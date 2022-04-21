@@ -1,7 +1,7 @@
 # Vehicle-Dynamic-Simulator
 A vehicle dynamic simulator based on Matlab Simulink and CarSim/TruckSim.
 
-# CarSim/TruckSim Module
+# Module CarSim/TruckSim
 
 # Module Localization
 
