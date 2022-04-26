@@ -9,15 +9,22 @@ This Module is used to:
   ...
 ## IO Definition
 ### Input
+| Input Type | Name | Note |
+|---|---|---|
+|Displacements & Angles|||
+|Velocity & Angular Velocity|||
+|Force & Torque|||
 #### Thorttle Command
 #### Brake Command
 #### Steer Command
 
 ### Output
-#### Road Information
-#### Vehicle Body Kinematics & Dynamics
-#### Vehicle Tyre Kinematics & Dynamics
-
+| Input Type | Name | Note |
+|---|---|---|
+| Road Information |||
+| Vehicle Body Kinematics & Dynamics |||
+| Vehicle Susp Kinematics & Dynamics |||
+| Vehicle Tyre Kinematics & Dynamics |||
 
 # Module Localization
 This Module is used to:
