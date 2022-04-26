@@ -6,6 +6,10 @@ This Module is used to:
   Manage I/O between CarSim/TruckSim and Matlab Simulink
   Unit Unification
   ...
+## IO Definition
+### Input
+
+### Output
 
 # Module Localization
 This Module is used to:
