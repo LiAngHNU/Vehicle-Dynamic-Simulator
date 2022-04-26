@@ -5,11 +5,19 @@ A vehicle dynamic simulator based on Matlab Simulink and CarSim/TruckSim.
 This Module is used to:
   Manage I/O between CarSim/TruckSim and Matlab Simulink
   Unit Unification
+  Input Processing
   ...
 ## IO Definition
 ### Input
+#### Thorttle Command
+#### Brake Command
+#### Steer Command
 
 ### Output
+#### Road Information
+#### Vehicle Body Kinematics & Dynamics
+#### Vehicle Tyre Kinematics & Dynamics
+
 
 # Module Localization
 This Module is used to:
