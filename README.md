@@ -30,11 +30,7 @@ This Module is used to:
 | | Y_path*|||
 | | kappa_path |||
 |                                    |            |||
-| Vehicle Body Kinematics & Dynamics | s_veh_1 | Station of front bumper at reference path | [m] -> [m] |
-|                                    | s_veh_2 | Station of front alxe at reference path   | [m] -> [m] |
-|                                    | s_veh_3 | Station of CoG at reference path          | [m] -> [m] |
-|                                    | s_veh_4 | Station of rear bumper at reference path  | [m] -> [m] |
-|                                    | s_veh_5 | Station of rear alxe at reference path    | [m] -> [m] |
+| Vehicle Body Kinematics & Dynamics | s_veh | Station of front bumper at reference path | [m] -> [m] |
 |                                    | l_veh_1 | Lateral distance of front bumper at reference path  | [m] -> [m] |
 |                                    | l_veh_2 | Lateral distance of front axle at reference path    | [m] -> [m] |
 |                                    | l_veh_3 | Lateral distance of CoG at reference path           | [m] -> [m] |
@@ -173,6 +169,11 @@ This Module is used to:
   Calculate Errors between Vehicle and Road 
   Update Vehicle Attitude
   ...
+## Maps
+### HandlingCourse
+### MCity
+#### Outside Loop
+#### State Street Loop
 
 # Module Chassis
 This Module is used to:
