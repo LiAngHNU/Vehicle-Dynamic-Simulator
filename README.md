@@ -22,29 +22,30 @@ This Module is used to:
 | Input Type | Name | Note | Unit |
 |---|---|---|---|
 | Vehicle-Path Informations | x_path |  | [m] -> [m] |
-| | y_path || [m] -> [m] |
-| | z_path || [m] -> [m] |
+|                           | y_path || [m] -> [m] |
+|                           | z_path || [m] -> [m] |
 | | bank_path |||
 | | slope_path |||
 | | theta_path |||
 | | kappa_path |||
-| | dkappa_path |||
-| | s_veh_front_bumper | ||
-| | s_veh_front_axle | ||
-| | s_veh_cog | ||
-| | s_veh_rear_axle | ||
-| | s_veh_rear_bumper | ||
-| | l_veh_front_bumper | ||
-| | l_veh_front_axle | ||
-| | l_veh_cog | ||
-| | l_veh_rear_axle | ||
-| | l_veh_rear_bumper | ||
+
 | Vehicle Body Kinematics & Dynamics | x_veh_ref | X coordinate of sprung mass | [m] -> [m] |
+| | s_veh_1 | ||
+| | s_veh_2 | ||
+| | s_veh_3 | ||
+| | s_veh_4 | ||
+| | s_veh_5 | ||
+| | l_veh_1 | ||
+| | l_veh_2 | ||
+| | l_veh_3 | ||
+| | l_veh_4 | ||
+| | l_veh_5 | ||
+|                                    | x_veh_ref | X coordinate of sprung mass | [m] -> [m] |
 |                                    | y_veh_ref | Y coordinate of sprung mass | [m] -> [m] |
 |                                    | z_veh_ref | Z coordinate of sprung mass | [m] -> [m] |
-|                                    | roll_veh_ref  | Rotate angle around X-axis of sprung mass | [deg] -> [rad] |
-|                                    | pitch_veh_ref | Rotate angle around Y-axis of sprung mass | [deg] -> [rad] |
-|                                    | yaw_veh_ref   | Rotate angle around Z-axis of sprung mass | [deg] -> [rad] |
+|                                    | r_veh_ref  | Rotate angle around X-axis of sprung mass | [deg] -> [rad] |
+|                                    | p_veh_ref | Rotate angle around Y-axis of sprung mass | [deg] -> [rad] |
+|                                    | y_veh_ref   | Rotate angle around Z-axis of sprung mass | [deg] -> [rad] |
 |                                    | vx_veh_ref | Linear velocity along X-axis of sprung mass | [km/h] -> [m/s] |
 |                                    | vy_veh_ref | Linear velocity along Y-axis of sprung mass | [km/h] -> [m/s] |
 |                                    | vz_veh_ref | Linear velocity along Z-axis of sprung mass | [km/h] -> [m/s] |
