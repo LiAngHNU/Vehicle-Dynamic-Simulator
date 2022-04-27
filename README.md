@@ -58,14 +58,30 @@ This Module is used to:
 |                                    | aay_veh_ref | Angular acceleration around Y-axis of sprung mass| [rad/s2] -> [rad/s2] |
 |                                    | aaz_veh_ref | Angular acceleration around Z-axis of sprung mass| [rad/s2] -> [rad/s2] |
 | Vehicle Susp Kinematics & Dynamics ||||
-| Vehicle Tyre Kinematics & Dynamics | kappa_whl_1l|||
-|                                    | kappa_whl_1r|||
-|                                    | kappa_whl_2l|||
-|                                    | kappa_whl_2r|||
-|                                    | kappa_whl_3l|||
-|                                    | kappa_whl_3r|||
-|                                    | kappa_whl_4l|||
-|                                    | kappa_whl_4r|||
+| Vehicle Tyre Kinematics & Dynamics | kappa_whl_1l |||
+|                                    | kappa_whl_1r |||
+|                                    | kappa_whl_2l |||
+|                                    | kappa_whl_2r |||
+|                                    | kappa_whl_3l |||
+|                                    | kappa_whl_3r |||
+|                                    | kappa_whl_4l |||
+|                                    | kappa_whl_4r |||
+|                                    | alpha_whl_1l |||
+|                                    | alpha_whl_1r |||
+|                                    | alpha_whl_2l |||
+|                                    | alpha_whl_2r |||
+|                                    | alpha_whl_3l |||
+|                                    | alpha_whl_3r |||
+|                                    | alpha_whl_4l |||
+|                                    | alpha_whl_4r |||
+|                                    | delta_whl_1l |||
+|                                    | delta_whl_1r |||
+|                                    | delta_whl_2l |||
+|                                    | delta_whl_2r |||
+|                                    | delta_whl_3l |||
+|                                    | delta_whl_3r |||
+|                                    | delta_whl_4l |||
+|                                    | delta_whl_4r |||
 
 # Module Localization
 This Module is used to:
