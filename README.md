@@ -21,14 +21,24 @@ This Module is used to:
 ### Output
 | Input Type | Name | Note | Unit |
 |---|---|---|---|
-| Vehicle-Path | x_path |  | |
-| | y_path |||
-| | z_path |||
+| Vehicle-Path Informations | x_path |  | [m] -> [m] |
+| | y_path || [m] -> [m] |
+| | z_path || [m] -> [m] |
 | | bank_path |||
 | | slope_path |||
 | | theta_path |||
-| | s_veh | ||
-| | l_veh | ||
+| | kappa_path |||
+| | dkappa_path |||
+| | s_veh_front_bumper | ||
+| | s_veh_front_axle | ||
+| | s_veh_cog | ||
+| | s_veh_rear_axle | ||
+| | s_veh_rear_bumper | ||
+| | l_veh_front_bumper | ||
+| | l_veh_front_axle | ||
+| | l_veh_cog | ||
+| | l_veh_rear_axle | ||
+| | l_veh_rear_bumper | ||
 | Vehicle Body Kinematics & Dynamics | x_veh_ref | X coordinate of sprung mass | [m] -> [m] |
 |                                    | y_veh_ref | Y coordinate of sprung mass | [m] -> [m] |
 |                                    | z_veh_ref | Z coordinate of sprung mass | [m] -> [m] |
