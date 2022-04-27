@@ -96,15 +96,6 @@ This Module is used to:
 |                                    | jnc_rate_whl_4l |||
 |                                    | jnc_rate_whl_4r |||
 |                                    |            |||
-|                                    | cmp_rate_spring_1l |||
-|                                    | cmp_rate_spring_1r |||
-|                                    | cmp_rate_spring_2l |||
-|                                    | cmp_rate_spring_2r |||
-|                                    | cmp_rate_spring_3l |||
-|                                    | cmp_rate_spring_3r |||
-|                                    | cmp_rate_spring_4l |||
-|                                    | cmp_rate_spring_4r |||
-|                                    |            |||
 |                                    | cmp_rate_damper_1l |||
 |                                    | cmp_rate_damper_1r |||
 |                                    | cmp_rate_damper_2l |||
@@ -113,15 +104,6 @@ This Module is used to:
 |                                    | cmp_rate_damper_3r |||
 |                                    | cmp_rate_damper_4l |||
 |                                    | cmp_rate_damper_4r |||
-|                                    |            |||
-|                                    | cmp_acc_spring_1l |||
-|                                    | cmp_acc_spring_1r |||
-|                                    | cmp_acc_spring_2l |||
-|                                    | cmp_acc_spring_2r |||
-|                                    | cmp_acc_spring_3l |||
-|                                    | cmp_acc_spring_3r |||
-|                                    | cmp_acc_spring_4l |||
-|                                    | cmp_acc_spring_4r |||
 |                                    |            |||
 |                                    | cmp_acc_damper_1l |||
 |                                    | cmp_acc_damper_1r |||
