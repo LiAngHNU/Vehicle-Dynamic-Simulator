@@ -21,25 +21,23 @@ This Module is used to:
 ### Output
 | Input Type | Name | Note | Unit |
 |---|---|---|---|
-| Vehicle-Path Informations | x_path |  | [m] -> [m] |
+| Vehicle-Path Informations | x_path || [m] -> [m] |
 |                           | y_path || [m] -> [m] |
 |                           | z_path || [m] -> [m] |
 | | bank_path |||
 | | slope_path |||
 | | theta_path |||
 | | kappa_path |||
-
-| Vehicle Body Kinematics & Dynamics | x_veh_ref | X coordinate of sprung mass | [m] -> [m] |
-| | s_veh_1 | Station of front bumper at reference path | [m] -> [m] |
-| | s_veh_2 | Station of front alxe at reference path   | [m] -> [m] |
-| | s_veh_3 | Station of CoG at reference path          | [m] -> [m] |
-| | s_veh_4 | Station of rear bumper at reference path  | [m] -> [m] |
-| | s_veh_5 | Station of rear alxe at reference path    | [m] -> [m] |
-| | l_veh_1 | Lateral distance of front bumper at reference path  | [m] -> [m] |
-| | l_veh_2 | Lateral distance of front axle at reference path    | [m] -> [m] |
-| | l_veh_3 | Lateral distance of CoG at reference path           | [m] -> [m] |
-| | l_veh_4 | Lateral distance of rear axle at reference path     | [m] -> [m] |
-| | l_veh_5 | Lateral distance of rear bumper at reference path   | [m] -> [m] |
+| Vehicle Body Kinematics & Dynamics | s_veh_1 | Station of front bumper at reference path | [m] -> [m] |
+|                                    | s_veh_2 | Station of front alxe at reference path   | [m] -> [m] |
+|                                    | s_veh_3 | Station of CoG at reference path          | [m] -> [m] |
+|                                    | s_veh_4 | Station of rear bumper at reference path  | [m] -> [m] |
+|                                    | s_veh_5 | Station of rear alxe at reference path    | [m] -> [m] |
+|                                    | l_veh_1 | Lateral distance of front bumper at reference path  | [m] -> [m] |
+|                                    | l_veh_2 | Lateral distance of front axle at reference path    | [m] -> [m] |
+|                                    | l_veh_3 | Lateral distance of CoG at reference path           | [m] -> [m] |
+|                                    | l_veh_4 | Lateral distance of rear axle at reference path     | [m] -> [m] |
+|                                    | l_veh_5 | Lateral distance of rear bumper at reference path   | [m] -> [m] |
 |                                    | x_veh_ref | X coordinate of sprung mass | [m] -> [m] |
 |                                    | y_veh_ref | Y coordinate of sprung mass | [m] -> [m] |
 |                                    | z_veh_ref | Z coordinate of sprung mass | [m] -> [m] |
