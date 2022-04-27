@@ -21,12 +21,13 @@ This Module is used to:
 ### Output
 | Input Type | Name | Note | Unit |
 |---|---|---|---|
+| Obstacle Informations | | | |
 | Vehicle-Path Informations | x_path || [m] -> [m] |
 |                           | y_path || [m] -> [m] |
-|                           | z_path || [m] -> [m] |
-| | bank_path |||
-| | slope_path |||
-| | theta_path |||
+|                           | z_path*|| [m] -> [m] |
+| | R_path |||
+| | P_path |||
+| | Y_path*|||
 | | kappa_path |||
 | Vehicle Body Kinematics & Dynamics | s_veh_1 | Station of front bumper at reference path | [m] -> [m] |
 |                                    | s_veh_2 | Station of front alxe at reference path   | [m] -> [m] |
@@ -56,8 +57,15 @@ This Module is used to:
 |                                    | aax_veh_ref | Angular acceleration around X-axis of sprung mass| [rad/s2] -> [rad/s2] |
 |                                    | aay_veh_ref | Angular acceleration around Y-axis of sprung mass| [rad/s2] -> [rad/s2] |
 |                                    | aaz_veh_ref | Angular acceleration around Z-axis of sprung mass| [rad/s2] -> [rad/s2] |
-| Vehicle Susp Kinematics & Dynamics |||
-| Vehicle Tyre Kinematics & Dynamics |||
+| Vehicle Susp Kinematics & Dynamics ||||
+| Vehicle Tyre Kinematics & Dynamics | kappa_whl_1l|||
+|                                    | kappa_whl_1r|||
+|                                    | kappa_whl_2l|||
+|                                    | kappa_whl_2r|||
+|                                    | kappa_whl_3l|||
+|                                    | kappa_whl_3r|||
+|                                    | kappa_whl_4l|||
+|                                    | kappa_whl_4r|||
 
 # Module Localization
 This Module is used to:
