@@ -29,6 +29,7 @@ This Module is used to:
 | | P_path |||
 | | Y_path*|||
 | | kappa_path |||
+|                                    |            |||
 | Vehicle Body Kinematics & Dynamics | s_veh_1 | Station of front bumper at reference path | [m] -> [m] |
 |                                    | s_veh_2 | Station of front alxe at reference path   | [m] -> [m] |
 |                                    | s_veh_3 | Station of CoG at reference path          | [m] -> [m] |
@@ -57,6 +58,7 @@ This Module is used to:
 |                                    | aax_veh_ref | Angular acceleration around X-axis of sprung mass| [rad/s2] -> [rad/s2] |
 |                                    | aay_veh_ref | Angular acceleration around Y-axis of sprung mass| [rad/s2] -> [rad/s2] |
 |                                    | aaz_veh_ref | Angular acceleration around Z-axis of sprung mass| [rad/s2] -> [rad/s2] |
+|                                    |            |||
 | Vehicle Susp Kinematics & Dynamics | jnc_whl_1l |||
 |                                    | jnc_whl_1r |||
 |                                    | jnc_whl_2l |||
@@ -111,7 +113,47 @@ This Module is used to:
 |                                    | cmp_rate_damper_4l |||
 |                                    | cmp_rate_damper_4r |||
 |                                    |            |||
-
+|                                    | cmp_acc_spring_1l |||
+|                                    | cmp_acc_spring_1r |||
+|                                    | cmp_acc_spring_2l |||
+|                                    | cmp_acc_spring_2r |||
+|                                    | cmp_acc_spring_3l |||
+|                                    | cmp_acc_spring_3r |||
+|                                    | cmp_acc_spring_4l |||
+|                                    | cmp_acc_spring_4r |||
+|                                    |            |||
+|                                    | cmp_acc_damper_1l |||
+|                                    | cmp_acc_damper_1r |||
+|                                    | cmp_acc_damper_2l |||
+|                                    | cmp_acc_damper_2r |||
+|                                    | cmp_acc_damper_3l |||
+|                                    | cmp_acc_damper_3r |||
+|                                    | cmp_acc_damper_4l |||
+|                                    | cmp_acc_damper_4r |||
+|                                    |            |||
+|                                    | f_spring_1l |||
+|                                    | f_spring_1r |||
+|                                    | f_spring_2l |||
+|                                    | f_spring_2r |||
+|                                    | f_spring_3l |||
+|                                    | f_spring_3r |||
+|                                    | f_spring_4l |||
+|                                    | f_spring_4r |||
+|                                    |            |||
+|                                    | f_damper_1l |||
+|                                    | f_damper_1r |||
+|                                    | f_damper_2l |||
+|                                    | f_damper_2r |||
+|                                    | f_damper_3l |||
+|                                    | f_damper_3r |||
+|                                    | f_damper_4l |||
+|                                    | f_damper_4r |||
+|                                    |            |||
+|                                    | m_arb_1 |||
+|                                    | m_arb_2 |||
+|                                    | m_arb_3 |||
+|                                    | m_arb_4 |||
+|                                    |            |||
 | Vehicle Tyre Kinematics & Dynamics | kappa_whl_1l |||
 |                                    | kappa_whl_1r |||
 |                                    | kappa_whl_2l |||
