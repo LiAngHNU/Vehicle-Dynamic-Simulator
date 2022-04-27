@@ -42,21 +42,21 @@ This Module is used to:
 | Vehicle Body Kinematics & Dynamics | x_veh_ref | X coordinate of sprung mass | [m] -> [m] |
 |                                    | y_veh_ref | Y coordinate of sprung mass | [m] -> [m] |
 |                                    | z_veh_ref | Z coordinate of sprung mass | [m] -> [m] |
-|                                    | roll_veh_ref  | Roll angle of sprung mass  | [deg] -> [rad] |
-|                                    | pitch_veh_ref | Picth angle of sprung mass | [deg] -> [rad] |
-|                                    | yaw_veh_ref   | Yaw angle of sprung mass   | [deg] -> [rad] |
-|                                    | vx_veh_ref | Longitudinal linear velocity of sprung mass | [km/h] -> [m/s] |
-|                                    | vy_veh_ref | Lateral linear velocity of sprung mass | [km/h] -> [m/s] |
-|                                    | vz_veh_ref | Vertical linear velocity of sprung mass | [km/h] -> [m/s] |
-| | avx_veh_ref | |
-| | avy_veh_ref | |
-| | avz_veh_ref | |
-| | ax_veh_ref | |
-| | ay_veh_ref | |
-| | az_veh_ref | |
-| | aax_veh_ref | |
-| | aay_veh_ref | |
-| | aaz_veh_ref | |
+|                                    | roll_veh_ref  | Rotate angle around X-axis of sprung mass | [deg] -> [rad] |
+|                                    | pitch_veh_ref | Rotate angle around Y-axis of sprung mass | [deg] -> [rad] |
+|                                    | yaw_veh_ref   | Rotate angle around Z-axis of sprung mass | [deg] -> [rad] |
+|                                    | vx_veh_ref | Linear velocity along X-axis of sprung mass | [km/h] -> [m/s] |
+|                                    | vy_veh_ref | Linear velocity along Y-axis of sprung mass | [km/h] -> [m/s] |
+|                                    | vz_veh_ref | Linear velocity along Z-axis of sprung mass | [km/h] -> [m/s] |
+|                                    | avx_veh_ref | Angular velocity around X-axis of sprung mass| [deg/s] -> [rad/s] |
+|                                    | avy_veh_ref | Angular velocity around Y-axis of sprung mass| [deg/s] -> [rad/s] |
+|                                    | avz_veh_ref | Angular velocity around Z-axis of sprung mass| [deg/s] -> [rad/s] |
+|                                    | ax_veh_ref | Linear acceleration along X-axis of sprung mass | [g's] -> [m/s2] |
+|                                    | ay_veh_ref | Linear acceleration along Y-axis of sprung mass | [g's] -> [m/s2] |
+|                                    | az_veh_ref | Linear acceleration along Z-axis of sprung mass | [g's] -> [m/s2] |
+|                                    | aax_veh_ref | Angular acceleration around X-axis of sprung mass| [rad/s2] -> [rad/s2] |
+|                                    | aay_veh_ref | Angular acceleration around Y-axis of sprung mass| [rad/s2] -> [rad/s2] |
+|                                    | aaz_veh_ref | Angular acceleration around Z-axis of sprung mass| [rad/s2] -> [rad/s2] |
 | Vehicle Susp Kinematics & Dynamics |||
 | Vehicle Tyre Kinematics & Dynamics |||
 
