@@ -57,7 +57,61 @@ This Module is used to:
 |                                    | aax_veh_ref | Angular acceleration around X-axis of sprung mass| [rad/s2] -> [rad/s2] |
 |                                    | aay_veh_ref | Angular acceleration around Y-axis of sprung mass| [rad/s2] -> [rad/s2] |
 |                                    | aaz_veh_ref | Angular acceleration around Z-axis of sprung mass| [rad/s2] -> [rad/s2] |
-| Vehicle Susp Kinematics & Dynamics ||||
+| Vehicle Susp Kinematics & Dynamics | jnc_whl_1l |||
+|                                    | jnc_whl_1r |||
+|                                    | jnc_whl_2l |||
+|                                    | jnc_whl_2r |||
+|                                    | jnc_whl_3l |||
+|                                    | jnc_whl_3r |||
+|                                    | jnc_whl_4l |||
+|                                    | jnc_whl_4r |||
+|                                    |            |||
+|                                    | cmp_spring_1l |||
+|                                    | cmp_spring_1r |||
+|                                    | cmp_spring_2l |||
+|                                    | cmp_spring_2r |||
+|                                    | cmp_spring_3l |||
+|                                    | cmp_spring_3r |||
+|                                    | cmp_spring_4l |||
+|                                    | cmp_spring_4r |||
+|                                    |            |||
+|                                    | cmp_damper_1l |||
+|                                    | cmp_damper_1r |||
+|                                    | cmp_damper_2l |||
+|                                    | cmp_damper_2r |||
+|                                    | cmp_damper_3l |||
+|                                    | cmp_damper_3r |||
+|                                    | cmp_damper_4l |||
+|                                    | cmp_damper_4r |||
+|                                    |            |||
+|                                    | jnc_rate_whl_1l |||
+|                                    | jnc_rate_whl_1r |||
+|                                    | jnc_rate_whl_2l |||
+|                                    | jnc_rate_whl_2r |||
+|                                    | jnc_rate_whl_3l |||
+|                                    | jnc_rate_whl_3r |||
+|                                    | jnc_rate_whl_4l |||
+|                                    | jnc_rate_whl_4r |||
+|                                    |            |||
+|                                    | cmp_rate_spring_1l |||
+|                                    | cmp_rate_spring_1r |||
+|                                    | cmp_rate_spring_2l |||
+|                                    | cmp_rate_spring_2r |||
+|                                    | cmp_rate_spring_3l |||
+|                                    | cmp_rate_spring_3r |||
+|                                    | cmp_rate_spring_4l |||
+|                                    | cmp_rate_spring_4r |||
+|                                    |            |||
+|                                    | cmp_rate_damper_1l |||
+|                                    | cmp_rate_damper_1r |||
+|                                    | cmp_rate_damper_2l |||
+|                                    | cmp_rate_damper_2r |||
+|                                    | cmp_rate_damper_3l |||
+|                                    | cmp_rate_damper_3r |||
+|                                    | cmp_rate_damper_4l |||
+|                                    | cmp_rate_damper_4r |||
+|                                    |            |||
+
 | Vehicle Tyre Kinematics & Dynamics | kappa_whl_1l |||
 |                                    | kappa_whl_1r |||
 |                                    | kappa_whl_2l |||
