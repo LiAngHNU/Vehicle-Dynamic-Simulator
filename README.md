@@ -40,6 +40,11 @@ This Module is used to:
 |                                    | l_veh_3 | Lateral distance of CoG at reference path           | [m] -> [m] |
 |                                    | l_veh_4 | Lateral distance of rear axle at reference path     | [m] -> [m] |
 |                                    | l_veh_5 | Lateral distance of rear bumper at reference path   | [m] -> [m] |
+|                                    | a_veh_1 | Lateral error area of front bumper at reference path  | [m2] -> [m2] |
+|                                    | a_veh_2 | Lateral error area of front axle at reference path    | [m2] -> [m2] |
+|                                    | a_veh_3 | Lateral error area of CoG at reference path           | [m2] -> [m2] |
+|                                    | a_veh_4 | Lateral error area of rear axle at reference path     | [m2] -> [m2] |
+|                                    | a_veh_5 | Lateral error area of rear bumper at reference path   | [m2] -> [m2] |
 |                                    | x_veh_ref | X coordinate of sprung mass | [m] -> [m] |
 |                                    | y_veh_ref | Y coordinate of sprung mass | [m] -> [m] |
 |                                    | z_veh_ref | Z coordinate of sprung mass | [m] -> [m] |
