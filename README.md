@@ -43,9 +43,10 @@ This Module is used to:
 |                                    | x_veh_ref | X coordinate of sprung mass | [m] -> [m] |
 |                                    | y_veh_ref | Y coordinate of sprung mass | [m] -> [m] |
 |                                    | z_veh_ref | Z coordinate of sprung mass | [m] -> [m] |
-|                                    | r_veh_ref  | Rotate angle around X-axis of sprung mass | [deg] -> [rad] |
+|                                    | delta_sw  | Rotate angle around X-axis of sprung mass | [deg] -> [rad] |
+|                                    | r_veh_ref | Rotate angle around X-axis of sprung mass | [deg] -> [rad] |
 |                                    | p_veh_ref | Rotate angle around Y-axis of sprung mass | [deg] -> [rad] |
-|                                    | y_veh_ref   | Rotate angle around Z-axis of sprung mass | [deg] -> [rad] |
+|                                    | y_veh_ref  | Rotate angle around Z-axis of sprung mass | [deg] -> [rad] |
 |                                    | vx_veh_ref | Linear velocity along X-axis of sprung mass | [km/h] -> [m/s] |
 |                                    | vy_veh_ref | Linear velocity along Y-axis of sprung mass | [km/h] -> [m/s] |
 |                                    | vz_veh_ref | Linear velocity along Z-axis of sprung mass | [km/h] -> [m/s] |
