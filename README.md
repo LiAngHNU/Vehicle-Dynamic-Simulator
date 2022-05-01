@@ -1,7 +1,7 @@
 # Vehicle-Dynamic-Simulator
 A vehicle dynamic simulator based on Matlab Simulink and CarSim/TruckSim.
 
-# Module CarSim/TruckSim
+# Module Chassis
 This Module is used to:
   Manage I/O between CarSim/TruckSim and Matlab Simulink
   Unit Unification
@@ -29,6 +29,22 @@ This Module is used to:
 | | P_path |||
 | | Y_path*|||
 | | kappa_path |||
+| | MuX_path_1l |||
+| | MuX_path_1r |||
+| | MuX_path_2l |||
+| | MuX_path_2r |||
+| | MuX_path_3l |||
+| | MuX_path_3r |||
+| | MuX_path_4l |||
+| | MuX_path_4r |||
+| | MuY_path_1l |||
+| | MuY_path_1r |||
+| | MuY_path_2l |||
+| | MuY_path_2r |||
+| | MuY_path_3l |||
+| | MuY_path_3r |||
+| | MuY_path_4l |||
+| | MuY_path_4r |||
 |                                    |            |||
 | Vehicle Body Kinematics & Dynamics | s_veh | Station of front bumper at reference path | [m] -> [m] |
 |                                    | l_veh_1 | Lateral distance of front bumper at reference path  | [m] -> [m] |
@@ -170,12 +186,15 @@ This Module is used to:
   Update Vehicle Attitude
   ...
 ## Maps
-### HandlingCourse
 ### MCity
 #### Outside Loop
-#### State Street Loop
+#### Inside Loop
+#### Highway Loop
+#### M Loop
+### Suburban Town
+### HandlingCourse
 
-# Module Chassis
+# Module Estimation
 This Module is used to:
   Update Vehicle Reference State
   ...
