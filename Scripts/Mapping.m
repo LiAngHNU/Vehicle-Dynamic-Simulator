@@ -43,46 +43,12 @@ for i = 2:1:length(Index)
     end
 end
 
-for i = 145:1:984
+%%
+for i = 534:1:1437
     Path.Theta(i,1) = Path.Theta(i,1) + pi;
 end
 
-for i = 985:1:1093
-    Path.Theta(i,1) = Path.Theta(i,1) + 2*pi;
-end
-
-for i = 1094:1:2186
-    Path.Theta(i,1) = Path.Theta(i,1) + pi;
-end
-
-for i = 2187:1:2250
-    Path.Theta(i,1) = Path.Theta(i,1) + 2*pi;
-end
-
-for i = 2251:1:2549
-    Path.Theta(i,1) = Path.Theta(i,1) + pi;
-end
-
-for i = 2550:1:2647
-    Path.Theta(i,1) = Path.Theta(i,1) + 2*pi;
-end
-
-for i = 2648:1:2725
-    Path.Theta(i,1) = Path.Theta(i,1) + pi;
-end
-
-for i = 2726:1:3765
-    Path.Theta(i,1) = Path.Theta(i,1) + 2*pi;
-end
-
-for i = 3766:1:4291
-    Path.Theta(i,1) = Path.Theta(i,1) + 3*pi;
-end
-
-for i = 4292:1:4789
-    Path.Theta(i,1) = Path.Theta(i,1) + 2*pi;
-end
-
+%%
 subplot(2,2,1); plot(Path.X,Path.Y);
 subplot(2,2,2); plot(Path.Index,Path.Theta);
 subplot(2,2,3); plot(Path.Index,Path.Kappa);
