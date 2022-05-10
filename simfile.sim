@@ -1,8 +1,8 @@
 SIMFILE
 
-SET_MACRO $(ROOT_FILE_NAME)$ Run_7ae43f80-ab99-4edb-b29e-0eafbdb25e58
-SET_MACRO $(OUTPUT_PATH)$ C:\Program Files\CarSim2019.0_Data\Results
-SET_MACRO $(WORK_DIR)$ C:\Program Files\CarSim2019.0_Data\
+SET_MACRO $(ROOT_FILE_NAME)$ Run_5112168a-fd1b-44a8-bac4-76e0e121a07f
+SET_MACRO $(OUTPUT_PATH)$ D:\Program Files\Mechanical Simulation\CarSim_2020.0\CarSim_2020.0_Data\Results
+SET_MACRO $(WORK_DIR)$ D:\Program Files\Mechanical Simulation\CarSim_2020.0\CarSim_2020.0_Data\
 SET_MACRO $(OUTPUT_FILE_PREFIX)$ $(OUTPUT_PATH)$\$(ROOT_FILE_NAME)$\$(TIMESTAMP)$
 
 FILEBASE $(OUTPUT_FILE_PREFIX)$
@@ -12,14 +12,14 @@ ECHO $(OUTPUT_FILE_PREFIX)$_echo.par
 FINAL $(OUTPUT_FILE_PREFIX)$_end.par
 LOGFILE $(OUTPUT_FILE_PREFIX)$_log.txt
 ERDFILE $(OUTPUT_FILE_PREFIX)$.vs
-PROGDIR C:\Program Files\CarSim2019.0_Prog\
-DATADIR C:\Program Files\CarSim2019.0_Data\
-GUI_REFRESH_V CarSim_RefreshEvent_16528
-RESOURCEDIR C:\Program Files\CarSim2019.0_Prog\\Resources\
+PROGDIR D:\Program Files\Mechanical Simulation\CarSim_2020.0\CarSim_2020.0_Prog\
+DATADIR D:\Program Files\Mechanical Simulation\CarSim_2020.0\CarSim_2020.0_Data\
+GUI_REFRESH_V CarSim_RefreshEvent_14184
+RESOURCEDIR D:\Program Files\Mechanical Simulation\CarSim_2020.0\CarSim_2020.0_Prog\\Resources\
 PRODUCT_ID CarSim
-PRODUCT_VER 2019.0
-ANIFILE C:\Program Files\CarSim2019.0_Data\runs\animator.par
-VEHICLE_CODE i_i
+PRODUCT_VER 2020.0
+ANIFILE D:\Program Files\Mechanical Simulation\CarSim_2020.0\CarSim_2020.0_Data\runs\animator.par
+VEHICLE_CODE i_s
 EXT_MODEL_STEP 0.00050000
 PORTS_IMP 1,3
 PORTS_EXP 1,96
