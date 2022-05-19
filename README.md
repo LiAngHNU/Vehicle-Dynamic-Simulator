@@ -1,7 +1,7 @@
 # Vehicle-Dynamic-Simulator
 A vehicle dynamic simulator based on Matlab Simulink and CarSim/TruckSim.
 
-# Module Chassis
+# Module： Sim_Module
 This Module is used to:
   Manage I/O between CarSim/TruckSim and Matlab Simulink
   Unit Unification
@@ -14,6 +14,8 @@ This Module is used to:
 |Displacements & Angles|||
 |Velocity & Angular Velocity|||
 |Force & Torque|||
+#### Wind Angle
+#### Wind Speed
 #### Thorttle Command
 #### Brake Command
 #### Steer Command
@@ -22,12 +24,12 @@ This Module is used to:
 | Input Type | Name | Note | Unit |
 |---|---|---|---|
 | Obstacle Informations | | | |
-| Vehicle-Path Informations | x_path || [m] -> [m] |
-|                           | y_path || [m] -> [m] |
-|                           | z_path*|| [m] -> [m] |
-| | R_path |||
-| | P_path |||
-| | Y_path*|||
+| Path Info | x_path || [m] -> [m] |
+|           | y_path || [m] -> [m] |
+|           | z_path*|| [m] -> [m] |
+|           | Rx_path || [deg] -> [rad] |
+|           | Py_path || [deg] -> [rad] |
+|           | Yz_path*|| [deg] -> [rad] |
 | | kappa_path |||
 | | MuX_path_1l |||
 | | MuX_path_1r |||

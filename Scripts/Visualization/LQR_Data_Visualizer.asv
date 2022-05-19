@@ -1,0 +1,42 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hunan University
+% Published by: Ang Li
+% Email: ang1997@hnu.edu.cn
+% Copyright (c) 2022 . All rights reserved.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Load Data
+load('Data\ILCLQR_vs_ILQR\ILQR_at_9.mat');
+load('Data\ILCLQR_vs_ILQR\ILCLQR_at_9.mat');
+
+% Data Visualization
+subplot(2,3,1);
+hold on;
+plot(ILQR_at_9.Station.Data, ILQR_at_9.ErrY.Data);
+plot(ILCLQR_at_9.Station.Data, ILCLQR_at_9.ErrY.Data);
+
+subplot(2,3,2);
+hold on;
+plot(NoCompensate.Station.Data, NoCompensate.ErrVy.Data);
+plot(UnderCompensate.Station.Data, UnderCompensate.ErrVy.Data);
+plot(FitCompensate.Station.Data, FitCompensate.ErrVy.Data);
+plot(OverCompensate.Station.Data, OverCompensate.ErrVy.Data);
+
+subplot(2,3,3);
+hold on;
+plot(NoCompensate.Station.Data, NoCompensate.ErrYz.Data);
+plot(UnderCompensate.Station.Data, UnderCompensate.ErrYz.Data);
+plot(FitCompensate.Station.Data, FitCompensate.ErrYz.Data);
+plot(OverCompensate.Station.Data, OverCompensate.ErrYz.Data);
+
+subplot(2,3,4);
+hold on;
+plot(NoCompensate.Station.Data, NoCompensate.ErrAVz.Data);
+plot(UnderCompensate.Station.Data, UnderCompensate.ErrAVz.Data);
+plot(FitCompensate.Station.Data, FitCompensate.ErrAVz.Data);
+plot(OverCompensate.Station.Data, OverCompensate.ErrAVz.Data);
+
+subplot(2,3,5);
+hold on;
+
+subplot(2,3,6);
+hold on;
