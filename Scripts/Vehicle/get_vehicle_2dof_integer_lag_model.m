@@ -7,19 +7,20 @@
 %% Numerical 2DOF Model
 % Lag and Delay Settings
 Ts = 0.01;
-Tl = 0.3;
+Tl = 0.2;
 Td = 30;
 
 % Load Vehicle Infomation
-load('Models\Vehicles\C_3A_Cab_Over_6x4\C_3A_Cab_Over_6x4_Calib.mat');
+load('Models\Vehicles\CiDi\Shanqi_E9\Shanqi_E9_Calib.mat');
 M = Vehicle_Calib.Mass;
 Iz = Vehicle_Calib.Inertia;
 Lf = Vehicle_Calib.Lf;
 Lr = Vehicle_Calib.Lr;
-% Cyf = Vehicle_Calib.Cyf;    
-% Cyr = Vehicle_Calib.Cyr;    
-Cyf = -50000;
-Cyr = -100000;
+Cyf = Vehicle_Calib.Cyf;    
+Cyr = Vehicle_Calib.Cyr;    
+% Cyf = 50000;    
+% Cyr = 100000; 
+
 % Calculate Continuous Vehicle Model
 a33 =  2*(Cyf+Cyr)/(M*Vx);          b61 = 1/Tl;  
 a34 = -2*(Cyf+Cyr)/(M);             g31 = 2*(Cyf*Lf-Cyr*Lr)/(M) - Vx*Vx;

@@ -50,8 +50,8 @@ for i = 2:1:length(Index)
 end
 
 %%
-for i = 2743:1:4120
-    Path.Theta(i,1) = Path.Theta(i,1) - pi;
+for i = 1:1:5389
+    Path.Theta(i,1) = Path.Theta(i,1) + pi;
 %     Path.Kappa(i,1) = -Path.Kappa(i,1);
 end
 
