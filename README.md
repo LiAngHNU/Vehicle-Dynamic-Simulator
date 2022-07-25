@@ -30,23 +30,23 @@ This Module is used to:
 |           | Rx_path || [deg] -> [rad] |
 |           | Py_path || [deg] -> [rad] |
 |           | Yz_path*|| [deg] -> [rad] |
-| | kappa_path |||
-| | MuX_path_1l |||
-| | MuX_path_1r |||
-| | MuX_path_2l |||
-| | MuX_path_2r |||
-| | MuX_path_3l |||
-| | MuX_path_3r |||
-| | MuX_path_4l |||
-| | MuX_path_4r |||
-| | MuY_path_1l |||
-| | MuY_path_1r |||
-| | MuY_path_2l |||
-| | MuY_path_2r |||
-| | MuY_path_3l |||
-| | MuY_path_3r |||
-| | MuY_path_4l |||
-| | MuY_path_4r |||
+| | kappa_path || [1/m] -> [1/m] |
+| | MuX_path_1l || [N/A] -> [N/A] |
+| | MuX_path_1r || [N/A] -> [N/A] |
+| | MuX_path_2l || [N/A] -> [N/A] |
+| | MuX_path_2r || [N/A] -> [N/A] |
+| | MuX_path_3l || [N/A] -> [N/A] |
+| | MuX_path_3r || [N/A] -> [N/A] |
+| | MuX_path_4l || [N/A] -> [N/A] |
+| | MuX_path_4r || [N/A] -> [N/A] |
+| | MuY_path_1l || [N/A] -> [N/A] |
+| | MuY_path_1r || [N/A] -> [N/A] |
+| | MuY_path_2l || [N/A] -> [N/A] |
+| | MuY_path_2r || [N/A] -> [N/A] |
+| | MuY_path_3l || [N/A] -> [N/A] |
+| | MuY_path_3r || [N/A] -> [N/A] |
+| | MuY_path_4l || [N/A] -> [N/A] |
+| | MuY_path_4r || [N/A] -> [N/A] |
 |                                    |            |||
 | Vehicle Body Kinematics & Dynamics | s_veh | Station of front bumper at reference path | [m] -> [m] |
 |                                    | l_veh_1 | Lateral distance of front bumper at reference path  | [m] -> [m] |
@@ -79,107 +79,107 @@ This Module is used to:
 |                                    | aay_veh_ref | Angular acceleration around Y-axis of sprung mass| [rad/s2] -> [rad/s2] |
 |                                    | aaz_veh_ref | Angular acceleration around Z-axis of sprung mass| [rad/s2] -> [rad/s2] |
 |                                    |            |||
-| Vehicle Susp Kinematics & Dynamics | jnc_whl_1l |||
-|                                    | jnc_whl_1r |||
-|                                    | jnc_whl_2l |||
-|                                    | jnc_whl_2r |||
-|                                    | jnc_whl_3l |||
-|                                    | jnc_whl_3r |||
-|                                    | jnc_whl_4l |||
-|                                    | jnc_whl_4r |||
+| Vehicle Susp Kinematics & Dynamics | jnc_whl_1l || [mm] -> [mm] |
+|                                    | jnc_whl_1r || [mm] -> [mm] |
+|                                    | jnc_whl_2l || [mm] -> [mm] |
+|                                    | jnc_whl_2r || [mm] -> [mm] |
+|                                    | jnc_whl_3l || [mm] -> [mm] |
+|                                    | jnc_whl_3r || [mm] -> [mm] |
+|                                    | jnc_whl_4l || [mm] -> [mm] |
+|                                    | jnc_whl_4r || [mm] -> [mm] |
 |                                    |            |||
-|                                    | cmp_spring_1l |||
-|                                    | cmp_spring_1r |||
-|                                    | cmp_spring_2l |||
-|                                    | cmp_spring_2r |||
-|                                    | cmp_spring_3l |||
-|                                    | cmp_spring_3r |||
-|                                    | cmp_spring_4l |||
-|                                    | cmp_spring_4r |||
+|                                    | cmp_spring_1l || [mm] -> [mm] |
+|                                    | cmp_spring_1r || [mm] -> [mm] |
+|                                    | cmp_spring_2l || [mm] -> [mm] |
+|                                    | cmp_spring_2r || [mm] -> [mm] |
+|                                    | cmp_spring_3l || [mm] -> [mm] |
+|                                    | cmp_spring_3r || [mm] -> [mm] |
+|                                    | cmp_spring_4l || [mm] -> [mm] |
+|                                    | cmp_spring_4r || [mm] -> [mm] |
 |                                    |            |||
-|                                    | cmp_damper_1l |||
-|                                    | cmp_damper_1r |||
-|                                    | cmp_damper_2l |||
-|                                    | cmp_damper_2r |||
-|                                    | cmp_damper_3l |||
-|                                    | cmp_damper_3r |||
-|                                    | cmp_damper_4l |||
-|                                    | cmp_damper_4r |||
+|                                    | cmp_damper_1l || [mm] -> [mm] |
+|                                    | cmp_damper_1r || [mm] -> [mm] |
+|                                    | cmp_damper_2l || [mm] -> [mm] |
+|                                    | cmp_damper_2r || [mm] -> [mm] |
+|                                    | cmp_damper_3l || [mm] -> [mm] |
+|                                    | cmp_damper_3r || [mm] -> [mm] |
+|                                    | cmp_damper_4l || [mm] -> [mm] |
+|                                    | cmp_damper_4r || [mm] -> [mm] |
 |                                    |            |||
-|                                    | jnc_rate_whl_1l |||
-|                                    | jnc_rate_whl_1r |||
-|                                    | jnc_rate_whl_2l |||
-|                                    | jnc_rate_whl_2r |||
-|                                    | jnc_rate_whl_3l |||
-|                                    | jnc_rate_whl_3r |||
-|                                    | jnc_rate_whl_4l |||
-|                                    | jnc_rate_whl_4r |||
+|                                    | jnc_rate_whl_1l || [mm/s] -> [mm/s] |
+|                                    | jnc_rate_whl_1r || [mm/s] -> [mm/s] |
+|                                    | jnc_rate_whl_2l || [mm/s] -> [mm/s] |
+|                                    | jnc_rate_whl_2r || [mm/s] -> [mm/s] |
+|                                    | jnc_rate_whl_3l || [mm/s] -> [mm/s] |
+|                                    | jnc_rate_whl_3r || [mm/s] -> [mm/s] |
+|                                    | jnc_rate_whl_4l || [mm/s] -> [mm/s] |
+|                                    | jnc_rate_whl_4r || [mm/s] -> [mm/s] |
 |                                    |            |||
-|                                    | cmp_rate_damper_1l |||
-|                                    | cmp_rate_damper_1r |||
-|                                    | cmp_rate_damper_2l |||
-|                                    | cmp_rate_damper_2r |||
-|                                    | cmp_rate_damper_3l |||
-|                                    | cmp_rate_damper_3r |||
-|                                    | cmp_rate_damper_4l |||
-|                                    | cmp_rate_damper_4r |||
+|                                    | cmp_rate_damper_1l || [mm/s] -> [mm/s] |
+|                                    | cmp_rate_damper_1r || [mm/s] -> [mm/s] |
+|                                    | cmp_rate_damper_2l || [mm/s] -> [mm/s] |
+|                                    | cmp_rate_damper_2r || [mm/s] -> [mm/s] |
+|                                    | cmp_rate_damper_3l || [mm/s] -> [mm/s] |
+|                                    | cmp_rate_damper_3r || [mm/s] -> [mm/s] |
+|                                    | cmp_rate_damper_4l || [mm/s] -> [mm/s] |
+|                                    | cmp_rate_damper_4r || [mm/s] -> [mm/s] |
 |                                    |            |||
-|                                    | cmp_acc_damper_1l |||
-|                                    | cmp_acc_damper_1r |||
-|                                    | cmp_acc_damper_2l |||
-|                                    | cmp_acc_damper_2r |||
-|                                    | cmp_acc_damper_3l |||
-|                                    | cmp_acc_damper_3r |||
-|                                    | cmp_acc_damper_4l |||
-|                                    | cmp_acc_damper_4r |||
+|                                    | cmp_acc_damper_1l || [mm/s2] -> [mm/s2] |
+|                                    | cmp_acc_damper_1r || [mm/s2] -> [mm/s2] |
+|                                    | cmp_acc_damper_2l || [mm/s2] -> [mm/s2] |
+|                                    | cmp_acc_damper_2r || [mm/s2] -> [mm/s2] |
+|                                    | cmp_acc_damper_3l || [mm/s2] -> [mm/s2] |
+|                                    | cmp_acc_damper_3r || [mm/s2] -> [mm/s2] |
+|                                    | cmp_acc_damper_4l || [mm/s2] -> [mm/s2] |
+|                                    | cmp_acc_damper_4r || [mm/s2] -> [mm/s2] |
 |                                    |            |||
-|                                    | f_spring_1l |||
-|                                    | f_spring_1r |||
-|                                    | f_spring_2l |||
-|                                    | f_spring_2r |||
-|                                    | f_spring_3l |||
-|                                    | f_spring_3r |||
-|                                    | f_spring_4l |||
-|                                    | f_spring_4r |||
+|                                    | f_spring_1l || [N] -> [N] |
+|                                    | f_spring_1r || [N] -> [N] |
+|                                    | f_spring_2l || [N] -> [N] |
+|                                    | f_spring_2r || [N] -> [N] |
+|                                    | f_spring_3l || [N] -> [N] |
+|                                    | f_spring_3r || [N] -> [N] |
+|                                    | f_spring_4l || [N] -> [N] |
+|                                    | f_spring_4r || [N] -> [N] |
 |                                    |            |||
-|                                    | f_damper_1l |||
-|                                    | f_damper_1r |||
-|                                    | f_damper_2l |||
-|                                    | f_damper_2r |||
-|                                    | f_damper_3l |||
-|                                    | f_damper_3r |||
-|                                    | f_damper_4l |||
-|                                    | f_damper_4r |||
+|                                    | f_damper_1l || [N] -> [N] |
+|                                    | f_damper_1r || [N] -> [N] |
+|                                    | f_damper_2l || [N] -> [N] |
+|                                    | f_damper_2r || [N] -> [N] |
+|                                    | f_damper_3l || [N] -> [N] |
+|                                    | f_damper_3r || [N] -> [N] |
+|                                    | f_damper_4l || [N] -> [N] |
+|                                    | f_damper_4r || [N] -> [N] |
 |                                    |            |||
-|                                    | m_arb_1 |||
-|                                    | m_arb_2 |||
-|                                    | m_arb_3 |||
-|                                    | m_arb_4 |||
+|                                    | m_arb_1 || [N/m] -> [N/m] |
+|                                    | m_arb_2 || [N/m] -> [N/m] |
+|                                    | m_arb_3 || [N/m] -> [N/m] |
+|                                    | m_arb_4 || [N/m] -> [N/m] |
 |                                    |            |||
-| Vehicle Tyre Kinematics & Dynamics | kappa_whl_1l |||
-|                                    | kappa_whl_1r |||
-|                                    | kappa_whl_2l |||
-|                                    | kappa_whl_2r |||
-|                                    | kappa_whl_3l |||
-|                                    | kappa_whl_3r |||
-|                                    | kappa_whl_4l |||
-|                                    | kappa_whl_4r |||
-|                                    | alpha_whl_1l |||
-|                                    | alpha_whl_1r |||
-|                                    | alpha_whl_2l |||
-|                                    | alpha_whl_2r |||
-|                                    | alpha_whl_3l |||
-|                                    | alpha_whl_3r |||
-|                                    | alpha_whl_4l |||
-|                                    | alpha_whl_4r |||
-|                                    | delta_whl_1l |||
-|                                    | delta_whl_1r |||
-|                                    | delta_whl_2l |||
-|                                    | delta_whl_2r |||
-|                                    | delta_whl_3l |||
-|                                    | delta_whl_3r |||
-|                                    | delta_whl_4l |||
-|                                    | delta_whl_4r |||
+| Vehicle Tyre Kinematics & Dynamics | kappa_whl_1l || [-] -> [-] |
+|                                    | kappa_whl_1r || [-] -> [-] |
+|                                    | kappa_whl_2l || [-] -> [-] |
+|                                    | kappa_whl_2r || [-] -> [-] |
+|                                    | kappa_whl_3l || [-] -> [-] |
+|                                    | kappa_whl_3r || [-] -> [-] |
+|                                    | kappa_whl_4l || [-] -> [-] |
+|                                    | kappa_whl_4r || [-] -> [-] |
+|                                    | alpha_whl_1l || [deg] -> [rad] |
+|                                    | alpha_whl_1r || [deg] -> [rad] |
+|                                    | alpha_whl_2l || [deg] -> [rad] |
+|                                    | alpha_whl_2r || [deg] -> [rad] |
+|                                    | alpha_whl_3l || [deg] -> [rad] |
+|                                    | alpha_whl_3r || [deg] -> [rad] |
+|                                    | alpha_whl_4l || [deg] -> [rad] |
+|                                    | alpha_whl_4r || [deg] -> [rad] |
+|                                    | delta_whl_1l || [deg] -> [rad] |
+|                                    | delta_whl_1r || [deg] -> [rad] |
+|                                    | delta_whl_2l || [deg] -> [rad] |
+|                                    | delta_whl_2r || [deg] -> [rad] |
+|                                    | delta_whl_3l || [deg] -> [rad] |
+|                                    | delta_whl_3r || [deg] -> [rad] |
+|                                    | delta_whl_4l || [deg] -> [rad] |
+|                                    | delta_whl_4r || [deg] -> [rad] |
 
 # Module Localization
 This Module is used to:
