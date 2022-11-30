@@ -1,0 +1,10 @@
+figure;
+subplot(2,2,1);
+plot(seconds(LateralError.Time),LateralError.value,'r','linewidth',2);
+title('横向误差');xlabel('时间/s');ylabel('m');
+subplot(2,2,2);
+plot(seconds(SteerAngle.Time),SteerAngle.value,'r','linewidth',2);
+title('方向盘转角');xlabel('时间/s');ylabel('deg');
+subplot(2,2,[3 4]);
+plot(seconds(RealSpeed.Time),RealSpeed.value,'r','linewidth',2);
+title('车辆速度');xlabel('时间/s');ylabel('m/s');

@@ -1,0 +1,7 @@
+function [x,y,yaw] = vehicle_kinetics(x,delta ,yaw ,param)
+v = param.v;
+dt = param.dt;
+x = xo + v * cos(yaw) * dt;
+y = yo + v * sin(yaw) * dt;
+yaw = yaw + v / L * tan(delta) * dt;
+end
