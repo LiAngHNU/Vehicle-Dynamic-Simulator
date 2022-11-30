@@ -69,9 +69,9 @@ plot3(alpha_Pacejka,Fzf*ones(len_Fy,1),Fy_Pacejka,'go:','LineWidth',2);
 Fx_Pacejka = interp2(kappa,Fz,Fx,kappa_Pacejka,Fzr*ones(len_Fx,1));
 subplot(2,2,3); 
 plot3(kappa_Pacejka,Fzr*ones(len_Fx,1),Fx_Pacejka,'r-','LineWidth',2);
-Bxf = +475;
-Cxf = +1.600;
-Dxf = +0.735*Fzr;
+Bxr = +475;
+Cxr = +1.600;
+Dxr = +0.735*Fzr;
 Fx_Pacejka = Dxf*sin(Cxf*atan(Bxf*kappa_Pacejka/57.3));
 subplot(2,2,3); 
 plot3(kappa_Pacejka,Fzr*ones(len_Fx,1),Fx_Pacejka,'go:','LineWidth',2);
@@ -79,9 +79,15 @@ plot3(kappa_Pacejka,Fzr*ones(len_Fx,1),Fx_Pacejka,'go:','LineWidth',2);
 Fy_Pacejka = interp2(alpha,Fz,Fy,alpha_Pacejka,Fzr*ones(len_Fy,1));
 subplot(2,2,4); 
 plot3(alpha_Pacejka,Fzr*ones(len_Fy,1),Fy_Pacejka,'r-','LineWidth',2);
-Byf = +6.875;
-Cyf = +1.625;
-Dyf = -0.725*Fzr;
+Byr = +6.875;
+Cyr = +1.625;
+Dyr = -0.725*Fzr;
 Fy_Pacejka = Dyf*sin(Cyf*atan(Byf*alpha_Pacejka/57.3));
 subplot(2,2,4); 
 plot3(alpha_Pacejka,Fzr*ones(len_Fy,1),Fy_Pacejka,'go:','LineWidth',2);
+
+Tyre_Calib = struct("Lon_Front_Coeffs",[Bxf;Cxf;Dxf],...
+                    "Lat_Front_Coeffs",[Byf;Cyf;Dyf],...
+                    "Lon_Rear_Coeffs",[Bxr;Cxr;Dxr],...
+                    "Lat_Rear_Coeffs",[Byr;Cyr;Dyr]);
+save(strcat("Configs\",Vehicle,"\",Vehicle,"_Pacejka_Tyre.mat"), "Tyre_Calib");
