@@ -43,48 +43,49 @@ surf(alpha,Fz,Fy,'FaceAlpha',0.5); view(0,0);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Simlified Pacejka Tyre Model Fitting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-kappa_Pacejka = kappa;
-alpha_Pacejka = alpha;
-Fx_Pacejka = interp2(kappa,Fz,Fx,kappa_Pacejka,Fzf*ones(len_Fx,1));
+% Front Longitudinal
+Fx_Pacejka = interp2(kappa,Fz,Fx,kappa,Fzf*ones(len_Fx,1));
 subplot(2,2,1); 
-plot3(kappa_Pacejka,Fzf*ones(len_Fx,1),Fx_Pacejka,'r-','LineWidth',2);
+plot3(kappa,Fzf*ones(len_Fx,1),Fx_Pacejka,'r-','LineWidth',2);
 Bxf = +450;
 Cxf = +1.600;
 Dxf = +0.800*Fzf;
-Fx_Pacejka = Dxf*sin(Cxf*atan(Bxf*kappa_Pacejka/57.3));
+Fx_Pacejka = Dxf*sin(Cxf*atan(Bxf*kappa/57.3));
 subplot(2,2,1); 
-plot3(kappa_Pacejka,Fzf*ones(len_Fx,1),Fx_Pacejka,'go:','LineWidth',2);
-
-Fy_Pacejka = interp2(alpha,Fz,Fy,alpha_Pacejka,Fzf*ones(len_Fy,1));
+plot3(kappa,Fzf*ones(len_Fx,1),Fx_Pacejka,'go:','LineWidth',2);
+% Front Lateral
+Fy_Pacejka = interp2(alpha,Fz,Fy,alpha,Fzf*ones(len_Fy,1));
 subplot(2,2,2); 
-plot3(alpha_Pacejka,Fzf*ones(len_Fy,1),Fy_Pacejka,'r-','LineWidth',2);
+plot3(alpha,Fzf*ones(len_Fy,1),Fy_Pacejka,'r-','LineWidth',2);
 Byf = +6.875;
 Cyf = +1.625;
 Dyf = -0.775*Fzf;
-Fy_Pacejka = Dyf*sin(Cyf*atan(Byf*alpha_Pacejka/57.3));
+Fy_Pacejka = Dyf*sin(Cyf*atan(Byf*alpha/57.3));
 subplot(2,2,2); 
-plot3(alpha_Pacejka,Fzf*ones(len_Fy,1),Fy_Pacejka,'go:','LineWidth',2);
-
-Fx_Pacejka = interp2(kappa,Fz,Fx,kappa_Pacejka,Fzr*ones(len_Fx,1));
+plot3(alpha,Fzf*ones(len_Fy,1),Fy_Pacejka,'go:','LineWidth',2);
+% Rear Longitudinal
+Fx_Pacejka = interp2(kappa,Fz,Fx,kappa,Fzr*ones(len_Fx,1));
 subplot(2,2,3); 
-plot3(kappa_Pacejka,Fzr*ones(len_Fx,1),Fx_Pacejka,'r-','LineWidth',2);
+plot3(kappa,Fzr*ones(len_Fx,1),Fx_Pacejka,'r-','LineWidth',2);
 Bxr = +450;
 Cxr = +1.600;
 Dxr = +0.825*Fzr;
-Fx_Pacejka = Dxr*sin(Cxr*atan(Bxr*kappa_Pacejka/57.3));
+Fx_Pacejka = Dxr*sin(Cxr*atan(Bxr*kappa/57.3));
 subplot(2,2,3); 
-plot3(kappa_Pacejka,Fzr*ones(len_Fx,1),Fx_Pacejka,'go:','LineWidth',2);
-
-Fy_Pacejka = interp2(alpha,Fz,Fy,alpha_Pacejka,Fzr*ones(len_Fy,1));
+plot3(kappa,Fzr*ones(len_Fx,1),Fx_Pacejka,'go:','LineWidth',2);
+% Rear Lateral
+Fy_Pacejka = interp2(alpha,Fz,Fy,alpha,Fzr*ones(len_Fy,1));
 subplot(2,2,4); 
-plot3(alpha_Pacejka,Fzr*ones(len_Fy,1),Fy_Pacejka,'r-','LineWidth',2);
+plot3(alpha,Fzr*ones(len_Fy,1),Fy_Pacejka,'r-','LineWidth',2);
 Byr = +6.875;
 Cyr = +1.625;
 Dyr = -0.800*Fzr;
-Fy_Pacejka = Dyr*sin(Cyr*atan(Byr*alpha_Pacejka/57.3));
+Fy_Pacejka = Dyr*sin(Cyr*atan(Byr*alpha/57.3));
 subplot(2,2,4); 
-plot3(alpha_Pacejka,Fzr*ones(len_Fy,1),Fy_Pacejka,'go:','LineWidth',2);
-
+plot3(alpha,Fzr*ones(len_Fy,1),Fy_Pacejka,'go:','LineWidth',2);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Save Results %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Tyre_Calib = struct("Lon_Front_Coeffs",[Bxf;Cxf;Dxf],...
                     "Lat_Front_Coeffs",[Byf;Cyf;Dyf],...
                     "Lon_Rear_Coeffs",[Bxr;Cxr;Dxr],...
