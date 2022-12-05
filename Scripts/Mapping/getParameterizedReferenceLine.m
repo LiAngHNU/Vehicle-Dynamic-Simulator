@@ -102,8 +102,8 @@ Yl = Y + Wl*cos(Tht);
 Xr = X + Wr*sin(Tht);
 Yr = Y - Wr*cos(Tht);
 for i = 2:1:nD
-    Sl = sqrt((Xl(i)-Xl(i-1))^2+(Yl(i)-Yl(i-1))^2) + Sl(i-1);
-    Sr = sqrt((Xr(i)-Xr(i-1))^2+(Yr(i)-Yr(i-1))^2) + Sr(i-1);
+    Sl(i) = sqrt((Xl(i)-Xl(i-1))^2+(Yl(i)-Yl(i-1))^2) + Sl(i-1);
+    Sr(i) = sqrt((Xr(i)-Xr(i-1))^2+(Yr(i)-Yr(i-1))^2) + Sr(i-1);
 end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Save RefLine %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -128,7 +128,7 @@ RefLineInfo.dKpa = dKpa;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Visualize RefLine Info %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-subplot(2,3,1); hold on;
+subplot(2,3,1); hold on; axis equal;
 plot(RefLineInfo.X,RefLineInfo.Y,'k');
 plot(RefLineInfo.Xl,RefLineInfo.Yl,'r');
 plot(RefLineInfo.Xr,RefLineInfo.Yr,'r');
@@ -149,3 +149,8 @@ subplot(2,3,5); hold on;
 plot(RefLineInfo.S,RefLineInfo.Kpa);
 plot(RefLineInfo.S,RefLineInfo.dKpa);
 legend('kappa', 'dkappa');
+subplot(2,3,6); hold on; grid on; view(45,45);
+plot3(RefLineInfo.X,RefLineInfo.Y,zeros(nD,1),'k');
+plot3(RefLineInfo.Xl,RefLineInfo.Yl,zeros(nD,1),'r');
+plot3(RefLineInfo.Xr,RefLineInfo.Yr,zeros(nD,1),'r');
+plot3(RefLineInfo.X,RefLineInfo.Y,RefLineInfo.S,'k');
