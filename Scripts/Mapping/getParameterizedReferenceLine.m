@@ -26,6 +26,12 @@ T = zeros(nD,1);
 S = zeros(nD,1);
 X = zeros(nD,1);
 Y = zeros(nD,1);
+Sl = zeros(nD,1);
+Xl = zeros(nD,1);
+Yl = zeros(nD,1);
+Sr = zeros(nD,1);
+Xr = zeros(nD,1);
+Yr = zeros(nD,1);
 Bnk = zeros(nD,1);
 Slp = zeros(nD,1);
 Tht = zeros(nD,1);
@@ -95,11 +101,15 @@ Xl = X - Wl*sin(Tht);
 Yl = Y + Wl*cos(Tht);
 Xr = X + Wr*sin(Tht);
 Yr = Y - Wr*cos(Tht);
+for i = 2:1:nD
+    Sl = sqrt((Xl(i)-Xl(i-1))^2+(Yl(i)-Yl(i-1))^2) + Sl(i-1);
+    Sr = sqrt((Xr(i)-Xr(i-1))^2+(Yr(i)-Yr(i-1))^2) + Sr(i-1);
+end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Save RefLine %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 RefLineInfo = table(Id, T, S, X, Y, Bnk, Slp, Tht, Kpa, dX, dY,...
-                    dBnk, dSlp, dTht, dKpa, Xl, Yl, Xr, Yr);
+                    dBnk, dSlp, dTht, dKpa, Sl, Xl, Yl, Sr, Xr, Yr);
 RefLineInfo.Id = Id;
 RefLineInfo.T = T;
 RefLineInfo.S = S;
