@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Batch Matrix`3 vehicles and 3 procedures`
+
+PARSFILE Runs\Run_16409b78-1c6e-45e9-9fe7-adff5d6c27d7.par
+#BlueLink0 TruckSim Run Control`Batch Matrix Template` Extended Models` , Baseline run`Run_16409b78-1c6e-45e9-9fe7-adff5d6c27d7
+
+PARSFILE Procedures\Proc_06bad3af-f1f7-4777-8c60-a4f93f4f150a.par
+#BlueLink1 Procedures`Straight Driving, Constant Speed` Driving` , Library for Factor A`Proc_06bad3af-f1f7-4777-8c60-a4f93f4f150a
+
+PARSFILE Procedures\Proc_fdccaa91-6052-4816-adad-68e3562e08c5.par
+#BlueLink2 Procedures`DLC @ 50 km/h` Handling Tests` , Baseline run`Proc_fdccaa91-6052-4816-adad-68e3562e08c5
+
+PARSFILE Procedures\Proc_e35a35e1-8d82-4a47-9b25-634f0f787e24.par
+#BlueLink3 Procedures`Four Small Bumps, 0.3 m incr. elev.` Ride Tests` , Baseline run`Proc_e35a35e1-8d82-4a47-9b25-634f0f787e24
+
+PARSFILE Vehicles\Lead_2a\Lead2a_9e80118f-ce1c-4f40-8d35-27feac9424e2.par
+#BlueLink19 Vehicle: Lead Unit with 2 Axles`Conv. Van (7-spd. MT)` 2A Conventional Van` , Library for Factor B`Lead2a_9e80118f-ce1c-4f40-8d35-27feac9424e2
+
+PARSFILE Vehicles\Lead_2a\Lead2a_a143789d-2d94-4635-a327-9c017c762b21.par
+#BlueLink20 Vehicle: Lead Unit with 2 Axles`Euro Van` Large European Van` , Baseline run`Lead2a_a143789d-2d94-4635-a327-9c017c762b21
+
+PARSFILE Vehicles\Lead_2a\Lead2a_a238c97f-f29c-4884-a720-fabe99204ce5.par
+#BlueLink21 Vehicle: Lead Unit with 2 Axles`2A Euro Cab (I_S)` 2A Tractors` , Baseline run`Lead2a_a238c97f-f29c-4884-a720-fabe99204ce5
+
+
+
+LOG_ENTRY Used Dataset: Batch Matrix; 3 vehicles and 3 procedures
+#Library : Batch Matrix
+#DataSet : 3 vehicles and 3 procedures
+#Category: 
+#FileID  : Matrix_c68bccaa-b0d3-41a0-ae84-82b7399188b6
+#Product : TruckSim 2020.1
+#VehCode Batch Matrix
+
+END

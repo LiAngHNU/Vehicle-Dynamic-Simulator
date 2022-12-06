@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Parallel Solvers`City Environment (4 Trucks)`ADAS and Active Safety
+PARSFILE Runs\Run_43667604-72f6-4753-b3e8-5669faf14c4d.par
+#BlueLink0 TruckSim Run Control`City (4 Parallel Solvers): Truck 1` * TS 2020.1 - Multiple Vehicles` , Vehicle 1:`Run_43667604-72f6-4753-b3e8-5669faf14c4d
+
+PARSFILE Runs\Run_7c30f1e9-0af4-46c6-bbad-59804c7de169.par
+#BlueLink1 TruckSim Run Control`City (4 Parallel Solvers): Truck 2` * TS 2020.1 - Multiple Vehicles` , Vehicle 2:`Run_7c30f1e9-0af4-46c6-bbad-59804c7de169
+
+PARSFILE Runs\Run_5d8195c3-1800-4480-aacd-0f6a6b14488d.par
+#BlueLink2 TruckSim Run Control`City (4 Parallel Solvers): Truck 3` * TS 2020.1 - Multiple Vehicles` , Vehicle 3:`Run_5d8195c3-1800-4480-aacd-0f6a6b14488d
+
+PARSFILE Runs\Run_cb21c5ea-0b9c-4ef3-b5b9-9bf1841df4b0.par
+#BlueLink3 TruckSim Run Control`City (4 Parallel Solvers): Truck 4` * TS 2020.1 - Multiple Vehicles` , Vehicle 4:`Run_cb21c5ea-0b9c-4ef3-b5b9-9bf1841df4b0
+
+#RingCtrl0 0
+*RUN_PLATFORM 0
+#RingCtrl1 4
+*SHOW_LINK 4
+
+#EMBEDDED_NOTES
+#To run this example in Windows:
+#1) click Open Model or Generate FMU
+#2) in Simulink, click the run button
+#3) review results from the last vehicle
+#
+#V: Video
+#P: Plot
+#
+#Each vehicle uses a shared simulink model that leverages parallel solvers to simulate the vehicles across multiple TruckSim Runs.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Parallel Solvers; { ADAS and Active Safety } City Environment (4 Trucks)
+#Library : Parallel Solvers
+#DataSet : City Environment (4 Trucks)
+#Category: ADAS and Active Safety
+#FileID  : MVeh_1410b350-3d86-4c3b-ba3c-94e929489b08
+#Product : TruckSim 2020.1
+#VehCode mVeh
+
+END

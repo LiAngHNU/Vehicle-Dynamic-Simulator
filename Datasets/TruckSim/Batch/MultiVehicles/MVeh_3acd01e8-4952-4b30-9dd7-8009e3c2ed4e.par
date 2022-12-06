@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Parallel Solvers`Five-Truck Platoon`Platooning
+PARSFILE Runs\Run_9eec49cb-86ac-4fb8-a433-be38fbc6f74a.par
+#BlueLink0 TruckSim Run Control`Five-Vehicle Platoon: Truck 1` Multiple Vehicles` , Vehicle 1:`Run_9eec49cb-86ac-4fb8-a433-be38fbc6f74a
+
+PARSFILE Runs\Run_1ad167fe-8b53-4cb8-99b4-ad852ff4770c.par
+#BlueLink1 TruckSim Run Control`Five-Vehicle Platoon: Truck 2` Multiple Vehicles` , Vehicle 2:`Run_1ad167fe-8b53-4cb8-99b4-ad852ff4770c
+
+PARSFILE Runs\Run_5730e988-b4d4-4772-be7d-4533cb16c5b7.par
+#BlueLink2 TruckSim Run Control`Five-Vehicle Platoon: Truck 3` Multiple Vehicles` , Vehicle 3:`Run_5730e988-b4d4-4772-be7d-4533cb16c5b7
+
+PARSFILE Runs\Run_e61f3c51-ae13-4e75-9fb1-b57c89a9a873.par
+#BlueLink3 TruckSim Run Control`Five-Vehicle Platoon: Truck 4` Multiple Vehicles` , Vehicle 4:`Run_e61f3c51-ae13-4e75-9fb1-b57c89a9a873
+
+PARSFILE Runs\Run_fa81cb4e-d4ef-40f0-8337-1f36cd000779.par
+#BlueLink4 TruckSim Run Control`Five-Vehicle Platoon: Truck 5` Multiple Vehicles` , Vehicle 5:`Run_fa81cb4e-d4ef-40f0-8337-1f36cd000779
+
+#RingCtrl0 0
+*RUN_PLATFORM 0
+#RingCtrl1 5
+*SHOW_LINK 5
+
+#EMBEDDED_NOTES
+#To run this example in Windows:
+#1) click Open Model or Generate FMU
+#2) in Simulink, click the run button
+#3) review results from Vehicle 5
+#
+#V: Video
+#P: Plot
+#
+#Each vehicle in the platoon uses a shared simulink model, that leverages parallel solvers to simulate the vehicles across multiple TruckSim Runs.
+#
+#In this example, each vehicle also has painted tire paths, to show the paths of the vehicle.
+#
+#The vehicles following the lead vehicle have negative station values so that they may properly obtain steering reference values from the vehicle(s) in front of them
+#
+#Up to 20 vehicles can be used with this multiple solver example, however you will need enough parallel licenses more than two vehicles
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Parallel Solvers; { Platooning } Five-Truck Platoon
+#Library : Parallel Solvers
+#DataSet : Five-Truck Platoon
+#Category: Platooning
+#FileID  : MVeh_3acd01e8-4952-4b30-9dd7-8009e3c2ed4e
+#Product : TruckSim 2020.1
+#VehCode mVeh
+
+END

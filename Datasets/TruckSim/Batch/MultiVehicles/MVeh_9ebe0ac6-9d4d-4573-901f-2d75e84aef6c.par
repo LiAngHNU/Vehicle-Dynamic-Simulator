@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Parallel Solvers`Two-Car Platoon`Platooning
+PARSFILE Runs\Run_031a05b6-c2e4-4b43-8680-9387e6922e6c.par
+#BlueLink0 TruckSim Run Control`Two-Vehicle Platoon: Lead` Multiple Vehicles` , Vehicle 1:`Run_031a05b6-c2e4-4b43-8680-9387e6922e6c
+
+PARSFILE Runs\Run_fc1cc171-bb38-4c0c-a804-1b7614ba1778.par
+#BlueLink1 TruckSim Run Control`Two-Vehicle Platoon: Last` Multiple Vehicles` , Vehicle 2:`Run_fc1cc171-bb38-4c0c-a804-1b7614ba1778
+
+#RingCtrl0 0
+*RUN_PLATFORM 0
+#RingCtrl1 2
+*SHOW_LINK 2
+
+#EMBEDDED_NOTES
+#To run this example in Windows:
+#1) click Open Model or Generate FMU
+#2) in Simulink, click the run button
+#3) review results from Vehicle 2
+#
+#V: Video
+#P: Plot
+#
+#Each vehicle in the platoon uses a shared simulink model, that leverages parallel solvers to simulate the vehicles across multiple TruckSim Runs.
+#
+#In this example, each vehicle also has painted tire paths, to show the paths of the vehicle.
+#
+#The vehicles following the lead vehicle have negative station values so that they may properly obtain steering reference values from the vehicle(s) in front of them
+#
+#Up to 20 vehicles can be used with this multiple solver example, however you will need enough parallel licenses more than two vehicles
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Parallel Solvers; { Platooning } Two-Car Platoon
+#Library : Parallel Solvers
+#DataSet : Two-Car Platoon
+#Category: Platooning
+#FileID  : MVeh_9ebe0ac6-9d4d-4573-901f-2d75e84aef6c
+#Product : TruckSim 2020.1
+#VehCode mVeh
+
+END

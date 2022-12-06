@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Parallel Solvers`Adaptive Cruise Control`ADAS and Active Safety
+PARSFILE Runs\Run_847d4cba-de30-43e5-821a-fbd87c1c71e8.par
+#BlueLink0 TruckSim Run Control`Radar Active Cruise: First Truck` Simulink and LabVIEW` , Vehicle 1:`Run_847d4cba-de30-43e5-821a-fbd87c1c71e8
+
+PARSFILE Runs\Run_fff10c6c-446c-4559-9a1e-7b6e3a4020e6.par
+#BlueLink1 TruckSim Run Control`Radar Active Cruise: Second Truck` Simulink and LabVIEW` , Vehicle 2:`Run_fff10c6c-446c-4559-9a1e-7b6e3a4020e6
+
+PARSFILE Runs\Run_5730e988-b4d4-4772-be7d-4533cb16c5b7.par
+#BlueLink2 TruckSim Run Control`Five-Vehicle Platoon: Truck 3` Multiple Vehicles` , Vehicle 3:`Run_5730e988-b4d4-4772-be7d-4533cb16c5b7
+
+PARSFILE Runs\Run_e61f3c51-ae13-4e75-9fb1-b57c89a9a873.par
+#BlueLink3 TruckSim Run Control`Five-Vehicle Platoon: Truck 4` Multiple Vehicles` , Vehicle 4:`Run_e61f3c51-ae13-4e75-9fb1-b57c89a9a873
+
+PARSFILE Runs\Run_fa81cb4e-d4ef-40f0-8337-1f36cd000779.par
+#BlueLink4 TruckSim Run Control`Five-Vehicle Platoon: Truck 5` Multiple Vehicles` , Vehicle 5:`Run_fa81cb4e-d4ef-40f0-8337-1f36cd000779
+
+#RingCtrl0 0
+*RUN_PLATFORM 0
+#RingCtrl1 2
+*SHOW_LINK 2
+
+#EMBEDDED_NOTES
+#To run this example in Windows:
+#1) click Open Model or Generate FMU
+#2) in Simulink, click the run button
+#3) review results from the last vehicle
+#
+#V: Video
+#P: Plot
+#
+#Each vehicle in the platoon uses a shared simulink model, that leverages parallel solvers to simulate the vehicles across multiple TruckSim Runs.
+#
+#The vehicles following the lead vehicle have negative station values so that they may properly obtain steering reference values from the vehicle(s) in front of them
+#
+#Up to 20 vehicles can be used with this multiple solver example, however you will need enough parallel licenses more than two vehicles
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Parallel Solvers; { ADAS and Active Safety } Adaptive Cruise Control
+#Library : Parallel Solvers
+#DataSet : Adaptive Cruise Control
+#Category: ADAS and Active Safety
+#FileID  : MVeh_b98af3c7-bbe4-4e90-a29e-e89d23b343ba
+#Product : TruckSim 2020.1
+#VehCode mVeh
+
+END
