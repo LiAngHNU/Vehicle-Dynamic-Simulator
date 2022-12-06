@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Aerodynamics: Fx (Drag) Coef. vs. Aero Slip`Spline: 0.30 at 0 deg.`Spline Interpolation
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+FX_AERO_SHAPING_TABLE SPLINE_FLAT
+-180, -0.3
+-160, -0.45
+-90, 0
+-20, 0.325
+0, 0.3
+20, 0.325
+90, 0
+160, -0.45
+180, -0.3
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#The drag coefficient typically increases a few percent as the vehicle develops an aerodynamic sidelsip angle, peaking around 20 degrees.
+#
+#Drag reduces as sidelip increases because the component of the airspeed in the vehicle X direction reduces.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Aerodynamics: Fx (Drag) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 0.30 at 0 deg.
+#Library : Aerodynamics: Fx (Drag) Coef. vs. Aero Slip
+#DataSet : Spline: 0.30 at 0 deg.
+#Category: Spline Interpolation
+#FileID  : AirCFx_4678f3f7-9e3d-4163-b657-521da316c4b2
+#Product : TruckSim 2020.1
+#VehCode Drag vs. Aero Slip
+
+END

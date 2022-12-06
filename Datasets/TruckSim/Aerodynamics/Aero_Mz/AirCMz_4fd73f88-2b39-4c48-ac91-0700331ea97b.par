@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip`Spline: 0.2 at 35 deg.`Spline Interpolation
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+MZ_AERO_SHAPING_TABLE SPLINE_FLAT
+-180, 0
+-135, 0.2
+-75, 0
+-35, -0.2
+0, 0
+35, 0.2
+75, 0
+135, -0.2
+180, 0
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#The aerodynamic moments relate the location of the aerodynamic center of pressure to the location of the aerodynamic reference point.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 0.2 at 35 deg.
+#Library : Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip
+#DataSet : Spline: 0.2 at 35 deg.
+#Category: Spline Interpolation
+#FileID  : AirCMz_4fd73f88-2b39-4c48-ac91-0700331ea97b
+#Product : TruckSim 2020.1
+#VehCode Mz vs. Aero Slip
+
+END

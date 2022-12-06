@@ -1,0 +1,24 @@
+PARSFILE
+#FullDataName Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip`Spline: 0.2 at 0 deg., 0.38 at 25 deg.`Spline Interpolation
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+MY_AERO_SHAPING_TABLE SPLINE_FLAT
+-25, 0.38
+0, 0.2
+25, 0.38
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 0.2 at 0 deg., 0.38 at 25 deg.
+#Library : Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip
+#DataSet : Spline: 0.2 at 0 deg., 0.38 at 25 deg.
+#Category: Spline Interpolation
+#FileID  : AirCMy_3f703848-1a7e-469d-98c7-d0008061cf15
+#Product : TruckSim 2020.1
+#VehCode My vs. Aero Slip
+
+END

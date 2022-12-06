@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Aerodynamics: Fx (Drag) Coef. vs. Aero Slip`Cab-Over-Engine`Tractor
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+FX_AERO_SHAPING_TABLE SPLINE_FLAT
+-20, 1.26
+-15, 1.17
+-10, 0.97
+-5, 0.82
+0, 0.69
+5, 0.82
+10, 0.97
+15, 1.17
+20, 1.26
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Aerodynamics: Fx (Drag) Coef. vs. Aero Slip; { Tractor } Cab-Over-Engine
+#Library : Aerodynamics: Fx (Drag) Coef. vs. Aero Slip
+#DataSet : Cab-Over-Engine
+#Category: Tractor
+#FileID  : AirCFx_a36061d3-6a33-434f-a7ea-cf33ddf6e273
+#Product : TruckSim 2020.1
+#VehCode Drag vs. Aero Slip
+
+END

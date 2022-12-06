@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Aerodynamics: Basic`Conv. Cab w/o Fairings, 4.3 m Ref.`Conventional Cab
+#CheckBox0 0    
+
+#RingCtrl0 2
+#RingCtrl1 2
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 2
+#RingCtrl5 2
+PARSFILE Aerodynamics\Aero_Fx\AirCFx_a36061d3-6a33-434f-a7ea-cf33ddf6e273.par
+#BlueLink0 Aerodynamics: Fx (Drag) Coef. vs. Aero Slip`Cab-Over-Engine` Tractor` , CFx`AirCFx_a36061d3-6a33-434f-a7ea-cf33ddf6e273
+
+PARSFILE Aerodynamics\Aero_Fy\AirCFy_92f3b9ec-f139-40d6-a3e6-dd804c77bbd4.par
+#BlueLink1 Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip`Linear: 0.082 1/deg.` Linear Interpolation` , CFy`AirCFy_92f3b9ec-f139-40d6-a3e6-dd804c77bbd4
+
+PARSFILE Aerodynamics\Aero_Fz\AirCFz_732f6c6c-06d7-4b6e-83fe-6c4f7aebe517.par
+#BlueLink2 Aerodynamics: Fz (Lift) Coef. vs. Aero Slip`Spline: -0.15 at 0 deg.` Spline Interpolation` , CFz`AirCFz_732f6c6c-06d7-4b6e-83fe-6c4f7aebe517
+
+PARSFILE Aerodynamics\Aero_Mx\AirCMx_a4968f49-cff8-48bd-a907-e3cbe0931823.par
+#BlueLink3 Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip`Spline: 0.064 1/deg.` Spline Interpolation` , CMx`AirCMx_a4968f49-cff8-48bd-a907-e3cbe0931823
+
+PARSFILE Aerodynamics\Aero_My\AirCMy_3f703848-1a7e-469d-98c7-d0008061cf15.par
+#BlueLink4 Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip`Spline: 0.2 at 0 deg., 0.38 at 25 deg.` Spline Interpolation` , CMy`AirCMy_3f703848-1a7e-469d-98c7-d0008061cf15
+
+PARSFILE Aerodynamics\Aero_Mz\AirCMz_69e3192e-3488-492b-a7e2-ecd10e075e83.par
+#BlueLink5 Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip`Linear: 0.012 1/deg.` Linear Interpolation` , CMz`AirCMz_69e3192e-3488-492b-a7e2-ecd10e075e83
+
+X_REF_AERO -2150
+Y_REF_AERO 0
+H_REF_AERO 0
+L_REF_AERO 4300
+AREA_AERO 7.3
+D_AIR 1.206
+
+#EMBEDDED_NOTES
+#According to SAE convention:
+#
+#The aerodynamic reference point is located at the midpoint of the wheelbase, the midpoint of the track, and at ground level.
+#
+#The aerodynamic reference length is equal to the vehicle's wheelbase.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Aerodynamics: Basic; { Conventional Cab } Conv. Cab w/o Fairings, 4.3 m Ref.
+#Library : Aerodynamics: Basic
+#DataSet : Conv. Cab w/o Fairings, 4.3 m Ref.
+#Category: Conventional Cab
+#FileID  : Aero_1f49c347-a178-4157-8841-bff0ea1085af
+#Product : TruckSim 2020.1
+#VehCode Aerodynamics
+
+END

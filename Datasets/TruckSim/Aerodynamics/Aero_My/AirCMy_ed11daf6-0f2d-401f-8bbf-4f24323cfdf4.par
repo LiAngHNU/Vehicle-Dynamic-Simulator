@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip`Spline: 0.15 at 0 deg.`Spline Interpolation
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+MY_AERO_SHAPING_TABLE SPLINE_FLAT
+-180, -0.17
+-160, -0.25
+-90, 0
+-20, 0.17
+0, 0.15
+20, 0.17
+90, 0
+160, -0.25
+180, -0.17
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#The aerodynamic moments relate the location of the aerodynamic center of pressure to the location of the aerodynamic reference point.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 0.15 at 0 deg.
+#Library : Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip
+#DataSet : Spline: 0.15 at 0 deg.
+#Category: Spline Interpolation
+#FileID  : AirCMy_ed11daf6-0f2d-401f-8bbf-4f24323cfdf4
+#Product : TruckSim 2020.1
+#VehCode My vs. Aero Slip
+
+END

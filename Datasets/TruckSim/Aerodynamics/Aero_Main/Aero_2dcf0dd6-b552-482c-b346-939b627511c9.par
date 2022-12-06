@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Aerodynamics: Basic`No Aerodynamics`
+#CheckBox0 0    
+
+#RingCtrl0 2
+#RingCtrl1 2
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 2
+#RingCtrl5 2
+PARSFILE Aerodynamics\Aero_Fx\AirCFx_3b13e364-8c16-4b9a-a6fe-51ab8a6b26b0.par
+#BlueLink0 Aerodynamics: Fx (Drag) Coef. vs. Aero Slip`CFx = 0` ` , CFx`AirCFx_3b13e364-8c16-4b9a-a6fe-51ab8a6b26b0
+
+PARSFILE Aerodynamics\Aero_Fy\AirCFy_75367110-1cb1-441b-8cfa-78a1f5c47c9a.par
+#BlueLink1 Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip`CFy = 0` ` , CFy`AirCFy_75367110-1cb1-441b-8cfa-78a1f5c47c9a
+
+PARSFILE Aerodynamics\Aero_Fz\AirCFz_8c216521-1034-4f2a-9bf1-e33ace68974f.par
+#BlueLink2 Aerodynamics: Fz (Lift) Coef. vs. Aero Slip`CFz = 0` ` , CFz`AirCFz_8c216521-1034-4f2a-9bf1-e33ace68974f
+
+PARSFILE Aerodynamics\Aero_Mx\AirCMx_f6aa5294-1980-4d91-840e-b03a0a7021d3.par
+#BlueLink3 Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip`CMx = 0` ` , CMx`AirCMx_f6aa5294-1980-4d91-840e-b03a0a7021d3
+
+PARSFILE Aerodynamics\Aero_My\AirCMy_d58fb350-48b7-46c3-8f7c-d47d539606c2.par
+#BlueLink4 Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip`CMy = 0` ` , CMy`AirCMy_d58fb350-48b7-46c3-8f7c-d47d539606c2
+
+PARSFILE Aerodynamics\Aero_Mz\AirCMz_6aa9dd11-f754-4320-89b3-570ad1ed5e1b.par
+#BlueLink5 Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip`CMz = 0` ` , CMz`AirCMz_6aa9dd11-f754-4320-89b3-570ad1ed5e1b
+
+X_REF_AERO 0
+Y_REF_AERO 0
+H_REF_AERO 0
+L_REF_AERO 0
+AREA_AERO 0
+D_AIR 1.206
+
+#EMBEDDED_NOTES
+#According to SAE convention:
+#
+#The aerodynamic reference point is located at the midpoint of the wheelbase, the midpoint of the track, and at ground level.
+#
+#The aerodynamic reference length is equal to the vehicle's wheelbase.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Aerodynamics: Basic; No Aerodynamics
+#Library : Aerodynamics: Basic
+#DataSet : No Aerodynamics
+#Category: 
+#FileID  : Aero_2dcf0dd6-b552-482c-b346-939b627511c9
+#Product : TruckSim 2020.1
+#VehCode Aerodynamics
+
+END

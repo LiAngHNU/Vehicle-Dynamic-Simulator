@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Aerodynamics: Basic`Pickup, Full Size Aero`Pickup Trucks
+#CheckBox0 0    
+
+#RingCtrl0 2
+#RingCtrl1 2
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 2
+#RingCtrl5 2
+PARSFILE Aerodynamics\Aero_Fx\AirCFx_4678f3f7-9e3d-4163-b657-521da316c4b2.par
+#BlueLink0 Aerodynamics: Fx (Drag) Coef. vs. Aero Slip`Spline: 0.30 at 0 deg.` Spline Interpolation` , CFx`AirCFx_4678f3f7-9e3d-4163-b657-521da316c4b2
+
+PARSFILE Aerodynamics\Aero_Fy\AirCFy_541d031d-d03e-41fb-ad62-bc066e42091c.par
+#BlueLink1 Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip`Spline: 2 at 90 deg.` Spline Interpolation` , CFy`AirCFy_541d031d-d03e-41fb-ad62-bc066e42091c
+
+PARSFILE Aerodynamics\Aero_Fz\AirCFz_280a5089-d129-4800-84cb-13b26ff4da20.par
+#BlueLink2 Aerodynamics: Fz (Lift) Coef. vs. Aero Slip`Spline: 0.18 at 0 deg.` Spline Interpolation` , CFz`AirCFz_280a5089-d129-4800-84cb-13b26ff4da20
+
+PARSFILE Aerodynamics\Aero_Mx\AirCMx_77c19958-4dfa-4656-867e-be2bddb88f1f.par
+#BlueLink3 Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip`Spline: 0.3 at 90 deg.` Spline Interpolation` , CMx`AirCMx_77c19958-4dfa-4656-867e-be2bddb88f1f
+
+PARSFILE Aerodynamics\Aero_My\AirCMy_ed11daf6-0f2d-401f-8bbf-4f24323cfdf4.par
+#BlueLink4 Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip`Spline: 0.15 at 0 deg.` Spline Interpolation` , CMy`AirCMy_ed11daf6-0f2d-401f-8bbf-4f24323cfdf4
+
+PARSFILE Aerodynamics\Aero_Mz\AirCMz_4fd73f88-2b39-4c48-ac91-0700331ea97b.par
+#BlueLink5 Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip`Spline: 0.2 at 35 deg.` Spline Interpolation` , CMz`AirCMz_4fd73f88-2b39-4c48-ac91-0700331ea97b
+
+X_REF_AERO -2000
+Y_REF_AERO 0
+H_REF_AERO 0
+L_REF_AERO 4000
+AREA_AERO 3.2
+D_AIR 1.206
+
+#EMBEDDED_NOTES
+#According to SAE convention:
+#
+#The aerodynamic reference point is located at the midpoint of the wheelbase, the midpoint of the track, and at ground level.
+#
+#The aerodynamic reference length is equal to the vehicle's wheelbase.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Aerodynamics: Basic; { Pickup Trucks } Pickup, Full Size Aero
+#Library : Aerodynamics: Basic
+#DataSet : Pickup, Full Size Aero
+#Category: Pickup Trucks
+#FileID  : Aero_b2fc818b-2ec7-4d9b-b486-fc66db328774
+#Product : TruckSim 2020.1
+#VehCode Aerodynamics
+
+END

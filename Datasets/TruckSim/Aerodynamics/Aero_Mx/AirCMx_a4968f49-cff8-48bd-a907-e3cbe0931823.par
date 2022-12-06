@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip`Spline: 0.064 1/deg.`Spline Interpolation
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+MX_AERO_SHAPING_TABLE SPLINE_FLAT
+-25, -1.6
+-20, -1.2
+-15, -0.85
+-10, -0.5
+-5, -0.25
+0, 0
+5, 0.25
+10, 0.5
+15, 0.85
+20, 1.2
+25, 1.6
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 0.064 1/deg.
+#Library : Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip
+#DataSet : Spline: 0.064 1/deg.
+#Category: Spline Interpolation
+#FileID  : AirCMx_a4968f49-cff8-48bd-a907-e3cbe0931823
+#Product : TruckSim 2020.1
+#VehCode Mx vs. Aero Slip
+
+END

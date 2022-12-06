@@ -1,0 +1,23 @@
+PARSFILE
+#FullDataName Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip`Linear: 0.012 1/deg.`Linear Interpolation
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+MZ_AERO_SHAPING_TABLE LINEAR_FLAT
+-25, -0.3
+25, 0.3
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip; { Linear Interpolation } Linear: 0.012 1/deg.
+#Library : Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip
+#DataSet : Linear: 0.012 1/deg.
+#Category: Linear Interpolation
+#FileID  : AirCMz_69e3192e-3488-492b-a7e2-ecd10e075e83
+#Product : TruckSim 2020.1
+#VehCode Mz vs. Aero Slip
+
+END

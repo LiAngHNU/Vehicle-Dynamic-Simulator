@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Aerodynamics: Fz (Lift) Coef. vs. Aero Slip`Spline: -0.15 at 0 deg.`Spline Interpolation
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+FZ_AERO_SHAPING_TABLE SPLINE_FLAT
+-25, 0.85
+-20, 0.55
+-15, 0.3
+-10, 0.05
+-5, -0.12
+0, -0.15
+5, -0.12
+10, 0.05
+15, 0.3
+20, 0.55
+25, 0.85
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Aerodynamics: Fz (Lift) Coef. vs. Aero Slip; { Spline Interpolation } Spline: -0.15 at 0 deg.
+#Library : Aerodynamics: Fz (Lift) Coef. vs. Aero Slip
+#DataSet : Spline: -0.15 at 0 deg.
+#Category: Spline Interpolation
+#FileID  : AirCFz_732f6c6c-06d7-4b6e-83fe-6c4f7aebe517
+#Product : TruckSim 2020.1
+#VehCode Lift vs. Aero Slip
+
+END
