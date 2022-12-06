@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Brakes: Torque vs. Rotor Temperature`Fr. Torque vs. Pressure & Temp`Large Euro Van
+#CheckBox0 0    
+
+#RingCtrl0 CARPET
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Rotor temperature (C)
+*3D_YLabel Brake cylinder pressure (MPa)
+*3D_ZLabel Brake torque (N-m)
+
+#DiagramTwo0
+*3D_DATA 3, 4 ! columns x rows
+MY_BRAKE_TEMP_CARPET 2D_LINEAR
+0, 145, 320, 505
+-0.1, 0, 0, 0
+0, 0, 0, 0
+0.05, 5.51, 6.13, 4.99
+1, 551.25, 612.5, 498.75
+ENDTABLE
+
+
+
+#EMBEDDED_NOTES
+#Brake Torque vs. Brake Cylinder Pressure and Rotor Temperature
+#
+#Push-out Pressure is represented as the initial data from 0 MPa to 0.05 MPa. Brake Torque build in this portion of the data is represented as 1% of the maximum values in this data range.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Brakes: Torque vs. Rotor Temperature; { Large Euro Van } Fr. Torque vs. Pressure & Temp
+#Library : Brakes: Torque vs. Rotor Temperature
+#DataSet : Fr. Torque vs. Pressure & Temp
+#Category: Large Euro Van
+#FileID  : TrqTmp_6ec9a65f-1bf5-42b9-9648-adf6c83511cd
+#Product : TruckSim 2020.1
+#VehCode Brake Torque w/ Temp
+
+END

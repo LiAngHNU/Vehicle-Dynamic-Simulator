@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Brakes: Two-Wheel System`7.5 kN-m Capacity, Air (No ABS)`Air Brakes
+#CheckBox1 0    
+#RingCtrl0 0
+#RingCtrl1 2
+#RingCtrl3 1
+#RingCtrl5 1
+#RingCtrl7 0
+OPT_BK_PEDAL 0
+
+iside 1
+symbol_push <<ax_bk>> <<axle>>
+symbol_push <<side>> L
+TL_L1 0.05
+TLAG_BK 0.05
+*MY_FRIC_L 1
+MY_FRICTION 1
+*P_L1 1.0
+PBK_DL_COEFFICIENT 1.0
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_L1 0.3
+TC_BK 0.3
+OPT_BK_DYN 1
+PARSFILE Brakes\Torque\BrkTrq_3f810c68-6d66-4ac2-bb18-1b00a046f15a.par
+#BlueLink0 Brakes: Torque`7.5 kN-m, Air` Air Brakes` , Torque`BrkTrq_3f810c68-6d66-4ac2-bb18-1b00a046f15a
+
+
+OPT_ABS_CTRL 0
+
+iside 2
+symbol_set <<side>> R
+TL_L1 0.05
+TLAG_BK 0.05
+*MY_FRIC_L 1
+MY_FRICTION 1
+*P_L1 1.0
+PBK_DL_COEFFICIENT 1.0
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_L1 0.3
+TC_BK 0.3
+OPT_BK_DYN 1
+PARSFILE Brakes\Torque\BrkTrq_3f810c68-6d66-4ac2-bb18-1b00a046f15a.par
+#BlueLink0 Brakes: Torque`7.5 kN-m, Air` Air Brakes` , Torque`BrkTrq_3f810c68-6d66-4ac2-bb18-1b00a046f15a
+
+
+LOG_ENTRY Used Dataset: Brakes: Two-Wheel System; { Air Brakes } 7.5 kN-m Capacity, Air (No ABS)
+#Library : Brakes: Two-Wheel System
+#DataSet : 7.5 kN-m Capacity, Air (No ABS)
+#Category: Air Brakes
+#FileID  : Brk2W_f3287af0-7014-484a-a147-94075e00a013
+#Product : TruckSim 2020.1
+#VehCode Brakes
+
+END

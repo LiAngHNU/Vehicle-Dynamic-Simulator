@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Brakes: Torque`7.5 kN-m, Air`Air Brakes
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RadioCtrl0 0    
+
+
+#DiagramOne0
+MY_BRAKE_TABLE SPLINE
+-0.1, 0
+-0.005, 0
+0, 0
+0.005, 0
+0.01, 0
+0.015, 0
+0.02, 0
+0.025, 0
+0.0275, 0
+0.03, 0
+0.032, 0
+0.035, 0
+0.25, 1063.7
+0.55, 5010
+0.7, 7500
+ENDTABLE
+
+#EMBEDDED_NOTES
+#Brake sized for stated capacity at 0.7 MPa (100 psi).
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Brakes: Torque; { Air Brakes } 7.5 kN-m, Air
+#Library : Brakes: Torque
+#DataSet : 7.5 kN-m, Air
+#Category: Air Brakes
+#FileID  : BrkTrq_3f810c68-6d66-4ac2-bb18-1b00a046f15a
+#Product : TruckSim 2020.1
+#VehCode Brake Torque
+
+END

@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Brakes: Cooling Coefficient`Rear Brake Cooling Coefficient`Large Euro Van
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR
+#RadioCtrl0 0    
+
+#DiagramOne0
+BRAKE_COOL_TABLE LINEAR
+-1, 0.001
+0, 0.001
+50, 0.0047
+100, 0.007
+160, 0.0096
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Brakes: Cooling Coefficient; { Large Euro Van } Rear Brake Cooling Coefficient
+#Library : Brakes: Cooling Coefficient
+#DataSet : Rear Brake Cooling Coefficient
+#Category: Large Euro Van
+#FileID  : BrkCool_86f5983f-29cb-4351-b267-9a927d558d5b
+#Product : TruckSim 2020.1
+#VehCode Cooling
+
+END

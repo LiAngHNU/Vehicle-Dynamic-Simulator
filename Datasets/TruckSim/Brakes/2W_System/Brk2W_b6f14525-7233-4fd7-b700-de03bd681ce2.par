@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Brakes: Two-Wheel System`10 kN-m Capacity, Air (No ABS)`Air Brakes
+#CheckBox1 0    
+#RingCtrl0 0
+#RingCtrl1 2
+#RingCtrl3 2
+#RingCtrl5 1
+#RingCtrl7 0
+OPT_BK_PEDAL 0
+
+iside 1
+symbol_push <<ax_bk>> <<axle>>
+symbol_push <<side>> L
+TL_L1 0.05
+TLAG_BK 0.05
+*MY_FRIC_L 2
+MY_FRICTION 2
+PARSFILE Brakes\Proportioning\BrkProp_ffd0018e-81bb-4523-847e-8e3a819e588f.par
+#BlueLink4 Brakes: Proportioning / Limiting Valve`Linear: Unity Gain` Linear` , Proportioning`BrkProp_ffd0018e-81bb-4523-847e-8e3a819e588f
+
+TC_L1 0.3
+TC_BK 0.3
+OPT_BK_DYN 1
+PARSFILE Brakes\Torque\BrkTrq_ab98ead6-470f-4847-b7c6-b5d3b7094cb6.par
+#BlueLink0 Brakes: Torque`10 kN-m, Air` Air Brakes` , Torque`BrkTrq_ab98ead6-470f-4847-b7c6-b5d3b7094cb6
+
+
+OPT_ABS_CTRL 0
+
+iside 2
+symbol_set <<side>> R
+TL_L1 0.05
+TLAG_BK 0.05
+*MY_FRIC_L 2
+MY_FRICTION 2
+PARSFILE Brakes\Proportioning\BrkProp_ffd0018e-81bb-4523-847e-8e3a819e588f.par
+#BlueLink4 Brakes: Proportioning / Limiting Valve`Linear: Unity Gain` Linear` , Proportioning`BrkProp_ffd0018e-81bb-4523-847e-8e3a819e588f
+
+TC_L1 0.3
+TC_BK 0.3
+OPT_BK_DYN 1
+PARSFILE Brakes\Torque\BrkTrq_ab98ead6-470f-4847-b7c6-b5d3b7094cb6.par
+#BlueLink0 Brakes: Torque`10 kN-m, Air` Air Brakes` , Torque`BrkTrq_ab98ead6-470f-4847-b7c6-b5d3b7094cb6
+
+
+LOG_ENTRY Used Dataset: Brakes: Two-Wheel System; { Air Brakes } 10 kN-m Capacity, Air (No ABS)
+#Library : Brakes: Two-Wheel System
+#DataSet : 10 kN-m Capacity, Air (No ABS)
+#Category: Air Brakes
+#FileID  : Brk2W_b6f14525-7233-4fd7-b700-de03bd681ce2
+#Product : TruckSim 2020.1
+#VehCode Brakes
+
+END

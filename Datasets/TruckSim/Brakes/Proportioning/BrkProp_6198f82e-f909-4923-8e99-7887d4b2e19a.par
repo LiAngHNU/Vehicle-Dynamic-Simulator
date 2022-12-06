@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Brakes: Proportioning / Limiting Valve`Unity until 2.0 MPa then 30%`Linear
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+PBK_DL_COMBINE ADD
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+PBK_DL_TABLE LINEAR
+-1, 0
+0, 0
+2, 2
+3, 2.3
+ENDTABLE
+PBK_DL_FZ_CONSTANT 0
+*SCALAR 1
+*SCALAR2 0
+
+
+#EMBEDDED_NOTES
+#Brake systems without ABS control typically have a propotioning valve that reduces pressure gains on the rear wheel when a moderate pressure is reached to avoid locking the rear wheels with high braking and associated load transfer.
+#
+#They are also used on some trucks with large ranges in load.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Brakes: Proportioning / Limiting Valve; { Linear } Unity until 2.0 MPa then 30%
+#Library : Brakes: Proportioning / Limiting Valve
+#DataSet : Unity until 2.0 MPa then 30%
+#Category: Linear
+#FileID  : BrkProp_6198f82e-f909-4923-8e99-7887d4b2e19a
+#Product : TruckSim 2020.1
+#VehCode Prop / Limit Valve
+
+END

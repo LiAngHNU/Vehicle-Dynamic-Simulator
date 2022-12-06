@@ -1,0 +1,61 @@
+PARSFILE
+#FullDataName Brakes: Two-Wheel System`Large Euro Van Brakes - Rear (2 ch. ABS)`Large European Van
+#CheckBox1 0    
+#RingCtrl0 2
+#RingCtrl1 1
+#RingCtrl3 2
+#RingCtrl5 1
+#RingCtrl7 0
+OPT_BK_PEDAL 0
+
+iside 1
+symbol_push <<ax_bk>> <<axle>>
+symbol_push <<side>> L
+TL_L1 0
+TLAG_BK 0
+*MY_FRIC_L 0.5
+MY_FRICTION 0.5
+PARSFILE Brakes\Proportioning\BrkProp_6198f82e-f909-4923-8e99-7887d4b2e19a.par
+#BlueLink4 Brakes: Proportioning / Limiting Valve`Unity until 2.0 MPa then 30%` Linear` , Proportioning`BrkProp_6198f82e-f909-4923-8e99-7887d4b2e19a
+
+TC_L1 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L1 300
+MY_BRAKE_COEFFICIENT 300
+
+INSTALL_ABS_CONTROLLER
+
+OPT_ABS_CTRL 2
+*OFF_F 0.18
+*ON_F 0.15
+*V_F 3
+ABS_SLIP_OFF 0.18
+ABS_SLIP_ON 0.15
+ABS_VMIN 3
+
+iside 2
+symbol_set <<side>> R
+TL_L1 0
+TLAG_BK 0
+*MY_FRIC_L 0.5
+MY_FRICTION 0.5
+PARSFILE Brakes\Proportioning\BrkProp_6198f82e-f909-4923-8e99-7887d4b2e19a.par
+#BlueLink4 Brakes: Proportioning / Limiting Valve`Unity until 2.0 MPa then 30%` Linear` , Proportioning`BrkProp_6198f82e-f909-4923-8e99-7887d4b2e19a
+
+TC_L1 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L1 300
+MY_BRAKE_COEFFICIENT 300
+T_AIR 20
+
+LOG_ENTRY Used Dataset: Brakes: Two-Wheel System; { Large European Van } Large Euro Van Brakes - Rear (2 ch. ABS)
+#Library : Brakes: Two-Wheel System
+#DataSet : Large Euro Van Brakes - Rear (2 ch. ABS)
+#Category: Large European Van
+#FileID  : Brk2W_03cd49ec-9822-45c6-b989-416078824f37
+#Product : TruckSim 2020.1
+#VehCode Brakes
+
+END

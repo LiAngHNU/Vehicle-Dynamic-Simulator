@@ -1,0 +1,29 @@
+PARSFILE
+#FullDataName Brakes: Caliper Pressure vs Volume`Rear Actuator Dynamics`Large Euro Van
+#CheckBox0 0    
+
+OPT_BK_DYN 2
+#RingCtrl0 SPLINE
+#RadioCtrl0 0    
+
+#DiagramOne0
+PBK_CALIPER_TABLE SPLINE
+-1, 0
+0, 0
+460, 0.5
+670, 1
+940, 2
+2900, 10
+ENDTABLE
+BK_HYD_RES 1.1e-04
+
+
+LOG_ENTRY Used Dataset: Brakes: Caliper Pressure vs Volume; { Large Euro Van } Rear Actuator Dynamics
+#Library : Brakes: Caliper Pressure vs Volume
+#DataSet : Rear Actuator Dynamics
+#Category: Large Euro Van
+#FileID  : PvCal_9c192111-b4c0-4bfd-889b-b7e79c6b173b
+#Product : TruckSim 2020.1
+#VehCode Caliper PV
+
+END

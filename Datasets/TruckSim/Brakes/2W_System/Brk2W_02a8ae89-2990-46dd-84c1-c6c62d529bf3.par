@@ -1,0 +1,70 @@
+PARSFILE
+#FullDataName Brakes: Two-Wheel System`Trailer: 20 Nm / MPa (2 ch. ABS)`Trailer Brakes
+#CheckBox1 0    
+#RingCtrl0 2
+#RingCtrl1 1
+#RingCtrl3 1
+#RingCtrl5 1
+#RingCtrl7 0
+OPT_BK_PEDAL 0
+
+iside 1
+symbol_push <<ax_bk>> <<axle>>
+symbol_push <<side>> L
+TL_L1 0
+TLAG_BK 0
+*MY_FRIC_L 0.5
+MY_FRICTION 0.5
+*P_L1 1
+PBK_DL_COEFFICIENT 1
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_L1 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L1 20
+MY_BRAKE_COEFFICIENT 20
+
+INSTALL_ABS_CONTROLLER
+
+OPT_ABS_CTRL 2
+*OFF_F 0.0045
+*ON_F 0.0042
+*V_F 4
+ABS_SLIP_OFF 0.0045
+ABS_SLIP_ON 0.0042
+ABS_VMIN 4
+
+iside 2
+symbol_set <<side>> R
+TL_L1 0
+TLAG_BK 0
+*MY_FRIC_L 0.5
+MY_FRICTION 0.5
+*P_L1 1
+PBK_DL_COEFFICIENT 1
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_L1 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L1 20
+MY_BRAKE_COEFFICIENT 20
+
+#EMBEDDED_NOTES
+#This 2-wheel brake system dataset represents the  capabilities found on some two-axle and three-axle utility trailers with up to approximately 20,000 lb (9071.8 kg) gross trailer weight. Target deceleration is in the range of 0.4 to 0.45 g.
+#
+#ABS slip targets were chosen based on straight line stopping tests with up to 16 MPa control pressure, tested on roads with coefficients of friction ranging from 0.5 to 1.0.
+#
+#Represented here, the trailer ABS will become active on lower mu roads (i.e., 0.5), but not when the trailer is unloaded and on high mu surfaces.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Brakes: Two-Wheel System; { Trailer Brakes } Trailer: 20 Nm / MPa (2 ch. ABS)
+#Library : Brakes: Two-Wheel System
+#DataSet : Trailer: 20 Nm / MPa (2 ch. ABS)
+#Category: Trailer Brakes
+#FileID  : Brk2W_02a8ae89-2990-46dd-84c1-c6c62d529bf3
+#Product : TruckSim 2020.1
+#VehCode Brakes
+
+END

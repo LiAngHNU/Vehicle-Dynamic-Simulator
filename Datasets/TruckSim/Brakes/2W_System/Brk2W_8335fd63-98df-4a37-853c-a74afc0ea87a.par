@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Brakes: Two-Wheel System`Pickup, Full Size w/ ABS - Rear`Pickup Trucks and SUVs
+#CheckBox1 0    
+#RingCtrl0 2
+#RingCtrl1 1
+#RingCtrl3 2
+#RingCtrl5 1
+#RingCtrl7 0
+OPT_BK_PEDAL 0
+
+iside 1
+symbol_push <<ax_bk>> <<axle>>
+symbol_push <<side>> L
+TL_L1 0
+TLAG_BK 0
+*MY_FRIC_L 0.5
+MY_FRICTION 0.5
+PARSFILE Brakes\Proportioning\BrkProp_6198f82e-f909-4923-8e99-7887d4b2e19a.par
+#BlueLink4 Brakes: Proportioning / Limiting Valve`Unity until 2.0 MPa then 30%` Linear` , Proportioning`BrkProp_6198f82e-f909-4923-8e99-7887d4b2e19a
+
+TC_L1 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L1 300
+MY_BRAKE_COEFFICIENT 300
+
+INSTALL_ABS_CONTROLLER
+
+OPT_ABS_CTRL 2
+*OFF_F 0.5
+*ON_F 0.1
+*V_F 3
+ABS_SLIP_OFF 0.5
+ABS_SLIP_ON 0.1
+ABS_VMIN 3
+
+iside 2
+symbol_set <<side>> R
+TL_L1 0
+TLAG_BK 0
+*MY_FRIC_L 0.5
+MY_FRICTION 0.5
+PARSFILE Brakes\Proportioning\BrkProp_6198f82e-f909-4923-8e99-7887d4b2e19a.par
+#BlueLink4 Brakes: Proportioning / Limiting Valve`Unity until 2.0 MPa then 30%` Linear` , Proportioning`BrkProp_6198f82e-f909-4923-8e99-7887d4b2e19a
+
+TC_L1 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L1 300
+MY_BRAKE_COEFFICIENT 300
+
+LOG_ENTRY Used Dataset: Brakes: Two-Wheel System; { Pickup Trucks and SUVs } Pickup, Full Size w/ ABS - Rear
+#Library : Brakes: Two-Wheel System
+#DataSet : Pickup, Full Size w/ ABS - Rear
+#Category: Pickup Trucks and SUVs
+#FileID  : Brk2W_8335fd63-98df-4a37-853c-a74afc0ea87a
+#Product : TruckSim 2020.1
+#VehCode Brakes
+
+END

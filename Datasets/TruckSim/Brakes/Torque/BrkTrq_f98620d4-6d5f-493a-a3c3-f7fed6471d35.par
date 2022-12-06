@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Brakes: Torque`7.5 kN-m, Hydraulic`Hydraulic Brakes
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RadioCtrl0 0    
+
+
+#DiagramOne0
+MY_BRAKE_TABLE SPLINE
+-0.1, 0
+-0.005, 0
+0, 0
+0.005, 0
+0.01, 0
+0.015, 0
+0.02, 0
+0.025, 0
+0.03, 0
+0.032, 0
+0.1, 0
+0.15, 0
+0.2, 0
+0.25, 0
+0.3, 0
+0.325, 0
+0.35, 0
+2.5, 1061.25
+5.5, 5008
+7, 7500
+ENDTABLE
+
+#EMBEDDED_NOTES
+#Brake sized for stated capacity at 7 MPa (1000 psi).
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Brakes: Torque; { Hydraulic Brakes } 7.5 kN-m, Hydraulic
+#Library : Brakes: Torque
+#DataSet : 7.5 kN-m, Hydraulic
+#Category: Hydraulic Brakes
+#FileID  : BrkTrq_f98620d4-6d5f-493a-a3c3-f7fed6471d35
+#Product : TruckSim 2020.1
+#VehCode Brake Torque
+
+END

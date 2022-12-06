@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Brakes: Two-Wheel System`No Brakes`
+#CheckBox1 0    
+#RingCtrl0 0
+#RingCtrl1 1
+#RingCtrl3 1
+#RingCtrl5 1
+#RingCtrl7 0
+OPT_BK_PEDAL 0
+
+iside 1
+symbol_push <<ax_bk>> <<axle>>
+symbol_push <<side>> L
+TL_L1 0
+TLAG_BK 0
+*MY_FRIC_L 1
+MY_FRICTION 1
+*P_L1 0
+PBK_DL_COEFFICIENT 0
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+OPT_BK_DYN 1
+*TQ_L1 0
+MY_BRAKE_COEFFICIENT 0
+
+OPT_ABS_CTRL 0
+
+iside 2
+symbol_set <<side>> R
+TL_L1 0
+TLAG_BK 0
+*MY_FRIC_L 1
+MY_FRICTION 1
+*P_L1 0
+PBK_DL_COEFFICIENT 0
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+OPT_BK_DYN 1
+*TQ_L1 0
+MY_BRAKE_COEFFICIENT 0
+
+LOG_ENTRY Used Dataset: Brakes: Two-Wheel System; No Brakes
+#Library : Brakes: Two-Wheel System
+#DataSet : No Brakes
+#Category: 
+#FileID  : Brk2W_3e8ff819-53fb-4b33-a411-80e62b21bcd3
+#Product : TruckSim 2020.1
+#VehCode Brakes
+
+END

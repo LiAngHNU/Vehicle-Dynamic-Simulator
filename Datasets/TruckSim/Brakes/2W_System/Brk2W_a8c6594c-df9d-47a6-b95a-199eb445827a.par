@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName Brakes: Two-Wheel System`Boost and Thermal, Large Euro Van Front`Large European Van
+#CheckBox1 0    
+#RingCtrl0 2
+#RingCtrl1 3
+#RingCtrl3 1
+#RingCtrl5 2
+#RingCtrl7 2
+OPT_BK_PEDAL 2
+R_BK_PEDAL 4.1
+D_MC 25
+PARSFILE Brakes\BOOST\BrkBst_bad7937d-7309-4abb-a8d5-b56f6275de6b.par
+#BlueLink8 Brakes: Booster Force`Piecewise Linear, 5.56 Gain` ` , Boost`BrkBst_bad7937d-7309-4abb-a8d5-b56f6275de6b
+
+TC_BK_APP 0.16
+TC_BK_REL 0.07
+
+iside 1
+symbol_push <<ax_bk>> <<axle>>
+symbol_push <<side>> L
+TL_L1 0
+TLAG_BK 0
+*MY_FRIC_L 0.5
+MY_FRICTION 0.5
+*P_L1 1.0
+PBK_DL_COEFFICIENT 1.0
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+PARSFILE Brakes\PV_CAL\PvCal_4854d31f-8cca-4e7d-bc6e-ffab186530a1.par
+#BlueLink6 Brakes: Caliper Pressure vs Volume`Front Actuator Dynamics` Large Euro Van` , Volume`PvCal_4854d31f-8cca-4e7d-bc6e-ffab186530a1
+
+PARSFILE Brakes\Caliper\BrkCal_c5782ae0-1859-40c5-b5af-ae210dd4657e.par
+#BlueLink2 Brakes: Caliper and Rotor Properties`Fr. Caliper & Rotor Properties` Large Euro Van` , Torque`BrkCal_c5782ae0-1859-40c5-b5af-ae210dd4657e
+
+*SV_TROT_L1 30
+SV_TROT_<<side>><<ax_bk>> 30
+
+INSTALL_ABS_CONTROLLER
+
+OPT_ABS_CTRL 2
+*OFF_F 0.2
+*ON_F 0.1
+*V_F 2
+ABS_SLIP_OFF 0.2
+ABS_SLIP_ON 0.1
+ABS_VMIN 2
+
+iside 2
+symbol_set <<side>> R
+TL_L1 0
+TLAG_BK 0
+*MY_FRIC_L 0.5
+MY_FRICTION 0.5
+*P_L1 1.0
+PBK_DL_COEFFICIENT 1.0
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+PARSFILE Brakes\PV_CAL\PvCal_4854d31f-8cca-4e7d-bc6e-ffab186530a1.par
+#BlueLink6 Brakes: Caliper Pressure vs Volume`Front Actuator Dynamics` Large Euro Van` , Volume`PvCal_4854d31f-8cca-4e7d-bc6e-ffab186530a1
+
+PARSFILE Brakes\Caliper\BrkCal_c5782ae0-1859-40c5-b5af-ae210dd4657e.par
+#BlueLink2 Brakes: Caliper and Rotor Properties`Fr. Caliper & Rotor Properties` Large Euro Van` , Torque`BrkCal_c5782ae0-1859-40c5-b5af-ae210dd4657e
+
+*SV_TROT_L1 30
+SV_TROT_<<side>><<ax_bk>> 30
+T_AIR 20
+
+LOG_ENTRY Used Dataset: Brakes: Two-Wheel System; { Large European Van } Boost and Thermal, Large Euro Van Front
+#Library : Brakes: Two-Wheel System
+#DataSet : Boost and Thermal, Large Euro Van Front
+#Category: Large European Van
+#FileID  : Brk2W_a8c6594c-df9d-47a6-b95a-199eb445827a
+#Product : TruckSim 2020.1
+#VehCode Brakes
+
+END

@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Brakes: Two-Wheel System`12.5 kN-m Capacity, Hydraulic (No ABS)`Hydraulic Brakes
+#CheckBox1 0    
+#RingCtrl0 0
+#RingCtrl1 2
+#RingCtrl3 1
+#RingCtrl5 1
+#RingCtrl7 0
+OPT_BK_PEDAL 0
+
+iside 1
+symbol_push <<ax_bk>> <<axle>>
+symbol_push <<side>> L
+TL_L1 0
+TLAG_BK 0
+*MY_FRIC_L 2
+MY_FRICTION 2
+*P_L1 1.0
+PBK_DL_COEFFICIENT 1.0
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_L1 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+PARSFILE Brakes\Torque\BrkTrq_d849c3e9-277a-4ee7-8042-cb669fb26ab0.par
+#BlueLink0 Brakes: Torque`12.5 kN-m, Hydraulic` Hydraulic Brakes` , Torque`BrkTrq_d849c3e9-277a-4ee7-8042-cb669fb26ab0
+
+
+OPT_ABS_CTRL 0
+
+iside 2
+symbol_set <<side>> R
+TL_L1 0
+TLAG_BK 0
+*MY_FRIC_L 2
+MY_FRICTION 2
+*P_L1 1.0
+PBK_DL_COEFFICIENT 1.0
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_L1 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+PARSFILE Brakes\Torque\BrkTrq_d849c3e9-277a-4ee7-8042-cb669fb26ab0.par
+#BlueLink0 Brakes: Torque`12.5 kN-m, Hydraulic` Hydraulic Brakes` , Torque`BrkTrq_d849c3e9-277a-4ee7-8042-cb669fb26ab0
+
+
+LOG_ENTRY Used Dataset: Brakes: Two-Wheel System; { Hydraulic Brakes } 12.5 kN-m Capacity, Hydraulic (No ABS)
+#Library : Brakes: Two-Wheel System
+#DataSet : 12.5 kN-m Capacity, Hydraulic (No ABS)
+#Category: Hydraulic Brakes
+#FileID  : Brk2W_0f175cfb-0199-4f1e-a8ba-ebf504ef595a
+#Product : TruckSim 2020.1
+#VehCode Brakes
+
+END
