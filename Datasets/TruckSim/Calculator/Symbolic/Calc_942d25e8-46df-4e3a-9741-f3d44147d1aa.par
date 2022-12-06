@@ -1,0 +1,95 @@
+PARSFILE
+#FullDataName Calculator: Symbolic`ISO 14791 Lane Change`Steering
+#RingCtrl0 1
+#RingCtrl1 5
+#RingCtrl2 5
+#RadioCtrl0 0    
+
+*START 0
+*STOP 2.5
+*STEP 0.05
+*X S*88/3.6
+*Y (2*PI*0.4*S-SIN(2*PI*0.4*S))/(2*PI*0.4)^2-1/(2*PI*0.4^2)
+
+#DiagramOne0
+CALCULATOR_TABLE
+0, -0.99472
+1.2222, -0.99467
+2.4444, -0.9943
+3.6667, -0.99331
+4.8889, -0.99141
+6.1111, -0.9883
+7.3333, -0.98373
+8.5556, -0.97744
+9.7778, -0.96923
+11, -0.95892
+12.222, -0.94634
+13.444, -0.93139
+14.667, -0.91399
+15.889, -0.89409
+17.111, -0.87171
+18.333, -0.84687
+19.556, -0.81966
+20.778, -0.79018
+22, -0.7586
+23.222, -0.7251
+24.444, -0.68989
+25.667, -0.65321
+26.889, -0.61532
+28.111, -0.57652
+29.333, -0.5371
+30.556, -0.49736
+31.778, -0.45762
+33, -0.4182
+34.222, -0.3794
+35.444, -0.34151
+36.667, -0.30483
+37.889, -0.26962
+39.111, -0.23612
+40.333, -0.20454
+41.556, -0.17506
+42.778, -0.14785
+44, -0.12301
+45.222, -0.10062
+46.444, -0.08073
+47.667, -0.063328
+48.889, -0.048378
+50.111, -0.035802
+51.333, -0.025486
+52.556, -0.017277
+53.778, -0.010993
+55, -0.006417
+56.222, -0.003309
+57.444, -0.0014037
+58.667, -0.00041756
+59.889, -5.2319e-05
+61.111, 1.1102e-16
+ENDTABLE
+
+#EMBEDDED_NOTES
+#This is the lane change as specified in ISO 14791, p9. It is scaled for a lateral accleration of 1 m/s2, speed of 88 km/h, and frequency of 0.4 Hz.
+#
+#The full equation is:
+#
+#y = Ay*(2*PI*F*X/V - SIN(2*PI*F*X/V))/(2*PI*F)^2
+#
+#where
+#
+#F is frequency (Hz)
+#Ay is lateral acceleration (m/s2)
+#V is speed (m/s)
+#
+#This can be scaled for arbitrary steer using the scale factor LTARG_GAIN.
+#
+#The path is offset to end at zero to simplify evaluation of offtracking in PBS C13.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Calculator: Symbolic; { Steering } ISO 14791 Lane Change
+#Library : Calculator: Symbolic
+#DataSet : ISO 14791 Lane Change
+#Category: Steering
+#FileID  : Calc_942d25e8-46df-4e3a-9741-f3d44147d1aa
+#Product : TruckSim 2020.1
+#VehCode Calculator
+
+END

@@ -1,0 +1,63 @@
+PARSFILE
+#FullDataName Calculator: Symbolic`ISO 14791 Steering Pulse`Steering
+#RingCtrl0 1
+#RingCtrl1 5
+#RingCtrl2 5
+#RadioCtrl0 0    
+
+*START 0
+*STOP 0.6
+*STEP 0.02
+*X S
+*Y (1-COS(2*PI*S/0.6))/2
+
+#DiagramOne0
+CALCULATOR_TABLE
+0, 0
+0.02, 0.010926
+0.04, 0.043227
+0.06, 0.095492
+0.08, 0.16543
+0.1, 0.25
+0.12, 0.34549
+0.14, 0.44774
+0.16, 0.55226
+0.18, 0.65451
+0.2, 0.75
+0.22, 0.83457
+0.24, 0.90451
+0.26, 0.95677
+0.28, 0.98907
+0.3, 1
+0.32, 0.98907
+0.34, 0.95677
+0.36, 0.90451
+0.38, 0.83457
+0.4, 0.75
+0.42, 0.65451
+0.44, 0.55226
+0.46, 0.44774
+0.48, 0.34549
+0.5, 0.25
+0.52, 0.16543
+0.54, 0.095492
+0.56, 0.043227
+0.58, 0.010926
+0.6, 0
+ENDTABLE
+
+#EMBEDDED_NOTES
+#This is the open=-loop steering pulse as specified in ISO 14791. It is scaled for a maximum steering wheel angle of 1 deg and frequency of 0.6 Hz.
+#
+#This can be scaled for arbitrary steer using the scale factor STEER_SW_GAIN.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Calculator: Symbolic; { Steering } ISO 14791 Steering Pulse
+#Library : Calculator: Symbolic
+#DataSet : ISO 14791 Steering Pulse
+#Category: Steering
+#FileID  : Calc_cc321329-5130-46d1-8a7d-39bb94eb5474
+#Product : TruckSim 2020.1
+#VehCode Calculator
+
+END
