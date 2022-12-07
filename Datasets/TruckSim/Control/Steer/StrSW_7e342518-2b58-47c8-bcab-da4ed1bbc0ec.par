@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Control: Steering (Open Loop)`Ramp: 0 to 250 deg. at 5 sec.`Ramp
+OPT_DM 0
+OPT_STR_BY_TRQ 0
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+STEER_SW_TABLE SPLINE_FLAT
+0, 0
+1, 0
+2, 0
+3, 0
+4, 0
+4.25, 0
+4.5, 0
+4.75, 0
+4.8, 0
+4.85, 0
+4.9, 0
+4.95, 0
+5, 0
+5.25, 116.667
+5.5, 250
+5.55, 250
+5.6, 250
+5.65, 250
+5.7, 250
+5.75, 250
+5.8, 250
+5.9, 250
+6, 250
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Control: Steering (Open Loop); { Ramp } Ramp: 0 to 250 deg. at 5 sec.
+#Library : Control: Steering (Open Loop)
+#DataSet : Ramp: 0 to 250 deg. at 5 sec.
+#Category: Ramp
+#FileID  : StrSW_7e342518-2b58-47c8-bcab-da4ed1bbc0ec
+#Product : TruckSim 2020.1
+#VehCode Open-Loop Steering
+
+END

@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Control: Steering Preview Time for the Driver Model`Variable Preview for Mixed Turns`
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+TPREV_TABLE LINEAR_FLAT
+0, 0.4
+15, 1.5
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#The preview is only 0.2s at low speed to make a 90-deg turn with minimal inboard tracking. At normal speeds, the preview is 1.5s for more stability.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Steering Preview Time for the Driver Model; Variable Preview for Mixed Turns
+#Library : Control: Steering Preview Time for the Driver Model
+#DataSet : Variable Preview for Mixed Turns
+#Category: 
+#FileID  : Tprev_60a52b14-543d-49b1-9c60-b2b70f06533d
+#Product : TruckSim 2020.1
+#VehCode Preview Time vs. Speed
+
+END

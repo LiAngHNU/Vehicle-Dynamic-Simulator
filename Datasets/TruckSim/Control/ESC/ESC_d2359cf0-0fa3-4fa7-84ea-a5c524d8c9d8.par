@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Control: Electronic Stability (ESC)`Basic ESC`
+INSTALL_ESC
+VLOW_ESC 4
+PBK_MAX_ESC 7
+PBK_ACTIVE_ESC 0.5
+AY_LIMIT_ESC 0.28
+ROLL_LIMIT_ESC 5
+AY_ROLL_LIMIT_ESC 0.14
+USG_ESC 1.2
+KP_AVZ_ESC 4
+AVZ_DEAD_ESC 5
+R_BRAKE_ESC 1.0
+
+PARSFILE Animator\HUD\HUD_9e8f8b7c-017a-410b-a03c-f45ccbe9bac4.par
+#BlueLink0 Animator: HUD`ESC Alert` Alerts` , Miscellaneous`HUD_9e8f8b7c-017a-410b-a03c-f45ccbe9bac4
+
+PARSFILE Plot\Setup\Plot_bf16c970-2632-4970-abac-dae4cd80be61.par
+#BlueLink1 Plot: Setup`AVz_ESC_Preview` ESC` , Plot`Plot_bf16c970-2632-4970-abac-dae4cd80be61
+
+PARSFILE Plot\Setup\Plot_2854bd72-cb7c-4311-b599-c56f17367950.par
+#BlueLink2 Plot: Setup`Ay_ESC_Preview` ESC` , Plot`Plot_2854bd72-cb7c-4311-b599-c56f17367950
+
+PARSFILE Plot\Setup\Plot_139b784b-cee9-401b-9712-900e9fc59f79.par
+#BlueLink3 Plot: Setup`ESC_Active` ESC` , Plot`Plot_139b784b-cee9-401b-9712-900e9fc59f79
+
+PARSFILE Plot\Setup\Plot_95203716-bdbf-4c1c-a300-d42516291ace.par
+#BlueLink4 Plot: Setup`Understeer (USG Live)` ESC` , Plot`Plot_95203716-bdbf-4c1c-a300-d42516291ace
+
+
+#EMBEDDED_NOTES
+#This simple ESC controller applies individual brakes to control yaw rate and possibly reduces throttle to avoid rollover.
+#
+#When ESC is used, 2 channel ABS is necessary so that individual brake modulation is retained.
+#
+#Single channel ABS modulates both wheels together, defeating the yaw rate control of ESC.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Electronic Stability (ESC); Basic ESC
+#Library : Control: Electronic Stability (ESC)
+#DataSet : Basic ESC
+#Category: 
+#FileID  : ESC_d2359cf0-0fa3-4fa7-84ea-a5c524d8c9d8
+#Product : TruckSim 2020.1
+#VehCode ESC
+
+END

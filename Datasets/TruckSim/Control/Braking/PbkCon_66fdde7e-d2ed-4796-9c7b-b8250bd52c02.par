@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Control: Braking MC Pressure (Open Loop)`Smooth Brake Apply: 0 to 1 MPa`Sigmoid
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+PBK_CON_TABLE SPLINE_FLAT
+0, 0
+0.05, 0.000123395
+0.1, 0.00033535
+0.15, 0.000911051
+0.2, 0.002472623
+0.25, 0.006692851
+0.3, 0.01798621
+0.35, 0.047425873
+0.4, 0.119202922
+0.45, 0.268941421
+0.5, 0.5
+0.55, 0.731058579
+0.6, 0.880797078
+0.65, 0.952574127
+0.7, 0.98201379
+0.75, 0.993307149
+0.8, 0.997527377
+0.85, 0.999088949
+0.9, 0.99966465
+0.95, 0.999876605
+1, 1
+ENDTABLE
+VLOW_STOP -1
+
+
+#EMBEDDED_NOTES
+#Sigmoid function, used to apply brake Master Cylinder Pressure.
+#
+#In general, f(x) = 1/(1 + e^-x)
+#
+#A smooth table ensures continuous derivatives.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Braking MC Pressure (Open Loop); { Sigmoid } Smooth Brake Apply: 0 to 1 MPa
+#Library : Control: Braking MC Pressure (Open Loop)
+#DataSet : Smooth Brake Apply: 0 to 1 MPa
+#Category: Sigmoid
+#FileID  : PbkCon_66fdde7e-d2ed-4796-9c7b-b8250bd52c02
+#Product : TruckSim 2020.1
+#VehCode Brake Control
+
+END

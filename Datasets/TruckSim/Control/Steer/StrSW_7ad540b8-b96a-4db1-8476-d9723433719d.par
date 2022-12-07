@@ -1,0 +1,29 @@
+PARSFILE
+#FullDataName Control: Steering (Open Loop)`Ramp: 0-970-0 deg.`Ramp
+OPT_DM 0
+OPT_STR_BY_TRQ 0
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+STEER_SW_TABLE LINEAR_FLAT
+0, 0
+5, 0
+8, 970
+10, 970
+14, 0
+16, 0
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Control: Steering (Open Loop); { Ramp } Ramp: 0-970-0 deg.
+#Library : Control: Steering (Open Loop)
+#DataSet : Ramp: 0-970-0 deg.
+#Category: Ramp
+#FileID  : StrSW_7ad540b8-b96a-4db1-8476-d9723433719d
+#Product : TruckSim 2020.1
+#VehCode Open-Loop Steering
+
+END

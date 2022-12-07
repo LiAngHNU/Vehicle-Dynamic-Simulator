@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Control: Shifting (Open Loop)`7 Spd: Shift @ 5s (OL Clutch)`Open-Loop Gearshift Control
+
+MODE_TRANS_CONSTANT 1
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#DiagramOne0
+GEAR_TRANS_TABLE LINEAR_FLAT
+0, 1
+5.2, 1
+5.3, 2
+10.2, 2
+10.3, 3
+15.2, 3
+15.3, 4
+20.2, 4
+20.3, 5
+25.2, 5
+25.3, 6
+30.2, 6
+30.3, 7
+35.3, 7
+ENDTABLE
+#RadioCtrl0 0    
+
+PARSFILE Control\Clutch\ClCon_80026a51-7356-4a78-a2fc-a0190da4fa0c.par
+#BlueLink0 Control: Clutch (Open Loop)`Profile: Shift Every 5 Sec. (7 Spd.)` Open Loop Shift Profiles` , Clutch Control`ClCon_80026a51-7356-4a78-a2fc-a0190da4fa0c
+
+
+
+LOG_ENTRY Used Dataset: Control: Shifting (Open Loop); { Open-Loop Gearshift Control } 7 Spd: Shift @ 5s (OL Clutch)
+#Library : Control: Shifting (Open Loop)
+#DataSet : 7 Spd: Shift @ 5s (OL Clutch)
+#Category: Open-Loop Gearshift Control
+#FileID  : GearOL_a541245a-d7ee-4491-b0b5-4e058e5a6b7e
+#Product : TruckSim 2020.1
+#VehCode Open-Loop Shift Control
+
+END

@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Control: Steering by the Closed-loop Driver Model`Preview w/ Lag`Constant Position: No Offset
+SET_ILTARG_FOR_ID 0
+set_description LTARG_ID Preview w/ Lag
+#RingCtrl0 0
+#RingCtrl1 CONSTANT
+#RingCtrl2 1
+LTARG_CONSTANT 0
+#RadioCtrl0 0    
+
+*SCALAR 0
+SET_PATH_WIDTH 0.1
+SET_PATH_DASH_INTERVAL 1
+SET_PATH_VERTEX_INTERVAL 1
+SET_PATH_DZ 0.03
+SET_PATH_COLOR 0.627 0.627 0.627
+#CheckBox2 0    
+#CheckBox3 1    
+LTARG_ID_DM LTARG_ID
+#CheckBox0 0    
+#CheckBox1 1    
+CREATE_PATH_OBJ on
+#CheckBox4 0    
+#CheckBox5 0    
+OPT_STR_BY_TRQ 0
+OPT_DM 1
+#CheckBox6 1    
+#CheckBox7 0    
+OPT_DM_2019 0
+TLAG_DM 0.2
+AV_SW_MAX_DM 1200
+A_SW_MAX_DM 900
+*TPREV 0.75
+VLOW_DM 10
+TPREV_CONSTANT 0.75
+
+LOG_ENTRY Used Dataset: Control: Steering by the Closed-loop Driver Model; { Constant Position: No Offset } Preview w/ Lag
+#Library : Control: Steering by the Closed-loop Driver Model
+#DataSet : Preview w/ Lag
+#Category: Constant Position: No Offset
+#FileID  : StrDM_1e797615-644d-42bc-beba-a970118aa8eb
+#Product : TruckSim 2020.1
+#VehCode Driver Path Follower
+
+END

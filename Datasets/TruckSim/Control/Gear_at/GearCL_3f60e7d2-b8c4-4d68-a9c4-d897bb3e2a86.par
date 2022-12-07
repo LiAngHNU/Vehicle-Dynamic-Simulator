@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Control: Shifting (Closed Loop)`AT (All Available Gears)`Closed-Loop Shifting
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+MODE_TRANS_CONSTANT NGEARS
+#RadioCtrl0 0    
+
+*SCALAR NGEARS
+
+
+#EMBEDDED_NOTES
+#NGEARS is the internal symbol for the number of gears in a transmission.
+#
+#By setting the Mode to NGEARS, CarSim is told to use all of the transmission gears.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } AT (All Available Gears)
+#Library : Control: Shifting (Closed Loop)
+#DataSet : AT (All Available Gears)
+#Category: Closed-Loop Shifting
+#FileID  : GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+#Product : TruckSim 2020.1
+#VehCode Closed-Loop Shift Control
+
+END

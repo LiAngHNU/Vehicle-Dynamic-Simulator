@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Control: Shifting (Open Loop)`Constant: 1st, OL Clutch`Constant
+
+MODE_TRANS_CONSTANT 1
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+GEAR_TRANS_CONSTANT 1
+#RadioCtrl0 0    
+
+PARSFILE Control\Clutch\ClCon_e536c2d6-c696-4fda-a00a-37a6c0e01e71.par
+#BlueLink0 Control: Clutch (Open Loop)`Engage in 0.1s @ 0.4s` Single Engagement / Disengagement` , Clutch Control`ClCon_e536c2d6-c696-4fda-a00a-37a6c0e01e71
+
+*SCALAR 1
+
+
+LOG_ENTRY Used Dataset: Control: Shifting (Open Loop); { Constant } Constant: 1st, OL Clutch
+#Library : Control: Shifting (Open Loop)
+#DataSet : Constant: 1st, OL Clutch
+#Category: Constant
+#FileID  : GearOL_6bb52aae-10b4-4add-bd54-ef6769d6fd16
+#Product : TruckSim 2020.1
+#VehCode Open-Loop Shift Control
+
+END

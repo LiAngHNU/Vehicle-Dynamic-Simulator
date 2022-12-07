@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Target Speed`Ramp: -5 to 0 km/h in 1 sec.`Speed vs. Time
+SET_ISPEED_FOR_ID 999
+set_description SPEED_TARGET_ID Ramp: -5 to 0 km/h in 1 sec.
+#CheckBox2 0    
+#CheckBox3 0    
+*SCALAR2 0
+#RingCtrl0 LINEAR_FLAT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SPEED_TARGET_COMBINE ADD
+#RingCtrl3 2
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+SPEED_TARGET_TABLE LINEAR_FLAT
+0, -5
+1, 0
+ENDTABLE
+SPEED_TARGET_S_CONSTANT 0
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Target Speed; { Speed vs. Time } Ramp: -5 to 0 km/h in 1 sec.
+#Library : Control: Speed (Closed Loop) Using Target Speed
+#DataSet : Ramp: -5 to 0 km/h in 1 sec.
+#Category: Speed vs. Time
+#FileID  : SpdTime_f1937f95-6afe-41c6-a06d-61b093fc5d42
+#Product : TruckSim 2020.1
+#VehCode Target Speed
+
+END

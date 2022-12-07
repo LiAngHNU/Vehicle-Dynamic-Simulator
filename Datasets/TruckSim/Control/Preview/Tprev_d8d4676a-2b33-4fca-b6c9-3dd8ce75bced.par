@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Control: Steering Preview Time for the Driver Model`Variable Speed Preview Time`
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+TPREV_TABLE LINEAR_FLAT
+0, 20
+1, 20
+2, 10
+3, 6.66667
+4, 5
+5, 4
+6, 3.33333
+7, 2.85714
+8, 2.5
+9, 2.22222
+10, 2
+11, 1.81818
+12, 1.66667
+13, 1.53846
+14, 1.42857
+15, 1.33333
+16, 1.25
+17, 1.17647
+18, 1.11111
+19, 1.05263
+20, 1
+100, 1
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#The driver model looks ahead at the target path over a distance that is based on a preview time and the current vehicle speed. For highway speeds, typical preview times are about 1 - 1.5 seconds. However, at low speeds, a more realistic preview is based on a constant preview distance.
+#
+#This dataset uses a 1 second preview time for speeds of 20 km/h and higher. The preview time increases at low speeds, to a maximum of 20 sec at 1 km/h.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Steering Preview Time for the Driver Model; Variable Speed Preview Time
+#Library : Control: Steering Preview Time for the Driver Model
+#DataSet : Variable Speed Preview Time
+#Category: 
+#FileID  : Tprev_d8d4676a-2b33-4fca-b6c9-3dd8ce75bced
+#Product : TruckSim 2020.1
+#VehCode Preview Time vs. Speed
+
+END

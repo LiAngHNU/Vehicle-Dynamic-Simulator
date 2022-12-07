@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Control: Braking MC Pressure (Open Loop)`AEB Brake Control: 5000000*ApplyAEB`Automated Emergency Braking (AEB)
+#CheckBox0 0    
+
+#RingCtrl0 EQUATION
+#RadioCtrl0 0    
+
+PBK_CON_EQUATION 5000000*ApplyAEB
+VLOW_STOP -100
+*EQUATION 5000000*ApplyAEB
+
+
+#EMBEDDED_NOTES
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Braking MC Pressure (Open Loop); { Automated Emergency Braking (AEB) } AEB Brake Control: 5000000*ApplyAEB
+#Library : Control: Braking MC Pressure (Open Loop)
+#DataSet : AEB Brake Control: 5000000*ApplyAEB
+#Category: Automated Emergency Braking (AEB)
+#FileID  : PbkCon_206f665b-e4e9-4262-b9d5-58776bf68ec7
+#Product : TruckSim 2020.1
+#VehCode Brake Control
+
+END

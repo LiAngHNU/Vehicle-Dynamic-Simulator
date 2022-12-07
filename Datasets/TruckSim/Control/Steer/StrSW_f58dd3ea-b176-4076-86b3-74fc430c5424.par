@@ -1,0 +1,29 @@
+PARSFILE
+#FullDataName Control: Steering (Open Loop)`Fishhook`Rollover
+OPT_DM 0
+OPT_STR_BY_TRQ 0
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+STEER_SW_TABLE LINEAR_FLAT
+0, 0
+1, 0
+1.4083, 294
+1.67, 294
+2.487, -294
+10, -294
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Control: Steering (Open Loop); { Rollover } Fishhook
+#Library : Control: Steering (Open Loop)
+#DataSet : Fishhook
+#Category: Rollover
+#FileID  : StrSW_f58dd3ea-b176-4076-86b3-74fc430c5424
+#Product : TruckSim 2020.1
+#VehCode Open-Loop Steering
+
+END

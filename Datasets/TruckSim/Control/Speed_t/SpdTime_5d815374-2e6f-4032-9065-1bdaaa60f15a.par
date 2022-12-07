@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Target Speed`Japanese Environment`
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Japanese Environment
+#CheckBox2 0    
+#CheckBox3 0    
+*SCALAR 0
+#RingCtrl0 CONSTANT
+#RingCtrl1 STEP
+#RingCtrl2 ADD
+SPEED_TARGET_COMBINE ADD
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+SPEED_TARGET_CONSTANT 0
+#DiagramOne1
+SPEED_TARGET_S_TABLE STEP
+0, 70
+5, 20
+10, 50
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Target Speed; Japanese Environment
+#Library : Control: Speed (Closed Loop) Using Target Speed
+#DataSet : Japanese Environment
+#Category: 
+#FileID  : SpdTime_5d815374-2e6f-4032-9065-1bdaaa60f15a
+#Product : TruckSim 2020.1
+#VehCode Target Speed
+
+END

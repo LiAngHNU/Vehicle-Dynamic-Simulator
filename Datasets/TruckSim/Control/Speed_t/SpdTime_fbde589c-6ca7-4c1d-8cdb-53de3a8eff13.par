@@ -1,0 +1,53 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Target Speed`Spline: 80 to 10 km/h in 9 sec.`Speed vs. Time
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Spline: 80 to 10 km/h in 9 sec.
+#CheckBox2 0    
+#CheckBox3 1    
+*SCALAR2 0
+#RingCtrl0 SPLINE_FLAT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SPEED_TARGET_COMBINE ADD
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 1
+SPEED_ID_SC SPEED_TARGET_ID
+#CheckBox0 1    
+OPT_BK_SC 1
+#CheckBox1 0    
+OPT_SC_ENGINE_BRAKING 0
+#CheckBox4 0    
+OPT_SC_2018 0
+SPEED_KI 0.75
+SPEED_KP 0.5
+VLOW_STOP -1
+BK_PERF_SC 5
+FPD_PERF_SC 0.1
+PBK_CON_MAX_SC 15
+SPEED_KP3 0
+#DiagramOne0
+SPEED_TARGET_TABLE SPLINE_FLAT
+0, 80
+9, 10
+9.1, 10
+9.2, 10
+9.3, 10
+9.4, 10
+9.5, 10
+10, 10
+ENDTABLE
+SPEED_TARGET_S_CONSTANT 0
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Target Speed; { Speed vs. Time } Spline: 80 to 10 km/h in 9 sec.
+#Library : Control: Speed (Closed Loop) Using Target Speed
+#DataSet : Spline: 80 to 10 km/h in 9 sec.
+#Category: Speed vs. Time
+#FileID  : SpdTime_fbde589c-6ca7-4c1d-8cdb-53de3a8eff13
+#Product : TruckSim 2020.1
+#VehCode Target Speed
+
+END

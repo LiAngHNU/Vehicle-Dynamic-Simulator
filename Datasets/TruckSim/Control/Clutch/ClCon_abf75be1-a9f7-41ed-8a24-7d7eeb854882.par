@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Control: Clutch (Open Loop)`Engage in 2s @ 1s`Single Engagement / Disengagement
+opt_clutch_mode 0
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+CLUTCH_CONTROL_TABLE LINEAR_FLAT
+0, 1
+1, 1
+3, 0
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Control: Clutch (Open Loop); { Single Engagement / Disengagement } Engage in 2s @ 1s
+#Library : Control: Clutch (Open Loop)
+#DataSet : Engage in 2s @ 1s
+#Category: Single Engagement / Disengagement
+#FileID  : ClCon_abf75be1-a9f7-41ed-8a24-7d7eeb854882
+#Product : TruckSim 2020.1
+#VehCode Open-Loop Clutch
+
+END

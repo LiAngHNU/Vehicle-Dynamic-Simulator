@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Control: Braking MC Pressure (Open Loop)`Step: 1.5 MPa at 2 sec.`Step
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+PBK_CON_TABLE LINEAR_FLAT
+0, 0
+1.99, 0
+2, 1.5
+10, 1.5
+ENDTABLE
+VLOW_STOP 0
+
+
+LOG_ENTRY Used Dataset: Control: Braking MC Pressure (Open Loop); { Step } Step: 1.5 MPa at 2 sec.
+#Library : Control: Braking MC Pressure (Open Loop)
+#DataSet : Step: 1.5 MPa at 2 sec.
+#Category: Step
+#FileID  : PbkCon_5dc16a1a-bec3-48a8-b6de-01da53a48064
+#Product : TruckSim 2020.1
+#VehCode Brake Control
+
+END

@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Target Speed`Slowly reverse`Speed vs. Time
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Slowly reverse
+#CheckBox2 0    
+#CheckBox3 1    
+*SCALAR2 0
+#RingCtrl0 LINEAR_FLAT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SPEED_TARGET_COMBINE ADD
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 1
+SPEED_ID_SC SPEED_TARGET_ID
+#CheckBox0 0    
+OPT_BK_SC 0
+#CheckBox1 0    
+OPT_SC_ENGINE_BRAKING 0
+SPEED_KI 0.5
+SPEED_KP 0.5
+SPEED_KP3 0
+#DiagramOne0
+SPEED_TARGET_TABLE LINEAR_FLAT
+0, 0
+5, -5
+ENDTABLE
+SPEED_TARGET_S_CONSTANT 0
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Target Speed; { Speed vs. Time } Slowly reverse
+#Library : Control: Speed (Closed Loop) Using Target Speed
+#DataSet : Slowly reverse
+#Category: Speed vs. Time
+#FileID  : SpdTime_3119da9e-f423-4d70-b1b0-81424c2a410f
+#Product : TruckSim 2020.1
+#VehCode Target Speed
+
+END

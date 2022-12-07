@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Control: Steering Torque (Open Loop)`2.5 N-m Pulse from 1.0 - 1.5 seconds`
+OPT_DM 0
+OPT_STR_BY_TRQ 1
+#CheckBox0 0    
+
+#RingCtrl0 STEP
+#RadioCtrl0 0    
+
+#DiagramOne0
+M_STR_IN_TABLE STEP
+0, 0
+1, 2.5
+1.5, 0
+2, 0
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Control: Steering Torque (Open Loop); 2.5 N-m Pulse from 1.0 - 1.5 seconds
+#Library : Control: Steering Torque (Open Loop)
+#DataSet : 2.5 N-m Pulse from 1.0 - 1.5 seconds
+#Category: 
+#FileID  : StrTrq_9b31ead7-7a13-46aa-80f1-81bdb6a2b21c
+#Product : TruckSim 2020.1
+#VehCode Open-Loop Steering Torque
+
+END

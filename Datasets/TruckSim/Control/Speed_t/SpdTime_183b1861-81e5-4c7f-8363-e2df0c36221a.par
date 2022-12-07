@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Target Speed`* Intersection SLOW_TRAFFIC`Speed vs. Station
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID * Intersection SLOW_TRAFFIC
+#CheckBox2 1    
+#CheckBox3 0    
+*SCALAR 0
+*SCALAR2 0
+#MiscYellow0
+define_parameter SLOW_TRAFFIC = ISPEED;...
+    -; ID for target speed that slows
+#ENDMYellow
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 LINEAR_FLAT
+#RingCtrl2 ADD
+SPEED_TARGET_COMBINE ADD
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 1    
+
+SPEED_TARGET_CONSTANT 0
+#DiagramOne1
+SPEED_TARGET_S_TABLE LINEAR_FLAT
+-130, 80
+-110, 75
+-70, 60
+-30, 40
+-20, 40
+-10, 80
+ENDTABLE
+
+#EMBEDDED_NOTES
+#Slow down to 40 km/h in case light turns yellow. Once -20m is reached, go back to speed. Acceleration will be limited by the controller, so it's OK to be abrupt in the target.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Target Speed; { Speed vs. Station } * Intersection SLOW_TRAFFIC
+#Library : Control: Speed (Closed Loop) Using Target Speed
+#DataSet : * Intersection SLOW_TRAFFIC
+#Category: Speed vs. Station
+#FileID  : SpdTime_183b1861-81e5-4c7f-8363-e2df0c36221a
+#Product : TruckSim 2020.1
+#VehCode Target Speed
+
+END

@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Target Speed`Border Town: Off-road`Speed vs. Station
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Border Town: Off-road
+#CheckBox2 1    
+#CheckBox3 0    
+*SCALAR 1
+#RingCtrl0 LINEAR
+#RingCtrl1 LINEAR_FLAT
+#RingCtrl2 MULTIPLY
+SPEED_TARGET_COMBINE MULTIPLY
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 1    
+
+#DiagramOne0
+SPEED_TARGET_TABLE LINEAR
+0, 60
+200, 60
+250, 20
+875, 20
+1300, 20
+ENDTABLE
+
+#EMBEDDED_NOTES
+#This dataset for the speed of the Bus comes from a TruckSim run of the same intersection using the "Speed Control from Path Preview" controller to set the target speed.
+#
+#The output data was then copied into this dataset to create a realistic speed profile for the bus.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Target Speed; { Speed vs. Station } Border Town: Off-road
+#Library : Control: Speed (Closed Loop) Using Target Speed
+#DataSet : Border Town: Off-road
+#Category: Speed vs. Station
+#FileID  : SpdTime_75d42283-4ebe-4050-ad8c-dd43a87d5d87
+#Product : TruckSim 2020.1
+#VehCode Target Speed
+
+END

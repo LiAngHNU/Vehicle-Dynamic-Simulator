@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Control: Steering (Open Loop)`Step: 180 deg at 2 sec`Step
+OPT_DM 0
+OPT_STR_BY_TRQ 0
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+STEER_SW_TABLE LINEAR_FLAT
+0, 0
+2, 0
+2.66, 180
+3, 180
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Control: Steering (Open Loop); { Step } Step: 180 deg at 2 sec
+#Library : Control: Steering (Open Loop)
+#DataSet : Step: 180 deg at 2 sec
+#Category: Step
+#FileID  : StrSW_c4ec63d5-44c6-4d5e-9e38-36e7bc00a75b
+#Product : TruckSim 2020.1
+#VehCode Open-Loop Steering
+
+END

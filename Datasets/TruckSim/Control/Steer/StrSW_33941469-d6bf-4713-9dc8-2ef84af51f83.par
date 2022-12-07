@@ -1,0 +1,62 @@
+PARSFILE
+#FullDataName Control: Steering (Open Loop)`Normalized Pulse Steer (0.6 sec period)`PBS Pulse Steer
+OPT_DM 0
+OPT_STR_BY_TRQ 0
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+STEER_SW_TABLE SPLINE_FLAT
+0, 0
+0.02, 0.010926
+0.04, 0.043227
+0.06, 0.095492
+0.08, 0.16543
+0.1, 0.25
+0.12, 0.34549
+0.14, 0.44774
+0.16, 0.55226
+0.18, 0.65451
+0.2, 0.75
+0.22, 0.83457
+0.24, 0.90451
+0.26, 0.95677
+0.28, 0.98907
+0.3, 1
+0.32, 0.98907
+0.34, 0.95677
+0.36, 0.90451
+0.38, 0.83457
+0.4, 0.75
+0.42, 0.65451
+0.44, 0.55226
+0.46, 0.44774
+0.48, 0.34549
+0.5, 0.25
+0.52, 0.16543
+0.54, 0.095492
+0.56, 0.043227
+0.58, 0.010926
+0.6, 0
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#This is the open-loop steering pulse as specified in ISO 14791. It is scaled for a maximum steering wheel angle of 1 deg and frequency of 0.6 Hz.
+#
+#The intent is that this will  be scaled for an arbitrary maximum steer using the scale factor STEER_SW_GAIN.
+#
+#The values in the table were calculated using hte Calculator library (see the Tools menu).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Steering (Open Loop); { PBS Pulse Steer } Normalized Pulse Steer (0.6 sec period)
+#Library : Control: Steering (Open Loop)
+#DataSet : Normalized Pulse Steer (0.6 sec period)
+#Category: PBS Pulse Steer
+#FileID  : StrSW_33941469-d6bf-4713-9dc8-2ef84af51f83
+#Product : TruckSim 2020.1
+#VehCode Open-Loop Steering
+
+END

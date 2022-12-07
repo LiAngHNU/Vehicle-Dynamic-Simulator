@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Target Speed`Target Speed for Roundabout`Traffic Scenarios
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Target Speed for Roundabout
+#CheckBox2 0    
+#CheckBox3 0    
+*SCALAR 0
+#RingCtrl0 CONSTANT
+#RingCtrl1 STEP
+#RingCtrl2 ADD
+SPEED_TARGET_COMBINE ADD
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+SPEED_TARGET_CONSTANT 0
+#DiagramOne1
+SPEED_TARGET_S_TABLE STEP
+50, 80
+60, 30
+90, 80
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Target Speed; { Traffic Scenarios } Target Speed for Roundabout
+#Library : Control: Speed (Closed Loop) Using Target Speed
+#DataSet : Target Speed for Roundabout
+#Category: Traffic Scenarios
+#FileID  : SpdTime_b1f7fabb-c493-4647-ae1c-d8fcd553e838
+#Product : TruckSim 2020.1
+#VehCode Target Speed
+
+END

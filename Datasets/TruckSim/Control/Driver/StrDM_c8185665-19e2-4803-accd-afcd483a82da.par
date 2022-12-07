@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Control: Steering by the Closed-loop Driver Model`0.5s Preview for Understeer Tests`Constant Position: No Offset
+SET_ILTARG_FOR_ID 0
+set_description LTARG_ID 0.5s Preview for Understeer Tests
+#RingCtrl0 0
+#RingCtrl1 CONSTANT
+#RingCtrl2 1
+LTARG_CONSTANT 0
+#RadioCtrl0 0    
+
+*SCALAR 0
+SET_PATH_WIDTH 0.05
+SET_PATH_DASH_INTERVAL 1
+SET_PATH_VERTEX_INTERVAL 3
+SET_PATH_DZ 0.05
+SET_PATH_COLOR 0.4 0.4 1
+#CheckBox2 0    
+#CheckBox3 1    
+LTARG_ID_DM LTARG_ID
+#CheckBox0 0    
+#CheckBox1 1    
+CREATE_PATH_OBJ on
+#CheckBox4 1    
+#CheckBox5 0    
+OPT_STR_BY_TRQ 0
+OPT_DM 3
+AV_SW_MAX_DM 1200
+A_SW_MAX_DM 720
+*TPREV 0.5
+*GAIN 0
+VLOW_DM 20
+TPREV_CONSTANT 0.5
+
+#EMBEDDED_NOTES
+#These settings were made for constant-radius understeer tests.
+#
+#A 0.5s preview time with a low-speed limit of 20 km/h was found to be OK for the low-speed initialization part.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Steering by the Closed-loop Driver Model; { Constant Position: No Offset } 0.5s Preview for Understeer Tests
+#Library : Control: Steering by the Closed-loop Driver Model
+#DataSet : 0.5s Preview for Understeer Tests
+#Category: Constant Position: No Offset
+#FileID  : StrDM_c8185665-19e2-4803-accd-afcd483a82da
+#Product : TruckSim 2020.1
+#VehCode Driver Path Follower
+
+END

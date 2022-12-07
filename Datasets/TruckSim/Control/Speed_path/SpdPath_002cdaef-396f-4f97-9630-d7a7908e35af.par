@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Path Preview`0.2/0.2 G Max Ax/Ay, 80 km/h`Intersections
+INSTALL_SPEED_CONTROLLER
+SPEED_AX_THROTTLE_CONSTANT 0.2
+SPEED_AX_BRAKE_CONSTANT 0.2
+SPEED_AY_LEFT_CONSTANT 0.2
+SPEED_AY_RIGHT_CONSTANT 0.2
+#RingCtrl0 1
+OPT_SC_SKILL 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 1
+SET_ISPEED_FOR_ID 0
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Path Preview: 0.2/0.2 G Max Ax/Ay, 80 km/h
+SPEED_TARGET_CONSTANT 80
+SPEED_ID_SC = SPEED_TARGET_ID
+OPT_SC 4
+#CheckBox0 1    
+OPT_SC_ENGINE_BRAKING 1
+#CheckBox1 0    
+#CheckBox2 1    
+OPT_SC_3D 1
+#CheckBox3 0    
+OPT_SC_2018 0
+
+SPEED_KP 2.0
+SPEED_KI 1.0
+SPEED_KP3 0
+BK_PERF_SC 1.1
+FPD_PERF_SC 0.1
+SPEED_PREVIEW_STEP 4
+SPEED_CURV_LENGTH 8
+SPEED_PREVIEW_START 0
+SPEED_PREVIEW 100
+PBK_CON_MAX_SC 10
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Path Preview; { Intersections } 0.2/0.2 G Max Ax/Ay, 80 km/h
+#Library : Control: Speed (Closed Loop) Using Path Preview
+#DataSet : 0.2/0.2 G Max Ax/Ay, 80 km/h
+#Category: Intersections
+#FileID  : SpdPath_002cdaef-396f-4f97-9630-d7a7908e35af
+#Product : TruckSim 2020.1
+#VehCode Speed Using Path Preview
+
+END

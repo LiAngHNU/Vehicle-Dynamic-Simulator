@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Target Speed`Need to Stop, v2`Speed vs Station (Normalized)
+SET_ISPEED_FOR_ID STOP_ID_2
+set_description SPEED_TARGET_ID Need to Stop, v2
+#CheckBox2 0    
+#CheckBox3 0    
+*SCALAR 0
+*SCALAR2 0
+#RingCtrl0 CONSTANT
+#RingCtrl1 STEP
+#RingCtrl2 ADD
+SPEED_TARGET_COMBINE ADD
+#RingCtrl3 2
+#RadioCtrl0 1    
+#RadioCtrl1 0    
+
+SPEED_TARGET_CONSTANT 0
+#DiagramOne1
+SPEED_TARGET_S_TABLE STEP
+-1, 3.6
+0, 0
+ENDTABLE
+
+#EMBEDDED_NOTES
+#This is a normalized table of target speed vs Station for intial speed  of 3.6 km/h (1 m/s) that changes to 0 at S = 0.
+#
+#To make a stop, set SPEED_ID_SC = STOP_ID, set TARGET_SPEED_GAIN to the current vehicle speed Vxz_Fwd, and set SSTART_SPEED_TARGET to the station where the vehicle should stop.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Target Speed; { Speed vs Station (Normalized) } Need to Stop, v2
+#Library : Control: Speed (Closed Loop) Using Target Speed
+#DataSet : Need to Stop, v2
+#Category: Speed vs Station (Normalized)
+#FileID  : SpdTime_b028a4a6-4a28-41bc-aba2-feb16017e390
+#Product : TruckSim 2020.1
+#VehCode Target Speed
+
+END

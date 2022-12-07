@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s`Closed-Loop Shifting
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+MODE_TRANS_CONSTANT NGEARS
+#RadioCtrl0 0    
+
+PARSFILE Control\Int_Shift\ClTime_bc551f7e-c815-4868-965e-a0f251e9cde8.par
+#BlueLink0 Control: Clutch Shifting Timelines (Closed Loop)`Clutch Actuation: 0.5s, Gear Change: 0.1s` ` , Shifting`ClTime_bc551f7e-c815-4868-965e-a0f251e9cde8
+
+*SCALAR NGEARS
+
+
+#EMBEDDED_NOTES
+#NGEARS is the internal math model keyword for the number of gears in a transmission.
+#
+#By setting the Mode to NGEARS, TruckSim is automatically told to use all of the transmission gears.
+#
+#The linked Shifting Timelines dataset specifies the relationship between throttle, clutch, and gearshift control.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } NGEARS, Clutch Act 0.5s, Gear 0.1s
+#Library : Control: Shifting (Closed Loop)
+#DataSet : NGEARS, Clutch Act 0.5s, Gear 0.1s
+#Category: Closed-Loop Shifting
+#FileID  : GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+#Product : TruckSim 2020.1
+#VehCode Closed-Loop Shift Control
+
+END

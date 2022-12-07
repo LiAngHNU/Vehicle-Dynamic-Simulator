@@ -1,0 +1,63 @@
+PARSFILE
+#FullDataName Control: Clutch (Open Loop)`Profile: Shift Every 5 Sec. (7 Spd.)`Open Loop Shift Profiles
+opt_clutch_mode 0
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+CLUTCH_CONTROL_TABLE LINEAR_FLAT
+0, 1
+0.35, 0.5
+0.65, 0.5
+1, 0
+4.9, 0
+5, 1
+5.4, 1
+5.75, 0.5
+6.05, 0.5
+6.4, 0
+9.9, 0
+10, 1
+10.4, 1
+10.75, 0.5
+11.05, 0.5
+11.4, 0
+14.9, 0
+15, 1
+15.4, 1
+15.75, 0.5
+16.05, 0.5
+16.4, 0
+19.9, 0
+20, 1
+20.4, 1
+20.75, 0.5
+21.05, 0.5
+21.4, 0
+24.9, 0
+25, 1
+25.4, 1
+25.75, 0.5
+26.05, 0.5
+26.4, 0
+29.9, 0
+30, 1
+30.4, 1
+30.75, 0.5
+31.05, 0.5
+31.4, 0
+36, 0
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Control: Clutch (Open Loop); { Open Loop Shift Profiles } Profile: Shift Every 5 Sec. (7 Spd.)
+#Library : Control: Clutch (Open Loop)
+#DataSet : Profile: Shift Every 5 Sec. (7 Spd.)
+#Category: Open Loop Shift Profiles
+#FileID  : ClCon_80026a51-7356-4a78-a2fc-a0190da4fa0c
+#Product : TruckSim 2020.1
+#VehCode Open-Loop Clutch
+
+END

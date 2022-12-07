@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Control: Throttle (Open Loop)`Zero to 0.65, hold for 14.5 sec, to Zero`Throttle Apply and Release
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+THROTTLE_ENGINE_TABLE LINEAR_FLAT
+0, 0
+0.1, 0
+0.5, 0.65
+15, 0.65
+15.5, 0
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Control: Throttle (Open Loop); { Throttle Apply and Release } Zero to 0.65, hold for 14.5 sec, to Zero
+#Library : Control: Throttle (Open Loop)
+#DataSet : Zero to 0.65, hold for 14.5 sec, to Zero
+#Category: Throttle Apply and Release
+#FileID  : Throttle_13a6337e-0458-4146-9c37-d508b1ce5162
+#Product : TruckSim 2020.1
+#VehCode Open-loop Throttle
+
+END

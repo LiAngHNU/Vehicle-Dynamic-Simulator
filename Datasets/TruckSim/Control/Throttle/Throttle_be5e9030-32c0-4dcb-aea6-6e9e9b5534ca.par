@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Control: Throttle (Open Loop)`Ramp to 0.5, Shifts every 5 sec.`Throttle Apply and Release
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+THROTTLE_ENGINE_TABLE LINEAR_FLAT
+0, 0
+0.1, 0
+0.11, 0.5
+4.9, 0.5
+5, 0
+5.4, 0
+6.4, 0.5
+9.9, 0.5
+10, 0
+10.4, 0
+11.4, 0.5
+14.9, 0.5
+15, 0
+15.4, 0
+16.4, 0.5
+19.9, 0.5
+20, 0
+20.4, 0
+21.4, 0.5
+24.9, 0.5
+25, 0
+25.4, 0
+26.4, 0.5
+30, 0.5
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Control: Throttle (Open Loop); { Throttle Apply and Release } Ramp to 0.5, Shifts every 5 sec.
+#Library : Control: Throttle (Open Loop)
+#DataSet : Ramp to 0.5, Shifts every 5 sec.
+#Category: Throttle Apply and Release
+#FileID  : Throttle_be5e9030-32c0-4dcb-aea6-6e9e9b5534ca
+#Product : TruckSim 2020.1
+#VehCode Open-loop Throttle
+
+END

@@ -1,0 +1,24 @@
+PARSFILE
+#FullDataName Control: Throttle (Open Loop)`Ramp: Full Throttle in 0.1 sec.`Ramp
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+THROTTLE_ENGINE_TABLE LINEAR_FLAT
+0, 0
+0.1, 1
+1, 1
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Control: Throttle (Open Loop); { Ramp } Ramp: Full Throttle in 0.1 sec.
+#Library : Control: Throttle (Open Loop)
+#DataSet : Ramp: Full Throttle in 0.1 sec.
+#Category: Ramp
+#FileID  : Throttle_c44287e7-3496-4c50-8646-3373aaeaef4d
+#Product : TruckSim 2020.1
+#VehCode Open-loop Throttle
+
+END

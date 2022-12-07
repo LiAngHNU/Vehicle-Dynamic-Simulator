@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Control: Clutch Shifting Timelines (Closed Loop)`Clutch Actuation 1.5s, Gear Change: 0.2s`
+
+opt_clutch_mode 1
+T_CL_DISENGAGE 0.1
+T_CL_PRESS_TOTAL 0.5
+T_CL_HALF_HOLD 0.3
+T_CL_RE_ENGAGE 1.5
+T_TH_ZERO 0.1
+T_TH_ZERO_TOTAL 0.5
+T_TH_RETURNED 1.5
+T_GEAR_LAG 0.2
+VLOW_CLUTCH 1
+
+*T_TH_ZERO_HOLD 0.5 - 0.1
+*T_TH_RETURN 1.5 - 0.5
+*T_CL_PRESS_HOLD 0.5 - 0.1
+*T_CL_HALF_TOTAL 1.5 - 0.5
+
+LOG_ENTRY Used Dataset: Control: Clutch Shifting Timelines (Closed Loop); Clutch Actuation 1.5s, Gear Change: 0.2s
+#Library : Control: Clutch Shifting Timelines (Closed Loop)
+#DataSet : Clutch Actuation 1.5s, Gear Change: 0.2s
+#Category: 
+#FileID  : ClTime_97af7dde-0fab-46dd-b3f7-88f56f32d3ac
+#Product : TruckSim 2020.1
+#VehCode Shifting Times (Alt)
+
+END

@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Control: Steering by the Closed-loop Driver Model`Exit, Right Lane: LTARG ID 2001`Atlas Highway Intersection
+SET_ILTARG_FOR_ID 2001
+set_description LTARG_ID Exit, Right Lane: LTARG ID 2001
+#RingCtrl1 LINEAR
+#RingCtrl2 2
+#DiagramOne0
+LTARG_TABLE LINEAR
+0, 0
+1000, 0
+1210, -2
+1500, -2
+ENDTABLE
+#RadioCtrl0 0    
+
+#CheckBox2 0    
+#CheckBox3 0    
+
+#EMBEDDED_NOTES
+#This LTARG dataset sets the lateral offset to -2.0 meters (to the right).
+#
+#The change in lateral target position starts at 1000 meters and is completed by 1210 meters.
+#
+#Since this LTARG dataset is intended to provide the LTARG path information only, the Driver Model parameters are not selected at the bottom of this screen.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Steering by the Closed-loop Driver Model; { Atlas Highway Intersection } Exit, Right Lane: LTARG ID 2001
+#Library : Control: Steering by the Closed-loop Driver Model
+#DataSet : Exit, Right Lane: LTARG ID 2001
+#Category: Atlas Highway Intersection
+#FileID  : StrDM_1594a655-3f36-4224-a771-17b3f7818433
+#Product : TruckSim 2020.1
+#VehCode Driver Path Follower
+
+END

@@ -1,0 +1,124 @@
+PARSFILE
+#FullDataName Control: Steering by the Closed-loop Driver Model`Road w/ Center Median`Highway Driving
+SET_ILTARG_FOR_ID 0
+set_description LTARG_ID Road w/ Center Median
+#RingCtrl0 0
+#RingCtrl1 LINEAR_FLAT
+#RingCtrl2 1
+#DiagramOne0
+LTARG_TABLE LINEAR_FLAT
+0, 2
+25, 2
+30, 2
+35, 2
+40, 2
+45, 2
+50, 2
+55, 2
+60, 2
+65, 2
+70, 2
+71, 2
+72, 2
+73, 2
+74, 2
+77, 2.001
+80, 2.01
+100, 3
+125, 4
+126, 4
+127, 4
+128, 4
+129, 4
+130, 4
+131, 4
+132, 4
+133, 4
+134, 4
+135, 4
+140, 4
+145, 4
+150, 4
+155, 4
+160, 4
+165, 4
+170, 4
+175, 4
+180, 4
+185, 4
+190, 4
+195, 4
+200, 4
+225, 4
+250, 4
+255, 4
+260, 4
+265, 4
+270, 4
+275, 4
+280, 4
+285, 4
+290, 4
+291, 4
+292, 4
+293, 4
+294, 4
+295, 4
+296, 4
+297, 4
+298, 4
+299, 4
+300, 4
+325, 3
+345, 2.01
+348, 2.001
+350, 2
+351, 2
+352, 2
+353, 2
+354, 2
+355, 2
+360, 2
+365, 2
+370, 2
+375, 2
+400, 2
+ENDTABLE
+#RadioCtrl0 0    
+
+*SCALAR 0
+SET_PATH_WIDTH 0.1
+SET_PATH_DASH_INTERVAL 1.0
+SET_PATH_VERTEX_INTERVAL 1
+SET_PATH_DZ 0.03
+SET_PATH_COLOR 0.4 0.4 1
+#CheckBox2 0    
+#CheckBox3 1    
+LTARG_ID_DM LTARG_ID
+#CheckBox0 0    
+#CheckBox1 1    
+CREATE_PATH_OBJ on
+#CheckBox4 0    
+#CheckBox5 0    
+OPT_STR_BY_TRQ 0
+OPT_DM 1
+#CheckBox6 1    
+#CheckBox7 0    
+OPT_DM_2019 0
+TLAG_DM 0
+AV_SW_MAX_DM 1200
+A_SW_MAX_DM 720
+*TPREV 1
+*GAIN 0
+VLOW_DM 10
+TPREV_CONSTANT 1
+
+LOG_ENTRY Used Dataset: Control: Steering by the Closed-loop Driver Model; { Highway Driving } Road w/ Center Median
+#Library : Control: Steering by the Closed-loop Driver Model
+#DataSet : Road w/ Center Median
+#Category: Highway Driving
+#FileID  : StrDM_e2e1d4b6-d74e-4bd8-8ffe-490fb4bd6220
+#Product : TruckSim 2020.1
+#VehCode Driver Path Follower
+
+END

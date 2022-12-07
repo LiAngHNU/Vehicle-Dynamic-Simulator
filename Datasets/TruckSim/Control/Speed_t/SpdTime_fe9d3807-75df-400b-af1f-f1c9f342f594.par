@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Target Speed`Constant: 6 km/h`Constant
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Constant: 6 km/h
+#CheckBox2 0    
+#CheckBox3 1    
+*SCALAR 6
+*SCALAR2 0
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SPEED_TARGET_COMBINE ADD
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 1
+SPEED_ID_SC SPEED_TARGET_ID
+#CheckBox0 1    
+OPT_BK_SC 1
+#CheckBox1 0    
+OPT_SC_ENGINE_BRAKING 0
+#CheckBox4 0    
+OPT_SC_2018 0
+SPEED_KI 0.15
+SPEED_KP 0.15
+VLOW_STOP -1
+BK_PERF_SC 1
+FPD_PERF_SC 0.1
+PBK_CON_MAX_SC 15
+SPEED_KP3 0
+SPEED_TARGET_CONSTANT 6
+SPEED_TARGET_S_CONSTANT 0
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Target Speed; { Constant } Constant: 6 km/h
+#Library : Control: Speed (Closed Loop) Using Target Speed
+#DataSet : Constant: 6 km/h
+#Category: Constant
+#FileID  : SpdTime_fe9d3807-75df-400b-af1f-f1c9f342f594
+#Product : TruckSim 2020.1
+#VehCode Target Speed
+
+END

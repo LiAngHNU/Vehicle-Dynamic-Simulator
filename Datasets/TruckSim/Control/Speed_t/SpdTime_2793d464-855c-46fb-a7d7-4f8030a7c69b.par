@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Target Speed`Constant: 80 km/h (PBS C14)`Constant
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Constant: 80 km/h (PBS C14)
+#CheckBox2 0    
+#CheckBox3 1    
+*SCALAR 80
+*SCALAR2 0
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SPEED_TARGET_COMBINE ADD
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 1
+SPEED_ID_SC SPEED_TARGET_ID
+#CheckBox0 0    
+OPT_BK_SC 0
+#CheckBox1 0    
+OPT_SC_ENGINE_BRAKING 0
+SPEED_KI 0.157
+SPEED_KP 0.141
+VLOW_STOP -1
+SPEED_KP3 0
+SPEED_TARGET_CONSTANT 80
+SPEED_TARGET_S_CONSTANT 0
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Target Speed; { Constant } Constant: 80 km/h (PBS C14)
+#Library : Control: Speed (Closed Loop) Using Target Speed
+#DataSet : Constant: 80 km/h (PBS C14)
+#Category: Constant
+#FileID  : SpdTime_2793d464-855c-46fb-a7d7-4f8030a7c69b
+#Product : TruckSim 2020.1
+#VehCode Target Speed
+
+END

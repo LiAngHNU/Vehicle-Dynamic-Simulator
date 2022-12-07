@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Target Speed`Intersection SLOW_TRAFFIC`Speed vs. Station
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Intersection SLOW_TRAFFIC
+#CheckBox2 1    
+#CheckBox3 0    
+*SCALAR 0
+*SCALAR2 0
+#MiscYellow0
+define_parameter SLOW_TRAFFIC = ISPEED;...
+    -; ID for target speed that slows
+#ENDMYellow
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 LINEAR_FLAT
+#RingCtrl2 ADD
+SPEED_TARGET_COMBINE ADD
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+SPEED_TARGET_CONSTANT 0
+#DiagramOne1
+SPEED_TARGET_S_TABLE LINEAR_FLAT
+-50, 80
+-8, 40
+8, 40
+50, 80
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Target Speed; { Speed vs. Station } Intersection SLOW_TRAFFIC
+#Library : Control: Speed (Closed Loop) Using Target Speed
+#DataSet : Intersection SLOW_TRAFFIC
+#Category: Speed vs. Station
+#FileID  : SpdTime_9ce062a4-7ec1-4ba2-a338-72cb6a0a07fc
+#Product : TruckSim 2020.1
+#VehCode Target Speed
+
+END

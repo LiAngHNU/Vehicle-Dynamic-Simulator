@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Target Speed`Crossing, Right Turn (Hyd. Brakes)`Speed vs. Station
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Crossing, Right Turn (Hyd. Brakes)
+#CheckBox2 0    
+#CheckBox3 1    
+*SCALAR 0
+#RingCtrl0 CONSTANT
+#RingCtrl1 SPLINE_FLAT
+#RingCtrl2 ADD
+SPEED_TARGET_COMBINE ADD
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 1
+SPEED_ID_SC SPEED_TARGET_ID
+#CheckBox0 1    
+OPT_BK_SC 1
+#CheckBox1 1    
+OPT_SC_ENGINE_BRAKING 1
+#CheckBox4 0    
+OPT_SC_2018 0
+SPEED_KI 0.2
+SPEED_KP 0.5
+VLOW_STOP -1
+BK_PERF_SC 0.1
+FPD_PERF_SC 0.1
+PBK_CON_MAX_SC 15
+SPEED_KP3 0.5
+SPEED_TARGET_CONSTANT 0
+#DiagramOne1
+SPEED_TARGET_S_TABLE SPLINE_FLAT
+-125, 75
+-100, 65
+-8, 10
+8, 10
+100, 30
+200, 50
+ENDTABLE
+
+#EMBEDDED_NOTES
+#Speed Target vs. Station for vehicles with hydraulic brakes.
+#
+#The maximum Master Cylinder Brake Pressure is set to be 15 MPa.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Target Speed; { Speed vs. Station } Crossing, Right Turn (Hyd. Brakes)
+#Library : Control: Speed (Closed Loop) Using Target Speed
+#DataSet : Crossing, Right Turn (Hyd. Brakes)
+#Category: Speed vs. Station
+#FileID  : SpdTime_02194b8a-27d6-4c77-985d-f66b15cb3698
+#Product : TruckSim 2020.1
+#VehCode Target Speed
+
+END

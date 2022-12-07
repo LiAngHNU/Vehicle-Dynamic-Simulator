@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Target Speed`Roundabout Traffic, 3rd Exit (Left)`Speed vs. Station
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Roundabout Traffic, 3rd Exit (Left)
+#CheckBox2 0    
+#CheckBox3 0    
+*SCALAR 0
+#RingCtrl0 CONSTANT
+#RingCtrl1 LINEAR_FLAT
+#RingCtrl2 ADD
+SPEED_TARGET_COMBINE ADD
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+SPEED_TARGET_CONSTANT 0
+#DiagramOne1
+SPEED_TARGET_S_TABLE LINEAR_FLAT
+15, 80
+65, 22
+135, 22
+185, 80
+ENDTABLE
+
+#EMBEDDED_NOTES
+#Since this Target Speed vs. Station dataset is intended to be used for traffic vehicles, the Closed Loop Speed Controller settings are not used.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Target Speed; { Speed vs. Station } Roundabout Traffic, 3rd Exit (Left)
+#Library : Control: Speed (Closed Loop) Using Target Speed
+#DataSet : Roundabout Traffic, 3rd Exit (Left)
+#Category: Speed vs. Station
+#FileID  : SpdTime_4beb3d74-6be2-43ff-a2cd-fccca9802d07
+#Product : TruckSim 2020.1
+#VehCode Target Speed
+
+END

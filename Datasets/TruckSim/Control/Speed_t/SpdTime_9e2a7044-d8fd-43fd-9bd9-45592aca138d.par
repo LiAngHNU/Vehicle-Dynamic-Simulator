@@ -1,0 +1,105 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Target Speed`Intersection STOP_TRAFFIC`Speed vs. Station
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Intersection STOP_TRAFFIC
+#CheckBox2 1    
+#CheckBox3 0    
+*SCALAR 0
+#MiscYellow0
+define_parameter STOP_TRAFFIC = ISPEED;...
+    -; ID for target speed that stops
+#ENDMYellow
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 LINEAR_FLAT
+#RingCtrl2 ADD
+SPEED_TARGET_COMBINE ADD
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+SPEED_TARGET_CONSTANT 0
+#DiagramOne1
+SPEED_TARGET_S_TABLE LINEAR_FLAT
+-137.17, 79.999
+-132.76, 78.703
+-128.43, 77.407
+-124.16, 76.111
+-119.97, 74.815
+-115.85, 73.519
+-111.8, 72.223
+-107.82, 70.927
+-103.92, 69.631
+-100.09, 68.335
+-96.326, 67.039
+-92.637, 65.743
+-89.021, 64.447
+-85.476, 63.151
+-82.004, 61.855
+-78.603, 60.559
+-75.275, 59.263
+-72.018, 57.967
+-68.834, 56.671
+-65.722, 55.375
+-62.681, 54.079
+-59.713, 52.783
+-56.816, 51.487
+-53.992, 50.191
+-51.239, 48.895
+-48.559, 47.599
+-45.95, 46.303
+-43.414, 45.007
+-40.95, 43.711
+-38.557, 42.415
+-36.24, 41.119
+-33.99, 39.823
+-31.81, 38.527
+-29.71, 37.231
+-27.67, 35.936
+-25.71, 34.64
+-23.83, 33.344
+-22.01, 32.048
+-20.27, 30.752
+-18.59, 29.456
+-16.99, 28.16
+-15.46, 26.864
+-14.01, 25.568
+-12.62, 24.272
+-11.31, 22.976
+-10.07, 21.68
+-8.9, 20.384
+-7.81, 19.088
+-6.78, 17.792
+-5.83, 16.496
+-4.95, 15.2
+-4.14, 13.904
+-3.4, 12.608
+-2.74, 11.312
+-2.15, 10.016
+-1.63, 8.7199
+-1.18, 7.4239
+-0.8, 6.1279
+-0.5, 4.8319
+-0.26, 3.536
+-0.1, 2.24
+-0.01, 0.94399
+0, 0
+ENDTABLE
+
+#EMBEDDED_NOTES
+#With initial speed Vo and constant deceleration A, V(t) = Vo - A*t, and distance S(t) = Vo*t - A*t^2/2.
+#
+#This version starts at 80 km/h with 1.8m/s2 decel.
+#
+#It stops at S = 0
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Target Speed; { Speed vs. Station } Intersection STOP_TRAFFIC
+#Library : Control: Speed (Closed Loop) Using Target Speed
+#DataSet : Intersection STOP_TRAFFIC
+#Category: Speed vs. Station
+#FileID  : SpdTime_9e2a7044-d8fd-43fd-9bd9-45592aca138d
+#Product : TruckSim 2020.1
+#VehCode Target Speed
+
+END

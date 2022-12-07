@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Control: Braking Pedal Force (Open Loop)`Ramp: 0-250N in 1s @ 5s`Ramp
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+F_BRAKE_PEDAL_TABLE LINEAR_FLAT
+0, 0
+5, 0
+6, 250
+8, 250
+ENDTABLE
+VLOW_STOP -1
+*SCALAR 0
+
+
+LOG_ENTRY Used Dataset: Control: Braking Pedal Force (Open Loop); { Ramp } Ramp: 0-250N in 1s @ 5s
+#Library : Control: Braking Pedal Force (Open Loop)
+#DataSet : Ramp: 0-250N in 1s @ 5s
+#Category: Ramp
+#FileID  : FbkCon_6bd7abfd-37ec-4ab7-987a-c7637ea29a3b
+#Product : TruckSim 2020.1
+#VehCode Open-Loop Pedal Force
+
+END

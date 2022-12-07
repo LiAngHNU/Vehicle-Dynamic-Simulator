@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Control: Braking Pedal Force (Open Loop)`Spike: 0-140N in 0.1s @ 2s`Spike
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+F_BRAKE_PEDAL_TABLE LINEAR_FLAT
+0, 0
+2, 0
+2.1, 140
+ENDTABLE
+VLOW_STOP -1
+*SCALAR 0
+
+
+LOG_ENTRY Used Dataset: Control: Braking Pedal Force (Open Loop); { Spike } Spike: 0-140N in 0.1s @ 2s
+#Library : Control: Braking Pedal Force (Open Loop)
+#DataSet : Spike: 0-140N in 0.1s @ 2s
+#Category: Spike
+#FileID  : FbkCon_65b0e223-1667-4f9f-9662-e7f2eba31d33
+#Product : TruckSim 2020.1
+#VehCode Open-Loop Pedal Force
+
+END

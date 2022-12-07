@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Control: Braking MC Pressure (Open Loop)`Stop while pedestrian crosses`Step
+#CheckBox0 0    
+
+#RingCtrl0 STEP
+#RadioCtrl0 0    
+
+#DiagramOne0
+PBK_CON_TABLE STEP
+10, 0
+12, 3
+25, 0
+ENDTABLE
+VLOW_STOP -10
+
+
+LOG_ENTRY Used Dataset: Control: Braking MC Pressure (Open Loop); { Step } Stop while pedestrian crosses
+#Library : Control: Braking MC Pressure (Open Loop)
+#DataSet : Stop while pedestrian crosses
+#Category: Step
+#FileID  : PbkCon_c7f97e3f-7b83-4fa9-a908-169ef9409824
+#Product : TruckSim 2020.1
+#VehCode Brake Control
+
+END

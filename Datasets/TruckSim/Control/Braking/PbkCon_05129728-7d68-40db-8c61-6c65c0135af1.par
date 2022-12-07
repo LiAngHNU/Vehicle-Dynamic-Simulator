@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName Control: Braking MC Pressure (Open Loop)`Air Brakes: 1.51MPa-1.4MPa in 8s`Measured Input
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+PBK_CON_TABLE LINEAR_FLAT
+0, 0
+0.01, 0
+0.02, 0
+0.25, 1.51
+0.27, 1.51
+0.3, 1.51
+0.35, 1.51
+0.4, 1.51
+0.5, 1.51
+0.62, 1.51
+0.82, 1.5
+1.02, 1.49
+1.03, 1.49
+1.23, 1.48
+1.43, 1.48
+1.63, 1.47
+1.83, 1.47
+2.03, 1.47
+2.04, 1.47
+2.24, 1.46
+2.44, 1.46
+2.64, 1.46
+2.84, 1.45
+3.04, 1.45
+3.05, 1.45
+3.25, 1.45
+3.45, 1.45
+3.65, 1.5
+3.85, 1.56
+4.05, 1.5
+4.06, 1.5
+4.26, 1.48
+4.46, 1.44
+4.66, 1.45
+4.86, 1.44
+5.06, 1.44
+5.07, 1.44
+5.27, 1.43
+5.47, 1.43
+5.67, 1.43
+5.87, 1.42
+6.07, 1.42
+6.08, 1.42
+6.28, 1.42
+6.48, 1.42
+6.68, 1.42
+6.88, 1.42
+7.08, 1.42
+7.09, 1.42
+7.29, 1.41
+7.49, 1.41
+7.69, 1.41
+7.89, 1.41
+8.09, 1.41
+8.1, 1.41
+8.3, 1.41
+8.5, 1.4
+ENDTABLE
+VLOW_STOP -100
+*SCALAR 15
+
+
+LOG_ENTRY Used Dataset: Control: Braking MC Pressure (Open Loop); { Measured Input } Air Brakes: 1.51MPa-1.4MPa in 8s
+#Library : Control: Braking MC Pressure (Open Loop)
+#DataSet : Air Brakes: 1.51MPa-1.4MPa in 8s
+#Category: Measured Input
+#FileID  : PbkCon_05129728-7d68-40db-8c61-6c65c0135af1
+#Product : TruckSim 2020.1
+#VehCode Brake Control
+
+END

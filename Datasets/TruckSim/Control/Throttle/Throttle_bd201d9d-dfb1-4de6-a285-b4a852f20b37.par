@@ -1,0 +1,20 @@
+PARSFILE
+#FullDataName Control: Throttle (Open Loop)`Throt_Ref`Opt_Engine_Running
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+#RadioCtrl0 0    
+
+THROTTLE_ENGINE_CONSTANT Throt_Ref
+*SCALAR Throt_Ref
+
+
+LOG_ENTRY Used Dataset: Control: Throttle (Open Loop); { Opt_Engine_Running } Throt_Ref
+#Library : Control: Throttle (Open Loop)
+#DataSet : Throt_Ref
+#Category: Opt_Engine_Running
+#FileID  : Throttle_bd201d9d-dfb1-4de6-a285-b4a852f20b37
+#Product : TruckSim 2020.1
+#VehCode Open-loop Throttle
+
+END

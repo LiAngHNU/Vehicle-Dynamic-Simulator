@@ -1,0 +1,66 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Path Preview`0.15/0.2 G Max Ax/Ay, SPEED_LIMIT_ID`Intersections
+INSTALL_SPEED_CONTROLLER
+SPEED_AX_THROTTLE_CONSTANT 0.15
+SPEED_AX_BRAKE_CONSTANT 0.2
+SPEED_AY_LEFT_CONSTANT 0.2
+SPEED_AY_RIGHT_CONSTANT 0.2
+#RingCtrl0 2
+OPT_SC_SKILL 2
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 2
+SET_ISPEED_FOR_ID SPEED_LIMIT_ID
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Path Preview: 0.15/0.2 G Max Ax/Ay, SPEED_LIMIT_ID
+SPEED_TARGET_CONSTANT 30;mi/h
+SPEED_ID_SC = SPEED_TARGET_ID
+OPT_SC 4
+#CheckBox0 1    
+OPT_SC_ENGINE_BRAKING 1
+#CheckBox1 1    
+#CheckBox2 0    
+OPT_SC_3D 0
+#CheckBox3 0    
+OPT_SC_2018 0
+
+SPEED_KP 0.5
+SPEED_KI 0.5
+SPEED_KP3 0
+BK_PERF_SC 0.1
+FPD_PERF_SC 0.1
+SPEED_PREVIEW_STEP 1
+SPEED_CURV_LENGTH 4
+SPEED_PREVIEW_START 0
+SPEED_PREVIEW 100
+PBK_CON_MAX_SC 10
+#MiscYellow0
+set_units Vxz_Fwd mi/h
+set_units VxTarget mi/h
+set_units Vx mi/h
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#These control settings are with a maximum speed specified with a SPEED_TARGET dataset with the ID set to the parameter SPEED_LIMIT.
+#
+#SPEED_LIMIT must be defined with a VS Command before this dataset is loaded.
+#
+#The speed limit may be obtained from signs with units of mi/h (USA), so the units for several speed output variables are set to mi/h.
+#
+#This dataset is used for ADAS examples where the vehicle stops and then makes a 90-deg turn. The path preview must handle a short-radius turn, while looking ahead 100m.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Path Preview; { Intersections } 0.15/0.2 G Max Ax/Ay, SPEED_LIMIT_ID
+#Library : Control: Speed (Closed Loop) Using Path Preview
+#DataSet : 0.15/0.2 G Max Ax/Ay, SPEED_LIMIT_ID
+#Category: Intersections
+#FileID  : SpdPath_15d13c88-577c-486c-a5cf-c0652c815e86
+#Product : TruckSim 2020.1
+#VehCode Speed Using Path Preview
+
+END

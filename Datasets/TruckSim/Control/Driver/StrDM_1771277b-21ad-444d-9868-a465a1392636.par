@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Control: Steering by the Closed-loop Driver Model`1.8m Right, Variable Speed Preview`Constant Position: Non-Zero Offset
+SET_ILTARG_FOR_ID 0
+set_description LTARG_ID 1.8m Right, Variable Speed Preview
+#RingCtrl0 1
+#RingCtrl1 CONSTANT
+#RingCtrl2 1
+LTARG_CONSTANT -1.8
+#RadioCtrl0 0    
+
+*SCALAR -1.8
+SET_PATH_WIDTH 0.1
+SET_PATH_DASH_INTERVAL 1.0
+SET_PATH_VERTEX_INTERVAL 1
+SET_PATH_DZ 0.03
+SET_PATH_COLOR 0.4 0.4 1
+#CheckBox2 0    
+#CheckBox3 1    
+LTARG_ID_DM LTARG_ID
+#CheckBox0 0    
+#CheckBox1 1    
+CREATE_PATH_OBJ on
+#CheckBox4 0    
+#CheckBox5 0    
+OPT_STR_BY_TRQ 0
+OPT_DM 1
+#CheckBox6 1    
+#CheckBox7 0    
+OPT_DM_2019 0
+TLAG_DM 0
+AV_SW_MAX_DM 1200
+A_SW_MAX_DM 720
+*TPREV 1.5
+VLOW_DM 10
+PARSFILE Control\Preview\Tprev_ae0ad2e6-7c23-4c28-a11f-0caa3cc35af8.par
+#BlueLink1 Control: Steering Preview Time for the Driver Model`Variable Preview for 90-deg Turn` ` , Preview time`Tprev_ae0ad2e6-7c23-4c28-a11f-0caa3cc35af8
+
+
+#EMBEDDED_NOTES
+#This dataset handles steering through a 90-deg turn. To avoid excessive inboard tracking, the preview is speed dependent.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Steering by the Closed-loop Driver Model; { Constant Position: Non-Zero Offset } 1.8m Right, Variable Speed Preview
+#Library : Control: Steering by the Closed-loop Driver Model
+#DataSet : 1.8m Right, Variable Speed Preview
+#Category: Constant Position: Non-Zero Offset
+#FileID  : StrDM_1771277b-21ad-444d-9868-a465a1392636
+#Product : TruckSim 2020.1
+#VehCode Driver Path Follower
+
+END

@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Target Speed`50-0kmh, -2 m/s/s, ISPEED = 2`AEB CCRb Target Speed
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID 50-0kmh, -2 m/s/s, ISPEED = 2
+#CheckBox2 1    
+#CheckBox3 0    
+*SCALAR2 0
+#MiscYellow0
+N_SPEED_TARGET = 2
+ISPEED = 2
+#ENDMYellow
+
+#RingCtrl0 LINEAR_FLAT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SPEED_TARGET_COMBINE ADD
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+SPEED_TARGET_TABLE LINEAR_FLAT
+0, 50
+6.944, 0
+ENDTABLE
+SPEED_TARGET_S_CONSTANT 0
+
+#EMBEDDED_NOTES
+#The EVT in the Euro NCAP AEB simulation uses this dataset for the case in which it decelerates from 50 km/h to zero at 2 m/s^2.
+#
+#This dataset is for ISPEED = 2.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Target Speed; { AEB CCRb Target Speed } 50-0kmh, -2 m/s/s, ISPEED = 2
+#Library : Control: Speed (Closed Loop) Using Target Speed
+#DataSet : 50-0kmh, -2 m/s/s, ISPEED = 2
+#Category: AEB CCRb Target Speed
+#FileID  : SpdTime_f34b0135-42b7-46ce-b413-366894b9b1a0
+#Product : TruckSim 2020.1
+#VehCode Target Speed
+
+END

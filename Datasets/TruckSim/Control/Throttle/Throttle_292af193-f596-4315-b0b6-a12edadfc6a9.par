@@ -1,0 +1,24 @@
+PARSFILE
+#FullDataName Control: Throttle (Open Loop)`Go from 0 to 0.2 in 2s`Smooth Transition
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE_FLAT
+#RadioCtrl0 1    
+
+#DiagramOne0
+THROTTLE_ENGINE_TABLE SPLINE_FLAT
+0, 0
+1, 0.1
+2, 0.2
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Control: Throttle (Open Loop); { Smooth Transition } Go from 0 to 0.2 in 2s
+#Library : Control: Throttle (Open Loop)
+#DataSet : Go from 0 to 0.2 in 2s
+#Category: Smooth Transition
+#FileID  : Throttle_292af193-f596-4315-b0b6-a12edadfc6a9
+#Product : TruckSim 2020.1
+#VehCode Open-loop Throttle
+
+END

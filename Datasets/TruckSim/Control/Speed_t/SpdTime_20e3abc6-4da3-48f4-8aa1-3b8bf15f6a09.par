@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Target Speed`Variable speed: 20 to 25 km/h`Traffic Vehicles and Sensor Targets
+SET_ISPEED_FOR_ID 2111
+set_description SPEED_TARGET_ID Variable speed: 20 to 25 km/h
+#CheckBox2 0    
+#CheckBox3 0    
+*SCALAR2 0
+#RingCtrl0 LINEAR_FLAT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SPEED_TARGET_COMBINE ADD
+#RingCtrl3 2
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+SPEED_TARGET_TABLE LINEAR_FLAT
+0, 25
+10, 20
+20, 20
+30, 25
+40, 25
+50, 20
+60, 20
+70, 25
+80, 25
+90, 20
+ENDTABLE
+SPEED_TARGET_S_CONSTANT 0
+
+#EMBEDDED_NOTES
+#This Target Speed vs. Time profile is intended for moving objects that will drive at non-constant speeds to exercise an adaptive cruise control (ACC) for the simulated ego vehicle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Target Speed; { Traffic Vehicles and Sensor Targets } Variable speed: 20 to 25 km/h
+#Library : Control: Speed (Closed Loop) Using Target Speed
+#DataSet : Variable speed: 20 to 25 km/h
+#Category: Traffic Vehicles and Sensor Targets
+#FileID  : SpdTime_20e3abc6-4da3-48f4-8aa1-3b8bf15f6a09
+#Product : TruckSim 2020.1
+#VehCode Target Speed
+
+END

@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Control: Steering Preview Time for the Driver Model`Ramp: 10-20kph in 1.6s @ 0.4s`
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+TPREV_TABLE LINEAR_FLAT
+10, 0.4
+20, 2
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#The preview is only 0.4s at low speed, used to make a 90-deg turn with minimal inboard tracking. At normal speeds, the preview is 2s for more stability when moving laterally to avoid a cyclist.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Steering Preview Time for the Driver Model; Ramp: 10-20kph in 1.6s @ 0.4s
+#Library : Control: Steering Preview Time for the Driver Model
+#DataSet : Ramp: 10-20kph in 1.6s @ 0.4s
+#Category: 
+#FileID  : Tprev_1e1a99e2-f157-4284-b1b4-6ce0c19d40cd
+#Product : TruckSim 2020.1
+#VehCode Preview Time vs. Speed
+
+END

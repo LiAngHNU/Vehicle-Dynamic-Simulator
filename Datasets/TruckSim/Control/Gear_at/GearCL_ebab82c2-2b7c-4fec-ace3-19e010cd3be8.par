@@ -1,0 +1,29 @@
+PARSFILE
+#FullDataName Control: Shifting (Closed Loop)`Mode_Trans 5, Clutch Act 1s, Gear 0.25s`Closed-Loop Shifting
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+MODE_TRANS_CONSTANT 5
+#RadioCtrl0 0    
+
+PARSFILE Control\Int_Shift\ClTime_69d33dd5-1243-457d-b3f7-e017be5e9205.par
+#BlueLink0 Control: Clutch Shifting Timelines (Closed Loop)`Clutch Actuation: 1s, Gear Change: 0.25s` ` , Shifting`ClTime_69d33dd5-1243-457d-b3f7-e017be5e9205
+
+*SCALAR 5
+
+
+#EMBEDDED_NOTES
+#Mode_Trans is set to 5, meaning the highest gear the transmission can shift to is 5th gear.
+#
+#The linked Shifting Timelines dataset specifies the relationship between throttle, clutch, and gearshift control.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } Mode_Trans 5, Clutch Act 1s, Gear 0.25s
+#Library : Control: Shifting (Closed Loop)
+#DataSet : Mode_Trans 5, Clutch Act 1s, Gear 0.25s
+#Category: Closed-Loop Shifting
+#FileID  : GearCL_ebab82c2-2b7c-4fec-ace3-19e010cd3be8
+#Product : TruckSim 2020.1
+#VehCode Closed-Loop Shift Control
+
+END
