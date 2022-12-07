@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Powertrain: Rear-Wheel Drive`150 kW, 7 Speed MT`150 kW Powertrains
+
+OPT_PT 2
+R_REAR_DRIVE_SC 1
+
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 1
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 0
+OPT_HEV 0
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+IDIFF 2
+OPT_DIFF_INTERNAL 1
+
+PARSFILE Powertrain\Engine\Engine_c244841e-942b-42e8-af99-c503b933200d.par
+#BlueLink0 Powertrain: Engine`150 kW Diesel (3000 RPM)` Engines: 150 kW to 250 kW` , Engine`Engine_c244841e-942b-42e8-af99-c503b933200d
+
+PARSFILE Powertrain\Clutch\TrqCl_9f785c12-973c-4838-8383-fd56aacf6982.par
+#BlueLink6 Powertrain: Clutch Torque`Maximum 900 N-m (Linear)` ` , Clutch`TrqCl_9f785c12-973c-4838-8383-fd56aacf6982
+
+PARSFILE Powertrain\TransExt\Trans18_ce216877-b4a7-4233-a1cf-1424f898bf3f.par
+#BlueLink9 Powertrain: Transmission (18 Gears or CVT)`7 Spd., MT, 3000 RPM` 7-Speed` , Transmission (Extended)`Trans18_ce216877-b4a7-4233-a1cf-1424f898bf3f
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_61f58837-8256-4b9b-8d48-3c1492a7bba6.par
+#BlueLink5 Powertrain: Rear Differential`Open Differential: Gear Ratio 5:1` Open` , Differential`DiffR_61f58837-8256-4b9b-8d48-3c1492a7bba6
+
+
+LOG_ENTRY Used Dataset: Powertrain: Rear-Wheel Drive; { 150 kW Powertrains } 150 kW, 7 Speed MT
+#Library : Powertrain: Rear-Wheel Drive
+#DataSet : 150 kW, 7 Speed MT
+#Category: 150 kW Powertrains
+#FileID  : RWD_f540c00f-56f7-494b-85a6-ffb9c489ddf1
+#Product : TruckSim 2020.1
+#VehCode RWD
+
+END

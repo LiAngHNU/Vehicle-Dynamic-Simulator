@@ -1,0 +1,104 @@
+PARSFILE
+#FullDataName Powertrain: Front Differential`Viscous Coupling: Gear Ratio 5:1`Limited Slip and Viscous Coupling
+#CheckBox0 0    
+LOCKED_FD_OPT 0
+
+#RingCtrl0 SPLINE
+OPT_LOCKED_DIFF 0
+#DiagramOne0
+M_DIFF_VISC_TABLE SPLINE
+-1200, 402.88
+-1080, 382.21
+-960, 360.35
+-840, 337.07
+-720, 312.07
+-600, 284.88
+-540, 270.26
+-480, 254.8
+-420, 238.35
+-360, 220.67
+-300, 201.44
+-240, 180.17
+-180, 156.03
+-120, 127.4
+-60, 90.09
+0, 0
+60, -90.09
+120, -127.4
+180, -156.03
+240, -180.17
+300, -201.44
+360, -220.67
+420, -238.35
+480, -254.8
+540, -270.26
+600, -284.88
+720, -312.07
+840, -337.07
+960, -360.35
+1080, -382.21
+1200, -402.88
+ENDTABLE
+#RadioCtrl0 0    
+
+M_DIFF_FD_TABLE SPLINE
+-1200, 402.88
+-1080, 382.21
+-960, 360.35
+-840, 337.07
+-720, 312.07
+-600, 284.88
+-540, 270.26
+-480, 254.8
+-420, 238.35
+-360, 220.67
+-300, 201.44
+-240, 180.17
+-180, 156.03
+-120, 127.4
+-60, 90.09
+0, 0
+60, -90.09
+120, -127.4
+180, -156.03
+240, -180.17
+300, -201.44
+360, -220.67
+420, -238.35
+480, -254.8
+540, -270.26
+600, -284.88
+720, -312.07
+840, -337.07
+960, -360.35
+1080, -382.21
+1200, -402.88
+ENDTABLE
+R_GEAR_FD 5.0
+R_EFF_F_FD 0.99
+R_EFF_R_FD 0.99
+LOCKED_FD_DAMP 0.8
+LOCKED_FD_K 80
+IDS_F 0.013
+IHS_LF 0.009
+IHS_RF 0.009
+*SCALAR 0
+
+R_GEAR_DIFF 5.0
+R_EFF_F_DIFF 0.99
+R_EFF_R_DIFF 0.99
+LOCKED_DIFF_DAMP 0.8
+LOCKED_DIFF_K 80
+IDS 0.013
+IHS_L 0.009
+IHS_R 0.009
+
+LOG_ENTRY Used Dataset: Powertrain: Front Differential; { Limited Slip and Viscous Coupling } Viscous Coupling: Gear Ratio 5:1
+#Library : Powertrain: Front Differential
+#DataSet : Viscous Coupling: Gear Ratio 5:1
+#Category: Limited Slip and Viscous Coupling
+#FileID  : DiffF_21b4412b-91da-4a6c-8a9e-59f6b775fb92
+#Product : TruckSim 2020.1
+#VehCode Front Differential
+
+END

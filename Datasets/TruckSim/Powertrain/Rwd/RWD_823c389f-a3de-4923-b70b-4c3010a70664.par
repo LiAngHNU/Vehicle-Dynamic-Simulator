@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Powertrain: Rear-Wheel Drive`150 kW, 6 Speed AT (2A LCF Van)`150 kW Powertrains
+
+OPT_PT 2
+R_REAR_DRIVE_SC 1
+
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 0
+OPT_HEV 0
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+IDIFF 2
+OPT_DIFF_INTERNAL 1
+
+PARSFILE Powertrain\Engine\Engine_7ff9ca78-e6d9-40a1-9fd8-c7c9011df987.par
+#BlueLink0 Powertrain: Engine`150 kW Diesel, I = 1.6 kgm2 (3000 RPM)` Engines: 150 kW to 250 kW` , Engine`Engine_7ff9ca78-e6d9-40a1-9fd8-c7c9011df987
+
+PARSFILE Powertrain\TConv\TC_98f7e37b-c4a2-404a-a254-6406f32d006a.par
+#BlueLink1 Powertrain: Torque Converter`150 kW, 3000 RPM Engine` Torque Converters: 150 kW to 250 kW` , Torque Conv.`TC_98f7e37b-c4a2-404a-a254-6406f32d006a
+
+PARSFILE Powertrain\TransExt\Trans18_90b95231-4652-4b10-b5a1-e2f7cb101c5d.par
+#BlueLink9 Powertrain: Transmission (18 Gears or CVT)`6 Spd., AT, 3000 RPM (2A LCF Van)` 6-Speed` , Transmission (Extended)`Trans18_90b95231-4652-4b10-b5a1-e2f7cb101c5d
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_bff4ee96-705d-41dd-a7f7-2750ffeed86b.par
+#BlueLink5 Powertrain: Rear Differential`Open Differential: Gear Ratio 5.571:1` Open` , Differential`DiffR_bff4ee96-705d-41dd-a7f7-2750ffeed86b
+
+
+LOG_ENTRY Used Dataset: Powertrain: Rear-Wheel Drive; { 150 kW Powertrains } 150 kW, 6 Speed AT (2A LCF Van)
+#Library : Powertrain: Rear-Wheel Drive
+#DataSet : 150 kW, 6 Speed AT (2A LCF Van)
+#Category: 150 kW Powertrains
+#FileID  : RWD_823c389f-a3de-4923-b70b-4c3010a70664
+#Product : TruckSim 2020.1
+#VehCode RWD
+
+END

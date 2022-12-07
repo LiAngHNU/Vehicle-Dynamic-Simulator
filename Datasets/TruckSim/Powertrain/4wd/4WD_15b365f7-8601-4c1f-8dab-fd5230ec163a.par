@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName Powertrain: 4-Wheel Drive`175 kW, 6-Spd, Open Fr, Locked Rr`175 kW Powertrains
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+
+OPT_PT 3
+R_REAR_DRIVE_SC 0.5
+
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 1
+#RingCtrl7 0
+OPT_HEV 0
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+IDIFF 1
+OPT_DIFF_INTERNAL 1
+IDIFF 2
+OPT_DIFF_INTERNAL 1
+IDIFF 3
+OPT_DIFF_INTERNAL 1
+
+PARSFILE Powertrain\Engine\Engine_4d7c19a5-3ab3-48fc-b2f2-501b877e1321.par
+#BlueLink0 Powertrain: Engine`175 kW Diesel (3000 RPM)` Engines: 150 kW to 250 kW` , Engine`Engine_4d7c19a5-3ab3-48fc-b2f2-501b877e1321
+
+PARSFILE Powertrain\TConv\TC_0048a915-2435-48fe-8a77-3c5f3ef772ea.par
+#BlueLink1 Powertrain: Torque Converter`175 kW, 3000 RPM Engine` Torque Converters: 150 kW to 250 kW` , Torque Conv.`TC_0048a915-2435-48fe-8a77-3c5f3ef772ea
+
+PARSFILE Powertrain\TransExt\Trans18_d2eec093-2e62-4051-813a-e18bb37cafdf.par
+#BlueLink10 Powertrain: Transmission (18 Gears or CVT)`7 Spd., AT, 3000 RPM` 7-Speed` , Transmission (Extended)`Trans18_d2eec093-2e62-4051-813a-e18bb37cafdf
+
+
+IDIFF 3
+PARSFILE Powertrain\Centerdiff\XC_423be8ff-9a6f-40bc-a17e-855229062144.par
+#BlueLink3 Powertrain: Transfer Case`Locked: 50/50, Gear Ratio 2:1` Locked` , Transfer case`XC_423be8ff-9a6f-40bc-a17e-855229062144
+
+
+IDIFF 1
+PARSFILE Powertrain\Frontdiff\DiffF_2a306530-225f-4eaa-81b4-3e25f67c0605.par
+#BlueLink4 Powertrain: Front Differential`Open Differential: Gear Ratio 4.1:1` Open` , Differential front`DiffF_2a306530-225f-4eaa-81b4-3e25f67c0605
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_972b30d2-4fc0-4b93-8382-52166a241445.par
+#BlueLink5 Powertrain: Rear Differential`Locked Differential: Gear Ratio 4.1:1` Locked` , Differential rear`DiffR_972b30d2-4fc0-4b93-8382-52166a241445
+
+
+#EMBEDDED_NOTES
+#Generic 175 kW powertrain with an automatic transmission. The torque converter data has been tuned to work with the 175 kW engine to give reasonable performance.
+#
+#This example uses a gear reduction transfer case to provide a low range option. The rear differential is also locked.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: 4-Wheel Drive; { 175 kW Powertrains } 175 kW, 6-Spd, Open Fr, Locked Rr
+#Library : Powertrain: 4-Wheel Drive
+#DataSet : 175 kW, 6-Spd, Open Fr, Locked Rr
+#Category: 175 kW Powertrains
+#FileID  : 4WD_15b365f7-8601-4c1f-8dab-fd5230ec163a
+#Product : TruckSim 2020.1
+#VehCode 4WD
+
+END

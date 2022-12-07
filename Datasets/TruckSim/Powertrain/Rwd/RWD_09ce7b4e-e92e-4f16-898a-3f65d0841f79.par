@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Powertrain: Rear-Wheel Drive`43/40 kW, Hybrid (Hi-Power), 3.905 Ratio`Hybrid: 43/40 kW (Engine + Motor)
+
+OPT_PT 2
+R_REAR_DRIVE_SC 1
+
+INSTALL_ENGINE
+#RingCtrl0 -1
+R_MDRIVE -1
+#RingCtrl4 1
+#RingCtrl5 1
+OPT_HEV 1
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 0
+OPT_TRANS_INTERNAL 0
+OPT_SHIFT_INTERNAL 0
+OPT_TR_GEAR_INTERNAL 0
+IDIFF 2
+OPT_DIFF_INTERNAL 1
+
+PARSFILE Powertrain\Engine\Engine_e10a2855-e13c-4e65-bf71-c813ed38a5fb.par
+#BlueLink0 Powertrain: Engine`1.5L, 43 kW  Engine` 43 kW - 125 kW Engines` , Engine`Engine_e10a2855-e13c-4e65-bf71-c813ed38a5fb
+
+PARSFILE Powertrain\HEV\HEV_a6fe6895-e10c-4d20-8195-a46816199447.par
+#BlueLink10 Powertrain: Hybrid/Electric System`Hybrid Powertrain Assembly` ` , Hybrid system`HEV_a6fe6895-e10c-4d20-8195-a46816199447
+
+PARSFILE Powertrain\HEV_PMC\PMC_a65582f0-a085-4bc8-9606-1a4f75f80775.par
+#BlueLink11 Powertrain: Hybrid/Electric Power Management Control`Power Management: Full Load 165kW` ` , Hybrid power management control`PMC_a65582f0-a085-4bc8-9606-1a4f75f80775
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_22e66ed6-351f-499c-88c6-1b3bc46c91f1.par
+#BlueLink5 Powertrain: Rear Differential`Open Differential: Gear Ratio 3.92:1` Open` , Differential`DiffR_22e66ed6-351f-499c-88c6-1b3bc46c91f1
+
+
+#EMBEDDED_NOTES
+#Generic 43 kW engine with a parallel hybrid electric motor (40 kW).
+#
+#Power manegement range is 165kW with full loaded throttle pedal.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: Rear-Wheel Drive; { Hybrid: 43/40 kW (Engine + Motor) } 43/40 kW, Hybrid (Hi-Power), 3.905 Ratio
+#Library : Powertrain: Rear-Wheel Drive
+#DataSet : 43/40 kW, Hybrid (Hi-Power), 3.905 Ratio
+#Category: Hybrid: 43/40 kW (Engine + Motor)
+#FileID  : RWD_09ce7b4e-e92e-4f16-898a-3f65d0841f79
+#Product : TruckSim 2020.1
+#VehCode RWD
+
+END

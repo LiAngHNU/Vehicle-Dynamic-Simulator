@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Powertrain: Shift Schedule`7 Spd., 2-3, 3000 RPM`7-Speed Shift Schedule, 3000 RPM (2A Tour Bus)
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+#DiagramOne0
+UPSHIFT_TRANS_TABLE
+0, 237
+0.2, 237
+0.8, 510
+1, 510
+ENDTABLE
+#DiagramOne1
+DOWNSHIFT_TRANS_TABLE
+0, 213
+0.2, 213
+0.8, 500
+1, 500
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Powertrain: Shift Schedule; { 7-Speed Shift Schedule, 3000 RPM (2A Tour Bus) } 7 Spd., 2-3, 3000 RPM
+#Library : Powertrain: Shift Schedule
+#DataSet : 7 Spd., 2-3, 3000 RPM
+#Category: 7-Speed Shift Schedule, 3000 RPM (2A Tour Bus)
+#FileID  : Shift_6534a247-ad6c-4edb-ae32-53bbbe9517cc
+#Product : TruckSim 2020.1
+#VehCode Shift Schedule
+
+END

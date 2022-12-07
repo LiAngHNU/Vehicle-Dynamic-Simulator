@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Powertrain: Shift Schedule`6 Spd. AT, 1-2, 4000 RPM`6-Speed Shift Schedule, 4000 RPM
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+#DiagramOne0
+UPSHIFT_TRANS_TABLE
+0, 331
+0.2, 331
+0.8, 1277
+1, 1277
+ENDTABLE
+#DiagramOne1
+DOWNSHIFT_TRANS_TABLE
+0, 298
+0.2, 298
+0.8, 1150
+1, 1150
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Powertrain: Shift Schedule; { 6-Speed Shift Schedule, 4000 RPM } 6 Spd. AT, 1-2, 4000 RPM
+#Library : Powertrain: Shift Schedule
+#DataSet : 6 Spd. AT, 1-2, 4000 RPM
+#Category: 6-Speed Shift Schedule, 4000 RPM
+#FileID  : Shift_2353020d-acc6-42e2-b369-4b1d31b9d279
+#Product : TruckSim 2020.1
+#VehCode Shift Schedule
+
+END

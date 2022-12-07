@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Powertrain: Rear-Wheel Drive`40 kW, Electric (Hi-Power), 3.905 Ratio`Electric: 40 kW (Motor)
+
+OPT_PT 2
+R_REAR_DRIVE_SC 1
+
+INSTALL_ENGINE
+#RingCtrl0 -1
+R_MDRIVE -1
+#RingCtrl4 1
+#RingCtrl5 2
+OPT_HEV 2
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+
+OPT_ENGINE_INTERNAL 0
+OPT_PWR_CPL_INTERNAL 0
+OPT_TRANS_INTERNAL 0
+OPT_SHIFT_INTERNAL 0
+OPT_TR_GEAR_INTERNAL 0
+IDIFF 2
+OPT_DIFF_INTERNAL 1
+
+PARSFILE Powertrain\HEV\HEV_f8043958-9868-47b5-bce7-e2ec543a1722.par
+#BlueLink10 Powertrain: Hybrid/Electric System`Electric Powertrain Assembly` ` , Hybrid system`HEV_f8043958-9868-47b5-bce7-e2ec543a1722
+
+PARSFILE Powertrain\HEV_PMC\PMC_a65582f0-a085-4bc8-9606-1a4f75f80775.par
+#BlueLink11 Powertrain: Hybrid/Electric Power Management Control`Power Management: Full Load 165kW` ` , Hybrid power management control`PMC_a65582f0-a085-4bc8-9606-1a4f75f80775
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_902550e4-6366-471c-bfc6-a6fede0e07e0.par
+#BlueLink5 Powertrain: Rear Differential`Locked Differential: Gear Ratio 3.92:1` Locked` , Differential`DiffR_902550e4-6366-471c-bfc6-a6fede0e07e0
+
+
+#EMBEDDED_NOTES
+#Generic 40 kW electric motor is included.
+#
+#Power manegement range is 165kW with full loaded throttle pedal.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: Rear-Wheel Drive; { Electric: 40 kW (Motor) } 40 kW, Electric (Hi-Power), 3.905 Ratio
+#Library : Powertrain: Rear-Wheel Drive
+#DataSet : 40 kW, Electric (Hi-Power), 3.905 Ratio
+#Category: Electric: 40 kW (Motor)
+#FileID  : RWD_2ce28f08-90d0-4f4e-bcae-2026641da93c
+#Product : TruckSim 2020.1
+#VehCode RWD
+
+END

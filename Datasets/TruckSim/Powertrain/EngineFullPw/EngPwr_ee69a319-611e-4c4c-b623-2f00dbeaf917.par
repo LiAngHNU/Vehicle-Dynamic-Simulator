@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Powertrain: Engine Full Load Power`150 KW (Cruise)`
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR
+#RadioCtrl0 0    
+
+#DiagramOne0
+PWR_ENGINE_AV_TABLE LINEAR
+500, 13.08995833
+800, 34.64964331
+1000, 54.21337143
+1200, 69.56736896
+1400, 86.01463981
+1600, 101.1843307
+1800, 113.8323721
+2000, 122.4172903
+2200, 130.189584
+2400, 136.6717314
+2600, 142.1527587
+2800, 146.5782118
+3000, 150.0423384
+3100, -15.48489711
+3150, -20.97953802
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#This full load engine characteristic came from AVL Cruise model which is necessary to perform the TruckSim speed controller.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: Engine Full Load Power; 150 KW (Cruise)
+#Library : Powertrain: Engine Full Load Power
+#DataSet : 150 KW (Cruise)
+#Category: 
+#FileID  : EngPwr_ee69a319-611e-4c4c-b623-2f00dbeaf917
+#Product : TruckSim 2020.1
+#VehCode Engine Full Load Power
+
+END

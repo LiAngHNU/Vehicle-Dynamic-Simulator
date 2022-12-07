@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Powertrain: Torque Converter`150 kW, 3000 RPM Engine`Torque Converters: 150 kW to 250 kW
+#RingCtrl0 SPLINE_FLAT
+#RingCtrl1 LINEAR_FLAT
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+ITC_INPUT_SHAFT 0.015
+ITC_OUTPUT_SHAFT 0.1
+
+#DiagramOne0
+INV_CAP_TC_TABLE SPLINE_FLAT
+0, 0.009797959
+0.1, 0.009700949
+0.2, 0.009605841
+0.3, 0.009512525
+0.4, 0.009420127
+0.5, 0.009322277
+0.6, 0.009187466
+0.7, 0.008898309
+0.8, 0.008098066
+0.9, 0.005854699
+0.95, 0.003590465
+0.99, 0.000852466
+1, 0
+1.01, -0.000852466
+1.05, -0.003590465
+1.1, -0.005854699
+1.2, -0.008098066
+1.3, -0.008898309
+1.4, -0.009187466
+1.5, -0.009322277
+1.6, -0.009420127
+1.7, -0.009512525
+1.8, -0.009605841
+1.9, -0.009797959
+2, -0.009797959
+ENDTABLE
+#DiagramOne1
+RM_TC_TABLE LINEAR_FLAT
+0, 2.05
+0.91, 1
+1, 1
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Powertrain: Torque Converter; { Torque Converters: 150 kW to 250 kW } 150 kW, 3000 RPM Engine
+#Library : Powertrain: Torque Converter
+#DataSet : 150 kW, 3000 RPM Engine
+#Category: Torque Converters: 150 kW to 250 kW
+#FileID  : TC_98f7e37b-c4a2-404a-a254-6406f32d006a
+#Product : TruckSim 2020.1
+#VehCode Torque Converter
+
+END

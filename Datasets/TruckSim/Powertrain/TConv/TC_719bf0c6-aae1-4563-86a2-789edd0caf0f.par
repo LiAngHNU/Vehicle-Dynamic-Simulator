@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Powertrain: Torque Converter`200 kW, 6100 RPM Engine`Torque Converters: 150 kW to 250 kW
+#RingCtrl0 SPLINE_FLAT
+#RingCtrl1 LINEAR_FLAT
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+ITC_INPUT_SHAFT 0.015
+ITC_OUTPUT_SHAFT 0.015
+
+#DiagramOne0
+INV_CAP_TC_TABLE SPLINE_FLAT
+0, 0.00819756
+0.1, 0.0081164
+0.2, 0.00803682
+0.3, 0.00795875
+0.4, 0.00788144
+0.5, 0.00779958
+0.6, 0.00768679
+0.7, 0.00744486
+0.8, 0.00677533
+0.9, 0.00489839
+0.95, 0.003004
+0.99, 0.000713225
+1, 0
+1.01, -0.000713225
+1.05, -0.003004
+1.1, -0.00489839
+1.2, -0.00677533
+1.3, -0.00744486
+1.4, -0.00768679
+1.5, -0.00779958
+1.6, -0.00788144
+1.7, -0.00795875
+1.8, -0.00803682
+1.9, -0.00819756
+2, -0.00819756
+ENDTABLE
+#DiagramOne1
+RM_TC_TABLE LINEAR_FLAT
+0, 1.864
+0.881, 1
+1, 1
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Powertrain: Torque Converter; { Torque Converters: 150 kW to 250 kW } 200 kW, 6100 RPM Engine
+#Library : Powertrain: Torque Converter
+#DataSet : 200 kW, 6100 RPM Engine
+#Category: Torque Converters: 150 kW to 250 kW
+#FileID  : TC_719bf0c6-aae1-4563-86a2-789edd0caf0f
+#Product : TruckSim 2020.1
+#VehCode Torque Converter
+
+END

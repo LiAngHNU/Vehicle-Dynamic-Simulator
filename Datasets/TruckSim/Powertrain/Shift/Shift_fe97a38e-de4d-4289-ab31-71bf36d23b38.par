@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Powertrain: Shift Schedule`5 Spd. AT, 1-2, 3100 RPM`5-Speed Shift Schedule, 3100 RPM
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+#DiagramOne0
+UPSHIFT_TRANS_TABLE
+0, 308
+0.2, 308
+0.8, 775
+1, 775
+ENDTABLE
+#DiagramOne1
+DOWNSHIFT_TRANS_TABLE
+0, 277
+0.2, 277
+0.8, 698
+1, 698
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Powertrain: Shift Schedule; { 5-Speed Shift Schedule, 3100 RPM } 5 Spd. AT, 1-2, 3100 RPM
+#Library : Powertrain: Shift Schedule
+#DataSet : 5 Spd. AT, 1-2, 3100 RPM
+#Category: 5-Speed Shift Schedule, 3100 RPM
+#FileID  : Shift_fe97a38e-de4d-4289-ab31-71bf36d23b38
+#Product : TruckSim 2020.1
+#VehCode Shift Schedule
+
+END

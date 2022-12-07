@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Powertrain: Torque Converter`270 kW, 4000 RPM Engine`Torque Converters: 251 kW to 350 kW
+#RingCtrl0 SPLINE_FLAT
+#RingCtrl1 LINEAR_FLAT
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+ITC_INPUT_SHAFT 0.015
+ITC_OUTPUT_SHAFT 0.015
+
+#DiagramOne0
+INV_CAP_TC_TABLE SPLINE_FLAT
+0, 0.0084852815
+0.1, 0.0084012685
+0.2, 0.0083189025
+0.3, 0.0082380885
+0.4, 0.008158069
+0.5, 0.0080733285
+0.6, 0.0079565795
+0.7, 0.007706162
+0.8, 0.007013131
+0.9, 0.005070318
+0.95, 0.003109434
+0.99, 0.0007382575
+1, 0
+1.01, -0.0007382575
+1.05, -0.003109434
+1.1, -0.005070318
+1.2, -0.007013131
+1.3, -0.007706162
+1.4, -0.0079565795
+1.5, -0.0080733285
+1.6, -0.008158069
+1.7, -0.0082380885
+1.8, -0.0083189025
+1.9, -0.0084852815
+2, -0.0084852815
+ENDTABLE
+#DiagramOne1
+RM_TC_TABLE LINEAR_FLAT
+0, 1.864
+0.881, 1
+1, 1
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Powertrain: Torque Converter; { Torque Converters: 251 kW to 350 kW } 270 kW, 4000 RPM Engine
+#Library : Powertrain: Torque Converter
+#DataSet : 270 kW, 4000 RPM Engine
+#Category: Torque Converters: 251 kW to 350 kW
+#FileID  : TC_d1194462-9661-4813-8d14-0e58a08e6c65
+#Product : TruckSim 2020.1
+#VehCode Torque Converter
+
+END

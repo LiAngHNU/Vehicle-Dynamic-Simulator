@@ -1,0 +1,112 @@
+PARSFILE
+#FullDataName Powertrain: Transmission (18 Gears or CVT)`5-Speed MT, 6600 RPM`5-Speed
+#RingCtrl0 5
+NGEARS 5
+#RingCtrl1 1
+OPT_SHIFT_INTERNAL 1
+#RingCtrl2 1
+OPT_TR_GEAR_INTERNAL 1
+#CheckBox0 0    
+R_GEAR_TR_REVERSE -5.151
+IGEAR 1
+R_GEAR_TR 5.106
+*R_GEAR_TR(1) 5.106
+IGEAR 2
+R_GEAR_TR 3.017
+*R_GEAR_TR(2) 3.017
+IGEAR 3
+R_GEAR_TR 1.908
+*R_GEAR_TR(3) 1.908
+IGEAR 4
+R_GEAR_TR 1.264
+*R_GEAR_TR(4) 1.264
+IGEAR 5
+R_GEAR_TR 1.00
+*R_GEAR_TR(5) 1.00
+ITR_REVERSE 0.03
+ITR_NEUTRAL 0.03
+IGEAR 1
+ITR 0.03
+*ITR(1) 0.03
+IGEAR 2
+ITR 0.03
+*ITR(2) 0.03
+IGEAR 3
+ITR 0.03
+*ITR(3) 0.03
+IGEAR 4
+ITR 0.03
+*ITR(4) 0.03
+IGEAR 5
+ITR 0.03
+*ITR(5) 0.03
+R_EFF_TR_F_REVERSE 0.95
+IGEAR 1
+R_EFF_TR_F 0.95
+*R_EFF_TR_F(1) 0.95
+IGEAR 2
+R_EFF_TR_F 0.95
+*R_EFF_TR_F(2) 0.95
+IGEAR 3
+R_EFF_TR_F 0.95
+*R_EFF_TR_F(3) 0.95
+IGEAR 4
+R_EFF_TR_F 0.95
+*R_EFF_TR_F(4) 0.95
+IGEAR 5
+R_EFF_TR_F 0.95
+*R_EFF_TR_F(5) 0.95
+R_EFF_TR_R_REVERSE 0.95
+IGEAR 1
+R_EFF_TR_R 0.95
+*R_EFF_TR_R(1) 0.95
+IGEAR 2
+R_EFF_TR_R 0.95
+*R_EFF_TR_R(2) 0.95
+IGEAR 3
+R_EFF_TR_R 0.95
+*R_EFF_TR_R(3) 0.95
+IGEAR 4
+R_EFF_TR_R 0.95
+*R_EFF_TR_R(4) 0.95
+IGEAR 5
+R_EFF_TR_R 0.95
+*R_EFF_TR_R(5) 0.95
+T_SHIFT 0.2
+
+
+igear 1
+PARSFILE Powertrain\Shift\Shift_ecd0588d-5527-4647-9d68-35453d8ee47b.par
+#BlueLink0 Powertrain: Shift Schedule`5 Spd. MT, 1-2, 6600 RPM` 5-Speed Shift Schedule, 6600 RPM` , Shift schedule`Shift_ecd0588d-5527-4647-9d68-35453d8ee47b
+
+
+igear 2
+PARSFILE Powertrain\Shift\Shift_c9fa305d-2059-4be3-8e72-5e9c8973bc07.par
+#BlueLink1 Powertrain: Shift Schedule`5 Spd. MT, 2-3, 6600 RPM` 5-Speed Shift Schedule, 6600 RPM` , Shift schedule`Shift_c9fa305d-2059-4be3-8e72-5e9c8973bc07
+
+
+igear 3
+PARSFILE Powertrain\Shift\Shift_b9542ca6-83b9-4318-a7ba-3b9a7721b89e.par
+#BlueLink2 Powertrain: Shift Schedule`5 Spd. MT, 3-4, 6600 RPM` 5-Speed Shift Schedule, 6600 RPM` , Shift schedule`Shift_b9542ca6-83b9-4318-a7ba-3b9a7721b89e
+
+
+igear 4
+PARSFILE Powertrain\Shift\Shift_c00098d8-0372-443d-84d0-c7da6dd1d739.par
+#BlueLink3 Powertrain: Shift Schedule`5 Spd. MT, 4-5, 6600 RPM` 5-Speed Shift Schedule, 6600 RPM` , Shift schedule`Shift_c00098d8-0372-443d-84d0-c7da6dd1d739
+
+
+igear 5
+
+#EMBEDDED_NOTES
+#This manual transmission dataset with five forward speeds was designed to suit the 32 kW engine.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: Transmission (18 Gears or CVT); { 5-Speed } 5-Speed MT, 6600 RPM
+#Library : Powertrain: Transmission (18 Gears or CVT)
+#DataSet : 5-Speed MT, 6600 RPM
+#Category: 5-Speed
+#FileID  : Trans18_cf2daa9c-4e11-417e-9d14-372aabe2412c
+#Product : TruckSim 2020.1
+#VehCode Transmission
+
+END

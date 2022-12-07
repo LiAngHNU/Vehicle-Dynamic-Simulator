@@ -1,0 +1,125 @@
+PARSFILE
+#FullDataName Powertrain: Transmission (18 Gears or CVT)`6 Spd., AT, 2100 RPM`6-Speed
+#RingCtrl0 6
+NGEARS 6
+#RingCtrl1 1
+OPT_SHIFT_INTERNAL 1
+#RingCtrl2 1
+OPT_TR_GEAR_INTERNAL 1
+#CheckBox0 0    
+R_GEAR_TR_REVERSE -3.168
+IGEAR 1
+R_GEAR_TR 4.70
+*R_GEAR_TR(1) 4.70
+IGEAR 2
+R_GEAR_TR 2.21
+*R_GEAR_TR(2) 2.21
+IGEAR 3
+R_GEAR_TR 1.53
+*R_GEAR_TR(3) 1.53
+IGEAR 4
+R_GEAR_TR 1
+*R_GEAR_TR(4) 1
+IGEAR 5
+R_GEAR_TR 0.76
+*R_GEAR_TR(5) 0.76
+IGEAR 6
+R_GEAR_TR 0.67
+*R_GEAR_TR(6) 0.67
+ITR_REVERSE 0.34
+ITR_NEUTRAL 0.34
+IGEAR 1
+ITR 0.37
+*ITR(1) 0.37
+IGEAR 2
+ITR 0.34
+*ITR(2) 0.34
+IGEAR 3
+ITR 0.42
+*ITR(3) 0.42
+IGEAR 4
+ITR 0.4
+*ITR(4) 0.4
+IGEAR 5
+ITR 0.4
+*ITR(5) 0.4
+IGEAR 6
+ITR 0.4
+*ITR(6) 0.4
+R_EFF_TR_F_REVERSE 0.9
+IGEAR 1
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(1) 0.92
+IGEAR 2
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(2) 0.92
+IGEAR 3
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(3) 0.92
+IGEAR 4
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(4) 0.92
+IGEAR 5
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(5) 0.92
+IGEAR 6
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(6) 0.92
+R_EFF_TR_R_REVERSE 0.9
+IGEAR 1
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(1) 0.92
+IGEAR 2
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(2) 0.92
+IGEAR 3
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(3) 0.92
+IGEAR 4
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(4) 0.92
+IGEAR 5
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(5) 0.92
+IGEAR 6
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(6) 0.92
+T_SHIFT 0.25
+
+
+igear 1
+PARSFILE Powertrain\Shift\Shift_78195037-5d1b-449a-b1f8-73886636064b.par
+#BlueLink0 Powertrain: Shift Schedule`6 Spd. AT, 1-2, 2100 RPM` 6-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_78195037-5d1b-449a-b1f8-73886636064b
+
+
+igear 2
+PARSFILE Powertrain\Shift\Shift_61e4cf8d-31d5-47b5-adcb-035dfac36d45.par
+#BlueLink1 Powertrain: Shift Schedule`6 Spd. AT, 2-3, 2100 RPM` 6-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_61e4cf8d-31d5-47b5-adcb-035dfac36d45
+
+
+igear 3
+PARSFILE Powertrain\Shift\Shift_60a8b822-44ef-47fa-b2e5-017a71a24b44.par
+#BlueLink2 Powertrain: Shift Schedule`6 Spd. AT, 3-4, 2100 RPM` 6-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_60a8b822-44ef-47fa-b2e5-017a71a24b44
+
+
+igear 4
+PARSFILE Powertrain\Shift\Shift_a2bd4669-09ee-43be-bb47-9086e68dcd40.par
+#BlueLink3 Powertrain: Shift Schedule`6 Spd. AT, 4-5, 2100 RPM` 6-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_a2bd4669-09ee-43be-bb47-9086e68dcd40
+
+
+igear 5
+PARSFILE Powertrain\Shift\Shift_0c06e0b4-d010-4b34-bad9-9d8d44cb5edf.par
+#BlueLink4 Powertrain: Shift Schedule`6 Spd. AT, 5-6, 2100 RPM` 6-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_0c06e0b4-d010-4b34-bad9-9d8d44cb5edf
+
+
+igear 6
+
+LOG_ENTRY Used Dataset: Powertrain: Transmission (18 Gears or CVT); { 6-Speed } 6 Spd., AT, 2100 RPM
+#Library : Powertrain: Transmission (18 Gears or CVT)
+#DataSet : 6 Spd., AT, 2100 RPM
+#Category: 6-Speed
+#FileID  : Trans18_7f72238e-497b-498e-8244-f7510302ac51
+#Product : TruckSim 2020.1
+#VehCode Transmission
+
+END

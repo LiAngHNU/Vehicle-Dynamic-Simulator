@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Powertrain: Rear Twin-Clutch Differential`Gear Ratio 4.4 (External Control)`
+
+IDIFF 2
+opt_twin_clutch 1
+
+
+R_GEAR_RD 4.4
+R_EFF_F_RD 0.99
+R_EFF_R_RD 0.9
+LOCKED_RD_DAMP 0.8
+LOCKED_RD_K 80
+IDS_R 0.5
+IHS_L2 0.009
+IHS_R2 0.009
+
+R_GEAR_DIFF 4.4
+R_EFF_F_DIFF 0.99
+R_EFF_R_DIFF 0.9
+LOCKED_DIFF_DAMP 0.8
+LOCKED_DIFF_K 80
+IDS 0.5
+IHS_L 0.009
+IHS_R 0.009
+
+iside 1
+PARSFILE Powertrain\Cl_Visc\ClVisc_45190aa7-e95c-4712-b876-daf266bdb061.par
+#BlueLink0 Powertrain: Clutch with Viscous Differential`External Control` ` , Clutch Left`ClVisc_45190aa7-e95c-4712-b876-daf266bdb061
+
+
+iside 2
+PARSFILE Powertrain\Cl_Visc\ClVisc_45190aa7-e95c-4712-b876-daf266bdb061.par
+#BlueLink1 Powertrain: Clutch with Viscous Differential`External Control` ` , Clutch Right`ClVisc_45190aa7-e95c-4712-b876-daf266bdb061
+
+
+LOG_ENTRY Used Dataset: Powertrain: Rear Twin-Clutch Differential; Gear Ratio 4.4 (External Control)
+#Library : Powertrain: Rear Twin-Clutch Differential
+#DataSet : Gear Ratio 4.4 (External Control)
+#Category: 
+#FileID  : TwinR_4b5f2a5a-4003-43d3-8065-4bfffa7131fc
+#Product : TruckSim 2020.1
+#VehCode Twin Clutches
+
+END

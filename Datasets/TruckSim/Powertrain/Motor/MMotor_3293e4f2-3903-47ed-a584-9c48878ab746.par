@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Powertrain: Electric Motor Torque`Max. Output 710 N-m`Electric Motor
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR
+#DiagramOne0
+MMOTOR_MAX_TABLE LINEAR
+0, 710
+500, 710
+1000, 680
+1500, 485
+2000, 390
+2500, 330
+3000, 290
+3500, 265
+4000, 245
+4500, 230
+6000, 195
+ENDTABLE
+#RadioCtrl0 0    
+
+TC_MOTOR 0.05
+IMOTOR 0.0226
+
+PARSFILE Generic\tables\GenTab_5b8c0469-aae6-4203-af41-03e86e82d3cb.par
+#BlueLink0 Generic Table`Motor efficiency` Powertrain (HEV)` , Motor Efficiency`GenTab_5b8c0469-aae6-4203-af41-03e86e82d3cb
+
+
+#EMBEDDED_NOTES
+#Generic 40 kW electric motor.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: Electric Motor Torque; { Electric Motor } Max. Output 710 N-m
+#Library : Powertrain: Electric Motor Torque
+#DataSet : Max. Output 710 N-m
+#Category: Electric Motor
+#FileID  : MMotor_3293e4f2-3903-47ed-a584-9c48878ab746
+#Product : TruckSim 2020.1
+#VehCode Drive torque w/ electric motor
+
+END

@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Powertrain: 4-Wheel Drive`150 kW, 7 Spd. AT (External Diffs.)`External Components
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+
+OPT_PT 3
+R_REAR_DRIVE_SC 0.5
+
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 0
+#RingCtrl5 0
+#RingCtrl6 0
+#RingCtrl7 0
+OPT_HEV 0
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+IDIFF 1
+OPT_DIFF_INTERNAL 0
+IDIFF 2
+OPT_DIFF_INTERNAL 0
+IDIFF 3
+OPT_DIFF_INTERNAL 0
+
+PARSFILE Powertrain\Engine\Engine_c244841e-942b-42e8-af99-c503b933200d.par
+#BlueLink0 Powertrain: Engine`150 kW Diesel (3000 RPM)` Engines: 150 kW to 250 kW` , Engine`Engine_c244841e-942b-42e8-af99-c503b933200d
+
+PARSFILE Powertrain\TConv\TC_98f7e37b-c4a2-404a-a254-6406f32d006a.par
+#BlueLink1 Powertrain: Torque Converter`150 kW, 3000 RPM Engine` Torque Converters: 150 kW to 250 kW` , Torque Conv.`TC_98f7e37b-c4a2-404a-a254-6406f32d006a
+
+PARSFILE Powertrain\TransExt\Trans18_d2eec093-2e62-4051-813a-e18bb37cafdf.par
+#BlueLink10 Powertrain: Transmission (18 Gears or CVT)`7 Spd., AT, 3000 RPM` 7-Speed` , Transmission (Extended)`Trans18_d2eec093-2e62-4051-813a-e18bb37cafdf
+
+
+IDIFF 3
+
+IDIFF 1
+
+IDIFF 2
+
+LOG_ENTRY Used Dataset: Powertrain: 4-Wheel Drive; { External Components } 150 kW, 7 Spd. AT (External Diffs.)
+#Library : Powertrain: 4-Wheel Drive
+#DataSet : 150 kW, 7 Spd. AT (External Diffs.)
+#Category: External Components
+#FileID  : 4WD_89626e53-c59a-44c2-9e44-240024f4521a
+#Product : TruckSim 2020.1
+#VehCode 4WD
+
+END

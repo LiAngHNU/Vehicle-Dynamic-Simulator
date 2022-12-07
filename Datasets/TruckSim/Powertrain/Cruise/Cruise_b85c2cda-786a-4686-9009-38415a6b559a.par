@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Powertrain: AVL Cruise`175 kW 4x2, 7-Speed MT`
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+#RingCtrl0 3
+#RingCtrl1 1
+R_MDRIVE 1
+#CheckBox0 1    
+OPT_CLUTCH 1
+#CheckBox1 0    
+
+OPT_SHIFT_INTERNAL 1
+OPT_SHIFT_AVL 0
+PARSFILE Powertrain\EngineFullPw\EngPwr_2e39c4cd-26dd-4879-9183-02c404212760.par
+#BlueLink2 Powertrain: Engine Full Load Power`175 KW (Cruise)` ` , Full load power`EngPwr_2e39c4cd-26dd-4879-9183-02c404212760
+
+PARSFILE Powertrain\TransExt\Trans18_85b68225-66ef-4bb6-87fa-4383978be410.par
+#BlueLink3 Powertrain: Transmission (18 Gears or CVT)`7 Spd., 3000 RPM, External Gear Ratios` 7-Speed` , 18-shift`Trans18_85b68225-66ef-4bb6-87fa-4383978be410
+
+
+#AVL Cruise setting data
+AVL_CRUISE_DLL C:\AVL\CRUISE\v2015\CRUISE\v2015\bin\bin.ia32-unknown-winnt_i11\cruise_m.dll
+AVL_CRUISE_PROJECT Extensions\AVL\Cruise-TruckSim_Man_4x2\ver_0001\Cruise-TruckSim_Man_4x2.prj
+#MiscYellow0
+LOCK_BK_R_FREQ     100
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#This example dataset uses the AVL Cruise model.
+#
+#TruckSim supports the AVL Cruise model (version 2011.1 or newer), but the following separate licenses are required:
+#
+#1. AVL Cruise license (available from AVL) and
+#2. TruckSim External Powertrain Interface license (available from Mechanical Simulation).
+#
+#In order to execute Cruise on TruckSim correctly, you have to set the following files:
+#
+#a. Cruise solver file (cruiseNT.dll), which should be version 2011.1 or newer, or an optional project embedded solver (CMC dll), and
+#b. Cruise project file (***.prj), if the solver is not CMC dll.
+#
+#This particular dataset involves the following settings:
+#
+#1.  The Cruise model selected here is a 4x2 manual transmission. Therefore the shift schedule is selected for "Internal shift schedule",
+#2.  Full load engine characteristic is specified which is necessary to perform the TruckSim speed controller.
+#3.  LOCK_BK_R_FREQ is set to 100 in order to avoid wheel oscillation during the vehicle stopping.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: AVL Cruise; 175 kW 4x2, 7-Speed MT
+#Library : Powertrain: AVL Cruise
+#DataSet : 175 kW 4x2, 7-Speed MT
+#Category: 
+#FileID  : Cruise_b85c2cda-786a-4686-9009-38415a6b559a
+#Product : TruckSim 2020.1
+#VehCode AVL Cruise Driveline
+
+END

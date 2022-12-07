@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Powertrain: Hybrid/Electric System`Hybrid Powertrain Assembly`
+#CheckBox0 0    
+#CheckBox1 0    
+OPT_MOTOR_ON_AXLE 0 
+IDIFF 1
+N_TH_SUN 30
+N_TH_RING 78
+IPLNT_SUN 0
+IPLNT_RING 0
+IPLNT_CR 0
+N_BATTERY 40
+T_BATTERY_INIT 40
+BATTERY_CHARGE_INIT 0.6
+V_MOTOR_MIN 60
+V_BATTERY_MIN 6
+V_BATTERY_MAX 9
+
+INSTALL_ELECTRIC_DRIVE_MOTORS 
+
+PARSFILE Powertrain\Motor\MMotor_9c4019ad-c573-405a-aa24-20a17ddaef20.par
+#BlueLink0 Powertrain: Electric Motor Torque`Max. Output 305 N-m` Electric Motor` , Electric Motor`MMotor_9c4019ad-c573-405a-aa24-20a17ddaef20
+
+PARSFILE Generic\Links\GenLink_1e61da3e-2c03-4189-9e05-76481bfea320.par
+#BlueLink1 Generic Group of Links`Electric Generator: Max. Load 66 N-m` Powertrain (HEV)` , Electric Generator`GenLink_1e61da3e-2c03-4189-9e05-76481bfea320
+
+PARSFILE Generic\tables\GenTab_d2c0ba71-dbe2-4e8b-9789-271c0f2d770d.par
+#BlueLink2 Generic Table`Battery charged resistance` Powertrain (HEV)` , Charging resistance`GenTab_d2c0ba71-dbe2-4e8b-9789-271c0f2d770d
+
+PARSFILE Generic\tables\GenTab_c114ff61-a685-4434-bb7c-176073571388.par
+#BlueLink3 Generic Table`Battery discharged resistance` Powertrain (HEV)` , Discharging resistance`GenTab_c114ff61-a685-4434-bb7c-176073571388
+
+PARSFILE Generic\tables\GenTab_366b8224-2bfb-41c4-918b-7474b312a5e7.par
+#BlueLink4 Generic Table`Battery Open-Circuit Voltage` Powertrain (HEV)` , Open-circuit voltage`GenTab_366b8224-2bfb-41c4-918b-7474b312a5e7
+
+PARSFILE Generic\tables\GenTab_3c330519-3554-4bdd-89d8-5b63d61c667e.par
+#BlueLink5 Generic Table`Battery Max. Capacity` Powertrain (HEV)` , Max. capacity`GenTab_3c330519-3554-4bdd-89d8-5b63d61c667e
+
+
+#EMBEDDED_NOTES
+#Generic a 40 kW electric motor is equipped.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: Hybrid/Electric System; Hybrid Powertrain Assembly
+#Library : Powertrain: Hybrid/Electric System
+#DataSet : Hybrid Powertrain Assembly
+#Category: 
+#FileID  : HEV_a6fe6895-e10c-4d20-8195-a46816199447
+#Product : TruckSim 2020.1
+#VehCode HEV
+
+END

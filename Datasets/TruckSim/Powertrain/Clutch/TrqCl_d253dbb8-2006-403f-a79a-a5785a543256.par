@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Powertrain: Clutch Torque`Maximum 2000 N-m (Linear)`
+
+OPT_CLUTCH 1
+#CheckBox0 1    
+OPT_CLUTCH_DELAY 1
+#CheckBox1 0    
+
+#RingCtrl0 LINEAR_FLAT
+#DiagramOne0
+CLUTCH_TORQUE_TABLE LINEAR_FLAT
+0, 2000
+1, 0
+ENDTABLE
+#RadioCtrl0 0    
+
+TC_CLUTCH_ENGAGE 0.1
+TC_CLUTCH_DISENGAGE 0.001
+ITC_INPUT_SHAFT 0.015
+ITC_OUTPUT_SHAFT 0.1
+
+LOG_ENTRY Used Dataset: Powertrain: Clutch Torque; Maximum 2000 N-m (Linear)
+#Library : Powertrain: Clutch Torque
+#DataSet : Maximum 2000 N-m (Linear)
+#Category: 
+#FileID  : TrqCl_d253dbb8-2006-403f-a79a-a5785a543256
+#Product : TruckSim 2020.1
+#VehCode Clutch
+
+END

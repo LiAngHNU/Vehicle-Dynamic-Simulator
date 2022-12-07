@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Powertrain: Shift Schedule`7 Spd., 2-3, 3000 RPM`7-Speed Shift Schedule, 3000 RPM (2A Conv. Van MT)
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+#DiagramOne0
+UPSHIFT_TRANS_TABLE
+0, 237
+0.2, 237
+0.8, 685
+1, 685
+ENDTABLE
+#DiagramOne1
+DOWNSHIFT_TRANS_TABLE
+0, 213
+0.2, 213
+0.8, 480
+1, 480
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Powertrain: Shift Schedule; { 7-Speed Shift Schedule, 3000 RPM (2A Conv. Van MT) } 7 Spd., 2-3, 3000 RPM
+#Library : Powertrain: Shift Schedule
+#DataSet : 7 Spd., 2-3, 3000 RPM
+#Category: 7-Speed Shift Schedule, 3000 RPM (2A Conv. Van MT)
+#FileID  : Shift_696a0958-b38c-4b15-b4cc-3382e3cf649d
+#Product : TruckSim 2020.1
+#VehCode Shift Schedule
+
+END

@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Powertrain: Transmission (18 Gears or CVT)`CVT: R = 0.83 - 3.6, 3100 RPM`CVT
+#RingCtrl0 1
+NGEARS 1
+#RingCtrl1 1
+OPT_SHIFT_INTERNAL 1
+#RingCtrl2 2
+OPT_TR_GEAR_INTERNAL 2
+#CheckBox0 0    
+R_GEAR_TR_REVERSE -3.17
+IGEAR 1
+ITR_REVERSE 0.2
+ITR_NEUTRAL 0.2
+IGEAR 1
+R_EFF_TR_F_REVERSE 0.9
+IGEAR 1
+R_EFF_TR_R_REVERSE 0.9
+IGEAR 1
+*TC_CLUTCH_ENGAGE 0.06
+*TC_CLUTCH_DISENGAGE 0.002
+*TC_RGEAR_CVT 0.25
+*ICVT_INPUT_PULLEY 0.075
+*ICVT_OUTPUT_PULLEY 0.075
+
+#CheckBox2 0    
+OPT_CVT_REVERSE 0
+TC_RGEAR_CVT 0.25
+ICVT_INPUT_PULLEY 0.075
+ICVT_OUTPUT_PULLEY 0.075
+
+igear 1
+
+icvt 1
+PARSFILE Powertrain\CVT\CVT_877f3ced-8520-4180-8899-d1e56bd970a9.par
+#BlueLink35 Powertrain: CVT Gear Ratio`R = 0.83 - 3.6, 3100 RPM` ` , CVT`CVT_877f3ced-8520-4180-8899-d1e56bd970a9
+
+
+#EMBEDDED_NOTES
+#Drive mode involves CVT whose gear ratio range is between 0.69 and 4.6. Reverse mode is a constant gear ratio.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: Transmission (18 Gears or CVT); { CVT } CVT: R = 0.83 - 3.6, 3100 RPM
+#Library : Powertrain: Transmission (18 Gears or CVT)
+#DataSet : CVT: R = 0.83 - 3.6, 3100 RPM
+#Category: CVT
+#FileID  : Trans18_51e8d71d-3c7f-42eb-8262-707e684912be
+#Product : TruckSim 2020.1
+#VehCode Transmission
+
+END

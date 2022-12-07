@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Powertrain: Transfer Case`Part Time 50/50, 2WD`Open
+#CheckBox0 0    
+LOCKED_XC_OPT 0
+
+#RingCtrl0 CONSTANT
+OPT_LOCKED_DIFF 0
+M_DIFF_VISC_CONSTANT 0
+#RadioCtrl0 0    
+
+M_DIFF_XC_CONSTANT 0
+R_GEAR_XC 1
+R_EFF_F_XC 0.99
+R_EFF_R_XC 0.99
+R_REAR_XC 1
+LOCKED_XC_DAMP 0.8
+LOCKED_XC_K 80
+*SCALAR 0
+
+R_GEAR_DIFF 1
+R_EFF_F_DIFF 0.99
+R_EFF_R_DIFF 0.99
+R_REAR_BIAS 1
+LOCKED_DIFF_DAMP 0.8
+LOCKED_DIFF_K 80
+
+LOG_ENTRY Used Dataset: Powertrain: Transfer Case; { Open } Part Time 50/50, 2WD
+#Library : Powertrain: Transfer Case
+#DataSet : Part Time 50/50, 2WD
+#Category: Open
+#FileID  : XC_deb011c7-e3fa-4933-bca2-093897a2c762
+#Product : TruckSim 2020.1
+#VehCode Transfer Case
+
+END

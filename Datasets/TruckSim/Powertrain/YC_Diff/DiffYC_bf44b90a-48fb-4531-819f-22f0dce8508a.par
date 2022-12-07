@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Powertrain: Yaw Control Differential`Capacity 2400 N-m, R 0.38`
+#RingCtrl0 LINEAR_FLAT
+#RingCtrl1 LINEAR_FLAT
+#DiagramOne0
+CLUTCH_TORQUE_DIFF_TABLE LINEAR_FLAT
+0, 0
+1, 2400
+ENDTABLE
+#DiagramOne1
+CLUTCH_TORQUE_DIFF2_TABLE LINEAR_FLAT
+0, 0
+1, 2400
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+R_CLUTCH_YAW 0.38
+TC_CL 0.06
+TLAG_CL 0.16
+TC_CL2 0.06
+TLAG_CL2 0.16
+
+
+OPT_CLUTCH_DIFF 2
+CLUTCH_CONTROL_DIFF 0
+
+LOG_ENTRY Used Dataset: Powertrain: Yaw Control Differential; Capacity 2400 N-m, R 0.38
+#Library : Powertrain: Yaw Control Differential
+#DataSet : Capacity 2400 N-m, R 0.38
+#Category: 
+#FileID  : DiffYC_bf44b90a-48fb-4531-819f-22f0dce8508a
+#Product : TruckSim 2020.1
+#VehCode Yaw Control Diff.
+
+END

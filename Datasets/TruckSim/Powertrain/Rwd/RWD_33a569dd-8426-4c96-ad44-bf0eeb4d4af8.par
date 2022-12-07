@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Powertrain: Rear-Wheel Drive`32 kW, 5 Speed MT`32 kW Powertrains
+
+OPT_PT 2
+R_REAR_DRIVE_SC 1
+
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 1
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 0
+OPT_HEV 0
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+IDIFF 2
+OPT_DIFF_INTERNAL 1
+
+PARSFILE Powertrain\Engine\Engine_77adf19b-dab4-49fb-83c8-b6b68758a17e.par
+#BlueLink0 Powertrain: Engine`32 kW Engine` ` , Engine`Engine_77adf19b-dab4-49fb-83c8-b6b68758a17e
+
+PARSFILE Powertrain\Clutch\TrqCl_55813df9-f663-419f-84f1-112f17cdef9e.par
+#BlueLink6 Powertrain: Clutch Torque`Maximum 80 N-m (Linear)` ` , Clutch`TrqCl_55813df9-f663-419f-84f1-112f17cdef9e
+
+PARSFILE Powertrain\TransExt\Trans18_cf2daa9c-4e11-417e-9d14-372aabe2412c.par
+#BlueLink9 Powertrain: Transmission (18 Gears or CVT)`5-Speed MT, 6600 RPM` 5-Speed` , Transmission (Extended)`Trans18_cf2daa9c-4e11-417e-9d14-372aabe2412c
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_b553cdf6-3854-4cdb-b6c4-83c000d92f03.par
+#BlueLink5 Powertrain: Rear Differential`Open Differential: Gear Ratio 5.125:1` Open` , Differential`DiffR_b553cdf6-3854-4cdb-b6c4-83c000d92f03
+
+
+LOG_ENTRY Used Dataset: Powertrain: Rear-Wheel Drive; { 32 kW Powertrains } 32 kW, 5 Speed MT
+#Library : Powertrain: Rear-Wheel Drive
+#DataSet : 32 kW, 5 Speed MT
+#Category: 32 kW Powertrains
+#FileID  : RWD_33a569dd-8426-4c96-ad44-bf0eeb4d4af8
+#Product : TruckSim 2020.1
+#VehCode RWD
+
+END

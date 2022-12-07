@@ -1,0 +1,67 @@
+PARSFILE
+#FullDataName Powertrain: 4-Wheel Drive`200 kW, 6-spd, Open Fr, Locked Rr`200 kW - 270 kW Powertrains
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+
+OPT_PT 3
+R_REAR_DRIVE_SC 0.5
+
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 1
+#RingCtrl7 0
+OPT_HEV 0
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+IDIFF 1
+OPT_DIFF_INTERNAL 1
+IDIFF 2
+OPT_DIFF_INTERNAL 1
+IDIFF 3
+OPT_DIFF_INTERNAL 1
+
+PARSFILE Powertrain\Engine\Engine_b540bced-0ccf-4fcd-8b29-09c9de6540a4.par
+#BlueLink0 Powertrain: Engine`200 kW Engine (6100 RPM)` Engines: 150 kW to 250 kW` , Engine`Engine_b540bced-0ccf-4fcd-8b29-09c9de6540a4
+
+PARSFILE Powertrain\TConv\TC_719bf0c6-aae1-4563-86a2-789edd0caf0f.par
+#BlueLink1 Powertrain: Torque Converter`200 kW, 6100 RPM Engine` Torque Converters: 150 kW to 250 kW` , Torque Conv.`TC_719bf0c6-aae1-4563-86a2-789edd0caf0f
+
+PARSFILE Powertrain\TransExt\Trans18_6362040b-3c35-4204-ad3f-5dd5d455e5dd.par
+#BlueLink10 Powertrain: Transmission (18 Gears or CVT)`6 Spd., AT, 6100 RPM` 6-Speed` , Transmission (Extended)`Trans18_6362040b-3c35-4204-ad3f-5dd5d455e5dd
+
+
+IDIFF 3
+PARSFILE Powertrain\Centerdiff\XC_423be8ff-9a6f-40bc-a17e-855229062144.par
+#BlueLink3 Powertrain: Transfer Case`Locked: 50/50, Gear Ratio 2:1` Locked` , Transfer case`XC_423be8ff-9a6f-40bc-a17e-855229062144
+
+
+IDIFF 1
+PARSFILE Powertrain\Frontdiff\DiffF_2a306530-225f-4eaa-81b4-3e25f67c0605.par
+#BlueLink4 Powertrain: Front Differential`Open Differential: Gear Ratio 4.1:1` Open` , Differential front`DiffF_2a306530-225f-4eaa-81b4-3e25f67c0605
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_972b30d2-4fc0-4b93-8382-52166a241445.par
+#BlueLink5 Powertrain: Rear Differential`Locked Differential: Gear Ratio 4.1:1` Locked` , Differential rear`DiffR_972b30d2-4fc0-4b93-8382-52166a241445
+
+
+LOG_ENTRY Used Dataset: Powertrain: 4-Wheel Drive; { 200 kW - 270 kW Powertrains } 200 kW, 6-spd, Open Fr, Locked Rr
+#Library : Powertrain: 4-Wheel Drive
+#DataSet : 200 kW, 6-spd, Open Fr, Locked Rr
+#Category: 200 kW - 270 kW Powertrains
+#FileID  : 4WD_c7d990e4-1ffb-46f4-b772-548e8775c936
+#Product : TruckSim 2020.1
+#VehCode 4WD
+
+END

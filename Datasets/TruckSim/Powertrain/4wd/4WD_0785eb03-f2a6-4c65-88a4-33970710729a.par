@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Powertrain: 4-Wheel Drive`150 kW, 7 Spd. AT (Ext. Powertrain)`External Components
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+
+OPT_PT 3
+R_REAR_DRIVE_SC 0.5
+
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 0
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl4 0
+#RingCtrl5 0
+#RingCtrl6 0
+#RingCtrl7 0
+OPT_HEV 0
+
+
+OPT_ENGINE_INTERNAL 0
+OPT_PWR_CPL_INTERNAL 0
+OPT_TRANS_INTERNAL 0
+IDIFF 1
+OPT_DIFF_INTERNAL 0
+IDIFF 2
+OPT_DIFF_INTERNAL 0
+IDIFF 3
+OPT_DIFF_INTERNAL 0
+
+PARSFILE Powertrain\Extrans\TransExt_6a730092-a50a-499e-bcab-b6a48755b6fa.par
+#BlueLink7 Powertrain: Transmission (External)`External Shift Schedule` ` , External Transmission`TransExt_6a730092-a50a-499e-bcab-b6a48755b6fa
+
+
+IDIFF 3
+
+IDIFF 1
+
+IDIFF 2
+
+LOG_ENTRY Used Dataset: Powertrain: 4-Wheel Drive; { External Components } 150 kW, 7 Spd. AT (Ext. Powertrain)
+#Library : Powertrain: 4-Wheel Drive
+#DataSet : 150 kW, 7 Spd. AT (Ext. Powertrain)
+#Category: External Components
+#FileID  : 4WD_0785eb03-f2a6-4c65-88a4-33970710729a
+#Product : TruckSim 2020.1
+#VehCode 4WD
+
+END

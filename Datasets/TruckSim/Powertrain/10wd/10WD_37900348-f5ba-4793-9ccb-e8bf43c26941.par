@@ -1,0 +1,119 @@
+PARSFILE
+#FullDataName Powertrain: 10-Wheel Drive`10 x 10  295 kW`
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+
+OPT_PT 6
+
+#RingCtrl0 0
+R_MDRIVE 0
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 1
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 1
+#RingCtrl10 1
+#RingCtrl11 1
+#RingCtrl12 1
+#RingCtrl13 0
+OPT_HEV 0
+IDS_F 0.015
+IDS_R 0.015
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+IDS_9 0.015
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+IDIFF 1
+OPT_DIFF_INTERNAL 1
+IDIFF 2
+OPT_DIFF_INTERNAL 1
+IDIFF 3
+OPT_DIFF_INTERNAL 1
+IDIFF 4
+OPT_DIFF_INTERNAL 1
+IDIFF 5
+OPT_DIFF_INTERNAL 1
+IDIFF 6
+OPT_DIFF_INTERNAL 1
+IDIFF 7
+OPT_DIFF_INTERNAL 1
+IDIFF 8
+OPT_DIFF_INTERNAL 1
+IDIFF 9
+OPT_DIFF_INTERNAL 1
+
+PARSFILE Powertrain\Engine\Engine_22f67d6b-0b55-4b68-8eb9-f2fd5db94aee.par
+#BlueLink0 Powertrain: Engine`330 kW Diesel (2100 RPM) w/ Sound` Engines: 251 kW to 350 kW` , Engine`Engine_22f67d6b-0b55-4b68-8eb9-f2fd5db94aee
+
+PARSFILE Powertrain\TConv\TC_f7c863b8-a5c9-4cf6-ad32-d3feef5be3ff.par
+#BlueLink1 Powertrain: Torque Converter`300 kW, 2100 RPM Engine` Torque Converters: 251 kW to 350 kW` , Torque Conv.`TC_f7c863b8-a5c9-4cf6-ad32-d3feef5be3ff
+
+PARSFILE Powertrain\TransExt\Trans18_455a9cc8-eac2-41ac-bfb1-8e7dd9925163.par
+#BlueLink12 Powertrain: Transmission (18 Gears or CVT)`18 Spd., MT, 2100 RPM` 18-Speed` , Transmission (Extended)`Trans18_455a9cc8-eac2-41ac-bfb1-8e7dd9925163
+
+
+IDIFF 3
+IDS 0.015
+PARSFILE Powertrain\Centerdiff\XC_bcfc69ab-007c-4abd-a471-473cbe2a34a5.par
+#BlueLink3 Powertrain: Transfer Case`50/50, Gear Ratio 1:1` Open` , Transfer case`XC_bcfc69ab-007c-4abd-a471-473cbe2a34a5
+
+
+IDIFF 1
+PARSFILE Powertrain\Frontdiff\DiffF_21b4412b-91da-4a6c-8a9e-59f6b775fb92.par
+#BlueLink4 Powertrain: Front Differential`Viscous Coupling: Gear Ratio 5:1` Limited Slip and Viscous Coupling` , Differential front`DiffF_21b4412b-91da-4a6c-8a9e-59f6b775fb92
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_985dc75c-9cb1-4b19-8f85-95f74dfaba24.par
+#BlueLink5 Powertrain: Rear Differential`Viscous Coupling: Gear Ratio 5:1` Limited Slip and Viscous Coupling` , Differential rear`DiffR_985dc75c-9cb1-4b19-8f85-95f74dfaba24
+
+
+IDIFF 6
+IDS 0.015
+PARSFILE Powertrain\Centerdiff\XC_b235e428-01aa-4d02-a902-85f9534b1e93.par
+#BlueLink6 Powertrain: Transfer Case`33/66, Gear Ratio 1:1` Open` , Transfer case`XC_b235e428-01aa-4d02-a902-85f9534b1e93
+
+
+IDIFF 4
+PARSFILE Powertrain\Frontdiff\DiffF_21b4412b-91da-4a6c-8a9e-59f6b775fb92.par
+#BlueLink7 Powertrain: Front Differential`Viscous Coupling: Gear Ratio 5:1` Limited Slip and Viscous Coupling` , Differential front`DiffF_21b4412b-91da-4a6c-8a9e-59f6b775fb92
+
+
+IDIFF 5
+PARSFILE Powertrain\Reardiff\DiffR_985dc75c-9cb1-4b19-8f85-95f74dfaba24.par
+#BlueLink8 Powertrain: Rear Differential`Viscous Coupling: Gear Ratio 5:1` Limited Slip and Viscous Coupling` , Differential rear`DiffR_985dc75c-9cb1-4b19-8f85-95f74dfaba24
+
+
+IDIFF 7
+PARSFILE Powertrain\Centerdiff\XC_7cde1498-7380-48e9-a8c8-b8a7f12a38b0.par
+#BlueLink9 Powertrain: Transfer Case`40/60, Gear Ratio 1:1` Open` , Transfer case`XC_7cde1498-7380-48e9-a8c8-b8a7f12a38b0
+
+
+IDIFF 8
+PARSFILE Powertrain\Reardiff\DiffR_985dc75c-9cb1-4b19-8f85-95f74dfaba24.par
+#BlueLink13 Powertrain: Rear Differential`Viscous Coupling: Gear Ratio 5:1` Limited Slip and Viscous Coupling` , Differential rear`DiffR_985dc75c-9cb1-4b19-8f85-95f74dfaba24
+
+
+IDIFF 9
+IDS 0.015
+PARSFILE Powertrain\Centerdiff\XC_d9f0b72e-5e3e-4a85-bfdd-9442e1fef990.par
+#BlueLink14 Powertrain: Transfer Case`Locked: 50/50, Gear Ratio 1:1` Locked` , Transfer case`XC_d9f0b72e-5e3e-4a85-bfdd-9442e1fef990
+
+
+LOG_ENTRY Used Dataset: Powertrain: 10-Wheel Drive; 10 x 10  295 kW
+#Library : Powertrain: 10-Wheel Drive
+#DataSet : 10 x 10  295 kW
+#Category: 
+#FileID  : 10WD_37900348-f5ba-4793-9ccb-e8bf43c26941
+#Product : TruckSim 2020.1
+#VehCode 10WD
+
+END

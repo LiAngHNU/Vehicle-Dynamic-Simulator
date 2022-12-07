@@ -1,0 +1,173 @@
+PARSFILE
+#FullDataName Powertrain: Transmission (18 Gears or CVT)`7 Spd., AT, 2100 RPM w/ Lockup TC`7-Speed
+#RingCtrl0 7
+NGEARS 7
+#RingCtrl1 1
+OPT_SHIFT_INTERNAL 1
+#RingCtrl2 1
+OPT_TR_GEAR_INTERNAL 1
+#CheckBox0 1    
+OPT_CLUTCH 2
+R_GEAR_TR_REVERSE -4.8
+IGEAR 1
+R_GEAR_TR 7.63
+*R_GEAR_TR(1) 7.63
+IGEAR 2
+R_GEAR_TR 3.51
+*R_GEAR_TR(2) 3.51
+IGEAR 3
+R_GEAR_TR 1.91
+*R_GEAR_TR(3) 1.91
+IGEAR 4
+R_GEAR_TR 1.43
+*R_GEAR_TR(4) 1.43
+IGEAR 5
+R_GEAR_TR 1.0
+*R_GEAR_TR(5) 1.0
+IGEAR 6
+R_GEAR_TR .74
+*R_GEAR_TR(6) .74
+IGEAR 7
+R_GEAR_TR 0.64
+*R_GEAR_TR(7) 0.64
+ITR_REVERSE 0.2
+ITR_NEUTRAL 0.2
+IGEAR 1
+ITR 0.15
+*ITR(1) 0.15
+IGEAR 2
+ITR 0.15
+*ITR(2) 0.15
+IGEAR 3
+ITR 0.2
+*ITR(3) 0.2
+IGEAR 4
+ITR 0.2
+*ITR(4) 0.2
+IGEAR 5
+ITR 0.2
+*ITR(5) 0.2
+IGEAR 6
+ITR 0.2
+*ITR(6) 0.2
+IGEAR 7
+ITR 0.2
+*ITR(7) 0.2
+R_EFF_TR_F_REVERSE 0.9
+IGEAR 1
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(1) 0.92
+IGEAR 2
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(2) 0.92
+IGEAR 3
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(3) 0.92
+IGEAR 4
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(4) 0.92
+IGEAR 5
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(5) 0.92
+IGEAR 6
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(6) 0.92
+IGEAR 7
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(7) 0.92
+R_EFF_TR_R_REVERSE 0.9
+IGEAR 1
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(1) 0.92
+IGEAR 2
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(2) 0.92
+IGEAR 3
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(3) 0.92
+IGEAR 4
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(4) 0.92
+IGEAR 5
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(5) 0.92
+IGEAR 6
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(6) 0.92
+IGEAR 7
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(7) 0.92
+T_SHIFT 0.25
+*TC_CLUTCH_ENGAGE 0.1
+*TC_CLUTCH_DISENGAGE 0.001
+*M_LOCKUP_CLUTCH_CAP 1200
+
+#CheckBox1 1    
+OPT_CLUTCH_DELAY 1
+TC_CLUTCH_ENGAGE 0.1
+TC_CLUTCH_DISENGAGE 0.001
+M_LOCKUP_CLUTCH_CAP 1200
+
+
+igear 1
+PARSFILE Powertrain\Shift\Shift_8b7d4373-307f-4c64-83da-0560b3d93b6c.par
+#BlueLink0 Powertrain: Shift Schedule`7 Spd. AT, 1-2, 2100 RPM` 7-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_8b7d4373-307f-4c64-83da-0560b3d93b6c
+
+PARSFILE Powertrain\ClutchSchedule\ClSched_8d6c1461-3b0a-4609-9f5c-c37eea1bded9.par
+#BlueLink17 Powertrain: AT Clutch Schedule`1st Gear, Lock` ` , Clutch schedule`ClSched_8d6c1461-3b0a-4609-9f5c-c37eea1bded9
+
+
+igear 2
+PARSFILE Powertrain\Shift\Shift_7ea62512-0aa5-4969-b3d3-146c890ef3a2.par
+#BlueLink1 Powertrain: Shift Schedule`7 Spd. AT, 2-3, 2100 RPM` 7-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_7ea62512-0aa5-4969-b3d3-146c890ef3a2
+
+PARSFILE Powertrain\ClutchSchedule\ClSched_e39acf24-1e64-4db1-96a7-f26e0b5bbd0d.par
+#BlueLink18 Powertrain: AT Clutch Schedule`2nd Gear, Lock` ` , Clutch schedule`ClSched_e39acf24-1e64-4db1-96a7-f26e0b5bbd0d
+
+
+igear 3
+PARSFILE Powertrain\Shift\Shift_f9e72183-6a68-44d8-b1fa-108a7a3f87b1.par
+#BlueLink2 Powertrain: Shift Schedule`7 Spd. AT, 3-4, 2100 RPM` 7-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_f9e72183-6a68-44d8-b1fa-108a7a3f87b1
+
+PARSFILE Powertrain\ClutchSchedule\ClSched_463742c5-00ca-4d6a-a72e-79039f315720.par
+#BlueLink19 Powertrain: AT Clutch Schedule`3rd Gear, Lock` ` , Clutch schedule`ClSched_463742c5-00ca-4d6a-a72e-79039f315720
+
+
+igear 4
+PARSFILE Powertrain\Shift\Shift_9d160058-5f1f-40f1-aaca-83b24bf26bbe.par
+#BlueLink3 Powertrain: Shift Schedule`7 Spd. AT, 4-5, 2100 RPM` 7-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_9d160058-5f1f-40f1-aaca-83b24bf26bbe
+
+PARSFILE Powertrain\ClutchSchedule\ClSched_98ae4080-63c1-48e6-842f-edfd62e977c9.par
+#BlueLink20 Powertrain: AT Clutch Schedule`4th Gear, Lock` ` , Clutch schedule`ClSched_98ae4080-63c1-48e6-842f-edfd62e977c9
+
+
+igear 5
+PARSFILE Powertrain\Shift\Shift_bd18c4cf-7474-481b-ae07-cd2aba610768.par
+#BlueLink4 Powertrain: Shift Schedule`7 Spd. AT, 5-6, 2100 RPM` 7-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_bd18c4cf-7474-481b-ae07-cd2aba610768
+
+PARSFILE Powertrain\ClutchSchedule\ClSched_d2dbe5a2-c53f-452a-96ac-eaaa93d96d87.par
+#BlueLink21 Powertrain: AT Clutch Schedule`5th Gear, Lock` ` , Clutch schedule`ClSched_d2dbe5a2-c53f-452a-96ac-eaaa93d96d87
+
+
+igear 6
+PARSFILE Powertrain\Shift\Shift_076f5eda-bb59-4107-9973-0d001edc85c8.par
+#BlueLink5 Powertrain: Shift Schedule`7 Spd. AT, 6-7, 2100 RPM` 7-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_076f5eda-bb59-4107-9973-0d001edc85c8
+
+PARSFILE Powertrain\ClutchSchedule\ClSched_32fa01a7-88e1-4c85-959a-60ec895d406f.par
+#BlueLink22 Powertrain: AT Clutch Schedule`6th Gear, Lock` ` , Clutch schedule`ClSched_32fa01a7-88e1-4c85-959a-60ec895d406f
+
+
+igear 7
+PARSFILE Powertrain\ClutchSchedule\ClSched_b7445a5a-590a-4a90-adfe-b89cb966af78.par
+#BlueLink23 Powertrain: AT Clutch Schedule`7th Gear, Lock` ` , Clutch schedule`ClSched_b7445a5a-590a-4a90-adfe-b89cb966af78
+
+
+LOG_ENTRY Used Dataset: Powertrain: Transmission (18 Gears or CVT); { 7-Speed } 7 Spd., AT, 2100 RPM w/ Lockup TC
+#Library : Powertrain: Transmission (18 Gears or CVT)
+#DataSet : 7 Spd., AT, 2100 RPM w/ Lockup TC
+#Category: 7-Speed
+#FileID  : Trans18_e8972121-50a8-4c12-b8f9-00efb5b4ea4a
+#Product : TruckSim 2020.1
+#VehCode Transmission
+
+END

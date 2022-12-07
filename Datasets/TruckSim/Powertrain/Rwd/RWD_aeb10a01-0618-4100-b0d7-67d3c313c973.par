@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Powertrain: Rear-Wheel Drive`300 kW, 10 Speed MT`270 kW - 300 kW Powertrains
+
+OPT_PT 2
+R_REAR_DRIVE_SC 1
+
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 1
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 0
+OPT_HEV 0
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+IDIFF 2
+OPT_DIFF_INTERNAL 1
+
+PARSFILE Powertrain\Engine\Engine_26a4e6b6-5de0-460b-9047-75be5e6b4083.par
+#BlueLink0 Powertrain: Engine`300 kW Diesel (2100 RPM)` Engines: 251 kW to 350 kW` , Engine`Engine_26a4e6b6-5de0-460b-9047-75be5e6b4083
+
+PARSFILE Powertrain\Clutch\TrqCl_d253dbb8-2006-403f-a79a-a5785a543256.par
+#BlueLink6 Powertrain: Clutch Torque`Maximum 2000 N-m (Linear)` ` , Clutch`TrqCl_d253dbb8-2006-403f-a79a-a5785a543256
+
+PARSFILE Powertrain\TransExt\Trans18_47229de8-2039-433a-a083-5fa0c0cdba26.par
+#BlueLink9 Powertrain: Transmission (18 Gears or CVT)`10 Spd., MT, 2100 RPM` 10-Speed` , Transmission (Extended)`Trans18_47229de8-2039-433a-a083-5fa0c0cdba26
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_1048798f-6f4a-4016-a589-d83256264b3d.par
+#BlueLink5 Powertrain: Rear Differential`Open Differential: Gear Ratio 4.4:1` Open` , Differential`DiffR_1048798f-6f4a-4016-a589-d83256264b3d
+
+
+LOG_ENTRY Used Dataset: Powertrain: Rear-Wheel Drive; { 270 kW - 300 kW Powertrains } 300 kW, 10 Speed MT
+#Library : Powertrain: Rear-Wheel Drive
+#DataSet : 300 kW, 10 Speed MT
+#Category: 270 kW - 300 kW Powertrains
+#FileID  : RWD_aeb10a01-0618-4100-b0d7-67d3c313c973
+#Product : TruckSim 2020.1
+#VehCode RWD
+
+END

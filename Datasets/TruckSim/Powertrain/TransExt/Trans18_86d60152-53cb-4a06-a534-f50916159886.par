@@ -1,0 +1,142 @@
+PARSFILE
+#FullDataName Powertrain: Transmission (18 Gears or CVT)`7 Spd., MT, 3000 RPM (2A LCF Van)`7-Speed
+#RingCtrl0 7
+NGEARS 7
+#RingCtrl1 1
+OPT_SHIFT_INTERNAL 1
+#RingCtrl2 1
+OPT_TR_GEAR_INTERNAL 1
+#CheckBox0 0    
+R_GEAR_TR_REVERSE -6.66
+IGEAR 1
+R_GEAR_TR 7.48
+*R_GEAR_TR(1) 7.48
+IGEAR 2
+R_GEAR_TR 4.43
+*R_GEAR_TR(2) 4.43
+IGEAR 3
+R_GEAR_TR 2.76
+*R_GEAR_TR(3) 2.76
+IGEAR 4
+R_GEAR_TR 1.90
+*R_GEAR_TR(4) 1.90
+IGEAR 5
+R_GEAR_TR 1.34
+*R_GEAR_TR(5) 1.34
+IGEAR 6
+R_GEAR_TR 1.0
+*R_GEAR_TR(6) 1.0
+IGEAR 7
+R_GEAR_TR 0.74
+*R_GEAR_TR(7) 0.74
+ITR_REVERSE 0.2
+ITR_NEUTRAL 0.2
+IGEAR 1
+ITR 0.25
+*ITR(1) 0.25
+IGEAR 2
+ITR 0.25
+*ITR(2) 0.25
+IGEAR 3
+ITR 0.2
+*ITR(3) 0.2
+IGEAR 4
+ITR 0.2
+*ITR(4) 0.2
+IGEAR 5
+ITR 0.2
+*ITR(5) 0.2
+IGEAR 6
+ITR 0.2
+*ITR(6) 0.2
+IGEAR 7
+ITR 0.2
+*ITR(7) 0.2
+R_EFF_TR_F_REVERSE 0.9
+IGEAR 1
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(1) 0.92
+IGEAR 2
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(2) 0.92
+IGEAR 3
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(3) 0.92
+IGEAR 4
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(4) 0.92
+IGEAR 5
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(5) 0.92
+IGEAR 6
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(6) 0.92
+IGEAR 7
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(7) 0.92
+R_EFF_TR_R_REVERSE 0.9
+IGEAR 1
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(1) 0.92
+IGEAR 2
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(2) 0.92
+IGEAR 3
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(3) 0.92
+IGEAR 4
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(4) 0.92
+IGEAR 5
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(5) 0.92
+IGEAR 6
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(6) 0.92
+IGEAR 7
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(7) 0.92
+T_SHIFT 0.25
+
+
+igear 1
+PARSFILE Powertrain\Shift\Shift_c9099103-fff2-43bf-b06e-cdca909af957.par
+#BlueLink0 Powertrain: Shift Schedule`7 Spd., 1-2, 3000 RPM` 7-Speed Shift Schedule, 3000 RPM (2A LCF Van, MT)` , Shift schedule`Shift_c9099103-fff2-43bf-b06e-cdca909af957
+
+
+igear 2
+PARSFILE Powertrain\Shift\Shift_3db0a471-a933-475c-b953-88eb2966a4cf.par
+#BlueLink1 Powertrain: Shift Schedule`7 Spd., 2-3, 3000 RPM` 7-Speed Shift Schedule, 3000 RPM (2A LCF Van, MT)` , Shift schedule`Shift_3db0a471-a933-475c-b953-88eb2966a4cf
+
+
+igear 3
+PARSFILE Powertrain\Shift\Shift_5baffc17-ec76-44f6-8870-2af64873c110.par
+#BlueLink2 Powertrain: Shift Schedule`7 Spd., 3-4, 3000 RPM` 7-Speed Shift Schedule, 3000 RPM (2A LCF Van, MT)` , Shift schedule`Shift_5baffc17-ec76-44f6-8870-2af64873c110
+
+
+igear 4
+PARSFILE Powertrain\Shift\Shift_231a5d66-9a64-461a-8df7-fbc6026ae617.par
+#BlueLink3 Powertrain: Shift Schedule`7 Spd., 4-5, 3000 RPM` 7-Speed Shift Schedule, 3000 RPM (2A LCF Van, MT)` , Shift schedule`Shift_231a5d66-9a64-461a-8df7-fbc6026ae617
+
+
+igear 5
+PARSFILE Powertrain\Shift\Shift_7613c356-933d-4cf9-9d0c-dab7a883062a.par
+#BlueLink4 Powertrain: Shift Schedule`7 Spd., 5-6, 3000 RPM` 7-Speed Shift Schedule, 3000 RPM (2A LCF Van, MT)` , Shift schedule`Shift_7613c356-933d-4cf9-9d0c-dab7a883062a
+
+
+igear 6
+PARSFILE Powertrain\Shift\Shift_d7e68695-9f7c-49c6-8c90-29a61b6fa352.par
+#BlueLink5 Powertrain: Shift Schedule`7 Spd., 6-7, 3000 RPM` 7-Speed Shift Schedule, 3000 RPM (2A LCF Van, MT)` , Shift schedule`Shift_d7e68695-9f7c-49c6-8c90-29a61b6fa352
+
+
+igear 7
+
+LOG_ENTRY Used Dataset: Powertrain: Transmission (18 Gears or CVT); { 7-Speed } 7 Spd., MT, 3000 RPM (2A LCF Van)
+#Library : Powertrain: Transmission (18 Gears or CVT)
+#DataSet : 7 Spd., MT, 3000 RPM (2A LCF Van)
+#Category: 7-Speed
+#FileID  : Trans18_86d60152-53cb-4a06-a534-f50916159886
+#Product : TruckSim 2020.1
+#VehCode Transmission
+
+END

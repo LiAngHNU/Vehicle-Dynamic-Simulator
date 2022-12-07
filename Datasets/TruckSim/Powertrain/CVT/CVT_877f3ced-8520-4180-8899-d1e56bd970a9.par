@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Powertrain: CVT Gear Ratio`R = 0.83 - 3.6, 3100 RPM`
+#RingCtrl0 CARPET
+#RadioCtrl0 0    
+
+
+PARSFILE Powertrain\CvtEfficiencies\CvtEff_af351e3a-e1df-47d7-b2c7-6f16f39645ba.par
+#BlueLink0 Powertrain: CVT Efficiencies`Constant: 0.92` ` , Efficiencies`CvtEff_af351e3a-e1df-47d7-b2c7-6f16f39645ba
+
+*3D_XLabel Throttle (-)
+*3D_YLabel Trans. output speed (rpm)
+*3D_ZLabel Absolute transmission gear ratio (-)
+
+#DiagramTwo0
+*3D_DATA 4, 10 ! columns x rows
+R_GEAR_CVT_CARPET 2D_LINEAR
+0, 0, 0.2, 0.8, 1
+200, 3.6, 3.6, 3.6, 3.6
+400, 3.6, 3.6, 3.6, 3.6
+500, 2.19, 3.3, 3.55, 3.6
+680, 1.41, 2.3, 3.25, 3.5
+870, 1, 1.5, 2.2, 3.2
+1000, 0.83, 1.2, 1.6, 2.2
+1500, 0.83, 0.83, 1.1, 1.41
+2200, 0.83, 0.83, 0.9, 1
+2800, 0.83, 0.83, 0.83, 0.83
+3100, 0.83, 0.83, 0.83, 0.83
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#This is an example of CVT gear ratio with range from 0.69 to 4.6. The gear ratio is a function of the throttle and transmission output speed.
+#
+#This screen also links to the CVT efficiency screen.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: CVT Gear Ratio; R = 0.83 - 3.6, 3100 RPM
+#Library : Powertrain: CVT Gear Ratio
+#DataSet : R = 0.83 - 3.6, 3100 RPM
+#Category: 
+#FileID  : CVT_877f3ced-8520-4180-8899-d1e56bd970a9
+#Product : TruckSim 2020.1
+#VehCode CVT Gear Ratio
+
+END

@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Powertrain: Transfer Case`50/50, Gear Ratio 1:1`Open
+#CheckBox0 0    
+LOCKED_XC_OPT 0
+
+#RingCtrl0 CONSTANT
+OPT_LOCKED_DIFF 0
+M_DIFF_VISC_CONSTANT 0
+#RadioCtrl0 0    
+
+M_DIFF_XC_CONSTANT 0
+R_GEAR_XC 1
+R_EFF_F_XC 0.99
+R_EFF_R_XC 0.99
+R_REAR_XC 0.5
+LOCKED_XC_DAMP 0.8
+LOCKED_XC_K 80
+*SCALAR 0
+
+R_GEAR_DIFF 1
+R_EFF_F_DIFF 0.99
+R_EFF_R_DIFF 0.99
+R_REAR_BIAS 0.5
+LOCKED_DIFF_DAMP 0.8
+LOCKED_DIFF_K 80
+
+LOG_ENTRY Used Dataset: Powertrain: Transfer Case; { Open } 50/50, Gear Ratio 1:1
+#Library : Powertrain: Transfer Case
+#DataSet : 50/50, Gear Ratio 1:1
+#Category: Open
+#FileID  : XC_bcfc69ab-007c-4abd-a471-473cbe2a34a5
+#Product : TruckSim 2020.1
+#VehCode Transfer Case
+
+END

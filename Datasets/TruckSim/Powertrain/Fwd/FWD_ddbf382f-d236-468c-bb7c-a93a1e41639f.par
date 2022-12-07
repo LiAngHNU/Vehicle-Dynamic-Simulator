@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Powertrain: Front-Wheel Drive`175 kW, 7 Speed MT`175 kW Powertrains
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+
+OPT_PT 1
+R_REAR_DRIVE_SC 0
+
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 1
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 0
+OPT_HEV 0
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+IDIFF 1
+OPT_DIFF_INTERNAL 1
+
+PARSFILE Powertrain\Engine\Engine_4d7c19a5-3ab3-48fc-b2f2-501b877e1321.par
+#BlueLink0 Powertrain: Engine`175 kW Diesel (3000 RPM)` Engines: 150 kW to 250 kW` , Engine`Engine_4d7c19a5-3ab3-48fc-b2f2-501b877e1321
+
+PARSFILE Powertrain\Clutch\TrqCl_9f785c12-973c-4838-8383-fd56aacf6982.par
+#BlueLink5 Powertrain: Clutch Torque`Maximum 900 N-m (Linear)` ` , Clutch`TrqCl_9f785c12-973c-4838-8383-fd56aacf6982
+
+PARSFILE Powertrain\TransExt\Trans18_ce216877-b4a7-4233-a1cf-1424f898bf3f.par
+#BlueLink8 Powertrain: Transmission (18 Gears or CVT)`7 Spd., MT, 3000 RPM` 7-Speed` , Transmission (Extended)`Trans18_ce216877-b4a7-4233-a1cf-1424f898bf3f
+
+
+IDIFF 1
+PARSFILE Powertrain\Frontdiff\DiffF_fabe2753-ef07-4529-8b13-b5593b49804e.par
+#BlueLink4 Powertrain: Front Differential`Open Differential: Gear Ratio 4.4:1` Open` , Differential`DiffF_fabe2753-ef07-4529-8b13-b5593b49804e
+
+
+LOG_ENTRY Used Dataset: Powertrain: Front-Wheel Drive; { 175 kW Powertrains } 175 kW, 7 Speed MT
+#Library : Powertrain: Front-Wheel Drive
+#DataSet : 175 kW, 7 Speed MT
+#Category: 175 kW Powertrains
+#FileID  : FWD_ddbf382f-d236-468c-bb7c-a93a1e41639f
+#Product : TruckSim 2020.1
+#VehCode FWD
+
+END

@@ -1,0 +1,108 @@
+PARSFILE
+#FullDataName Powertrain: Transmission (18 Gears or CVT)`5 Spd., AT, 2100 RPM`5-Speed
+#RingCtrl0 5
+NGEARS 5
+#RingCtrl1 1
+OPT_SHIFT_INTERNAL 1
+#RingCtrl2 1
+OPT_TR_GEAR_INTERNAL 1
+#CheckBox0 0    
+R_GEAR_TR_REVERSE -4.8
+IGEAR 1
+R_GEAR_TR 4.17
+*R_GEAR_TR(1) 4.17
+IGEAR 2
+R_GEAR_TR 2.21
+*R_GEAR_TR(2) 2.21
+IGEAR 3
+R_GEAR_TR 1.66
+*R_GEAR_TR(3) 1.66
+IGEAR 4
+R_GEAR_TR 1.27
+*R_GEAR_TR(4) 1.27
+IGEAR 5
+R_GEAR_TR 1.0
+*R_GEAR_TR(5) 1.0
+ITR_REVERSE 0.2
+ITR_NEUTRAL 0.2
+IGEAR 1
+ITR 0.15
+*ITR(1) 0.15
+IGEAR 2
+ITR 0.15
+*ITR(2) 0.15
+IGEAR 3
+ITR 0.2
+*ITR(3) 0.2
+IGEAR 4
+ITR 0.2
+*ITR(4) 0.2
+IGEAR 5
+ITR 0.2
+*ITR(5) 0.2
+R_EFF_TR_F_REVERSE 0.92
+IGEAR 1
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(1) 0.92
+IGEAR 2
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(2) 0.92
+IGEAR 3
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(3) 0.92
+IGEAR 4
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(4) 0.92
+IGEAR 5
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(5) 0.92
+R_EFF_TR_R_REVERSE 0.92
+IGEAR 1
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(1) 0.92
+IGEAR 2
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(2) 0.92
+IGEAR 3
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(3) 0.92
+IGEAR 4
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(4) 0.92
+IGEAR 5
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(5) 0.92
+T_SHIFT 0.25
+
+
+igear 1
+PARSFILE Powertrain\Shift\Shift_1aa071e0-fd11-4cf1-8348-84a1b9af52a3.par
+#BlueLink0 Powertrain: Shift Schedule`5 Spd. AT, 1-2, 2100 RPM` 5-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_1aa071e0-fd11-4cf1-8348-84a1b9af52a3
+
+
+igear 2
+PARSFILE Powertrain\Shift\Shift_7515c07e-89ad-4cfd-a545-796cda972f99.par
+#BlueLink1 Powertrain: Shift Schedule`5 Spd. AT, 2-3, 2100 RPM` 5-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_7515c07e-89ad-4cfd-a545-796cda972f99
+
+
+igear 3
+PARSFILE Powertrain\Shift\Shift_77a24b44-4f4f-4422-b107-c3a5213bfe8f.par
+#BlueLink2 Powertrain: Shift Schedule`5 Spd. AT, 3-4, 2100 RPM` 5-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_77a24b44-4f4f-4422-b107-c3a5213bfe8f
+
+
+igear 4
+PARSFILE Powertrain\Shift\Shift_23c052e0-e48d-49e0-a064-94d2c778474d.par
+#BlueLink3 Powertrain: Shift Schedule`5 Spd. AT, 4-5, 2100 RPM` 5-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_23c052e0-e48d-49e0-a064-94d2c778474d
+
+
+igear 5
+
+LOG_ENTRY Used Dataset: Powertrain: Transmission (18 Gears or CVT); { 5-Speed } 5 Spd., AT, 2100 RPM
+#Library : Powertrain: Transmission (18 Gears or CVT)
+#DataSet : 5 Spd., AT, 2100 RPM
+#Category: 5-Speed
+#FileID  : Trans18_89af0c13-8b4d-4aaa-b508-29409db3b07e
+#Product : TruckSim 2020.1
+#VehCode Transmission
+
+END

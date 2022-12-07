@@ -1,0 +1,67 @@
+PARSFILE
+#FullDataName Powertrain: 4-Wheel Drive`330 kW, 18 Spd. MT (Locked T-Case)`330 kW Powertrains
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+
+OPT_PT 3
+R_REAR_DRIVE_SC 0.5
+
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 1
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 1
+#RingCtrl7 0
+OPT_HEV 0
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+IDIFF 1
+OPT_DIFF_INTERNAL 1
+IDIFF 2
+OPT_DIFF_INTERNAL 1
+IDIFF 3
+OPT_DIFF_INTERNAL 1
+
+PARSFILE Powertrain\Engine\Engine_e10d3eb6-fc02-4fec-9cfa-d7e0543b91d6.par
+#BlueLink0 Powertrain: Engine`330 kW Diesel (2100 RPM)` Engines: 251 kW to 350 kW` , Engine`Engine_e10d3eb6-fc02-4fec-9cfa-d7e0543b91d6
+
+PARSFILE Powertrain\Clutch\TrqCl_5185473d-4bf4-4f36-8223-d1766c5865bd.par
+#BlueLink6 Powertrain: Clutch Torque`Maximum 5000 N-m (Linear)` ` , Clutch`TrqCl_5185473d-4bf4-4f36-8223-d1766c5865bd
+
+PARSFILE Powertrain\TransExt\Trans18_455a9cc8-eac2-41ac-bfb1-8e7dd9925163.par
+#BlueLink10 Powertrain: Transmission (18 Gears or CVT)`18 Spd., MT, 2100 RPM` 18-Speed` , Transmission (Extended)`Trans18_455a9cc8-eac2-41ac-bfb1-8e7dd9925163
+
+
+IDIFF 3
+PARSFILE Powertrain\Centerdiff\XC_d9f0b72e-5e3e-4a85-bfdd-9442e1fef990.par
+#BlueLink3 Powertrain: Transfer Case`Locked: 50/50, Gear Ratio 1:1` Locked` , Transfer case`XC_d9f0b72e-5e3e-4a85-bfdd-9442e1fef990
+
+
+IDIFF 1
+PARSFILE Powertrain\Frontdiff\DiffF_fabe2753-ef07-4529-8b13-b5593b49804e.par
+#BlueLink4 Powertrain: Front Differential`Open Differential: Gear Ratio 4.4:1` Open` , Differential front`DiffF_fabe2753-ef07-4529-8b13-b5593b49804e
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_1048798f-6f4a-4016-a589-d83256264b3d.par
+#BlueLink5 Powertrain: Rear Differential`Open Differential: Gear Ratio 4.4:1` Open` , Differential rear`DiffR_1048798f-6f4a-4016-a589-d83256264b3d
+
+
+LOG_ENTRY Used Dataset: Powertrain: 4-Wheel Drive; { 330 kW Powertrains } 330 kW, 18 Spd. MT (Locked T-Case)
+#Library : Powertrain: 4-Wheel Drive
+#DataSet : 330 kW, 18 Spd. MT (Locked T-Case)
+#Category: 330 kW Powertrains
+#FileID  : 4WD_924ec1d1-43dc-4b63-bd23-ee34e019da14
+#Product : TruckSim 2020.1
+#VehCode 4WD
+
+END

@@ -1,0 +1,199 @@
+PARSFILE
+#FullDataName Powertrain: Transmission (18 Gears or CVT)`10 Spd., MT, 2100 RPM`10-Speed
+#RingCtrl0 10
+NGEARS 10
+#RingCtrl1 1
+OPT_SHIFT_INTERNAL 1
+#RingCtrl2 1
+OPT_TR_GEAR_INTERNAL 1
+#CheckBox0 0    
+R_GEAR_TR_REVERSE -9.58
+IGEAR 1
+R_GEAR_TR 11.06
+*R_GEAR_TR(1) 11.06
+IGEAR 2
+R_GEAR_TR 8.2
+*R_GEAR_TR(2) 8.2
+IGEAR 3
+R_GEAR_TR 6.06
+*R_GEAR_TR(3) 6.06
+IGEAR 4
+R_GEAR_TR 4.49
+*R_GEAR_TR(4) 4.49
+IGEAR 5
+R_GEAR_TR 3.32
+*R_GEAR_TR(5) 3.32
+IGEAR 6
+R_GEAR_TR 2.46
+*R_GEAR_TR(6) 2.46
+IGEAR 7
+R_GEAR_TR 1.82
+*R_GEAR_TR(7) 1.82
+IGEAR 8
+R_GEAR_TR 1.35
+*R_GEAR_TR(8) 1.35
+IGEAR 9
+R_GEAR_TR 1
+*R_GEAR_TR(9) 1
+IGEAR 10
+R_GEAR_TR 0.74
+*R_GEAR_TR(10) 0.74
+ITR_REVERSE 0.2
+ITR_NEUTRAL 0.2
+IGEAR 1
+ITR 0.15
+*ITR(1) 0.15
+IGEAR 2
+ITR 0.15
+*ITR(2) 0.15
+IGEAR 3
+ITR 0.2
+*ITR(3) 0.2
+IGEAR 4
+ITR 0.2
+*ITR(4) 0.2
+IGEAR 5
+ITR 0.2
+*ITR(5) 0.2
+IGEAR 6
+ITR 0.2
+*ITR(6) 0.2
+IGEAR 7
+ITR 0.2
+*ITR(7) 0.2
+IGEAR 8
+ITR 0.2
+*ITR(8) 0.2
+IGEAR 9
+ITR 0.2
+*ITR(9) 0.2
+IGEAR 10
+ITR 0.2
+*ITR(10) 0.2
+R_EFF_TR_F_REVERSE 0.9
+IGEAR 1
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(1) 0.92
+IGEAR 2
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(2) 0.92
+IGEAR 3
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(3) 0.92
+IGEAR 4
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(4) 0.92
+IGEAR 5
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(5) 0.92
+IGEAR 6
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(6) 0.92
+IGEAR 7
+R_EFF_TR_F 0.92
+*R_EFF_TR_F(7) 0.92
+IGEAR 8
+R_EFF_TR_F 0.95
+*R_EFF_TR_F(8) 0.95
+IGEAR 9
+R_EFF_TR_F 0.95
+*R_EFF_TR_F(9) 0.95
+IGEAR 10
+R_EFF_TR_F 0.95
+*R_EFF_TR_F(10) 0.95
+R_EFF_TR_R_REVERSE 0.9
+IGEAR 1
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(1) 0.92
+IGEAR 2
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(2) 0.92
+IGEAR 3
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(3) 0.92
+IGEAR 4
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(4) 0.92
+IGEAR 5
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(5) 0.92
+IGEAR 6
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(6) 0.92
+IGEAR 7
+R_EFF_TR_R 0.92
+*R_EFF_TR_R(7) 0.92
+IGEAR 8
+R_EFF_TR_R 0.95
+*R_EFF_TR_R(8) 0.95
+IGEAR 9
+R_EFF_TR_R 0.95
+*R_EFF_TR_R(9) 0.95
+IGEAR 10
+R_EFF_TR_R 0.95
+*R_EFF_TR_R(10) 0.95
+T_SHIFT 0.25
+
+
+igear 1
+PARSFILE Powertrain\Shift\Shift_5ce7685e-9374-4bed-957b-479b9529af55.par
+#BlueLink0 Powertrain: Shift Schedule`10 Spd. MT, 1-2, 2100 RPM` 10-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_5ce7685e-9374-4bed-957b-479b9529af55
+
+
+igear 2
+PARSFILE Powertrain\Shift\Shift_86f5c10f-a913-4099-978a-c3bb9ca72673.par
+#BlueLink1 Powertrain: Shift Schedule`10 Spd. MT, 2-3, 2100 RPM` 10-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_86f5c10f-a913-4099-978a-c3bb9ca72673
+
+
+igear 3
+PARSFILE Powertrain\Shift\Shift_76686de1-4719-4b83-ad6f-39ebe1c66a62.par
+#BlueLink2 Powertrain: Shift Schedule`10 Spd. MT, 3-4, 2100 RPM` 10-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_76686de1-4719-4b83-ad6f-39ebe1c66a62
+
+
+igear 4
+PARSFILE Powertrain\Shift\Shift_30a3c2ff-7fb3-487a-8035-699a3dfb2f68.par
+#BlueLink3 Powertrain: Shift Schedule`10 Spd. MT, 4-5, 2100 RPM` 10-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_30a3c2ff-7fb3-487a-8035-699a3dfb2f68
+
+
+igear 5
+PARSFILE Powertrain\Shift\Shift_21ef3028-1d6e-4e38-bd7b-87d5e4950f00.par
+#BlueLink4 Powertrain: Shift Schedule`10 Spd. MT, 5-6, 2100 RPM` 10-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_21ef3028-1d6e-4e38-bd7b-87d5e4950f00
+
+
+igear 6
+PARSFILE Powertrain\Shift\Shift_25630606-7201-40cd-94e8-748b67828e2e.par
+#BlueLink5 Powertrain: Shift Schedule`10 Spd. MT, 6-7, 2100 RPM` 10-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_25630606-7201-40cd-94e8-748b67828e2e
+
+
+igear 7
+PARSFILE Powertrain\Shift\Shift_a0677a0e-5c29-4990-961e-d2e8a1753d00.par
+#BlueLink6 Powertrain: Shift Schedule`10 Spd. MT, 7-8, 2100 RPM` 10-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_a0677a0e-5c29-4990-961e-d2e8a1753d00
+
+
+igear 8
+PARSFILE Powertrain\Shift\Shift_dc509118-1335-473d-ac92-02018a52a20b.par
+#BlueLink7 Powertrain: Shift Schedule`10 Spd. MT, 8-9, 2100 RPM` 10-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_dc509118-1335-473d-ac92-02018a52a20b
+
+
+igear 9
+PARSFILE Powertrain\Shift\Shift_b80764c0-e773-4bd9-a362-e8e8894c2dbb.par
+#BlueLink8 Powertrain: Shift Schedule`10 Spd. MT, 9-10, 2100 RPM` 10-Speed Shift Schedule, 2100 RPM` , Shift schedule`Shift_b80764c0-e773-4bd9-a362-e8e8894c2dbb
+
+
+igear 10
+
+#EMBEDDED_NOTES
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: Transmission (18 Gears or CVT); { 10-Speed } 10 Spd., MT, 2100 RPM
+#Library : Powertrain: Transmission (18 Gears or CVT)
+#DataSet : 10 Spd., MT, 2100 RPM
+#Category: 10-Speed
+#FileID  : Trans18_47229de8-2039-433a-a083-5fa0c0cdba26
+#Product : TruckSim 2020.1
+#VehCode Transmission
+
+END

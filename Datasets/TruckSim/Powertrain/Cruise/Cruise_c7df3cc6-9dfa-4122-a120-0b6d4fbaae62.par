@@ -1,0 +1,61 @@
+PARSFILE
+#FullDataName Powertrain: AVL Cruise`150 kW, 6x4, 7-speed MT`
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+#RingCtrl0 1
+#RingCtrl1 1
+R_MDRIVE 1
+#CheckBox0 1    
+OPT_CLUTCH 1
+#CheckBox1 0    
+
+OPT_SHIFT_INTERNAL 1
+OPT_SHIFT_AVL 0
+PARSFILE Powertrain\Upshift\UpShift_8275335e-ab26-443b-853c-dc3e3e6705e0.par
+#BlueLink0 Powertrain: Upshift Schedule`7-speed (3000 RPM)` ` , Upshift`UpShift_8275335e-ab26-443b-853c-dc3e3e6705e0
+
+PARSFILE Powertrain\Downshift\DnShift_7b08e3a5-51e9-4c5c-9cb0-0f6530f5ee36.par
+#BlueLink1 Powertrain: Downshift Schedule`7-Speed (3000 RPM)` ` , Downshift`DnShift_7b08e3a5-51e9-4c5c-9cb0-0f6530f5ee36
+
+PARSFILE Powertrain\EngineFullPw\EngPwr_ee69a319-611e-4c4c-b623-2f00dbeaf917.par
+#BlueLink2 Powertrain: Engine Full Load Power`150 KW (Cruise)` ` , Full load power`EngPwr_ee69a319-611e-4c4c-b623-2f00dbeaf917
+
+
+#AVL Cruise setting data
+AVL_CRUISE_DLL Extensions\AVL\cruiseNT.dll
+AVL_CRUISE_PROJECT Extensions\AVL\Cruise-TruckSim_Man_6x4\ver_0001\Cruise-TruckSim_Man_6x4.prj
+#MiscYellow0
+LOCK_BK_R_FREQ     100
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#This example dataset uses the AVL Cruise model.
+#
+#TruckSim supports the AVL Cruise model (version 2011.1 or newer), but the following separate licenses are required:
+#
+#1. AVL Cruise license (available from AVL) and
+#2. TruckSim External Powertrain Interface license (available from Mechanical Simulation).
+#
+#In order to execute Cruise on TruckSim correctly, you have to set the following files:
+#
+#a. Cruise solver file (cruiseNT.dll), which should be version 2011.1 or newer, or an optional project embedded solver (CMC dll), and
+#b. Cruise project file (***.prj), if the solver is not CMC dll.
+#
+#This particular dataset involves the following settings:
+#
+#1.  The Cruise model selected here is a 6x4 manual transmission. Therefore the shift schedule is selected for "Internal shift schedule",
+#2.  Full load engine characteristic is specified which is necessary to perform the TruckSim speed controller.
+#3.  LOCK_BK_R_FREQ is set to 100 in order to avoid wheel oscillation during the vehicle stopping.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: AVL Cruise; 150 kW, 6x4, 7-speed MT
+#Library : Powertrain: AVL Cruise
+#DataSet : 150 kW, 6x4, 7-speed MT
+#Category: 
+#FileID  : Cruise_c7df3cc6-9dfa-4122-a120-0b6d4fbaae62
+#Product : TruckSim 2020.1
+#VehCode AVL Cruise Driveline
+
+END

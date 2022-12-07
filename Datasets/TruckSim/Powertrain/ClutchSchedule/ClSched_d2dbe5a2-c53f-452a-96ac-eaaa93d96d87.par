@@ -1,0 +1,29 @@
+PARSFILE
+#FullDataName Powertrain: AT Clutch Schedule`5th Gear, Lock`
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+LOCK_AT_TABLE
+0, 1000
+0.14, 1000
+0.86, 1322
+1, 1322
+ENDTABLE
+#DiagramOne1
+UNLOCK_AT_TABLE
+0, 850
+0.14, 850
+0.86, 1200
+1, 1200
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Powertrain: AT Clutch Schedule; 5th Gear, Lock
+#Library : Powertrain: AT Clutch Schedule
+#DataSet : 5th Gear, Lock
+#Category: 
+#FileID  : ClSched_d2dbe5a2-c53f-452a-96ac-eaaa93d96d87
+#Product : TruckSim 2020.1
+#VehCode Clutch Schedule
+
+END

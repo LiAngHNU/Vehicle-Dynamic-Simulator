@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Powertrain: Rear-Wheel Drive`270 kW, 6-Spd AT, 4.1 Ratio, Open Diff`270 kW - 300 kW Powertrains
+
+OPT_PT 2
+R_REAR_DRIVE_SC 1
+
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 0
+OPT_HEV 0
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+IDIFF 2
+OPT_DIFF_INTERNAL 1
+
+PARSFILE Powertrain\Engine\Engine_1b47c442-1fa1-4921-bf1b-33f0dc2f9419.par
+#BlueLink0 Powertrain: Engine`270 kW Diesel (4000 RPM)` Engines: 251 kW to 350 kW` , Engine`Engine_1b47c442-1fa1-4921-bf1b-33f0dc2f9419
+
+PARSFILE Powertrain\TConv\TC_d1194462-9661-4813-8d14-0e58a08e6c65.par
+#BlueLink1 Powertrain: Torque Converter`270 kW, 4000 RPM Engine` Torque Converters: 251 kW to 350 kW` , Torque Conv.`TC_d1194462-9661-4813-8d14-0e58a08e6c65
+
+PARSFILE Powertrain\TransExt\Trans18_66b2661e-7c25-405b-99d4-c343ef72f389.par
+#BlueLink9 Powertrain: Transmission (18 Gears or CVT)`6 Spd., AT, 4000 RPM` 6-Speed` , Transmission (Extended)`Trans18_66b2661e-7c25-405b-99d4-c343ef72f389
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_fc7a9a9a-4ca0-467b-8f7e-c099d1b56ff8.par
+#BlueLink5 Powertrain: Rear Differential`Open Differential: Gear Ratio 4.1:1` Open` , Differential`DiffR_fc7a9a9a-4ca0-467b-8f7e-c099d1b56ff8
+
+
+LOG_ENTRY Used Dataset: Powertrain: Rear-Wheel Drive; { 270 kW - 300 kW Powertrains } 270 kW, 6-Spd AT, 4.1 Ratio, Open Diff
+#Library : Powertrain: Rear-Wheel Drive
+#DataSet : 270 kW, 6-Spd AT, 4.1 Ratio, Open Diff
+#Category: 270 kW - 300 kW Powertrains
+#FileID  : RWD_81c20b6e-80c3-446a-9e7b-295394c50e8c
+#Product : TruckSim 2020.1
+#VehCode RWD
+
+END

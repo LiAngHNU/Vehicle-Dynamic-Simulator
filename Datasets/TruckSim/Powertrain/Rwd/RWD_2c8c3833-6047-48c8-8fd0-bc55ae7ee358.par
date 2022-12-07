@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Powertrain: Rear-Wheel Drive`175 kW, 7 Speed AT (2A Conv. Van)`175 kW Powertrains
+
+OPT_PT 2
+R_REAR_DRIVE_SC 1
+
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 0
+OPT_HEV 0
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+IDIFF 2
+OPT_DIFF_INTERNAL 1
+
+PARSFILE Powertrain\Engine\Engine_8b6cdaa7-0670-4f51-9c14-8c7607084370.par
+#BlueLink0 Powertrain: Engine`175 kW Diesel, I = 1.75 kgm2 (3000 RPM)` Engines: 150 kW to 250 kW` , Engine`Engine_8b6cdaa7-0670-4f51-9c14-8c7607084370
+
+PARSFILE Powertrain\TConv\TC_0048a915-2435-48fe-8a77-3c5f3ef772ea.par
+#BlueLink1 Powertrain: Torque Converter`175 kW, 3000 RPM Engine` Torque Converters: 150 kW to 250 kW` , Torque Conv.`TC_0048a915-2435-48fe-8a77-3c5f3ef772ea
+
+PARSFILE Powertrain\TransExt\Trans18_7641329b-df82-4ca0-86ab-907141a2a6bf.par
+#BlueLink9 Powertrain: Transmission (18 Gears or CVT)`7 Spd., AT, 3000 RPM (2A Conv. Van)` 7-Speed` , Transmission (Extended)`Trans18_7641329b-df82-4ca0-86ab-907141a2a6bf
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_61f58837-8256-4b9b-8d48-3c1492a7bba6.par
+#BlueLink5 Powertrain: Rear Differential`Open Differential: Gear Ratio 5:1` Open` , Differential`DiffR_61f58837-8256-4b9b-8d48-3c1492a7bba6
+
+
+#EMBEDDED_NOTES
+#Powertrain set up to work with the 2-axle Conventional Van:
+#175 kW engine
+#Torque Converter
+#7-speed transmission
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: Rear-Wheel Drive; { 175 kW Powertrains } 175 kW, 7 Speed AT (2A Conv. Van)
+#Library : Powertrain: Rear-Wheel Drive
+#DataSet : 175 kW, 7 Speed AT (2A Conv. Van)
+#Category: 175 kW Powertrains
+#FileID  : RWD_2c8c3833-6047-48c8-8fd0-bc55ae7ee358
+#Product : TruckSim 2020.1
+#VehCode RWD
+
+END

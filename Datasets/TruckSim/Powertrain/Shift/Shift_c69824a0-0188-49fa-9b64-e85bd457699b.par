@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Powertrain: Shift Schedule`6 Spd., 4-5, 3000 RPM`6-Speed Shift Schedule, 3000 RPM (2A LCF)
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+#DiagramOne0
+UPSHIFT_TRANS_TABLE
+0, 633
+0.1, 633
+0.8, 2490
+1, 2490
+ENDTABLE
+#DiagramOne1
+DOWNSHIFT_TRANS_TABLE
+0, 480
+0.75, 480
+0.9, 1067
+1, 1067
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Powertrain: Shift Schedule; { 6-Speed Shift Schedule, 3000 RPM (2A LCF) } 6 Spd., 4-5, 3000 RPM
+#Library : Powertrain: Shift Schedule
+#DataSet : 6 Spd., 4-5, 3000 RPM
+#Category: 6-Speed Shift Schedule, 3000 RPM (2A LCF)
+#FileID  : Shift_c69824a0-0188-49fa-9b64-e85bd457699b
+#Product : TruckSim 2020.1
+#VehCode Shift Schedule
+
+END
