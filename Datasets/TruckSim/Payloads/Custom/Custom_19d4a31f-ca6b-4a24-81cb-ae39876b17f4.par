@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Payload: Custom`Large Drum (FL)`Payloads: Barrels and Drums
+DEFINE_PAYLOADS 1
+ILOAD = NLOAD
+OPT_PL_BODY_ID = IUNIT
+IOBJECT_SAVE
+SET_DESCRIPTION PAYLOAD_NAME Large Drum (FL)
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Animator\STL\Shape_a08e1813-ec1c-4f46-9af3-c591c69d8386.par
+#BlueLink0 Animator: Shape File Link`Drum` Common Vehicle Assets: Payloads` , Animator`Shape_a08e1813-ec1c-4f46-9af3-c591c69d8386
+
+SET_OFFSET_X -1.10000005225
+SET_OFFSET_Y 0.375000017812
+SET_OFFSET_Z 0.950000045123
+H_CG_PL 950
+LX_CG_PL 1100
+Y_CG_PL 375
+M_PL 200
+IXX_PL 100
+IYY_PL 100
+IZZ_PL 100
+IXZ_PL 0
+IXY_PL 0
+IYZ_PL 0
+*RX 0.707
+*RY 0.707
+*RZ 0.707
+
+IOBJECT_RESTORE
+
+LOG_ENTRY Used Dataset: Payload: Custom; { Payloads: Barrels and Drums } Large Drum (FL)
+#Library : Payload: Custom
+#DataSet : Large Drum (FL)
+#Category: Payloads: Barrels and Drums
+#FileID  : Custom_19d4a31f-ca6b-4a24-81cb-ae39876b17f4
+#Product : TruckSim 2020.1
+#VehCode Payload: Custom
+
+END

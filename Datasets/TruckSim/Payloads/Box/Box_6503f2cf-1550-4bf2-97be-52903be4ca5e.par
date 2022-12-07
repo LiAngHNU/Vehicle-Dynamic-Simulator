@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Payload: Box Shape`Conventional/LCF Van Payload (6789 kg)`Box Trucks
+DEFINE_PAYLOADS 1
+ILOAD = NLOAD
+OPT_PL_BODY_ID = IUNIT
+SET_DESCRIPTION PAYLOAD_NAME Conventional/LCF Van Payload (6789 kg)
+IOBJECT_SAVE
+*X_LENGTH 3000
+*Y_LENGTH 2000
+*Z_LENGTH 1000
+Y_CG_PL 0
+H_BOX_BOTTOM 1300
+LX_CG_PL 4500
+M_PL 6789
+*SET_COLOR 1 0 0
+
+#CheckBox0 1    
+
+H_CG_PL 1800.00
+IXX_PL 2828.75
+IYY_PL 5657.50
+IZZ_PL 7354.75
+IXY_PL 0
+IXZ_PL 0
+IYZ_PL 0
+WRITE_ADD_REFERENCE_FRAME_BODY
+add_obj Payloads\Box\Box_6503f2cf-1550-4bf2-97be-52903be4ca5e.obj
+show_front on
+show_back off
+set_color 1 0 0
+
+IOBJECT_RESTORE
+
+LOG_ENTRY Used Dataset: Payload: Box Shape; { Box Trucks } Conventional/LCF Van Payload (6789 kg)
+#Library : Payload: Box Shape
+#DataSet : Conventional/LCF Van Payload (6789 kg)
+#Category: Box Trucks
+#FileID  : Box_6503f2cf-1550-4bf2-97be-52903be4ca5e
+#Product : TruckSim 2020.1
+#VehCode Payload: Box
+
+END

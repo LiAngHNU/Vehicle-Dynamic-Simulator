@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Payload: Custom`Small Crate (Front)`Payloads: Small Crates
+DEFINE_PAYLOADS 1
+ILOAD = NLOAD
+OPT_PL_BODY_ID = IUNIT
+IOBJECT_SAVE
+SET_DESCRIPTION PAYLOAD_NAME Small Crate (Front)
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Animator\STL\Shape_33a3515c-8523-4af9-94a6-c8503294777d.par
+#BlueLink0 Animator: Shape File Link`Crate, Small` Common Vehicle Assets: Payloads` , Animator`Shape_33a3515c-8523-4af9-94a6-c8503294777d
+
+SET_OFFSET_X -1.75000008312
+SET_OFFSET_Y 0
+SET_OFFSET_Z 2.10000009974
+H_CG_PL 2100
+LX_CG_PL 1750
+Y_CG_PL 0
+M_PL 5000
+IXX_PL 900
+IYY_PL 6000
+IZZ_PL 6000
+IXZ_PL 0
+IXY_PL 0
+IYZ_PL 0
+*RX 0.424
+*RY 1.095
+*RZ 1.095
+
+IOBJECT_RESTORE
+
+LOG_ENTRY Used Dataset: Payload: Custom; { Payloads: Small Crates } Small Crate (Front)
+#Library : Payload: Custom
+#DataSet : Small Crate (Front)
+#Category: Payloads: Small Crates
+#FileID  : Custom_ae7071b1-407f-44fa-a1a0-7372683823b1
+#Product : TruckSim 2020.1
+#VehCode Payload: Custom
+
+END

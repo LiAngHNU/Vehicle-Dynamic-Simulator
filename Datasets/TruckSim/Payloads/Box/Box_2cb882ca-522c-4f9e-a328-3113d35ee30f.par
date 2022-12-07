@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Payload: Box Shape`Mobile crane`Box Trucks
+DEFINE_PAYLOADS 1
+ILOAD = NLOAD
+OPT_PL_BODY_ID = IUNIT
+SET_DESCRIPTION PAYLOAD_NAME Mobile crane
+IOBJECT_SAVE
+*X_LENGTH 3000
+*Y_LENGTH 2000
+*Z_LENGTH 1200
+Y_CG_PL 0
+H_BOX_BOTTOM 1300
+LX_CG_PL 10845
+M_PL 7000
+*SET_COLOR 1 0.6 0.2
+
+#CheckBox0 1    
+
+H_CG_PL 1900.00
+IXX_PL 3173.33
+IYY_PL 6090.00
+IZZ_PL 7583.33
+IXY_PL 0
+IXZ_PL 0
+IYZ_PL 0
+WRITE_ADD_REFERENCE_FRAME_BODY
+add_obj Payloads\Box\Box_2cb882ca-522c-4f9e-a328-3113d35ee30f.obj
+show_front on
+show_back off
+set_color 1 0.6 0.2
+
+IOBJECT_RESTORE
+
+LOG_ENTRY Used Dataset: Payload: Box Shape; { Box Trucks } Mobile crane
+#Library : Payload: Box Shape
+#DataSet : Mobile crane
+#Category: Box Trucks
+#FileID  : Box_2cb882ca-522c-4f9e-a328-3113d35ee30f
+#Product : TruckSim 2020.1
+#VehCode Payload: Box
+
+END

@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Payload: Custom`2A Bus Passengers`Payloads: Tour Bus
+DEFINE_PAYLOADS 1
+ILOAD = NLOAD
+OPT_PL_BODY_ID = IUNIT
+IOBJECT_SAVE
+SET_DESCRIPTION PAYLOAD_NAME 2A Bus Passengers
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Animator\STL\Shape_463e0cee-f7fb-4c2f-9641-3523eac1cfcd.par
+#BlueLink0 Animator: Shape File Link`Tour Bus (2A): Passengers` Trucks: Buses` , Animator`Shape_463e0cee-f7fb-4c2f-9641-3523eac1cfcd
+
+SET_OFFSET_X -2.75000013062
+SET_OFFSET_Y 0
+SET_OFFSET_Z 1.75000008312
+H_CG_PL 1750
+LX_CG_PL 2750
+Y_CG_PL 0
+M_PL 3000
+IXX_PL 250
+IYY_PL 6250
+IZZ_PL 6250
+IXZ_PL 0
+IXY_PL 0
+IYZ_PL 0
+*RX 0.289
+*RY 1.443
+*RZ 1.443
+
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#2A Tour Bus Passengers shape file is updated in 2017 version.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Payload: Custom; { Payloads: Tour Bus } 2A Bus Passengers
+#Library : Payload: Custom
+#DataSet : 2A Bus Passengers
+#Category: Payloads: Tour Bus
+#FileID  : Custom_22925be3-b1dc-4b1b-8293-b5d2ab4a5e26
+#Product : TruckSim 2020.1
+#VehCode Payload: Custom
+
+END

@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Payload: Box Shape`Activity Bus`Buses
+DEFINE_PAYLOADS 1
+ILOAD = NLOAD
+OPT_PL_BODY_ID = IUNIT
+SET_DESCRIPTION PAYLOAD_NAME Activity Bus
+IOBJECT_SAVE
+*X_LENGTH 2000
+*Y_LENGTH 1500
+*Z_LENGTH 1000
+Y_CG_PL 0
+H_BOX_BOTTOM 850
+LX_CG_PL 3720
+M_PL 4050
+*SET_COLOR 1 1 0
+
+#CheckBox0 0    
+
+H_CG_PL 1350.00
+IXX_PL 1096.88
+IYY_PL 1687.50
+IZZ_PL 2109.38
+IXY_PL 0
+IXZ_PL 0
+IYZ_PL 0
+IOBJECT_RESTORE
+
+LOG_ENTRY Used Dataset: Payload: Box Shape; { Buses } Activity Bus
+#Library : Payload: Box Shape
+#DataSet : Activity Bus
+#Category: Buses
+#FileID  : Box_58dbe2df-6ea9-4464-ba70-43879bf2083e
+#Product : TruckSim 2020.1
+#VehCode Payload: Box
+
+END

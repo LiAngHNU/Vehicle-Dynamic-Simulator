@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Payload: Box Shape`Hybrid Battery`
+DEFINE_PAYLOADS 1
+ILOAD = NLOAD
+OPT_PL_BODY_ID = IUNIT
+SET_DESCRIPTION PAYLOAD_NAME Hybrid Battery
+IOBJECT_SAVE
+*X_LENGTH 1500
+*Y_LENGTH 300
+*Z_LENGTH 250
+Y_CG_PL 650
+H_BOX_BOTTOM 450
+LX_CG_PL 2500
+M_PL 300
+*SET_COLOR 0 1 1
+
+#CheckBox0 1    
+
+H_CG_PL 575.00
+IXX_PL 3.81
+IYY_PL 57.81
+IZZ_PL 58.50
+IXY_PL 0
+IXZ_PL 0
+IYZ_PL 0
+WRITE_ADD_REFERENCE_FRAME_BODY
+add_obj Payloads\Box\Box_85583e12-be54-431d-834c-f72c226d35f9.obj
+show_front on
+show_back off
+set_color 0 1 1
+
+IOBJECT_RESTORE
+
+LOG_ENTRY Used Dataset: Payload: Box Shape; Hybrid Battery
+#Library : Payload: Box Shape
+#DataSet : Hybrid Battery
+#Category: 
+#FileID  : Box_85583e12-be54-431d-834c-f72c226d35f9
+#Product : TruckSim 2020.1
+#VehCode Payload: Box
+
+END

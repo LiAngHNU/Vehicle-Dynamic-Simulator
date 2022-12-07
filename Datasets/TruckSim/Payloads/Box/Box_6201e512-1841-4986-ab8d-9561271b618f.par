@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Payload: Box Shape`Trailer Outrigger`Outriggers
+DEFINE_PAYLOADS 1
+ILOAD = NLOAD
+OPT_PL_BODY_ID = IUNIT
+SET_DESCRIPTION PAYLOAD_NAME Trailer Outrigger
+IOBJECT_SAVE
+*X_LENGTH 100
+*Y_LENGTH 5000
+*Z_LENGTH 200
+Y_CG_PL 0
+H_BOX_BOTTOM 950
+LX_CG_PL 5500
+M_PL 250
+
+#CheckBox0 0    
+
+H_CG_PL 1050.00
+IXX_PL 521.67
+IYY_PL 1.04
+IZZ_PL 521.04
+IXY_PL 0
+IXZ_PL 0
+IYZ_PL 0
+IOBJECT_RESTORE
+
+LOG_ENTRY Used Dataset: Payload: Box Shape; { Outriggers } Trailer Outrigger
+#Library : Payload: Box Shape
+#DataSet : Trailer Outrigger
+#Category: Outriggers
+#FileID  : Box_6201e512-1841-4986-ab8d-9561271b618f
+#Product : TruckSim 2020.1
+#VehCode Payload: Box
+
+END

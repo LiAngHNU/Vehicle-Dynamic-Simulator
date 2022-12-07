@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Payload: Box Shape`Utility Trailer (200 kg)`Trailers
+DEFINE_PAYLOADS 1
+ILOAD = NLOAD
+OPT_PL_BODY_ID = IUNIT
+SET_DESCRIPTION PAYLOAD_NAME Utility Trailer (200 kg)
+IOBJECT_SAVE
+*X_LENGTH 600
+*Y_LENGTH 800
+*Z_LENGTH 400
+Y_CG_PL 0
+H_BOX_BOTTOM 500
+LX_CG_PL 2500
+M_PL 200
+*SET_COLOR 0.6 0 0
+
+#CheckBox0 1    
+
+H_CG_PL 700.00
+IXX_PL 13.33
+IYY_PL 8.67
+IZZ_PL 16.67
+IXY_PL 0
+IXZ_PL 0
+IYZ_PL 0
+WRITE_ADD_REFERENCE_FRAME_BODY
+add_obj Payloads\Box\Box_52da0815-7027-4ea2-bdd5-1664c20f54c0.obj
+show_front on
+show_back off
+set_color 0.6 0 0
+
+IOBJECT_RESTORE
+
+LOG_ENTRY Used Dataset: Payload: Box Shape; { Trailers } Utility Trailer (200 kg)
+#Library : Payload: Box Shape
+#DataSet : Utility Trailer (200 kg)
+#Category: Trailers
+#FileID  : Box_52da0815-7027-4ea2-bdd5-1664c20f54c0
+#Product : TruckSim 2020.1
+#VehCode Payload: Box
+
+END

@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Payload: Custom`Large Drum (Row 3, Right)`Payloads: 2A Conventional Van
+DEFINE_PAYLOADS 1
+ILOAD = NLOAD
+OPT_PL_BODY_ID = IUNIT
+IOBJECT_SAVE
+SET_DESCRIPTION PAYLOAD_NAME Large Drum (Row 3, Right)
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Animator\STL\Shape_a08e1813-ec1c-4f46-9af3-c591c69d8386.par
+#BlueLink0 Animator: Shape File Link`Drum` Common Vehicle Assets: Payloads` , Animator`Shape_a08e1813-ec1c-4f46-9af3-c591c69d8386
+
+SET_OFFSET_X -4.50000021374
+SET_OFFSET_Y -0.375000017812
+SET_OFFSET_Z 1.600000076
+H_CG_PL 1600
+LX_CG_PL 4500
+Y_CG_PL -375
+M_PL 200
+IXX_PL 100
+IYY_PL 100
+IZZ_PL 100
+IXZ_PL 0
+IXY_PL 0
+IYZ_PL 0
+*RX 0.707
+*RY 0.707
+*RZ 0.707
+
+IOBJECT_RESTORE
+
+LOG_ENTRY Used Dataset: Payload: Custom; { Payloads: 2A Conventional Van } Large Drum (Row 3, Right)
+#Library : Payload: Custom
+#DataSet : Large Drum (Row 3, Right)
+#Category: Payloads: 2A Conventional Van
+#FileID  : Custom_49f9b67a-d302-48ba-bc1a-6fcf2d40e192
+#Product : TruckSim 2020.1
+#VehCode Payload: Custom
+
+END

@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Payload: Box Shape`Trailer (20,582.76 kg = 45,376.76 lb)`Trailers
+DEFINE_PAYLOADS 1
+ILOAD = NLOAD
+OPT_PL_BODY_ID = IUNIT
+SET_DESCRIPTION PAYLOAD_NAME Trailer (20,582.76 kg = 45,376.76 lb)
+IOBJECT_SAVE
+*X_LENGTH 7500
+*Y_LENGTH 2000
+*Z_LENGTH 2000
+Y_CG_PL 0
+H_BOX_BOTTOM 1300
+LX_CG_PL 6000
+M_PL 20582.76
+*SET_COLOR 0 0 1
+
+#CheckBox0 1    
+
+H_CG_PL 2300.00
+IXX_PL 13721.84
+IYY_PL 103342.61
+IZZ_PL 103342.61
+IXY_PL 0
+IXZ_PL 0
+IYZ_PL 0
+WRITE_ADD_REFERENCE_FRAME_BODY
+add_obj Payloads\Box\Box_698a87f6-f63b-4d8f-a00b-9b40e7cb402c.obj
+show_front on
+show_back off
+set_color 0 0 1
+
+IOBJECT_RESTORE
+
+LOG_ENTRY Used Dataset: Payload: Box Shape; { Trailers } Trailer (20,582.76 kg = 45,376.76 lb)
+#Library : Payload: Box Shape
+#DataSet : Trailer (20,582.76 kg = 45,376.76 lb)
+#Category: Trailers
+#FileID  : Box_698a87f6-f63b-4d8f-a00b-9b40e7cb402c
+#Product : TruckSim 2020.1
+#VehCode Payload: Box
+
+END

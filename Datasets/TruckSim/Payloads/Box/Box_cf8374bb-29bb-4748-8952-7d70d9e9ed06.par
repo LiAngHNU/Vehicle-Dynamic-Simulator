@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Payload: Box Shape`Tour Bus (Left Passengers)`Buses
+DEFINE_PAYLOADS 1
+ILOAD = NLOAD
+OPT_PL_BODY_ID = IUNIT
+SET_DESCRIPTION PAYLOAD_NAME Tour Bus (Left Passengers)
+IOBJECT_SAVE
+*X_LENGTH 7000
+*Y_LENGTH 1000
+*Z_LENGTH 1000
+Y_CG_PL 750
+H_BOX_BOTTOM 1250
+LX_CG_PL 2750
+M_PL 1500
+*SET_COLOR 1 0 0
+
+#CheckBox0 0    
+
+H_CG_PL 1750.00
+IXX_PL 250.00
+IYY_PL 6250.00
+IZZ_PL 6250.00
+IXY_PL 0
+IXZ_PL 0
+IYZ_PL 0
+IOBJECT_RESTORE
+
+LOG_ENTRY Used Dataset: Payload: Box Shape; { Buses } Tour Bus (Left Passengers)
+#Library : Payload: Box Shape
+#DataSet : Tour Bus (Left Passengers)
+#Category: Buses
+#FileID  : Box_cf8374bb-29bb-4748-8952-7d70d9e9ed06
+#Product : TruckSim 2020.1
+#VehCode Payload: Box
+
+END
