@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Events`H. Stop`Trailer Reversing into Loading Dock
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 t_event
+*VALUE1 3
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+tstart_t_event t
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_2541c6e5-6d6c-48d8-9a2d-b0518f7baf1a.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Constant: 1.5 MPa` Constant` , Miscellaneous`PbkCon_2541c6e5-6d6c-48d8-9a2d-b0518f7baf1a
+
+PARSFILE Control\Steer\StrSW_9419b1df-a776-4d94-97e4-93750a8c097b.par
+#BlueLink11 Control: Steering (Open Loop)`Constant: 0 deg.` Constant` , Miscellaneous`StrSW_9419b1df-a776-4d94-97e4-93750a8c097b
+
+PARSFILE Control\Clutch\ClCon_d24c29a2-52e3-40e4-a44e-927cae6163ef.par
+#BlueLink12 Control: Clutch (Open Loop)`Disengaged, Constant` Single Engagement / Disengagement` , Miscellaneous`ClCon_d24c29a2-52e3-40e4-a44e-927cae6163ef
+
+MAKE_EVENT t_event > 3 ; Events\Events_c5025ed7-e2a1-4ada-a2db-eab746c72ecb.par
+#BlueLink0 Events`I. Drive Foward` Trailer Reversing into Loading Dock` , Events`Events_c5025ed7-e2a1-4ada-a2db-eab746c72ecb
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Vehicle closes the throttle, applies the brakes, disengages the clutch, and centers the steering.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Trailer Reversing into Loading Dock } H. Stop
+#Library : Events
+#DataSet : H. Stop
+#Category: Trailer Reversing into Loading Dock
+#FileID  : Events_4d412c2b-7a28-4734-8291-0add589fffba
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

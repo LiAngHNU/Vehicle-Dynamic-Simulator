@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Events`J. Complete Turn Around`Trailer Reversing into Loading Dock
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 vx
+*VALUE1 20
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_ffc26ec3-1a4d-482e-9096-0772193e092a.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0.5` Constant` , Speed link`Throttle_ffc26ec3-1a4d-482e-9096-0772193e092a
+
+#MiscYellow0
+OPT_DIRECTION -1
+#ENDMYellow
+
+PARSFILE Control\Driver\StrDM_aff32df7-f66f-4196-98fe-2b0785393716.par
+#BlueLink10 Control: Steering by the Closed-loop Driver Model`1.65m Left, 4s Preview` Constant Position: Non-Zero Offset` , Miscellaneous`StrDM_aff32df7-f66f-4196-98fe-2b0785393716
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink11 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Miscellaneous`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+MAKE_EVENT vx > 20 ; Events\Events_9b376ff0-310d-419e-87f0-0c4307dfa086.par
+#BlueLink0 Events`End Events` ` , Events`Events_9b376ff0-310d-419e-87f0-0c4307dfa086
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The vehicle continues accelerating, now in the reverse direction of the road, and switches to a closed-loop driver path follower until 20 km/h is reached.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Trailer Reversing into Loading Dock } J. Complete Turn Around
+#Library : Events
+#DataSet : J. Complete Turn Around
+#Category: Trailer Reversing into Loading Dock
+#FileID  : Events_cf04e40c-04de-47e3-9da3-9d5bc094fe46
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Events`C. Accelerate to 60 kph`Accel. then Brake: 0 - 60 - 0 km/h, MT
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 vx
+*VALUE1 60
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_982ba2f0-9bd1-4d14-bc94-1299f205eacf.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 1.0 (Full Throttle)` Constant` , Speed link`Throttle_982ba2f0-9bd1-4d14-bc94-1299f205eacf
+
+#MiscYellow0
+TSTART_CLUTCH = T
+TSTART_GEAR = T
+TSTART_THROTTLE = T
+#ENDMYellow
+
+PARSFILE Control\Gear_at\GearCL_1f02400d-01c7-4eba-8f38-306dc57444fc.par
+#BlueLink10 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 3.5s, Gear 2s` Closed-Loop Shifting` , Miscellaneous`GearCL_1f02400d-01c7-4eba-8f38-306dc57444fc
+
+MAKE_EVENT vx > 60 ; Events\Events_aef4764a-2933-4d65-ad81-70400b323281.par
+#BlueLink0 Events`D. Brake to a stop` Accel. then Brake: 0 - 70 - 0 km/h, MT` , Events`Events_aef4764a-2933-4d65-ad81-70400b323281
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This Event sets the transmission shifting control to Closed-Loop control.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Accel. then Brake: 0 - 60 - 0 km/h, MT } C. Accelerate to 60 kph
+#Library : Events
+#DataSet : C. Accelerate to 60 kph
+#Category: Accel. then Brake: 0 - 60 - 0 km/h, MT
+#FileID  : Events_ea8aa660-f4c1-4a45-a907-a1f250e66454
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

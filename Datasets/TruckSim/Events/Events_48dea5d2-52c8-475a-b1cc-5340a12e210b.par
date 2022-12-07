@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Events`Engine OFF`Ignition Switch and Transmission Park
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 ==
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 ign_onoff
+*VALUE1 1
+PARSFILE Powertrain\Engine\Engine_1b115f1d-8517-4937-bf7b-483db773f974.par
+#BlueLink10 Powertrain: Engine`150 kW Engine Off Motoring Torque` Engines: 150 kW to 250 kW` , Miscellaneous`Engine_1b115f1d-8517-4937-bf7b-483db773f974
+
+MAKE_EVENT ign_onoff == 1 ; Events\Events_22f4592e-90f4-4e5e-b441-a952dc7b5c3b.par
+#BlueLink0 Events`Engine ON` Ignition Switch and Transmission Park` , Events`Events_22f4592e-90f4-4e5e-b441-a952dc7b5c3b
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Ignition Switch and Transmission Park } Engine OFF
+#Library : Events
+#DataSet : Engine OFF
+#Category: Ignition Switch and Transmission Park
+#FileID  : Events_48dea5d2-52c8-475a-b1cc-5340a12e210b
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

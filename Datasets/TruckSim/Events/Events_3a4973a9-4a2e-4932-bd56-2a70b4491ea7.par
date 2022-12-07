@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Events`000: Approach Turn`Restoring to a Previous State
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 2
+*NAME1 station
+*VALUE1 200
+OPT_SC 2
+PARSFILE Control\Speed_t\SpdTime_1fde1d0f-ff29-4bd5-b833-5d64c9dd808b.par
+#BlueLink16 Control: Speed (Closed Loop) Using Target Speed`Constant: 1 km/h` Constant` , Speed link`SpdTime_1fde1d0f-ff29-4bd5-b833-5d64c9dd808b
+
+SPEED_ID_SC = SPEED_TARGET_ID
+#MiscYellow0
+SPEED_TARGET_GAIN(1) 100
+start_save_timer (restore_interval)
+#ENDMYellow
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink10 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Miscellaneous`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Driver\StrDM_c7177a80-1b6b-4c3e-aaa1-17098da24958.par
+#BlueLink11 Control: Steering by the Closed-loop Driver Model`2.5m Right, 0.6s Single Preview` Constant Position: Non-Zero Offset` , Miscellaneous`StrDM_c7177a80-1b6b-4c3e-aaa1-17098da24958
+
+MAKE_EVENT station > 200 ; Events\Events_da20a0d9-2070-439c-80c7-515d865708c9.par
+#BlueLink0 Events`010: Monitor Path Following` Restoring to a Previous State` , Events`Events_da20a0d9-2070-439c-80c7-515d865708c9
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The speed controller is given a constant speed target. It is easily set and modified by using a speed of 1 with a gain applied to it. In this way, the speed target can be changed by just modifying the gain.
+#
+#The "start_save_timer" saves all information about the vehicle state at time intervals of "restore_interval" seconds.
+#
+#The first curve begins at 200 m, so monitoring of the vehicle position begins there.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Restoring to a Previous State } 000: Approach Turn
+#Library : Events
+#DataSet : 000: Approach Turn
+#Category: Restoring to a Previous State
+#FileID  : Events_3a4973a9-4a2e-4932-bd56-2a70b4491ea7
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

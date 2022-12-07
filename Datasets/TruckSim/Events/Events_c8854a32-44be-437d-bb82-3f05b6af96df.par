@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Events`A. Start Steady-State Circle Series`ISO Steady-State Circle Series
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T
+*NAME2 AY_REF
+*VALUE1 3*T_WAIT
+*VALUE2 abs(ay)
+#MiscYellow0
+OPT_WRITE = WRITE_ALL
+IPRINT = 1
+#ENDMYellow
+
+MAKE_EVENT T > 3*T_WAIT ; Events\Events_808b67cb-3b3c-4967-a1d2-89e23063f838.par
+#BlueLink0 Events`B. Save Ackermann Steer` ISO Steady-State Circle Series` , Events`Events_808b67cb-3b3c-4967-a1d2-89e23063f838
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#WRITE_ALL is a parameter to write outputs to file continuously. It is normally 0, but can be reset from the Run Control screen for diagnostics.
+#
+#IPRINT is set to 1 to enable writing as soon as OPT_WRITE is set to 1, usually just for one time step.
+#
+#T_WAIT is the time used to wait for the vehicle to settle into a steady-state condition for most of the circle tests. The first one can take longer, so the wait time is multiplied by 3 in the pending event.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ISO Steady-State Circle Series } A. Start Steady-State Circle Series
+#Library : Events
+#DataSet : A. Start Steady-State Circle Series
+#Category: ISO Steady-State Circle Series
+#FileID  : Events_c8854a32-44be-437d-bb82-3f05b6af96df
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

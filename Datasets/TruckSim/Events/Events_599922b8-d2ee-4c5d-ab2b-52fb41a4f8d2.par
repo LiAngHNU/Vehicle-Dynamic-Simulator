@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Events`B. Adjust lateral target`3-Point Turn
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 station
+*VALUE1 4
+#MiscYellow0
+LTARG_CONSTANT = -1.1
+#ENDMYellow
+
+MAKE_EVENT station > 4 ; Events\Events_d63f2298-c0e9-47b8-a521-dc999b647fb7.par
+#BlueLink0 Events`C. Brake to Stop w/ Accel Control` 3-Point Turn` , Events`Events_d63f2298-c0e9-47b8-a521-dc999b647fb7
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#To avoid hitting the curb with a rear tire, the lateral target is changed to -1.1m. Otherwise, the existing controls stay in effect.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { 3-Point Turn } B. Adjust lateral target
+#Library : Events
+#DataSet : B. Adjust lateral target
+#Category: 3-Point Turn
+#FileID  : Events_599922b8-d2ee-4c5d-ab2b-52fb41a4f8d2
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

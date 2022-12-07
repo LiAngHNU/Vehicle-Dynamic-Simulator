@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName Events`A. Accelerate to Speed at 100% Throttle`Transient Response Times
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl1 >
+#RingCtrl10 2
+#RingCtrl11 0
+*NAME1 vx
+*NAME2 t_event
+*VALUE1 speed_mph
+*VALUE2 time_out
+*SPEED 0
+OPT_SC 0
+SV_VXS 0
+PARSFILE Control\Throttle\Throttle_982ba2f0-9bd1-4d14-bc94-1299f205eacf.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 1.0 (Full Throttle)` Constant` , Speed link`Throttle_982ba2f0-9bd1-4d14-bc94-1299f205eacf
+
+#MiscYellow0
+! Start in the corner of the grid
+sstart -480
+ltarg_offset -480
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Miscellaneous`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink11 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Miscellaneous`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Driver\StrDM_bc14b97b-72c4-4e95-a3ab-a055a14bb58a.par
+#BlueLink12 Control: Steering by the Closed-loop Driver Model`1s Preview` Constant Position: No Offset` , Miscellaneous`StrDM_bc14b97b-72c4-4e95-a3ab-a055a14bb58a
+
+PARSFILE Roads\3D_Road\Road_1d628bf6-d343-4b53-aab3-6c447711f700.par
+#BlueLink13 Road: 3D Surface (All Properties)`1 km Square, Mu = 0.85` Flat Test Pads` , Miscellaneous`Road_1d628bf6-d343-4b53-aab3-6c447711f700
+
+PARSFILE Generic\VS_commands\GenVS_5724a7f8-ffb3-4c69-9cdb-59929e31b454.par
+#BlueLink15 Generic VS Commands`Define Transient Response Variables` Miscellaneous Custom Output Variables` , Miscellaneous`GenVS_5724a7f8-ffb3-4c69-9cdb-59929e31b454
+
+MAKE_EVENT vx > speed_mph ; Events\Events_45c4d402-6cff-41c5-ae91-8ecc2295816d.par
+#BlueLink0 Events`B. Maintain Constant Speed` Transient Response Times` , Events`Events_45c4d402-6cff-41c5-ae91-8ecc2295816d
+
+MAKE_EVENT t_event > time_out ; Events\Events_9b376ff0-310d-419e-87f0-0c4307dfa086.par
+#BlueLink1 Events`End Events` ` , Events`Events_9b376ff0-310d-419e-87f0-0c4307dfa086
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This procedure is controlled with VS Commands. Go to the linked VS Commands dataset to see them.
+#
+#The closed loop driver model initializes based on the values of sstart and ltarg. Ltarg_offset is added to the table values linked in the Driver Path Follower information to shift the starting point 480 meters to the right.
+#
+#The vehicle is accelerated in a straight line under open-loop throttle control until the user specified speed is reached.
+#
+#If the vehicle fails to reach the target speed, the run ends.
+#
+#Using letters (A,B,C, etc) in the event titles is a way to organize their appearance in the dataset menu, and makes each event easier to find in sequence.
+#
+#A run can be forced to end by linking to nothing. Here, however, a link to an End Event is used to explicitly end the run. This indicates that the link wasn't simply forgotten or broken.
+#
+#Since this is the first event, it isn't necessary to check the box for setting intialization details.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Transient Response Times } A. Accelerate to Speed at 100% Throttle
+#Library : Events
+#DataSet : A. Accelerate to Speed at 100% Throttle
+#Category: Transient Response Times
+#FileID  : Events_f4539d2c-8084-4778-b426-e0d23c81a973
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Events`J. Turn off Open Loop Throttle`Hill Hold with Parking Brake: Auto. Trans.
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 t_event
+*VALUE1 0.001
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+TSTART_T_EVENT = T
+TSTART_THROTTLE = T
+! Switching from Open Loop Throttle to Closed Loop Speed Control 
+! requires us to set the Open Loop Throttle to 0. Event lasts 0.001 sec.
+#ENDMYellow
+
+MAKE_EVENT t_event > 0.001 ; Events\Events_41173810-21ae-4a72-8819-d80b4f45b7b0.par
+#BlueLink0 Events`K. Switch to CL Target Speed` Hill Hold with Parking Brake: Auto. Trans.` , Events`Events_41173810-21ae-4a72-8819-d80b4f45b7b0
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Hill Hold with Parking Brake: Auto. Trans. } J. Turn off Open Loop Throttle
+#Library : Events
+#DataSet : J. Turn off Open Loop Throttle
+#Category: Hill Hold with Parking Brake: Auto. Trans.
+#FileID  : Events_0ed2989b-4c9e-4ac0-becf-28ba4cfe6b6b
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

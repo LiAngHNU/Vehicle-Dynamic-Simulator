@@ -1,0 +1,72 @@
+PARSFILE
+#FullDataName Events`B. Put Into Gear, Apply Throttle`PBS  C1: Startability
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <=
+#RingCtrl1 <
+#RingCtrl10 2
+#RingCtrl11 5
+*NAME1 S_Limit
+*NAME2 S_Limit
+*VALUE1 STATION - S_CURRENT
+*VALUE2 -2.5*(STATION - S_CURRENT)
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_c44287e7-3496-4c50-8646-3373aaeaef4d.par
+#BlueLink18 Control: Throttle (Open Loop)`Ramp: Full Throttle in 0.1 sec.` Ramp` , Speed link`Throttle_c44287e7-3496-4c50-8646-3373aaeaef4d
+
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 0
+OPT_INIT_SPEED 0
+#MiscYellow0
+DEFINE_PARAMETER S_CURRENT = STATION
+OPT_WRITE = 1
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Miscellaneous`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Clutch\ClCon_748ef92c-8a48-4295-92cd-9d7ecaa5b35e.par
+#BlueLink11 Control: Clutch (Open Loop)`Engage in 1s` Single Engagement / Disengagement` , Miscellaneous`ClCon_748ef92c-8a48-4295-92cd-9d7ecaa5b35e
+
+PARSFILE Control\Gear_mt\GearOL_cd4864dc-13d3-4aee-9214-835703699b6f.par
+#BlueLink12 Control: Shifting (Open Loop)`Constant: 1st Gear` Constant` , Miscellaneous`GearOL_cd4864dc-13d3-4aee-9214-835703699b6f
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+MAKE_EVENT S_Limit <= STATION - S_CURRENT ; Events\Events_59f2d2a0-c64d-4293-af72-895e0e376f5f.par
+#BlueLink0 Events`End Run: Success` PBS Testing Events` , Events`Events_59f2d2a0-c64d-4293-af72-895e0e376f5f
+
+MAKE_EVENT S_Limit < -2.5*(STATION - S_CURRENT) ; Events\Events_d8e9a35f-7cad-4f40-affd-888345fee670.par
+#BlueLink1 Events`End Run: Fail` PBS Testing Events` , Events`Events_d8e9a35f-7cad-4f40-affd-888345fee670
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { PBS  C1: Startability } B. Put Into Gear, Apply Throttle
+#Library : Events
+#DataSet : B. Put Into Gear, Apply Throttle
+#Category: PBS  C1: Startability
+#FileID  : Events_d5ec6593-3628-4855-a828-f3ecd79a97e1
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

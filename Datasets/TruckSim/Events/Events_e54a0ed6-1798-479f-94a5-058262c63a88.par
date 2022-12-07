@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Events`Set Exit Strategy`Traffic Vehicle and Traffic LIght
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 S_TV1
+*NAME2 LightNS
+*VALUE1 S_GO_LIGHT
+*VALUE2 LIGHT_YELLOW
+*SET_EVENT_ID ITV1
+SET_EVENT_ID ITV1
+MAKE_EVENT S_TV1 > S_GO_LIGHT ; Events\Events_bbd88714-c8f8-477c-a6ab-3918d4a02028.par
+#BlueLink0 Events`Exit Intersection` Traffic Vehicle and Traffic LIght` , Events`Events_bbd88714-c8f8-477c-a6ab-3918d4a02028
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#When the station S_TV1 reaches S_GO_LIGHT, the vehicle is committed to going through the light.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Traffic Vehicle and Traffic LIght } Set Exit Strategy
+#Library : Events
+#DataSet : Set Exit Strategy
+#Category: Traffic Vehicle and Traffic LIght
+#FileID  : Events_e54a0ed6-1798-479f-94a5-058262c63a88
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Events`M. Roll-back Limit Reached`Hill Hold with Parking Brake: Auto. Trans.
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t_event
+*VALUE1 0.001
+#MiscYellow0
+TSTART_T_EVENT = T
+#ENDMYellow
+
+#MiscYellow1
+rb_pf = -1; ! Roll-back Check: Fail = -1
+rb_compl = -1; ! Roll-back Check: Incomplete due to Fail = -1;
+driveoff = -1; ! Not ok to Drive-off = -1;
+#ENDMYellow
+
+MAKE_EVENT t_event > 0.001 ; Events\Events_19e822b2-9272-4144-b113-76eeb874e387.par
+#BlueLink0 Events`N. End Run: Roll-back Limit` Hill Hold with Parking Brake: Auto. Trans.` , Events`Events_19e822b2-9272-4144-b113-76eeb874e387
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Hill Hold with Parking Brake: Auto. Trans. } M. Roll-back Limit Reached
+#Library : Events
+#DataSet : M. Roll-back Limit Reached
+#Category: Hill Hold with Parking Brake: Auto. Trans.
+#FileID  : Events_ffdc08bc-0e2d-4517-a709-151168fc8af7
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

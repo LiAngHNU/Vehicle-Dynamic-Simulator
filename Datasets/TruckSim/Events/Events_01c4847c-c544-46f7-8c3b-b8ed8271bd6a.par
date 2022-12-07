@@ -1,0 +1,67 @@
+PARSFILE
+#FullDataName Events`C. Slowly Increasing Steer`Transient Response Times
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl1 >
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 ay
+*NAME2 t_event
+*VALUE1 ay_test
+*VALUE2 time_out
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 0
+OPT_INIT_SPEED 0
+PARSFILE Control\Steer\StrSW_81a15186-8966-49ee-8022-f91a23dbfde2.par
+#BlueLink10 Control: Steering (Open Loop)`Slowly Increasing Steer (13.5 deg./sec.)` Ramp` , Miscellaneous`StrSW_81a15186-8966-49ee-8022-f91a23dbfde2
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+MAKE_EVENT ay > ay_test ; Events\Events_fe71e8e7-f579-4165-a8f8-29d2d35fdc62.par
+#BlueLink0 Events`D. Straighten Out Steer` Transient Response Times` , Events`Events_fe71e8e7-f579-4165-a8f8-29d2d35fdc62
+
+MAKE_EVENT t_event > time_out ; Events\Events_9b376ff0-310d-419e-87f0-0c4307dfa086.par
+#BlueLink1 Events`End Events` ` , Events`Events_9b376ff0-310d-419e-87f0-0c4307dfa086
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#After steady state conditions are reached, a slowly increasing steer test  is performed.
+#
+#When the user-specified lateral acceleration is reached, the steer angle will be recorded and steer returned to straight ahead.
+#
+#If the specified lateral aceleration is not reached in the allowed time, the run ends.
+#
+#The checkbox to reset the control clocks is checked so t_event can be used to monitor the time elapsed since this event began.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Transient Response Times } C. Slowly Increasing Steer
+#Library : Events
+#DataSet : C. Slowly Increasing Steer
+#Category: Transient Response Times
+#FileID  : Events_01c4847c-c544-46f7-8c3b-b8ed8271bd6a
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

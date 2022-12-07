@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Events`G. Straighten Steering`Trailer Reversing into Loading Dock
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Yo
+*VALUE1 8.9
+#MiscYellow0
+tstart_steer t
+#ENDMYellow
+
+PARSFILE Control\Steer\StrSW_bf0c3c23-d4e6-4849-b56d-0e52da4d528c.par
+#BlueLink10 Control: Steering (Open Loop)`Ramp: 750 to 0 deg. in 1 sec.` Ramp` , Miscellaneous`StrSW_bf0c3c23-d4e6-4849-b56d-0e52da4d528c
+
+MAKE_EVENT Yo > 8.9 ; Events\Events_4d412c2b-7a28-4734-8291-0add589fffba.par
+#BlueLink0 Events`H. Stop` Trailer Reversing into Loading Dock` , Events`Events_4d412c2b-7a28-4734-8291-0add589fffba
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Steering is straightened.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Trailer Reversing into Loading Dock } G. Straighten Steering
+#Library : Events
+#DataSet : G. Straighten Steering
+#Category: Trailer Reversing into Loading Dock
+#FileID  : Events_a026041c-6de4-4fbc-885f-e55f9a57d828
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

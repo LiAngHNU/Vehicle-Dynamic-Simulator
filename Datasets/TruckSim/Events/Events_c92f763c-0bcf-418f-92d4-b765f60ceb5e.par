@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Events`G. Go forward and accelerate`3-Point Turn
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 6
+*NAME1 Station
+*VALUE1 60
+*SPEED 30
+PARSFILE Control\Speed_path\SpdPath_f65b2b24-552e-478e-9b66-536a39f83ece.par
+#BlueLink19 Control: Speed (Closed Loop) Using Path Preview`0.2/0.2 G Max Ax/Ay, 80 km/h` Highway Driving` , Speed link`SpdPath_f65b2b24-552e-478e-9b66-536a39f83ece
+
+#MiscYellow0
+path_id_dm = 1013
+#ENDMYellow
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink10 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Miscellaneous`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink11 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Miscellaneous`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+MAKE_EVENT Station > 60 ; Events\Events_9b376ff0-310d-419e-87f0-0c4307dfa086.par
+#BlueLink0 Events`End Events` ` , Events`Events_9b376ff0-310d-419e-87f0-0c4307dfa086
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Change the path to go straight, release the brakes, switch to forward with automatic gear selection, and go back to path preview speed control.
+#
+#Stop the run what station reaches 60m.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { 3-Point Turn } G. Go forward and accelerate
+#Library : Events
+#DataSet : G. Go forward and accelerate
+#Category: 3-Point Turn
+#FileID  : Events_c92f763c-0bcf-418f-92d4-b765f60ceb5e
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

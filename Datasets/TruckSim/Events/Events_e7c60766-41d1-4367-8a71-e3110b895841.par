@@ -1,0 +1,64 @@
+PARSFILE
+#FullDataName Events`Look for Objects v3`ADAS Detection
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 1    
+
+#RingCtrl0 ==
+#RingCtrl1 ZERO ~=
+#RingCtrl2 <
+#RingCtrl10 3
+#RingCtrl11 5
+IVEHICLE 3
+DELETE_EVENTS_ID IVEHICLE
+*NAME1 TypeNear3
+*NAME2 TypeNear2
+*NAME3 Vxz_Fwd3
+*NAME4 1
+*VALUE1 STOP_SIGN
+*VALUE2 ApplyAEB3
+*VALUE3 TypeNear2 == LIGHT_RED | TypeNear2 == LIGHT_YELLOW
+*VALUE4 NeedAEB2 & ApplyAEB2
+*SET_EVENT_ID IVEHICLE
+SET_EVENT_ID IVEHICLE
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+SPEED_ID_SC = SPEED_LIMIT_ID
+OPT_SC = 4
+OPT_AUTO_RESET_IC 1
+VX_IERR_DEAD_SC 2
+SPEED_KI = 0.5
+#ENDMYellow
+
+MAKE_EVENT TypeNear3 == STOP_SIGN ; Events\Events_b248ae5d-bcf0-44c4-8bf3-b5707d315675.par
+#BlueLink0 Events`Stop Sign v3` ADAS Detection` , Events`Events_b248ae5d-bcf0-44c4-8bf3-b5707d315675
+
+DEFINE_EVENT ApplyAEB3 ; Events\Events_acffe74c-af43-4d5f-aa62-05379a49096c.par
+#BlueLink1 Events`Ensure Object Collision v3` ADAS Detection` , Events`Events_acffe74c-af43-4d5f-aa62-05379a49096c
+
+MAKE_EVENT Vxz_Fwd3 < TypeNear2 == LIGHT_RED | TypeNear2 == LIGHT_YELLOW ; Events\Events_7d2b2703-87ff-435a-a675-dd7ae6117f98.par
+#BlueLink2 Events`Wait to go v3` ADAS Detection` , Events`Events_7d2b2703-87ff-435a-a675-dd7ae6117f98
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Set the speed controller for vehicle #3 to path preview (OPT_SC = 4) and set the upper speed (SPEED_ID_SC = SPEED_LIMIT_ID).
+#
+#Create three pending events to look for stop signs, a need to brake (ApplyAEB3), and a switch to waiting if the speed is less than 1 km/h.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ADAS Detection } Look for Objects v3
+#Library : Events
+#DataSet : Look for Objects v3
+#Category: ADAS Detection
+#FileID  : Events_e7c60766-41d1-4367-8a71-e3110b895841
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

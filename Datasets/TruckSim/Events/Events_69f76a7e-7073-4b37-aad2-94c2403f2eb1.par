@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Events`A. Monitor Forward Vehicle to Pass`Automatic Lane Changing
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 2
+DELETE_EVENTS_ID 1000
+*NAME1 GO_LEFT
+*VALUE1 0
+*SPEED 120
+*SET_EVENT_ID 1000
+SET_EVENT_ID 1000
+OPT_SC 2
+PARSFILE Control\Speed_t\SpdTime_9d1f87d0-cc25-41e4-bf05-6f9a8a464600.par
+#BlueLink16 Control: Speed (Closed Loop) Using Target Speed`Constant: 80 km/h` Constant` , Speed link`SpdTime_9d1f87d0-cc25-41e4-bf05-6f9a8a464600
+
+SPEED_ID_SC = SPEED_TARGET_ID
+PARSFILE Control\Driver\StrDM_18f94b3e-836a-47a6-acdb-72abea2ef691.par
+#BlueLink10 Control: Steering by the Closed-loop Driver Model`1m Right, Variable Speed Preview` Constant Position: Non-Zero Offset` , Miscellaneous`StrDM_18f94b3e-836a-47a6-acdb-72abea2ef691
+
+MAKE_EVENT GO_LEFT > 0 ; Events\Events_555b190b-9d82-4098-a778-3946cf683f14.par
+#BlueLink0 Events`B. Accelerate into the Left Lane` Automatic Lane Changing` , Events`Events_555b190b-9d82-4098-a778-3946cf683f14
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Removed delete_events statement and utilize GROUP ID.
+#This dataset defines the basic condition of driving in the right-hand lane.
+#
+#Speed is set to 120 km/h and the target position is -1.0 m, scaled by the lane center location lane_ctr.
+#
+#A pending event is defined using the variable GO_LEFT.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Automatic Lane Changing } A. Monitor Forward Vehicle to Pass
+#Library : Events
+#DataSet : A. Monitor Forward Vehicle to Pass
+#Category: Automatic Lane Changing
+#FileID  : Events_69f76a7e-7073-4b37-aad2-94c2403f2eb1
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

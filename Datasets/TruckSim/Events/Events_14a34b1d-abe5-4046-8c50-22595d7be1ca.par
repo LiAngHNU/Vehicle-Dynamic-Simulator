@@ -1,0 +1,64 @@
+PARSFILE
+#FullDataName Events`Look for Objects v4`ADAS Detection
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 1    
+
+#RingCtrl0 ==
+#RingCtrl1 ZERO ~=
+#RingCtrl2 <
+#RingCtrl10 3
+#RingCtrl11 5
+IVEHICLE 4
+DELETE_EVENTS_ID IVEHICLE
+*NAME1 TypeNear4
+*NAME2 TypeNear2
+*NAME3 Vxz_Fwd4
+*NAME4 1
+*VALUE1 STOP_SIGN
+*VALUE2 ApplyAEB4
+*VALUE3 1
+*VALUE4 NeedAEB2 & ApplyAEB2
+*SET_EVENT_ID IVEHICLE
+SET_EVENT_ID IVEHICLE
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+SPEED_ID_SC = SPEED_LIMIT_ID
+OPT_SC = 4
+OPT_AUTO_RESET_IC 1
+VX_IERR_DEAD_SC 2
+SPEED_KI = 0.5
+#ENDMYellow
+
+MAKE_EVENT TypeNear4 == STOP_SIGN ; Events\Events_96b2daa5-7055-4265-85b4-aea2549ae5b6.par
+#BlueLink0 Events`Stop Sign v4` ADAS Detection` , Events`Events_96b2daa5-7055-4265-85b4-aea2549ae5b6
+
+DEFINE_EVENT ApplyAEB4 ; Events\Events_ecdada3f-44c4-41b4-a3e8-3aee41b03b6c.par
+#BlueLink1 Events`Ensure Object Collision v4` ADAS Detection` , Events`Events_ecdada3f-44c4-41b4-a3e8-3aee41b03b6c
+
+MAKE_EVENT Vxz_Fwd4 < 1 ; Events\Events_b2d8a1d9-d28e-4d84-b9a6-b84e54d7af55.par
+#BlueLink2 Events`Wait to go v4` ADAS Detection` , Events`Events_b2d8a1d9-d28e-4d84-b9a6-b84e54d7af55
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Set the speed controller for vehicle #4 to path preview (OPT_SC = 4) and set the upper speed (SPEED_ID_SC = SPEED_LIMIT_ID).
+#
+#Create three pending events to look for stop signs, a need to brake (ApplyAEB4), and a switch to waiting if the speed is less than 1 km/h.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ADAS Detection } Look for Objects v4
+#Library : Events
+#DataSet : Look for Objects v4
+#Category: ADAS Detection
+#FileID  : Events_14a34b1d-abe5-4046-8c50-22595d7be1ca
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

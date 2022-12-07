@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Events`C. Exit West`Roundabout Network, D = 36 m
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl10 0
+#RingCtrl11 4
+#MiscYellow0
+path_id_dm = 1003
+station = 75
+LTARG_DM = 0
+#ENDMYellow
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Roundabout Network, D = 36 m } C. Exit West
+#Library : Events
+#DataSet : C. Exit West
+#Category: Roundabout Network, D = 36 m
+#FileID  : Events_49ea7309-8eec-4369-8bf6-7d4f892136dd
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Events`B. Shift to Neutral`Braking in a Turn
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl10 0
+#RingCtrl11 4
+PARSFILE Control\Clutch\ClCon_68f7c282-a7f9-4aa5-a0d4-cb61072444b6.par
+#BlueLink10 Control: Clutch (Open Loop)`Disengage in 0.1s` Single Engagement / Disengagement` , Miscellaneous`ClCon_68f7c282-a7f9-4aa5-a0d4-cb61072444b6
+
+PARSFILE Control\Gear_mt\GearOL_b732302a-f9da-44f3-b13d-20c763a90262.par
+#BlueLink11 Control: Shifting (Open Loop)`Neutral (No Clutch)` Constant` , Miscellaneous`GearOL_b732302a-f9da-44f3-b13d-20c763a90262
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Disengage clutch and shift to neutral.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Braking in a Turn } B. Shift to Neutral
+#Library : Events
+#DataSet : B. Shift to Neutral
+#Category: Braking in a Turn
+#FileID  : Events_4a8a58d6-03d2-4164-9e39-aafee5fdf2bd
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

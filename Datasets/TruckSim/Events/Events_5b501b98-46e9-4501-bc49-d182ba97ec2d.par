@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Events`1. Lane Drifting Start - Drive Straight`Lane Departure Warning
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t_event
+*VALUE1 1
+#MiscYellow0
+ltarg_coefficient(1) = 0
+#ENDMYellow
+
+#MiscYellow1
+TStart_T_Event T
+#ENDMYellow
+
+MAKE_EVENT t_event > 1 ; Events\Events_f70e79ef-f01e-47dd-99bf-f4421e74037a.par
+#BlueLink0 Events`2. Drift Left` Lane Departure Warning` , Events`Events_f70e79ef-f01e-47dd-99bf-f4421e74037a
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Lane Departure Warning } 1. Lane Drifting Start - Drive Straight
+#Library : Events
+#DataSet : 1. Lane Drifting Start - Drive Straight
+#Category: Lane Departure Warning
+#FileID  : Events_5b501b98-46e9-4501-bc49-d182ba97ec2d
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

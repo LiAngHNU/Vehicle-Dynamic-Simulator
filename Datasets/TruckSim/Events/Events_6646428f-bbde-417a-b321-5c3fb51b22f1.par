@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Events`A. Wait 1 second`Rollover Test
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T
+*VALUE1 1
+MAKE_EVENT T > 1 ; Events\Events_00b0a0c0-9a3c-4eab-b5f8-1033e2d9a361.par
+#BlueLink0 Events`B. Release Throttle` Rollover Test` , Events`Events_00b0a0c0-9a3c-4eab-b5f8-1033e2d9a361
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#When global time is greater than 1 sec., trigger the next Event.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Rollover Test } A. Wait 1 second
+#Library : Events
+#DataSet : A. Wait 1 second
+#Category: Rollover Test
+#FileID  : Events_6646428f-bbde-417a-b321-5c3fb51b22f1
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

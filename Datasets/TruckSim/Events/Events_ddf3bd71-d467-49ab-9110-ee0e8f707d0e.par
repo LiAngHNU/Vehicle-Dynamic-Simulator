@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Events`A. Drive 500 m`Stability Testing
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 station
+*VALUE1 500
+#MiscYellow0
+id_event 1
+current_road_id = 2001
+define_output id_rd = current_road_id
+#ENDMYellow
+
+MAKE_EVENT station > 500 ; Events\Events_4c74e38a-b405-4569-b1b0-005360265da9.par
+#BlueLink0 Events`B. Transition to U-Road, ID 2002` Stability Testing` , Events`Events_4c74e38a-b405-4569-b1b0-005360265da9
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Stability Testing } A. Drive 500 m
+#Library : Events
+#DataSet : A. Drive 500 m
+#Category: Stability Testing
+#FileID  : Events_ddf3bd71-d467-49ab-9110-ee0e8f707d0e
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

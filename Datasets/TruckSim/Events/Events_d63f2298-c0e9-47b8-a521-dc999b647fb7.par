@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Events`C. Brake to Stop w/ Accel Control`3-Point Turn
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Vxz_Fwd
+*VALUE1 0.1
+#MiscYellow0
+opt_sc 5 ! acc control
+Ax_SCcmd = -0.15
+OPT_BK_SC = 1 ! allow brakes
+LTARG_CONSTANT = -1.65
+#ENDMYellow
+
+MAKE_EVENT Vxz_Fwd < 0.1 ; Events\Events_9cefcb90-b896-43e5-b866-5a156f8496cf.par
+#BlueLink0 Events`D. Shift to Reverse, go to -10 km/h` 3-Point Turn` , Events`Events_9cefcb90-b896-43e5-b866-5a156f8496cf
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The speed control mode is changed to acceleration mode (OPT_SC = 5). The target acceleration for braking is -0.15g.
+#
+#The parameter OPT_BK_SC is set to enable brakes. (This parameter was not used during the path-preview mode.)
+#
+#Continue until the speed is near zero.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { 3-Point Turn } C. Brake to Stop w/ Accel Control
+#Library : Events
+#DataSet : C. Brake to Stop w/ Accel Control
+#Category: 3-Point Turn
+#FileID  : Events_d63f2298-c0e9-47b8-a521-dc999b647fb7
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

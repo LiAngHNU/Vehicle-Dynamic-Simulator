@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Events`C. Go to Next Speed`ISO Steady-State Circle Series
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T_EVENT
+*NAME2 AY_REF
+*VALUE1 T_WAIT
+*VALUE2 abs(ay)
+#MiscYellow0
+AY_TARG = AY_TARG + AY_STEP
+SPEED_TARGET_CONSTANT = SQRT(R*AY_TARG)
+TSTART_T_EVENT = T
+OPT_WRITE = WRITE_ALL
+#ENDMYellow
+
+MAKE_EVENT T_EVENT > T_WAIT ; Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par
+#BlueLink0 Events`D. Check Lateral Acceleration` ISO Steady-State Circle Series` , Events`Events_614fa500-1fd6-4f02-92f2-62ce41f91c79
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Set up the next steady-state test, using a new target acceleration and speed.
+#
+#Increment AY_TARG and calculate the corresponding target speed SPEED_TARGET_CONSTANT using the radius R of the circle.
+#
+#Reset the local event time T_EVENT by setting the offset TSTART_T_EVENT to the current time T.
+#
+#Set OPT_WRITE to WRITE_ALL, which is usually 0 (i.e, stop writing results to the ERD file).
+#
+#Create a pending event to trigger when the local time reaches T_WAIT.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
+#Library : Events
+#DataSet : C. Go to Next Speed
+#Category: ISO Steady-State Circle Series
+#FileID  : Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

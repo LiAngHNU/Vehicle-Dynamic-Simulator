@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Events`G. Turn off Open Loop Throttle`Opt_Engine_Running: Auto. Transmission
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 t_event
+*VALUE1 0.001
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+TSTART_T_EVENT = T
+TSTART_THROTTLE = T
+! Switching from Open Loop Throttle to Closed Loop Speed Control 
+! requires us to set the Open Loop Throttle to 0. Event lasts 0.001 sec.
+#ENDMYellow
+
+MAKE_EVENT t_event > 0.001 ; Events\Events_e4e02b85-4394-4477-a1eb-4c671a57f096.par
+#BlueLink0 Events`H. Switch to Closed Loop Target Speed` Opt_Engine_Running: Auto. Transmission` , Events`Events_e4e02b85-4394-4477-a1eb-4c671a57f096
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Opt_Engine_Running: Auto. Transmission } G. Turn off Open Loop Throttle
+#Library : Events
+#DataSet : G. Turn off Open Loop Throttle
+#Category: Opt_Engine_Running: Auto. Transmission
+#FileID  : Events_23bcbe57-e4c6-46d8-b9d9-e4a4ec4dd265
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

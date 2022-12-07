@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Events`I. Reapply Throttle`Hill Hold with Parking Brake: Auto. Trans.
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 vx
+*VALUE1 14.99
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_894cf30f-a918-471f-98f5-9dda992cde61.par
+#BlueLink18 Control: Throttle (Open Loop)`Smooth Throttle Apply: 0 to 1` Sigmoid` , Speed link`Throttle_894cf30f-a918-471f-98f5-9dda992cde61
+
+#MiscYellow0
+TSTART_T_EVENT = T
+TSTART_THROTTLE = T
+driveoff = 1; ! Ok to Drive-off = 1
+#ENDMYellow
+
+#MiscYellow1
+THROTTLE_ENGINE_GAIN = Throt_Ref*1.1; ! Gain applied to Throt_Ref
+! Throttle was saved in an earlier Event and used here to reset the throttle
+! to that same position. Adjust THROTTLE_ENGINE_GAIN to increase or
+! decrease the amount of throttle applied, necessary to accelerate the car
+! through 1st gear.
+#ENDMYellow
+
+MAKE_EVENT vx > 14.99 ; Events\Events_0ed2989b-4c9e-4ac0-becf-28ba4cfe6b6b.par
+#BlueLink0 Events`J. Turn off Open Loop Throttle` Hill Hold with Parking Brake: Auto. Trans.` , Events`Events_0ed2989b-4c9e-4ac0-becf-28ba4cfe6b6b
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Hill Hold with Parking Brake: Auto. Trans. } I. Reapply Throttle
+#Library : Events
+#DataSet : I. Reapply Throttle
+#Category: Hill Hold with Parking Brake: Auto. Trans.
+#FileID  : Events_5d180c55-07fb-4983-b835-579add417405
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

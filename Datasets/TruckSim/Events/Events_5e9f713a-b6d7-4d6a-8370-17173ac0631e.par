@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Events`A. Go Into Right Turn`3-Point Turn
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Station
+*VALUE1 -9
+MAKE_EVENT Station > -9 ; Events\Events_599922b8-d2ee-4c5d-ab2b-52fb41a4f8d2.par
+#BlueLink0 Events`B. Adjust lateral target` 3-Point Turn` , Events`Events_599922b8-d2ee-4c5d-ab2b-52fb41a4f8d2
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The vehicle speed controller with preview will slow down to make the turn. Before it can speed up, an event will be triggered at Station = -9m
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { 3-Point Turn } A. Go Into Right Turn
+#Library : Events
+#DataSet : A. Go Into Right Turn
+#Category: 3-Point Turn
+#FileID  : Events_5e9f713a-b6d7-4d6a-8370-17173ac0631e
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

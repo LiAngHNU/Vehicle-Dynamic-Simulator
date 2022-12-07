@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Events`CCRm E. New Test, Decrease Speed`Euro NCAP AEB Testing: CCRm
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 T
+*VALUE1 0
+#MiscYellow0
+crashed = 1
+VUT_START = VUT_START - (5/3.6); ! Slow down
+#ENDMYellow
+
+MAKE_EVENT T > 0 ; Events\Events_97755b7a-31c6-4088-bd40-8056588bf38b.par
+#BlueLink0 Events`CCRm F. Reset Vehicle and Target` Euro NCAP AEB Testing: CCRm` , Events`Events_97755b7a-31c6-4088-bd40-8056588bf38b
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Impact with the target object occured. The variable Crashed is set to 1.
+#
+#Reduce the speed by 5 km/h and try again.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Euro NCAP AEB Testing: CCRm } CCRm E. New Test, Decrease Speed
+#Library : Events
+#DataSet : CCRm E. New Test, Decrease Speed
+#Category: Euro NCAP AEB Testing: CCRm
+#FileID  : Events_98cce03f-4984-49cb-bd10-9b5053ea1063
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

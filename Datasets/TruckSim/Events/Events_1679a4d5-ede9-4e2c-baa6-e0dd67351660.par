@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Events`B. Brake to a Stop`Highway Intersection
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <=
+#RingCtrl10 1
+#RingCtrl11 1
+#RingCtrl12 1
+RESET_EVENTS
+*NAME1 Vx
+*VALUE1 0.5
+*SPEED 0
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Event: B. Brake to a Stop
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+SPEED_ID_SC = SPEED_TARGET_ID
+OPT_SC_ENGINE_BRAKING 0
+SPEED_TARGET_CONSTANT 0
+MAKE_EVENT Vx <= 0.5 ; Events\Events_9b376ff0-310d-419e-87f0-0c4307dfa086.par
+#BlueLink0 Events`End Events` ` , Events`Events_9b376ff0-310d-419e-87f0-0c4307dfa086
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Highway Intersection } B. Brake to a Stop
+#Library : Events
+#DataSet : B. Brake to a Stop
+#Category: Highway Intersection
+#FileID  : Events_1679a4d5-ede9-4e2c-baa6-e0dd67351660
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

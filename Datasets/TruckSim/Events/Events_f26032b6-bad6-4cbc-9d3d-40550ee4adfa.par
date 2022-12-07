@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Events`C. Brake to Stop`Brake Fade Test
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 vx
+*VALUE1 0.01
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+PARSFILE Control\Brake_pedal\FbkCon_65b0e223-1667-4f9f-9662-e7f2eba31d33.par
+#BlueLink10 Control: Braking Pedal Force (Open Loop)`Spike: 0-140N in 0.1s @ 2s` Spike` , Miscellaneous`FbkCon_65b0e223-1667-4f9f-9662-e7f2eba31d33
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink11 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Miscellaneous`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+MAKE_EVENT vx < 0.01 ; Events\Events_901a7ac4-85c3-4fb2-8267-9fc1d63575b2.par
+#BlueLink0 Events`D. Hold at Stop for 2 seconds` Brake Fade Test` , Events`Events_901a7ac4-85c3-4fb2-8267-9fc1d63575b2
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Once the vehicle speed drops below 0.01 km/h, Event D is loaded, which has brake controls to hold the vehicle at a stop for a few seconds; the duration of the stop is set on Event D.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Brake Fade Test } C. Brake to Stop
+#Library : Events
+#DataSet : C. Brake to Stop
+#Category: Brake Fade Test
+#FileID  : Events_f26032b6-bad6-4cbc-9d3d-40550ee4adfa
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

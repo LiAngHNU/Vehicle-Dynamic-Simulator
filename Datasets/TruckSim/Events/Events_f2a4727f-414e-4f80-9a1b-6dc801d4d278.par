@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Events`A. Drive onto Hill`Hill Hold with Parking Brake: Auto. Trans.
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 dist_2
+*VALUE1 lim
+MAKE_EVENT dist_2 < lim ; Events\Events_b32c2ac1-b99d-439a-9700-c57a8d644556.par
+#BlueLink0 Events`B. Apply Service Brakes, Shift to Neutral` Hill Hold with Parking Brake: Auto. Trans.` , Events`Events_b32c2ac1-b99d-439a-9700-c57a8d644556
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Hill Hold with Parking Brake: Auto. Trans. } A. Drive onto Hill
+#Library : Events
+#DataSet : A. Drive onto Hill
+#Category: Hill Hold with Parking Brake: Auto. Trans.
+#FileID  : Events_f2a4727f-414e-4f80-9a1b-6dc801d4d278
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

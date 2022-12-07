@@ -1,0 +1,63 @@
+PARSFILE
+#FullDataName Events`D. Straighten Out Steer`Transient Response Times
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t_event
+*VALUE1 time_settle
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 0
+OPT_INIT_SPEED 0
+#MiscYellow0
+str_test = if_not_0_then(str_test, str_test, steer_sw);
+#ENDMYellow
+
+PARSFILE Control\Steer\StrSW_9419b1df-a776-4d94-97e4-93750a8c097b.par
+#BlueLink10 Control: Steering (Open Loop)`Constant: 0 deg.` Constant` , Miscellaneous`StrSW_9419b1df-a776-4d94-97e4-93750a8c097b
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+MAKE_EVENT t_event > time_settle ; Events\Events_0f07ae9a-f79f-43ed-8aec-99caf1cd7698.par
+#BlueLink0 Events`E. Step Steer` Transient Response Times` , Events`Events_0f07ae9a-f79f-43ed-8aec-99caf1cd7698
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Upon reaching steady state, the value of str_test is captured. It is the steering wheel angle at which the specified lateral acceleration was reached, to be used for the step steer test.
+#
+#By using an expression to just set the variable, instead of using an equation command (eq_in, eq_out, etc.) a "snapshot" value is obtained instead of a time variable. str_test will remain constant unless reset later.
+#
+#Once again, the checkbox to reset the control clocks is checked so t_event can be used to monitor the time elapsed since this event began.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Transient Response Times } D. Straighten Out Steer
+#Library : Events
+#DataSet : D. Straighten Out Steer
+#Category: Transient Response Times
+#FileID  : Events_fe71e8e7-f579-4165-a8f8-29d2d35fdc62
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

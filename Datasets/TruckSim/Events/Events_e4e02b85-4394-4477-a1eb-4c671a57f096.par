@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Events`H. Switch to Closed Loop Target Speed`Opt_Engine_Running: Auto. Transmission
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 2
+*NAME1 t_event
+*VALUE1 15
+*SPEED 30
+OPT_SC 2
+PARSFILE Control\Speed_t\SpdTime_552497c3-e30e-4460-ab6a-8601d4babc1c.par
+#BlueLink16 Control: Speed (Closed Loop) Using Target Speed`Constant: 30 km/h` Constant` , Speed link`SpdTime_552497c3-e30e-4460-ab6a-8601d4babc1c
+
+SPEED_ID_SC = SPEED_TARGET_ID
+#MiscYellow0
+TSTART_T_EVENT = T
+OPT_SC  3
+TSTART_SPEED_CTRL = T
+#ENDMYellow
+
+MAKE_EVENT t_event > 15 ; Events\Events_9b376ff0-310d-419e-87f0-0c4307dfa086.par
+#BlueLink0 Events`End Events` ` , Events`Events_9b376ff0-310d-419e-87f0-0c4307dfa086
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Opt_Engine_Running: Auto. Transmission } H. Switch to Closed Loop Target Speed
+#Library : Events
+#DataSet : H. Switch to Closed Loop Target Speed
+#Category: Opt_Engine_Running: Auto. Transmission
+#FileID  : Events_e4e02b85-4394-4477-a1eb-4c671a57f096
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

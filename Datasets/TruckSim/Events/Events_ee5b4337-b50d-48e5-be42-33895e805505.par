@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Events`B. Linearize (Steer Input)`Linearization
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl10 0
+#RingCtrl11 4
+#MiscYellow0
+LINEARIZE Extensions\Linearization\Linear_steer_input.m
+*cpar_include Extensions\Linearization\Linear_steer_input.m
+#ENDMYellow
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Linearize the vehicle model and write the linear system matrices (A, B, C and D) in specified text file using MATLAB M-File format.
+#
+#The *cpar_include command forces the named file to be added to a .cpar if one is exported. This assures that the path exists in the target database, so the file can be written when the run is made.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Linearization } B. Linearize (Steer Input)
+#Library : Events
+#DataSet : B. Linearize (Steer Input)
+#Category: Linearization
+#FileID  : Events_ee5b4337-b50d-48e5-be42-33895e805505
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

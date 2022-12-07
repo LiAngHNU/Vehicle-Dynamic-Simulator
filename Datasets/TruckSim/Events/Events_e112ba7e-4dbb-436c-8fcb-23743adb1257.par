@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Events`Reverse and Turn Around`Steering control
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 2
+*NAME1 Station
+*VALUE1 103
+OPT_SC 2
+PARSFILE Control\Speed_t\SpdTime_3119da9e-f423-4d70-b1b0-81424c2a410f.par
+#BlueLink16 Control: Speed (Closed Loop) Using Target Speed`Slowly reverse` Speed vs. Time` , Speed link`SpdTime_3119da9e-f423-4d70-b1b0-81424c2a410f
+
+SPEED_ID_SC = SPEED_TARGET_ID
+#MiscYellow0
+TSTART_T_EVENT = T
+TSTART_SPEED_CTRL = T
+#ENDMYellow
+
+PARSFILE Control\Gear_at\GearCL_b4eda8d9-0c25-467b-b3b4-f5da9aa31080.par
+#BlueLink10 Control: Shifting (Closed Loop)`Reverse` ` , Miscellaneous`GearCL_b4eda8d9-0c25-467b-b3b4-f5da9aa31080
+
+#MiscYellow1
+path_id_dm = 1014
+#ENDMYellow
+
+MAKE_EVENT Station < 103 ; Events\Events_f9d170ad-306c-4fa6-af80-46ff71602ebc.par
+#BlueLink0 Events`Drive Off` Steering control` , Events`Events_f9d170ad-306c-4fa6-af80-46ff71602ebc
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Steering control } Reverse and Turn Around
+#Library : Events
+#DataSet : Reverse and Turn Around
+#Category: Steering control
+#FileID  : Events_e112ba7e-4dbb-436c-8fcb-23743adb1257
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

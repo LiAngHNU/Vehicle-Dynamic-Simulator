@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Events`End Run: Fail`PBS Testing Events
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl10 0
+#RingCtrl11 4
+#MiscYellow0
+stop_run_now This vehicle FAILED the PBS Test
+#ENDMYellow
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { PBS Testing Events } End Run: Fail
+#Library : Events
+#DataSet : End Run: Fail
+#Category: PBS Testing Events
+#FileID  : Events_d8e9a35f-7cad-4f40-affd-888345fee670
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

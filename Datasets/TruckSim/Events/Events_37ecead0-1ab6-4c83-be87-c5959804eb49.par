@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Events`E. Brake to a Stop in Reverse`3-Point Turn
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Vxz_Fwd
+*VALUE1 abs(Vxz_Fwd) < 0.1
+#MiscYellow0
+opt_sc 5 ! acc control
+Ax_SCcmd = 0.2
+#ENDMYellow
+
+DEFINE_EVENT abs(Vxz_Fwd) < 0.1 ; Events\Events_9416ce64-46b4-4a2d-bbcf-96229adb07e0.par
+#BlueLink0 Events`F. Stop and wait 0.25s` 3-Point Turn` , Events`Events_9416ce64-46b4-4a2d-bbcf-96229adb07e0
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Change to acceleration mode for speed control, with a target acceleration of 0.2g.
+#
+#Stop when the speed approaches zero.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { 3-Point Turn } E. Brake to a Stop in Reverse
+#Library : Events
+#DataSet : E. Brake to a Stop in Reverse
+#Category: 3-Point Turn
+#FileID  : Events_37ecead0-1ab6-4c83-be87-c5959804eb49
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

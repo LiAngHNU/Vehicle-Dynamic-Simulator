@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Events`C. Hold Axle 3`Lift Axle 3
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 t_stamp
+*VALUE1 t_down
+#MiscYellow0
+DFDT_LIFT = 0; ! hold the axle
+#ENDMYellow
+
+MAKE_EVENT t_stamp > t_down ; Events\Events_bb780649-c1c3-4b79-87d1-1db2f1dfcf03.par
+#BlueLink0 Events`D. Lower Axle 3` Lift Axle 3` , Events`Events_bb780649-c1c3-4b79-87d1-1db2f1dfcf03
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Read this dataset when the maximum compression is reached for the spring on either side of axle 3.
+#
+#The rate of change for the lift force is set to zero, causing the lift force to stay contant until the next event is triggered.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Lift Axle 3 } C. Hold Axle 3
+#Library : Events
+#DataSet : C. Hold Axle 3
+#Category: Lift Axle 3
+#FileID  : Events_60f35abf-b34b-47f6-b2bf-714a79a9f50f
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

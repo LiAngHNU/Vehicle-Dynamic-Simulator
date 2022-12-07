@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Events`A. Start on SE Leg`Roundabout Network, D = 36 m
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Station
+*VALUE1 75
+#MiscYellow0
+current_road_id = 1001
+path_id_dm = 1001
+LTARG_DM = 1
+#ENDMYellow
+
+MAKE_EVENT Station > 75 ; Events\Events_5b90d6cd-9deb-4bc0-b802-8470e95424c3.par
+#BlueLink0 Events`B: Switch to Roundabout Circle` Roundabout Network, D = 36 m` , Events`Events_5b90d6cd-9deb-4bc0-b802-8470e95424c3
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Roundabout Network, D = 36 m } A. Start on SE Leg
+#Library : Events
+#DataSet : A. Start on SE Leg
+#Category: Roundabout Network, D = 36 m
+#FileID  : Events_bbd12a4d-9c5e-46d4-92ca-94c8c72f0a98
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Events`Exit Intersection`Traffic Vehicle and Traffic LIght
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 0    
+
+#RingCtrl10 0
+#RingCtrl11 4
+DELETE_EVENTS_ID ITV1
+*NAME1 LightNS
+*NAME2 LightNS
+*VALUE1 LIGHT_GREEN
+*VALUE2 LIGHT_YELLOW
+*SET_EVENT_ID ITV1
+SET_EVENT_ID ITV1
+#MiscYellow0
+IOBJECT = ITV1
+SPEED_ID_OBJ = SLOW_TRAFFIC
+#ENDMYellow
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Clear all existing events in the group ITV1 and set the target speed to SLOW_TRAFFIC, which goes to 80km/h for the rest of the simulation.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Traffic Vehicle and Traffic LIght } Exit Intersection
+#Library : Events
+#DataSet : Exit Intersection
+#Category: Traffic Vehicle and Traffic LIght
+#FileID  : Events_bbd88714-c8f8-477c-a6ab-3918d4a02028
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

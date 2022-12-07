@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Events`C. Write M-File`Steady-State Speed Series
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 T
+*NAME2 AY_REF
+*VALUE1 0
+*VALUE2 abs(ay)
+#MiscYellow0
+LINEARIZE "Extensions\Linearization\"+"Linear_" + VX_TARG*3.6 + "kph.m"
+#ENDMYellow
+
+MAKE_EVENT T > 0 ; Events\Events_b8f15eec-ccaf-4b40-96c8-c0263f79cd34.par
+#BlueLink0 Events`D. Go to Next Speed` Steady-State Speed Series` , Events`Events_b8f15eec-ccaf-4b40-96c8-c0263f79cd34
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Linearize the vehicle model and write the linear system matrices (A, B, C and D) in specified text file using MATLAB M-File format.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Steady-State Speed Series } C. Write M-File
+#Library : Events
+#DataSet : C. Write M-File
+#Category: Steady-State Speed Series
+#FileID  : Events_33720a27-dc43-488e-bdc4-4604824bfcc1
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

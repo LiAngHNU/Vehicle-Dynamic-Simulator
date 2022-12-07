@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Events`CCRb B. Monitor Speed`Euro NCAP AEB Testing: CCRb
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl1 <
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 Vx
+*NAME2 Vx
+*VALUE1 vx_evt
+*VALUE2 0
+#MiscYellow0
+eq_out SPEED_TARGET_CONSTANT(1) = vx_evt
+#ENDMYellow
+
+MAKE_EVENT Vx < vx_evt ; Events\Events_a1068fc0-7f41-49f4-9fbc-a9c010d2a8cb.par
+#BlueLink0 Events`CCRb C. Apply Brakes and Stop` Euro NCAP AEB Testing: CCRb` , Events`Events_a1068fc0-7f41-49f4-9fbc-a9c010d2a8cb
+
+MAKE_EVENT Vx < 0 ; Events\Events_9b376ff0-310d-419e-87f0-0c4307dfa086.par
+#BlueLink1 Events`End Events` ` , Events`Events_9b376ff0-310d-419e-87f0-0c4307dfa086
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#As a quick way to show this type of test, the built-in TruckSim speed controller is simply given a new target speed: Vx_EVT.
+#
+#The current Vx is much higher, so it will apply the brakes.
+#
+#If Vx is less than Vx_EVT, Event C is triggered: the brakes will be applied to bring the vehicle to a stop.
+#
+#A second IF statement is specified such that if Vx drops below zero km/h, the simulation will end.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Euro NCAP AEB Testing: CCRb } CCRb B. Monitor Speed
+#Library : Events
+#DataSet : CCRb B. Monitor Speed
+#Category: Euro NCAP AEB Testing: CCRb
+#FileID  : Events_7668a1cd-2505-443b-8461-94dc7eaa57c6
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

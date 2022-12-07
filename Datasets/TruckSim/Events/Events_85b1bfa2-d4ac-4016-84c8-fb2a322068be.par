@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Events`C. Turn Engine Off`Opt_Engine_Running: Auto. Transmission
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 t_event
+*VALUE1 2.5
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+TSTART_T_EVENT = T
+TSTART_THROTTLE = T
+Opt_Engine_Running = 0; ! Turn the engine off
+#ENDMYellow
+
+MAKE_EVENT t_event > 2.5 ; Events\Events_b8c38ac0-36cb-49f4-add2-972cf8879fb3.par
+#BlueLink0 Events`D. Release Brake` Opt_Engine_Running: Auto. Transmission` , Events`Events_b8c38ac0-36cb-49f4-add2-972cf8879fb3
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Opt_Engine_Running: Auto. Transmission } C. Turn Engine Off
+#Library : Events
+#DataSet : C. Turn Engine Off
+#Category: Opt_Engine_Running: Auto. Transmission
+#FileID  : Events_85b1bfa2-d4ac-4016-84c8-fb2a322068be
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

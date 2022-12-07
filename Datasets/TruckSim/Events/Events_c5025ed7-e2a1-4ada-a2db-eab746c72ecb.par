@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Events`I. Drive Foward`Trailer Reversing into Loading Dock
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 0
+*NAME1 Yo
+*VALUE1 0
+*SPEED 0
+OPT_SC 0
+SV_VXS 0
+PARSFILE Control\Throttle\Throttle_c44287e7-3496-4c50-8646-3373aaeaef4d.par
+#BlueLink18 Control: Throttle (Open Loop)`Ramp: Full Throttle in 0.1 sec.` Ramp` , Speed link`Throttle_c44287e7-3496-4c50-8646-3373aaeaef4d
+
+#MiscYellow0
+tstart_throttle t
+tstart_clutch t
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Miscellaneous`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_mt\GearOL_cd4864dc-13d3-4aee-9214-835703699b6f.par
+#BlueLink11 Control: Shifting (Open Loop)`Constant: 1st Gear` Constant` , Miscellaneous`GearOL_cd4864dc-13d3-4aee-9214-835703699b6f
+
+PARSFILE Control\Clutch\ClCon_e536c2d6-c696-4fda-a00a-37a6c0e01e71.par
+#BlueLink12 Control: Clutch (Open Loop)`Engage in 0.1s @ 0.4s` Single Engagement / Disengagement` , Miscellaneous`ClCon_e536c2d6-c696-4fda-a00a-37a6c0e01e71
+
+MAKE_EVENT Yo < 0 ; Events\Events_cf04e40c-04de-47e3-9da3-9d5bc094fe46.par
+#BlueLink0 Events`J. Complete Turn Around` Trailer Reversing into Loading Dock` , Events`Events_cf04e40c-04de-47e3-9da3-9d5bc094fe46
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The vehicle begins to accelerate until has reached a point off of the driveway.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Trailer Reversing into Loading Dock } I. Drive Foward
+#Library : Events
+#DataSet : I. Drive Foward
+#Category: Trailer Reversing into Loading Dock
+#FileID  : Events_c5025ed7-e2a1-4ada-a2db-eab746c72ecb
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

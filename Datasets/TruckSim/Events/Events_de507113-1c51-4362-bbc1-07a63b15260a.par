@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Events`Reset to S = 0`Reset Position
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl10 0
+#RingCtrl11 4
+*NAME1 S
+*VALUE1 1200
+#MiscYellow0
+sv_xo = -480
+sv_yo = 0
+#ENDMYellow
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Reset Position } Reset to S = 0
+#Library : Events
+#DataSet : Reset to S = 0
+#Category: Reset Position
+#FileID  : Events_de507113-1c51-4362-bbc1-07a63b15260a
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

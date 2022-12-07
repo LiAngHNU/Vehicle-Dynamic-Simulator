@@ -1,0 +1,29 @@
+PARSFILE
+#FullDataName Events`Stop if Speed Goes Past -10 km/h`PBS  C2A: Maintain Motion
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 Vx
+*VALUE1 -10
+MAKE_EVENT Vx < -10 ; Events\Events_9b376ff0-310d-419e-87f0-0c4307dfa086.par
+#BlueLink0 Events`End Events` ` , Events`Events_9b376ff0-310d-419e-87f0-0c4307dfa086
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { PBS  C2A: Maintain Motion } Stop if Speed Goes Past -10 km/h
+#Library : Events
+#DataSet : Stop if Speed Goes Past -10 km/h
+#Category: PBS  C2A: Maintain Motion
+#FileID  : Events_6c1fe2b6-0bfa-4f7a-9b0d-c674c1c2c47c
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

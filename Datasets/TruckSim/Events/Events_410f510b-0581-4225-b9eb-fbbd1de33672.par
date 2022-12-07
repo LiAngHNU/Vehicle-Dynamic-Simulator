@@ -1,0 +1,62 @@
+PARSFILE
+#FullDataName Events`B. Ramp throttle and engage 1st gear`Accel. then Brake: 0 - 60 - 0 km/h, MT
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 0
+*NAME1 vx
+*VALUE1 6
+*SPEED 0
+OPT_SC 0
+SV_VXS 0
+PARSFILE Control\Throttle\Throttle_5298d94a-4968-447a-baae-0aeb178ca3b3.par
+#BlueLink18 Control: Throttle (Open Loop)`Ramp: Full Throttle in 0.5 sec.` Ramp` , Speed link`Throttle_5298d94a-4968-447a-baae-0aeb178ca3b3
+
+#MiscYellow0
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_THROTTLE = T
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Miscellaneous`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_mt\GearOL_cd4864dc-13d3-4aee-9214-835703699b6f.par
+#BlueLink11 Control: Shifting (Open Loop)`Constant: 1st Gear` Constant` , Miscellaneous`GearOL_cd4864dc-13d3-4aee-9214-835703699b6f
+
+PARSFILE Control\Clutch\ClCon_abf75be1-a9f7-41ed-8a24-7d7eeb854882.par
+#BlueLink12 Control: Clutch (Open Loop)`Engage in 2s @ 1s` Single Engagement / Disengagement` , Miscellaneous`ClCon_abf75be1-a9f7-41ed-8a24-7d7eeb854882
+
+MAKE_EVENT vx > 6 ; Events\Events_ea8aa660-f4c1-4a45-a907-a1f250e66454.par
+#BlueLink0 Events`C. Accelerate to 60 kph` Accel. then Brake: 0 - 60 - 0 km/h, MT` , Events`Events_ea8aa660-f4c1-4a45-a907-a1f250e66454
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The following Event timers are set to the current simulation time, T:
+#
+#Brake Master Cylinder Control
+#Clutch
+#Throttle
+#
+#When the vehicle speed exceeds 6 kph, Event C is loaded, allowing the vehicle to accelerate to the target speed.
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Accel. then Brake: 0 - 60 - 0 km/h, MT } B. Ramp throttle and engage 1st gear
+#Library : Events
+#DataSet : B. Ramp throttle and engage 1st gear
+#Category: Accel. then Brake: 0 - 60 - 0 km/h, MT
+#FileID  : Events_410f510b-0581-4225-b9eb-fbbd1de33672
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

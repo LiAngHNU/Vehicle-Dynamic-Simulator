@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Events`Returned to path`Embedded Python: Obstacle Detection
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 show_fcw
+*VALUE1 0
+MAKE_EVENT show_fcw > 0 ; Events\Events_ebaf790d-45e3-43c7-9382-fd1e995c4158.par
+#BlueLink0 Events`New Detect` Embedded Python: Obstacle Detection` , Events`Events_ebaf790d-45e3-43c7-9382-fd1e995c4158
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Return to checking for a new obstruction.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Embedded Python: Obstacle Detection } Returned to path
+#Library : Events
+#DataSet : Returned to path
+#Category: Embedded Python: Obstacle Detection
+#FileID  : Events_652fa323-617d-4ced-95a0-890b1df9fda5
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

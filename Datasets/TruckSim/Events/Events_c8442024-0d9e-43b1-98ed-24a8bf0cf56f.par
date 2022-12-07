@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Events`C. Accelerate`PBS  C3: Acceleration
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl10 0
+#RingCtrl11 5
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_982ba2f0-9bd1-4d14-bc94-1299f205eacf.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 1.0 (Full Throttle)` Constant` , Speed link`Throttle_982ba2f0-9bd1-4d14-bc94-1299f205eacf
+
+#MiscYellow0
+S_INIT = STATION
+#ENDMYellow
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink11 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Miscellaneous`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { PBS  C3: Acceleration } C. Accelerate
+#Library : Events
+#DataSet : C. Accelerate
+#Category: PBS  C3: Acceleration
+#FileID  : Events_c8442024-0d9e-43b1-98ed-24a8bf0cf56f
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

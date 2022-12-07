@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Events`C. Stop and End Run`Braking Distance, Pedal Force
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t_event
+*VALUE1 2
+#MiscYellow0
+TSTART_T_EVENT = T
+TSTART_F_BRAKE_PEDAL = T
+#ENDMYellow
+
+PARSFILE Control\Brake_pedal\FbkCon_9822d550-ba74-4913-9d5c-c5698d121c28.par
+#BlueLink10 Control: Braking Pedal Force (Open Loop)`Constant: 155 N` Constant` , Miscellaneous`FbkCon_9822d550-ba74-4913-9d5c-c5698d121c28
+
+MAKE_EVENT t_event > 2 ; Events\Events_9b376ff0-310d-419e-87f0-0c4307dfa086.par
+#BlueLink0 Events`End Events` ` , Events`Events_9b376ff0-310d-419e-87f0-0c4307dfa086
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Braking Distance, Pedal Force } C. Stop and End Run
+#Library : Events
+#DataSet : C. Stop and End Run
+#Category: Braking Distance, Pedal Force
+#FileID  : Events_c1f2c55c-7909-407d-ac96-4f2d0199e6b1
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

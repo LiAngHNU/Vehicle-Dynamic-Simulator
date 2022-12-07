@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Events`D. Brake to a stop`Accel. then Brake: 0 - 70 - 0 km/h, MT
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 vx
+*VALUE1 0.001
+#MiscYellow0
+TSTART_BRAKES = T
+TSTART_CLUTCH = T
+TSTART_TRANS = T
+#ENDMYellow
+
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink10 Control: Throttle (Open Loop)`Constant: 0` Constant` , Miscellaneous`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+PARSFILE Control\Braking\PbkCon_94278654-7ddf-4daa-8fe8-5f2b4bbaa9ed.par
+#BlueLink11 Control: Braking MC Pressure (Open Loop)`Ramp: 0 to 0.75 MPa in 10 seconds` Ramp` , Miscellaneous`PbkCon_94278654-7ddf-4daa-8fe8-5f2b4bbaa9ed
+
+PARSFILE Control\Clutch\ClCon_68f7c282-a7f9-4aa5-a0d4-cb61072444b6.par
+#BlueLink12 Control: Clutch (Open Loop)`Disengage in 0.1s` Single Engagement / Disengagement` , Miscellaneous`ClCon_68f7c282-a7f9-4aa5-a0d4-cb61072444b6
+
+PARSFILE Control\Gear_mt\GearOL_b732302a-f9da-44f3-b13d-20c763a90262.par
+#BlueLink13 Control: Shifting (Open Loop)`Neutral (No Clutch)` Constant` , Miscellaneous`GearOL_b732302a-f9da-44f3-b13d-20c763a90262
+
+MAKE_EVENT vx < 0.001 ; Events\Events_3432fe0a-4c94-4b3b-9ac7-5511138538d1.par
+#BlueLink0 Events`E. Return to idle and hold at a stop` Accel. then Brake: 0 - 100 - 0 km/h, MT` , Events`Events_3432fe0a-4c94-4b3b-9ac7-5511138538d1
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This Event has controls that apply the brakes while simultaneously setting the throttle to zero, disengaging the clutch, and placing the transmission in neutral.
+#
+#Once the vehicle speed has dropped below 0.001 km/h, Event E is loaded and the engine is returned to idle speed.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Accel. then Brake: 0 - 70 - 0 km/h, MT } D. Brake to a stop
+#Library : Events
+#DataSet : D. Brake to a stop
+#Category: Accel. then Brake: 0 - 70 - 0 km/h, MT
+#FileID  : Events_aef4764a-2933-4d65-ad81-70400b323281
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

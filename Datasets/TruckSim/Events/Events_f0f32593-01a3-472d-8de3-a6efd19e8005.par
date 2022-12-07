@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Events`A. Initialize Axle 2`Lift Axle 2
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t_stamp
+*VALUE1 t_up
+MAKE_EVENT t_stamp > t_up ; Events\Events_7ce82edb-d68c-4f7e-8481-d552f9a85124.par
+#BlueLink0 Events`B. Raise Axle 2` Lift Axle 2` , Events`Events_7ce82edb-d68c-4f7e-8481-d552f9a85124
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Wait until the time reaches t_up and then go to the next dataset.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Lift Axle 2 } A. Initialize Axle 2
+#Library : Events
+#DataSet : A. Initialize Axle 2
+#Category: Lift Axle 2
+#FileID  : Events_f0f32593-01a3-472d-8de3-a6efd19e8005
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

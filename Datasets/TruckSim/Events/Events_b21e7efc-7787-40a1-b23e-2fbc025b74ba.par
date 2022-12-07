@@ -1,0 +1,67 @@
+PARSFILE
+#FullDataName Events`B. Reset Position and Accelerate`Brake Fade Test
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 vx
+*VALUE1 100
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_84079665-0586-4c64-9d13-a2294665e8a5.par
+#BlueLink18 Control: Throttle (Open Loop)`Ramp: Full Throttle in 1.0 sec.` Ramp` , Speed link`Throttle_84079665-0586-4c64-9d13-a2294665e8a5
+
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 1
+OPT_INIT_SPEED 0
+PARSFILE Control\Brake_pedal\FbkCon_af2fa584-d9cd-4fd4-98f5-b70494bad37e.par
+#BlueLink10 Control: Braking Pedal Force (Open Loop)`Constant: 0 N` Constant` , Miscellaneous`FbkCon_af2fa584-d9cd-4fd4-98f5-b70494bad37e
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink11 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Miscellaneous`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par
+#BlueLink12 Control: Steering by the Closed-loop Driver Model`0.6s Single Preview` Constant Position: No Offset` , Miscellaneous`StrDM_e2398fab-b956-498b-8858-93e89178bdf3
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+MAKE_EVENT vx > 100 ; Events\Events_f26032b6-bad6-4cbc-9d3d-40550ee4adfa.par
+#BlueLink0 Events`C. Brake to Stop` Brake Fade Test` , Events`Events_f26032b6-bad6-4cbc-9d3d-40550ee4adfa
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The vehicle's position is reset to the beginning of the test road and it accelerates to the initial test speed of 100 km/h.
+#
+#Once the vehicle speed exceeds 100 km/h, Event C is loaded, which contains the brake control portion of the test.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Brake Fade Test } B. Reset Position and Accelerate
+#Library : Events
+#DataSet : B. Reset Position and Accelerate
+#Category: Brake Fade Test
+#FileID  : Events_b21e7efc-7787-40a1-b23e-2fbc025b74ba
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

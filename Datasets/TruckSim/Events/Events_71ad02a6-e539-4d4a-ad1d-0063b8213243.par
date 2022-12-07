@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Events`E. Set Opt_Engine_Running = 1`Opt_Engine_Running: Auto. Transmission
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t_event
+*VALUE1 2.5
+#MiscYellow0
+TSTART_T_EVENT = T
+TSTART_BRAKES = T
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Miscellaneous`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+#MiscYellow1
+Opt_Engine_Running = 1; ! Turn engine back on
+SV_AV_ENG = AV_ENG_IDLE; 
+! Turning the engine on is accompanied by setting the engine speed state
+! variable to a non-zero value. In this case, SV_AV_Eng is set to the engine
+! idle speed, normally set on the Engine screen.
+#ENDMYellow
+
+MAKE_EVENT t_event > 2.5 ; Events\Events_08c11f46-0796-4591-a605-9326bf5ddbc1.par
+#BlueLink0 Events`F. Return Throttle to Throt_Ref` Opt_Engine_Running: Auto. Transmission` , Events`Events_08c11f46-0796-4591-a605-9326bf5ddbc1
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Opt_Engine_Running: Auto. Transmission } E. Set Opt_Engine_Running = 1
+#Library : Events
+#DataSet : E. Set Opt_Engine_Running = 1
+#Category: Opt_Engine_Running: Auto. Transmission
+#FileID  : Events_71ad02a6-e539-4d4a-ad1d-0063b8213243
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

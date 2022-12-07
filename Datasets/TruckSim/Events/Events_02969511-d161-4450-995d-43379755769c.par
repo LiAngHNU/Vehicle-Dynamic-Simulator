@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Events`B. Check Longitudinal Speed`Steady-State Speed Series
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl1 >=
+#RingCtrl2 <
+#RingCtrl10 3
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 VX_STEP
+*NAME2 VX_TARG
+*NAME3 VX_TARG
+*NAME4 VX
+*NAME5 VX
+*VALUE1 ABS(VX - VX_TARG)
+*VALUE2 121
+*VALUE3 121
+*VALUE4 5
+*VALUE5 5
+MAKE_EVENT VX_STEP < ABS(VX - VX_TARG) ; Events\Events_92a91fb8-3a4a-461e-82a0-d4ab4560a4ba.par
+#BlueLink0 Events`Long. Speed Stop Condition` Steady-State Speed Series` , Events`Events_92a91fb8-3a4a-461e-82a0-d4ab4560a4ba
+
+MAKE_EVENT VX_TARG >= 121 ; Events\Events_92a91fb8-3a4a-461e-82a0-d4ab4560a4ba.par
+#BlueLink1 Events`Long. Speed Stop Condition` Steady-State Speed Series` , Events`Events_92a91fb8-3a4a-461e-82a0-d4ab4560a4ba
+
+MAKE_EVENT VX_TARG < 121 ; Events\Events_33720a27-dc43-488e-bdc4-4604824bfcc1.par
+#BlueLink2 Events`C. Write M-File` Steady-State Speed Series` , Events`Events_33720a27-dc43-488e-bdc4-4604824bfcc1
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Check speed and go to classified events.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Steady-State Speed Series } B. Check Longitudinal Speed
+#Library : Events
+#DataSet : B. Check Longitudinal Speed
+#Category: Steady-State Speed Series
+#FileID  : Events_02969511-d161-4450-995d-43379755769c
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

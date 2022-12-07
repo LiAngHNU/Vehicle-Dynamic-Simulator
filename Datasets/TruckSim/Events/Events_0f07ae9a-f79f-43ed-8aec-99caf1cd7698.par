@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName Events`E. Step Steer`Transient Response Times
+#CheckBox1 1    
+*CLEAR
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 t_event
+*VALUE1 time_settle
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 0
+OPT_INIT_SPEED 0
+#MiscYellow0
+steer_sw_gain = str_test;
+! Count each step steer pass
+pass = pass + 1;
+#ENDMYellow
+
+PARSFILE Control\Steer\StrSW_0db8a2fe-6f9f-4bf9-be35-58c387ed4d82.par
+#BlueLink10 Control: Steering (Open Loop)`Step: 0 to 1 Radian at 0 seconds` Step` , Miscellaneous`StrSW_0db8a2fe-6f9f-4bf9-be35-58c387ed4d82
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+MAKE_EVENT t_event > time_settle ; Events\Events_bddeede7-79ff-459b-8786-0cc28767e11b.par
+#BlueLink0 Events`F. Capture Steady State Data` Transient Response Times` , Events`Events_bddeede7-79ff-459b-8786-0cc28767e11b
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#A step steer test is performed. An open loop steer table is linked to step the steering wheel angle from zero to one radian in 0.05 seconds.
+#
+#The steer angle saved from the slowly increasing steer test is applied to the open-loop steer table as a gain. Although the table is defined in degrees equivalent to one radian, the values are internally  maintained in radians. This means the saved steer angle, also internally represented as radians, can be multiplied by the non-linear table, internally represented as a step from zero to one radian.
+#
+#There will be two steep steer manuevers. The first is used to obtain the steady state values of each parameter, and the second to obtain the response times.
+#
+#A counter, "pass" (defined in the VS Commands linked at event A) is incremented to count the step steer manuevers.
+#
+#The checkbox to clear existing events is checked, because the value of "pass" is used in the next event, and this series of events loops. If the box isn't checked, the test based on "pass" in the next event would still be active on returning to this event. Then, upon incrementing "pass", that event condition would immediately be satisfied, causing, in this case, the termination of the run.
+#
+#The clocks are again reset.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Transient Response Times } E. Step Steer
+#Library : Events
+#DataSet : E. Step Steer
+#Category: Transient Response Times
+#FileID  : Events_0f07ae9a-f79f-43ed-8aec-99caf1cd7698
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

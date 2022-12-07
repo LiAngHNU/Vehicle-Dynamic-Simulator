@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Events`Traffic Vehicle 1 (TV1) Green Light`Traffic Vehicle and Traffic LIght
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 0    
+
+#RingCtrl0 ==
+#RingCtrl1 ==
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 TrfSgClr
+*NAME2 TrfSgClr
+*VALUE1 LIGHT_RED
+*VALUE2 LIGHT_YELLOW
+*SET_EVENT_ID ITV1
+SET_EVENT_ID ITV1
+#MiscYellow0
+IOBJECT = ITV1
+SPEED_ID_OBJ = SLOW_TRAFFIC
+IOBJECT = NOBJECT
+#ENDMYellow
+
+MAKE_EVENT TrfSgClr == LIGHT_RED ; Events\Events_f90dce5b-0891-47e6-afb1-33438858c884.par
+#BlueLink0 Events`Traffic Red Light` Traffic Vehicle and Traffic LIght` , Events`Events_f90dce5b-0891-47e6-afb1-33438858c884
+
+MAKE_EVENT TrfSgClr == LIGHT_YELLOW ; Events\Events_f90dce5b-0891-47e6-afb1-33438858c884.par
+#BlueLink1 Events`Traffic Red Light` Traffic Vehicle and Traffic LIght` , Events`Events_f90dce5b-0891-47e6-afb1-33438858c884
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Traffic Vehicle and Traffic LIght } Traffic Vehicle 1 (TV1) Green Light
+#Library : Events
+#DataSet : Traffic Vehicle 1 (TV1) Green Light
+#Category: Traffic Vehicle and Traffic LIght
+#FileID  : Events_c0129263-c16e-459b-9af0-12ed53e9db6d
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

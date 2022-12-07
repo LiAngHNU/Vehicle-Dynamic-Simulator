@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Events`999: End`Restoring to a Previous State
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl10 0
+#RingCtrl11 4
+#MiscYellow0
+stop_run_now Failed to find point
+#ENDMYellow
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Restoring to a Previous State } 999: End
+#Library : Events
+#DataSet : 999: End
+#Category: Restoring to a Previous State
+#FileID  : Events_ebb1ee57-354b-41f3-a2c2-4e3deba630b8
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

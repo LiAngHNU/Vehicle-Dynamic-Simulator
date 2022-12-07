@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Events`F. Return Throttle to Throt_Ref`Opt_Engine_Running: Manual Transmission
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 AV_Trans
+*VALUE1 275
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_bd201d9d-dfb1-4de6-a285-b4a852f20b37.par
+#BlueLink18 Control: Throttle (Open Loop)`Throt_Ref` Opt_Engine_Running` , Speed link`Throttle_bd201d9d-dfb1-4de6-a285-b4a852f20b37
+
+#MiscYellow0
+TSTART_THROTTLE = T
+TSTART_BRAKES = T
+TSTART_GEAR = T
+TSTART_CLUTCH = T
+#ENDMYellow
+
+PARSFILE Control\Gear_mt\GearOL_9ce947dd-3af9-4151-a740-3a980df0bade.par
+#BlueLink10 Control: Shifting (Open Loop)`1st Gear, 3s Clutch Engagement` Constant` , Miscellaneous`GearOL_9ce947dd-3af9-4151-a740-3a980df0bade
+
+PARSFILE Control\Braking\PbkCon_b35278fb-7b51-4d98-9fab-9d52ef7939b6.par
+#BlueLink11 Control: Braking MC Pressure (Open Loop)`Smooth Brake Release: 1 to 0 MPa` Sigmoid` , Miscellaneous`PbkCon_b35278fb-7b51-4d98-9fab-9d52ef7939b6
+
+#MiscYellow1
+CLUTCH_TORQUE_GAIN = 0.5; ! Allow for clutch slip
+PBK_CON_GAIN = 3;
+TSCALE_PBK_CON = 1.5; 
+THROTTLE_ENGINE_GAIN = 4; ! Gain applied to Throt_Ref
+
+! Throttle was saved in an earlier Event and used here to reset the throttle
+! to that same position. Adjust THROTTLE_ENGINE_GAIN to increase or
+! decrease the amount of throttle applied, necessary to accelerate the truck
+! through 1st gear.
+#ENDMYellow
+
+MAKE_EVENT AV_Trans > 275 ; Events\Events_5db74f08-0697-4a11-8855-98988e2c28d2.par
+#BlueLink0 Events`G. Shift to 2nd Gear` Opt_Engine_Running: Manual Transmission` , Events`Events_5db74f08-0697-4a11-8855-98988e2c28d2
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Opt_Engine_Running: Manual Transmission } F. Return Throttle to Throt_Ref
+#Library : Events
+#DataSet : F. Return Throttle to Throt_Ref
+#Category: Opt_Engine_Running: Manual Transmission
+#FileID  : Events_8a2afca5-7375-4e00-939a-25e5dc175473
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

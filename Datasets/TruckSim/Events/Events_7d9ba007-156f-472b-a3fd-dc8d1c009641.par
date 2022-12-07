@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Events`E. Write One Time Step`ISO Steady-State Circle Series
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 0    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl10 1
+#RingCtrl11 4
+DELETE_EVENTS_ID 1000
+*NAME1 T
+*NAME2 AY_REF
+*VALUE1 1
+*VALUE2 abs(ay)
+*SET_EVENT_ID 1000
+SET_EVENT_ID 1000
+#MiscYellow0
+OPT_WRITE 1
+#ENDMYellow
+
+DEFINE_EVENT 1 ; Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par
+#BlueLink0 Events`C. Go to Next Speed` ISO Steady-State Circle Series` , Events`Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#When this dataaset is read, it's time to write to file. OPT_WRITE is set to 1 turn on writing.
+#
+#A pending event is added that will trigger in the next time step. The result will be to return to C, and go to the next speed.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
+#Library : Events
+#DataSet : E. Write One Time Step
+#Category: ISO Steady-State Circle Series
+#FileID  : Events_7d9ba007-156f-472b-a3fd-dc8d1c009641
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

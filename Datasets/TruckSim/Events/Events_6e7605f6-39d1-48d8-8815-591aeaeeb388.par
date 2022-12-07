@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Events`A. Initialize Collision Detection`ADAS Sensor Collision Recorder
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t
+*VALUE1 0
+MAKE_EVENT t > 0 ; Events\Events_9087a2de-7a90-4736-a5dc-5a335a4a5a16.par
+#BlueLink0 Events`B. Check Collision status` ADAS Sensor Collision Recorder` , Events`Events_9087a2de-7a90-4736-a5dc-5a335a4a5a16
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#First Event as part of the Collision Detection example.
+#
+#This Event initializes the series by comparing the global simulation time (t) to zero sec. As soon as the simulation starts, this Event is evaluated to True, and the next Event is loaded.
+#
+#Values of time other than zero sec. can be used to represent different amounts of time it might take for a physical sensor to initialize after being powered on.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ADAS Sensor Collision Recorder } A. Initialize Collision Detection
+#Library : Events
+#DataSet : A. Initialize Collision Detection
+#Category: ADAS Sensor Collision Recorder
+#FileID  : Events_6e7605f6-39d1-48d8-8815-591aeaeeb388
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

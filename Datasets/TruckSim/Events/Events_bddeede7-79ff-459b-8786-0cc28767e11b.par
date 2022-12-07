@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Events`F. Capture Steady State Data`Transient Response Times
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl1 >
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 pass
+*NAME2 t_stamp
+*VALUE1 1
+*VALUE2 0
+#MiscYellow0
+ss_ay = if_not_0_then( ss_ay, ss_ay, ay);
+ss_roll = if_not_0_then( ss_roll, ss_roll, roll);
+ss_avz = if_not_0_then(ss_avz, ss_avz, avz);
+#ENDMYellow
+
+MAKE_EVENT pass > 1 ; Events\Events_9b376ff0-310d-419e-87f0-0c4307dfa086.par
+#BlueLink0 Events`End Events` ` , Events`Events_9b376ff0-310d-419e-87f0-0c4307dfa086
+
+MAKE_EVENT t_stamp > 0 ; Events\Events_fe71e8e7-f579-4165-a8f8-29d2d35fdc62.par
+#BlueLink1 Events`D. Straighten Out Steer` Transient Response Times` , Events`Events_fe71e8e7-f579-4165-a8f8-29d2d35fdc62
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The variables created in the VS Commands to hold the steady state values are set.
+#
+#If this is the second step steer, "pass" is equal to 2 and the run is terminated.
+#
+#If it is the first step steer, "pass" is equal to 1 and the condition is not satisfied.
+#
+#T_stamp is the "global time clock" that began when the run started, so the condition that t_stamp is greater than zero is always satisfied, sending the sequence back to event D.
+#
+#The test involving "pass" must appear first on the list, because the conditions are simply read from top to bottom, and the first that is satisfied is acted upon.
+#
+#Since the test involving t_stamp is always true, the test involving "pass" would never be reached if it were second on the list.
+#
+#On looping back to event D, the test involving "pass" is still on the active list of tests, so when its value is incremented at event E, the test would immediately be satisfied and the run ended. The checkbox to clear existing events is used at event E to prevent this.
+#
+#Also on the loop, the test involving t_stamp, having been satisifed, is automatically removed from the pending events list.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Transient Response Times } F. Capture Steady State Data
+#Library : Events
+#DataSet : F. Capture Steady State Data
+#Category: Transient Response Times
+#FileID  : Events_bddeede7-79ff-459b-8786-0cc28767e11b
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

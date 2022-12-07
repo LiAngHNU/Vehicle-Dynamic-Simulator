@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Events`Ensure Object Collision v4`ADAS Detection
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 1    
+
+#RingCtrl0 >
+#RingCtrl1 ZERO ~=
+#RingCtrl10 2
+#RingCtrl11 4
+IVEHICLE 4
+DELETE_EVENTS_ID IVEHICLE
+*NAME1 t_event4
+*NAME2 ObjDtct
+*VALUE1 .005
+*VALUE2 t_event4 > 0.004 & ~NeedAEB4
+*SET_EVENT_ID IVEHICLE
+SET_EVENT_ID IVEHICLE
+#MiscYellow0
+T_Event4_Start = t
+#ENDMYellow
+
+MAKE_EVENT t_event4 > .005 ; Events\Events_05c6413f-6f57-4fec-87f3-17cf4c4a36b9.par
+#BlueLink0 Events`Braking for Object v4` ADAS Detection` , Events`Events_05c6413f-6f57-4fec-87f3-17cf4c4a36b9
+
+DEFINE_EVENT t_event4 > 0.004 & ~NeedAEB4 ; Events\Events_14a34b1d-abe5-4046-8c50-22595d7be1ca.par
+#BlueLink1 Events`Look for Objects v4` ADAS Detection` , Events`Events_14a34b1d-abe5-4046-8c50-22595d7be1ca
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#When the sensors switch targets, Sensor Velocity values sometimes spike.
+#
+#Wait for at least 0.004s if there is not need for AEB, then we're done braking and go back to regular driving for vehicle #4.
+#
+#If there is still a need for braking at 0.005s, then go back to the braking mode.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ADAS Detection } Ensure Object Collision v4
+#Library : Events
+#DataSet : Ensure Object Collision v4
+#Category: ADAS Detection
+#FileID  : Events_ecdada3f-44c4-41b4-a3e8-3aee41b03b6c
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

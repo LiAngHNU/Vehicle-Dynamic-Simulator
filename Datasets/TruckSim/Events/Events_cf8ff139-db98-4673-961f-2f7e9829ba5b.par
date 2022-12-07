@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Events`Restart from Stop Sign`Sign Detection
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 Vxz_Fwd
+*VALUE1 10
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_292af193-f596-4315-b0b6-a12edadfc6a9.par
+#BlueLink18 Control: Throttle (Open Loop)`Go from 0 to 0.2 in 2s` Smooth Transition` , Speed link`Throttle_292af193-f596-4315-b0b6-a12edadfc6a9
+
+#MiscYellow0
+TSTART_THROTTLE = t
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Miscellaneous`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+MAKE_EVENT Vxz_Fwd > 10 ; Events\Events_00671864-a3ba-40e9-bca2-44dd7c3c56a3.par
+#BlueLink0 Events`Look for Traffic Signs` Sign Detection` , Events`Events_00671864-a3ba-40e9-bca2-44dd7c3c56a3
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Release brakes, gradually increase throttle.
+#
+#Wait until speed is up to 10 mi/h and then start looking for signs again.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Sign Detection } Restart from Stop Sign
+#Library : Events
+#DataSet : Restart from Stop Sign
+#Category: Sign Detection
+#FileID  : Events_cf8ff139-db98-4673-961f-2f7e9829ba5b
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

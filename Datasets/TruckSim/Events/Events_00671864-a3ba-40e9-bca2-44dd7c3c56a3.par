@@ -1,0 +1,65 @@
+PARSFILE
+#FullDataName Events`Look for Traffic Signs`Sign Detection
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 0    
+
+#RingCtrl0 ==
+#RingCtrl1 ==
+#RingCtrl2 ==
+#RingCtrl3 ==
+#RingCtrl10 4
+#RingCtrl11 5
+DELETE_EVENTS_ID SIGN_DETECT
+*NAME1 TypeSign
+*NAME2 TypeSign
+*NAME3 TypeSign
+*NAME4 TypeSign
+*VALUE1 STOP_SIGN
+*VALUE2 SPEED_SIGN
+*VALUE3 LIGHT_RED
+*VALUE4 LIGHT_YELLOW
+*SET_EVENT_ID SIGN_DETECT
+SET_EVENT_ID SIGN_DETECT
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+SPEED_ID_SC = SPEED_LIMIT_ID
+OPT_SC = 4
+OPT_AUTO_RESET_IC 1
+VX_IERR_DEAD_SC 2
+SPEED_KI = 0.5 ! enable integral control
+#ENDMYellow
+
+MAKE_EVENT TypeSign == STOP_SIGN ; Events\Events_f0138c1f-a322-4847-af41-ce5276ac3b0a.par
+#BlueLink0 Events`Detected Stop Sign` Sign Detection` , Events`Events_f0138c1f-a322-4847-af41-ce5276ac3b0a
+
+MAKE_EVENT TypeSign == SPEED_SIGN ; Events\Events_ca8f3be2-dca9-4369-81de-f68e2f6a056d.par
+#BlueLink1 Events`Speed Limit Sign` Sign Detection` , Events`Events_ca8f3be2-dca9-4369-81de-f68e2f6a056d
+
+MAKE_EVENT TypeSign == LIGHT_RED ; Events\Events_e157f4c9-49d1-4786-b0c2-d938edf4432d.par
+#BlueLink2 Events`Detected Red or Yellow Light` Sign Detection` , Events`Events_e157f4c9-49d1-4786-b0c2-d938edf4432d
+
+MAKE_EVENT TypeSign == LIGHT_YELLOW ; Events\Events_e157f4c9-49d1-4786-b0c2-d938edf4432d.par
+#BlueLink3 Events`Detected Red or Yellow Light` Sign Detection` , Events`Events_e157f4c9-49d1-4786-b0c2-d938edf4432d
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The symbols for sign types are defined in the VS Command dataset "Define Target Messages"
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Sign Detection } Look for Traffic Signs
+#Library : Events
+#DataSet : Look for Traffic Signs
+#Category: Sign Detection
+#FileID  : Events_00671864-a3ba-40e9-bca2-44dd7c3c56a3
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

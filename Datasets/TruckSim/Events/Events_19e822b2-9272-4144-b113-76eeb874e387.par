@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Events`N. End Run: Roll-back Limit`Hill Hold with Parking Brake: Auto. Trans.
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl10 0
+#RingCtrl11 4
+#MiscYellow0
+stop_run_now Roll-back Limit has been reached
+#ENDMYellow
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#VS Command STOP_RUN_NOW is used to trigger the simulation to end. The keyword is typed and a user defined message may be displayed after the keyword.  The message may be seen in the Log file by using the View button on the Run screen.
+#
+#This dataset is usually used at the end of a series of events.
+#
+#Linking to an event like this, instead of simply linking to nothing (which will also end the run), serves as a reminder that the run is intentionally ended, and notice that a link wasn't broken or just forgotten.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Hill Hold with Parking Brake: Auto. Trans. } N. End Run: Roll-back Limit
+#Library : Events
+#DataSet : N. End Run: Roll-back Limit
+#Category: Hill Hold with Parking Brake: Auto. Trans.
+#FileID  : Events_19e822b2-9272-4144-b113-76eeb874e387
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Events`Check Speed`Variable Grade Hill Climb
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl1 >
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 T_EVENT
+*NAME2 T_EVENT
+*VALUE1 ABS(Vxz_Fwd - SPEED_TARGET(0,0,1)) < V_TOL
+*VALUE2 T_WAIT
+DEFINE_EVENT ABS(Vxz_Fwd - SPEED_TARGET(0,0,1)) < V_TOL ; Events\Events_5c2fdc29-3275-43ee-922b-b82e204d142c.par
+#BlueLink0 Events`Set New Grade` Variable Grade Hill Climb` , Events`Events_5c2fdc29-3275-43ee-922b-b82e204d142c
+
+MAKE_EVENT T_EVENT > T_WAIT ; Events\Events_9b376ff0-310d-419e-87f0-0c4307dfa086.par
+#BlueLink1 Events`End Events` ` , Events`Events_9b376ff0-310d-419e-87f0-0c4307dfa086
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Variable Grade Hill Climb } Check Speed
+#Library : Events
+#DataSet : Check Speed
+#Category: Variable Grade Hill Climb
+#FileID  : Events_689ca89c-0ded-4f49-bbf7-c3162a9cfbea
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Events`B: Switch to Roundabout Circle`Roundabout Network, D = 36 m
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 Station
+*VALUE1 60
+#MiscYellow0
+path_id_dm = 1000
+station = 10
+LTARG_DM = 2
+#ENDMYellow
+
+MAKE_EVENT Station > 60 ; Events\Events_49ea7309-8eec-4369-8bf6-7d4f892136dd.par
+#BlueLink0 Events`C. Exit West` Roundabout Network, D = 36 m` , Events`Events_49ea7309-8eec-4369-8bf6-7d4f892136dd
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Roundabout Network, D = 36 m } B: Switch to Roundabout Circle
+#Library : Events
+#DataSet : B: Switch to Roundabout Circle
+#Category: Roundabout Network, D = 36 m
+#FileID  : Events_5b90d6cd-9deb-4bc0-b802-8470e95424c3
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

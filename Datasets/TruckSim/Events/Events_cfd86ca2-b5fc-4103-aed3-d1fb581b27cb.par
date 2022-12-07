@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Events`A. Come to Stop`Trailer Reversing into Loading Dock
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 vx
+*VALUE1 0.01
+PARSFILE Control\Clutch\ClCon_d24c29a2-52e3-40e4-a44e-927cae6163ef.par
+#BlueLink10 Control: Clutch (Open Loop)`Disengaged, Constant` Single Engagement / Disengagement` , Miscellaneous`ClCon_d24c29a2-52e3-40e4-a44e-927cae6163ef
+
+MAKE_EVENT vx < 0.01 ; Events\Events_360b42f5-89fc-4282-9cd7-da73ac7182c8.par
+#BlueLink0 Events`B. Hold at Stop` Trailer Reversing into Loading Dock` , Events`Events_360b42f5-89fc-4282-9cd7-da73ac7182c8
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Initial event waiting for the vehicle to almost come to a stop.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Trailer Reversing into Loading Dock } A. Come to Stop
+#Library : Events
+#DataSet : A. Come to Stop
+#Category: Trailer Reversing into Loading Dock
+#FileID  : Events_cfd86ca2-b5fc-4103-aed3-d1fb581b27cb
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

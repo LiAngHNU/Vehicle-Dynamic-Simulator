@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName Events`B. Random Path: Watch for Waypoints`Road Network Driving
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl1 <
+#RingCtrl2 <
+#RingCtrl3 <
+#RingCtrl4 <
+#RingCtrl5 <
+#RingCtrl6 <
+#RingCtrl7 <
+#RingCtrl10 8
+#RingCtrl11 4
+*NAME1 dist_1
+*NAME2 dist_2
+*NAME3 dist_3
+*NAME4 dist_4
+*NAME5 dist_5
+*NAME6 dist_6
+*NAME7 dist_7
+*NAME8 dist_8
+*NAME9 else
+*VALUE1 lim
+*VALUE2 lim
+*VALUE3 lim
+*VALUE4 lim
+*VALUE5 lim
+*VALUE6 lim
+*VALUE7 lim
+*VALUE8 lim
+*VALUE9 0
+PARSFILE Events\Events_c96f9630-0c57-4152-b8da-864a3ba4eeed.par
+#BlueLink10 Events`K. More Waypoints` Road Network Driving` , Miscellaneous`Events_c96f9630-0c57-4152-b8da-864a3ba4eeed
+
+#BlueLink14 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+MAKE_EVENT dist_1 < lim ; Events\Events_e6da602e-25f8-46a7-adcb-9b704c4e15bd.par
+#BlueLink0 Events`C. SE Roundabout` Road Network Driving` , Events`Events_e6da602e-25f8-46a7-adcb-9b704c4e15bd
+
+MAKE_EVENT dist_2 < lim ; Events\Events_20894156-bc91-45f8-93ab-c7263bf595c5.par
+#BlueLink1 Events`D. NE Roundabout` Road Network Driving` , Events`Events_20894156-bc91-45f8-93ab-c7263bf595c5
+
+MAKE_EVENT dist_3 < lim ; Events\Events_6ba529d2-b94d-4e2a-9bba-2319d7594bd4.par
+#BlueLink2 Events`E. NW Roundabout` Road Network Driving` , Events`Events_6ba529d2-b94d-4e2a-9bba-2319d7594bd4
+
+MAKE_EVENT dist_4 < lim ; Events\Events_0356da56-4bee-4e11-89b3-d8dc287c320a.par
+#BlueLink3 Events`F. SW Roundabout` Road Network Driving` , Events`Events_0356da56-4bee-4e11-89b3-d8dc287c320a
+
+MAKE_EVENT dist_5 < lim ; Events\Events_3408e5af-c047-4612-b24e-abf249a19b5e.par
+#BlueLink4 Events`G. SE Outer Loop` Road Network Driving` , Events`Events_3408e5af-c047-4612-b24e-abf249a19b5e
+
+MAKE_EVENT dist_6 < lim ; Events\Events_26cdc73f-f8c3-4441-84f0-ff279b614755.par
+#BlueLink5 Events`H. SW Outer Loop` Road Network Driving` , Events`Events_26cdc73f-f8c3-4441-84f0-ff279b614755
+
+MAKE_EVENT dist_7 < lim ; Events\Events_ac98a630-b2dd-406b-a94a-ee0dc6539a38.par
+#BlueLink6 Events`I. NW Outer Loop` Road Network Driving` , Events`Events_ac98a630-b2dd-406b-a94a-ee0dc6539a38
+
+MAKE_EVENT dist_8 < lim ; Events\Events_a65238be-3b69-4848-8f1c-193df0565008.par
+#BlueLink7 Events`J. NE Outer Loop` Road Network Driving` , Events`Events_a65238be-3b69-4848-8f1c-193df0565008
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Check distances to 12 waypoints. This screen only has room for 10 Events, so a link (K. More) includes the rest.
+#
+#Each pending Event involves making a change when the vehicle is close to one of the 12 waypoints.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Road Network Driving } B. Random Path: Watch for Waypoints
+#Library : Events
+#DataSet : B. Random Path: Watch for Waypoints
+#Category: Road Network Driving
+#FileID  : Events_c3d5d286-aa95-4d42-ac2f-6af6a42afc56
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

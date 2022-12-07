@@ -1,0 +1,65 @@
+PARSFILE
+#FullDataName Events`CCRm F. Reset Vehicle and Target`Euro NCAP AEB Testing: CCRm
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 ~=
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 ApplyAEB
+*VALUE1 0
+OPT_INIT_CONFIG 1
+OPT_INIT_PATH 1
+OPT_INIT_SPEED 1
+#MiscYellow0
+SV_IVERR = 0 ! Speed controller integral of error
+tstart_t_event = t
+#ENDMYellow
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+#MiscYellow1
+SPEED_TARGET_CONSTANT(1) = VUT_START
+S_OBJ_1 = START_EVT
+S_OBJ_2 = START_EVT + 8
+#ENDMYellow
+
+MAKE_EVENT ApplyAEB ~= 0 ; Events\Events_5f32553f-8ded-449d-824c-33e874ea949c.par
+#BlueLink0 Events`CCRm B. Monitor Braking Progress` Euro NCAP AEB Testing: CCRm` , Events`Events_5f32553f-8ded-449d-824c-33e874ea949c
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The initialization options are checked for vehicle position (X, Y, Yaw) and speed (to match the target speed).
+#
+#The integral of the speed error is set to zero  to clear the controller.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Euro NCAP AEB Testing: CCRm } CCRm F. Reset Vehicle and Target
+#Library : Events
+#DataSet : CCRm F. Reset Vehicle and Target
+#Category: Euro NCAP AEB Testing: CCRm
+#FileID  : Events_97755b7a-31c6-4088-bd40-8056588bf38b
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

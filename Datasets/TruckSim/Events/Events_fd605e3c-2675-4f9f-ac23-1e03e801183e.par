@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Events`D. Lower Axle 2`Lift Axle 2
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl1 <
+#RingCtrl10 2
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 JNC_L2
+*NAME2 JNC_R2
+*VALUE1 JNC_MIN
+*VALUE2 JNC_MIN
+#MiscYellow0
+DFDT_LIFT = -DFDT_RATE ! lower the axle
+#ENDMYellow
+
+MAKE_EVENT JNC_L2 < JNC_MIN ; Events\Events_31e3d4e0-3aaf-4049-bea5-d511497afb8b.par
+#BlueLink0 Events`E. End Run 2` Lift Axle 2` , Events`Events_31e3d4e0-3aaf-4049-bea5-d511497afb8b
+
+MAKE_EVENT JNC_R2 < JNC_MIN ; Events\Events_31e3d4e0-3aaf-4049-bea5-d511497afb8b.par
+#BlueLink1 Events`E. End Run 2` Lift Axle 2` , Events`Events_31e3d4e0-3aaf-4049-bea5-d511497afb8b
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This dataset is activated when it is time to drop axle 2.
+#
+#The rate of  change for the state variable SV_F_LIFT is set to -DFDT_RATE.
+#
+#This condition stays in effect until either the left or right suspension jounce drops below the limit JNC_MIN.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Lift Axle 2 } D. Lower Axle 2
+#Library : Events
+#DataSet : D. Lower Axle 2
+#Category: Lift Axle 2
+#FileID  : Events_fd605e3c-2675-4f9f-ac23-1e03e801183e
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

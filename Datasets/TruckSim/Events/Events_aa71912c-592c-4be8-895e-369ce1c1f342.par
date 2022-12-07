@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Events`D. No Throttle`Trailer Reversing into Loading Dock
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 t_event
+*VALUE1 0
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+tstart_t_event t
+#ENDMYellow
+
+MAKE_EVENT t_event > 0 ; Events\Events_e69c7a29-ff8f-40ad-9b7d-c9808704560a.par
+#BlueLink0 Events`E. Turn and Reverse` Trailer Reversing into Loading Dock` , Events`Events_e69c7a29-ff8f-40ad-9b7d-c9808704560a
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Release the throttle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Trailer Reversing into Loading Dock } D. No Throttle
+#Library : Events
+#DataSet : D. No Throttle
+#Category: Trailer Reversing into Loading Dock
+#FileID  : Events_aa71912c-592c-4be8-895e-369ce1c1f342
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Events`K. Switch to CL Target Speed`Hill Hold with Parking Brake: Auto. Trans.
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 1
+#RingCtrl12 1
+*NAME1 t_event
+*VALUE1 2.5
+*SPEED 15
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Event: K. Switch to CL Target Speed
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+SPEED_ID_SC = SPEED_TARGET_ID
+OPT_SC_ENGINE_BRAKING 0
+SPEED_TARGET_CONSTANT 15
+#MiscYellow0
+TSTART_T_EVENT = T
+OPT_SC  3
+TSTART_SPEED_CTRL = T
+#ENDMYellow
+
+MAKE_EVENT t_event > 2.5 ; Events\Events_b9376187-eeb1-4b88-b5af-365f9dff51ca.par
+#BlueLink0 Events`L. End Events` Hill Hold with Parking Brake: Auto. Trans.` , Events`Events_b9376187-eeb1-4b88-b5af-365f9dff51ca
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Hill Hold with Parking Brake: Auto. Trans. } K. Switch to CL Target Speed
+#Library : Events
+#DataSet : K. Switch to CL Target Speed
+#Category: Hill Hold with Parking Brake: Auto. Trans.
+#FileID  : Events_41173810-21ae-4a72-8819-d80b4f45b7b0
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

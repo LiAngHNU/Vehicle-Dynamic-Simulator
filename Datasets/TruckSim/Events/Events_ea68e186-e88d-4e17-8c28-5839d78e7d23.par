@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Events`A. Wait 1 sec`Ignition Switch and Transmission Park
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t_event
+*VALUE1 1.0
+#MiscYellow0
+tstart_t_event = t
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink11 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Miscellaneous`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+MAKE_EVENT t_event > 1.0 ; Events\Events_edcaf923-c66d-4556-9247-79919f1e609f.par
+#BlueLink0 Events`B. Start Engine, Wait 0.5 sec` Ignition Switch and Transmission Park` , Events`Events_edcaf923-c66d-4556-9247-79919f1e609f
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Wait one second with engine off
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Ignition Switch and Transmission Park } A. Wait 1 sec
+#Library : Events
+#DataSet : A. Wait 1 sec
+#Category: Ignition Switch and Transmission Park
+#FileID  : Events_ea68e186-e88d-4e17-8c28-5839d78e7d23
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

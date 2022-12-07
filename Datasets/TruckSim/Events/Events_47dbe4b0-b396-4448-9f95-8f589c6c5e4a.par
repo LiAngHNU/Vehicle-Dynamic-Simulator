@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Events`Watch Bike Lane`Pedestrian and Bike Detection
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 0    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl10 1
+#RingCtrl11 4
+*VALUE1 AND(GT(Vxz_Fwd, 4), AND(EQ(TypeO,PEDESTRIAN) , GT(Y_Obj, Y_RIGHT)))
+*SET_EVENT_ID BIKE_LANE
+SET_EVENT_ID BIKE_LANE
+#MiscYellow0
+ILTARG = LTARG_ID_DM
+LTARG_OFFSET = 0
+DELETE_EQS_OUT LTARG_OFFSET
+#ENDMYellow
+
+DEFINE_EVENT AND(GT(Vxz_Fwd, 4), AND(EQ(TypeO,PEDESTRIAN) , GT(Y_Obj, Y_RIGHT))) ; Events\Events_668eb1a7-9c64-4d59-b303-6df413775373.par
+#BlueLink0 Events`Change LTARG_OFFSET due to Bike` Pedestrian and Bike Detection` , Events`Events_668eb1a7-9c64-4d59-b303-6df413775373
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#First, clear EQ_OUT equations involving LTARG_OFFSET and set the offset to zero.
+#
+#Create a pending Event to watch for a pedestrian or bike to the right of the vehicle. The accepted Y coordinates for the target is Y_RIGHT.
+#
+#There are three conditions for triggering this event: (1) Vxz_Fwd > 4m/s, (2) Object type == pedestrian, (3) Y_Obj > Y_RIGHT. Stretch the yellow field to see the complete formula.
+#
+#Note that Y coordinates on the right size are negative.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Pedestrian and Bike Detection } Watch Bike Lane
+#Library : Events
+#DataSet : Watch Bike Lane
+#Category: Pedestrian and Bike Detection
+#FileID  : Events_47dbe4b0-b396-4448-9f95-8f589c6c5e4a
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Events`A. Start at 100 km/h`Braking Distance, Pedal Force
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 vx
+*VALUE1 100
+MAKE_EVENT vx < 100 ; Events\Events_7c1b8cb2-fa17-4513-9f00-6f57db323742.par
+#BlueLink0 Events`B. Reset Vehicle Position and Brake` Braking Distance, Pedal Force` , Events`Events_7c1b8cb2-fa17-4513-9f00-6f57db323742
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Braking Distance, Pedal Force } A. Start at 100 km/h
+#Library : Events
+#DataSet : A. Start at 100 km/h
+#Category: Braking Distance, Pedal Force
+#FileID  : Events_0ec31afb-3c7e-4da9-b1eb-a810a5ea92a2
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Events`M. Drive on Road 1`Road Network Driving
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 ~=
+#RingCtrl10 1
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 outside
+*VALUE1 0
+#MiscYellow0
+path_id_dm = path1
+sv_sta_road = new_sta1;
+sv_station = new_sta1;
+#ENDMYellow
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink14 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+MAKE_EVENT outside ~= 0 ; Events\Events_c3d5d286-aa95-4d42-ac2f-6af6a42afc56.par
+#BlueLink0 Events`B. Random Path: Watch for Waypoints` Road Network Driving` , Events`Events_c3d5d286-aa95-4d42-ac2f-6af6a42afc56
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Road Network Driving } M. Drive on Road 1
+#Library : Events
+#DataSet : M. Drive on Road 1
+#Category: Road Network Driving
+#FileID  : Events_1931cbc8-976d-4c87-91d9-82478c6d2c71
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

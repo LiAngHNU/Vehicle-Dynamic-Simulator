@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Events`A. Begin Brake Fade Test`Brake Fade Test
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl1 >
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 t_event
+*NAME2 bk_cycle
+*VALUE1 2
+*VALUE2 8
+#MiscYellow0
+! Increments brake cycles
+bk_cycle = bk_cycle +1;
+TSTART_T_EVENT = T
+#ENDMYellow
+
+MAKE_EVENT t_event > 2 ; Events\Events_b21e7efc-7787-40a1-b23e-2fbc025b74ba.par
+#BlueLink0 Events`B. Reset Position and Accelerate` Brake Fade Test` , Events`Events_b21e7efc-7787-40a1-b23e-2fbc025b74ba
+
+MAKE_EVENT bk_cycle > 8 ; Events\Events_b1cd84e3-b882-4147-827a-cc245e0de864.par
+#BlueLink1 Events`E. After 8 Cycles, Hold at Stop` Brake Fade Test` , Events`Events_b1cd84e3-b882-4147-827a-cc245e0de864
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#When this Event is loaded, the variable bk_cycle is incremented.
+#
+#When bk_cycle is greater than 8, Event E is triggered, which holds the vehicle at a stop for a few seconds (duration is set on Event E), after which the test is stopped using the VS Command stop_run_now.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Brake Fade Test } A. Begin Brake Fade Test
+#Library : Events
+#DataSet : A. Begin Brake Fade Test
+#Category: Brake Fade Test
+#FileID  : Events_81c14c66-2ca1-4033-878b-2742b0136a9b
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

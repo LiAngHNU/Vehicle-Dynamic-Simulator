@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Events`2. Drift Left`Lane Departure Warning
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 ~=
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 FixSteer
+*VALUE1 0
+#MiscYellow0
+ltarg_coefficient(1) = 0.01
+SSTART_LTARG(1) = Station
+#ENDMYellow
+
+MAKE_EVENT FixSteer ~= 0 ; Events\Events_21c3ffb4-0348-4bd9-a129-e4537d91330e.par
+#BlueLink0 Events`3. Steer Back into Lane` Lane Departure Warning` , Events`Events_21c3ffb4-0348-4bd9-a129-e4537d91330e
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Lane Departure Warning } 2. Drift Left
+#Library : Events
+#DataSet : 2. Drift Left
+#Category: Lane Departure Warning
+#FileID  : Events_f70e79ef-f01e-47dd-99bf-f4421e74037a
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

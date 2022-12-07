@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Events`I. Switch to Target Speed`Opt_Engine_Running: Manual Transmission
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 2
+*NAME1 t_event
+*VALUE1 15
+OPT_SC 2
+PARSFILE Control\Speed_t\SpdTime_552497c3-e30e-4460-ab6a-8601d4babc1c.par
+#BlueLink16 Control: Speed (Closed Loop) Using Target Speed`Constant: 30 km/h` Constant` , Speed link`SpdTime_552497c3-e30e-4460-ab6a-8601d4babc1c
+
+SPEED_ID_SC = SPEED_TARGET_ID
+#MiscYellow0
+TSTART_T_EVENT = T
+OPT_SC  3
+TSTART_SPEED_CTRL = T
+OPT_CLUTCH_MODE = 1; ! Switch to Closed Loop Shifting Control
+#ENDMYellow
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink10 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Miscellaneous`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+MAKE_EVENT t_event > 15 ; Events\Events_9b376ff0-310d-419e-87f0-0c4307dfa086.par
+#BlueLink0 Events`End Events` ` , Events`Events_9b376ff0-310d-419e-87f0-0c4307dfa086
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Opt_Engine_Running: Manual Transmission } I. Switch to Target Speed
+#Library : Events
+#DataSet : I. Switch to Target Speed
+#Category: Opt_Engine_Running: Manual Transmission
+#FileID  : Events_d987fd91-fc3c-46cd-b51f-3a06e50c266e
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

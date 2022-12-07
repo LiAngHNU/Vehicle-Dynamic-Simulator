@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Events`A. Drive for 5 Seconds on Current Path`Road Network Driving
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T
+*VALUE1 5
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink14 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+MAKE_EVENT T > 5 ; Events\Events_c3d5d286-aa95-4d42-ac2f-6af6a42afc56.par
+#BlueLink0 Events`B. Random Path: Watch for Waypoints` Road Network Driving` , Events`Events_c3d5d286-aa95-4d42-ac2f-6af6a42afc56
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#5 s to go before anything happens
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Road Network Driving } A. Drive for 5 Seconds on Current Path
+#Library : Events
+#DataSet : A. Drive for 5 Seconds on Current Path
+#Category: Road Network Driving
+#FileID  : Events_8025e947-b087-4235-a9c1-b59f3006d115
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

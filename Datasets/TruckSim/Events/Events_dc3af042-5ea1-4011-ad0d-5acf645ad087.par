@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Events`B1. Look For Station`Lane Change
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 station
+*VALUE1 50
+MAKE_EVENT station > 50 ; Events\Events_76b4a4e9-9dfe-4fa4-bfc9-92b976326140.par
+#BlueLink0 Events`B2. Change Lanes (Finds Global Min.)` Lane Change` , Events`Events_76b4a4e9-9dfe-4fa4-bfc9-92b976326140
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Lane Change } B1. Look For Station
+#Library : Events
+#DataSet : B1. Look For Station
+#Category: Lane Change
+#FileID  : Events_dc3af042-5ea1-4011-ad0d-5acf645ad087
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Events`CCRm C. More Tests?`Euro NCAP AEB Testing: CCRm
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <=
+#RingCtrl1 >
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 Crashed
+*NAME2 Crashed
+*VALUE1 0
+*VALUE2 0
+MAKE_EVENT Crashed <= 0 ; Events\Events_6138563d-f59a-4415-9ec4-caf0ed03360d.par
+#BlueLink0 Events`CCRm D. New Test, Increase Speed` Euro NCAP AEB Testing: CCRm` , Events`Events_6138563d-f59a-4415-9ec4-caf0ed03360d
+
+MAKE_EVENT Crashed > 0 ; Events\Events_9b376ff0-310d-419e-87f0-0c4307dfa086.par
+#BlueLink1 Events`End Events` ` , Events`Events_9b376ff0-310d-419e-87f0-0c4307dfa086
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The current test finished without Contact. If the variable Crashed is zero, no crash has occured, so increase the speed and see how that works.
+#
+#If the variable Crashed is not zero, the test sequence has completed.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Euro NCAP AEB Testing: CCRm } CCRm C. More Tests?
+#Library : Events
+#DataSet : CCRm C. More Tests?
+#Category: Euro NCAP AEB Testing: CCRm
+#FileID  : Events_439617bb-f1e9-4bdc-aa26-e94190fbe9ad
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

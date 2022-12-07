@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Events`Reset to S = 0`Steer Controller Parameter Optimization
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Station
+*VALUE1 1165
+OPT_INIT_CONFIG 1
+OPT_INIT_PATH 1
+OPT_INIT_SPEED 1
+#MiscYellow0
+pyret = python(1,"steercontrol.update_tab","OPEN",None,None)
+Iters = Iters +1
+Iters = min(Iters,NITERS)
+L_FORWARD = LFWD_OPTS(0, Iters, 1)
+TOTERR = 0
+#ENDMYellow
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+MAKE_EVENT Station > 1165 ; Events\Events_9ad1d4fa-b21a-4e19-ac80-3f6d8529472b.par
+#BlueLink0 Events`Reset to S = 0 based on Iteration` Steer Controller Parameter Optimization` , Events`Events_9ad1d4fa-b21a-4e19-ac80-3f6d8529472b
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Steer Controller Parameter Optimization } Reset to S = 0
+#Library : Events
+#DataSet : Reset to S = 0
+#Category: Steer Controller Parameter Optimization
+#FileID  : Events_c152a277-688b-42ea-96b4-a9be4da42bdf
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

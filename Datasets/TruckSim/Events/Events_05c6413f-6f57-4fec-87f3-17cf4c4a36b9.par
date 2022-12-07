@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Events`Braking for Object v4`ADAS Detection
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 1    
+
+#RingCtrl0 <
+#RingCtrl1 <
+#RingCtrl10 2
+#RingCtrl11 4
+IVEHICLE 4
+DELETE_EVENTS_ID IVEHICLE
+*NAME1 Vxz_Fwd4
+*NAME2 AxCrit4
+*VALUE1 .1
+*VALUE2 .25
+*SET_EVENT_ID IVEHICLE
+SET_EVENT_ID IVEHICLE
+#MiscYellow0
+OPT_SC = 5 ! Use AxCrit4 as command for speed controller
+#ENDMYellow
+
+MAKE_EVENT Vxz_Fwd4 < .1 ; Events\Events_b2d8a1d9-d28e-4d84-b9a6-b84e54d7af55.par
+#BlueLink0 Events`Wait to go v4` ADAS Detection` , Events`Events_b2d8a1d9-d28e-4d84-b9a6-b84e54d7af55
+
+MAKE_EVENT AxCrit4 < .25 ; Events\Events_60540014-87c3-4d9d-acc5-620623c87d1b.par
+#BlueLink1 Events`Ensure Avoidance v4` ADAS Detection` , Events`Events_60540014-87c3-4d9d-acc5-620623c87d1b
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Slow vehicle #4 down by setting the4 speed controller to acceleration command (OPT_SC = 5). Do this until the vehicle is stopped, or the need goes away (AxCrit4 < 0.25 m/s2).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ADAS Detection } Braking for Object v4
+#Library : Events
+#DataSet : Braking for Object v4
+#Category: ADAS Detection
+#FileID  : Events_05c6413f-6f57-4fec-87f3-17cf4c4a36b9
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

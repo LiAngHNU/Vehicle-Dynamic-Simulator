@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Events`B. Start Engine, Wait 0.5 sec`Ignition Switch and Transmission Park
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t_event
+*VALUE1 0.5
+#MiscYellow0
+tstart_t_event = t
+key_pos_ask = 3
+#ENDMYellow
+
+MAKE_EVENT t_event > 0.5 ; Events\Events_45b903a9-d5a3-48cb-887c-238c18ce4452.par
+#BlueLink0 Events`C. Engine On, Wait 2 sec` Ignition Switch and Transmission Park` , Events`Events_45b903a9-d5a3-48cb-887c-238c18ce4452
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Move the key to START, wait 1/2 second
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Ignition Switch and Transmission Park } B. Start Engine, Wait 0.5 sec
+#Library : Events
+#DataSet : B. Start Engine, Wait 0.5 sec
+#Category: Ignition Switch and Transmission Park
+#FileID  : Events_edcaf923-c66d-4556-9247-79919f1e609f
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

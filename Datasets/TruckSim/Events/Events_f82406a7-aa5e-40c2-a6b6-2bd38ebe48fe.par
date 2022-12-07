@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Events`Ensure Avoidance v2`ADAS Detection
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 1    
+
+#RingCtrl0 >
+#RingCtrl1 ZERO ~=
+#RingCtrl10 2
+#RingCtrl11 4
+IVEHICLE 2
+DELETE_EVENTS_ID IVEHICLE
+*NAME1 t_event2
+*VALUE1 .005
+*VALUE2 t_event2>.004 & AxCrit2<.25
+*SET_EVENT_ID IVEHICLE
+SET_EVENT_ID IVEHICLE
+#MiscYellow0
+T_Event2_Start = t
+#ENDMYellow
+
+MAKE_EVENT t_event2 > .005 ; Events\Events_66f2abe3-9e29-4bf7-b32e-53c1ab04a3c8.par
+#BlueLink0 Events`Braking for Object v2` ADAS Detection` , Events`Events_66f2abe3-9e29-4bf7-b32e-53c1ab04a3c8
+
+DEFINE_EVENT t_event2>.004 & AxCrit2<.25 ; Events\Events_26df52a2-abdb-445a-9dcf-f559fae57bb8.par
+#BlueLink1 Events`Look for Objects v2` ADAS Detection` , Events`Events_26df52a2-abdb-445a-9dcf-f559fae57bb8
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#If this event dataset was loaded, it was because AxCrit < 0.25. Sometimes when the sensor switches targets, there is a glitch in the detection speed and AxCrit.
+#
+#The test on this screen gives a second chance for vehicle #2 to go back to braking.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ADAS Detection } Ensure Avoidance v2
+#Library : Events
+#DataSet : Ensure Avoidance v2
+#Category: ADAS Detection
+#FileID  : Events_f82406a7-aa5e-40c2-a6b6-2bd38ebe48fe
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Events`Wait at Stop Sign`Sign Detection
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl10 1
+#RingCtrl11 5
+*VALUE1 and(ne(TypeO, pedestrian), ne(TypeSign, light_red))
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+OPT_SC = 0
+OPT_AUTO_RESET_IC 1
+VX_IERR_DEAD_SC 1
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_23a66c97-9f41-408f-936f-da3b3e745d1f.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Constant: 3 MPa` Constant` , Miscellaneous`PbkCon_23a66c97-9f41-408f-936f-da3b3e745d1f
+
+DEFINE_EVENT and(ne(TypeO, pedestrian), ne(TypeSign, light_red)) ; Events\Events_cf8ff139-db98-4673-961f-2f7e9829ba5b.par
+#BlueLink0 Events`Restart from Stop Sign` Sign Detection` , Events`Events_cf8ff139-db98-4673-961f-2f7e9829ba5b
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Wait until there are no pedestrians in sight. Sit with zero throttle and 3 MPa brake control.
+#
+#The symbol PEDESTRIAN is defined in the VS Command dataset "Define Target Messages"
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Sign Detection } Wait at Stop Sign
+#Library : Events
+#DataSet : Wait at Stop Sign
+#Category: Sign Detection
+#FileID  : Events_a02aa9f0-9f3c-4dfe-bf0f-d28e546a0e0a
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

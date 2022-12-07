@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Events`A. Pull Forward & Stop`Offset Backing
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <=
+#RingCtrl10 1
+#RingCtrl11 2
+*NAME1 Vx
+*VALUE1 0.1
+OPT_SC 2
+PARSFILE Control\Speed_t\SpdTime_7d8449c0-dd37-4475-898f-59b1cc3116ad.par
+#BlueLink16 Control: Speed (Closed Loop) Using Target Speed`Fwd Speed for Offset Backing` Speed vs. Station` , Speed link`SpdTime_7d8449c0-dd37-4475-898f-59b1cc3116ad
+
+SPEED_ID_SC = SPEED_TARGET_ID
+MAKE_EVENT Vx <= 0.1 ; Events\Events_d4274d68-59bf-4ef7-8bc8-33f849b9fcfe.par
+#BlueLink0 Events`B. Offset Backing` Offset Backing` , Events`Events_d4274d68-59bf-4ef7-8bc8-33f849b9fcfe
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Offset Backing } A. Pull Forward & Stop
+#Library : Events
+#DataSet : A. Pull Forward & Stop
+#Category: Offset Backing
+#FileID  : Events_8a67e9ce-cd05-440a-9c0f-94da809bc909
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

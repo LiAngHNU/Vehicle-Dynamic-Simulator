@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Events`B. Maintain turn speed`3-Point Turn
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 station
+*VALUE1 10
+#MiscYellow0
+ISPEED = SPEED_ID_SC ! set context for speed target
+SPEED_TARGET_CONSTANT Vxz_Fwd
+LTARG_CONSTANT = -1.2
+#ENDMYellow
+
+MAKE_EVENT station > 10 ; Events\Events_d63f2298-c0e9-47b8-a521-dc999b647fb7.par
+#BlueLink0 Events`C. Brake to Stop w/ Accel Control` 3-Point Turn` , Events`Events_d63f2298-c0e9-47b8-a521-dc999b647fb7
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The target speed is changed to the current vehicle speed, so it will not speed up. When clearing the turn (S > 10), braking will be applied.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { 3-Point Turn } B. Maintain turn speed
+#Library : Events
+#DataSet : B. Maintain turn speed
+#Category: 3-Point Turn
+#FileID  : Events_102b8a52-5383-4954-b95b-6aa6115c03be
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

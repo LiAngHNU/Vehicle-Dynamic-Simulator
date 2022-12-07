@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Events`D. NE Roundabout`Road Network Driving
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl1 <
+#RingCtrl10 2
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 decision
+*NAME2 decision
+*VALUE1 switch_probability
+*VALUE2 switch_probability
+#MiscYellow0
+! get a random number
+decision = r_gen;
+path1 = path_id_dm;
+path2 = if_not_0_then(path1 - 1001, 1001, 1003);
+new_sta1 = if_not_0_then(path1 - 1001, 118.047, 56.5485);
+new_sta2 = if_not_0_then(path1 - 1001, 18.8495, 118.047);
+#ENDMYellow
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink14 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+MAKE_EVENT decision > switch_probability ; Events\Events_1931cbc8-976d-4c87-91d9-82478c6d2c71.par
+#BlueLink0 Events`M. Drive on Road 1` Road Network Driving` , Events`Events_1931cbc8-976d-4c87-91d9-82478c6d2c71
+
+MAKE_EVENT decision < switch_probability ; Events\Events_5393448a-30ce-41bd-98d5-8f08baa85b23.par
+#BlueLink1 Events`N. Drive on Road 2` Road Network Driving` , Events`Events_5393448a-30ce-41bd-98d5-8f08baa85b23
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Road Network Driving } D. NE Roundabout
+#Library : Events
+#DataSet : D. NE Roundabout
+#Category: Road Network Driving
+#FileID  : Events_20894156-bc91-45f8-93ab-c7263bf595c5
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

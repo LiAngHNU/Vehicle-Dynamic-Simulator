@@ -1,0 +1,66 @@
+PARSFILE
+#FullDataName Events`B. Accelerate into the Left Lane`Automatic Lane Changing
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 1
+#RingCtrl12 1
+RESET_EVENTS
+*NAME1 station
+*VALUE1 sstart_ltarg + 3 * sscale_ltarg
+*SPEED 100
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Event: B. Accelerate into the Left Lane
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+SPEED_ID_SC = SPEED_TARGET_ID
+OPT_SC_ENGINE_BRAKING 0
+SPEED_TARGET_CONSTANT 100
+PARSFILE Control\Driver\StrDM_d4f54257-fff9-44d4-82f2-5d9e67e53e77.par
+#BlueLink10 Control: Steering by the Closed-loop Driver Model`Go to Left 1 m, dS = 2 m` Lane Changes` , Miscellaneous`StrDM_d4f54257-fff9-44d4-82f2-5d9e67e53e77
+
+#MiscYellow1
+LTARG_GAIN 2.25
+sstart_ltarg station + vx/2
+sscale_ltarg vx
+#ENDMYellow
+
+MAKE_EVENT station > sstart_ltarg + 3 * sscale_ltarg ; Events\Events_b29790f9-30e3-4921-b39e-f148dab80445.par
+#BlueLink0 Events`C. Monitor Rear Vehicle to Return` Automatic Lane Changing` , Events`Events_b29790f9-30e3-4921-b39e-f148dab80445
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Removed delete_events statement and utilize GROUP ID.
+#
+#Added LTARG_GAIN 2.25 variable since LTARG index method has changed in 2018.1.
+#
+#When this event occurs, the vehicle begins a lane change to the left.
+#
+#The target for the path follower is set via the parameter sstart_ltarg to start now, and the distance is scaled to the current speed.
+#
+#The target speed is increased to 140 km/h.
+#
+#Any pending events involving the variable GO_LEFT are cleared.
+#
+#A new event is set up for the condition that the vehicle has covered a distance of 3 * sscale_targ.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Automatic Lane Changing } B. Accelerate into the Left Lane
+#Library : Events
+#DataSet : B. Accelerate into the Left Lane
+#Category: Automatic Lane Changing
+#FileID  : Events_555b190b-9d82-4098-a778-3946cf683f14
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

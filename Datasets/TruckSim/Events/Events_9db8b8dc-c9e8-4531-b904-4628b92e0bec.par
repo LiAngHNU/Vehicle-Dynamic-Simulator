@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Events`C. Return Steering to Zero deg.`Step Steer Test with Trailer
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t_event
+*VALUE1 2.5
+#MiscYellow0
+TSTART_T_EVENT = T
+TSTART_STEER = T ;
+#ENDMYellow
+
+PARSFILE Control\Steer\StrSW_8cbbeb13-3b6f-412d-8d02-7e21d4a75174.par
+#BlueLink10 Control: Steering (Open Loop)`Ramp: 180 to 0 deg. in 2 sec.` Ramp` , Miscellaneous`StrSW_8cbbeb13-3b6f-412d-8d02-7e21d4a75174
+
+PARSFILE Control\Gear_at\GearCL_ef540ed9-53bb-40ba-b058-cb0f7fa4bfa6.par
+#BlueLink11 Control: Shifting (Closed Loop)`Neutral` ` , Miscellaneous`GearCL_ef540ed9-53bb-40ba-b058-cb0f7fa4bfa6
+
+MAKE_EVENT t_event > 2.5 ; Events\Events_7570c6e9-9445-48e3-a1b8-25555db05ba1.par
+#BlueLink0 Events`D. Apply Brakes and Come to a Stop` Step Steer Test with Trailer` , Events`Events_7570c6e9-9445-48e3-a1b8-25555db05ba1
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This Event returns the Steering Wheel Angle control to zero degrees and sets the transmission to be in Neutral.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Step Steer Test with Trailer } C. Return Steering to Zero deg.
+#Library : Events
+#DataSet : C. Return Steering to Zero deg.
+#Category: Step Steer Test with Trailer
+#FileID  : Events_9db8b8dc-c9e8-4531-b904-4628b92e0bec
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

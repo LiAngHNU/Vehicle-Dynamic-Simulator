@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Events`G. Shift into Drive`Hill Hold with Parking Brake: Auto. Trans.
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t_event
+*VALUE1 1
+#MiscYellow0
+TSTART_T_EVENT = T
+#ENDMYellow
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink10 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Miscellaneous`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+MAKE_EVENT t_event > 1 ; Events\Events_5208afb5-d0e9-4628-b0a4-54d5c3e91414.par
+#BlueLink0 Events`H. Release Service Brakes` Hill Hold with Parking Brake: Auto. Trans.` , Events`Events_5208afb5-d0e9-4628-b0a4-54d5c3e91414
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Hill Hold with Parking Brake: Auto. Trans. } G. Shift into Drive
+#Library : Events
+#DataSet : G. Shift into Drive
+#Category: Hill Hold with Parking Brake: Auto. Trans.
+#FileID  : Events_65f51252-f9ae-4863-8dbd-e42bbad033ef
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

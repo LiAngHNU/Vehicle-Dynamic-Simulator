@@ -1,0 +1,63 @@
+PARSFILE
+#FullDataName Events`B. Offset Backing`Offset Backing
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <=
+#RingCtrl10 1
+#RingCtrl11 2
+*NAME1 Station
+*VALUE1 29
+*SPEED -5
+OPT_SC 2
+PARSFILE Control\Speed_t\SpdTime_71bf54ff-b0b6-4df0-9e7e-47037d5e95df.par
+#BlueLink16 Control: Speed (Closed Loop) Using Target Speed`Ramp: 0 to -5 km/h in 1 sec.` Speed vs. Time` , Speed link`SpdTime_71bf54ff-b0b6-4df0-9e7e-47037d5e95df
+
+SPEED_ID_SC = SPEED_TARGET_ID
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 0
+OPT_INIT_SPEED 0
+PARSFILE Control\Driver\StrDM_40481a6a-19ed-4b76-93cf-009167125143.par
+#BlueLink10 Control: Steering by the Closed-loop Driver Model`1.8m Right, 0.6s Single Preview` Constant Position: Non-Zero Offset` , Miscellaneous`StrDM_40481a6a-19ed-4b76-93cf-009167125143
+
+PARSFILE Generic\VS_commands\GenVS_ecfa98e0-8d9d-4541-8013-2906f37f7d96.par
+#BlueLink11 Generic VS Commands`Offset Backing: I-PD Control` Custom Steering Controls` , Miscellaneous`GenVS_ecfa98e0-8d9d-4541-8013-2906f37f7d96
+
+PARSFILE Control\Gear_mt\GearOL_cb846421-e707-49bf-bd50-47f4e5ba1305.par
+#BlueLink14 Control: Shifting (Open Loop)`Reverse` Constant` , Miscellaneous`GearOL_cb846421-e707-49bf-bd50-47f4e5ba1305
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+MAKE_EVENT Station <= 29 ; Events\Events_e522dc27-ea36-4d0d-b8f9-dfbb0a8c329e.par
+#BlueLink0 Events`C. Stop` Offset Backing` , Events`Events_e522dc27-ea36-4d0d-b8f9-dfbb0a8c329e
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Offset Backing } B. Offset Backing
+#Library : Events
+#DataSet : B. Offset Backing
+#Category: Offset Backing
+#FileID  : Events_d4274d68-59bf-4ef7-8bc8-33f849b9fcfe
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

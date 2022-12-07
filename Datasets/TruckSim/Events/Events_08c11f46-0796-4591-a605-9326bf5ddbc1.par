@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Events`F. Return Throttle to Throt_Ref`Opt_Engine_Running: Auto. Transmission
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 vx
+*VALUE1 30
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_bd201d9d-dfb1-4de6-a285-b4a852f20b37.par
+#BlueLink18 Control: Throttle (Open Loop)`Throt_Ref` Opt_Engine_Running` , Speed link`Throttle_bd201d9d-dfb1-4de6-a285-b4a852f20b37
+
+#MiscYellow0
+TSTART_THROTTLE = T
+#ENDMYellow
+
+#MiscYellow1
+THROTTLE_ENGINE_GAIN = 1.6; ! Gain applied to Throt_Ref
+
+! Throttle was saved in an earlier Event and used here to reset the throttle
+! to that same position. Adjust THROTTLE_ENGINE_GAIN to increase or
+! decrease the amount of throttle applied, necessary to accelerate the car
+! through 1st gear.
+#ENDMYellow
+
+MAKE_EVENT vx > 30 ; Events\Events_23bcbe57-e4c6-46d8-b9d9-e4a4ec4dd265.par
+#BlueLink0 Events`G. Turn off Open Loop Throttle` Opt_Engine_Running: Auto. Transmission` , Events`Events_23bcbe57-e4c6-46d8-b9d9-e4a4ec4dd265
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Opt_Engine_Running: Auto. Transmission } F. Return Throttle to Throt_Ref
+#Library : Events
+#DataSet : F. Return Throttle to Throt_Ref
+#Category: Opt_Engine_Running: Auto. Transmission
+#FileID  : Events_08c11f46-0796-4591-a605-9326bf5ddbc1
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

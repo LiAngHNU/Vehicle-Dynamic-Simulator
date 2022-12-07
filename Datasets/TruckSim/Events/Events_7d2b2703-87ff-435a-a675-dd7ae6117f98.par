@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Events`Wait to go v3`ADAS Detection
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 1    
+
+#RingCtrl0 ZERO ==
+#RingCtrl10 1
+#RingCtrl11 5
+IVEHICLE 3
+*VALUE1 ApplyAEB3
+*SET_EVENT_ID IVEHICLE
+SET_EVENT_ID IVEHICLE
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+OPT_SC = 0
+OPT_AUTO_RESET_IC 1
+VX_IERR_DEAD_SC 1
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_23a66c97-9f41-408f-936f-da3b3e745d1f.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Constant: 3 MPa` Constant` , Miscellaneous`PbkCon_23a66c97-9f41-408f-936f-da3b3e745d1f
+
+DEFINE_EVENT ~(ApplyAEB3) ; Events\Events_7812e138-3d37-43bd-800c-02137b1535e5.par
+#BlueLink0 Events`Continue Driving v3` ADAS Detection` , Events`Events_7812e138-3d37-43bd-800c-02137b1535e5
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Apply the brakes, set the throttle to 0, and turn off the speed controller for vehicle #3.
+#
+#Define a pending Event to wait until the ApplyAEB command has gone to 0.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ADAS Detection } Wait to go v3
+#Library : Events
+#DataSet : Wait to go v3
+#Category: ADAS Detection
+#FileID  : Events_7d2b2703-87ff-435a-a675-dd7ae6117f98
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

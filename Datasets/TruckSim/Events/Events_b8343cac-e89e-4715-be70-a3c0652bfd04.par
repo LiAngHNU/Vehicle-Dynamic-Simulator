@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Events`A. Start at 100 km/h`Braking Distance, M/C, Air
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 vx
+*VALUE1 100
+MAKE_EVENT vx < 100 ; Events\Events_6056aeb5-09da-4833-8038-0f66bd3f103e.par
+#BlueLink0 Events`B. Reset Postion and Apply M/C Pressure` Braking Distance, M/C, Air` , Events`Events_6056aeb5-09da-4833-8038-0f66bd3f103e
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#When the vehicle speed drops to 100 km/h, read another dataset that will apply the brakes with a pressure typical of an air system.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Braking Distance, M/C, Air } A. Start at 100 km/h
+#Library : Events
+#DataSet : A. Start at 100 km/h
+#Category: Braking Distance, M/C, Air
+#FileID  : Events_b8343cac-e89e-4715-be70-a3c0652bfd04
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

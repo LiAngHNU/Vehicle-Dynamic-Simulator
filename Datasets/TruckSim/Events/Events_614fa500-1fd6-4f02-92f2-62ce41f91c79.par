@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Events`D. Check Lateral Acceleration`ISO Steady-State Circle Series
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 0    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl1 ZERO ~=
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 AY_STEP
+*NAME2 T
+*VALUE1 ABS(ABS(AY) - AY_TARG) > AY_STEP
+*VALUE2 1
+*SET_EVENT_ID 1000
+SET_EVENT_ID 1000
+DEFINE_EVENT ABS(ABS(AY) - AY_TARG) > AY_STEP ; Events\Events_6b337dcc-dfd9-44fd-94b2-6fae7ff1ff11.par
+#BlueLink0 Events`Stop Due to Lateral Acceleration Error` Stop Conditions` , Events`Events_6b337dcc-dfd9-44fd-94b2-6fae7ff1ff11
+
+DEFINE_EVENT 1 ; Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par
+#BlueLink1 Events`E. Write One Time Step` ISO Steady-State Circle Series` , Events`Events_7d9ba007-156f-472b-a3fd-dc8d1c009641
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Add two pending events for mutually exclusive options.
+#
+#The first event checks to see if the actual vehicle lateral acceleration is close to the target lateral acceleration. If it is not, the event will trigger and the run will stop.
+#
+#Otherwise, the second event will be triggered becuase the condition is always true.
+#
+#The Group ID is set so when events are cleared they are limited to this group.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
+#Library : Events
+#DataSet : D. Check Lateral Acceleration
+#Category: ISO Steady-State Circle Series
+#FileID  : Events_614fa500-1fd6-4f02-92f2-62ce41f91c79
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

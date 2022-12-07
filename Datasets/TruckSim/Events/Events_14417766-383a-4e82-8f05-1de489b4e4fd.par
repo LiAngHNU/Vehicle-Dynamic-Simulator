@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName Events`C. Shift to 4WD`Shift 2WD to 4WD
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 t_event
+*VALUE1 0.5
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 0
+OPT_INIT_SPEED 0
+#MiscYellow0
+opt_locked_diff(2) 1 ! Lock the rear differential
+opt_locked_diff(3) 1 ! Lock the transfer case diffferential
+r_gear_diff(3) 2.0 ! Change the transfer case gear ratio to low range (2:1)
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Miscellaneous`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_5fa1f4df-7f4e-4903-ae4f-f593c92cccda.par
+#BlueLink14 Control: Shifting (Closed Loop)`AT (1st Gear)` Closed-Loop Shifting` , Miscellaneous`GearCL_5fa1f4df-7f4e-4903-ae4f-f593c92cccda
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+#MiscYellow1
+vis_4wd 1
+vis_2wd 0
+#ENDMYellow
+
+MAKE_EVENT t_event > 0.5 ; Events\Events_d4950c1f-3499-4adb-861e-38f3195acdb2.par
+#BlueLink0 Events`D Apply Throttle` Shift 2WD to 4WD` , Events`Events_d4950c1f-3499-4adb-861e-38f3195acdb2
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#To enable 4WD, three parameters are changed:
+#
+#The rear differential and transfer case are locked.
+#The Transfer Case Gear Ratio is set to be in low-range.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Shift 2WD to 4WD } C. Shift to 4WD
+#Library : Events
+#DataSet : C. Shift to 4WD
+#Category: Shift 2WD to 4WD
+#FileID  : Events_14417766-383a-4e82-8f05-1de489b4e4fd
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

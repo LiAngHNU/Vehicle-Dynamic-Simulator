@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Events`H. Release Service Brakes`Hill Hold with Parking Brake: Auto. Trans.
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 PBK_Con
+*VALUE1 0.001
+#MiscYellow0
+TSTART_T_EVENT = T
+TSTART_BRAKES = T
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_b35278fb-7b51-4d98-9fab-9d52ef7939b6.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Smooth Brake Release: 1 to 0 MPa` Sigmoid` , Miscellaneous`PbkCon_b35278fb-7b51-4d98-9fab-9d52ef7939b6
+
+#MiscYellow1
+PBK_CON_GAIN = 2; ! Gain on ouput of Master Cylinder control table
+TSCALE_PBK_CON = 1; ! Gain to adjust the Master Cylinder release time
+#ENDMYellow
+
+MAKE_EVENT PBK_Con < 0.001 ; Events\Events_5d180c55-07fb-4983-b835-579add417405.par
+#BlueLink0 Events`I. Reapply Throttle` Hill Hold with Parking Brake: Auto. Trans.` , Events`Events_5d180c55-07fb-4983-b835-579add417405
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Hill Hold with Parking Brake: Auto. Trans. } H. Release Service Brakes
+#Library : Events
+#DataSet : H. Release Service Brakes
+#Category: Hill Hold with Parking Brake: Auto. Trans.
+#FileID  : Events_5208afb5-d0e9-4628-b0a4-54d5c3e91414
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

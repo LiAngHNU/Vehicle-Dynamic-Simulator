@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Events`A. Approach Intersection`Highway Intersection
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 2
+*NAME1 BRAKE
+*VALUE1 0
+OPT_SC 2
+PARSFILE Control\Speed_t\SpdTime_064a8cb4-2173-4631-9fa0-4928f4ef3c71.par
+#BlueLink16 Control: Speed (Closed Loop) Using Target Speed`Constant: 60 km/h` Constant` , Speed link`SpdTime_064a8cb4-2173-4631-9fa0-4928f4ef3c71
+
+SPEED_ID_SC = SPEED_TARGET_ID
+#MiscYellow0
+current_road_id 1
+path_id_dm = current_road_id
+#ENDMYellow
+
+PARSFILE Control\Driver\StrDM_1feed557-ac2c-454e-9802-65ac5734b661.par
+#BlueLink10 Control: Steering by the Closed-loop Driver Model`7.25m Right, 1.5s Preview` Constant Position: Non-Zero Offset` , Miscellaneous`StrDM_1feed557-ac2c-454e-9802-65ac5734b661
+
+MAKE_EVENT BRAKE > 0 ; Events\Events_1679a4d5-ede9-4e2c-baa6-e0dd67351660.par
+#BlueLink0 Events`B. Brake to a Stop` Highway Intersection` , Events`Events_1679a4d5-ede9-4e2c-baa6-e0dd67351660
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The vehicle approaches the intersection.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Highway Intersection } A. Approach Intersection
+#Library : Events
+#DataSet : A. Approach Intersection
+#Category: Highway Intersection
+#FileID  : Events_41c44368-34a2-411f-abc1-2e902f1565da
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

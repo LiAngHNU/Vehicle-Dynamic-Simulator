@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Events`E. Reapply Service Brakes`Hill Hold with Parking Brake: Auto. Trans.
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t_event
+*VALUE1 5
+#MiscYellow0
+TSTART_T_EVENT = T 
+TSTART_BRAKES = T
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_66fdde7e-d2ed-4796-9c7b-b8250bd52c02.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Smooth Brake Apply: 0 to 1 MPa` Sigmoid` , Miscellaneous`PbkCon_66fdde7e-d2ed-4796-9c7b-b8250bd52c02
+
+#MiscYellow1
+PBK_CON_GAIN = 2; ! Gain on ouput of Master Cylinder control table
+TSCALE_PBK_CON = 3; ! Gain to adjust the Master Cylinder release time
+
+rb_init = 0; ! Roll-back Check: Initiation Complete = 0;
+rb_pf = 1; ! Roll-back Check: Pass = 1;
+rb_compl = 1; ! Roll-back Check: Completed successfully = 1
+#ENDMYellow
+
+MAKE_EVENT t_event > 5 ; Events\Events_482cb8cf-d3fc-4ae2-8455-296bd4d9bcad.par
+#BlueLink0 Events`F. Release Parking Brake` Hill Hold with Parking Brake: Auto. Trans.` , Events`Events_482cb8cf-d3fc-4ae2-8455-296bd4d9bcad
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Hill Hold with Parking Brake: Auto. Trans. } E. Reapply Service Brakes
+#Library : Events
+#DataSet : E. Reapply Service Brakes
+#Category: Hill Hold with Parking Brake: Auto. Trans.
+#FileID  : Events_826950b2-6b67-44c9-bcc4-a5e7d47b1f5b
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Events`Detected Red or Yellow Light`Sign Detection
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl1 ==
+#RingCtrl10 2
+#RingCtrl11 4
+DELETE_EVENTS_ID SIGN_DETECT
+*NAME1 VxTarget
+*NAME2 TypeSign
+*VALUE1 .1
+*VALUE2 LIGHT_GREEN
+*SET_EVENT_ID SIGN_DETECT
+SET_EVENT_ID SIGN_DETECT
+#MiscYellow0
+SET_ISPEED_FOR_ID STOP_ID ! Set context for blue link dataset
+SPEED_TARGET_GAIN = Vxz_Fwd
+SSTART_SPEED_TARGET =  Station + SignDist - StopDist
+SSCALE_SPEED_TARGET =  0.5*Vxz_Fwd^2/SPEED_AX_BRAKE_CONSTANT
+#ENDMYellow
+
+#MiscYellow1
+SPEED_ID_SC = STOP_ID
+#ENDMYellow
+
+MAKE_EVENT VxTarget < .1 ; Events\Events_a02aa9f0-9f3c-4dfe-bf0f-d28e546a0e0a.par
+#BlueLink0 Events`Wait at Stop Sign` Sign Detection` , Events`Events_a02aa9f0-9f3c-4dfe-bf0f-d28e546a0e0a
+
+MAKE_EVENT TypeSign == LIGHT_GREEN ; Events\Events_cf8ff139-db98-4673-961f-2f7e9829ba5b.par
+#BlueLink1 Events`Restart from Stop Sign` Sign Detection` , Events`Events_cf8ff139-db98-4673-961f-2f7e9829ba5b
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Sign Detection } Detected Red or Yellow Light
+#Library : Events
+#DataSet : Detected Red or Yellow Light
+#Category: Sign Detection
+#FileID  : Events_e157f4c9-49d1-4786-b0c2-d938edf4432d
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

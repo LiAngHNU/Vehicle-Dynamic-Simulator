@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName Events`B. Maintain Constant Speed`Transient Response Times
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 1
+#RingCtrl12 1
+*NAME1 t_event
+*VALUE1 time_settle
+*SPEED speed_mph
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Event: B. Maintain Constant Speed
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+SPEED_ID_SC = SPEED_TARGET_ID
+OPT_SC_ENGINE_BRAKING 0
+SPEED_TARGET_CONSTANT speed_mph
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 0
+OPT_INIT_SPEED 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink10 Control: Throttle (Open Loop)`Constant: 0` Constant` , Miscellaneous`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+MAKE_EVENT t_event > time_settle ; Events\Events_01c4847c-c544-46f7-8c3b-b8ed8271bd6a.par
+#BlueLink0 Events`C. Slowly Increasing Steer` Transient Response Times` , Events`Events_01c4847c-c544-46f7-8c3b-b8ed8271bd6a
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The "speed_mph" parameter is pasted into the yellow field for the Constant Target Speed.
+#
+#An open-loop throttle control is linked here to "turn-off" the open loop throttle setting from the previous event.
+#
+#The target speed is maintained for a settling time, to reach steady state.
+#
+#The checkbox to reset the control clocks is checked so t_event can be used to monitor the time elapsed since this event began.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Transient Response Times } B. Maintain Constant Speed
+#Library : Events
+#DataSet : B. Maintain Constant Speed
+#Category: Transient Response Times
+#FileID  : Events_45c4d402-6cff-41c5-ae91-8ecc2295816d
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

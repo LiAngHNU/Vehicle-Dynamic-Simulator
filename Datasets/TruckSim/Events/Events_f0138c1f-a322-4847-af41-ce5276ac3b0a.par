@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Events`Detected Stop Sign`Sign Detection
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 4
+DELETE_EVENTS_ID SIGN_DETECT
+*NAME1 Vxz_Fwd
+*VALUE1 .1
+*SET_EVENT_ID SIGN_DETECT
+SET_EVENT_ID SIGN_DETECT
+#MiscYellow0
+set_ispeed_for_id STOP_ID ! set scope for next 2 lines
+speed_target_gain = Vxz_Fwd
+sstart_speed_target =  Station + SignDist - StopDist
+speed_id_sc = STOP_ID ! have speed controller use this dataset
+#ENDMYellow
+
+MAKE_EVENT Vxz_Fwd < .1 ; Events\Events_a02aa9f0-9f3c-4dfe-bf0f-d28e546a0e0a.par
+#BlueLink0 Events`Wait at Stop Sign` Sign Detection` , Events`Events_a02aa9f0-9f3c-4dfe-bf0f-d28e546a0e0a
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Uses information from Sensor 1 and Ax parameter from speed controller.
+#
+#Target stop is Station + dist to sign - STOP_LINE.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Sign Detection } Detected Stop Sign
+#Library : Events
+#DataSet : Detected Stop Sign
+#Category: Sign Detection
+#FileID  : Events_f0138c1f-a322-4847-af41-ce5276ac3b0a
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

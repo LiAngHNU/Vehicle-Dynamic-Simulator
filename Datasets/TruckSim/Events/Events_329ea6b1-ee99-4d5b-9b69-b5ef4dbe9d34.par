@@ -1,0 +1,68 @@
+PARSFILE
+#FullDataName Events`Look for Objects`ADAS Detection
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 1    
+
+#RingCtrl0 ==
+#RingCtrl1 ZERO ~=
+#RingCtrl2 <
+#RingCtrl10 3
+#RingCtrl11 5
+IVEHICLE 1
+DELETE_EVENTS_ID IVEHICLE
+*NAME1 TypeNear
+*NAME2 TypeNear
+*NAME3 Vxz_Fwd
+*NAME4 1
+*VALUE1 STOP_SIGN
+*VALUE2 ApplyAEB
+*VALUE3 1
+*VALUE4 NeedAEB & ApplyAEB
+*SET_EVENT_ID IVEHICLE
+SET_EVENT_ID IVEHICLE
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+SPEED_ID_SC = SPEED_LIMIT_ID
+OPT_SC = 4
+OPT_AUTO_RESET_IC 1
+VX_IERR_DEAD_SC 2
+SPEED_KI = 0.5
+#ENDMYellow
+
+MAKE_EVENT TypeNear == STOP_SIGN ; Events\Events_9d20bfb6-eef3-46f2-bffa-ccb64c03094a.par
+#BlueLink0 Events`Stop Sign` ADAS Detection` , Events`Events_9d20bfb6-eef3-46f2-bffa-ccb64c03094a
+
+DEFINE_EVENT ApplyAEB ; Events\Events_c1762db0-7fe2-40b0-8c82-ff4ffc49c022.par
+#BlueLink1 Events`Ensure Object Collision` ADAS Detection` , Events`Events_c1762db0-7fe2-40b0-8c82-ff4ffc49c022
+
+MAKE_EVENT Vxz_Fwd < 1 ; Events\Events_61d9f76f-f0bc-4944-b31b-0b46f6a68e35.par
+#BlueLink2 Events`Wait to go` ADAS Detection` , Events`Events_61d9f76f-f0bc-4944-b31b-0b46f6a68e35
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This series of event requires that parameters have been defined for target types, and output variables have been defined to braking-related commands.
+#
+#The vehicle is set to 1, so settings for throttle and target speed appy to that vehicle.
+#
+#Set the speed controller to path preview (OPT_SC = 4) and set the upper speed (SPEED_ID_SC = SPEED_LIMIT_ID).
+#
+#Create three pending events to look for stop signs, a need to brake (ApplyAEB), and a switch to waiting if the speed is less than 1 km/h.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ADAS Detection } Look for Objects
+#Library : Events
+#DataSet : Look for Objects
+#Category: ADAS Detection
+#FileID  : Events_329ea6b1-ee99-4d5b-9b69-b5ef4dbe9d34
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

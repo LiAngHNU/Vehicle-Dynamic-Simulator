@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Events`A. PBS C3: Wait to Accelerate`PBS  C3: Acceleration
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T
+*VALUE1 TSTART_WRITE
+MAKE_EVENT T > TSTART_WRITE ; Events\Events_a94e95e0-1f32-498e-9ba9-9e3ad3c1abcb.par
+#BlueLink0 Events`B. Put Into Gear, Apply Throttle` PBS  C3: Acceleration` , Events`Events_a94e95e0-1f32-498e-9ba9-9e3ad3c1abcb
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { PBS  C3: Acceleration } A. PBS C3: Wait to Accelerate
+#Library : Events
+#DataSet : A. PBS C3: Wait to Accelerate
+#Category: PBS  C3: Acceleration
+#FileID  : Events_410ef534-76e6-4a7f-9879-0dd363f8e040
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

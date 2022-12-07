@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Events`Stop, Reverse, Turn Around`Steering control
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Station
+*VALUE1 13
+#MiscYellow0
+path_id_dm = 1001
+current_road_id = 1001
+#ENDMYellow
+
+MAKE_EVENT Station > 13 ; Events\Events_4050dbfe-dff8-4dd7-872f-9fc099465470.par
+#BlueLink0 Events`Slow to Stop` Steering control` , Events`Events_4050dbfe-dff8-4dd7-872f-9fc099465470
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Driving on the first road, turning right.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Steering control } Stop, Reverse, Turn Around
+#Library : Events
+#DataSet : Stop, Reverse, Turn Around
+#Category: Steering control
+#FileID  : Events_7f14c5c3-5253-4d81-b421-7d9f08e43e80
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

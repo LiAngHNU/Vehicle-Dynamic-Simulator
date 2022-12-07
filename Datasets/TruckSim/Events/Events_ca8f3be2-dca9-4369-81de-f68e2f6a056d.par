@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Events`Speed Limit Sign`Sign Detection
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+DELETE_EVENTS_ID SIGN_DETECT
+*NAME1 SPEED_TOL
+*VALUE1 ABS(Vxz_Fwd - SPEED_TARGET_S_CONSTANT)
+*SET_EVENT_ID SIGN_DETECT
+SET_EVENT_ID SIGN_DETECT
+#MiscYellow0
+set_ispeed_for_id SPEED_ID_SC
+SPEED_TARGET_CONSTANT = SpdLimit
+#ENDMYellow
+
+MAKE_EVENT SPEED_TOL > ABS(Vxz_Fwd - SPEED_TARGET_S_CONSTANT) ; Events\Events_00671864-a3ba-40e9-bca2-44dd7c3c56a3.par
+#BlueLink0 Events`Look for Traffic Signs` Sign Detection` , Events`Events_00671864-a3ba-40e9-bca2-44dd7c3c56a3
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Sign Detection } Speed Limit Sign
+#Library : Events
+#DataSet : Speed Limit Sign
+#Category: Sign Detection
+#FileID  : Events_ca8f3be2-dca9-4369-81de-f68e2f6a056d
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

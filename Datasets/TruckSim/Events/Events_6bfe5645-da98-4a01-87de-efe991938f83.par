@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Events`B. Launch`Accel. then Brake
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 0
+*NAME1 vx
+*VALUE1 80
+*SPEED 0
+OPT_SC 0
+SV_VXS 0
+PARSFILE Control\Throttle\Throttle_ac48fab3-0566-47a4-9a27-f688bda7e651.par
+#BlueLink18 Control: Throttle (Open Loop)`Ramp: Full Throttle in 0.4 sec.` Ramp` , Speed link`Throttle_ac48fab3-0566-47a4-9a27-f688bda7e651
+
+#MiscYellow0
+tstart_throttle = t_stamp
+#ENDMYellow
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink10 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Miscellaneous`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink11 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Miscellaneous`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+MAKE_EVENT vx > 80 ; Events\Events_9851e9de-9e01-4ad4-89f4-86121f22fd38.par
+#BlueLink0 Events`C. Brake to stop` Accel. then Brake` , Events`Events_9851e9de-9e01-4ad4-89f4-86121f22fd38
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Set driver controls: ramp to full throttle, no braking, shifting using Auto Shift and Auto Clutch (All Gears)
+#
+#Set the offset in the throttle table (TSTART_THROTTLE) to the current time (T_STAMP), so the rampup will start now.
+#
+#Add a new event that is triggered when forward speed (VX) exceeds 80 km/h. At that time, load the dataset "C. Brake to stop".
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Accel. then Brake } B. Launch
+#Library : Events
+#DataSet : B. Launch
+#Category: Accel. then Brake
+#FileID  : Events_6bfe5645-da98-4a01-87de-efe991938f83
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Events`B. Raise Axle 2`Lift Axle 2
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl1 >
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 CmpJStL2
+*NAME2 CmpJStR2
+*VALUE1 CMP_MAX
+*VALUE2 CMP_MAX
+#MiscYellow0
+DFDT_LIFT = DFDT_RATE ! raise axle
+#ENDMYellow
+
+MAKE_EVENT CmpJStL2 > CMP_MAX ; Events\Events_67437249-d125-4f78-8339-1ba9571983e4.par
+#BlueLink0 Events`C. Hold Axle 2` Lift Axle 2` , Events`Events_67437249-d125-4f78-8339-1ba9571983e4
+
+MAKE_EVENT CmpJStR2 > CMP_MAX ; Events\Events_67437249-d125-4f78-8339-1ba9571983e4.par
+#BlueLink1 Events`C. Hold Axle 2` Lift Axle 2` , Events`Events_67437249-d125-4f78-8339-1ba9571983e4
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This dataset is activated when it is time to lift axle 2.
+#
+#The rate of  change for the state variable SV_F_LIFT is set to the parameter DFDT_RATE.
+#
+#This condition stays in effect until either the left or right spring compression reaches the limit CMP_MAX.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Lift Axle 2 } B. Raise Axle 2
+#Library : Events
+#DataSet : B. Raise Axle 2
+#Category: Lift Axle 2
+#FileID  : Events_7ce82edb-d68c-4f7e-8481-d552f9a85124
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

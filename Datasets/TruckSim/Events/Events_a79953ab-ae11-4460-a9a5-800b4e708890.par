@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Events`D. Shift to Drive, Drive`Ignition Switch and Transmission Park
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 vx
+*VALUE1 60
+#MiscYellow0
+mode_trans_override = ngears
+#ENDMYellow
+
+PARSFILE Control\Speed_path\SpdPath_b525f579-b67b-4db2-8cca-9d4215c6901d.par
+#BlueLink10 Control: Speed (Closed Loop) Using Path Preview`0.2/0.2 G Max Ax/Ay, 100 km/h` Highway Driving` , Miscellaneous`SpdPath_b525f579-b67b-4db2-8cca-9d4215c6901d
+
+MAKE_EVENT vx > 60 ; Events\Events_242a62b5-c83c-47f0-b7ce-091b7ea6192c.par
+#BlueLink0 Events`E. Brake to a Stop` Ignition Switch and Transmission Park` , Events`Events_242a62b5-c83c-47f0-b7ce-091b7ea6192c
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The vehicle will attempt to accelerate at 0.2 G. (Some vehicles my not be capable of 0.2 G accel.)
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Ignition Switch and Transmission Park } D. Shift to Drive, Drive
+#Library : Events
+#DataSet : D. Shift to Drive, Drive
+#Category: Ignition Switch and Transmission Park
+#FileID  : Events_a79953ab-ae11-4460-a9a5-800b4e708890
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

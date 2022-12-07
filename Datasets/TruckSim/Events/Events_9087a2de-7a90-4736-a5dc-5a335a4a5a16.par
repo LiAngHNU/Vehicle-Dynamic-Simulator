@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Events`B. Check Collision status`ADAS Sensor Collision Recorder
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 ==
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Collision_Contact
+*VALUE1 1
+MAKE_EVENT Collision_Contact == 1 ; Events\Events_216fe460-2ba2-4134-bbeb-5e393e8a6707.par
+#BlueLink0 Events`C. Increment Collision counter` ADAS Sensor Collision Recorder` , Events`Events_216fe460-2ba2-4134-bbeb-5e393e8a6707
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Second Event as part of the Collision Detection example.
+#
+#This Event checks to see when the VS Commands-defined variable Collision is evaluated to be 1, corresponding to the Moving Object being within a user-defined distance and magnitude threshold.
+#
+#Once Collision is evaluated to be 1, this Event is triggered and the next Event is loaded.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ADAS Sensor Collision Recorder } B. Check Collision status
+#Library : Events
+#DataSet : B. Check Collision status
+#Category: ADAS Sensor Collision Recorder
+#FileID  : Events_9087a2de-7a90-4736-a5dc-5a335a4a5a16
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Events`E. Set Opt_Engine_Running = 1`Opt_Engine_Running: Manual Transmission
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t_event
+*VALUE1 2.5
+#MiscYellow0
+TSTART_T_EVENT = T
+TSTART_CLUTCH = T
+TSTART_THROTTLE = T
+#ENDMYellow
+
+PARSFILE Control\Gear_mt\GearOL_50b447c5-c4f2-460e-9b7c-e28c38fc7164.par
+#BlueLink10 Control: Shifting (Open Loop)`Neutral w/ Clutch Disengaged` Constant` , Miscellaneous`GearOL_50b447c5-c4f2-460e-9b7c-e28c38fc7164
+
+#MiscYellow1
+Opt_Engine_Running = 1
+SV_AV_ENG = AV_ENG_IDLE
+#ENDMYellow
+
+MAKE_EVENT t_event > 2.5 ; Events\Events_8a2afca5-7375-4e00-939a-25e5dc175473.par
+#BlueLink0 Events`F. Return Throttle to Throt_Ref` Opt_Engine_Running: Manual Transmission` , Events`Events_8a2afca5-7375-4e00-939a-25e5dc175473
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Opt_Engine_Running: Manual Transmission } E. Set Opt_Engine_Running = 1
+#Library : Events
+#DataSet : E. Set Opt_Engine_Running = 1
+#Category: Opt_Engine_Running: Manual Transmission
+#FileID  : Events_a62764bf-195b-4fa6-92c3-ab31ad004876
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

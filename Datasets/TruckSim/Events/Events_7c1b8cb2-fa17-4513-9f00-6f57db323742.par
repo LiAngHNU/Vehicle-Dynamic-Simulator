@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Events`B. Reset Vehicle Position and Brake`Braking Distance, Pedal Force
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 vx
+*VALUE1 0.001
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 1
+OPT_INIT_SPEED 0
+#MiscYellow0
+TSTART_BRAKES T
+#ENDMYellow
+
+PARSFILE Control\Brake_pedal\FbkCon_85b8baaf-17e6-4c42-bb38-a86262f662a3.par
+#BlueLink10 Control: Braking Pedal Force (Open Loop)`Ramp: 0 -155N in 1s @ 1s` Ramp` , Miscellaneous`FbkCon_85b8baaf-17e6-4c42-bb38-a86262f662a3
+
+MAKE_EVENT vx < 0.001 ; Events\Events_c1f2c55c-7909-407d-ac96-4f2d0199e6b1.par
+#BlueLink0 Events`C. Stop and End Run` Braking Distance, Pedal Force` , Events`Events_c1f2c55c-7909-407d-ac96-4f2d0199e6b1
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Braking Distance, Pedal Force } B. Reset Vehicle Position and Brake
+#Library : Events
+#DataSet : B. Reset Vehicle Position and Brake
+#Category: Braking Distance, Pedal Force
+#FileID  : Events_7c1b8cb2-fa17-4513-9f00-6f57db323742
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Events`F. Opposite Steer`Trailer Reversing into Loading Dock
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Art_H
+*VALUE1 -6
+#MiscYellow0
+tstart_steer t
+#ENDMYellow
+
+PARSFILE Control\Steer\StrSW_6e645503-865b-4708-a140-87ba6ffb47ea.par
+#BlueLink10 Control: Steering (Open Loop)`Ramp: 0 to 750 deg. in 1 sec.` Ramp` , Miscellaneous`StrSW_6e645503-865b-4708-a140-87ba6ffb47ea
+
+MAKE_EVENT Art_H > -6 ; Events\Events_a026041c-6de4-4fbc-885f-e55f9a57d828.par
+#BlueLink0 Events`G. Straighten Steering` Trailer Reversing into Loading Dock` , Events`Events_a026041c-6de4-4fbc-885f-e55f9a57d828
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Open-loop steering control is still used, but a different dataset is defined.  Hitch articulation is monitored.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Trailer Reversing into Loading Dock } F. Opposite Steer
+#Library : Events
+#DataSet : F. Opposite Steer
+#Category: Trailer Reversing into Loading Dock
+#FileID  : Events_165a0a5d-1807-4809-ab45-6841266ac43b
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Events`Slow to Stop`Steering control
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 6
+*NAME1 Vxz_Fwd
+*VALUE1 0.1
+PARSFILE Control\Speed_path\SpdPath_79856204-80b8-45ea-b3a6-07a84ab03062.par
+#BlueLink19 Control: Speed (Closed Loop) Using Path Preview`Slowing to a Stop` Intersections` , Speed link`SpdPath_79856204-80b8-45ea-b3a6-07a84ab03062
+
+MAKE_EVENT Vxz_Fwd < 0.1 ; Events\Events_e112ba7e-4dbb-436c-8fcb-23743adb1257.par
+#BlueLink0 Events`Reverse and Turn Around` Steering control` , Events`Events_e112ba7e-4dbb-436c-8fcb-23743adb1257
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Steering control } Slow to Stop
+#Library : Events
+#DataSet : Slow to Stop
+#Category: Steering control
+#FileID  : Events_4050dbfe-dff8-4dd7-872f-9fc099465470
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

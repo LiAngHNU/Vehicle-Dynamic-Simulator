@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Events`Change LTARG_OFFSET due to Bike`Pedestrian and Bike Detection
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 0    
+
+#RingCtrl0 ~=
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 TypeO
+*VALUE1 pedestrian
+*SET_EVENT_ID BIKE_LANE
+SET_EVENT_ID BIKE_LANE
+#MiscYellow0
+ILTARG = LTARG_ID_DM
+EQ_OUT LTARG_OFFSET = Y_OBJ - Y_RIGHT  ! Y is negative on right side
+#ENDMYellow
+
+MAKE_EVENT TypeO ~= pedestrian ; Events\Events_47dbe4b0-b396-4448-9f95-8f589c6c5e4a.par
+#BlueLink0 Events`Watch Bike Lane` Pedestrian and Bike Detection` , Events`Events_47dbe4b0-b396-4448-9f95-8f589c6c5e4a
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#If a pedestrian or bike was detected that is too close, add an EQ_OUT equation to adjust the LTARG dataset of the driver model.
+#
+#Create a new pending Event when the closest object no longer has type == pedestrian.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Pedestrian and Bike Detection } Change LTARG_OFFSET due to Bike
+#Library : Events
+#DataSet : Change LTARG_OFFSET due to Bike
+#Category: Pedestrian and Bike Detection
+#FileID  : Events_668eb1a7-9c64-4d59-b303-6df413775373
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

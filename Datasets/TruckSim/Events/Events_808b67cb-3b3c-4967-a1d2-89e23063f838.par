@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Events`B. Save Ackermann Steer`ISO Steady-State Circle Series
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T
+*NAME2 AY_REF
+*VALUE1 0
+*VALUE2 abs(ay)
+#MiscYellow0
+OPT_WRITE = 1
+STR_ACK = Steer_SW
+STR_ACK1 = Steer_F
+#ENDMYellow
+
+MAKE_EVENT T > 0 ; Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par
+#BlueLink0 Events`C. Go to Next Speed` ISO Steady-State Circle Series` , Events`Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Save the current steering wheel angle and average front wheel angle as Ackermann parameters.
+#
+#This is done only once in the simulation.
+#
+#A pending Event is defined that will be triggered immediately (the next time step).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ISO Steady-State Circle Series } B. Save Ackermann Steer
+#Library : Events
+#DataSet : B. Save Ackermann Steer
+#Category: ISO Steady-State Circle Series
+#FileID  : Events_808b67cb-3b3c-4967-a1d2-89e23063f838
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

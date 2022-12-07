@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Events`020: Restore State, Reduce Target Speed`Restoring to a Previous State
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl1 >
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 t_stamp
+*NAME2 restores
+*VALUE1 0
+*VALUE2 restore_limit
+#MiscYellow0
+restore_point = if_gt_0_then(restore_point, restore_point - restore_interval, t - restore_interval);
+restore_state restore_point
+SPEED_TARGET_GAIN(1) 70
+#ENDMYellow
+
+MAKE_EVENT t_stamp > 0 ; Events\Events_da20a0d9-2070-439c-80c7-515d865708c9.par
+#BlueLink0 Events`010: Monitor Path Following` Restoring to a Previous State` , Events`Events_da20a0d9-2070-439c-80c7-515d865708c9
+
+MAKE_EVENT restores > restore_limit ; Events\Events_ebb1ee57-354b-41f3-a2c2-4e3deba630b8.par
+#BlueLink1 Events`999: End` Restoring to a Previous State` , Events`Events_ebb1ee57-354b-41f3-a2c2-4e3deba630b8
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#At the first failure, the restore point is the current time minus the restore interval. At each successive restore, another restore interval is subtracted to step farther back in time.
+#
+#The speed controller target is set by changing the table gain to a speed at which the truck is known to be able to negotiate the second part of the turn.
+#
+#To prevent the run from going on infinitely, the restore counter is to end the run if more than the specified limit of restores are attempted without success.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Restoring to a Previous State } 020: Restore State, Reduce Target Speed
+#Library : Events
+#DataSet : 020: Restore State, Reduce Target Speed
+#Category: Restoring to a Previous State
+#FileID  : Events_05fc1a08-06fb-4f91-87a2-06b83048fffe
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

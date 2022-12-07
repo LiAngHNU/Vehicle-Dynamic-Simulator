@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Events`K. More Waypoints`Road Network Driving
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl1 <
+#RingCtrl2 <
+#RingCtrl3 <
+#RingCtrl10 4
+#RingCtrl11 4
+*NAME1 dist_9
+*NAME2 dist_10
+*NAME3 dist_11
+*NAME4 dist_12
+*VALUE1 lim
+*VALUE2 lim
+*VALUE3 lim
+*VALUE4 lim
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink14 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+MAKE_EVENT dist_9 < lim ; Events\Events_a0f4d9ba-481b-4c29-b26f-9a7d58aeeac9.par
+#BlueLink0 Events`L. Merge with Outer Loop` Road Network Driving` , Events`Events_a0f4d9ba-481b-4c29-b26f-9a7d58aeeac9
+
+MAKE_EVENT dist_10 < lim ; Events\Events_a0f4d9ba-481b-4c29-b26f-9a7d58aeeac9.par
+#BlueLink1 Events`L. Merge with Outer Loop` Road Network Driving` , Events`Events_a0f4d9ba-481b-4c29-b26f-9a7d58aeeac9
+
+MAKE_EVENT dist_11 < lim ; Events\Events_a0f4d9ba-481b-4c29-b26f-9a7d58aeeac9.par
+#BlueLink2 Events`L. Merge with Outer Loop` Road Network Driving` , Events`Events_a0f4d9ba-481b-4c29-b26f-9a7d58aeeac9
+
+MAKE_EVENT dist_12 < lim ; Events\Events_a0f4d9ba-481b-4c29-b26f-9a7d58aeeac9.par
+#BlueLink3 Events`L. Merge with Outer Loop` Road Network Driving` , Events`Events_a0f4d9ba-481b-4c29-b26f-9a7d58aeeac9
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Road Network Driving } K. More Waypoints
+#Library : Events
+#DataSet : K. More Waypoints
+#Category: Road Network Driving
+#FileID  : Events_c96f9630-0c57-4152-b8da-864a3ba4eeed
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

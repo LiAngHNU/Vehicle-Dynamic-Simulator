@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Events`E. After 8 Cycles, Hold at Stop`Brake Fade Test
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+RESET_EVENTS
+*NAME1 t_event
+*VALUE1 10
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+TSTART_T_EVENT = T
+TSTART_THROTTLE = T
+TSTART_F_BRAKE_PEDAL = T
+#ENDMYellow
+
+PARSFILE Control\Brake_pedal\FbkCon_a246a03b-d1d4-4c12-9aa3-de6ced38f8e6.par
+#BlueLink10 Control: Braking Pedal Force (Open Loop)`Constant: 140 N` Constant` , Miscellaneous`FbkCon_a246a03b-d1d4-4c12-9aa3-de6ced38f8e6
+
+MAKE_EVENT t_event > 10 ; Events\Events_9b376ff0-310d-419e-87f0-0c4307dfa086.par
+#BlueLink0 Events`End Events` ` , Events`Events_9b376ff0-310d-419e-87f0-0c4307dfa086
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Once this Event is loaded, the brake cycles are completed and the vehicle is held at a stop with a constant 140 N of pedal force.
+#
+#This Event lasts 10 seconds, allowing the vehicle to come to equilibrium before stopping the test.
+#
+#It is common in physical testing to allow the instrumentation to continue to record for a short period of time once the test has completed. During the post-processing of the data, this can make it easier to ensure the test was in fact completed, as well as look for any effects due to the vehicle settling.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Brake Fade Test } E. After 8 Cycles, Hold at Stop
+#Library : Events
+#DataSet : E. After 8 Cycles, Hold at Stop
+#Category: Brake Fade Test
+#FileID  : Events_b1cd84e3-b882-4147-827a-cc245e0de864
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

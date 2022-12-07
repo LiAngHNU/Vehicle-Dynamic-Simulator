@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Events`A. PBS C1: Wait to Start on Grade`PBS  C1: Startability
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T
+*VALUE1 1
+MAKE_EVENT T > 1 ; Events\Events_d5ec6593-3628-4855-a828-f3ecd79a97e1.par
+#BlueLink0 Events`B. Put Into Gear, Apply Throttle` PBS  C1: Startability` , Events`Events_d5ec6593-3628-4855-a828-f3ecd79a97e1
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { PBS  C1: Startability } A. PBS C1: Wait to Start on Grade
+#Library : Events
+#DataSet : A. PBS C1: Wait to Start on Grade
+#Category: PBS  C1: Startability
+#FileID  : Events_e240265c-c479-4526-a7c4-71d01015c6a6
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

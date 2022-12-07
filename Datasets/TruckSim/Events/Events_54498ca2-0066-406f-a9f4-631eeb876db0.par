@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Events`Stop at Ay = AY_STOP`Validation Tests
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <=
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 AY_STOP
+*VALUE1 ABS(Ay)
+MAKE_EVENT AY_STOP <= ABS(Ay) ; 
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Validation Tests } Stop at Ay = AY_STOP
+#Library : Events
+#DataSet : Stop at Ay = AY_STOP
+#Category: Validation Tests
+#FileID  : Events_54498ca2-0066-406f-a9f4-631eeb876db0
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Events`C. Throttle to Speed`Trailer Reversing into Loading Dock
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 vx
+*VALUE1 -6
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_ac48fab3-0566-47a4-9a27-f688bda7e651.par
+#BlueLink18 Control: Throttle (Open Loop)`Ramp: Full Throttle in 0.4 sec.` Ramp` , Speed link`Throttle_ac48fab3-0566-47a4-9a27-f688bda7e651
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Miscellaneous`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_mt\GearOL_cb846421-e707-49bf-bd50-47f4e5ba1305.par
+#BlueLink11 Control: Shifting (Open Loop)`Reverse` Constant` , Miscellaneous`GearOL_cb846421-e707-49bf-bd50-47f4e5ba1305
+
+PARSFILE Control\Clutch\ClCon_e536c2d6-c696-4fda-a00a-37a6c0e01e71.par
+#BlueLink12 Control: Clutch (Open Loop)`Engage in 0.1s @ 0.4s` Single Engagement / Disengagement` , Miscellaneous`ClCon_e536c2d6-c696-4fda-a00a-37a6c0e01e71
+
+MAKE_EVENT vx < -6 ; Events\Events_aa71912c-592c-4be8-895e-369ce1c1f342.par
+#BlueLink0 Events`D. No Throttle` Trailer Reversing into Loading Dock` , Events`Events_aa71912c-592c-4be8-895e-369ce1c1f342
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Shift into reverse, release the brakes, engage the clutch, while ramping to full throttle.  The next event is triggered when the speed reaches -5 km/h.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Trailer Reversing into Loading Dock } C. Throttle to Speed
+#Library : Events
+#DataSet : C. Throttle to Speed
+#Category: Trailer Reversing into Loading Dock
+#FileID  : Events_738d7ece-587c-4be7-9373-10e80c9a78e0
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

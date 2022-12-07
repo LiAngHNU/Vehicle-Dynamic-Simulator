@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Events`010: Monitor Path Following`Restoring to a Previous State
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl1 <
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 lat_veh
+*NAME2 lat_veh
+*VALUE1 lat_targ + lat_err
+*VALUE2 lat_targ - lat_err
+#MiscYellow0
+! increment the restore counter
+restores = restores + 1
+#ENDMYellow
+
+MAKE_EVENT lat_veh > lat_targ + lat_err ; Events\Events_05fc1a08-06fb-4f91-87a2-06b83048fffe.par
+#BlueLink0 Events`020: Restore State, Reduce Target Speed` Restoring to a Previous State` , Events`Events_05fc1a08-06fb-4f91-87a2-06b83048fffe
+
+MAKE_EVENT lat_veh < lat_targ - lat_err ; Events\Events_05fc1a08-06fb-4f91-87a2-06b83048fffe.par
+#BlueLink1 Events`020: Restore State, Reduce Target Speed` Restoring to a Previous State` , Events`Events_05fc1a08-06fb-4f91-87a2-06b83048fffe
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This Event will be invoked once when the vehicle reaches station = 200 m and again upon each restore.
+#
+#The restore counter "restores" counts the number of restores each time the run returns to this screen on restoring the run, the counter is incremented.
+#
+#It is used to end the simulation if success is not achieved after the linked Events occur when the vehicle deviates from the target by more than 0.35 m.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Restoring to a Previous State } 010: Monitor Path Following
+#Library : Events
+#DataSet : 010: Monitor Path Following
+#Category: Restoring to a Previous State
+#FileID  : Events_da20a0d9-2070-439c-80c7-515d865708c9
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

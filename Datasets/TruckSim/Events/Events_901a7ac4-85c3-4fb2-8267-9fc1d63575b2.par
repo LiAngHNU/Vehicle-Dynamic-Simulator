@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Events`D. Hold at Stop for 2 seconds`Brake Fade Test
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 t_event
+*VALUE1 2
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+TSTART_T_EVENT = T
+TSTART_THROTTLE = T
+TSTART_F_BRAKE_PEDAL = T
+#ENDMYellow
+
+PARSFILE Control\Brake_pedal\FbkCon_a246a03b-d1d4-4c12-9aa3-de6ced38f8e6.par
+#BlueLink10 Control: Braking Pedal Force (Open Loop)`Constant: 140 N` Constant` , Miscellaneous`FbkCon_a246a03b-d1d4-4c12-9aa3-de6ced38f8e6
+
+MAKE_EVENT t_event > 2 ; Events\Events_81c14c66-2ca1-4033-878b-2742b0136a9b.par
+#BlueLink0 Events`A. Begin Brake Fade Test` Brake Fade Test` , Events`Events_81c14c66-2ca1-4033-878b-2742b0136a9b
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Brake Fade Test } D. Hold at Stop for 2 seconds
+#Library : Events
+#DataSet : D. Hold at Stop for 2 seconds
+#Category: Brake Fade Test
+#FileID  : Events_901a7ac4-85c3-4fb2-8267-9fc1d63575b2
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

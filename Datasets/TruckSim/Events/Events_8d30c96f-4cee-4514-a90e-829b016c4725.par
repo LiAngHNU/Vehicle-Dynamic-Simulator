@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Events`A. Idle`Accel. then Brake: 0 - 60 - 0 km/h, MT
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t_stamp
+*VALUE1 2.5
+MAKE_EVENT t_stamp > 2.5 ; Events\Events_410f510b-0581-4225-b9eb-fbbd1de33672.par
+#BlueLink0 Events`B. Ramp throttle and engage 1st gear` Accel. then Brake: 0 - 60 - 0 km/h, MT` , Events`Events_410f510b-0581-4225-b9eb-fbbd1de33672
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This Event lasts for 2.5 seconds, using the timer t_stamp.
+#
+#Once 2.5 seconds have elapsed, Event B is loaded and the truck begins to accelerate.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Accel. then Brake: 0 - 60 - 0 km/h, MT } A. Idle
+#Library : Events
+#DataSet : A. Idle
+#Category: Accel. then Brake: 0 - 60 - 0 km/h, MT
+#FileID  : Events_8d30c96f-4cee-4514-a90e-829b016c4725
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

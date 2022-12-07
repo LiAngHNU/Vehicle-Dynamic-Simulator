@@ -1,0 +1,29 @@
+PARSFILE
+#FullDataName Events`B. Start Writing`PBS  C5: Tracking on Straight Path
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl10 0
+#RingCtrl11 4
+#MiscYellow0
+OPT_WRITE 1
+YmaxRP1 = 0;
+YminRP1 = 0;
+YminRP2 = 0;
+YminRP3 = 0;
+#ENDMYellow
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { PBS  C5: Tracking on Straight Path } B. Start Writing
+#Library : Events
+#DataSet : B. Start Writing
+#Category: PBS  C5: Tracking on Straight Path
+#FileID  : Events_841a29f3-1f2b-45f6-a028-a6700c73f622
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

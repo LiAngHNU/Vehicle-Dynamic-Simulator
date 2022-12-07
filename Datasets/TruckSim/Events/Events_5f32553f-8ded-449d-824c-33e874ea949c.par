@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Events`CCRm B. Monitor Braking Progress`Euro NCAP AEB Testing: CCRm
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl1 >
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 Vx
+*NAME2 Contact
+*VALUE1 Vx_Evt
+*VALUE2 0
+#MiscYellow0
+SPEED_TARGET_CONSTANT(1) = vx_evt
+#ENDMYellow
+
+MAKE_EVENT Vx < Vx_Evt ; Events\Events_439617bb-f1e9-4bdc-aa26-e94190fbe9ad.par
+#BlueLink0 Events`CCRm C. More Tests?` Euro NCAP AEB Testing: CCRm` , Events`Events_439617bb-f1e9-4bdc-aa26-e94190fbe9ad
+
+MAKE_EVENT Contact > 0 ; Events\Events_98cce03f-4984-49cb-bd10-9b5053ea1063.par
+#BlueLink1 Events`CCRm E. New Test, Decrease Speed` Euro NCAP AEB Testing: CCRm` , Events`Events_98cce03f-4984-49cb-bd10-9b5053ea1063
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#As a quick way to show this type of test, the built-in TruckSim speed controller is simply given a new target speed: Vx_EVT.
+#
+#The current Vx is much higher, so it will apply the brakes.
+#
+#If Vx drops below Vx_EVT the AEB was successful, and maybe another test will be made.
+#
+#If Contact is not zero, a crash occured. Try again with a lower speed.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Euro NCAP AEB Testing: CCRm } CCRm B. Monitor Braking Progress
+#Library : Events
+#DataSet : CCRm B. Monitor Braking Progress
+#Category: Euro NCAP AEB Testing: CCRm
+#FileID  : Events_5f32553f-8ded-449d-824c-33e874ea949c
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

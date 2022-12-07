@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Events`Traffic Red Light`Traffic Vehicle and Traffic LIght
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 0    
+
+#RingCtrl0 ==
+#RingCtrl10 1
+#RingCtrl11 4
+DELETE_EVENTS_ID ITV1
+*NAME1 TrfSgClr
+*NAME2 LightNS
+*VALUE1 LIGHT_GREEN
+*VALUE2 LIGHT_YELLOW
+*SET_EVENT_ID ITV1
+SET_EVENT_ID ITV1
+#MiscYellow0
+IOBJECT = ITV1
+SPEED_ID_OBJ = STOP_TRAFFIC
+#ENDMYellow
+
+MAKE_EVENT TrfSgClr == LIGHT_GREEN ; Events\Events_bbd88714-c8f8-477c-a6ab-3918d4a02028.par
+#BlueLink0 Events`Exit Intersection` Traffic Vehicle and Traffic LIght` , Events`Events_bbd88714-c8f8-477c-a6ab-3918d4a02028
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Traffic Vehicle and Traffic LIght } Traffic Red Light
+#Library : Events
+#DataSet : Traffic Red Light
+#Category: Traffic Vehicle and Traffic LIght
+#FileID  : Events_f90dce5b-0891-47e6-afb1-33438858c884
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

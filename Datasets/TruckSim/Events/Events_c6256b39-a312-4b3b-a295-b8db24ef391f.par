@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Events`Stop Condition: Lateral Tracking Error`Stop Conditions
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Lat_Tolerance
+*NAME2 Lat_Veh
+*VALUE1 abs(Lat_Veh - Lat_Targ)
+*VALUE2 -0.5
+#MiscYellow0
+Define_Parameter Lat_Tolerance 0.5 ; units = m
+#ENDMYellow
+
+MAKE_EVENT Lat_Tolerance < abs(Lat_Veh - Lat_Targ) ; Events\Events_9b376ff0-310d-419e-87f0-0c4307dfa086.par
+#BlueLink0 Events`End Events` ` , Events`Events_9b376ff0-310d-419e-87f0-0c4307dfa086
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Stop the run if the lateral vehicle tracking error exceeds the parameter Lat_Tolerance.
+#
+#The default tolerance as set here is 0.5 m. It can be given another value anywhere that is sent to the VS solver after this dataset.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Stop Conditions } Stop Condition: Lateral Tracking Error
+#Library : Events
+#DataSet : Stop Condition: Lateral Tracking Error
+#Category: Stop Conditions
+#FileID  : Events_c6256b39-a312-4b3b-a295-b8db24ef391f
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

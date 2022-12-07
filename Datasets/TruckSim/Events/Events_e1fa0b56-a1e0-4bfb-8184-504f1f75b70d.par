@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Events`E. End Run 3`Lift Axle 3
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl10 0
+#RingCtrl11 4
+*NAME1 t_stamp
+*VALUE1 tstop
+#MiscYellow0
+DFDT_LIFT = 0;
+SV_F_LIFT = 0;
+#ENDMYellow
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This dataset sets the lift force and its derivative to zero.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Lift Axle 3 } E. End Run 3
+#Library : Events
+#DataSet : E. End Run 3
+#Category: Lift Axle 3
+#FileID  : Events_e1fa0b56-a1e0-4bfb-8184-504f1f75b70d
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

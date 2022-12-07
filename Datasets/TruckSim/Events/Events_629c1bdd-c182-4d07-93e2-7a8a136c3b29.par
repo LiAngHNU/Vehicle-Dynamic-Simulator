@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Events`B. Brake to a Stop`Opt_Engine_Running: Auto. Transmission
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 vx
+*VALUE1 0.001
+#MiscYellow0
+TSTART_T_EVENT = T
+Throt_Ref = Throttle; ! Capture current throttle position, save for later
+TSTART_BRAKES = T; ! Event timer, sets Brake Control to Event start time.
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_66fdde7e-d2ed-4796-9c7b-b8250bd52c02.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Smooth Brake Apply: 0 to 1 MPa` Sigmoid` , Miscellaneous`PbkCon_66fdde7e-d2ed-4796-9c7b-b8250bd52c02
+
+#MiscYellow1
+PBK_CON_GAIN = 3;
+TSCALE_PBK_CON = 3; 
+! Increase or decrease TSCALE_PBK_CON to adjust the brake application
+! time
+
+! Scale factor applied to independent variable (i.e., Time) of Master Cylinder 
+! Pressure control table. Since the table is normalized (0 to 1) on both axes,
+! this scale factor results in the Master Cylinder Pressure application taking
+! 3 seconds to reach 1 MPa.
+#ENDMYellow
+
+MAKE_EVENT vx < 0.001 ; Events\Events_85b1bfa2-d4ac-4016-84c8-fb2a322068be.par
+#BlueLink0 Events`C. Turn Engine Off` Opt_Engine_Running: Auto. Transmission` , Events`Events_85b1bfa2-d4ac-4016-84c8-fb2a322068be
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Opt_Engine_Running: Auto. Transmission } B. Brake to a Stop
+#Library : Events
+#DataSet : B. Brake to a Stop
+#Category: Opt_Engine_Running: Auto. Transmission
+#FileID  : Events_629c1bdd-c182-4d07-93e2-7a8a136c3b29
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

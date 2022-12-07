@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Events`Continue Driving v3`ADAS Detection
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 1    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+IVEHICLE 3
+DELETE_EVENTS_ID IVEHICLE
+*NAME1 t_event3
+*VALUE1 2
+*SET_EVENT_ID IVEHICLE
+SET_EVENT_ID IVEHICLE
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_292af193-f596-4315-b0b6-a12edadfc6a9.par
+#BlueLink18 Control: Throttle (Open Loop)`Go from 0 to 0.2 in 2s` Smooth Transition` , Speed link`Throttle_292af193-f596-4315-b0b6-a12edadfc6a9
+
+#MiscYellow0
+TSTART_THROTTLE = t
+T_Event3_Start = t
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Miscellaneous`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+MAKE_EVENT t_event3 > 2 ; Events\Events_e7c60766-41d1-4367-8a71-e3110b895841.par
+#BlueLink0 Events`Look for Objects v3` ADAS Detection` , Events`Events_e7c60766-41d1-4367-8a71-e3110b895841
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Gradually accelerate vehicle #3 with open-loop throttle for 2s.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ADAS Detection } Continue Driving v3
+#Library : Events
+#DataSet : Continue Driving v3
+#Category: ADAS Detection
+#FileID  : Events_7812e138-3d37-43bd-800c-02137b1535e5
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

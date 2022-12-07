@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Events`A. Wait 2.5 sec.`Opt_Engine_Running: Auto. Transmission
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T
+*VALUE1 2.5
+MAKE_EVENT T > 2.5 ; Events\Events_629c1bdd-c182-4d07-93e2-7a8a136c3b29.par
+#BlueLink0 Events`B. Brake to a Stop` Opt_Engine_Running: Auto. Transmission` , Events`Events_629c1bdd-c182-4d07-93e2-7a8a136c3b29
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Opt_Engine_Running: Auto. Transmission } A. Wait 2.5 sec.
+#Library : Events
+#DataSet : A. Wait 2.5 sec.
+#Category: Opt_Engine_Running: Auto. Transmission
+#FileID  : Events_3f20d672-84f5-4e46-a480-e0843bebb44c
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

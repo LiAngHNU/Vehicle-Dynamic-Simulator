@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Events`D. Lower Axle 3`Lift Axle 3
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 t_stamp
+*VALUE1 t_down
+#MiscYellow0
+DFDT_LIFT = 0; ! lower the axle
+#ENDMYellow
+
+MAKE_EVENT t_stamp > t_down ; Events\Events_e1fa0b56-a1e0-4bfb-8184-504f1f75b70d.par
+#BlueLink0 Events`E. End Run 3` Lift Axle 3` , Events`Events_e1fa0b56-a1e0-4bfb-8184-504f1f75b70d
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This dataset is activated when it is time to drop axle 3.
+#
+#The rate of  change for the state variable SV_F_LIFT is set to -DFDT_RATE.
+#
+#This condition stays in effect until either the left or right suspension jounce drops below the limit JNC_MIN.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Lift Axle 3 } D. Lower Axle 3
+#Library : Events
+#DataSet : D. Lower Axle 3
+#Category: Lift Axle 3
+#FileID  : Events_bb780649-c1c3-4b79-87d1-1db2f1dfcf03
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

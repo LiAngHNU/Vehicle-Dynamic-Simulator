@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Events`New Detect`Embedded Python: Obstacle Detection
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 DsLS1_1
+*VALUE1 35.0
+#MiscYellow0
+det_time = t+3
+! Set up the inputs
+eq_in intab(0,1,1) = Vx
+eq_in intab(0,2,1) = DsLS1_1
+eq_in intab(0,3,1) = BrCS1_1
+eq_in intab(0,4,1) = Lat_Targ
+eq_in intab(0,5,1) = Station
+#ENDMYellow
+
+MAKE_EVENT DsLS1_1 > 35.0 ; Events\Events_768a45e1-7b8c-4703-bdac-6f02efe9cb48.par
+#BlueLink0 Events`Update Path` Embedded Python: Obstacle Detection` , Events`Events_768a45e1-7b8c-4703-bdac-6f02efe9cb48
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Update input table to Python call and watch detection until it is closer than 35 m.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Embedded Python: Obstacle Detection } New Detect
+#Library : Events
+#DataSet : New Detect
+#Category: Embedded Python: Obstacle Detection
+#FileID  : Events_ebaf790d-45e3-43c7-9382-fd1e995c4158
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

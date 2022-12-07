@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Events`F. Stop and wait 0.25s`3-Point Turn
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 t_event
+*VALUE1 0.25
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+TSTART_T_EVENT = T
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_99b49306-162c-4ce6-91b0-49d4a608d2d8.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Constant: 1 MPa` Constant` , Miscellaneous`PbkCon_99b49306-162c-4ce6-91b0-49d4a608d2d8
+
+MAKE_EVENT t_event > 0.25 ; Events\Events_c92f763c-0bcf-418f-92d4-b765f60ceb5e.par
+#BlueLink0 Events`G. Go forward and accelerate` 3-Point Turn` , Events`Events_c92f763c-0bcf-418f-92d4-b765f60ceb5e
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Wait 0.25s with the brakes applied.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { 3-Point Turn } F. Stop and wait 0.25s
+#Library : Events
+#DataSet : F. Stop and wait 0.25s
+#Category: 3-Point Turn
+#FileID  : Events_9416ce64-46b4-4a2d-bbcf-96229adb07e0
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

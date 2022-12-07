@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Events`Reset to S = 0 based on Iteration`Steer Controller Parameter Optimization
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <=
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Iters
+*VALUE1 8
+MAKE_EVENT Iters <= 8 ; Events\Events_261c9f14-3e3f-4fc0-a010-451f92ebe877.par
+#BlueLink0 Events`Reset to S = 0 based on station` Steer Controller Parameter Optimization` , Events`Events_261c9f14-3e3f-4fc0-a010-451f92ebe877
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Steer Controller Parameter Optimization } Reset to S = 0 based on Iteration
+#Library : Events
+#DataSet : Reset to S = 0 based on Iteration
+#Category: Steer Controller Parameter Optimization
+#FileID  : Events_9ad1d4fa-b21a-4e19-ac80-3f6d8529472b
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

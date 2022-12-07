@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Events`Update Path`Embedded Python: Obstacle Detection
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t
+*VALUE1 det_time
+#MiscYellow0
+
+! Run the routine
+RUN_PYTHON_PROG makepath.pathtoavoid LTARGNPATH intab_table None
+
+! Now load the new table that was created
+LOAD_TABLE_FILE LTARGNPATH.vstb
+FILE_TO_TABLE LTARG_TABLE XLABEL VALUE
+ECHO_LOADED_TABLE LTARG_TABLE
+#ENDMYellow
+
+MAKE_EVENT t > det_time ; Events\Events_652fa323-617d-4ced-95a0-890b1df9fda5.par
+#BlueLink0 Events`Returned to path` Embedded Python: Obstacle Detection` , Events`Events_652fa323-617d-4ced-95a0-890b1df9fda5
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Using the inputs from the input table, Python creates a new LTARG path to avoid the object.
+#
+#Wait for a period of time and then return to looking for obstructions.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Embedded Python: Obstacle Detection } Update Path
+#Library : Events
+#DataSet : Update Path
+#Category: Embedded Python: Obstacle Detection
+#FileID  : Events_768a45e1-7b8c-4703-bdac-6f02efe9cb48
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

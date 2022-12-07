@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Events`Delete EQ's and End`K & C Testing
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl10 0
+#RingCtrl11 4
+PARSFILE Generic\VS_commands\GenVS_c45cbaf3-8ad0-4a3f-aaa7-af353a3bd70f.par
+#BlueLink10 Generic VS Commands`Capture Ground Z, Delete Eq's` K & C Testing` , Miscellaneous`GenVS_c45cbaf3-8ad0-4a3f-aaa7-af353a3bd70f
+
+#MiscYellow1
+stop_run_now End event triggered
+#ENDMYellow
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { K & C Testing } Delete EQ's and End
+#Library : Events
+#DataSet : Delete EQ's and End
+#Category: K & C Testing
+#FileID  : Events_18b174b8-3bca-4522-995d-cb8c24b1f200
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

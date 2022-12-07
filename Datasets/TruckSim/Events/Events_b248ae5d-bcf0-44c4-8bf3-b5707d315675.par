@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Events`Stop Sign v3`ADAS Detection
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 1    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 4
+IVEHICLE 3
+DELETE_EVENTS_ID IVEHICLE
+*NAME1 Vxz_Fwd3
+*VALUE1 .1
+*SET_EVENT_ID IVEHICLE
+SET_EVENT_ID IVEHICLE
+#MiscYellow0
+set_ispeed_for_id STOP_ID_3 ! set scope for next 2 lines
+speed_target_gain = Vxz_Fwd3
+sstart_speed_target =  Station_3 + detect_dist(s3,1) - detect_msg(s3,1)
+speed_id_sc = STOP_ID_3 ! have speed controller use this dataset
+#ENDMYellow
+
+MAKE_EVENT Vxz_Fwd3 < .1 ; Events\Events_e01bc69a-3be7-4058-93f4-029b1d420cb0.par
+#BlueLink0 Events`Check for Clear Path v3` ADAS Detection` , Events`Events_e01bc69a-3be7-4058-93f4-029b1d420cb0
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Use the speed controller for vehicle #3 to stop at a stop sign.
+#
+#To do this, set the current target speed to the dataset STOP_ID_3, which goes to zero speed. Change the  gain of the table to the current speed. Offset the station in the table by taking into account the vehicle position (Station_3), the distance to the stop sign (detect_dist(s3,1)), and the distance from the sign to where the vehicle should stop (detect_msg(s3,1)).
+#
+#Define a pending event to be triggered when the vehicle speed is near zero.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ADAS Detection } Stop Sign v3
+#Library : Events
+#DataSet : Stop Sign v3
+#Category: ADAS Detection
+#FileID  : Events_b248ae5d-bcf0-44c4-8bf3-b5707d315675
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

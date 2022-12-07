@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Events`B. Hold at Stop`Trailer Reversing into Loading Dock
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t_event
+*VALUE1 2.5
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 0
+OPT_INIT_SPEED 0
+#MiscYellow0
+tstart_t_event t
+#ENDMYellow
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+MAKE_EVENT t_event > 2.5 ; Events\Events_738d7ece-587c-4be7-9373-10e80c9a78e0.par
+#BlueLink0 Events`C. Throttle to Speed` Trailer Reversing into Loading Dock` , Events`Events_738d7ece-587c-4be7-9373-10e80c9a78e0
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Wait for vehicle to come to a complete stop.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Trailer Reversing into Loading Dock } B. Hold at Stop
+#Library : Events
+#DataSet : B. Hold at Stop
+#Category: Trailer Reversing into Loading Dock
+#FileID  : Events_360b42f5-89fc-4282-9cd7-da73ac7182c8
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

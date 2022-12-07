@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Events`D. Shift to Reverse, go to -10 km/h`3-Point Turn
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 2
+*NAME1 station
+*VALUE1 116
+OPT_SC 2
+PARSFILE Control\Speed_t\SpdTime_a79ab16f-75ff-421f-a5a3-ae30ff8e3730.par
+#BlueLink16 Control: Speed (Closed Loop) Using Target Speed`Ramp: 0 to -10 km/h` Speed vs Time` , Speed link`SpdTime_a79ab16f-75ff-421f-a5a3-ae30ff8e3730
+
+SPEED_ID_SC = SPEED_TARGET_ID
+#MiscYellow0
+TSTART_SPEED_TARGET = T; ! Sets SC time
+path_id_dm = 1014
+#ENDMYellow
+
+PARSFILE Control\Gear_at\GearCL_b4eda8d9-0c25-467b-b3b4-f5da9aa31080.par
+#BlueLink10 Control: Shifting (Closed Loop)`Reverse` ` , Miscellaneous`GearCL_b4eda8d9-0c25-467b-b3b4-f5da9aa31080
+
+MAKE_EVENT station < 116 ; Events\Events_37ecead0-1ab6-4c83-be87-c5959804eb49.par
+#BlueLink0 Events`E. Brake to a Stop in Reverse` 3-Point Turn` , Events`Events_37ecead0-1ab6-4c83-be87-c5959804eb49
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Change to reverse, and start a new speed target dataset that goes from 0 to -10 km/h.
+#
+#Change the path used by the steering controller to make a left turn in reverse.
+#
+#Continue until clearing the turn at Station < 116m on the new path.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { 3-Point Turn } D. Shift to Reverse, go to -10 km/h
+#Library : Events
+#DataSet : D. Shift to Reverse, go to -10 km/h
+#Category: 3-Point Turn
+#FileID  : Events_9cefcb90-b896-43e5-b866-5a156f8496cf
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

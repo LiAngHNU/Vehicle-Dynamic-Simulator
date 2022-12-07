@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Events`Stop at Speed = V_STOP`Validation Tests
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Vxz_Fwd
+*VALUE1 V_STOP
+MAKE_EVENT Vxz_Fwd > V_STOP ; 
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Validation Tests } Stop at Speed = V_STOP
+#Library : Events
+#DataSet : Stop at Speed = V_STOP
+#Category: Validation Tests
+#FileID  : Events_28c85c50-bc1d-4ecb-9a6f-c589bb9c035b
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

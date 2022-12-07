@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Events`A. Bode Analysis for Steer Input`Linearization
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T
+*VALUE1 14
+MAKE_EVENT T > 14 ; Events\Events_ee5b4337-b50d-48e5-be42-33895e805505.par
+#BlueLink0 Events`B. Linearize (Steer Input)` Linearization` , Events`Events_ee5b4337-b50d-48e5-be42-33895e805505
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The linearization is applied after 14 seconds from the simulation started in order to wait for the vehicle to come to a steady-state condition after the math model initialization..
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Linearization } A. Bode Analysis for Steer Input
+#Library : Events
+#DataSet : A. Bode Analysis for Steer Input
+#Category: Linearization
+#FileID  : Events_118e46d6-26f6-4928-a4ff-e3a6d3d7ce27
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

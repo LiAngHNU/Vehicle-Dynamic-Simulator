@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Events`A. PBS C5: Wait Until Station Reaches 0`PBS  C5: Tracking on Straight Path
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >=
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Station
+*VALUE1 0
+MAKE_EVENT Station >= 0 ; Events\Events_841a29f3-1f2b-45f6-a028-a6700c73f622.par
+#BlueLink0 Events`B. Start Writing` PBS  C5: Tracking on Straight Path` , Events`Events_841a29f3-1f2b-45f6-a028-a6700c73f622
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { PBS  C5: Tracking on Straight Path } A. PBS C5: Wait Until Station Reaches 0
+#Library : Events
+#DataSet : A. PBS C5: Wait Until Station Reaches 0
+#Category: PBS  C5: Tracking on Straight Path
+#FileID  : Events_5decb4ea-a533-4107-a217-e0b0720abda5
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

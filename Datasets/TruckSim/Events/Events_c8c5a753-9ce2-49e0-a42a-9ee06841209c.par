@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Events`A. Check Trailer Roll Angle`Step Steer Test with Trailer
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 roll_2
+*VALUE1 abs(11)
+MAKE_EVENT roll_2 > abs(11) ; Events\Events_8d19f365-6197-4a09-acdd-9982776ef22c.par
+#BlueLink0 Events`B. Set Throttle to Zero` Step Steer Test with Trailer` , Events`Events_8d19f365-6197-4a09-acdd-9982776ef22c
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This Event waits for the condition when the trailer's roll angle is greater than 12 degrees.
+#
+#When this condition is true, Event B is triggered and the throttle is set to 0.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Step Steer Test with Trailer } A. Check Trailer Roll Angle
+#Library : Events
+#DataSet : A. Check Trailer Roll Angle
+#Category: Step Steer Test with Trailer
+#FileID  : Events_c8c5a753-9ce2-49e0-a42a-9ee06841209c
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

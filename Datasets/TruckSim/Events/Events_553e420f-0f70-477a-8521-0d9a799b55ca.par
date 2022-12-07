@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Events`A. Idle`Accel. then Brake
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t_stamp
+*VALUE1 4
+MAKE_EVENT t_stamp > 4 ; Events\Events_6bfe5645-da98-4a01-87de-efe991938f83.par
+#BlueLink0 Events`B. Launch` Accel. then Brake` , Events`Events_6bfe5645-da98-4a01-87de-efe991938f83
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Wait until the absolute time reaches 4 sec, then load the next Event dataset .
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Accel. then Brake } A. Idle
+#Library : Events
+#DataSet : A. Idle
+#Category: Accel. then Brake
+#FileID  : Events_553e420f-0f70-477a-8521-0d9a799b55ca
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

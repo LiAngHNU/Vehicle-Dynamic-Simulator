@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Events`C. Increment Collision counter`ADAS Sensor Collision Recorder
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 ==
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Collision_Contact
+*VALUE1 0
+#MiscYellow0
+iter = iter + 1
+#ENDMYellow
+
+MAKE_EVENT Collision_Contact == 0 ; Events\Events_9087a2de-7a90-4736-a5dc-5a335a4a5a16.par
+#BlueLink0 Events`B. Check Collision status` ADAS Sensor Collision Recorder` , Events`Events_9087a2de-7a90-4736-a5dc-5a335a4a5a16
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Third Event as part of the Collision Detection example.
+#
+#This Event has three purposes:
+#* Increment the Collision counter
+#* Reset the Event-based Collision status
+#* Return to Event B to check for the next Collision
+#
+#This is required to ensure we only increment the counter once per detected Collision. Without this, the counter would increment once per time-step as long as the Collision condition remained true.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ADAS Sensor Collision Recorder } C. Increment Collision counter
+#Library : Events
+#DataSet : C. Increment Collision counter
+#Category: ADAS Sensor Collision Recorder
+#FileID  : Events_216fe460-2ba2-4134-bbeb-5e393e8a6707
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

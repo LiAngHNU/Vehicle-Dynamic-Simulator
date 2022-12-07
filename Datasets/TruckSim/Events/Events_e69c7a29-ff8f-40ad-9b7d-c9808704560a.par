@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Events`E. Turn and Reverse`Trailer Reversing into Loading Dock
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 1
+#RingCtrl12 1
+*NAME1 Art_H
+*VALUE1 -61
+*SPEED -6
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Event: E. Turn and Reverse
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+SPEED_ID_SC = SPEED_TARGET_ID
+OPT_SC_ENGINE_BRAKING 0
+SPEED_TARGET_CONSTANT -6
+#MiscYellow0
+tstart_steer t
+#ENDMYellow
+
+PARSFILE Control\Steer\StrSW_fa2114d0-d273-4b80-bcd7-831063ce8fa7.par
+#BlueLink10 Control: Steering (Open Loop)`Ramp: 0 to -180 deg. in 1 sec.` Ramp` , Miscellaneous`StrSW_fa2114d0-d273-4b80-bcd7-831063ce8fa7
+
+MAKE_EVENT Art_H < -61 ; Events\Events_165a0a5d-1807-4809-ab45-6841266ac43b.par
+#BlueLink0 Events`F. Opposite Steer` Trailer Reversing into Loading Dock` , Events`Events_165a0a5d-1807-4809-ab45-6841266ac43b
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Maintain a constant -5 km/h and begin steering.  When the hitch reaches -60 deg., the next event is triggered.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Trailer Reversing into Loading Dock } E. Turn and Reverse
+#Library : Events
+#DataSet : E. Turn and Reverse
+#Category: Trailer Reversing into Loading Dock
+#FileID  : Events_e69c7a29-ff8f-40ad-9b7d-c9808704560a
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Events`End Design Load Run`K & C Testing
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl10 1
+#RingCtrl11 4
+*VALUE1 (err_l1<h_tol)&(err_r1<h_tol)&(err_l2<h_tol)&(err_r2<h_tol)
+DEFINE_EVENT (err_l1<h_tol)&(err_r1<h_tol)&(err_l2<h_tol)&(err_r2<h_tol) ; Events\Events_18b174b8-3bca-4522-995d-cb8c24b1f200.par
+#BlueLink0 Events`Delete EQ's and End` K & C Testing` , Events`Events_18b174b8-3bca-4522-995d-cb8c24b1f200
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { K & C Testing } End Design Load Run
+#Library : Events
+#DataSet : End Design Load Run
+#Category: K & C Testing
+#FileID  : Events_1f85239c-a586-45a4-9a80-6354bfda1501
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

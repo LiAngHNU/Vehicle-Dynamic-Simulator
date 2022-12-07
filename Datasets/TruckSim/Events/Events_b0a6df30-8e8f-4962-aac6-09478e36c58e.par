@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Events`Apply AEB`ADAS Detection
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 1    
+
+#RingCtrl0 ZERO ==
+#RingCtrl10 1
+#RingCtrl11 4
+IVEHICLE 1
+*VALUE1 ApplyAEB
+*SET_EVENT_ID IVEHICLE
+SET_EVENT_ID IVEHICLE
+#MiscYellow0
+OPT_SC = 5
+ACCEL_KP_SC 5
+#ENDMYellow
+
+DEFINE_EVENT ~(ApplyAEB) ; Events\Events_e8436edd-78c1-4e51-a245-37c95f045a08.par
+#BlueLink0 Events`Look for AEB` ADAS Detection` , Events`Events_e8436edd-78c1-4e51-a245-37c95f045a08
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Apply braking by using acceleration control (OPT_SC = 5). Make a pending Event to turn off braking.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ADAS Detection } Apply AEB
+#Library : Events
+#DataSet : Apply AEB
+#Category: ADAS Detection
+#FileID  : Events_b0a6df30-8e8f-4962-aac6-09478e36c58e
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

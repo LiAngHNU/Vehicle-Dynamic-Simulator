@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Events`Stop Due to Lateral Acceleration Error`Stop Conditions
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl10 0
+#RingCtrl11 4
+*NAME1 Vx_Tolerance
+*NAME2 Lat_Veh
+*VALUE1 abs(Vx_Err)
+*VALUE2 -0.5
+#MiscYellow0
+stop_run_now  due to lateral acceleration error
+#ENDMYellow
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Stop, and write message in log file.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Stop Conditions } Stop Due to Lateral Acceleration Error
+#Library : Events
+#DataSet : Stop Due to Lateral Acceleration Error
+#Category: Stop Conditions
+#FileID  : Events_6b337dcc-dfd9-44fd-94b2-6fae7ff1ff11
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

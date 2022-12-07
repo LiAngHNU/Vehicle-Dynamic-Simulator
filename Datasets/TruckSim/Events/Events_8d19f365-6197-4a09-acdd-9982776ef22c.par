@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Events`B. Set Throttle to Zero`Step Steer Test with Trailer
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 t_event
+*VALUE1 5
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+TSTART_T_EVENT = T
+#ENDMYellow
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+MAKE_EVENT t_event > 5 ; Events\Events_9db8b8dc-c9e8-4531-b904-4628b92e0bec.par
+#BlueLink0 Events`C. Return Steering to Zero deg.` Step Steer Test with Trailer` , Events`Events_9db8b8dc-c9e8-4531-b904-4628b92e0bec
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This Event sets the Throttle to 0.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Step Steer Test with Trailer } B. Set Throttle to Zero
+#Library : Events
+#DataSet : B. Set Throttle to Zero
+#Category: Step Steer Test with Trailer
+#FileID  : Events_8d19f365-6197-4a09-acdd-9982776ef22c
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

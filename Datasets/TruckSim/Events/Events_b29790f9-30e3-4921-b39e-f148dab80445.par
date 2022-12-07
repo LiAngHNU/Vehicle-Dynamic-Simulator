@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Events`C. Monitor Rear Vehicle to Return`Automatic Lane Changing
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+DELETE_EVENTS_ID 1001
+*NAME1 GO_RIGHT
+*NAME2 go_left
+*VALUE1 0
+*VALUE2 0
+*SET_EVENT_ID 1001
+SET_EVENT_ID 1001
+MAKE_EVENT GO_RIGHT > 0 ; Events\Events_c95328d0-618e-43ef-b6bf-74d5e70272a6.par
+#BlueLink0 Events`D. Return to Right Lane` Automatic Lane Changing` , Events`Events_c95328d0-618e-43ef-b6bf-74d5e70272a6
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Removed delete_events statement and utilize GROUP ID.
+#
+#This dataset is applied after the vehicle has settled into the left-hand lane. It defines a pending event using the variable GO_RIGHT.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Automatic Lane Changing } C. Monitor Rear Vehicle to Return
+#Library : Events
+#DataSet : C. Monitor Rear Vehicle to Return
+#Category: Automatic Lane Changing
+#FileID  : Events_b29790f9-30e3-4921-b39e-f148dab80445
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

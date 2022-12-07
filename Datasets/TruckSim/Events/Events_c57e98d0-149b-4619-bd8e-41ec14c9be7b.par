@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Events`Check for Clear Path v2`ADAS Detection
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 1    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl10 1
+#RingCtrl11 5
+IVEHICLE 2
+DELETE_EVENTS_ID IVEHICLE
+*VALUE1 t_event2 > 1 & ClearGo2
+*SET_EVENT_ID IVEHICLE
+SET_EVENT_ID IVEHICLE
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+OPT_SC = 0
+OPT_AUTO_RESET_IC 1
+VX_IERR_DEAD_SC 1
+T_Event2_Start = t
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_23a66c97-9f41-408f-936f-da3b3e745d1f.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Constant: 3 MPa` Constant` , Miscellaneous`PbkCon_23a66c97-9f41-408f-936f-da3b3e745d1f
+
+DEFINE_EVENT t_event2 > 1 & ClearGo2 ; Events\Events_5128eb14-e107-4799-a571-83aa41e0e796.par
+#BlueLink0 Events`Continue Driving v2` ADAS Detection` , Events`Events_5128eb14-e107-4799-a571-83aa41e0e796
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Wait for at least 1s and it is clear to go for vehicle #2. Sit with zero throttle, speed control off, and 3 MPa brake control.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ADAS Detection } Check for Clear Path v2
+#Library : Events
+#DataSet : Check for Clear Path v2
+#Category: ADAS Detection
+#FileID  : Events_c57e98d0-149b-4619-bd8e-41ec14c9be7b
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

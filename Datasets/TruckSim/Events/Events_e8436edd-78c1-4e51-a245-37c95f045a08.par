@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Events`Look for AEB`ADAS Detection
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 1    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl10 1
+#RingCtrl11 5
+IVEHICLE 1
+*NAME1 Vxz_Fwd
+*NAME2 AxCrit
+*VALUE1 APPLYAEB
+*VALUE2 .25
+*SET_EVENT_ID IVEHICLE
+SET_EVENT_ID IVEHICLE
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+OPT_SC = 4
+OPT_AUTO_RESET_IC 1
+VX_IERR_DEAD_SC 2
+SPEED_KI = 0.5
+#ENDMYellow
+
+DEFINE_EVENT APPLYAEB ; Events\Events_b0a6df30-8e8f-4962-aac6-09478e36c58e.par
+#BlueLink0 Events`Apply AEB` ADAS Detection` , Events`Events_b0a6df30-8e8f-4962-aac6-09478e36c58e
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#When there is no need for AEB, set the speed controller to path preview (OPT_SC = 4) for vehicle #1 and make pending Event to look for a need to ApplyAEB.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ADAS Detection } Look for AEB
+#Library : Events
+#DataSet : Look for AEB
+#Category: ADAS Detection
+#FileID  : Events_e8436edd-78c1-4e51-a245-37c95f045a08
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

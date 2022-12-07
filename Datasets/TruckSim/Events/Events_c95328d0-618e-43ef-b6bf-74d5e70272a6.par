@@ -1,0 +1,61 @@
+PARSFILE
+#FullDataName Events`D. Return to Right Lane`Automatic Lane Changing
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+#CheckBox10 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 2
+DELETE_EVENTS_ID 1000
+*NAME1 GO_LEFT
+*NAME2 go_left
+*VALUE1 0
+*VALUE2 0
+*SPEED 120
+*SET_EVENT_ID 1000
+SET_EVENT_ID 1000
+OPT_SC 2
+PARSFILE Control\Speed_t\SpdTime_9d1f87d0-cc25-41e4-bf05-6f9a8a464600.par
+#BlueLink16 Control: Speed (Closed Loop) Using Target Speed`Constant: 80 km/h` Constant` , Speed link`SpdTime_9d1f87d0-cc25-41e4-bf05-6f9a8a464600
+
+SPEED_ID_SC = SPEED_TARGET_ID
+PARSFILE Control\Driver\StrDM_83a73e1f-88b6-4a36-810b-d9b7b000d44a.par
+#BlueLink10 Control: Steering by the Closed-loop Driver Model`Go to Right 1 m, dS = 2 m` Lane Changes` , Miscellaneous`StrDM_83a73e1f-88b6-4a36-810b-d9b7b000d44a
+
+#MiscYellow1
+LTARG_GAIN 2.25
+sstart_ltarg station + vx/2
+sscale_ltarg vx
+#ENDMYellow
+
+MAKE_EVENT GO_LEFT > 0 ; Events\Events_555b190b-9d82-4098-a778-3946cf683f14.par
+#BlueLink0 Events`B. Accelerate into the Left Lane` Automatic Lane Changing` , Events`Events_555b190b-9d82-4098-a778-3946cf683f14
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Removed delete_events statement and utilize GROUP ID.
+#
+#Added LTARG_GAIN 2.25 variable since LTARG index method has changed in 2018.1.
+#
+#When this event occurs, the vehicle begins a lane change back to the right lane.
+#
+#The target for the path follower is set via the parameter sstart_ltarg to start now, and the distance is scaled to the current speed.
+#
+#The target path ends in the right-hand lane, which is just fine until GO_LEFT is activated again.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Automatic Lane Changing } D. Return to Right Lane
+#Library : Events
+#DataSet : D. Return to Right Lane
+#Category: Automatic Lane Changing
+#FileID  : Events_c95328d0-618e-43ef-b6bf-74d5e70272a6
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END
