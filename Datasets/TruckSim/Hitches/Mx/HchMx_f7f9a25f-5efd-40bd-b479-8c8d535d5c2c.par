@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Hitch: Roll Moment`100 kN-m/deg (1 deg lash)`
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR
+#RadioCtrl0 0    
+
+#DiagramOne0
+MX_HITCH_TABLE LINEAR
+-2, -100000
+-1.5, -50000
+-0.5, -50000
+0.5, 50000
+1.5, 50000
+2, 100000
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Hitch: Roll Moment; 100 kN-m/deg (1 deg lash)
+#Library : Hitch: Roll Moment
+#DataSet : 100 kN-m/deg (1 deg lash)
+#Category: 
+#FileID  : HchMx_f7f9a25f-5efd-40bd-b479-8c8d535d5c2c
+#Product : TruckSim 2020.1
+#VehCode Hitch Mx
+
+END

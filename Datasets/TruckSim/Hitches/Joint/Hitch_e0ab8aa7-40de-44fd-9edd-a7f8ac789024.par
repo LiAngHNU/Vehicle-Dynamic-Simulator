@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Hitch: Joint Assembly`Pintle Hitch`Pintle Hitches
+#CheckBox0 0    
+OPT_ROLL_HITCH 0
+#CheckBox1 0    
+
+PARSFILE Hitches\Mx\HchMx_f36c8b0a-56e5-447a-97b8-244ba359ea88.par
+#BlueLink0 Hitch: Roll Moment`100 kN-m/deg (+/- 30 deg Lash)` ` , Roll Stiffness`HchMx_f36c8b0a-56e5-447a-97b8-244ba359ea88
+
+PARSFILE Hitches\My\HchMy_45741636-2801-495d-90de-5f36779047d0.par
+#BlueLink1 Hitch: Pitch Moment`100 kN-m/deg (180 deg Lash)` ` , Pitch Stiffness`HchMy_45741636-2801-495d-90de-5f36779047d0
+
+PARSFILE Hitches\Mz\HchMz_50b298cc-cb30-46df-b78a-f6edcd587091.par
+#BlueLink2 Hitch: Yaw Moment`100 kN-m/deg (180 deg Lash)` ` , Yaw Stiffness`HchMz_50b298cc-cb30-46df-b78a-f6edcd587091
+
+WRITE_ADD_REFERENCE_FRAME_HITCH
+PARSFILE Animator\STL\Shape_6809c251-8dd3-4b05-b904-52ba9ab6b455.par
+#BlueLink3 Animator: Shape File Link`Hitches: Pintle Hitch` Common Vehicle Assets` , Hitch Shape`Shape_6809c251-8dd3-4b05-b904-52ba9ab6b455
+
+SET_OFFSET_X <<hitch_x>>
+SET_OFFSET_Y <<hitch_y>>
+SET_OFFSET_Z <<hitch_z>>
+
+LOG_ENTRY Used Dataset: Hitch: Joint Assembly; { Pintle Hitches } Pintle Hitch
+#Library : Hitch: Joint Assembly
+#DataSet : Pintle Hitch
+#Category: Pintle Hitches
+#FileID  : Hitch_e0ab8aa7-40de-44fd-9edd-a7f8ac789024
+#Product : TruckSim 2020.1
+#VehCode Hitch
+
+END

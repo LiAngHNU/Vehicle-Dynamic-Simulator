@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Hitch: Joint Assembly`Ball Hitch (SS_SS + SS)`Ball Hitches
+#CheckBox0 0    
+OPT_ROLL_HITCH 0
+#CheckBox1 0    
+
+PARSFILE Hitches\Mx\HchMx_5253a5cd-1fae-4985-93bd-712bd61d27a9.par
+#BlueLink0 Hitch: Roll Moment`100 kN-m/deg (+/- 20 deg Lash)` ` , Roll Stiffness`HchMx_5253a5cd-1fae-4985-93bd-712bd61d27a9
+
+PARSFILE Hitches\My\HchMy_32126cfe-b94e-4398-8c34-3fbe25585754.par
+#BlueLink1 Hitch: Pitch Moment`100 kN-m/deg (-10 to 15 deg Lash)` ` , Pitch Stiffness`HchMy_32126cfe-b94e-4398-8c34-3fbe25585754
+
+PARSFILE Hitches\Mz\HchMz_50b298cc-cb30-46df-b78a-f6edcd587091.par
+#BlueLink2 Hitch: Yaw Moment`100 kN-m/deg (180 deg Lash)` ` , Yaw Stiffness`HchMz_50b298cc-cb30-46df-b78a-f6edcd587091
+
+WRITE_ADD_REFERENCE_FRAME_HITCH
+PARSFILE Animator\STL\Shape_a04e2164-7a01-41bf-872d-8118d95ebc60.par
+#BlueLink3 Animator: Shape File Link`Hitches: Ball Hitch (SS_SS+SS)` Common Vehicle Assets` , Hitch Shape`Shape_a04e2164-7a01-41bf-872d-8118d95ebc60
+
+SET_OFFSET_X <<hitch_x>>
+SET_OFFSET_Y <<hitch_y>>
+SET_OFFSET_Z <<hitch_z>>
+
+LOG_ENTRY Used Dataset: Hitch: Joint Assembly; { Ball Hitches } Ball Hitch (SS_SS + SS)
+#Library : Hitch: Joint Assembly
+#DataSet : Ball Hitch (SS_SS + SS)
+#Category: Ball Hitches
+#FileID  : Hitch_7e709722-a626-46ac-8ffd-d871cc4cdcf4
+#Product : TruckSim 2020.1
+#VehCode Hitch
+
+END

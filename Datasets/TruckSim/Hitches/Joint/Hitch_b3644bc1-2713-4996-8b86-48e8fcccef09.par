@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Hitch: Joint Assembly`5th Wheel for Pickup`5th Wheel Hitches
+#CheckBox0 0    
+OPT_ROLL_HITCH 0
+#CheckBox1 0    
+
+PARSFILE Hitches\Mx\HchMx_f7f9a25f-5efd-40bd-b479-8c8d535d5c2c.par
+#BlueLink0 Hitch: Roll Moment`100 kN-m/deg (1 deg lash)` ` , Roll Stiffness`HchMx_f7f9a25f-5efd-40bd-b479-8c8d535d5c2c
+
+PARSFILE Hitches\My\HchMy_0157f1ef-0440-4b85-83e0-5514a7e36578.par
+#BlueLink1 Hitch: Pitch Moment`100 kN-m/deg (-11 to 7 deg Lash)` ` , Pitch Stiffness`HchMy_0157f1ef-0440-4b85-83e0-5514a7e36578
+
+PARSFILE Hitches\Mz\HchMz_50b298cc-cb30-46df-b78a-f6edcd587091.par
+#BlueLink2 Hitch: Yaw Moment`100 kN-m/deg (180 deg Lash)` ` , Yaw Stiffness`HchMz_50b298cc-cb30-46df-b78a-f6edcd587091
+
+WRITE_ADD_REFERENCE_FRAME_HITCH
+PARSFILE Animator\STL\Shape_78dd93c3-ed90-43de-84c3-51137d4a1a5f.par
+#BlueLink3 Animator: Shape File Link`Hitches: 5th Wheel (Light Duty)` Common Vehicle Assets` , Hitch Shape`Shape_78dd93c3-ed90-43de-84c3-51137d4a1a5f
+
+SET_OFFSET_X <<hitch_x>>
+SET_OFFSET_Y <<hitch_y>>
+SET_OFFSET_Z <<hitch_z>>
+
+LOG_ENTRY Used Dataset: Hitch: Joint Assembly; { 5th Wheel Hitches } 5th Wheel for Pickup
+#Library : Hitch: Joint Assembly
+#DataSet : 5th Wheel for Pickup
+#Category: 5th Wheel Hitches
+#FileID  : Hitch_b3644bc1-2713-4996-8b86-48e8fcccef09
+#Product : TruckSim 2020.1
+#VehCode Hitch
+
+END

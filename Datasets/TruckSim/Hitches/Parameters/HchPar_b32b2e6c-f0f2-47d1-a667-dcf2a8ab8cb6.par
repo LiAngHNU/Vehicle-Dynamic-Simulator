@@ -1,0 +1,72 @@
+PARSFILE
+#FullDataName Hitch: Parameters`Gooseneck`
+#CheckBox0 1    
+#CheckBox1 0    
+OPT_ROLL_HITCH 0
+
+*STIFF_Y 50
+*STIFF_X 50
+*STIFF_Z 50
+HITCH_DMP_Y 5
+HITCH_DMP_X 5
+HITCH_DMP_Z 5
+*STOP_Y 30
+*STOP_X 30
+*STOP_Z 120
+HITCH_FRIC_Y 100
+HITCH_FRIC_X 100
+HITCH_FRIC_Z 100
+BETA_UE_Y 0.1
+BETA_UE_X 0.1
+BETA_UE_Z 0.1
+BETA_LE_Y 0.1
+BETA_LE_X 0.1
+BETA_LE_Z 0.1
+*BUMP_Y 500000
+*BUMP_X 500000
+*BUMP_Z 500000
+*PRELOAD 0
+
+MY_HITCH_TABLE LINEAR
+-31, -501500
+-30, -1500
+30, 1500
+31, 501500
+ENDTABLE
+
+MX_HITCH_TABLE LINEAR
+-31, -501500
+-30, -1500
+30, 1500
+31, 501500
+ENDTABLE
+
+MZ_HITCH_TABLE LINEAR
+-121, -506000
+-120, -6000
+120, 6000
+121, 506000
+ENDTABLE
+WRITE_ADD_REFERENCE_FRAME_HITCH
+PARSFILE Animator\STL\Shape_43d730e1-898d-4d95-bbac-de1acd79e1da.par
+#BlueLink0 Animator: Shape File Link`Hitches: Gooseneck` Common Vehicle Assets` , Hitch Shape`Shape_43d730e1-898d-4d95-bbac-de1acd79e1da
+
+SET_OFFSET_X <<hitch_x>>
+SET_OFFSET_Y <<hitch_y>>
+SET_OFFSET_Z <<hitch_z>>
+
+#EMBEDDED_NOTES
+#This screen offers an alternative way of describing hitch properties, and includes damping and friction.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Hitch: Parameters; Gooseneck
+#Library : Hitch: Parameters
+#DataSet : Gooseneck
+#Category: 
+#FileID  : HchPar_b32b2e6c-f0f2-47d1-a667-dcf2a8ab8cb6
+#Product : TruckSim 2020.1
+#VehCode Hitch Parameters
+
+END
