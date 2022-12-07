@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Generic VS Commands`Setup for Steady-State Circle Series`Setup Events
+#VehCode Setup Events
+
+#MiscYellow0
+DEFINE_PARAMETER STR_ACK = 0; deg; Ackermann angle for steering wheel
+DEFINE_PARAMETER STR_ACK1 = 0; deg; Ackermann angle for front road wheels
+DEFINE_PARAMETER WRITE_ALL 0 ; - ;  0 - write steady state results, 1 - write everything
+DEFINE_PARAMETER AY_STEP 0.02 ; g ; Step in Ay, used to set new Ay targets
+DEFINE_PARAMETER T_WAIT 12 ; s ; Time to wait for vehicle to settle
+
+DEFINE_OUTPUT SteerRel = Steer_SW - STR_ACK; deg ; Steering wheel rel. to Ackermann
+DEFINE_OUTPUT Steer_F = (Steer_L1 + Steer_R1)/2; deg ; Ave steer of front road wheels
+DEFINE_OUTPUT StrF_Rel = Steer_F - STR_ACK1; deg; Ave str of F. whls rel. to Ackermann
+DEFINE_OUTPUT Ay_Targ 0; g ; Target lateral acceleration
+#ENDMYellow
+
+*MODELCODE Setup Events
+PARSFILE Events\Events_c8854a32-44be-437d-bb82-3f05b6af96df.par
+#BlueLink1 Events`A. Start Steady-State Circle Series` ISO Steady-State Circle Series` , Miscellaneous`Events_c8854a32-44be-437d-bb82-3f05b6af96df
+
+PARSFILE Plot\Setup\Plot_0e04a57f-2fd2-4194-a578-ead188efc99d.par
+#BlueLink3 Plot: Setup`Steering Wheel (Relative) vs. Lat Accel` Steering` , Plot`Plot_0e04a57f-2fd2-4194-a578-ead188efc99d
+
+PARSFILE Plot\Setup\Plot_a17179e9-2f52-4554-8867-6dc51bc954bf.par
+#BlueLink4 Plot: Setup`Steering (Front, Relative) vs. Lat Accel` Steering` , Plot`Plot_a17179e9-2f52-4554-8867-6dc51bc954bf
+
+
+#EMBEDDED_NOTES
+#This dataset defines new variables in support of the steady-state test series. These variables are referenced by VS Events used in the understeer test. They are also plotted agains lateral accleration in the two plot setups linked here.
+#
+#Two parameters are used to plot Ackermann steer: one for the steering wheel angle (STR_ACK) and one for the average of the front wheels at the road (STR_ACK1).
+#
+#Plot setups are linked to show steering relative to the Ackermann references.
+#
+#The bottom of the screen has link to the first VS Event dataset in the series used for these tests.
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Setup Events } Setup for Steady-State Circle Series
+#Library : Generic VS Commands
+#DataSet : Setup for Steady-State Circle Series
+#Category: Setup Events
+#FileID  : GenVS_5cdc6194-e7c9-45c4-88e4-2ce9b304ca41
+#Product : TruckSim 2020.1
+#VehCode Setup Events
+
+END

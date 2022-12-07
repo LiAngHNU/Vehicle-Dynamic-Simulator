@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Generic VS Commands`Speed Control Variables`Miscellaneous Custom Controls
+#VehCode VS Commands
+
+#MiscYellow0
+! 3 new Configurable functions
+define_table Kp_Vx_Tab;
+define_table Ki_Vx_Tab;
+define_table K3_Vx_Tab;
+
+! Variables calculated with the new functions
+define_output Kp_Vx = Kp_Vx_Tab(0,vx_err,1); s/m ; Speed controller KP based on Vx
+define_output Ki_Vx  = Ki_Vx_Tab(0,vx_err,1); 1/m ; Speed controller KI based on Vx
+define_output K3_Vx = K3_Vx_Tab(0,vx_err,1); s3/m3 ; Speed controller K3 based on Vx
+
+! Set the existing parameters to the calculated values every time step
+eq_out speed_kp = Kp_Vx;
+eq_out speed_ki = Ki_Vx;
+eq_out speed_kp3 = K3_Vx;
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_5380e062-8b71-48bc-a004-de612ce946f7.par
+#BlueLink3 Plot: Setup`Speed Controller Gains` Speed Controller` , Plot`Plot_5380e062-8b71-48bc-a004-de612ce946f7
+
+
+#EMBEDDED_NOTES
+#Define three Configurable Functions and three variables calculated with those functions, that are assigned to closed-loop controller coefficients every time step.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Miscellaneous Custom Controls } Speed Control Variables
+#Library : Generic VS Commands
+#DataSet : Speed Control Variables
+#Category: Miscellaneous Custom Controls
+#FileID  : GenVS_bd328d8a-22dd-451d-bf0f-dbaed295483b
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

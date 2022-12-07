@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Generic VS Commands`Euro NCAP: CCRm & CCRs Test Series`ADAS Support
+#VehCode VS Commands
+
+#MiscYellow0
+! vut_start is used to repeat tests with different start speeds
+DEFINE_PARAMETER vut_start = 50; km/h ; Start speed of driven vehicle (VUT)
+EQ_PRE_INIT  SPEED_TARGET_CONSTANT(1) = vut_start; 
+
+!  Contact is defined for a distance of 0.2 m for the closest detection 
+DEFINE_OUTPUT Contact = AND(MagS<<s>>_1, LT(DisS<<s>>_1,0.2)); - ; ...
+  Boolean: contact with EVT
+
+! Crashed variable is only updated with events. Used to manage a test series
+DEFINE_OUTPUT Crashed = 0; - ;  Boolean: crash occured
+#ENDMYellow
+
+PARSFILE Generic\Lists\GenList_b53a229b-196f-4bb4-9af0-d04e5dadcaa8.par
+#BlueLink0 Generic Data Lists`Speedometer (RWD Vehicle)` HUD Indicators` , Miscellaneous`GenList_b53a229b-196f-4bb4-9af0-d04e5dadcaa8
+
+
+#EMBEDDED_NOTES
+#This dataset has a few commands to support a sequence of tests that are managed with Events.
+#
+#These include the parameter vut_start and the output variables Contact and Crashed.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { ADAS Support } Euro NCAP: CCRm & CCRs Test Series
+#Library : Generic VS Commands
+#DataSet : Euro NCAP: CCRm & CCRs Test Series
+#Category: ADAS Support
+#FileID  : GenVS_9c9b333f-2ee7-4cd4-89c2-7e35316c666f
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

@@ -1,0 +1,63 @@
+PARSFILE
+#FullDataName Generic VS Commands`Derived Outputs vs. Alpha`Tire Tester
+#VehCode VS Commands
+
+#MiscYellow0
+! (1) Normalized lateral and longitudinal forces
+define_output mu_y_l1 = if_not_0_then( fz_l1, fy_l1 / fz_l1, 0); units = -;
+set_output_long_name mu_y_l1 Normalized lateral force
+define_output mu_x_l1 = if_not_0_then(fz_l1, fx_l1 / fz_l1, 0); units = -;
+set_output_long_name mu_x_l1 Normalized longitudinal force
+
+! (2) Tangent of slip angle
+define_output slip_l1 = tan(alpha_l1); units = -;
+set_output_long_name slip_l1 Tangent of slip angle
+
+! (3) CTC lateral shift
+define_output y_ctc_l1 = if_not_0_then( fz_l1, mx_l1 / fz_l1, 0); units = mm;
+set_output_long_name y_ctc_l1 CTC lateral shift
+
+! (4) Aligning moment due to Fx and lateral shift of the CTC
+define_output mz_fx_l1 = fx_l1 * y_ctc_l1; units = N-m;
+set_output_long_name mz_fx_l1 Mz due to Fx and CTC lat. shift
+
+! (5) The remaining aligning moment is assumed entirely due to Fy
+define_output mz_fy_l1 = mz_l1 - mz_fx_l1; units = N-m;
+set_output_long_name mz_fy_l1 Aligning moment due to Fy
+
+! (6) The aligning moment due to Fy can be described by  a moment arm (pneumatic trail)
+define_output trail_l1 = if_not_0_then(fy_l1, mz_fy_l1 / fy_l1, 0); units = mm;
+set_output_long_name trail_l1 Pneumatic trail
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_dc8c3b4e-5c2d-4666-98c5-8ebd6f4390a7.par
+#BlueLink3 Plot: Setup`Normalized Lateral Force vs. Alpha` Tire Tester Derived Outputs` , Plot`Plot_dc8c3b4e-5c2d-4666-98c5-8ebd6f4390a7
+
+PARSFILE Plot\Setup\Plot_3e342540-d1fc-410d-90fe-404c47b7139b.par
+#BlueLink4 Plot: Setup`Normalized Longitudinal Force vs. Alpha` Tire Tester Derived Outputs` , Plot`Plot_3e342540-d1fc-410d-90fe-404c47b7139b
+
+PARSFILE Plot\Setup\Plot_4c5e2ef9-2584-4699-b5fe-e99ed6ebfc34.par
+#BlueLink5 Plot: Setup`Tangent of Slip Angle vs. Alpha` Tire Tester Derived Outputs` , Plot`Plot_4c5e2ef9-2584-4699-b5fe-e99ed6ebfc34
+
+PARSFILE Plot\Setup\Plot_a4e8dd1b-2cdc-4a24-a41a-31cbc9b4747a.par
+#BlueLink6 Plot: Setup`Lateral Shift of CTC vs. Alpha` Tire Tester Derived Outputs` , Plot`Plot_a4e8dd1b-2cdc-4a24-a41a-31cbc9b4747a
+
+PARSFILE Plot\Setup\Plot_558e532b-abdf-4fc9-ac49-4cfd94af3dbf.par
+#BlueLink7 Plot: Setup`Mz due to Fx vs. Alpha` Tire Tester Derived Outputs` , Plot`Plot_558e532b-abdf-4fc9-ac49-4cfd94af3dbf
+
+PARSFILE Plot\Setup\Plot_f82b5807-aa53-423f-8c32-eb85de27904a.par
+#BlueLink8 Plot: Setup`Mz: Fy & Pneumatic Trail vs. Alpha` Tire Tester Derived Outputs` , Plot`Plot_f82b5807-aa53-423f-8c32-eb85de27904a
+
+PARSFILE Plot\Setup\Plot_6525a7a7-29ff-4dc1-af55-32c3ee1a3e7b.par
+#BlueLink9 Plot: Setup`Pneumatic Trail vs. Alpha` Tire Tester Derived Outputs` , Plot`Plot_6525a7a7-29ff-4dc1-af55-32c3ee1a3e7b
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Tire Tester } Derived Outputs vs. Alpha
+#Library : Generic VS Commands
+#DataSet : Derived Outputs vs. Alpha
+#Category: Tire Tester
+#FileID  : GenVS_2bfe1811-7442-437c-9bd7-ec1d8d3e60fa
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

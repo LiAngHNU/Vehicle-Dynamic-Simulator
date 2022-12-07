@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Generic VS Commands`Force Euler Angles to Degrees`Alternate Unit Systems
+#VehCode VS Commands
+
+#MiscYellow0
+! Introduce alternate units for degrees to support animation angles (yaw, roll, pitch)
+
+DEFINE_UNITS Degrees  57.2957795
+
+SET_UNITS YAW DEGREES
+SET_UNITS ROLL_E DEGREES
+SET_UNITS PITCH DEGREES
+
+SET_UNITS YAW_L1 DEGREES
+SET_UNITS YAW_L2 DEGREES
+SET_UNITS YAW_R1 DEGREES
+SET_UNITS YAW_R2 DEGREES
+
+SET_UNITS ROLL_L1 DEGREES
+SET_UNITS ROLL_L2 DEGREES
+SET_UNITS ROLL_R1 DEGREES
+SET_UNITS ROLL_R2 DEGREES
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#The animator expects angles to be in degrees and lengths to be in meters. These are the units normally used by the vehicle math models. For example, the keyword "DEG" is used to set the units for most angles in the math model. Normally, "DEG" is written in plots as "deg" with a scale factor of 57.2957795 (relative to the internal angular units of radian).
+#
+#All of the angles with units associated with the symbol "DEG" can reset to other units (e.g., radians). In fact, this is done with the dataset "SI Units" in this library. If no other adjustments are made, then simulation results made with the dataset "SI Units" won't animate properly.
+#
+#This dataset changes the units back to degrees for a few angular variables needed by the animator to view a four-wheeled vehicle. To do this, we introduces a new units symbol "DEGREES" that is independent of the built-in units symbol "DEG". The angular variables of interest are set to "DEGREES"  with the VS Commands here.
+#
+#The angles for the sprung mass are yaw, roll, and pitch. For the wheels, they are yaw, roll, and rotation. Rotation is OK; it has units of "revolution" and the vehicle screens provide the correct scale factor.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Alternate Unit Systems } Force Euler Angles to Degrees
+#Library : Generic VS Commands
+#DataSet : Force Euler Angles to Degrees
+#Category: Alternate Unit Systems
+#FileID  : GenVS_9da8a7e3-4a76-4f67-8cbe-9618b923c2bd
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

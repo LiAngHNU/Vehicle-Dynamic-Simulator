@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Generic VS Commands`VS Commands: Lane Change Commands`VS Commands for Sensors and Traffic
+#VehCode VS Commands
+
+#MiscYellow0
+define_output GO_LEFT;
+define_output GO_RIGHT;
+
+EQ_OUT GO_LEFT = MAGS1_1 & (ABS(BRLS1_1) < 5/DR) & (DISS1_1 < 18) & ~GO_RIGHT;
+EQ_OUT GO_RIGHT = MAGS2_1 & (DISS2_1 > 10) & (ABS(BRLS2_1) > 5/DR) & ~GO_LEFT;
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#This dataset defines two new variables for triggering lane changes based on sensor signals.
+#
+#The logic is extremely simple and is intended to demonstrate the use of VS Commands to help define scenarios. (It is not based on known controller logic, and for example use only.)
+#
+#GO_LEFT is non-zero if the closest object seen with sensor #1 is less than 18 meters in distance with a left-edge bearing angle magnitude less than 5-degrees.
+#
+#GO_RIGHT is non-zero if these conditions are true:
+#1. the rear sensor has a signal for the closest object, and
+#2. the object is more than 10 m distance, and
+#3. the left edge of the object is more than 5-deg (in magnitude) to the left, and
+#4. the GO_LEFT variable is zero (false).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { VS Commands for Sensors and Traffic } VS Commands: Lane Change Commands
+#Library : Generic VS Commands
+#DataSet : VS Commands: Lane Change Commands
+#Category: VS Commands for Sensors and Traffic
+#FileID  : GenVS_a7b57426-35a2-490a-a48e-7ef73d17470e
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

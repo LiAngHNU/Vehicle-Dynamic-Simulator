@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Generic Data Group`Flat Surface, Mu = 1`PBS Tests
+#VehCode Generic Group
+#MiscYellow0
+! The first link goes to a road, to access the
+! automatically generated animator shapes
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_1d628bf6-d343-4b53-aab3-6c447711f700.par
+#BlueLink0 Road: 3D Surface (All Properties)`1 km Square, Mu = 0.85` Flat Test Pads` , Link 1`Road_1d628bf6-d343-4b53-aab3-6c447711f700
+
+
+#MiscYellow1
+! Set the road coefficient of friction to 1.0
+MU_ROAD_CONSTANT 1.0
+#ENDMYellow
+
+
+
+
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#There must be at least one road defined as part of the initialization
+#
+#In previous releases of TruckSim, this example used Opt_Road 0 to replace the road with a flat ground. However, since the support for the Legacy road grid has been dropped, Opt_Road can either be set to 1, or this line can be removed.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { PBS Tests } Flat Surface, Mu = 1
+#Library : Generic Data Group
+#DataSet : Flat Surface, Mu = 1
+#Category: PBS Tests
+#FileID  : GenGrp_c7174d53-d3a6-44c3-8cc3-a9186f053c54
+#Product : TruckSim 2020.1
+#VehCode Generic Group
+
+END

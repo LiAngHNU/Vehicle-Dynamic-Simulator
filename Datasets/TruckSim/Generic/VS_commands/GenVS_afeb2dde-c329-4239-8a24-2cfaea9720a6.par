@@ -1,0 +1,72 @@
+PARSFILE
+#FullDataName Generic VS Commands`Setup for Object Detection`Setup Events
+#VehCode Setup Events
+
+#MiscYellow0
+! Define Object Types for detection
+N_MIN_DETECTIONS 4
+define_output TypeO1 =  TypS<<s>>_1; - ; 
+define_output TypeO2 =  TypS<<s>>_2; - ; 
+define_output TypeO3 =  TypS<<s>>_3; - ; 
+define_output TypeO4 =  TypS<<s>>_4; - ; 
+
+! Determine if detected objects 1-4 for sensor 1 are intersecting with vehicle path; if so, calculate required deceleration
+DEFINE_OUTPUT Ax_Calc1 = (abs(Y_S<<s>>_1+Vy_S<<s>>_1/abs(Vx_S<<S>>_1)*X_S<<s>>_1)<2.5)&(-Y_S<<s>>_1/Vy_S<<s>>_1<-X_S<<S>>_1/Vx_S<<S>>_1+5/Vxz_fwd)*(MagS<<s>>_1*SpdS<<s>>_1^2/(2*(DisS<<s>>_1))); m/s2 ;
+DEFINE_OUTPUT Ax_Calc2 = (abs(Y_S<<s>>_2+Vy_S<<s>>_2/abs(Vx_S<<S>>_2)*X_S<<s>>_2)<2.5)&(-Y_S<<s>>_2/Vy_S<<s>>_2<-X_S<<S>>_2/Vx_S<<S>>_2+5/Vxz_fwd)*(MagS<<s>>_2*SpdS<<s>>_2^2/(2*(DisS<<s>>_2))); m/s2 ;
+DEFINE_OUTPUT Ax_Calc3 = (abs(Y_S<<s>>_3+Vy_S<<s>>_3/abs(Vx_S<<S>>_3)*X_S<<s>>_3)<2.5)&(-Y_S<<s>>_3/Vy_S<<s>>_3<-X_S<<S>>_3/Vx_S<<S>>_3+5/Vxz_fwd)*(MagS<<s>>_3*SpdS<<s>>_3^2/(2*(DisS<<s>>_3))); m/s2 ;
+DEFINE_OUTPUT Ax_Calc4 = (abs(Y_S<<s>>_4+Vy_S<<s>>_4/abs(Vx_S<<S>>_4)*X_S<<s>>_4)<2.5)&(-Y_S<<s>>_4/Vy_S<<s>>_4<-X_S<<S>>_4/Vx_S<<S>>_4+5/Vxz_fwd)*(MagS<<s>>_4*SpdS<<s>>_4^2/(2*(DisS<<s>>_4))); m/s2 ;
+DEFINE_OUTPUT Ax_Calc = Max(Max(Ax_Calc1,Ax_Calc2),Max(Ax_Calc3,Ax_Calc4))
+DEFINE_PARAMETER Ax_Brake = 3;m/s2; Deceleration level to apply brakes
+! Compare Ax_Calc and Ax_Brake
+DEFINE_OUTPUT ApplyAEB = 0; - ;  Boolean: apply brakes
+EQ_OUT ApplyAEB = (Ax_Calc > Ax_Brake)
+
+! Need to remember which dataset has the stopping speed profile
+define_parameter STOP_SPEED_ID =  1 ; - ; ID for target speed dataset when stopping
+define_parameter SPEED_TOL = 5; mi/h; Speed tolerance used to start looking at signs again
+
+! Make detection output variable for use in Events  that cannot use the Symbol Stack
+define_output TypeSign = TypS<<s>>_1; - ; Type of closest sign
+define_output SignDist=   DisS<<s>>_1; m; Distance from sensor to sign
+define_output ObjDist=   IF(Ax_Calc == Ax_Calc1, DisS<<s>>_1,0)+IF(Ax_Calc == Ax_Calc2, DisS<<s>>_2,0)+IF(Ax_Calc == Ax_Calc3, DisS<<s>>_3,0)+IF(Ax_Calc == Ax_Calc4, DisS<<s>>_4,0) ; m; Distance from sensor to AEB collision object
+define_output StopDist=  3.5; m;Distance from sign to stop point
+define_output SpdLimit=  MsgS<<s>>_1;mi/h;Speed limit from sign
+define_output ObjDtct = ((TypeO1>200)&(Ax_Calc1>Ax_Brake))|((TypeO2>200)&(Ax_Calc2>Ax_Brake))|((TypeO3>200)&(Ax_Calc3>Ax_Brake))|((TypeO4>200)&(Ax_Calc4>Ax_Brake))
+!TypeO1 ==pedestrian|TypeO1==vehicle|TypeO2 ==pedestrian|TypeO2==vehicle|TypeO3 ==pedestrian|TypeO3==vehicle|TypeO4 ==pedestrian|TypeO4==vehicle)
+
+define_parameter SIGN_DETECT = 100; -; Event Group ID for handling signs
+
+! Define variables for use in Check for Clear Path logic
+define_output clear1 
+eq_in clear1 (TypeO1 ~= pedestrian & TypeO1 ~= vehicle & TypeSign ~= light_red)|(DisS<<s>>_1 >45)|(DisS<<s>>_1 <0)|(Ax_Calc1<.001))
+define_output clear2 
+eq_in clear2 (TypeO2 ~= pedestrian & TypeO2 ~= vehicle & TypeSign ~= light_red)|(DisS<<s>>_2 >45)|(DisS<<s>>_2 <0)|(Ax_Calc2<.001))
+define_output clear3 
+eq_in clear3 (TypeO3 ~= pedestrian & TypeO3 ~= vehicle & TypeSign ~= light_red)|(DisS<<s>>_3 >45)|(DisS<<s>>_3 <0)|(Ax_Calc3<.001))
+define_output clear4 
+eq_in clear4 (TypeO4 ~= pedestrian & TypeO4 ~= vehicle & TypeSign ~= light_red)|(DisS<<s>>_4 >45)|(DisS<<s>>_4 <0)|(Ax_Calc4<.001))
+#ENDMYellow
+
+*MODELCODE Setup Events
+PARSFILE Events\Events_329ea6b1-ee99-4d5b-9b69-b5ef4dbe9d34.par
+#BlueLink1 Events`Look for Objects` ADAS Detection` , Miscellaneous`Events_329ea6b1-ee99-4d5b-9b69-b5ef4dbe9d34
+
+PARSFILE Plot\Setup\Plot_d74e246f-688c-4f35-8d51-9263d7ca7d70.par
+#BlueLink3 Plot: Setup`Ax_Calc for AEB` ADAS and AEB Alerts and Commands` , Plot`Plot_d74e246f-688c-4f35-8d51-9263d7ca7d70
+
+
+#EMBEDDED_NOTES
+#Add parameters and a target speed table to support braking when a stop sign is detected. Calculate AEB logic to avoid collisions.
+#
+#Begin a chain of events involving detection of traffic signs and objects.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Setup Events } Setup for Object Detection
+#Library : Generic VS Commands
+#DataSet : Setup for Object Detection
+#Category: Setup Events
+#FileID  : GenVS_afeb2dde-c329-4239-8a24-2cfaea9720a6
+#Product : TruckSim 2020.1
+#VehCode Setup Events
+
+END

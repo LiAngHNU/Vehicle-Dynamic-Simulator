@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Generic Group of Links`DRW Pickup, No PT, Fwd Sensor`Multiple Vehicles
+#VehCode i_s
+PARSFILE Vehicles\Lead_2a\Lead2a_c8797c18-2bda-44f2-bc90-4fc7a080af04.par
+#BlueLink0 Vehicle: Lead Unit with 2 Axles`Pickup, Reg. Cab DRW, no PT` Pickup Trucks` , Miscellaneous`Lead2a_c8797c18-2bda-44f2-bc90-4fc7a080af04
+
+PARSFILE Procedures\Proc_b1dbf624-9d33-49c9-aef1-1297e9719f19.par
+#BlueLink1 Procedures`Control w/ path preview` Multi-Vehicle` , Miscellaneous`Proc_b1dbf624-9d33-49c9-aef1-1297e9719f19
+
+PARSFILE Sensors_Traffic\Radar\Radar_5a1d0511-08d1-44c5-81cf-f328d26a1743.par
+#BlueLink2 ADAS Sensors for Range and Tracking`Forward Radar` Forward Facing Sensors: FCW and ACC` , Miscellaneous`Radar_5a1d0511-08d1-44c5-81cf-f328d26a1743
+
+PARSFILE Sensors_Traffic\Targets\Target_5822eee4-7ca3-4253-bf55-c9be2085ac81.par
+#BlueLink3 Single Moving Object (Custom)`IUNIT_OBJ` Multi-Vehicle` , Miscellaneous`Target_5822eee4-7ca3-4253-bf55-c9be2085ac81
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55.par
+#BlueLink4 Multiple Moving Objects`1 Driver Preview Point, Set by DM` Points of Interest` , Miscellaneous`TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55
+
+PARSFILE Generic\VS_commands\GenVS_9fab14dd-162e-453c-92eb-712f824eacc9.par
+#BlueLink6 Generic VS Commands`FCW Booeans & Alert` ADAS Support` , Miscellaneous`GenVS_9fab14dd-162e-453c-92eb-712f824eacc9
+
+#MiscYellow0
+opt_direction 1
+speed_ki 0.1 ! override integral control
+#ENDMYellow
+
+PARSFILE Generic\VS_commands\GenVS_25552e35-ee24-4b20-9385-7bb60549cf67.par
+#BlueLink11 Generic VS Commands`AEB: Sensor Booleans & Pbk_Con` ADAS Support` , Miscellaneous`GenVS_25552e35-ee24-4b20-9385-7bb60549cf67
+
+PARSFILE Roads\BuilderSegment\RoadSeg_c72116c2-3fad-4c32-93c7-0895d6f5156f.par
+#BlueLink12 Path: Segment Builder`South Entrance, 3d Exit, 1021` Roundabout, D = 36 m` , Miscellaneous`RoadSeg_c72116c2-3fad-4c32-93c7-0895d6f5156f
+
+#MiscYellow2
+current_road_id 1001
+sstart -15
+tstop 20
+#ENDMYellow
+
+*MODELCODE i_s
+
+#EMBEDDED_NOTES
+#Setup for a vehicle in a multi-vehicle scenario.
+#
+#Current versions requires minimal powertrain.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Group of Links; { Multiple Vehicles } DRW Pickup, No PT, Fwd Sensor
+#Library : Generic Group of Links
+#DataSet : DRW Pickup, No PT, Fwd Sensor
+#Category: Multiple Vehicles
+#FileID  : GenLink_585a025d-9c5d-4cc8-8801-3e06d243e167
+#Product : TruckSim 2020.1
+#VehCode i_s
+
+END

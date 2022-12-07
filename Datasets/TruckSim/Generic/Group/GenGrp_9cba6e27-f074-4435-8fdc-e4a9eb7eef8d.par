@@ -1,0 +1,74 @@
+PARSFILE
+#FullDataName Generic Data Group`* Traffic Vehicles at Light`ADAS: Traffic Scenarios
+#VehCode Generic Group
+PARSFILE Control\Speed_t\SpdTime_183b1861-81e5-4c7f-8363-e2df0c36221a.par
+#BlueLink0 Control: Speed (Closed Loop) Using Target Speed`* Intersection SLOW_TRAFFIC` Speed vs. Station` , Link 1`SpdTime_183b1861-81e5-4c7f-8363-e2df0c36221a
+
+
+#MiscYellow1
+define_parameter S_GO_LIGHT = -50;m; ...
+  Station to commit if light is green
+#ENDMYellow
+
+PARSFILE Control\Speed_t\SpdTime_9e2a7044-d8fd-43fd-9bd9-45592aca138d.par
+#BlueLink1 Control: Speed (Closed Loop) Using Target Speed`Intersection STOP_TRAFFIC` Speed vs. Station` , Link 2`SpdTime_9e2a7044-d8fd-43fd-9bd9-45592aca138d
+
+
+#MiscYellow2
+SSTART_SPEED_TARGET -16 ! where to stop
+#ENDMYellow
+
+
+#MiscYellow3
+symbol_push <<sstart>> -150
+! The road and path going N to S is 1013
+set_ipath_for_id 1013
+set_iroad_for_id 1013
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_0960fc78-0345-441c-9059-22a40c8a4e90.par
+#BlueLink3 Multiple Moving Objects`Sedan Leading Caravan` Traffic Vehicles (Misc)` , Link 4`TMotion_0960fc78-0345-441c-9059-22a40c8a4e90
+
+
+#MiscYellow4
+define_output S_TV1 = S_Obj_<<o>>;m; ...
+  Station for TV1
+define_parameter ITV1 = IOBJECT;-;...
+  Event Group ID for TV1
+define_output Vel_TV1 = V_Obj_<<o>>;...
+  km/h;  Speed for TV1
+#ENDMYellow
+
+PARSFILE Events\Events_e54a0ed6-1798-479f-94a5-058262c63a88.par
+#BlueLink4 Events`Set Exit Strategy` Traffic Vehicle and Traffic LIght` , Link 5`Events_e54a0ed6-1798-479f-94a5-058262c63a88
+
+
+#MiscYellow5
+define_output TrfSgClr = LightNS; -; ...
+  Light color for the signal of interest to this object
+#ENDMYellow
+
+PARSFILE Events\Events_c0129263-c16e-459b-9af0-12ed53e9db6d.par
+#BlueLink5 Events`Traffic Vehicle 1 (TV1) Green Light` Traffic Vehicle and Traffic LIght` , Link 6`Events_c0129263-c16e-459b-9af0-12ed53e9db6d
+
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_311eb624-0be3-4019-adc8-006adb1c9493.par
+#BlueLink6 Multiple Moving Objects`3 Vehicles in Caravan` Traffic Vehicles (Forward)` , Link 7`TMotion_311eb624-0be3-4019-adc8-006adb1c9493
+
+
+
+
+
+#EMBEDDED_NOTES
+#After 2019.0: adjusted target speed to slow traffic, adjusted stop location (SSTART_SPEED_TARGET).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { ADAS: Traffic Scenarios } * Traffic Vehicles at Light
+#Library : Generic Data Group
+#DataSet : * Traffic Vehicles at Light
+#Category: ADAS: Traffic Scenarios
+#FileID  : GenGrp_9cba6e27-f074-4435-8fdc-e4a9eb7eef8d
+#Product : TruckSim 2020.1
+#VehCode Generic Group
+
+END

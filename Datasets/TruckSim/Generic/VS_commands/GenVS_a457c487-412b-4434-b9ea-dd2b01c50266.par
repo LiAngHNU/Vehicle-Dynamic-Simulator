@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Generic VS Commands`Euro NCAP: Sensor Booleans`ADAS Support
+#VehCode VS Commands, AEB
+
+#MiscYellow0
+! Units for acceleration are m/s^2 to match Euro NCAP specifications
+DEFINE_PARAMETER Ax_Brake = 4 ; m/s2; Deceleration level to apply brakes
+
+! Compare Ax_Calc and Ax_Brake
+DEFINE_OUTPUT ApplyAEB = 0; - ;  Boolean: apply brakes
+EQ_OUT ApplyAEB = AND(MagS<<s>>_1,  AND(LT(SpdS<<s>>_1, 0), GT(Ax_Calc, Ax_Brake)))
+#ENDMYellow
+
+*MODELCODE VS Commands, AEB
+
+#EMBEDDED_NOTES
+#Logic to generate a command to intervene to prevent a collision.
+#
+#The output Ax_Calc was calculated in the VS Command dataset to set the Show_FCW variable. It is reused here to calculate the value for another Boolean variable ApplyAEB that is 1 when the brakes should be applied via AEB.
+#
+#The actions taken when ApplyAEB is nonzero are defined in VS Events and depend of the type of test.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { ADAS Support } Euro NCAP: Sensor Booleans
+#Library : Generic VS Commands
+#DataSet : Euro NCAP: Sensor Booleans
+#Category: ADAS Support
+#FileID  : GenVS_a457c487-412b-4434-b9ea-dd2b01c50266
+#Product : TruckSim 2020.1
+#VehCode VS Commands, AEB
+
+END

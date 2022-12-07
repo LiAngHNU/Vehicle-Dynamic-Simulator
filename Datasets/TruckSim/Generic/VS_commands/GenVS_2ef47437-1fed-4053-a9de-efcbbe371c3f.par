@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Generic VS Commands`Mcity: FCW Booleans and HUD Alert`Mcity
+#VehCode VS Commands
+
+#MiscYellow0
+! Units for acceleration are m/s2 to match Euro NCAP specifications
+DEFINE_PARAMETER Ax_Alert = 3 ;m/s2; Deceleration level to show FCW alert
+
+! Ax_Calc is needed for avoid collision, given relative speed and distance from sensor
+DEFINE_OUTPUT Ax_Calc = MagS<<s>>_1*SpdS<<s>>_1^2/(2*DisS<<s>>_1); m/s2 ; ...
+   Decel needed to avoid collision
+
+! Compare Ax_Calc and Ax_Alert
+DEFINE_OUTPUT Show_FCW = 0; - ;  Boolean: show FCW icon
+EQ_OUT Show_FCW = AND(MagS<<s>>_1,  AND(LT(SpdS<<s>>_1, 0), GT(Ax_Calc, Ax_Alert)))
+#ENDMYellow
+
+PARSFILE Animator\HUD\HUD_bb95272c-4b83-4a10-8334-f8f6097af704.par
+#BlueLink0 Animator: HUD`FCW Alert (small)` Alerts` , Miscellaneous`HUD_bb95272c-4b83-4a10-8334-f8f6097af704
+
+PARSFILE Generic\Links\GenLink_1385abb8-6bdc-4fae-a193-9f24996ada4b.par
+#BlueLink1 Generic Group of Links`EVT, Sensor, FCW and AEB` ADAS: Sensor Groups` , Miscellaneous`GenLink_1385abb8-6bdc-4fae-a193-9f24996ada4b
+
+PARSFILE Plot\Setup\Plot_d74e246f-688c-4f35-8d51-9263d7ca7d70.par
+#BlueLink3 Plot: Setup`Ax_Calc for AEB` ADAS and AEB Alerts and Commands` , Plot`Plot_d74e246f-688c-4f35-8d51-9263d7ca7d70
+
+PARSFILE Plot\Setup\Plot_778dd38b-4a22-4826-bb7f-8b79a095e1f9.par
+#BlueLink4 Plot: Setup`AEB Booleans` ADAS and AEB Alerts and Commands` , Plot`Plot_778dd38b-4a22-4826-bb7f-8b79a095e1f9
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Mcity } Mcity: FCW Booleans and HUD Alert
+#Library : Generic VS Commands
+#DataSet : Mcity: FCW Booleans and HUD Alert
+#Category: Mcity
+#FileID  : GenVS_2ef47437-1fed-4053-a9de-efcbbe371c3f
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

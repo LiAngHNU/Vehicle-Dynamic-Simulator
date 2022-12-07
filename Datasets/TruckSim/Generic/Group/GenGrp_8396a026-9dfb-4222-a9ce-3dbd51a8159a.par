@@ -1,0 +1,59 @@
+PARSFILE
+#FullDataName Generic Data Group`LDW Lane Edges: 0, -3.9, + 3.9`Lane Departure Warning
+#VehCode Generic Group
+#MiscYellow0
+N_LTARG = 4 ! one for the driver, 3 for edges
+iltarg =2
+ltarg_CONSTANT = 0
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_ec26bbd4-7380-444d-9e11-bbee7bba901a.par
+#BlueLink0 Multiple Moving Objects`5 Lane Edge Markers Based On ILTARG` Points of Interest` , Link 1`TMotion_ec26bbd4-7380-444d-9e11-bbee7bba901a
+
+
+#BlueLink1 ` , Link 2` , Link 2` , Link 2`
+
+
+
+#MiscYellow3
+! Edge #3
+iltarg =3
+ltarg_CONSTANT = -3.9
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_ec26bbd4-7380-444d-9e11-bbee7bba901a.par
+#BlueLink3 Multiple Moving Objects`5 Lane Edge Markers Based On ILTARG` Points of Interest` , Link 4`TMotion_ec26bbd4-7380-444d-9e11-bbee7bba901a
+
+
+
+
+#MiscYellow6
+! Edge #4
+iltarg =4
+ltarg_CONSTANT = 3.9
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_ec26bbd4-7380-444d-9e11-bbee7bba901a.par
+#BlueLink6 Multiple Moving Objects`5 Lane Edge Markers Based On ILTARG` Points of Interest` , Link 7`TMotion_ec26bbd4-7380-444d-9e11-bbee7bba901a
+
+
+
+
+
+#EMBEDDED_NOTES
+#Define 15 moving objects located on lane edges.
+#
+#Each edge is define with an LTARG dataset. 1 is for the driver, 2,3,4 are for lane edges.
+#
+#Ther Symbol Stack variable <<n>> is set here to be the current object number <<o>> in support of an equation used in the linked Multiple Objects dataset.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { Lane Departure Warning } LDW Lane Edges: 0, -3.9, + 3.9
+#Library : Generic Data Group
+#DataSet : LDW Lane Edges: 0, -3.9, + 3.9
+#Category: Lane Departure Warning
+#FileID  : GenGrp_8396a026-9dfb-4222-a9ce-3dbd51a8159a
+#Product : TruckSim 2020.1
+#VehCode Generic Group
+
+END

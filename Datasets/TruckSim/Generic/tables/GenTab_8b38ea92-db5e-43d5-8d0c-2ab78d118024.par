@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Generic Table`User STI parameters (TYPARR array)`VS STI
+#RingCtrl0 STEP
+#CheckBox0 0    
+
+#DiagramOne0
+STI_TYPARR_TABLE STEP
+0, 0.51
+1, 980000
+2, 371000
+3, -317800
+4, -82.5
+5, 50360
+6, 0.0556
+7, 0.5556
+8, 0.05
+9, 0.5
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD STI_TYPARR
+*X_LABEL Property number
+*Y_LABEL Property value
+
+
+#EMBEDDED_NOTES
+#This TYPARR array specifies the following six parameters for a simple linear external tire model:
+#
+#0: Free rolling radius (m)
+#1: Vertical stiffness (N/m)
+#2: Logitudinal slip stiffness (N/1)
+#3: Lateral cornering stiffness (N/rad)
+#4: Overturning stiffness (N-m/rad)
+#5: Aligning stiffness (N-m/rad)
+#6: Low speed limit: allow near-static Fx or Fy to avoid drift when stopped on a grade (m/s)
+#7: Minimum Vx used in ODE for lagged slip (m/s)
+#8: Longitudinal relaxation length (m)
+#9: Lateral relaxation length (m)
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Table; { VS STI } User STI parameters (TYPARR array)
+#Library : Generic Table
+#DataSet : User STI parameters (TYPARR array)
+#Category: VS STI
+#FileID  : GenTab_8b38ea92-db5e-43d5-8d0c-2ab78d118024
+#Product : TruckSim 2020.1
+#VehCode table
+
+END

@@ -1,0 +1,135 @@
+PARSFILE
+#FullDataName Generic VS Commands`Roll-Back Check`Hill Hold with Parking Brake
+#VehCode VS Commands
+
+#MiscYellow0
+! Roll-back Check Initiated
+define_variable rb_init = 0;
+! Initial value of variable = 0; 
+! Roll-back Check: Initiated = 1;
+! Roll-back Check: Initiation Complete = 0;
+define_output rbinit = rb_init;
+
+! Roll-back Check: Pass / Fail
+define_variable rb_pf = 0; 
+! Initial value of variable = 0;
+! Pass = 1
+! Fail = -1
+define_output rbpf  = rb_pf;
+
+! Roll-back Check Completed
+define_variable rb_compl = 0;
+! Initial value of variable = 0;
+! Roll-back Check: Completed Successfully = 1;
+! Roll-back Check: Incomplete due to Fail = -1;
+define_output rbcompl = rb_compl;
+
+! Ok to Drive-off
+define_variable driveoff = 0;
+! Initial value of variable = 0; 
+! Ok to Drive-off = 1; 
+! Not ok to Drive-off = -1;
+define_output drvoff = driveoff;
+
+! Roll-back Distance Limit
+define_parameter S_Limit = 5; m
+define_output SLimit = S_Limit; ! New output for plotting
+
+define_parameter S_CURRENT = 0;
+! Station position to be saved and used in check for roll-back
+define_output SCurrent = S_CURRENT; ! New output for plotting
+
+define_parameter rbd_mult = 2.5; 
+! Multiplier used in Roll-back Distance check, below and in Events. 
+! The reference distance is (Station - S_Current).
+! The Event is set up such that S_Limit < -2.5*(Station - S_Current).
+! For example, if (Station - S_Current) = 2 meters and rbd_mult = 2.5, then 2*2.5 = 5 meters. With
+! S_Limit set to 5 m, above, the vehicle will only have to roll back 2 meters before 2*2.5 = 5 meters, 
+! triggering the next Event.
+! Multiplying (Station - S_Current) by rbd_mult, with rbd_mult larger than 1, means the vehicle won't
+! roll back as far before the next Event is triggered.
+
+define_variable Roll_Back_Distance = 0;
+! Initial value of variable = 0;
+eq_in Roll_Back_Distance = (Station - S_Current);
+define_output rb_dist = Roll_Back_Distance;
+define_output rbdmult = rbd_mult*Roll_Back_Distance;
+! These variables are used in the Events as part of the roll-back check. 
+
+
+define_output rbdcheck = if_gt_0_then(rb_init, (Station - S_Current), 0);
+! This output variable is used in a plot and VsV HUD text to show the roll-back distance.
+! When the flag rb_init is set to 1 in an Event, the output variable rbdcheck shows the calculation
+! (Station - S_Current). If the vehicle is rolling back, the value shown will increment, indicating how far
+! back the vehicle has rolled. 
+! Once the roll-back check is completed and the vehicle has not rolled back, the flag rb_init is set back
+! to zero in an Event, and the output rbdcheck returns a value of zero.
+
+
+!----------------------------------------------------------
+
+
+! Parking Brake = pb
+! pb_on is the control signal. 0 = OFF, 1 = FULLY ON
+define_variable pb_on 0; units = -;
+define_output pb_plot = pb_on;
+define_variable p_target 0; units = mpa;
+
+! state variable for brake dynamics
+define_variable p_state 0; units = mpa;
+
+!the max wheel cylinder pressure to be used in the brake event
+define_variable pmax = 7; units = mpa;
+! define_variable pmax = 0; units = mpa;
+
+! time constant for the handbrake
+define_variable tc_pb = 0.06; units = sec;
+
+! calculate pressures
+eq_in p_target = pb_on * pmax;
+eq_differential p_state = (p_target - p_state) / tc_pb;
+
+! assign values to import varibles
+eq_in imp_pbk_l2 = p_state;
+
+! both brakes have same pressure
+eq_in imp_pbk_r2 = imp_pbk_l2;
+
+! import command
+imp_pbk_l2 add 0
+imp_pbk_r2 add 0
+
+
+!-----------------------------------------------
+
+
+! define table to be used for parking brake application
+define_table pb_apply 4
+
+!define table to be used for parking brake release
+define_table pb_release 4
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_8e565f3e-7b71-498c-a50b-db4c89fa0081.par
+#BlueLink3 Plot: Setup`pb_on` Hill Hold with Parking Brake` , Plot`Plot_8e565f3e-7b71-498c-a50b-db4c89fa0081
+
+PARSFILE Plot\Setup\Plot_689cedd3-ce29-47ce-b43d-c53bf64ffcbe.par
+#BlueLink4 Plot: Setup`Roll-Back Check Flags` Hill Hold with Parking Brake` , Plot`Plot_689cedd3-ce29-47ce-b43d-c53bf64ffcbe
+
+PARSFILE Plot\Setup\Plot_b9d27b00-7425-4c3c-b389-15e7c0130338.par
+#BlueLink5 Plot: Setup`Roll-Back Distance` Hill Hold with Parking Brake` , Plot`Plot_b9d27b00-7425-4c3c-b389-15e7c0130338
+
+
+#EMBEDDED_NOTES
+#! Roll-back Check
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Hill Hold with Parking Brake } Roll-Back Check
+#Library : Generic VS Commands
+#DataSet : Roll-Back Check
+#Category: Hill Hold with Parking Brake
+#FileID  : GenVS_dce245b9-bbf9-4c75-805e-bf4b0b3f0e21
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

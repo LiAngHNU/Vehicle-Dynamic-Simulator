@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName Generic Data Group`Traffic: Straight Truck Turn, 4-Way`ADAS: Traffic Scenarios
+#VehCode Generic Group
+#MiscYellow0
+symbol_push <<L>> -2
+symbol_push <<start>> 0
+N_SPEED_TARGET = 2
+symbol_push <<ispeed>> 2
+speed_target_constant(<<ispeed>>) = 80
+#ENDMYellow
+
+PARSFILE Roads\BuilderSegment\RoadSeg_08ba0f79-cc4a-4553-ae31-1adf1e0c58b9.par
+#BlueLink0 Path: Segment Builder`1013: Straight Path South` Straight` , Link 1`RoadSeg_08ba0f79-cc4a-4553-ae31-1adf1e0c58b9
+
+
+#MiscYellow1
+set_ipath_for_id 1013
+set_iroad_for_id 1003
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_47268db4-affd-446c-843d-72e617ced93f.par
+#BlueLink1 Multiple Moving Objects`3 Vehicles, Blue, PATH_ID and ROAD_ID` Traffic Vehicles (Low Speed, Reusable)` , Link 2`TMotion_47268db4-affd-446c-843d-72e617ced93f
+
+
+PARSFILE Control\Speed_t\SpdTime_599d2bf9-cca6-4eaf-a84c-f2f4662ffe91.par
+#BlueLink2 Control: Speed (Closed Loop) Using Target Speed`Intersection (S = 0), Turn` Speed vs. Station` , Link 3`SpdTime_599d2bf9-cca6-4eaf-a84c-f2f4662ffe91
+
+
+#MiscYellow3
+set_ipath_for_id 1002
+set_iroad_for_id 1002
+symbol_set <<ispeed>> 3
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_66af0cc6-42f8-4161-81c9-1b2d49b8ecd6.par
+#BlueLink3 Multiple Moving Objects`3 Vehicles, Red, PATH_ID and ROAD_ID` Traffic Vehicles (Low Speed, Reusable)` , Link 4`TMotion_66af0cc6-42f8-4161-81c9-1b2d49b8ecd6
+
+
+#MiscYellow4
+set_ipath_for_id 1001
+set_iroad_for_id 1001
+symbol_set <<start>> 60
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_b2ea491b-4e6c-41ba-bd52-ffc2ab437780.par
+#BlueLink4 Multiple Moving Objects`3 Vehicles, Black, PATH_ID and ROAD_ID` Traffic Vehicles (Low Speed, Reusable)` , Link 5`TMotion_b2ea491b-4e6c-41ba-bd52-ffc2ab437780
+
+
+#MiscYellow5
+set_ipath_for_id 1003
+set_iroad_for_id 1003
+symbol_set <<start>> -130
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_b2ea491b-4e6c-41ba-bd52-ffc2ab437780.par
+#BlueLink5 Multiple Moving Objects`3 Vehicles, Black, PATH_ID and ROAD_ID` Traffic Vehicles (Low Speed, Reusable)` , Link 6`TMotion_b2ea491b-4e6c-41ba-bd52-ffc2ab437780
+
+
+
+
+#MiscYellow8
+! Restore vehicle initial conditions
+path_id_dm = 1001
+current_road_id = 1001
+#ENDMYellow
+
+
+
+#EMBEDDED_NOTES
+#This dataset adds three groups of traffic vehicles to a simulation. Each linked  dataset for multiple objects specifies that the objects follow the current path (PATH_ID) and road (ROAD_ID), with station values based on a symbol stack variable <<START>>, a lateral position specified with a symbol stack variable <<L>>, and a speed defined with the SPEED_TARGET function using the dataset identifgied with the symbol stack variable <<ISPEED>>.
+#
+#The first group goes at a constant speed of 80 km/h; the other two use a table function that drops the speed in the intersection (near S = 0).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { ADAS: Traffic Scenarios } Traffic: Straight Truck Turn, 4-Way
+#Library : Generic Data Group
+#DataSet : Traffic: Straight Truck Turn, 4-Way
+#Category: ADAS: Traffic Scenarios
+#FileID  : GenGrp_0335de62-1b98-4a18-a69e-30bcb04c7754
+#Product : TruckSim 2020.1
+#VehCode Generic Group
+
+END

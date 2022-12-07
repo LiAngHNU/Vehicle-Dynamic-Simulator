@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Generic Table`Battery charged resistance`Powertrain (HEV)
+#RingCtrl0 CARPET
+#CheckBox0 1    
+
+*3D_XLabel Temperature (C)
+*3D_YLabel State of charged (-)
+*3D_ZLabel Resistance (V2/W)
+
+#DiagramTwo0
+*3D_DATA 2, 11 ! columns x rows
+R_CHRG_BATTERY_CARPET 2D_LINEAR
+0, 0, 25
+0, 0.0235, 0.0235
+0.1, 0.022, 0.022
+0.2, 0.0205, 0.0205
+0.3, 0.0198, 0.0198
+0.4, 0.0198, 0.0198
+0.5, 0.0196, 0.0196
+0.6, 0.0198, 0.0198
+0.7, 0.0197, 0.0197
+0.8, 0.0203, 0.0203
+0.9, 0.0204, 0.0204
+1, 0.0204, 0.0204
+ENDTABLE
+
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD R_CHRG_BATTERY
+*X_LABEL State of charged (-)
+*Y_LABEL Resistance (V2/W)
+*X_LABEL_2 Temperature (C)
+
+
+LOG_ENTRY Used Dataset: Generic Table; { Powertrain (HEV) } Battery charged resistance
+#Library : Generic Table
+#DataSet : Battery charged resistance
+#Category: Powertrain (HEV)
+#FileID  : GenTab_d2c0ba71-dbe2-4e8b-9789-271c0f2d770d
+#Product : TruckSim 2020.1
+#VehCode table
+
+END

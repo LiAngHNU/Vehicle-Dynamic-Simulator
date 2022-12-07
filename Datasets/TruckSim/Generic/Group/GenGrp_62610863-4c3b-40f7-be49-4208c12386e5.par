@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Generic Data Group`Single tires for one axle`Very Large Vehicles
+#VehCode Generic Group
+#MiscYellow0
+iaxle <<axle_per_unit>>
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+write_add_reference_frame_wheel
+l_dual 0
+#ENDMYellow
+
+PARSFILE Tires\Tire\Tire_51969d27-5453-40db-8ccd-07609732c0d1.par
+#BlueLink0 Tire`550 mm Radius` 3000 kg Rating` , Link 1`Tire_51969d27-5453-40db-8ccd-07609732c0d1
+
+
+
+#MiscYellow2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+write_add_reference_frame_wheel
+l_dual 0
+#ENDMYellow
+
+PARSFILE Tires\Tire\Tire_51969d27-5453-40db-8ccd-07609732c0d1.par
+#BlueLink2 Tire`550 mm Radius` 3000 kg Rating` , Link 3`Tire_51969d27-5453-40db-8ccd-07609732c0d1
+
+
+
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#Symbol Stack operations were used here to supply information normally provided by the Tire Group browser screen. Studying a Tire Group sdataset parsfile will assist in understanding this screen.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { Very Large Vehicles } Single tires for one axle
+#Library : Generic Data Group
+#DataSet : Single tires for one axle
+#Category: Very Large Vehicles
+#FileID  : GenGrp_62610863-4c3b-40f7-be49-4208c12386e5
+#Product : TruckSim 2020.1
+#VehCode Generic Group
+
+END

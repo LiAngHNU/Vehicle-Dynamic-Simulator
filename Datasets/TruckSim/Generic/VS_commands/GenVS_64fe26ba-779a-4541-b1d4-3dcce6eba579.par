@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Generic VS Commands`Waypoints and Distances`Hill Hold with Parking Brake
+#VehCode VS Commands
+
+#MiscYellow0
+! Create waypoints
+
+! Orgin of road (X, Y, Z)
+define_parameter wp1_x = 0; m; 
+define_parameter wp1_y = 0; m; 
+define_parameter wp1_z = 0; m; 
+
+! Target location on hill to stop and test handbrake (X, Y, Z)
+define_parameter wp2_x = 76.504; m; 
+define_parameter wp2_y = 0; m;
+define_parameter wp2_z = 5.642; m; 
+
+
+! Monitor the distance to each waypoint
+define_output dist_1 = sqrt((xo - wp1_x)^2 + (yo - wp1_y)^2); m; ! Distance to waypoint 1
+define_output dist_2 = sqrt((xo - wp2_x)^2 + (yo - wp2_y)^2); m; ! Distance to waypoint 2
+
+
+! define a parameter for a threshold distance to trigger an Event
+define_parameter lim = 6.5; m; ! Limit distance used in Events and equations
+
+
+! Variable to note when outside of waypoint areas
+define_output outside 0; -; ! Boolean: > Lim from all waypoints
+eq_in outside gt(dist_1, lim)*gt(dist_2, lim);
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Hill Hold with Parking Brake } Waypoints and Distances
+#Library : Generic VS Commands
+#DataSet : Waypoints and Distances
+#Category: Hill Hold with Parking Brake
+#FileID  : GenVS_64fe26ba-779a-4541-b1d4-3dcce6eba579
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

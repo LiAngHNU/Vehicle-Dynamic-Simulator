@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Generic VS Commands`Acceleration Field (replicate 10% grade)`Acceleration Field Imports
+#VehCode VS Commands
+
+#MiscYellow0
+DEFINE_UNITS % 100
+DEFINE_OUTPUT Grade_Rd = 10;%;Road grade
+DEFINE_OUTPUT Pitch_G = 0;deg;Pitch of gravity vector
+
+! New equations
+EQ_IN Pitch_G = atan(Grade_Rd)
+EQ_IN IMP_AX_FIELD = -g*sin(Pitch_G);
+EQ_IN IMP_AZ_FIELD = g*(1 - cos(Pitch_G));
+
+! Activate imports
+IMPORT IMP_AX_FIELD
+IMPORT IMP_AZ_FIELD
+
+! In case we want to change the grade
+DEFINE_PARAMETER GRADE_INC = 2;%; Increment for a grade increase
+DEFINE_PARAMETER T_WAIT = 20;s; Time allowed to reach target speed at new grade
+DEFINE_PARAMETER V_TOL = 0.1;km/h; Tolerance for speed
+#ENDMYellow
+
+PARSFILE Animator\Frames\Frame_8fb768b4-93bc-41a5-82f5-bbf3beba0ec5.par
+#BlueLink0 Animator: Reference Frame`Vehicle X-Y-Z, Pitch-adjusted Skybox` Tracking: Vehicle` , Miscellaneous`Frame_8fb768b4-93bc-41a5-82f5-bbf3beba0ec5
+
+
+#EMBEDDED_NOTES
+#VS Commands are used to apply Acceleration Fields to the vehicle, simulating it driving up a 10% grade.
+#
+#The new output GRADE_RD has units of percent (internally, dimensionless) and is used to set the grade of the road to be simulated.
+#
+#The arctangent of the grade is a pitch angle Pitch_G that is used to rotate the gravity vector to where it would be if the road had the grade GRADE_RD.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Acceleration Field Imports } Acceleration Field (replicate 10% grade)
+#Library : Generic VS Commands
+#DataSet : Acceleration Field (replicate 10% grade)
+#Category: Acceleration Field Imports
+#FileID  : GenVS_2c7d7ded-6f47-4184-a7f7-4a9f0cf32d76
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

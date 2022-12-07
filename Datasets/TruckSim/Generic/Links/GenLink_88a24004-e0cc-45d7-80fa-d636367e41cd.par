@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Generic Group of Links`Animated Deer`ADAS: Moving Objects, incl. Pedestrians
+#VehCode Animated Deer
+PARSFILE Sensors_Traffic\Targets\Target_cfed43ec-c18c-476b-b203-d68de1b5a0d8.par
+#BlueLink0 Single Moving Object (Custom)`Animated Deer (Idle)` Deer (Crossing)` , Miscellaneous`Target_cfed43ec-c18c-476b-b203-d68de1b5a0d8
+
+PARSFILE Sensors_Traffic\Targets\Target_8bed7d72-cc44-438e-b8d6-396028babb93.par
+#BlueLink1 Single Moving Object (Custom)`Animated Deer (Walking)` Deer (Crossing)` , Miscellaneous`Target_8bed7d72-cc44-438e-b8d6-396028babb93
+
+PARSFILE Sensors_Traffic\Targets\Target_c6442461-111e-45be-ab53-1abb5cc3c236.par
+#BlueLink2 Single Moving Object (Custom)`Animated Deer (Running)` Deer (Crossing)` , Miscellaneous`Target_c6442461-111e-45be-ab53-1abb5cc3c236
+
+#MiscYellow0
+! Reset ego vehicle to first road
+PATH_ID_DM 1
+CURRENT_ROAD_ID 1
+#ENDMYellow
+
+*MODELCODE Animated Deer
+
+#EMBEDDED_NOTES
+#Three deer: one idle, one walking, and one running.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Group of Links; { ADAS: Moving Objects, incl. Pedestrians } Animated Deer
+#Library : Generic Group of Links
+#DataSet : Animated Deer
+#Category: ADAS: Moving Objects, incl. Pedestrians
+#FileID  : GenLink_88a24004-e0cc-45d7-80fa-d636367e41cd
+#Product : TruckSim 2020.1
+#VehCode Animated Deer
+
+END

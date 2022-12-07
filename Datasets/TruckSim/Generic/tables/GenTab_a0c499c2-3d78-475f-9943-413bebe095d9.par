@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Generic Table`Target Distance: PBS Level 2`PBS C3: Target Distance for Acceleration
+#RingCtrl0 LINEAR_FLAT
+#CheckBox0 0    
+
+#MiscYellow0
+IPBS_DISTANCE 2
+#ENDMYellow
+
+#DiagramOne0
+PBS_DISTANCE_TABLE LINEAR_FLAT
+1, 0
+2, 2.2
+3, 3.9
+4, 6
+5, 8.4
+6, 11.1
+7, 14.2
+8, 17.6
+9, 21.4
+10, 25.5
+11, 29.9
+12, 34.6
+13, 39.6
+14, 44.9
+15, 50.5
+16, 56.3
+17, 62.4
+18, 68.8
+19, 75.4
+20, 82.3
+21, 89.4
+22, 96.8
+23, 104.4
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD PBS_DISTANCE
+*X_LABEL Time
+*Y_LABEL Distance
+
+
+LOG_ENTRY Used Dataset: Generic Table; { PBS C3: Target Distance for Acceleration } Target Distance: PBS Level 2
+#Library : Generic Table
+#DataSet : Target Distance: PBS Level 2
+#Category: PBS C3: Target Distance for Acceleration
+#FileID  : GenTab_a0c499c2-3d78-475f-9943-413bebe095d9
+#Product : TruckSim 2020.1
+#VehCode table
+
+END

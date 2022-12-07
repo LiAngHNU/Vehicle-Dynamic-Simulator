@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Generic Group of Links`4-Way Intersection, Articulated Trucks`Roads and Paths
+#VehCode Generic Links
+PARSFILE Roads\3D_Road\Road_b95f2de8-1683-4031-bf0a-e798a5909a40.par
+#BlueLink0 Road: 3D Surface (All Properties)`999: Grass and Intersection, 4-Way` Intersection, 3D Roads with Curbs` , Miscellaneous`Road_b95f2de8-1683-4031-bf0a-e798a5909a40
+
+PARSFILE Roads\3D_Road\Road_d1bb0ab8-c7c9-4f96-b193-ae92f609f1d3.par
+#BlueLink1 Road: 3D Surface (All Properties)`1001: Enter South, Exit East` Intersection, 3D Roads with Curbs` , Miscellaneous`Road_d1bb0ab8-c7c9-4f96-b193-ae92f609f1d3
+
+PARSFILE Roads\3D_Road\Road_feb75f46-7b86-4c12-b498-e1dbb5b454f8.par
+#BlueLink2 Road: 3D Surface (All Properties)`1002: Enter East, Exit North` Intersection, 3D Roads with Curbs` , Miscellaneous`Road_feb75f46-7b86-4c12-b498-e1dbb5b454f8
+
+PARSFILE Roads\3D_Road\Road_1ec968b6-d6b3-438d-aa4c-98fbf7c2614d.par
+#BlueLink3 Road: 3D Surface (All Properties)`1003: Enter North, Exit West` Intersection, 3D Roads with Curbs` , Miscellaneous`Road_1ec968b6-d6b3-438d-aa4c-98fbf7c2614d
+
+PARSFILE Roads\3D_Road\Road_28de5a72-cfd3-4984-be8d-c89caa80ba2c.par
+#BlueLink4 Road: 3D Surface (All Properties)`1004: Enter West, Exit South` Intersection, 3D Roads with Curbs` , Miscellaneous`Road_28de5a72-cfd3-4984-be8d-c89caa80ba2c
+
+PARSFILE Roads\BuilderSegment\RoadSeg_3636e8e7-9855-40f2-93d0-59b444eb31b0.par
+#BlueLink5 Path: Segment Builder`2004: South Entrance, Right Turn, Wide` Crossing with Curbs` , Miscellaneous`RoadSeg_3636e8e7-9855-40f2-93d0-59b444eb31b0
+
+PARSFILE Roads\Boundaries\RdBnd_cb523e83-ec6f-4ecf-99cf-2ffc2e363762.par
+#BlueLink9 Road: Boundaries`South and East Entrances` Crossing with Curbs` , Miscellaneous`RdBnd_cb523e83-ec6f-4ecf-99cf-2ffc2e363762
+
+PARSFILE Roads\Boundaries\RdBnd_e3f78d34-1fb0-4f49-9f40-a03f7d0c119f.par
+#BlueLink10 Road: Boundaries`North and West Entrances` Crossing with Curbs` , Miscellaneous`RdBnd_e3f78d34-1fb0-4f49-9f40-a03f7d0c119f
+
+#MiscYellow1
+path_id_dm = 2004; ! !Path ID 2004 is for articulated trucks
+current_road_id = 1001
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#This example has two-lane roads intersecting, with both passing through the intersection.
+#
+#The network is built from four road datasets. Each represents a single lane (including the adjacent curb). The reference paths are on the left edge of the paths, which is the road centerline.
+#
+#Note that Path ID 2004 is used for articulated trucks. Rather than attempt a constant radius turn at the intersection, the path has the vehicle perform a wider turn to reduce or eliminate the trailer riding up on the inside curb.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Group of Links; { Roads and Paths } 4-Way Intersection, Articulated Trucks
+#Library : Generic Group of Links
+#DataSet : 4-Way Intersection, Articulated Trucks
+#Category: Roads and Paths
+#FileID  : GenLink_c5d0848b-d264-41aa-9cee-10d72ef529a8
+#Product : TruckSim 2020.1
+#VehCode Generic Links
+
+END

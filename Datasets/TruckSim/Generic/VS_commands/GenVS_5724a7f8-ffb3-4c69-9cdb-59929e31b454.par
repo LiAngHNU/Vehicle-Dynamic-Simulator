@@ -1,0 +1,61 @@
+PARSFILE
+#FullDataName Generic VS Commands`Define Transient Response Variables`Miscellaneous Custom Output Variables
+#VehCode VS Commands
+
+#MiscYellow0
+! Test speed in mi/h.
+define_parameter speed_mph = 60; mi/h; Test speed in mi/h
+define_parameter time_out 1000; s; Parameter to end run if something goes wrong
+define_parameter time_settle 5; s; Time to allow vehicle to come to steady state
+
+define_parameter ay_test 0; g's; Lateral acceleration used to obtain steer angle
+define_output str_test 0; deg; Steer angle for the step steer test
+
+! Variables to hold the steady state values
+define_output ss_ay 0; g's; steady state ay
+define_output ss_roll 0; deg; steady state roll
+define_output ss_avz 0; deg/s; steady state yaw
+define_output pass 0; -; Counter for passes through the step steer test
+
+define_parameter level_i 0.5;  -; Fractions of steady state steer defined as initiation time
+define_parameter level_f 0.9; -; 
+
+! Response time is the elapsed time between initiation of steer and completion.
+define_variable t_init 0; s; Variable to hold the steer initiation time
+
+! Capture the steer equivalent initiation time. The equation is a set of nested if_then conditions.
+! First we check to see if the initialization time has already been set.
+! If it hasn't, we check to see that we are on the second of two step steer events.
+! If that is true, we check for the moment that the initialization threshold is reached, and record the time.
+! Note: Each VS command must be on a single line
+eq_out t_init = if_not_0_then(t_init, t_init, if_gt_0_then(pass - 1,...
+   if_gt_0_then(steer_sw - level_i * str_test, t_event, 0), 0));
+
+! Variables to hold the response times
+define_output rt_ay 0; sec; ay response times
+define_output rt_roll 0; sec; roll response times
+define_output rt_avz 0; sec; yaw response times
+
+! Capture the response times. Each equation is a set of nested if_then conditions.
+! First we check to see if the response time for each parameter has already been captured.
+! If it hasn't, we check to see that we are on the second of two step steer events.
+! If that is true, we check for the moment that the parameter reaches its threshold value,
+! and record the time.
+eq_out rt_ay = if_not_0_then(rt_ay, rt_ay, if_gt_0_then(pass - 1, ...
+  if_gt_0_then(ay - level_f * ss_ay, t_event - t_init, 0), 0));
+eq_out rt_roll = if_not_0_then(rt_roll, rt_roll, if_gt_0_then(pass - 1, ...
+  if_gt_0_then(roll - level_f * ss_roll, t_event - t_init, 0), 0));
+eq_out rt_avz = if_not_0_then(rt_avz, rt_avz, if_gt_0_then(pass - 1, ...
+if_gt_0_then(avz - level_f *ss_avz, t_event - t_init, 0), 0));
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Miscellaneous Custom Output Variables } Define Transient Response Variables
+#Library : Generic VS Commands
+#DataSet : Define Transient Response Variables
+#Category: Miscellaneous Custom Output Variables
+#FileID  : GenVS_5724a7f8-ffb3-4c69-9cdb-59929e31b454
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

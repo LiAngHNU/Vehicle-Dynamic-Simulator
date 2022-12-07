@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Generic Data Group`Pedestrians at Intersection`
+#VehCode Detectable Objects
+#MiscYellow0
+define_parameter ped_cross_ID = 4200; -; path ID for pedestrian crossing the street
+define_parameter ped_cut_ID = 4201; -; path ID for pedestrian cutting through the building
+#ENDMYellow
+
+PARSFILE Roads\BuilderSegment\RoadSeg_6dc68a0e-deea-4238-a9ae-ab72432b3a43.par
+#BlueLink0 Path: Segment Builder`4200: Ped. Path: From East crossing North` Crossing with Curbs` , Link 1`RoadSeg_6dc68a0e-deea-4238-a9ae-ab72432b3a43
+
+
+PARSFILE Sensors_Traffic\Targets\Target_22633050-e670-44fb-9f87-501122a6ee68.par
+#BlueLink1 Single Moving Object (Custom)`Woman Crossing Behind Building` Pedestrians Crossing` , Link 2`Target_22633050-e670-44fb-9f87-501122a6ee68
+
+
+
+PARSFILE Roads\BuilderSegment\RoadSeg_39070e00-3470-4b1f-ab70-4f34e6b5aa38.par
+#BlueLink3 Path: Segment Builder`4201: Ped. Path: From East to South` Crossing with Curbs` , Link 4`RoadSeg_39070e00-3470-4b1f-ab70-4f34e6b5aa38
+
+
+PARSFILE Sensors_Traffic\Targets\Target_e15393b8-2eee-4b62-bf3d-fc7ba1830909.par
+#BlueLink4 Single Moving Object (Custom)`Man Moving Under Overhang` Pedestrians Crossing` , Link 5`Target_e15393b8-2eee-4b62-bf3d-fc7ba1830909
+
+
+
+
+
+#MiscYellow8
+! Set Road and Path AFTER all datasets are defined
+path_id_dm = 1001
+current_road_id = 1001
+#ENDMYellow
+
+
+*MODELCODE Detectable Objects
+
+LOG_ENTRY Used Dataset: Generic Data Group; Pedestrians at Intersection
+#Library : Generic Data Group
+#DataSet : Pedestrians at Intersection
+#Category: 
+#FileID  : GenGrp_a98c598d-b72a-4f1c-b379-bdd6f1f8067c
+#Product : TruckSim 2020.1
+#VehCode Detectable Objects
+
+END

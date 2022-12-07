@@ -1,0 +1,70 @@
+PARSFILE
+#FullDataName Generic Data Group`Traffic: Traffic Light`ADAS: Traffic Scenarios
+#VehCode Generic Group
+PARSFILE Control\Speed_t\SpdTime_9ce062a4-7ec1-4ba2-a338-72cb6a0a07fc.par
+#BlueLink0 Control: Speed (Closed Loop) Using Target Speed`Intersection SLOW_TRAFFIC` Speed vs. Station` , Link 1`SpdTime_9ce062a4-7ec1-4ba2-a338-72cb6a0a07fc
+
+
+#MiscYellow1
+define_parameter S_GO_LIGHT = -50;m; ...
+  Station to commit if light is green
+#ENDMYellow
+
+PARSFILE Control\Speed_t\SpdTime_9e2a7044-d8fd-43fd-9bd9-45592aca138d.par
+#BlueLink1 Control: Speed (Closed Loop) Using Target Speed`Intersection STOP_TRAFFIC` Speed vs. Station` , Link 2`SpdTime_9e2a7044-d8fd-43fd-9bd9-45592aca138d
+
+
+#MiscYellow2
+SSTART_SPEED_TARGET -20 ! where to stop
+#ENDMYellow
+
+
+#MiscYellow3
+symbol_push <<sstart>> -150
+! The road and path going N to S is 1013
+set_ipath_for_id 1013
+set_iroad_for_id 1013
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_0960fc78-0345-441c-9059-22a40c8a4e90.par
+#BlueLink3 Multiple Moving Objects`Sedan Leading Caravan` Traffic Vehicles (Misc)` , Link 4`TMotion_0960fc78-0345-441c-9059-22a40c8a4e90
+
+
+#MiscYellow4
+define_output S_TV1 = S_Obj_<<o>>;m; ...
+  Station for TV1
+define_parameter ITV1 = IOBJECT;-;...
+  Event Group ID for TV1
+define_output Vel_TV1 = V_Obj_<<o>>;...
+  km/h;  Speed for TV1
+#ENDMYellow
+
+PARSFILE Events\Events_e54a0ed6-1798-479f-94a5-058262c63a88.par
+#BlueLink4 Events`Set Exit Strategy` Traffic Vehicle and Traffic LIght` , Link 5`Events_e54a0ed6-1798-479f-94a5-058262c63a88
+
+
+#MiscYellow5
+define_output TrfSgClr = LightNS; -; ...
+  Light color for the signal of interest to this object
+#ENDMYellow
+
+PARSFILE Events\Events_c0129263-c16e-459b-9af0-12ed53e9db6d.par
+#BlueLink5 Events`Traffic Vehicle 1 (TV1) Green Light` Traffic Vehicle and Traffic LIght` , Link 6`Events_c0129263-c16e-459b-9af0-12ed53e9db6d
+
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_311eb624-0be3-4019-adc8-006adb1c9493.par
+#BlueLink6 Multiple Moving Objects`3 Vehicles in Caravan` Traffic Vehicles (Forward)` , Link 7`TMotion_311eb624-0be3-4019-adc8-006adb1c9493
+
+
+
+
+
+LOG_ENTRY Used Dataset: Generic Data Group; { ADAS: Traffic Scenarios } Traffic: Traffic Light
+#Library : Generic Data Group
+#DataSet : Traffic: Traffic Light
+#Category: ADAS: Traffic Scenarios
+#FileID  : GenGrp_da5ad181-b722-42d9-958c-148b0b77781d
+#Product : TruckSim 2020.1
+#VehCode Generic Group
+
+END

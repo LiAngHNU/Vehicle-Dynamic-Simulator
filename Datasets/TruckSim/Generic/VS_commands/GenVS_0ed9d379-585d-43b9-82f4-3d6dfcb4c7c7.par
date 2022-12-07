@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Generic VS Commands`Tire Skid Mark Setup`Tire Paths and Road Markings
+#VehCode VS Commands
+
+#MiscYellow0
+! Ghost parameters are for VS Visualizer
+default_ghost off ! disable ghosts for vehicle
+ghost_count 200 ! number of markers
+ghost_period -0.05
+
+! New parameters are for VS Solver
+DEFINE_PARAMETER TireMarkLen = 0.052; m; Length of each tire mark segement
+DEFINE_PARAMETER TireMarkOffset = 0.0;  m;  Minimum allowed darkness of tire marks.
+DEFINE_PARAMETER TireMarkScale = 0.8;  m; Scaling of tire mark darkness
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#Tire skid marks are created using the "ghost" feature in the animator to show repeated images of an object. In this case, the object is a rectangle located at each tire/ground contact point. The object is shown for past times spaced at intervals of 0.05 sec (specified with the animator keyword ghost_period). The number of ghosts is set to 200, to show paths for 10 sec (10 = 0.05 x 200).
+#
+#To avoid seeing up to 200 images of the main vehicle, the default ghosting is disabled. This means that ghost are only shown for objects that are explicitly specified. In this case, the only objects which are repeated are the rectangles used to create the tire skid marks.
+#
+#The darkness of the marks is scaled by two variables added in this dataset (TireMarkOffset and TireMarkScale). The scaling is multiplied by total slip (always less than 1) and tire compression (maximum about 0.06 m = 60 mm).
+#
+#This dataset should be linked before datasets that define wheel paths using datasets from the "Animator: Wheel Arrows and Other Indicators" library.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Tire Paths and Road Markings } Tire Skid Mark Setup
+#Library : Generic VS Commands
+#DataSet : Tire Skid Mark Setup
+#Category: Tire Paths and Road Markings
+#FileID  : GenVS_0ed9d379-585d-43b9-82f4-3d6dfcb4c7c7
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

@@ -1,0 +1,129 @@
+PARSFILE
+#FullDataName Generic VS Commands`VsV HUD Text: Parking Brake Control`Hill Hold with Parking Brake
+#VehCode VS Commands
+
+#MiscYellow0
+!Add Handbrake Control Display
+ANI_pb_plot
+WRT_pb_plot
+ADD_ENTITY hud_text Parking Brake Control Display
+  prefix Parking Brake Engaged
+  value pb_plot
+  precision 3
+  location 22 360 100 18
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  ! min_width_prefix 20
+  color 1 1 1 1
+  outline_color .3 .3 .3 0.5
+  font VeraMono.ttf
+END_ENTITY hud_text Parking Brake Control Display
+
+
+! Add Roll-back Distance Display
+ANI_rbdcheck
+WRT_rbdcheck
+ADD_ENTITY hud_text Roll-Back Distance Display
+prefix Roll-Back Distance
+  value rbdcheck
+  precision 3
+  location 22 340 100 18
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  ! min_width_prefix 20
+  color 1 1 1 1
+  outline_color .3 .3 .3 0.5
+  font VeraMono.ttf
+END_ENTITY hud_text Roll-Back Distance Display
+
+
+ !Add Roll-back Check Display
+ANI_rbinit
+WRT_rbinit
+ADD_ENTITY hud_text Roll-back Check: Initiated Display
+  prefix Roll-back Check: Initiation
+  value rbinit
+  precision 0
+  location 22 320 100 18
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  ! min_width_prefix 20
+  color 1 1 1 1
+  outline_color .3 .3 .3 0.5
+  font VeraMono.ttf
+END_ENTITY hud_text Roll-back Check: Initiated Display
+
+
+!Add Roll-back Check Display
+ANI_rbpf
+WRT_rbpf
+ADD_ENTITY hud_text Roll-back Check: Pass / Fail Display
+  prefix Roll-back Check: Pass / Fail
+  value rbpf
+  precision 0
+  location 22 300 100 18
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  ! min_width_prefix 20
+  color 1 1 1 1
+  outline_color .3 .3 .3 0.5
+  font VeraMono.ttf
+END_ENTITY hud_text Roll-back Check: Pass / Fail Display
+
+
+!Add Roll-back Check Display
+ANI_rbcompl
+WRT_rbcompl
+ADD_ENTITY hud_text Roll-back Check: Completed Display
+  prefix Roll-back Check: Completed
+  value rbcompl
+  precision 0
+  location 22 280 100 18
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  ! min_width_prefix 20
+  color 1 1 1 1
+  outline_color .3 .3 .3 0.5
+  font VeraMono.ttf
+END_ENTITY hud_text Roll-back Check: Completed Display
+
+
+!Add Drive-off Ok / Nok Display
+ANI_drvoff
+WRT_drvoff
+ADD_ENTITY hud_text Drive-off Ok / NOk Display
+  prefix Drive-off: Ok / NOk
+  value drvoff
+  precision 0
+  location 22 260 100 18
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  ! min_width_prefix 20
+  color 1 1 1 1
+  outline_color .3 .3 .3 0.5
+  font VeraMono.ttf
+END_ENTITY hud_text Drive-off Ok / NOk Display
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Hill Hold with Parking Brake } VsV HUD Text: Parking Brake Control
+#Library : Generic VS Commands
+#DataSet : VsV HUD Text: Parking Brake Control
+#Category: Hill Hold with Parking Brake
+#FileID  : GenVS_383ca4d9-0e0d-4cd8-bd35-90e0b2c4dae5
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

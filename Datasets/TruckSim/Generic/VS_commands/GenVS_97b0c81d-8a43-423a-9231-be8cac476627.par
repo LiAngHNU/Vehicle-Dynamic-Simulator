@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Generic VS Commands`Simple ACC with HUD Icon`ADAS Support
+#VehCode ACC and HUD icon
+
+#MiscYellow0
+DEFINE_OUTPUT vel_lead = SpdS<<s>>_1 + vx; km/h
+define_output Distance_ACC = (vel_lead * time_gap) + 10 ; m ; Target following distance for ACC
+
+RANGE_LIMIT_SENSOR = 50
+
+EQ_OUT SPEED_TARGET_GAIN(1) = IF(MagS<<s>>_1 > 0, ...
+    MIN(1, DisS<<s>>_1/Distance_ACC), 1)
+#ENDMYellow
+
+*MODELCODE ACC and HUD icon
+PARSFILE Animator\HUD\HUD_922295fe-d91c-4a55-8178-814ca9b4eb14.par
+#BlueLink0 Animator: HUD`ACC Icon` HUD Groups` , Miscellaneous`HUD_922295fe-d91c-4a55-8178-814ca9b4eb14
+
+PARSFILE Animator\HUD\HUD_739f958a-a5e3-42f3-9057-e5f0eb21ab27.par
+#BlueLink1 Animator: HUD`ACC Bars` ACC - Adaptive Cruise Control` , Miscellaneous`HUD_739f958a-a5e3-42f3-9057-e5f0eb21ab27
+
+
+#EMBEDDED_NOTES
+#The misc. field defines a simple speed controller. The parameter Distance_ACC is the target following distance if there is a vehicle in front.
+#
+#The range of the sensor is set to 50m. Speed control is very simple: the gain for the target speed is reduced if the distance is too close.
+#
+#The ACC HUD icon is a combination of HUD objects that are defined by two datasets.  The first dataset, ACC Icon, displays the base, lead car, active cruise alert, and brakes.  The second dataset, ACC Bars, displays the distance bars which indicate following distance.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { ADAS Support } Simple ACC with HUD Icon
+#Library : Generic VS Commands
+#DataSet : Simple ACC with HUD Icon
+#Category: ADAS Support
+#FileID  : GenVS_97b0c81d-8a43-423a-9231-be8cac476627
+#Product : TruckSim 2020.1
+#VehCode ACC and HUD icon
+
+END

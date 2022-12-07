@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Generic VS Commands`Lift Axle 3`Lift Axle
+#VehCode VS Commands
+
+#MiscYellow0
+! Install equations for axle 3 spring forces, using existing import variables
+eq_in IMP_FS_L3 = -SV_F_LIFT;
+eq_in IMP_FS_R3 = -SV_F_LIFT;
+
+! Activate import variables for spring forces (add them to internal variables)
+IMP_FS_L3 vs_add 0 ! the initial value 0 is only used once
+IMP_FS_R3 vs_add 0
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#Apply a lifter force to the suspension springs on axle 3. SV_F_LIFT is the force.
+#
+#The built-in import variables IMP_FS_L3 and IMP_FS_R3 apply the force to each side of the axle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Lift Axle } Lift Axle 3
+#Library : Generic VS Commands
+#DataSet : Lift Axle 3
+#Category: Lift Axle
+#FileID  : GenVS_20a5f1a5-0c19-4984-891f-22edfff02e0f
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Generic VS Commands`Smoothly Increase Grade to Target`PBS Tests
+#VehCode VS Commands: Startability
+
+#MiscYellow0
+! An equation is applied to the gain for the road elevation to smoothly scale it from zero to
+! the target over the period between T = TSTART and T = 0.
+
+eq_in ROAD_ZS_GAIN(1) = if_gt_0_then(T, 1, COS(T/TSTART * PI) / 2 + 0.5)
+ROAD_ZS_GAIN(1) 0
+define_output RoadZS = ROAD_ZS_GAIN; - ; Gain applied to road elevation
+#ENDMYellow
+
+*MODELCODE VS Commands: Startability
+#BlueLink0 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Plot\Setup\Plot_b1f78eba-9ba2-4893-ae9d-b1fecee6ea37.par
+#BlueLink3 Plot: Setup`RoadZS` PBS (Performance Based Standards)` , Plot`Plot_b1f78eba-9ba2-4893-ae9d-b1fecee6ea37
+
+PARSFILE Plot\Setup\Plot_f0db74be-1c22-43e5-b618-3f3cfa3ae4df.par
+#BlueLink4 Plot: Setup`Slip Ratios (Axles 4 - 5)` Tire Kinematics` , Plot`Plot_f0db74be-1c22-43e5-b618-3f3cfa3ae4df
+
+PARSFILE Plot\Setup\Plot_ce5a1ca9-35e1-4e1d-8da5-056fbe4e3bf7.par
+#BlueLink5 Plot: Setup`Slip Ratios (Axles 6 - 7)` Tire Kinematics` , Plot`Plot_ce5a1ca9-35e1-4e1d-8da5-056fbe4e3bf7
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { PBS Tests } Smoothly Increase Grade to Target
+#Library : Generic VS Commands
+#DataSet : Smoothly Increase Grade to Target
+#Category: PBS Tests
+#FileID  : GenVS_6c8b82f1-1685-40b2-ad4a-f77121828b55
+#Product : TruckSim 2020.1
+#VehCode VS Commands: Startability
+
+END

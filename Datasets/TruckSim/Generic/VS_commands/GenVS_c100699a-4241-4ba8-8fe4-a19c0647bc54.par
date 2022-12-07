@@ -1,0 +1,19 @@
+PARSFILE
+#FullDataName Generic VS Commands`PBS: Lat Tracking Error of Driver Model`PBS Tests
+#VehCode VS Commands
+
+#MiscYellow0
+DEFINE_OUTPUT LatError = Lat_Targ - Lat_Veh; mm ; Lateral tracking error
+#ENDMYellow
+
+*MODELCODE VS Commands
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { PBS Tests } PBS: Lat Tracking Error of Driver Model
+#Library : Generic VS Commands
+#DataSet : PBS: Lat Tracking Error of Driver Model
+#Category: PBS Tests
+#FileID  : GenVS_c100699a-4241-4ba8-8fe4-a19c0647bc54
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

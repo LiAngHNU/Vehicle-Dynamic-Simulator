@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Generic Data Group (More)`Vehicle 1 (Blue), Group`Multiple Vehicles (Running in Group)
+#VehCode S_S
+#MiscYellow0
+SET_RUN_COLOR Blue
+#ENDMYellow
+
+PARSFILE Vehicles\Lead_2a\Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80.par
+#BlueLink0 Vehicle: Lead Unit with 2 Axles`LCF Van` 2A LCF Van` , Link 1`Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80
+
+
+PARSFILE Sensors_Traffic\Radar\Radar_62225666-9afe-44fd-a820-7362f677408f.par
+#BlueLink1 ADAS Sensors for Range and Tracking`160 deg Sensor (Blue)` 160 deg Sensor` , Link 2`Radar_62225666-9afe-44fd-a820-7362f677408f
+
+
+PARSFILE Generic\Links\GenLink_195052a3-4217-4f30-9c92-7070995b06ff.par
+#BlueLink2 Generic Group of Links`Parameters and Functions` ADAS Setups` , Link 3`GenLink_195052a3-4217-4f30-9c92-7070995b06ff
+
+
+PARSFILE Generic\VS_commands\GenVS_906e51c2-9c41-4cb7-9d71-0a69260492ad.par
+#BlueLink3 Generic VS Commands`Setup for Object Detection, Multi` Setup Events` , Link 4`GenVS_906e51c2-9c41-4cb7-9d71-0a69260492ad
+
+
+PARSFILE Sensors_Traffic\Targets\Target_5822eee4-7ca3-4253-bf55-c9be2085ac81.par
+#BlueLink4 Single Moving Object (Custom)`IUNIT_OBJ` Multi-Vehicle` , Link 5`Target_5822eee4-7ca3-4253-bf55-c9be2085ac81
+
+
+
+
+
+
+*MODELCODE S_S
+
+#EMBEDDED_NOTES
+#This is a setup for a vehicle with a sensor  to run with other vehicles. It sets the run color blue before the five blue links that:
+#
+#1. link to a vehicle dataset,
+#2. link to a sensor,
+#3. link to a set of VS Commands that define parameters and functions that apply for all vehicles in the simulation
+#4. link to a set of VS Commands specifici for vehicle #1, and the first Event dataset in a chain that is specific for vehicle #1.
+#5. link to a target object that is attached to the sprung mass, such that vehicle #1 can be detected by other vehicles.
+#
+#Feel free to change the vehicle dataset used with the first link. However, be sure to update the dataset code for this dataset if need to match that of the vehicle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group (More); { Multiple Vehicles (Running in Group) } Vehicle 1 (Blue), Group
+#Library : Generic Data Group (More)
+#DataSet : Vehicle 1 (Blue), Group
+#Category: Multiple Vehicles (Running in Group)
+#FileID  : GenGrpM_2cd7725a-1495-4ace-8a87-283befd2a27c
+#Product : TruckSim 2020.1
+#VehCode S_S
+
+END

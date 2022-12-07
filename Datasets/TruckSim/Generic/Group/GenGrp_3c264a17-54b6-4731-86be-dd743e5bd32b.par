@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName Generic Data Group`Traffic Lights for 3-way`Traffic Lights
+#VehCode Generic Group
+#MiscYellow0
+symbol_push <<x>> 2
+symbol_push <<y>> 7
+symbol_push <<psi>> (-pi/2)
+symbol_push <<rstart>> (0.5 + r_sig_start)
+symbol_push <<dist>> 24
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_eada2227-a8cf-47fd-ad2e-42375e4a038a.par
+#BlueLink0 Single Moving Object (Custom)`Overhead Traffic Signal, Generic` Traffic Signs and Lights` , Link 1`Target_eada2227-a8cf-47fd-ad2e-42375e4a038a
+
+
+#MiscYellow1
+set_description object_name ...
+  Traffic light facing south ! previous link
+define_output LightNS = TypeO_<<o>>;-;...
+  Light color for N-S lights
+symbol_set <<x>> -2
+symbol_set <<y>> -7
+symbol_set <<psi>> (pi/2)
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_eada2227-a8cf-47fd-ad2e-42375e4a038a.par
+#BlueLink1 Single Moving Object (Custom)`Overhead Traffic Signal, Generic` Traffic Signs and Lights` , Link 2`Target_eada2227-a8cf-47fd-ad2e-42375e4a038a
+
+
+#MiscYellow2
+set_description object_name ...
+   Traffic light facing north ! previous link
+symbol_set <<x>> -6
+symbol_set <<y>> 2
+symbol_set <<psi>> 0
+symbol_set <<rstart>> r_sig_start
+symbol_set <<dist>> 23
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_eada2227-a8cf-47fd-ad2e-42375e4a038a.par
+#BlueLink2 Single Moving Object (Custom)`Overhead Traffic Signal, Generic` Traffic Signs and Lights` , Link 3`Target_eada2227-a8cf-47fd-ad2e-42375e4a038a
+
+
+#MiscYellow3
+set_description object_name ...
+  Traffic light facing east ! previous link
+define_output LightE = TypeO_<<o>>;-;...
+  Light color for E-facing lights
+symbol_set <<x>> 5
+symbol_set <<y>> 7
+symbol_set <<psi>> (pi/2)
+#ENDMYellow
+
+
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#Note: East is <<psi>> = 0 and increases anti-clockwise
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { Traffic Lights } Traffic Lights for 3-way
+#Library : Generic Data Group
+#DataSet : Traffic Lights for 3-way
+#Category: Traffic Lights
+#FileID  : GenGrp_3c264a17-54b6-4731-86be-dd743e5bd32b
+#Product : TruckSim 2020.1
+#VehCode Generic Group
+
+END

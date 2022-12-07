@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Generic VS Commands`VS Commands to Set Up Traffic`VS Commands for Sensors and Traffic
+#VehCode VS Commands
+
+#MiscYellow0
+define_variable VX_START 0; units = km/h
+eq_init2 VX_START = vx -4;
+
+define_parameter lane_ctr = 2.25; units = m
+ltarg_gain lane_ctr
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#This dataset defines a new variable VX_START that is set to match the inital speed of the simulated vehicle with an equation that is applied after initializations (EQ_INIT2).
+#
+#VX_START is then used to set speeds of traffic vehicles.
+#
+#There is also a new parameter: lane_ctr (the lateral distance to the center of the left lane). It is used to scale the lateral target paths with the parameter ltarg_gain.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { VS Commands for Sensors and Traffic } VS Commands to Set Up Traffic
+#Library : Generic VS Commands
+#DataSet : VS Commands to Set Up Traffic
+#Category: VS Commands for Sensors and Traffic
+#FileID  : GenVS_35a84004-8fd6-476d-8942-7916f7f89924
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

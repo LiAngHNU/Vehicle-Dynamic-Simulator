@@ -1,0 +1,67 @@
+PARSFILE
+#FullDataName Generic Group of Links`3D Highway Exit, I-94 Exit 172, Scenic`Roads and Paths
+#VehCode Highway Intersection
+PARSFILE Roads\3D_Road\Road_8df2fee6-8984-4393-b178-9933f1891f79.par
+#BlueLink0 Road: 3D Surface (All Properties)`I-94 North, Near Exit 172 (Scenic)` Atlas and ADAS RP Map Downloads` , Miscellaneous`Road_8df2fee6-8984-4393-b178-9933f1891f79
+
+PARSFILE Roads\3D_Road\Road_81cdffda-a2dc-40f2-a3df-6e061a2dc302.par
+#BlueLink1 Road: 3D Surface (All Properties)`Jackson Ave, Near I-94 (Scenic)` Atlas and ADAS RP Map Downloads` , Miscellaneous`Road_81cdffda-a2dc-40f2-a3df-6e061a2dc302
+
+PARSFILE Roads\3D_Road\Road_9396294e-c7bd-424c-985b-575d41fe3c8d.par
+#BlueLink2 Road: 3D Surface (All Properties)`I-94 Exit 172 to Jackson Ave (Scenic)` Atlas and ADAS RP Map Downloads` , Miscellaneous`Road_9396294e-c7bd-424c-985b-575d41fe3c8d
+
+PARSFILE Roads\Boundaries\RdBnd_a8b2f48f-57e3-4eba-86dd-f7739efdcad6.par
+#BlueLink4 Road: Boundaries`Atlas: I-94 Exit 172` Atlas Intersection` , Miscellaneous`RdBnd_a8b2f48f-57e3-4eba-86dd-f7739efdcad6
+
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink5 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , Miscellaneous`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+#BlueLink7 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\BuilderSegment\RoadSeg_3784a94a-532c-48b3-991a-11306f30c142.par
+#BlueLink8 Path: Segment Builder`I-94 exit Right onto Jackson: 2001` Highway Intersection` , Miscellaneous`RoadSeg_3784a94a-532c-48b3-991a-11306f30c142
+
+PARSFILE Roads\BuilderSegment\RoadSeg_039f817f-d434-4e46-a1d0-53d663f8ec55.par
+#BlueLink9 Path: Segment Builder`I-94 exit Left onto Jackson: 2002` Highway Intersection` , Miscellaneous`RoadSeg_039f817f-d434-4e46-a1d0-53d663f8ec55
+
+#BlueLink11 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink12 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink13 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink14 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink15 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink16 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink17 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink18 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink19 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+*MODELCODE Highway Intersection
+
+#EMBEDDED_NOTES
+#Three roads define the Highway Intersection: I-94 North, Jackson Ave, and the exit off I-94 onto Jackson Ave.
+#
+#There is also a link to a dataset with boundaries for I-94 to the exit, and the exit to Jackson Ave.
+#
+#The global X-Y-Z coordinate system is defined such that (0,0,0) is at the start of the I-94 section. This is also where S=0 for that section.
+#
+#Two paths are linked for use by the driver model and/or traffic objects.
+#
+#Note that the sky is separate from the roads.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Group of Links; { Roads and Paths } 3D Highway Exit, I-94 Exit 172, Scenic
+#Library : Generic Group of Links
+#DataSet : 3D Highway Exit, I-94 Exit 172, Scenic
+#Category: Roads and Paths
+#FileID  : GenLink_1c0ab883-9458-4537-b079-48d929931ddc
+#Product : TruckSim 2020.1
+#VehCode Highway Intersection
+
+END

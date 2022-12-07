@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Generic Group of Links`Another Vehicle, S_SS__SS, West Entrance`Multiple Vehicles
+#VehCode S_SS__SS
+PARSFILE Vehicles\Loaded\VehLoad_36d31efe-c295-427b-88eb-2e9bada65961.par
+#BlueLink11 Vehicle: Loaded Combination`3A Day+2A Trailer, Group ADAS` Day-Cab Tractor-Trailers` , Miscellaneous`VehLoad_36d31efe-c295-427b-88eb-2e9bada65961
+
+PARSFILE Roads\BuilderSegment\RoadSeg_982e0f07-f629-46be-bfc1-c66d00e1e85d.par
+#BlueLink12 Path: Segment Builder`West Entrance, 3d Exit, 1024` Roundabout, D = 36 m` , Miscellaneous`RoadSeg_982e0f07-f629-46be-bfc1-c66d00e1e85d
+
+#MiscYellow2
+current_road_id 1004
+sstart 70
+opt_direction 1
+#ENDMYellow
+
+PARSFILE Procedures\Proc_b1dbf624-9d33-49c9-aef1-1297e9719f19.par
+#BlueLink16 Procedures`Control w/ path preview` Multi-Vehicle` , Miscellaneous`Proc_b1dbf624-9d33-49c9-aef1-1297e9719f19
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_9de240e7-18ba-402b-8be6-c63897199123.par
+#BlueLink18 Multiple Moving Objects`1 Driver Preview Point, Vehicle 2` Points of Interest` , Miscellaneous`TMotion_9de240e7-18ba-402b-8be6-c63897199123
+
+*MODELCODE S_SS__SS
+
+#EMBEDDED_NOTES
+#Setup for a vehicle in a multi-vehicle scenario on the roundabout.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Group of Links; { Multiple Vehicles } Another Vehicle, S_SS__SS, West Entrance
+#Library : Generic Group of Links
+#DataSet : Another Vehicle, S_SS__SS, West Entrance
+#Category: Multiple Vehicles
+#FileID  : GenLink_3ac396b3-a712-4049-9f89-80f2b2f97bf4
+#Product : TruckSim 2020.1
+#VehCode S_SS__SS
+
+END

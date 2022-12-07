@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Generic VS Commands`Steer Controller w/ VS Commands`Miscellaneous Custom Controls
+#VehCode VS Commands
+
+#MiscYellow0
+!    Simple Steer Controller
+
+! Define new units for control parameter
+define_units deg/m 57.29577951
+
+! Define 3 new parameters. Changed July 15 to include descriptions for Echo file.
+define_parameter L_FORWARD 20; m; Distance to view point
+define_parameter LAT_TRACK -1.6; m; Distance vehicle is offset from road centerline
+define_parameter GAIN_STEER_CTRL 100; deg/m; Control gain
+
+! Define 2 new outputs. Extended July 2015 to include long names.
+define_output Xpreview = XCG_TM + L_FORWARD*cos(YAW); m ; X coordinate of preview point
+define_output Ypreview = YCG_TM + L_FORWARD*sin(YAW); m ; Y coordinate of preview point
+
+! Define extra variable for steer control
+define_variable steer_ctrl;
+
+!Add equation to define imported steering wheel angle
+eq_in steer_ctrl = (LAT_TRACK - road_l(Xpreview, Ypreview))*GAIN_STEER_CTRL ;
+
+! Activate steering import. Set after first time step.
+IMP_STEER_SW replace 0
+eq_in IMP_STEER_SW = IF_GT_0_THEN(t-tstart, steer_ctrl, 0);
+
+! Define detailed output titles (32 character limit)
+set_output_long_name Xpreview X coordinate of preview point
+set_output_long_name Ypreview Y coordinate of preview point
+set_output_generic Xpreview X coordinate
+set_output_generic Ypreview Y coordinate
+set_output_component Xpreview Steer control preview point
+set_output_component Ypreview Steer control preview point
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#These VS Commands are for the example steer controller described in the tech memo "Example: Extending a Model with VS Commands and the API."
+#
+#Updated July 2015 to include a second semicolon in some commands.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Miscellaneous Custom Controls } Steer Controller w/ VS Commands
+#Library : Generic VS Commands
+#DataSet : Steer Controller w/ VS Commands
+#Category: Miscellaneous Custom Controls
+#FileID  : GenVS_d7bb1fff-1bb4-4778-8adf-4026514e446d
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

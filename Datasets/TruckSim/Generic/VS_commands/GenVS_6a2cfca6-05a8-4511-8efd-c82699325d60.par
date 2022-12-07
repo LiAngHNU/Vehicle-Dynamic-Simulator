@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Generic VS Commands`Trailer Backing: PI Control`Custom Steering Controls
+#VehCode VS Commands
+
+#MiscYellow0
+TPREV_CONSTANT 5; ! tune preview point placement here if needed
+OPT_DRIVER_ACTION 1; ! prevents the built-in controller from controlling the vehicle
+
+DEFINE_OUTPUT Art_H_Desired = ...
+                                                      atan2( (X_DM_1-X_S1)*sin(YAW) - (Y_DM_1-Y_S1)*cos(YAW), ...
+                                                                -(X_DM_1-X_S1)*cos(YAW) - (Y_DM_1-Y_S1)*sin(YAW) ); deg;
+
+DEFINE_OUTPUT Art_H_Error = Art_H_Desired-Art_H;
+
+DEFINE_OUTPUT Int_Art_H_Error 0;
+EQ_DIFFERENTIAL Int_Art_H_Error = Art_H_Error;
+
+DEFINE_PARAMETER KP_TRAILER_STEER 500; ! tune here if needed
+DEFINE_PARAMETER KI_TRAILER_STEER  100; ! tune here if needed
+
+IMPORT IMP_STEER_SW VS_REPLACE 0;
+EQ_FULL_STEP IMP_STEER_SW = KP_TRAILER_STEER*Art_H_Error ...
+                                                   + KI_TRAILER_STEER*Int_Art_H_Error;
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_da8cecab-a3d5-4231-b725-2264d40d49f8.par
+#BlueLink3 Plot: Setup`Hitch Articulation vs. Desired` Hitch` , Plot`Plot_da8cecab-a3d5-4231-b725-2264d40d49f8
+
+
+#EMBEDDED_NOTES
+#This dataset implements a PI controller for backing a single trailer. It is based on the concept of aiming the trailer toward a single preview point, located behind the vehicle, via handwheel adjustments.
+#
+#Prerequisites for use:
+#- A "Control: Steering by the Closed-loop Driver Model" dataset which uses the single-point option. This is not used to control the handwheel; rather, it is used to calculate the preview point coordinates.
+#- A motion sensor located at the trailer hitch point with a sensor ID number of one.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Custom Steering Controls } Trailer Backing: PI Control
+#Library : Generic VS Commands
+#DataSet : Trailer Backing: PI Control
+#Category: Custom Steering Controls
+#FileID  : GenVS_6a2cfca6-05a8-4511-8efd-c82699325d60
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

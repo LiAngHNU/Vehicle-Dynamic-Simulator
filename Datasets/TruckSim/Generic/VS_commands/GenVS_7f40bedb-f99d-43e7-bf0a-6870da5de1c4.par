@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Generic VS Commands`Increment One`Embedded Python
+#VehCode VS Commands
+
+#MiscYellow0
+OPT_ENABLE_PYTHON = 1
+
+!SET_PYTHON_INSTALL_32 C:\\Program Files (x86)\\Python36\\python36.dll
+
+! put one.py inside \TruckSim_Data\Extensions\Python
+RUN_PYTHON_STRING "import increment_one"
+define_variable pyReturn
+define_variable pyCondition
+define_variable myCounter = 0
+
+
+! Set condition so Python call will always run
+pyCondition = 1
+
+!Run the routine
+eq_in pyReturn = python(pyCondition,"increment_one.add_one","OPEN",None,None)
+! the last None, None is for intab and outtab and we are not using it here.
+
+define_output counterResult = myCounter
+
+*CPAR_INCLUDE Extensions\Python\increment_one.py
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_65e278b0-47c3-4208-a85d-59b077f56d6c.par
+#BlueLink3 Plot: Setup`Simple Counter` Misc.` , Plot`Plot_65e278b0-47c3-4208-a85d-59b077f56d6c
+
+
+#EMBEDDED_NOTES
+#This dataset calls increment_one.py and add 1  to myCounter at every time step.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Embedded Python } Increment One
+#Library : Generic VS Commands
+#DataSet : Increment One
+#Category: Embedded Python
+#FileID  : GenVS_7f40bedb-f99d-43e7-bf0a-6870da5de1c4
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

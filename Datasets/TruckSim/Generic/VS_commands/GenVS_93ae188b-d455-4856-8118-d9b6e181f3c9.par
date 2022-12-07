@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName Generic VS Commands`Derived Outputs vs. Kappa`Tire Tester
+#VehCode VS Commands
+
+#MiscYellow0
+! (1) Normalized lateral and longitudinal forces
+define_output mu_y_l1 = if_not_0_then( fz_l1, fy_l1 / fz_l1, 0); units = -;
+set_output_long_name mu_y_l1 Normalized lateral force
+define_output mu_x_l1 = if_not_0_then(fz_l1, fx_l1 / fz_l1, 0); units = -;
+set_output_long_name mu_x_l1 Normalized longitudinal force
+
+! (2) Tangent of slip angle
+define_output slip_l1 = tan(alpha_l1); units = -;
+set_output_long_name slip_l1 Tangent of slip angle
+
+! (3) CTC lateral shift
+define_output y_ctc_l1 = if_not_0_then( fz_l1, mx_l1 / fz_l1, 0); units = mm;
+set_output_long_name y_ctc_l1 CTC lateral shift
+
+! (4) Aligning moment due to Fx and lateral shift of the CTC
+define_output mz_fx_l1 = fx_l1 * y_ctc_l1; units = N-m;
+set_output_long_name mz_fx_l1 Mz due to Fx and CTC lat. shift
+
+! (5) The remaining aligning moment is assumed entirely due to Fy
+define_output mz_fy_l1 = mz_l1 - mz_fx_l1; units = N-m;
+set_output_long_name mz_fy_l1 Aligning moment due to Fy
+
+! (6) The aligning moment due to Fy can be described by  a moment arm (pneumatic trail)
+define_output trail_l1 = if_not_0_then(fy_l1, mz_fy_l1 / fy_l1, 0); units = mm;
+set_output_long_name trail_l1 Pneumatic trail
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_3cac319d-5482-42d1-8f75-b9244853c0a5.par
+#BlueLink3 Plot: Setup`Normalized Lateral Force vs. Kappa` Tire Tester Derived Outputs` , Plot`Plot_3cac319d-5482-42d1-8f75-b9244853c0a5
+
+PARSFILE Plot\Setup\Plot_40b4f04e-f48c-4627-84c9-b8c698c72471.par
+#BlueLink4 Plot: Setup`Normalized Longitudinal Force vs. Kappa` Tire Tester Derived Outputs` , Plot`Plot_40b4f04e-f48c-4627-84c9-b8c698c72471
+
+PARSFILE Plot\Setup\Plot_26b5c1e8-f330-4205-beab-a3c66d761538.par
+#BlueLink5 Plot: Setup`Tangent of Slip Angle vs. Kappa` Tire Tester Derived Outputs` , Plot`Plot_26b5c1e8-f330-4205-beab-a3c66d761538
+
+PARSFILE Plot\Setup\Plot_f79eecd6-f461-4dcb-b594-4c642723225f.par
+#BlueLink6 Plot: Setup`Lateral Shift of CTC vs. Kappa` Tire Tester Derived Outputs` , Plot`Plot_f79eecd6-f461-4dcb-b594-4c642723225f
+
+PARSFILE Plot\Setup\Plot_617ac41a-4bab-49e7-a2a2-194267104cea.par
+#BlueLink7 Plot: Setup`Mz due to Fx vs. Kappa` Tire Tester Derived Outputs` , Plot`Plot_617ac41a-4bab-49e7-a2a2-194267104cea
+
+PARSFILE Plot\Setup\Plot_85bd6a82-2677-4ed2-8b5f-71db7bf1dc13.par
+#BlueLink8 Plot: Setup`Mz: Fy & Pneumatic Trail vs. Kappa` Tire Tester Derived Outputs` , Plot`Plot_85bd6a82-2677-4ed2-8b5f-71db7bf1dc13
+
+PARSFILE Plot\Setup\Plot_f623aa24-4152-497e-adf1-894197938b37.par
+#BlueLink9 Plot: Setup`Pneumatic Trail vs. Kappa` Tire Tester Derived Outputs` , Plot`Plot_f623aa24-4152-497e-adf1-894197938b37
+
+
+#EMBEDDED_NOTES
+#This dataset only creates outputs for use with the tire tester.
+#
+#(1) Sometimes tire shear forces are normalized by dividing by the normal force, producing an analog to the coefficent of friction, and generally referred to as "Mu".
+#
+#(2) Sometimes the tangent of the slip angle is used to refer to lateral slip instead of the angle itself, facilitating plotting it alongside longitudinal slip ratio. It may be referred to as "percent slip".
+#
+#(3) The overturning moment may be thought of as the effect of the vertical force acting through a laterally shifted center of tire contact.
+#
+#(4) The longitudinal force, acting through the moment arm of the laterally shifted CTC, produces a component of the aligning moment.
+#
+#(5) The aligning moment due to Fx can be removed from the total to see the component due to Fy alone.
+#
+#(6) Sometimes the aligning moment is expressed as the length of a moment arm through which the lateral force acts to produce the aligning moment.
+#It is called "pneumatic trail"
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Tire Tester } Derived Outputs vs. Kappa
+#Library : Generic VS Commands
+#DataSet : Derived Outputs vs. Kappa
+#Category: Tire Tester
+#FileID  : GenVS_93ae188b-d455-4856-8118-d9b6e181f3c9
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

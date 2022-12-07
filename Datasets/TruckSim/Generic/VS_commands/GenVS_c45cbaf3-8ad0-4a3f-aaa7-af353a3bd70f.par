@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Generic VS Commands`Capture Ground Z, Delete Eq's`K & C Testing
+#VehCode VS Commands
+
+#MiscYellow0
+Gnd_Z_at_Design_L1 = imp_zgnd_l1i;
+Gnd_Z_at_Design_R1 = imp_zgnd_r1i;
+Gnd_Z_at_Design_L2 = imp_zgnd_l2i;
+Gnd_Z_at_Design_R2 = imp_zgnd_r2i;
+
+delete_eqs_in imp_zgnd_l1i
+delete_eqs_in imp_zgnd_r1i
+delete_eqs_in imp_zgnd_l2i
+delete_eqs_in imp_zgnd_r2i
+
+delete_eqs_in imp_zgnd_l1o
+delete_eqs_in imp_zgnd_r1o
+delete_eqs_in imp_zgnd_l2o
+delete_eqs_in imp_zgnd_r2o
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#This dataset sets the values of some outputs
+#defined only for the K&C test of the Design Load Condition and removes equations needed only for this test
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { K & C Testing } Capture Ground Z, Delete Eq's
+#Library : Generic VS Commands
+#DataSet : Capture Ground Z, Delete Eq's
+#Category: K & C Testing
+#FileID  : GenVS_c45cbaf3-8ad0-4a3f-aaa7-af353a3bd70f
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

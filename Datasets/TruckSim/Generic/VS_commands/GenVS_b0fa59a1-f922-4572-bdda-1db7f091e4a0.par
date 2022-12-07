@@ -1,0 +1,139 @@
+PARSFILE
+#FullDataName Generic VS Commands`Ignition Switch & AT Park`Vehicle Model Extensions, Powertrain
+#VehCode VS Commands
+
+#MiscYellow0
+! Overview of operation - park position
+! Park may be selected at any time
+! when Park is selected the transmission is internally in neutral,
+! and the parking pawl is engaged on the output shaft
+! This model doesn't reproduce a parking pawl that can ratchet out when overloaded.
+
+INSTALL_TRANSMISSION
+
+! parameters for the torsional stiffness and damping of the park mechanism
+define_parameter k_park 10; units = N-m/deg;
+define_parameter c_park 1; units = N-m-s/deg;
+
+! variable to select transmission Park (this is set with events)
+define_parameter mode_trans_override 0; ! -2 = park
+
+! variable to hold the rotation angle of the trans output shaft when park is selected
+define_variable a_park 0;
+
+! Operation of park:
+! At the moment park is selected:
+! mode_trans_override = -2
+! a_park = 0;
+eq_in a_park = if_not_0_then(eq(mode_trans_override, -2) * not(a_park), rottrans, a_park);
+
+! Once park is selected,
+! mode_trans_override = -2
+! a_park <> 0
+
+! At the moment park is deselected
+! mode_trans_override <> -2
+! a_park <> 0
+eq_in a_park = if_not_0_then(ne(mode_trans_override, -2) * a_park, 0, a_park);
+
+! Once park is deselected
+! mode_trans_override <> -2
+! a_park = 0
+
+! force the trans to be in neutral internally when in park or neutral
+eq_in mode_trans_gain = if_not_0_then(or(eq(mode_trans_override, -2) ,eq(mode_trans_override, 0)), 0, 1);
+
+! when in park apply a moment to the driveshaft
+eq_in imp_m_out_tr = (-1 * (rottrans - a_park) * k_park - av_trans * c_park) * eq(mode_trans_override, -2);
+import imp_m_out_tr add 0
+
+! ---------------------------------------------------------------------------------------------------------
+! Overview of operation - ignition
+! The key position "key_pos_ask" as treated as a request by the driver to select a key position
+! key position paramter is set with events
+! A key position is returned "key_pos" depending on meeting various conditions
+define_parameter key_pos_ask 0;   !  0 -> off, 1 -> acc, 2 -> run 3 -> start
+define_variable key_pos 0; ! The current key position, based on request and conditions
+define_variable key_pos_temp 0; ! place holder
+define_variable ign_onoff 0; ! ignition state 0 -> off, 1 -> on
+define_variable ign_onoff_temp 0; ! ignition state 0 -> off, 1 -> on
+define_variable key_warn 0; ! if the requested key position isnt allowed, set to 1
+
+! figure out the key position based on current position and request, and other requirements
+
+! Key is OFF
+! switching to ACC
+eq_in key_pos_temp   = if_not_0_then(eq(key_pos, 0) * eq(key_pos_ask, 1), key_pos_ask, key_pos);
+eq_in ign_onoff_temp = if_not_0_then(eq(key_pos, 0) * eq(key_pos_ask, 1), 0, ign_onoff);
+! switching to RUN (requires trans in park or neutral to change)
+eq_in key_pos_temp   = if_not_0_then(eq(key_pos, 0) * eq(key_pos_ask, 2) * eq(modetran, 0), key_pos_ask, key_pos_temp);
+eq_in ign_onoff_temp = if_not_0_then(eq(key_pos, 0) * eq(key_pos_ask, 2) * eq(modetran, 0), 0, ign_onoff_temp);
+! switching to START (requires trans in park or neutral to change)
+eq_in key_pos_temp   = if_not_0_then(eq(key_pos, 0) * eq(key_pos_ask, 3) * eq(modetran, 0), key_pos_ask, key_pos_temp);
+eq_in ign_onoff_temp = if_not_0_then(eq(key_pos, 0) * eq(key_pos_ask, 3) * eq(modetran, 0), 1, ign_onoff_temp);
+
+! Key is ACC
+! switching to OFF (requires trans in park or neutral to change)
+eq_in key_pos_temp   = if_not_0_then(eq(key_pos, 1) * eq(key_pos_ask, 0) * eq(modetran, 0), key_pos_ask, key_pos_temp);
+eq_in ign_onoff_temp = if_not_0_then(eq(key_pos, 1) * eq(key_pos_ask, 0) * eq(modetran, 0), 0, ign_onoff_temp);
+! switching to RUN (requires trans in park or neutral to change)
+eq_in key_pos_temp   = if_not_0_then(eq(key_pos, 1) * eq(key_pos_ask, 2) * eq(modetran, 0), key_pos_ask, key_pos_temp);
+eq_in ign_onoff_temp = if_not_0_then(eq(key_pos, 1) * eq(key_pos_ask, 2) * eq(modetran, 0), 0, ign_onoff_temp);
+! switching to START (requires trans in park or neutral to change)
+eq_in key_pos_temp   = if_not_0_then(eq(key_pos, 1) * eq(key_pos_ask, 3) * eq(modetran, 0), key_pos_ask, key_pos_temp);
+eq_in ign_onoff_temp = if_not_0_then(eq(key_pos, 1) * eq(key_pos_ask, 3) * eq(modetran, 0), 1, ign_onoff_temp);
+
+! Key is RUN
+! switching to OFF (requires trans in park or neutral to change)
+eq_in key_pos_temp   = if_not_0_then(eq(key_pos, 2) * eq(key_pos_ask, 0) * eq(modetran, 0), key_pos_ask, key_pos_temp);
+!           if not neutral or park and OFF is selected, set to ACC
+eq_in key_pos_temp   = if_not_0_then(eq(key_pos, 2) * eq(key_pos_ask, 0) * ne(modetran, 0), 1, key_pos_temp);
+eq_in ign_onoff_temp = if_not_0_then(eq(key_pos, 2) * eq(key_pos_ask, 0) * eq(modetran, 0), 0, ign_onoff_temp);
+! switching to ACC (requires trans in park or neutral to change)
+eq_in key_pos_temp   = if_not_0_then(eq(key_pos, 2) * eq(key_pos_ask, 1) * eq(modetran, 0), key_pos_ask, key_pos_temp);
+eq_in ign_onoff_temp = if_not_0_then(eq(key_pos, 2) * eq(key_pos_ask, 1) * eq(modetran, 0), 0, ign_onoff_temp);
+! switching to START  (requires trans in park or neutral and ignition OFF to change)
+eq_in key_pos_temp   = if_not_0_then(eq(key_pos, 2) * eq(key_pos_ask, 3) * eq(modetran, 0) * eq(ign_onoff, 0), key_pos_ask, key_pos_temp);
+eq_in ign_onoff_temp = if_not_0_then(eq(key_pos, 2) * eq(key_pos_ask, 3) * eq(modetran, 0) * eq(ign_onoff, 0), 1, ign_onoff_temp);
+
+! Key is START (operation allows user to hold key in START as long as he wants to)
+! switching to OFF (requires trans in park neutral to change)
+eq_in key_pos_temp   = if_not_0_then(eq(key_pos, 3) * eq(key_pos_ask, 0) * eq(modetran, 0), key_pos_ask, key_pos_temp);
+!           if not neutral or park and OFF is selected, set to ACC
+eq_in key_pos_temp   = if_not_0_then(eq(key_pos, 3) * eq(key_pos_ask, 0) * ne(modetran, 0), 1, key_pos_temp);
+eq_in ign_onoff_temp = if_not_0_then(eq(key_pos, 3) * eq(key_pos_ask, 0) * eq(modetran, 0), 0, ign_onoff_temp);
+! switching to ACC (requires trans in park or neutral to change)
+eq_in key_pos_temp   = if_not_0_then(eq(key_pos, 3) * eq(key_pos_ask, 1) * eq(modetran, 0), key_pos_ask, key_pos_temp);
+eq_in ign_onoff_temp = if_not_0_then(eq(key_pos, 3) * eq(key_pos_ask, 1) * eq(modetran, 0), 0, ign_onoff_temp);
+! switching to RUN (valid in any gear)
+eq_in key_pos_temp   = if_not_0_then(eq(key_pos, 3) * eq(key_pos_ask, 2), key_pos_ask, key_pos_temp);
+eq_in ign_onoff_temp = if_not_0_then(eq(key_pos, 3) * eq(key_pos_ask, 2), 1, ign_onoff_temp);
+
+! set the final key position and ignition state
+eq_in key_pos   = key_pos_temp;
+eq_in ign_onoff = ign_onoff_temp;
+! set warning if requested key position wasn't allowed
+eq_in key_warn  = if_not_0_then(eq(key_pos, key_pos_ask), 0, 1);
+
+define_output keyask  = key_pos_ask;
+define_output keypos  = key_pos;
+define_output ign     = ign_onoff;
+define_output warn    = key_warn;
+
+!
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#The comments in the parsfile describe the implementation of an ignition switch and transmission park mechanism. Their operation is controlled via Events on the Procedures screen linked to this run.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Vehicle Model Extensions, Powertrain } Ignition Switch & AT Park
+#Library : Generic VS Commands
+#DataSet : Ignition Switch & AT Park
+#Category: Vehicle Model Extensions, Powertrain
+#FileID  : GenVS_b0fa59a1-f922-4572-bdda-1db7f091e4a0
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

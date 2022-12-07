@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Generic Group of Links`DRW Pickup, Fwd Sensor`Multiple Vehicles
+#VehCode i_s
+PARSFILE Vehicles\Lead_2a\Lead2a_c8797c18-2bda-44f2-bc90-4fc7a080af04.par
+#BlueLink0 Vehicle: Lead Unit with 2 Axles`Pickup, Reg. Cab DRW, no PT` Pickup Trucks` , Miscellaneous`Lead2a_c8797c18-2bda-44f2-bc90-4fc7a080af04
+
+PARSFILE Roads\BuilderSegment\RoadSeg_982e0f07-f629-46be-bfc1-c66d00e1e85d.par
+#BlueLink12 Path: Segment Builder`West Entrance, 3d Exit, 1024` Roundabout, D = 36 m` , Miscellaneous`RoadSeg_982e0f07-f629-46be-bfc1-c66d00e1e85d
+
+#MiscYellow2
+current_road_id 1004
+sstart 60
+opt_direction 1
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_5822eee4-7ca3-4253-bf55-c9be2085ac81.par
+#BlueLink14 Single Moving Object (Custom)`IUNIT_OBJ` Multi-Vehicle` , Miscellaneous`Target_5822eee4-7ca3-4253-bf55-c9be2085ac81
+
+PARSFILE Sensors_Traffic\Radar\Radar_5a1d0511-08d1-44c5-81cf-f328d26a1743.par
+#BlueLink15 ADAS Sensors for Range and Tracking`Forward Radar` Forward Facing Sensors: FCW and ACC` , Miscellaneous`Radar_5a1d0511-08d1-44c5-81cf-f328d26a1743
+
+PARSFILE Procedures\Proc_b1dbf624-9d33-49c9-aef1-1297e9719f19.par
+#BlueLink16 Procedures`Control w/ path preview` Multi-Vehicle` , Miscellaneous`Proc_b1dbf624-9d33-49c9-aef1-1297e9719f19
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55.par
+#BlueLink17 Multiple Moving Objects`1 Driver Preview Point, Set by DM` Points of Interest` , Miscellaneous`TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55
+
+*MODELCODE i_s
+
+#EMBEDDED_NOTES
+#Setup for a vehicle in a multi-vehicle scenario.
+#
+#Current versions requires minimal powertrain.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Group of Links; { Multiple Vehicles } DRW Pickup, Fwd Sensor
+#Library : Generic Group of Links
+#DataSet : DRW Pickup, Fwd Sensor
+#Category: Multiple Vehicles
+#FileID  : GenLink_ce0e6ad9-9fc5-4740-8878-bac0abed4b0d
+#Product : TruckSim 2020.1
+#VehCode i_s
+
+END

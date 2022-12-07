@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Generic Data Group (More)`Vehicle 3 (Green), Group`Multiple Vehicles (Running in Group)
+#VehCode I_S
+#MiscYellow0
+SET_RUN_COLOR Green
+#ENDMYellow
+
+PARSFILE Vehicles\Lead_2a\Lead2a_bf1682b3-8f9c-4a92-a4b9-2ff9945b9ab3.par
+#BlueLink0 Vehicle: Lead Unit with 2 Axles`Pickup, Compact: RWD` Pickup Trucks` , Link 1`Lead2a_bf1682b3-8f9c-4a92-a4b9-2ff9945b9ab3
+
+
+PARSFILE Sensors_Traffic\Radar\Radar_f727f185-ba77-41c2-aad7-5fd22a347555.par
+#BlueLink1 ADAS Sensors for Range and Tracking`160 deg Sensor (Green)` 160 deg Sensor` , Link 2`Radar_f727f185-ba77-41c2-aad7-5fd22a347555
+
+
+
+PARSFILE Generic\VS_commands\GenVS_bf9835a7-f783-4b16-8e29-9ea83b4ac0cd.par
+#BlueLink3 Generic VS Commands`Setup for Object Detection, Multi, v3` Setup Events` , Link 4`GenVS_bf9835a7-f783-4b16-8e29-9ea83b4ac0cd
+
+
+PARSFILE Sensors_Traffic\Targets\Target_5822eee4-7ca3-4253-bf55-c9be2085ac81.par
+#BlueLink4 Single Moving Object (Custom)`IUNIT_OBJ` Multi-Vehicle` , Link 5`Target_5822eee4-7ca3-4253-bf55-c9be2085ac81
+
+
+
+
+
+
+*MODELCODE I_S
+
+#EMBEDDED_NOTES
+#This is a setup for a vehicle with a sensor  to run with other vehicles. It sets the run color green before the four blue links that:
+#
+#1. link to a vehicle dataset,
+#2. link to a sensor,
+#3. link to a set of VS Commands specifici for vehicle #3, and the first Event dataset in a chain that is specific for vehicle #3.
+#4. link to a target object that is attached to the sprung mass, such that vehicle #3 can be detected by other vehicles.
+#
+#Feel free to change the vehicle dataset used with the first link. However, be sure to update the dataset code for this dataset if need to match that of the vehicle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group (More); { Multiple Vehicles (Running in Group) } Vehicle 3 (Green), Group
+#Library : Generic Data Group (More)
+#DataSet : Vehicle 3 (Green), Group
+#Category: Multiple Vehicles (Running in Group)
+#FileID  : GenGrpM_c9033faf-18fe-4dd7-b731-d3e7b2cc61f9
+#Product : TruckSim 2020.1
+#VehCode I_S
+
+END

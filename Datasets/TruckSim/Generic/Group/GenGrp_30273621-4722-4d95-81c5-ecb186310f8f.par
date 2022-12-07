@@ -1,0 +1,77 @@
+PARSFILE
+#FullDataName Generic Data Group`2 Vehicles: S_S S_SS__SS, Roundabout`Multiple Vehicles
+#VehCode S_S S_SS__SS
+#MiscYellow0
+TSTOP 20
+#ENDMYellow
+
+PARSFILE Generic\Links\GenLink_5f1dc396-1ce3-489d-a786-89cfd8a64426.par
+#BlueLink0 Generic Group of Links`36 m Roundabout, 3D` Roads and Paths` , Link 1`GenLink_5f1dc396-1ce3-489d-a786-89cfd8a64426
+
+
+PARSFILE Roads\3D_Road\Road_dec1ad76-94b8-4142-b4d8-6a6e0328efa7.par
+#BlueLink1 Road: 3D Surface (All Properties)`Big Grass` Roundabout, Single Lane, D = 36 m` , Link 2`Road_dec1ad76-94b8-4142-b4d8-6a6e0328efa7
+
+
+
+PARSFILE Generic\GroupMore\GenGrpM_2cd7725a-1495-4ace-8a87-283befd2a27c.par
+#BlueLink3 Generic Data Group (More)`Vehicle 1 (Blue), Group` Multiple Vehicles (Running in Group)` , Link 4`GenGrpM_2cd7725a-1495-4ace-8a87-283befd2a27c
+
+
+PARSFILE Roads\BuilderSegment\RoadSeg_c72116c2-3fad-4c32-93c7-0895d6f5156f.par
+#BlueLink4 Path: Segment Builder`South Entrance, 3d Exit, 1021` Roundabout, D = 36 m` , Link 5`RoadSeg_c72116c2-3fad-4c32-93c7-0895d6f5156f
+
+
+#MiscYellow5
+current_road_id 1001
+sstart -30
+opt_direction 1
+#ENDMYellow
+
+PARSFILE Procedures\Proc_3176d474-e34a-4fa9-ae9e-d66c3b5b3cb4.par
+#BlueLink5 Procedures`Multiple Vehicles: Controls+Preview Pt` Multi-Vehicle` , Link 6`Proc_3176d474-e34a-4fa9-ae9e-d66c3b5b3cb4
+
+
+#MiscYellow6
+SET_RUN_COLOR White
+#ENDMYellow
+
+PARSFILE Vehicles\Loaded\VehLoad_36d31efe-c295-427b-88eb-2e9bada65961.par
+#BlueLink6 Vehicle: Loaded Combination`3A Day+2A Trailer, Group ADAS` Day-Cab Tractor-Trailers` , Link 7`VehLoad_36d31efe-c295-427b-88eb-2e9bada65961
+
+
+PARSFILE Roads\BuilderSegment\RoadSeg_982e0f07-f629-46be-bfc1-c66d00e1e85d.par
+#BlueLink7 Path: Segment Builder`West Entrance, 3d Exit, 1024` Roundabout, D = 36 m` , Link 8`RoadSeg_982e0f07-f629-46be-bfc1-c66d00e1e85d
+
+
+#MiscYellow8
+current_road_id 1004
+sstart 60
+opt_direction 1
+#ENDMYellow
+
+PARSFILE Procedures\Proc_483a6f75-f8c9-4ee3-bc60-593aae30c7e1.par
+#BlueLink8 Procedures`Multiple Vehicles: Controls+Preview Pt 2` Multi-Vehicle` , Link 9`Proc_483a6f75-f8c9-4ee3-bc60-593aae30c7e1
+
+
+*MODELCODE S_S S_SS__SS
+
+#EMBEDDED_NOTES
+#Setup for two vehicles. The dataset code is critical here.
+#
+#First setup the environment: a Roundabout intersection made for multipe road surfaces.
+#
+#Next setup vehicle 1 with a sensor, procedure, path, and Events for simple brake control.
+#
+#Last, setup a second vehicle with its own controls and path. In this case the vehicle has a semi-trailer.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { Multiple Vehicles } 2 Vehicles: S_S S_SS__SS, Roundabout
+#Library : Generic Data Group
+#DataSet : 2 Vehicles: S_S S_SS__SS, Roundabout
+#Category: Multiple Vehicles
+#FileID  : GenGrp_30273621-4722-4d95-81c5-ecb186310f8f
+#Product : TruckSim 2020.1
+#VehCode S_S S_SS__SS
+
+END

@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Generic VS Commands`AEB: Sensor Booleans & Pbk_Con`ADAS Support
+#VehCode VS Commands, AEB
+
+#MiscYellow0
+! Units for acceleration are m/s2 to match Euro NCAP specifications
+DEFINE_PARAMETER Ax_Brake = 4 ;m/s2; Deceleration level to apply brakes
+
+! Compare Ax_Calc and Ax_Brake
+DEFINE_OUTPUT ApplyAEB = 0; - ;  Boolean: apply brakes
+EQ_OUT ApplyAEB = (MagS<<s>>_1 &  ((SpdS<<s>>_1 < 0) & (Ax_Calc > Ax_Brake)))
+
+! Replace master cylinder pressure with equation
+PBK_CON_EQUATION 5000000*ApplyAEB
+
+OPT_VMIN -1 ! never stop
+#ENDMYellow
+
+*MODELCODE VS Commands, AEB
+
+#EMBEDDED_NOTES
+#Logic to generate a command to intervene to prevent a collision.
+#
+#The output Ax_Calc was calculated in the VS Command dataset to set the Show_FCW variable. It is reused here to calculate the value for another Boolean variable ApplyAEB that is 1 when the brakes should be applied via AEB.
+#
+#An equation is included for open-loop brake pressure via the configurable function PBK_CON.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { ADAS Support } AEB: Sensor Booleans & Pbk_Con
+#Library : Generic VS Commands
+#DataSet : AEB: Sensor Booleans & Pbk_Con
+#Category: ADAS Support
+#FileID  : GenVS_25552e35-ee24-4b20-9385-7bb60549cf67
+#Product : TruckSim 2020.1
+#VehCode VS Commands, AEB
+
+END

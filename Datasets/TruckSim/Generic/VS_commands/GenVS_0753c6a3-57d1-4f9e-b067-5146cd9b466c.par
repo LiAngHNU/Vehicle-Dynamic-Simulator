@@ -1,0 +1,24 @@
+PARSFILE
+#FullDataName Generic VS Commands`Setup Road Definitions`ADAS Support
+#VehCode Define Parameters
+
+#MiscYellow0
+! define user-specified ID values for road datasets
+define_parameter SIDEWALK = 9999; -; Road dataset that defines sidewalk dZ geometry used with VS Scene Builder Tiles
+#ENDMYellow
+
+*MODELCODE Define Parameters
+
+#EMBEDDED_NOTES
+#Add parameters that define user-specified ID numbers for particular road datasets.  This allows the parameter to be used in place of an ID number.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { ADAS Support } Setup Road Definitions
+#Library : Generic VS Commands
+#DataSet : Setup Road Definitions
+#Category: ADAS Support
+#FileID  : GenVS_0753c6a3-57d1-4f9e-b067-5146cd9b466c
+#Product : TruckSim 2020.1
+#VehCode Define Parameters
+
+END

@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Generic Group of Links`Deer placement for Update Path`ADAS: Moving Objects, incl. Pedestrians
+#VehCode Generic Links
+PARSFILE Sensors_Traffic\Targets\Target_ed0876c9-7098-4af5-a935-496e5000b613.par
+#BlueLink0 Single Moving Object (Custom)`Deer (Idle) #1` Deer (Stationary)` , Miscellaneous`Target_ed0876c9-7098-4af5-a935-496e5000b613
+
+PARSFILE Sensors_Traffic\Targets\Target_3debf374-2574-4b1a-839b-eecc4860eb08.par
+#BlueLink1 Single Moving Object (Custom)`Deer (Idle) #2` Deer (Stationary)` , Miscellaneous`Target_3debf374-2574-4b1a-839b-eecc4860eb08
+
+PARSFILE Sensors_Traffic\Targets\Target_96c4fb6a-df7f-46c3-869d-fb23212b6ec5.par
+#BlueLink2 Single Moving Object (Custom)`Deer (Idle) #3` Deer (Stationary)` , Miscellaneous`Target_96c4fb6a-df7f-46c3-869d-fb23212b6ec5
+
+#MiscYellow0
+! Let Cpar know we use python module 
+*CPAR_INCLUDE Extensions\Python\makepath.py
+#ENDMYellow
+
+#MiscYellow1
+! Some setup for python call
+OPT_ENABLE_PYTHON = 1
+! Load the module
+RUN_PYTHON_STRING "import makepath"
+
+define_variable det_time = 0
+define_table intab
+intab_table step
+1,1
+2,2
+3,3
+4,4
+5,5
+endtable
+#ENDMYellow
+
+#MiscYellow2
+define_variable SEEDVAL
+! Uncomment next line to randomize
+! location of last person
+!SEEDVAL = SRAND(GENSEED(1.0))
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_56bd0cf0-ab7e-4a48-bc3b-8edda203ae0c.par
+#BlueLink13 Single Moving Object (Custom)`Deer (Idle) #4 (RND)` Deer (Stationary)` , Miscellaneous`Target_56bd0cf0-ab7e-4a48-bc3b-8edda203ae0c
+
+
+#EMBEDDED_NOTES
+#Four deer
+#
+#The location of the fourth person can be randomized.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Group of Links; { ADAS: Moving Objects, incl. Pedestrians } Deer placement for Update Path
+#Library : Generic Group of Links
+#DataSet : Deer placement for Update Path
+#Category: ADAS: Moving Objects, incl. Pedestrians
+#FileID  : GenLink_d5353de4-8a71-4e42-aeee-92faf02f44cb
+#Product : TruckSim 2020.1
+#VehCode Generic Links
+
+END

@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Generic Table`Driver Demand Power: Full Load 55 kW`Powertrain (HEV)
+#RingCtrl0 COEFFICIENT
+#CheckBox0 0    
+
+PWR_DRV_THROTTLE_COEFFICIENT 55
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD PWR_DRV_THROTTLE
+*X_LABEL Throttle pedal position (-)
+*Y_LABEL Driving power (kW)
+*SCALAR 55
+*X_LABEL_2 Temperature (C)
+
+
+LOG_ENTRY Used Dataset: Generic Table; { Powertrain (HEV) } Driver Demand Power: Full Load 55 kW
+#Library : Generic Table
+#DataSet : Driver Demand Power: Full Load 55 kW
+#Category: Powertrain (HEV)
+#FileID  : GenTab_64c1529b-de91-4f17-ae74-50fac6ce66ed
+#Product : TruckSim 2020.1
+#VehCode table
+
+END

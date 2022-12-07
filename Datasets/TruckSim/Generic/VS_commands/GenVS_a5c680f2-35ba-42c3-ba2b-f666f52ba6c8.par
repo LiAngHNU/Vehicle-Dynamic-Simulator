@@ -1,0 +1,59 @@
+PARSFILE
+#FullDataName Generic VS Commands`Setup for Object Detection, Multi, v2`Setup Events
+#VehCode Setup Events
+
+#MiscYellow0
+DEFINE_PARAMETER S2 = ISENSOR;-; Sensor installed for vehicle 2
+DEFINE_PARAMETER STOP_ID_2 = 2002; -; ID for target speed that has V=0 at S=0
+DEFINE_PARAMETER T_EVENT2_START = 0;s; Reference time for T_Event2
+
+define_output T_Event2 = T - T_Event2_Start;s; Event time for vehicle 2
+define_output ObjCrit2 = obj_crit(s2);-; Critical object for vehicle 2
+define_output AxCrit2 = AX_AEB(s2,ObjCrit2);m/s2; Required decel for ObjCrit2
+define_output IDcrit2 = DETECT_ID(s2,ObjCrit2);-;ID of critical Obj
+define_output ApplyAEB2 =  AxCrit2 > Ax_Brake; - ;  Boolean: apply brakes for vehicle 2?
+define_output DistCrit2 = DIST_BDRY(s2,ObjCrit2); m; Distance to critical object
+
+define_output TypeNear2 = DETECT_TYPE(s2,1); - ; Type of nearest object
+define_output ID_near2 = DETECT_ID(s2,1);-;ID of nearest
+
+define_output NeedAEB2 = NEED_AEB(s2,1) | NEED_AEB(s2,2) | ...
+  NEED_AEB(s2,3) | NEED_AEB(s2,4);- ; Boolean: 1 if AEB is needed
+
+define_output ClearGo2 = 0;-; Boolean: 1 if clear to go
+eq_in ClearGo2 = is_clr(s2,1) & is_clr(s2,2) & is_clr(s2,3) & is_clr(s2,4)
+
+eq_out Ax_SCcmd_2 = -AxCrit2 ! speed control command if OPT_SC = 5
+#ENDMYellow
+
+*MODELCODE Setup Events
+PARSFILE Control\Speed_t\SpdTime_b028a4a6-4a28-41bc-aba2-feb16017e390.par
+#BlueLink0 Control: Speed (Closed Loop) Using Target Speed`Need to Stop, v2` Speed vs Station (Normalized)` , Miscellaneous`SpdTime_b028a4a6-4a28-41bc-aba2-feb16017e390
+
+PARSFILE Events\Events_26df52a2-abdb-445a-9dcf-f559fae57bb8.par
+#BlueLink1 Events`Look for Objects v2` ADAS Detection` , Miscellaneous`Events_26df52a2-abdb-445a-9dcf-f559fae57bb8
+
+PARSFILE Plot\Setup\Plot_32c11035-0f9e-4c9a-b34f-1ec454522712.par
+#BlueLink3 Plot: Setup`AEB: AxCrit2` ADAS and AEB Alerts and Commands` , Plot`Plot_32c11035-0f9e-4c9a-b34f-1ec454522712
+
+PARSFILE Plot\Setup\Plot_e89935bd-1e45-4cee-b05d-d7a1688566d2.par
+#BlueLink4 Plot: Setup`Speed Target and Actual , v2` Speed Controller` , Plot`Plot_e89935bd-1e45-4cee-b05d-d7a1688566d2
+
+
+#EMBEDDED_NOTES
+#New variables for vehicle 2. These include T_Event2 and T_Event2_Start.
+#
+#There is a link to a Target Speed dataset used for stopping vehicle 2.
+#
+#The Events link starts a set of Events for vehicle 2.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Setup Events } Setup for Object Detection, Multi, v2
+#Library : Generic VS Commands
+#DataSet : Setup for Object Detection, Multi, v2
+#Category: Setup Events
+#FileID  : GenVS_a5c680f2-35ba-42c3-ba2b-f666f52ba6c8
+#Product : TruckSim 2020.1
+#VehCode Setup Events
+
+END

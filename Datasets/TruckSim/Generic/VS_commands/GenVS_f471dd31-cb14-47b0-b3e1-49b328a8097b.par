@@ -1,0 +1,179 @@
+PARSFILE
+#FullDataName Generic VS Commands`VsV HUD Text Display for Steering Tests`HUD Gauges
+#VehCode VS Commands
+
+#MiscYellow0
+!Add Ax Display
+ANI_Ax
+WRT_Ax
+ADD_ENTITY hud_text Text Output - Ax
+  location 0.05 0.35 0.05 0.035
+  prefix Ax (g's)
+  min_width_prefix 20
+  value Ax
+  precision 2
+  color 1 1 .5 1
+  outline_color 0 0 0 1
+END_ENTITY hud_text Text Output - Ax
+!
+!Add Ay Display
+ANI_Ay
+WRT_Ay
+ADD_ENTITY hud_text Text Output - Ay
+  location 0.05 0.4 0.05 0.035
+  prefix Ay (g's)
+  min_width_prefix 20
+  value Ay
+  precision 2
+  color 1 1 .5 1
+  outline_color 0 0 0 1
+END_ENTITY hud_text Text Output - Ay
+
+!Add Steering Wheel Angle Display
+ANI_Steer_SW
+WRT_Steer_SW
+ADD_ENTITY hud_text Text Output - Steering Wheel Angle
+  location 0.05 0.45 0.05 0.035
+  prefix SWA (deg)
+  min_width_prefix 20
+  value Steer_SW
+  precision 2
+  color 1 1 .5 1
+  outline_color 0 0 0 1
+END_ENTITY hud_text Text Output - Steering Wheel Angle
+!
+!Add Handwheel Torque Display
+ANI_M_SW
+WRT_M_SW
+ADD_ENTITY hud_text Text Output - M_SW
+  location 0.05 0.5 0.05 0.035
+  prefix Handwheel Torque (Nm)
+  min_width_prefix 20
+  value M_SW
+  precision 2
+  color 1 1 .5 1
+  outline_color 0 0 0 1
+END_ENTITY hud_text Text Output - M_SW
+!
+!Add Target Speed Display
+ANI_VxTarget
+WRT_VxTarget
+ADD_ENTITY hud_text Text Output - Target Speed
+  location 0.05 0.6 0.05 0.035
+  prefix Target Speed (km/h)
+  min_width_prefix 20
+  value VxTarget
+  precision 0
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+END_ENTITY hud_text Text Output - Target Speed
+!
+!Add Actual Speed Display
+ANI_Vx
+WRT_Vx
+ADD_ENTITY hud_text Text Output - Speed
+  location 0.05 0.65 0.05 0.035
+  prefix Actual Speed (km/h)
+  min_width_prefix 20
+  value Vx
+  precision 0
+  color 1 1 .5 1
+  outline_color 0 0 0 1
+END_ENTITY hud_text Text Output - Speed
+!
+!Add Speed Error Display
+ANI_Vx_Err
+WRT_Vx_Err
+ADD_ENTITY hud_text Text Output - Speed Error
+  location 0.05 0.7 0.05 0.035
+  prefix Speed Error (km/h)
+  min_width_prefix 20
+  value Vx_ERR
+  precision 0
+  color 1 1 .5 1
+  outline_color 0 0 0 1
+END_ENTITY hud_text Text Output - Speed Error
+!
+!Add Throttle Position Display
+ANI_Throttle
+WRT_Throttle
+ADD_ENTITY hud_text Text Output - Throttle
+  min_width_prefix 20
+  location 0.05 0.8 0.05 0.035
+  prefix Throttle
+  value Throttle
+  precision 2
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+END_ENTITY hud_text Text Output - Throttle
+!
+!Add Brake Pressure Display
+ANI_Pbk_Con
+WRT_Pbk_Con
+ADD_ENTITY hud_text Text Output - Brake Pressure
+  location 0.05 0.85 0.05 0.035
+  prefix Brake Press. (MPa)
+  min_width_prefix 20
+  value Pbk_Con
+  precision 2
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+END_ENTITY hud_text Text Output - Brake Pressure
+!
+!Add Gear Position Display
+ANI_GearStat
+WRT_GearStat
+ADD_ENTITY hud_text Text Output - GearStat
+  location 0.05 0.9 0.05 0.035
+  prefix Gear
+  min_width_prefix 20
+  value GearStat
+  precision 0
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+END_ENTITY hud_text Text Output - GearStat
+!
+!Add RPM Display
+ANI_AV_Eng
+WRT_AV_Eng
+ADD_ENTITY hud_text Text Output - RPM
+  location 0.05 0.95 0.05 0.035
+  prefix RPM
+  min_width_prefix 20
+  value AV_Eng
+  precision 0
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+END_ENTITY hud_text Text Output - RPM
+!
+!Adds TruckSim Logo
+ADD_ENTITY hud_image Image Widget
+  location 10 10 160 160
+  align_x 2
+  align_y 2
+  size_mode 1
+  place_mode 1
+  opacity 0.33
+  image_file Animator\2D_HUD_Icons\VS_Icons\TSIcon.png
+END_ENTITY hud_image Image Widget
+!
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#This example demonstrates Heads-Up-Display (HUD) text elements for use with the VsVisualizer.
+#
+#The features on display are text elements, aligned using a minimum width and the fixed-width font, as well as a TruckSim watermark placed in the lower right corner of the screen.
+#
+#Note that these display elements will not show up in our older animation package, SurfAnim.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { HUD Gauges } VsV HUD Text Display for Steering Tests
+#Library : Generic VS Commands
+#DataSet : VsV HUD Text Display for Steering Tests
+#Category: HUD Gauges
+#FileID  : GenVS_f471dd31-cb14-47b0-b3e1-49b328a8097b
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

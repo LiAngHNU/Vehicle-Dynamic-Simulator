@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Generic Group of Links`Sensor Target: Collision Detection`ADAS: Moving Objects, incl. Pedestrians
+#VehCode Generic Links
+PARSFILE Sensors_Traffic\Traffic\TMotion_9835cda5-e642-46d6-ab12-0866e62be044.par
+#BlueLink0 Multiple Moving Objects`F-Class Sedan, VS Commands control` ADAS Sensor: Collision Detection` , Miscellaneous`TMotion_9835cda5-e642-46d6-ab12-0866e62be044
+
+PARSFILE Generic\VS_commands\GenVS_dcdf96c9-ba85-490c-9ccb-46d5e86eecfe.par
+#BlueLink1 Generic VS Commands`Sensor Target: Collision Detection` ADAS Support` , Miscellaneous`GenVS_dcdf96c9-ba85-490c-9ccb-46d5e86eecfe
+
+PARSFILE Animator\Groups\Group_73b9c2ff-eb22-4a12-8989-31adbfccca3b.par
+#BlueLink2 Animator: Group`HUD Collision Dataset` HUD` , Miscellaneous`Group_73b9c2ff-eb22-4a12-8989-31adbfccca3b
+
+
+#EMBEDDED_NOTES
+#Generic Group of Links dataset, used to assemble a Moving Object and a Generic VS Commands dataset that are part of a Collision Detection method based on the ADAS Range and Detection Sensors.
+#
+#Since the Generic VS Commands dataset uses information about the Moving Object, the Moving Object must be linked first.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Group of Links; { ADAS: Moving Objects, incl. Pedestrians } Sensor Target: Collision Detection
+#Library : Generic Group of Links
+#DataSet : Sensor Target: Collision Detection
+#Category: ADAS: Moving Objects, incl. Pedestrians
+#FileID  : GenLink_4dff1a6e-daad-4e81-a5b1-6bbca95701b9
+#Product : TruckSim 2020.1
+#VehCode Generic Links
+
+END

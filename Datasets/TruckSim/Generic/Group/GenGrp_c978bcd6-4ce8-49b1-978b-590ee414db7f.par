@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Generic Data Group`Mobile Crane Axle: Drive, Steer 50%`Very Large Vehicles
+#VehCode Generic Group
+#MiscYellow0
+! This axle steers 
+! Kinematics
+#ENDMYellow
+
+PARSFILE Suspensions\Kin_Solid\KinSA_896f54bf-fec8-4dee-947c-a5f05954a83f.par
+#BlueLink0 Suspension: Solid Axle System Kinematics`Driven` Mobile Crane` , Link 1`KinSA_896f54bf-fec8-4dee-947c-a5f05954a83f
+
+
+#MiscYellow1
+! Compliance, springs, dampers
+#ENDMYellow
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_870721cb-8477-426d-bcab-a185debcac7d.par
+#BlueLink1 Suspension: Solid Axle Compliance, Springs, and Dampers`250 N/mm No jounce and rebound stops` Very Large Vehicles` , Link 2`CmpSA_870721cb-8477-426d-bcab-a185debcac7d
+
+
+#MiscYellow2
+! Brakes
+#ENDMYellow
+
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink2 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Link 3`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+#MiscYellow3
+opt_steer_ext 0
+#ENDMYellow
+
+PARSFILE Steering\System\StrSys_0e08700c-1ee3-497e-84b4-666725bf3be1.par
+#BlueLink3 Steering System`9A mobile crane steer 50%` Mobile Crane` , Link 4`StrSys_0e08700c-1ee3-497e-84b4-666725bf3be1
+
+
+
+
+
+
+
+
+LOG_ENTRY Used Dataset: Generic Data Group; { Very Large Vehicles } Mobile Crane Axle: Drive, Steer 50%
+#Library : Generic Data Group
+#DataSet : Mobile Crane Axle: Drive, Steer 50%
+#Category: Very Large Vehicles
+#FileID  : GenGrp_c978bcd6-4ce8-49b1-978b-590ee414db7f
+#Product : TruckSim 2020.1
+#VehCode Generic Group
+
+END

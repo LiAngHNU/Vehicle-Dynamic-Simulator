@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Generic Data Lists`ESC Alert`HUD Indicators
+#VehCode Generic Lists
+#MiscYellow0
+ANI_esc_icon
+WRT_esc_icon
+
+ADD_ENTITY hud_image HUD_ESC_Icon
+  location 30 17 150 150
+  align_x center
+  align_y bottom
+  size_mode absolute
+  place_mode absolute 
+  opacity esc_icon
+  image_file Animator\3D_shape_files_TS\dashboard\Icons\Stability_Control.png
+END_ENTITY hud_image HUD_ESC_Icon
+#ENDMYellow
+
+
+
+
+
+#EMBEDDED_NOTES
+#This dataset is for VS Visualizer. It will show the ESC alert icon if the output variable ESC_ICON is not zero. That output variable is defined with the VS Command DEFINE_OUTPUT in the VS Commands dataset that links to this one.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Lists; { HUD Indicators } ESC Alert
+#Library : Generic Data Lists
+#DataSet : ESC Alert
+#Category: HUD Indicators
+#FileID  : GenList_02c04e69-49bf-4f65-a1a1-dfcab57027b4
+#Product : TruckSim 2020.1
+#VehCode Generic Lists
+
+END

@@ -1,0 +1,64 @@
+PARSFILE
+#FullDataName Generic Data Group`2 Vehicles: I_S I_S on Roundabout`Multiple Vehicles
+#VehCode S_S S_SS
+#MiscYellow0
+TSTOP 20
+#ENDMYellow
+
+PARSFILE Generic\Links\GenLink_5f1dc396-1ce3-489d-a786-89cfd8a64426.par
+#BlueLink0 Generic Group of Links`36 m Roundabout, 3D` Roads and Paths` , Link 1`GenLink_5f1dc396-1ce3-489d-a786-89cfd8a64426
+
+
+PARSFILE Roads\3D_Road\Road_dec1ad76-94b8-4142-b4d8-6a6e0328efa7.par
+#BlueLink1 Road: 3D Surface (All Properties)`Big Grass` Roundabout, Single Lane, D = 36 m` , Link 2`Road_dec1ad76-94b8-4142-b4d8-6a6e0328efa7
+
+
+
+PARSFILE Vehicles\Loaded\VehLoad_a9d3ae7f-8f90-4a09-9c8a-afa26c79d0a8.par
+#BlueLink3 Vehicle: Loaded Combination`LCF Van, 160 deg Sensor (Blue)` LCF Vans` , Link 4`VehLoad_a9d3ae7f-8f90-4a09-9c8a-afa26c79d0a8
+
+
+PARSFILE Roads\BuilderSegment\RoadSeg_c72116c2-3fad-4c32-93c7-0895d6f5156f.par
+#BlueLink4 Path: Segment Builder`South Entrance, 3d Exit, 1021` Roundabout, D = 36 m` , Link 5`RoadSeg_c72116c2-3fad-4c32-93c7-0895d6f5156f
+
+
+#MiscYellow5
+current_road_id 1001
+sstart -20
+opt_direction 1
+#ENDMYellow
+
+PARSFILE Procedures\Proc_3176d474-e34a-4fa9-ae9e-d66c3b5b3cb4.par
+#BlueLink5 Procedures`Multiple Vehicles: Controls+Preview Pt` Multi-Vehicle` , Link 6`Proc_3176d474-e34a-4fa9-ae9e-d66c3b5b3cb4
+
+
+PARSFILE Generic\VS_commands\GenVS_dcab0e29-34e8-4159-976e-274c4b557ee8.par
+#BlueLink6 Generic VS Commands`Setup for Simple AEB` Setup Events` , Link 7`GenVS_dcab0e29-34e8-4159-976e-274c4b557ee8
+
+
+PARSFILE Generic\Links\GenLink_d8ed3ad8-ef4b-427c-8795-27c4c0804484.par
+#BlueLink7 Generic Group of Links`Another Vehicle, West Entrance` Multiple Vehicles` , Link 8`GenLink_d8ed3ad8-ef4b-427c-8795-27c4c0804484
+
+
+
+*MODELCODE S_S S_SS
+
+#EMBEDDED_NOTES
+#Setup for two vehicles. The dataset code is critical here.
+#
+#First setup the environment: a Roundabout intersection made from multiple road surfaces.
+#
+#Next, setup vehicle 1 (using the same vehicle setup as seen in the city examples), path, and procedure.
+#
+#Last, repeat for vehicle 2.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { Multiple Vehicles } 2 Vehicles: I_S I_S on Roundabout
+#Library : Generic Data Group
+#DataSet : 2 Vehicles: I_S I_S on Roundabout
+#Category: Multiple Vehicles
+#FileID  : GenGrp_26bc78fd-ff2b-49ea-b96a-2a581186943f
+#Product : TruckSim 2020.1
+#VehCode S_S S_SS
+
+END

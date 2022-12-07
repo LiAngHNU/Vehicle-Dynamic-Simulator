@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Generic VS Commands`Define Lift Axle Variables & Parameters`Lift Axle
+#VehCode VS Commands
+
+#MiscYellow0
+define_variable DFDT_RATE = 100000; ! Rate of change for lift force (N/s)
+define_variable T_UP = 3; units = sec           ! Start lifting axle at this time
+define_variable T_DOWN = 12; units = sec        ! Start lowering axle at this time
+define_variable CMP_MAX = 115; units = mm       ! Maximum jounce stop compression
+define_variable JNC_MIN = 25; units = mm        ! Minimum jounce to stop applying lift force
+
+define_variable SV_F_LIFT = 0; units  = N;   ! Lift force (state variable)
+define_variable DFDT_LIFT = 0; ! Rate of change for lift force (N/s)
+eq_differential SV_F_LIFT = DFDT_LIFT; ! differential equation for lift force
+define_output F_LIFT = SV_F_LIFT; units  = N;   ! Output variable (for plotting)
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#An axle will be lifted by adjusting the spring forces that normally push down on an axle.
+#
+#A new state variable is defined for lift force SV_F_LIFT. SV_F_LIFT is either ramping up, ramping down, or constant. It's derivative is DFDT_LIFT, which is given different values during the run via events.
+#
+#At some time T_UP, the lift force will ramp up.
+#
+#When a compression CMP_MAX is reached, the force will hold constant.
+#
+#When a time T_DOWN is reached, the lift force will ramp down.
+#
+#When the suspension jounce reaches a minimum JNC_MIN, the force will be set to zero.
+#
+#A separate set of VS Commands is used to subtract the lift force from the spring forces for the axle being lifted.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Lift Axle } Define Lift Axle Variables & Parameters
+#Library : Generic VS Commands
+#DataSet : Define Lift Axle Variables & Parameters
+#Category: Lift Axle
+#FileID  : GenVS_62dc7c14-f257-47b5-8d9a-96b17a10ea1a
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

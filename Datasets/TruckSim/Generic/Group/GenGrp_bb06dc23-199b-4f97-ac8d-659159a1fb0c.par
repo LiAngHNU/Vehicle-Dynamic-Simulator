@@ -1,0 +1,97 @@
+PARSFILE
+#FullDataName Generic Data Group`14 axle flatbed (B train) (solid axles)`Very Large Vehicles
+#VehCode Generic Group
+#MiscYellow0
+IUNIT_INCREMENT
+symbol_add  <<unit>> 1
+symbol_push <<axle_temp>> <<axle>>
+symbol_push <<axle_per_unit>> 0
+NAXLES 14
+#ENDMYellow
+
+PARSFILE Generic\GroupMore\GenGrpM_bc875a51-3279-40f8-abe5-333788d0da72.par
+#BlueLink0 Generic Data Group (More)`Tires for 9 axles` Very Large Vehicles` , Link 1`GenGrpM_bc875a51-3279-40f8-abe5-333788d0da72
+
+
+#MiscYellow1
+! Link all tires here
+#ENDMYellow
+
+PARSFILE Generic\GroupMore\GenGrpM_00d74c8e-ef12-41d1-bab1-8a44c25551a3.par
+#BlueLink1 Generic Data Group (More)`Tires for 5 axles` Very Large Vehicles` , Link 2`GenGrpM_00d74c8e-ef12-41d1-bab1-8a44c25551a3
+
+
+
+#MiscYellow3
+symbol_push  <<axle>> <<axle_temp>>
+symbol_push <<axle_per_unit>> 0
+
+
+
+! No tandem load sharing
+#ENDMYellow
+
+PARSFILE Generic\GroupMore\GenGrpM_03467457-b1e7-4cbc-994c-31db600d5f43.par
+#BlueLink3 Generic Data Group (More)`Specifications for 9 solid axles` Very Large Vehicles` , Link 4`GenGrpM_03467457-b1e7-4cbc-994c-31db600d5f43
+
+
+PARSFILE Generic\GroupMore\GenGrpM_9b8b57b6-9f94-48fb-9db6-0d0c1041b0e5.par
+#BlueLink4 Generic Data Group (More)`Specifications for 5 solid axles` Very Large Vehicles` , Link 5`GenGrpM_9b8b57b6-9f94-48fb-9db6-0d0c1041b0e5
+
+
+#MiscYellow5
+! Hitch
+symbol_push  <<hitch_x>> -17.8
+symbol_push  <<hitch_y>> 0.000000
+symbol_push  <<hitch_z>> 1.100000
+LX_H(<<unit>>) 17800
+Y_H(<<unit>>) 0
+H_H(<<unit>>) 1100
+#ENDMYellow
+
+PARSFILE Hitches\Joint\Hitch_fc25dbf0-73ba-4b1c-82af-5e2cf0a07b55.par
+#BlueLink5 Hitch: Joint Assembly`5th Wheel` 5th Wheel Hitches` , Link 6`Hitch_fc25dbf0-73ba-4b1c-82af-5e2cf0a07b55
+
+
+#MiscYellow6
+! Sprung mass
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 19000
+#ENDMYellow
+
+PARSFILE Vehicles\Trl_Sprung_Mass\TrlSprM_04af2288-ba88-4588-9c26-0fa3c501fa4c.par
+#BlueLink6 Vehicle: Trailer Sprung Mass`1A Flatbed Trailer` 1A Trailer` , Link 7`TrlSprM_04af2288-ba88-4588-9c26-0fa3c501fa4c
+
+
+#MiscYellow7
+! Animator
+#ENDMYellow
+
+PARSFILE Animator\Vehicles\AniVeh_f390d079-6fcf-49d3-b07c-e5ebf8aa613d.par
+#BlueLink7 Animator: Vehicles and Sensor Targets`1A B-Train Flatbed` Trailers: 1-axle` , Link 8`AniVeh_f390d079-6fcf-49d3-b07c-e5ebf8aa613d
+
+
+#MiscYellow8
+! Aero
+#ENDMYellow
+
+PARSFILE Aerodynamics\Aero_Main\Aero_2dcf0dd6-b552-482c-b346-939b627511c9.par
+#BlueLink8 Aerodynamics: Basic`No Aerodynamics` ` , Link 9`Aero_2dcf0dd6-b552-482c-b346-939b627511c9
+
+
+
+#EMBEDDED_NOTES
+#Symbol Stack operations are used along with browser keywords to assemble a 14 axle trailer.
+#
+#The parsfile for a 3A trailer screen was emulated here, with appropriate settings for 14 axles. Studying the parsfile for a 3A trailer dataset will assist in understanding the operation of this dataset.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { Very Large Vehicles } 14 axle flatbed (B train) (solid axles)
+#Library : Generic Data Group
+#DataSet : 14 axle flatbed (B train) (solid axles)
+#Category: Very Large Vehicles
+#FileID  : GenGrp_bb06dc23-199b-4f97-ac8d-659159a1fb0c
+#Product : TruckSim 2020.1
+#VehCode Generic Group
+
+END

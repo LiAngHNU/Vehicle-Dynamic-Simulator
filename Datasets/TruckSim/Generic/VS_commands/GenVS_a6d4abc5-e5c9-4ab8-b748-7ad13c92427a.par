@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Generic VS Commands`LKAS Example`Path Detection
+#VehCode VS Commands
+
+#MiscYellow0
+! A PI controller is used to calculate handwheel angle based on making detected lateral
+! offset zero. The detected curvature is treated as a disturbance which is between the PI
+! controller and the plant model.
+
+DEFINE_PARAMETER STEER_RATIO = 20 ! handwheel angle / avg roadwheel angle
+DEFINE_OUTPUT SteerDisturbance = STEER_RATIO*LX_AXLE*CurvPD_1; deg
+
+DEFINE_VARIABLE IntYoffsetPD
+EQ_DIFFERENTIAL IntYoffsetPD = YoffsetPD_1
+
+DEFINE_PARAMETER KP = 3.0
+DEFINE_PARAMETER KI = 1.5
+
+IMPORT IMP_STEER_SW VS_REPLACE 0
+EQ_IN IMP_STEER_SW = KP*YoffsetPD_1+KI*IntYoffsetPD+SteerDisturbance
+
+! Because VS_REPLACE is used, the closed loop driver model does not provide any
+! steer input.
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Path Detection } LKAS Example
+#Library : Generic VS Commands
+#DataSet : LKAS Example
+#Category: Path Detection
+#FileID  : GenVS_a6d4abc5-e5c9-4ab8-b748-7ad13c92427a
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

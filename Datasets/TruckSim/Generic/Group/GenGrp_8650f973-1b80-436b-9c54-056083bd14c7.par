@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName Generic Data Group`Mobile Crane`Very Large Vehicles
+#VehCode Generic Group
+#MiscYellow0
+IUNIT 1
+symbol_add  <<unit>> 1
+symbol_push <<axle_temp>> <<axle>>
+symbol_push <<axle_per_unit>> 0
+NAXLES 9
+! Link all tires here
+#ENDMYellow
+
+PARSFILE Generic\GroupMore\GenGrpM_545e3523-b098-4ed5-86ec-edb85df36c9f.par
+#BlueLink0 Generic Data Group (More)`Mobile crane: Tires for 9 axles` Very Large Vehicles` , Link 1`GenGrpM_545e3523-b098-4ed5-86ec-edb85df36c9f
+
+
+#MiscYellow1
+symbol_push  <<axle>> <<axle_temp>>
+symbol_push <<axle_per_unit>> 0
+
+! Tandem load sharing
+R_TANDEM(1) 1/2
+R_TANDEM(2) 2/3
+R_TANDEM(3) 2/3
+R_TANDEM(4) 1/2
+R_TANDEM(5) 1/2
+#ENDMYellow
+
+PARSFILE Generic\GroupMore\GenGrpM_b28cb863-689b-4eaa-a786-54c9331251c8.par
+#BlueLink1 Generic Data Group (More)`Mobile crane: Specs for 9 solid axles` Very Large Vehicles` , Link 2`GenGrpM_b28cb863-689b-4eaa-a786-54c9331251c8
+
+
+#MiscYellow2
+! Sprung mass
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 16445
+#ENDMYellow
+
+PARSFILE Vehicles\Sprung_Mass\SprMass_72711a5e-f89b-48fb-a8bb-2ef84513711f.par
+#BlueLink2 Vehicle: Lead Unit Sprung Mass`Mobile Crane Base vehicle` Mobile Crane` , Link 3`SprMass_72711a5e-f89b-48fb-a8bb-2ef84513711f
+
+
+PARSFILE Aerodynamics\Aero_Main\Aero_2a4a7111-e5fb-4116-845a-5ab1e31e8c99.par
+#BlueLink3 Aerodynamics: Basic`Conv. Cab w/ Fairings, 6.0 m Ref.` Conventional Cab` , Link 4`Aero_2a4a7111-e5fb-4116-845a-5ab1e31e8c99
+
+
+PARSFILE Steering\Str_Wheel_Tq\TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6.par
+#BlueLink4 Steering Wheel Torque`Linear: 1/25 (Typical)` ` , Link 5`TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6
+
+
+PARSFILE Animator\Vehicles\AniVeh_6f39474a-eb19-4f18-89fe-36188ccba84a.par
+#BlueLink5 Animator: Vehicles and Sensor Targets`Mobile Crane Vehicle` Mobile Crane` , Link 6`AniVeh_6f39474a-eb19-4f18-89fe-36188ccba84a
+
+
+PARSFILE Powertrain\10wd\10WD_37900348-f5ba-4793-9ccb-e8bf43c26941.par
+#BlueLink6 Powertrain: 10-Wheel Drive`10 x 10  295 kW` ` , Link 7`10WD_37900348-f5ba-4793-9ccb-e8bf43c26941
+
+
+
+
+
+#EMBEDDED_NOTES
+#Symbol Stack operations are used along with browser keywords to assemble a 9 axle mobile crane.
+#
+#The parsfile for a 5A lead unit screen was emulated here, with appropriate settings for 9 axles. Studying the parsfile for a 5A lead unit dataset will assist in understanding the operation of this dataset.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { Very Large Vehicles } Mobile Crane
+#Library : Generic Data Group
+#DataSet : Mobile Crane
+#Category: Very Large Vehicles
+#FileID  : GenGrp_8650f973-1b80-436b-9c54-056083bd14c7
+#Product : TruckSim 2020.1
+#VehCode Generic Group
+
+END

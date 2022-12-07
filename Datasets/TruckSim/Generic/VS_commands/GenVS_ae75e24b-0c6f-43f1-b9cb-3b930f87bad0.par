@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Generic VS Commands`Trailer Backing: I-PD Setup`Custom Steering Controls
+#VehCode VS Commands
+
+#MiscYellow0
+DEFINE_OUTPUT Art_H_Desired = IF(GEARSTAT<0, ...
+                                                      atan2( (X_DM_1-X_S1)*sin(YAW) - (Y_DM_1-Y_S1)*cos(YAW), ...
+                                                                -(X_DM_1-X_S1)*cos(YAW) - (Y_DM_1-Y_S1)*sin(YAW) ), ...
+                                                           Art_H); deg;
+
+DEFINE_OUTPUT Art_H_Error = Art_H_Desired-Art_H;
+
+DEFINE_OUTPUT Int_Art_H_Error 0;
+EQ_DIFFERENTIAL Int_Art_H_Error = Art_H_Error;
+
+DEFINE_OUTPUT Prev_Art_H; deg;
+EQ_INIT2 Prev_Art_H = Art_H;
+
+IMPORT IMP_STEER_SW VS_ADD 0;
+
+DEFINE_OUTPUT dArt_H_dt 0; deg/s;
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_da8cecab-a3d5-4231-b725-2264d40d49f8.par
+#BlueLink3 Plot: Setup`Hitch Articulation vs. Desired` Hitch` , Plot`Plot_da8cecab-a3d5-4231-b725-2264d40d49f8
+
+
+#EMBEDDED_NOTES
+#This dataset makes the necessary output definitions needed for the I-PD trailer-backing controller. This controller is based on the concept of aiming the trailer toward a single preview point, located behind the vehicle, via handwheel adjustments.
+#
+#These VS commands are separate from the controller itself so that the controller can be activated during an Event.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Custom Steering Controls } Trailer Backing: I-PD Setup
+#Library : Generic VS Commands
+#DataSet : Trailer Backing: I-PD Setup
+#Category: Custom Steering Controls
+#FileID  : GenVS_ae75e24b-0c6f-43f1-b9cb-3b930f87bad0
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

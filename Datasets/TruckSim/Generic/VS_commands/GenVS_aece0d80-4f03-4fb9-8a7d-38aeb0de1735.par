@@ -1,0 +1,147 @@
+PARSFILE
+#FullDataName Generic VS Commands`K & C Design Load Setup`K & C Testing
+#VehCode VS Commands
+
+#MiscYellow0
+define_units N/mm 0.001
+define_units N-s/mm 0.001
+
+! Some outputs for animator reference frames
+define_output x_kc = -lx_axle(2)/2+ 0.5;
+define_output y_kc = 0;
+
+define_parameter z_table_par = 700; mm;
+define_output z_kc = z_table_par;
+
+define_output roll_kc = 0;
+define_output pitch_kc = 0;
+define_output yaw_kc = 0;
+
+! The same stiffness and damping parameter values are used for X and Y,
+! Z requires higher stiffness
+define_parameter k_fixture_xy = 100000; N/mm;
+define_parameter c_fixture_xy = 100; N-s/mm;
+define_parameter k_fixture_z = 100000; N/mm;
+define_parameter c_fixture_z = 100; N-s/mm;
+
+! Create output variables for the reference point locations so their values are
+! written to the echo file. Use the output variables in the spring force calculations
+! so they will have correct values at the beginning
+define_output x_clamp_l1 = x_rp1; mm;
+define_output y_clamp_l1 = y_rp1; mm;
+define_output z_clamp_l1 = z_rp1; mm;
+define_output vx_clamp_l1 = vx_s1;
+define_output vy_clamp_l1 = vy_s1;
+define_output vz_clamp_l1 = vz_s1;
+
+define_output x_clamp_r1 = x_rp2; mm;
+define_output y_clamp_r1 = y_rp2; mm;
+define_output z_clamp_r1 = z_rp2; mm;
+define_output vx_clamp_r1 = vx_s2;
+define_output vy_clamp_r1 = vy_s2;
+define_output vz_clamp_r1 = vz_s2;
+
+define_output x_clamp_l2 = x_rp3; mm;
+define_output y_clamp_l2 = y_rp3; mm;
+define_output z_clamp_l2 = z_rp3; mm;
+define_output vx_clamp_l2 = vx_s3;
+define_output vy_clamp_l2 = vy_s3;
+define_output vz_clamp_l2 = vz_s3;
+
+define_output x_clamp_r2 = x_rp4; mm;
+define_output y_clamp_r2 = y_rp4; mm;
+define_output z_clamp_r2 = z_rp4; mm;
+define_output vx_clamp_r2 = vx_s4;
+define_output vy_clamp_r2 = vy_s4;
+define_output vz_clamp_r2 = vz_s4;
+
+! Horizontal
+eq_in imp_fx_rp_1 = -k_fixture_xy * x_clamp_l1 + -c_fixture_xy * vx_clamp_l1;
+eq_in imp_fy_rp_1 = -k_fixture_xy * (y_clamp_l1 - l_track(1)/2) + -c_fixture_xy * vy_clamp_l1;
+import imp_fx_rp_1 vs_replace 0
+import imp_fy_rp_1 vs_replace 0
+
+eq_in imp_fx_rp_2 = -k_fixture_xy * x_clamp_r1 + -c_fixture_xy * vx_clamp_r1;
+eq_in imp_fy_rp_2 = -k_fixture_xy * (y_clamp_r1 + l_track(1)/2) + -c_fixture_xy * vy_clamp_r1;
+import imp_fx_rp_2 vs_replace 0
+import imp_fy_rp_2 vs_replace 0
+
+eq_in imp_fx_rp_3 = -k_fixture_xy * (x_clamp_l2 + lx_axle(2)) + -c_fixture_xy * vx_clamp_l2;
+eq_in imp_fy_rp_3 = -k_fixture_xy * (y_clamp_l2 - l_track(2)/2) + -c_fixture_xy * vy_clamp_l2;
+import imp_fx_rp_3 vs_replace 0
+import imp_fy_rp_3 vs_replace 0
+
+eq_in imp_fx_rp_4 = -k_fixture_xy * (x_clamp_r2 + lx_axle(2)) + -c_fixture_xy * vx_clamp_r2;
+eq_in imp_fy_rp_4 = -k_fixture_xy * (y_clamp_r2 + l_track(2)/2) + -c_fixture_xy * vy_clamp_r2;
+import imp_fx_rp_4 vs_replace 0
+import imp_fy_rp_4 vs_replace 0
+
+! Vertical
+eq_in imp_fz_rp_1 = -k_fixture_z * z_clamp_l1 + -c_fixture_z * vz_clamp_l1;
+import imp_fz_rp_1 vs_replace 0
+eq_in imp_fz_rp_2 = -k_fixture_z * z_clamp_r1 + -c_fixture_z * vz_clamp_r1;
+import imp_fz_rp_2 vs_replace 0
+eq_in imp_fz_rp_3 = -k_fixture_z * z_clamp_l2 + -c_fixture_z * vz_clamp_l2;
+import imp_fz_rp_3 vs_replace 0
+eq_in imp_fz_rp_4 = -k_fixture_z * z_clamp_r2 + -c_fixture_z * vz_clamp_r2;
+import imp_fz_rp_4 vs_replace 0
+
+! Move the ground under each wheel to set the wheel center height to the
+! spec on the sprung mass screen
+define_parameter h_wc_gain 0.01
+define_parameter h_tol = 1e-9; mm;
+
+! Output variables dont need to be created for the wheel center Z internal outputs,
+! because the equations are deleted at the end of the setup run
+define_output err_l1 = abs(h_wc(1,1) - z_l1); mm; Wheel center position error L1;
+eq_in imp_zgnd_l1i = zgnd_l1i +(h_wc(1,1) - z_l1) * h_wc_gain;
+import imp_zgnd_l1i vs_add
+eq_in imp_zgnd_l1o = imp_zgnd_l1i;
+import imp_zgnd_l1o vs_add
+
+define_output err_r1 = abs(h_wc(1,2) - z_r1); mm; Wheel center position error R1;
+eq_in imp_zgnd_r1i = zgnd_r1i + (h_wc(1,2) - z_r1) * h_wc_gain;
+import imp_zgnd_r1i vs_add
+eq_in imp_zgnd_r1o = imp_zgnd_r1i;
+import imp_zgnd_r1o vs_add
+
+define_output err_l2 = abs(h_wc(2,1) - z_l2); mm; Wheel center position error L2;
+eq_in imp_zgnd_l2i = zgnd_l2i + (h_wc(2,1) - z_l2) * h_wc_gain;
+import imp_zgnd_l2i vs_add
+eq_in imp_zgnd_l2o = imp_zgnd_l2i;
+import imp_zgnd_l2o vs_add
+
+define_output err_r2 = abs(h_wc(2,2) - z_r2); mm; Wheel center position error R2;
+eq_in imp_zgnd_r2i = zgnd_r2i + (h_wc(2,2) - z_r2) * h_wc_gain;
+import imp_zgnd_r2i vs_add
+eq_in imp_zgnd_r2o = imp_zgnd_r2i;
+import imp_zgnd_r2o vs_add
+
+! Paremeters to keep the ground Z at each wheel at the end of the run, for use in tests
+define_parameter Gnd_Z_at_Design_L1 0; m;
+define_parameter Gnd_Z_at_Design_R1 0; m;
+define_parameter Gnd_Z_at_Design_L2 0; m;
+define_parameter Gnd_Z_at_Design_R2 0; m;
+
+!
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#Springs and dampers to constrain the position of the sprung mass are defined here.
+#
+#Three springs (X, Y, Z) are defined at each wheel center location, and while this is more than necessary, it is conceptually simple and makes it easy to use the same stiffness properties at all locations
+#
+#They can be turned off and on as needed to let the vehicle move or lock it in place.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { K & C Testing } K & C Design Load Setup
+#Library : Generic VS Commands
+#DataSet : K & C Design Load Setup
+#Category: K & C Testing
+#FileID  : GenVS_aece0d80-4f03-4fb9-8a7d-38aeb0de1735
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

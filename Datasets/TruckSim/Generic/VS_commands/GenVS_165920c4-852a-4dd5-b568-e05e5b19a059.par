@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Generic VS Commands`Blind Spot Detection, Backing Up`ADAS Support
+#VehCode VS Commands
+
+#MiscYellow0
+>! This example is set up so detection #1 is for the closest target.
+SYMBOL_PUSH <<alert>> Alert<<LR>>
+
+DEFINE_OUTPUT <<alert>> = AND(GT(MagS<<s>>_1,0), OR(LT(Vx_S<<s>>_1, -2), ...
+         LT(DisS<<s>>_1, 2))) ; - ; <<side>> blind spot alert
+
+ADD_ENTITY hud_image <<side>> Blind Spot Alert
+  align_x <<side>>
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  location 0 0 128 128
+  opacity <<alert>>
+  image_file Animator\2D_HUD_Icons\Blind_Spot\<<side>>_Blind_Spot.png
+END_ENTITY hud_image <<side>> Blind Spot Alert
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_41c37436-b70a-4127-b371-ba3bc2474634.par
+#BlueLink3 Plot: Setup`Distance from Sensor on One Side` ADAS Sensor Detections, Symbol Stack` , Plot`Plot_41c37436-b70a-4127-b371-ba3bc2474634
+
+PARSFILE Plot\Setup\Plot_97bbbe0b-d5c5-47f8-8863-a89e3ff3ea32.par
+#BlueLink4 Plot: Setup`Vx from Sensor on One Side` ADAS Sensor Detections, Symbol Stack` , Plot`Plot_97bbbe0b-d5c5-47f8-8863-a89e3ff3ea32
+
+
+#EMBEDDED_NOTES
+#When driving in reverse (parking lot), both rear blind-spot sensors trigger an alert if the target is detected moving close (negative Vx) or if it is within 2m.
+#
+#This uses the Symbol Stack variables <<side>>, <<LR>>, and <<s>>, all from the Sensor dataset.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { ADAS Support } Blind Spot Detection, Backing Up
+#Library : Generic VS Commands
+#DataSet : Blind Spot Detection, Backing Up
+#Category: ADAS Support
+#FileID  : GenVS_165920c4-852a-4dd5-b568-e05e5b19a059
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Generic Table`Control: Parking Brake Release`Parking Brake Control
+#RingCtrl0 SPLINE_FLAT
+#CheckBox0 0    
+
+#MiscYellow0
+ipb_release 4
+#ENDMYellow
+
+#DiagramOne0
+pb_release_TABLE SPLINE_FLAT
+0, 1
+0.05, 0.999876605
+0.1, 0.99966465
+0.15, 0.999088949
+0.2, 0.997527377
+0.25, 0.993307149
+0.3, 0.98201379
+0.35, 0.952574127
+0.4, 0.880797078
+0.45, 0.731058579
+0.5, 0.5
+0.55, 0.268941421
+0.6, 0.119202922
+0.65, 0.047425873
+0.7, 0.01798621
+0.75, 0.006692851
+0.8, 0.002472623
+0.85, 0.000911051
+0.9, 0.00033535
+0.95, 0.000123395
+1, 0
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD pb_release
+*X_LABEL T - Tstart_brakes
+*Y_LABEL Parking Brake: Release
+
+
+#EMBEDDED_NOTES
+#Sigmoid function, used to release parking brake
+#
+#In general, f(x) = 1/(1 + e^-x)
+#
+#A smooth table ensures continuous derivatives.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Table; { Parking Brake Control } Control: Parking Brake Release
+#Library : Generic Table
+#DataSet : Control: Parking Brake Release
+#Category: Parking Brake Control
+#FileID  : GenTab_4dcbe7f4-c8bd-4222-8ab9-8630d1d46bc8
+#Product : TruckSim 2020.1
+#VehCode table
+
+END

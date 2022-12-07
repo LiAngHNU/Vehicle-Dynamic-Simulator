@@ -1,0 +1,70 @@
+PARSFILE
+#FullDataName Generic VS Commands`Reverse Indicator`HUD Gauges
+#VehCode VS Commands
+
+#MiscYellow0
+ADD_ENTITY hud_text Reverse Indicator
+prefix Reverse
+location 140 95 100 18
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+color 1.0 1.0 1.0 1.0
+outline_color .3 .3 .3 0.5
+font VeraMono.ttf
+END_ENTITY hud_text Reverse Indicator
+
+ADD_ENTITY hud_image Brake Fill BG
+location 125 2 100 100
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+image_file Resources\Animator\2D_HUD_Icons\Indicator_Lamp\LIGHT_OFF.dds
+END_ENTITY hud_image Brake Fill BG
+
+
+define_variable Flash = 0;
+eq_in Flash = sin(2*pi*t);
+ANI_Flash
+WRT_Flash
+define_output FlashOut = Flash
+
+
+define_variable Reverse = 0;
+eq_in Reverse = LT(ModeTran, 0);
+
+ANI_Reverse;
+WRT_Reverse;
+define_output RevFlag = Reverse;
+
+
+
+ADD_ENTITY hud_image Brake Fill BG
+location 125 2 100 100
+red 1
+green 1
+blue 1
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+opacity RevFlag*FlashOut
+image_file Resources\Animator\2D_HUD_Icons\Indicator_Lamp\LIGHT_ON.dds
+END_ENTITY hud_image Brake Fill BG
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_8a9b0c5b-13c2-4ff3-b77a-0ffc3a07e222.par
+#BlueLink3 Plot: Setup`Transmission: Reverse Flag` Controls: Driver` , Plot`Plot_8a9b0c5b-13c2-4ff3-b77a-0ffc3a07e222
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { HUD Gauges } Reverse Indicator
+#Library : Generic VS Commands
+#DataSet : Reverse Indicator
+#Category: HUD Gauges
+#FileID  : GenVS_d74870c7-6ae5-4a01-b77e-38c104e60d80
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

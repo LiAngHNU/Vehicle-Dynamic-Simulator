@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Generic VS Commands`PBS: C3 Target Distance vs. Time`PBS Tests
+#VehCode VS Commands
+
+#MiscYellow0
+DEFINE_TABLE PBS_DISTANCE 4
+
+DEFINE_OUTPUT DistLev1 = PBS_DISTANCE(0, T_Event, 1);  m; PBS Level 1 distance
+DEFINE_OUTPUT DistLev2 = PBS_DISTANCE(0, T_Event, 2);  m; PBS Level 2 distance
+DEFINE_OUTPUT DistLev3 = PBS_DISTANCE(0, T_Event, 3);  m; PBS Level 3 distance
+DEFINE_OUTPUT DistLev4 = PBS_DISTANCE(0, T_Event, 4);  m; PBS Level 4 distance
+
+DEFINE_PARAMETER S_INIT 0; m; Initial station
+DEFINE_OUTPUT DistVeh = STATION - S_INIT; m ; Vehicle distance
+#ENDMYellow
+
+#BlueLink0 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Plot\Setup\Plot_36a3e270-43d8-481c-be37-de78c9f4c7f7.par
+#BlueLink3 Plot: Setup`PBS C3: Target Distances` PBS (Performance Based Standards)` , Plot`Plot_36a3e270-43d8-481c-be37-de78c9f4c7f7
+
+
+#EMBEDDED_NOTES
+#These VS Commands define 5 output variables that are plotted.
+#
+#The parameter S_INIT is also used in an event dataset.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { PBS Tests } PBS: C3 Target Distance vs. Time
+#Library : Generic VS Commands
+#DataSet : PBS: C3 Target Distance vs. Time
+#Category: PBS Tests
+#FileID  : GenVS_d0a6ef1a-35d5-487b-921d-d1cbd823184f
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

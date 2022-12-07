@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Generic VS Commands`Setup X-Y Imports`Path Detection
+#VehCode VS Commands
+
+#MiscYellow0
+import imp_x_pdtarg1_1 vs_replace 0 
+import imp_y_pdtarg1_1 vs_replace 0
+import imp_x_pdtarg2_1 vs_replace 0
+import imp_y_pdtarg2_1 vs_replace 0
+import imp_x_pdtarg3_1 vs_replace 0
+import imp_y_pdtarg3_1 vs_replace 0
+
+define_variable station_pd 0
+define_variable ltarg_pd 0
+eq_in station_pd = PATH_S_ID(Xo,Yo,PathIdDm,1)
+eq_in ltarg_pd = LTARG_CONSTANT(1)
+
+eq_in imp_x_pdtarg1_1 = PATH_X_ID(station_pd, ltarg_pd, PathIdDm, 1);
+eq_in imp_y_pdtarg1_1 = PATH_Y_ID(station_pd, ltarg_pd, PathIdDm, 1);
+eq_in imp_x_pdtarg2_1 = PATH_X_ID(station_pd+10, ltarg_pd, PathIdDm, 2);
+eq_in imp_y_pdtarg2_1 = PATH_Y_ID(station_pd+10, ltarg_pd, PathIdDm, 2);
+eq_in imp_x_pdtarg3_1 = PATH_X_ID(station_pd+20, ltarg_pd, PathIdDm, 3);
+eq_in imp_y_pdtarg3_1 = PATH_Y_ID(station_pd+20, ltarg_pd, PathIdDm, 3);
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#The X-Y imports are calculated using a VehicleSim reference path, just as an example of how to use the import variables.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Path Detection } Setup X-Y Imports
+#Library : Generic VS Commands
+#DataSet : Setup X-Y Imports
+#Category: Path Detection
+#FileID  : GenVS_3fcb4317-7ed5-49e6-b8cb-c976d4880e63
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

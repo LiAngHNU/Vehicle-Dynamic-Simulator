@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Generic Data Group (More)`Vehicle 4 (Yellow), Solo`Multiple Vehicles (Running Solo)
+#VehCode I_S
+#MiscYellow0
+SET_RUN_COLOR Yellow
+#ENDMYellow
+
+PARSFILE Vehicles\Lead_2a\Lead2a_0e8f42e3-6607-4e9f-8f23-092fbd4f093c.par
+#BlueLink0 Vehicle: Lead Unit with 2 Axles`Conv. Van (7-spd. AT, Park Tq.)` 2A Conventional Van` , Link 1`Lead2a_0e8f42e3-6607-4e9f-8f23-092fbd4f093c
+
+
+PARSFILE Sensors_Traffic\Radar\Radar_20f859dd-a34a-4c6f-a2c6-64f67345f31c.par
+#BlueLink1 ADAS Sensors for Range and Tracking`160 deg Sensor (Yellow)` 160 deg Sensor` , Link 2`Radar_20f859dd-a34a-4c6f-a2c6-64f67345f31c
+
+
+PARSFILE Generic\Links\GenLink_195052a3-4217-4f30-9c92-7070995b06ff.par
+#BlueLink2 Generic Group of Links`Parameters and Functions` ADAS Setups` , Link 3`GenLink_195052a3-4217-4f30-9c92-7070995b06ff
+
+
+
+
+
+
+
+
+*MODELCODE I_S
+
+#EMBEDDED_NOTES
+#This is a setup for a vehicle with a sensor  to run with other vehicles in Simulink, using the Parallel Solvers screen accessed from the Tools menu.
+#
+#Feel free to change the vehicle dataset used with the first link. However, be sure the dataset code for this dataset matches that of the vehicle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group (More); { Multiple Vehicles (Running Solo) } Vehicle 4 (Yellow), Solo
+#Library : Generic Data Group (More)
+#DataSet : Vehicle 4 (Yellow), Solo
+#Category: Multiple Vehicles (Running Solo)
+#FileID  : GenGrpM_f9b3e7b2-cda5-4a46-9774-e295e3be5405
+#Product : TruckSim 2020.1
+#VehCode I_S
+
+END

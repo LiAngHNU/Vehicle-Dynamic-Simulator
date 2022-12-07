@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Generic Data Group`Diesel Engine (6 Cylinder)`Audio Sound Sets
+#VehCode Generic Group
+#MiscYellow0
+define_parameter ncyls = 6; ; ...
+  Number of engine cylinders, used for audio
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+#ENDMYellow
+
+PARSFILE Animator\Sound\Sample\SndSmp_6533838b-a30f-453f-a926-1774a27cb142.par
+#BlueLink0 Animator: Sound Sample`Diesel 6 Cyl. - Power Off` Diesel Engine Sounds` , Link 1`SndSmp_6533838b-a30f-453f-a926-1774a27cb142
+
+
+PARSFILE Animator\Sound\Sample\SndSmp_4a7f38f0-1662-4ce2-a79b-c798327f1332.par
+#BlueLink1 Animator: Sound Sample`Diesel 6 Cyl. - Power On` Diesel Engine Sounds` , Link 2`SndSmp_4a7f38f0-1662-4ce2-a79b-c798327f1332
+
+
+
+
+
+
+
+
+
+
+LOG_ENTRY Used Dataset: Generic Data Group; { Audio Sound Sets } Diesel Engine (6 Cylinder)
+#Library : Generic Data Group
+#DataSet : Diesel Engine (6 Cylinder)
+#Category: Audio Sound Sets
+#FileID  : GenGrp_1521d907-311d-4574-bdb6-7695027f6bdc
+#Product : TruckSim 2020.1
+#VehCode Generic Group
+
+END

@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Generic VS Commands`ACC Equations w/ HUD`ADAS Support
+#VehCode VS Commands, ADAS
+
+#MiscYellow0
+define_parameter speed_limit = 80; km/h ; Top speed limit for ACC
+DEFINE_OUTPUT vel_lead = SpdS<<s>>_1 + vx; km/h
+define_output Distance_ACC = vel_lead * time_gap ; m ; Variable target following distance for ACC
+
+! the following equations use speed_target for dataset #1, which must match the driver model
+EQ_INIT speed_limit = speed_target(station,t,1);
+EQ_OUT SPEED_TARGET_CONSTANT(1) = IF(MagS<<s>>_1 > 0, ...
+    MIN(speed_limit, vx + SpdS<<s>>_1*Distance_ACC/DisS<<s>>_1), ...
+    speed_limit)
+#ENDMYellow
+
+*MODELCODE VS Commands, ADAS
+PARSFILE Animator\HUD\HUD_922295fe-d91c-4a55-8178-814ca9b4eb14.par
+#BlueLink0 Animator: HUD`ACC Icon` HUD Groups` , Miscellaneous`HUD_922295fe-d91c-4a55-8178-814ca9b4eb14
+
+PARSFILE Animator\HUD\HUD_739f958a-a5e3-42f3-9057-e5f0eb21ab27.par
+#BlueLink1 Animator: HUD`ACC Bars` ACC - Adaptive Cruise Control` , Miscellaneous`HUD_739f958a-a5e3-42f3-9057-e5f0eb21ab27
+
+
+#EMBEDDED_NOTES
+#This dataset makes use of the internal TruckSim speed controller. The target speed is set to a constant to eliminate table lookup. However, the "constant" value is updated every time step with the EQ_OUT equation.
+#
+#Based on detections from the current sensor <<s>>, the target speed is either a constant speed limit assigned to the parameter SPEED_LIMIT (based on the initial target speed when this dataset is scanned), or a speed that will attempt to match the detected speed of the target in front.
+#
+#Rather than naming the detection variables for sensor 1 (e.g.,
+#MagS1>_1, the equation is written for the current sensor <<s>>, where <<s>> is a symbol stack variable. This allows the dataset to be used with a sensor that might not be the first one defined.
+#
+#To see how these equations are presented to the VS Solver, please look at the Echo file near the end, where VS Commands are listed.
+#
+#The ACC HUD icon is a combination of HUD objects that are defined by two datasets.  The first dataset, ACC Icon, displays the base, lead car, active cruise alert, and brakes.  The second dataset, ACC Bars, displays the distance bars which indicate following distance.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { ADAS Support } ACC Equations w/ HUD
+#Library : Generic VS Commands
+#DataSet : ACC Equations w/ HUD
+#Category: ADAS Support
+#FileID  : GenVS_a4fa9b56-2424-48af-961c-c52a32bc1ddb
+#Product : TruckSim 2020.1
+#VehCode VS Commands, ADAS
+
+END

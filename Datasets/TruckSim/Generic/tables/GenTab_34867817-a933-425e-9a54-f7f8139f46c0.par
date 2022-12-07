@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Generic Table`Roundabout: 1m LTARG for Enter and Exit`Roads and Paths
+#RingCtrl0 SPLINE_FLAT
+#CheckBox0 0    
+
+#MiscYellow0
+ILTARG = 1
+#ENDMYellow
+
+#DiagramOne0
+LTARG_TABLE SPLINE_FLAT
+40, 0
+60, 0.8
+75, 1
+90, 0.8
+110, 0
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD LTARG
+*Y_LABEL Lateral Offset
+
+
+#EMBEDDED_NOTES
+#When entering or leaving the roundabout, the vehicle is turning right. The target is positive (left) to reduce offtracking on the right by the trailer axles.
+#
+#This is ILTARG dataset #1.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Table; { Roads and Paths } Roundabout: 1m LTARG for Enter and Exit
+#Library : Generic Table
+#DataSet : Roundabout: 1m LTARG for Enter and Exit
+#Category: Roads and Paths
+#FileID  : GenTab_34867817-a933-425e-9a54-f7f8139f46c0
+#Product : TruckSim 2020.1
+#VehCode table
+
+END

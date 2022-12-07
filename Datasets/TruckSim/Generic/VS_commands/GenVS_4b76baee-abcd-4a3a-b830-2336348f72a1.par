@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Generic VS Commands`Tilt Table Equivalent Ay HUD Display`PBS Tests
+#VehCode VS Commands
+
+#MiscYellow0
+!Add Target Speed Display
+ANI_Ay_Tilt
+WRT_Ay_Tilt
+ADD_ENTITY hud_text Text Output - Equivalent Lateral Acceleration
+  location 0.05 0.05 0.05 0.035
+  prefix Equivalent Ay (G)
+  min_width_prefix 16
+  value Ay_Tilt
+  precision 3
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+END_ENTITY hud_text Text Output - Equivalent Lateral Acceleration
+
+
+!
+!Adds TruckSim Logo
+ADD_ENTITY hud_image Image Widget
+  location 10 10 160 160
+  align_x 2
+  align_y 2
+  size_mode 1
+  place_mode 1
+  opacity 0.33
+  image_file Animator\2D_HUD_Icons\VS_Icons\TSIcon.png
+END_ENTITY hud_image Image Widget
+!
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { PBS Tests } Tilt Table Equivalent Ay HUD Display
+#Library : Generic VS Commands
+#DataSet : Tilt Table Equivalent Ay HUD Display
+#Category: PBS Tests
+#FileID  : GenVS_4b76baee-abcd-4a3a-b830-2336348f72a1
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

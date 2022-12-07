@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Generic VS Commands`PBS C11: Tilt Table VS Commands`PBS Tests
+#VehCode PBS: Tilt Table
+
+#MiscYellow0
+! New parameter and variable for table tilt
+define_parameter tilt_rate = 2; deg/s;  ! Rate of tilt
+define_variable tilt = 0; deg;  ! Current tilt angle
+define_output Roll_Tab = tilt; units = deg;  ! Copy of tilt used for animation
+define_output Ay_Tilt = tan(tilt);
+set_output_long_name Ay_Tilt Equivalent Ay (G);
+
+define_output roll_rd = roll - tilt; deg;  ! Relative roll of lead unit
+
+eq_in tilt = tilt_rate * max(0,t);  ! Calculated at the start of each time step
+
+! The tilt table is hinged at Y = -2 m. The road slope is defined with a 2D table
+! that is sloped 1m vertical per 1m lateral.
+
+idz_road 1 ! set to properly load dZ vs S, L in formulas and linked dataset below
+
+ROAD_DZ_GAIN = 0 ; ! initial condition
+ROAD_DZ_OFFSET = 0;
+
+eq_in ROAD_DZ_GAIN = tan(tilt);  ! Updated every time step
+eq_in ROAD_DZ_OFFSET = 2*tan(tilt)
+#ENDMYellow
+
+*MODELCODE PBS: Tilt Table
+PARSFILE Plot\Setup\Plot_486245c8-36a9-4da6-8d71-d4790f9b6079.par
+#BlueLink3 Plot: Setup`Slip Ratios (Axles 1- 3)` Tire Kinematics` , Plot`Plot_486245c8-36a9-4da6-8d71-d4790f9b6079
+
+PARSFILE Plot\Setup\Plot_f0db74be-1c22-43e5-b618-3f3cfa3ae4df.par
+#BlueLink4 Plot: Setup`Slip Ratios (Axles 4 - 5)` Tire Kinematics` , Plot`Plot_f0db74be-1c22-43e5-b618-3f3cfa3ae4df
+
+
+#EMBEDDED_NOTES
+#The tilt table is simulated by dynamically scaling a road geometry defined with a lateral slope of 1 m/m;
+#
+#The tilting surface is "hinged" at y = -2 m. To get this effect, the tilted surface is transformed using by using formulas to adjust the offset ROAD_DZ_OFFSET and scale ROAD_DZ_GAIN using the VS Commands in this dataset.
+#
+#The parameter TILT_RATE is defined here. It can be updated with another value anytime after this dataset is loaded.
+#
+#This dataset is given a code to identify it in blue links (e.g., the Procedure dataset that uses it).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { PBS Tests } PBS C11: Tilt Table VS Commands
+#Library : Generic VS Commands
+#DataSet : PBS C11: Tilt Table VS Commands
+#Category: PBS Tests
+#FileID  : GenVS_c33c0556-d8e4-4753-b8d7-a4582364fafb
+#Product : TruckSim 2020.1
+#VehCode PBS: Tilt Table
+
+END

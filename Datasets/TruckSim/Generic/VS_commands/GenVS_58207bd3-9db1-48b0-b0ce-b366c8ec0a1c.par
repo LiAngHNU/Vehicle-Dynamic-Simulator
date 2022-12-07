@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Generic VS Commands`Initial Target, Left Turn, Comb. Vehicles`PBS Tests
+#VehCode VS Commands
+
+#MiscYellow0
+LTARG_CONSTANT = (L_TIRE_REF + L_Track(1,1)/2) ! Only works for combinaton vehicles
+#ENDMYellow
+
+*MODELCODE VS Commands
+
+#EMBEDDED_NOTES
+#This dataset is needed the PBS low-speed 12.5m turn.
+#
+#Link to this dataset from the Run Control screen if the turn is to the left and the vehicle has a trailer.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { PBS Tests } Initial Target, Left Turn, Comb. Vehicles
+#Library : Generic VS Commands
+#DataSet : Initial Target, Left Turn, Comb. Vehicles
+#Category: PBS Tests
+#FileID  : GenVS_58207bd3-9db1-48b0-b0ce-b366c8ec0a1c
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

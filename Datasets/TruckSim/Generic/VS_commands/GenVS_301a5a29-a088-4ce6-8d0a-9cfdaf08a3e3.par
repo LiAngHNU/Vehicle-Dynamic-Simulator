@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Generic VS Commands`ACC Equations`ADAS Support
+#VehCode VS Commands, ADAS
+
+#MiscYellow0
+define_parameter speed_limit = speed_target(station,t,1) ; km/h ; Top speed limit for ACC
+define_parameter Distance_ACC = 12 ; m ; Target following distance for ACC
+
+! Adjust speed target every time step. Weight relative speed by distance
+EQ_OUT SPEED_TARGET_CONSTANT(1) = IF_GT_0_THEN(MagS<<s>>_1, ...
+    MIN(speed_limit, vx + SpdS<<s>>_1*Distance_ACC/DisS<<s>>_1), ...
+    speed_limit)
+#ENDMYellow
+
+*MODELCODE VS Commands, ADAS
+
+#EMBEDDED_NOTES
+#This dataset makes use of the internal TruckSim speed controller. The target speed is set to a constant to eliminate table lookup. However, the "constant" value is updated every time step with the EQ_OUT equation.
+#
+#Based on detections from the current sensor <<s>>, the target speed is either a constant speed limit assigned to the parameter SPEED_LIMIT (based on the initial target speed when this dataset is scanned), or a speed that will attempt to match the detected speed of the target in front.
+#
+#Rather than naming the detection variables for sensor 1 (e.g.,
+#MagS1>_1, the equation is written for the current sensor <<s>>, where <<s>> is a symbol stack variable. This allows the dataset to be used with a sensor that might not be the first one defined.
+#
+#To see how these equations are presented to the VS Solver, please look at the Echo file near the end, where VS Commands are listed.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { ADAS Support } ACC Equations
+#Library : Generic VS Commands
+#DataSet : ACC Equations
+#Category: ADAS Support
+#FileID  : GenVS_301a5a29-a088-4ce6-8d0a-9cfdaf08a3e3
+#Product : TruckSim 2020.1
+#VehCode VS Commands, ADAS
+
+END

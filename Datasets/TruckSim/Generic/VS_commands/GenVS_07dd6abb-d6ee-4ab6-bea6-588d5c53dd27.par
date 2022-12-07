@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Generic VS Commands`Mcity: Loaded Mu Data`Mcity
+#VehCode VS Commands
+
+#MiscYellow0
+
+! Load Mu Data from file.
+LOAD_TABLE_FILE Animator\3D_Shape_Files_User\Mcity\Map10cmMu.vstb
+
+! Create Carpet from loaded data.
+FILE_TO_CARPET MU_ROAD_CARPET
+
+! Used to make files copy to Consolidated Pars File Export
+*CPAR_INCLUDE Animator\3D_Shape_Files_User\Mcity\Map10cmMu.vstb
+*CPAR_INCLUDE Animator\3D_Shape_Files_User\Mcity\Map10cmMu.vsb
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Mcity } Mcity: Loaded Mu Data
+#Library : Generic VS Commands
+#DataSet : Mcity: Loaded Mu Data
+#Category: Mcity
+#FileID  : GenVS_07dd6abb-d6ee-4ab6-bea6-588d5c53dd27
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

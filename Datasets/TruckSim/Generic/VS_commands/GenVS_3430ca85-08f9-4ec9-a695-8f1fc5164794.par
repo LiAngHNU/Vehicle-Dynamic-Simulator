@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Generic VS Commands`Euro NCAP: FCW`ADAS Support
+#VehCode VS Commands, FCW
+
+#MiscYellow0
+! Units for acceleration are m/s^2 to match Euro NCAP specifications
+DEFINE_PARAMETER Ax_Alert = 3 ; m/s2; Deceleration level to show FCW alert
+
+! Ax_Calc is needed for avoid collision, given relative speed and distance from sensor
+DEFINE_OUTPUT Ax_Calc = MagS<<s>>_1*SpdS<<s>>_1^2/(2*DisS<<s>>_1); m/s2 ; ...
+   Decel needed to avoid collision
+
+! Compare Ax_Calc and Ax_Alert
+DEFINE_OUTPUT Show_FCW = 0; - ;  Boolean: show FCW icon
+EQ_OUT Show_FCW = AND(MagS<<s>>_1,  AND(LT(SpdS<<s>>_1, 0), GT(Ax_Calc, Ax_Alert)))
+#ENDMYellow
+
+*MODELCODE VS Commands, FCW
+PARSFILE Animator\HUD\HUD_bb95272c-4b83-4a10-8334-f8f6097af704.par
+#BlueLink0 Animator: HUD`FCW Alert (small)` Alerts` , Miscellaneous`HUD_bb95272c-4b83-4a10-8334-f8f6097af704
+
+PARSFILE Plot\Setup\Plot_8d362312-f083-4a5a-90ee-120fcf6bb5d9.par
+#BlueLink3 Plot: Setup`Euro NCAP: Ax_Calc for AEB` ADAS and AEB Alerts and Commands` , Plot`Plot_8d362312-f083-4a5a-90ee-120fcf6bb5d9
+
+PARSFILE Plot\Setup\Plot_8c9bbc88-a890-4baf-9791-b05739354da1.par
+#BlueLink4 Plot: Setup`Euro NCAP: AEB Booleans` ADAS and AEB Alerts and Commands` , Plot`Plot_8c9bbc88-a890-4baf-9791-b05739354da1
+
+
+#EMBEDDED_NOTES
+#Logic to generate a forward collision warning (FCW) using the current sensor <<s>> and a parameter for the acceptable deceleration.
+#
+#The output Ax_Calc is an estimate of the deceleration needed to avoid a collision, based on sensor Distance and Speed detection signals.
+#
+#Ax_Calc is compared to the threshold parameter Ax_Alert to set a Boolean parameter Show_FCW, which is linked to an HUD icon.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { ADAS Support } Euro NCAP: FCW
+#Library : Generic VS Commands
+#DataSet : Euro NCAP: FCW
+#Category: ADAS Support
+#FileID  : GenVS_3430ca85-08f9-4ec9-a695-8f1fc5164794
+#Product : TruckSim 2020.1
+#VehCode VS Commands, FCW
+
+END

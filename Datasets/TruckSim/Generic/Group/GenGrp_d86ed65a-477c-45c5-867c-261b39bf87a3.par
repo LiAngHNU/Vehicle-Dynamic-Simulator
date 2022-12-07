@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Generic Data Group`100 km/h Wind: From Right then Left`Wind and Environment
+#VehCode Generic Group
+PARSFILE Wind\Speed\Wind_144d567b-0b4a-4730-9cdd-13c30817ff12.par
+#BlueLink0 Wind Speed`Constant: 1 km/h` ` , Link 1`Wind_144d567b-0b4a-4730-9cdd-13c30817ff12
+
+
+PARSFILE Generic\tables\GenTab_d39abbe0-d8bd-41d4-a7d1-bf36f3527b91.par
+#BlueLink1 Generic Table`Wind Speed: 100 km/h Bursts` Crosswind Facility` , Link 2`GenTab_d39abbe0-d8bd-41d4-a7d1-bf36f3527b91
+
+
+#MiscYellow2
+eq_in WIND_SPEED_GAIN = Wind_Spd(0,station,1)
+#ENDMYellow
+
+
+PARSFILE Wind\Heading\WindDir_71293680-ce85-4cde-8d30-b72f38c44ff8.par
+#BlueLink3 Wind Heading`Constant: 1 deg` ` , Link 4`WindDir_71293680-ce85-4cde-8d30-b72f38c44ff8
+
+
+PARSFILE Generic\tables\GenTab_e019bb3c-5237-4b45-8652-0f8cef9fa3c7.par
+#BlueLink4 Generic Table`Wind Heading: From Right then Left` Crosswind Facility` , Link 5`GenTab_e019bb3c-5237-4b45-8652-0f8cef9fa3c7
+
+
+#MiscYellow5
+eq_in WIND_HEADING_GAIN = Wind_Hdg(0,station,1)
+#ENDMYellow
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#The "Generic Wind Speed" and "Generic Wind Heading" are scaled by gains created with user defined tables to turn the wind on and off and change its heading as the vehicle passes through the Crosswind Facility test section.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { Wind and Environment } 100 km/h Wind: From Right then Left
+#Library : Generic Data Group
+#DataSet : 100 km/h Wind: From Right then Left
+#Category: Wind and Environment
+#FileID  : GenGrp_d86ed65a-477c-45c5-867c-261b39bf87a3
+#Product : TruckSim 2020.1
+#VehCode Generic Group
+
+END

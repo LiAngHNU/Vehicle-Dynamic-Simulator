@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Generic VS Commands`Parameter Setting Options`Custom Steering Controls
+#VehCode VS Commands
+
+#MiscYellow0
+DEFINE_VARIABLE Iters  = 1
+DEFINE_PARAMETER NITERS  = 8
+DEFINE_TABLE LFWD_OPTS
+DEFINE_TABLE LFWD_ES
+
+! Set this value to 1 to display results
+DEFINE_VARIABLE PrintVals = 0
+DEFINE_VARIABLE BESTVAL = 0
+DEFINE_VARIABLE BESTVALERROR = 0
+
+! A table of possible values for L_FORWARD to check for best performance
+LFWD_OPTS_TABLE STEP
+1, 13
+2, 14
+3, 15
+4, 16
+5, 17
+6, 18
+7, 19
+8, 20
+ENDTABLE
+
+! A table to hold the accumulated error value for each value of L_FORWARD
+LFWD_ES_TABLE STEP
+1, 0.0
+2, 0.0
+3, 0.0
+4, 0.0
+5, 0.0
+6, 0.0
+7, 0.0
+8, 0.0
+ENDTABLE
+
+EQ_DYN L_FORWARD = LFWD_OPTS(0, Iters, 1)
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Custom Steering Controls } Parameter Setting Options
+#Library : Generic VS Commands
+#DataSet : Parameter Setting Options
+#Category: Custom Steering Controls
+#FileID  : GenVS_be3dd4b6-3b44-48dd-a002-d1a1266ee455
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

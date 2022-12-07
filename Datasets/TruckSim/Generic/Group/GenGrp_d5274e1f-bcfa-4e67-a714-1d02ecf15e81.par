@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Generic Data Group`Skid Marks (6 Axles, 2 Units)`Tire Skid Mark Animations
+#VehCode Generic Group
+PARSFILE Generic\VS_commands\GenVS_0ed9d379-585d-43b9-82f4-3d6dfcb4c7c7.par
+#BlueLink0 Generic VS Commands`Tire Skid Mark Setup` Tire Paths and Road Markings` , Link 1`GenVS_0ed9d379-585d-43b9-82f4-3d6dfcb4c7c7
+
+
+PARSFILE Animator\Arrows\Arrows_c35370b9-ba5f-4087-aba1-42d9ca7e28a8.par
+#BlueLink1 Animator: Wheel Arrows and Other Indicators`Tire (Inner) Skid Marks (6 Axles)` Skid Marks (6 Axles)` , Link 2`Arrows_c35370b9-ba5f-4087-aba1-42d9ca7e28a8
+
+
+PARSFILE Animator\Arrows\Arrows_d691e2c9-3518-4f6f-9649-8a270e94b3a4.par
+#BlueLink2 Animator: Wheel Arrows and Other Indicators`Tire (Outer) Skid Marks (6 Axles)` Skid Marks (6 Axles)` , Link 3`Arrows_d691e2c9-3518-4f6f-9649-8a270e94b3a4
+
+
+
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#This dataset creates tire skid marks for the animator. Because the vehicle has dual tires, two datasets are linked here to show marks for both the inner and outer tires of a 6-axle vehicle with 2 units (22 tires).
+#
+#The Tire Skid Mark Setup dataset is loaded before the wheel indicator datasets, because it uses VS Commands to define new variables that they use. In turn, the Tire Skid Mark Setup dataset makes use of a new parameter Fz_Ref_Skid that is defined here as a reference static tire load for each tire.
+#
+#The Fz_Ref_Skid value is approximate. It does not include unsprung masses, and a single value is used for all tires.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { Tire Skid Mark Animations } Skid Marks (6 Axles, 2 Units)
+#Library : Generic Data Group
+#DataSet : Skid Marks (6 Axles, 2 Units)
+#Category: Tire Skid Mark Animations
+#FileID  : GenGrp_d5274e1f-bcfa-4e67-a714-1d02ecf15e81
+#Product : TruckSim 2020.1
+#VehCode Generic Group
+
+END

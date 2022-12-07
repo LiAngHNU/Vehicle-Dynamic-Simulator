@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Generic VS Commands`Setup for Sign Detection`Setup Events
+#VehCode Setup Events
+
+#MiscYellow0
+! Need to remember which dataset has the stopping speed profile
+define_parameter STOP_SPEED_ID =  1 ; - ; ID for target speed dataset when stopping
+define_parameter SPEED_TOL = 2; mi/h; Speed tolerance used to start looking at signs again
+
+! Make detection output variable for use in Events  that do not involve Symbol Stack
+define_output TypeSign = TypS<<s>>_1; - ; Type of closest sign
+define_output SignDist=   X_S<<s>>_1; m;Distance from sensor to sign
+define_output StopDist=  MsgS<<s>>_1; m;Distance from sign to stop point
+define_output SpdLimit=  MsgS<<s>>_1;mi/h;Speed limit from sign
+
+define_parameter SIGN_DETECT = 100; -; Event Group ID for handling signs
+#ENDMYellow
+
+*MODELCODE Setup Events
+PARSFILE Events\Events_00671864-a3ba-40e9-bca2-44dd7c3c56a3.par
+#BlueLink1 Events`Look for Traffic Signs` Sign Detection` , Miscellaneous`Events_00671864-a3ba-40e9-bca2-44dd7c3c56a3
+
+
+#EMBEDDED_NOTES
+#Add parameters and a target speed table to support braking when a stop sign is detected.
+#
+#Begin a chain of events involving detection of traffic signs.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Setup Events } Setup for Sign Detection
+#Library : Generic VS Commands
+#DataSet : Setup for Sign Detection
+#Category: Setup Events
+#FileID  : GenVS_390e4090-68bf-4277-87c2-0abef4604ed5
+#Product : TruckSim 2020.1
+#VehCode Setup Events
+
+END

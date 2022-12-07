@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName Generic Data Group`Bus for 3-Way Intersection`ADAS: Traffic Scenarios
+#VehCode Traffic Objects
+PARSFILE Control\Speed_t\SpdTime_1a6854b3-657e-4ef2-b122-0a150878ccdb.par
+#BlueLink0 Control: Speed (Closed Loop) Using Target Speed`3-Way Intersection: 30 mph Bus` Speed vs. Station` , Link 1`SpdTime_1a6854b3-657e-4ef2-b122-0a150878ccdb
+
+
+#MiscYellow1
+define_parameter S_GO_LIGHT = -34.45;m;...
+  Station to commit if light is green
+#ENDMYellow
+
+PARSFILE Control\Speed_t\SpdTime_9e2a7044-d8fd-43fd-9bd9-45592aca138d.par
+#BlueLink1 Control: Speed (Closed Loop) Using Target Speed`Intersection STOP_TRAFFIC` Speed vs. Station` , Link 2`SpdTime_9e2a7044-d8fd-43fd-9bd9-45592aca138d
+
+
+#MiscYellow2
+SSTART_SPEED_TARGET -14.45 ! where to stop
+SPEED_TARGET_GAIN 0.6035 ! Adjust initial speed to match scene
+#ENDMYellow
+
+
+#MiscYellow3
+symbol_push <<sstart>> -125
+! The road and path going E and exiting N is 1002
+symbol_push <<Bus_Path>> 1002
+symbol_push <<Bus_Road>> 1002
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_55b64603-9637-47f7-b8f6-976c9894c5b5.par
+#BlueLink3 Single Moving Object (Custom)`Bus with Custom Detection Boundary` Irregularly Shaped Objects` , Link 4`Target_55b64603-9637-47f7-b8f6-976c9894c5b5
+
+
+#MiscYellow4
+define_output S_TV1 = S_Obj_<<o>>;m; ...
+  Station for TV1
+define_parameter ITV1 = IOBJECT;-;...
+  Event Group ID for TV1
+define_output Vel_TV1 = V_Obj_<<o>>;...
+  km/h;  Speed for TV1
+#ENDMYellow
+
+PARSFILE Events\Events_e54a0ed6-1798-479f-94a5-058262c63a88.par
+#BlueLink4 Events`Set Exit Strategy` Traffic Vehicle and Traffic LIght` , Link 5`Events_e54a0ed6-1798-479f-94a5-058262c63a88
+
+
+#MiscYellow5
+define_output TrfSgClr = LightE; -; ...
+  Light color for the signal of interest to this object
+#ENDMYellow
+
+PARSFILE Events\Events_c0129263-c16e-459b-9af0-12ed53e9db6d.par
+#BlueLink5 Events`Traffic Vehicle 1 (TV1) Green Light` Traffic Vehicle and Traffic LIght` , Link 6`Events_c0129263-c16e-459b-9af0-12ed53e9db6d
+
+
+
+
+
+*MODELCODE Traffic Objects
+
+#EMBEDDED_NOTES
+#This group of datasets creates a traffic vehicle that is able to act based on the status of the traffic signal.  It can be expanded to include additional vehicles which respond to the speed of the lead vehicle in the lane.
+#
+#The bus shape used here has a customized polygonal bounding box.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { ADAS: Traffic Scenarios } Bus for 3-Way Intersection
+#Library : Generic Data Group
+#DataSet : Bus for 3-Way Intersection
+#Category: ADAS: Traffic Scenarios
+#FileID  : GenGrp_3d160f3c-1f80-4051-99ef-001b36c8cadc
+#Product : TruckSim 2020.1
+#VehCode Traffic Objects
+
+END

@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Generic VS Commands`Import Target Point Coordinates`Custom Steering Controls
+#VehCode VS Commands
+
+#MiscYellow0
+! Import target point coordinates
+
+define_parameter dist_ahead 4; m;
+define_parameter amp = 2.0; m;
+define_parameter str_freq 0.2;
+
+! Position of the target along a line of  length "amp" 
+define_output str_dir = amp * sin(str_freq * 2 * pi * t); m;
+
+! calculate the X and Y coordinates of the target
+eq_in imp_x_dm = xo + dist_ahead * cos(yaw) - str_dir * sin(yaw);
+import imp_x_dm vs_replace
+
+eq_in imp_y_dm = yo + dist_ahead * sin(yaw) + str_dir * cos(yaw)
+import imp_y_dm vs_replace
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_6f188b75-96e5-4ed3-ac38-a931a4f03979.par
+#BlueLink3 Plot: Setup`Steer target direction` User-Defined Variables` , Plot`Plot_6f188b75-96e5-4ed3-ac38-a931a4f03979
+
+
+#EMBEDDED_NOTES
+#Some simple parameters create the coordinates of a point that lies on a line dist_ahead of the vehicle origin, perpendicular to the vehicle, and oscillating laterally at str_freq with and amplitude of amp.
+#
+#The position of the target considers the location of the vehicle (x, y, yaw).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Custom Steering Controls } Import Target Point Coordinates
+#Library : Generic VS Commands
+#DataSet : Import Target Point Coordinates
+#Category: Custom Steering Controls
+#FileID  : GenVS_a4da4bac-5090-4bba-9218-04f58c477405
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

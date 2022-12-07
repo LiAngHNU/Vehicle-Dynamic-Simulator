@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Generic VS Commands`Mcity: Loaded Elevation Data`Mcity
+#VehCode VS Commands
+
+#MiscYellow0
+! Set up DZ Table
+NROAD_DZ 1
+IROAD_DZ = NROAD_DZ
+ROAD_N_DZ = ROAD_N_DZ +1
+IDZ_ROAD = ROAD_N_DZ
+RD_DZ_ID = IPATH
+
+! Load elevation from data file.
+LOAD_TABLE_FILE Animator\3D_Shape_Files_User\Mcity\Map10cmEle.vstb
+
+! Create data carpet from loaded data.
+FILE_TO_CARPET ROAD_DZ_CARPET
+
+! Data echoing commented out.
+!ECHO_LOADED_TABLE ROAD_DZ_CARPET
+
+! Used to make files copy to Consolidated Pars File Export
+*CPAR_INCLUDE Animator\3D_Shape_Files_User\Mcity\Map10cmEle.vstb
+*CPAR_INCLUDE Animator\3D_Shape_Files_User\Mcity\Map10cmEle.vsb
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Mcity } Mcity: Loaded Elevation Data
+#Library : Generic VS Commands
+#DataSet : Mcity: Loaded Elevation Data
+#Category: Mcity
+#FileID  : GenVS_621a92b2-54e9-4c7a-945d-d688b59ee39a
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

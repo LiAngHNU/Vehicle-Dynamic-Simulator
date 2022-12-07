@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Generic VS Commands`Camera Sensor on Upper Fr. Window`Camera Sensors
+#VehCode VS Commands
+
+#MiscYellow0
+ADD_ENTITY Cameraman Orbit
+  NAME Emergency Sensor Camera
+  BASE_REFERENCE_FRAME Upper Front Window
+  SET_FIELD_OF_VIEW 55
+END_ENTITY Cameraman Orbit
+
+ADD_ENTITY RenderView Emergency Sensor RenderView
+  CAMERAMAN_NAME Emergency Sensor Camera
+  TEX_W 320
+  TEX_H 200
+END_ENTITY RenderView Emergency Sensor RenderView
+
+ADD_ENTITY SharedBuffer
+  BUFFER_NAME EBS
+  BUFFER_RENDERVIEW Emergency Sensor RenderView
+  BUFFER_ADD_CONTENT_TYPE rgb
+  BUFFER_ADD_CONTENT_TYPE distance
+  BUFFER_ADD_CONTENT_TYPE normal
+END_ENTITY SharedBuffer
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Camera Sensors } Camera Sensor on Upper Fr. Window
+#Library : Generic VS Commands
+#DataSet : Camera Sensor on Upper Fr. Window
+#Category: Camera Sensors
+#FileID  : GenVS_3475e725-3fee-4b70-80ff-b8574ae8673a
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

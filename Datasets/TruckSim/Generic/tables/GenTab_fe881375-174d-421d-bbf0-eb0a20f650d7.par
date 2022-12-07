@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Generic Table`Ax Limit Throttle`Speed Controller
+#RingCtrl0 CONSTANT
+#RingCtrl1 MULTIPLY
+#RingCtrl2 LINEAR
+#CheckBox0 1    
+
+SPEED_AX_THROTTLE_COMBINE MULTIPLY
+SPEED_AX_THROTTLE_CONSTANT 1
+#DiagramOne1
+SPEED_AX_THROTTLE_V_TABLE LINEAR
+60, 0.65
+80, 0.6
+110, 0.5
+120, 0.4
+ENDTABLE
+#RadioCtrl0 1    
+#RadioCtrl1 0    
+
+*KEYWORD SPEED_AX_THROTTLE
+*X_LABEL Station
+*Y_LABEL Ax Limit
+*SCALAR 1
+*X_LABEL_2 Speed (km/h)
+*KEYWORD_2 SPEED_AX_THROTTLE_V
+
+
+#EMBEDDED_NOTES
+#The path preview option in the speed controller allows the limits for acceleration to be functions of station and speed. This example defines the acceleration limit in throttle as a function of speed, to account for engine limits.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Table; { Speed Controller } Ax Limit Throttle
+#Library : Generic Table
+#DataSet : Ax Limit Throttle
+#Category: Speed Controller
+#FileID  : GenTab_fe881375-174d-421d-bbf0-eb0a20f650d7
+#Product : TruckSim 2020.1
+#VehCode table
+
+END

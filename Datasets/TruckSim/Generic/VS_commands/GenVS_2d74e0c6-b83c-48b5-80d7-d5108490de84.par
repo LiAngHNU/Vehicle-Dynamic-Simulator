@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Generic VS Commands`Parameters for Signs and Pedestrians`ADAS Support
+#VehCode Define Parameters
+
+#MiscYellow0
+! define codes for stop sign and others target types
+define_parameter SPEED_SIGN =  100 ; -; Speed limit sign (object type)
+define_parameter STOP_SIGN =  101 ; - ; Stop sign (object type)
+define_parameter YIELD_SIGN =  102 ; - ; Yield sign (object type)
+define_parameter LIGHT_GREEN =  110 ; - ; Traffic light green (object type)
+define_parameter LIGHT_YELLOW =  111 ; - ; Traffic light yellow (object type)
+define_parameter LIGHT_RED =  112 ; - ; Traffic light red (object type)
+define_parameter WALL = 150 ; - ; Wall (object type)
+define_parameter BUILDING = 151 ; - ; Building (object type)
+define_parameter TRAFFIC =  200 ; - ; Traffic vehicle (object type)
+define_parameter PEDESTRIAN =  201 ; - ; Pedestrian or bike (object type)
+define_parameter VEHICLE = TRAFFIC ; - ; Vehicle (object type)
+
+define_parameter SPEED_LIMIT_ID = 2000;-; ID for speed limit dataset for path preview
+define_parameter STOP_ID = 2001; -; ID for target speed that has V=0 at S=0
+
+define_parameter T_SIG_PERIOD = 30;s; Period of a signal cycle
+define_parameter R_SIG_START = 0.75; - ; Fraction of signal period at T = 0
+
+! arg r_time is normlized starting time for the traffic light cycle
+begin_function light_type(r_time) ;; r_time is fraction of cycle for a light
+  define_local t_cycle
+  t_cycle = fmod(t + r_time*t_sig_period, t_sig_period)
+  return light_green + (t_cycle >t_sig_period/2 - 5) + (t_cycle >t_sig_period/2 -2)
+end_function
+#ENDMYellow
+
+*MODELCODE Define Parameters
+PARSFILE Control\Speed_t\SpdTime_9855c75b-9e4c-4bfe-9ca3-265717c264f2.par
+#BlueLink1 Control: Speed (Closed Loop) Using Target Speed`Need to Stop` Speed vs Station (Normalized)` , Miscellaneous`SpdTime_9855c75b-9e4c-4bfe-9ca3-265717c264f2
+
+
+#EMBEDDED_NOTES
+#Add parameters for Target messages for use in ADAS scenarios.
+#
+#This also has a function that calculates the status of a traffic light given a starting point in the cycle.
+#
+#Load a normalized speed_target that goes from 1m/s (3.6 km/h) to 0 at S = 0 to cause the path preview controller to come to a stop.
+#
+#2020.1: Added type for building, removed parameter for ego vehicle
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { ADAS Support } Parameters for Signs and Pedestrians
+#Library : Generic VS Commands
+#DataSet : Parameters for Signs and Pedestrians
+#Category: ADAS Support
+#FileID  : GenVS_2d74e0c6-b83c-48b5-80d7-d5108490de84
+#Product : TruckSim 2020.1
+#VehCode Define Parameters
+
+END

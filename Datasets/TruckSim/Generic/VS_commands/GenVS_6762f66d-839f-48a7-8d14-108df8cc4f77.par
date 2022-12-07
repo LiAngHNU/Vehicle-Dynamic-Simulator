@@ -1,0 +1,77 @@
+PARSFILE
+#FullDataName Generic VS Commands`K & C Roll Test VS`K & C Testing
+#VehCode VS Commands
+
+#MiscYellow0
+define_units N/mm 0.001
+define_units N-s/mm 0.001
+DEFINE_PARAMETER AMP_ROLL 4; deg    ! Amplitude of kc movement (parameter)
+DEFINE_PARAMETER T_KC_CYCLE 10; s          ! Time length for 1 cycle test (parameter)
+DEFINE_PARAMETER K_KC_TR  1000; N/mm          ! Stiffness (Trans.) between KC and vehicle body (parameter)
+DEFINE_PARAMETER C_KC_TR  100; N-s/mm          ! Damping (Trans.) between KC and vehicle body (parameter)
+DEFINE_PARAMETER K_KC_RT  100000; N-m/deg          ! Stiffness (Rot.) between KC and vehicle body (parameter)
+DEFINE_PARAMETER C_KC_RT  10000; N-m-s/deg          ! Damping (Rot.) between KC and vehicle body (parameter)
+define_output x_kc = -2; m  ! Longitudinal displacement of kc
+define_output y_kc = 0; m  ! Latera. displacement of kc
+define_output z_kc = 0.5; m  ! Vertical displacement of kc
+define_output yaw_kc = 0; deg  ! Yaw angle of kc
+define_output pitch_kc = 0; deg  ! pitch angle of kc
+define_output roll_kc = 0; deg  ! Roll angle of kc
+define_output tot_mxf = 0; N-m  ! Front total roll moment
+define_output tot_mxr = 0; N-m  ! Rear total roll moment
+eq_in x_kc= -2;
+eq_in y_kc = 0;
+eq_in z_kc =  0.5;
+eq_in yaw_kc = 0.0;
+eq_in pitch_kc = 0.0;
+eq_in roll_kc = 0.0 + AMP_ROLL*sin(2*pi*T/T_KC_CYCLE);
+eq_in tot_mxf = -(fz_l1-fz_r1)*L_TRACK(1)/2;
+eq_in tot_mxr = -(fz_l2-fz_r2)*L_TRACK(2)/2;
+eq_in IMP_FX_RP_1 = (x_kc - X_RP1) * K_KC_TR -  VX_SM * C_KC_TR;
+eq_in IMP_FY_RP_1 = (y_kc - Y_RP1) * K_KC_TR - VY_SM * C_KC_TR;
+eq_in IMP_FZ_RP_1 = (z_kc - Z_RP1) * K_KC_TR - VZ_SM * C_KC_TR;
+eq_in IMP_MX_EXT = (roll_kc - ROLL) * K_KC_RT - AVx * C_KC_RT;
+eq_in IMP_MY_EXT = (pitch_kc - PITCH) * K_KC_RT - AVy * C_KC_RT;
+eq_in IMP_MZ_EXT = (yaw_kc - YAW) * K_KC_RT - AVz * C_KC_RT;
+IMP_FX_RP_1 vs_replace 0
+IMP_FY_RP_1 vs_replace 0
+IMP_FZ_RP_1 vs_replace 0
+IMP_MX_EXT vs_replace 0
+IMP_MY_EXT vs_replace 0
+IMP_MZ_EXT vs_replace 0
+SET_OUTPUT_LONG_NAME X_KC X coordinate of K and C Table
+SET_OUTPUT_LONG_NAME Y_KC Y coordinate of K and C Table
+SET_OUTPUT_LONG_NAME Z_KC Z coordinate of K and C Table
+SET_OUTPUT_LONG_NAME YAW_KC Yaw angle of K and C Table
+SET_OUTPUT_LONG_NAME PITCH_KC Pitch angle of K and C Table
+SET_OUTPUT_LONG_NAME ROLL_KC Roll angle of K and C Table
+SET_OUTPUT_LONG_NAME TOT_MXF Front total roll moment
+SET_OUTPUT_LONG_NAME TOT_MXR Rear total roll moment
+SET_OUTPUT_GENERIC X_KC X coordinate
+SET_OUTPUT_GENERIC Y_KC Y coordinate
+SET_OUTPUT_GENERIC Z_KC Z coordinate
+SET_OUTPUT_GENERIC YAW_KC angle
+SET_OUTPUT_GENERIC PITCH_KC angle
+SET_OUTPUT_GENERIC ROLL_KC angle
+SET_OUTPUT_GENERIC TOT_MXF Total roll moment
+SET_OUTPUT_GENERIC TOT_MXR Total roll moment
+SET_OUTPUT_COMPONENT X_KC K and C Table
+SET_OUTPUT_COMPONENT Y_KC K and C Table
+SET_OUTPUT_COMPONENT Z_KC K and C Table
+SET_OUTPUT_COMPONENT YAW_KC K and C Table
+SET_OUTPUT_COMPONENT PITCH_KC K and C Table
+SET_OUTPUT_COMPONENT ROLL_KC K and C Table
+SET_OUTPUT_COMPONENT TOT_MXF Front
+SET_OUTPUT_COMPONENT TOT_MXR Rear
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { K & C Testing } K & C Roll Test VS
+#Library : Generic VS Commands
+#DataSet : K & C Roll Test VS
+#Category: K & C Testing
+#FileID  : GenVS_6762f66d-839f-48a7-8d14-108df8cc4f77
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

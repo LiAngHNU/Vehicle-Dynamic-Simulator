@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Generic Table`Width vs. Compression`Tire Contact Patch Dimensions
+#RingCtrl0 SPLINE_FLAT
+#CheckBox0 0    
+
+#DiagramOne0
+L_CONTACT_Y_TABLE SPLINE_FLAT
+0, 150
+5, 250
+12, 315
+22, 320
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD L_CONTACT_Y
+*X_LABEL Tire Compression
+*Y_LABEL L_CONTACT_Y
+
+
+#EMBEDDED_NOTES
+#Tire Contact Patch Width vs. Compression
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Table; { Tire Contact Patch Dimensions } Width vs. Compression
+#Library : Generic Table
+#DataSet : Width vs. Compression
+#Category: Tire Contact Patch Dimensions
+#FileID  : GenTab_2013fa82-03bb-4593-a0b4-411d54a7367e
+#Product : TruckSim 2020.1
+#VehCode table
+
+END

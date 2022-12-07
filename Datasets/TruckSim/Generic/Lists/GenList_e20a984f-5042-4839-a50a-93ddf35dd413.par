@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Generic Data Lists`LTARG for Offtracking (Trailer)`Roundabout
+#VehCode Generic Lists
+#MiscYellow0
+N_LTARG = N_LTARG + 1
+LTARG_DM = 1
+LTARG_CONSTANT(2) = -1
+#ENDMYellow
+
+PARSFILE Generic\tables\GenTab_34867817-a933-425e-9a54-f7f8139f46c0.par
+#BlueLink0 Generic Table`Roundabout: 1m LTARG for Enter and Exit` Roads and Paths` , Miscellaneous`GenTab_34867817-a933-425e-9a54-f7f8139f46c0
+
+
+
+
+
+#EMBEDDED_NOTES
+#The LTARG dataset is changed by Events while going through the roundabout.
+#
+#Initially the target LTARG_DM = 1, which uses the linked dataset to move left when entering or existing the circle, to avoid offtracking of the rear trailer axles.
+#
+#Within the circle, an Event will change LTARG_DM = 2 to move right, to avoid offtracking on the curb within the circle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Lists; { Roundabout } LTARG for Offtracking (Trailer)
+#Library : Generic Data Lists
+#DataSet : LTARG for Offtracking (Trailer)
+#Category: Roundabout
+#FileID  : GenList_e20a984f-5042-4839-a50a-93ddf35dd413
+#Product : TruckSim 2020.1
+#VehCode Generic Lists
+
+END

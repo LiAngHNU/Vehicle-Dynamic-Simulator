@@ -1,0 +1,74 @@
+PARSFILE
+#FullDataName Generic VS Commands`52 States to Linearize (S_S Model)`Linearization
+#VehCode VS Commands
+
+#MiscYellow0
+OPT_LINEARIZATION 1
+linear_sv SV_ZO
+linear_sv SV_PITCH
+linear_sv SV_ROLL
+linear_sv SV_SWA
+linear_sv SV_AV_SW
+linear_sv SV_STR_IN_GR_A1
+linear_sv SV_STR_IN_DGR_A1
+linear_sv SV_ROLL_A1
+linear_sv SV_JNC_A1
+linear_sv SV_ROT_L1
+linear_sv SV_ROT_R1
+linear_sv SV_ROLL_A2
+linear_sv SV_JNC_A2
+linear_sv SV_ROT_L2
+linear_sv SV_ROT_R2
+linear_sv SV_SLIP_LAT_L1I
+linear_sv SV_SLIP_LONG_L1I
+linear_sv SV_SLIP_LAT_L1O
+linear_sv SV_SLIP_LONG_L1O
+linear_sv SV_SLIP_LAT_R1I
+linear_sv SV_SLIP_LONG_R1I
+linear_sv SV_SLIP_LAT_R1O
+linear_sv SV_SLIP_LONG_R1O
+linear_sv SV_SLIP_LAT_L2I
+linear_sv SV_SLIP_LONG_L2I
+linear_sv SV_SLIP_LAT_L2O
+linear_sv SV_SLIP_LONG_L2O
+linear_sv SV_SLIP_LAT_R2I
+linear_sv SV_SLIP_LONG_R2I
+linear_sv SV_SLIP_LAT_R2O
+linear_sv SV_SLIP_LONG_R2O
+linear_sv SV_ROT_TR_OUT
+linear_sv SV_ROT_SHAFT_1
+linear_sv SV_ROT_SHAFT_2
+linear_sv SV_ROT_SHAFT_3
+linear_sv SV_VXS
+linear_sv SV_VYS
+linear_sv SV_VZS
+linear_sv SV_AVZ
+linear_sv SV_AVY
+linear_sv SV_AVX
+linear_sv SV_AVX_A1
+linear_sv SV_JNCR_A1
+linear_sv SV_AVY_L1
+linear_sv SV_AVY_R1
+linear_sv SV_AVX_A2
+linear_sv SV_JNCR_A2
+linear_sv SV_AVY_L2
+linear_sv SV_AVY_R2
+linear_sv SV_AV_ENG
+linear_sv SV_AV_TC
+linear_sv SV_AV_TR_OUT
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#52 state variables are specified to linearize the system.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Linearization } 52 States to Linearize (S_S Model)
+#Library : Generic VS Commands
+#DataSet : 52 States to Linearize (S_S Model)
+#Category: Linearization
+#FileID  : GenVS_ce7ab08b-d25e-4fdd-b674-13d9c5c4026a
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

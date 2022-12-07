@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName Generic Data Group`CIty (4 Vehicles)`Multiple Vehicles
+#VehCode S_S I_S I_S S_S
+PARSFILE Generic\GroupMore\GenGrpM_2cd7725a-1495-4ace-8a87-283befd2a27c.par
+#BlueLink0 Generic Data Group (More)`Vehicle 1 (Blue), Group` Multiple Vehicles (Running in Group)` , Link 1`GenGrpM_2cd7725a-1495-4ace-8a87-283befd2a27c
+
+
+PARSFILE Procedures\Proc_087a7e38-dbd6-4ef9-99d5-4b1fa99db79d.par
+#BlueLink1 Procedures`Multiple Vehicles (Controls + Setup)` Multi-Vehicle` , Link 2`Proc_087a7e38-dbd6-4ef9-99d5-4b1fa99db79d
+
+
+PARSFILE Generic\GroupMore\GenGrpM_f7141d1c-a155-42ee-927e-aa7d0027567f.par
+#BlueLink2 Generic Data Group (More)`Vehicle 2 (Red), Group` Multiple Vehicles (Running in Group)` , Link 3`GenGrpM_f7141d1c-a155-42ee-927e-aa7d0027567f
+
+
+#MiscYellow3
+SSTART 50
+path_id_dm 1002
+opt_direction 1
+#ENDMYellow
+
+PARSFILE Procedures\Proc_ae84dd83-7049-4a26-ad08-78b19aedf3c3.par
+#BlueLink3 Procedures`Multiple Vehicles (Controls Only)` Multi-Vehicle` , Link 4`Proc_ae84dd83-7049-4a26-ad08-78b19aedf3c3
+
+
+PARSFILE Generic\GroupMore\GenGrpM_c9033faf-18fe-4dd7-b731-d3e7b2cc61f9.par
+#BlueLink4 Generic Data Group (More)`Vehicle 3 (Green), Group` Multiple Vehicles (Running in Group)` , Link 5`GenGrpM_c9033faf-18fe-4dd7-b731-d3e7b2cc61f9
+
+
+#MiscYellow5
+SSTART 90
+path_id_dm 1003
+opt_direction 1
+#ENDMYellow
+
+PARSFILE Procedures\Proc_ae84dd83-7049-4a26-ad08-78b19aedf3c3.par
+#BlueLink5 Procedures`Multiple Vehicles (Controls Only)` Multi-Vehicle` , Link 6`Proc_ae84dd83-7049-4a26-ad08-78b19aedf3c3
+
+
+PARSFILE Generic\GroupMore\GenGrpM_7557b51c-ea46-449e-9b73-55d72b82570c.par
+#BlueLink6 Generic Data Group (More)`Vehicle 4 (Yellow), Group` Multiple Vehicles (Running in Group)` , Link 7`GenGrpM_7557b51c-ea46-449e-9b73-55d72b82570c
+
+
+#MiscYellow7
+SSTART 90
+path_id_dm 1004
+opt_direction 1
+#ENDMYellow
+
+PARSFILE Procedures\Proc_ae84dd83-7049-4a26-ad08-78b19aedf3c3.par
+#BlueLink7 Procedures`Multiple Vehicles (Controls Only)` Multi-Vehicle` , Link 8`Proc_ae84dd83-7049-4a26-ad08-78b19aedf3c3
+
+
+
+*MODELCODE S_S I_S I_S S_S
+
+#EMBEDDED_NOTES
+#This dataset has the MODEL_LAYOUT code used by the solver to create 4 vehicles, each with configuration I_I.
+#
+#There are four pairs of links to Vehicle data and Procedure data. The linked Procedure dataset for vehicle 1 includes the environment. The other linked procedures go to the same dataset, which simply defines the closed-loop controls used by the associated vehicle.
+#
+#The initial positions of vehicles 2 - 4 are set in miscellaneous fields after each vehicle is specified.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { Multiple Vehicles } CIty (4 Vehicles)
+#Library : Generic Data Group
+#DataSet : CIty (4 Vehicles)
+#Category: Multiple Vehicles
+#FileID  : GenGrp_0b159d4b-56a4-4f3e-9553-6307b6286b70
+#Product : TruckSim 2020.1
+#VehCode S_S I_S I_S S_S
+
+END

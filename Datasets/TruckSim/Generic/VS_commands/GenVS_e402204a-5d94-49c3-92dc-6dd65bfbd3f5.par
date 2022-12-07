@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Generic VS Commands`Lane Departure Warning`ADAS Support
+#VehCode VS Commands
+
+#MiscYellow0
+DEFINE_PARAMETER Lat_Warn = 1.1; m ; Lateral distance to edge for warning
+DEFINE_PARAMETER Lat_Steer = 0.9; m ; Lateral distance to edge for steering
+
+! These equations look at the closest point
+DEFINE_OUTPUT WARN_L = AND(GT(Y_S<<s>>_1,0.1),LT(Y_S<<s>>_1,Lat_Warn));-; L edge warning
+DEFINE_OUTPUT WARN_R = AND(LT(Y_S<<s>>_1, -0.1), GT(Y_S<<s>>_1,-Lat_Warn));-; R edge warning
+
+DEFINE_OUTPUT FixSteer = OR(  AND(GT(Y_S<<s>>_1,0.1),LT(Y_S<<s>>_1,Lat_Steer)), ...
+  AND(LT(Y_S<<s>>_1, -0.1), GT(Y_S<<s>>_1, -Lat_Steer)));-;  Need steering correction
+#ENDMYellow
+
+PARSFILE Animator\HUD\HUD_a0da4582-3f3f-4d36-a3a2-e88fc8411924.par
+#BlueLink0 Animator: HUD`Lane Departures` Alerts` , Miscellaneous`HUD_a0da4582-3f3f-4d36-a3a2-e88fc8411924
+
+PARSFILE Plot\Setup\Plot_f0ea951f-1945-470b-b8e5-c1602e083636.par
+#BlueLink3 Plot: Setup`Alerts: Lane Detection` ADAS and AEB Alerts and Commands` , Plot`Plot_f0ea951f-1945-470b-b8e5-c1602e083636
+
+
+#EMBEDDED_NOTES
+#This dataset defines three output variables involved with lane detection: WARN_L, WARN_R, and FixSteer
+#
+#All are Boolean flags. The two WARN variables are used just to show HUD icon, with settings also in this dataset.
+#
+#The FixSteer is for use with VS Events.
+#
+#They assume target 1 is the closest lane edge point of interest.
+#
+#The equations use detection 1 from the current sensor, <<s>>
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { ADAS Support } Lane Departure Warning
+#Library : Generic VS Commands
+#DataSet : Lane Departure Warning
+#Category: ADAS Support
+#FileID  : GenVS_e402204a-5d94-49c3-92dc-6dd65bfbd3f5
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

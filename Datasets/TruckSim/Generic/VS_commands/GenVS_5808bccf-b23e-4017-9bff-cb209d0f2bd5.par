@@ -1,0 +1,23 @@
+PARSFILE
+#FullDataName Generic VS Commands`Throttle Reference`Hill Hold with Parking Brake
+#VehCode VS Commands
+
+#MiscYellow0
+define_parameter Throt_Ref = 0; 
+! Throttle to be saved when service brakes are initially applied, before applying parking brake
+define_output ThrotRef = Throt_Ref; ! New output variable for plotting
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_53787166-e912-49ab-92dd-4f3790212b1a.par
+#BlueLink3 Plot: Setup`Throt_Ref` Controls: Driver` , Plot`Plot_53787166-e912-49ab-92dd-4f3790212b1a
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Hill Hold with Parking Brake } Throttle Reference
+#Library : Generic VS Commands
+#DataSet : Throttle Reference
+#Category: Hill Hold with Parking Brake
+#FileID  : GenVS_5808bccf-b23e-4017-9bff-cb209d0f2bd5
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

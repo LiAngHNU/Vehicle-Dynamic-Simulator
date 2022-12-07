@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Generic VS Commands`4x4 Indicator`HUD Gauges
+#VehCode VS Commands
+
+#MiscYellow0
+define_output vis_2wd 1; -; 2wd visibility switch
+define_output vis_4wd 0; -; 4wd visibility switch
+
+!Adds 2WD Image
+ADD_ENTITY hud_image 2WD Image
+  location 255 17 100 160
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  opacity vis_2wd
+  image_file Animator\2D_HUD_Icons\Transfer_Case\2WD.png
+END_ENTITY hud_image 2WD Image
+!
+!Adds 4WD Image
+ADD_ENTITY hud_image 4WD Image
+  location 255 17 100 160
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  opacity vis_4wd
+  image_file Animator\2D_HUD_Icons\Transfer_Case\4WD_LO.png
+END_ENTITY hud_image 4WD Image
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { HUD Gauges } 4x4 Indicator
+#Library : Generic VS Commands
+#DataSet : 4x4 Indicator
+#Category: HUD Gauges
+#FileID  : GenVS_4e0ef3de-e54e-4f5b-9e2a-b2283c8d07e5
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

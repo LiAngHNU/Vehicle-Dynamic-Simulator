@@ -1,0 +1,70 @@
+PARSFILE
+#FullDataName Generic Group of Links`36 m Roundabout, 3D`Roads and Paths
+#VehCode Generic Links
+PARSFILE Roads\3D_Road\Road_c9a16d4d-8e05-479b-b46c-71feacd363c7.par
+#BlueLink0 Road: 3D Surface (All Properties)`Circle, 1000` Roundabout, Single Lane, D = 36 m` , Miscellaneous`Road_c9a16d4d-8e05-479b-b46c-71feacd363c7
+
+PARSFILE Roads\3D_Road\Road_18ffeec7-edbe-416f-ae41-f7967f581a43.par
+#BlueLink1 Road: 3D Surface (All Properties)`Enter S, Exit E, 1001` Roundabout, Single Lane, D = 36 m` , Miscellaneous`Road_18ffeec7-edbe-416f-ae41-f7967f581a43
+
+PARSFILE Roads\3D_Road\Road_0290f1e1-cbd9-49fb-b85a-4f5ff8ad123f.par
+#BlueLink2 Road: 3D Surface (All Properties)`Enter E, Exit N, 1002` Roundabout, Single Lane, D = 36 m` , Miscellaneous`Road_0290f1e1-cbd9-49fb-b85a-4f5ff8ad123f
+
+PARSFILE Roads\3D_Road\Road_9205f255-c9e3-44f9-86fb-935cd0560c1d.par
+#BlueLink3 Road: 3D Surface (All Properties)`Enter N, Exit W, 1003` Roundabout, Single Lane, D = 36 m` , Miscellaneous`Road_9205f255-c9e3-44f9-86fb-935cd0560c1d
+
+PARSFILE Roads\3D_Road\Road_e4335ece-df5e-48f7-8fe2-9e05af033610.par
+#BlueLink4 Road: 3D Surface (All Properties)`Enter W, Exit S, 1004` Roundabout, Single Lane, D = 36 m` , Miscellaneous`Road_e4335ece-df5e-48f7-8fe2-9e05af033610
+
+#BlueLink5 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink6 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink7 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink8 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Boundaries\RdBnd_dd691baa-2c31-414c-86d4-9ec97c6e3a1f.par
+#BlueLink9 Road: Boundaries`Roundabout, South & East Entrances` Roundabout D = 36 m` , Miscellaneous`RdBnd_dd691baa-2c31-414c-86d4-9ec97c6e3a1f
+
+PARSFILE Roads\Boundaries\RdBnd_605b3e7c-4e1d-4092-86ab-0949892c8126.par
+#BlueLink10 Road: Boundaries`Roundabout: North and West Entrances` Roundabout D = 36 m` , Miscellaneous`RdBnd_605b3e7c-4e1d-4092-86ab-0949892c8126
+
+#BlueLink11 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink12 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink13 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink14 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink15 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink16 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink17 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink18 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink19 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+
+#EMBEDDED_NOTES
+#The roads are numbered 1000 (circle), 1001 (S), 1002 (E), 1003 (N), 1004 (W).
+#
+#For each entering road, station increases when approaching the circle. The right-turn always starts at S= 50 and ends at S = 99.5.
+#
+#Station for the circle is 0 at the South point, and increases to 100.5 going c-clockwise.
+#
+#In this example, the reference paths are all located at the center of the lane; the vehicle target is typically L = 0.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Group of Links; { Roads and Paths } 36 m Roundabout, 3D
+#Library : Generic Group of Links
+#DataSet : 36 m Roundabout, 3D
+#Category: Roads and Paths
+#FileID  : GenLink_5f1dc396-1ce3-489d-a786-89cfd8a64426
+#Product : TruckSim 2020.1
+#VehCode Generic Links
+
+END

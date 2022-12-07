@@ -1,0 +1,67 @@
+PARSFILE
+#FullDataName Generic Data Group`3 Lanes Fwd, 3 Traffic Groups, +,-3.5 m`ADAS: Traffic for ACC & FCW
+#VehCode Generic Group
+#MiscYellow0
+N_LTARG = N_LTARG + 1
+ILTARG = N_LTARG
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_9c8afdab-b83d-4d0b-942a-d6537df589b3.par
+#BlueLink0 Multiple Moving Objects`3 Vehicles, Vx` Traffic Vehicles (Forward)` , Link 1`TMotion_9c8afdab-b83d-4d0b-942a-d6537df589b3
+
+
+#MiscYellow1
+N_LTARG = N_LTARG + 1
+ILTARG = N_LTARG
+ltarg_constant = -3.5
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_5ac26c79-b975-4023-a8e5-a013fe2d0030.par
+#BlueLink1 Multiple Moving Objects`6 Vehicles, Vx * 0.95, offtracking` Traffic Vehicles (Forward)` , Link 2`TMotion_5ac26c79-b975-4023-a8e5-a013fe2d0030
+
+
+#MiscYellow2
+N_LTARG = N_LTARG + 1
+ILTARG = N_LTARG
+ltarg_constant = 3.5
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_482a269d-cca8-452b-992c-50cd717acdd2.par
+#BlueLink2 Multiple Moving Objects`6 Vehicles, Vx * 1.1, Offtracking` Traffic Vehicles (Forward)` , Link 3`TMotion_482a269d-cca8-452b-992c-50cd717acdd2
+
+
+#MiscYellow3
+ISPEED = 2
+n_speed_target = 2
+#ENDMYellow
+
+PARSFILE Control\Speed_t\SpdTime_c675dd61-b290-4c26-ade8-36124017059e.par
+#BlueLink3 Control: Speed (Closed Loop) Using Target Speed`Traffic Speed for ACC` Traffic Vehicles and Sensor Targets` , Link 4`SpdTime_c675dd61-b290-4c26-ade8-36124017059e
+
+
+
+
+
+#BlueLink7 ` , Link 8` , Link 8` , Link 8`
+
+
+
+
+#EMBEDDED_NOTES
+#This dataset assembles traffic vehicles with traffic speed for ACC.
+#
+#The moving objects from link 1 follow a target speed defined in link 3. The other vehicles have speeds based on the current speed of the Ego Vehicle, Vx.
+#
+#The lateral positions of the moving objects are set using the LTARG function, with datasets specified with ILTARG.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { ADAS: Traffic for ACC & FCW } 3 Lanes Fwd, 3 Traffic Groups, +,-3.5 m
+#Library : Generic Data Group
+#DataSet : 3 Lanes Fwd, 3 Traffic Groups, +,-3.5 m
+#Category: ADAS: Traffic for ACC & FCW
+#FileID  : GenGrp_7848ce25-1b7d-4720-9bee-c2caae8b8c34
+#Product : TruckSim 2020.1
+#VehCode Generic Group
+
+END

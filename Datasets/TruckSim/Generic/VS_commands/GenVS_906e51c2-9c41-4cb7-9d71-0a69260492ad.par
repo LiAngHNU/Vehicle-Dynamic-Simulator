@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Generic VS Commands`Setup for Object Detection, Multi`Setup Events
+#VehCode Setup Events
+
+#MiscYellow0
+DEFINE_PARAMETER s1 = ISENSOR;-; Sensor installed for current vehicle
+define_output ObjCrit = obj_crit(s1);-; Critical object for this vehicle
+define_output AxCrit = AX_AEB(s1,ObjCrit);m/s2; Required decel for ObjCrit
+define_output IDcrit = DETECT_ID(s1,ObjCrit);-;ID of critical Obj
+define_output ApplyAEB =  AxCrit > Ax_Brake; - ;  Boolean: apply brakes?
+define_output DistCrit = DIST_BDRY(s1,ObjCrit); m; Distance to object bdry
+
+! Make detection output variable for use in Events
+define_output TypeNear = DETECT_TYPE(s1,1); - ; Type of nearest object
+define_output ID_near = DETECT_ID(s1,1);-;ID of nearest
+
+define_output NeedAEB = NEED_AEB(s1,1) | NEED_AEB(s1,2) | ...
+  NEED_AEB(s1,3) | NEED_AEB(s1,4);-; Boolean: 1 if AEB is needed
+
+define_output ClearGo = 0;-; Boolean: 1 if clear to go
+eq_in ClearGo = is_clr(s1,1) & is_clr(s1,2) & is_clr(s1,3) & is_clr(s1,4)
+
+eq_out Ax_SCcmd = -AxCrit ! speed control command if OPT_SC = 5
+#ENDMYellow
+
+*MODELCODE Setup Events
+PARSFILE Events\Events_329ea6b1-ee99-4d5b-9b69-b5ef4dbe9d34.par
+#BlueLink1 Events`Look for Objects` ADAS Detection` , Miscellaneous`Events_329ea6b1-ee99-4d5b-9b69-b5ef4dbe9d34
+
+PARSFILE Plot\Setup\Plot_7dadda40-7138-4c4d-bc66-73caadcece25.par
+#BlueLink3 Plot: Setup`AEB: AxCrit` ADAS and AEB Alerts and Commands` , Plot`Plot_7dadda40-7138-4c4d-bc66-73caadcece25
+
+PARSFILE Plot\Setup\Plot_ac871e31-3a2e-4f60-b6cb-3284aa167ea9.par
+#BlueLink4 Plot: Setup`Speed Target and Actual` Speed Controller` , Plot`Plot_ac871e31-3a2e-4f60-b6cb-3284aa167ea9
+
+
+#EMBEDDED_NOTES
+#Add parameters and a target speed table to support braking when a stop sign is detected. Calculate AEB logic to avoid collisions.
+#
+#Begin a chain of events involving detection of traffic signs and objects.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Setup Events } Setup for Object Detection, Multi
+#Library : Generic VS Commands
+#DataSet : Setup for Object Detection, Multi
+#Category: Setup Events
+#FileID  : GenVS_906e51c2-9c41-4cb7-9d71-0a69260492ad
+#Product : TruckSim 2020.1
+#VehCode Setup Events
+
+END

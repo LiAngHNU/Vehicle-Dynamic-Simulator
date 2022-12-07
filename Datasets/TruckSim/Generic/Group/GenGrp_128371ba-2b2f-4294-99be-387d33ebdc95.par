@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Generic Data Group`Traffic, Two Lanes, 3.5m lateral offset`ADAS: Traffic for ACC & FCW
+#VehCode Generic Group
+PARSFILE Sensors_Traffic\Traffic\TMotion_9c8afdab-b83d-4d0b-942a-d6537df589b3.par
+#BlueLink0 Multiple Moving Objects`3 Vehicles, Vx` Traffic Vehicles (Forward)` , Link 1`TMotion_9c8afdab-b83d-4d0b-942a-d6537df589b3
+
+
+#MiscYellow1
+SET_ILTARG_FOR_ID 0
+ltarg_constant = 3.5
+define_parameter vx_ref = speed_target(0,0,1); ...
+  km/h; Reference speed
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_075b7f2e-5945-4cc7-bcfe-87521626949f.par
+#BlueLink1 Multiple Moving Objects`6 Vehicles, Speed = -Vx_Ref Offtracking` Traffic Vehicles (w/o Target Display)` , Link 2`TMotion_075b7f2e-5945-4cc7-bcfe-87521626949f
+
+
+
+
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#The moving objects from link 1 follow the ego vehicle. Their positions are based on the position of the vehicle's station.
+#
+#The moving objects have speeds that are proportional to that of the vehicle: Vx.
+#
+#The lateral positions of the moving objects are set using the LTARG function, with datasets specified with ILTARG.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { ADAS: Traffic for ACC & FCW } Traffic, Two Lanes, 3.5m lateral offset
+#Library : Generic Data Group
+#DataSet : Traffic, Two Lanes, 3.5m lateral offset
+#Category: ADAS: Traffic for ACC & FCW
+#FileID  : GenGrp_128371ba-2b2f-4294-99be-387d33ebdc95
+#Product : TruckSim 2020.1
+#VehCode Generic Group
+
+END

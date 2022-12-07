@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Generic VS Commands`Front In-Wheel Motors`Vehicle Model Extensions, Powertrain
+#VehCode VS Commands
+
+#MiscYellow0
+
+! Defines maximum power for each wheel motor
+define_variable max_pwr 50; units = kW
+
+! Torque applied to each front wheel.  
+! AVy_(wheel) is an offset to prevent a divide by zero error.
+! The VS Command "sign" is used to check for the transmission mode. If modetran is negative, the 
+! transmission is in Reverse, and the torque applied to the wheels is given a negative sign. This allows
+! the vehicle to travel in reverse. 
+
+eq_in IMP_MYUSM_L1 = IF_GT_0_THEN(Throttle, sign((max_pwr  / (AVy_L1 + 0.5)), modetran), 0);
+eq_in IMP_MYUSM_R1 = IF_GT_0_THEN(Throttle, sign((max_pwr / (AVy_R1 + 0.5)), modetran), 0);
+
+
+IMP_MYUSM_L1 vs_add 0
+IMP_MYUSM_R1 vs_add 0
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_76cce033-b80b-4e0e-8891-fed16767b8ac.par
+#BlueLink3 Plot: Setup`User Defined Drive/Brake Moments` Controls: Powertrain, VS Commands` , Plot`Plot_76cce033-b80b-4e0e-8891-fed16767b8ac
+
+PARSFILE Plot\Setup\Plot_13e24c06-536f-4c8c-8efe-0a40666fa307.par
+#BlueLink4 Plot: Setup`User Defined Drv/Brk Mom/Whl RPM` Controls: Powertrain, VS Commands` , Plot`Plot_13e24c06-536f-4c8c-8efe-0a40666fa307
+
+
+#EMBEDDED_NOTES
+#This dataset adds drive torque to the two front wheels, independently of the built-in powertrain. The torque is simply the available power (MAX_PWR) divided by the spin velocity of the wheel.
+#
+#A mininum spin rate of 0.5 rad/sec is used to prevent a "divide by zero" numerical error at zero spin.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Vehicle Model Extensions, Powertrain } Front In-Wheel Motors
+#Library : Generic VS Commands
+#DataSet : Front In-Wheel Motors
+#Category: Vehicle Model Extensions, Powertrain
+#FileID  : GenVS_15ca772f-c2f9-405f-9d33-b3a7b1194238
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

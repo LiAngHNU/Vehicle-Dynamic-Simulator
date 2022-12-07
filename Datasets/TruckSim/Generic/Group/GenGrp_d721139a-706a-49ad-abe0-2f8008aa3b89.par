@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName Generic Data Group`Traffic Lights for 4-way in City`Traffic Lights
+#VehCode Generic Group
+#MiscYellow0
+! Parameters related to lights
+define_parameter LIGHT_GREEN =  110 ; - ; Traffic light green (object type)
+define_parameter LIGHT_YELLOW =  111 ; - ; Traffic light yellow (object type)
+define_parameter LIGHT_RED =  112 ; - ; Traffic light red (object type)
+define_parameter T_SIG_PERIOD = 30;s; Period of a signal cycle
+define_parameter R_SIG_START = 0.75; - ; Fraction of signal period at T = 0
+#ENDMYellow
+
+
+#MiscYellow1
+symbol_push <<x>> 152
+symbol_push <<y>> 160
+symbol_push <<psi>> (-pi/2)
+symbol_push <<rstart>> (0.5 + r_sig_start)
+symbol_push <<dist>> 16
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_eada2227-a8cf-47fd-ad2e-42375e4a038a.par
+#BlueLink1 Single Moving Object (Custom)`Overhead Traffic Signal, Generic` Traffic Signs and Lights` , Link 2`Target_eada2227-a8cf-47fd-ad2e-42375e4a038a
+
+
+#MiscYellow2
+set_description object_name ...
+  Traffic light facing south ! previous link
+symbol_set <<x>> 147
+symbol_set <<y>> 140
+symbol_set <<psi>> (pi/2)
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_eada2227-a8cf-47fd-ad2e-42375e4a038a.par
+#BlueLink2 Single Moving Object (Custom)`Overhead Traffic Signal, Generic` Traffic Signs and Lights` , Link 3`Target_eada2227-a8cf-47fd-ad2e-42375e4a038a
+
+
+#MiscYellow3
+set_description object_name ...
+   Traffic light facing north ! previous link
+symbol_set <<x>> 138
+symbol_set <<y>>153
+symbol_set <<psi>> 0
+symbol_set <<rstart>> r_sig_start
+symbol_set <<dist>> 23
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_eada2227-a8cf-47fd-ad2e-42375e4a038a.par
+#BlueLink3 Single Moving Object (Custom)`Overhead Traffic Signal, Generic` Traffic Signs and Lights` , Link 4`Target_eada2227-a8cf-47fd-ad2e-42375e4a038a
+
+
+#MiscYellow4
+set_description object_name ...
+  Traffic light facing east ! previous link
+symbol_set <<x>> 160
+symbol_set <<y>>146
+symbol_set <<psi>>pi
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_eada2227-a8cf-47fd-ad2e-42375e4a038a.par
+#BlueLink4 Single Moving Object (Custom)`Overhead Traffic Signal, Generic` Traffic Signs and Lights` , Link 5`Target_eada2227-a8cf-47fd-ad2e-42375e4a038a
+
+
+#MiscYellow5
+set_description object_name ...
+  Traffic light facing west ! previous link
+#ENDMYellow
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#Note: East is <<psi>> = 0 and increases anti-clockwise
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { Traffic Lights } Traffic Lights for 4-way in City
+#Library : Generic Data Group
+#DataSet : Traffic Lights for 4-way in City
+#Category: Traffic Lights
+#FileID  : GenGrp_d721139a-706a-49ad-abe0-2f8008aa3b89
+#Product : TruckSim 2020.1
+#VehCode Generic Group
+
+END

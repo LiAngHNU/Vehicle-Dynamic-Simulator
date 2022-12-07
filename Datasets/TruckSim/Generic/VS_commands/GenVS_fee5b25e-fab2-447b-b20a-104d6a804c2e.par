@@ -1,0 +1,59 @@
+PARSFILE
+#FullDataName Generic VS Commands`Control L1 Tire Sidewall Point, New DM`PBS Tests
+#VehCode VS Commands
+
+#MiscYellow0
+! Define a point in the LF Tire that is supposed to follow the 12.5m radius path (right-hand turn)
+DEFINE_PARAMETER L_TIRE_REF 0.2 ; m ; Distance to point on sidewall
+
+DEFINE_OUTPUT X_Ref = Xctc_L1o - sin(Yaw_L1)*L_TIRE_REF; m ;  X coordinate of tire ref point
+DEFINE_OUTPUT Y_Ref = Yctc_L1o + cos(Yaw_L1)*L_TIRE_REF; m ;  Y coordinate of tire ref point
+
+! Tracking Error
+DEFINE_OUTPUT LatError = PATH_L_I(X_Ref, Y_Ref, 2) ; mm ;  Error distance to the path
+DEFINE_OUTPUT IntLerr = 0;-;Integral of LatError
+EQ_DIFFERENTIAL IntLerr LatError
+
+! Use Motion Sensor 1 for frontal swing in right-hand turn, PBS test C8(A)
+DEFINE_OUTPUT LatFront = -PATH_L_I(X_S1,Y_S1, 2) ;  mm ; Outer corner tracking
+
+! Specify unit and axle so the proper L_TRACK parameter is used below
+iaxle 1
+iunit 1
+YREF_DM (L_TIRE_REF + L_Track/2) ! used for initialization
+EQ_OUT YREF_DM (L_TIRE_REF + L_Track/2) + 10*IntLerr ! updated each time step
+#ENDMYellow
+
+*MODELCODE VS Commands
+PARSFILE Animator\Frames\Frame_f9a32661-919b-4654-a4ab-cf97ed8535d2.par
+#BlueLink0 Animator: Reference Frame`Tire Sidewall` Animator Reference Frame, Unit 1` , Miscellaneous`Frame_f9a32661-919b-4654-a4ab-cf97ed8535d2
+
+PARSFILE Plot\Setup\Plot_1defea62-89f0-49bf-b9a6-1e844a4877e6.par
+#BlueLink3 Plot: Setup`X-Y Tracking for Outside Tire Sidewall` PBS (Performance Based Standards)` , Plot`Plot_1defea62-89f0-49bf-b9a6-1e844a4877e6
+
+PARSFILE Plot\Setup\Plot_6a9be8bd-746e-445f-8506-640a64f59970.par
+#BlueLink4 Plot: Setup`Lateral Tracking Error` PBS (Performance Based Standards)` , Plot`Plot_6a9be8bd-746e-445f-8506-640a64f59970
+
+PARSFILE Plot\Setup\Plot_d216ce1a-daa3-48de-ab04-2ccd98c0fdd8.par
+#BlueLink5 Plot: Setup`Lateral Tracking Target` PBS (Performance Based Standards)` , Plot`Plot_d216ce1a-daa3-48de-ab04-2ccd98c0fdd8
+
+PARSFILE Plot\Setup\Plot_1c601c16-ee73-4f94-892b-d9deb41cf070.par
+#BlueLink6 Plot: Setup`Integral of Lateral Tracking Error` PBS (Performance Based Standards)` , Plot`Plot_1c601c16-ee73-4f94-892b-d9deb41cf070
+
+
+#EMBEDDED_NOTES
+#These commands define a point on the outside sidewall of the left-front tire. The lateral offset is defined with a new parameter, L_TIRE_REF.
+#
+#X and Y coordinates are defined for that point to support plotting.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { PBS Tests } Control L1 Tire Sidewall Point, New DM
+#Library : Generic VS Commands
+#DataSet : Control L1 Tire Sidewall Point, New DM
+#Category: PBS Tests
+#FileID  : GenVS_fee5b25e-fab2-447b-b20a-104d6a804c2e
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

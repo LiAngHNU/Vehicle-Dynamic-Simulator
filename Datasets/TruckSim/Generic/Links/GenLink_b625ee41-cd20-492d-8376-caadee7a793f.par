@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Generic Group of Links`Pedestrians at Cross Walk, Rural`ADAS: Moving Objects, incl. Pedestrians
+#VehCode Pedestrians and Bicyclists
+PARSFILE Sensors_Traffic\Targets\Target_75218406-5861-4b26-a099-ecb01c815626.par
+#BlueLink0 Single Moving Object (Custom)`Woman Crossing from S=-9.5, L=-5` Pedestrians Crossing` , Miscellaneous`Target_75218406-5861-4b26-a099-ecb01c815626
+
+PARSFILE Sensors_Traffic\Targets\Target_63c8fb8e-db59-44c0-a021-6b9c8f33255b.par
+#BlueLink1 Single Moving Object (Custom)`Man Crossing from S=-8.5, L=-8` Pedestrians Crossing` , Miscellaneous`Target_63c8fb8e-db59-44c0-a021-6b9c8f33255b
+
+#MiscYellow0
+symbol_push <<sstart>> -72
+symbol_push <<path>> 1001
+symbol_push  <<road>> 1001
+symbol_push <<ltarg>> -3.1
+symbol_push <<speed>> 6
+symbol_push  <<heading>> 0
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_16306336-04fe-410c-ac12-dd90e56f012b.par
+#BlueLink11 Multiple Moving Objects`Bicyclist, Symbolic, Will Lean in Turn` Bicyclists` , Miscellaneous`TMotion_16306336-04fe-410c-ac12-dd90e56f012b
+
+#MiscYellow1
+symbol_set <<sstart>> 70
+symbol_set <<path>> 1013
+symbol_set  <<road>> 1001
+symbol_set <<ltarg>> 3.5
+symbol_set <<speed>> -5
+symbol_set <<heading>> pi
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_dad79902-77b4-4834-913e-2f7f1d9cbba8.par
+#BlueLink12 Multiple Moving Objects`Bicyclist, Symbolic, No Lean` Bicyclists` , Miscellaneous`TMotion_dad79902-77b4-4834-913e-2f7f1d9cbba8
+
+PARSFILE Generic\VS_commands\GenVS_2d67b053-a507-4198-8b63-fda8e4039347.par
+#BlueLink22 Generic VS Commands`Pedestrian Velocity and Station` Plot Groups` , Miscellaneous`GenVS_2d67b053-a507-4198-8b63-fda8e4039347
+
+*MODELCODE Pedestrians and Bicyclists
+
+LOG_ENTRY Used Dataset: Generic Group of Links; { ADAS: Moving Objects, incl. Pedestrians } Pedestrians at Cross Walk, Rural
+#Library : Generic Group of Links
+#DataSet : Pedestrians at Cross Walk, Rural
+#Category: ADAS: Moving Objects, incl. Pedestrians
+#FileID  : GenLink_b625ee41-cd20-492d-8376-caadee7a793f
+#Product : TruckSim 2020.1
+#VehCode Pedestrians and Bicyclists
+
+END

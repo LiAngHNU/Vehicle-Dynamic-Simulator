@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Generic Table`Battery Open-Circuit Voltage`Powertrain (HEV)
+#RingCtrl0 CARPET
+#CheckBox0 1    
+
+*3D_XLabel Temperature (C)
+*3D_YLabel State of charged (-)
+*3D_ZLabel Voltage (V)
+
+#DiagramTwo0
+*3D_DATA 2, 11 ! columns x rows
+VOC_BATTERY_CARPET 2D_LINEAR
+0, 0, 25
+0, 7.237, 7.237
+0.1, 7.4047, 7.4047
+0.2, 7.5106, 7.5106
+0.3, 7.5873, 7.5873
+0.4, 7.6459, 7.6459
+0.5, 7.6909, 7.6909
+0.6, 7.7294, 7.7294
+0.7, 7.7666, 7.7666
+0.8, 7.8078, 7.8078
+0.9, 7.9143, 7.9143
+1, 8.3645, 8.3645
+ENDTABLE
+
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD VOC_BATTERY
+*X_LABEL State of charged (-)
+*Y_LABEL Voltage (V)
+*X_LABEL_2 Temperature (C)
+
+
+LOG_ENTRY Used Dataset: Generic Table; { Powertrain (HEV) } Battery Open-Circuit Voltage
+#Library : Generic Table
+#DataSet : Battery Open-Circuit Voltage
+#Category: Powertrain (HEV)
+#FileID  : GenTab_366b8224-2bfb-41c4-918b-7474b312a5e7
+#Product : TruckSim 2020.1
+#VehCode table
+
+END

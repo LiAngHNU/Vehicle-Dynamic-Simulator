@@ -1,0 +1,88 @@
+PARSFILE
+#FullDataName Generic VS Commands`Roundabouts: Waypoints & Distances`Miscellaneous Custom Controls
+#VehCode VS Commands
+
+#MiscYellow0
+! seed the random number generator. Change the seed parameter to get different sequences
+define_parameter seed 6; - ; Seed for random-number generator function SRAND
+define_parameter seeded = srand(seed); - ;Result of SRAND(seed)
+
+! create a parameter to get a random number at events
+! rand returns a uniformly distributed psuedo-random value between 0 and 1
+define_output Decision 0;-;Decision (used in Events)
+define_output R_Gen = rand(1); - ;Rand(1)
+
+! create waypoints where decisions must be made about changing roads or continuing
+! waypoints are at intersections in this example
+define_parameter wp1_x = 16.9706 ; m;  Southeast exit from roundabout
+define_parameter wp1_y = -16.9706; m;  
+define_parameter wp2_x = 16.9706;  m;   Northeast exit from roundabout
+define_parameter wp2_y = 16.9706;m;
+define_parameter wp3_x = -16.9706; m;   Northwest exit from roundabout
+define_parameter wp3_y = 16.9706;m;  
+define_parameter wp4_x = -16.9706; m;   Southwest exit from roundabout
+define_parameter wp4_y = -16.9706;m;  
+define_parameter wp5_x = 52.3214;  m;   Southeast exit from outer loop
+define_parameter wp5_y = -85.1779;m;  
+define_parameter wp6_x = -85.1779; m;   Southwest exit from outer loop
+define_parameter wp6_y = -52.3214;m;  
+define_parameter wp7_x = -52.3214; m;   Northwest exit from outer loop
+define_parameter wp7_y = 85.1779; m;  
+define_parameter wp8_x = 85.1779;  m;   Northeast exit from outer loop
+define_parameter wp8_y = 52.3214; m;  
+define_parameter wp9_x =  85.1779;  m;   Southeast merge with outer loop
+define_parameter wp9_y =  -52.3214;m;
+define_parameter wp10_x = -52.3214; m;  Southwest merge with outer loop
+define_parameter wp10_y = -85.1779;m;
+define_parameter wp11_x = -85.1779; m;   Northwest merge with outer loop
+define_parameter wp11_y = 52.3214;m;
+define_parameter wp12_x = 52.3214; m;   Northeast merge with outer loop
+define_parameter wp12_y = 85.1779;m;  
+
+! Monitor the distance to each waypoint
+define_output dist_1 = sqrt((xo - wp1_x)^2 + (yo - wp1_y)^2); m; Dist to WP 1
+define_output dist_2 = sqrt((xo - wp2_x)^2 + (yo - wp2_y)^2); m; Dist to WP 2
+define_output dist_3 = sqrt((xo - wp3_x)^2 + (yo - wp3_y)^2); m; Dist to WP 3
+define_output dist_4 = sqrt((xo - wp4_x)^2 + (yo - wp4_y)^2); m; Dist to WP 4
+define_output dist_5 = sqrt((xo - wp5_x)^2 + (yo - wp5_y)^2); m; Dist to WP 5
+define_output dist_6 = sqrt((xo - wp6_x)^2 + (yo - wp6_y)^2); m; Dist to WP 6
+define_output dist_7 = sqrt((xo - wp7_x)^2 + (yo - wp7_y)^2); m; Dist to WP 7
+define_output dist_8 = sqrt((xo - wp8_x)^2 + (yo - wp8_y)^2); m; Dist to WP 8
+define_output dist_9 = sqrt((xo - wp9_x)^2 + (yo - wp9_y)^2); m; Dist to WP 9
+define_output dist_10 = sqrt((xo - wp10_x)^2 + (yo - wp10_y)^2); m; Dist to WP 10
+define_output dist_11 = sqrt((xo - wp11_x)^2 + (yo - wp11_y)^2); m; Dist to WP 11
+define_output dist_12 = sqrt((xo - wp12_x)^2 + (yo - wp12_y)^2); m; Dist to WP 12
+
+! define a parameter for a threshold distance to trigger an event
+define_parameter lim = 3.6;  m; Limit distance used in events and equations
+! parameter for probability of switching
+define_parameter switch_probability 0.75; - ;Likelihood to switch to a different path
+
+! parameters to hold 2 road id's to make events more portable
+define_parameter path1 = 0;- ; Current path ID, used in Events
+define_parameter path2 = 0;-; New path ID, used in Event
+! parameter to hold a value for the new station
+define_parameter new_sta1 = 0;m; New station for path1
+define_parameter new_sta2 = 0;m; New station for path2
+
+! variable to note when outside of all intersection areas
+define_output outside 0;-; Boolean: > Lim from all waypoints
+eq_in outside = gt(dist_1, lim)*gt(dist_2, lim)*gt(dist_3, lim)*gt(dist_4, lim)*gt(dist_5, lim)*gt(dist_6, lim)*gt(dist_7, lim)*gt(dist_8, lim)*gt(dist_9, lim)*gt(dist_10, lim)*gt(dist_11, lim)*gt(dist_12, lim);
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#These VS Commands add parameters and outputs to support a driver changing paths while navigating the  Road Network of roundabouts.
+#
+#To get a different set of random results (and different simulation results) change the value of the parameter "seed".
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Miscellaneous Custom Controls } Roundabouts: Waypoints & Distances
+#Library : Generic VS Commands
+#DataSet : Roundabouts: Waypoints & Distances
+#Category: Miscellaneous Custom Controls
+#FileID  : GenVS_e636474f-83f0-4497-9777-f1b8b046f994
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Generic Data Group`Tire Paths (4 Axles)`Tire Path Animations
+#VehCode Generic Group
+PARSFILE Generic\VS_commands\GenVS_aedb57eb-4885-4197-bff8-1d7e11120d06.par
+#BlueLink0 Generic VS Commands`Tire Path Setup` Tire Paths and Road Markings` , Link 1`GenVS_aedb57eb-4885-4197-bff8-1d7e11120d06
+
+
+PARSFILE Animator\Arrows\Arrows_a0ea10ce-eae9-423b-84db-8de73a91efd3.par
+#BlueLink1 Animator: Wheel Arrows and Other Indicators`Tire (Inner) Paths (4 Axles)` Tire Paths (4 Axles)` , Link 2`Arrows_a0ea10ce-eae9-423b-84db-8de73a91efd3
+
+
+PARSFILE Animator\Arrows\Arrows_659231a3-a35e-43b9-88e1-82b4873e83ab.par
+#BlueLink2 Animator: Wheel Arrows and Other Indicators`Tire (Outer) Paths (4 Axles)` Tire Paths (4 Axles)` , Link 3`Arrows_659231a3-a35e-43b9-88e1-82b4873e83ab
+
+
+
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#This dataset creates the tire paths using the animator. Because the vehicle has dual tires, two datasets are linked here to show paths for both the inner and outer tires of a 4-axle vehicle. Both of these datasets require that the Tire Path Setup be loaded first.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { Tire Path Animations } Tire Paths (4 Axles)
+#Library : Generic Data Group
+#DataSet : Tire Paths (4 Axles)
+#Category: Tire Path Animations
+#FileID  : GenGrp_5f529023-ae09-4c64-b1a6-729d16aef293
+#Product : TruckSim 2020.1
+#VehCode Generic Group
+
+END

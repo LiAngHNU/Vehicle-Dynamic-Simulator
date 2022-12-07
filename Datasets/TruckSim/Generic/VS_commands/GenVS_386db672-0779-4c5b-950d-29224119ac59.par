@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Generic VS Commands`Vehicle That Reacts to a Traffic Light`Traffic
+#VehCode VS Commands
+
+#MiscYellow0
+! set road the traffic
+! Need to set this manually for the object that is the light of interest. In this custom setup, 
+! the N-facing light is #3
+
+symbol_push <<light>> 3
+
+! The road and path going N to S is 1013
+set_ipath_for_id 1013
+set_iroad_for_id 1013
+
+! Starting station should be before the light
+symbol_push <<sstart>> -150
+#ENDMYellow
+
+PARSFILE Control\Speed_t\SpdTime_9ce062a4-7ec1-4ba2-a338-72cb6a0a07fc.par
+#BlueLink0 Control: Speed (Closed Loop) Using Target Speed`Intersection SLOW_TRAFFIC` Speed vs. Station` , Miscellaneous`SpdTime_9ce062a4-7ec1-4ba2-a338-72cb6a0a07fc
+
+PARSFILE Control\Speed_t\SpdTime_9e2a7044-d8fd-43fd-9bd9-45592aca138d.par
+#BlueLink1 Control: Speed (Closed Loop) Using Target Speed`Intersection STOP_TRAFFIC` Speed vs. Station` , Miscellaneous`SpdTime_9e2a7044-d8fd-43fd-9bd9-45592aca138d
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_1085d711-73e8-4900-8a19-828b4aaaf105.par
+#BlueLink2 Multiple Moving Objects`Vehicle That Stops for a Red Light` Traffic Vehicles (Misc)` , Miscellaneous`TMotion_1085d711-73e8-4900-8a19-828b4aaaf105
+
+PARSFILE Plot\Setup\Plot_44988dbf-64c4-40c8-a0e6-d43a789a66bc.par
+#BlueLink3 Plot: Setup`Stop Mode, Current Object` Pedestrians and Traffic Lights` , Plot`Plot_44988dbf-64c4-40c8-a0e6-d43a789a66bc
+
+PARSFILE Plot\Setup\Plot_70c8172c-48a8-4db2-9bd2-a46d8c70b7c3.par
+#BlueLink4 Plot: Setup`Look Mode, Current Object` Pedestrians and Traffic Lights` , Plot`Plot_70c8172c-48a8-4db2-9bd2-a46d8c70b7c3
+
+PARSFILE Plot\Setup\Plot_dcc2fab0-cfd2-4818-be8f-f99e80ee9e86.par
+#BlueLink5 Plot: Setup`Speed_ID, Current Object` Pedestrians and Traffic Lights` , Plot`Plot_dcc2fab0-cfd2-4818-be8f-f99e80ee9e86
+
+PARSFILE Plot\Setup\Plot_e9dd907a-c822-435a-b0f7-e4be26e5a80b.par
+#BlueLink6 Plot: Setup`Distance to Sign, Current Object` Pedestrians and Traffic Lights` , Plot`Plot_e9dd907a-c822-435a-b0f7-e4be26e5a80b
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Traffic } Vehicle That Reacts to a Traffic Light
+#Library : Generic VS Commands
+#DataSet : Vehicle That Reacts to a Traffic Light
+#Category: Traffic
+#FileID  : GenVS_386db672-0779-4c5b-950d-29224119ac59
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

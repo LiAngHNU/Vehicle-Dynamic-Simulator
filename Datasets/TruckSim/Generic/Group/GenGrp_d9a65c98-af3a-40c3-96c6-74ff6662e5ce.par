@@ -1,0 +1,64 @@
+PARSFILE
+#FullDataName Generic Data Group`2 Edges, Based On Lat_Veh`ADAS: Lane Detection Markers
+#VehCode Generic Group
+#MiscYellow0
+define_parameter Lane_Width = 3.85; m; ...
+  Lane width, used to calculate edge locations
+PATH_ID_DM = 1
+Current_Road_ID = 1
+#ENDMYellow
+
+
+#BlueLink1 ` , Link 2` , Link 2` , Link 2`
+
+
+
+#MiscYellow3
+define_output L_Edge_R = 0 ; m ; ...
+    L coordinate of right lane edge
+eq_out L_Edge_R = floor(Lat_Veh/Lane_Width)*Lane_Width
+symbol_push <<edge>> L_Edge_R
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_a7f8b877-3fc7-4e49-9176-c3263154ef3b.par
+#BlueLink3 Multiple Moving Objects`5 Lane Edge Markers Based On [[Edge]]` Points of Interest` , Link 4`TMotion_a7f8b877-3fc7-4e49-9176-c3263154ef3b
+
+
+#MiscYellow4
+define_output L_Edge_L = 0 ; m ; ...
+    L coordinate of left lane edge
+eq_out  L_Edge_L = L_Edge_R + Lane_Width
+symbol_set <<edge>> L_Edge_L
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_a7f8b877-3fc7-4e49-9176-c3263154ef3b.par
+#BlueLink4 Multiple Moving Objects`5 Lane Edge Markers Based On [[Edge]]` Points of Interest` , Link 5`TMotion_a7f8b877-3fc7-4e49-9176-c3263154ef3b
+
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#Note: This dataset has been updated for TruckSim 2018 such that the ADAS Sensors are linked on the Vehicle: Loaded Combination screen.
+#
+#Define a front-facing lane-detection sensor and 10 moving objects located on lane edges.
+#
+#The sensor is defined before the objects because they use the coordinate X_SENSOR to define station S on the lane edge. The VS Commands for warnings and HUD  follows the sensor and objects because it uses sensor detection variables.
+#
+#The target objects on the lane edges are located with the custom output variables L_Edge_L and L_Edge_R, defined here using the current vehcle location (Lat_Veh) and a user-defined parameter for lane width (Lane_Width).
+#
+#A Symbol Stack variable <<edge>> is defined to reuse the same dataset for two sets of edge markers.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { ADAS: Lane Detection Markers } 2 Edges, Based On Lat_Veh
+#Library : Generic Data Group
+#DataSet : 2 Edges, Based On Lat_Veh
+#Category: ADAS: Lane Detection Markers
+#FileID  : GenGrp_d9a65c98-af3a-40c3-96c6-74ff6662e5ce
+#Product : TruckSim 2020.1
+#VehCode Generic Group
+
+END

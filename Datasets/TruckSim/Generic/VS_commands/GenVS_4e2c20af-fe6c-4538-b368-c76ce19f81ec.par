@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Generic VS Commands`EQ_DYN: External Springs`Miscellaneous Custom Controls
+#VehCode VS Commands
+
+#MiscYellow0
+iprint 0
+define_parameter initial_spring_force_axle1 16383.2; N
+define_parameter initial_spring_force_axle2 5461.1; N
+define_parameter linear_spring_rate_axle1 250; N/mm
+define_parameter linear_spring_rate_axle2 700; N/mm
+
+IMPORT IMP_FS_L1 ADD initial_spring_force_axle1
+IMPORT IMP_FS_R1 ADD initial_spring_force_axle1
+
+IMPORT IMP_FS_L2 ADD initial_spring_force_axle2
+IMPORT IMP_FS_R2 ADD initial_spring_force_axle2
+
+EQ_DYN IMP_FS_L1 CmpS_L1*linear_spring_rate_axle1+initial_spring_force_axle1
+EQ_DYN IMP_FS_R1 CmpS_R1*linear_spring_rate_axle1+initial_spring_force_axle1
+
+EQ_DYN IMP_FS_L2 CmpS_L2*linear_spring_rate_axle2+initial_spring_force_axle2
+EQ_DYN IMP_FS_R2 CmpS_R2*linear_spring_rate_axle2+initial_spring_force_axle2
+
+!output variables for plots
+define_output eq_in_IMP_FS_L1
+define_output eq_dyn_IMP_FS_L1
+define_output eq_out_IMP_FS_L1
+
+eq_in eq_in_IMP_FS_L1 IMP_FS_L1       !Capture IMP_FS_L1 before kinematical equations
+eq_dyn eq_dyn_IMP_FS_L1 IMP_FS_L1 !Capture IMP_FS_L1 after kinematical equations
+eq_out eq_out_IMP_FS_L1 IMP_FS_L1  !Capture IMP_FS_L1 after dynamical equations
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_9386a075-a889-4fbd-8d52-9fb9448f512e.par
+#BlueLink3 Plot: Setup`Ext. Springs: EQ_IN, EQ_DYN, EQ_OUT` User-Defined Variables` , Plot`Plot_9386a075-a889-4fbd-8d52-9fb9448f512e
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Miscellaneous Custom Controls } EQ_DYN: External Springs
+#Library : Generic VS Commands
+#DataSet : EQ_DYN: External Springs
+#Category: Miscellaneous Custom Controls
+#FileID  : GenVS_4e2c20af-fe6c-4538-b368-c76ce19f81ec
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

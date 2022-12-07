@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName Generic Table`Lx Variable, Scaled to Tire`Tire Relaxation Length
+#RingCtrl0 SPLINE_FLAT
+#RingCtrl1 MULTIPLY
+#RingCtrl2 LINEAR
+#CheckBox0 1    
+
+L_RELAX_X_COMBINE MULTIPLY
+#MiscYellow0
+SET_UNITS L_RELAX_X_TABLE m
+L_RELAX_X_GAIN = RRE/5
+FZ_SCALE_L_RELAX_X = FZ_REF
+#ENDMYellow
+
+#DiagramOne0
+L_RELAX_X_TABLE SPLINE_FLAT
+-0.1, 0.13526
+-0.095, 0.13793
+-0.09, 0.1431
+-0.085, 0.14862
+-0.08, 0.1552
+-0.075, 0.16251
+-0.07, 0.17087
+-0.065, 0.18085
+-0.06, 0.1926
+-0.055, 0.20631
+-0.05, 0.22324
+-0.045, 0.24389
+-0.04, 0.26989
+-0.035, 0.30301
+-0.03, 0.34575
+-0.025, 0.40397
+-0.02, 0.48251
+-0.015, 0.59275
+-0.01, 0.7393
+-0.005, 0.90707
+0, 1
+0.005, 0.90707
+0.01, 0.7393
+0.015, 0.59275
+0.02, 0.48251
+0.025, 0.40397
+0.03, 0.34575
+0.035, 0.30301
+0.04, 0.26989
+0.045, 0.24389
+0.05, 0.22324
+0.055, 0.20631
+0.06, 0.1926
+0.065, 0.18085
+0.07, 0.17087
+0.075, 0.16251
+0.08, 0.1552
+0.085, 0.14862
+0.09, 0.1431
+0.095, 0.13793
+0.1, 0.13526
+ENDTABLE
+#DiagramOne1
+L_RELAX_X_FZ_TABLE LINEAR
+0, 0.2
+1, 1
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD L_RELAX_X
+*X_LABEL Lagged Slip Ratio (-)
+*Y_LABEL Length
+*X_LABEL_2 Vertical Load (Fz)
+*KEYWORD_2 L_RELAX_X_FZ
+
+
+#EMBEDDED_NOTES
+#This is a generalized function that can be used with any tire to produce reasonable values of relaxation length dependent upon slip angle and vertical load.
+#
+#The computation determines the normalized length (without regard to vertical loads) from the upper table using the current value of the lagged slip angle. The normalized length is then adjusted for vertical loads by multiplying by a factor from the lower table that is based on the current value of the normalized load. This adjusted value is converted to relaxation length by multiplying by a scale factor, L_RELAX_X_GAIN, which is set to a fifth of the effective rolling radius.
+#
+#Note: The normalized vertical load is the actual load divided by the reference vertical load, FZ_REF, which is set on the tire screen. FZ_REF must be reasonably correct so that the load adjustment done here is reasonable.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+#Library : Generic Table
+#DataSet : Lx Variable, Scaled to Tire
+#Category: Tire Relaxation Length
+#FileID  : GenTab_b39bbe4a-1fec-4454-92d0-578179ec80e0
+#Product : TruckSim 2020.1
+#VehCode table
+
+END

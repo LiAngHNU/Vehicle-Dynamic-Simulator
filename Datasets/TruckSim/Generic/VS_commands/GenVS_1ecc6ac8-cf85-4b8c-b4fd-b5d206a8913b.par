@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Generic VS Commands`Hello World`Embedded Python
+#VehCode VS Commands
+
+#MiscYellow0
+OPT_ENABLE_PYTHON = 1
+
+!SET_PYTHON_INSTALL_32 C:\\Program Files (x86)\\Python36\\python36.dll
+
+! put hello_world.py inside \TruckSim_Data\Extensions\Python
+RUN_PYTHON_STRING "import hello_world"
+
+RUN_PYTHON_PROG hello_world.print 'OPEN' None None
+
+*CPAR_INCLUDE Extensions\Python\hello_world.py
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#This dataset calls hello_world.py and display a string.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Embedded Python } Hello World
+#Library : Generic VS Commands
+#DataSet : Hello World
+#Category: Embedded Python
+#FileID  : GenVS_1ecc6ac8-cf85-4b8c-b4fd-b5d206a8913b
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

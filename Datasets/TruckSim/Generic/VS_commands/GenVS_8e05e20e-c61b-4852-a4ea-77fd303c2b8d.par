@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName Generic VS Commands`Steer of Telescopic Trailer Axles`Miscellaneous Custom Controls
+#VehCode VS Commands
+
+#MiscYellow0
+! Get the lateral offset of the trailer control point to the path
+define_output target_offset = ltarg(0, path_s_id(x_s1, y_s1, PathIdDM, 1), ltarg_id_dm) ;
+
+! Calculate a target offset for the control point
+define_output Ctrl_Lat_Offset = path_l_id(x_s1, y_s1, PathIdDM, 1) - target_offset;
+
+! Controller gain
+define_parameter ctrl_gain = 0.25;
+
+! Steer the trailer axles by applying control to the
+! output of the steering gear sent to each wheel
+eq_in imp_steer_con_l4 = - ctrl_gain * Ctrl_Lat_Offset;
+import imp_steer_con_l4 vs_replace 0
+define_output calc_str_l4 = imp_steer_con_l4; deg
+
+eq_in imp_steer_con_r4 = - ctrl_gain * Ctrl_Lat_Offset;
+import imp_steer_con_r4 vs_replace 0
+define_output calc_str_r4 = imp_steer_con_r4; deg
+
+eq_in imp_steer_con_l5 = - ctrl_gain * Ctrl_Lat_Offset;
+import imp_steer_con_l5 vs_replace 0
+define_output calc_str_l5 = imp_steer_con_l5; deg
+
+eq_in imp_steer_con_r5 = - ctrl_gain * Ctrl_Lat_Offset;
+import imp_steer_con_r5 vs_replace 0
+define_output calc_str_r5 = imp_steer_con_r5; deg
+
+eq_in imp_steer_con_l6 = - ctrl_gain * Ctrl_Lat_Offset;
+import imp_steer_con_l6 vs_replace 0
+define_output calc_str_l6 = imp_steer_con_l6; deg
+
+eq_in imp_steer_con_r6 = - ctrl_gain * Ctrl_Lat_Offset;
+import imp_steer_con_r6 vs_replace 0
+define_output calc_str_r6 = imp_steer_con_r6; deg
+
+eq_in imp_steer_con_l7 = - ctrl_gain * Ctrl_Lat_Offset;
+import imp_steer_con_l7 vs_replace 0
+define_output calc_str_l7 = imp_steer_con_l7; deg
+
+eq_in imp_steer_con_r7 = - ctrl_gain * Ctrl_Lat_Offset;
+import imp_steer_con_r7 vs_replace 0
+define_output calc_str_r7 = imp_steer_con_r7; deg
+
+!Define global X-Y coordinates for reference point along road
+define_output X_S_Ref PATH_X_ID(path_s_id(x_s1, y_s1, PathIdDM, 1),target_offset, PathIdDM,1)
+define_output Y_S_Ref PATH_Y_ID(path_s_id(x_s1, y_s1, PathIdDM, 1),target_offset, PathIdDM,1)
+define_output Z_S_Ref ROAD_Z_ID(path_s_id(x_s1, y_s1, PathIdDM, 1),target_offset, CURRENT_ROAD_ID,1)
+
+!Define angles between Control point and Reference Point for Sensor
+define_output sensor_mag sqrt((Z_s1-Z_S_Ref)^2+Ctrl_Lat_Offset^2)
+define_output sensor_yaw atan2((Y_S_Ref-y_s1),(X_S_Ref-x_s1)); deg
+define_output sensor_roll atan((Z_s1-Z_S_Ref)/abs(Ctrl_Lat_Offset)); deg
+
+!
+#ENDMYellow
+
+PARSFILE Animator\Frames\Frame_582cdefa-2a82-49d3-88ac-7f702d334fa9.par
+#BlueLink0 Animator: Reference Frame`Telescopic Trailer Control Point` Tracking: Vehicle` , Miscellaneous`Frame_582cdefa-2a82-49d3-88ac-7f702d334fa9
+
+PARSFILE Animator\Frames\Frame_1d26092e-e7c9-49b7-99db-b242d9231caa.par
+#BlueLink1 Animator: Reference Frame`Control Point Reference` Tracking: Vehicle` , Miscellaneous`Frame_1d26092e-e7c9-49b7-99db-b242d9231caa
+
+PARSFILE Animator\Frames\Frame_7a063968-c27d-493a-a739-3208c201cdb5.par
+#BlueLink2 Animator: Reference Frame`Control Point Sensor` Tracking: Vehicle` , Miscellaneous`Frame_7a063968-c27d-493a-a739-3208c201cdb5
+
+
+#EMBEDDED_NOTES
+#VS Commands determine the lateral offset of the trailer control point to the path. A gain is applied to this offset to apply control to the output of the steering gear sent to each wheel.
+#
+#Two spheres define the control point and the reference point along the path and a line indicates the sensor detection between them.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Miscellaneous Custom Controls } Steer of Telescopic Trailer Axles
+#Library : Generic VS Commands
+#DataSet : Steer of Telescopic Trailer Axles
+#Category: Miscellaneous Custom Controls
+#FileID  : GenVS_8e05e20e-c61b-4852-a4ea-77fd303c2b8d
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Generic VS Commands`Constant Braking`Embedded Python
+#VehCode VS Commands
+
+#MiscYellow0
+OPT_ENABLE_PYTHON = 1
+
+!SET_PYTHON_INSTALL_32 C:\\Program Files (x86)\\Python36\\python36.dll
+
+! put constant_braking.py inside \TruckSim_Data\Extensions\Python
+RUN_PYTHON_STRING "import constant_braking"
+
+define_variable pyReturn
+define_variable pyCondition
+
+pyCondition = 1
+
+define_table outtab
+outtab_table step
+1, 1
+2, 2
+3, 3
+4, 4
+endtable
+
+! Run the routine
+eq_in pyReturn = python(pyCondition, "constant_braking.brake", "OPEN", None, outtab_table)
+
+IMP_PBK_L1 vs_replace 
+IMP_PBK_R1 vs_replace 
+IMP_PBK_L2 vs_replace 
+IMP_PBK_R2 vs_replace 
+
+eq_in IMP_PBK_L1 =  outtab(0,1,1)
+eq_in IMP_PBK_R1 =  outtab(0,2,1)
+eq_in IMP_PBK_L2 =  outtab(0,3,1)
+eq_in IMP_PBK_R2 =  outtab(0,4,1)
+
+*CPAR_INCLUDE Extensions\Python\constant_braking.py
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#This dataset calls constant_braking.py and passes the values of brake actuator pressures defined in a python script back to TruckSim.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Embedded Python } Constant Braking
+#Library : Generic VS Commands
+#DataSet : Constant Braking
+#Category: Embedded Python
+#FileID  : GenVS_a0961b05-87b8-465b-a621-3d64d123e89b
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

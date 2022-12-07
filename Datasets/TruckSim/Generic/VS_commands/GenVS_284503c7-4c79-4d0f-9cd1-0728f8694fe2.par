@@ -1,0 +1,89 @@
+PARSFILE
+#FullDataName Generic VS Commands`Steer Controller with Embedded Python`Miscellaneous Custom Controls
+#VehCode VS Commands
+
+#MiscYellow0
+!    Simple Steer Controller with Embedded Python
+
+! Define new units for control parameter
+define_units deg/m DR
+
+OPT_ENABLE_PYTHON = 1
+
+!SET_PYTHON_INSTALL_32 C:\\Program Files (x86)\\Python36\\python36.dll
+
+! Load the module
+RUN_PYTHON_STRING "import steercontrol"
+define_variable pyret
+define_variable pycond
+define_variable roadl
+define_variable STEER_CTRL
+define_variable xprev
+define_variable yprev
+define_variable LERROR 0; m; Lateral Error from path
+define_variable TOTERR 0; -
+define_variable tcount = 0
+
+! Set condition so Python call will always run
+pycond = 1
+
+! define table for outputs from Embedded Python
+define_table outtab
+outtab_table step
+1,1
+2,2
+3,3
+endtable
+
+
+! Define 3 new parameters.
+define_variable L_FORWARD 20; m; Distance to view point
+define_parameter LAT_TRACK -1.6; m; Distance vehicle is offset from road centerline
+define_parameter GAIN_STEER_CTRL 100; deg/m; Control gain
+
+
+eq_in pycond = if_gt_0_then(FMOD(tcount,50), 0, 1)
+eq_in tcount = tcount+1
+
+!Run the routine
+eq_in pyret = python(pycond,"steercontrol.steer","OPEN",None,outtab_table)
+eq_in STEER_CTRL = outtab(0,1,1)
+eq_in xprev = outtab(0,2,1)
+eq_in yprev = outtab(0,3,1)
+
+! Define 2 new outputs.
+define_output Xpreview = xprev; m; X coordinate of preview point
+define_output Ypreview = yprev; m ; Y coordinate of preview point
+
+! Activate steering import
+IMP_STEER_SW vs_replace
+
+! Add equation for imported steering wheel angle. Start at 0 when T = 0.
+eq_in IMP_STEER_SW = if_gt_0_then(t, STEER_CTRL, 0) ;
+
+! Define labels for overlay plots (32 character limit)
+set_output_component Xpreview Steer control preview point
+set_output_component Ypreview Steer control preview point
+set_output_generic Xpreview X coordinate
+set_output_generic Ypreview Y coordinate
+
+! Used to make files copy to Consolidated Pars File Export
+*CPAR_INCLUDE Extensions\Python\steercontrol.py
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#These VS Commands are for the example steer controller described in the tech memo "Example: Extending a Model with VS Commands and the API."
+#
+#Updated July 2015 to include a second semicolon in some commands.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Miscellaneous Custom Controls } Steer Controller with Embedded Python
+#Library : Generic VS Commands
+#DataSet : Steer Controller with Embedded Python
+#Category: Miscellaneous Custom Controls
+#FileID  : GenVS_284503c7-4c79-4d0f-9cd1-0728f8694fe2
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

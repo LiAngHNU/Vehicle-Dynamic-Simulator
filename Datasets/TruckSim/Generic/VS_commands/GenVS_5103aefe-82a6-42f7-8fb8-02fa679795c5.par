@@ -1,0 +1,23 @@
+PARSFILE
+#FullDataName Generic VS Commands`6-Lane Highway: Road IDs`Road Networks
+#VehCode Road IDs
+
+#MiscYellow0
+define_parameter six_ln_hwy = 4200; -; Road ID for Six Lane Highway
+define_parameter right_wall = 4201; -; Road ID for Right Wall
+define_parameter left_wall = 4202; -; Road ID for Left Wall
+define_parameter right_access_rd = 4203; -; Road ID for Right Access Road
+define_parameter left_access_rd = 4204; -; Road ID for Left Access Road
+#ENDMYellow
+
+*MODELCODE Road IDs
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Road Networks } 6-Lane Highway: Road IDs
+#Library : Generic VS Commands
+#DataSet : 6-Lane Highway: Road IDs
+#Category: Road Networks
+#FileID  : GenVS_5103aefe-82a6-42f7-8fb8-02fa679795c5
+#Product : TruckSim 2020.1
+#VehCode Road IDs
+
+END

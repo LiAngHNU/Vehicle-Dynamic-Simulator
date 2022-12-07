@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Generic VS Commands`Watch Bike Lane`ADAS Support
+#VehCode Watch for bicycles
+
+#MiscYellow0
+IAXLE = 2 ! context for L_TRACK, valid w/ or w/o trailer
+define_parameter Y_RIGHT = -(1.5 + 0.5*L_TRACK);m; ...
+  Max allowed Y to bike or pedestrian (Y is negative on right side)
+
+define_parameter BIKE_LANE = 110;-; Event group ID for checking bike lane
+#ENDMYellow
+
+*MODELCODE Watch for bicycles
+PARSFILE Events\Events_47dbe4b0-b396-4448-9f95-8f589c6c5e4a.par
+#BlueLink1 Events`Watch Bike Lane` Pedestrian and Bike Detection` , Miscellaneous`Events_47dbe4b0-b396-4448-9f95-8f589c6c5e4a
+
+
+#EMBEDDED_NOTES
+#Define parameters to help watch to the right of the vehcle (in a bike lane), with the intent of steering to the left to give room to a pedestrian or bicyle,
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { ADAS Support } Watch Bike Lane
+#Library : Generic VS Commands
+#DataSet : Watch Bike Lane
+#Category: ADAS Support
+#FileID  : GenVS_20e12e9f-430d-481d-9f6d-f9d501d178f0
+#Product : TruckSim 2020.1
+#VehCode Watch for bicycles
+
+END

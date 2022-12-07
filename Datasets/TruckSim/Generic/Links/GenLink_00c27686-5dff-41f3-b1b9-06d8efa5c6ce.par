@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Generic Group of Links`Two Blind-Spot Sensors`ADAS: Sensor Groups
+#VehCode Generic Links
+PARSFILE Sensors_Traffic\Radar\Radar_d29279d3-9c83-424c-91d3-78b9b4085d4e.par
+#BlueLink0 ADAS Sensors for Range and Tracking`Left Blind-Spot, Vx` Blind-Spot Sensors (Legacy TS 2017)` , Miscellaneous`Radar_d29279d3-9c83-424c-91d3-78b9b4085d4e
+
+PARSFILE Sensors_Traffic\Radar\Radar_140d9ab1-6ccb-455a-9f78-bfef0cccc29c.par
+#BlueLink1 ADAS Sensors for Range and Tracking`Right Blind-Spot, Vx` Blind-Spot Sensors (Legacy TS 2017)` , Miscellaneous`Radar_140d9ab1-6ccb-455a-9f78-bfef0cccc29c
+
+PARSFILE Animator\HUD\HUD_5d5f7982-ee80-49a3-98b1-add3ef4a979a.par
+#BlueLink2 Animator: HUD`Blind Spot Alerts` Alerts` , Miscellaneous`HUD_5d5f7982-ee80-49a3-98b1-add3ef4a979a
+
+#BlueLink4 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink5 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+
+#EMBEDDED_NOTES
+#This dataset has links to two blind spot sensors that would be active for forward speed.
+#
+#Each sensor link has the sensor plus VS Commands to show a warning HUD, plus plots.
+#
+#The VS Commands require that at least one target object be defined before linking to this dataset because they use detection variables such as MagS<<s>>_1.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Group of Links; { ADAS: Sensor Groups } Two Blind-Spot Sensors
+#Library : Generic Group of Links
+#DataSet : Two Blind-Spot Sensors
+#Category: ADAS: Sensor Groups
+#FileID  : GenLink_00c27686-5dff-41f3-b1b9-06d8efa5c6ce
+#Product : TruckSim 2020.1
+#VehCode Generic Links
+
+END

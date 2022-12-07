@@ -1,0 +1,61 @@
+PARSFILE
+#FullDataName Generic Data Group`Traffic, 2 Lanes Fwd, 1 Lane Opp`ADAS: Traffic for ACC & FCW
+#VehCode Generic Group
+#MiscYellow0
+N_LTARG = N_LTARG + 1
+ILTARG = N_LTARG
+ltarg_constant = 2
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_a47fd266-dabe-4dba-b0f7-73e40d4beb28.par
+#BlueLink0 Multiple Moving Objects`2 Vehicles, Relative S` Traffic Vehicles (Forward)` , Link 1`TMotion_a47fd266-dabe-4dba-b0f7-73e40d4beb28
+
+
+#MiscYellow1
+N_LTARG = N_LTARG + 1
+ILTARG = N_LTARG
+ltarg_constant = -2
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_510e4ce7-45f5-4611-a79c-3c65c0efa4b1.par
+#BlueLink1 Multiple Moving Objects`6 Vehicles, Vx * 0.95` Traffic Vehicles (Forward)` , Link 2`TMotion_510e4ce7-45f5-4611-a79c-3c65c0efa4b1
+
+
+#MiscYellow2
+N_LTARG = N_LTARG + 1
+ILTARG = N_LTARG
+ltarg_constant = 6
+define_parameter vx_ref = speed_target(0,0,1); ...
+  km/h; Reference speed
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_ef4d20f9-03c9-4ee7-9374-955bd49a78e9.par
+#BlueLink2 Multiple Moving Objects`6 Vehicles, Speed = -Vx_Ref` Traffic Vehicles (Oncoming)` , Link 3`TMotion_ef4d20f9-03c9-4ee7-9374-955bd49a78e9
+
+
+
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#This dataset assembles traffic vehicles in three lanes.
+#
+#The moving objects from link 1 follow the ego vehicle. Their positions are based on the position of the vehicle's station.
+#
+#The moving objects from links 2 and 3 have speeds that are proportional to that of the vehicle: Vx.
+#
+#The lateral positions of the moving objects are set using the LTARG function, with datasets specified with ILTARG.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { ADAS: Traffic for ACC & FCW } Traffic, 2 Lanes Fwd, 1 Lane Opp
+#Library : Generic Data Group
+#DataSet : Traffic, 2 Lanes Fwd, 1 Lane Opp
+#Category: ADAS: Traffic for ACC & FCW
+#FileID  : GenGrp_014e7fb4-5a4a-4182-b4c3-f6cbad94f758
+#Product : TruckSim 2020.1
+#VehCode Generic Group
+
+END

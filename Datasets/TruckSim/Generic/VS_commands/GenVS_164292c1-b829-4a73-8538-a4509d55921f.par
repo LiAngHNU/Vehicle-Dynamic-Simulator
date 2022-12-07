@@ -1,0 +1,67 @@
+PARSFILE
+#FullDataName Generic VS Commands`AX_AEB Functions`ADAS Support
+#VehCode AX_AEB Functions
+
+#MiscYellow0
+DEFINE_PARAMETER AX_BRAKE = 4;m/s2; Deceleration level to apply brakes
+
+BEGIN_FUNCTION DIST_BDRY(IDS, IDO) ; X distance from vehicle bumper to object boundary
+  RETURN IF(IDO & DETECT_TYPE(IDS,IDO) >= VEHICLE, ...
+    DETECT_X(IDS, IDO) + X_SENSOR(IDS) -1.0 -DETECT_MSG(IDS, IDO), 0)
+END_FUNCTION
+
+BEGIN_FUNCTION AX_AEB(IDS, IDO) ; Ax needed for target within 3m laterally
+  DEFINE_LOCAL COND, DISTX, VX
+  DISTX = IF(IDO, DIST_BDRY(IDS, IDO), 0)
+  VX = IF(IDO, DETECT_VX(IDS, IDO), 0)
+  COND = IF(DISTX & VX < 0, ...
+    ABS(DETECT_Y(IDS,IDO) - DETECT_VY(IDS,IDO)*DISTX/VX) <3, 0)
+  RETURN IF(COND, VX*VX/(2*DISTX), 0)
+END_FUNCTION
+
+BEGIN_FUNCTION OBJ_CRIT(IDS) ; find object requiring most decel among the 1st 4
+  DEFINE_LOCAL IOBJ, AX_CRIT, AX
+  IOBJ = 1
+  AX_CRIT = 0
+  AX = AX_AEB(IDS, 1)
+  AX_CRIT = IF(AX > AX_CRIT,AX,AX_CRIT)
+
+  AX = AX_AEB(IDS, 2)
+  IOBJ = IF(AX > AX_CRIT,2,IOBJ)
+  AX_CRIT = IF(AX > AX_CRIT, AX, AX_CRIT)
+
+  AX = AX_AEB(IDS, 3)
+  IOBJ = IF(AX > AX_CRIT,3,IOBJ)
+  AX_CRIT = IF(AX > AX_CRIT,AX,AX_CRIT)
+
+  AX = AX_AEB(IDS, 4)
+  IOBJ = IF(AX > AX_CRIT,4,IOBJ)
+  RETURN IOBJ
+END_FUNCTION
+
+BEGIN_FUNCTION IS_CLR (IDS, IOBJ) ; True if there's a clear path for object iobj
+  DEFINE_LOCAL DIST
+  DIST = DETECT_DIST(IDS, IOBJ)
+  RETURN DETECT_TYPE(IDS, IOBJ) < VEHICLE | DIST > 45 | DIST <= 0 | AX_AEB(IDS, IOBJ) < 0.01
+END_FUNCTION
+
+BEGIN_FUNCTION NEED_AEB(IDS,IOBJ) ; Need to brake?
+  RETURN IF(IOBJ, AX_AEB(IDS, IOBJ) > AX_BRAKE, 0)
+END_FUNCTION
+#ENDMYellow
+
+*MODELCODE AX_AEB Functions
+
+#EMBEDDED_NOTES
+#The functions are used in the ADAS city examples with multiple vehicles. They mainly work with automated emergency braking AEB logic, finding the most critical detected target among the four closest.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { ADAS Support } AX_AEB Functions
+#Library : Generic VS Commands
+#DataSet : AX_AEB Functions
+#Category: ADAS Support
+#FileID  : GenVS_164292c1-b829-4a73-8538-a4509d55921f
+#Product : TruckSim 2020.1
+#VehCode AX_AEB Functions
+
+END

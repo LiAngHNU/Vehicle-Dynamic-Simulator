@@ -1,0 +1,69 @@
+PARSFILE
+#FullDataName Generic Data Group`3 Edges, Based On LTARG`ADAS: Lane Detection Markers
+#VehCode Generic Group
+#MiscYellow0
+DEFINE_PARAMETER lane_width = 3.85; m; ...
+  Lane width, used to calculate edge locations
+PATH_ID_DM = 1
+Current_Road_ID = 1 ! No real road yet
+#ENDMYellow
+
+
+#BlueLink1 ` , Link 2` , Link 2` , Link 2`
+
+
+
+#MiscYellow3
+! Road reference path, objects 1 - 5
+N_LTARG = N_LTARG + 1
+ILTARG = N_LTARG
+ltarg_constant = 0
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_ec26bbd4-7380-444d-9e11-bbee7bba901a.par
+#BlueLink3 Multiple Moving Objects`5 Lane Edge Markers Based On ILTARG` Points of Interest` , Link 4`TMotion_ec26bbd4-7380-444d-9e11-bbee7bba901a
+
+
+#MiscYellow4
+! First edge to right, objects 6 - 10
+N_LTARG = N_LTARG + 1
+ILTARG = N_LTARG
+EQ_INIT ltarg_constant = -Lane_Width
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_ec26bbd4-7380-444d-9e11-bbee7bba901a.par
+#BlueLink4 Multiple Moving Objects`5 Lane Edge Markers Based On ILTARG` Points of Interest` , Link 5`TMotion_ec26bbd4-7380-444d-9e11-bbee7bba901a
+
+
+#MiscYellow5
+! First edge to left, objects 11 - 15
+N_LTARG = N_LTARG + 1
+ILTARG = N_LTARG
+EQ_INIT ltarg_constant = Lane_Width
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_ec26bbd4-7380-444d-9e11-bbee7bba901a.par
+#BlueLink5 Multiple Moving Objects`5 Lane Edge Markers Based On ILTARG` Points of Interest` , Link 6`TMotion_ec26bbd4-7380-444d-9e11-bbee7bba901a
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#Define a front-facing lane-detection sensor and 15 moving objects located on lane edges.
+#
+#The sensor is defined before the objects, because they use the coordinate X_SENSOR to define station S on the lane edge. The links for VS Commands for warnings and HUD  follow the sensor and objects, because it uses sensor detection variables.
+#
+#Each edge is defined with an LTARG dataset. These are set to constants that are defined with a parameter LANE_WIDTH.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { ADAS: Lane Detection Markers } 3 Edges, Based On LTARG
+#Library : Generic Data Group
+#DataSet : 3 Edges, Based On LTARG
+#Category: ADAS: Lane Detection Markers
+#FileID  : GenGrp_772039a5-122b-46ef-bcee-0fd0d4863a1f
+#Product : TruckSim 2020.1
+#VehCode Generic Group
+
+END

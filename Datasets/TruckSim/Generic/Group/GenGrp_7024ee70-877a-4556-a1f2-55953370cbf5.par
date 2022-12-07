@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Generic Data Group`Parking Lot Vehicles`ADAS: Traffic Scenarios
+#VehCode Generic Group
+PARSFILE Sensors_Traffic\Traffic\TMotion_de0fd820-7455-4dd2-9d43-8824edaa5858.par
+#BlueLink0 Multiple Moving Objects`Reverse Blind-Spot: Crossing Vehicle` Traffic Vehicles (Misc)` , Link 1`TMotion_de0fd820-7455-4dd2-9d43-8824edaa5858
+
+
+#MiscYellow1
+ipath = 1
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_7022d317-3e18-4ba9-951a-55b15c78bf9d.par
+#BlueLink1 Multiple Moving Objects`Parked Vehicle, S_init = 0, Lat = -3` Parked Vehicles` , Link 2`TMotion_7022d317-3e18-4ba9-951a-55b15c78bf9d
+
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_23192352-d945-4c07-9ce2-86cc49e6ea6f.par
+#BlueLink2 Multiple Moving Objects`Parked Vehicle, S_init = 0, Lat = 3` Parked Vehicles` , Link 3`TMotion_23192352-d945-4c07-9ce2-86cc49e6ea6f
+
+
+
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#The moving vehicle gets the most recent path and road. After it is loaded, IPATH is set to 1 for the two parked vehicles.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { ADAS: Traffic Scenarios } Parking Lot Vehicles
+#Library : Generic Data Group
+#DataSet : Parking Lot Vehicles
+#Category: ADAS: Traffic Scenarios
+#FileID  : GenGrp_7024ee70-877a-4556-a1f2-55953370cbf5
+#Product : TruckSim 2020.1
+#VehCode Generic Group
+
+END

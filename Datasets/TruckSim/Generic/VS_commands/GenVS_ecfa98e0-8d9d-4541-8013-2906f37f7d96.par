@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Generic VS Commands`Offset Backing: I-PD Control`Custom Steering Controls
+#VehCode VS Commands
+
+#MiscYellow0
+OPT_DRIVER_ACTION 1; ! prevents the built-in controller from controlling the vehicle
+
+TPREV_CONSTANT 3.75; ! tune preview point placement here if needed
+DEFINE_PARAMETER KP_TRAILER_STEER 140; ! tune here if needed
+DEFINE_PARAMETER KI_TRAILER_STEER  300; ! tune here if needed
+DEFINE_PARAMETER KD_TRAILER_STEER  0; ! tune here if needed
+
+EQ_FULL_STEP dArt_H_dt = (Art_H-Prev_Art_H)/TSTEP;
+
+EQ_FULL_STEP IMP_STEER_SW = KP_TRAILER_STEER*-Art_H ...
+                                                   + KI_TRAILER_STEER*Int_Art_H_Error ...
+                                                   - KD_TRAILER_STEER*dArt_H_dt;
+
+EQ_FULL_STEP Prev_Art_H = Art_H;
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#This dataset implements an I-PD controller for offset-backing a single trailer. It is based on the concept of aiming the trailer toward a single preview point, located behind the vehicle, via handwheel adjustments.
+#
+#The I-PD approach handles step changes in desired hitch angle more gracefully than a typical PID-style controller.
+#
+#Prerequisites for use, in the order they should be called:
+#- A motion sensor located at the trailer hitch point with a sensor ID number of one.
+#- The generic VS commands dataset "Trailer Backing: I-PD Setup", which defines the necessary output variables.
+#- A "Control: Steering by the Closed-loop Driver Model" dataset which uses the single-point option. This is not used to control the handwheel; rather, it is used to calculate the preview point coordinates. If multiple such steer controllers are in use for this run, the preview point will be of the one which is active at the time this controller is called. A preview point may also be manually defined.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Custom Steering Controls } Offset Backing: I-PD Control
+#Library : Generic VS Commands
+#DataSet : Offset Backing: I-PD Control
+#Category: Custom Steering Controls
+#FileID  : GenVS_ecfa98e0-8d9d-4541-8013-2906f37f7d96
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

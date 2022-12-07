@@ -1,0 +1,158 @@
+PARSFILE
+#FullDataName Generic VS Commands`Sensor Target: Collision Detection`ADAS Support
+#VehCode VS Commands
+
+#MiscYellow0
+! This variable is used as a counter in the linked Events, and represents the number of recorded collisions. 
+define_variable iter = 0;
+define_output iterplot = iter;
+ANI_iter;
+WRT_iter;
+
+
+!---------------------------
+
+
+ADD_ENTITY hud_image Text_BG_Outer
+  size_mode absolute
+  place_mode absolute
+  align_x left
+  align_y bottom
+  location 5 15 380 330
+  red 0
+  green 0
+  blue 0
+  opacity .5
+END_ENTITY hud_image Text_BG_Outer
+
+
+ADD_ENTITY hud_image Text_BG_Inner
+  size_mode absolute
+  place_mode absolute
+  align_x left
+  align_y bottom
+  location 10 20 370 320
+  red 0
+  green 0
+  blue 0
+  opacity .25
+END_ENTITY hud_image Text_BG_Inner
+
+
+!---------------------------
+
+
+! Detection
+! Detection means: Magnitude > 0, and Distance is > -1
+define_variable Detection = 0; 
+eq_in Detection = GT(MagS1_1, 0) & GT(DisS1_1, -1);
+define_output Detect = Detection;
+ANI_Detect;
+WRT_Detect;
+
+define_variable Flash_Det = 0;  ! Flash for Detection
+eq_in Flash_Det = sin(5*pi*t);
+define_output FlashOut = Flash_Det;
+ANI_Flash;
+WRT_Flash;
+ANI_FlashOut;
+WRT_FlashOut;
+
+
+!---------------------------
+
+
+! Collision Imminent
+! Collision Imminent means: If Magnitude > 0, Return 1 if Distance < 0.5. Otherwise, return 0
+define_variable Collision_Imminent = 0;
+eq_in Collision_Imminent = if_gt_0_then(MagS1_1, LT(DisS1_1, 0.5), 0);
+define_output ColImt = Collision_Imminent;
+ANI_ColImt;
+WRT_ColImt;
+
+define_variable Flash_Col = 0; ! Flash for Collision Imminent
+eq_in Flash_Col = sin(5*pi*t);
+define_output FlashCol = Flash_Col;
+ANI_Flash_Col;
+WRT_Flash_Col;
+ANI_FlashCol;
+WRT_FlashCOL;
+
+
+!---------------------------
+
+
+! Collision Contact
+! Collision Contact means: If Magnitude > 0, Return 1 if Distance < 0.25. Otherwise, return 0
+define_variable Collision_Contact = 0;
+eq_in Collision_Contact = if_gt_0_then(MagS1_1, LT(DisS1_1, 0.25), 0);
+define_output Contac = Collision_Contact
+ANI_Contac; 
+WRT_Contac;
+
+define_variable Solid_Con = 0; ! Constant Warning for Contact
+eq_in Solid_Con = Collision_Contact;
+define_output SolidCon = Solid_Con; 
+ANI_Solid_Con;
+WRT_Solid_Con;
+ANI_SolidCon; 
+WRT_SolidCon;
+
+
+!---------------------------
+#ENDMYellow
+
+PARSFILE Events\Events_6e7605f6-39d1-48d8-8815-591aeaeeb388.par
+#BlueLink0 Events`A. Initialize Collision Detection` ADAS Sensor Collision Recorder` , Miscellaneous`Events_6e7605f6-39d1-48d8-8815-591aeaeeb388
+
+PARSFILE Plot\Setup\Plot_6c2bc6ff-778a-43bf-8c97-f1cc24f76392.par
+#BlueLink3 Plot: Setup`Collision Counter` ADAS Sensor Detections: Collision` , Plot`Plot_6c2bc6ff-778a-43bf-8c97-f1cc24f76392
+
+PARSFILE Plot\Setup\Plot_29f6fbde-a45d-48f9-a914-f109f2f0f40d.par
+#BlueLink4 Plot: Setup`Detection Alert` ADAS Sensor Detections: Collision` , Plot`Plot_29f6fbde-a45d-48f9-a914-f109f2f0f40d
+
+PARSFILE Plot\Setup\Plot_9cb920c5-d341-44a1-86b6-9882445d49c8.par
+#BlueLink5 Plot: Setup`Collision Imminent` ADAS Sensor Detections: Collision` , Plot`Plot_9cb920c5-d341-44a1-86b6-9882445d49c8
+
+PARSFILE Plot\Setup\Plot_9ad00b4a-9e47-4bc5-972a-55b671063782.par
+#BlueLink6 Plot: Setup`Contact` ADAS Sensor Detections: Collision` , Plot`Plot_9ad00b4a-9e47-4bc5-972a-55b671063782
+
+PARSFILE Plot\Setup\Plot_0d44dd8b-9d4e-4794-963e-7f74b80d3fcf.par
+#BlueLink7 Plot: Setup`Collision Detection` ADAS Sensor Detections: Collision` , Plot`Plot_0d44dd8b-9d4e-4794-963e-7f74b80d3fcf
+
+PARSFILE Plot\Setup\Plot_66e1edea-ceb3-4449-8502-dca3211609d6.par
+#BlueLink8 Plot: Setup`FlashOut` ADAS Sensor Detections: Collision` , Plot`Plot_66e1edea-ceb3-4449-8502-dca3211609d6
+
+PARSFILE Plot\Setup\Plot_7d9e7535-6fb3-4a0a-984c-14eb961bfca9.par
+#BlueLink9 Plot: Setup`FlashCol` ADAS Sensor Detections: Collision` , Plot`Plot_7d9e7535-6fb3-4a0a-984c-14eb961bfca9
+
+PARSFILE Plot\Setup\Plot_f78b1a57-c529-4c69-9d29-66c553585e95.par
+#BlueLink10 Plot: Setup`SolidCon` ADAS Sensor Detections: Collision` , Plot`Plot_f78b1a57-c529-4c69-9d29-66c553585e95
+
+PARSFILE Plot\Setup\Plot_8f1f1d97-6520-4421-a2fb-ee35f23a3947.par
+#BlueLink12 Plot: Setup`Moving Object Station: S_Obj_1` ADAS Sensor Target Properties` , Plot`Plot_8f1f1d97-6520-4421-a2fb-ee35f23a3947
+
+PARSFILE Plot\Setup\Plot_2ceda2d8-09ce-45a8-a7f4-ecac6f8df2d0.par
+#BlueLink13 Plot: Setup`Moving Object X Position: X_Obj_1` ADAS Sensor Target Properties` , Plot`Plot_2ceda2d8-09ce-45a8-a7f4-ecac6f8df2d0
+
+PARSFILE Plot\Setup\Plot_9795803e-e506-42e8-93a3-5ae5032f5e3d.par
+#BlueLink14 Plot: Setup`Moving Object Speed: V_Obj_1` ADAS Sensor Target Properties` , Plot`Plot_9795803e-e506-42e8-93a3-5ae5032f5e3d
+
+
+#EMBEDDED_NOTES
+#Generic VS Commands dataset used to define Collision Detection information based on a Moving Object and an ADAS Sensor.
+#
+#This dataset does two things:
+#* Define a new variable that's incremented in Events, corresponding to each time a collision is recorded.
+#* VS Commands to compare the detected distance and magnitude to user-defined thresholds, the results of which are different alert states.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { ADAS Support } Sensor Target: Collision Detection
+#Library : Generic VS Commands
+#DataSet : Sensor Target: Collision Detection
+#Category: ADAS Support
+#FileID  : GenVS_dcdf96c9-ba85-490c-9ccb-46d5e86eecfe
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END

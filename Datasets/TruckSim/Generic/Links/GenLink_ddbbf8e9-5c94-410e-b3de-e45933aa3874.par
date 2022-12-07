@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Generic Group of Links`9A Mobile Crane w/ 5 driven axles`Mobile Crane
+#VehCode ss_sss_ss_ss
+PARSFILE Generic\Group\GenGrp_8650f973-1b80-436b-9c54-056083bd14c7.par
+#BlueLink0 Generic Data Group`Mobile Crane` Very Large Vehicles` , Miscellaneous`GenGrp_8650f973-1b80-436b-9c54-056083bd14c7
+
+PARSFILE Payloads\Box\Box_2cb882ca-522c-4f9e-a328-3113d35ee30f.par
+#BlueLink1 Payload: Box Shape`Mobile crane` Box Trucks` , Miscellaneous`Box_2cb882ca-522c-4f9e-a328-3113d35ee30f
+
+#MiscYellow0
+! Make the payload not shiny
+set_specular 0 0 0
+#ENDMYellow
+
+*MODELCODE ss_sss_ss_ss
+
+#EMBEDDED_NOTES
+#Symbol Stack operations are used along with browser keywords to assemble a 9 axle mobile crane.
+#
+#This vehicle has 5 driven axles. See the 2018 TruckSim Powertrain manual, page 11, for a discussion.
+#
+#The payload represents the mass of the crane module.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Group of Links; { Mobile Crane } 9A Mobile Crane w/ 5 driven axles
+#Library : Generic Group of Links
+#DataSet : 9A Mobile Crane w/ 5 driven axles
+#Category: Mobile Crane
+#FileID  : GenLink_ddbbf8e9-5c94-410e-b3de-e45933aa3874
+#Product : TruckSim 2020.1
+#VehCode ss_sss_ss_ss
+
+END

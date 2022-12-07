@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Generic VS Commands`Alley Dock: Preview Point`Custom Steering Controls
+#VehCode VS Commands
+
+#MiscYellow0
+INSTALL_DM_OUTPUTS; ! activate X_DM_1, Y_DM_1
+DEFINE_PARAMETER X_INITIAL = 30; m;
+DEFINE_PARAMETER PREVIEW_GAIN = 0.63; ! tune here if needed
+EQ_IN X_DM_1 = X_INITIAL+SPEED_TARGET_CONSTANT*PREVIEW_GAIN*T;
+EQ_IN Y_DM_1 = 1.8; ! place in center of cones
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#Custom preview point for alley docking (AD) manuever.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Custom Steering Controls } Alley Dock: Preview Point
+#Library : Generic VS Commands
+#DataSet : Alley Dock: Preview Point
+#Category: Custom Steering Controls
+#FileID  : GenVS_d9a85c4d-a8db-456a-a263-f9e039a7a03e
+#Product : TruckSim 2020.1
+#VehCode VS Commands
+
+END
