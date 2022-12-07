@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Plot: Setup`Slip Ratios, Lagged (Axle 2)`Tire Kinematics
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS KappLL2i, Time
+PLOTCHANNELS KappLL2o, Time
+PLOTCHANNELS KappLR2i, Time
+PLOTCHANNELS KappLR2o, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Slip Ratios, Lagged (Axle 2)
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#Lagged Slip Ratios
+#
+#These are the slip ratio values after applying the tire relaxation lengths.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Kinematics } Slip Ratios, Lagged (Axle 2)
+#Library : Plot: Setup
+#DataSet : Slip Ratios, Lagged (Axle 2)
+#Category: Tire Kinematics
+#FileID  : Plot_d9d546bb-6a4c-43cc-bd96-f64e62ce4844
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

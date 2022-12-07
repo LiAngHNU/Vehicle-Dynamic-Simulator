@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Visibility: VisO_1`ADAS Sensor Target Properties
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS VisO_1, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Visibility: VisO_1
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Target Properties } Visibility: VisO_1
+#Library : Plot: Setup
+#DataSet : Visibility: VisO_1
+#Category: ADAS Sensor Target Properties
+#FileID  : Plot_78426217-c05a-4a2c-bd10-bf18840fc8da
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

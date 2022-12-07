@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Steering Wheel (Relative) vs. Lat Accel`Steering
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS SteerRel, Ay
+
+#ENDMYellow
+
+YAXISLABEL Steering Wheel Relative to Ackermann - deg
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Steering Wheel (Relative) vs. Lat Accel
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Steering Wheel (Relative) vs. Lat Accel
+#Library : Plot: Setup
+#DataSet : Steering Wheel (Relative) vs. Lat Accel
+#Category: Steering
+#FileID  : Plot_0e04a57f-2fd2-4194-a578-ead188efc99d
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

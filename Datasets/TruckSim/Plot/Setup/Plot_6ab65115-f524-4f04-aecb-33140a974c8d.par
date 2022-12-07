@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Longitudinal Accel. of CG's vs. Time`Vehicle Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Ax, Time
+PLOTCHANNELS Ax_2, Time
+PLOTCHANNELS Ax_3, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Longitudinal Accel. of CG's vs. Time
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Longitudinal Accel. of CG's vs. Time
+#Library : Plot: Setup
+#DataSet : Longitudinal Accel. of CG's vs. Time
+#Category: Vehicle Motion
+#FileID  : Plot_6ab65115-f524-4f04-aecb-33140a974c8d
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`GPS Lat. vs. GPS Long (Relative)`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS GPS_Lat, GPS_Long
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE GPS Lat. vs. GPS Long (Relative)
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#The Absolute GPS angles have lots of digits. This plot setup uses GPS coordinates relative to the starting location as specified with parameters GPS_REF_LAT and GPS_REF_LONG.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } GPS Lat. vs. GPS Long (Relative)
+#Library : Plot: Setup
+#DataSet : GPS Lat. vs. GPS Long (Relative)
+#Category: Tracking
+#FileID  : Plot_22887c04-18a1-47fe-a22c-430a2e6b3c89
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

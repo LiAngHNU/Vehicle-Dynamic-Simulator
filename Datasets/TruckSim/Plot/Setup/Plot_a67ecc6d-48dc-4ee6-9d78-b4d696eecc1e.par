@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Axle Roll`Suspension Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Roll_A1, Time
+PLOTCHANNELS Roll_A2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Axle Roll
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Motion } Axle Roll
+#Library : Plot: Setup
+#DataSet : Axle Roll
+#Category: Suspension Motion
+#FileID  : Plot_a67ecc6d-48dc-4ee6-9d78-b4d696eecc1e
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

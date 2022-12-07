@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Throt_Ref`Controls: Driver
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS ThrotRef, Time
+PLOTCHANNELS Throttle, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Throt_Ref
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#ThrotRef is a new output variable defined for use with the Opt_Engine_Running examples.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Controls: Driver } Throt_Ref
+#Library : Plot: Setup
+#DataSet : Throt_Ref
+#Category: Controls: Driver
+#FileID  : Plot_53787166-e912-49ab-92dd-4f3790212b1a
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

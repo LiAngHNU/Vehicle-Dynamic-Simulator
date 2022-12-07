@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Plot: Setup`Lateral Distance to Design Path`Driver Sensor
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS L_DRV_1, time
+PLOTCHANNELS L_DRV_2, time
+PLOTCHANNELS L_DRV_3, time
+PLOTCHANNELS L_DRV_4, time
+PLOTCHANNELS L_DRV_5, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Lateral Distance to Design Path
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#L_DRV_i represents the lateral distance from the target path to the Driver Preview Point.
+#
+#The lateral distance is measured perpendicular to the target path.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Driver Sensor } Lateral Distance to Design Path
+#Library : Plot: Setup
+#DataSet : Lateral Distance to Design Path
+#Category: Driver Sensor
+#FileID  : Plot_a2d0dc95-1fef-4cbe-9eff-a485d738fc13
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

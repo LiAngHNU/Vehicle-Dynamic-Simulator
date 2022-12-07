@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Yaw Rate of Sprung Masses vs. Time`Vehicle Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS AVz, Time
+PLOTCHANNELS AVz_2, Time
+PLOTCHANNELS AVz_3, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Yaw Rate of Sprung Masses vs. Time
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Yaw Rate of Sprung Masses vs. Time
+#Library : Plot: Setup
+#DataSet : Yaw Rate of Sprung Masses vs. Time
+#Category: Vehicle Motion
+#FileID  : Plot_38af2fee-b452-4e50-bfca-9012303b5e16
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Target Offset`Rear Steer Control
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS target_offset, Time
+PLOTCHANNELS Ctrl_Lat_Offset, Time
+
+#ENDMYellow
+
+YAXISLABEL Lateral Offset - m
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Target Offset
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Rear Steer Control } Target Offset
+#Library : Plot: Setup
+#DataSet : Target Offset
+#Category: Rear Steer Control
+#FileID  : Plot_1a3b8a4f-3476-4607-b732-fefd03eb3a28
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Plot: Setup`Stop Mode, Current Object`Pedestrians and Traffic Lights
+
+ADD_ENTITY Plot
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Stop_<<o>>, S_Obj_<<o>>
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Stop Mode, Current Object
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Pedestrians and Traffic Lights } Stop Mode, Current Object
+#Library : Plot: Setup
+#DataSet : Stop Mode, Current Object
+#Category: Pedestrians and Traffic Lights
+#FileID  : Plot_44988dbf-64c4-40c8-a0e6-d43a789a66bc
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Plot: Setup`Distance to Waypoints`Road Network Driving
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#BlueLink2 TruckSim Run Control`Tractor-Semi: 38m Roundabout` * TS 2016: Road Options` , example run`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS dist_1, time
+PLOTCHANNELS dist_2, time
+PLOTCHANNELS dist_3, time
+PLOTCHANNELS dist_4, time
+PLOTCHANNELS dist_5, time
+PLOTCHANNELS dist_6, time
+PLOTCHANNELS dist_7, time
+PLOTCHANNELS dist_8, time
+PLOTCHANNELS dist_9, time
+PLOTCHANNELS dist_10, time
+PLOTCHANNELS dist_11, time
+PLOTCHANNELS dist_12, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Distance to Waypoints
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Road Network Driving } Distance to Waypoints
+#Library : Plot: Setup
+#DataSet : Distance to Waypoints
+#Category: Road Network Driving
+#FileID  : Plot_d5a7358a-109b-4bbb-8ba0-be1d56347d3b
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

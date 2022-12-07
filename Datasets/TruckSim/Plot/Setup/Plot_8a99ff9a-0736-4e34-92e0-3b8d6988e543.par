@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Distance: DisS1_1, DsLS1_1, DsRS1_1`ADAS Sensor Detections
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS DisS1_1, Time
+PLOTCHANNELS DsLS1_1, Time
+PLOTCHANNELS DsRS1_1, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Distance: DisS1_1, DsLS1_1, DsRS1_1
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections } Distance: DisS1_1, DsLS1_1, DsRS1_1
+#Library : Plot: Setup
+#DataSet : Distance: DisS1_1, DsLS1_1, DsRS1_1
+#Category: ADAS Sensor Detections
+#FileID  : Plot_8a99ff9a-0736-4e34-92e0-3b8d6988e543
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

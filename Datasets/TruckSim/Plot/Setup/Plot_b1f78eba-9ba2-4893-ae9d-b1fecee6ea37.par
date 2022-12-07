@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Plot: Setup`RoadZS`PBS (Performance Based Standards)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS RoadZS, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE RoadZS
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#This plot dataset is intended to be linked to the Generic VS Commands dataset "Smoothly Increase Grade to Target".
+#
+#Although viewing this plot data is not necessary as part of the PBS test specification, it can be useful for diagnostic purposes when checking to make sure the VS Commands used to slowly increase the grade are working as expected.
+#
+#Since this plot dataset is linked on the Generic VS Commands dataset, be sure to uncheck the box "Only these plots" on the Run Control screen if you want to see the plot data.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { PBS (Performance Based Standards) } RoadZS
+#Library : Plot: Setup
+#DataSet : RoadZS
+#Category: PBS (Performance Based Standards)
+#FileID  : Plot_b1f78eba-9ba2-4893-ae9d-b1fecee6ea37
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

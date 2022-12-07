@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Steering Wheel Angle vs. Time`Steering
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Steer_SW, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Steering Wheel Angle vs. Time
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Steering Wheel Angle vs. Time
+#Library : Plot: Setup
+#DataSet : Steering Wheel Angle vs. Time
+#Category: Steering
+#FileID  : Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

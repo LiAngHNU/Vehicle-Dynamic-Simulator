@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Plot: Setup`Distance from Sensor on One Side`ADAS Sensor Detections, Symbol Stack
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#BlueLink2 TruckSim Run Control`Roundabout (3D, 36 m), 3A Tractor + 1A Trailer` * TS 2016: Road Options` , example run`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS DisS<<s>>_1, Time
+
+#ENDMYellow
+
+YAXISLABEL <<side>> distance to target - m
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Distance from Sensor on One Side
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#Use Symbol Stack <<s>> to get closest object to current sensor.
+#
+#Need to check the box to not truncate to allow the length of the name that includes <<s>>.
+#
+#<<side>> (for the Y axis title) is either Left or Right.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections, Symbol Stack } Distance from Sensor on One Side
+#Library : Plot: Setup
+#DataSet : Distance from Sensor on One Side
+#Category: ADAS Sensor Detections, Symbol Stack
+#FileID  : Plot_41c37436-b70a-4127-b371-ba3bc2474634
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

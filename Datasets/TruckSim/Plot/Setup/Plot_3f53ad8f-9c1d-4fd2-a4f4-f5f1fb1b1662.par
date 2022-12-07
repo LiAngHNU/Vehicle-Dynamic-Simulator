@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Plot: Setup`My_Dr (Wheel Drive Torques, Lead Unit)`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS My_Dr_L1, Time
+PLOTCHANNELS My_Dr_L2, Time
+PLOTCHANNELS My_Dr_L3, Time
+PLOTCHANNELS My_Dr_L4, Time
+PLOTCHANNELS My_Dr_L5, Time
+PLOTCHANNELS My_Dr_R1, Time
+PLOTCHANNELS My_Dr_R2, Time
+PLOTCHANNELS My_Dr_R3, Time
+PLOTCHANNELS My_Dr_R4, Time
+PLOTCHANNELS My_Dr_R5, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE My_Dr (Wheel Drive Torques, Lead Unit)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } My_Dr (Wheel Drive Torques, Lead Unit)
+#Library : Plot: Setup
+#DataSet : My_Dr (Wheel Drive Torques, Lead Unit)
+#Category: Powertrain
+#FileID  : Plot_3f53ad8f-9c1d-4fd2-a4f4-f5f1fb1b1662
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

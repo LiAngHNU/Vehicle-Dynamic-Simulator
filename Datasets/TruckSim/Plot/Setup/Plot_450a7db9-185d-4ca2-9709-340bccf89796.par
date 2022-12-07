@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`GPS Lat. vs. GPS Long.`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS GPS_Lat, GPS_Long
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE GPS Lat. vs. GPS Long.
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } GPS Lat. vs. GPS Long.
+#Library : Plot: Setup
+#DataSet : GPS Lat. vs. GPS Long.
+#Category: Tracking
+#FileID  : Plot_450a7db9-185d-4ca2-9709-340bccf89796
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

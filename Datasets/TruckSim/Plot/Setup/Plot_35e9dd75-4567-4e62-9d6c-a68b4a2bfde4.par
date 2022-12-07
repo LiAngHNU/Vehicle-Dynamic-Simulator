@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Battery resistance`Powertrain (Hybrid)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS ResBttry, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Battery resistance
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain (Hybrid) } Battery resistance
+#Library : Plot: Setup
+#DataSet : Battery resistance
+#Category: Powertrain (Hybrid)
+#FileID  : Plot_35e9dd75-4567-4e62-9d6c-a68b4a2bfde4
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

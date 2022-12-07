@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Differential Clutch Control Input`Controls: Chassis and Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Clt_D1_2, Time
+PLOTCHANNELS Clt_D2_2, Time
+PLOTCHANNELS ClutchD1, Time
+PLOTCHANNELS ClutchD2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Differential Clutch Control Input
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Controls: Chassis and Powertrain } Differential Clutch Control Input
+#Library : Plot: Setup
+#DataSet : Differential Clutch Control Input
+#Category: Controls: Chassis and Powertrain
+#FileID  : Plot_5cfea828-b0ce-4988-95de-83d04b590625
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

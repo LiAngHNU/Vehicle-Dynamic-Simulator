@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Mz due to Fx vs. Alpha`Tire Tester Derived Outputs
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS mz_fx_l1, Alpha_l1
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Mz due to Fx vs. Alpha
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Mz due to Fx vs. Alpha
+#Library : Plot: Setup
+#DataSet : Mz due to Fx vs. Alpha
+#Category: Tire Tester Derived Outputs
+#FileID  : Plot_558e532b-abdf-4fc9-ac49-4cfd94af3dbf
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Plot: Setup`Slip Ratios, Left Side (Axles 1- 7)`Tire Kinematics
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS KappaL1i, Time
+PLOTCHANNELS KappaL1o, Time
+PLOTCHANNELS KappaL2i, Time
+PLOTCHANNELS KappaL2o, Time
+PLOTCHANNELS KappaL3i, Time
+PLOTCHANNELS KappaL3o, Time
+PLOTCHANNELS KappaL4i, Time
+PLOTCHANNELS KappaL4o, Time
+PLOTCHANNELS KappaL5i, Time
+PLOTCHANNELS KappaL5o, Time
+PLOTCHANNELS KappaL6i, Time
+PLOTCHANNELS KappaL6o, Time
+PLOTCHANNELS KappaL7i, Time
+PLOTCHANNELS KappaL7o, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Slip Ratios, Left Side (Axles 1- 7)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Kinematics } Slip Ratios, Left Side (Axles 1- 7)
+#Library : Plot: Setup
+#DataSet : Slip Ratios, Left Side (Axles 1- 7)
+#Category: Tire Kinematics
+#FileID  : Plot_ecb14b97-59f7-4125-9436-1ec68bcf0beb
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

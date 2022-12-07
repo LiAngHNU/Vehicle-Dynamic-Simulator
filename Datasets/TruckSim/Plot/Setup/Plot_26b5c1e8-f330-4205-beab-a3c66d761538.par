@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Tangent of Slip Angle vs. Kappa`Tire Tester Derived Outputs
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS slip_l1, kappa_l1
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Tangent of Slip Angle vs. Kappa
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Tangent of Slip Angle vs. Kappa
+#Library : Plot: Setup
+#DataSet : Tangent of Slip Angle vs. Kappa
+#Category: Tire Tester Derived Outputs
+#FileID  : Plot_26b5c1e8-f330-4205-beab-a3c66d761538
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Plot: Setup`Road ID for Tires`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS RdID_L1I, Time
+PLOTCHANNELS RdID_L2I, Time
+PLOTCHANNELS RdID_L2O, Time
+PLOTCHANNELS RdID_R1I, Time
+PLOTCHANNELS RdID_R2I, Time
+PLOTCHANNELS RdID_R2O, Time
+PLOTCHANNELS RdID_L3I, Time
+PLOTCHANNELS RdID_L3O, Time
+PLOTCHANNELS RdID_L4I, Time
+PLOTCHANNELS RdID_L4O, Time
+PLOTCHANNELS RdID_L5I, Time
+PLOTCHANNELS RdID_L5O, Time
+PLOTCHANNELS RdID_R3I, Time
+PLOTCHANNELS RdID_R3O, Time
+PLOTCHANNELS RdID_R4I, Time
+PLOTCHANNELS RdID_R4O, Time
+PLOTCHANNELS RdID_R5I, Time
+PLOTCHANNELS RdID_R5O, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 0
+
+
+PTITLE Road ID for Tires
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Road ID for Tires
+#Library : Plot: Setup
+#DataSet : Road ID for Tires
+#Category: Tracking
+#FileID  : Plot_92e94740-7813-4c8a-9bea-c62fff972287
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

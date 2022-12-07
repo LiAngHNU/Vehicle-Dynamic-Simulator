@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Collision Counter`ADAS Sensor Detections: Collision
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS iterplot, Time, Collision Counter
+
+#ENDMYellow
+
+YAXISLABEL Collision Counter
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Collision Counter
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections: Collision } Collision Counter
+#Library : Plot: Setup
+#DataSet : Collision Counter
+#Category: ADAS Sensor Detections: Collision
+#FileID  : Plot_6c2bc6ff-778a-43bf-8c97-f1cc24f76392
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

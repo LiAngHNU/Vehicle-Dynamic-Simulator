@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Plot: Setup`AEB: AxCrit`ADAS and AEB Alerts and Commands
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#BlueLink1 ` , Discontinued` , Discontinued` , Discontinued`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS NeedAEB, Time
+PLOTCHANNELS ApplyAEB, Time
+PLOTCHANNELS ObjCrit, Time
+PLOTCHANNELS AxCrit, Time
+PLOTCHANNELS DistCrit, Time
+PLOTCHANNELS DistNear, Time
+PLOTCHANNELS IDcrit, Time
+PLOTCHANNELS ID_near, Time
+PLOTCHANNELS VxCrit, Time
+
+#ENDMYellow
+
+YMAX 100
+YMIN -10
+
+#RingCtrl2 Manual
+YMaxmin Manual
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+YAXIS -10, 100
+
+PTITLE AEB: AxCrit
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#These variables are all relatred to AEB controls. They don't have the same units. The assumption is that if the plot is viewed, the values will be shown in the legend.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS and AEB Alerts and Commands } AEB: AxCrit
+#Library : Plot: Setup
+#DataSet : AEB: AxCrit
+#Category: ADAS and AEB Alerts and Commands
+#FileID  : Plot_7dadda40-7138-4c4d-bc66-73caadcece25
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

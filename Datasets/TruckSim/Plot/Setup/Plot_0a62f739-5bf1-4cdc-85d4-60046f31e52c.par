@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`SV Yo v Time`
+
+ADD_ENTITY Plot
+
+#BlueLink2 TruckSim Run Control`City, 2 Trucks, Pedestrians, 1 Solver` * TS 2020.1 - Multiple Vehicles` , example run`Run_dec618e1-ec3a-41da-80d4-0dd19a2013f9
+
+#CheckBox1 0    
+
+*README_FILE Results\Run_dec618e1-ec3a-41da-80d4-0dd19a2013f9\Run_out_tab.txt
+
+#MiscYellow0
+PLOTCHANNELS Yo, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl4 0
+#RingCtrl6 0
+#RingCtrl8 1
+
+
+PTITLE SV Yo v Time
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; SV Yo v Time
+#Library : Plot: Setup
+#DataSet : SV Yo v Time
+#Category: 
+#FileID  : Plot_0a62f739-5bf1-4cdc-85d4-60046f31e52c
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

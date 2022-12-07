@@ -1,0 +1,59 @@
+PARSFILE
+#FullDataName Plot: Setup`Differential and T-Case Locked Status`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+define_output Dif2Lock = opt_locked_diff(2); !Lock the rear differential
+define_output Dif3Lock = opt_locked_diff(3); ! Lock the transfer case diffferential
+define_output TCaseGR = r_gear_diff(3); ! Change the transfer case gear ratio to low range (2:1)
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS Dif2Lock, Time
+PLOTCHANNELS Dif3Lock, Time
+PLOTCHANNELS TCaseGR, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Differential and T-Case Locked Status
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#This Plot: Setup dataset is used with the Event-driven test in which the pickup truck's 4WD powertrain is changed from 2WD to 4WD Low Range.
+#
+#These new output variables correspond to the:
+#
+#(1)
+#Locked status of the Transfer Case and Rear Differential
+#
+#(2)
+#Transfer Case's gear ratio
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } Differential and T-Case Locked Status
+#Library : Plot: Setup
+#DataSet : Differential and T-Case Locked Status
+#Category: Powertrain
+#FileID  : Plot_c8ae3ffe-9209-407a-9114-586800f47602
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Lift Force`Lift Axles
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS F_LIFT, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Lift Force
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Lift Axles } Lift Force
+#Library : Plot: Setup
+#DataSet : Lift Force
+#Category: Lift Axles
+#FileID  : Plot_a8f3095b-0106-492e-b22e-5f661b6ffd49
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

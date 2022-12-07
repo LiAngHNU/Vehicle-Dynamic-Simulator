@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`Wheel Speeds (Unit 2, 2 Axles)`Braking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Vx_L4, Time
+PLOTCHANNELS Vx_R4, Time
+PLOTCHANNELS Vx_L5, Time
+PLOTCHANNELS Vx_R5, Time
+PLOTCHANNELS Vx, Time
+PLOTCHANNELS Vx_2, Time
+PLOTCHANNELS Vx_3, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Wheel Speeds (Unit 2, 2 Axles)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Braking } Wheel Speeds (Unit 2, 2 Axles)
+#Library : Plot: Setup
+#DataSet : Wheel Speeds (Unit 2, 2 Axles)
+#Category: Braking
+#FileID  : Plot_8db2e013-8329-48e6-a9d3-2aa264ac5627
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

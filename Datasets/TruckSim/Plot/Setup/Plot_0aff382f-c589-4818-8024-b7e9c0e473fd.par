@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Engine Torque`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#BlueLink1 ` , Discontinued` , Discontinued` , Discontinued`
+
+#BlueLink2 TruckSim Run Control`Outrigger for Roll Stability Testing` Extended Models` , example run`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS M_EngOut, Time
+PLOTCHANNELS M_Eng_In, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Engine Torque
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } Engine Torque
+#Library : Plot: Setup
+#DataSet : Engine Torque
+#Category: Powertrain
+#FileID  : Plot_0aff382f-c589-4818-8024-b7e9c0e473fd
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

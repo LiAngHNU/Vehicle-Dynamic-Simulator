@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Euro NCAP: Longitudinal Speeds (AEB)`ADAS and AEB Alerts and Commands
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#BlueLink2 TruckSim Run Control`Roundabout (3D, 36 m), 3A Tractor + 1A Trailer` * TS 2016: Road Options` , example run`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Vx, Time
+PLOTCHANNELS VxTarget, Time
+PLOTCHANNELS Vx_EVT, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Euro NCAP: Longitudinal Speeds (AEB)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS and AEB Alerts and Commands } Euro NCAP: Longitudinal Speeds (AEB)
+#Library : Plot: Setup
+#DataSet : Euro NCAP: Longitudinal Speeds (AEB)
+#Category: ADAS and AEB Alerts and Commands
+#FileID  : Plot_0f5f145e-bfe3-4292-aa9c-4c6d76236efd
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

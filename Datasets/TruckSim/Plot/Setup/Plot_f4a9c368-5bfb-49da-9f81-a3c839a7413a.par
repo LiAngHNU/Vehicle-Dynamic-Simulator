@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Fy vs. Kappa`Tire Tester
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fy_L1, Kappa_L1
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Fy vs. Kappa
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#This dataset defines a plot setup for variables that were created in external.c for a Custom C code example that simulates a tire test.You can plot these variables only from tire tester examples.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester } Fy vs. Kappa
+#Library : Plot: Setup
+#DataSet : Fy vs. Kappa
+#Category: Tire Tester
+#FileID  : Plot_f4a9c368-5bfb-49da-9f81-a3c839a7413a
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

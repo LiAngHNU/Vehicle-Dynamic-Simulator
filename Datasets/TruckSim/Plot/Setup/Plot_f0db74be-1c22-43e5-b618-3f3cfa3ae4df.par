@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Plot: Setup`Slip Ratios (Axles 4 - 5)`Tire Kinematics
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS KappaL4i, Time
+PLOTCHANNELS KappaR4i, Time
+PLOTCHANNELS KappaL4o, Time
+PLOTCHANNELS KappaR4o, Time
+PLOTCHANNELS KappaL5i, Time
+PLOTCHANNELS KappaR5i, Time
+PLOTCHANNELS KappaL5o, Time
+PLOTCHANNELS KappaR5o, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Slip Ratios (Axles 4 - 5)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Kinematics } Slip Ratios (Axles 4 - 5)
+#Library : Plot: Setup
+#DataSet : Slip Ratios (Axles 4 - 5)
+#Category: Tire Kinematics
+#FileID  : Plot_f0db74be-1c22-43e5-b618-3f3cfa3ae4df
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

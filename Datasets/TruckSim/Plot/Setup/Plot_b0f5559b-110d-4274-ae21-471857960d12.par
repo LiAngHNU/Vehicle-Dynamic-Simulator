@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Station vs. t_stamp`Restoring to a Previous State
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Station, t_stamp
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Station vs. t_stamp
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Restoring to a Previous State } Station vs. t_stamp
+#Library : Plot: Setup
+#DataSet : Station vs. t_stamp
+#Category: Restoring to a Previous State
+#FileID  : Plot_b0f5559b-110d-4274-ae21-471857960d12
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

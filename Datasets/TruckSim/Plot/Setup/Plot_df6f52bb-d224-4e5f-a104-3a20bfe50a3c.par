@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Magnitude: S1 (2 Objects)`ADAS Sensor Detections
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS MagS1_1, Time
+PLOTCHANNELS MagS1_2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Magnitude: S1 (2 Objects)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections } Magnitude: S1 (2 Objects)
+#Library : Plot: Setup
+#DataSet : Magnitude: S1 (2 Objects)
+#Category: ADAS Sensor Detections
+#FileID  : Plot_df6f52bb-d224-4e5f-a104-3a20bfe50a3c
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

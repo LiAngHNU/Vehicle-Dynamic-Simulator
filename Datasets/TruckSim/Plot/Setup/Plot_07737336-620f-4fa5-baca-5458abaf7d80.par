@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Plot: Setup`Powers in Hybrid Powertrain`Powertrain (Hybrid)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS PwrEngIn, Time
+PLOTCHANNELS PwrGnrtr, Time
+PLOTCHANNELS PwrMotor, Time
+PLOTCHANNELS PwrBttry, Time
+PLOTCHANNELS Pwr_Gnrt, Time, Electric generator (ext. model) 
+PLOTCHANNELS Pwr_Motr, Time, Electric motor (ext. model)
+PLOTCHANNELS Pwr_Batt, Time, Battery power (ext. model)
+PLOTCHANNELS PwrMt_D1, Time
+PLOTCHANNELS PwMtC_D1, Time
+PLOTCHANNELS PwrMt_D2, Time
+PLOTCHANNELS PwMtC_D2, Time
+
+#ENDMYellow
+
+YAXISLABEL kW
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Powers in Hybrid Powertrain
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain (Hybrid) } Powers in Hybrid Powertrain
+#Library : Plot: Setup
+#DataSet : Powers in Hybrid Powertrain
+#Category: Powertrain (Hybrid)
+#FileID  : Plot_07737336-620f-4fa5-baca-5458abaf7d80
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

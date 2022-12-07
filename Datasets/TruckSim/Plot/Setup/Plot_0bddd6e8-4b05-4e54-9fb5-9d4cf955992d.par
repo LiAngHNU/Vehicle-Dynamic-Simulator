@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Plot: Setup`Wheel Speeds (3 Units, 7 Axles)`Braking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Vx_L1, Time
+PLOTCHANNELS Vx_R1, Time
+PLOTCHANNELS Vx_L2, Time
+PLOTCHANNELS Vx_R2, Time
+PLOTCHANNELS Vx_L3, Time
+PLOTCHANNELS Vx_R3, Time
+PLOTCHANNELS Vx_L4, Time
+PLOTCHANNELS Vx_R4, Time
+PLOTCHANNELS Vx_L5, Time
+PLOTCHANNELS Vx_R5, Time
+PLOTCHANNELS Vx_L6, Time
+PLOTCHANNELS Vx_R6, Time
+PLOTCHANNELS Vx_L7, Time
+PLOTCHANNELS Vx_R7, Time
+PLOTCHANNELS Vx, Time
+PLOTCHANNELS Vx_2, Time
+PLOTCHANNELS Vx_3, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Wheel Speeds (3 Units, 7 Axles)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Braking } Wheel Speeds (3 Units, 7 Axles)
+#Library : Plot: Setup
+#DataSet : Wheel Speeds (3 Units, 7 Axles)
+#Category: Braking
+#FileID  : Plot_0bddd6e8-4b05-4e54-9fb5-9d4cf955992d
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

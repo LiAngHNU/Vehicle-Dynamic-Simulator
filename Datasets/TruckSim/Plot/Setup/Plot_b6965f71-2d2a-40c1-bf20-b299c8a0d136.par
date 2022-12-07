@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`C8(A): Frontal Swing`PBS (Performance Based Standards)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_ab0c31cf-0b7b-4d6d-a868-58a3014b3cc3.par
+#BlueLink0 Plot: Format`Fine Grid` ` , Plot format`PlotFmt_ab0c31cf-0b7b-4d6d-a868-58a3014b3cc3
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS LatFront, station, Outer corner tracking
+PLOTCHANNELS LatError, station, Tracking of tire ref. point
+
+#ENDMYellow
+
+YAXISLABEL Frontal Swing - mm
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE C8(A): Frontal Swing
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { PBS (Performance Based Standards) } C8(A): Frontal Swing
+#Library : Plot: Setup
+#DataSet : C8(A): Frontal Swing
+#Category: PBS (Performance Based Standards)
+#FileID  : Plot_b6965f71-2d2a-40c1-bf20-b299c8a0d136
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

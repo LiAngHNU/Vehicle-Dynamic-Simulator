@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Battery power limit`Powertrain (Hybrid)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS PwrBttry, Time
+PLOTCHANNELS PwrBtrCh, Time
+PLOTCHANNELS PwrBtrDs, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Battery power limit
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain (Hybrid) } Battery power limit
+#Library : Plot: Setup
+#DataSet : Battery power limit
+#Category: Powertrain (Hybrid)
+#FileID  : Plot_9e7c6a3f-7f4d-4388-b203-bc0555523537
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

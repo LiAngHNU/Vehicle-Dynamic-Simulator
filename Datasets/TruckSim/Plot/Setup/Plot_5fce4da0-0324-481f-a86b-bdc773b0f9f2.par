@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Clutch Control Input`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS ClutchTr, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Clutch Control Input
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } Clutch Control Input
+#Library : Plot: Setup
+#DataSet : Clutch Control Input
+#Category: Powertrain
+#FileID  : Plot_5fce4da0-0324-481f-a86b-bdc773b0f9f2
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Yaw Angle: YawO_1`ADAS Sensor Target Properties
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS YawO_1, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Yaw Angle: YawO_1
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Target Properties } Yaw Angle: YawO_1
+#Library : Plot: Setup
+#DataSet : Yaw Angle: YawO_1
+#Category: ADAS Sensor Target Properties
+#FileID  : Plot_980bc02b-ed50-450d-9156-1228fc571782
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

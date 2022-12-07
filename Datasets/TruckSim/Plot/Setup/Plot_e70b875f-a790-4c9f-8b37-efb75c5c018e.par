@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Speed Target and Actual , v3`Speed Controller
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS VxTarget_3, Time
+PLOTCHANNELS Vxz_Fwd3, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Speed Target and Actual , v3
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Speed Controller } Speed Target and Actual , v3
+#Library : Plot: Setup
+#DataSet : Speed Target and Actual , v3
+#Category: Speed Controller
+#FileID  : Plot_e70b875f-a790-4c9f-8b37-efb75c5c018e
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Station`Vehicle Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Vx, Station
+PLOTCHANNELS Vxz_Fwd, Station
+PLOTCHANNELS VxTarget, Station
+PLOTCHANNELS Vx_2, Station
+PLOTCHANNELS Vx_3, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Longitudinal Speed (Vxz_Fwd) vs. Station
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#The output variable Vxz_Fwd is what the TruckSim Closed-Loop Speed Controller uses.
+#
+#It is fixed in the vehicle Sprung Mass and takes into account the Sprung Mass pitch angle by taking the vector sum of the Sprung Mass Velocity in the Sprung Mass Coordinate System X direction and the Sprung Mass Coordinate System Z direction, and then taking the square root of the sum of the squares.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Longitudinal Speed (Vxz_Fwd) vs. Station
+#Library : Plot: Setup
+#DataSet : Longitudinal Speed (Vxz_Fwd) vs. Station
+#Category: Vehicle Motion
+#FileID  : Plot_aeb01166-5cff-44c0-bf80-ba2ecefa95ae
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

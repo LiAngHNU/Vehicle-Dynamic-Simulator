@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Plot: Setup`User Defined Drive/Brake Moments`Controls: Powertrain, VS Commands
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS MY_US_L1, Time
+PLOTCHANNELS MY_US_R1, Time
+PLOTCHANNELS MY_US_L2, Time
+PLOTCHANNELS MY_US_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE User Defined Drive/Brake Moments
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#The internal drive torques are applied to the driven wheels. They are reacted at the sprung mass with independent suspensions and at the unsprung mass for solid axles.
+#
+#The internal brake torques are applied to the wheels and always react against the unsprung mass. They always oppose the direction of wheel rotation.
+#
+#These ouput variables are associated with the user-defined import variables IMP_MYUSM_L1
+#(L2, R1, R2), The import variables are moments applied to the wheels and reacting against the unsprung mass. The magnitude and sign are whatever you define in your extensions (VS Commands, Simulink, C Code, etc.)
+#
+#These imports allow you to define things like electric motors mounted on the suspension, the torque multiplication of a planetary gear on the suspension, brake and bearing drag, and many other effects.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Controls: Powertrain, VS Commands } User Defined Drive/Brake Moments
+#Library : Plot: Setup
+#DataSet : User Defined Drive/Brake Moments
+#Category: Controls: Powertrain, VS Commands
+#FileID  : Plot_76cce033-b80b-4e0e-8891-fed16767b8ac
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

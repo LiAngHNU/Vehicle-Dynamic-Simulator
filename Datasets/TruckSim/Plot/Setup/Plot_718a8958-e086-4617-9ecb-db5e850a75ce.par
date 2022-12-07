@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Plot: Setup`C11: Roll vs. Ay (Tilt Table)`PBS (Performance Based Standards)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Roll_Tab, Ay_Tilt, Table Roll
+PLOTCHANNELS Roll_Rd, Ay_Tilt, Relative Roll Unit 1
+PLOTCHANNELS Roll, Ay_Tilt, Absolute Roll Unit 1
+PLOTCHANNELS Roll_2, Ay_Tilt, Absolute Roll Unit 2
+PLOTCHANNELS Roll_3, Ay_Tilt, Absolute Roll Unit 3
+PLOTCHANNELS Roll_4, Ay_Tilt, Absolute Roll Unit 4
+PLOTCHANNELS Roll_5, Ay_Tilt, Absolute Roll Unit 5
+
+#ENDMYellow
+
+YAXISLABEL Roll Angle - deg
+XAXISLABEL Effective Lateral Acceleration - g's
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE C11: Roll vs. Ay (Tilt Table)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { PBS (Performance Based Standards) } C11: Roll vs. Ay (Tilt Table)
+#Library : Plot: Setup
+#DataSet : C11: Roll vs. Ay (Tilt Table)
+#Category: PBS (Performance Based Standards)
+#FileID  : Plot_718a8958-e086-4617-9ecb-db5e850a75ce
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

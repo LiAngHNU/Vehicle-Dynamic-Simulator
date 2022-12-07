@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Speed Controller Gains`Speed Controller
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#BlueLink2 TruckSim Run Control`Roundabout (3D, 36 m), 3A Tractor + 1A Trailer` * TS 2016: Road Options` , example run`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Kp_Vx, Time
+PLOTCHANNELS Ki_Vx, Time
+PLOTCHANNELS K3_Vx, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Speed Controller Gains
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Speed Controller } Speed Controller Gains
+#Library : Plot: Setup
+#DataSet : Speed Controller Gains
+#Category: Speed Controller
+#FileID  : Plot_5380e062-8b71-48bc-a004-de612ce946f7
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

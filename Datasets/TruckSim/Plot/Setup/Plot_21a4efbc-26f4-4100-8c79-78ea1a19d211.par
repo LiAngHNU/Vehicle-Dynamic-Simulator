@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Plot: Setup`Wheel Alpha (3-Axle)`* * * Vehicle Dynamic Simulator
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Alpha_L1i, Station
+PLOTCHANNELS Alpha_R1i, Station
+PLOTCHANNELS Alpha_L2o, Station
+PLOTCHANNELS Alpha_L2i, Station
+PLOTCHANNELS Alpha_R2o, Station
+PLOTCHANNELS Alpha_R2i, Station
+PLOTCHANNELS Alpha_L3o, Station
+PLOTCHANNELS Alpha_L3i, Station
+PLOTCHANNELS Alpha_R3o, Station
+PLOTCHANNELS Alpha_R3i, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Wheel Alpha (3-Axle)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * Vehicle Dynamic Simulator } Wheel Alpha (3-Axle)
+#Library : Plot: Setup
+#DataSet : Wheel Alpha (3-Axle)
+#Category: * * * Vehicle Dynamic Simulator
+#FileID  : Plot_21a4efbc-26f4-4100-8c79-78ea1a19d211
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

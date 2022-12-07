@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Wheel Cylinder Pressures (Axle 1, 2, 3)`Braking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS PbkCh_L1, Time
+PLOTCHANNELS PbkCh_R1, Time
+PLOTCHANNELS PbkCh_L2, Time
+PLOTCHANNELS PbkCh_R2, Time
+PLOTCHANNELS PbkCh_L3, Time
+PLOTCHANNELS PbkCh_R3, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Wheel Cylinder Pressures (Axle 1, 2, 3)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Braking } Wheel Cylinder Pressures (Axle 1, 2, 3)
+#Library : Plot: Setup
+#DataSet : Wheel Cylinder Pressures (Axle 1, 2, 3)
+#Category: Braking
+#FileID  : Plot_11e9c896-a52a-422e-ae87-450721c8be32
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

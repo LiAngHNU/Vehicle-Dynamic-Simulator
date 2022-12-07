@@ -1,0 +1,53 @@
+PARSFILE
+#FullDataName Plot: Setup`Slip Angles (Axles 1 - 4)`Tire Kinematics
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS AlphaL1i, Time
+PLOTCHANNELS AlphaL1o, Time
+PLOTCHANNELS AlphaR1i, Time
+PLOTCHANNELS AlphaR1o, Time
+PLOTCHANNELS AlphaL2i, Time
+PLOTCHANNELS AlphaL2o, Time
+PLOTCHANNELS AlphaR2i, Time
+PLOTCHANNELS AlphaR2o, Time
+PLOTCHANNELS AlphaL3i, Time
+PLOTCHANNELS AlphaL3o, Time
+PLOTCHANNELS AlphaR3i, Time
+PLOTCHANNELS AlphaR3o, Time
+PLOTCHANNELS AlphaL4i, Time
+PLOTCHANNELS AlphaL4o, Time
+PLOTCHANNELS AlphaR4i, Time
+PLOTCHANNELS AlphaR4o, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Slip Angles (Axles 1 - 4)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Kinematics } Slip Angles (Axles 1 - 4)
+#Library : Plot: Setup
+#DataSet : Slip Angles (Axles 1 - 4)
+#Category: Tire Kinematics
+#FileID  : Plot_60033996-0231-49e9-9009-99c91c6106ea
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

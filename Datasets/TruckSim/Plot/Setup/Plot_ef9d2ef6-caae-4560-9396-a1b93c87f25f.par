@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Plot: Setup`Longitudinal Forces (Right Side)`Tire Forces
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fx_R1i, Time
+PLOTCHANNELS Fx_R1o, Time
+PLOTCHANNELS Fx_R2i, Time
+PLOTCHANNELS Fx_R2o, Time
+PLOTCHANNELS Fx_R3i, Time
+PLOTCHANNELS Fx_R3o, Time
+PLOTCHANNELS Fx_R4i, Time
+PLOTCHANNELS Fx_R4o, Time
+PLOTCHANNELS Fx_R5i, Time
+PLOTCHANNELS Fx_R5o, Time
+PLOTCHANNELS Fx_R6i, Time
+PLOTCHANNELS Fx_R6o, Time
+PLOTCHANNELS Fx_R7i, Time
+PLOTCHANNELS Fx_R7o, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Longitudinal Forces (Right Side)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Forces } Longitudinal Forces (Right Side)
+#Library : Plot: Setup
+#DataSet : Longitudinal Forces (Right Side)
+#Category: Tire Forces
+#FileID  : Plot_ef9d2ef6-caae-4560-9396-a1b93c87f25f
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

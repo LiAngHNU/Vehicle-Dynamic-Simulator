@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Brake Torque (Axle 1)`Braking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS My_Bk_L1, Time
+PLOTCHANNELS My_Bk_R1, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Brake Torque (Axle 1)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Braking } Brake Torque (Axle 1)
+#Library : Plot: Setup
+#DataSet : Brake Torque (Axle 1)
+#Category: Braking
+#FileID  : Plot_d16f5ec0-e1a1-4876-8088-694b6f2e0882
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

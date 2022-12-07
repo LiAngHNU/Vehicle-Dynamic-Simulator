@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Plot: Setup`Vertical Forces (per Wheel)`Tire Forces
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fz_L1, Time
+PLOTCHANNELS Fz_R1, Time
+PLOTCHANNELS Fz_L2, Time
+PLOTCHANNELS Fz_R2, Time
+PLOTCHANNELS Fz_L3, Time
+PLOTCHANNELS Fz_R3, Time
+PLOTCHANNELS Fz_L4, Time
+PLOTCHANNELS Fz_R4, Time
+PLOTCHANNELS Fz_L5, Time
+PLOTCHANNELS Fz_R5, Time
+PLOTCHANNELS Fz_L6, Time
+PLOTCHANNELS Fz_R6, Time
+PLOTCHANNELS Fz_L7, Time
+PLOTCHANNELS Fz_R7, Time
+PLOTCHANNELS Fz_L8, Time
+PLOTCHANNELS Fz_R8, Time
+PLOTCHANNELS Fz_L9, Time
+PLOTCHANNELS Fz_R9, Time
+PLOTCHANNELS Fz_L10, Time
+PLOTCHANNELS Fz_R10, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vertical Forces (per Wheel)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Forces } Vertical Forces (per Wheel)
+#Library : Plot: Setup
+#DataSet : Vertical Forces (per Wheel)
+#Category: Tire Forces
+#FileID  : Plot_a146934a-339c-4983-9664-0f9749a0dfd6
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

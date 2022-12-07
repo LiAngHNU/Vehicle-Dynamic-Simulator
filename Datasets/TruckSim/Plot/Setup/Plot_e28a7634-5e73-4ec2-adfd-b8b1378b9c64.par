@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Plot: Setup`C10: Friction Demand (Axles 1 and 2)`PBS (Performance Based Standards)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+DEFINE_OUTPUT FricL1 = 100*sqrt(FX_L1^2 + FY_L1^2)/FZ_L1
+DEFINE_OUTPUT FricR1 = 100*sqrt(FX_R1^2 + FY_R1^2)/FZ_R1
+DEFINE_OUTPUT FricTot1 = 100*(sqrt(FX_L1^2 + FY_L1^2) + sqrt(FX_R1^2 + FY_R1^2))/(FZ_L1 + FZ_R1)
+
+DEFINE_OUTPUT FricL2 = 100*sqrt(FX_L2^2 + FY_L2^2)/FZ_L2
+DEFINE_OUTPUT FricR2 = 100*sqrt(FX_R2^2 + FY_R2^2)/FZ_R2
+DEFINE_OUTPUT FricTot2 = 100*(sqrt(FX_L2^2 + FY_L2^2) + sqrt(FX_R2^2 + FY_R2^2))/(FZ_L2 + FZ_R2)
+
+DEFINE_OUTPUT FricTot = 100*(sqrt(FX_L2^2 + FY_L2^2) + sqrt(FX_R2^2 + FY_R2^2) + sqrt(FX_L1^2 + FY_L1^2) + sqrt(FX_R1^2 + FY_R1^2))/(FZ_L2 + FZ_R2 + FZ_L1 + FZ_R1)
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS FricTot1, station, Axle 1 (Both Tires)
+PLOTCHANNELS FricTot2, station, Axle 2 (Both Tires)
+PLOTCHANNELS FricTot, station, Axles 1 and 2
+PLOTCHANNELS FricL1, station, Left Tire Axle 1
+PLOTCHANNELS FricR1, station, Right Tire Axle 1
+PLOTCHANNELS FricL2, station, Left Tire Axle 2
+PLOTCHANNELS FricR2, station, Right Tire Axle 2
+
+#ENDMYellow
+
+YAXISLABEL Friction Demand of Steered Wheels - %
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE C10: Friction Demand (Axles 1 and 2)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { PBS (Performance Based Standards) } C10: Friction Demand (Axles 1 and 2)
+#Library : Plot: Setup
+#DataSet : C10: Friction Demand (Axles 1 and 2)
+#Category: PBS (Performance Based Standards)
+#FileID  : Plot_e28a7634-5e73-4ec2-adfd-b8b1378b9c64
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

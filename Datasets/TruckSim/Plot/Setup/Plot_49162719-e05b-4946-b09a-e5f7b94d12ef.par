@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Battery efficiency`Powertrain (Hybrid)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS BattEff, Time, Battery efficiency (ext. model)
+PLOTCHANNELS EffBttry, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Battery efficiency
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain (Hybrid) } Battery efficiency
+#Library : Plot: Setup
+#DataSet : Battery efficiency
+#Category: Powertrain (Hybrid)
+#FileID  : Plot_49162719-e05b-4946-b09a-e5f7b94d12ef
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

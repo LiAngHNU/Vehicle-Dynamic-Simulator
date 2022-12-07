@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Lateral Offset: LatO_1`ADAS Sensor Target Properties
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS LatO_1, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Lateral Offset: LatO_1
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Target Properties } Lateral Offset: LatO_1
+#Library : Plot: Setup
+#DataSet : Lateral Offset: LatO_1
+#Category: ADAS Sensor Target Properties
+#FileID  : Plot_c38abc49-f120-4c85-ac3c-86123a8da17b
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

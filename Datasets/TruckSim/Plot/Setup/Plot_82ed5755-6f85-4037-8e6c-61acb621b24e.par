@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Messages of Objects`ADAS Sensor Target Properties
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS MsgObj_1, Time
+PLOTCHANNELS MsgObj_2, Time
+PLOTCHANNELS MsgObj_3, Time
+PLOTCHANNELS MsgObj_4, Time
+PLOTCHANNELS MsgObj_5, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Messages of Objects
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Target Properties } Messages of Objects
+#Library : Plot: Setup
+#DataSet : Messages of Objects
+#Category: ADAS Sensor Target Properties
+#FileID  : Plot_82ed5755-6f85-4037-8e6c-61acb621b24e
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Spring Compression (Axles 3 - 5)`Suspension Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS CmpS_L3, Time
+PLOTCHANNELS CmpS_R3, Time
+PLOTCHANNELS CmpS_L4, Time
+PLOTCHANNELS CmpS_R4, Time
+PLOTCHANNELS CmpS_L5, Time
+PLOTCHANNELS CmpS_R5, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Spring Compression (Axles 3 - 5)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Motion } Spring Compression (Axles 3 - 5)
+#Library : Plot: Setup
+#DataSet : Spring Compression (Axles 3 - 5)
+#Category: Suspension Motion
+#FileID  : Plot_b223b7f0-6431-4a6a-8b5e-7438f67cdd82
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

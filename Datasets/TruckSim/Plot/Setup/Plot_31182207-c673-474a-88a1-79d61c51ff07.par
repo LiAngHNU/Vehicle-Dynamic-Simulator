@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Road Station for Tires (Axle 1)`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#BlueLink2 TruckSim Run Control`Tractor-Semi: 38m Roundabout` * TS 2016: Road Options` , example run`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS S_Rd_L1I, Time
+PLOTCHANNELS S_Rd_R1I, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Road Station for Tires (Axle 1)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Road Station for Tires (Axle 1)
+#Library : Plot: Setup
+#DataSet : Road Station for Tires (Axle 1)
+#Category: Tracking
+#FileID  : Plot_31182207-c673-474a-88a1-79d61c51ff07
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

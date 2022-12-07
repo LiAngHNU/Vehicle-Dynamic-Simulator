@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`Vehicle Sideslip Angle vs. Station`Vehicle Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Beta, Station
+PLOTCHANNELS Beta_2, Station
+PLOTCHANNELS Beta_3, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vehicle Sideslip Angle vs. Station
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#The vehicle sideslip angle is the angle between the vehicle's heading (yaw angle) and its trajectory (tangent to the actual path of motion).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Vehicle Sideslip Angle vs. Station
+#Library : Plot: Setup
+#DataSet : Vehicle Sideslip Angle vs. Station
+#Category: Vehicle Motion
+#FileID  : Plot_033c55dc-d64e-4e15-89b2-56afa03c4255
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

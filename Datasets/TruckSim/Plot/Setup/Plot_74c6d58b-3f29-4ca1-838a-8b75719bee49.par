@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Z Coordinate: Z_Obj_1`ADAS Sensor Target Properties
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Z_Obj_1, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Z Coordinate: Z_Obj_1
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Target Properties } Z Coordinate: Z_Obj_1
+#Library : Plot: Setup
+#DataSet : Z Coordinate: Z_Obj_1
+#Category: ADAS Sensor Target Properties
+#FileID  : Plot_74c6d58b-3f29-4ca1-838a-8b75719bee49
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

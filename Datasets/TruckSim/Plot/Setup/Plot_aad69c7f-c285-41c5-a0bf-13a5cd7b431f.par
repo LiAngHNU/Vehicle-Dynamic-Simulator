@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Plot: Setup`Wheel Fy`* * * Vehicle Dynamic Simulator
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fy_L1i, Station
+PLOTCHANNELS Fy_R1i, Station
+PLOTCHANNELS Fy_L2o, Station
+PLOTCHANNELS Fy_L2i, Station
+PLOTCHANNELS Fy_R2o, Station
+PLOTCHANNELS Fy_R2i, Station
+PLOTCHANNELS Fy_L3o, Station
+PLOTCHANNELS Fy_L3i, Station
+PLOTCHANNELS Fy_R3o, Station
+PLOTCHANNELS Fy_R3i, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Wheel Fy
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * Vehicle Dynamic Simulator } Wheel Fy
+#Library : Plot: Setup
+#DataSet : Wheel Fy
+#Category: * * * Vehicle Dynamic Simulator
+#FileID  : Plot_aad69c7f-c285-41c5-a0bf-13a5cd7b431f
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

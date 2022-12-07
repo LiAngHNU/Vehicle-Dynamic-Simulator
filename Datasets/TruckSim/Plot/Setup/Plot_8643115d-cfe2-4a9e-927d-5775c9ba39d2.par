@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Axle Fz (3-Axle)`* * * Vehicle Dynamic Simulator
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fz_A1, Station
+PLOTCHANNELS Fz_A2, Station
+PLOTCHANNELS Fz_A3, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Axle Fz (3-Axle)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * Vehicle Dynamic Simulator } Axle Fz (3-Axle)
+#Library : Plot: Setup
+#DataSet : Axle Fz (3-Axle)
+#Category: * * * Vehicle Dynamic Simulator
+#FileID  : Plot_8643115d-cfe2-4a9e-927d-5775c9ba39d2
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Plot: Setup`Throttle: Control Input vs. t_stamp`Restoring to a Previous State
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Throttle, t_stamp
+PLOTCHANNELS Thr_Eng, t_stamp
+
+#ENDMYellow
+
+YAXISLABEL Throttle -
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Throttle: Control Input vs. t_stamp
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#The variable "Throttle" is the sum of any throttle control calculated by the TruckSim closed loop speed controller and any specified open-loop throttle.
+#
+#The source of open-loop throttle command may be from internal tables, VS Commands, or external sources like Simulink or the API.
+#
+#By using the sum of these 2 command sources you can implement things like driver aids for active safety that augment actions taken by the driver.
+#
+#When switching between open loop and closed loop control, take care that no unintended open loop control is "left over" by supplying a data set that sets the open loop component to zero.
+#
+#The variable "Thr_Eng" is the value of "Throttle", optionally modified by the application of a time constant to simulate the transient delay in changes in engine torque.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Restoring to a Previous State } Throttle: Control Input vs. t_stamp
+#Library : Plot: Setup
+#DataSet : Throttle: Control Input vs. t_stamp
+#Category: Restoring to a Previous State
+#FileID  : Plot_ad9b1d19-5de6-4f3d-a810-862db75fbd87
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

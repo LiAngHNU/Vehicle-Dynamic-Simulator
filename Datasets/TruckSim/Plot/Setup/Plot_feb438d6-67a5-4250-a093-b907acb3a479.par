@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Trans. Control: Mode`Controls: Driver
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS ModeTran, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Trans. Control: Mode
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#Closed loop control uses a signal called "Mode" that specifies the number of gear ratios the controller is allowed to use.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Controls: Driver } Trans. Control: Mode
+#Library : Plot: Setup
+#DataSet : Trans. Control: Mode
+#Category: Controls: Driver
+#FileID  : Plot_feb438d6-67a5-4250-a093-b907acb3a479
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

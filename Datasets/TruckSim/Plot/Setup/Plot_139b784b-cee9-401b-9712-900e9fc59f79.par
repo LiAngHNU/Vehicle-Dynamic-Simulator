@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Plot: Setup`ESC_Active`ESC
+
+ADD_ENTITY Plot
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS ESC_Enabled, Time
+PLOTCHANNELS ESC_Active, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE ESC_Active
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ESC } ESC_Active
+#Library : Plot: Setup
+#DataSet : ESC_Active
+#Category: ESC
+#FileID  : Plot_139b784b-cee9-401b-9712-900e9fc59f79
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

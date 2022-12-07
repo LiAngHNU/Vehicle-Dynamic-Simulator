@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Vehicle Gear`* * * Vehicle Dynamic Simulator
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Gear_OL, Station
+PLOTCHANNELS Gear_CL, Station
+PLOTCHANNELS Gear_Del, Station
+PLOTCHANNELS GearStat, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vehicle Gear
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * Vehicle Dynamic Simulator } Vehicle Gear
+#Library : Plot: Setup
+#DataSet : Vehicle Gear
+#Category: * * * Vehicle Dynamic Simulator
+#FileID  : Plot_dd74277f-c542-48b2-81db-c719358bd98f
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

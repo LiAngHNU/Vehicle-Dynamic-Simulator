@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Plot: Setup`Z vs. X -- Trajectory (Front)`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Z_L1, X_L1
+PLOTCHANNELS Z_R1, X_R1
+PLOTCHANNELS Z_L2, X_L2
+PLOTCHANNELS Z_R2, X_R2
+PLOTCHANNELS Z_L3, X_L3
+PLOTCHANNELS Z_R3, X_R3
+PLOTCHANNELS Z_L4, X_L4
+PLOTCHANNELS Z_R4, X_R4
+PLOTCHANNELS Z_L5, X_L5
+PLOTCHANNELS Z_R5, X_R5
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Z vs. X -- Trajectory (Front)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Z vs. X -- Trajectory (Front)
+#Library : Plot: Setup
+#DataSet : Z vs. X -- Trajectory (Front)
+#Category: Tracking
+#FileID  : Plot_315f1711-843a-4824-b8d0-71eac894581d
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

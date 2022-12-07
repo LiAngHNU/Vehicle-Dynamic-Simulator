@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Rebound Stop Force`Suspension Forces and Moments
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS FRSt_L1, Time
+PLOTCHANNELS FRSt_R1, Time
+PLOTCHANNELS FRSt_L2, Time
+PLOTCHANNELS FRSt_R2, Time
+PLOTCHANNELS FRSt_L3, Time
+PLOTCHANNELS FRSt_R3, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Rebound Stop Force
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Forces and Moments } Rebound Stop Force
+#Library : Plot: Setup
+#DataSet : Rebound Stop Force
+#Category: Suspension Forces and Moments
+#FileID  : Plot_a8ee8c0e-c960-4d6e-8654-db4ce7278055
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Y vs. X (Custom Controller)`Driver Sensor
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Yo, Xo
+PLOTCHANNELS Ypreview, Xpreview
+PLOTCHANNELS Y_Design, X_Design
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Y vs. X (Custom Controller)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Driver Sensor } Y vs. X (Custom Controller)
+#Library : Plot: Setup
+#DataSet : Y vs. X (Custom Controller)
+#Category: Driver Sensor
+#FileID  : Plot_a84983b8-4a59-4af3-b4d9-877a05383d75
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

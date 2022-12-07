@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Wheel Steer Angle (Axle 1) vs. t_stamp`Restoring to a Previous State
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Steer_L1, t_stamp
+PLOTCHANNELS Steer_R1, t_stamp
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Wheel Steer Angle (Axle 1) vs. t_stamp
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Restoring to a Previous State } Wheel Steer Angle (Axle 1) vs. t_stamp
+#Library : Plot: Setup
+#DataSet : Wheel Steer Angle (Axle 1) vs. t_stamp
+#Category: Restoring to a Previous State
+#FileID  : Plot_4b4aa6f6-89ab-4f9b-8085-094a1a78cae2
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

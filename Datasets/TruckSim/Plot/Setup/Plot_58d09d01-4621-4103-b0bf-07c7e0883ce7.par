@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Detected Path Offset at PD Origin`Path Detector
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS yoffsetpd_1, time
+PLOTCHANNELS yoffsetpd_2, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Detected Path Offset at PD Origin
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Path Detector } Detected Path Offset at PD Origin
+#Library : Plot: Setup
+#DataSet : Detected Path Offset at PD Origin
+#Category: Path Detector
+#FileID  : Plot_58d09d01-4621-4103-b0bf-07c7e0883ce7
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

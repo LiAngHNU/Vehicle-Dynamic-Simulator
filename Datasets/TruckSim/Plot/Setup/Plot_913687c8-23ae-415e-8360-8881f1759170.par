@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Cab Mount Deflection`Suspended Cab
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS DefMntLF, Time
+PLOTCHANNELS DefMntLR, Time
+PLOTCHANNELS DefMntRF, Time
+PLOTCHANNELS DefMntRR, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Cab Mount Deflection
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspended Cab } Cab Mount Deflection
+#Library : Plot: Setup
+#DataSet : Cab Mount Deflection
+#Category: Suspended Cab
+#FileID  : Plot_913687c8-23ae-415e-8360-8881f1759170
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

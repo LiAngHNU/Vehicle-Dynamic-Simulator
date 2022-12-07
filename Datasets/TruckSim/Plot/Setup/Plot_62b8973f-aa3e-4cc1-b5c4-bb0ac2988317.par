@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Camber vs. Jounce (Axle 1)`Suspension Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS CamberL1, Jnc_L1
+PLOTCHANNELS CamberR1, Jnc_R1
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Camber vs. Jounce (Axle 1)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Motion } Camber vs. Jounce (Axle 1)
+#Library : Plot: Setup
+#DataSet : Camber vs. Jounce (Axle 1)
+#Category: Suspension Motion
+#FileID  : Plot_62b8973f-aa3e-4cc1-b5c4-bb0ac2988317
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

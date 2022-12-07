@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`CTC: Y vs. X (Unit 2, 2 Axles)`Tire Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 1    
+
+
+#MiscYellow0
+PLOTCHANNELS Yctc_L3i, Xctc_L3i
+PLOTCHANNELS Yctc_R3i, Xctc_R3i
+PLOTCHANNELS Yctc_L3o, Xctc_L3o
+PLOTCHANNELS Yctc_R3o, Xctc_R3o
+PLOTCHANNELS Yctc_L4i, Xctc_L4i
+PLOTCHANNELS Yctc_R4i, Xctc_R4i
+PLOTCHANNELS Yctc_L4o, Xctc_L4o
+PLOTCHANNELS Yctc_R4o, Xctc_R4o
+
+#ENDMYellow
+
+ASPECTRATIO 1
+
+#RingCtrl8 1
+
+
+PTITLE CTC: Y vs. X (Unit 2, 2 Axles)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tracking } CTC: Y vs. X (Unit 2, 2 Axles)
+#Library : Plot: Setup
+#DataSet : CTC: Y vs. X (Unit 2, 2 Axles)
+#Category: Tire Tracking
+#FileID  : Plot_304dd9c5-46d4-4019-a688-5722ed6a9500
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

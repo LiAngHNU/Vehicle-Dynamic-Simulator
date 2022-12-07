@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`Z Coord for Right-Side Points, Unit 1`PBS (Performance Based Standards)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Z_S6, Station
+PLOTCHANNELS Z_S7, Station
+PLOTCHANNELS Z_S8, Station
+PLOTCHANNELS Z_S9, Station
+PLOTCHANNELS Z_S10, Station
+
+#ENDMYellow
+
+YAXISLABEL Global Z Coordinates, Right Side - m
+XAXISLABEL Station
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Z Coord for Right-Side Points, Unit 1
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { PBS (Performance Based Standards) } Z Coord for Right-Side Points, Unit 1
+#Library : Plot: Setup
+#DataSet : Z Coord for Right-Side Points, Unit 1
+#Category: PBS (Performance Based Standards)
+#FileID  : Plot_3a30e8e4-70f9-416e-a177-8cf477077356
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

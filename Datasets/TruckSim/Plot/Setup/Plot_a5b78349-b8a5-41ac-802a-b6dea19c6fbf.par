@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Twin Clutch Torque`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS M_L1_Cl, Time
+PLOTCHANNELS M_L2_Cl, Time
+PLOTCHANNELS M_R1_Cl, Time
+PLOTCHANNELS M_R2_Cl, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Twin Clutch Torque
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } Twin Clutch Torque
+#Library : Plot: Setup
+#DataSet : Twin Clutch Torque
+#Category: Powertrain
+#FileID  : Plot_a5b78349-b8a5-41ac-802a-b6dea19c6fbf
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

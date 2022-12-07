@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Plot: Setup`Brake Control: Pedal Force`Braking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS F_Pedal, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Brake Control: Pedal Force
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#The input to the brake model with boost and thermal effects is a control signal representing pedal force.
+#
+#Its source may be the internal closed loop speed controller or direct open loop specification of force, or an import variable from any of the external sources.
+#
+#The speed controller can be configured either to modulate the brake, or to become disabled when open-loop braking is supplied.
+#
+#Signals from open-loop and closed-loop sources are added.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Braking } Brake Control: Pedal Force
+#Library : Plot: Setup
+#DataSet : Brake Control: Pedal Force
+#Category: Braking
+#FileID  : Plot_dd8ae232-f573-4a48-af7e-17e04f682f52
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

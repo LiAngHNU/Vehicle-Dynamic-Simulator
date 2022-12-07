@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Plot: Setup`Trans. Control: Gear Selected`Controls: Driver
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#BlueLink1 ` , Discontinued` , Discontinued` , Discontinued`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS GearStat, Time
+PLOTCHANNELS Gear_Del, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Trans. Control: Gear Selected
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#This is the number of the gear engaged, whether from open- or closed-loop control.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Controls: Driver } Trans. Control: Gear Selected
+#Library : Plot: Setup
+#DataSet : Trans. Control: Gear Selected
+#Category: Controls: Driver
+#FileID  : Plot_536a6a4d-647d-4eb4-b11f-664addaec88a
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Plot: Setup`Master Cyl. Pressure vs. t_stamp`Restoring to a Previous State
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Pbk_Con, t_stamp
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Master Cyl. Pressure vs. t_stamp
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#The input to the basic brake model is a control signal representing master cylinder output pressure.
+#
+#Its source may be the internal closed loop speed controller or direct open loop specification of pressure, or an import variable from any of the external sources.
+#
+#The speed controller can be configured either to modulate the brake, or to become disabled when open-loop braking is supplied.
+#
+#Signals from open-loop and closed-loop sources are added.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Restoring to a Previous State } Master Cyl. Pressure vs. t_stamp
+#Library : Plot: Setup
+#DataSet : Master Cyl. Pressure vs. t_stamp
+#Category: Restoring to a Previous State
+#FileID  : Plot_07e57ac2-aa2a-48d8-9487-4f365101a969
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

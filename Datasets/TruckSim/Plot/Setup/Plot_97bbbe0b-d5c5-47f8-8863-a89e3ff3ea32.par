@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Plot: Setup`Vx from Sensor on One Side`ADAS Sensor Detections, Symbol Stack
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#BlueLink2 TruckSim Run Control`Roundabout (3D, 36 m), 3A Tractor + 1A Trailer` * TS 2016: Road Options` , example run`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Vx_S<<s>>_1, Time
+
+#ENDMYellow
+
+YAXISLABEL <<side>> Vx detection - km/h
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vx from Sensor on One Side
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#Use Symbol Stack <<s>> to get closest object to current sensor.
+#
+#Need to check the box to not truncate to allow the length of the name that includes <<s>>.
+#
+#<<side>> (for the Y axis title) is either Left or Right.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections, Symbol Stack } Vx from Sensor on One Side
+#Library : Plot: Setup
+#DataSet : Vx from Sensor on One Side
+#Category: ADAS Sensor Detections, Symbol Stack
+#FileID  : Plot_97bbbe0b-d5c5-47f8-8863-a89e3ff3ea32
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

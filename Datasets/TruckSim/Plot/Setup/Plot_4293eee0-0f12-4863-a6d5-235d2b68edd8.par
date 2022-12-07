@@ -1,0 +1,59 @@
+PARSFILE
+#FullDataName Plot: Setup`Slip Angles, Lagged (Axle 1 - 4)`Tire Kinematics
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS AlphLL1i, Time
+PLOTCHANNELS AlphLL1o, Time
+PLOTCHANNELS AlphLR1i, Time
+PLOTCHANNELS AlphLR1o, Time
+PLOTCHANNELS AlphLL2i, Time
+PLOTCHANNELS AlphLL2o, Time
+PLOTCHANNELS AlphLR2i, Time
+PLOTCHANNELS AlphLR2o, Time
+PLOTCHANNELS AlphLL3i, Time
+PLOTCHANNELS AlphLL3o, Time
+PLOTCHANNELS AlphLR3i, Time
+PLOTCHANNELS AlphLR3o, Time
+PLOTCHANNELS AlphLL4i, Time
+PLOTCHANNELS AlphLL4o, Time
+PLOTCHANNELS AlphLR4i, Time
+PLOTCHANNELS AlphLR4o, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Slip Angles, Lagged (Axle 1 - 4)
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#Lagged Slip Angles
+#
+#These are the slip angle values after applying the tire relaxation lengths.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Kinematics } Slip Angles, Lagged (Axle 1 - 4)
+#Library : Plot: Setup
+#DataSet : Slip Angles, Lagged (Axle 1 - 4)
+#Category: Tire Kinematics
+#FileID  : Plot_4293eee0-0f12-4863-a6d5-235d2b68edd8
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Plot: Setup`Fx vs. Slip`Tire Characteristics
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fx_L1i, KappLL1i
+PLOTCHANNELS Fx_R1i, KappLR1i
+PLOTCHANNELS Fx_L2i, KappLL2i
+PLOTCHANNELS Fx_R2i, KappLR2i
+PLOTCHANNELS Fx_L1o, KappLL1o
+PLOTCHANNELS Fx_R1o, KappLR1o
+PLOTCHANNELS Fx_L2o, KappLL2o
+PLOTCHANNELS Fx_R2o, KappLR2o
+PLOTCHANNELS Fx_L3i, KappLL3i
+PLOTCHANNELS Fx_R3i, KappLR3i
+PLOTCHANNELS Fx_L4i, KappLL4i
+PLOTCHANNELS Fx_R4i, KappLR4i
+PLOTCHANNELS Fx_L3o, KappLL3o
+PLOTCHANNELS Fx_R3o, KappLR3o
+PLOTCHANNELS Fx_L4o, KappLL4o
+PLOTCHANNELS Fx_R4o, KappLR4o
+PLOTCHANNELS Fx_L5i, KappLL5i
+PLOTCHANNELS Fx_R5i, KappLR5i
+PLOTCHANNELS Fx_L5o, KappLL5o
+PLOTCHANNELS Fx_R5o, KappLR5o
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Fx vs. Slip
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Characteristics } Fx vs. Slip
+#Library : Plot: Setup
+#DataSet : Fx vs. Slip
+#Category: Tire Characteristics
+#FileID  : Plot_97c6372d-66eb-48e5-b443-a2d18b78c4ed
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

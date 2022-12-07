@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Y vs. X -- Trajectory (Custom View Point)`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 1    
+
+
+#MiscYellow0
+PLOTCHANNELS Yo, Xo
+PLOTCHANNELS Y_Design, X_Design
+PLOTCHANNELS Y_Target, X_Target
+PLOTCHANNELS Ypreview, Xpreview
+
+#ENDMYellow
+
+ASPECTRATIO 1
+
+#RingCtrl8 1
+
+
+PTITLE Y vs. X -- Trajectory (Custom View Point)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Y vs. X -- Trajectory (Custom View Point)
+#Library : Plot: Setup
+#DataSet : Y vs. X -- Trajectory (Custom View Point)
+#Category: Tracking
+#FileID  : Plot_d3b7b8fc-8054-4ad1-acbd-ec64d46aef8e
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

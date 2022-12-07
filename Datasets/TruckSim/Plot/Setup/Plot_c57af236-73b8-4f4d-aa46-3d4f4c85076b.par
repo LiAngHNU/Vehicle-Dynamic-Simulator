@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time`Vehicle Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Vx, Time
+PLOTCHANNELS VxTarget, Time
+PLOTCHANNELS Vx_2, Time
+PLOTCHANNELS Vxz_Fwd, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Longitudinal Speed (Vxz_Fwd) vs. Time
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#The output variable Vxz_Fwd is what the TruckSim Closed-Loop Speed Controller uses.
+#
+#It is fixed in the vehicle Sprung Mass and takes into account the Sprung Mass pitch angle by taking the vector sum of the Sprung Mass Velocity in the Sprung Mass Coordinate System X direction and the Sprung Mass Coordinate System Z direction, and then taking the square root of the sum of the squares.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Longitudinal Speed (Vxz_Fwd) vs. Time
+#Library : Plot: Setup
+#DataSet : Longitudinal Speed (Vxz_Fwd) vs. Time
+#Category: Vehicle Motion
+#FileID  : Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

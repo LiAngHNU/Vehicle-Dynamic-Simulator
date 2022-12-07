@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Jounce (Axle 9)`Suspension Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Jnc_L9, Time
+PLOTCHANNELS Jnc_R9, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Jounce (Axle 9)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Motion } Jounce (Axle 9)
+#Library : Plot: Setup
+#DataSet : Jounce (Axle 9)
+#Category: Suspension Motion
+#FileID  : Plot_49c04d30-2f43-46b7-acc6-41d86af87111
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

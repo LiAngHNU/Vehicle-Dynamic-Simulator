@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Road ID for Tires (Axle 3)`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#BlueLink2 TruckSim Run Control`Tractor-Semi: 38m Roundabout` * TS 2016: Road Options` , example run`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS RdID_L3I, Time
+PLOTCHANNELS RdID_R3I, Time
+PLOTCHANNELS RdID_L3O, Time
+PLOTCHANNELS RdID_R3O, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Road ID for Tires (Axle 3)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Road ID for Tires (Axle 3)
+#Library : Plot: Setup
+#DataSet : Road ID for Tires (Axle 3)
+#Category: Tracking
+#FileID  : Plot_1039846c-c66b-4824-875a-62cd47a7d223
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

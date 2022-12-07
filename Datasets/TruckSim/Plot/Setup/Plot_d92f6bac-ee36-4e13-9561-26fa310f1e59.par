@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Road Wheel Steer (Kinematics Only)`Steering
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS StrK_L1, Time
+PLOTCHANNELS StrK_R1, Time
+PLOTCHANNELS StrK_L2, Time
+PLOTCHANNELS StrK_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Road Wheel Steer (Kinematics Only)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Road Wheel Steer (Kinematics Only)
+#Library : Plot: Setup
+#DataSet : Road Wheel Steer (Kinematics Only)
+#Category: Steering
+#FileID  : Plot_d92f6bac-ee36-4e13-9561-26fa310f1e59
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

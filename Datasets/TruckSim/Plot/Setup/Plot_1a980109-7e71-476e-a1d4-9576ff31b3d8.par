@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Y vs. X -- Trajectory`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 1    
+
+
+#MiscYellow0
+PLOTCHANNELS Yo, Xo
+PLOTCHANNELS Y_Design, X_Design
+PLOTCHANNELS Y_Target, X_Target
+PLOTCHANNELS Yo_2, Xo_2
+
+#ENDMYellow
+
+ASPECTRATIO 1
+
+#RingCtrl8 1
+
+
+PTITLE Y vs. X -- Trajectory
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Y vs. X -- Trajectory
+#Library : Plot: Setup
+#DataSet : Y vs. X -- Trajectory
+#Category: Tracking
+#FileID  : Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

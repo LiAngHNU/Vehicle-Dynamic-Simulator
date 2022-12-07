@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Plot: Setup`Alerts: Blind Spot Passing`ADAS and AEB Alerts and Commands
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#BlueLink2 TruckSim Run Control`Roundabout (3D, 36 m), 3A Tractor + 1A Trailer` * TS 2016: Road Options` , example run`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS <<alert>>, Time, Alert Signal (Filtered)
+PLOTCHANNELS <<raw>>, Time, Alert Signal (Raw)
+
+#ENDMYellow
+
+YAXISLABEL <<side>> Blind Spot Alert
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Alerts: Blind Spot Passing
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#This dataset can be used multiple times to generate plots for blind spot sensors that use VS Commands to low-pass filter a raw signal. The filtered signal has the name specified with the Symbol Stack variable <<alert>>; the raw signal is the variable with the name <<raw>>.
+#
+#The variable <<side>> is used for the Y axis label.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS and AEB Alerts and Commands } Alerts: Blind Spot Passing
+#Library : Plot: Setup
+#DataSet : Alerts: Blind Spot Passing
+#Category: ADAS and AEB Alerts and Commands
+#FileID  : Plot_8a849f38-56df-48bb-a6d4-3d5f15c7af23
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

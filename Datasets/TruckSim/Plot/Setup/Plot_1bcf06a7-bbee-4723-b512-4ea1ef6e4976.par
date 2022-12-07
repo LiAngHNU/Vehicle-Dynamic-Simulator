@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Plot: Setup`Overturning Moments`Tire Moments
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Mx_L1i, Time
+PLOTCHANNELS Mx_R1i, Time
+PLOTCHANNELS Mx_L2i, Time
+PLOTCHANNELS Mx_R2i, Time
+PLOTCHANNELS Mx_L1o, Time
+PLOTCHANNELS Mx_R1o, Time
+PLOTCHANNELS Mx_L2o, Time
+PLOTCHANNELS Mx_R2o, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Overturning Moments
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Moments } Overturning Moments
+#Library : Plot: Setup
+#DataSet : Overturning Moments
+#Category: Tire Moments
+#FileID  : Plot_1bcf06a7-bbee-4723-b512-4ea1ef6e4976
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

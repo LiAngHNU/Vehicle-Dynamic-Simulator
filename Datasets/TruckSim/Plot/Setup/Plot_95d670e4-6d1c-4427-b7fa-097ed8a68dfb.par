@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Fs vs. Wheel Jounce (Axle 4)`Suspension
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fs_L4, Jnc_L4
+PLOTCHANNELS Fs_R4, Jnc_R4
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Fs vs. Wheel Jounce (Axle 4)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension } Fs vs. Wheel Jounce (Axle 4)
+#Library : Plot: Setup
+#DataSet : Fs vs. Wheel Jounce (Axle 4)
+#Category: Suspension
+#FileID  : Plot_95d670e4-6d1c-4427-b7fa-097ed8a68dfb
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`GPS Trajectory: Lat vs Long`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS GPS_LatA, GPSlongA
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE GPS Trajectory: Lat vs Long
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#The Absolute GPS angles have lots of digits. To use these variables, be sure to set the 64-bit option for output files.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } GPS Trajectory: Lat vs Long
+#Library : Plot: Setup
+#DataSet : GPS Trajectory: Lat vs Long
+#Category: Tracking
+#FileID  : Plot_d5eb192a-ead8-4ebe-bd1e-962c6eedf12d
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

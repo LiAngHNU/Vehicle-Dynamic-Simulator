@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Mx vs. Gamma`Tire Tester
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Mx_L1, Gamma_L1
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Mx vs. Gamma
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#This dataset defines a plot setup for variables that were created in external.c for a Custom C code example that simulates a tire test.You can plot these variables only from tire tester examples.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester } Mx vs. Gamma
+#Library : Plot: Setup
+#DataSet : Mx vs. Gamma
+#Category: Tire Tester
+#FileID  : Plot_02dea83a-59df-4079-9f14-5bff85492bba
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

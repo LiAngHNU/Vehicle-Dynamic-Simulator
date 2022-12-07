@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Steer Wheel Motion`* * * Vehicle Dynamic Simulator
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Steer_SW, Station
+PLOTCHANNELS StrAV_SW, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Steer Wheel Motion
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * Vehicle Dynamic Simulator } Steer Wheel Motion
+#Library : Plot: Setup
+#DataSet : Steer Wheel Motion
+#Category: * * * Vehicle Dynamic Simulator
+#FileID  : Plot_d662d431-9501-4990-a498-834ae110d0d4
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

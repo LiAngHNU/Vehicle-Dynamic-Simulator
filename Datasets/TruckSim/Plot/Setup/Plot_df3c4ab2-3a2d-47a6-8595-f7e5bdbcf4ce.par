@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Speeds for 2 Vehicles`ADAS Sensor Target Properties
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS V_Obj_2, Time
+PLOTCHANNELS V_Obj_4, Time
+PLOTCHANNELS Vxz_Fwd, Time
+PLOTCHANNELS Vxz_Fwd2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Speeds for 2 Vehicles
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Target Properties } Speeds for 2 Vehicles
+#Library : Plot: Setup
+#DataSet : Speeds for 2 Vehicles
+#Category: ADAS Sensor Target Properties
+#FileID  : Plot_df3c4ab2-3a2d-47a6-8595-f7e5bdbcf4ce
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`opt_clutch_mode`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+define_output CltcMode = opt_clutch_mode
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS CltcMode, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE opt_clutch_mode
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } opt_clutch_mode
+#Library : Plot: Setup
+#DataSet : opt_clutch_mode
+#Category: Powertrain
+#FileID  : Plot_46707735-d20b-470b-8748-88b764a86362
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Battery current`Powertrain (Hybrid)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS CurrBatt, Time, Battery current (ext. model)
+PLOTCHANNELS A_Bttry, Time
+
+#ENDMYellow
+
+YAXISLABEL Battery current (A)
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Battery current
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain (Hybrid) } Battery current
+#Library : Plot: Setup
+#DataSet : Battery current
+#Category: Powertrain (Hybrid)
+#FileID  : Plot_4445b244-c3e7-43a0-a5f5-85a967aa04e4
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

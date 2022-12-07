@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`Current Path ID`Road Network Driving
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#BlueLink2 TruckSim Run Control`Roundabout Network (Flat)` Road Networks: Intersections and Roundabouts` , example run`Run_b0ca8397-3299-4473-b8e3-ec6b63b40f9a
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+define_output PathID = path_id_dm; - ;Current Path ID
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS PathID, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 0
+
+
+PTITLE Current Path ID
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Road Network Driving } Current Path ID
+#Library : Plot: Setup
+#DataSet : Current Path ID
+#Category: Road Network Driving
+#FileID  : Plot_93f9222e-e03b-462f-9848-ebc24c122b1d
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

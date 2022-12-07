@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Plot: Setup`Rear Wheel Angle`Rear Steer Control
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS calc_str_l4, time
+PLOTCHANNELS calc_str_r4, time
+PLOTCHANNELS calc_str_l5, time
+PLOTCHANNELS calc_str_r5, time
+PLOTCHANNELS calc_str_l6, time
+PLOTCHANNELS calc_str_r6, time
+PLOTCHANNELS calc_str_l7, time
+PLOTCHANNELS calc_str_r7, time
+
+#ENDMYellow
+
+YAXISLABEL Trailer Wheel Steer - deg
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Rear Wheel Angle
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Rear Steer Control } Rear Wheel Angle
+#Library : Plot: Setup
+#DataSet : Rear Wheel Angle
+#Category: Rear Steer Control
+#FileID  : Plot_64382d35-83e1-470d-963e-754f9b219447
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

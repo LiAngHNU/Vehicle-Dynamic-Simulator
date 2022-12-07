@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Accel. Control: Commanded vs. Actual`Controls: Driver
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Ax_Rd, Time
+PLOTCHANNELS Ax_SCcmd, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Accel. Control: Commanded vs. Actual
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Controls: Driver } Accel. Control: Commanded vs. Actual
+#Library : Plot: Setup
+#DataSet : Accel. Control: Commanded vs. Actual
+#Category: Controls: Driver
+#FileID  : Plot_3063562b-8660-4c29-8bcc-bd83aab0d865
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Steer Torque vs. Steer Angle`Steering
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS M_SW, Steer_SW
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Steer Torque vs. Steer Angle
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Steer Torque vs. Steer Angle
+#Library : Plot: Setup
+#DataSet : Steer Torque vs. Steer Angle
+#Category: Steering
+#FileID  : Plot_637b8350-a6b4-4316-b81b-12f50955df56
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

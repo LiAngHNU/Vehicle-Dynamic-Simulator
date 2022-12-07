@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Path Detector Origin`Path Detector
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS x_detector_1, time
+PLOTCHANNELS y_detector_1, time
+PLOTCHANNELS x_detector_2, time
+PLOTCHANNELS y_detector_2, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Path Detector Origin
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Path Detector } Path Detector Origin
+#Library : Plot: Setup
+#DataSet : Path Detector Origin
+#Category: Path Detector
+#FileID  : Plot_4f1e2ac5-69c1-40e8-ba95-eb648ee4a915
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

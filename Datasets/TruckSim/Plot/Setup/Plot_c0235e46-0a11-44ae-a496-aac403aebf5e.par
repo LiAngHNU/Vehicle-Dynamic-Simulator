@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Spring Forces (Axles 5 - 6)`Suspension Forces and Moments
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fs_L5, Time
+PLOTCHANNELS Fs_R5, Time
+PLOTCHANNELS Fs_L6, Time
+PLOTCHANNELS Fs_R6, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Spring Forces (Axles 5 - 6)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Forces and Moments } Spring Forces (Axles 5 - 6)
+#Library : Plot: Setup
+#DataSet : Spring Forces (Axles 5 - 6)
+#Category: Suspension Forces and Moments
+#FileID  : Plot_c0235e46-0a11-44ae-a496-aac403aebf5e
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

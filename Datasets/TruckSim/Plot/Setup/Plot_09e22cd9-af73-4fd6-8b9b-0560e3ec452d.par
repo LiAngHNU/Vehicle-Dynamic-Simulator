@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Detected Curvature Rate`Path Detector
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS curvratepd_1, time
+PLOTCHANNELS curvratepd_2, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Detected Curvature Rate
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Path Detector } Detected Curvature Rate
+#Library : Plot: Setup
+#DataSet : Detected Curvature Rate
+#Category: Path Detector
+#FileID  : Plot_09e22cd9-af73-4fd6-8b9b-0560e3ec452d
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

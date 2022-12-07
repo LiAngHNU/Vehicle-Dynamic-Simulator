@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`Brake Test Cycle`Braking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS bkcycle, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Brake Test Cycle
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#Brake Test Cycle
+#
+#This Plot: Setup dataset is used with the Brake Fade example, where the variable bk_cycle is defined on the Procedure screen and is incremented using the Brake Fade Test Events.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Braking } Brake Test Cycle
+#Library : Plot: Setup
+#DataSet : Brake Test Cycle
+#Category: Braking
+#FileID  : Plot_0a91ecd1-6768-4c3f-afc2-b6911293a3f6
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

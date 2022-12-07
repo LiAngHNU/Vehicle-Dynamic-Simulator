@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Distance to Point`Driver Sensor
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Lx_Sen_1, Time
+PLOTCHANNELS Lx_Sen_2, Time
+PLOTCHANNELS Lx_Sen_3, Time
+PLOTCHANNELS Lx_Sen_4, Time
+PLOTCHANNELS Lx_Sen_5, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Distance to Point
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Driver Sensor } Distance to Point
+#Library : Plot: Setup
+#DataSet : Distance to Point
+#Category: Driver Sensor
+#FileID  : Plot_88df6252-2bbd-4438-8fb3-cf879005dc72
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

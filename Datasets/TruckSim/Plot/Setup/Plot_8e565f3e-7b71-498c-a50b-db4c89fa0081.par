@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`pb_on`Hill Hold with Parking Brake
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS pb_plot, Time, Parking Brake Control
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE pb_on
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Hill Hold with Parking Brake } pb_on
+#Library : Plot: Setup
+#DataSet : pb_on
+#Category: Hill Hold with Parking Brake
+#FileID  : Plot_8e565f3e-7b71-498c-a50b-db4c89fa0081
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

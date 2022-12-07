@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Plot: Setup`Look Mode, Current Object`Pedestrians and Traffic Lights
+
+ADD_ENTITY Plot
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Look_<<o>>, S_Obj_<<o>>
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Look Mode, Current Object
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Pedestrians and Traffic Lights } Look Mode, Current Object
+#Library : Plot: Setup
+#DataSet : Look Mode, Current Object
+#Category: Pedestrians and Traffic Lights
+#FileID  : Plot_70c8172c-48a8-4db2-9bd2-a46d8c70b7c3
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

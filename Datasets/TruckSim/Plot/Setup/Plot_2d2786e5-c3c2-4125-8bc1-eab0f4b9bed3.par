@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Distance: S1 (2 Objects)`ADAS Sensor Detections
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS DisS1_1, Time
+PLOTCHANNELS DisS1_2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Distance: S1 (2 Objects)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections } Distance: S1 (2 Objects)
+#Library : Plot: Setup
+#DataSet : Distance: S1 (2 Objects)
+#Category: ADAS Sensor Detections
+#FileID  : Plot_2d2786e5-c3c2-4125-8bc1-eab0f4b9bed3
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

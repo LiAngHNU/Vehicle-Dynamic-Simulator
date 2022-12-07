@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Vehicle Acceleration`* * * Vehicle Dynamic Simulator
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Ax, Station
+PLOTCHANNELS Ay, Station
+PLOTCHANNELS Az, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vehicle Acceleration
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * Vehicle Dynamic Simulator } Vehicle Acceleration
+#Library : Plot: Setup
+#DataSet : Vehicle Acceleration
+#Category: * * * Vehicle Dynamic Simulator
+#FileID  : Plot_ce673858-4862-4f77-b085-b579999fd6ab
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

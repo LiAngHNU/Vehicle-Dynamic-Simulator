@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Vertical Tire Forces (Axle 1) vs. t_stamp`Restoring to a Previous State
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fz_L1i, t_stamp
+PLOTCHANNELS Fz_R1i, t_stamp
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vertical Tire Forces (Axle 1) vs. t_stamp
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Restoring to a Previous State } Vertical Tire Forces (Axle 1) vs. t_stamp
+#Library : Plot: Setup
+#DataSet : Vertical Tire Forces (Axle 1) vs. t_stamp
+#Category: Restoring to a Previous State
+#FileID  : Plot_55f89ae9-7070-44f8-b75d-2afe4336ffa3
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

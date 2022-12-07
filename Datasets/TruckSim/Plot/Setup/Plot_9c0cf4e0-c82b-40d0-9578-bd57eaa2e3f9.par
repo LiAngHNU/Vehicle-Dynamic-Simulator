@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Plot: Setup`Sensor Y for Closest Pedestrian`ADAS Sensor Target Properties
+
+ADD_ENTITY Plot
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Y_S<<s>>_1, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Sensor Y for Closest Pedestrian
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Target Properties } Sensor Y for Closest Pedestrian
+#Library : Plot: Setup
+#DataSet : Sensor Y for Closest Pedestrian
+#Category: ADAS Sensor Target Properties
+#FileID  : Plot_9c0cf4e0-c82b-40d0-9578-bd57eaa2e3f9
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

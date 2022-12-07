@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Plot: Setup`Ay_ESC_Preview`ESC
+
+ADD_ENTITY Plot
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Ay_ESC_Pre, Time
+PLOTCHANNELS Ay, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Ay_ESC_Preview
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ESC } Ay_ESC_Preview
+#Library : Plot: Setup
+#DataSet : Ay_ESC_Preview
+#Category: ESC
+#FileID  : Plot_2854bd72-cb7c-4311-b599-c56f17367950
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

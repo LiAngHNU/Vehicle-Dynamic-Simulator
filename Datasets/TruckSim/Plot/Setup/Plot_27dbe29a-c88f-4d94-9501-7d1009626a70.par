@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`My_Dr -- Wheel Drive Torque (Axle 5)`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS My_Dr_L5, Time
+PLOTCHANNELS My_Dr_R5, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE My_Dr -- Wheel Drive Torque (Axle 5)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } My_Dr -- Wheel Drive Torque (Axle 5)
+#Library : Plot: Setup
+#DataSet : My_Dr -- Wheel Drive Torque (Axle 5)
+#Category: Powertrain
+#FileID  : Plot_27dbe29a-c88f-4d94-9501-7d1009626a70
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

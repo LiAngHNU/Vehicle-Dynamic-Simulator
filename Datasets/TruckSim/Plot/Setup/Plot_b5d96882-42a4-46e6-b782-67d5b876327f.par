@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Aerodynamic Slip Angle`Aerodynamics and Wind
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS BetaAir, Time
+PLOTCHANNELS BetaAir2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Aerodynamic Slip Angle
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Aerodynamics and Wind } Aerodynamic Slip Angle
+#Library : Plot: Setup
+#DataSet : Aerodynamic Slip Angle
+#Category: Aerodynamics and Wind
+#FileID  : Plot_b5d96882-42a4-46e6-b782-67d5b876327f
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Hitch Angular Rates`Hitch
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS ArtR_H, Time
+PLOTCHANNELS PitchR_H, Time
+PLOTCHANNELS RollR_H, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Hitch Angular Rates
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Hitch } Hitch Angular Rates
+#Library : Plot: Setup
+#DataSet : Hitch Angular Rates
+#Category: Hitch
+#FileID  : Plot_c3bccf1f-980c-453e-88fc-06b3fa4c8b2d
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

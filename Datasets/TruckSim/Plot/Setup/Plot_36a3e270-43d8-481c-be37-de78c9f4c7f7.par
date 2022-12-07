@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`PBS C3: Target Distances`PBS (Performance Based Standards)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS DistVeh, T_Event, This Vehicle
+PLOTCHANNELS DistLev1, T_Event, PBS Level 1
+PLOTCHANNELS DistLev2, T_Event, PBS Level 2
+PLOTCHANNELS DistLev3, T_Event, PBS Level 3
+PLOTCHANNELS DistLev4, T_Event, PBS Level 4
+
+#ENDMYellow
+
+YAXISLABEL Distance Travelled - m
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE PBS C3: Target Distances
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { PBS (Performance Based Standards) } PBS C3: Target Distances
+#Library : Plot: Setup
+#DataSet : PBS C3: Target Distances
+#Category: PBS (Performance Based Standards)
+#FileID  : Plot_36a3e270-43d8-481c-be37-de78c9f4c7f7
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

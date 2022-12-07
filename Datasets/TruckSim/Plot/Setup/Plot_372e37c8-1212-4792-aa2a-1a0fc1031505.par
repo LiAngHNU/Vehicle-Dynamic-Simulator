@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Cab Origin Height`Suspended Cab
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Zo_Cab, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Cab Origin Height
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspended Cab } Cab Origin Height
+#Library : Plot: Setup
+#DataSet : Cab Origin Height
+#Category: Suspended Cab
+#FileID  : Plot_372e37c8-1212-4792-aa2a-1a0fc1031505
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

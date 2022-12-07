@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Steer vs. Roll (Axle 1)`Suspension Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Steer_L1, Roll
+PLOTCHANNELS Steer_R1, Roll
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Steer vs. Roll (Axle 1)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Motion } Steer vs. Roll (Axle 1)
+#Library : Plot: Setup
+#DataSet : Steer vs. Roll (Axle 1)
+#Category: Suspension Motion
+#FileID  : Plot_05a8d2a5-83e6-4906-9a28-0f20d6429586
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`My vs. Kappa`Tire Tester
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS My_L1, Kappa_L1
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE My vs. Kappa
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester } My vs. Kappa
+#Library : Plot: Setup
+#DataSet : My vs. Kappa
+#Category: Tire Tester
+#FileID  : Plot_f1898cf5-0fc6-435c-b961-becd6e78b186
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

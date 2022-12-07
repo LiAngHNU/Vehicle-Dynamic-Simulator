@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Pitch_G (Pitch of Gravity)`User-Defined Variables
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Pitch_G, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Pitch_G (Pitch of Gravity)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { User-Defined Variables } Pitch_G (Pitch of Gravity)
+#Library : Plot: Setup
+#DataSet : Pitch_G (Pitch of Gravity)
+#Category: User-Defined Variables
+#FileID  : Plot_200e4e98-1b4d-4cb8-ae2a-8e55d23ef83b
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

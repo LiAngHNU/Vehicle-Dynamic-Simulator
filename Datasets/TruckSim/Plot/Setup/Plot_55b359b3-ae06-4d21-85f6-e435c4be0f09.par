@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Fuel Consumed`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Mfuel, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Fuel Consumed
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } Fuel Consumed
+#Library : Plot: Setup
+#DataSet : Fuel Consumed
+#Category: Powertrain
+#FileID  : Plot_55b359b3-ae06-4d21-85f6-e435c4be0f09
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

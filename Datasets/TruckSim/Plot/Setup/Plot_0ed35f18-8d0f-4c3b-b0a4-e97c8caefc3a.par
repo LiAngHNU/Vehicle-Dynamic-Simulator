@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Plot: Setup`Wheel Fz`* * * Vehicle Dynamic Simulator
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fz_L1i, Station
+PLOTCHANNELS Fz_R1i, Station
+PLOTCHANNELS Fz_L2o, Station
+PLOTCHANNELS Fz_L2i, Station
+PLOTCHANNELS Fz_R2o, Station
+PLOTCHANNELS Fz_R2i, Station
+PLOTCHANNELS Fz_L3o, Station
+PLOTCHANNELS Fz_L3i, Station
+PLOTCHANNELS Fz_R3o, Station
+PLOTCHANNELS Fz_R3i, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Wheel Fz
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * Vehicle Dynamic Simulator } Wheel Fz
+#Library : Plot: Setup
+#DataSet : Wheel Fz
+#Category: * * * Vehicle Dynamic Simulator
+#FileID  : Plot_0ed35f18-8d0f-4c3b-b0a4-e97c8caefc3a
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

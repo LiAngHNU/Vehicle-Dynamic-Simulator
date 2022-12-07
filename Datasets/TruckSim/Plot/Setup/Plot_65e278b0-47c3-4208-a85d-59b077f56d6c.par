@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Plot: Setup`Simple Counter`Misc.
+
+ADD_ENTITY Plot
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS counterResult, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Simple Counter
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Misc. } Simple Counter
+#Library : Plot: Setup
+#DataSet : Simple Counter
+#Category: Misc.
+#FileID  : Plot_65e278b0-47c3-4208-a85d-59b077f56d6c
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

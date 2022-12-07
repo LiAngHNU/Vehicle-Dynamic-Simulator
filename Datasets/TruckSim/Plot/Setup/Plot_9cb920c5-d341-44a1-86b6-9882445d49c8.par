@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Collision Imminent`ADAS Sensor Detections: Collision
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS ColImt, time, Collision Imminent Alert
+
+#ENDMYellow
+
+YAXISLABEL Collision Imminent Alert
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Collision Imminent
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections: Collision } Collision Imminent
+#Library : Plot: Setup
+#DataSet : Collision Imminent
+#Category: ADAS Sensor Detections: Collision
+#FileID  : Plot_9cb920c5-d341-44a1-86b6-9882445d49c8
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Fuel Rate`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Qfuel, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Fuel Rate
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } Fuel Rate
+#Library : Plot: Setup
+#DataSet : Fuel Rate
+#Category: Powertrain
+#FileID  : Plot_81ba5019-034e-415c-a251-aa19feea9266
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

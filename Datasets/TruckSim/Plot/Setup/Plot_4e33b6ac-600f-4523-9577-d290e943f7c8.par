@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Hitch: Pitch Angle Rate`Hitch
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS PitchR_H, Time
+PLOTCHANNELS PtchR_H2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Hitch: Pitch Angle Rate
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Hitch } Hitch: Pitch Angle Rate
+#Library : Plot: Setup
+#DataSet : Hitch: Pitch Angle Rate
+#Category: Hitch
+#FileID  : Plot_4e33b6ac-600f-4523-9577-d290e943f7c8
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

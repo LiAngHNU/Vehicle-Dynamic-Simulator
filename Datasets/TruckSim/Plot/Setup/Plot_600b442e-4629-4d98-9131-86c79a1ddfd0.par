@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Z Wheel Centers rel. to SM`Vehicle Motion
+
+ADD_ENTITY Plot
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Zrel_L1, Time
+PLOTCHANNELS Zrel_L2, Time
+PLOTCHANNELS Zrel_R1, Time
+PLOTCHANNELS Zrel_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Z Wheel Centers rel. to SM
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#Z-position of each wheel relative to the sprun mass
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Z Wheel Centers rel. to SM
+#Library : Plot: Setup
+#DataSet : Z Wheel Centers rel. to SM
+#Category: Vehicle Motion
+#FileID  : Plot_600b442e-4629-4d98-9131-86c79a1ddfd0
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

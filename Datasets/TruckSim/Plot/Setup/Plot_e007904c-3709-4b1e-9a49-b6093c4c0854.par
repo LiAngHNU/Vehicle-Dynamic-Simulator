@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Plot: Setup`Sensor Point Tracking (On Road)`Driver Sensor
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Y_Targ1, X_Targ1
+PLOTCHANNELS Y_Targ2, X_Targ2
+PLOTCHANNELS Y_Targ3, X_Targ3
+PLOTCHANNELS Y_Targ4, X_Targ4
+PLOTCHANNELS Y_Targ5, X_Targ5
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Sensor Point Tracking (On Road)
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#X_Targi and Y_Targi represent the global X and Y coordinates, respectively, of the driver preview points on the reference path.
+#
+#The output variables provide the global coordinates of the road reference line nearest to each preview point.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Driver Sensor } Sensor Point Tracking (On Road)
+#Library : Plot: Setup
+#DataSet : Sensor Point Tracking (On Road)
+#Category: Driver Sensor
+#FileID  : Plot_e007904c-3709-4b1e-9a49-b6093c4c0854
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

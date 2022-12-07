@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`Control Point Path`Rear Steer Control
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Y_S_Ref, X_S_Ref
+PLOTCHANNELS Yo, Xo
+PLOTCHANNELS Y_Design, X_Design
+PLOTCHANNELS Y_Target, X_Target
+PLOTCHANNELS Yo_2, Xo_2
+
+#ENDMYellow
+
+YAXISLABEL Global Y - m
+XAXISLABEL Global X - m
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Control Point Path
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Rear Steer Control } Control Point Path
+#Library : Plot: Setup
+#DataSet : Control Point Path
+#Category: Rear Steer Control
+#FileID  : Plot_fb90afad-3275-4e7e-a39f-f38030e40172
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Pitch Angle of Sprung Masses vs. t_stamp`Restoring to a Previous State
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Pitch, t_stamp
+PLOTCHANNELS Pitch_2, t_stamp
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Pitch Angle of Sprung Masses vs. t_stamp
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Restoring to a Previous State } Pitch Angle of Sprung Masses vs. t_stamp
+#Library : Plot: Setup
+#DataSet : Pitch Angle of Sprung Masses vs. t_stamp
+#Category: Restoring to a Previous State
+#FileID  : Plot_2be4447a-647e-4191-a0cb-38aecb22d39e
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

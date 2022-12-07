@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Plot: Setup`Understeer (USG Live)`ESC
+
+ADD_ENTITY Plot
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS USG_Live, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Understeer (USG Live)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ESC } Understeer (USG Live)
+#Library : Plot: Setup
+#DataSet : Understeer (USG Live)
+#Category: ESC
+#FileID  : Plot_95203716-bdbf-4c1c-a300-d42516291ace
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

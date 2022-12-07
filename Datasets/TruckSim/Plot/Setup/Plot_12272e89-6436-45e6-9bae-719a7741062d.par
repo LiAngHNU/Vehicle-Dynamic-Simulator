@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Random Numbers`Road Network Driving
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#BlueLink2 TruckSim Run Control`Tractor-Semi: 38m Roundabout` * TS 2016: Road Options` , example run`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS r_gen, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Random Numbers
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Road Network Driving } Random Numbers
+#Library : Plot: Setup
+#DataSet : Random Numbers
+#Category: Road Network Driving
+#FileID  : Plot_12272e89-6436-45e6-9bae-719a7741062d
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

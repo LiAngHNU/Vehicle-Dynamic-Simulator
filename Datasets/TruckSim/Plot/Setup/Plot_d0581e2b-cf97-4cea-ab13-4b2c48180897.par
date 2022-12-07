@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Plot: Setup`Road_ID_DM vs. Time`IDs: Driver Model, Paths, Roads
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+define_output RoadID = CURRENT_ROAD_ID
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS RoadID, Time
+PLOTCHANNELS RdID_L1, Time
+PLOTCHANNELS RdID_R1, Time
+PLOTCHANNELS RdID_L2, Time
+PLOTCHANNELS RdID_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Road_ID_DM vs. Time
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { IDs: Driver Model, Paths, Roads } Road_ID_DM vs. Time
+#Library : Plot: Setup
+#DataSet : Road_ID_DM vs. Time
+#Category: IDs: Driver Model, Paths, Roads
+#FileID  : Plot_d0581e2b-cf97-4cea-ab13-4b2c48180897
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

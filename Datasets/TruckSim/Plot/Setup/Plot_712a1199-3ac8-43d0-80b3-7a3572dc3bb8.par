@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Hitch Forces`Hitch
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fx_H, Time
+PLOTCHANNELS Fy_H, Time
+PLOTCHANNELS Fz_H, Time
+PLOTCHANNELS Fx_H2, Time
+PLOTCHANNELS Fy_H2, Time
+PLOTCHANNELS Fz_H2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Hitch Forces
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Hitch } Hitch Forces
+#Library : Plot: Setup
+#DataSet : Hitch Forces
+#Category: Hitch
+#FileID  : Plot_712a1199-3ac8-43d0-80b3-7a3572dc3bb8
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

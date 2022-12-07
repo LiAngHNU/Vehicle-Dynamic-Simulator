@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`Trajectories of Axle Centers (7A)`PBS (Performance Based Standards)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_ab0c31cf-0b7b-4d6d-a868-58a3014b3cc3.par
+#BlueLink0 Plot: Format`Fine Grid` ` , Plot format`PlotFmt_ab0c31cf-0b7b-4d6d-a868-58a3014b3cc3
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Y_A1, X_A1, Axle 1
+PLOTCHANNELS Y_A2, X_A2, Axle 2
+PLOTCHANNELS Y_A3, X_A3, Axle 3
+PLOTCHANNELS Y_A4, X_A4, Axle 4
+PLOTCHANNELS Y_A5, X_A5, Axle 5
+PLOTCHANNELS Y_A6, X_A6, Axle 6
+PLOTCHANNELS Y_A7, X_A7, Axle 7
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Trajectories of Axle Centers (7A)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { PBS (Performance Based Standards) } Trajectories of Axle Centers (7A)
+#Library : Plot: Setup
+#DataSet : Trajectories of Axle Centers (7A)
+#Category: PBS (Performance Based Standards)
+#FileID  : Plot_6d2b1be0-e929-4f7d-8d3b-3d6ac1009519
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

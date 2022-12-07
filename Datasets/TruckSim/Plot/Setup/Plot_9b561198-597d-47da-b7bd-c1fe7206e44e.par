@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Plot: Setup`AEB: AxCrit4`ADAS and AEB Alerts and Commands
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#BlueLink1 ` , Discontinued` , Discontinued` , Discontinued`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS NeedAEB4, Time
+PLOTCHANNELS ApplyAEB4, Time
+PLOTCHANNELS ObjCrit4, Time
+PLOTCHANNELS AxCrit4, Time
+PLOTCHANNELS DistCrit4, Time
+PLOTCHANNELS DistNear4, Time
+PLOTCHANNELS IDcrit4, Time
+PLOTCHANNELS ID_near4, Time
+
+#ENDMYellow
+
+YMAX 100
+YMIN -10
+
+#RingCtrl2 Manual
+YMaxmin Manual
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+YAXIS -10, 100
+
+PTITLE AEB: AxCrit4
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS and AEB Alerts and Commands } AEB: AxCrit4
+#Library : Plot: Setup
+#DataSet : AEB: AxCrit4
+#Category: ADAS and AEB Alerts and Commands
+#FileID  : Plot_9b561198-597d-47da-b7bd-c1fe7206e44e
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

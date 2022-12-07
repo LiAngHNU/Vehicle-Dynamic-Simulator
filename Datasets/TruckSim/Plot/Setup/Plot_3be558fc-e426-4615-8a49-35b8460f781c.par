@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Vertical Accel. of CG's vs. Time`Vehicle Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Az, Time
+PLOTCHANNELS Az_2, Time
+PLOTCHANNELS Az_3, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vertical Accel. of CG's vs. Time
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Vertical Accel. of CG's vs. Time
+#Library : Plot: Setup
+#DataSet : Vertical Accel. of CG's vs. Time
+#Category: Vehicle Motion
+#FileID  : Plot_3be558fc-e426-4615-8a49-35b8460f781c
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

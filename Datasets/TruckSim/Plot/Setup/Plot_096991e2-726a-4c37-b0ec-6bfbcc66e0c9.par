@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Plot: Setup`Torques in Hybrid Powertrain`Powertrain (Hybrid)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS M_Eng_In, Time
+PLOTCHANNELS M_Trans, Time
+PLOTCHANNELS M_Gnrtr, Time, Electric generator
+PLOTCHANNELS M_Motor, Time, Electric motor
+PLOTCHANNELS M_MotCmd, Time, Motor command
+PLOTCHANNELS M_D3f, Time
+PLOTCHANNELS M_D3r, Time
+PLOTCHANNELS M_Mtr_D1, Time
+PLOTCHANNELS M_MtC_D1, Time
+PLOTCHANNELS M_Mtr_D2, Time
+PLOTCHANNELS M_MtC_D2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Torques in Hybrid Powertrain
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain (Hybrid) } Torques in Hybrid Powertrain
+#Library : Plot: Setup
+#DataSet : Torques in Hybrid Powertrain
+#Category: Powertrain (Hybrid)
+#FileID  : Plot_096991e2-726a-4c37-b0ec-6bfbcc66e0c9
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

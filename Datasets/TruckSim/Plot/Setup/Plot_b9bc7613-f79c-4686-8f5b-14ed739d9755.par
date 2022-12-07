@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Go Flags for Sensor Lane Change`ADAS and AEB Alerts and Commands
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Go_Left, time
+PLOTCHANNELS Go_Right, time
+
+#ENDMYellow
+
+YAXISLABEL Command Signal
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Go Flags for Sensor Lane Change
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS and AEB Alerts and Commands } Go Flags for Sensor Lane Change
+#Library : Plot: Setup
+#DataSet : Go Flags for Sensor Lane Change
+#Category: ADAS and AEB Alerts and Commands
+#FileID  : Plot_b9bc7613-f79c-4686-8f5b-14ed739d9755
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

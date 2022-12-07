@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`FlashOut`ADAS Sensor Detections: Collision
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS FlashOut, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE FlashOut
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections: Collision } FlashOut
+#Library : Plot: Setup
+#DataSet : FlashOut
+#Category: ADAS Sensor Detections: Collision
+#FileID  : Plot_66e1edea-ceb3-4449-8502-dca3211609d6
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

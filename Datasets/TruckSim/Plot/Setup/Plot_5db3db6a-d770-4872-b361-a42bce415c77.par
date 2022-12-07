@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Vertical Forces (Axle 18)`Tire Forces: Multiple Vehicle Units
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fz_L18i, Time
+PLOTCHANNELS Fz_L18o, Time
+PLOTCHANNELS Fz_R18i, Time
+PLOTCHANNELS Fz_R18o, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vertical Forces (Axle 18)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Forces: Multiple Vehicle Units } Vertical Forces (Axle 18)
+#Library : Plot: Setup
+#DataSet : Vertical Forces (Axle 18)
+#Category: Tire Forces: Multiple Vehicle Units
+#FileID  : Plot_5db3db6a-d770-4872-b361-a42bce415c77
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

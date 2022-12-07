@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Fs (Axle 2)`Lift Axles
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS FS_L2, time
+PLOTCHANNELS FS_R2, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Fs (Axle 2)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Lift Axles } Fs (Axle 2)
+#Library : Plot: Setup
+#DataSet : Fs (Axle 2)
+#Category: Lift Axles
+#FileID  : Plot_40f0751f-421a-4812-8d43-1575e1d996e9
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

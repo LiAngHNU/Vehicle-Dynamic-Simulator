@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Plot: Setup`Wheel Kappa (3-Axle)`* * * Vehicle Dynamic Simulator
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Kappa_L1i, Station
+PLOTCHANNELS Kappa_R1i, Station
+PLOTCHANNELS Kappa_L2o, Station
+PLOTCHANNELS Kappa_L2i, Station
+PLOTCHANNELS Kappa_R2o, Station
+PLOTCHANNELS Kappa_R2i, Station
+PLOTCHANNELS Kappa_L3o, Station
+PLOTCHANNELS Kappa_L3i, Station
+PLOTCHANNELS Kappa_R3o, Station
+PLOTCHANNELS Kappa_R3i, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Wheel Kappa (3-Axle)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * Vehicle Dynamic Simulator } Wheel Kappa (3-Axle)
+#Library : Plot: Setup
+#DataSet : Wheel Kappa (3-Axle)
+#Category: * * * Vehicle Dynamic Simulator
+#FileID  : Plot_731b59a1-0b5e-4364-a3e3-57d3edbba81b
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

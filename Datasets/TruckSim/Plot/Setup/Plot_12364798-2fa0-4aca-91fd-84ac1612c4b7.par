@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Plot: Setup`Vy from Sensor on One Side`ADAS Sensor Detections, Symbol Stack
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Vy_S<<s>>_1, Time
+
+#ENDMYellow
+
+YAXISLABEL <<side>> Vy detection - km/h
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vy from Sensor on One Side
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#This dataset can be used multiple times to generate plots for blind spot sensors.
+#
+#Use Symbol Stack <<s>> to get the detection 1 (closest) for the current sensor.
+#
+#Need to check the box to not truncate allow the length of <<s>>.
+#
+#Use <<side>> for Y axis label.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections, Symbol Stack } Vy from Sensor on One Side
+#Library : Plot: Setup
+#DataSet : Vy from Sensor on One Side
+#Category: ADAS Sensor Detections, Symbol Stack
+#FileID  : Plot_12364798-2fa0-4aca-91fd-84ac1612c4b7
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Lateral Shift of CTC vs. Alpha`Tire Tester Derived Outputs
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS y_ctc_l1, alpha_l1
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Lateral Shift of CTC vs. Alpha
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Lateral Shift of CTC vs. Alpha
+#Library : Plot: Setup
+#DataSet : Lateral Shift of CTC vs. Alpha
+#Category: Tire Tester Derived Outputs
+#FileID  : Plot_a4e8dd1b-2cdc-4a24-a41a-31cbc9b4747a
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

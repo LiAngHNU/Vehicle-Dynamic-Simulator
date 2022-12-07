@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Plot: Setup`Speed_ID, Current Object`Pedestrians and Traffic Lights
+
+ADD_ENTITY Plot
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Speed_ID_<<o>>, S_Obj_<<o>>
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Speed_ID, Current Object
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Pedestrians and Traffic Lights } Speed_ID, Current Object
+#Library : Plot: Setup
+#DataSet : Speed_ID, Current Object
+#Category: Pedestrians and Traffic Lights
+#FileID  : Plot_dcc2fab0-cfd2-4818-be8f-f99e80ee9e86
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Plot: Setup`Ground Elevation (Axle 2)`Ground
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Zgnd_L2i, Time
+PLOTCHANNELS Zgnd_L2o, Time
+PLOTCHANNELS Zgnd_R2i, Time
+PLOTCHANNELS Zgnd_R2o, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Ground Elevation (Axle 2)
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#This is the global vertical coordinate of the gorund (road) at the center of tire contact for each tire.
+#
+#If the tire is off the ground, it is the Z coordinate of the point on the road nearest the tire.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Ground } Ground Elevation (Axle 2)
+#Library : Plot: Setup
+#DataSet : Ground Elevation (Axle 2)
+#Category: Ground
+#FileID  : Plot_7f47b4b0-9176-4bc0-b346-4a8f4b3c80d8
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

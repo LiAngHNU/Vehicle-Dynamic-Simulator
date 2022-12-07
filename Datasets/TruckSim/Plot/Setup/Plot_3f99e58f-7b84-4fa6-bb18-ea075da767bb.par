@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Traffic Accel v. Station (5 - 12)`ADAS Traffic Motion
+
+ADD_ENTITY Plot
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS A_Obj_5, S_Obj_5
+PLOTCHANNELS A_Obj_6, S_Obj_6
+PLOTCHANNELS A_Obj_7, S_Obj_7
+PLOTCHANNELS A_Obj_8, S_Obj_8
+PLOTCHANNELS A_Obj_9, S_Obj_9
+PLOTCHANNELS A_Obj_10, S_Obj_10
+PLOTCHANNELS A_Obj_11, S_Obj_11
+PLOTCHANNELS A_Obj_12, S_Obj_12
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Traffic Accel v. Station (5 - 12)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Traffic Motion } Traffic Accel v. Station (5 - 12)
+#Library : Plot: Setup
+#DataSet : Traffic Accel v. Station (5 - 12)
+#Category: ADAS Traffic Motion
+#FileID  : Plot_3f99e58f-7b84-4fa6-bb18-ea075da767bb
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

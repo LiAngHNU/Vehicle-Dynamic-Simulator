@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Tangent of Slip Angle vs. Alpha`Tire Tester Derived Outputs
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS slip_l1, alpha_l1
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Tangent of Slip Angle vs. Alpha
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Tangent of Slip Angle vs. Alpha
+#Library : Plot: Setup
+#DataSet : Tangent of Slip Angle vs. Alpha
+#Category: Tire Tester Derived Outputs
+#FileID  : Plot_4c5e2ef9-2584-4699-b5fe-e99ed6ebfc34
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

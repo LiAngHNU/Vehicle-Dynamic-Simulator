@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Roll vs. Lateral Accel.`Vehicle Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Roll, Ay
+PLOTCHANNELS Roll_2, Ay
+
+#ENDMYellow
+
+YAXISLABEL Roll Angle
+XAXISLABEL Lateral Acceleration
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Roll vs. Lateral Accel.
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Roll vs. Lateral Accel.
+#Library : Plot: Setup
+#DataSet : Roll vs. Lateral Accel.
+#Category: Vehicle Motion
+#FileID  : Plot_6c56dc2f-7305-48e8-96d3-4081fbab1e39
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

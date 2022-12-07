@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Plot: Setup`Magnitude: Sensor 1, Objects 1-15`ADAS Sensor Detections
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#BlueLink2 TruckSim Run Control`Roundabout (3D, 36 m), 3A Tractor + 1A Trailer` * TS 2016: Road Options` , example run`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS MagS1_1, Time
+PLOTCHANNELS MagS1_2, Time
+PLOTCHANNELS MagS1_3, Time
+PLOTCHANNELS MagS1_4, Time
+PLOTCHANNELS MagS1_5, Time
+PLOTCHANNELS MagS1_6, Time
+PLOTCHANNELS MagS1_7, Time
+PLOTCHANNELS MagS1_8, Time
+PLOTCHANNELS MagS1_9, Time
+PLOTCHANNELS MagS1_10, Time
+PLOTCHANNELS MagS1_11, Time
+PLOTCHANNELS MagS1_12, Time
+PLOTCHANNELS MagS1_13, Time
+PLOTCHANNELS MagS1_14, Time
+PLOTCHANNELS MagS1_15, Time
+
+#ENDMYellow
+
+YAXISLABEL Detection Magnitude
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Magnitude: Sensor 1, Objects 1-15
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections } Magnitude: Sensor 1, Objects 1-15
+#Library : Plot: Setup
+#DataSet : Magnitude: Sensor 1, Objects 1-15
+#Category: ADAS Sensor Detections
+#FileID  : Plot_7a4900c7-68a0-40d3-8796-6256354312c8
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

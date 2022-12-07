@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Plot: Setup`Locked Brake Status (Axle 1)`Braking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#BlueLink2 TruckSim Run Control`Tractor-Semi: 38m Roundabout` * TS 2016: Roundabout` , example run`
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+define_output LkStatL1 = SV_LK_WHL_L1; units = -; Wheel L1 lockup state
+define_output LkStatR1 = SV_LK_WHL_R1; units = -; Wheel R1 lockup state
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS LkStatL1, Time
+PLOTCHANNELS LkStatR1, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Locked Brake Status (Axle 1)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Braking } Locked Brake Status (Axle 1)
+#Library : Plot: Setup
+#DataSet : Locked Brake Status (Axle 1)
+#Category: Braking
+#FileID  : Plot_15fbaba8-9867-4fa9-a94f-057ce0c21f24
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

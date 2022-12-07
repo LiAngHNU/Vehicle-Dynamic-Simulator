@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Y vs. X Coord for Left Side Points`PBS (Performance Based Standards)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_ab0c31cf-0b7b-4d6d-a868-58a3014b3cc3.par
+#BlueLink0 Plot: Format`Fine Grid` ` , Plot format`PlotFmt_ab0c31cf-0b7b-4d6d-a868-58a3014b3cc3
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Y_S1, X_S1, Front of Unit 1
+PLOTCHANNELS Y_S5, X_S5, Rear of Unit 1
+PLOTCHANNELS Y_S11, X_S11, Front of Unit 2
+PLOTCHANNELS Y_S15, X_S15, Rear of Unit 2
+
+#ENDMYellow
+
+YAXISLABEL Global Y Coordinates, Left Side - m
+XAXISLABEL Global X Coordinates - m
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Y vs. X Coord for Left Side Points
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { PBS (Performance Based Standards) } Y vs. X Coord for Left Side Points
+#Library : Plot: Setup
+#DataSet : Y vs. X Coord for Left Side Points
+#Category: PBS (Performance Based Standards)
+#FileID  : Plot_69442d89-c056-4ea1-81dc-14728182414e
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

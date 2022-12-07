@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`AEB Booleans`ADAS and AEB Alerts and Commands
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Show_FCW, Time
+
+#ENDMYellow
+
+YAXISLABEL AEB Flags
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE AEB Booleans
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS and AEB Alerts and Commands } AEB Booleans
+#Library : Plot: Setup
+#DataSet : AEB Booleans
+#Category: ADAS and AEB Alerts and Commands
+#FileID  : Plot_778dd38b-4a22-4826-bb7f-8b79a095e1f9
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

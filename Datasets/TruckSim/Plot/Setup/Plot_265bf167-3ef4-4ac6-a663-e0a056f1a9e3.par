@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Outside Waypoint Limits`Hill Hold with Parking Brake
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS outside, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Outside Waypoint Limits
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Hill Hold with Parking Brake } Outside Waypoint Limits
+#Library : Plot: Setup
+#DataSet : Outside Waypoint Limits
+#Category: Hill Hold with Parking Brake
+#FileID  : Plot_265bf167-3ef4-4ac6-a663-e0a056f1a9e3
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

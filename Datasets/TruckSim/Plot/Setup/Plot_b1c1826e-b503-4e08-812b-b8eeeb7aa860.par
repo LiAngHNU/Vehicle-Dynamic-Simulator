@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Y Speed: Vy_S1_1`ADAS Sensor Detections
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Vy_S1_1, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Y Speed: Vy_S1_1
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections } Y Speed: Vy_S1_1
+#Library : Plot: Setup
+#DataSet : Y Speed: Vy_S1_1
+#Category: ADAS Sensor Detections
+#FileID  : Plot_b1c1826e-b503-4e08-812b-b8eeeb7aa860
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

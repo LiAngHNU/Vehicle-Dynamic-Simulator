@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Plot: Setup`Steer_DM (Opt_Driver_Action)`Steering
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Steer_DM, Time
+PLOTCHANNELS Steer_SW, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Steer_DM (Opt_Driver_Action)
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#When Opt_Driver_Action = 1, Steer_DM and Steer_SW will give the same results.
+#
+#When Opt_Driver_Action = 0, Steer_DM represents the calculated steering angle for the Closed-Loop Driver Model. However, this is not passed to the vehicle's steering system.
+#
+#In this case, Steer_SW will be zero for the duration of the simulation, or until Opt_Driver_Action is reset to 1 via an Event or other VS Command.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Steer_DM (Opt_Driver_Action)
+#Library : Plot: Setup
+#DataSet : Steer_DM (Opt_Driver_Action)
+#Category: Steering
+#FileID  : Plot_b1964997-a026-4755-9055-cda9b096224a
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

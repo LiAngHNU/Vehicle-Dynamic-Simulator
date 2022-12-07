@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Plot: Setup`Euro NCAP: AEB Booleans`ADAS and AEB Alerts and Commands
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Show_FCW, Time
+PLOTCHANNELS Contact, Time
+PLOTCHANNELS Crashed, Time
+
+#ENDMYellow
+
+YAXISLABEL AEB Flags
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Euro NCAP: AEB Booleans
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#These variables were added with VS Commands for the Euro NCAP AEB examples.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS and AEB Alerts and Commands } Euro NCAP: AEB Booleans
+#Library : Plot: Setup
+#DataSet : Euro NCAP: AEB Booleans
+#Category: ADAS and AEB Alerts and Commands
+#FileID  : Plot_8c9bbc88-a890-4baf-9791-b05739354da1
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

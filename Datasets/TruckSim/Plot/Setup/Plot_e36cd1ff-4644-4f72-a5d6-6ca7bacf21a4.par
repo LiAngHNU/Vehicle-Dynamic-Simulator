@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Lateral Forces (Axle 7, Dual Tires)`Tire Forces: Multiple Vehicle Units
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fy_L7i, Time
+PLOTCHANNELS Fy_R7i, Time
+PLOTCHANNELS Fy_L7o, Time
+PLOTCHANNELS Fy_R7o, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Lateral Forces (Axle 7, Dual Tires)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Forces: Multiple Vehicle Units } Lateral Forces (Axle 7, Dual Tires)
+#Library : Plot: Setup
+#DataSet : Lateral Forces (Axle 7, Dual Tires)
+#Category: Tire Forces: Multiple Vehicle Units
+#FileID  : Plot_e36cd1ff-4644-4f72-a5d6-6ca7bacf21a4
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

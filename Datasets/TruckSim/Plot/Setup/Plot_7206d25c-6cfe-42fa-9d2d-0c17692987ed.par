@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Path Curvature vs. Station`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS RhoPathY, Station
+PLOTCHANNELS RhoPathZ, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Path Curvature vs. Station
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Path Curvature vs. Station
+#Library : Plot: Setup
+#DataSet : Path Curvature vs. Station
+#Category: Tracking
+#FileID  : Plot_7206d25c-6cfe-42fa-9d2d-0c17692987ed
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

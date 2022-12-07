@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`Aerodynamic Moments`Aerodynamics and Wind
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Mx_Air, Time
+PLOTCHANNELS Mx_Air_2, Time
+PLOTCHANNELS My_Air, Time
+PLOTCHANNELS My_Air_2, Time
+PLOTCHANNELS Mz_Air, Time
+PLOTCHANNELS Mz_Air_2, Time
+
+#ENDMYellow
+
+YAXISLABEL Aerodynamic Moment -- N-m
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Aerodynamic Moments
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Aerodynamics and Wind } Aerodynamic Moments
+#Library : Plot: Setup
+#DataSet : Aerodynamic Moments
+#Category: Aerodynamics and Wind
+#FileID  : Plot_d682b82b-6026-4a0d-bf0b-e2e9cfe52493
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Fy vs. Fx`Tire Tester
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fy_L1, Fx_L1
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Fy vs. Fx
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester } Fy vs. Fx
+#Library : Plot: Setup
+#DataSet : Fy vs. Fx
+#Category: Tire Tester
+#FileID  : Plot_1b537f9d-b699-4e5d-a558-c6d988ac53f4
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

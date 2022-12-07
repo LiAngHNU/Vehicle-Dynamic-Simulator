@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Plot: Setup`Miles per gallon`Powertrain (Hybrid)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+DEFINE_VARIABLE station_in_mile;-; Station in mile
+EQ_DIFFERENTIAL station_in_mile = vx/1000/1.6
+define_output StationM = station_in_mile; -; Station in mile
+define_output mpg = IF_GT_0_THEN(Mfuel_g-0.001, StationM/Mfuel_g, 0); -; Miles per gallon
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS mpg, Time, Miles per gallon
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Miles per gallon
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain (Hybrid) } Miles per gallon
+#Library : Plot: Setup
+#DataSet : Miles per gallon
+#Category: Powertrain (Hybrid)
+#FileID  : Plot_033b13aa-a635-4ea4-a1b3-cebbfea1b76b
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

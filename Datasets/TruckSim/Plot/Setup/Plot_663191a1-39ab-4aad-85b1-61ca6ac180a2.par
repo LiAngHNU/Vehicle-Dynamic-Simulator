@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Jounce Stop Force`Suspension Forces and Moments
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS FJSt_L1, Time
+PLOTCHANNELS FJSt_R1, Time
+PLOTCHANNELS FJSt_L2, Time
+PLOTCHANNELS FJSt_R2, Time
+PLOTCHANNELS FJSt_L3, Time
+PLOTCHANNELS FJSt_R3, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Jounce Stop Force
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Forces and Moments } Jounce Stop Force
+#Library : Plot: Setup
+#DataSet : Jounce Stop Force
+#Category: Suspension Forces and Moments
+#FileID  : Plot_663191a1-39ab-4aad-85b1-61ca6ac180a2
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

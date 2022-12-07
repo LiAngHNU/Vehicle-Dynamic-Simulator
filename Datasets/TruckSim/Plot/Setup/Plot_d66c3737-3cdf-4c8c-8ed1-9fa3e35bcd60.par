@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Plot: Setup`Distance to Pedestrian`Pedestrians and Traffic Lights
+
+ADD_ENTITY Plot
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS distance_to_veh, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Distance to Pedestrian
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Pedestrians and Traffic Lights } Distance to Pedestrian
+#Library : Plot: Setup
+#DataSet : Distance to Pedestrian
+#Category: Pedestrians and Traffic Lights
+#FileID  : Plot_d66c3737-3cdf-4c8c-8ed1-9fa3e35bcd60
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

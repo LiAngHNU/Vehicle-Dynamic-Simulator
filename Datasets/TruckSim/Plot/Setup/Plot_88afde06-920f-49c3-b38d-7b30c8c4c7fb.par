@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Cab Mount Spring Force`Suspended Cab
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS FSMntLF, Time
+PLOTCHANNELS FSMntLR, Time
+PLOTCHANNELS FSMntRF, Time
+PLOTCHANNELS FSMntRR, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Cab Mount Spring Force
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspended Cab } Cab Mount Spring Force
+#Library : Plot: Setup
+#DataSet : Cab Mount Spring Force
+#Category: Suspended Cab
+#FileID  : Plot_88afde06-920f-49c3-b38d-7b30c8c4c7fb
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

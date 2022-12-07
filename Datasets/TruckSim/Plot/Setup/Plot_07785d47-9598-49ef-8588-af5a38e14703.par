@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Traffic Speed v. Station (5 - 12)`ADAS Traffic Motion
+
+ADD_ENTITY Plot
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS V_Obj_5, S_Obj_5
+PLOTCHANNELS V_Obj_6, S_Obj_6
+PLOTCHANNELS V_Obj_7, S_Obj_7
+PLOTCHANNELS V_Obj_8, S_Obj_8
+PLOTCHANNELS V_Obj_9, S_Obj_9
+PLOTCHANNELS V_Obj_10, S_Obj_10
+PLOTCHANNELS V_Obj_11, S_Obj_11
+PLOTCHANNELS V_Obj_12, S_Obj_12
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Traffic Speed v. Station (5 - 12)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Traffic Motion } Traffic Speed v. Station (5 - 12)
+#Library : Plot: Setup
+#DataSet : Traffic Speed v. Station (5 - 12)
+#Category: ADAS Traffic Motion
+#FileID  : Plot_07785d47-9598-49ef-8588-af5a38e14703
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,59 @@
+PARSFILE
+#FullDataName Plot: Setup`Ground Elevation vs. Station`Ground
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Zgnd_L1i, Station
+PLOTCHANNELS Zgnd_L1o, Station
+PLOTCHANNELS Zgnd_R1i, Station
+PLOTCHANNELS Zgnd_R1o, Station
+PLOTCHANNELS Zgnd_L2i, Station
+PLOTCHANNELS Zgnd_L2o, Station
+PLOTCHANNELS Zgnd_R2i, Station
+PLOTCHANNELS Zgnd_R2o, Station
+PLOTCHANNELS Zgnd_L3i, Station
+PLOTCHANNELS Zgnd_L3o, Station
+PLOTCHANNELS Zgnd_R3i, Station
+PLOTCHANNELS Zgnd_R3o, Station
+PLOTCHANNELS Zgnd_L4i, Station
+PLOTCHANNELS Zgnd_L4o, Station
+PLOTCHANNELS Zgnd_R4i, Station
+PLOTCHANNELS Zgnd_R4o, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Ground Elevation vs. Station
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#This is the global vertical coordinate of the gorund (road) at the center of tire contact for each tire.
+#
+#If the tire is off the ground, it is the Z coordinate of the point on the road nearest the tire.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Ground } Ground Elevation vs. Station
+#Library : Plot: Setup
+#DataSet : Ground Elevation vs. Station
+#Category: Ground
+#FileID  : Plot_28346536-17a7-43d1-9d01-abb1238a43f7
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

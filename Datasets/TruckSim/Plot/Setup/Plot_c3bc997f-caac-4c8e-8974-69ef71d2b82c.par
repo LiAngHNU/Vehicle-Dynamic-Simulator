@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Steer Torque`Steering
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS M_SW, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Steer Torque
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Steer Torque
+#Library : Plot: Setup
+#DataSet : Steer Torque
+#Category: Steering
+#FileID  : Plot_c3bc997f-caac-4c8e-8974-69ef71d2b82c
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

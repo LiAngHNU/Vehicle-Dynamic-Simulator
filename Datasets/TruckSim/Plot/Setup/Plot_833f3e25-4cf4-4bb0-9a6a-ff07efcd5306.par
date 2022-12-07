@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`Event Elapsed Time`Event Control
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS t_event, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Event Elapsed Time
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#T_EVENT is a timer that begins when the run begins. It can be reset to zero to track the time spent under the control of any event (or series of events).
+#
+#It is reset to to zero when any event is triggered that has the "Reset all control clocks" checkbox checked.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Event Control } Event Elapsed Time
+#Library : Plot: Setup
+#DataSet : Event Elapsed Time
+#Category: Event Control
+#FileID  : Plot_833f3e25-4cf4-4bb0-9a6a-ff07efcd5306
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

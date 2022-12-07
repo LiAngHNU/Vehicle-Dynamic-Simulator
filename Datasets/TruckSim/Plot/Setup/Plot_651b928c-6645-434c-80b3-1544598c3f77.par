@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Plot: Setup`Vehicle Trajectory`* * * Vehicle Dynamic Simulator
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 1    
+
+
+#MiscYellow0
+PLOTCHANNELS Yo, Xo
+PLOTCHANNELS Y_Design, X_Design
+
+#ENDMYellow
+
+ASPECTRATIO 1
+
+#RingCtrl8 1
+
+
+PTITLE Vehicle Trajectory
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * Vehicle Dynamic Simulator } Vehicle Trajectory
+#Library : Plot: Setup
+#DataSet : Vehicle Trajectory
+#Category: * * * Vehicle Dynamic Simulator
+#FileID  : Plot_651b928c-6645-434c-80b3-1544598c3f77
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

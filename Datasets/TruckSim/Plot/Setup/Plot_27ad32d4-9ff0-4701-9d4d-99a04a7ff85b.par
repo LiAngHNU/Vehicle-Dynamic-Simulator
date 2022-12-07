@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`Clutch: Control Input`Controls: Driver
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS ClutchTr, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Clutch: Control Input
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#The clutch control signal ranges from 0 to 1. 0 represents a fully engaged clutch, and 1 represents a fully disengaged clutch. The control signal is mapped to a table of clutch torque vs control, to provide the torque that can be transmitted by the clutch.
+#
+#The control signal can be produced by the internal shift logic that controls the throttle, clutch, and gear change, or it can be provided by open loop controls using a table, VS Commands, or other external methods.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Controls: Driver } Clutch: Control Input
+#Library : Plot: Setup
+#DataSet : Clutch: Control Input
+#Category: Controls: Driver
+#FileID  : Plot_27ad32d4-9ff0-4701-9d4d-99a04a7ff85b
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

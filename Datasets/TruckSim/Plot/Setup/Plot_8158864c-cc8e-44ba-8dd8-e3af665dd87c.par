@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Throttle: Control Input vs Station`Controls: Driver
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Throttle, station
+PLOTCHANNELS Thr_Eng, station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Throttle: Control Input vs Station
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Controls: Driver } Throttle: Control Input vs Station
+#Library : Plot: Setup
+#DataSet : Throttle: Control Input vs Station
+#Category: Controls: Driver
+#FileID  : Plot_8158864c-cc8e-44ba-8dd8-e3af665dd87c
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

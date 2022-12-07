@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`M/C & Line Pressures (Axles 1-2)`Braking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Pbk_Con, Time
+PLOTCHANNELS PbkL_L1, Time
+PLOTCHANNELS PbkL_R1, Time
+PLOTCHANNELS PbkL_L2, Time
+PLOTCHANNELS PbkL_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE M/C & Line Pressures (Axles 1-2)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Braking } M/C & Line Pressures (Axles 1-2)
+#Library : Plot: Setup
+#DataSet : M/C & Line Pressures (Axles 1-2)
+#Category: Braking
+#FileID  : Plot_173ec74a-6152-49e0-b603-9caf7f493926
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

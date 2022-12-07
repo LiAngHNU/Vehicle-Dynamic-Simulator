@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Pneumatic Trail vs. Kappa`Tire Tester Derived Outputs
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS trail_l1, kappa_l1
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Pneumatic Trail vs. Kappa
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Pneumatic Trail vs. Kappa
+#Library : Plot: Setup
+#DataSet : Pneumatic Trail vs. Kappa
+#Category: Tire Tester Derived Outputs
+#FileID  : Plot_f623aa24-4152-497e-adf1-894197938b37
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

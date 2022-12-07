@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Tire Compression`Tire Kinematics
+
+ADD_ENTITY Plot
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS CmpT_L1i, Time
+PLOTCHANNELS CmpT_L1o, Time
+PLOTCHANNELS CmpT_R1i, Time
+PLOTCHANNELS CmpT_R1o, Time
+PLOTCHANNELS CmpT_L2i, Time
+PLOTCHANNELS CmpT_L2o, Time
+PLOTCHANNELS CmpT_R2i, Time
+PLOTCHANNELS CmpT_R2o, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Tire Compression
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Kinematics } Tire Compression
+#Library : Plot: Setup
+#DataSet : Tire Compression
+#Category: Tire Kinematics
+#FileID  : Plot_7cb33731-132d-4bd3-90e2-d2ec3316a3cd
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

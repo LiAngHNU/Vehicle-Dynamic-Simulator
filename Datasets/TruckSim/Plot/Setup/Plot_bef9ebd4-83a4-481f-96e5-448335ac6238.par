@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Road Grade (Used to Adjust Gravity)`User-Defined Variables
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Grade_Rd, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Road Grade (Used to Adjust Gravity)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { User-Defined Variables } Road Grade (Used to Adjust Gravity)
+#Library : Plot: Setup
+#DataSet : Road Grade (Used to Adjust Gravity)
+#Category: User-Defined Variables
+#FileID  : Plot_bef9ebd4-83a4-481f-96e5-448335ac6238
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

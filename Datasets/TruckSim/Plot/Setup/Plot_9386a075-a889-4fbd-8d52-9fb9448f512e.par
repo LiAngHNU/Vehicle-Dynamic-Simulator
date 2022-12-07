@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Ext. Springs: EQ_IN, EQ_DYN, EQ_OUT`User-Defined Variables
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS eq_in_IMP_FS_L1, Time
+PLOTCHANNELS eq_dyn_IMP_FS_L1, Time
+PLOTCHANNELS eq_out_IMP_FS_L1, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Ext. Springs: EQ_IN, EQ_DYN, EQ_OUT
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { User-Defined Variables } Ext. Springs: EQ_IN, EQ_DYN, EQ_OUT
+#Library : Plot: Setup
+#DataSet : Ext. Springs: EQ_IN, EQ_DYN, EQ_OUT
+#Category: User-Defined Variables
+#FileID  : Plot_9386a075-a889-4fbd-8d52-9fb9448f512e
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

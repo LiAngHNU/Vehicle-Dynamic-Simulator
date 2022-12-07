@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Cab Pitch`Suspended Cab
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS PitchCab, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Cab Pitch
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspended Cab } Cab Pitch
+#Library : Plot: Setup
+#DataSet : Cab Pitch
+#Category: Suspended Cab
+#FileID  : Plot_2053f0b1-5ce2-475f-9498-a8ec278ee79f
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

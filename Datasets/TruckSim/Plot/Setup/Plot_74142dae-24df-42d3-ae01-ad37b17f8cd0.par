@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Plot: Setup`Error Area to Design Path`Driver Sensor
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS A_DRV_1, time
+PLOTCHANNELS A_DRV_2, time
+PLOTCHANNELS A_DRV_3, time
+PLOTCHANNELS A_DRV_4, time
+PLOTCHANNELS A_DRV_5, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Error Area to Design Path
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#A_Drv_i represents the area between the preview points and the target path.
+#
+#The preview points are located on the ISO/SAE intermediate X axis. This is a horizontal projection of the vehicle X axis, without the effect of sprung mass pitch angle.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Driver Sensor } Error Area to Design Path
+#Library : Plot: Setup
+#DataSet : Error Area to Design Path
+#Category: Driver Sensor
+#FileID  : Plot_74142dae-24df-42d3-ae01-ad37b17f8cd0
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

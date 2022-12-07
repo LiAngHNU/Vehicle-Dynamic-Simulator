@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Steering Wheel Angle vs. Station`Steering
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Steer_SW, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Steering Wheel Angle vs. Station
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Steering Wheel Angle vs. Station
+#Library : Plot: Setup
+#DataSet : Steering Wheel Angle vs. Station
+#Category: Steering
+#FileID  : Plot_f3a092b2-bb19-4758-b72a-a5ec9414f452
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`ID and Message of Closest Object`ADAS Sensor Target Properties
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS MsgS<<s>>_1, time
+PLOTCHANNELS ID_S<<s>>_1, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE ID and Message of Closest Object
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Target Properties } ID and Message of Closest Object
+#Library : Plot: Setup
+#DataSet : ID and Message of Closest Object
+#Category: ADAS Sensor Target Properties
+#FileID  : Plot_6df5d376-4900-4c6a-9701-4833722153eb
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

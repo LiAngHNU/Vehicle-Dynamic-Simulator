@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Lateral Forces`Tire Forces
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fy_L1, Time
+PLOTCHANNELS Fy_R1, Time
+PLOTCHANNELS Fy_L2, Time
+PLOTCHANNELS Fy_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Lateral Forces
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Forces } Lateral Forces
+#Library : Plot: Setup
+#DataSet : Lateral Forces
+#Category: Tire Forces
+#FileID  : Plot_509ee5ee-5e2f-40a1-8161-c0e072452892
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

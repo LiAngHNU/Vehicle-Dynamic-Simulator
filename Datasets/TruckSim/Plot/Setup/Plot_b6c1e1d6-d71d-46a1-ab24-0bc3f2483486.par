@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`AVy -- Wheel Spin (Axle 1)`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS AVy_L1, Time
+PLOTCHANNELS AVy_R1, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE AVy -- Wheel Spin (Axle 1)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } AVy -- Wheel Spin (Axle 1)
+#Library : Plot: Setup
+#DataSet : AVy -- Wheel Spin (Axle 1)
+#Category: Powertrain
+#FileID  : Plot_b6c1e1d6-d71d-46a1-ab24-0bc3f2483486
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

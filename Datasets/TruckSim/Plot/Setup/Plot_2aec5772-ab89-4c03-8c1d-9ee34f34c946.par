@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`ABS Apply Command`Braking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS ABS_L1, Time
+PLOTCHANNELS ABS_R1, Time
+PLOTCHANNELS ABS_L2, Time
+PLOTCHANNELS ABS_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE ABS Apply Command
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Braking } ABS Apply Command
+#Library : Plot: Setup
+#DataSet : ABS Apply Command
+#Category: Braking
+#FileID  : Plot_2aec5772-ab89-4c03-8c1d-9ee34f34c946
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Station vs. Time`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Station, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Station vs. Time
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Station vs. Time
+#Library : Plot: Setup
+#DataSet : Station vs. Time
+#Category: Tracking
+#FileID  : Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

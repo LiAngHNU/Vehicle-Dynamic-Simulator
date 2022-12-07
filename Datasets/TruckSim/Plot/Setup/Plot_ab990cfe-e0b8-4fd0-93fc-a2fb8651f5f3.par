@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Plot: Setup`Ignition Switch Information`Controls: Powertrain, VS Commands
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#BlueLink1 ` , Discontinued` , Discontinued` , Discontinued`
+
+#BlueLink2 TruckSim Run Control`Outrigger for Roll Stability Testing` Extended Models` , example run`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS keyask, time
+PLOTCHANNELS keypos, time
+PLOTCHANNELS ign, time
+PLOTCHANNELS warn, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Ignition Switch Information
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Controls: Powertrain, VS Commands } Ignition Switch Information
+#Library : Plot: Setup
+#DataSet : Ignition Switch Information
+#Category: Controls: Powertrain, VS Commands
+#FileID  : Plot_ab990cfe-e0b8-4fd0-93fc-a2fb8651f5f3
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

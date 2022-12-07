@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`Event Count`Event Control
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Event, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Event Count
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#This variable counts each event as it is triggered. The first event linked to a procedure is counted as zero (it has no trigger).
+#
+#You can also examine the timing of events by looking at the log file, available from the View button on the Runs screen.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Event Control } Event Count
+#Library : Plot: Setup
+#DataSet : Event Count
+#Category: Event Control
+#FileID  : Plot_26dc2eb1-dd9b-4776-8f9f-09208d63924a
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

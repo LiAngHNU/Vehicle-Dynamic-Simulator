@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Vx -- Longitudinal Speed vs. t_stamp`Restoring to a Previous State
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Vx, t_stamp
+PLOTCHANNELS VxTarget, t_stamp
+PLOTCHANNELS Vx_2, t_stamp
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vx -- Longitudinal Speed vs. t_stamp
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Restoring to a Previous State } Vx -- Longitudinal Speed vs. t_stamp
+#Library : Plot: Setup
+#DataSet : Vx -- Longitudinal Speed vs. t_stamp
+#Category: Restoring to a Previous State
+#FileID  : Plot_b06ed09a-e1b6-43c7-be8e-d4fb9b3f9269
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

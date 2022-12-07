@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Vertical Forces (Axles 3 - 5)`Tire Forces
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fz_L3i, Time
+PLOTCHANNELS Fz_R3i, Time
+PLOTCHANNELS Fz_L4i, Time
+PLOTCHANNELS Fz_R4i, Time
+PLOTCHANNELS Fz_L5i, Time
+PLOTCHANNELS Fz_R5i, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vertical Forces (Axles 3 - 5)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Forces } Vertical Forces (Axles 3 - 5)
+#Library : Plot: Setup
+#DataSet : Vertical Forces (Axles 3 - 5)
+#Category: Tire Forces
+#FileID  : Plot_9bae2746-cc78-49a3-a1ff-85cfb6480e51
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

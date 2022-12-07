@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`Brake Pressures`* * * Vehicle Dynamic Simulator
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Pbk_Con, Station
+PLOTCHANNELS PbkCh_L1, Station
+PLOTCHANNELS PbkCh_R1, Station
+PLOTCHANNELS PbkCh_L2, Station
+PLOTCHANNELS PbkCh_R2, Station
+PLOTCHANNELS PbkCh_L3, Station
+PLOTCHANNELS PbkCh_R3, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Brake Pressures
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * Vehicle Dynamic Simulator } Brake Pressures
+#Library : Plot: Setup
+#DataSet : Brake Pressures
+#Category: * * * Vehicle Dynamic Simulator
+#FileID  : Plot_a7094586-c37d-41ab-b166-d023e36eaf75
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

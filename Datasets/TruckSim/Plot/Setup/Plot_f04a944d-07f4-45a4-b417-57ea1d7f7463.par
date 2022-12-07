@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Hybrid powertrain mode`Powertrain (Hybrid)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS ModeHybr, Time, Hybrid mode
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Hybrid powertrain mode
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain (Hybrid) } Hybrid powertrain mode
+#Library : Plot: Setup
+#DataSet : Hybrid powertrain mode
+#Category: Powertrain (Hybrid)
+#FileID  : Plot_f04a944d-07f4-45a4-b417-57ea1d7f7463
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

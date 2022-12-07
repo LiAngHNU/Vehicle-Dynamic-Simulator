@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Plot: Setup`Damping Force`Suspension Forces and Moments
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fd_L1, Time
+PLOTCHANNELS Fd_R1, Time
+PLOTCHANNELS Fd_L2, Time
+PLOTCHANNELS Fd_R2, Time
+PLOTCHANNELS Fd_L3, Time
+PLOTCHANNELS Fd_R3, Time
+PLOTCHANNELS Fd_L4, Time
+PLOTCHANNELS Fd_R4, Time
+PLOTCHANNELS Fd_L5, Time
+PLOTCHANNELS Fd_R5, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Damping Force
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Forces and Moments } Damping Force
+#Library : Plot: Setup
+#DataSet : Damping Force
+#Category: Suspension Forces and Moments
+#FileID  : Plot_611d5c3a-96d6-4ce1-9480-2884389661ab
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Z Coord: Wheel Centers`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Z_L1, Time
+PLOTCHANNELS Z_R1, Time
+PLOTCHANNELS Z_L2, Time
+PLOTCHANNELS Z_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Z Coord: Wheel Centers
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Z Coord: Wheel Centers
+#Library : Plot: Setup
+#DataSet : Z Coord: Wheel Centers
+#Category: Tracking
+#FileID  : Plot_bfb1e34d-5e8e-4868-89e9-fb4702f0acaa
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

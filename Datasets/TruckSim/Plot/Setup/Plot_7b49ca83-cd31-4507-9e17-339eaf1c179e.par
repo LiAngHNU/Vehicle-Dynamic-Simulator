@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Plot: Setup`Bearing Angle: S1, S2 (2 Objects)`ADAS Sensor Detections
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS BrCS1_1, Time
+PLOTCHANNELS BrLS1_1, Time
+PLOTCHANNELS BrRS1_1, Time
+PLOTCHANNELS BrCS1_2, Time
+PLOTCHANNELS BrLS1_2, Time
+PLOTCHANNELS BrRS1_2, Time
+PLOTCHANNELS BrCS2_1, Time
+PLOTCHANNELS BrLS2_1, Time
+PLOTCHANNELS BrRS2_1, Time
+PLOTCHANNELS BrCS2_2, Time
+PLOTCHANNELS BrLS2_2, Time
+PLOTCHANNELS BrRS2_2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Bearing Angle: S1, S2 (2 Objects)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections } Bearing Angle: S1, S2 (2 Objects)
+#Library : Plot: Setup
+#DataSet : Bearing Angle: S1, S2 (2 Objects)
+#Category: ADAS Sensor Detections
+#FileID  : Plot_7b49ca83-cd31-4507-9e17-339eaf1c179e
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

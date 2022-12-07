@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Steering (Front, Relative) vs. Lat Accel`Steering
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS StrF_Rel, Ay
+
+#ENDMYellow
+
+YAXISLABEL Ave. Front Wheel Steer Relative to Ackermann - deg
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Steering (Front, Relative) vs. Lat Accel
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Steering (Front, Relative) vs. Lat Accel
+#Library : Plot: Setup
+#DataSet : Steering (Front, Relative) vs. Lat Accel
+#Category: Steering
+#FileID  : Plot_a17179e9-2f52-4554-8867-6dc51bc954bf
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

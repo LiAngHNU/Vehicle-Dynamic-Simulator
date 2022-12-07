@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Plot: Setup`Spring Forces, 4-Axle Lead Unit`Suspension Forces and Moments
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fs_L1, Time
+PLOTCHANNELS Fs_R1, Time
+PLOTCHANNELS Fs_L2, Time
+PLOTCHANNELS Fs_R2, Time
+PLOTCHANNELS Fs_L3, Time
+PLOTCHANNELS Fs_R3, Time
+PLOTCHANNELS Fs_L4, Time
+PLOTCHANNELS Fs_R4, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Spring Forces, 4-Axle Lead Unit
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Forces and Moments } Spring Forces, 4-Axle Lead Unit
+#Library : Plot: Setup
+#DataSet : Spring Forces, 4-Axle Lead Unit
+#Category: Suspension Forces and Moments
+#FileID  : Plot_497ec0cb-9158-4aba-bb62-0ce225dbcd3e
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

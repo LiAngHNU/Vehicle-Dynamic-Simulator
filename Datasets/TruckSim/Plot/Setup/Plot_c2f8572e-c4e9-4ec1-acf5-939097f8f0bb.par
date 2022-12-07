@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`C9: Tail Swing, Left Turn`PBS (Performance Based Standards)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_ab0c31cf-0b7b-4d6d-a868-58a3014b3cc3.par
+#BlueLink0 Plot: Format`Fine Grid` ` , Plot format`PlotFmt_ab0c31cf-0b7b-4d6d-a868-58a3014b3cc3
+
+#CheckBox1 1    
+
+
+#MiscYellow0
+PLOTCHANNELS Y_Ref, X_Ref, Tire Sidewall
+PLOTCHANNELS Y_s10, X_s10, Unit 1
+PLOTCHANNELS Y_s20, X_s20, Unit 2
+
+#ENDMYellow
+
+ASPECTRATIO 1
+YAXISLABEL Global Y Coordinate - m
+XAXISLABEL Global X Coordinate - m
+
+#RingCtrl8 1
+
+
+PTITLE C9: Tail Swing, Left Turn
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { PBS (Performance Based Standards) } C9: Tail Swing, Left Turn
+#Library : Plot: Setup
+#DataSet : C9: Tail Swing, Left Turn
+#Category: PBS (Performance Based Standards)
+#FileID  : Plot_c2f8572e-c4e9-4ec1-acf5-939097f8f0bb
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

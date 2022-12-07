@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Sensor Yaw Rate (5 Sensors)`Position, Accel. and Rate Sensors
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS AVz_S1, Time
+PLOTCHANNELS AVz_S2, Time
+PLOTCHANNELS AVz_S3, Time
+PLOTCHANNELS AVz_S4, Time
+PLOTCHANNELS AVz_S5, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Sensor Yaw Rate (5 Sensors)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Position, Accel. and Rate Sensors } Sensor Yaw Rate (5 Sensors)
+#Library : Plot: Setup
+#DataSet : Sensor Yaw Rate (5 Sensors)
+#Category: Position, Accel. and Rate Sensors
+#FileID  : Plot_b5924001-474d-4923-809e-0321802b6547
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

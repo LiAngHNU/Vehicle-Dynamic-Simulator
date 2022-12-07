@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Plot: Setup`Position Sensors Tracking, Unit 1`Position, Accel. and Rate Sensors
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_0ad33551-a968-4b78-b662-5c083cc08b21
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Y_RP1, X_RP1
+PLOTCHANNELS Y_RP10, X_RP10
+PLOTCHANNELS Y_RP2, X_RP2
+PLOTCHANNELS Y_RP3, X_RP3
+PLOTCHANNELS Y_RP4, X_RP4
+PLOTCHANNELS Y_RP5, X_RP5
+PLOTCHANNELS Y_RP6, X_RP6
+PLOTCHANNELS Y_RP7, X_RP7
+PLOTCHANNELS Y_RP8, X_RP8
+PLOTCHANNELS Y_RP9, X_RP9
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Position Sensors Tracking, Unit 1
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Position, Accel. and Rate Sensors } Position Sensors Tracking, Unit 1
+#Library : Plot: Setup
+#DataSet : Position Sensors Tracking, Unit 1
+#Category: Position, Accel. and Rate Sensors
+#FileID  : Plot_9c353e25-e74e-4782-886d-496503bf320b
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END
