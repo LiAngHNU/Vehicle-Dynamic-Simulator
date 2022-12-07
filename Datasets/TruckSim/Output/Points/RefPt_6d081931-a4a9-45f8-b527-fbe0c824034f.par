@@ -1,0 +1,99 @@
+PARSFILE
+#FullDataName Custom Forces and Reference Points`Trailer Outrigger Points`Outrigger Points
+#RingCtrl0 2
+#RingCtrl2 3
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 1
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 1
+*BODY_ID_1 2
+*X_RP1 -5500
+*Y_RP1 2500
+*Z_RP1 600
+*BODY_ID_2 2
+*X_RP2 -5500
+*Y_RP2 -2500
+*Z_RP2 600
+*BODY_ID_3 2
+*X_RP3 -5500
+*Y_RP3 0
+*Z_RP3 600
+
+IREF_PT = 1
+DEFINE_REFERENCE_POINTS 3 + IREF_PT -1 -NREF_PT
+
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 1
+OPT_RP_BODY_ID 2
+X_RP -5500
+Y_RP 2500
+Z_RP 600
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 1: Trailer Outrigger Points
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 1
+OPT_RP_BODY_ID 2
+X_RP -5500
+Y_RP -2500
+Z_RP 600
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 2: Trailer Outrigger Points
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 1
+OPT_RP_BODY_ID 2
+X_RP -5500
+Y_RP 0
+Z_RP 600
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 3: Trailer Outrigger Points
+
+#MiscYellow0
+define_units N/mm 0.001
+
+define_variable K_RIG 1000; units = N/mm
+
+eq_out IMP_FZ_RP_1 = max((0.09 - Z_RP1) * K_RIG, 0);
+eq_out IMP_FZ_RP_2 = max((0.09 - Z_RP2) * K_RIG, 0);
+
+
+IMP_FZ_RP_1 vs_replace 0;
+IMP_FZ_RP_2 vs_replace 0;
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_d8e23465-0fa8-4913-aa4e-c04c0b2b146d.par
+#BlueLink0 Plot: Setup`Height Sensors Tracking, Unit 2` Position, Accel. and Rate Sensors` , Plot`Plot_d8e23465-0fa8-4913-aa4e-c04c0b2b146d
+
+PARSFILE Plot\Setup\Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8.par
+#BlueLink1 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8
+
+PARSFILE Animator\Groups\Group_b03656e3-fe06-4cb6-8f4d-3f86bba171eb.par
+#BlueLink8 Animator: Group`Outrigger Shapes for Trailer` Outrigger` , Miscellaneous`Group_b03656e3-fe06-4cb6-8f4d-3f86bba171eb
+
+
+#EMBEDDED_NOTES
+#Trailer Outrigger Reference Points
+#
+#Reference Points 1 and 2 are defined at the end of the outriggers. Vertical forces are reacted at these locations to simulate the outrigger wheels touching the ground.
+#
+#1 = Trailer Outrigger, left end
+#2 = Trailer Outrigger, right end
+#3 = Center of outrigger shape
+#
+#The vertical force is defined with a linear spring, whose stiffness has units of N/mm. Those units are not built into the vehicle models, so they are defined with the VS command DEFINE_UNITS.
+#
+#NOTE for TruckSim 9: the Z coordinates of the three contact points were changed from -500 to +600 due to a bug fix involving Z coordinates of reference points. See the Release Note: Version 9 Backward Compatibility: Reference Points and Motion Sensors.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Custom Forces and Reference Points; { Outrigger Points } Trailer Outrigger Points
+#Library : Custom Forces and Reference Points
+#DataSet : Trailer Outrigger Points
+#Category: Outrigger Points
+#FileID  : RefPt_6d081931-a4a9-45f8-b527-fbe0c824034f
+#Product : TruckSim 2020.1
+#VehCode Custom Forces
+
+END

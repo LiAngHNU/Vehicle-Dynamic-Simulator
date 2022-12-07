@@ -1,0 +1,93 @@
+PARSFILE
+#FullDataName Custom Forces and Reference Points`Cab RP at Cab CG and Mounts`
+#RingCtrl0 0
+#RingCtrl2 5
+#RingCtrl3 1
+#RingCtrl4 5
+#RingCtrl5 0
+#RingCtrl6 5
+#RingCtrl7 0
+#RingCtrl8 5
+#RingCtrl9 0
+#RingCtrl10 5
+#RingCtrl11 0
+#RingCtrl12 5
+#RingCtrl13 0
+*X_RP1 -LX_CG_CAB
+*Y_RP1 Y_CG_CAB
+*Z_RP1 H_CG_CAB
+*X_RP2 -LX_MOUNTS_F
+*Y_RP2 LY_MOUNTS_F / 2.0
+*Z_RP2 H_MOUNTS_F
+*X_RP3 -LX_MOUNTS_F
+*Y_RP3 -LY_MOUNTS_F / 2.0
+*Z_RP3 H_MOUNTS_F
+*X_RP4 -LX_MOUNTS_R
+*Y_RP4 LY_MOUNTS_R / 2.0
+*Z_RP4 H_MOUNTS_R
+*X_RP5 -LX_MOUNTS_R
+*Y_RP5 -LY_MOUNTS_R / 2.0
+*Z_RP5 H_MOUNTS_R
+
+IREF_PT = 1
+DEFINE_REFERENCE_POINTS 5 + IREF_PT -1 -NREF_PT
+
+OPT_RP_BODY_TYPE 5
+OPT_RP_FORCE_N 0
+X_RP -LX_CG_CAB
+Y_RP Y_CG_CAB
+Z_RP H_CG_CAB
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 1: Cab RP at Cab CG and Mounts
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 5
+OPT_RP_FORCE_N 0
+X_RP -LX_MOUNTS_F
+Y_RP LY_MOUNTS_F / 2.0
+Z_RP H_MOUNTS_F
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 2: Cab RP at Cab CG and Mounts
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 5
+OPT_RP_FORCE_N 0
+X_RP -LX_MOUNTS_F
+Y_RP -LY_MOUNTS_F / 2.0
+Z_RP H_MOUNTS_F
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 3: Cab RP at Cab CG and Mounts
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 5
+OPT_RP_FORCE_N 0
+X_RP -LX_MOUNTS_R
+Y_RP LY_MOUNTS_R / 2.0
+Z_RP H_MOUNTS_R
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 4: Cab RP at Cab CG and Mounts
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 5
+OPT_RP_FORCE_N 0
+X_RP -LX_MOUNTS_R
+Y_RP -LY_MOUNTS_R / 2.0
+Z_RP H_MOUNTS_R
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 5: Cab RP at Cab CG and Mounts
+
+
+#EMBEDDED_NOTES
+#This dataset is used to add reference points at the locations of the mounts on the suspended cab.
+#
+#The output variables for the reference points are used to animate force arrows for the cab mounting springs at the locations of the mounts.
+#
+#Instead of entering numbers corresponding to the locations of the mounts on the cab, the parameter names for the X, Y, and Z coordinates are entered.
+#
+#This means this dataset will work with any suspended cab, and you don't have to create a new one for each cab.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Custom Forces and Reference Points; Cab RP at Cab CG and Mounts
+#Library : Custom Forces and Reference Points
+#DataSet : Cab RP at Cab CG and Mounts
+#Category: 
+#FileID  : RefPt_d706b97b-b06b-4ce0-a432-6c67c9484b8a
+#Product : TruckSim 2020.1
+#VehCode Custom Forces
+
+END

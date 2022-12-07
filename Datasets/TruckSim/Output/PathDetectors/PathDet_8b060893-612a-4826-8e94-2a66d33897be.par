@@ -1,0 +1,53 @@
+PARSFILE
+#FullDataName Path Detectors for External Driver Control`Driver Model Path Detection`
+#RingCtrl0 1
+INSTALL_PATH_DETECTOR 1
+
+IDETECTOR 1
+symbol_push  <<detector>> 1
+X_DETECTOR_SM(1) 0
+Y_DETECTOR_SM(1) 0
+#CheckBox0 0    
+OPT_PATH_PD(1) 1
+L_PVW_PD(1) 20
+PATH_ID_PD(1) path_id_dm
+PARSFILE Sensors_Traffic\Traffic\TMotion_3fd092ea-969f-4644-97b7-c2ce3007928d.par
+#BlueLink5 Multiple Moving Objects`Detected Path Visual` Path Detections` , multiple moving objects`TMotion_3fd092ea-969f-4644-97b7-c2ce3007928d
+
+#MiscYellow0
+LTARG_ID_PD = LTARG_ID_DM
+#ENDMYellow
+
+PARSFILE Generic\Links\GenLink_f8e10b0f-dbcb-4959-b4ce-d7121f850795.par
+#BlueLink16 Generic Group of Links`Path Detector Plots` Path Detection` , Miscellaneous`GenLink_f8e10b0f-dbcb-4959-b4ce-d7121f850795
+
+
+#EMBEDDED_NOTES
+#This dataset and its children
+#(a) install the path detection feature
+#(b) set its path and ltarg IDs to match that seen by the driver model
+#(c) create moving objects to represent the detected path, and
+#(d) plot the available path detector outputs.
+#
+#The path detector coordinate system has a user specifiable origin. The path detector axis directions are those of the intermediate axis system.
+#
+#The path detector fits an approximate clothoid, whose coordinates in the path detector coordinate system are given by
+#
+#y = CurvRatePd/6*x^3+CurvPd/2*x^2+YoffsetPd
+#
+#The curve fit is based on the target points, but does not necessarily interpolate them exactly.
+#
+#As this is a clothoidal approximation, curvature at other points is calculated in the path detector coordinate system by
+#
+#curvature(x) = CurvRatePd*x + CurvPd
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Path Detectors for External Driver Control; Driver Model Path Detection
+#Library : Path Detectors for External Driver Control
+#DataSet : Driver Model Path Detection
+#Category: 
+#FileID  : PathDet_8b060893-612a-4826-8e94-2a66d33897be
+#Product : TruckSim 2020.1
+#VehCode Path Detectors
+
+END

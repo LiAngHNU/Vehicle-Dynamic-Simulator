@@ -1,0 +1,148 @@
+PARSFILE
+#FullDataName Positions, Velocities, and Accelerations`2A, SM CG and Wheel Center Heights`Sprung Mass and Suspended Cab
+#RingCtrl0 6
+#RingCtrl2 5
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 4
+#RingCtrl6 1
+#RingCtrl7 4
+#RingCtrl8 1
+#RingCtrl9 4
+#RingCtrl10 1
+#RingCtrl11 4
+#RingCtrl12 1
+#RingCtrl13 4
+*BODY_ID_1 1
+*X_S1 - LX_CG_SU
+*Y_S1 Y_CG_SU
+*Z_S1 H_CG_SU
+*A_ROLL_S1 0
+*A_PITCH_S1 0
+*A_YAW_S1 0
+*BODY_ID_2 1
+*X_S2 - LX_AXLE(1)
+*Y_S2 L_TRACK(1)/2
+*Z_S2 H_WC(1,1)
+*A_ROLL_S2 0
+*A_PITCH_S2 0
+*A_YAW_S2 0
+*BODY_ID_3 1
+*X_S3 - LX_AXLE(1)
+*Y_S3 - L_TRACK(1)/2
+*Z_S3 H_WC(1,2)
+*A_ROLL_S3 0
+*A_PITCH_S3 0
+*A_YAW_S3 0
+*BODY_ID_4 1
+*X_S4 - LX_AXLE(2)
+*Y_S4 L_TRACK(2)/2
+*Z_S4 H_WC(2,1)
+*A_ROLL_S4 0
+*A_PITCH_S4 0
+*A_YAW_S4 0
+*BODY_ID_5 1
+*X_S5 - LX_AXLE(2)
+*Y_S5 - L_TRACK(2)/2
+*Z_S5 H_WC(2,2)
+*A_ROLL_S5 0
+*A_PITCH_S5 0
+*A_YAW_S5 0
+
+ISENSOR_M = 1
+DEFINE_MOTION_SENSORS 5 + ISENSOR_M -1 -NSENSOR_M
+
+OPT_S_BODY_TYPE 1
+OPT_S_OUTPUT 4
+OPT_S_BODY_ID 1
+X_S - LX_CG_SU
+Y_S Y_CG_SU
+Z_S H_CG_SU
+A_ROLL_S 0
+A_PITCH_S 0
+A_YAW_S 0
+SET_DESCRIPTION MOTION_SENSOR_NAME Sensor 1: 2A, SM CG and Wheel Center Heights
+
+ISENSOR_M = ISENSOR_M + 1
+OPT_S_BODY_TYPE 1
+OPT_S_OUTPUT 4
+OPT_S_BODY_ID 1
+X_S - LX_AXLE(1)
+Y_S L_TRACK(1)/2
+Z_S H_WC(1,1)
+A_ROLL_S 0
+A_PITCH_S 0
+A_YAW_S 0
+SET_DESCRIPTION MOTION_SENSOR_NAME Sensor 2: 2A, SM CG and Wheel Center Heights
+
+ISENSOR_M = ISENSOR_M + 1
+OPT_S_BODY_TYPE 1
+OPT_S_OUTPUT 4
+OPT_S_BODY_ID 1
+X_S - LX_AXLE(1)
+Y_S - L_TRACK(1)/2
+Z_S H_WC(1,2)
+A_ROLL_S 0
+A_PITCH_S 0
+A_YAW_S 0
+SET_DESCRIPTION MOTION_SENSOR_NAME Sensor 3: 2A, SM CG and Wheel Center Heights
+
+ISENSOR_M = ISENSOR_M + 1
+OPT_S_BODY_TYPE 1
+OPT_S_OUTPUT 4
+OPT_S_BODY_ID 1
+X_S - LX_AXLE(2)
+Y_S L_TRACK(2)/2
+Z_S H_WC(2,1)
+A_ROLL_S 0
+A_PITCH_S 0
+A_YAW_S 0
+SET_DESCRIPTION MOTION_SENSOR_NAME Sensor 4: 2A, SM CG and Wheel Center Heights
+
+ISENSOR_M = ISENSOR_M + 1
+OPT_S_BODY_TYPE 1
+OPT_S_OUTPUT 4
+OPT_S_BODY_ID 1
+X_S - LX_AXLE(2)
+Y_S - L_TRACK(2)/2
+Z_S H_WC(2,2)
+A_ROLL_S 0
+A_PITCH_S 0
+A_YAW_S 0
+SET_DESCRIPTION MOTION_SENSOR_NAME Sensor 5: 2A, SM CG and Wheel Center Heights
+
+MAKE_MOTION_SENSOR_OUTPUTS
+PARSFILE Plot\Setup\Plot_6582c44b-81db-432a-8824-523ed7b991ba.par
+#BlueLink0 Plot: Setup`Sensor Lateral Acceleration (5 Sensors)` Position, Accel. and Rate Sensors` , Plot`Plot_6582c44b-81db-432a-8824-523ed7b991ba
+
+PARSFILE Plot\Setup\Plot_78c0376a-d667-416e-94d7-8a1b17abd1e8.par
+#BlueLink1 Plot: Setup`Sensor Long. Accel. (5 Sensors)` Position, Accel. and Rate Sensors` , Plot`Plot_78c0376a-d667-416e-94d7-8a1b17abd1e8
+
+PARSFILE Plot\Setup\Plot_099137b0-f251-4464-acad-6c33a2dda79f.par
+#BlueLink2 Plot: Setup`Sensor Vertical Acceleration (5 Sensors)` Position, Accel. and Rate Sensors` , Plot`Plot_099137b0-f251-4464-acad-6c33a2dda79f
+
+PARSFILE Plot\Setup\Plot_b5924001-474d-4923-809e-0321802b6547.par
+#BlueLink3 Plot: Setup`Sensor Yaw Rate (5 Sensors)` Position, Accel. and Rate Sensors` , Plot`Plot_b5924001-474d-4923-809e-0321802b6547
+
+PARSFILE Plot\Setup\Plot_de8c1e5e-37ce-4a6c-8c0e-0a8f168d688d.par
+#BlueLink4 Plot: Setup`Sensor Pitch Rate (5 Sensors)` Position, Accel. and Rate Sensors` , Plot`Plot_de8c1e5e-37ce-4a6c-8c0e-0a8f168d688d
+
+PARSFILE Plot\Setup\Plot_c219792e-ad81-45b9-8f11-8c3d9da74c1e.par
+#BlueLink5 Plot: Setup`Sensor Roll Rate (5 Sensors)` Position, Accel. and Rate Sensors` , Plot`Plot_c219792e-ad81-45b9-8f11-8c3d9da74c1e
+
+
+#EMBEDDED_NOTES
+#This dataset adds 5 motion sensors to the sprung mass of a vehicle, with the sensors located at the sprung mass C.G. and at the nominal locations of the four wheels.
+#
+#The positions are specified using the symbolic names of vehicle parameters, so this dataset will work with any single-unit vehicle. However, it will fail if used for a vehicle with a trailer because the names of the dimensions would need another index for the trailer. For example, "LX_AXLE(1)" would be "LX_AXLE(1,1)".
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Positions, Velocities, and Accelerations; { Sprung Mass and Suspended Cab } 2A, SM CG and Wheel Center Heights
+#Library : Positions, Velocities, and Accelerations
+#DataSet : 2A, SM CG and Wheel Center Heights
+#Category: Sprung Mass and Suspended Cab
+#FileID  : MoSen_bf274431-7219-45a5-af93-0d6cccbc03a8
+#Product : TruckSim 2020.1
+#VehCode Motion Sensors
+
+END

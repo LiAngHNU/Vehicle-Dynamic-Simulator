@@ -1,0 +1,179 @@
+PARSFILE
+#FullDataName Custom Forces and Reference Points`Example Truck: SM and USM CGs`
+#RingCtrl0 1
+#RingCtrl2 10
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 0
+#RingCtrl6 1
+#RingCtrl7 0
+#RingCtrl8 1
+#RingCtrl9 0
+#RingCtrl10 1
+#RingCtrl11 0
+#RingCtrl12 1
+#RingCtrl13 0
+#RingCtrl14 1
+#RingCtrl15 0
+#RingCtrl16 1
+#RingCtrl17 0
+#RingCtrl18 1
+#RingCtrl19 0
+#RingCtrl20 1
+#RingCtrl21 0
+#RingCtrl22 1
+#RingCtrl23 0
+*BODY_ID_1 1
+*X_RP1 -1113
+*Y_RP1 0
+*Z_RP1 1173
+*BODY_ID_2 1
+*X_RP2 0
+*Y_RP2 1011
+*Z_RP2 490
+*BODY_ID_3 1
+*X_RP3 0
+*Y_RP3 -1011
+*Z_RP3 490
+*BODY_ID_4 1
+*X_RP4 -5000
+*Y_RP4 914.5
+*Z_RP4 505
+*BODY_ID_5 1
+*X_RP5 -5000
+*Y_RP5 -914.5
+*Z_RP5 505
+*BODY_ID_6 1
+*X_RP6 -653
+*Y_RP6 -273
+*Z_RP6 2055
+*BODY_ID_7 1
+*X_RP7 -653
+*Y_RP7 -248
+*Z_RP7 2055
+*BODY_ID_8 1
+*X_RP8 -653
+*Y_RP8 -248
+*Z_RP8 2154
+*BODY_ID_9 1
+*X_RP9 -655
+*Y_RP9 662
+*Z_RP9 2020
+*BODY_ID_10 1
+*X_RP10 900
+*Y_RP10 -100
+*Z_RP10 90
+
+IREF_PT = 1
+DEFINE_REFERENCE_POINTS 10 + IREF_PT -1 -NREF_PT
+
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 0
+OPT_RP_BODY_ID 1
+X_RP -1113
+Y_RP 0
+Z_RP 1173
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 1: Example Truck: SM and USM CGs
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 0
+OPT_RP_BODY_ID 1
+X_RP 0
+Y_RP 1011
+Z_RP 490
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 2: Example Truck: SM and USM CGs
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 0
+OPT_RP_BODY_ID 1
+X_RP 0
+Y_RP -1011
+Z_RP 490
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 3: Example Truck: SM and USM CGs
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 0
+OPT_RP_BODY_ID 1
+X_RP -5000
+Y_RP 914.5
+Z_RP 505
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 4: Example Truck: SM and USM CGs
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 0
+OPT_RP_BODY_ID 1
+X_RP -5000
+Y_RP -914.5
+Z_RP 505
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 5: Example Truck: SM and USM CGs
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 0
+OPT_RP_BODY_ID 1
+X_RP -653
+Y_RP -273
+Z_RP 2055
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 6: Example Truck: SM and USM CGs
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 0
+OPT_RP_BODY_ID 1
+X_RP -653
+Y_RP -248
+Z_RP 2055
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 7: Example Truck: SM and USM CGs
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 0
+OPT_RP_BODY_ID 1
+X_RP -653
+Y_RP -248
+Z_RP 2154
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 8: Example Truck: SM and USM CGs
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 0
+OPT_RP_BODY_ID 1
+X_RP -655
+Y_RP 662
+Z_RP 2020
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 9: Example Truck: SM and USM CGs
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 0
+OPT_RP_BODY_ID 1
+X_RP 900
+Y_RP -100
+Z_RP 90
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 10: Example Truck: SM and USM CGs
+
+PARSFILE Plot\Setup\Plot_9c353e25-e74e-4782-886d-496503bf320b.par
+#BlueLink0 Plot: Setup`Position Sensors Tracking, Unit 1` Position, Accel. and Rate Sensors` , Plot`Plot_9c353e25-e74e-4782-886d-496503bf320b
+
+
+#EMBEDDED_NOTES
+#These reference points have coordinates set for the 2-axle Conventional Van.
+#
+#Specifying reference points allows users to track the trajectories of various locations of a vehicle's sprung mass during a maneuver.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Custom Forces and Reference Points; Example Truck: SM and USM CGs
+#Library : Custom Forces and Reference Points
+#DataSet : Example Truck: SM and USM CGs
+#Category: 
+#FileID  : RefPt_d78f9725-81ac-44e8-9327-b4e6fb1b7e87
+#Product : TruckSim 2020.1
+#VehCode Custom Forces
+
+END

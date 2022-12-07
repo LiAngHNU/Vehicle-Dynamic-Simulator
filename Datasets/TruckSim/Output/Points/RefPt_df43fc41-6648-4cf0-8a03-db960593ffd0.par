@@ -1,0 +1,140 @@
+PARSFILE
+#FullDataName Custom Forces and Reference Points`Outrigger Points`Outrigger Points
+#RingCtrl0 0
+#RingCtrl2 6
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 1
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 1
+#RingCtrl10 1
+#RingCtrl11 1
+#RingCtrl12 1
+#RingCtrl13 1
+#RingCtrl14 1
+#RingCtrl15 1
+*BODY_ID_1 1
+*X_RP1 1000
+*Y_RP1 2500
+*Z_RP1 850
+*BODY_ID_2 1
+*X_RP2 1000
+*Y_RP2 -2500
+*Z_RP2 850
+*BODY_ID_3 1
+*X_RP3 -6500
+*Y_RP3 2500
+*Z_RP3 850
+*BODY_ID_4 1
+*X_RP4 -6500
+*Y_RP4 -2500
+*Z_RP4 850
+*BODY_ID_5 1
+*X_RP5 1000
+*Y_RP5 0
+*Z_RP5 850
+*BODY_ID_6 1
+*X_RP6 -6500
+*Y_RP6 0
+*Z_RP6 850
+
+IREF_PT = 1
+DEFINE_REFERENCE_POINTS 6 + IREF_PT -1 -NREF_PT
+
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 1
+OPT_RP_BODY_ID 1
+X_RP 1000
+Y_RP 2500
+Z_RP 850
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 1: Outrigger Points
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 1
+OPT_RP_BODY_ID 1
+X_RP 1000
+Y_RP -2500
+Z_RP 850
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 2: Outrigger Points
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 1
+OPT_RP_BODY_ID 1
+X_RP -6500
+Y_RP 2500
+Z_RP 850
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 3: Outrigger Points
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 1
+OPT_RP_BODY_ID 1
+X_RP -6500
+Y_RP -2500
+Z_RP 850
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 4: Outrigger Points
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 1
+OPT_RP_BODY_ID 1
+X_RP 1000
+Y_RP 0
+Z_RP 850
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 5: Outrigger Points
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 1
+OPT_RP_BODY_ID 1
+X_RP -6500
+Y_RP 0
+Z_RP 850
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 6: Outrigger Points
+
+#MiscYellow0
+define_variable K_RIG 1000; units = N/mm
+
+eq_out IMP_FZ_RP_1 = max((0.09 - Z_RP1) * K_RIG, 0);
+eq_out IMP_FZ_RP_2 = max((0.09 - Z_RP2) * K_RIG, 0);
+eq_out IMP_FZ_RP_3 = max((0.09 - Z_RP3) * K_RIG, 0);
+eq_out IMP_FZ_RP_4 = max((0.09 - Z_RP4) * K_RIG, 0);
+
+IMP_FZ_RP_1 vs_replace 0;
+IMP_FZ_RP_2 vs_replace 0;
+IMP_FZ_RP_3 vs_replace 0;
+IMP_FZ_RP_4 vs_replace 0;
+#ENDMYellow
+
+PARSFILE Animator\Groups\Group_b1872529-b644-4d2d-9ca3-abe4f209a20a.par
+#BlueLink8 Animator: Group`Outrigger Shapes` Outrigger` , Miscellaneous`Group_b1872529-b644-4d2d-9ca3-abe4f209a20a
+
+
+#EMBEDDED_NOTES
+#Lead Unit Outrigger Reference Points
+#
+#Reference points 1-4 are defined at the end of the outriggers. Vertical forces are reacted at these locations to simulate the outrigger wheels touching the ground.
+#
+#1 = LF
+#2 = RF
+#3 = LR
+#4 = RR
+#5 = Front Middle Outrigger Shape
+#6 = Rear Middle Outrigger Shape
+#
+#The vertical force is defined with a linear spring, whose stiffness has units of N/mm.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Custom Forces and Reference Points; { Outrigger Points } Outrigger Points
+#Library : Custom Forces and Reference Points
+#DataSet : Outrigger Points
+#Category: Outrigger Points
+#FileID  : RefPt_df43fc41-6648-4cf0-8a03-db960593ffd0
+#Product : TruckSim 2020.1
+#VehCode Custom Forces
+
+END

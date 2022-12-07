@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Positions, Velocities, and Accelerations`Mid-Length Telescope Steer Point`Telescopic Trailer Steer Point
+#RingCtrl0 0
+#RingCtrl2 1
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 1
+*BODY_ID_1 2
+*X_S1 -41568.5+10000+8946
+*Y_S1 0
+*Z_S1 1200
+
+ISENSOR_M = 1
+DEFINE_MOTION_SENSORS 1 + ISENSOR_M -1 -NSENSOR_M
+
+OPT_S_BODY_TYPE 1
+OPT_S_OUTPUT 1
+OPT_S_BODY_ID 2
+X_S -41568.5+10000+8946
+Y_S 0
+Z_S 1200
+SET_DESCRIPTION MOTION_SENSOR_NAME Mid-Length Telescope Steer Point
+
+MAKE_MOTION_SENSOR_OUTPUTS
+
+LOG_ENTRY Used Dataset: Positions, Velocities, and Accelerations; { Telescopic Trailer Steer Point } Mid-Length Telescope Steer Point
+#Library : Positions, Velocities, and Accelerations
+#DataSet : Mid-Length Telescope Steer Point
+#Category: Telescopic Trailer Steer Point
+#FileID  : MoSen_6767ffdc-a5cf-417c-b002-94f023f61c36
+#Product : TruckSim 2020.1
+#VehCode Motion Sensors
+
+END

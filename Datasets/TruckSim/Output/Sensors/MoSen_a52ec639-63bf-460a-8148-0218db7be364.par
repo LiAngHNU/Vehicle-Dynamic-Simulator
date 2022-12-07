@@ -1,0 +1,103 @@
+PARSFILE
+#FullDataName Positions, Velocities, and Accelerations`K & C Sensors (Parametric Locations)`K & C Test Rig
+#RingCtrl0 0
+#RingCtrl2 4
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 3
+#RingCtrl6 1
+#RingCtrl7 3
+#RingCtrl8 1
+#RingCtrl9 3
+#RingCtrl10 1
+#RingCtrl11 3
+*BODY_ID_1 1
+*X_S1 -lx_axle(1)
+*Y_S1 l_track(1)/2
+*Z_S1 0
+*A_ROLL_S1 0
+*A_PITCH_S1 0
+*A_YAW_S1 0
+*BODY_ID_2 1
+*X_S2 -lx_axle(1)
+*Y_S2 -l_track(1)/2
+*Z_S2 0
+*A_ROLL_S2 0
+*A_PITCH_S2 0
+*A_YAW_S2 0
+*BODY_ID_3 1
+*X_S3 -lx_axle(2)
+*Y_S3 l_track(2)/2
+*Z_S3 0
+*A_ROLL_S3 0
+*A_PITCH_S3 0
+*A_YAW_S3 0
+*BODY_ID_4 1
+*X_S4 -lx_axle(2)
+*Y_S4 -l_track(2)/2
+*Z_S4 0
+*A_ROLL_S4 0
+*A_PITCH_S4 0
+*A_YAW_S4 0
+
+ISENSOR_M = 1
+DEFINE_MOTION_SENSORS 4 + ISENSOR_M -1 -NSENSOR_M
+
+OPT_S_BODY_TYPE 1
+OPT_S_OUTPUT 3
+OPT_S_BODY_ID 1
+X_S -lx_axle(1)
+Y_S l_track(1)/2
+Z_S 0
+A_ROLL_S 0
+A_PITCH_S 0
+A_YAW_S 0
+SET_DESCRIPTION MOTION_SENSOR_NAME Sensor 1: K & C Sensors (Parametric Locations)
+
+ISENSOR_M = ISENSOR_M + 1
+OPT_S_BODY_TYPE 1
+OPT_S_OUTPUT 3
+OPT_S_BODY_ID 1
+X_S -lx_axle(1)
+Y_S -l_track(1)/2
+Z_S 0
+A_ROLL_S 0
+A_PITCH_S 0
+A_YAW_S 0
+SET_DESCRIPTION MOTION_SENSOR_NAME Sensor 2: K & C Sensors (Parametric Locations)
+
+ISENSOR_M = ISENSOR_M + 1
+OPT_S_BODY_TYPE 1
+OPT_S_OUTPUT 3
+OPT_S_BODY_ID 1
+X_S -lx_axle(2)
+Y_S l_track(2)/2
+Z_S 0
+A_ROLL_S 0
+A_PITCH_S 0
+A_YAW_S 0
+SET_DESCRIPTION MOTION_SENSOR_NAME Sensor 3: K & C Sensors (Parametric Locations)
+
+ISENSOR_M = ISENSOR_M + 1
+OPT_S_BODY_TYPE 1
+OPT_S_OUTPUT 3
+OPT_S_BODY_ID 1
+X_S -lx_axle(2)
+Y_S -l_track(2)/2
+Z_S 0
+A_ROLL_S 0
+A_PITCH_S 0
+A_YAW_S 0
+SET_DESCRIPTION MOTION_SENSOR_NAME Sensor 4: K & C Sensors (Parametric Locations)
+
+MAKE_MOTION_SENSOR_OUTPUTS
+
+LOG_ENTRY Used Dataset: Positions, Velocities, and Accelerations; { K & C Test Rig } K & C Sensors (Parametric Locations)
+#Library : Positions, Velocities, and Accelerations
+#DataSet : K & C Sensors (Parametric Locations)
+#Category: K & C Test Rig
+#FileID  : MoSen_a52ec639-63bf-460a-8148-0218db7be364
+#Product : TruckSim 2020.1
+#VehCode Motion Sensors
+
+END

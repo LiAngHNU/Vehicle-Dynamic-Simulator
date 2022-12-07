@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Positions, Velocities, and Accelerations`Cab Sensor at Origin`Sprung Mass and Suspended Cab
+#RingCtrl0 0
+#RingCtrl2 1
+#RingCtrl3 1
+#RingCtrl4 5
+#RingCtrl5 4
+*X_S1 0
+*Y_S1 0
+*Z_S1 0
+*A_ROLL_S1 0
+*A_PITCH_S1 0
+*A_YAW_S1 0
+
+ISENSOR_M = 1
+DEFINE_MOTION_SENSORS 1 + ISENSOR_M -1 -NSENSOR_M
+
+OPT_S_BODY_TYPE 5
+OPT_S_OUTPUT 4
+X_S 0
+Y_S 0
+Z_S 0
+A_ROLL_S 0
+A_PITCH_S 0
+A_YAW_S 0
+SET_DESCRIPTION MOTION_SENSOR_NAME Cab Sensor at Origin
+
+MAKE_MOTION_SENSOR_OUTPUTS
+
+#EMBEDDED_NOTES
+#Acceleration and Rate Sensors for the suspended cab, measured in the sprung mass coordinate system.
+#
+#The default location for motion sensors and reference points is the origin of the sprung mass coordinate system. With all fields blank, all sensors are located there.
+#
+#This Acceleration and Rate Sensors dataset specifically defines a single sensor for the suspended cab, at the vehicle's sprung mass coordinate system origin, and the sensor's orientation is set to 0 degrees in Roll, Pitch, and Yaw.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Positions, Velocities, and Accelerations; { Sprung Mass and Suspended Cab } Cab Sensor at Origin
+#Library : Positions, Velocities, and Accelerations
+#DataSet : Cab Sensor at Origin
+#Category: Sprung Mass and Suspended Cab
+#FileID  : MoSen_5d96aaf4-dc63-416c-adba-9bf5fc6ea23f
+#Product : TruckSim 2020.1
+#VehCode Motion Sensors
+
+END

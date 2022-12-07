@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Custom Forces and Reference Points`Steering Reference Point for Trail`Platoon Reference Points
+#RingCtrl0 0
+#RingCtrl2 2
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 0
+#RingCtrl6 1
+#RingCtrl7 0
+*BODY_ID_1 1
+*X_RP1 -8000
+*BODY_ID_2 1
+*X_RP2 -1000
+*Z_RP2 5000
+
+IREF_PT = 1
+DEFINE_REFERENCE_POINTS 2 + IREF_PT -1 -NREF_PT
+
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 0
+OPT_RP_BODY_ID 1
+X_RP -8000
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 1: Steering Reference Point for Trail
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 0
+OPT_RP_BODY_ID 1
+X_RP -1000
+Z_RP 5000
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 2: Steering Reference Point for Trail
+
+
+LOG_ENTRY Used Dataset: Custom Forces and Reference Points; { Platoon Reference Points } Steering Reference Point for Trail
+#Library : Custom Forces and Reference Points
+#DataSet : Steering Reference Point for Trail
+#Category: Platoon Reference Points
+#FileID  : RefPt_e601bc28-eab9-430b-a44e-c85fbefaee29
+#Product : TruckSim 2020.1
+#VehCode Custom Forces
+
+END

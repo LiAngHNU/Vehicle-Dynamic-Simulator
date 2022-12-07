@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Path Detectors for External Driver Control`Imported Target Points`
+#RingCtrl0 1
+INSTALL_PATH_DETECTOR 1
+
+IDETECTOR 1
+symbol_push  <<detector>> 1
+X_DETECTOR_SM(1) 0
+Y_DETECTOR_SM(1) 0
+#CheckBox0 1    
+OPT_PATH_PD(1) 0
+PARSFILE Generic\VS_commands\GenVS_3fcb4317-7ed5-49e6-b8cb-c976d4880e63.par
+#BlueLink10 Generic VS Commands`Setup X-Y Imports` Path Detection` , Generic settings`GenVS_3fcb4317-7ed5-49e6-b8cb-c976d4880e63
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_3fd092ea-969f-4644-97b7-c2ce3007928d.par
+#BlueLink5 Multiple Moving Objects`Detected Path Visual` Path Detections` , multiple moving objects`TMotion_3fd092ea-969f-4644-97b7-c2ce3007928d
+
+PARSFILE Generic\Links\GenLink_f8e10b0f-dbcb-4959-b4ce-d7121f850795.par
+#BlueLink16 Generic Group of Links`Path Detector Plots` Path Detection` , Miscellaneous`GenLink_f8e10b0f-dbcb-4959-b4ce-d7121f850795
+
+
+#EMBEDDED_NOTES
+#In this case, the path detector uses imported target points, bypassing the PATH_ID_PD, LTARG_ID_PD, and L_PVW_PD parameters.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Path Detectors for External Driver Control; Imported Target Points
+#Library : Path Detectors for External Driver Control
+#DataSet : Imported Target Points
+#Category: 
+#FileID  : PathDet_f59ecb9a-5aa5-462d-8b11-626079aa7bf9
+#Product : TruckSim 2020.1
+#VehCode Path Detectors
+
+END

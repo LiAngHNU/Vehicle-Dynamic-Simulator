@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Positions, Velocities, and Accelerations`ADAS Sensor: Motion Sensor`ADAS Sensors
+#RingCtrl0 0
+#RingCtrl2 1
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 4
+*BODY_ID_1 1
+*X_S1 X_SENSOR(1)
+*Y_S1 Y_SENSOR(1)
+*Z_S1 Z_SENSOR(1)
+*A_ROLL_S1 ROLL_AIM_SENSOR(1)
+*A_PITCH_S1 PITCH_AIM_SENSOR(1)
+*A_YAW_S1 YAW_AIM_SENSOR(1)
+
+ISENSOR_M = 1
+DEFINE_MOTION_SENSORS 1 + ISENSOR_M -1 -NSENSOR_M
+
+OPT_S_BODY_TYPE 1
+OPT_S_OUTPUT 4
+OPT_S_BODY_ID 1
+X_S X_SENSOR(1)
+Y_S Y_SENSOR(1)
+Z_S Z_SENSOR(1)
+A_ROLL_S ROLL_AIM_SENSOR(1)
+A_PITCH_S PITCH_AIM_SENSOR(1)
+A_YAW_S YAW_AIM_SENSOR(1)
+SET_DESCRIPTION MOTION_SENSOR_NAME ADAS Sensor: Motion Sensor
+
+MAKE_MOTION_SENSOR_OUTPUTS
+
+#EMBEDDED_NOTES
+#A single Motion Sensor placed at the same location as the first ADAS Sensor.
+#
+#The math model keywords for the ADAS Sensor's position (X, Y, Z) and angular orientation (Roll, Pitch, Yaw) can be found in the Echo file for the simulation. The advantage to this approach is that if the ADAS Sensor is moved and/or rotated to a new position and/or orientation, the Motion Sensor will move to the same, new location.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Positions, Velocities, and Accelerations; { ADAS Sensors } ADAS Sensor: Motion Sensor
+#Library : Positions, Velocities, and Accelerations
+#DataSet : ADAS Sensor: Motion Sensor
+#Category: ADAS Sensors
+#FileID  : MoSen_8790dd9f-7bc3-4d68-ab07-f907ee516407
+#Product : TruckSim 2020.1
+#VehCode Motion Sensors
+
+END

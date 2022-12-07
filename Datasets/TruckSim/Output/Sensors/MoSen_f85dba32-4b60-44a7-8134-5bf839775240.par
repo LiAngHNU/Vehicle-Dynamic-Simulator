@@ -1,0 +1,184 @@
+PARSFILE
+#FullDataName Positions, Velocities, and Accelerations`PBS Points, 2A Van Trailer`PBS Tests
+#RingCtrl0 0
+#RingCtrl2 10
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 1
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 1
+#RingCtrl10 1
+#RingCtrl11 1
+#RingCtrl12 1
+#RingCtrl13 1
+#RingCtrl14 1
+#RingCtrl15 1
+#RingCtrl16 1
+#RingCtrl17 1
+#RingCtrl18 1
+#RingCtrl19 1
+#RingCtrl20 1
+#RingCtrl21 1
+#RingCtrl22 1
+#RingCtrl23 1
+*N_PREVIOUS 11
+*BODY_ID_1 2
+*X_S1 800
+*Y_S1 1220
+*Z_S1 H_H
+*BODY_ID_2 2
+*X_S2 -7000
+*Y_S2 1220
+*Z_S2 H_H
+*BODY_ID_3 2
+*X_S3 -13124
+*Y_S3 1220
+*Z_S3 H_H
+*BODY_ID_4 2
+*X_S4 -14412
+*Y_S4 1220
+*Z_S4 H_H
+*BODY_ID_5 2
+*X_S5 -15000
+*Y_S5 1220
+*Z_S5 H_H
+*BODY_ID_6 2
+*X_S6 800
+*Y_S6 -1220
+*Z_S6 H_H
+*BODY_ID_7 2
+*X_S7 -7000
+*Y_S7 -1220
+*Z_S7 H_H
+*BODY_ID_8 2
+*X_S8 -13124
+*Y_S8 -1220
+*Z_S8 H_H
+*BODY_ID_9 2
+*X_S9 -14412
+*Y_S9 -1220
+*Z_S9 H_H
+*BODY_ID_10 2
+*X_S10 -15000
+*Y_S10 -1220
+*Z_S10 H_H
+
+ISENSOR_M 11
+DEFINE_MOTION_SENSORS 10 + ISENSOR_M -1 -NSENSOR_M
+
+OPT_S_BODY_TYPE 1
+OPT_S_OUTPUT 1
+OPT_S_BODY_ID 2
+X_S 800
+Y_S 1220
+Z_S H_H
+SET_DESCRIPTION MOTION_SENSOR_NAME Sensor 1: PBS Points, 2A Van Trailer
+
+ISENSOR_M = ISENSOR_M + 1
+OPT_S_BODY_TYPE 1
+OPT_S_OUTPUT 1
+OPT_S_BODY_ID 2
+X_S -7000
+Y_S 1220
+Z_S H_H
+SET_DESCRIPTION MOTION_SENSOR_NAME Sensor 2: PBS Points, 2A Van Trailer
+
+ISENSOR_M = ISENSOR_M + 1
+OPT_S_BODY_TYPE 1
+OPT_S_OUTPUT 1
+OPT_S_BODY_ID 2
+X_S -13124
+Y_S 1220
+Z_S H_H
+SET_DESCRIPTION MOTION_SENSOR_NAME Sensor 3: PBS Points, 2A Van Trailer
+
+ISENSOR_M = ISENSOR_M + 1
+OPT_S_BODY_TYPE 1
+OPT_S_OUTPUT 1
+OPT_S_BODY_ID 2
+X_S -14412
+Y_S 1220
+Z_S H_H
+SET_DESCRIPTION MOTION_SENSOR_NAME Sensor 4: PBS Points, 2A Van Trailer
+
+ISENSOR_M = ISENSOR_M + 1
+OPT_S_BODY_TYPE 1
+OPT_S_OUTPUT 1
+OPT_S_BODY_ID 2
+X_S -15000
+Y_S 1220
+Z_S H_H
+SET_DESCRIPTION MOTION_SENSOR_NAME Sensor 5: PBS Points, 2A Van Trailer
+
+ISENSOR_M = ISENSOR_M + 1
+OPT_S_BODY_TYPE 1
+OPT_S_OUTPUT 1
+OPT_S_BODY_ID 2
+X_S 800
+Y_S -1220
+Z_S H_H
+SET_DESCRIPTION MOTION_SENSOR_NAME Sensor 6: PBS Points, 2A Van Trailer
+
+ISENSOR_M = ISENSOR_M + 1
+OPT_S_BODY_TYPE 1
+OPT_S_OUTPUT 1
+OPT_S_BODY_ID 2
+X_S -7000
+Y_S -1220
+Z_S H_H
+SET_DESCRIPTION MOTION_SENSOR_NAME Sensor 7: PBS Points, 2A Van Trailer
+
+ISENSOR_M = ISENSOR_M + 1
+OPT_S_BODY_TYPE 1
+OPT_S_OUTPUT 1
+OPT_S_BODY_ID 2
+X_S -13124
+Y_S -1220
+Z_S H_H
+SET_DESCRIPTION MOTION_SENSOR_NAME Sensor 8: PBS Points, 2A Van Trailer
+
+ISENSOR_M = ISENSOR_M + 1
+OPT_S_BODY_TYPE 1
+OPT_S_OUTPUT 1
+OPT_S_BODY_ID 2
+X_S -14412
+Y_S -1220
+Z_S H_H
+SET_DESCRIPTION MOTION_SENSOR_NAME Sensor 9: PBS Points, 2A Van Trailer
+
+ISENSOR_M = ISENSOR_M + 1
+OPT_S_BODY_TYPE 1
+OPT_S_OUTPUT 1
+OPT_S_BODY_ID 2
+X_S -15000
+Y_S -1220
+Z_S H_H
+SET_DESCRIPTION MOTION_SENSOR_NAME Sensor 10: PBS Points, 2A Van Trailer
+
+MAKE_MOTION_SENSOR_OUTPUTS
+
+#EMBEDDED_NOTES
+#PBS Points for 2A Van Trailer
+#
+#These 10 points define paths plotted in PBS tests. Points 11 - 15 are for the left side of the trailer; Points 16 - 20 are for the right side.
+#
+#These are numbered points 11-20.
+#
+#This dataset was moved from Custom Forces and Reference Points in version 8.2a to this library. All references to the old reference point output names in plot settings and VS Commands were modified.
+#
+#NOTE for TruckSim 9: the Z coordinates of the points were changed from 0 to H_H, the math model keyword for the lead unit's trailer hitch height. This was due to a bug fix involving Z coordinates of reference points.
+#
+#See the Release Note: Version 9 Backward Compatibility: Reference Points and Motion Sensors.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Positions, Velocities, and Accelerations; { PBS Tests } PBS Points, 2A Van Trailer
+#Library : Positions, Velocities, and Accelerations
+#DataSet : PBS Points, 2A Van Trailer
+#Category: PBS Tests
+#FileID  : MoSen_f85dba32-4b60-44a7-8134-5bf839775240
+#Product : TruckSim 2020.1
+#VehCode Motion Sensors
+
+END

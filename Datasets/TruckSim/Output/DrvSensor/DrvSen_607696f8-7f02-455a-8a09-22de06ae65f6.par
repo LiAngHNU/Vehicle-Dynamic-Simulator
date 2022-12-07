@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Preview Points for External Driver Control`5 Driver Sensors`
+
+INSTALL_DRIVER_PREVIEW_SENSORS 5
+OPT_SENSOR 1
+#RingCtrl0 5
+#RingCtrl1 5
+LX_DRVSEN(1) 5
+LX_DRVSEN(2) 10
+LX_DRVSEN(3) 15
+LX_DRVSEN(4) -10
+LX_DRVSEN(5) -20
+
+PARSFILE Plot\Setup\Plot_88df6252-2bbd-4438-8fb3-cf879005dc72.par
+#BlueLink0 Plot: Setup`Distance to Point` Driver Sensor` , Plot`Plot_88df6252-2bbd-4438-8fb3-cf879005dc72
+
+PARSFILE Plot\Setup\Plot_74142dae-24df-42d3-ae01-ad37b17f8cd0.par
+#BlueLink1 Plot: Setup`Error Area to Design Path` Driver Sensor` , Plot`Plot_74142dae-24df-42d3-ae01-ad37b17f8cd0
+
+PARSFILE Plot\Setup\Plot_a2d0dc95-1fef-4cbe-9eff-a485d738fc13.par
+#BlueLink2 Plot: Setup`Lateral Distance to Design Path` Driver Sensor` , Plot`Plot_a2d0dc95-1fef-4cbe-9eff-a485d738fc13
+
+PARSFILE Plot\Setup\Plot_07f55dd3-2ab2-425f-96e0-97d19bfed8dd.par
+#BlueLink3 Plot: Setup`Sensor Point Tracking` Driver Sensor` , Plot`Plot_07f55dd3-2ab2-425f-96e0-97d19bfed8dd
+
+PARSFILE Plot\Setup\Plot_e007904c-3709-4b1e-9a49-b6093c4c0854.par
+#BlueLink4 Plot: Setup`Sensor Point Tracking (On Road)` Driver Sensor` , Plot`Plot_e007904c-3709-4b1e-9a49-b6093c4c0854
+
+
+LOG_ENTRY Used Dataset: Preview Points for External Driver Control; 5 Driver Sensors
+#Library : Preview Points for External Driver Control
+#DataSet : 5 Driver Sensors
+#Category: 
+#FileID  : DrvSen_607696f8-7f02-455a-8a09-22de06ae65f6
+#Product : TruckSim 2020.1
+#VehCode Driver Preview Points
+
+END

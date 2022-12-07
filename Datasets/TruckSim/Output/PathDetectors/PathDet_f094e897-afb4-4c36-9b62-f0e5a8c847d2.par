@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Path Detectors for External Driver Control`Two Detected Paths`
+#RingCtrl0 2
+INSTALL_PATH_DETECTOR 2
+
+IDETECTOR 1
+symbol_push  <<detector>> 1
+X_DETECTOR_SM(1) 0
+Y_DETECTOR_SM(1) 0
+#CheckBox0 0    
+OPT_PATH_PD(1) 1
+PATH_ID_PD(1) path_id_dm
+PARSFILE Control\Driver\StrDM_a36bbf93-0b8a-4a99-8b63-e52cc035a002.par
+#BlueLink0 Control: Steering by the Closed-loop Driver Model`Left Lane Marking` Path Detections` , lateral target`StrDM_a36bbf93-0b8a-4a99-8b63-e52cc035a002
+
+LTARG_ID_PD(1) = LTARG_ID
+PARSFILE Sensors_Traffic\Traffic\TMotion_3fd092ea-969f-4644-97b7-c2ce3007928d.par
+#BlueLink5 Multiple Moving Objects`Detected Path Visual` Path Detections` , multiple moving objects`TMotion_3fd092ea-969f-4644-97b7-c2ce3007928d
+
+
+IDETECTOR 2
+symbol_add  <<detector>> 1
+X_DETECTOR_SM(2) 0
+Y_DETECTOR_SM(2) 0
+#CheckBox1 0    
+OPT_PATH_PD(2) 1
+PATH_ID_PD(2) path_id_dm
+PARSFILE Control\Driver\StrDM_d4d89039-3de2-4b71-9428-547b401e3f11.par
+#BlueLink1 Control: Steering by the Closed-loop Driver Model`Right Lane Marking` Path Detections` , lateral target`StrDM_d4d89039-3de2-4b71-9428-547b401e3f11
+
+LTARG_ID_PD(2) = LTARG_ID
+PARSFILE Sensors_Traffic\Traffic\TMotion_3fd092ea-969f-4644-97b7-c2ce3007928d.par
+#BlueLink6 Multiple Moving Objects`Detected Path Visual` Path Detections` , multiple moving objects`TMotion_3fd092ea-969f-4644-97b7-c2ce3007928d
+
+#MiscYellow0
+EQ_IN L_PVW_PD(1) = Vx*1.5
+EQ_IN L_PVW_PD(2) = Vx*1.5
+#ENDMYellow
+
+PARSFILE Generic\Links\GenLink_f8e10b0f-dbcb-4959-b4ce-d7121f850795.par
+#BlueLink16 Generic Group of Links`Path Detector Plots` Path Detection` , Miscellaneous`GenLink_f8e10b0f-dbcb-4959-b4ce-d7121f850795
+
+
+#EMBEDDED_NOTES
+#Two instances of the Path Detector are installed. Both refer to the same Path ID, but each has a unique Ltarg specification, allowing one to represent the left lane marking and the other to represent the right lane marking.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Path Detectors for External Driver Control; Two Detected Paths
+#Library : Path Detectors for External Driver Control
+#DataSet : Two Detected Paths
+#Category: 
+#FileID  : PathDet_f094e897-afb4-4c36-9b62-f0e5a8c847d2
+#Product : TruckSim 2020.1
+#VehCode Path Detectors
+
+END

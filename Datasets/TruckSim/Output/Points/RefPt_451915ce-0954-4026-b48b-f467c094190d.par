@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName Custom Forces and Reference Points`K and C Rig (Parametric Location)`K & C Test Rig
+#RingCtrl0 0
+#RingCtrl2 4
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 1
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 1
+#RingCtrl10 1
+#RingCtrl11 1
+*BODY_ID_1 1
+*X_RP1 -lx_axle(1)
+*Y_RP1 l_track(1)/2
+*Z_RP1 0
+*BODY_ID_2 1
+*X_RP2 -lx_axle(1)
+*Y_RP2 -l_track(1)/2
+*Z_RP2 0
+*BODY_ID_3 1
+*X_RP3 -lx_axle(2)
+*Y_RP3 l_track(2)/2
+*Z_RP3 0
+*BODY_ID_4 1
+*X_RP4 -lx_axle(2)
+*Y_RP4 -l_track(2)/2
+*Z_RP4 0
+
+IREF_PT = 1
+DEFINE_REFERENCE_POINTS 4 + IREF_PT -1 -NREF_PT
+
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 1
+OPT_RP_BODY_ID 1
+X_RP -lx_axle(1)
+Y_RP l_track(1)/2
+Z_RP 0
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 1: K and C Rig (Parametric Location)
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 1
+OPT_RP_BODY_ID 1
+X_RP -lx_axle(1)
+Y_RP -l_track(1)/2
+Z_RP 0
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 2: K and C Rig (Parametric Location)
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 1
+OPT_RP_BODY_ID 1
+X_RP -lx_axle(2)
+Y_RP l_track(2)/2
+Z_RP 0
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 3: K and C Rig (Parametric Location)
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 1
+OPT_RP_BODY_ID 1
+X_RP -lx_axle(2)
+Y_RP -l_track(2)/2
+Z_RP 0
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 4: K and C Rig (Parametric Location)
+
+
+#EMBEDDED_NOTES
+#Reference points 1 through 4 (RP_1 through RP_4) are used to attach spring forces between the sprung mass and ground to fix the location of the vehicle. The forces are turned on or off, or scaled as needed by VS Command equations
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Custom Forces and Reference Points; { K & C Test Rig } K and C Rig (Parametric Location)
+#Library : Custom Forces and Reference Points
+#DataSet : K and C Rig (Parametric Location)
+#Category: K & C Test Rig
+#FileID  : RefPt_451915ce-0954-4026-b48b-f467c094190d
+#Product : TruckSim 2020.1
+#VehCode Custom Forces
+
+END

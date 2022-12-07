@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Custom Forces and Reference Points`K&C Table Ref. Points`
+#RingCtrl0 0
+#RingCtrl2 1
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 0
+*BODY_ID_1 1
+*X_RP1 -2000
+*Y_RP1 0
+*Z_RP1 500
+
+IREF_PT = 1
+DEFINE_REFERENCE_POINTS 1 + IREF_PT -1 -NREF_PT
+
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 0
+OPT_RP_BODY_ID 1
+X_RP -2000
+Y_RP 0
+Z_RP 500
+SET_DESCRIPTION REFERENCE_POINT_NAME K&C Table Ref. Points
+
+
+#EMBEDDED_NOTES
+#The examples illustrating Kinematics & Compliance (K&C) tests require a point to be defined on the sprung mass at which forces from the K&C table can be applied.
+#
+#This dataset specifies a location that is appropriate for the 2-axle Conventional Van.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Custom Forces and Reference Points; K&C Table Ref. Points
+#Library : Custom Forces and Reference Points
+#DataSet : K&C Table Ref. Points
+#Category: 
+#FileID  : RefPt_c4b78f23-c2d4-4a67-832e-aaae49ab766d
+#Product : TruckSim 2020.1
+#VehCode Custom Forces
+
+END
