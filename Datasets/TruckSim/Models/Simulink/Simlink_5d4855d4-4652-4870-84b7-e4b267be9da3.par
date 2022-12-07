@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Models: Simulink`External Transfer Case and Diffs (TS 9.0)`External Powertrain
+#RunMdlFile Extensions\Simulink\pt_diff\Pt_Diff_TS9.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\pt_diff\Pt_Diff_TS9.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 1    
+OPT_IO_UPDATE 1
+#CheckBox4 1    
+OPT_IO_SYNC_FM 1
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+PARSFILE IO_Channels\I_Channels\Import_da8aa37a-c295-4a72-941c-4cabfb682d4c.par
+#BlueLink0 I/O Channels: Import`Transfer Case and Differentials Import` Powertrain Imports` , Import`Import_da8aa37a-c295-4a72-941c-4cabfb682d4c
+
+PARSFILE IO_Channels\O_Channels\Export_a2d57ee8-ee31-4d4f-a01d-4064eee1b5c2.par
+#BlueLink1 I/O Channels: Export`Transfer Case and Diffs. Export (TS 9.0)` Powertrain` , Import/Export`Export_a2d57ee8-ee31-4d4f-a01d-4064eee1b5c2
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This Models: Simulink dataset links to a Simulink model representing the Transfer Case and Front and Rear Axle Differentials.
+#
+#The TruckSim powertrain model involves some detailed interactions between variables, so the options to Replace or Multiply the Simulink imported variables with their corresponding variables in TruckSim are not available for most powertrain variables.
+#
+#For most Powertrain import variables, the only import mode is Add.
+#
+#It is also necessary to specify on the powertrain library screen that certain components are handled with an external model.
+#
+#The Simulink model is set to use "variable step" numerical integration, which means it will inherit the time step from TruckSim. The box is checked on this screen to set the time step here which ensures that the time step used is compatible with possible limits or requirement in the Simulink model.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { External Powertrain } External Transfer Case and Diffs (TS 9.0)
+#Library : Models: Simulink
+#DataSet : External Transfer Case and Diffs (TS 9.0)
+#Category: External Powertrain
+#FileID  : Simlink_5d4855d4-4652-4870-84b7-e4b267be9da3
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

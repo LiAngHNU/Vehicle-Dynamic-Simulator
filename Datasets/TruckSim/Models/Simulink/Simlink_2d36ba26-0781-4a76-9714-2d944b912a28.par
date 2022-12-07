@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Models: Simulink`Live Video S-Function only`Live Video
+#RunMdlFile Extensions\Simulink\Base_TSModel.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\Base_TSModel.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 0    
+OPT_IO_SYNC_FM 0
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+#MiscYellow0
+LIVE_SERVER localhost
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+#ENDMYellow
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This dataset is used for a live video example.
+#
+#Base_TSModel.mdl only contains the S-Function2v and Time blocks.
+#
+#To use live video with Simulink, enter the line "LIVE_SERVER localhost" inside the "Miscellaneous settings for advanced users" yellow field.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Live Video } Live Video S-Function only
+#Library : Models: Simulink
+#DataSet : Live Video S-Function only
+#Category: Live Video
+#FileID  : Simlink_2d36ba26-0781-4a76-9714-2d944b912a28
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

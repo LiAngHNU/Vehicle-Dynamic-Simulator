@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Models: Simulink`Highway Lane Detection w/ Steer Control`Live Video
+#RunMdlFile Extensions\Simulink\Highway_Lane_Detection_TS2018.slx
+SIMULINK_MODEL_FILE Extensions\Simulink\Highway_Lane_Detection_TS2018.slx
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 0    
+OPT_IO_SYNC_FM 0
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+#MiscYellow0
+LIVE_SERVER localhost
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+#ENDMYellow
+
+PARSFILE IO_Channels\I_Channels\Import_b10b5ea8-8a10-4f0a-bbbd-56702ea495f3.par
+#BlueLink0 I/O Channels: Import`Steering Wheel Angle` Driver` , Import`Import_b10b5ea8-8a10-4f0a-bbbd-56702ea495f3
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This dataset links to a Simulink camera sensor model with an image processing for highway lane detection.
+#
+#The camera sensor's image information is passed to the Simulink model, and using image processing, the lanes are detected and the lane locations are checked against the vehicle location.  The steering corrections are also added when the vehicle drift to one side.
+#
+#(Computer Vision System Toolbox is required).
+#
+#Base_TSModel.mdl contains only S-Function2v and Time blocks.
+#
+#To use live video with Simulink, enter the line "LIVE_SERVER localhost" inside "Miscellaneous settings for advanced users" yellow field.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Live Video } Highway Lane Detection w/ Steer Control
+#Library : Models: Simulink
+#DataSet : Highway Lane Detection w/ Steer Control
+#Category: Live Video
+#FileID  : Simlink_febd0819-78b0-4be2-b761-60272a7b05dc
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

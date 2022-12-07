@@ -1,0 +1,59 @@
+PARSFILE
+#FullDataName Models: Simulink`Vehicle Dynamic Simulator`* * * Vehicle Dynamic Simulator
+#RunMdlFile D:\Project Files\Vehicle-Dynamic-Simulator-Local\Vehicle_Dynamic_Simulator.mdl
+SIMULINK_MODEL_FILE D:\Project Files\Vehicle-Dynamic-Simulator-Local\Vehicle_Dynamic_Simulator.mdl
+#RingCtrl0 -1
+#CheckBox0 1    
+*USE_ALT_DIR 1
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 1    
+OPT_IO_UPDATE 1
+#CheckBox4 0    
+OPT_IO_SYNC_FM 0
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+#AltPath D:\Project Files\Vehicle-Dynamic-Simulator-Local
+*ALTERNATE_PATH D:\Project Files\Vehicle-Dynamic-Simulator-Local
+#MiscYellow0
+LIVE_SERVER localhost
+ANI_T_STAMP
+TIME_CHANNEL_T_STAMP
+#ENDMYellow
+
+PARSFILE IO_Channels\I_Channels\Import_5a56a423-0f1c-438d-953f-fa1ac45e0568.par
+#BlueLink0 I/O Channels: Import`Vehicle Dynamic Simulator, Import` * * * Vehicle Dynamic Simulator` , Import`Import_5a56a423-0f1c-438d-953f-fa1ac45e0568
+
+PARSFILE IO_Channels\O_Channels\Export_c2915827-ab82-4ee0-a576-c43f2e3287bd.par
+#BlueLink1 I/O Channels: Export`Vehicle Dynamic Simulator, Export` * * * Vehicle Dynamic Simulator` , Import/Export`Export_c2915827-ab82-4ee0-a576-c43f2e3287bd
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This Models: Simulink dataset links to a Simulink model of a Semi-Active suspension system.
+#
+#The suspension damper forces are imported with the mode "Replace". This means the TruckSim-calculated values for suspension damper forces will be ignored and replaced with the data imported from the Simulink model.
+#
+#The Simulink model is set to use "variable step" numerical integration, which means it will inherit the time step from TruckSim. The box is checked on this screen to set the time step here which ensures that the time step used is compatible with possible limits or requirement in the Simulink model.
+#
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { * * * Vehicle Dynamic Simulator } Vehicle Dynamic Simulator
+#Library : Models: Simulink
+#DataSet : Vehicle Dynamic Simulator
+#Category: * * * Vehicle Dynamic Simulator
+#FileID  : Simlink_507b33f2-073f-47c7-b1d5-06a017f6bd28
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

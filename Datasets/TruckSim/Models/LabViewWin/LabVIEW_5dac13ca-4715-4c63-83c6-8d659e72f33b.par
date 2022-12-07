@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Models: LabVIEW for Windows (VI)`ABS Example`
+#RunMdlFile Extensions\LabViewWin\ABS_Example.vi
+#CheckBox0 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox2 1    
+#RingCtrl0 -1
+#RingCtrl2 0
+*X64SOLVER 0
+PARSFILE IO_Channels\I_Channels\Import_fb6f5ede-415e-4f25-bf48-5686cd190ba4.par
+#BlueLink0 I/O Channels: Import`ABS: Wheel Cylinder Pressures` Braking Imports` , Import`Import_fb6f5ede-415e-4f25-bf48-5686cd190ba4
+
+PARSFILE IO_Channels\O_Channels\Export_35c937bb-9c77-44fc-b62e-29c711f820f4.par
+#BlueLink1 I/O Channels: Export`ABS` Braking Exports` , Import/Export`Export_35c937bb-9c77-44fc-b62e-29c711f820f4
+
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox1 0    
+OPT_IO_UPDATE 0
+#CheckBox3 1    
+OPT_IO_SYNC_FM 1
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+
+LOG_ENTRY Used Dataset: Models: LabVIEW for Windows (VI); ABS Example
+#Library : Models: LabVIEW for Windows (VI)
+#DataSet : ABS Example
+#Category: 
+#FileID  : LabVIEW_5dac13ca-4715-4c63-83c6-8d659e72f33b
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

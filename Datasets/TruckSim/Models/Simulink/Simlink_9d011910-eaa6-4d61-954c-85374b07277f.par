@@ -1,0 +1,59 @@
+PARSFILE
+#FullDataName Models: Simulink`Custom Steer S-Function`Steering
+#RunMdlFile Extensions\Custom_C\S_Function\Steer_example.mdl
+SIMULINK_MODEL_FILE Extensions\Custom_C\S_Function\Steer_example.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 0    
+OPT_IO_SYNC_FM 0
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+#MiscYellow1
+IMP_STEER_SW REPLACE 0
+OPT_USE_EXT_STEER 1
+
+! C code has default value of 10; 
+! A gain of 100 works well with the 2-axle Conventional Van
+GAIN_STEER_CTRL 100;
+#ENDMYellow
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This Models: Simulink dataset provides an example for using custom C code to extend a model for use in Simulink.
+#
+#A preview point is defined to be at a distance L_FORWARD in front of the vehicle CG. If the preview point is to the right of the road reference line, the vehicle steers to the left. If the preview point is to the left, the vehicle steers to the right. The gain for the steering is defined with a new parameter GAIN_STR_CTRL which has units of steering wheel angle (deg) per meter of lateral tracking error.
+#
+#An offset from the road reference line is provided with a tracking target parameter LAT_TRACK.
+#
+#In order to use the extended C option, the import variable for steering must be enabled and the new parameter OPT_USE_EXT_STEER must also be enabled.
+#
+#This dataset links to a simple Simulink model that makes use of the new S-Function. The new S-Function is defined mainly by 3 C files: one with the API functions, one with a generic S-Function wrapper, and one with the steering controller.
+#
+#The custom C code is also used in an example dataset linked in the Model: Self-Contained Solvers library.
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Steering } Custom Steer S-Function
+#Library : Models: Simulink
+#DataSet : Custom Steer S-Function
+#Category: Steering
+#FileID  : Simlink_9d011910-eaa6-4d61-954c-85374b07277f
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

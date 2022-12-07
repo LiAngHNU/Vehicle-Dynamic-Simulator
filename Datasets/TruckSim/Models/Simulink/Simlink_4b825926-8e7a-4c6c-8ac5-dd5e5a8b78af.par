@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Models: Simulink`Autnomous (Detect One Vehicle)`Multi-Vehicle
+#RunMdlFile Extensions\Simulink\Multi_Vehicle\City_Env_2Car_TS2020.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\Multi_Vehicle\City_Env_2Car_TS2020.mdl
+#RingCtrl0 -1
+#CheckBox0 1    
+*USE_ALT_DIR 1
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 2
+OPT_INT_METHOD 2
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 0    
+OPT_IO_SYNC_FM 0
+*TSTEP 0.001
+*FREQ_MODEL 1000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.001
+iprint 25
+#AltPath Extensions\Simulink\Multi_Vehicle
+*ALTERNATE_PATH Extensions\Simulink\Multi_Vehicle
+PARSFILE IO_Channels\I_Channels\Import_357ee5e5-deaf-40ed-970d-e6e2e3868066.par
+#BlueLink0 I/O Channels: Import`Autonomous Detection: 1 Other Vehicle` Multi-Vehicle` , Import`Import_357ee5e5-deaf-40ed-970d-e6e2e3868066
+
+PARSFILE IO_Channels\O_Channels\Export_e91d7250-ddc9-47d9-a297-0e240dda2bfa.par
+#BlueLink1 I/O Channels: Export`City Env: Ego Position` Multi-Vehicle` , Import/Export`Export_e91d7250-ddc9-47d9-a297-0e240dda2bfa
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#Models: Simulink dataset for use with the City Env (2-Car) example's autonomous trucks.
+#
+#- The Models: Simulink Library for the vehicles must have correct adaptations in a) use of model file, b) Working Directory (same as where the simulink .mdl file is located, and c) the correct imports/exports:
+#   - Each Vehicle exports its Position and Rotation to each other Vehicle
+#
+#For more details on this example, please see the Technical Memo: "Example: Running Multiple Vehicles in Simulink."
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Multi-Vehicle } Autnomous (Detect One Vehicle)
+#Library : Models: Simulink
+#DataSet : Autnomous (Detect One Vehicle)
+#Category: Multi-Vehicle
+#FileID  : Simlink_4b825926-8e7a-4c6c-8ac5-dd5e5a8b78af
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

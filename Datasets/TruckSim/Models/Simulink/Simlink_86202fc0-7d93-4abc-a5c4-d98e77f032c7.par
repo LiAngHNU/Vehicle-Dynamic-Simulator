@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Models: Simulink`Simple Driver Model`Steering
+#RunMdlFile Extensions\Simulink\Driver_TS9.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\Driver_TS9.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 1    
+OPT_IO_UPDATE 1
+#CheckBox4 0    
+OPT_IO_SYNC_FM 0
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+PARSFILE IO_Channels\I_Channels\Import_b10b5ea8-8a10-4f0a-bbbd-56702ea495f3.par
+#BlueLink0 I/O Channels: Import`Steering Wheel Angle` Driver` , Import`Import_b10b5ea8-8a10-4f0a-bbbd-56702ea495f3
+
+PARSFILE IO_Channels\O_Channels\Export_034f14a6-5f70-4071-8c28-4165959287e5.par
+#BlueLink1 I/O Channels: Export`Driver Channels` Steering Controller: User-defined` , Import/Export`Export_034f14a6-5f70-4071-8c28-4165959287e5
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This Models: Simulink dataset links to a Simulink model of a steering controller that replaces the  steering wheel angle determined by the built-in TruckSim model.
+#
+#This example makes use of the driver sensors built into TruckSim for previewing the target path and giving feedback about predicted tracking error (L_DRV_1, LDRV_2, ...,) and the integral of tracking error (A_DRV_1, A_DRV_2, ...).
+#
+#The Simulink model is set to use "variable step" numerical integration, which means it will inherit the time step from TruckSim. The box is checked on this screen to set the time step here which ensures that the time step used is compatible with possible limits or requirement in the Simulink model.
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Steering } Simple Driver Model
+#Library : Models: Simulink
+#DataSet : Simple Driver Model
+#Category: Steering
+#FileID  : Simlink_86202fc0-7d93-4abc-a5c4-d98e77f032c7
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

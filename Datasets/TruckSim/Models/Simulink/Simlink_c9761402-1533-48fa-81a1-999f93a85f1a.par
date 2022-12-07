@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Models: Simulink`Semi-Active Suspension`
+#RunMdlFile Extensions\Simulink\SemiActive_TS9.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\SemiActive_TS9.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 1    
+OPT_IO_UPDATE 1
+#CheckBox4 0    
+OPT_IO_SYNC_FM 0
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.004
+*FREQ_OUT 250
+tstep 0.0005
+iprint 8
+PARSFILE IO_Channels\I_Channels\Import_8ec4a3bb-1279-4395-84ef-988e855f326e.par
+#BlueLink0 I/O Channels: Import`Semi-Active Suspension` ` , Import`Import_8ec4a3bb-1279-4395-84ef-988e855f326e
+
+PARSFILE IO_Channels\O_Channels\Export_f802fb04-32a5-4188-98b0-b4a49dbde681.par
+#BlueLink1 I/O Channels: Export`Semi-Active Suspension` Suspension System: Control and External Models` , Import/Export`Export_f802fb04-32a5-4188-98b0-b4a49dbde681
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This Models: Simulink dataset links to a Simulink model of a Semi-Active suspension system.
+#
+#The suspension damper forces are imported with the mode "Replace". This means the TruckSim-calculated values for suspension damper forces will be ignored and replaced with the data imported from the Simulink model.
+#
+#The Simulink model is set to use "variable step" numerical integration, which means it will inherit the time step from TruckSim. The box is checked on this screen to set the time step here which ensures that the time step used is compatible with possible limits or requirement in the Simulink model.
+#
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; Semi-Active Suspension
+#Library : Models: Simulink
+#DataSet : Semi-Active Suspension
+#Category: 
+#FileID  : Simlink_c9761402-1533-48fa-81a1-999f93a85f1a
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

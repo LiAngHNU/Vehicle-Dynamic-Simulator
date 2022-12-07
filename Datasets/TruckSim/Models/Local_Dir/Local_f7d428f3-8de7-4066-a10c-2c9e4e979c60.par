@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Models: Transfer to Local Windows Directory`simfile generator`
+*USE_ALT_DIR 1
+#ALTPATH Extensions\Custom_Py\Highway_Lane_Detection
+#CheckBox1 0    
+#CheckBox2 0    
+*USE_DIFF_SOLVERS 0
+#RingCtrl1 1
+*X64SOLVER 1
+#RingCtrl2 -1
+#MiscYellow0
+LIVE_SERVER localhost
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+#ENDMYellow
+
+PARSFILE IO_Channels\I_Channels\Import_b10b5ea8-8a10-4f0a-bbbd-56702ea495f3.par
+#BlueLink0 I/O Channels: Import`Steering Wheel Angle` Driver` , Misc. Link`Import_b10b5ea8-8a10-4f0a-bbbd-56702ea495f3
+
+
+#EMBEDDED_NOTES
+#This dataset is created to use with Highway Lane Detection (Python) example.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Transfer to Local Windows Directory; simfile generator
+#Library : Models: Transfer to Local Windows Directory
+#DataSet : simfile generator
+#Category: 
+#FileID  : Local_f7d428f3-8de7-4066-a10c-2c9e4e979c60
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

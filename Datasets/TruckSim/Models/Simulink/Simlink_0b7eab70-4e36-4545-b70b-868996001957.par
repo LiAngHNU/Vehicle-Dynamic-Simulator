@@ -1,0 +1,53 @@
+PARSFILE
+#FullDataName Models: Simulink`Yaw Control Diff. (Detailed)`External Powertrain
+#RunMdlFile Extensions\Simulink\Yaw_Control_Diff_TS9.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\Yaw_Control_Diff_TS9.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 1    
+OPT_IO_UPDATE 1
+#CheckBox4 1    
+OPT_IO_SYNC_FM 1
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+PARSFILE IO_Channels\I_Channels\Import_5344b5c4-7e76-438c-8313-4360cdbc1200.par
+#BlueLink0 I/O Channels: Import`Differentials Import` Powertrain Imports` , Import`Import_5344b5c4-7e76-438c-8313-4360cdbc1200
+
+PARSFILE IO_Channels\O_Channels\Export_a2dcf768-28ea-4766-96df-1fa29a2f49cd.par
+#BlueLink1 I/O Channels: Export`Yaw Control Differentials Export` Powertrain` , Import/Export`Export_a2dcf768-28ea-4766-96df-1fa29a2f49cd
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This Models: Simulink dataset links to a Simulink model of a yaw control system that is applied to the front and rear axle differentials.
+#
+#The TruckSim powertrain model involves some detailed interactions between variables, so the options to Replace or Multiply the Simulink imported variables with their corresponding variables in TruckSim are not available for most powertrain variables.
+#
+#For most Powertrain import variables, the only import mode is Add.
+#
+#It is also necessary to specify on the powertrain library screen that certain components are handled with an external model.
+#
+#The Simulink model is set to use "variable step" numerical integration, which means it will inherit the time step from TruckSim. The box is checked on this screen to set the time step here which ensures that the time step used is compatible with possible limits or requirement in the Simulink model.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { External Powertrain } Yaw Control Diff. (Detailed)
+#Library : Models: Simulink
+#DataSet : Yaw Control Diff. (Detailed)
+#Category: External Powertrain
+#FileID  : Simlink_0b7eab70-4e36-4545-b70b-868996001957
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

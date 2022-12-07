@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Models: Simulink`TCS Controller`
+#RunMdlFile Extensions\Simulink\TCS_TS2017.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\TCS_TS2017.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 1    
+OPT_IO_UPDATE 1
+#CheckBox4 0    
+OPT_IO_SYNC_FM 0
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+PARSFILE IO_Channels\I_Channels\Import_131b88e7-49be-430f-a015-173b33ff7c82.par
+#BlueLink0 I/O Channels: Import`Engine Torque Control: ESC/TCS` ` , Import`Import_131b88e7-49be-430f-a015-173b33ff7c82
+
+PARSFILE IO_Channels\O_Channels\Export_6a82bd1b-ac41-472d-8bb3-2f4ee1a86658.par
+#BlueLink1 I/O Channels: Export`Engine Torque Control: ECS/TCS` Traction Control for TCS and ESC` , Import/Export`Export_6a82bd1b-ac41-472d-8bb3-2f4ee1a86658
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This dataset links to a Simulink model of an TCS controller, which controls excessive wheel spin with modulated brake pressures and engine torque management.
+#
+#The Simulink TCS model is set to use "variable step" numerical integration, which means it will inherit the time step from TruckSim. The box is checked on this screen to set the time step here, to ensure that the time step used is compatible with possible limits or requirement in the Simulink model.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; TCS Controller
+#Library : Models: Simulink
+#DataSet : TCS Controller
+#Category: 
+#FileID  : Simlink_56f16ca2-363f-403d-bf59-a1b271d695e1
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

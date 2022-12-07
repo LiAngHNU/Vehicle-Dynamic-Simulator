@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Models: Simulink`Moving Objects (2 Sensors)`Braking Controls
+#RunMdlFile Extensions\Simulink\ADAS_Brake_2_sensors_TS9.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\ADAS_Brake_2_sensors_TS9.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 0    
+OPT_IO_SYNC_FM 0
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+PARSFILE IO_Channels\I_Channels\Import_8a9e40b0-edcc-4544-b106-f37393fb018d.par
+#BlueLink0 I/O Channels: Import`Brake Control for Sensors` Braking Imports` , Import`Import_8a9e40b0-edcc-4544-b106-f37393fb018d
+
+PARSFILE IO_Channels\O_Channels\Export_049413f1-9782-457a-817e-43a796469254.par
+#BlueLink1 I/O Channels: Export`Brake Control for Sensors` Braking Exports` , Import/Export`Export_049413f1-9782-457a-817e-43a796469254
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This Models: Simulink dataset links to a Simulink model that takes input from the TruckSim Range and Detection Sensors and calculates a Brake Master Cylinder Pressure.
+#
+#The Export Channels dataset linked on this screen only has the vehicle velocity, Vx.
+#
+#The Sensor export variables are specified based on a checkbox on the Sensor datasets. For this example, all Sensor export variables are automatically sent to Simulink for both Sensors.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Braking Controls } Moving Objects (2 Sensors)
+#Library : Models: Simulink
+#DataSet : Moving Objects (2 Sensors)
+#Category: Braking Controls
+#FileID  : Simlink_b4216a5d-9714-42f6-ba10-39498b7dc52b
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

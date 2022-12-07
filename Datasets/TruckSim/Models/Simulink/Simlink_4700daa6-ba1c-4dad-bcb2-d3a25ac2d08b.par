@@ -1,0 +1,53 @@
+PARSFILE
+#FullDataName Models: Simulink`ACC: Second Truck (Ext. Sen.)`Active Cruise Control
+#RunMdlFile Extensions\Simulink\Multi_Vehicle\Radar_Acc_ExtSen_TS2020.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\Multi_Vehicle\Radar_Acc_ExtSen_TS2020.mdl
+#RingCtrl0 -1
+#CheckBox0 1    
+*USE_ALT_DIR 1
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 2
+OPT_INT_METHOD 2
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 0    
+OPT_IO_SYNC_FM 0
+*TSTEP 0.001
+*FREQ_MODEL 1000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.001
+iprint 25
+#AltPath Extensions\Simulink\Multi_Vehicle
+*ALTERNATE_PATH Extensions\Simulink\Multi_Vehicle
+PARSFILE IO_Channels\I_Channels\Import_36ade234-5fd4-4a88-ac38-cbee419b398c.par
+#BlueLink0 I/O Channels: Import`Radar Active Cruise (Ext. Sen.)` ` , Import`Import_36ade234-5fd4-4a88-ac38-cbee419b398c
+
+PARSFILE IO_Channels\O_Channels\Export_cf359a4c-d5e9-4a0f-bfba-d2637ea8503e.par
+#BlueLink1 I/O Channels: Export`Radar Active Cruise (Ext. Sen.)` RADAR: Active Cruise Control` , Import/Export`Export_cf359a4c-d5e9-4a0f-bfba-d2637ea8503e
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#Models: Simulink dataset for use with the Radar ACC Run Control example and the second (i.e., trailing) truck.
+#
+#A uniquely named simfile is specified on this screen which is in turn read by the Simulink S-Function and used for the vehicle math model .dll: trucksim2_64.dll
+#
+#Note: If you are using 32-bit MATLAB, specify the vehicle math model as: trucksim2_32.dll.
+#
+#For more details on this example, please see the Technical Memo: "Example: Running Multiple Vehicles in Simulink."
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Active Cruise Control } ACC: Second Truck (Ext. Sen.)
+#Library : Models: Simulink
+#DataSet : ACC: Second Truck (Ext. Sen.)
+#Category: Active Cruise Control
+#FileID  : Simlink_4700daa6-ba1c-4dad-bcb2-d3a25ac2d08b
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

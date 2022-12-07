@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Models: Simulink`Five-Vehicle Platoon: Truck 1`Multi-Vehicle
+#RunMdlFile Extensions\Simulink\Multi_Vehicle\Five_Truck_Platoon_TS2020.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\Multi_Vehicle\Five_Truck_Platoon_TS2020.mdl
+#RingCtrl0 -1
+#CheckBox0 1    
+*USE_ALT_DIR 1
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 2
+OPT_INT_METHOD 2
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 0    
+OPT_IO_SYNC_FM 0
+*TSTEP 0.001
+*FREQ_MODEL 1000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.001
+iprint 25
+#AltPath Extensions\Simulink\Multi_Vehicle
+*ALTERNATE_PATH Extensions\Simulink\Multi_Vehicle
+PARSFILE IO_Channels\O_Channels\Export_9a2d0a6c-4794-4ead-8fa3-c166668d0f64.par
+#BlueLink1 I/O Channels: Export`Exports: Truck 1` Platoon` , Import/Export`Export_9a2d0a6c-4794-4ead-8fa3-c166668d0f64
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#Models: Simulink dataset for use with the Platoon example and the first truck.
+#
+#A uniquely named simfile is specified on this screen which is in turn read by the Simulink S-Function and used for the vehicle math model .dll:
+#trucksim_32.dll (32-bit Matlab)
+#trucksim_64.dll (64-bit Matlab)
+#
+#For more details on this example, please see the Technical Memo: "Example: Running Multiple Vehicles in Simulink."
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Multi-Vehicle } Five-Vehicle Platoon: Truck 1
+#Library : Models: Simulink
+#DataSet : Five-Vehicle Platoon: Truck 1
+#Category: Multi-Vehicle
+#FileID  : Simlink_5409d0a6-abb9-4edf-b705-a4c57f89ac14
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

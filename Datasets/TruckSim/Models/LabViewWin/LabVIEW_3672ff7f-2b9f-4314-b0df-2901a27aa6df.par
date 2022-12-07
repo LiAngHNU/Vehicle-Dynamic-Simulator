@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Models: LabVIEW for Windows (VI)`Base Model`
+#RunMdlFile Extensions\LabViewWin\TruckSim_Base.vi
+#CheckBox0 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox2 1    
+#RingCtrl0 -1
+#RingCtrl2 0
+*X64SOLVER 0
+PARSFILE IO_Channels\O_Channels\Export_35c937bb-9c77-44fc-b62e-29c711f820f4.par
+#BlueLink1 I/O Channels: Export`ABS` Braking Exports` , Import/Export`Export_35c937bb-9c77-44fc-b62e-29c711f820f4
+
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox1 0    
+OPT_IO_UPDATE 0
+#CheckBox3 1    
+OPT_IO_SYNC_FM 1
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+
+#EMBEDDED_NOTES
+#This library is used to link TruckSim models to LabVIEW.
+#
+#VS models can be extended using Simulink and LabView. The libraries for setting up these extensions are Models: Simulink and Models: LabVIEW for Windows (VI), respectively. The screens for these libraries are very similar in operation and function with the main difference being that the Simulink screen is set up to work with MDL files, while the LabView screen is set up to work with VI files. Another difference is that the Simulink screen has settings to support live video for driving simulators.
+#
+#See the Help menu item "Model Extensions and RT HIL" for more information.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: LabVIEW for Windows (VI); Base Model
+#Library : Models: LabVIEW for Windows (VI)
+#DataSet : Base Model
+#Category: 
+#FileID  : LabVIEW_3672ff7f-2b9f-4314-b0df-2901a27aa6df
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

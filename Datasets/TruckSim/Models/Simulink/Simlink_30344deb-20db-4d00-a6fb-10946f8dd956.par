@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Models: Simulink`External Engine and Torque Converter`External Powertrain
+#RunMdlFile Extensions\Simulink\pt_engine_tc\Pt_Engine_TC_TS9.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\pt_engine_tc\Pt_Engine_TC_TS9.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 1    
+OPT_IO_UPDATE 1
+#CheckBox4 1    
+OPT_IO_SYNC_FM 1
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+PARSFILE IO_Channels\I_Channels\Import_88c76164-1eb0-4235-8423-d7f3cdd9f7ba.par
+#BlueLink0 I/O Channels: Import`Engine and TC Import` Powertrain Imports` , Import`Import_88c76164-1eb0-4235-8423-d7f3cdd9f7ba
+
+PARSFILE IO_Channels\O_Channels\Export_6acec523-b120-41ff-bf78-5f765ec1cac2.par
+#BlueLink1 I/O Channels: Export`Engine and TC Export` Powertrain` , Import/Export`Export_6acec523-b120-41ff-bf78-5f765ec1cac2
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This Models: Simulink dataset links to a Simulink model representing the Engine and Torque Converter.
+#
+#The TruckSim powertrain model involves some detailed interactions between variables, so the options to Replace or Multiply the Simulink imported variables with their corresponding variables in TruckSim are not available for most powertrain variables.
+#
+#For most Powertrain import variables, the only import mode is Add.
+#
+#It is also necessary to specify on the powertrain library screen that certain components are handled with an external model.
+#
+#The Simulink model is set to use "variable step" numerical integration, which means it will inherit the time step from TruckSim. The box is checked on this screen to set the time step here which ensures that the time step used is compatible with possible limits or requirement in the Simulink model.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { External Powertrain } External Engine and Torque Converter
+#Library : Models: Simulink
+#DataSet : External Engine and Torque Converter
+#Category: External Powertrain
+#FileID  : Simlink_30344deb-20db-4d00-a6fb-10946f8dd956
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Models: Simulink`Pedestrian Detection`Live Video
+#RunMdlFile Extensions\Simulink\Pedestrian_Detection_CS2018.slx
+SIMULINK_MODEL_FILE Extensions\Simulink\Pedestrian_Detection_CS2018.slx
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 1    
+OPT_IO_UPDATE 1
+#CheckBox4 0    
+OPT_IO_SYNC_FM 0
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+#MiscYellow0
+LIVE_SERVER localhost
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+#ENDMYellow
+
+PARSFILE IO_Channels\I_Channels\Import_772db505-46ee-497f-989d-aaeea7a6ce4a.par
+#BlueLink0 I/O Channels: Import`Brake Control from Camera Sensor` ` , Import`Import_772db505-46ee-497f-989d-aaeea7a6ce4a
+
+PARSFILE IO_Channels\O_Channels\Export_2cd87c10-2485-43f4-afbe-f32d5062738f.par
+#BlueLink1 I/O Channels: Export`Vehicle Speed Vxz_Fwd` Braking Exports` , Import/Export`Export_2cd87c10-2485-43f4-afbe-f32d5062738f
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This example shows the pedestrian detection using a camera sensor with image processing in Simulink. The example can only run Matlab version 2017a and above with Computer Vision System Toolbox.  The Simulink model detects a pedestrian from the trained ACF classification model using Caltech Pedestrian data and display the confidense level.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Live Video } Pedestrian Detection
+#Library : Models: Simulink
+#DataSet : Pedestrian Detection
+#Category: Live Video
+#FileID  : Simlink_a6cc7daf-2be0-4b87-a0a1-26697fe15db2
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

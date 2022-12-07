@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Models: Simulink`Type B ABS Controller`Braking Controls
+#RunMdlFile Extensions\Simulink\absmdl_TypeB_TS2017.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\absmdl_TypeB_TS2017.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 1    
+OPT_IO_SYNC_FM 1
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+PARSFILE IO_Channels\I_Channels\Import_c390a369-30e9-48d8-af11-10b5786cf9e7.par
+#BlueLink0 I/O Channels: Import`Type B ABS: PCTL (after proportioning)` Braking Imports` , Import`Import_c390a369-30e9-48d8-af11-10b5786cf9e7
+
+PARSFILE IO_Channels\O_Channels\Export_8988fbb0-649c-4338-822d-a09b7210d4bc.par
+#BlueLink1 I/O Channels: Export`Type B ABS: PbkD (delivery pressure)` Braking Exports` , Import/Export`Export_8988fbb0-649c-4338-822d-a09b7210d4bc
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This example demonstrates a Type B ABS Control, which means the pressure control is applied after the brake system proportioning.
+#
+#The import variables are Imp_PCTL_{xy}, where {xy} is the wheel/brake where the pressure is applied, e.g., for the left front wheel (L1), Imp_PCTL_L1.
+#
+#Export variables include PbkD_L1, PbkD_R1, PbkD_L2, and PbkD_R2.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Braking Controls } Type B ABS Controller
+#Library : Models: Simulink
+#DataSet : Type B ABS Controller
+#Category: Braking Controls
+#FileID  : Simlink_24ea83b1-0dd8-4ff6-82c9-9f69703256d9
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

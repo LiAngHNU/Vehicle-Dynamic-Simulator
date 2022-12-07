@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Models: Simulink`ABS to Compare, Preview On`Braking Controls
+#RunMdlFile Extensions\Simulink\ABS_TS_Kin_Preview.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\ABS_TS_Kin_Preview.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 1    
+OPT_IO_UPDATE 1
+#CheckBox4 1    
+OPT_IO_SYNC_FM 1
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.0005
+*FREQ_OUT 2000
+tstep 0.0005
+iprint 1
+PARSFILE IO_Channels\I_Channels\Import_fb6f5ede-415e-4f25-bf48-5686cd190ba4.par
+#BlueLink0 I/O Channels: Import`ABS: Wheel Cylinder Pressures` Braking Imports` , Import`Import_fb6f5ede-415e-4f25-bf48-5686cd190ba4
+
+PARSFILE IO_Channels\O_Channels\Export_35c937bb-9c77-44fc-b62e-29c711f820f4.par
+#BlueLink1 I/O Channels: Export`ABS` Braking Exports` , Import/Export`Export_35c937bb-9c77-44fc-b62e-29c711f820f4
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This dataset links to a Simulink model of an ABS controller.
+#
+#This dataset is used to set the output time step to match the internal math model time step (0.0005s). This high freqency is not recommended for routine use, but is helpful when investigating subtle differences between results obtained with different settings.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Braking Controls } ABS to Compare, Preview On
+#Library : Models: Simulink
+#DataSet : ABS to Compare, Preview On
+#Category: Braking Controls
+#FileID  : Simlink_fd60d6b3-f147-4b86-9373-7ffbf0555b50
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

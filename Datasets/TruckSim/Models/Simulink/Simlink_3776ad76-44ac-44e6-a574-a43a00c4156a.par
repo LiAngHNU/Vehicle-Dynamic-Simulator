@@ -1,0 +1,61 @@
+PARSFILE
+#FullDataName Models: Simulink`Differential Controller Multi-Port`External Powertrain
+#RunMdlFile Extensions\Simulink\Differential_MP_TS9.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\Differential_MP_TS9.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 1    
+OPT_IO_UPDATE 1
+#CheckBox4 1    
+OPT_IO_SYNC_FM 1
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+PARSFILE IO_Channels\Ports\Port_ac7d6cb8-14a8-423d-8eb4-e672feab7c93.par
+#BlueLink2 I/O Channels: Ports`Differential Controller Multi-Port` External Powertrain` , Miscellaneous`Port_ac7d6cb8-14a8-423d-8eb4-e672feab7c93
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#New for TruckSim 9:
+#
+#This is an alternative model of the Differential controller. This version is set up to use multiple ports for Import and Export in the Simulink model.
+#
+#Instead of specifying single Import and Export datasets here, a link is made to the dataset in the I/O Channels: Ports Library, which in turn links to 10 Import and 12 Export datasets.
+#
+#This example is used for the examples of Active Transfer Case, Active Yaw Control Differential, LSD and Twin-clutch system. This model exports all control positions for the differential clutches and twin-clutches, and all differential torques that are involved up to 2-axle driven powertrain system.
+#
+#The model varies the clutch control position sinusoidally. Therefore, the simulation results should show some sinusoidal control responses.
+#
+#The TruckSim powertrain model involves some detailed interactions between variables, so the options to Replace or Multiply the Simulink imported variables with their corresponding variables in TruckSim are not available for most powertrain variables.
+#
+#For most Powertrain import variables, the only import mode is Add.
+#
+#It is also necessary to specify on the powertrain library screen that certain components are handled with an external model.
+#
+#The Simulink model is set to use "variable step" numerical integration, which means it will inherit the time step from TruckSim. The box is checked on this screen to set the time step here which ensures that the time step used is compatible with possible limits or requirement in the Simulink model.
+#
+#
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { External Powertrain } Differential Controller Multi-Port
+#Library : Models: Simulink
+#DataSet : Differential Controller Multi-Port
+#Category: External Powertrain
+#FileID  : Simlink_3776ad76-44ac-44e6-a574-a43a00c4156a
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

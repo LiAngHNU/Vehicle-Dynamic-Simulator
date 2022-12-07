@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Models: Simulink`ACC: First Truck (Ext. Sen.)`Active Cruise Control
+#RunMdlFile Extensions\Simulink\Multi_Vehicle\Radar_Acc_ExtSen_TS2020.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\Multi_Vehicle\Radar_Acc_ExtSen_TS2020.mdl
+#RingCtrl0 -1
+#CheckBox0 1    
+*USE_ALT_DIR 1
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 2
+OPT_INT_METHOD 2
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 0    
+OPT_IO_SYNC_FM 0
+*TSTEP 0.001
+*FREQ_MODEL 1000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.001
+iprint 25
+#AltPath Extensions\Simulink\Multi_Vehicle
+*ALTERNATE_PATH Extensions\Simulink\Multi_Vehicle
+PARSFILE IO_Channels\O_Channels\Export_cf359a4c-d5e9-4a0f-bfba-d2637ea8503e.par
+#BlueLink1 I/O Channels: Export`Radar Active Cruise (Ext. Sen.)` RADAR: Active Cruise Control` , Import/Export`Export_cf359a4c-d5e9-4a0f-bfba-d2637ea8503e
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This "Models: Simulink" dataset is used in an example in which two vehicle models are simulated simultaneously under the control of Simulink. This dataset is used for the first vehicle, which is detected by a second vehicle.
+#
+#Both "Models: Simulink" datasets identify the same Simulink model.
+#- For the lead vehicle there are only exports
+#- For the following vehicle there exports and imports
+#For more details on this example, please see the Technical Memo: "Example: Running Multiple Vehicles in Simulink."
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Active Cruise Control } ACC: First Truck (Ext. Sen.)
+#Library : Models: Simulink
+#DataSet : ACC: First Truck (Ext. Sen.)
+#Category: Active Cruise Control
+#FileID  : Simlink_2fc71e9a-bddb-41d3-9379-f33f69bdd7e5
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

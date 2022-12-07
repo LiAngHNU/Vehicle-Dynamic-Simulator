@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Models: Simulink`Four Wheel Steering System`Steering
+#RunMdlFile Extensions\Simulink\Mdl4ws_TS9.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\Mdl4ws_TS9.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 1    
+OPT_IO_UPDATE 1
+#CheckBox4 0    
+OPT_IO_SYNC_FM 0
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+PARSFILE IO_Channels\I_Channels\Import_8468ce10-4084-4b24-9b20-43f07ed9f2c9.par
+#BlueLink0 I/O Channels: Import`Four Wheel Steer` ` , Import`Import_8468ce10-4084-4b24-9b20-43f07ed9f2c9
+
+PARSFILE IO_Channels\O_Channels\Export_4cfda96e-43e8-471b-9a89-c6a2fb5f7f39.par
+#BlueLink1 I/O Channels: Export`Four Wheel Steer` Steering System: Control and External Models` , Import/Export`Export_4cfda96e-43e8-471b-9a89-c6a2fb5f7f39
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This Models: Simulink dataset links to a Simulink model that controls the rear axle's road wheel steer angles, creating a 4-wheel steering system.
+#
+#The Simulink model is set to use "variable step" numerical integration, which means it will inherit the time step from TruckSim. The box is checked on this screen to set the time step here which ensures that the time step used is compatible with possible limits or requirement in the Simulink model.
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Steering } Four Wheel Steering System
+#Library : Models: Simulink
+#DataSet : Four Wheel Steering System
+#Category: Steering
+#FileID  : Simlink_fdd876d5-ea31-4f9d-9364-605f134bd4b5
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

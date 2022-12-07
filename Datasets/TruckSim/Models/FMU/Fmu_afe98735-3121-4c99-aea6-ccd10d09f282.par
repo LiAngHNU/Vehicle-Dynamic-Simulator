@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Models: Export FMU/FMI`pyFMI`
+*FMU_PATH Extensions\FMU_FMI\FMI2_Baseline.fmu
+*FMU_PATH_2 Extensions\FMU_FMI\FMI2_Baseline_RunScript.cmd
+#CheckBox0 1    
+*PYTHON_RUN_FMU 1
+#CheckBox1 0    
+*SELF_CONTAIN_FMU 0
+#CheckBox2 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 0    
+OPT_IO_UPDATE 0
+#CheckBox4 0    
+#RingCtrl1 2
+OPT_INT_METHOD 2
+#RingCtrl2 2
+*FMI_VER 2
+#RingCtrl3 1
+*FMI_PORT_TYPE 1
+#BlueLink0 ` , Import` , Import` , Import`
+
+PARSFILE IO_Channels\O_Channels\Export_35c937bb-9c77-44fc-b62e-29c711f820f4.par
+#BlueLink1 I/O Channels: Export`ABS` Braking Exports` , Import/Export`Export_35c937bb-9c77-44fc-b62e-29c711f820f4
+
+
+LOG_ENTRY Used Dataset: Models: Export FMU/FMI; pyFMI
+#Library : Models: Export FMU/FMI
+#DataSet : pyFMI
+#Category: 
+#FileID  : Fmu_afe98735-3121-4c99-aea6-ccd10d09f282
+#Product : TruckSim 2020.1
+#VehCode 
+
+END
