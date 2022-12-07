@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Autonomous Detection: 1 Other Vehicle`Multi-Vehicle
+#RingCtrl0 0
+#RingCtrl1 1
+*README_FILE Results\Run_4d63adc2-0d79-4242-be5e-f3e84b0e4bfe\Run_imp_tab.txt
+
+#MiscYellow0
+#ENDMYellow
+
+#MiscYellow1
+DEFINE_IMPORT IMP_Car1_X
+DEFINE_IMPORT IMP_Car1_Y
+DEFINE_IMPORT IMP_Car1_Z
+DEFINE_IMPORT IMP_Car1_Roll
+DEFINE_IMPORT IMP_Car1_Pitch
+DEFINE_IMPORT IMP_Car1_Yaw
+IMPORT IMP_Car1_X
+IMPORT IMP_Car1_Y
+IMPORT IMP_Car1_Z
+IMPORT IMP_Car1_Roll
+IMPORT IMP_Car1_Pitch
+IMPORT IMP_Car1_Yaw
+#ENDMYellow
+
+#BlueLink0 TruckSim Run Control`City (2 Parallel Solvers): Truck 1` * TS 2020.1 - Multiple Vehicles` , example run`Run_4d63adc2-0d79-4242-be5e-f3e84b0e4bfe
+
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { Multi-Vehicle } Autonomous Detection: 1 Other Vehicle
+#Library : I/O Channels: Import
+#DataSet : Autonomous Detection: 1 Other Vehicle
+#Category: Multi-Vehicle
+#FileID  : Import_357ee5e5-deaf-40ed-970d-e6e2e3868066
+#Product : TruckSim 2020.1
+#VehCode Import Channels
+
+END

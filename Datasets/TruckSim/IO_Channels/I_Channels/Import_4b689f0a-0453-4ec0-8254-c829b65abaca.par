@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Steering Wheel Angle w/ Preview Points`Driver
+#RingCtrl0 1
+#RingCtrl1 1
+*README_FILE Results\Run_b2b4a9e7-fbe3-4b99-a109-7409b4490b56\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_STEER_SW Replace 0.0! 1
+IMP_X_PREV Add 0.0! 0
+IMP_Y_PREV Add 0.0! 0
+#ENDMYellow
+
+#MiscYellow1
+define_import IMP_X_PREV
+define_import IMP_Y_PREV
+
+define_output Xpreview = IMP_X_PREV
+define_output Ypreview = IMP_Y_PREV
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#This dataset uses VS Commands to add two import and output variables for X and Y coordinates of a preview point used in the steering controller example described in the tech memo  "Example: Extending a Model with VS Commands and the API."
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { Driver } Steering Wheel Angle w/ Preview Points
+#Library : I/O Channels: Import
+#DataSet : Steering Wheel Angle w/ Preview Points
+#Category: Driver
+#FileID  : Import_4b689f0a-0453-4ec0-8254-c829b65abaca
+#Product : TruckSim 2020.1
+#VehCode Import Channels
+
+END

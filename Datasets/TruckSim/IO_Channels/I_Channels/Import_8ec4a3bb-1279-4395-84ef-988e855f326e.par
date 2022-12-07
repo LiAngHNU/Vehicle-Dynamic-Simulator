@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Semi-Active Suspension`
+#RingCtrl0 0
+#RingCtrl1 1
+*README_FILE Results\Run_9225e80a-db2e-4d7b-b544-6ab46029acab\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_FD_L1 Replace 0! 1
+IMP_FD_R1 Replace 0! 1
+IMP_FD_L2 Replace 0! 1
+IMP_FD_R2 Replace 0! 1
+#ENDMYellow
+
+#BlueLink0 TruckSim Run Control`Semi-Active Suspension: L/R Bumps` Simulink and LabVIEW` , example run`Run_9225e80a-db2e-4d7b-b544-6ab46029acab
+
+
+#EMBEDDED_NOTES
+#Import variables dataset for the Semi-Active Suspension Simulink example.
+#
+#This dataset specifies the import variables for the suspension damper forces for four wheels (axles 1 and 2).
+#
+#The import mode Replace is used to replace the internally calculated suspension damper forces with data imported from an external model.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; Semi-Active Suspension
+#Library : I/O Channels: Import
+#DataSet : Semi-Active Suspension
+#Category: 
+#FileID  : Import_8ec4a3bb-1279-4395-84ef-988e855f326e
+#Product : TruckSim 2020.1
+#VehCode Import Channels
+
+END

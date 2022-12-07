@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName I/O Channels: Export`Radar Active Cruise (Ext. Sen.)`RADAR: Active Cruise Control
+#RingCtrl0 0
+#RingCtrl1 1
+*README_FILE Results\Run_fff10c6c-446c-4559-9a1e-7b6e3a4020e6\Run_out_tab.txt
+
+
+EXPORT Vx
+EXPORT Xo
+EXPORT Yo
+EXPORT Yaw
+#MiscYellow0
+#Number of Selected Channels: 4
+#CHN_NAME: Vx
+#CHN_NAME: Xo
+#CHN_NAME: Yo
+#CHN_NAME: Yaw
+#ENDMYellow
+
+#BlueLink0 TruckSim Run Control`Radar Active Cruise: Second Truck` Simulink and LabVIEW` , example run`Run_fff10c6c-446c-4559-9a1e-7b6e3a4020e6
+
+
+#EMBEDDED_NOTES
+#Export variables dataset for Radar Active Cruise Control example, used for both the lead truck and trailing truck.
+#
+#This dataset specifies the export variables for the vehicle's longitudinal speed, the X and Y coordintes of the vehicle sprung mass coordinate system origin, and the vehicle's yaw angle
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Export; { RADAR: Active Cruise Control } Radar Active Cruise (Ext. Sen.)
+#Library : I/O Channels: Export
+#DataSet : Radar Active Cruise (Ext. Sen.)
+#Category: RADAR: Active Cruise Control
+#FileID  : Export_cf359a4c-d5e9-4a0f-bfba-d2637ea8503e
+#Product : TruckSim 2020.1
+#VehCode Export Channels
+
+END

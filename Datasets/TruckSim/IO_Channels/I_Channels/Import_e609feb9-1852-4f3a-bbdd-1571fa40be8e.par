@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Total Powertrain Import`Powertrain Imports
+#RingCtrl0 0
+#RingCtrl1 1
+*README_FILE Results\Run_37973d5b-95e9-4c35-816f-f8fc23fedacd\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_MY_OUT_D1_L Add 0.0! 0
+IMP_MY_OUT_D1_R Add 0.0! 0
+IMP_MY_OUT_D2_L Add 0.0! 0
+IMP_MY_OUT_D2_R Add 0.0! 0
+IMP_GEAR_TRANS Add 0.0! 0
+IMP_AV_ENG Add 0.0! 0
+IMP_AV_TC Add 0.0! 0
+IMP_AV_TRANS Add 0.0! 1
+IMP_AV_D3_F Add 0.0! 0
+IMP_AV_D3_R Add 0.0! 0
+#ENDMYellow
+
+#BlueLink0 TruckSim Run Control`External Powertrain` Simulink and LabVIEW` , example run`Run_37973d5b-95e9-4c35-816f-f8fc23fedacd
+
+
+#EMBEDDED_NOTES
+#Import variables dataset for an externally defined Total Powertrain.
+#
+#The TruckSim powertrain model involves some detailed interactions between variables, so the option to Add, Replace, or Multiply the Simulink imported variables with their corresponding variables in TruckSim is not available for most powertrain variables. (The only option is "Add".)
+#
+#Instead, it is necessary to specify on the powertrain library screen that certain components are handled with an external model.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { Powertrain Imports } Total Powertrain Import
+#Library : I/O Channels: Import
+#DataSet : Total Powertrain Import
+#Category: Powertrain Imports
+#FileID  : Import_e609feb9-1852-4f3a-bbdd-1571fa40be8e
+#Product : TruckSim 2020.1
+#VehCode Import Channels
+
+END

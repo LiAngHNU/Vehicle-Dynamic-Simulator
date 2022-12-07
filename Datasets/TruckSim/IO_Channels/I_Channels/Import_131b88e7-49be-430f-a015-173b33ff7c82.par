@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Engine Torque Control: ESC/TCS`
+#RingCtrl0 1
+#RingCtrl1 1
+*README_FILE Results\Run_c912a1f0-2abd-4ae6-b78c-f79546456335\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_ESC_ENGINE_CON_STATE Add 0.0! 0
+IMP_MENGINE_ESC_REQUEST Add 0.0! 0
+IMP_PBK_L1 Replace 0.0! 1
+IMP_PBK_R1 Replace 0.0! 1
+IMP_PBK_L2 Replace 0.0! 1
+IMP_PBK_R2 Replace 0.0! 1
+#ENDMYellow
+
+#BlueLink0 TruckSim Run Control`TCS: Low Mu Full Thrt. Accel.` Engine Torque Control` , example run`Run_c912a1f0-2abd-4ae6-b78c-f79546456335
+
+
+#EMBEDDED_NOTES
+#ESC/TCS import variables involve engine torque management:
+#
+#IMP_ESC_ENGINE_CON_STATE:
+#0: no control,
+#1: engine torque reduced to ESC request, and
+#2: engine torque increased to ESC request.
+#
+#IMP_MENGINE_ESC_REQUEST: ESC requesting engine torque.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; Engine Torque Control: ESC/TCS
+#Library : I/O Channels: Import
+#DataSet : Engine Torque Control: ESC/TCS
+#Category: 
+#FileID  : Import_131b88e7-49be-430f-a015-173b33ff7c82
+#Product : TruckSim 2020.1
+#VehCode Import Channels
+
+END

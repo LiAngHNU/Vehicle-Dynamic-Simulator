@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Four Wheel Steer`
+#RingCtrl0 0
+#RingCtrl1 1
+*README_FILE Results\Run_c10ed18c-2274-4f24-8fbe-f7856374afc2\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_STEER_L2 Add 0.0! 1
+IMP_STEER_R2 Add 0.0! 1
+#ENDMYellow
+
+#BlueLink0 TruckSim Run Control`External Four Wheel Steering` Simulink and LabVIEW` , example run`Run_c10ed18c-2274-4f24-8fbe-f7856374afc2
+
+
+#EMBEDDED_NOTES
+#Import variables dataset for Four-Wheel Steering example.
+#
+#This dataset specifies the import variables for the direct control of the steer of the rear wheels (i.e., axle 2 of a 2-axle truck).
+#
+#There are no existing built-in control variables for the direct control of the steer of the rear wheels, so "Add" is the only import mode available.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; Four Wheel Steer
+#Library : I/O Channels: Import
+#DataSet : Four Wheel Steer
+#Category: 
+#FileID  : Import_8468ce10-4084-4b24-9b20-43f07ed9f2c9
+#Product : TruckSim 2020.1
+#VehCode Import Channels
+
+END

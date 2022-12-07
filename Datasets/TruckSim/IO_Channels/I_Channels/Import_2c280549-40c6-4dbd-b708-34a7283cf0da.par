@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Brake Wheel Cylinder Pressure L2`Braking Imports
+#RingCtrl0 1
+#RingCtrl1 1
+*README_FILE Results\Run_88a80b3c-6116-48ee-8c0a-a7dd0ed048ef\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_PBK_L2 Replace 0.0! 1
+#ENDMYellow
+
+#BlueLink0 TruckSim Run Control`Ext. ABS: Split Mu - Multi-Port` Simulink and LabVIEW` , example run`Run_88a80b3c-6116-48ee-8c0a-a7dd0ed048ef
+
+
+#EMBEDDED_NOTES
+#Import variables dataset for simple ABS example.
+#
+#This dataset specifies the import variables for the brake pressure at all four wheels. The import mode Replace is used to replace the internally calculated wheel brake pressure with data imported from an external model.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { Braking Imports } Brake Wheel Cylinder Pressure L2
+#Library : I/O Channels: Import
+#DataSet : Brake Wheel Cylinder Pressure L2
+#Category: Braking Imports
+#FileID  : Import_2c280549-40c6-4dbd-b708-34a7283cf0da
+#Product : TruckSim 2020.1
+#VehCode Import Channels
+
+END

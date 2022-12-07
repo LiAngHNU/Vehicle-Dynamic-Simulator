@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName I/O Channels: Export`Engine Torque Control: ECS/TCS`Traction Control for TCS and ESC
+#RingCtrl0 1
+#RingCtrl1 1
+*README_FILE Results\Run_c912a1f0-2abd-4ae6-b78c-f79546456335\Run_out_tab.txt
+
+
+EXPORT Vx_L1
+EXPORT Vx_R1
+EXPORT Vx_L2
+EXPORT Vx_R2
+EXPORT Vx_SM
+EXPORT M_Eng_In
+EXPORT M_Eng_Rq
+#MiscYellow0
+#Number of Selected Channels: 7
+#CHN_NAME: Vx_L1
+#CHN_NAME: Vx_R1
+#CHN_NAME: Vx_L2
+#CHN_NAME: Vx_R2
+#CHN_NAME: Vx_SM
+#CHN_NAME: M_Eng_In
+#CHN_NAME: M_Eng_Rq
+#ENDMYellow
+
+#BlueLink0 TruckSim Run Control`TCS: Low Mu Full Thrt. Accel.` Engine Torque Control` , example run`Run_c912a1f0-2abd-4ae6-b78c-f79546456335
+
+
+#EMBEDDED_NOTES
+#ESC/TCS export variables involve engine torque management:
+#
+#M_ENG_IN: actual engine torque
+#M_ENG_RQ: driver requesting engine torque
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Export; { Traction Control for TCS and ESC } Engine Torque Control: ECS/TCS
+#Library : I/O Channels: Export
+#DataSet : Engine Torque Control: ECS/TCS
+#Category: Traction Control for TCS and ESC
+#FileID  : Export_6a82bd1b-ac41-472d-8bb3-2f4ee1a86658
+#Product : TruckSim 2020.1
+#VehCode Export Channels
+
+END

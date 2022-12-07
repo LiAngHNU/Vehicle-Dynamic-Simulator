@@ -1,0 +1,29 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Brake Control for Sensors`Braking Imports
+#RingCtrl0 0
+#RingCtrl1 1
+*README_FILE Results\Run_23852d8d-63e8-4bc7-9146-6f8015e9e872\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_PCON_BK Add 0.0! 1
+#ENDMYellow
+
+#BlueLink0 TruckSim Run Control`Crossing Vehicles (Simulink)` ADAS and Active Safety` , example run`Run_23852d8d-63e8-4bc7-9146-6f8015e9e872
+
+
+#EMBEDDED_NOTES
+#Import variables dataset for Collision Avoidance / Simple ADAS example.
+#
+#This dataset specifies the import variable for the brake master cylinder pressure. The import mode is Add, which means the imported brake master cylinder pressure will be added to any internal calculation from TruckSim.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { Braking Imports } Brake Control for Sensors
+#Library : I/O Channels: Import
+#DataSet : Brake Control for Sensors
+#Category: Braking Imports
+#FileID  : Import_8a9e40b0-edcc-4544-b106-f37393fb018d
+#Product : TruckSim 2020.1
+#VehCode Import Channels
+
+END

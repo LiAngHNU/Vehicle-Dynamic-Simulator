@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Steering Wheel Angle`Driver
+#RingCtrl0 0
+#RingCtrl1 1
+*README_FILE Results\Run_306eca81-f11d-43e5-a321-90aff424ff4e\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_STEER_SW Replace 0.0! 1
+#ENDMYellow
+
+#BlueLink0 TruckSim Run Control`External Driver Model w/ Driver Sensors` Simulink and LabVIEW` , example run`Run_306eca81-f11d-43e5-a321-90aff424ff4e
+
+
+#EMBEDDED_NOTES
+#Import variables dataset for simple Simulink-based driver model.
+#
+#This dataset specifies the import variable for the steering wheel angle. The import mode Replace is used to replace the internally calculated steering wheel angle with data imported from an external model.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { Driver } Steering Wheel Angle
+#Library : I/O Channels: Import
+#DataSet : Steering Wheel Angle
+#Category: Driver
+#FileID  : Import_b10b5ea8-8a10-4f0a-bbbd-56702ea495f3
+#Product : TruckSim 2020.1
+#VehCode Import Channels
+
+END

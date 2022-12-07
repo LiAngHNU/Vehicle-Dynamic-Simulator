@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Radar Active Cruise (Ext. Sen.)`
+#RingCtrl0 0
+#RingCtrl1 1
+*README_FILE Results\Run_fff10c6c-446c-4559-9a1e-7b6e3a4020e6\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_THROTTLE_ENGINE Add 0.0! 1
+IMP_PCON_BK Add 0.0! 1
+IMP_DETECT Add 0.0! 0
+#ENDMYellow
+
+#MiscYellow1
+define_import imp_detect;
+define_output detect = imp_detect;
+#ENDMYellow
+
+#BlueLink0 TruckSim Run Control`Radar Active Cruise: Second Truck` Simulink and LabVIEW` , example run`Run_fff10c6c-446c-4559-9a1e-7b6e3a4020e6
+
+
+#EMBEDDED_NOTES
+#Import variables dataset for Radar Active Cruise Control example.
+#
+#This dataset should only be used with the second truck.
+#
+#Imp_Aux1 corresponds to the radar detection status (i.e., Detected/Not Detected) in the Simulink model.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; Radar Active Cruise (Ext. Sen.)
+#Library : I/O Channels: Import
+#DataSet : Radar Active Cruise (Ext. Sen.)
+#Category: 
+#FileID  : Import_36ade234-5fd4-4a88-ac38-cbee419b398c
+#Product : TruckSim 2020.1
+#VehCode Import Channels
+
+END

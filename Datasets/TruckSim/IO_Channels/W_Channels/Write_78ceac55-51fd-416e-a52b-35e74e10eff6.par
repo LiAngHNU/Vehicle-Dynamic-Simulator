@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName I/O Channels: Write`Copy Vx and Station to CSV`
+
+#RingCtrl1 1
+#RingCtrl2 0
+#RingCtrl3 1
+#RingCtrl4 0
+
+#MiscYellow0
+#Station
+#VxTarget
+#ENDMYellow
+
+#MiscYellow1
+SPEED_AX_BRAKE_CONSTANT 0.15
+SPEED_AX_THROTTLE_CONSTANT 0.12
+SPEED_AY_LEFT_CONSTANT 0.15
+SPEED_AY_RIGHT_CONSTANT 0.15
+speed_preview 150
+#ENDMYellow
+
+OPT_ALL_WRITE_CONVERT_CSV 0
+OPT_ALL_WRITE_CONVERT_MAT 0
+OPT_CONVERT_SUFFIX 
+OPT_FMT_CSV 1
+OPT_FMT_MAT 0
+WRT_Station
+WRTCVT Station
+WRT_VxTarget
+WRTCVT VxTarget
+
+#EMBEDDED_NOTES
+#This dataset is set up to save 2 channels of output variables in .CSV (Excel).
+#
+#The results are to be pasted into a dataset for a target speed vs. station to be used for moving objects representing a tractor-semitrailer.
+#
+#Besides setting up the creation of the CSV file, this dataset overrides the accleration limits for the path preview speed controller with lower values that might be representative of a heavy truck.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Write; Copy Vx and Station to CSV
+#Library : I/O Channels: Write
+#DataSet : Copy Vx and Station to CSV
+#Category: 
+#FileID  : Write_78ceac55-51fd-416e-a52b-35e74e10eff6
+#Product : TruckSim 2020.1
+#VehCode Write Channels
+
+END

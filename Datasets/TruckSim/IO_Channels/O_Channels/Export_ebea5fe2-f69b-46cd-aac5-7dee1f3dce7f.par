@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName I/O Channels: Export`Total Powertrain Export`Powertrain
+#RingCtrl0 1
+#RingCtrl1 1
+*README_FILE Results\Run_37973d5b-95e9-4c35-816f-f8fc23fedacd\Run_out_tab.txt
+
+
+EXPORT Thr_Eng
+EXPORT ModeTran
+EXPORT Gear_OL
+EXPORT AVy_L1
+EXPORT AVy_R1
+EXPORT AVy_L2
+EXPORT AVy_R2
+EXPORT Vx_L1
+EXPORT Vx_R1
+EXPORT Vx_L2
+EXPORT Vx_R2
+EXPORT Vx
+#MiscYellow0
+#Number of Selected Channels: 12
+#CHN_NAME: Thr_Eng
+#CHN_NAME: ModeTran
+#CHN_NAME: Gear_OL
+#CHN_NAME: AVy_L1
+#CHN_NAME: AVy_R1
+#CHN_NAME: AVy_L2
+#CHN_NAME: AVy_R2
+#CHN_NAME: Vx_L1
+#CHN_NAME: Vx_R1
+#CHN_NAME: Vx_L2
+#CHN_NAME: Vx_R2
+#CHN_NAME: Vx
+#ENDMYellow
+
+#BlueLink0 TruckSim Run Control`External Powertrain` Simulink and LabVIEW` , example run`Run_37973d5b-95e9-4c35-816f-f8fc23fedacd
+
+
+#EMBEDDED_NOTES
+#Export variables dataset for an externally defined Total Powertrain.
+#
+#This dataset specifies the export variables for the normalized throttle at the engine, transmission control mode, transmission gear, wheel rotational speeds, equivalent longitudinal wheel speeds, and the vehicle's longtudinal velocity.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Export; { Powertrain } Total Powertrain Export
+#Library : I/O Channels: Export
+#DataSet : Total Powertrain Export
+#Category: Powertrain
+#FileID  : Export_ebea5fe2-f69b-46cd-aac5-7dee1f3dce7f
+#Product : TruckSim 2020.1
+#VehCode Export Channels
+
+END

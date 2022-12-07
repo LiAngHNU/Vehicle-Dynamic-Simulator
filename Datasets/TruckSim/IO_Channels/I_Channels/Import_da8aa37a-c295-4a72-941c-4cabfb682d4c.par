@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Transfer Case and Differentials Import`Powertrain Imports
+#RingCtrl0 0
+#RingCtrl1 1
+*README_FILE Results\Run_f73f0c7c-9438-4f0f-87da-89eb2a7b70fa\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_MY_OUT_D1_L Add 0.0! 0
+IMP_MY_OUT_D1_R Add 0.0! 0
+IMP_MY_OUT_D2_L Add 0.0! 0
+IMP_MY_OUT_D2_R Add 0.0! 0
+IMP_AV_TRANS Add 0.0! 1
+IMP_AV_D3_F Add 0.0! 0
+IMP_AV_D3_R Add 0.0! 0
+IMP_R_GEAR_D1 Add 3.2! 0
+IMP_R_GEAR_D2 Add 3.2! 0
+IMP_R_GEAR_D3 Add 0.0! 0
+#ENDMYellow
+
+#BlueLink0 TruckSim Run Control`External Differentials` Simulink and LabVIEW` , example run`Run_f73f0c7c-9438-4f0f-87da-89eb2a7b70fa
+
+
+#EMBEDDED_NOTES
+#Import variables dataset for externally defined Transfer Case and Differentials.
+#
+#The TruckSim powertrain model involves some detailed interactions between variables, so the option to Add, Replace, or Multiply the Simulink imported variables with their corresponding variables in TruckSim is not available for most powertrain variables. (The only option is "Add".)
+#
+#Instead, it is necessary to specify on the powertrain library screen that certain components are handled with an external model.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { Powertrain Imports } Transfer Case and Differentials Import
+#Library : I/O Channels: Import
+#DataSet : Transfer Case and Differentials Import
+#Category: Powertrain Imports
+#FileID  : Import_da8aa37a-c295-4a72-941c-4cabfb682d4c
+#Product : TruckSim 2020.1
+#VehCode Import Channels
+
+END

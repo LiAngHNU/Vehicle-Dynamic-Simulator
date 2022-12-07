@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName I/O Channels: Export`ABS`Braking Exports
+#RingCtrl0 0
+#RingCtrl1 1
+*README_FILE Results\Run_f4a8374c-a6c0-44b4-86b5-31e1599f8b5a\Run_out_tab.txt
+
+
+EXPORT Vx_L1
+EXPORT Vx_R1
+EXPORT Vx_L2
+EXPORT Vx_R2
+EXPORT Vx_SM
+EXPORT Pbk_Con
+#MiscYellow0
+#Number of Selected Channels: 6
+#CHN_NAME: Vx_L1
+#CHN_NAME: Vx_R1
+#CHN_NAME: Vx_L2
+#CHN_NAME: Vx_R2
+#CHN_NAME: Vx_SM
+#CHN_NAME: Pbk_Con
+#ENDMYellow
+
+#BlueLink0 TruckSim Run Control`Ext. ABS: Split Mu` Simulink and LabVIEW` , example run`Run_f4a8374c-a6c0-44b4-86b5-31e1599f8b5a
+
+
+#EMBEDDED_NOTES
+#Export variables dataset for the simple ABS/Simulink example.
+#
+#This dataset specifies the export variables for the equivalent longitudinal wheel speeds, the velocity at the sprung mass, and the master cylinder brake pressure.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Export; { Braking Exports } ABS
+#Library : I/O Channels: Export
+#DataSet : ABS
+#Category: Braking Exports
+#FileID  : Export_35c937bb-9c77-44fc-b62e-29c711f820f4
+#Product : TruckSim 2020.1
+#VehCode Export Channels
+
+END

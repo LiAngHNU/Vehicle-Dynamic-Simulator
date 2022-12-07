@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Differentials Import 4x2`Powertrain Imports
+#RingCtrl0 0
+#RingCtrl1 1
+*README_FILE Results\Run_32827740-3212-4fc8-8f03-afdfd5718276\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_CLUTCH_D2 Add 0.0! 0
+IMP_CLT_D2_2 Add 0.0! 0
+IMP_CLUTCH_L2 Add 0.0! 0
+IMP_CLUTCH_R2 Add 0.0! 0
+IMP_M_DIFF_D2 Add 0.0! 0
+#ENDMYellow
+
+#BlueLink0 TruckSim Run Control`Yaw Control Diff.` Simulink and LabVIEW` , example run`Run_32827740-3212-4fc8-8f03-afdfd5718276
+
+
+#EMBEDDED_NOTES
+#Import variables dataset for externally defined differential controller.
+#
+#The TruckSim powertrain model includes options for two clutch controls for each differential (IMP_CLUTCH_D1, IMP_CLT_D1_2, IMP_CLUTCH_D2, ...). The built-in models include limited options for running one clutch per differential. To run both clutches, the controls must be provided by external models.
+#
+#Because of the limited built-in capabilities, the option to Add, Replace, or Multiply the Simulink imported variables with corresponding internal variables in TruckSim is not available for the differential clutch control variables. (The only option is "Add".)
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { Powertrain Imports } Differentials Import 4x2
+#Library : I/O Channels: Import
+#DataSet : Differentials Import 4x2
+#Category: Powertrain Imports
+#FileID  : Import_f9ebb274-1879-4536-83fb-f5ce5be54244
+#Product : TruckSim 2020.1
+#VehCode Import Channels
+
+END

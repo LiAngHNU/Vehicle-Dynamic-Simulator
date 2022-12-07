@@ -1,0 +1,104 @@
+PARSFILE
+#FullDataName I/O Channels: Ports`Differential Controller Multi-Port`External Powertrain
+#RingCtrl0 10
+#RingCtrl1 12
+#CheckBox0 0    
+
+IPORT_IMP 1
+PARSFILE IO_Channels\I_Channels\Import_ebe8a893-8dd0-40ff-917a-0e1435681e6a.par
+#BlueLink0 I/O Channels: Import`Center Differential Import` Powertrain Imports` , Library for factor A`Import_ebe8a893-8dd0-40ff-917a-0e1435681e6a
+
+IPORT_IMP 2
+PARSFILE IO_Channels\I_Channels\Import_0859f9a3-c45c-421d-8ec7-6c9b4a127604.par
+#BlueLink1 I/O Channels: Import`Front Differential Import` Powertrain Imports` , Baseline run`Import_0859f9a3-c45c-421d-8ec7-6c9b4a127604
+
+IPORT_IMP 3
+PARSFILE IO_Channels\I_Channels\Import_1be2e1de-155f-4598-a435-d5dbd25cca66.par
+#BlueLink2 I/O Channels: Import`Rear Differential Import` Powertrain Imports` , Baseline run`Import_1be2e1de-155f-4598-a435-d5dbd25cca66
+
+IPORT_IMP 4
+PARSFILE IO_Channels\I_Channels\Import_a4c5a4ec-269a-451b-86fe-8e0b735dcaf6.par
+#BlueLink3 I/O Channels: Import`LF Twin Clutch` Powertrain Imports` , Baseline run`Import_a4c5a4ec-269a-451b-86fe-8e0b735dcaf6
+
+IPORT_IMP 5
+PARSFILE IO_Channels\I_Channels\Import_d97cc67c-6366-4f0c-aa4c-c34e0854de5b.par
+#BlueLink4 I/O Channels: Import`RF Twin Clutch` Powertrain Imports` , Baseline run`Import_d97cc67c-6366-4f0c-aa4c-c34e0854de5b
+
+IPORT_IMP 6
+PARSFILE IO_Channels\I_Channels\Import_e5d545ed-80ab-414a-bfca-f902764e1014.par
+#BlueLink5 I/O Channels: Import`LR Twin Clutch` Powertrain Imports` , Baseline run`Import_e5d545ed-80ab-414a-bfca-f902764e1014
+
+IPORT_IMP 7
+PARSFILE IO_Channels\I_Channels\Import_2a159510-fc01-4c55-a67b-400360c0b6cb.par
+#BlueLink6 I/O Channels: Import`RR Twin Clutch` Powertrain Imports` , Baseline run`Import_2a159510-fc01-4c55-a67b-400360c0b6cb
+
+IPORT_IMP 8
+PARSFILE IO_Channels\I_Channels\Import_e646e92d-a4cf-4208-97ad-82b144760f61.par
+#BlueLink7 I/O Channels: Import`Center Differential Torque` Powertrain Imports` , Baseline run`Import_e646e92d-a4cf-4208-97ad-82b144760f61
+
+IPORT_IMP 9
+PARSFILE IO_Channels\I_Channels\Import_9be90a3d-bfc6-4ab7-b4af-a5d9fbf9ce86.par
+#BlueLink8 I/O Channels: Import`Front Differential Torque` Powertrain Imports` , Baseline run`Import_9be90a3d-bfc6-4ab7-b4af-a5d9fbf9ce86
+
+IPORT_IMP 10
+PARSFILE IO_Channels\I_Channels\Import_ba3e5f90-e492-455c-bbb5-5bc133773b90.par
+#BlueLink9 I/O Channels: Import`Rear Differential Torque` Powertrain Imports` , Baseline run`Import_ba3e5f90-e492-455c-bbb5-5bc133773b90
+
+IPORT_EXP 1
+PARSFILE IO_Channels\O_Channels\Export_e90c1007-a311-4977-acd6-ffc7437dc19c.par
+#BlueLink20 I/O Channels: Export`Throttle` Differential Controller` , Library for factor B`Export_e90c1007-a311-4977-acd6-ffc7437dc19c
+
+IPORT_EXP 2
+PARSFILE IO_Channels\O_Channels\Export_eecc836f-d02f-4f35-b57a-5f7d647733e4.par
+#BlueLink21 I/O Channels: Export`Engine Speed` Differential Controller` , Baseline run`Export_eecc836f-d02f-4f35-b57a-5f7d647733e4
+
+IPORT_EXP 3
+PARSFILE IO_Channels\O_Channels\Export_4d206673-36bd-41d3-9ebf-bf45c71408c4.par
+#BlueLink22 I/O Channels: Export`Torque Converter Output Speed` Differential Controller` , Baseline run`Export_4d206673-36bd-41d3-9ebf-bf45c71408c4
+
+IPORT_EXP 4
+PARSFILE IO_Channels\O_Channels\Export_a6904ad3-1bf2-48c0-90cc-ab898f298aad.par
+#BlueLink23 I/O Channels: Export`Engine Output Torque` Differential Controller` , Baseline run`Export_a6904ad3-1bf2-48c0-90cc-ab898f298aad
+
+IPORT_EXP 5
+PARSFILE IO_Channels\O_Channels\Export_4c4c3bfb-4aa8-49d2-b857-db55f4d76303.par
+#BlueLink24 I/O Channels: Export`Transmission Output Torque` Differential Controller` , Baseline run`Export_4c4c3bfb-4aa8-49d2-b857-db55f4d76303
+
+IPORT_EXP 6
+PARSFILE IO_Channels\O_Channels\Export_abf44b9a-9308-40ea-9f08-2f49ae3199af.par
+#BlueLink25 I/O Channels: Export`Gear Position` Differential Controller` , Baseline run`Export_abf44b9a-9308-40ea-9f08-2f49ae3199af
+
+IPORT_EXP 7
+PARSFILE IO_Channels\O_Channels\Export_5a9f5ee4-48f0-4aa4-ae9c-dd3c8335a658.par
+#BlueLink26 I/O Channels: Export`Wheel Speeds, 2 Axles` Differential Controller` , Baseline run`Export_5a9f5ee4-48f0-4aa4-ae9c-dd3c8335a658
+
+IPORT_EXP 8
+PARSFILE IO_Channels\O_Channels\Export_16d1c209-0e52-4376-952a-44ea9a491353.par
+#BlueLink27 I/O Channels: Export`Steering Angle` Differential Controller` , Baseline run`Export_16d1c209-0e52-4376-952a-44ea9a491353
+
+IPORT_EXP 9
+PARSFILE IO_Channels\O_Channels\Export_df07257d-5f93-4654-a320-d96dd99b034f.par
+#BlueLink28 I/O Channels: Export`Yaw Rate` Differential Controller` , Baseline run`Export_df07257d-5f93-4654-a320-d96dd99b034f
+
+IPORT_EXP 10
+PARSFILE IO_Channels\O_Channels\Export_e3d7ea2e-2ca6-4ac6-b79f-4709dea36780.par
+#BlueLink29 I/O Channels: Export`Longitudinal Acceleration` Differential Controller` , Baseline run`Export_e3d7ea2e-2ca6-4ac6-b79f-4709dea36780
+
+IPORT_EXP 11
+PARSFILE IO_Channels\O_Channels\Export_62819fdc-01ee-4eae-8fc3-df28b1378295.par
+#BlueLink30 I/O Channels: Export`Lateral Acceleration` Differential Controller` , Baseline run`Export_62819fdc-01ee-4eae-8fc3-df28b1378295
+
+IPORT_EXP 12
+PARSFILE IO_Channels\O_Channels\Export_9a0ec274-9978-46c6-a760-62770f6fb41e.par
+#BlueLink31 I/O Channels: Export`Brake Master Cylinder Pressure` Differential Controller` , Baseline run`Export_9a0ec274-9978-46c6-a760-62770f6fb41e
+
+
+LOG_ENTRY Used Dataset: I/O Channels: Ports; { External Powertrain } Differential Controller Multi-Port
+#Library : I/O Channels: Ports
+#DataSet : Differential Controller Multi-Port
+#Category: External Powertrain
+#FileID  : Port_ac7d6cb8-14a8-423d-8eb4-e672feab7c93
+#Product : TruckSim 2020.1
+#VehCode I/O Ports
+
+END

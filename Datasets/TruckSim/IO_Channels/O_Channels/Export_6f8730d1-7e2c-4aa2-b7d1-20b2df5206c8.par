@@ -1,0 +1,61 @@
+PARSFILE
+#FullDataName I/O Channels: Export`Differentials Export`Powertrain
+#RingCtrl0 1
+#RingCtrl1 1
+*README_FILE Results\Run_b2a91e77-4768-44ed-a4e4-8deb2406300c\Run_out_tab.txt
+
+
+EXPORT Throttle
+EXPORT AV_Eng
+EXPORT AV_TC
+EXPORT M_EngOut
+EXPORT M_Trans
+EXPORT GearStat
+EXPORT Vx_L1
+EXPORT Vx_R1
+EXPORT Vx_L2
+EXPORT Vx_R2
+EXPORT Steer_SW
+EXPORT AVz
+EXPORT Ax
+EXPORT Ay
+EXPORT Pbk_Con
+#MiscYellow0
+#Number of Selected Channels: 15
+#CHN_NAME: Throttle
+#CHN_NAME: AV_Eng
+#CHN_NAME: AV_TC
+#CHN_NAME: M_EngOut
+#CHN_NAME: M_Trans
+#CHN_NAME: GearStat
+#CHN_NAME: Vx_L1
+#CHN_NAME: Vx_R1
+#CHN_NAME: Vx_L2
+#CHN_NAME: Vx_R2
+#CHN_NAME: Steer_SW
+#CHN_NAME: AVz
+#CHN_NAME: Ax
+#CHN_NAME: Ay
+#CHN_NAME: Pbk_Con
+#ENDMYellow
+
+#BlueLink0 TruckSim Run Control`Active Transfer Case Control` Simulink and LabVIEW` , example run`Run_b2a91e77-4768-44ed-a4e4-8deb2406300c
+
+
+#EMBEDDED_NOTES
+#Export variables dataset for externally defined Differential controller.
+#
+#The TruckSim powertrain model includes options for two clutch controls for each differential (IMP_CLUTCH_D1, IMP_CLT_D1_2, IMP_CLUTCH_D2, ...). The built-in models include limited options for running one clutch per differential. To run both clutches, the controls must be provided by external models such as Simulink.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Export; { Powertrain } Differentials Export
+#Library : I/O Channels: Export
+#DataSet : Differentials Export
+#Category: Powertrain
+#FileID  : Export_6f8730d1-7e2c-4aa2-b7d1-20b2df5206c8
+#Product : TruckSim 2020.1
+#VehCode Export Channels
+
+END

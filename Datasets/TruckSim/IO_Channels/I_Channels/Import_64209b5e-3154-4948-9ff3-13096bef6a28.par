@@ -1,0 +1,63 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Autonomous Detection: 3 Other Vehicles`Multi-Vehicle
+#RingCtrl0 0
+#RingCtrl1 1
+*README_FILE Results\Run_43667604-72f6-4753-b3e8-5669faf14c4d\Run_imp_tab.txt
+
+#MiscYellow0
+#ENDMYellow
+
+#MiscYellow1
+DEFINE_IMPORT IMP_Car1_X
+DEFINE_IMPORT IMP_Car1_Y
+DEFINE_IMPORT IMP_Car1_Z
+DEFINE_IMPORT IMP_Car1_Roll
+DEFINE_IMPORT IMP_Car1_Pitch
+DEFINE_IMPORT IMP_Car1_Yaw
+IMPORT IMP_Car1_X
+IMPORT IMP_Car1_Y
+IMPORT IMP_Car1_Z
+IMPORT IMP_Car1_Roll
+IMPORT IMP_Car1_Pitch
+IMPORT IMP_Car1_Yaw
+
+
+DEFINE_IMPORT IMP_Car2_X
+DEFINE_IMPORT IMP_Car2_Y
+DEFINE_IMPORT IMP_Car2_Z
+DEFINE_IMPORT IMP_Car2_Roll
+DEFINE_IMPORT IMP_Car2_Pitch
+DEFINE_IMPORT IMP_Car2_Yaw
+IMPORT IMP_Car2_X
+IMPORT IMP_Car2_Y
+IMPORT IMP_Car2_Z
+IMPORT IMP_Car2_Roll
+IMPORT IMP_Car2_Pitch
+IMPORT IMP_Car2_Yaw
+
+DEFINE_IMPORT IMP_Car3_X
+DEFINE_IMPORT IMP_Car3_Y
+DEFINE_IMPORT IMP_Car3_Z
+DEFINE_IMPORT IMP_Car3_Roll
+DEFINE_IMPORT IMP_Car3_Pitch
+DEFINE_IMPORT IMP_Car3_Yaw
+IMPORT IMP_Car3_X
+IMPORT IMP_Car3_Y
+IMPORT IMP_Car3_Z
+IMPORT IMP_Car3_Roll
+IMPORT IMP_Car3_Pitch
+IMPORT IMP_Car3_Yaw
+#ENDMYellow
+
+#BlueLink0 TruckSim Run Control`City (4 Parallel Solvers): Truck 1` * TS 2020.1 - Multiple Vehicles` , example run`Run_43667604-72f6-4753-b3e8-5669faf14c4d
+
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { Multi-Vehicle } Autonomous Detection: 3 Other Vehicles
+#Library : I/O Channels: Import
+#DataSet : Autonomous Detection: 3 Other Vehicles
+#Category: Multi-Vehicle
+#FileID  : Import_64209b5e-3154-4948-9ff3-13096bef6a28
+#Product : TruckSim 2020.1
+#VehCode Import Channels
+
+END

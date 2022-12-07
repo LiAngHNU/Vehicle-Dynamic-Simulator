@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName I/O Channels: Write`Copy 3 Variables to Excel and MATLAB`
+
+#RingCtrl1 1
+#RingCtrl2 0
+#RingCtrl3 1
+#RingCtrl4 1
+
+#MiscYellow0
+#AVz
+#Ay
+#Steer_SW
+#ENDMYellow
+
+OPT_ALL_WRITE_CONVERT_CSV 0
+OPT_ALL_WRITE_CONVERT_MAT 0
+OPT_CONVERT_SUFFIX 
+OPT_FMT_CSV 1
+OPT_FMT_MAT 1
+WRT_AVz
+WRTCVT AVz
+WRT_Ay
+WRTCVT Ay
+WRT_Steer_SW
+WRTCVT Steer_SW
+
+#EMBEDDED_NOTES
+#This dataset is set up to save 3 channels of output variables in both .CSV and .MAT format.
+#
+#The variables AVz, Ay, and Steer_SW are specified in the "Variables to be Written" field to ensure they are written to the ERD file.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Write; Copy 3 Variables to Excel and MATLAB
+#Library : I/O Channels: Write
+#DataSet : Copy 3 Variables to Excel and MATLAB
+#Category: 
+#FileID  : Write_dc8bc2e0-07f2-4e4f-ba78-a2a662821bf1
+#Product : TruckSim 2020.1
+#VehCode Write Channels
+
+END

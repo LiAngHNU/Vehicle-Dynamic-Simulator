@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Differentials Import`Powertrain Imports
+#RingCtrl0 0
+#RingCtrl1 1
+*README_FILE Results\Run_b2a91e77-4768-44ed-a4e4-8deb2406300c\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_CLUTCH_D3 Add 0.0! 0
+IMP_CLT_D3_2 Add 0.0! 0
+IMP_CLUTCH_D1 Add 0.0! 0
+IMP_CLT_D1_2 Add 0.0! 0
+IMP_CLUTCH_D2 Add 0.0! 0
+IMP_CLT_D2_2 Add 0.0! 0
+IMP_CLUTCH_L1 Add 0.0! 0
+IMP_CLUTCH_R1 Add 0.0! 0
+IMP_CLUTCH_L2 Add 0.0! 0
+IMP_CLUTCH_R2 Add 0.0! 0
+IMP_M_DIFF_D3 Add 0.0! 0
+IMP_M_DIFF_D1 Add 0.0! 0
+IMP_M_DIFF_D2 Add 0.0! 0
+#ENDMYellow
+
+#BlueLink0 TruckSim Run Control`Active Transfer Case Control` Simulink and LabVIEW` , example run`Run_b2a91e77-4768-44ed-a4e4-8deb2406300c
+
+
+#EMBEDDED_NOTES
+#Import variables dataset for externally defined differential controller.
+#
+#The TruckSim powertrain model includes options for two clutch controls for each differential (IMP_CLUTCH_D1, IMP_CLT_D1_2, IMP_CLUTCH_D2, ...). The built-in models include limited options for running one clutch per differential. To run both clutches, the controls must be provided by external models.
+#
+#Because of the limited built-in capabilities, the option to Add, Replace, or Multiply the Simulink imported variables with corresponding internal variables in TruckSim is not available for the differential clutch control variables. (The only option is "Add".)
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { Powertrain Imports } Differentials Import
+#Library : I/O Channels: Import
+#DataSet : Differentials Import
+#Category: Powertrain Imports
+#FileID  : Import_5344b5c4-7e76-438c-8313-4360cdbc1200
+#Product : TruckSim 2020.1
+#VehCode Import Channels
+
+END

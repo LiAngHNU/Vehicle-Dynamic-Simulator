@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Vehicle Dynamic Simulator, Import`* * * Vehicle Dynamic Simulator
+#RingCtrl0 2
+#RingCtrl1 1
+*README_FILE Results\Run_9d3edc5f-aa71-485d-978c-c161f13e5c93\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_MODE_TRANS Add 0.0 ! 0
+IMP_THROTTLE_ENGINE Add 0.0 ! 1
+IMP_MY_OUT_D1_L Add 0.0 ! 0
+IMP_MY_OUT_D1_R Add 0.0 ! 0
+IMP_MY_OUT_D2_L Add 0.0 ! 0
+IMP_MY_OUT_D2_R Add 0.0 ! 0
+IMP_PCON_BK Add 0.0 ! 1
+IMP_PBK_L1 Add 0.0 ! 1
+IMP_PBK_R1 Add 0.0 ! 1
+IMP_PBK_L2 Add 0.0 ! 1
+IMP_PBK_R2 Add 0.0 ! 1
+IMP_STEER_SW Replace 0.0 ! 1
+IMP_STEER_L1 Add 0.0 ! 1
+IMP_STEER_R1 Add 0.0 ! 1
+IMP_STEER_L2 Add 0.0 ! 1
+IMP_STEER_R2 Add 0.0 ! 1
+IMP_LX_SEN_1 Replace 0.0 ! 1
+IMP_LX_SEN_2 Replace 0.0 ! 1
+IMP_LX_SEN_3 Replace 0.0 ! 1
+IMP_LX_SEN_4 Replace 0.0 ! 1
+IMP_LX_SEN_5 Replace 0.0 ! 1
+IMP_LX_SEN_6 Replace 0.0 ! 1
+#ENDMYellow
+
+#BlueLink0 TruckSim Run Control`Vehicle Dynamic Simulator` * * * Vehicle Dynamic Simulator` , example run`Run_9d3edc5f-aa71-485d-978c-c161f13e5c93
+
+
+#EMBEDDED_NOTES
+#Import variables dataset for the Semi-Active Suspension Simulink example.
+#
+#This dataset specifies the import variables for the suspension damper forces for four wheels (axles 1 and 2).
+#
+#The import mode Replace is used to replace the internally calculated suspension damper forces with data imported from an external model.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { * * * Vehicle Dynamic Simulator } Vehicle Dynamic Simulator, Import
+#Library : I/O Channels: Import
+#DataSet : Vehicle Dynamic Simulator, Import
+#Category: * * * Vehicle Dynamic Simulator
+#FileID  : Import_5a56a423-0f1c-438d-953f-fa1ac45e0568
+#Product : TruckSim 2020.1
+#VehCode Import Channels
+
+END

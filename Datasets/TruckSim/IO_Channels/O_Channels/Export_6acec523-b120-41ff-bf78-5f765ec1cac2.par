@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName I/O Channels: Export`Engine and TC Export`Powertrain
+#RingCtrl0 0
+#RingCtrl1 1
+*README_FILE Results\Run_efe63d7b-97f4-4acb-b94e-10cfb64c20ff\Run_out_tab.txt
+
+
+EXPORT Thr_Eng
+EXPORT AV_TC
+#MiscYellow0
+#Number of Selected Channels: 2
+#CHN_NAME: Thr_Eng
+#CHN_NAME: AV_TC
+#ENDMYellow
+
+#BlueLink0 TruckSim Run Control`External Engine and Torq. Con.` Simulink and LabVIEW` , example run`Run_efe63d7b-97f4-4acb-b94e-10cfb64c20ff
+
+
+#EMBEDDED_NOTES
+#Export variables dataset for externally defined Engine and Torque Converter.
+#
+#This dataset specifies the export variables for the normalized throttle at the engine and the transmission input shaft speed.
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Export; { Powertrain } Engine and TC Export
+#Library : I/O Channels: Export
+#DataSet : Engine and TC Export
+#Category: Powertrain
+#FileID  : Export_6acec523-b120-41ff-bf78-5f765ec1cac2
+#Product : TruckSim 2020.1
+#VehCode Export Channels
+
+END
