@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`2000 m, One Lane, Mu = 0.85`Straight
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_243541c4-89b2-4d80-a10e-601d26e5c2ac.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 2000 m, One Lane, Mu = 0.85
+PARSFILE Roads\BuilderSegment\RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c.par
+#BlueLink0 Path: Segment Builder`Straight Path East` Straight` , Reference Path`RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight Path East
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_0db81c0d-1603-4bba-882c-9b8965081f2c.par
+#BlueLink4 Road: Animator Surface Shapes`2000m Road+200 m Grass (1 Ln)` Roads` , Road shape definitions`RdShape_0db81c0d-1603-4bba-882c-9b8965081f2c
+
+RR_SURF_CONSTANT 1
+*IMAGE_FIT_MODE 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_243541c4-89b2-4d80-a10e-601d26e5c2ac.ani
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Straight } 2000 m, One Lane, Mu = 0.85
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 2000 m, One Lane, Mu = 0.85
+#Category: Straight
+#FileID  : Road_243541c4-89b2-4d80-a10e-601d26e5c2ac
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

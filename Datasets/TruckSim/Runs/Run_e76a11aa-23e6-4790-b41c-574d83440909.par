@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName TruckSim Run Control`S-Turn, Optimize`Restore, Restart, Optimize
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_e76a11aa-23e6-4790-b41c-574d83440909
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_20658a56-b08d-44ff-a2d9-9088e077bc2a.par
+#BlueLink2 Vehicle: Loaded Combination`2A Conventional Van w/ 8 Payloads` Conventional Vans` , Math Model`VehLoad_20658a56-b08d-44ff-a2d9-9088e077bc2a
+
+PARSFILE Procedures\Proc_3ad9f148-ec33-4fa7-a385-85302505f475.par
+#BlueLink28 Procedures`Find Out Where to Slow Down` Restoring to a Previous State` , Procedure`Proc_3ad9f148-ec33-4fa7-a385-85302505f475
+
+PARSFILE Animator\HUD\HUD_647507c0-a511-41d5-8437-e3b1fc5eb87f.par
+#BlueLink9 Animator: HUD`Throttle, Brakes, G-G, Speedo, Gear, Tach` HUD Groups` , Miscellaneous`HUD_647507c0-a511-41d5-8437-e3b1fc5eb87f
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_3bdd57de-7629-4dd9-a496-9e034394996e.png
+WRITE_SENSOR_DETECT
+Title S-Turn, Optimize <Restore, Restart, Optimize>
+CATEGORY Restore, Restart, Optimize 
+DATASET_TITLE S-Turn, Optimize
+#MiscYellow0
+opt_buffer_write 1
+nsamp_buffer 1200
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#Restoring to a Previous State
+#Slow down for a tight curve
+#
+#In this example, the truck approaches an S turn.
+#
+#The first part of the S has a radius of 200-m, and the second part has a radius of 100-m.
+#
+#At the speed the vehicle is traveling, it can negotiate the first part of the turn without trouble, but the inside rear tires lift off the road in the second part if the speed remains at 100 kph.
+#
+#When the truck leaves the target path, the run is suspended and restored at successively earlier points in order to find a location where reducing the target speed gives the truck sufficent time to slow down for the second part.
+#
+#Comment out the lines in the "Advance settings" box to see all the intermediate steps
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Restore, Restart, Optimize } S-Turn, Optimize
+#Library : TruckSim Run Control
+#DataSet : S-Turn, Optimize
+#Category: Restore, Restart, Optimize
+#FileID  : Run_e76a11aa-23e6-4790-b41c-574d83440909
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

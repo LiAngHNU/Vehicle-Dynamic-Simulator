@@ -1,0 +1,105 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Roundabout, 2A Conv, Traffic`Road Networks: Intersections and Roundabouts
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_dd2e852b-f742-4bdd-b0ab-e937b100b64b
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_12afd0d3-c9b8-47b4-9b7e-1cd0582e975b.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m` Vehicle Reference` , Animator camera`Camera_12afd0d3-c9b8-47b4-9b7e-1cd0582e975b
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 7
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_9e80118f-ce1c-4f40-8d35-27feac9424e2.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Conv. Van (7-spd. MT)` 2A Conventional Van` , Math Model`Lead2a_9e80118f-ce1c-4f40-8d35-27feac9424e2
+
+PARSFILE Procedures\Proc_fad890a7-9705-4036-8031-03187221463d.par
+#BlueLink28 Procedures`Roundabout: D = 36m` Road Networks` , Procedure`Proc_fad890a7-9705-4036-8031-03187221463d
+
+PARSFILE Generic\Group\GenGrp_3089777f-1286-4f4f-8a83-9d12842c3550.par
+#BlueLink9 Generic Data Group`Traffic: Roundabout` ADAS: Traffic Scenarios` , Miscellaneous`GenGrp_3089777f-1286-4f4f-8a83-9d12842c3550
+
+PARSFILE Roads\BuilderSegment\RoadSeg_c72116c2-3fad-4c32-93c7-0895d6f5156f.par
+#BlueLink11 Path: Segment Builder`South Entrance, 3d Exit, 1021` Roundabout, D = 36 m` , Miscellaneous`RoadSeg_c72116c2-3fad-4c32-93c7-0895d6f5156f
+
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink15 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_246bcb1b-ad8e-4311-a1b3-faf171d44be4.par
+#BlueLink16 Plot: Setup`Road ID for Tires (Axle 1, Single Tires)` Tracking` , Plot`Plot_246bcb1b-ad8e-4311-a1b3-faf171d44be4
+
+PARSFILE Plot\Setup\Plot_3ccc6f14-4965-48a4-bffb-f352c7a91346.par
+#BlueLink17 Plot: Setup`Road ID for Tires (Axle 2)` Tracking` , Plot`Plot_3ccc6f14-4965-48a4-bffb-f352c7a91346
+
+PARSFILE Plot\Setup\Plot_31182207-c673-474a-88a1-79d61c51ff07.par
+#BlueLink18 Plot: Setup`Road Station for Tires (Axle 1)` Tracking` , Plot`Plot_31182207-c673-474a-88a1-79d61c51ff07
+
+PARSFILE Plot\Setup\Plot_4e65f385-7eaf-465b-a8f4-c5854337acdf.par
+#BlueLink19 Plot: Setup`Road Station for Tires (Axle 2)` Tracking` , Plot`Plot_4e65f385-7eaf-465b-a8f4-c5854337acdf
+
+PARSFILE Plot\Setup\Plot_b91ec39e-cb0f-4154-92b2-0292820b6ac7.par
+#BlueLink20 Plot: Setup`Ground Elevation (Axle 1, Single Tires)` Ground` , Plot`Plot_b91ec39e-cb0f-4154-92b2-0292820b6ac7
+
+PARSFILE Plot\Setup\Plot_7f47b4b0-9176-4bc0-b346-4a8f4b3c80d8.par
+#BlueLink21 Plot: Setup`Ground Elevation (Axle 2)` Ground` , Plot`Plot_7f47b4b0-9176-4bc0-b346-4a8f4b3c80d8
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Roundabout, 2A Conv, Traffic <Road Networks: Intersections and Roundabouts>
+CATEGORY Road Networks: Intersections and Roundabouts 
+DATASET_TITLE Roundabout, 2A Conv, Traffic
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example has a vehicle entering and taking the 3rd exit (a left turn), using path 1021.
+#
+#12 Paths have been defined for using this roundabout. Several of them are used to show traffic vehicles in this example. The traffic vehicles are included to show how to provide alternate paths and speeds for sets of moving objects that are animated to look like vehicles.
+#
+#The last link (path 1021) will be used by the driver model (both steering and speed) because it is the last one scanned.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Road Networks: Intersections and Roundabouts } Roundabout, 2A Conv, Traffic
+#Library : TruckSim Run Control
+#DataSet : Roundabout, 2A Conv, Traffic
+#Category: Road Networks: Intersections and Roundabouts
+#FileID  : Run_dd2e852b-f742-4bdd-b0ab-e937b100b64b
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

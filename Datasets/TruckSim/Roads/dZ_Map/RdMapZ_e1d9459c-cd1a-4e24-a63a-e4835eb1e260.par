@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, S-L Grid`7cm Bump`Bumps
+#CheckBox0 0    
+
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: 7cm Bump
+set_description ROAD_DZ_ID 7cm Bump
+#RingCtrl0 CARPET
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 6, 6 ! columns x rows
+ROAD_DZ_CARPET 2D_LINEAR
+0, -10, -4, -3.5, 3.5, 4, 10
+100, 0, 0, 0, 0, 0, 0
+105, 0, 0, 0, 0, 0, 0
+105.01, 0, 0, 0.07, 0.07, 0, 0
+105.39, 0, 0, 0.07, 0.07, 0, 0
+105.4, 0, 0, 0, 0, 0, 0
+130, 0, 0, 0, 0, 0, 0
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Bumps } 7cm Bump
+#Library : Road: Off-Center Elevation Map, S-L Grid
+#DataSet : 7cm Bump
+#Category: Bumps
+#FileID  : RdMapZ_e1d9459c-cd1a-4e24-a63a-e4835eb1e260
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L Grid
+
+END

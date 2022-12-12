@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Lift Axle - Rear`Extended Models
+#VEHICLECODE S_SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_ba0d9dea-c61d-4663-85ae-d64cf1f6736e
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_31e5f92f-1c15-4ca8-bfcc-b3d172b5188e.par
+#BlueLink0 Animator: Camera Setup`90 Azm, 5 El, 45 m` Vehicle Reference` , Animator camera`Camera_31e5f92f-1c15-4ca8-bfcc-b3d172b5188e
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.6 0.2
+SET_RUN_COLOR 0 0.6 0.2
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_a2329db7-c004-496f-a59e-01a0e7ac15f4.par
+#BlueLink2 Vehicle: Loaded Combination`3A Conv. Truck w/ Rear Lift Axle` Conventional Vans` , Math Model`VehLoad_a2329db7-c004-496f-a59e-01a0e7ac15f4
+
+PARSFILE Procedures\Proc_9aa71add-1163-4c55-8105-bd703b690ea6.par
+#BlueLink28 Procedures`Step Steer and Lift Axle 3` Lift Axles` , Procedure`Proc_9aa71add-1163-4c55-8105-bd703b690ea6
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_c2a8544e-c310-4e45-a92d-e030eba0c4ea.png
+WRITE_SENSOR_DETECT
+Title Lift Axle - Rear <Extended Models>
+CATEGORY Extended Models 
+DATASET_TITLE Lift Axle - Rear
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#NOTE: For TruckSim 2020.0, this example now includes the effects of the brake system transport delay parameter, math model keyword TLAG_BK. This is a pure time delay between the master cylinder and the brake actuator.
+#
+#This example demonstrates how to simulate a Tag axle on a 3A straight truck.
+#
+#In this case, the third axle is the Tag axle and is therefore not driven by the powertrain. VS Commands are used to define the Lift Axle variables, parameters, and suspension springs, while Events are used to trigger when the axle is raised, held, then lowered.
+#
+#To see how this was accomplished, click on the Procedures dataset "Step Steer and Lift Axle 3".
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Extended Models } Lift Axle - Rear
+#Library : TruckSim Run Control
+#DataSet : Lift Axle - Rear
+#Category: Extended Models
+#FileID  : Run_ba0d9dea-c61d-4663-85ae-d64cf1f6736e
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

@@ -1,0 +1,94 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Semi-Active Suspension: L/R Bumps`Simulink and LabVIEW
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_9225e80a-db2e-4d7b-b544-6ab46029acab
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_c9761402-1533-48fa-81a1-999f93a85f1a.par
+#BlueLink12 Models: Simulink`Semi-Active Suspension` ` , Models`Simlink_c9761402-1533-48fa-81a1-999f93a85f1a
+
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+*RUN_COLOR 0 0.4 0.8
+SET_RUN_COLOR 0 0.4 0.8
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_9e67d413-6c86-46ce-9b3a-cf088f1d807a.par
+#BlueLink2 Vehicle: Loaded Combination`2A Conventional Van w/ Payload` Conventional Vans` , Math Model`VehLoad_9e67d413-6c86-46ce-9b3a-cf088f1d807a
+
+PARSFILE Procedures\Proc_81270a0e-5382-413d-adf1-9d51ace597af.par
+#BlueLink28 Procedures`Left / Right Bumps` Ride Tests` , Procedure`Proc_81270a0e-5382-413d-adf1-9d51ace597af
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+*TSTOP 4
+*TSTART 0
+*SSTART 50
+PARSFILE Plot\Setup\Plot_a67ecc6d-48dc-4ee6-9d78-b4d696eecc1e.par
+#BlueLink15 Plot: Setup`Axle Roll` Suspension Motion` , Plot`Plot_a67ecc6d-48dc-4ee6-9d78-b4d696eecc1e
+
+
+SPECIAL_PARSFILE Runs\Run_8de9dbcf-6e21-42ed-adb4-f1391aad4e3a.par
+#BlueLink23 TruckSim Run Control`Left / Right Bumps, Solid Axle Susp.: S_S` Suspension and Ride` , Overlay run or ERD file`Run_8de9dbcf-6e21-42ed-adb4-f1391aad4e3a
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Semi-Active Suspension: L/R Bumps <Simulink and LabVIEW>
+CATEGORY Simulink and LabVIEW 
+DATASET_TITLE Semi-Active Suspension: L/R Bumps
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates the use of a Semi-Active Suspension defined in Simulink on a vehicle driving over the Left/Right Bumps.
+#
+#The Simulink model calculates the damper forces, and these are set to replace the TruckSim-calculated damper forces.
+#
+#The example is overlaid with the simulation "Left/Right Bumps, Solid Axle Susp. (s_s)". That example uses the same 2A Conventional Van as this example, except the overlaid vehicle does not use a Simulink-defined Semi-Active Suspension.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Simulink and LabVIEW } Semi-Active Suspension: L/R Bumps
+#Library : TruckSim Run Control
+#DataSet : Semi-Active Suspension: L/R Bumps
+#Category: Simulink and LabVIEW
+#FileID  : Run_9225e80a-db2e-4d7b-b544-6ab46029acab
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

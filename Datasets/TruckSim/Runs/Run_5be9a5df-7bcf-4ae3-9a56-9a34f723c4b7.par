@@ -1,0 +1,94 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Half Throttle Accel.: CVT`Powertrain
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_5be9a5df-7bcf-4ae3-9a56-9a34f723c4b7
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+*RUN_COLOR 0.6 0 0
+SET_RUN_COLOR 0.6 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_531a8b97-0541-441b-bec8-cf6c63bbf237.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Euro Van (CVT)` Large European Van` , Math Model`Lead2a_531a8b97-0541-441b-bec8-cf6c63bbf237
+
+PARSFILE Procedures\Proc_a07b2cfe-aad4-4b9c-b9db-1969e001a47a.par
+#BlueLink28 Procedures`Half Throttle Acceleration (AT)` Acceleration and Braking` , Procedure`Proc_a07b2cfe-aad4-4b9c-b9db-1969e001a47a
+
+PARSFILE Animator\HUD\HUD_647507c0-a511-41d5-8437-e3b1fc5eb87f.par
+#BlueLink9 Animator: HUD`Throttle, Brakes, G-G, Speedo, Gear, Tach` HUD Groups` , Miscellaneous`HUD_647507c0-a511-41d5-8437-e3b1fc5eb87f
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink10 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+PARSFILE Plot\Setup\Plot_55b359b3-ae06-4d21-85f6-e435c4be0f09.par
+#BlueLink15 Plot: Setup`Fuel Consumed` Powertrain` , Plot`Plot_55b359b3-ae06-4d21-85f6-e435c4be0f09
+
+PARSFILE Plot\Setup\Plot_81ba5019-034e-415c-a251-aa19feea9266.par
+#BlueLink16 Plot: Setup`Fuel Rate` Powertrain` , Plot`Plot_81ba5019-034e-415c-a251-aa19feea9266
+
+
+SPECIAL_PARSFILE Runs\Run_d9998440-9fab-44d3-9a56-ea8677f90b62.par
+#BlueLink23 TruckSim Run Control`Half Throttle Accel.: AT` Powertrain` , Overlay run or ERD file`Run_d9998440-9fab-44d3-9a56-ea8677f90b62
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Lead_2a\Lead2a_531a8b97-0541-441b-bec8-cf6c63bbf237.png
+WRITE_SENSOR_DETECT
+Title Half Throttle Accel.: CVT <Powertrain>
+CATEGORY Powertrain 
+DATASET_TITLE Half Throttle Accel.: CVT
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates a simple 1/2 throttle acceleration using a Large European Van with a CVT transmission and 2WD.
+#
+#This example is overlaid with the simulation "Half Throttle Accel.: AT".
+#
+#These two examples allow you to compare the difference a 5-speed automatic transmission vs. a CVT can have on acceleration performance.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Powertrain } Half Throttle Accel.: CVT
+#Library : TruckSim Run Control
+#DataSet : Half Throttle Accel.: CVT
+#Category: Powertrain
+#FileID  : Run_5be9a5df-7bcf-4ae3-9a56-9a34f723c4b7
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

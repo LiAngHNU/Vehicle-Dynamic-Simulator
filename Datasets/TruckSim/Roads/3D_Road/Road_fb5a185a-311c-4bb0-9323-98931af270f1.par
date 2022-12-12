@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Medium Bump, 0.6 m incr. elev.`Ride Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_fb5a185a-311c-4bb0-9323-98931af270f1.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Medium Bump, 0.6 m incr. elev.
+PARSFILE Roads\Builder\Build_0a0bb491-7f6e-4d5d-9f05-73ad94d6178f.par
+#BlueLink0 Path/Road: Segment Builder (Simple 3D)`Straight Path (East-West)` Straight Paths` , Reference Path`Build_0a0bb491-7f6e-4d5d-9f05-73ad94d6178f
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight Path (East-West)
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+PARSFILE Roads\dZ_Map\RdMapZ_6a12e34e-ffd6-483d-a5b1-dddbd4be158a.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Medium Bump Smoothed` Bumps` , Miscellaneous`RdMapZ_6a12e34e-ffd6-483d-a5b1-dddbd4be158a
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_fde85dc8-3388-43eb-abe9-3f28f64288fc.par
+#BlueLink4 Road: Animator Surface Shapes`Medium Bump` Ride Roads and Suspension Testing` , Road shape definitions`RdShape_fde85dc8-3388-43eb-abe9-3f28f64288fc
+
+RR_SURF_CONSTANT 1.0
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_265e38de-4bbf-46ee-bbc0-868db110b76d.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 3 El, 44 m` Road Reference` , Camera`Camera_265e38de-4bbf-46ee-bbc0-868db110b76d
+
+parsfile Roads\3D_Road\Road_fb5a185a-311c-4bb0-9323-98931af270f1.ani
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Ride Roads } Medium Bump, 0.6 m incr. elev.
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Medium Bump, 0.6 m incr. elev.
+#Category: Ride Roads
+#FileID  : Road_fb5a185a-311c-4bb0-9323-98931af270f1
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

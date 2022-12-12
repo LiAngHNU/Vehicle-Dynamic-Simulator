@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Traffic Signal Facing East, Red to Green`ADAS and Active Safety
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_fa448324-d442-4d1b-964e-e2d96bd76a14
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_12afd0d3-c9b8-47b4-9b7e-1cd0582e975b.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m` Vehicle Reference` , Animator camera`Camera_12afd0d3-c9b8-47b4-9b7e-1cd0582e975b
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_4007d7dd-3239-46e7-9cc4-277245a7804e.par
+#BlueLink2 Vehicle: Loaded Combination`DRW Pickup w/ Sign Detection` Pickup Trucks` , Math Model`VehLoad_4007d7dd-3239-46e7-9cc4-277245a7804e
+
+PARSFILE Procedures\Proc_f5696e49-f0ae-4d9f-b188-e7fc0eac1760.par
+#BlueLink28 Procedures`3-Way Intersection, Speed Sign` Road Networks` , Procedure`Proc_f5696e49-f0ae-4d9f-b188-e7fc0eac1760
+
+PARSFILE Sensors_Traffic\Targets\Target_52c625d3-0064-45b3-92f4-a585d3510410.par
+#BlueLink10 Single Moving Object (Custom)`Overhead Traffic Signal facing East` Traffic Signs and Lights` , Miscellaneous`Target_52c625d3-0064-45b3-92f4-a585d3510410
+
+PARSFILE Plot\Setup\Plot_1f28df3a-b5b2-4674-9fe3-12262d4cd3bb.par
+#BlueLink15 Plot: Setup`Tcycle for signals` ADAS Sensor Target Properties` , Plot`Plot_1f28df3a-b5b2-4674-9fe3-12262d4cd3bb
+
+PARSFILE Plot\Setup\Plot_82ed5755-6f85-4037-8e6c-61acb621b24e.par
+#BlueLink16 Plot: Setup`Messages of Objects` ADAS Sensor Target Properties` , Plot`Plot_82ed5755-6f85-4037-8e6c-61acb621b24e
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ee189bc-4102-46cf-a6ee-046ab79da53b.png
+WRITE_SENSOR_DETECT
+Title Traffic Signal Facing East, Red to Green <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Traffic Signal Facing East, Red to Green
+#MiscYellow0
+R_SIG_START = 0.75
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This intersection of two straight roads (East and North) has curbs on the edges. One road ends at the intersection, so it is a 3-way.
+#
+#The vehicle slows for the red light, but then resumes when the light turns green.
+#
+#Adjust the parameter R_SIG_START to control where the light cycle is when the simulation starts.
+#
+#A TruckSim Sensors license is required to rerun this simulation. You may still view the animation and plots.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { ADAS and Active Safety } Traffic Signal Facing East, Red to Green
+#Library : TruckSim Run Control
+#DataSet : Traffic Signal Facing East, Red to Green
+#Category: ADAS and Active Safety
+#FileID  : Run_fa448324-d442-4d1b-964e-e2d96bd76a14
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

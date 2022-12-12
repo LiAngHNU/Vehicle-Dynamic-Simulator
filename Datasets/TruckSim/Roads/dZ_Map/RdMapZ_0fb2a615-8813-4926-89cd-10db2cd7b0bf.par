@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, S-L Grid`Japanese Hilly Road: Incr. Elevation`Japanese Grid Environment
+#CheckBox0 0    
+
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: Japanese Hilly Road: Incr. Elevation
+set_description ROAD_DZ_ID Japanese Hilly Road: Incr. Elevation
+#RingCtrl0 CARPET
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 11, 6 ! columns x rows
+ROAD_DZ_CARPET 2D_LINEAR
+0, -50, -20, -10, -8.5, -7, -5.5, 5.5, 7, 10, 20, 50
+0, -7.1, -7.1, 0, 0, 0, 0, 0, 0, 0, -7.1, -7.1
+110, -7.1, -7.1, 0, 0, 0, 0, 0, 0, 0, -7.1, -7.1
+157, -7.1, -7.1, -2.5, -2, 0, 0, 0, 0, -2.5, -7.1, -7.1
+200, -7.1, -7.1, -2.5, -2, 0, 0, 0, 0, -2.5, -7.1, -7.1
+240, -7.1, -7.1, -5, -3, -1, 0, 0, -1, -5, -7.1, -7.1
+300, -7.1, -7.1, -5, -3, -1, 0, 0, -1, -5, -7.1, -7.1
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Japanese Grid Environment } Japanese Hilly Road: Incr. Elevation
+#Library : Road: Off-Center Elevation Map, S-L Grid
+#DataSet : Japanese Hilly Road: Incr. Elevation
+#Category: Japanese Grid Environment
+#FileID  : RdMapZ_0fb2a615-8813-4926-89cd-10db2cd7b0bf
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L Grid
+
+END

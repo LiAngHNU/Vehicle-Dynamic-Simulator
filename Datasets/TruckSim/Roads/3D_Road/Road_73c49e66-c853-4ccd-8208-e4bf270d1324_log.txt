@@ -1,0 +1,105 @@
+Run made by VS Road Calculator at 11:08 on June 29, 2020.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_73c49e66-c853-4ccd-8208-e4bf270d1324.par"
+Include PARSFILE "Roads\BuilderSegment\RoadSeg_11d95fe0-8d9d-4b2f-b48b-861ab1013a99.par"
+ 100 m Radius <Circles>
+Used Dataset: Path: Segment Builder; { Circles } 100 m Radius
+Include PARSFILE "Roads\Friction\RdMu_ea7d6f58-71c6-42d0-aa52-92b3387a35cb.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } Constant: 0.9
+Include PARSFILE "Roads\Shapes\RdShape_740b8e92-37dc-495f-843f-12c4392d73a9.par"
+Used Dataset: Road: Animator Surface Shapes; { Looped Roads } Looped Road + 100 m Light Grass
+Include PARSFILE "Roads\Boundaries\RdBnd_0568183c-f578-4a1d-8480-fc1d91ca5579.par"
+Used Dataset: Road: Boundaries; { Road Boundary Stop Conditions } Circle Test
+Include PARSFILE "Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par"
+Include PARSFILE "Animator\Frames\Frame_7bb47609-7102-4b34-a50f-a8c8a02234db.par"
+Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Skybox (Vehicle X-Y-Z)
+Include PARSFILE "Animator\STL\Shape_f49e5d15-b002-46b6-b28e-df6b8d8a40b6.par"
+Used Dataset: Animator: Shape File Link; { Environment: Sky Boxes } Partly Cloudy Sky
+Include PARSFILE "Animator\STL\Shape_79cf4b25-5748-487a-8e5c-a602d7f86a42.par"
+Used Dataset: Animator: Shape File Link; { Environment: Land Bowls } Light Grass
+Used Dataset: Animator: Group; { Environment Spheres } Partly Cloudy Sky with Light Grass
+Include PARSFILE "Roads\AniGroup\AniRep_56057bb1-8c48-4f52-b983-f7e6021418ef.par"
+Used Dataset: Road: Animator Repeated Object; { Trees } Trees for 100-m Radius Circle
+Include PARSFILE "Roads\3D_Road\Road_73c49e66-c853-4ccd-8208-e4bf270d1324.ani"
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Include PARSFILE "Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Oak: Fall
+Used Dataset: Road: 3D Surface (All Properties); { Circular Roads } 100-m Radius Circle, Mu = 0.9
+
+Time to read input = 0.00269967
+
+Run stopped at t = 10.04. Stop time reached.
+
+Run started: VS output file = Roads\3D_Road\Road_73c49e66-c853-4ccd-8208-e4bf270d1324.vsb
+
+Computational time ratio: RTIME = inf (real time)/(simulation time)
+

@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`PBS: 12% Grade`PBS Tests
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_8f377c9e-3eb5-4250-bbed-ce2e72bc125d.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 1012
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id PBS: 12% Grade
+PARSFILE Roads\BuilderSegment\RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c.par
+#BlueLink0 Path: Segment Builder`Straight Path East` Straight` , Reference Path`RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight Path East
+PARSFILE Roads\Center_Z\RdRefZ_482a4a33-d83f-4af0-a304-27007c5f8e01.par
+#BlueLink1 Road: Reference Line Elevation`Uniform Grade: 12%` Uniform Grades` , Path Elevation`RdRefZ_482a4a33-d83f-4af0-a304-27007c5f8e01
+
+PARSFILE Roads\Friction\RdMu_b9002147-95c5-413a-83ea-2e94873c1c62.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.8` Constant Mu` , Friction`RdMu_b9002147-95c5-413a-83ea-2e94873c1c62
+
+PARSFILE Roads\Shapes\RdShape_d1bb3bb4-1111-41a4-8a0a-60eb182ccc49.par
+#BlueLink4 Road: Animator Surface Shapes`1200 m One Ln Road + 100 m Light Grass` Roads` , Road shape definitions`RdShape_d1bb3bb4-1111-41a4-8a0a-60eb182ccc49
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_265e38de-4bbf-46ee-bbc0-868db110b76d.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 3 El, 44 m` Road Reference` , Camera`Camera_265e38de-4bbf-46ee-bbc0-868db110b76d
+
+parsfile Roads\3D_Road\Road_8f377c9e-3eb5-4250-bbed-ce2e72bc125d.ani
+
+#EMBEDDED_NOTES
+#This straight road has a 12% grade with Mu = 0.8 as needed to apply the PBS C1 Startability and C2 Gradeability tests.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { PBS Tests } PBS: 12% Grade
+#Library : Road: 3D Surface (All Properties)
+#DataSet : PBS: 12% Grade
+#Category: PBS Tests
+#FileID  : Road_8f377c9e-3eb5-4250-bbed-ce2e72bc125d
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

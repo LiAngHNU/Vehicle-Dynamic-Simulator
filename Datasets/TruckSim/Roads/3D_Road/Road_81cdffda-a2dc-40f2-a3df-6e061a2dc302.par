@@ -1,0 +1,70 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Jackson Ave, Near I-94 (Scenic)`Atlas and ADAS RP Map Downloads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_81cdffda-a2dc-40f2-a3df-6e061a2dc302.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 1001
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Jackson Ave, Near I-94 (Scenic)
+PARSFILE Roads\ExScene\SceneImp_fe1e1702-1256-431a-9dd0-d15cd19c61e5.par
+#BlueLink0 Scene: External Import`Jackson Ave Near I-94` Atlas` , Reference Path`SceneImp_fe1e1702-1256-431a-9dd0-d15cd19c61e5
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Jackson Ave Near I-94
+PARSFILE Roads\dZ_Map_V_Wdth\VarWidZ_86fd20e8-fcc2-4685-ac56-6630c6e5b1c5.par
+#BlueLink2 Road: Off-Center Elevation Map, Variable Width`Jackson Boundary` Highway Intersection Boundaries` , Miscellaneous`VarWidZ_86fd20e8-fcc2-4685-ac56-6630c6e5b1c5
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_4e4dbadd-8c81-4e0b-b3b6-8616a799fa1f.par
+#BlueLink4 Road: Animator Surface Shapes`Jackson Ave (Scenic)` Highway Intersection` , Road shape definitions`RdShape_4e4dbadd-8c81-4e0b-b3b6-8616a799fa1f
+
+RR_SURF_CONSTANT 1.0
+add_reference_frame road_stuff_6_Trees_along_Jackson
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_7ad1bba1-e4fa-4640-9d54-de177e4d1d2b.par
+#BlueLink6 Road: Animator Repeated Object`Trees along Jackson` Highway Intersection` , 3D Shapes`AniRep_7ad1bba1-e4fa-4640-9d54-de177e4d1d2b
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_81cdffda-a2dc-40f2-a3df-6e061a2dc302.ani
+
+add_reference_frame road_stuff_1_1_Mixed_Forest,_Small_Scale
+reference_frame_ghosts off
+set_offset_var_yaw -22.33927187
+set_offset_var_x -51.1212640013
+set_offset_var_y 1330.88598008
+set_offset_var_z -7.7319827646
+parsfile Animator\STL\Shape_10f310b3-4ffa-4298-acb0-89220910c7b2.par
+
+add_reference_frame road_stuff_2_1_Mixed_Forest,_Small_Scale
+reference_frame_ghosts off
+set_offset_var_yaw -21.6135501048
+set_offset_var_x 115.869234526
+set_offset_var_y 1263.19480375
+set_offset_var_z -9.60353411895
+parsfile Animator\STL\Shape_10f310b3-4ffa-4298-acb0-89220910c7b2.par
+
+#EMBEDDED_NOTES
+#This road is defined 100% by an Atlas download. The External Path Import dataset includes path and altitude information.
+#
+#The exit from I-94 intersects this road at about S= 380.
+#
+#The GPS coordinates from Google are at the center of the road.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Atlas and ADAS RP Map Downloads } Jackson Ave, Near I-94 (Scenic)
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Jackson Ave, Near I-94 (Scenic)
+#Category: Atlas and ADAS RP Map Downloads
+#FileID  : Road_81cdffda-a2dc-40f2-a3df-6e061a2dc302
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

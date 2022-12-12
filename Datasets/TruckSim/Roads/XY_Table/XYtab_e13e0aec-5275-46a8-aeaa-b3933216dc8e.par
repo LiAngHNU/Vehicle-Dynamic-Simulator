@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Path: X-Y Coordinates for Segment`Exit off I-94`Highway Intersection
+#RingCtrl0 1
+DEFINE_XY_TABLES 1
+ITAB_XY = NTAB_XY
+XY_TABLE_ID = ITAB_XY
+SET_DESCRIPTION XY_TABLE_ID Exit off I-94
+XY_SEGMENT_ID = XY_TABLE_ID
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox3 0    
+
+#RadioCtrl0 1    
+
+#DiagramOne0
+SEGMENT_XY_TABLE
+-13.6142, -508.1200, 0.0000
+-16.0365, -476.4970, 31.7156
+-17.7400, -437.7720, 70.4781
+-17.7400, -391.9610, 116.2891
+-5.4314, -156.1840, 352.3872
+-0.4745, -43.5316, 465.1486
+28.3117, 536.8917, 1046.2852
+36.6076, 702.2005, 1211.8021
+56.4872, 986.7825, 1497.0776
+58.5697, 1031.8504, 1542.1936
+63.5346, 1104.3385, 1614.8515
+66.0066, 1169.9381, 1680.4977
+66.8348, 1237.4884, 1748.0530
+67.6518, 1248.2803, 1758.8758
+68.5585, 1253.2193, 1763.8974
+71.1140, 1261.1016, 1772.1836
+81.3969, 1283.3964, 1796.7355
+ENDTABLE
+
+#EMBEDDED_NOTES
+#This segement goes from I-94 to exit 172 to Jackson Ave. The X-Y coordinates here were copied from two other datasets:
+#
+#1. The 12 rows of data for the Road: X-Y-Z Coordinates Reference Line for the exit were copied. The first coordinate is (28.233, 537.191).
+#
+#2. To start the path earlier (on I-94), 6 preceding rows were copied from the Parsfile for the Scene: External Import dataset for Esit 172. These cover Y coordinates for the range -508 to -43. The X coordinates for these rows were incremented by 2m to move to the center of the right lane, rather than the original GPS line.
+#
+#A point was removed (32.5, 611), leaving 17 points.
+#
+#The coordinates of the last point were changed to shorten the path, to allow for a circular arc to connect to Jackson Ave.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Path: X-Y Coordinates for Segment; { Highway Intersection } Exit off I-94
+#Library : Path: X-Y Coordinates for Segment
+#DataSet : Exit off I-94
+#Category: Highway Intersection
+#FileID  : XYtab_e13e0aec-5275-46a8-aeaa-b3933216dc8e
+#Product : TruckSim 2020.1
+#VehCode X-Y Coordinates of Segment
+
+END

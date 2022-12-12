@@ -1,0 +1,104 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Traffic Signals Facing N, E, S`ADAS and Active Safety
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_a961370a-3caf-4521-9d93-0dbc77903fbf
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_3cc9f468-6020-44a8-b462-ce46a8455caf.par
+#BlueLink0 Animator: Camera Setup`Fixed View Looking NW at Lights` Fixed Camera` , Animator camera`Camera_3cc9f468-6020-44a8-b462-ce46a8455caf
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 3
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_4007d7dd-3239-46e7-9cc4-277245a7804e.par
+#BlueLink2 Vehicle: Loaded Combination`DRW Pickup w/ Sign Detection` Pickup Trucks` , Math Model`VehLoad_4007d7dd-3239-46e7-9cc4-277245a7804e
+
+PARSFILE Procedures\Proc_f5696e49-f0ae-4d9f-b188-e7fc0eac1760.par
+#BlueLink28 Procedures`3-Way Intersection, Speed Sign` Road Networks` , Procedure`Proc_f5696e49-f0ae-4d9f-b188-e7fc0eac1760
+
+PARSFILE Generic\Group\GenGrp_3c264a17-54b6-4731-86be-dd743e5bd32b.par
+#BlueLink9 Generic Data Group`Traffic Lights for 3-way` Traffic Lights` , Miscellaneous`GenGrp_3c264a17-54b6-4731-86be-dd743e5bd32b
+
+PARSFILE Generic\Group\GenGrp_a3f34622-8dfb-4f65-bf56-0fb60640edce.par
+#BlueLink10 Generic Data Group`Traffic: Follow Ego` ADAS: Traffic Scenarios` , Miscellaneous`GenGrp_a3f34622-8dfb-4f65-bf56-0fb60640edce
+
+PARSFILE Generic\Group\GenGrp_9cba6e27-f074-4435-8fdc-e4a9eb7eef8d.par
+#BlueLink11 Generic Data Group`* Traffic Vehicles at Light` ADAS: Traffic Scenarios` , Miscellaneous`GenGrp_9cba6e27-f074-4435-8fdc-e4a9eb7eef8d
+
+PARSFILE Plot\Setup\Plot_1f28df3a-b5b2-4674-9fe3-12262d4cd3bb.par
+#BlueLink15 Plot: Setup`Tcycle for signals` ADAS Sensor Target Properties` , Plot`Plot_1f28df3a-b5b2-4674-9fe3-12262d4cd3bb
+
+PARSFILE Plot\Setup\Plot_07785d47-9598-49ef-8588-af5a38e14703.par
+#BlueLink16 Plot: Setup`Traffic Speed v. Station (5 - 12)` ADAS Traffic Motion` , Plot`Plot_07785d47-9598-49ef-8588-af5a38e14703
+
+PARSFILE Plot\Setup\Plot_3f99e58f-7b84-4fa6-bb18-ea075da767bb.par
+#BlueLink17 Plot: Setup`Traffic Accel v. Station (5 - 12)` ADAS Traffic Motion` , Plot`Plot_3f99e58f-7b84-4fa6-bb18-ea075da767bb
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ee189bc-4102-46cf-a6ee-046ab79da53b.png
+WRITE_SENSOR_DETECT
+Title Traffic Signals Facing N, E, S <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Traffic Signals Facing N, E, S
+#MiscYellow0
+ ! start fraction of signal cycle, 0 - 1
+R_SIG_START = 0.7
+sstop = 280
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#After 2019.0: Fixed bug involving limit braking accel for moving objects, better initial station for traffic vehicles, adjusted target speeds.
+#
+#This intersection of two straight roads (East and North) has curbs on the edges. One road ends at the intersection, so it is a 3-way.
+#
+#This has three overhead traffic lights with a short cycle. The two lights that should not be visible to a vehicle approaching from the east are blocked by hidden objects.
+#
+#Adjust the parameter R_SIG_START to control where the light cycle is when the simulation starts.
+#
+#A Sensors license is required to rerun this simulation. You may still view the animation and plots.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { ADAS and Active Safety } Traffic Signals Facing N, E, S
+#Library : TruckSim Run Control
+#DataSet : Traffic Signals Facing N, E, S
+#Category: ADAS and Active Safety
+#FileID  : Run_a961370a-3caf-4521-9d93-0dbc77903fbf
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

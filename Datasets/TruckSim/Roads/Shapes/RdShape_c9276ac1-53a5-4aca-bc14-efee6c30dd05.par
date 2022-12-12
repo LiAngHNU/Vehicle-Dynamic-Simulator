@@ -1,0 +1,95 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Alt 3 FHWA Road`Scenic Road Shapes
+NLANES 5
+OPTTHRESHOLD 1
+#MiscYellow0
+# 1 1 1, Road (Medium), 1, 20, 1, -5, m, 5, m, 5, , -100, 1200, 5, , , Road
+# 1 1 1, Road Transition (Light), 1, 10, 1, 5, m, 7.1, m, 1, , -100, 1200, 5, , , Foliage
+# 1 1 1, Grass (Light), 1, 10, 9, -7.1, m, -100, m, , , -100, 1200, 5, , , Foliage
+# 1 1 1, Grass (Light), 1, 10, 9, 7.1, m, 100, m, , , -100, 1200, 5, , , Foliage
+# 1 1 1, Road Transition (Light), 1, 10, -1, -5, m, -7.1, m, 1, , -100, 1200, 5, , , Foliage
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (Medium)
+SPECULAR(1) 1
+SCALE(1) 20
+LTILES(1) 1
+LIN(1) -5
+LINUNITS(1) m
+LOUT(1) 5
+LOUTUNITS(1) m
+LDIV(1) 5
+S_START(1) -100
+S_STOP(1) 1200
+SINT(1) 5
+AUTODETAIL(1) Road
+COLOR(2) 1 1 1
+MATERIAL(2) Road Transition (Light)
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 1
+LIN(2) 5
+LINUNITS(2) m
+LOUT(2) 7.1
+LOUTUNITS(2) m
+LDIV(2) 1
+S_START(2) -100
+S_STOP(2) 1200
+SINT(2) 5
+AUTODETAIL(2) Foliage
+COLOR(3) 1 1 1
+MATERIAL(3) Grass (Light)
+SPECULAR(3) 1
+SCALE(3) 10
+LTILES(3) 9
+LIN(3) -7.1
+LINUNITS(3) m
+LOUT(3) -100
+LOUTUNITS(3) m
+S_START(3) -100
+S_STOP(3) 1200
+SINT(3) 5
+AUTODETAIL(3) Foliage
+COLOR(4) 1 1 1
+MATERIAL(4) Grass (Light)
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) 9
+LIN(4) 7.1
+LINUNITS(4) m
+LOUT(4) 100
+LOUTUNITS(4) m
+S_START(4) -100
+S_STOP(4) 1200
+SINT(4) 5
+AUTODETAIL(4) Foliage
+COLOR(5) 1 1 1
+MATERIAL(5) Road Transition (Light)
+SPECULAR(5) 1
+SCALE(5) 10
+LTILES(5) -1
+LIN(5) -5
+LINUNITS(5) m
+LOUT(5) -7.1
+LOUTUNITS(5) m
+LDIV(5) 1
+S_START(5) -100
+S_STOP(5) 1200
+SINT(5) 5
+AUTODETAIL(5) Foliage
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Scenic Road Shapes } Alt 3 FHWA Road
+#Library : Road: Animator Surface Shapes
+#DataSet : Alt 3 FHWA Road
+#Category: Scenic Road Shapes
+#FileID  : RdShape_c9276ac1-53a5-4aca-bc14-efee6c30dd05
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

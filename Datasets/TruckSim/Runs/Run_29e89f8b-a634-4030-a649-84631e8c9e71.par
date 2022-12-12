@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Accel and Brk Test, Engine Sounds`VS Visualizer Examples
+#VEHICLECODE S_SS + S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_29e89f8b-a634-4030-a649-84631e8c9e71
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_292e779f-a9eb-42a8-a95f-d7969f2cab01.par
+#BlueLink2 Vehicle: Loaded Combination`3A Day+1A Trl, ABS` Day-Cab Tractor-Trailers` , Math Model`VehLoad_292e779f-a9eb-42a8-a95f-d7969f2cab01
+
+PARSFILE Procedures\Proc_5d3d5ca1-ce46-474b-a08f-4be0b015c6fb.par
+#BlueLink28 Procedures`0-60-0kmh, Event control, MT` Acceleration and Braking` , Procedure`Proc_5d3d5ca1-ce46-474b-a08f-4be0b015c6fb
+
+PARSFILE Generic\Group\GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa.par
+#BlueLink9 Generic Data Group`5 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa
+
+PARSFILE Animator\HUD\HUD_750fb88e-77be-4b0e-9523-30964a270490.par
+#BlueLink10 Animator: HUD`Throttle, Brakes, Speedo, Tach` HUD Groups` , Miscellaneous`HUD_750fb88e-77be-4b0e-9523-30964a270490
+
+OPT_VS_FILETYPE 1
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_210bf516-a418-4707-bed2-da7b93f14f00.png
+WRITE_SENSOR_DETECT
+Title Accel and Brk Test, Engine Sounds <VS Visualizer Examples>
+CATEGORY VS Visualizer Examples 
+DATASET_TITLE Accel and Brk Test, Engine Sounds
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#3-axle Day Cab tractor towing a 1-axle trailer, performing an acceleration and braking test controlled by Events.
+#
+#This example uses a sound set linked on the lead unit's engine screen and represents a diesel engine operating throughout its rpm range.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { VS Visualizer Examples } Accel and Brk Test, Engine Sounds
+#Library : TruckSim Run Control
+#DataSet : Accel and Brk Test, Engine Sounds
+#Category: VS Visualizer Examples
+#FileID  : Run_29e89f8b-a634-4030-a649-84631e8c9e71
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

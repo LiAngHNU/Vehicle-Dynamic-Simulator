@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Jounce & Rebound Stops: Med. Bump`Suspension and Ride
+#VEHICLECODE S_SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_295ce897-5d6d-4d76-a87d-73a8f6da64b6
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_f7554333-df25-4cb0-9949-01a3d4268e99.par
+#BlueLink0 Animator: Camera Setup`90 Azm, 5 El, 45 m, No Yaw` Vehicle Reference` , Animator camera`Camera_f7554333-df25-4cb0-9949-01a3d4268e99
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_94566beb-9532-4333-8144-e1e4bf9c49fe.par
+#BlueLink2 Vehicle: Loaded Combination`3A Dump Truck, Loaded, Locked TC` Dump Trucks` , Math Model`VehLoad_94566beb-9532-4333-8144-e1e4bf9c49fe
+
+PARSFILE Procedures\Proc_527a916a-72c5-4399-811f-5b206e828523.par
+#BlueLink28 Procedures`Medium Bump, 0.6 m incr. elev.` Ride Tests` , Procedure`Proc_527a916a-72c5-4399-811f-5b206e828523
+
+PARSFILE Generic\Group\GenGrp_aa29b4a0-5439-4fbb-ad2f-bb4211f7d41f.par
+#BlueLink9 Generic Data Group`3 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_aa29b4a0-5439-4fbb-ad2f-bb4211f7d41f
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_5e99b800-fddc-4e1b-a23d-d8a55608d47a.png
+WRITE_SENSOR_DETECT
+Title Jounce & Rebound Stops: Med. Bump <Suspension and Ride>
+CATEGORY Suspension and Ride 
+DATASET_TITLE Jounce & Rebound Stops: Med. Bump
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates a 3A dump truck with a tandem rear suspension traveling up to, over, and down from, a 0.6-m elevated road section, with smooth ramps serving as the entry and exit.
+#
+#Due to the ramp geometry and the spacing of the tandem axles, the vehicle's third axle will temporarily leave the road surface as the truck climbs up the entry ramp.
+#
+#Similarly, the vehicle's second axle will temporarily leave the road surface as the truck descends from the plateau.
+#
+#The example can be used to study the suspension's jounce bumpers, as well as the tandem load sharing and powertrain torque distribution.
+#
+#Tests like these, in which various bumps are added to the road surface, should be run at a slow speed to allow the vehicle's tires and suspension to realistically travel over the road features.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Suspension and Ride } Jounce & Rebound Stops: Med. Bump
+#Library : TruckSim Run Control
+#DataSet : Jounce & Rebound Stops: Med. Bump
+#Category: Suspension and Ride
+#FileID  : Run_295ce897-5d6d-4d76-a87d-73a8f6da64b6
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

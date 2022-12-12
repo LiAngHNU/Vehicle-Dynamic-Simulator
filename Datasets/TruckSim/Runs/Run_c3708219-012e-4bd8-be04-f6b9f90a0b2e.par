@@ -1,0 +1,94 @@
+PARSFILE
+#FullDataName TruckSim Run Control`B. QS DLC Continue`Restore, Restart, Optimize
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_c3708219-012e-4bd8-be04-f6b9f90a0b2e
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+
+SPECIAL_PARSFILE Runs\Run_0957a954-50bd-4617-b29e-ed79d6ccf926.par
+#BlueLink1 TruckSim Run Control`A. QS DLC Stop @ 5s` Restore, Restart, Optimize` , Continue`Run_0957a954-50bd-4617-b29e-ed79d6ccf926
+
+PARSFILE Results\Run_0957a954-50bd-4617-b29e-ed79d6ccf926\LastRun_END.PAR
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 1    
+#CheckBox10 1    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+*TSTOP 3
+
+SPECIAL_PARSFILE Runs\Run_0957a954-50bd-4617-b29e-ed79d6ccf926.par
+#BlueLink23 TruckSim Run Control`A. QS DLC Stop @ 5s` Restore, Restart, Optimize` , Overlay run or ERD file`Run_0957a954-50bd-4617-b29e-ed79d6ccf926
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Lead_2a\Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80.png
+
+OPT_ALL_WRITE 1
+WRITE_SENSOR_DETECT
+Title B. QS DLC Continue <Restore, Restart, Optimize>
+CATEGORY Restore, Restart, Optimize 
+DATASET_TITLE B. QS DLC Continue
+#MiscYellow0
+sstop = 300
+tstop = 12
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This will continue a run that was stopped. All links that would normally provide information about the vehicle and procedure are cleared.
+#
+#Instead:
+#
+#1. a link is made for the "Continue" option.
+#2. The box "Need animation shapes" is checked.
+#3. The stop time is set to 12, sstop to 300
+#4. An overlay is linked for the same start run.
+#
+#In this example, all information about the model was obtained from the End file generated at the end of the linked simulation that stopped too early. Besides getting all parameters and tables, the state of the math model was used to initialize the second run to maintain continuity.
+#
+#The plots from both runs show continuity in the variables of interest. The video shows both runs with two separate vehicles.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Restore, Restart, Optimize } B. QS DLC Continue
+#Library : TruckSim Run Control
+#DataSet : B. QS DLC Continue
+#Category: Restore, Restart, Optimize
+#FileID  : Run_c3708219-012e-4bd8-be04-f6b9f90a0b2e
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

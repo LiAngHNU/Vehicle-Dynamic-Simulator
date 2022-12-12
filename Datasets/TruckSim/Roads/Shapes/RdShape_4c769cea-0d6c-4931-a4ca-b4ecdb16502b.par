@@ -1,0 +1,92 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`3000m Road+200m Grass (1 Ln)`Roads
+NLANES 5
+OPTTHRESHOLD 1
+#MiscYellow0
+# 1 1 1, Road (One Lane), 1, 10, 1, -4, m, 4, m, , , -100, 3000, 5, , , Road
+# 1 1 1, Road Transition (Light), 1, 10, 1, 4, m, 7.1, m, , , -100, 3000, 5, , , Foliage
+# 1 1 1, Grass (Light), 1, 10, 9, -7.1, m, -100, m, , , -100, 3000, 5, , , Foliage
+# 1 1 1, Grass (Light), 1, 10, 9, 7.1, m, 100, m, , , -100, 3000, 5, , , Foliage
+# 1 1 1, Road Transition (Light), 1, 10, -0.969, -4, m, -7.1, m, , , -100, 3000, 5, , , Foliage
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (One Lane)
+SPECULAR(1) 1
+SCALE(1) 10
+LTILES(1) 1
+LIN(1) -4
+LINUNITS(1) m
+LOUT(1) 4
+LOUTUNITS(1) m
+S_START(1) -100
+S_STOP(1) 3000
+SINT(1) 5
+AUTODETAIL(1) Road
+COLOR(2) 1 1 1
+MATERIAL(2) Road Transition (Light)
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 1
+LIN(2) 4
+LINUNITS(2) m
+LOUT(2) 7.1
+LOUTUNITS(2) m
+S_START(2) -100
+S_STOP(2) 3000
+SINT(2) 5
+AUTODETAIL(2) Foliage
+COLOR(3) 1 1 1
+MATERIAL(3) Grass (Light)
+SPECULAR(3) 1
+SCALE(3) 10
+LTILES(3) 9
+LIN(3) -7.1
+LINUNITS(3) m
+LOUT(3) -100
+LOUTUNITS(3) m
+S_START(3) -100
+S_STOP(3) 3000
+SINT(3) 5
+AUTODETAIL(3) Foliage
+COLOR(4) 1 1 1
+MATERIAL(4) Grass (Light)
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) 9
+LIN(4) 7.1
+LINUNITS(4) m
+LOUT(4) 100
+LOUTUNITS(4) m
+S_START(4) -100
+S_STOP(4) 3000
+SINT(4) 5
+AUTODETAIL(4) Foliage
+COLOR(5) 1 1 1
+MATERIAL(5) Road Transition (Light)
+SPECULAR(5) 1
+SCALE(5) 10
+LTILES(5) -0.969
+LIN(5) -4
+LINUNITS(5) m
+LOUT(5) -7.1
+LOUTUNITS(5) m
+S_START(5) -100
+S_STOP(5) 3000
+SINT(5) 5
+AUTODETAIL(5) Foliage
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Roads } 3000m Road+200m Grass (1 Ln)
+#Library : Road: Animator Surface Shapes
+#DataSet : 3000m Road+200m Grass (1 Ln)
+#Category: Roads
+#FileID  : RdShape_4c769cea-0d6c-4931-a4ca-b4ecdb16502b
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

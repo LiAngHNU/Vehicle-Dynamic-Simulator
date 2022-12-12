@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Braking Distance Test (M/C Pressure, Air)`Brake Tests
+#VEHICLECODE S_SS + SSS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_4f7f3663-5b75-4c29-aa2e-99df482a0716
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_a5f5e39e-1099-49e4-9a86-51e0aba9c43f.par
+#BlueLink2 Vehicle: Loaded Combination`3A Cab Over w/ 3A Euro Trailer` Cab-Over Tractor-Trailers` , Math Model`VehLoad_a5f5e39e-1099-49e4-9a86-51e0aba9c43f
+
+PARSFILE Procedures\Proc_7e8815c7-500c-4e04-80db-de68f76f10bd.par
+#BlueLink28 Procedures`100-0kmh Braking Distance, M/C` Acceleration and Braking` , Procedure`Proc_7e8815c7-500c-4e04-80db-de68f76f10bd
+
+PARSFILE Generic\Group\GenGrp_d5274e1f-bcfa-4e67-a714-1d02ecf15e81.par
+#BlueLink9 Generic Data Group`Skid Marks (6 Axles, 2 Units)` Tire Skid Mark Animations` , Miscellaneous`GenGrp_d5274e1f-bcfa-4e67-a714-1d02ecf15e81
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_9490ba51-301a-40a6-8eb6-db37cea19aa0.png
+WRITE_SENSOR_DETECT
+Title Braking Distance Test (M/C Pressure, Air) <Brake Tests>
+CATEGORY Brake Tests 
+DATASET_TITLE Braking Distance Test (M/C Pressure, Air)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates how to perform a straight-line braking distance test from 100 km/h, with Master Cylinder Pressure as the brake system control method.
+#
+#Events and VS Commands are used in the test Procedure to allow the vehicle to coast down from 102 km/h to 100 km/h.
+#
+#Once the vehicle speed drops below 100 km/h, the vehicle position is reset to the beginning of the test road (Station = 0 m) and the braking portion of the test begins.
+#
+#Stopping distance is obtained by plotting Station vs. Time.
+#
+#Measured test data from an Air Braking system is used as the Master Cylinder Pressure control input; any vehicle using this test Procedure should have brake system data representative of an Air Braking system.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Brake Tests } Braking Distance Test (M/C Pressure, Air)
+#Library : TruckSim Run Control
+#DataSet : Braking Distance Test (M/C Pressure, Air)
+#Category: Brake Tests
+#FileID  : Run_4f7f3663-5b75-4c29-aa2e-99df482a0716
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

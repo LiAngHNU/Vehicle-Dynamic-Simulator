@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Roundabout S 2-lane Circle`Roundabout Network, Flat
+NLANES 2
+#MiscYellow0
+# 1 1 1, Road (Rough), 1, 20, 1, -3.6, m, 3.6, m, 1, 1, 0, 150.796, 1, 1, 0.04, Road
+# 1 1 1, Road Transition (Light), 1, 10, 1, 3.6, m, 8, m, 1, 1, 0, 150.796, 1, 1, 0.04, Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (Rough)
+SPECULAR(1) 1
+SCALE(1) 20
+LTILES(1) 1
+LIN(1) -3.6
+LINUNITS(1) m
+LOUT(1) 3.6
+LOUTUNITS(1) m
+LDIV(1) 1
+LIPRINT(1) 1
+S_START(1) 0
+S_STOP(1) 150.796
+SINT(1) 1
+IPRINT(1) 1
+DZ(1) 0.04
+AUTODETAIL(1) Road
+COLOR(2) 1 1 1
+MATERIAL(2) Road Transition (Light)
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 1
+LIN(2) 3.6
+LINUNITS(2) m
+LOUT(2) 8
+LOUTUNITS(2) m
+LDIV(2) 1
+LIPRINT(2) 1
+S_START(2) 0
+S_STOP(2) 150.796
+SINT(2) 1
+IPRINT(2) 1
+DZ(2) 0.04
+AUTODETAIL(2) Random
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Roundabout Network, Flat } Roundabout S 2-lane Circle
+#Library : Road: Animator Surface Shapes
+#DataSet : Roundabout S 2-lane Circle
+#Category: Roundabout Network, Flat
+#FileID  : RdShape_8fff63fe-c860-4318-aa19-0d2d210f4332
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

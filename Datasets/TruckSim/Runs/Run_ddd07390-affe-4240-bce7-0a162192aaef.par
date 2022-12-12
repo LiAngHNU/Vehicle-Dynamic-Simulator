@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Crosswind Test Facility`Handling and Stability Tests
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_ddd07390-affe-4240-bce7-0a162192aaef
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Animator camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_e0ccd287-beec-486d-929f-02b004b9d2c2.par
+#BlueLink2 Vehicle: Loaded Combination`2A Conv, Loaded, Transp, Aero Ref` Conventional Vans` , Math Model`VehLoad_e0ccd287-beec-486d-929f-02b004b9d2c2
+
+PARSFILE Procedures\Proc_48641ea9-fccd-47da-955c-ba738a288d92.par
+#BlueLink28 Procedures`Crosswind Test` Stability Tests` , Procedure`Proc_48641ea9-fccd-47da-955c-ba738a288d92
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_3bdd57de-7629-4dd9-a496-9e034394996e.png
+WRITE_SENSOR_DETECT
+Title Crosswind Test Facility <Handling and Stability Tests>
+CATEGORY Handling and Stability Tests 
+DATASET_TITLE Crosswind Test Facility
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates how generic tables with user-specified data can be used to define a crosswind test facility.
+#
+#Ordinarily in TruckSim, wind speed and heading are defined with respect to time. In this example, generic tables are used to define wind speed with respect to vehicle station, simulating the effect of crosswind fans turning on and off as the vehicle enters and exits the test section.
+#
+#The crosswind fans produce a 100 km/h wind from the right side, then the left side.
+#
+#The steering control method is closed-loop with the driver steering to keep the truck on its path.
+#
+#The aerodynamic forces are displayed as single-headed arrows located at the aerodynamic reference point. The center of pressure is not generally located at the aerodynamic reference point so aerodynamic moments complete the description of aerodynamic effects. Forces at the center of pressure are replaced with forces at the aerodynamic reference point.
+#
+#The aerodynamic moments are displayed as double-headed arrows located at the sprung mass CG. Because the aerodynamic forces are applied at the aerodynamic reference point which is not located at the sprung mass CG, the forces produce moments about the CG.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Handling and Stability Tests } Crosswind Test Facility
+#Library : TruckSim Run Control
+#DataSet : Crosswind Test Facility
+#Category: Handling and Stability Tests
+#FileID  : Run_ddd07390-affe-4240-bce7-0a162192aaef
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

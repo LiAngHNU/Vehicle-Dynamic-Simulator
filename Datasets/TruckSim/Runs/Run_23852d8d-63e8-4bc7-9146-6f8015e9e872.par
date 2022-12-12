@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Crossing Vehicles (Simulink)`ADAS and Active Safety
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_23852d8d-63e8-4bc7-9146-6f8015e9e872
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_b4216a5d-9714-42f6-ba10-39498b7dc52b.par
+#BlueLink12 Models: Simulink`Moving Objects (2 Sensors)` Braking Controls` , Models`Simlink_b4216a5d-9714-42f6-ba10-39498b7dc52b
+
+PARSFILE Animator\Cameras\Camera_f177b393-4607-4b3c-9b61-ceba09d3b71d.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 4.5 El, 48 m` Vehicle Reference` , Animator camera`Camera_f177b393-4607-4b3c-9b61-ceba09d3b71d
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 0.6 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_79a6f578-e63f-4b97-ba00-2ba3bc644fc7.par
+#BlueLink2 Vehicle: Loaded Combination`DRW Pickup, ADAS Sens. (2), Simulink` Pickup Trucks` , Math Model`VehLoad_79a6f578-e63f-4b97-ba00-2ba3bc644fc7
+
+PARSFILE Procedures\Proc_b5c7bb12-3d01-4835-9470-9a9606a19a94.par
+#BlueLink28 Procedures`Two Target Vehicles` Sensors and Traffic` , Procedure`Proc_b5c7bb12-3d01-4835-9470-9a9606a19a94
+
+PARSFILE Animator\HUD\HUD_647507c0-a511-41d5-8437-e3b1fc5eb87f.par
+#BlueLink9 Animator: HUD`Throttle, Brakes, G-G, Speedo, Gear, Tach` HUD Groups` , Miscellaneous`HUD_647507c0-a511-41d5-8437-e3b1fc5eb87f
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_1a5339c0-4baa-420e-bba9-1b937d9b12e1.png
+WRITE_SENSOR_DETECT
+Title Crossing Vehicles (Simulink) <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Crossing Vehicles (Simulink)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example was modified in version 2018.  The vehicle model and the sensors were moved to a Vehicle: Loaded Combination screen.
+#
+#A Dually Pickup Truck with two forward-facing sensors detects two target vehicles.
+#
+#The two target vehicles start to cross the pickup truck's path, and once the target vehicles come into sensor range the Simulink model, receiving data from the pickup truck's sensors, controls the truck's braking. The vehicle is slowed down enough such that it is allowed to safely pass the two target vehicles.
+#
+#A sensor license is required to run the math model for this example. However, you can still view the simulation results provided with TruckSim by clicking the "Video" and "Plot" buttons.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { ADAS and Active Safety } Crossing Vehicles (Simulink)
+#Library : TruckSim Run Control
+#DataSet : Crossing Vehicles (Simulink)
+#Category: ADAS and Active Safety
+#FileID  : Run_23852d8d-63e8-4bc7-9146-6f8015e9e872
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

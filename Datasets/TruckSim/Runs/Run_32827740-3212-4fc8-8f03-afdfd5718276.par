@@ -1,0 +1,95 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Yaw Control Diff.`Simulink and LabVIEW
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_32827740-3212-4fc8-8f03-afdfd5718276
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_1a4d2301-8ddd-4bd5-bff5-eb2d3fd51f19.par
+#BlueLink12 Models: Simulink`Yaw Control Diff. (Detailed) 4x2` External Powertrain` , Models`Simlink_1a4d2301-8ddd-4bd5-bff5-eb2d3fd51f19
+
+PARSFILE Animator\Cameras\Camera_293071ae-9194-4088-8862-92255ece0a0f.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 48 m` Vehicle Reference` , Animator camera`Camera_293071ae-9194-4088-8862-92255ece0a0f
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 3
+#RingCtrl7 -1
+*RUN_COLOR 1 0 0
+SET_RUN_COLOR 1 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_689c7480-d14c-4585-a6bc-192a9d01f410.par
+#BlueLink2 Vehicle: Loaded Combination`2A Tour Bus, Payloads, Yaw Ctrl Diff` Tour Buses` , Math Model`VehLoad_689c7480-d14c-4585-a6bc-192a9d01f410
+
+PARSFILE Procedures\Proc_a3dccc17-66b9-4c38-b9ab-c5d03e028fab.par
+#BlueLink28 Procedures`DLC @ 100 km/h Low Mu` Handling Tests` , Procedure`Proc_a3dccc17-66b9-4c38-b9ab-c5d03e028fab
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+PARSFILE Plot\Setup\Plot_5cfea828-b0ce-4988-95de-83d04b590625.par
+#BlueLink15 Plot: Setup`Differential Clutch Control Input` Controls: Chassis and Powertrain` , Plot`Plot_5cfea828-b0ce-4988-95de-83d04b590625
+
+PARSFILE Plot\Setup\Plot_3c547a25-d783-4563-861d-c824d9dfc38a.par
+#BlueLink16 Plot: Setup`Differential Clutch Torque` Powertrain` , Plot`Plot_3c547a25-d783-4563-861d-c824d9dfc38a
+
+PARSFILE Plot\Setup\Plot_e7b41872-2b40-4556-aa0d-7e348d4a1a61.par
+#BlueLink17 Plot: Setup`My_Dr -- Wheel Drive Torque (Axle 2)` Powertrain` , Plot`Plot_e7b41872-2b40-4556-aa0d-7e348d4a1a61
+
+
+SPECIAL_PARSFILE Runs\Run_2f66a867-189f-4908-85f7-61c4dab81c19.par
+#BlueLink23 TruckSim Run Control`100 km/h, 0.5 mu, DLC` Handling and Stability Tests` , Overlay run or ERD file`Run_2f66a867-189f-4908-85f7-61c4dab81c19
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_d28b558f-b555-4e58-ad92-ce684db5c9e3.png
+WRITE_SENSOR_DETECT
+Title Yaw Control Diff. <Simulink and LabVIEW>
+CATEGORY Simulink and LabVIEW 
+DATASET_TITLE Yaw Control Diff.
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#In 2019.1, Differential 3 reference was removed from this example since it uses 4x2. If the vehicle has a 4x4 powertrain, Models: Simulink > External Powertrain > Yaw Control Diff. (Detailed) can be selected.
+#
+#This example demonstrates the use of a Yaw Controlled Differential defined in Simulink on a vehicle performing a double lane change at 100 km/h on a low mu surface.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Simulink and LabVIEW } Yaw Control Diff.
+#Library : TruckSim Run Control
+#DataSet : Yaw Control Diff.
+#Category: Simulink and LabVIEW
+#FileID  : Run_32827740-3212-4fc8-8f03-afdfd5718276
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

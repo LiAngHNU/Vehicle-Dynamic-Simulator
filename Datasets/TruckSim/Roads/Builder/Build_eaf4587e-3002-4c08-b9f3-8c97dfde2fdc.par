@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Path/Road: Segment Builder (Simple 3D)`Entry South/ Exit East, ID = 1002`Roundabout (Small)
+#RingCtrl0 0
+#RingCtrl1 2
+
+SET_IPATH_FOR_ID 1002
+#CheckBox0 0    
+OPT_PATH_LOOP 0
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 1    
+OPT_PATH_START 1
+#CheckBox4 0    
+#CheckBox5 0    
+
+PATH_ID_DM = PATH_ID
+set_description path_id Entry South/ Exit East, ID = 1002
+
+#MiscYellow0
+# Right 125 deg 33.25 m 125 72.539 72.540 10.0 0.0 Rel 0.0 Rel 0.0 10 0.8 0.8
+# Right 90 deg 57.9411 m 90 163.552 163.554 10.0 0.0 Rel 0.0 Rel 0.0 10 0.8 0.8
+# Right 125 deg 33.25 m 125 236.094161 236.094 10.0 0.0 Rel 0.0 Rel 0.0 10 0.8 0.8
+#ENDMYellow
+
+SPATH_START 0
+NSEGMENTS 3
+X_PATH_START 52.3214
+Y_PATH_START -85.1779
+HEADING_START 215
+*TRANSZ 0
+
+IPATHSEG 1
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -33.25
+SEGMENT_ARC 125
+
+IPATHSEG 2
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -57.9411
+SEGMENT_ARC 90
+
+IPATHSEG 3
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -33.25
+SEGMENT_ARC 125
+
+LOG_ENTRY Used Dataset: Path/Road: Segment Builder (Simple 3D); { Roundabout (Small) } Entry South/ Exit East, ID = 1002
+#Library : Path/Road: Segment Builder (Simple 3D)
+#DataSet : Entry South/ Exit East, ID = 1002
+#Category: Roundabout (Small)
+#FileID  : Build_eaf4587e-3002-4c08-b9f3-8c97dfde2fdc
+#Product : TruckSim 2020.1
+#VehCode Path/Road Segment Builder
+
+END

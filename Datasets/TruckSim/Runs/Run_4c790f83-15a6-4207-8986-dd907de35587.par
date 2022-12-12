@@ -1,0 +1,96 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Rollover: Loaded`Handling and Stability Tests
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_4c790f83-15a6-4207-8986-dd907de35587
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_245b5580-eac8-4494-a96f-0533fd4ce892.par
+#BlueLink0 Animator: Camera Setup`150 Azm, 4.5 El, 100 m` Vehicle Reference` , Animator camera`Camera_245b5580-eac8-4494-a96f-0533fd4ce892
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.6 0.2
+SET_RUN_COLOR 0 0.6 0.2
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_3f23baec-524e-4a49-8fdd-c74ffb84a441.par
+#BlueLink2 Vehicle: Loaded Combination`2A LCF, Payload` LCF Vans` , Math Model`VehLoad_3f23baec-524e-4a49-8fdd-c74ffb84a441
+
+PARSFILE Procedures\Proc_3621bf6e-b45f-4c75-a51b-2d960a117632.par
+#BlueLink28 Procedures`J-Turn-type Stability Testing` Stability Tests` , Procedure`Proc_3621bf6e-b45f-4c75-a51b-2d960a117632
+
+PARSFILE Generic\Group\GenGrp_481fa86b-f2f8-4035-8771-14fc9958d6d3.par
+#BlueLink9 Generic Data Group`Skid Marks (2 Axles)` Tire Skid Mark Animations` , Miscellaneous`GenGrp_481fa86b-f2f8-4035-8771-14fc9958d6d3
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink10 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+INSTALL_SPEED_CONTROLLER
+Opt_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Set from the Run Control screen
+SPEED_TARGET_CONSTANT 55
+OPT_SC_ENGINE_BRAKING 0
+*SPEED 55
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_9dc8d573-d8fc-4f9d-92f0-02b27f88cf1a.png
+WRITE_SENSOR_DETECT
+Title Rollover: Loaded <Handling and Stability Tests>
+CATEGORY Handling and Stability Tests 
+DATASET_TITLE Rollover: Loaded
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates a Fishhook test using a 2A LCF van with a payload. No outriggers are linked to the vehicle.
+#
+#Events, linked on the Procedure screen, are used to control the vehicle's speed, steering input, and transmission settings.
+#
+#The Fishhook procedure dataset is shared with several other examples, so the Constant Target Speed for this example is specified on the Run Control screen to effectively demonstrate a rollover condition.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Handling and Stability Tests } Rollover: Loaded
+#Library : TruckSim Run Control
+#DataSet : Rollover: Loaded
+#Category: Handling and Stability Tests
+#FileID  : Run_4c790f83-15a6-4207-8986-dd907de35587
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

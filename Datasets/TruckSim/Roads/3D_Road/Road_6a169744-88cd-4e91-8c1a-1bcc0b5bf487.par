@@ -1,0 +1,98 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Coastal Highway w/ Gap`Scenic Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_6a169744-88cd-4e91-8c1a-1bcc0b5bf487.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Coastal Highway w/ Gap
+PARSFILE Roads\Center_XY\PathXY_ff4458e7-8a36-423f-9726-28d38c3fe5b6.par
+#BlueLink0 Path: X-Y Coordinates`Alt 3 Road from FHWA` Public Road Section` , Reference Path`PathXY_ff4458e7-8a36-423f-9726-28d38c3fe5b6
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Alt 3 Road from FHWA
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+PARSFILE Roads\dZ_Map\RdMapZ_fabaffbb-94d1-42c6-97c8-8da0ce51175a.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Drive Along the Coast w/ Gap` Roads` , Miscellaneous`RdMapZ_fabaffbb-94d1-42c6-97c8-8da0ce51175a
+
+PARSFILE Roads\Friction\RdMu_7beaa53b-62ba-45c2-ab97-3e92787e515f.par
+#BlueLink3 Road: Friction Map, S-L Grid`Loose Shoulder at 4 m` Split Mu` , Friction`RdMu_7beaa53b-62ba-45c2-ab97-3e92787e515f
+
+PARSFILE Roads\Shapes\RdShape_5e06a0a5-c92f-4095-b22a-e5ae4280c256.par
+#BlueLink4 Road: Animator Surface Shapes`Drive Along the Coast w/ Gap` Scenic Road Shapes` , Road shape definitions`RdShape_5e06a0a5-c92f-4095-b22a-e5ae4280c256
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_S-Curve_(-5.5_m,_Lateral_position)
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_f7ee78eb-7de0-48a4-bdb8-0f6f034a2e99.par
+#BlueLink6 Road: Animator Repeated Object`S-Curve (-5.5 m, Lateral position)` Signs` , 3D Shapes`AniRep_f7ee78eb-7de0-48a4-bdb8-0f6f034a2e99
+
+add_reference_frame road_stuff_7_Speed_Limit_70_(-5.5_m,_Lateral_position)
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_57556d31-0bd4-4440-8df7-0796ee9a46a7.par
+#BlueLink7 Road: Animator Repeated Object`Speed Limit 70 (-5.5 m, Lateral position)` Signs` , 3D Shapes`AniRep_57556d31-0bd4-4440-8df7-0796ee9a46a7
+
+add_reference_frame road_stuff_9_Partly_Cloudy_Sky_with_Water
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_45106006-7de6-4e11-9ef6-2f3da9350689.par
+#BlueLink9 Animator: Group`Partly Cloudy Sky with Water` Environment Spheres` , 3D Shapes`Group_45106006-7de6-4e11-9ef6-2f3da9350689
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_6a169744-88cd-4e91-8c1a-1bcc0b5bf487.ani
+
+add_reference_frame road_stuff_1_1_US:_S-Curve
+reference_frame_ghosts off
+set_offset_var_yaw 150.502424832
+set_offset_var_x 171.362854599
+set_offset_var_y -103.272060527
+set_offset_var_z -0.0639386189258
+parsfile Animator\STL\Shape_efa720bc-9371-44fd-8c75-17c2a77cf0a5.par
+
+add_reference_frame road_stuff_2_1_US:_S-Curve
+reference_frame_ghosts off
+set_offset_var_yaw 124.665853471
+set_offset_var_x 697.69483061
+set_offset_var_y -238.092169862
+set_offset_var_z -0.0639386189258
+parsfile Animator\STL\Shape_efa720bc-9371-44fd-8c75-17c2a77cf0a5.par
+
+add_reference_frame road_stuff_1_2_US:_Speed_Limit:_70_mph_(48in_x_60in)
+reference_frame_ghosts off
+set_offset_var_yaw 193.685131375
+set_offset_var_x 360.775344656
+set_offset_var_y -160.395611074
+set_offset_var_z -0.0639386189258
+parsfile Animator\STL\Shape_421cfb1a-0f6e-4ddc-aff0-074b9d7a6395.par
+
+add_reference_frame road_stuff_2_2_US:_Speed_Limit:_70_mph_(48in_x_60in)
+reference_frame_ghosts off
+set_offset_var_yaw 204.002045021
+set_offset_var_x 877.299979177
+set_offset_var_y -291.422736269
+set_offset_var_z -0.0639386189258
+parsfile Animator\STL\Shape_421cfb1a-0f6e-4ddc-aff0-074b9d7a6395.par
+
+#EMBEDDED_NOTES
+#This dataset uses an old road description for horizontal geometry and adds vertical information used to generate shapes.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Scenic Roads } Coastal Highway w/ Gap
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Coastal Highway w/ Gap
+#Category: Scenic Roads
+#FileID  : Road_6a169744-88cd-4e91-8c1a-1bcc0b5bf487
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

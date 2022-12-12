@@ -1,0 +1,99 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Root Locus (Speed Series)`Linearization
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_fa684ffa-3dcb-4bda-82eb-7f31c345f8be
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 7
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.4 0
+SET_RUN_COLOR 0 0.4 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_a69f3a88-d6b7-4692-ab81-e5407b2e1b44.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Pickup, Reg. Cab DRW (SFA)` Pickup Trucks w/ Options` , Math Model`Lead2a_a69f3a88-d6b7-4692-ab81-e5407b2e1b44
+
+PARSFILE Procedures\Proc_33fff24e-38ab-4e1e-92db-998bd4434f24.par
+#BlueLink28 Procedures`No Steer, Speed Series` Driver Controls` , Procedure`Proc_33fff24e-38ab-4e1e-92db-998bd4434f24
+
+PARSFILE Generic\VS_commands\GenVS_ce7ab08b-d25e-4fdd-b674-13d9c5c4026a.par
+#BlueLink9 Generic VS Commands`52 States to Linearize (S_S Model)` Linearization` , Miscellaneous`GenVS_ce7ab08b-d25e-4fdd-b674-13d9c5c4026a
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_2a7c5c10-25ca-44b3-8034-dbf1de646707.png
+WRITE_SENSOR_DETECT
+Title Root Locus (Speed Series) <Linearization>
+CATEGORY Linearization 
+DATASET_TITLE Root Locus (Speed Series)
+#MiscYellow0
+linear_control IMP_STEER_SW
+linear_output EXP_AVz
+linear_output EXP_AY
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example creates linear matrices of the vehicle model during the simulation run (in steady state). A series of runs with various vehicle speed (from 0 to 120 km/h) is performed by Event.  52 state variables, steer input, yaw rate, and lateral acceleration outputs are specified to linearize the system. The generated matrices can be loaded with MATLAB and analyzed with a frequency-domain bode plot and root locus
+#
+#Please note that the MATLAB Control System Toolbox is required for the bode plot. On the other hand, the root locus plots can be generated with a basic MATLAB package.
+#
+#A similar example (that uses a motorcycle in BikeSim) is explained in a Technical Memo (Help-> Technical Memos -> Linear Analysis in VehicleSim Models).
+#
+#To perform a linear analysis, follow these steps:
+#
+#1) Run this simulation.
+#
+#2) Go to the folder, "Extensions\ Linearization\" and confirm that multiple M-Files "Linear_**kph.m" have been created.
+#
+#3) Start MATLAB and change the current directory to the folder "Extensions\ Linearization\."
+#
+#4) Type "root_spd" and press the Enter key to view the root locus plot.
+#
+#5) Type "bdp_spd" and press the Enter key to view the bode plots.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Linearization } Root Locus (Speed Series)
+#Library : TruckSim Run Control
+#DataSet : Root Locus (Speed Series)
+#Category: Linearization
+#FileID  : Run_fa684ffa-3dcb-4bda-82eb-7f31c345f8be
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName TruckSim Run Control`GPS and 64-bit Output`Output Options
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_c3145192-ff8f-4061-af92-2f93cc4b8156
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`LCF Van` 2A LCF Van` , Math Model`Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80
+
+PARSFILE Procedures\Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4.par
+#BlueLink28 Procedures`DLC @ 70 km/h` Handling Tests` , Procedure`Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4
+
+OPT_VS_FILETYPE 1
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_d5eb192a-ead8-4ebe-bd1e-962c6eedf12d.par
+#BlueLink15 Plot: Setup`GPS Trajectory: Lat vs Long` Tracking` , Plot`Plot_d5eb192a-ead8-4ebe-bd1e-962c6eedf12d
+
+
+SPECIAL_PARSFILE Runs\Run_f02bf0b3-4066-447e-bb5e-40a929b281c7.par
+#BlueLink23 TruckSim Run Control`Baseline` * * Quick Start Guide Example` , Overlay run or ERD file`Run_f02bf0b3-4066-447e-bb5e-40a929b281c7
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Lead_2a\Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80.png
+WRITE_SENSOR_DETECT
+Title GPS and 64-bit Output <Output Options>
+CATEGORY Output Options 
+DATASET_TITLE GPS and 64-bit Output
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This run is the same as the Quick Start Guide Baseline double lane change. However, the output file is specified as a VS format with 64-bit binary.
+#
+#A plot is added showing the trajectory of the vehicle with global latitude and longitude. Compare with the baseline (written with 32-bit ERD) to see why 64-bit outputs are needed when working with GPS data.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Output Options } GPS and 64-bit Output
+#Library : TruckSim Run Control
+#DataSet : GPS and 64-bit Output
+#Category: Output Options
+#FileID  : Run_c3145192-ff8f-4061-af92-2f93cc4b8156
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

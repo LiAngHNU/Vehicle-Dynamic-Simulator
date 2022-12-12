@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, S-L Grid`Loading Dock Ramp`Gutters, Curbs, Ditches
+#CheckBox0 0    
+
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: Loading Dock Ramp
+set_description ROAD_DZ_ID Loading Dock Ramp
+#RingCtrl0 CARPET
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 7, 6 ! columns x rows
+ROAD_DZ_CARPET 2D_LINEAR
+0, 0, 5, 6, 23, 25, 25.001, 26
+148, 0, 0, 0, 0, 0, 0, 0
+149.999, 0, 0, 0, 0, 0, 0, 0
+150, 0, 0, 0, -1, -1, 0, 0
+170, 0, 0, 0, -1, -1, 0, 0
+170.001, 0, 0, 0, 0, 0, 0, 0
+171, 0, 0, 0, 0, 0, 0, 0
+ENDTABLE
+
+*SCALAR 0
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Gutters, Curbs, Ditches } Loading Dock Ramp
+#Library : Road: Off-Center Elevation Map, S-L Grid
+#DataSet : Loading Dock Ramp
+#Category: Gutters, Curbs, Ditches
+#FileID  : RdMapZ_b8ef1a2c-9403-4921-a5d4-19d093db4630
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L Grid
+
+END

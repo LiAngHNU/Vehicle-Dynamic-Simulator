@@ -1,0 +1,67 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`40-m Radius Circle, Mu = 0.9`Circular Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_a3be6c77-3aef-4bc5-a25a-891f863de027.png
+#RingCtrl0 1
+#CheckBox0 1    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 40-m Radius Circle, Mu = 0.9
+PARSFILE Roads\BuilderSegment\RoadSeg_b72c5d52-3359-4b37-a033-ae0e240b9382.par
+#BlueLink0 Path: Segment Builder`40 m Radius` Circles` , Reference Path`RoadSeg_b72c5d52-3359-4b37-a033-ae0e240b9382
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: 40 m Radius
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_ea7d6f58-71c6-42d0-aa52-92b3387a35cb.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.9` Constant Mu` , Friction`RdMu_ea7d6f58-71c6-42d0-aa52-92b3387a35cb
+
+PARSFILE Roads\Shapes\RdShape_9f2115c2-de05-4d09-9e92-c11a26a2bf17.par
+#BlueLink4 Road: Animator Surface Shapes`Looped Road + 20 m Light Grass` Looped Roads` , Road shape definitions`RdShape_9f2115c2-de05-4d09-9e92-c11a26a2bf17
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+#MiscYellow0
+DEFINE_PARAMETER R = 40; m ; ...
+     Radius of test circle
+#ENDMYellow
+
+PARSFILE Roads\Boundaries\RdBnd_0568183c-f578-4a1d-8480-fc1d91ca5579.par
+#BlueLink11 Road: Boundaries`Circle Test` Road Boundary Stop Conditions` , Miscellaneous`RdBnd_0568183c-f578-4a1d-8480-fc1d91ca5579
+
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_a3be6c77-3aef-4bc5-a25a-891f863de027.ani
+
+#EMBEDDED_NOTES
+#This track is a circular loop with a 40-m radius to the centerline. It is suitable for constant-radius testing as specified in ISO 4138 and ISO 14792.
+#
+#A parameter R is defined for use in a formula for target speed in the ISO steady-state circle procedure.
+#
+#The surface is completely flat and the coefficient of friction is a constant 0.9.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Circular Roads } 40-m Radius Circle, Mu = 0.9
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 40-m Radius Circle, Mu = 0.9
+#Category: Circular Roads
+#FileID  : Road_a3be6c77-3aef-4bc5-a25a-891f863de027
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

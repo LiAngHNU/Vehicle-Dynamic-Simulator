@@ -1,0 +1,70 @@
+Run made by VS Road Calculator at 10:34 on June 15, 2022.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_b6ceae19-eb75-493a-94f5-1e01b7c88b7e.par"
+Include PARSFILE "Roads\Center_XY\PathXY_a3313409-e843-4fc1-b1d9-5cf400059820.par"
+Used Dataset: Path: X-Y Coordinates; { Handling Course } Handling Course
+Include PARSFILE "Roads\Center_Z\RdRefZ_73e23a2d-f9bc-4437-8ac6-68064c5aad36.par"
+Used Dataset: Road: Reference Line Elevation; { Handling Course } Handling Course
+Include PARSFILE "Roads\dZ_Map\RdMapZ_1d94193c-cbe0-4ef9-807b-865eadf78afa.par"
+Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Handling Course } Handling Course Camber
+Include PARSFILE "Roads\Friction\RdMu_ec730a7b-6605-468c-9810-842dc2bc5209.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Road Handling Course } 1.0 Asphalt, 1.1 Concrete, 0.75 Grass
+Include PARSFILE "Roads\Shapes\RdShape_fd732d47-09f3-4d86-961b-2da5134afc87.par"
+Used Dataset: Road: Animator Surface Shapes; No Machine-Generated Shapes
+Include PARSFILE "Roads\dZ_Map\RdMapZ_9334e93f-d95d-4a56-b74d-10b7ae6f400f.par"
+Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Handling Course } Handling Course Curbing
+Include PARSFILE "Roads\RollingResistance\RdRr_e50e6f84-f1ce-4bde-b26b-7ac1a4a15091.par"
+Used Dataset: Road: Rolling Resistance Map, S-L Grid; { Handling Course } Handling Course Rolling Resistance
+Include PARSFILE "Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par"
+Include PARSFILE "Animator\Frames\Frame_7bb47609-7102-4b34-a50f-a8c8a02234db.par"
+Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Skybox (Vehicle X-Y-Z)
+Include PARSFILE "Animator\STL\Shape_f49e5d15-b002-46b6-b28e-df6b8d8a40b6.par"
+Used Dataset: Animator: Shape File Link; { Environment: Sky Boxes } Partly Cloudy Sky
+Include PARSFILE "Animator\STL\Shape_79cf4b25-5748-487a-8e5c-a602d7f86a42.par"
+Used Dataset: Animator: Shape File Link; { Environment: Land Bowls } Light Grass
+Used Dataset: Animator: Group; { Environment Spheres } Partly Cloudy Sky with Light Grass
+Include PARSFILE "Animator\STL\Shape_a21b46c8-62b2-41c2-b2c2-f16a3a9eae8c.par"
+Used Dataset: Animator: Shape File Link; { Self-Contained Scenes } Handling Course: Road
+Include PARSFILE "Roads\AniGroup\AniRep_536c4903-6cc1-418c-a704-16e3fbe1b280.par"
+Used Dataset: Road: Animator Repeated Object; { Cones } Handling Course Cones
+Include PARSFILE "Animator\STL\Shape_a286cb57-4b02-42d8-815c-2d4e23026790.par"
+Used Dataset: Animator: Shape File Link; { Self-Contained Scenes } Handling Course: Details
+Include PARSFILE "Animator\STL\Shape_78ca3e64-fbf2-48fb-9097-31476670474b.par"
+Used Dataset: Animator: Shape File Link; { Self-Contained Scenes } Handling Course: Trees
+Include PARSFILE "Roads\3D_Road\Road_b6ceae19-eb75-493a-94f5-1e01b7c88b7e.ani"
+Include PARSFILE "Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par"
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par"
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par"
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par"
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par"
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par"
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par"
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par"
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par"
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par"
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par"
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par"
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Road: 3D Surface (All Properties); { * * * Vehicle Dynamic Simulator } Handling Course
+
+Time to read input = 0.003113
+
+Run stopped at t = 19.32. Stop time reached.
+
+Run started: VS output file = Roads\3D_Road\Road_b6ceae19-eb75-493a-94f5-1e01b7c88b7e.vsb
+
+Computational time ratio: RTIME = inf (real time)/(simulation time)
+

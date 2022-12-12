@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`I-94 N Exit 172 (Raw GPS)`Highway Intersection
+NLANES 1
+OPTTHRESHOLD 1
+#MiscYellow0
+# 1 1 1, Road (No Lines), 1, 20, 1, -2, m, 2, m, , , 1700, 2120, 1, , , Road
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (No Lines)
+SPECULAR(1) 1
+SCALE(1) 20
+LTILES(1) 1
+LIN(1) -2
+LINUNITS(1) m
+LOUT(1) 2
+LOUTUNITS(1) m
+S_START(1) 1700
+S_STOP(1) 2120
+SINT(1) 1
+AUTODETAIL(1) Road
+MTL_FILE Animator\Road_Materials\road.mtl
+
+
+#EMBEDDED_NOTES
+#This dataset has minimal information for visualizing the exit from I-94 using GPS data as downloaded (no editing or smoothing).
+#
+#The start and stop stations were set after viewing a run, to reduce the overlap of this surface with the other two.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Highway Intersection } I-94 N Exit 172 (Raw GPS)
+#Library : Road: Animator Surface Shapes
+#DataSet : I-94 N Exit 172 (Raw GPS)
+#Category: Highway Intersection
+#FileID  : RdShape_090391f1-547e-4f6a-814b-3e480979d21c
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

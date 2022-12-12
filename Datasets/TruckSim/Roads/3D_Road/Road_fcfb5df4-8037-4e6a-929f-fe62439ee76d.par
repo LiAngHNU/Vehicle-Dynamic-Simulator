@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`East Curbs, Exterior Grass`Parking Lot
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_fcfb5df4-8037-4e6a-929f-fe62439ee76d.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id East Curbs, Exterior Grass
+PARSFILE Roads\Center_XY\PathXY_d2b497e1-8e3c-4bc3-a7a1-695be07b0410.par
+#BlueLink0 Path: X-Y Coordinates`Parking Lot: Eastern Curb Path` Parking Lot` , Reference Path`PathXY_d2b497e1-8e3c-4bc3-a7a1-695be07b0410
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Parking Lot: Eastern Curb Path
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+PARSFILE Roads\dZ_Map\RdMapZ_263616a0-fb5b-4290-8569-ab5db85aa493.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Parking Lot: dZ for Curbs` Parking Lot` , Miscellaneous`RdMapZ_263616a0-fb5b-4290-8569-ab5db85aa493
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_6ca499c0-722f-46b7-af6d-79dd53fdda7b.par
+#BlueLink4 Road: Animator Surface Shapes`East Curbs and Border Grass` Parking Lot` , Road shape definitions`RdShape_6ca499c0-722f-46b7-af6d-79dd53fdda7b
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_293071ae-9194-4088-8862-92255ece0a0f.par
+#BlueLink5 Animator: Camera Setup`13 Azm, 4.5 El, 48 m` Vehicle Reference` , Camera`Camera_293071ae-9194-4088-8862-92255ece0a0f
+
+parsfile Roads\3D_Road\Road_fcfb5df4-8037-4e6a-929f-fe62439ee76d.ani
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Parking Lot } East Curbs, Exterior Grass
+#Library : Road: 3D Surface (All Properties)
+#DataSet : East Curbs, Exterior Grass
+#Category: Parking Lot
+#FileID  : Road_fcfb5df4-8037-4e6a-929f-fe62439ee76d
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

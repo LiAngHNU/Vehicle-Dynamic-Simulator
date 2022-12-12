@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Lane Changes in Traffic`ADAS and Active Safety
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_af770225-52be-41b7-9adc-d883c418f43d
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_69c20d2f-6831-47ee-b906-da3ea57fa917.par
+#BlueLink0 Animator: Camera Setup`View for Sensors and Traffic` Sensor View` , Animator camera`Camera_69c20d2f-6831-47ee-b906-da3ea57fa917
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 10
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.2 0.6
+SET_RUN_COLOR 0 0.2 0.6
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_36fd48d5-6684-4257-b591-c11f3887c2b2.par
+#BlueLink2 Vehicle: Loaded Combination`DRW Pickup, ADAS Sens. (2) (Lane Chng)` Pickup Trucks` , Math Model`VehLoad_36fd48d5-6684-4257-b591-c11f3887c2b2
+
+PARSFILE Procedures\Proc_fe67a8e9-fec5-4fc7-8b19-ef900dbb9f1b.par
+#BlueLink28 Procedures`Lane Changes on Curvy Road` Sensors and Traffic` , Procedure`Proc_fe67a8e9-fec5-4fc7-8b19-ef900dbb9f1b
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ee189bc-4102-46cf-a6ee-046ab79da53b.png
+WRITE_SENSOR_DETECT
+Title Lane Changes in Traffic <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Lane Changes in Traffic
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#Example demonstrating how lane changes can be triggered using a combination of ADAS Sensors, VS Commands, and Events.
+#
+#Two conditions are monitored:
+#Go_Left and Go_Right
+#
+#When the GO_Left flag becomes true, the ego vehicle executes a single lane change and speeds up to pass a vehicle in the right lane.
+#
+#When the Go_Right flag becomes true, the ego vehicle returns to the right lane and resumes the speed it had prior to the lane change maneuver.
+#
+#LTarg datasets are linked in the Events and set up such that they cover a 2 m lateral displacement over an elapsed station distance of 2 m. The LTarg table gains and offsets are then used in the Events to scale the LTarg tables based on vehicle speed and preview time.
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { ADAS and Active Safety } Lane Changes in Traffic
+#Library : TruckSim Run Control
+#DataSet : Lane Changes in Traffic
+#Category: ADAS and Active Safety
+#FileID  : Run_af770225-52be-41b7-9adc-d883c418f43d
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

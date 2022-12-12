@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Reverse DLC: Tractor-Trailer`Low-Speed Tracking
+#VEHICLECODE S_SS + SSS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_2eef821b-b70c-474d-981f-d75e6a6af5ea
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_f8da3609-9215-4223-acae-ba2f69fe86eb.par
+#BlueLink0 Animator: Camera Setup`10 Azm, 1.0 El, 50 m, no Yaw` Vehicle Reference` , Animator camera`Camera_f8da3609-9215-4223-acae-ba2f69fe86eb
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 10
+#RingCtrl2 3
+#RingCtrl3 0
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 on
+RT_WINDOW_CLOSE on
+#RingCtrl5 1
+LIVE_SERVER_MAX_CONNECTIONS 1
+PARSFILE Vehicles\Loaded\VehLoad_d65e8626-80ac-4d9f-9323-79d236217ba5.par
+#BlueLink2 Vehicle: Loaded Combination`3A Tractor w/ 3A Flatbed Trl.` Sleeper-Cab Tractor-Trailers` , Math Model`VehLoad_d65e8626-80ac-4d9f-9323-79d236217ba5
+
+PARSFILE Procedures\Proc_ae98405f-ff7c-4c8d-a172-ed8cd83c6a53.par
+#BlueLink28 Procedures`DLC @ -10 km/h` Handling Tests` , Procedure`Proc_ae98405f-ff7c-4c8d-a172-ed8cd83c6a53
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55.par
+#BlueLink9 Multiple Moving Objects`1 Driver Preview Point, Set by DM` Points of Interest` , Miscellaneous`TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55
+
+PARSFILE Output\Sensors\MoSen_18562cab-0304-4eb9-9286-f65055610723.par
+#BlueLink10 Positions, Velocities, and Accelerations`Trailer Hitch Position` Sprung Mass and Suspended Cab` , Miscellaneous`MoSen_18562cab-0304-4eb9-9286-f65055610723
+
+PARSFILE Generic\VS_commands\GenVS_6a2cfca6-05a8-4511-8efd-c82699325d60.par
+#BlueLink11 Generic VS Commands`Trailer Backing: PI Control` Custom Steering Controls` , Miscellaneous`GenVS_6a2cfca6-05a8-4511-8efd-c82699325d60
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_8ba88f47-4990-40ca-bf2d-9bbebeda47ea.png
+WRITE_SENSOR_DETECT
+Title Reverse DLC: Tractor-Trailer <Low-Speed Tracking>
+CATEGORY Low-Speed Tracking 
+DATASET_TITLE Reverse DLC: Tractor-Trailer
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#In this example, a tractor-trailer executes a low-speed "double lane change" maneuver in reverse.
+#
+#Steering control is implemented via VS Commands. For more detail, refer to the notes on the "Trailer Backing: PI Control" VS Commands dataset.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Low-Speed Tracking } Reverse DLC: Tractor-Trailer
+#Library : TruckSim Run Control
+#DataSet : Reverse DLC: Tractor-Trailer
+#Category: Low-Speed Tracking
+#FileID  : Run_2eef821b-b70c-474d-981f-d75e6a6af5ea
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

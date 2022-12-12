@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, S-L Grid`Offroad Baja Banks`Off-road Terrain
+#CheckBox0 0    
+
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: Offroad Baja Banks
+set_description ROAD_DZ_ID Offroad Baja Banks
+#RingCtrl0 2D_SPLINE
+#RingCtrl3 1
+#RadioCtrl0 1    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 4, 40 ! columns x rows
+ROAD_DZ_CARPET 2D_SPLINE
+0, -5, -4, 4, 5
+1, 0, 0, 0, 0
+149, 0, 0, 0, 0
+151, 0, 0, 0, 0
+164.707764, 0, 0, 0, 0
+166.707764, 0, 0, 0, 0
+248.067764, 0, 0, 0, 0
+250.067764, 0, 0, 0, 0
+269.067764, 0, 0, 0, 0
+279.067764, 0.2, 0.2, -0.2, -0.2
+289.702469, 0.2, 0.2, -0.2, -0.2
+297.702469, 0, 0, 0, 0
+298.702469, 0, 0, 0, 0
+308.702469, 0, 0, 0, 0
+318.337174, 0, 0, 0, 0
+328.337174, -0.6, -0.6, 0.6, 0.6
+391.875993, -0.6, -0.6, 0.6, 0.6
+411.875993, 0, 0, 0, 0
+466.875993, 0, 0, 0, 0
+486.875993, -0.08, -0.08, 0.08, 0.08
+513.763364, -0.08, -0.08, 0.08, 0.08
+523.763364, 0, 0, 0, 0
+538.763364, 0, 0, 0, 0
+548.763364, 0, 0, 0, 0
+584.650734, 0, 0, 0, 0
+586.650734, 0, 0, 0, 0
+684.650734, 0, 0, 0, 0
+686.650734, 0.12, 0.12, -0.12, -0.12
+713.375242, 0.12, 0.12, -0.12, -0.12
+723.375242, 0, 0, 0, 0
+769.734455, 0, 0, 0, 0
+771.734455, 0, 0, 0, 0
+785.734455, 0, 0, 0, 0
+805.734455, -0.4, -0.4, 0.4, 0.4
+854.273275, -0.4, -0.4, 0.4, 0.4
+894.273275, 0, 0, 0, 0
+914.273275, 0, 0, 0, 0
+934.273275, 0, 0, 0, 0
+960.909077, 0, 0, 0, 0
+962.909077, 0, 0, 0, 0
+1199.714389, 0, 0, 0, 0
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Off-road Terrain } Offroad Baja Banks
+#Library : Road: Off-Center Elevation Map, S-L Grid
+#DataSet : Offroad Baja Banks
+#Category: Off-road Terrain
+#FileID  : RdMapZ_93a6c7d5-b18c-4308-acfb-e572aa0510b5
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L Grid
+
+END

@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, S-L Grid`Hilly Scenic Route`Hills and Valleys
+#CheckBox0 0    
+
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: Hilly Scenic Route
+set_description ROAD_DZ_ID Hilly Scenic Route
+#RingCtrl0 CARPET
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 9, 7 ! columns x rows
+ROAD_DZ_CARPET 2D_LINEAR
+0, -40, -35, -25, -15, -5, 5, 15, 25, 35
+0, -10, -10, -5, -2, 0, 0, 3, 8, 15
+500, -15, -15, -8, -4, 0, 0, 4, 10, 20
+1000, -20, -20, -12, -3, 0, 0, 3, 12, 15
+1500, -15, -15, -10, -4, 0, 0, 2, 8, 15
+2000, -10, -10, -8, -3, 0, 0, 5, 10, 20
+2500, -15, -15, -10, -2, 0, 0, 4, 5, 15
+3000, -20, -20, -8, -4, 0, 0, 3, 8, 20
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Hills and Valleys } Hilly Scenic Route
+#Library : Road: Off-Center Elevation Map, S-L Grid
+#DataSet : Hilly Scenic Route
+#Category: Hills and Valleys
+#FileID  : RdMapZ_4d525010-fed4-4968-a37e-c3101b46ee4b
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L Grid
+
+END

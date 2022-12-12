@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName Path: Segment Builder`I-94 exit Right onto Jackson: 2001`Highway Intersection
+#RingCtrl0 2
+SET_IPATH_FOR_ID 2001
+#CheckBox0 0    
+OPT_PATH_START 0
+#CheckBox1 0    
+OPT_PATH_LOOP 0
+
+SPATH_START -508
+PATH_ID_DM = PATH_ID
+set_description path_id I-94 exit Right onto Jackson: 2001
+
+NSEGMENTS 3
+*TABLEROWS 3
+
+! Table Columns:
+!   NOTE: Label columns are not written to parsfile.
+!
+! 0: (Ring) Specify the type of segment. Circular arcs can be specified using radius or curvature (inverse radius). The table option provides a link to a dataset from the X-Y Coordinates for Segment library. The clothoid option will automatically generate an X-Y table with a specified length that maintains continuity with adjacent segments (the preceding and following rows in the table).
+! 1: (BlueLink) Link to a dataset from the X-Y Coordinates for Segment library.
+! 2: (Text) Length of straight segment in meters.
+! 3: (Label) Specify the length of a straight segment with meters.
+! 4: (Text) Segment radius: use a positive radius for a left turn, negative for a right turn.
+! 5: (Label) Specify radius with meters. Use a positive number for a left turn, negative number for a right turn.
+! 6: (Text) Length of segment arc, specified with arc length (m) or central angle (deg).
+! 7: (Ring) Specify arc size with central angle (deg) or arc length (m).
+! 8: (Text) Segment curvature (inverse of radius, 1/m): use a positive curvature for a left turn, negative for a right turn
+! 9: (Label) Specify segment curvature with 1/meter (inverse of radius). Use a positive number for a left turn, negative for a right turn.
+! 10: (Text) Length of segment arc, specified with arc length (m) or central angle (deg).
+! 11: (Ring) Specify arc size with central angle (deg) or arc length (m).
+! 12: (Text) Length of clothoid segment in meters. This will automatically generate an X-Y table that has this overall length and maintains continuity with the adjacent segments (the preceding and following rows in the table).
+! 13: (Label) Specify the length of a clothoid segment with meters.
+#MIXTABLE0
+#NUMROWS 3
+#table, XYtab_e13e0aec-5275-46a8-aeaa-b3933216dc8e, 50, 100, 90, deg, 0.01, 90, deg, 400
+#radius, XYtab_323d0256-8eb2-41d5-86f8-3f1b6ff802ff, 50, -6, 87, deg, 0.01, 90, deg, 400
+#table, XYtab_9558f458-4ef7-472e-849a-96a27e4701e7, 50, 100, 90, deg, 0.01, 90, deg, 400
+#ENDTABLE
+
+! Segment 1, table
+IPATHSEG 1
+SEGMENT_TYPE 1
+PARSFILE Roads\XY_Table\XYtab_e13e0aec-5275-46a8-aeaa-b3933216dc8e.par
+
+! Segment 2, radius
+IPATHSEG 2
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -6.000000
+SEGMENT_ARC 87.000000
+
+! Segment 3, table
+IPATHSEG 3
+SEGMENT_TYPE 1
+PARSFILE Roads\XY_Table\XYtab_9558f458-4ef7-472e-849a-96a27e4701e7.par
+
+Title I-94 exit Right onto Jackson: 2001 <Highway Intersection>
+
+#EMBEDDED_NOTES
+#In order to a clean path for the driver model to make a 90-deg turn, a pure circular arc is used to connect two paths whose coordinates were imported from GPS data from Atlas.
+#
+#The first table covers part of the right lane of I-94 and proceeds through the exit road to Jackson Ave. The second table follows Jackson Ave going East.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Path: Segment Builder; { Highway Intersection } I-94 exit Right onto Jackson: 2001
+#Library : Path: Segment Builder
+#DataSet : I-94 exit Right onto Jackson: 2001
+#Category: Highway Intersection
+#FileID  : RoadSeg_3784a94a-532c-48b3-991a-11306f30c142
+#Product : TruckSim 2020.1
+#VehCode Path Segment Builder
+
+END

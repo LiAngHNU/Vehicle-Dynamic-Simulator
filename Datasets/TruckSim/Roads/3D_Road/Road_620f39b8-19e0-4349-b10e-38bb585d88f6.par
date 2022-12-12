@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Curvy Divided Highway`Scenic Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_620f39b8-19e0-4349-b10e-38bb585d88f6.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Curvy Divided Highway
+PARSFILE Roads\Builder\Build_61223960-7a7b-48aa-a557-bad424dc9a1d.par
+#BlueLink0 Path/Road: Segment Builder (Simple 3D)`3 Turns w/ Banking` Paths with Banking` , Reference Path`Build_61223960-7a7b-48aa-a557-bad424dc9a1d
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: 3 Turns w/ Banking
+PARSFILE Roads\Center_Z\RdRefZ_e5f2cd5e-dff8-4f81-b987-9ad1d6798aad.par
+#BlueLink1 Road: Reference Line Elevation`10 m Dip in the Road` Hills and Valleys` , Path Elevation`RdRefZ_e5f2cd5e-dff8-4f81-b987-9ad1d6798aad
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_dad1e073-5d48-4d48-b0c3-66e6b2913044.par
+#BlueLink4 Road: Animator Surface Shapes`Four Lanes (Divided)` Lane-Keeping Assist Roads` , Road shape definitions`RdShape_dad1e073-5d48-4d48-b0c3-66e6b2913044
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_620f39b8-19e0-4349-b10e-38bb585d88f6.ani
+
+#EMBEDDED_NOTES
+#This road uses an existing path with 3 turns. The center of the forward road is where L = 0. The oncoming road is just for cosmetic effect.
+#
+#Whatever road and friction properties were set in the road-builder dataset are overwritten here to define just a gradual hill.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Scenic Roads } Curvy Divided Highway
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Curvy Divided Highway
+#Category: Scenic Roads
+#FileID  : Road_620f39b8-19e0-4349-b10e-38bb585d88f6
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

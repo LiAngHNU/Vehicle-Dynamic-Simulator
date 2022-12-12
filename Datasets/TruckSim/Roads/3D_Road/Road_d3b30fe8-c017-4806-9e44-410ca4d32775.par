@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Road 2000: Entrance Ramp`Path Change Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_d3b30fe8-c017-4806-9e44-410ca4d32775.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 2000
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Road 2000: Entrance Ramp
+PARSFILE Roads\BuilderSegment\RoadSeg_593db033-799a-4f6c-b086-303360fce81c.par
+#BlueLink0 Path: Segment Builder`Path 2000: Entrance Ramp` Lane Change Paths` , Reference Path`RoadSeg_593db033-799a-4f6c-b086-303360fce81c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Path 2000: Entrance Ramp
+PARSFILE Roads\Center_Z\RdRefZ_26f1eafe-bbc8-4a86-884d-0f1d39272f54.par
+#BlueLink1 Road: Reference Line Elevation`Gradually Ascend to Zero` ` , Path Elevation`RdRefZ_26f1eafe-bbc8-4a86-884d-0f1d39272f54
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_e46efb33-c172-4526-9ddc-1a491e68d0fc.par
+#BlueLink4 Road: Animator Surface Shapes`Right Lane` Lane Change Roads` , Road shape definitions`RdShape_e46efb33-c172-4526-9ddc-1a491e68d0fc
+
+RR_SURF_CONSTANT 1
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_d4c450d6-372b-4662-b26d-43e2a7e034fd.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 39 m` Road Reference` , Camera`Camera_d4c450d6-372b-4662-b26d-43e2a7e034fd
+
+parsfile Roads\3D_Road\Road_d3b30fe8-c017-4806-9e44-410ca4d32775.ani
+
+#EMBEDDED_NOTES
+#This road is a very simplified version of an entrance ramp for a cloverleaf interchange.  It is intended to be used when comparing the effects of a lane change with and without performing a full sweep of the target path.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Path Change Roads } Road 2000: Entrance Ramp
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Road 2000: Entrance Ramp
+#Category: Path Change Roads
+#FileID  : Road_d3b30fe8-c017-4806-9e44-410ca4d32775
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

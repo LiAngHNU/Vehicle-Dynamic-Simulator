@@ -1,0 +1,210 @@
+PARSFILE
+#FullDataName Path: Segment Builder`City and Off-road 3D`Looped Roads for Environments
+#RingCtrl0 1
+SET_IPATH_FOR_ID 0
+#CheckBox0 1    
+OPT_PATH_START 1
+#CheckBox1 1    
+OPT_PATH_LOOP 1
+
+SPATH_START 0
+X_PATH_START 0
+Y_PATH_START 116.4
+PATH_ID_DM = PATH_ID
+set_description path_id City and Off-road 3D
+
+NSEGMENTS 24
+*TABLEROWS 24
+
+! Table Columns:
+!   NOTE: Label columns are not written to parsfile.
+!
+! 0: (Ring) Specify the type of segment. Circular arcs can be specified using radius or curvature (inverse radius). The table option provides a link to a dataset from the X-Y Coordinates for Segment library. The clothoid option will automatically generate an X-Y table with a specified length that maintains continuity with adjacent segments (the preceding and following rows in the table).
+! 1: (BlueLink) Link to a dataset from the X-Y Coordinates for Segment library.
+! 2: (Text) Length of straight segment in meters.
+! 3: (Label) Specify the length of a straight segment with meters.
+! 4: (Text) Segment radius: use a positive radius for a left turn, negative for a right turn.
+! 5: (Label) Specify radius with meters. Use a positive number for a left turn, negative number for a right turn.
+! 6: (Text) Length of segment arc, specified with arc length (m) or central angle (deg).
+! 7: (Ring) Specify arc size with central angle (deg) or arc length (m).
+! 8: (Text) Segment curvature (inverse of radius, 1/m): use a positive curvature for a left turn, negative for a right turn
+! 9: (Label) Specify segment curvature with 1/meter (inverse of radius). Use a positive number for a left turn, negative for a right turn.
+! 10: (Text) Length of segment arc, specified with arc length (m) or central angle (deg).
+! 11: (Ring) Specify arc size with central angle (deg) or arc length (m).
+! 12: (Text) Length of clothoid segment in meters. This will automatically generate an X-Y table that has this overall length and maintains continuity with the adjacent segments (the preceding and following rows in the table).
+! 13: (Label) Specify the length of a clothoid segment with meters.
+#MIXTABLE0
+#NUMROWS 24
+#straight, , 50, 100, 90, deg, 0.01, 90, deg, 400
+#radius, , 50, -110, 90, deg, 0.01, 90, deg, 400
+#straight, , 26.4, 100, 90, deg, 0.01, 90, deg, 400
+#straight, , 25, 100, 90, deg, 0.01, 90, deg, 400
+#radius, , 50, 25, 45, deg, 0.01, 90, deg, 400
+#straight, , 10, 100, 90, deg, 0.01, 90, deg, 400
+#radius, , 50, -25, 45, deg, 0.01, 90, deg, 400
+#radius, , 50, -50, 90, deg, 0.01, 90, deg, 400
+#straight, , 75, 100, 90, deg, 0.01, 90, deg, 400
+#radius, , 50, -40, 60, deg, 0.01, 90, deg, 400
+#straight, , 25, 100, 90, deg, 0.01, 90, deg, 400
+#radius, , 50, 40, 60, deg, 0.01, 90, deg, 400
+#straight, , 100, 100, 90, deg, 0.01, 90, deg, 400
+#radius, , 50, 25, 75, deg, 0.01, 90, deg, 400
+#radius, , 50, -40, 75, deg, 0.01, 90, deg, 400
+#straight, , 25, 100, 90, deg, 0.01, 90, deg, 400
+#radius, , 50, -50, 90, deg, 0.01, 90, deg, 400
+#straight, , 98, 100, 90, deg, 0.01, 90, deg, 400
+#radius, , 50, -10, 90, deg, 0.01, 90, deg, 400
+#straight, , 107, 100, 90, deg, 0.01, 90, deg, 400
+#radius, , 10, 10, 90, deg, 0.01, 90, deg, 400
+#straight, , 62.35, 100, 90, deg, 0.01, 90, deg, 400
+#radius, , -10, -10, 90, deg, 0.01, 90, deg, 400
+#straight, , 125.84, 100, 90, deg, 0.01, 90, deg, 400
+#ENDTABLE
+
+! Segment 1, straight
+IPATHSEG 1
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 50
+
+! Segment 2, radius
+IPATHSEG 2
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -110.000000
+SEGMENT_ARC 90.000000
+
+! Segment 3, straight
+IPATHSEG 3
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 26.4
+
+! Segment 4, straight
+IPATHSEG 4
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 25
+
+! Segment 5, radius
+IPATHSEG 5
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 25.000000
+SEGMENT_ARC 45.000000
+
+! Segment 6, straight
+IPATHSEG 6
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 10
+
+! Segment 7, radius
+IPATHSEG 7
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -25.000000
+SEGMENT_ARC 45.000000
+
+! Segment 8, radius
+IPATHSEG 8
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -50.000000
+SEGMENT_ARC 90.000000
+
+! Segment 9, straight
+IPATHSEG 9
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 75
+
+! Segment 10, radius
+IPATHSEG 10
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -40.000000
+SEGMENT_ARC 60.000000
+
+! Segment 11, straight
+IPATHSEG 11
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 25
+
+! Segment 12, radius
+IPATHSEG 12
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 40.000000
+SEGMENT_ARC 60.000000
+
+! Segment 13, straight
+IPATHSEG 13
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 100
+
+! Segment 14, radius
+IPATHSEG 14
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 25.000000
+SEGMENT_ARC 75.000000
+
+! Segment 15, radius
+IPATHSEG 15
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -40.000000
+SEGMENT_ARC 75.000000
+
+! Segment 16, straight
+IPATHSEG 16
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 25
+
+! Segment 17, radius
+IPATHSEG 17
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -50.000000
+SEGMENT_ARC 90.000000
+
+! Segment 18, straight
+IPATHSEG 18
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 98
+
+! Segment 19, radius
+IPATHSEG 19
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -10.000000
+SEGMENT_ARC 90.000000
+
+! Segment 20, straight
+IPATHSEG 20
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 107
+
+! Segment 21, radius
+IPATHSEG 21
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 10.000000
+SEGMENT_ARC 90.000000
+
+! Segment 22, straight
+IPATHSEG 22
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 62.35
+
+! Segment 23, radius
+IPATHSEG 23
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -10.000000
+SEGMENT_ARC 90.000000
+
+! Segment 24, straight
+IPATHSEG 24
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 125.84
+
+Title City and Off-road 3D <Looped Roads for Environments>
+
+#EMBEDDED_NOTES
+#This straight line east matches the S-L coordinates to global X-Y coordinates: S = X, L = Y.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Path: Segment Builder; { Looped Roads for Environments } City and Off-road 3D
+#Library : Path: Segment Builder
+#DataSet : City and Off-road 3D
+#Category: Looped Roads for Environments
+#FileID  : RoadSeg_c3a93136-a7c4-4046-8a3c-81302449da68
+#Product : TruckSim 2020.1
+#VehCode Path Segment Builder
+
+END

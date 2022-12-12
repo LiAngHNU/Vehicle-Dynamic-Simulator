@@ -1,0 +1,87 @@
+PARSFILE
+#FullDataName TruckSim Run Control`MF-Tyre, Sym.: Sine Steer`Tire Models
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_64b1c38d-ad39-4338-b625-1dbe70b37e3e
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#BlueLink12 ` , Models` , Models` , Models`
+
+PARSFILE Animator\Cameras\Camera_e1c31f95-b0c9-423f-af09-82016e848b91.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 1 El, 25 m` Vehicle Reference` , Animator camera`Camera_e1c31f95-b0c9-423f-af09-82016e848b91
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.4 1
+SET_RUN_COLOR 0 0.4 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_67ce5dcd-f290-4f98-bb32-d00b6684ceb7.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Conv. Van (MF-Tyre: Symmetric)` 2A Conventional Van` , Math Model`Lead2a_67ce5dcd-f290-4f98-bb32-d00b6684ceb7
+
+PARSFILE Procedures\Proc_ba677a90-43a4-4276-bfe6-4bfdea4a1839.par
+#BlueLink28 Procedures`Sine Steer @ 50 km/h` Steering Tests` , Procedure`Proc_ba677a90-43a4-4276-bfe6-4bfdea4a1839
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+#BlueLink23 TruckSim Run Control`Extended Tires: Sine Steer` Tire Models` , Overlay run or ERD file`Run_865fed96-0657-42b4-a5eb-854a72e4372a
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title MF-Tyre, Sym.: Sine Steer <Tire Models>
+CATEGORY Tire Models 
+DATASET_TITLE MF-Tyre, Sym.: Sine Steer
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example shows the 2A Conventional Van with the Delft-Tyre model (including Symmetric tire properties between the left and right sides) performing an open-loop Sine Wave Steer Input test.
+#
+#To see how the MF-Tyre data is incorporated into TruckSim, browse to the Vehicle: Lead Unit with 2 Axles screen and click on the Tires dataset "510 mm Radius, MF-Tyre: Symmetric" for more information.
+#
+#This example is overlaid with the simulation "Extended Tires: Sine Steer."
+#
+#The MF-Tyre / MF-Swift (Symmetric) dataset and the TruckSim Extended Tire dataset are based on different tire models, although they share the same tire characteristics.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Tire Models } MF-Tyre, Sym.: Sine Steer
+#Library : TruckSim Run Control
+#DataSet : MF-Tyre, Sym.: Sine Steer
+#Category: Tire Models
+#FileID  : Run_64b1c38d-ad39-4338-b625-1dbe70b37e3e
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

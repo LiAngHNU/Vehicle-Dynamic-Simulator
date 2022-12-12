@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Accel. and Braking`Powertrain
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_1b6eda53-709a-4d9b-88b2-e923bd386b5e
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_6f53a7db-08fa-4ac5-8444-58582195a374.par
+#BlueLink2 Vehicle: Loaded Combination`2A Conventional Van Loaded (No ABS)` Conventional Vans` , Math Model`VehLoad_6f53a7db-08fa-4ac5-8444-58582195a374
+
+PARSFILE Procedures\Proc_2a97a6e8-41c7-4a70-a92f-24b55c9c15f6.par
+#BlueLink28 Procedures`0-80-0kmh, Event Control` Acceleration and Braking` , Procedure`Proc_2a97a6e8-41c7-4a70-a92f-24b55c9c15f6
+
+PARSFILE Generic\Group\GenGrp_481fa86b-f2f8-4035-8771-14fc9958d6d3.par
+#BlueLink9 Generic Data Group`Skid Marks (2 Axles)` Tire Skid Mark Animations` , Miscellaneous`GenGrp_481fa86b-f2f8-4035-8771-14fc9958d6d3
+
+PARSFILE Animator\HUD\HUD_647507c0-a511-41d5-8437-e3b1fc5eb87f.par
+#BlueLink10 Animator: HUD`Throttle, Brakes, G-G, Speedo, Gear, Tach` HUD Groups` , Miscellaneous`HUD_647507c0-a511-41d5-8437-e3b1fc5eb87f
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Accel. and Braking <Powertrain>
+CATEGORY Powertrain 
+DATASET_TITLE Accel. and Braking
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#A 2-axle Conventional Van with no ABS and a payload performs an acceleration and braking test.
+#
+#This example makes use of Events to control the vehicle's transition from sitting still at idle, to reaching a target speed of 80 km/h, then applying the brakes to slow down.
+#
+#Since the vehicle used in this example is set up such that the TruckSim ABS is turned off, the the rear wheels lock up near the end of the test as a result of the brake pressure being applied.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Powertrain } Accel. and Braking
+#Library : TruckSim Run Control
+#DataSet : Accel. and Braking
+#Category: Powertrain
+#FileID  : Run_1b6eda53-709a-4d9b-88b2-e923bd386b5e
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

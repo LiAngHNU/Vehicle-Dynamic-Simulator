@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`1200m, 10% Grade, Waypoints`Hills
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_ae0a4f63-b6e4-448d-ab4d-90c35cd3b1b7.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 1200m, 10% Grade, Waypoints
+PARSFILE Roads\BuilderSegment\RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c.par
+#BlueLink0 Path: Segment Builder`Straight Path East` Straight` , Reference Path`RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight Path East
+PARSFILE Roads\Center_Z\RdRefZ_25cabca0-a070-4f73-8303-8673f79f5180.par
+#BlueLink1 Road: Reference Line Elevation`Ramp to 10% Grade` Hills and Valleys` , Path Elevation`RdRefZ_25cabca0-a070-4f73-8303-8673f79f5180
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_d1bb3bb4-1111-41a4-8a0a-60eb182ccc49.par
+#BlueLink4 Road: Animator Surface Shapes`1200 m One Ln Road + 100 m Light Grass` Roads` , Road shape definitions`RdShape_d1bb3bb4-1111-41a4-8a0a-60eb182ccc49
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+add_reference_frame road_stuff_7_Road_Stripes_at_S_=_0m,_76.508m
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_4784512a-af12-49cc-8161-28107980b464.par
+#BlueLink7 Road: Animator Repeated Object`Road Stripes at S = 0m, 76.508m` Hill Hold w/ Parking Brake` , 3D Shapes`AniRep_4784512a-af12-49cc-8161-28107980b464
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_265e38de-4bbf-46ee-bbc0-868db110b76d.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 3 El, 44 m` Road Reference` , Camera`Camera_265e38de-4bbf-46ee-bbc0-868db110b76d
+
+parsfile Roads\3D_Road\Road_ae0a4f63-b6e4-448d-ab4d-90c35cd3b1b7.ani
+
+add_reference_frame road_stuff_1_2_Rectangle_for_Road_Stripe
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_pitch 0.115389731231
+set_offset_var_roll 0
+set_offset_var_x 0
+set_offset_var_y 0
+set_offset_var_z 0
+parsfile Animator\STL\Shape_1fe05434-c992-439b-8e7f-009b1f03e938.par
+
+add_reference_frame road_stuff_2_2_Rectangle_for_Road_Stripe
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_pitch 5.71216566746
+set_offset_var_roll 0
+set_offset_var_x 76.508
+set_offset_var_y 0
+set_offset_var_z 5.65069828341
+parsfile Animator\STL\Shape_1fe05434-c992-439b-8e7f-009b1f03e938.par
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Hills } 1200m, 10% Grade, Waypoints
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 1200m, 10% Grade, Waypoints
+#Category: Hills
+#FileID  : Road_ae0a4f63-b6e4-448d-ab4d-90c35cd3b1b7
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

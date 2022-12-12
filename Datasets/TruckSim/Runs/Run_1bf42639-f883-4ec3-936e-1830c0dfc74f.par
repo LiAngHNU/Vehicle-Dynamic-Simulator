@@ -1,0 +1,94 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Lane Departure in Double Lane Change`ADAS and Active Safety
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_1bf42639-f883-4ec3-936e-1830c0dfc74f
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b7028f29-fdf7-4233-8487-abd35f8aee05.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 10 El, 36 m` Vehicle Reference` , Animator camera`Camera_b7028f29-fdf7-4233-8487-abd35f8aee05
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_dd51d318-e512-4350-9caa-8fcd1fc427a2.par
+#BlueLink2 Vehicle: Loaded Combination`DRW Pickup, ADAS Sen., Lane Detection` Pickup Trucks` , Math Model`VehLoad_dd51d318-e512-4350-9caa-8fcd1fc427a2
+
+PARSFILE Procedures\Proc_15835a6c-8a89-455e-9bcc-29b9ebdf42dd.par
+#BlueLink28 Procedures`Lane Departure using Lat_Veh` ADAS and Active Safety` , Procedure`Proc_15835a6c-8a89-455e-9bcc-29b9ebdf42dd
+
+PARSFILE Roads\3D_Road\Road_2d020066-d170-461b-a680-2d8408718ba5.par
+#BlueLink9 Road: 3D Surface (All Properties)`4-Lane Section (Divided)` Multiple Lanes` , Miscellaneous`Road_2d020066-d170-461b-a680-2d8408718ba5
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Control\Driver\StrDM_a20c224e-d1a6-444a-b806-f534ac8456d3.par
+#BlueLink3 Control: Steering by the Closed-loop Driver Model`Double Lane Change (Quick Start)` Vehicle Dynamics Tests` , Steering`StrDM_a20c224e-d1a6-444a-b806-f534ac8456d3
+
+OPT_STOP 0
+TSTOP 10
+OPT_DIRECTION 1
+*TSTOP 10
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ee189bc-4102-46cf-a6ee-046ab79da53b.png
+WRITE_SENSOR_DETECT
+Title Lane Departure in Double Lane Change <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Lane Departure in Double Lane Change
+#MiscYellow0
+LTARG_OFFSET = -2
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#2018.1  Add LTARG_OFFSET = -2 in the run control since the LTARG index method is changed.
+#
+#A double-lane change is performed to show how the lane edge targets reset with the vehicle's lateral position.
+#
+#A front-facing ADAS sensor is configured to only detect targets down low. The moving point targets are defined to follow lane edges at 5-m intervals in front of the sensor.
+#
+#VS Commands for the alerts show the lane departure alerts even though the lane change was a deliberate driver action.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { ADAS and Active Safety } Lane Departure in Double Lane Change
+#Library : TruckSim Run Control
+#DataSet : Lane Departure in Double Lane Change
+#Category: ADAS and Active Safety
+#FileID  : Run_1bf42639-f883-4ec3-936e-1830c0dfc74f
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

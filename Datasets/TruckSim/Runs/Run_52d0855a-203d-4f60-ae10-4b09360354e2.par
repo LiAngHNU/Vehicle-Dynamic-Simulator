@@ -1,0 +1,87 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Brake in a Turn: No ABS`Brake Tests
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_52d0855a-203d-4f60-ae10-4b09360354e2
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_293071ae-9194-4088-8862-92255ece0a0f.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 48 m` Vehicle Reference` , Animator camera`Camera_293071ae-9194-4088-8862-92255ece0a0f
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.6 1
+SET_RUN_COLOR 0 0.6 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_6f53a7db-08fa-4ac5-8444-58582195a374.par
+#BlueLink2 Vehicle: Loaded Combination`2A Conventional Van Loaded (No ABS)` Conventional Vans` , Math Model`VehLoad_6f53a7db-08fa-4ac5-8444-58582195a374
+
+PARSFILE Procedures\Proc_175e5068-f465-4eaa-b6c0-f0bfa062082a.par
+#BlueLink28 Procedures`Brake in a Turn` Acceleration and Braking` , Procedure`Proc_175e5068-f465-4eaa-b6c0-f0bfa062082a
+
+PARSFILE Generic\Group\GenGrp_481fa86b-f2f8-4035-8771-14fc9958d6d3.par
+#BlueLink9 Generic Data Group`Skid Marks (2 Axles)` Tire Skid Mark Animations` , Miscellaneous`GenGrp_481fa86b-f2f8-4035-8771-14fc9958d6d3
+
+
+SPECIAL_PARSFILE Runs\Run_a90ed613-6f54-4c09-801a-c3b2ee9115a0.par
+#BlueLink23 TruckSim Run Control`Brake in a Turn: ABS` Brake Tests` , Overlay run or ERD file`Run_a90ed613-6f54-4c09-801a-c3b2ee9115a0
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Brake in a Turn: No ABS <Brake Tests>
+CATEGORY Brake Tests 
+DATASET_TITLE Brake in a Turn: No ABS
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates a test in which a vehicle without ABS is braking in a turn.
+#
+#It is overlaid with a reference simulation, "Brake in a Turn: ABS".
+#
+#Skid marks have been added using a dataset linked on the Run Control screen.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Brake Tests } Brake in a Turn: No ABS
+#Library : TruckSim Run Control
+#DataSet : Brake in a Turn: No ABS
+#Category: Brake Tests
+#FileID  : Run_52d0855a-203d-4f60-ae10-4b09360354e2
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

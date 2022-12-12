@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, S-L Grid`3% Cross-slope (Constant)`PBS Tests
+#CheckBox0 0    
+
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: 3% Cross-slope (Constant)
+set_description ROAD_DZ_ID 3% Cross-slope (Constant)
+#RingCtrl0 CARPET
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 4, 2 ! columns x rows
+ROAD_DZ_CARPET 2D_LINEAR
+0, -10, -5, 5, 10
+0, 0.15, 0.15, -0.15, -0.15
+200, 0.15, 0.15, -0.15, -0.15
+ENDTABLE
+
+ROAD_DZ_L_CONSTANT 1
+*SCALAR 0
+*SCALAR2 1
+
+#EMBEDDED_NOTES
+#A simple cross-slope of 0.3 m per 10 m (0.03 grade).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { PBS Tests } 3% Cross-slope (Constant)
+#Library : Road: Off-Center Elevation Map, S-L Grid
+#DataSet : 3% Cross-slope (Constant)
+#Category: PBS Tests
+#FileID  : RdMapZ_8c362854-ac45-45a8-8505-0f9fdf62c316
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L Grid
+
+END

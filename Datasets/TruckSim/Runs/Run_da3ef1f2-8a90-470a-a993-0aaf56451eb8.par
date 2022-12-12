@@ -1,0 +1,77 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Road X-Y-Z Edges`Road Networks: 3D Geometry and Terrain
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_da3ef1f2-8a90-470a-a993-0aaf56451eb8
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_f177b393-4607-4b3c-9b61-ceba09d3b71d.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 4.5 El, 48 m` Vehicle Reference` , Animator camera`Camera_f177b393-4607-4b3c-9b61-ceba09d3b71d
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_f2e42802-b6bd-4532-8292-f20e5972f36c.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Pickup, Ext. Cab DRW` Pickup Trucks` , Math Model`Lead2a_f2e42802-b6bd-4532-8292-f20e5972f36c
+
+PARSFILE Procedures\Proc_3d63efcc-f6d3-40df-bd49-1a9038916a5d.par
+#BlueLink28 Procedures`Road X-Y-Z Edges` Driving` , Procedure`Proc_3d63efcc-f6d3-40df-bd49-1a9038916a5d
+
+OPT_VS_FILETYPE 1
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_1a5339c0-4baa-420e-bba9-1b937d9b12e1.png
+WRITE_SENSOR_DETECT
+Title Road X-Y-Z Edges <Road Networks: 3D Geometry and Terrain>
+CATEGORY Road Networks: 3D Geometry and Terrain 
+DATASET_TITLE Road X-Y-Z Edges
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates the TruckSim Road X-Y-Z Coordinates of Edges screen, a road building technique wherein the user enters data for the X, Y, and Z coordinates of the road edges and TruckSim calculates the station position.
+#
+#Road Roughness is also added to this example, linked on the Procedure screen.
+#
+#To learn more about this, click on the Procedures blue link "Road X-Y-Z Edges", and browse to the Road: 3D Surface screen by clicking on the road dataset "X-Y-Z Edges".
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Road Networks: 3D Geometry and Terrain } Road X-Y-Z Edges
+#Library : TruckSim Run Control
+#DataSet : Road X-Y-Z Edges
+#Category: Road Networks: 3D Geometry and Terrain
+#FileID  : Run_da3ef1f2-8a90-470a-a993-0aaf56451eb8
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

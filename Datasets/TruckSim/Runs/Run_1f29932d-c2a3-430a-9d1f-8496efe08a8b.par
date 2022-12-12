@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Events: Shift 2WD to 4WD`Powertrain
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_1f29932d-c2a3-430a-9d1f-8496efe08a8b
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_245b5580-eac8-4494-a96f-0533fd4ce892.par
+#BlueLink0 Animator: Camera Setup`150 Azm, 4.5 El, 100 m` Vehicle Reference` , Animator camera`Camera_245b5580-eac8-4494-a96f-0533fd4ce892
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.2 0.6
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_be864b93-9355-49fa-ada1-9938a21fe28b.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Pickup, Mid: Part-Time 4WD` Pickup Trucks` , Math Model`Lead2a_be864b93-9355-49fa-ada1-9938a21fe28b
+
+PARSFILE Procedures\Proc_ae91f45e-4961-4d71-969f-7d759608ef3e.par
+#BlueLink28 Procedures`Off-Road Hill Climb: 2WD to 4WD` Event Triggered Tests` , Procedure`Proc_ae91f45e-4961-4d71-969f-7d759608ef3e
+
+PARSFILE Animator\HUD\HUD_ab8c71e2-152f-420f-85d0-3214a3d8fbaf.par
+#BlueLink9 Animator: HUD`4x4, Speedo, Tach, Brake, Throttle` HUD Groups` , Miscellaneous`HUD_ab8c71e2-152f-420f-85d0-3214a3d8fbaf
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Lead_2a\Lead2a_be864b93-9355-49fa-ada1-9938a21fe28b.png
+WRITE_SENSOR_DETECT
+Title Events: Shift 2WD to 4WD <Powertrain>
+CATEGORY Powertrain 
+DATASET_TITLE Events: Shift 2WD to 4WD
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example simulates an off-road type hill climb test with a 2-axle pickup truck equipped with a part-time 4WD system.
+#
+#The Events are used to monitor the vehicle’s progress up the hill. Once it begins to roll backwards:
+# * The brakes are applied
+# * The transmission is placed in neutral
+# * Parameters are used to switch the vehicle's
+#part-time 4WD from 2WD to 4WD Low-Range
+#
+#The additional traction of the front-driven wheels and the torque provided by the locked differentials and low-range gearing allows the truck to continue to climb the hill.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Powertrain } Events: Shift 2WD to 4WD
+#Library : TruckSim Run Control
+#DataSet : Events: Shift 2WD to 4WD
+#Category: Powertrain
+#FileID  : Run_1f29932d-c2a3-430a-9d1f-8496efe08a8b
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

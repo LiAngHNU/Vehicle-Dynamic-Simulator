@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Leg Boundary Visualization (Blue)`Roundabout, 3D, D = 36 m
+NLANES 2
+#MiscYellow0
+# 1 1 1, Road (No Centerline), 1, 10, 1, -2.1, m, 2.1, m, , , -100, 250, 1, , , Road
+# 0 0.2 1, No Texture, 1, 10, 1, 1, edge, 2, edge, , , 40, 110, 0.5, , 0.075, Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (No Centerline)
+SPECULAR(1) 1
+SCALE(1) 10
+LTILES(1) 1
+LIN(1) -2.1
+LINUNITS(1) m
+LOUT(1) 2.1
+LOUTUNITS(1) m
+S_START(1) -100
+S_STOP(1) 250
+SINT(1) 1
+AUTODETAIL(1) Road
+COLOR(2) 0 0.2 1
+MATERIAL(2) No Texture
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 1
+LIN(2) 1
+LINUNITS(2) edge
+LOUT(2) 2
+LOUTUNITS(2) edge
+S_START(2) 40
+S_STOP(2) 110
+SINT(2) 0.5
+DZ(2) 0.075
+AUTODETAIL(2) Random
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Roundabout, 3D, D = 36 m } Leg Boundary Visualization (Blue)
+#Library : Road: Animator Surface Shapes
+#DataSet : Leg Boundary Visualization (Blue)
+#Category: Roundabout, 3D, D = 36 m
+#FileID  : RdShape_fa350421-1c00-4b88-bf55-4a95bd3161bd
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

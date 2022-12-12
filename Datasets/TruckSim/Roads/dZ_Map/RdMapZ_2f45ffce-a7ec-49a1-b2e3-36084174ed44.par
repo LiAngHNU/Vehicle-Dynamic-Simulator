@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, S-L Grid`Flat`Flat
+#CheckBox0 0    
+
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: Flat
+set_description ROAD_DZ_ID Flat
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 MULTIPLY
+ROAD_DZ_COMBINE MULTIPLY
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+ROAD_DZ_CONSTANT 0
+ROAD_DZ_L_CONSTANT 1
+*SCALAR 0
+*SCALAR2 1
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Flat } Flat
+#Library : Road: Off-Center Elevation Map, S-L Grid
+#DataSet : Flat
+#Category: Flat
+#FileID  : RdMapZ_2f45ffce-a7ec-49a1-b2e3-36084174ed44
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L Grid
+
+END

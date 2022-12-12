@@ -1,0 +1,33 @@
+Run made by VS Road Calculator at 11:20 on July 25, 2022.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_254626e4-6912-4d54-9b26-1ae8ad08029c.par"
+Include PARSFILE "Roads\BuilderSegment\RoadSeg_f0c79ae4-40f1-4abb-bc5d-0831d484d83c.par"
+ Single Curve, R = 1000 m <Constant Radius, Straight Lead-in / Lead-out>
+Used Dataset: Path: Segment Builder; { Constant Radius, Straight Lead-in / Lead-out } Single Curve, R = 1000 m
+Include PARSFILE "Roads\Center_Z\RdRefZ_c7c734f7-efef-48fa-8117-779b17748086.par"
+Used Dataset: Road: Reference Line Elevation; { Hills and Valleys } 1.5 km with Hills
+Include PARSFILE "Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } Constant: 0.85
+Include PARSFILE "Roads\Shapes\RdShape_bcbce738-62b0-412e-a9d2-540c215a9051.par"
+Used Dataset: Road: Animator Surface Shapes; { Lane-Keeping Assist Roads } Four Lanes (Adjacent)
+Include PARSFILE "Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par"
+Include PARSFILE "Animator\Frames\Frame_7bb47609-7102-4b34-a50f-a8c8a02234db.par"
+Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Skybox (Vehicle X-Y-Z)
+Include PARSFILE "Animator\STL\Shape_f49e5d15-b002-46b6-b28e-df6b8d8a40b6.par"
+Used Dataset: Animator: Shape File Link; { Environment: Sky Boxes } Partly Cloudy Sky
+Include PARSFILE "Animator\STL\Shape_79cf4b25-5748-487a-8e5c-a602d7f86a42.par"
+Used Dataset: Animator: Shape File Link; { Environment: Land Bowls } Light Grass
+Used Dataset: Animator: Group; { Environment Spheres } Partly Cloudy Sky with Light Grass
+Include PARSFILE "Roads\3D_Road\Road_254626e4-6912-4d54-9b26-1ae8ad08029c.ani"
+Used Dataset: Road: 3D Surface (All Properties); { Multiple Lanes } 4-Lane Section (Adjacent Lanes)
+
+Time to read input = 0.0008584
+
+Run stopped at t = 18.36. Stop time reached.
+
+Run started: VS output file = Roads\3D_Road\Road_254626e4-6912-4d54-9b26-1ae8ad08029c.vsb
+
+Computational time ratio: RTIME = inf (real time)/(simulation time)
+

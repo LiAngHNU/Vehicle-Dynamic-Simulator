@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Baseline: Road w/ 10% grade`* TS 2020.1 - Acceleration Field Imports
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_34922198-4ecb-4f5b-8403-edf61a5e23e9
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fa668846-ecab-4a6b-858c-7be5cd0236cf.par
+#BlueLink0 Animator: Camera Setup`80 Azm, 2 El, 48 m` Vehicle Reference` , Animator camera`Camera_fa668846-ecab-4a6b-858c-7be5cd0236cf
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_9dcbf1c7-4623-418e-9593-cc98464f7ef3.par
+#BlueLink2 Vehicle: Loaded Combination`2A LCF Van, Motion Sensor at SM CG` LCF Vans` , Math Model`VehLoad_9dcbf1c7-4623-418e-9593-cc98464f7ef3
+
+PARSFILE Procedures\Proc_8806f513-dbf4-470f-bf25-6f3a621e06a1.par
+#BlueLink28 Procedures`Constant 10% grade (5.7 degrees)` Acceleration Field Imports` , Procedure`Proc_8806f513-dbf4-470f-bf25-6f3a621e06a1
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55.par
+#BlueLink10 Multiple Moving Objects`1 Driver Preview Point, Set by DM` Points of Interest` , Miscellaneous`TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55
+
+*TSTOP 1
+
+*IMAGE_TYPE PASS_THROUGH
+WRITE_SENSOR_DETECT
+Title Baseline: Road w/ 10% grade <* TS 2020.1 - Acceleration Field Imports>
+CATEGORY * TS 2020.1 - Acceleration Field Imports 
+DATASET_TITLE Baseline: Road w/ 10% grade
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example serves as a baseline for the Acceleration Field Import example. Here, a 2-axle vehicle drives up a constant 10% grade with a constant target speed.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { * TS 2020.1 - Acceleration Field Imports } Baseline: Road w/ 10% grade
+#Library : TruckSim Run Control
+#DataSet : Baseline: Road w/ 10% grade
+#Category: * TS 2020.1 - Acceleration Field Imports
+#FileID  : Run_34922198-4ecb-4f5b-8403-edf61a5e23e9
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

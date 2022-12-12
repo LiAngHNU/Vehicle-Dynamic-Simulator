@@ -1,0 +1,223 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Loading Dock`Test Facilities
+NLANES 15
+OPTTHRESHOLD 1
+#MiscYellow0
+# .7 .7 .7, Concrete, 1, 10, 2, 5, m, 25, m, 50, , 150, 170, 0.25, , , Road
+# 1 1 1, Road (One Lane), 1, 20, 1, -10, m, 5, m, , , 0, 300, , , , Road
+# 1 1 0, Concrete, 1, .001, 1, 5, m, 25, m, 50, , 149.999, 150.001, .001, , , Foliage
+# 1 1 0, Concrete, 1, .001, 1, 5, m, 25, m, 50, , 170, 170.002, .001, , , Foliage
+# 1 1 0, Concrete, 1, 10, 1, 25, m, 25.001, m, , , 150, 170, , , , Foliage
+# 1 1 1, Pavement, 1, 20, 2, 5, m, 25.001, m, , , 100, 149.999, , , , Random
+# 1 1 1, Pavement, 1, 20, 2, 5, m, 25.001, m, , , 170.001, 220, , , , Random
+# 1 1 1, Pavement, 1, 20, 2, 25.001, m, 75, m, , , 100, 220, , , , Random
+# 1 1 1, Road Transition (Light), 1, 10, -1, -10, m, -11, m, , , 0, 300, , , , Foliage
+# 1 1 1, Grass (Light), 1, 10, 19, -200, m, -11, m, , , 0, 300, , , , Foliage
+# 1 1 1, Grass (Light), 1, 10, 12, 75, m, 200, m, , , 0, 300, , , , Foliage
+# 1 1 1, Grass (Light), 1, 10, 19, 6, m, 200, m, , , 0, 100, , , , Foliage
+# 1 1 1, Grass (Light), 1, 10, 9, 6, m, 200, m, , , 220, 300, , , , Foliage
+# 1 1 1, Road Transition (Light), 1, 10, 1, 5, m, 6, m, , , 0, 100, , , , Foliage
+# 1 1 1, Road Transition (Light), 1, 10, 1, 5, m, 6, m, , , 220, 300, , , , Foliage
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) .7 .7 .7
+MATERIAL(1) Concrete
+SPECULAR(1) 1
+SCALE(1) 10
+LTILES(1) 2
+LIN(1) 5
+LINUNITS(1) m
+LOUT(1) 25
+LOUTUNITS(1) m
+LDIV(1) 50
+S_START(1) 150
+S_STOP(1) 170
+SINT(1) 0.25
+AUTODETAIL(1) Road
+COLOR(2) 1 1 1
+MATERIAL(2) Road (One Lane)
+SPECULAR(2) 1
+SCALE(2) 20
+LTILES(2) 1
+LIN(2) -10
+LINUNITS(2) m
+LOUT(2) 5
+LOUTUNITS(2) m
+S_START(2) 0
+S_STOP(2) 300
+AUTODETAIL(2) Road
+COLOR(3) 1 1 0
+MATERIAL(3) Concrete
+SPECULAR(3) 1
+SCALE(3) .001
+LTILES(3) 1
+LIN(3) 5
+LINUNITS(3) m
+LOUT(3) 25
+LOUTUNITS(3) m
+LDIV(3) 50
+S_START(3) 149.999
+S_STOP(3) 150.001
+SINT(3) .001
+AUTODETAIL(3) Foliage
+COLOR(4) 1 1 0
+MATERIAL(4) Concrete
+SPECULAR(4) 1
+SCALE(4) .001
+LTILES(4) 1
+LIN(4) 5
+LINUNITS(4) m
+LOUT(4) 25
+LOUTUNITS(4) m
+LDIV(4) 50
+S_START(4) 170
+S_STOP(4) 170.002
+SINT(4) .001
+AUTODETAIL(4) Foliage
+COLOR(5) 1 1 0
+MATERIAL(5) Concrete
+SPECULAR(5) 1
+SCALE(5) 10
+LTILES(5) 1
+LIN(5) 25
+LINUNITS(5) m
+LOUT(5) 25.001
+LOUTUNITS(5) m
+S_START(5) 150
+S_STOP(5) 170
+AUTODETAIL(5) Foliage
+COLOR(6) 1 1 1
+MATERIAL(6) Pavement
+SPECULAR(6) 1
+SCALE(6) 20
+LTILES(6) 2
+LIN(6) 5
+LINUNITS(6) m
+LOUT(6) 25.001
+LOUTUNITS(6) m
+S_START(6) 100
+S_STOP(6) 149.999
+AUTODETAIL(6) Random
+COLOR(7) 1 1 1
+MATERIAL(7) Pavement
+SPECULAR(7) 1
+SCALE(7) 20
+LTILES(7) 2
+LIN(7) 5
+LINUNITS(7) m
+LOUT(7) 25.001
+LOUTUNITS(7) m
+S_START(7) 170.001
+S_STOP(7) 220
+AUTODETAIL(7) Random
+COLOR(8) 1 1 1
+MATERIAL(8) Pavement
+SPECULAR(8) 1
+SCALE(8) 20
+LTILES(8) 2
+LIN(8) 25.001
+LINUNITS(8) m
+LOUT(8) 75
+LOUTUNITS(8) m
+S_START(8) 100
+S_STOP(8) 220
+AUTODETAIL(8) Random
+COLOR(9) 1 1 1
+MATERIAL(9) Road Transition (Light)
+SPECULAR(9) 1
+SCALE(9) 10
+LTILES(9) -1
+LIN(9) -10
+LINUNITS(9) m
+LOUT(9) -11
+LOUTUNITS(9) m
+S_START(9) 0
+S_STOP(9) 300
+AUTODETAIL(9) Foliage
+COLOR(10) 1 1 1
+MATERIAL(10) Grass (Light)
+SPECULAR(10) 1
+SCALE(10) 10
+LTILES(10) 19
+LIN(10) -200
+LINUNITS(10) m
+LOUT(10) -11
+LOUTUNITS(10) m
+S_START(10) 0
+S_STOP(10) 300
+AUTODETAIL(10) Foliage
+COLOR(11) 1 1 1
+MATERIAL(11) Grass (Light)
+SPECULAR(11) 1
+SCALE(11) 10
+LTILES(11) 12
+LIN(11) 75
+LINUNITS(11) m
+LOUT(11) 200
+LOUTUNITS(11) m
+S_START(11) 0
+S_STOP(11) 300
+AUTODETAIL(11) Foliage
+COLOR(12) 1 1 1
+MATERIAL(12) Grass (Light)
+SPECULAR(12) 1
+SCALE(12) 10
+LTILES(12) 19
+LIN(12) 6
+LINUNITS(12) m
+LOUT(12) 200
+LOUTUNITS(12) m
+S_START(12) 0
+S_STOP(12) 100
+AUTODETAIL(12) Foliage
+COLOR(13) 1 1 1
+MATERIAL(13) Grass (Light)
+SPECULAR(13) 1
+SCALE(13) 10
+LTILES(13) 9
+LIN(13) 6
+LINUNITS(13) m
+LOUT(13) 200
+LOUTUNITS(13) m
+S_START(13) 220
+S_STOP(13) 300
+AUTODETAIL(13) Foliage
+COLOR(14) 1 1 1
+MATERIAL(14) Road Transition (Light)
+SPECULAR(14) 1
+SCALE(14) 10
+LTILES(14) 1
+LIN(14) 5
+LINUNITS(14) m
+LOUT(14) 6
+LOUTUNITS(14) m
+S_START(14) 0
+S_STOP(14) 100
+AUTODETAIL(14) Foliage
+COLOR(15) 1 1 1
+MATERIAL(15) Road Transition (Light)
+SPECULAR(15) 1
+SCALE(15) 10
+LTILES(15) 1
+LIN(15) 5
+LINUNITS(15) m
+LOUT(15) 6
+LOUTUNITS(15) m
+S_START(15) 220
+S_STOP(15) 300
+AUTODETAIL(15) Foliage
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Test Facilities } Loading Dock
+#Library : Road: Animator Surface Shapes
+#DataSet : Loading Dock
+#Category: Test Facilities
+#FileID  : RdShape_53b6b387-bae0-4442-a6c3-0d65f9b8c2a0
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

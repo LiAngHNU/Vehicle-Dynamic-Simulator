@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Electric 4WD: O-L, Regen. Brk.`Powertrain
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_da1a0a95-e206-4cf2-95fd-e7b3ed7ccac4
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.4 1
+SET_RUN_COLOR 0 0.4 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_2709f99a-6b71-4eca-8543-bd5b3da784d2.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Pickup, Comp (Electric 4WD, Regen Brk)` Pickup Trucks w/ Options` , Math Model`Lead2a_2709f99a-6b71-4eca-8543-bd5b3da784d2
+
+PARSFILE Procedures\Proc_5dfac0c4-71f6-4962-9ab7-5e3f51faec93.par
+#BlueLink28 Procedures`Accel. then Brake (HEV)` Acceleration and Braking` , Procedure`Proc_5dfac0c4-71f6-4962-9ab7-5e3f51faec93
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+#BlueLink23 TruckSim Run Control`Electric: OL, Regen Brk 100%` Powertrain` , Overlay run or ERD file`Run_c99814da-345e-426d-ad1d-feaad8a3f28e
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Lead_2a\Lead2a_2709f99a-6b71-4eca-8543-bd5b3da784d2.png
+WRITE_SENSOR_DETECT
+Title Electric 4WD: O-L, Regen. Brk. <Powertrain>
+CATEGORY Powertrain 
+DATASET_TITLE Electric 4WD: O-L, Regen. Brk.
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#A 2-axle pickup with an electric powertrain (4WD).
+#
+#This example demonstrates an electric powertrain that includes an electric motor, electric powertrain assembly, and power management control.
+#
+#The vehicle in this example is 4WD in which an electric motor is equipped on each of front and rear drive axles (total 2 motors).
+#
+#The Procedure has open-loop controls for throttle and braking.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Powertrain } Electric 4WD: O-L, Regen. Brk.
+#Library : TruckSim Run Control
+#DataSet : Electric 4WD: O-L, Regen. Brk.
+#Category: Powertrain
+#FileID  : Run_da1a0a95-e206-4cf2-95fd-e7b3ed7ccac4
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

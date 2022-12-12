@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Looped Road`Road Networks: 3D Geometry and Terrain
+#VEHICLECODE S_SS + SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_716f6a6c-d2d1-4f76-9e3d-4a3e67262dac
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_cab1809d-9038-447e-a68d-b3432420a8f6.par
+#BlueLink0 Animator: Camera Setup`10 Azm, 10 El, 50 m` Vehicle Reference` , Animator camera`Camera_cab1809d-9038-447e-a68d-b3432420a8f6
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_06bef8e1-fa26-4463-83cd-71c2940cb169.par
+#BlueLink2 Vehicle: Loaded Combination`3A Day+2A Lowboy Trl.` Day-Cab Tractor-Trailers` , Math Model`VehLoad_06bef8e1-fa26-4463-83cd-71c2940cb169
+
+PARSFILE Procedures\Proc_71fe7f53-b612-424e-ab5a-72c16d423ba9.par
+#BlueLink28 Procedures`Looped Road w/ Banking` Driving` , Procedure`Proc_71fe7f53-b612-424e-ab5a-72c16d423ba9
+
+PARSFILE Generic\Group\GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa.par
+#BlueLink9 Generic Data Group`5 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_210bf516-a418-4707-bed2-da7b93f14f00.png
+WRITE_SENSOR_DETECT
+Title Looped Road <Road Networks: 3D Geometry and Terrain>
+CATEGORY Road Networks: 3D Geometry and Terrain 
+DATASET_TITLE Looped Road
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates how to use the TruckSim Road Segment Builder to construct a looped road that has complicated elevation and banking transitions.
+#
+#The Road Segment Builder allows users to construct a road by entering road segment lengths, banking, radius of curvature, etc.
+#
+#Click on the Procedure dataset "Looped Road w/ Banking" for more information.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Road Networks: 3D Geometry and Terrain } Looped Road
+#Library : TruckSim Run Control
+#DataSet : Looped Road
+#Category: Road Networks: 3D Geometry and Terrain
+#FileID  : Run_716f6a6c-d2d1-4f76-9e3d-4a3e67262dac
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

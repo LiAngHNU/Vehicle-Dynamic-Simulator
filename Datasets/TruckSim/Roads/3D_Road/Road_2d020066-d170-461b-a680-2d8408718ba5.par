@@ -1,0 +1,64 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`4-Lane Section (Divided)`Multiple Lanes
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_2d020066-d170-461b-a680-2d8408718ba5.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 4-Lane Section (Divided)
+PARSFILE Roads\BuilderSegment\RoadSeg_f0c79ae4-40f1-4abb-bc5d-0831d484d83c.par
+#BlueLink0 Path: Segment Builder`Single Curve, R = 1000 m` Constant Radius, Straight Lead-in / Lead-out` , Reference Path`RoadSeg_f0c79ae4-40f1-4abb-bc5d-0831d484d83c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Single Curve, R = 1000 m
+PARSFILE Roads\Center_Z\RdRefZ_c7c734f7-efef-48fa-8117-779b17748086.par
+#BlueLink1 Road: Reference Line Elevation`1.5 km with Hills` Hills and Valleys` , Path Elevation`RdRefZ_c7c734f7-efef-48fa-8117-779b17748086
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_dad1e073-5d48-4d48-b0c3-66e6b2913044.par
+#BlueLink4 Road: Animator Surface Shapes`Four Lanes (Divided)` Lane-Keeping Assist Roads` , Road shape definitions`RdShape_dad1e073-5d48-4d48-b0c3-66e6b2913044
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+add_reference_frame road_stuff_7__,_3D_Shapes
+reference_frame_ghosts off
+#BlueLink7 ` , 3D Shapes` , 3D Shapes` , 3D Shapes`
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_2d020066-d170-461b-a680-2d8408718ba5.ani
+
+#EMBEDDED_NOTES
+#This road has a single curve with a 1000-m radius.
+#
+#The center of the forward road is where L = 0. Both lanes are 4 m wide; one is from L = -4 to 0, the other L = 0 to 4 m.
+#
+#The oncoming road lanes go from L = 12 to 20 m.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Multiple Lanes } 4-Lane Section (Divided)
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 4-Lane Section (Divided)
+#Category: Multiple Lanes
+#FileID  : Road_2d020066-d170-461b-a680-2d8408718ba5
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

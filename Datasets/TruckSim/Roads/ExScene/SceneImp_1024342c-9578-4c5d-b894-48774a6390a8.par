@@ -1,0 +1,306 @@
+PARSFILE
+#FullDataName Scene: External Import`Rural Intersection Scene`VS Scene Builder
+#VehCode VS Terrain Scene
+ADD_REFERENCE_FRAME Speed Sign 50 MPH
+add_obj Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Props/Road_Signs/US/Speed_Limit/Mesh/VsV/Sign_50_MPH_30_36.obj
+vsv_enable_shadows_recursive
+SET_ANGLE_Z -180.000000
+SET_OFFSET_X 144.028984
+SET_OFFSET_Y -8.649573
+SET_OFFSET_Z -0.048236
+ADD_REFERENCE_FRAME Speed Sign 50 MPH
+add_obj Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Props/Road_Signs/US/Speed_Limit/Mesh/VsV/Sign_50_MPH_30_36.obj
+vsv_enable_shadows_recursive
+SET_ANGLE_Z 0.000000
+SET_OFFSET_X 156.001791
+SET_OFFSET_Y -289.017351
+SET_OFFSET_Z -0.045979
+ADD_REFERENCE_FRAME Wind Mill
+add_obj Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Props/Animated/Wind_Mill/Mesh/VsV/Wind_Mill.OSG
+vsv_enable_shadows_recursive
+SET_ANGLE_Z -270.000000
+SET_OFFSET_X 35.122388
+SET_OFFSET_Y -197.870855
+SET_OFFSET_Z 0.003868
+ADD_REFERENCE_FRAME Stop Sign 01
+add_obj Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Props/Road_Signs/US/Stop01/Mesh/VsV/Stop_Sign_24_24.obj
+vsv_enable_shadows_recursive
+SET_ANGLE_Z -90.000000
+SET_OFFSET_X 141.852449
+SET_OFFSET_Y -154.895924
+SET_OFFSET_Z 0.000000
+ADD_REFERENCE_FRAME Stop Sign 01
+add_obj Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Props/Road_Signs/US/Stop01/Mesh/VsV/Stop_Sign_24_24.obj
+vsv_enable_shadows_recursive
+SET_ANGLE_Z -270.000000
+SET_OFFSET_X 158.208437
+SET_OFFSET_Y -145.048960
+SET_OFFSET_Z -0.034463
+ADD_REFERENCE_FRAME Field_02
+add_obj Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/Field_02.OSG
+vsv_enable_shadows_recursive
+SET_ANGLE_Z 0.000000
+SET_OFFSET_X 450.000000
+SET_OFFSET_Y 150.000000
+SET_OFFSET_Z 0.000000
+ADD_REFERENCE_FRAME Field_03
+add_obj Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/Field_03.OSG
+vsv_enable_shadows_recursive
+SET_ANGLE_Z 0.000000
+SET_OFFSET_X 450.000000
+SET_OFFSET_Y -450.000000
+SET_OFFSET_Z 0.000000
+ADD_REFERENCE_FRAME Straight_300_02
+add_obj Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/Straight_300_02.OSG
+vsv_enable_shadows_recursive
+SET_ANGLE_Z 0.000000
+SET_OFFSET_X 150.000100
+SET_OFFSET_Y -450.000000
+SET_OFFSET_Z 0.000000
+ADD_REFERENCE_FRAME Straight_300_01
+add_obj Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/Straight_300_01.OSG
+vsv_enable_shadows_recursive
+SET_ANGLE_Z -90.000000
+SET_OFFSET_X -150.000015
+SET_OFFSET_Y -149.999603
+SET_OFFSET_Z 0.000000
+ADD_REFERENCE_FRAME Straight_300_01
+add_obj Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/Straight_300_01.OSG
+vsv_enable_shadows_recursive
+SET_ANGLE_Z -90.000000
+SET_OFFSET_X 450.000000
+SET_OFFSET_Y -149.999900
+SET_OFFSET_Z 0.000000
+ADD_REFERENCE_FRAME Straight_300_02
+add_obj Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/Straight_300_02.OSG
+vsv_enable_shadows_recursive
+SET_ANGLE_Z 0.000000
+SET_OFFSET_X 150.000000
+SET_OFFSET_Y 150.000000
+SET_OFFSET_Z 0.000000
+ADD_REFERENCE_FRAME 4_Way_02
+add_obj Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/4_Way_02.OSG
+vsv_enable_shadows_recursive
+SET_ANGLE_Z -90.000000
+SET_OFFSET_X 150.000000
+SET_OFFSET_Y -150.000000
+SET_OFFSET_Z 0.000000
+
+
+DEFINE_PATHS   1
+IPATH = NPATH
+PATH_ID IPATH
+OPT_PATH_START 0
+OPT_PATH_LOOP 0
+SPATH_START -447
+PATH_ID_DM  = PATH_ID
+set_description path_id Start South, Turn Right
+NSEGMENTS   1
+IPATHSEG 1
+SEGMENT_TYPE 1
+DEFINE_XY_TABLES 1
+ITAB_XY = NTAB_XY
+XY_TABLE_ID = ITAB_XY
+SET_DESCRIPTION XY_TABLE_ID Start South, Turn Right Segment 1
+XY_SEGMENT_ID = XY_TABLE_ID
+SEGMENT_XY_TABLE
+151.792100, -600.000000, 0.000000, -447.000000
+151.792100, -540.702000, -0.000020, -387.702000
+151.792100, -359.648800, -0.000018, -206.648800
+151.792100, -300.000000, -0.000017, -147.000000
+151.792000, -156.509700, -0.000011, -3.509700
+151.804400, -156.215400, -0.000011, -3.215139
+151.837300, -155.921200, -0.000013, -2.919105
+151.889200, -155.628700, -0.000011, -2.622036
+151.958700, -155.339800, -0.000009, -2.324894
+152.044400, -155.055500, -0.000008, -2.027958
+152.144700, -154.777700, -0.000006, -1.732606
+152.258200, -154.507800, -0.000003, -1.439812
+152.383300, -154.247300, -0.000003, -1.150831
+152.518800, -153.997700, -0.000007, -0.866823
+152.662900, -153.760700, -0.000010, -0.589453
+152.814400, -153.537600, -0.000011, -0.319776
+152.971700, -153.330000, -0.000012, -0.059313
+153.133400, -153.139500, -0.000012, 0.190561
+153.302400, -152.962100, -0.000012, 0.435575
+153.482300, -152.793200, -0.000012, 0.682337
+153.672700, -152.633900, -0.000012, 0.930588
+153.872800, -152.485400, -0.000011, 1.179771
+154.082600, -152.348200, -0.000011, 1.430450
+154.301100, -152.223900, -0.000010, 1.681831
+154.528200, -152.113300, -0.000010, 1.934431
+154.763200, -152.017200, -0.000004, 2.188322
+155.005600, -151.936800, -0.000001, 2.443707
+155.255000, -151.873100, -0.000001, 2.701114
+155.510800, -151.827100, -0.000002, 2.961017
+155.772700, -151.799700, -0.000002, 3.224346
+156.040000, -151.792000, -0.000002, 3.491757
+300.000000, -151.792000, 0.000000, 147.451757
+359.298000, -151.791900, -0.000020, 206.749757
+540.351200, -151.791900, -0.000018, 387.802957
+600.000000, -151.791900, -0.000017, 447.451757
+ENDTABLE
+
+DEFINE_PATHS   1
+IPATH = NPATH
+PATH_ID IPATH
+OPT_PATH_START 0
+OPT_PATH_LOOP 0
+SPATH_START 0
+PATH_ID_DM  = PATH_ID
+set_description path_id Start North, Go Straight
+NSEGMENTS   1
+IPATHSEG 1
+SEGMENT_TYPE 1
+DEFINE_XY_TABLES 1
+ITAB_XY = NTAB_XY
+XY_TABLE_ID = ITAB_XY
+SET_DESCRIPTION XY_TABLE_ID Start North, Go Straight Segment 1
+XY_SEGMENT_ID = XY_TABLE_ID
+SEGMENT_XY_TABLE
+148.208400, 300.000000, -0.000005, 0.000000
+148.208400, 240.934800, -0.000005, 59.065200
+148.208400, 59.484500, -0.000008, 240.515500
+148.208400, 0.000000, -0.000009, 300.000000
+148.208500, -300.000000, -0.000005, 600.000000
+148.208500, -359.065200, -0.000005, 659.065200
+148.208500, -540.515500, -0.000008, 840.515500
+148.208500, -600.000000, -0.000009, 900.000000
+ENDTABLE
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+SMTH_MULT 1.0
+SMTH_MINACC 1.0
+JSON_FILENAME Scene_Import\VS_Scene_Builder\Rural_Intersection_2_Paths.vsscene
+VS_TERRAIN_FILE Scene_Import\VS_Scene_Builder\Rural_Intersection_2_Paths.vsterrain
+#RingCtrl0 1
+SMTH_PASS 1
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!  Warning: Raw Data Below  !!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!  Do Not Edit  !!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Table Columns:
+!   NOTE: Label columns are not written to parsfile.
+!
+! 0: (Text) Describes the import object type (PATH or SEGM)
+! 1: (Text) Describes the import object internal ID
+! 2: (Text) Describes the import object name
+! 3: (Text) Id of segment linked to by a path
+! 4: (Text) X Coordinate of Segment definition
+! 5: (Text) Y Coordinate of Segment definition
+! 6: (Text) Z Coordinate of Segment definition
+! 7: (Text) S Coordinate of Segment definition
+! 8: (Text) Heading of a segment linked to by a path
+! 9: (Text) RenderObject Title
+! 10: (Text) RenderObject Path
+! 11: (Text) RenderObject Z Angle
+! 12: (Text) RenderObject X Offset
+! 13: (Text) RenderObject Y Offset
+! 14: (Text) RenderObject Z Offset
+! 15: (Text) RenderObject No Shadows
+! 16: (Text) SensorObject Title
+! 17: (Text) SensorObject X
+! 18: (Text) SensorObject Y
+! 19: (Text) SensorObject Height
+! 20: (Text) SensorObject Diameter
+! 21: (Text) SensorObject Type
+! 22: (Text) SensorObject Message
+! 23: (Text) Path is looped
+#MIXTABLE0
+#NUMROWS 58
+#SEGM, 0, , , 151.792100, -600.000000, 0.000000, -447.000000, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 151.792100, -540.702000, -0.000020, -387.702000, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 151.792100, -359.648800, -0.000018, -206.648800, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 151.792100, -300.000000, -0.000017, -147.000000, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 151.792000, -156.509700, -0.000011, -3.509700, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 151.804400, -156.215400, -0.000011, -3.215139, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 151.837300, -155.921200, -0.000013, -2.919105, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 151.889200, -155.628700, -0.000011, -2.622036, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 151.958700, -155.339800, -0.000009, -2.324894, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 152.044400, -155.055500, -0.000008, -2.027958, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 152.144700, -154.777700, -0.000006, -1.732606, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 152.258200, -154.507800, -0.000003, -1.439812, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 152.383300, -154.247300, -0.000003, -1.150831, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 152.518800, -153.997700, -0.000007, -0.866823, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 152.662900, -153.760700, -0.000010, -0.589454, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 152.814400, -153.537600, -0.000011, -0.319776, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 152.971700, -153.330000, -0.000012, -0.059313, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 153.133400, -153.139500, -0.000012, 0.190561, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 153.302400, -152.962100, -0.000012, 0.435575, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 153.482300, -152.793200, -0.000012, 0.682336, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 153.672700, -152.633900, -0.000012, 0.930588, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 153.872800, -152.485400, -0.000011, 1.179771, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 154.082600, -152.348200, -0.000011, 1.430450, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 154.301100, -152.223900, -0.000010, 1.681831, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 154.528200, -152.113300, -0.000010, 1.934431, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 154.763200, -152.017200, -0.000004, 2.188321, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 155.005600, -151.936800, -0.000001, 2.443707, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 155.255000, -151.873100, -0.000001, 2.701114, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 155.510800, -151.827100, -0.000002, 2.961017, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 155.772700, -151.799700, -0.000002, 3.224346, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 156.040000, -151.792000, -0.000002, 3.491757, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 300.000000, -151.792000, 0.000000, 147.451757, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 359.298000, -151.791900, -0.000020, 206.749757, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 540.351200, -151.791900, -0.000018, 387.802957, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 600.000000, -151.791900, -0.000017, 447.451757, , , , , , , , , , , , , , , , 
+#SEGM, 1, , , 148.208400, 300.000000, -0.000005, 0.000000, , , , , , , , , , , , , , , , 
+#SEGM, 1, , , 148.208400, 240.934800, -0.000005, 59.065200, , , , , , , , , , , , , , , , 
+#SEGM, 1, , , 148.208400, 59.484500, -0.000008, 240.515500, , , , , , , , , , , , , , , , 
+#SEGM, 1, , , 148.208400, -0.000000, -0.000009, 300.000000, , , , , , , , , , , , , , , , 
+#SEGM, 1, , , 148.208500, -300.000000, -0.000005, 600.000000, , , , , , , , , , , , , , , , 
+#SEGM, 1, , , 148.208500, -359.065200, -0.000005, 659.065200, , , , , , , , , , , , , , , , 
+#SEGM, 1, , , 148.208500, -540.515500, -0.000008, 840.515500, , , , , , , , , , , , , , , , 
+#SEGM, 1, , , 148.208500, -600.000000, -0.000009, 900.000000, , , , , , , , , , , , , , , , 
+#PATH, 0, "Start South, Turn Right", 0, , , , , 0.000000, , , , , , , , , , , , , , , 0
+#PATH, 1, "Start North, Go Straight", 1, , , , , 0.000000, , , , , , , , , , , , , , , 0
+#REND, , , , , , , , , Speed Sign 50 MPH, Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Props/Road_Signs/US/Speed_Limit/Mesh/VsV/Sign_50_MPH_30_36.obj, -180.000000, 144.028984, -8.649573, -0.048236, 0, , , , , , , , 
+#REND, , , , , , , , , Speed Sign 50 MPH, Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Props/Road_Signs/US/Speed_Limit/Mesh/VsV/Sign_50_MPH_30_36.obj, -0.000000, 156.001791, -289.017351, -0.045979, 0, , , , , , , , 
+#REND, , , , , , , , , Wind Mill, Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Props/Animated/Wind_Mill/Mesh/VsV/Wind_Mill.OSG, -270.000000, 35.122388, -197.870855, 0.003868, 0, , , , , , , , 
+#REND, , , , , , , , , Stop Sign 01, Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Props/Road_Signs/US/Stop01/Mesh/VsV/Stop_Sign_24_24.obj, -90.000000, 141.852449, -154.895924, 0.000000, 0, , , , , , , , 
+#REND, , , , , , , , , Stop Sign 01, Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Props/Road_Signs/US/Stop01/Mesh/VsV/Stop_Sign_24_24.obj, -270.000000, 158.208437, -145.048960, -0.034463, 0, , , , , , , , 
+#REND, , , , , , , , , Field_02, Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/Field_02.OSG, -0.000000, 450.000000, 150.000000, 0.000000, 0, , , , , , , , 
+#REND, , , , , , , , , Field_03, Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/Field_03.OSG, -0.000000, 450.000000, -450.000000, 0.000000, 0, , , , , , , , 
+#REND, , , , , , , , , Straight_300_02, Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/Straight_300_02.OSG, -0.000000, 150.000100, -450.000000, 0.000000, 0, , , , , , , , 
+#REND, , , , , , , , , Straight_300_01, Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/Straight_300_01.OSG, -90.000000, -150.000015, -149.999603, 0.000000, 0, , , , , , , , 
+#REND, , , , , , , , , Straight_300_01, Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/Straight_300_01.OSG, -90.000000, 450.000000, -149.999900, 0.000000, 0, , , , , , , , 
+#REND, , , , , , , , , Straight_300_02, Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/Straight_300_02.OSG, -0.000000, 150.000000, 150.000000, 0.000000, 0, , , , , , , , 
+#REND, , , , , , , , , 4_Way_02, Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/4_Way_02.OSG, -90.000000, 150.000000, -150.000000, 0.000000, 0, , , , , , , , 
+#, , , , , , , , , , , , , , , , , , , , , , , 
+#ENDTABLE
+
+! Table Columns:
+!   NOTE: Label columns are not written to parsfile.
+!
+! 0: (Ring) Choose Yes to set a custom Path ID
+! 1: (Text) Path ID (if active; ignored otherwise)  Specify an integer 999 or greater to identify this reference path. If a path already exists with this ID, then information from this dataset will override the properties of the existing path. If not, a new one will be added to the model.
+! 2: (Text) Path Description
+! 3: (Text) Starting Station for path
+! 4: (Text) Ending Station for path (calculated)
+! 5: (Text) Path Length (calculated)
+! 6: (Text) Start X location (Global Coordinates)
+! 7: (Text) Start Y location (Global Coordinates)
+! 8: (Ring) Choose Yes to set path as looped.
+#MIXTABLE1
+#NUMROWS 2
+#No, 1000, "Start South, Turn Right", -447, 447.452, 894.452, 151.792, -600.000, No
+#No, 1001, "Start North, Go Straight", 0, 900.000, 900.000, 148.208, 300.000, No
+#ENDTABLE
+
+#EMBEDDED_NOTES
+#The 2 paths and accompanying scenary were imported with the file Rural_Intersection_2_Paths.vsscene from the folder Scene_import\VS_Scene_Builder.
+#
+#Set starting station for first path to -447 to make S=0 near the center of the turn.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Scene: External Import; { VS Scene Builder } Rural Intersection Scene
+#Library : Scene: External Import
+#DataSet : Rural Intersection Scene
+#Category: VS Scene Builder
+#FileID  : SceneImp_1024342c-9578-4c5d-b894-48774a6390a8
+#Product : TruckSim 2020.1
+#VehCode VS Terrain Scene
+
+END

@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName TruckSim Run Control`External Differentials`Simulink and LabVIEW
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_f73f0c7c-9438-4f0f-87da-89eb2a7b70fa
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_5d4855d4-4652-4870-84b7-e4b267be9da3.par
+#BlueLink12 Models: Simulink`External Transfer Case and Diffs (TS 9.0)` External Powertrain` , Models`Simlink_5d4855d4-4652-4870-84b7-e4b267be9da3
+
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_c7303bab-6b52-410f-8529-c8c8aca0c856.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Pickup, Reg. Cab DRW (Ext. Diffs)` Pickup Trucks w/ Options` , Math Model`Lead2a_c7303bab-6b52-410f-8529-c8c8aca0c856
+
+PARSFILE Procedures\Proc_a07b2cfe-aad4-4b9c-b9db-1969e001a47a.par
+#BlueLink28 Procedures`Half Throttle Acceleration (AT)` Acceleration and Braking` , Procedure`Proc_a07b2cfe-aad4-4b9c-b9db-1969e001a47a
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_2a7c5c10-25ca-44b3-8034-dbf1de646707.png
+WRITE_SENSOR_DETECT
+Title External Differentials <Simulink and LabVIEW>
+CATEGORY Simulink and LabVIEW 
+DATASET_TITLE External Differentials
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates the use of Simulink to define the Transfer Case as well as the Front and Rear Differentials on a 2A Dually Pickup Truck that is performing a 1/2 Throttle Acceleration.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Simulink and LabVIEW } External Differentials
+#Library : TruckSim Run Control
+#DataSet : External Differentials
+#Category: Simulink and LabVIEW
+#FileID  : Run_f73f0c7c-9438-4f0f-87da-89eb2a7b70fa
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

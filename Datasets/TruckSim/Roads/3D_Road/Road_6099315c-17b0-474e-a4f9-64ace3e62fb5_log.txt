@@ -1,0 +1,34 @@
+Run made by VS Road Calculator at 13:56 on May 06, 2022.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_6099315c-17b0-474e-a4f9-64ace3e62fb5.par"
+Include PARSFILE "Roads\Builder\Build_0a0bb491-7f6e-4d5d-9f05-73ad94d6178f.par"
+Used Dataset: Path/Road: Segment Builder (Simple 3D); { Straight Paths } Straight Path (East-West)
+Include PARSFILE "Roads\Center_Z\RdRefZ_2f22c14a-668d-43cc-80a2-6a1502e26712.par"
+Used Dataset: Road: Reference Line Elevation; { Uniform Grades } Uniform Grade: 5%
+Include PARSFILE "Roads\dZ_Map\RdMapZ_78582304-c272-467e-890e-48b436b1a8c9.par"
+Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Bumps } Small Bumps Smoothed
+Include PARSFILE "Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } Constant: 0.85
+Include PARSFILE "Roads\Shapes\RdShape_37f99924-b92b-4833-8c85-632f85931223.par"
+Used Dataset: Road: Animator Surface Shapes; { Ride Roads and Suspension Testing } 200 m Wide 400 m Long w/ Bumps
+Include PARSFILE "Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par"
+Include PARSFILE "Animator\Frames\Frame_7bb47609-7102-4b34-a50f-a8c8a02234db.par"
+Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Skybox (Vehicle X-Y-Z)
+Include PARSFILE "Animator\STL\Shape_f49e5d15-b002-46b6-b28e-df6b8d8a40b6.par"
+Used Dataset: Animator: Shape File Link; { Environment: Sky Boxes } Partly Cloudy Sky
+Include PARSFILE "Animator\STL\Shape_79cf4b25-5748-487a-8e5c-a602d7f86a42.par"
+Used Dataset: Animator: Shape File Link; { Environment: Land Bowls } Light Grass
+Used Dataset: Animator: Group; { Environment Spheres } Partly Cloudy Sky with Light Grass
+Include PARSFILE "Roads\3D_Road\Road_6099315c-17b0-474e-a4f9-64ace3e62fb5.ani"
+Used Dataset: Road: 3D Surface (All Properties); { Ride Roads } Four Small Bumps, 5% grade
+
+Time to read input = 0.0076521
+
+Run started: VS output file = Roads\3D_Road\Road_6099315c-17b0-474e-a4f9-64ace3e62fb5.vsb
+
+Run stopped at t = 8.96. External control (manual or external model)
+
+Computational time ratio: RTIME = inf (real time)/(simulation time)
+

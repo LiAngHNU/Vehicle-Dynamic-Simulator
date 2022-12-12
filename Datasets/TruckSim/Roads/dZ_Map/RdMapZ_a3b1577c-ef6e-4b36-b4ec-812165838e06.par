@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, S-L Grid`Constant 10% Bank`Banks and Cross-Slopes
+#CheckBox0 0    
+
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: Constant 10% Bank
+set_description ROAD_DZ_ID Constant 10% Bank
+#RingCtrl0 CONSTANT
+#RingCtrl1 LINEAR_FLAT
+#RingCtrl2 ADD
+ROAD_DZ_COMBINE ADD
+#RingCtrl3 1
+#RadioCtrl0 1    
+#RadioCtrl1 0    
+
+ROAD_DZ_CONSTANT 0
+#DiagramOne1
+ROAD_DZ_L_TABLE LINEAR_FLAT
+-4, 0.4
+4, -0.4
+ENDTABLE
+*SCALAR 0
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Banks and Cross-Slopes } Constant 10% Bank
+#Library : Road: Off-Center Elevation Map, S-L Grid
+#DataSet : Constant 10% Bank
+#Category: Banks and Cross-Slopes
+#FileID  : RdMapZ_a3b1577c-ef6e-4b36-b4ec-812165838e06
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L Grid
+
+END

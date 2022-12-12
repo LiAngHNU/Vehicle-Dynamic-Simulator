@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName Road: X-Y-Z Coordinates of Reference Line`I-94 Exit 172`Atlas
+#RingCtrl0 0
+#RingCtrl1 2
+SET_IPATH_FOR_ID 1002
+SET_ITAB_XY_FOR_ID 1002
+SET_DESCRIPTION PATH_ID I-94 Exit 172
+SET_DESCRIPTION XY_TABLE_ID I-94 Exit 172
+IPATHSEG = 1
+PATH_ID_DM = PATH_ID
+SEGMENT_TYPE = 1
+XY_SEGMENT_ID = XY_TABLE_ID
+
+#CheckBox0 0    
+OPT_PATH_LOOP 0
+
+#RadioCtrl0 1    
+
+SPATH_START 537
+#DiagramTwo0
+*3D_DATA 3, 12 ! columns x rows
+*ALL_CARPET
+0, 1, 2, 3
+28.3117, 536.8917, -2.3008, 537.0000
+32.6105, 610.7229, -1.2500, 610.9562
+36.6076, 702.2005, -0.9200, 702.5211
+56.4872, 986.7825, -1.4000, 987.7966
+58.5697, 1031.8504, -1.6000, 1032.9126
+63.5346, 1104.3385, -3.2923, 1105.5706
+66.0066, 1169.9381, -5.8539, 1171.2167
+66.8348, 1237.4884, -8.3791, 1238.7721
+67.6518, 1248.2803, -8.7396, 1249.5949
+68.5585, 1253.2193, -8.8624, 1254.6164
+71.1140, 1261.1016, -9.0156, 1262.9026
+85.8039, 1292.9513, -9.9400, 1297.9768
+ENDTABLE
+
+SEGMENT_XY_TABLE
+28.3117, 536.8917, 537.0000
+32.6105, 610.7229, 610.9562
+36.6076, 702.2005, 702.5211
+56.4872, 986.7825, 987.7966
+58.5697, 1031.8504, 1032.9126
+63.5346, 1104.3385, 1105.5706
+66.0066, 1169.9381, 1171.2167
+66.8348, 1237.4884, 1238.7721
+67.6518, 1248.2803, 1249.5949
+68.5585, 1253.2193, 1254.6164
+71.1140, 1261.1016, 1262.9026
+85.8039, 1292.9513, 1297.9768
+ENDTABLE
+
+ROAD_ZS_TABLE SPLINE
+537.0000, -2.3008
+610.9562, -1.2500
+702.5211, -0.9200
+987.7966, -1.4000
+1032.9126, -1.6000
+1105.5706, -3.2923
+1171.2167, -5.8539
+1238.7721, -8.3791
+1249.5949, -8.7396
+1254.6164, -8.8624
+1262.9026, -9.0156
+1297.9768, -9.9400
+ENDTABLE
+
+#EMBEDDED_NOTES
+#The X-Y-Z data were copied from the Parsfile for the Scene External Import library (dataset with same name). Filtering was set to use D-P, 0.3 coefficient. The table had 45 rows.
+#
+#The path from Google included a right turn onto Jackson. The table was reduced to 28 rows to remove everything after the hard-right turn.
+#
+#Station is set to match I-94 station (path UD = 1094) when they coincide. That is, S = 0 when X = Y = 0. The first 13 rows all have negative Y and were deleted . After some testing with I-94 (ID = 1094), the first point was also eliminated, so Y starts at 537. S is set to this value also.
+#
+#The Google coordinates are between the two N-bound lanes on I-94. This is OK for path 1094, but they are at the left edge of the exit lane. Therefore, X coordinates for rows 1 - 4 were increased by 2m.
+#
+#The XY plot was compared to aerial photos (Google Map) and several X coordinates were adjusted to make the exit path farily straight.
+#
+#Some of the Z values were adjusted to fit better with I-94 (ID = 1094) and Jackson (ID = 1001).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: X-Y-Z Coordinates of Reference Line; { Atlas } I-94 Exit 172
+#Library : Road: X-Y-Z Coordinates of Reference Line
+#DataSet : I-94 Exit 172
+#Category: Atlas
+#FileID  : RoadXYZ_2bb1602c-d9d3-47a5-a001-10dc82f47c21
+#Product : TruckSim 2020.1
+#VehCode X-Y-Z Coords of Ref. Line
+
+END

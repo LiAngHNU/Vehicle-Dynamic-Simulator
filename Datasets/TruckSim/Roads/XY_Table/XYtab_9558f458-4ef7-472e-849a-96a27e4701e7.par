@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Path: X-Y Coordinates for Segment`Right onto Jackson`Highway Intersection
+#RingCtrl0 1
+DEFINE_XY_TABLES 1
+ITAB_XY = NTAB_XY
+XY_TABLE_ID = ITAB_XY
+SET_DESCRIPTION XY_TABLE_ID Right onto Jackson
+XY_SEGMENT_ID = XY_TABLE_ID
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox3 0    
+
+#RadioCtrl0 0    
+
+#DiagramOne0
+SEGMENT_XY_TABLE
+88.4639, 1291.2400, 0.0000
+205.8101, 1243.8937, 126.5378
+269.5660, 1219.6817, 194.7363
+322.4543, 1206.3122, 249.2882
+ENDTABLE
+
+#EMBEDDED_NOTES
+#The 5-row table of X-Y-Z coordinates for Jackson Avenue was copied from the Parsfile of the dataset " Jackson Ave Near I-94" in the Scene: External Import library.
+#
+#The first row was deleted, such that Rows 1 - 4 in this this dataset matched rows 2 - 5 from the original. The coordinates in row 1 were replaced with values interpolated between rows 1 and 2 from the original, to define a point at the end of a circular arc made to connected the exit road to this path.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Path: X-Y Coordinates for Segment; { Highway Intersection } Right onto Jackson
+#Library : Path: X-Y Coordinates for Segment
+#DataSet : Right onto Jackson
+#Category: Highway Intersection
+#FileID  : XYtab_9558f458-4ef7-472e-849a-96a27e4701e7
+#Product : TruckSim 2020.1
+#VehCode X-Y Coordinates of Segment
+
+END

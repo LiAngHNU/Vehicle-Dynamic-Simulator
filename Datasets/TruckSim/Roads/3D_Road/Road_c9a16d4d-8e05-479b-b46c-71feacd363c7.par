@@ -1,0 +1,59 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Circle, 1000`Roundabout, Single Lane, D = 36 m
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_c9a16d4d-8e05-479b-b46c-71feacd363c7.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 1000
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Circle, 1000
+PARSFILE Roads\BuilderSegment\RoadSeg_048a31e9-87ad-4676-8620-87dc87c55af1.par
+#BlueLink0 Path: Segment Builder`16 m Radius` Circles` , Reference Path`RoadSeg_048a31e9-87ad-4676-8620-87dc87c55af1
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: 16 m Radius
+PARSFILE Roads\dZ_Map\RdMapZ_c56cc15f-4b76-4843-a352-d658d36a94d7.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Inside Apron for 16 m Radius Circle` Roundabout, D = 36 m` , Miscellaneous`RdMapZ_c56cc15f-4b76-4843-a352-d658d36a94d7
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_e6420741-2528-4e80-8880-c6656bdfdaa5.par
+#BlueLink4 Road: Animator Surface Shapes`R=16m, Inner Apron` Roundabout, 3D, D = 36 m` , Road shape definitions`RdShape_e6420741-2528-4e80-8880-c6656bdfdaa5
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6__,_3D_Shapes
+reference_frame_ghosts off
+#BlueLink6 ` , 3D Shapes` , 3D Shapes` , 3D Shapes`
+
+add_reference_frame road_stuff_7__,_3D_Shapes
+reference_frame_ghosts off
+#BlueLink7 ` , 3D Shapes` , 3D Shapes` , 3D Shapes`
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_c9a16d4d-8e05-479b-b46c-71feacd363c7.ani
+
+#EMBEDDED_NOTES
+#This circle for a roundabout has a reference path with R = 16 m.
+#
+#The main drivable surface goes from 2.1 m to -2.1 m, thus the outside radius is 18.1 m, with diameter 36.2 m. The surface has a superelevation typical of roundabouts: it drops 0.1 m over the 4.2 m width (2.4% cross-slope)
+#
+#There are two curbs on the inside, as is also typical.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Roundabout, Single Lane, D = 36 m } Circle, 1000
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Circle, 1000
+#Category: Roundabout, Single Lane, D = 36 m
+#FileID  : Road_c9a16d4d-8e05-479b-b46c-71feacd363c7
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

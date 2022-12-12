@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Jackson Ave (Minimal)`Highway Intersection
+NLANES 2
+OPTTHRESHOLD 1
+#MiscYellow0
+# 1 1 1, Road (Medium), 1, 20, 1, -7.4, m, 0, m, , , 0, 640, 5, , , Road
+# 1 1 1, Road (Medium), 1, 20, 1, 0, m, 7.4, m, , , 0, 640, 5, , , Road
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (Medium)
+SPECULAR(1) 1
+SCALE(1) 20
+LTILES(1) 1
+LIN(1) -7.4
+LINUNITS(1) m
+LOUT(1) 0
+LOUTUNITS(1) m
+S_START(1) 0
+S_STOP(1) 640
+SINT(1) 5
+AUTODETAIL(1) Road
+COLOR(2) 1 1 1
+MATERIAL(2) Road (Medium)
+SPECULAR(2) 1
+SCALE(2) 20
+LTILES(2) 1
+LIN(2) 0
+LINUNITS(2) m
+LOUT(2) 7.4
+LOUTUNITS(2) m
+S_START(2) 0
+S_STOP(2) 640
+SINT(2) 5
+AUTODETAIL(2) Road
+MTL_FILE Animator\Road_Materials\road.mtl
+
+
+#EMBEDDED_NOTES
+#Jackson Ave has four adjacent lanes. The GPS line is in the middle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Highway Intersection } Jackson Ave (Minimal)
+#Library : Road: Animator Surface Shapes
+#DataSet : Jackson Ave (Minimal)
+#Category: Highway Intersection
+#FileID  : RdShape_b1d8732f-ab92-4795-9940-1c905fdc02f6
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

@@ -1,0 +1,98 @@
+PARSFILE
+#FullDataName TruckSim Run Control`AEB w/ Deceleration Command`AEB: Automated Emergency Braking
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_a6ab3e2e-43e3-4fa2-b785-3f5bcd1b094e
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_6a030c0f-0bb9-408f-96f1-b927223d953f.par
+#BlueLink0 Animator: Camera Setup`Automated Emergency Braking` ADAS and Euro NCAP: Camera Views` , Animator camera`Camera_6a030c0f-0bb9-408f-96f1-b927223d953f
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 4
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_41ebdb95-0ba5-44b9-a660-3ca9d1f31173.par
+#BlueLink2 Vehicle: Loaded Combination`DRW Pickup, FCW Sen. & AEB Alerts` Pickup Trucks` , Math Model`VehLoad_41ebdb95-0ba5-44b9-a660-3ca9d1f31173
+
+PARSFILE Procedures\Proc_2b694aa0-5c28-4e71-8afb-2739adfe8184.par
+#BlueLink28 Procedures`AEB Single Test: CCRb w/ OPT_SC 5` AEB: Automated Emergency Braking` , Procedure`Proc_2b694aa0-5c28-4e71-8afb-2739adfe8184
+
+PARSFILE Control\Speed_t\SpdTime_f34b0135-42b7-46ce-b413-366894b9b1a0.par
+#BlueLink9 Control: Speed (Closed Loop) Using Target Speed`50-0kmh, -2 m/s/s, ISPEED = 2` AEB CCRb Target Speed` , Miscellaneous`SpdTime_f34b0135-42b7-46ce-b413-366894b9b1a0
+
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_8c9bbc88-a890-4baf-9791-b05739354da1.par
+#BlueLink15 Plot: Setup`Euro NCAP: AEB Booleans` ADAS and AEB Alerts and Commands` , Plot`Plot_8c9bbc88-a890-4baf-9791-b05739354da1
+
+PARSFILE Plot\Setup\Plot_2d2786e5-c3c2-4125-8bc1-eab0f4b9bed3.par
+#BlueLink16 Plot: Setup`Distance: S1 (2 Objects)` ADAS Sensor Detections` , Plot`Plot_2d2786e5-c3c2-4125-8bc1-eab0f4b9bed3
+
+PARSFILE Plot\Setup\Plot_0f5f145e-bfe3-4292-aa9c-4c6d76236efd.par
+#BlueLink17 Plot: Setup`Euro NCAP: Longitudinal Speeds (AEB)` ADAS and AEB Alerts and Commands` , Plot`Plot_0f5f145e-bfe3-4292-aa9c-4c6d76236efd
+
+PARSFILE Plot\Setup\Plot_3063562b-8660-4c29-8bcc-bd83aab0d865.par
+#BlueLink18 Plot: Setup`Accel. Control: Commanded vs. Actual` Controls: Driver` , Plot`Plot_3063562b-8660-4c29-8bcc-bd83aab0d865
+
+#BlueLink23 TruckSim Run Control`AEB  CCRb: - 2 m/s^2, 12 m` AEB: Automated Emergency Braking` , Overlay run or ERD file`Run_e9b8bba4-7d59-4a03-b981-caf64175ca52
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ee189bc-4102-46cf-a6ee-046ab79da53b.png
+WRITE_SENSOR_DETECT
+Title AEB w/ Deceleration Command <AEB: Automated Emergency Braking>
+CATEGORY AEB: Automated Emergency Braking 
+DATASET_TITLE AEB w/ Deceleration Command
+#MiscYellow0
+START_DISTANCE = 12; m
+IMPORT IMP_AX_SC VS_REPLACE 0
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example is equivalent to the one with the name 'AEB  CCRb: - 2 m/s^2, 12 m' in the category of 'AEB: Automated Emergency Braking', but uses the speed control mode OPT_SC 5 to control the deceleration of the ego vehicle rather than a target speed.
+#
+#See the other version of this example in the AEB category for full details of the scenario.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { AEB: Automated Emergency Braking } AEB w/ Deceleration Command
+#Library : TruckSim Run Control
+#DataSet : AEB w/ Deceleration Command
+#Category: AEB: Automated Emergency Braking
+#FileID  : Run_a6ab3e2e-43e3-4fa2-b785-3f5bcd1b094e
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

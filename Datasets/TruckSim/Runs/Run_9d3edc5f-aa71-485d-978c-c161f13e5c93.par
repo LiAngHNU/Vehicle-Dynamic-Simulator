@@ -1,0 +1,94 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Vehicle Dynamic Simulator`* * * Vehicle Dynamic Simulator
+#VEHICLECODE F_S_SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_9d3edc5f-aa71-485d-978c-c161f13e5c93
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_507b33f2-073f-47c7-b1d5-06a017f6bd28.par
+#BlueLink12 Models: Simulink`Vehicle Dynamic Simulator` * * * Vehicle Dynamic Simulator` , Models`Simlink_507b33f2-073f-47c7-b1d5-06a017f6bd28
+
+PARSFILE Animator\Cameras\Camera_e1c31f95-b0c9-423f-af09-82016e848b91.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 1 El, 25 m` Vehicle Reference` , Animator camera`Camera_e1c31f95-b0c9-423f-af09-82016e848b91
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 1    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.878 0.878 0.878
+SET_RUN_COLOR 0.878 0.878 0.878
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_c7c562e7-1a1b-4cc7-8f30-0a3fe86b05a6.par
+#BlueLink2 Vehicle: Loaded Combination`3A CiDi Foton Auman` * * * Vehicle Dynamic Simulator` , Math Model`VehLoad_c7c562e7-1a1b-4cc7-8f30-0a3fe86b05a6
+
+PARSFILE Procedures\Proc_2eb0a1c9-d079-4792-a2d3-0022ba3069e0.par
+#BlueLink28 Procedures`Vehicle Dynamic Simulator, Test Dataset` * * * Vehicle Dynamic Simulator` , Procedure`Proc_2eb0a1c9-d079-4792-a2d3-0022ba3069e0
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_cadfa811-aa3a-460d-b7e1-6b41deff17af.par
+#BlueLink9 Multiple Moving Objects`10 Driver Preview Points, Set by DM` Points of Interest` , Miscellaneous`TMotion_cadfa811-aa3a-460d-b7e1-6b41deff17af
+
+PARSFILE Generic\Group\GenGrp_7c3148c6-de37-4027-be86-a5d25fcb2727.par
+#BlueLink10 Generic Data Group`6 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_7c3148c6-de37-4027-be86-a5d25fcb2727
+
+PARSFILE Output\DrvSensor\DrvSen_0f84f15d-5097-484d-9f8d-ce44937adf7c.par
+#BlueLink11 Preview Points for External Driver Control`6 Driver Sensors: V2R Error` ` , Miscellaneous`DrvSen_0f84f15d-5097-484d-9f8d-ce44937adf7c
+
+*TSTOP 1
+#BlueLink23 TruckSim Run Control`File: 2022-12-08_13.41.09.vs` ` , Overlay run or ERD file`
+
+*ERD_FILE_1 Results\Run_9d3edc5f-aa71-485d-978c-c161f13e5c93\2022-12-08_13.41.09.vs
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Lead_3a\Lead3a_54ca410c-d0a5-4cbd-a399-ab4b465dee7d.png
+
+OPT_ALL_WRITE 1
+WRITE_SENSOR_DETECT
+Title Vehicle Dynamic Simulator <* * * Vehicle Dynamic Simulator>
+CATEGORY * * * Vehicle Dynamic Simulator 
+DATASET_TITLE Vehicle Dynamic Simulator
+#RingCtrl8 25
+NUM_CACHED_RUNS 25
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This is a baseline example used in the TruckSim Demo Tutorial (see Help > Guides and Tutorials). It is similar to the example used in the TruckSim Quick Start Guide.
+#
+#The box is checked to "Write all outputs." This simplifies the use of this example as a reference for comparisons with other runs that might have different plot settings.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { * * * Vehicle Dynamic Simulator } Vehicle Dynamic Simulator
+#Library : TruckSim Run Control
+#DataSet : Vehicle Dynamic Simulator
+#Category: * * * Vehicle Dynamic Simulator
+#FileID  : Run_9d3edc5f-aa71-485d-978c-c161f13e5c93
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

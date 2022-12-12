@@ -1,0 +1,105 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Non-Linear Spring Deflection Tables`Suspension and Ride
+#VEHICLECODE I_I
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_b20aee53-c150-44b1-a804-20e43bfde604
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 0.8 0
+SET_RUN_COLOR 1 0.8 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_c6edc578-1ac1-4d0f-a787-fcd7159b8846.par
+#BlueLink2 Vehicle: Loaded Combination`Compact Utility Truck (I_I)` Misc. Utility Trucks` , Math Model`VehLoad_c6edc578-1ac1-4d0f-a787-fcd7159b8846
+
+PARSFILE Procedures\Proc_289a6952-478f-4d9f-8885-a556b4216383.par
+#BlueLink28 Procedures`Bounce Sine Sweep Test` Ride Tests` , Procedure`Proc_289a6952-478f-4d9f-8885-a556b4216383
+
+PARSFILE Generic\Group\GenGrp_220ceee7-7a60-4578-b4db-245aac5b3552.par
+#BlueLink9 Generic Data Group`Non-Linear Spring MR Deflection` Motion Ratios from Generic Tables` , Miscellaneous`GenGrp_220ceee7-7a60-4578-b4db-245aac5b3552
+
+OPT_STOP 0
+TSTART 0
+SSTART -5
+TSTART_WRITE = 0;
+TSTOP 20
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*TSTOP 20
+*TSTART 0
+*SSTART -5
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_1d7d0caf-7609-48e8-af6d-bbc086475760.png
+WRITE_SENSOR_DETECT
+Title Non-Linear Spring Deflection Tables <Suspension and Ride>
+CATEGORY Suspension and Ride 
+DATASET_TITLE Non-Linear Spring Deflection Tables
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates two features of TruckSim:
+#
+#(1) Implementing non-linear suspension properties by linking to tables.
+#
+#(2) Adding payload to the bed of the truck using the Vehicle: Loaded Combination screen.
+#
+#TruckSim supports the use of tables for suspension mechanical ratios and compliances.
+#
+#Prior to TruckSim 8.2, the browser only supported linear coefficients for the suspension compliances and mechanical ratios to reduce the number and complexity of screens needed for most applications. However, the math models supported the use of tables which could be used to define non-linear suspension properties.
+#
+#New for TruckSim 8.2, users now have the option of linking either to the linear coefficients, or to generic tables directly from the Suspension: Compliance screen.
+#
+#This example demonstrates the traditional method of defining, and linking to, new generic tables. It also demonstrates how to use axle and vehicle side indices to specify which generic table will be used at which vehicle corner.
+#
+#From this Run Control screen example, click on the Generic Data Group blue link "Non-Linear Spring MR Deflection". Once on the new screen, you can see the four datasets that define the Spring seat deflection vs. Jounce tables (i.e., the spring mechanical ratios).
+#
+#To find the root keyword for each table, browse to the Suspension Compliance screen where you set the spring and damper properties. Right click on the field for the spring mechanical ratio. The notes include the table root keywords.
+#
+#A negative Station position is chosen to allow the loaded vehicle some time to settle before it enters the Bounce Sine Sweep course.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Suspension and Ride } Non-Linear Spring Deflection Tables
+#Library : TruckSim Run Control
+#DataSet : Non-Linear Spring Deflection Tables
+#Category: Suspension and Ride
+#FileID  : Run_b20aee53-c150-44b1-a804-20e43bfde604
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

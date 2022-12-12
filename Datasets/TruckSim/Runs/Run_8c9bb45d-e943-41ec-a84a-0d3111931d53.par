@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Trough Wander`Road Networks: 3D Geometry and Terrain
+#VEHICLECODE S_S + S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_8c9bb45d-e943-41ec-a84a-0d3111931d53
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_d13c1c01-d295-49d6-b68c-fe9cd21e7359.par
+#BlueLink2 Vehicle: Loaded Combination`2A Euro Van (S_S) + 1A Rental Trailer (S)` European Vans` , Math Model`VehLoad_d13c1c01-d295-49d6-b68c-fe9cd21e7359
+
+PARSFILE Procedures\Proc_573fcfca-2f9b-4aac-acb6-0e6269585970.par
+#BlueLink28 Procedures`Trough Wander` Driving` , Procedure`Proc_573fcfca-2f9b-4aac-acb6-0e6269585970
+
+PARSFILE Generic\Group\GenGrp_aa29b4a0-5439-4fbb-ad2f-bb4211f7d41f.par
+#BlueLink9 Generic Data Group`3 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_aa29b4a0-5439-4fbb-ad2f-bb4211f7d41f
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_f747720e-6e19-4110-bf60-110dcdd78765.png
+WRITE_SENSOR_DETECT
+Title Trough Wander <Road Networks: 3D Geometry and Terrain>
+CATEGORY Road Networks: 3D Geometry and Terrain 
+DATASET_TITLE Trough Wander
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates how to construct a road with a trough wander.
+#
+#This was accomplished using an Off-Center Elevation dataset, linked on the Road: 3D Surface (All Properties) screen.
+#
+#Road roughness has also been added to this example.
+#
+#For more information, click on the Procedures dataset "Trough Wander".
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Road Networks: 3D Geometry and Terrain } Trough Wander
+#Library : TruckSim Run Control
+#DataSet : Trough Wander
+#Category: Road Networks: 3D Geometry and Terrain
+#FileID  : Run_8c9bb45d-e943-41ec-a84a-0d3111931d53
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

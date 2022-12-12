@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Pwr Recirc Ball Steer, Sine Steer`Steering Tests
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_71d92ab4-c487-4a3c-bb9a-dff71e88d94e
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_41978f36-4f18-4d5c-ab02-fc60fe430e15.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 18 m` Vehicle Reference` , Animator camera`Camera_41978f36-4f18-4d5c-ab02-fc60fe430e15
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 4
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_dce0ba6f-440e-479a-ba80-b23ea521de1c.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Pickup, Reg. Cab DRW` Pickup Trucks` , Math Model`Lead2a_dce0ba6f-440e-479a-ba80-b23ea521de1c
+
+PARSFILE Procedures\Proc_3918de18-b44c-45dd-8efa-13facd69bd64.par
+#BlueLink28 Procedures`Sine Wave 0.2 Hz, 450 deg.` Steering Tests` , Procedure`Proc_3918de18-b44c-45dd-8efa-13facd69bd64
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+PARSFILE Plot\Setup\Plot_a524351b-b516-4aed-b47a-da7310d61cd3.par
+#BlueLink15 Plot: Setup`Boost Torque vs. T-Bar Torque` Steering` , Plot`Plot_a524351b-b516-4aed-b47a-da7310d61cd3
+
+PARSFILE Plot\Setup\Plot_296429a4-bdb3-47e0-9ce3-f3494e791642.par
+#BlueLink16 Plot: Setup`Boost Torque vs. Time` Steering` , Plot`Plot_296429a4-bdb3-47e0-9ce3-f3494e791642
+
+PARSFILE Plot\Setup\Plot_637b8350-a6b4-4316-b81b-12f50955df56.par
+#BlueLink17 Plot: Setup`Steer Torque vs. Steer Angle` Steering` , Plot`Plot_637b8350-a6b4-4316-b81b-12f50955df56
+
+PARSFILE Plot\Setup\Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717.par
+#BlueLink18 Plot: Setup`Vertical Forces (Axle 1, Single Tires)` Tire Forces` , Plot`Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_2a7c5c10-25ca-44b3-8034-dbf1de646707.png
+WRITE_SENSOR_DETECT
+Title Pwr Recirc Ball Steer, Sine Steer <Steering Tests>
+CATEGORY Steering Tests 
+DATASET_TITLE Pwr Recirc Ball Steer, Sine Steer
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#In this example, a full-size pickup truck has a recirculating ball steering system and is performing a Sine Steer.
+#
+#In the vehicle model, the "Steering Column and Assist" library contains global data about the steering system and the steering assist mechanism (e.g. Gear Torque, Column Torque, or Rack Force).  While the individual axle steering datasets use the "Steering System" library to define the axle specific steering information.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Steering Tests } Pwr Recirc Ball Steer, Sine Steer
+#Library : TruckSim Run Control
+#DataSet : Pwr Recirc Ball Steer, Sine Steer
+#Category: Steering Tests
+#FileID  : Run_71d92ab4-c487-4a3c-bb9a-dff71e88d94e
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

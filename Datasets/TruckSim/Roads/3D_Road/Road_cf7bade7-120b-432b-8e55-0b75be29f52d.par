@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Sharp Bump`Ride Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_cf7bade7-120b-432b-8e55-0b75be29f52d.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Sharp Bump
+PARSFILE Roads\Builder\Build_0a0bb491-7f6e-4d5d-9f05-73ad94d6178f.par
+#BlueLink0 Path/Road: Segment Builder (Simple 3D)`Straight Path (East-West)` Straight Paths` , Reference Path`Build_0a0bb491-7f6e-4d5d-9f05-73ad94d6178f
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight Path (East-West)
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+PARSFILE Roads\dZ_Map\RdMapZ_e1d9459c-cd1a-4e24-a63a-e4835eb1e260.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`7cm Bump` Bumps` , Miscellaneous`RdMapZ_e1d9459c-cd1a-4e24-a63a-e4835eb1e260
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_847aa034-388c-4d0e-914e-7f8f0722bb0e.par
+#BlueLink4 Road: Animator Surface Shapes`Sharp Bump` Ride Roads and Suspension Testing` , Road shape definitions`RdShape_847aa034-388c-4d0e-914e-7f8f0722bb0e
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF_CONSTANT 1.0
+*IMAGE_FIT_MODE 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_265e38de-4bbf-46ee-bbc0-868db110b76d.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 3 El, 44 m` Road Reference` , Camera`Camera_265e38de-4bbf-46ee-bbc0-868db110b76d
+
+parsfile Roads\3D_Road\Road_cf7bade7-120b-432b-8e55-0b75be29f52d.ani
+
+#EMBEDDED_NOTES
+#This flat road with a single sharp bump is used to compare different tire models.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Ride Roads } Sharp Bump
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Sharp Bump
+#Category: Ride Roads
+#FileID  : Road_cf7bade7-120b-432b-8e55-0b75be29f52d
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Roundabout Network (Flat)`Road Networks: Intersections and Roundabouts
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_b0ca8397-3299-4473-b8e3-ec6b63b40f9a
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_7ea80950-b7ed-48df-bd55-8f14715877a9.par
+#BlueLink0 Animator: Camera Setup`Fixed View High - Looking North` Fixed Camera` , Animator camera`Camera_7ea80950-b7ed-48df-bd55-8f14715877a9
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 5
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_9e67d413-6c86-46ce-9b3a-cf088f1d807a.par
+#BlueLink2 Vehicle: Loaded Combination`2A Conventional Van w/ Payload` Conventional Vans` , Math Model`VehLoad_9e67d413-6c86-46ce-9b3a-cf088f1d807a
+
+PARSFILE Procedures\Proc_59b72150-f5d6-45f0-a318-d46a067c45d3.par
+#BlueLink28 Procedures`Roundabout Network (Flat)` Road Networks` , Procedure`Proc_59b72150-f5d6-45f0-a318-d46a067c45d3
+
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a.par
+#BlueLink15 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a
+
+PARSFILE Plot\Setup\Plot_d5a7358a-109b-4bbb-8ba0-be1d56347d3b.par
+#BlueLink16 Plot: Setup`Distance to Waypoints` Road Network Driving` , Plot`Plot_d5a7358a-109b-4bbb-8ba0-be1d56347d3b
+
+PARSFILE Plot\Setup\Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8.par
+#BlueLink17 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8
+
+PARSFILE Plot\Setup\Plot_93f9222e-e03b-462f-9848-ebc24c122b1d.par
+#BlueLink18 Plot: Setup`Current Path ID` Road Network Driving` , Plot`Plot_93f9222e-e03b-462f-9848-ebc24c122b1d
+
+PARSFILE Plot\Setup\Plot_ef551610-46f6-492e-a65c-92942608a5f5.par
+#BlueLink19 Plot: Setup`Decision` Road Network Driving` , Plot`Plot_ef551610-46f6-492e-a65c-92942608a5f5
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Roundabout Network (Flat) <Road Networks: Intersections and Roundabouts>
+CATEGORY Road Networks: Intersections and Roundabouts 
+DATASET_TITLE Roundabout Network (Flat)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#A road network with 7 road datasets is used to generate animator graphics for visualization purposes. All of the roads are flat and level, so the math model works with a single simple ground description.
+#
+#On the other hand, the paths that define six road centerlines are used to control the driver model. In this example, way points are defined with VS Commands and used with a random-number function to have the simulated vehicle navigate through the network.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Road Networks: Intersections and Roundabouts } Roundabout Network (Flat)
+#Library : TruckSim Run Control
+#DataSet : Roundabout Network (Flat)
+#Category: Road Networks: Intersections and Roundabouts
+#FileID  : Run_b0ca8397-3299-4473-b8e3-ec6b63b40f9a
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

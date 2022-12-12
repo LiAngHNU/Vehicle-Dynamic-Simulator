@@ -1,0 +1,100 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Camera Sensor: Lanes (Simulink)`ADAS and Active Safety
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_06384317-cc6d-4226-8342-e84426ea9fe9
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_febd0819-78b0-4be2-b761-60272a7b05dc.par
+#BlueLink12 Models: Simulink`Highway Lane Detection w/ Steer Control` Live Video` , Models`Simlink_febd0819-78b0-4be2-b761-60272a7b05dc
+
+PARSFILE Animator\Cameras\Camera_8ae22d3a-c92e-4484-adbf-72759c9d819d.par
+#BlueLink0 Animator: Camera Setup`Camera Sensor: Pickup` Sensor View` , Animator camera`Camera_8ae22d3a-c92e-4484-adbf-72759c9d819d
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+
+#RingCtrl6 1
+#RingCtrl7 -1
+OPT_BUFFER_WRITE 1
+AUTOSIZE OFF
+BLOCKING_RT_READ ON
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 1
+LIVE_SERVER_MAX_CONNECTIONS 1
+PARSFILE Vehicles\Lead_2a\Lead2a_cb692613-bfd2-4c05-bb5a-b06d0a3c3dde.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Pickup, Crew Cab DRW (Camera)` Pickup Trucks w/ Options` , Math Model`Lead2a_cb692613-bfd2-4c05-bb5a-b06d0a3c3dde
+
+PARSFILE Procedures\Proc_6d874f1a-a093-487c-b418-5c827b67a156.par
+#BlueLink28 Procedures`110 km/h, 2m Right, OL Steer` Driver Controls` , Procedure`Proc_6d874f1a-a093-487c-b418-5c827b67a156
+
+PARSFILE Roads\3D_Road\Road_254626e4-6912-4d54-9b26-1ae8ad08029c.par
+#BlueLink9 Road: 3D Surface (All Properties)`4-Lane Section (Adjacent Lanes)` Multiple Lanes` , Miscellaneous`Road_254626e4-6912-4d54-9b26-1ae8ad08029c
+
+PARSFILE Generic\VS_commands\GenVS_3475e725-3fee-4b70-80ff-b8574ae8673a.par
+#BlueLink11 Generic VS Commands`Camera Sensor on Upper Fr. Window` Camera Sensors` , Miscellaneous`GenVS_3475e725-3fee-4b70-80ff-b8574ae8673a
+
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink15 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_af769eb0-873a-40c8-98c5-3952c4c29754.png
+WRITE_SENSOR_DETECT
+Title Camera Sensor: Lanes (Simulink) <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Camera Sensor: Lanes (Simulink)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#VsV Camera Sensor and Live Video S-Function
+#(Matlab 2014b or newer)
+#
+#This example demonstrates highway lane detection using a Camera Sensor with image processing in Simulink.
+#
+#The Camera Sensor in Simulink detects the lanes on the left and right sides of the vehicle, warns when the vehicle drifts, and calculates a steering wheel angle necessary to steer the vehicle in the opposite direction back to the center of the lane.
+#
+#The Matlab Computer Vision System Toolbox and Image Processing Toolbox are required to run this example. The minimum supported Matlab version is R2014b.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { ADAS and Active Safety } Camera Sensor: Lanes (Simulink)
+#Library : TruckSim Run Control
+#DataSet : Camera Sensor: Lanes (Simulink)
+#Category: ADAS and Active Safety
+#FileID  : Run_06384317-cc6d-4226-8342-e84426ea9fe9
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

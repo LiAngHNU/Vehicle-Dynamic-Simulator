@@ -1,0 +1,114 @@
+Run made by VS Road Calculator at 11:21 on July 25, 2022.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_20e0d688-aee1-430a-8473-cac2e55158ac.par"
+Include PARSFILE "Roads\Builder\Build_61223960-7a7b-48aa-a557-bad424dc9a1d.par"
+Used Dataset: Path/Road: Segment Builder (Simple 3D); { Paths with Banking } 3 Turns w/ Banking
+Include PARSFILE "Roads\Center_Z\RdRefZ_e5f2cd5e-dff8-4f81-b987-9ad1d6798aad.par"
+Used Dataset: Road: Reference Line Elevation; { Hills and Valleys } 10 m Dip in the Road
+Include PARSFILE "Roads\dZ_Map\RdMapZ_2f45ffce-a7ec-49a1-b2e3-36084174ed44.par"
+Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Flat } Flat
+Include PARSFILE "Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } Constant: 0.85
+Include PARSFILE "Roads\Shapes\RdShape_ec782ab1-ce67-43a2-96bb-4b82eae0e136.par"
+Used Dataset: Road: Animator Surface Shapes; { Scenic Road Shapes } Long Road (S Stop = 5000 m)
+Include PARSFILE "Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par"
+Include PARSFILE "Animator\Frames\Frame_7bb47609-7102-4b34-a50f-a8c8a02234db.par"
+Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Skybox (Vehicle X-Y-Z)
+Include PARSFILE "Animator\STL\Shape_f49e5d15-b002-46b6-b28e-df6b8d8a40b6.par"
+Used Dataset: Animator: Shape File Link; { Environment: Sky Boxes } Partly Cloudy Sky
+Include PARSFILE "Animator\STL\Shape_79cf4b25-5748-487a-8e5c-a602d7f86a42.par"
+Used Dataset: Animator: Shape File Link; { Environment: Land Bowls } Light Grass
+Used Dataset: Animator: Group; { Environment Spheres } Partly Cloudy Sky with Light Grass
+Include PARSFILE "Roads\AniGroup\AniRep_ee25ec3a-346f-4ab6-aa7a-4b1b9e8bd2da.par"
+Used Dataset: Road: Animator Repeated Object; { Trees } Trees (0, 2320)
+Include PARSFILE "Roads\3D_Road\Road_20e0d688-aee1-430a-8473-cac2e55158ac.ani"
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Include PARSFILE "Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+Used Dataset: Road: 3D Surface (All Properties); { Scenic Roads } Curvy Road
+
+Time to read input = 0.0023962
+
+Run stopped at t = 28.6. Stop time reached.
+
+Run started: VS output file = Roads\3D_Road\Road_20e0d688-aee1-430a-8473-cac2e55158ac.vsb
+
+Computational time ratio: RTIME = inf (real time)/(simulation time)
+

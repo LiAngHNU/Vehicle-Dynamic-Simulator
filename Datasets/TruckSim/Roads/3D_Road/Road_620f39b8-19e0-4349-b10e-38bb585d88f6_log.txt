@@ -1,0 +1,32 @@
+Run made by VS Road Calculator at 17:32 on May 19, 2022.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_620f39b8-19e0-4349-b10e-38bb585d88f6.par"
+Include PARSFILE "Roads\Builder\Build_61223960-7a7b-48aa-a557-bad424dc9a1d.par"
+Used Dataset: Path/Road: Segment Builder (Simple 3D); { Paths with Banking } 3 Turns w/ Banking
+Include PARSFILE "Roads\Center_Z\RdRefZ_e5f2cd5e-dff8-4f81-b987-9ad1d6798aad.par"
+Used Dataset: Road: Reference Line Elevation; { Hills and Valleys } 10 m Dip in the Road
+Include PARSFILE "Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } Constant: 0.85
+Include PARSFILE "Roads\Shapes\RdShape_dad1e073-5d48-4d48-b0c3-66e6b2913044.par"
+Used Dataset: Road: Animator Surface Shapes; { Lane-Keeping Assist Roads } Four Lanes (Divided)
+Include PARSFILE "Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par"
+Include PARSFILE "Animator\Frames\Frame_7bb47609-7102-4b34-a50f-a8c8a02234db.par"
+Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Skybox (Vehicle X-Y-Z)
+Include PARSFILE "Animator\STL\Shape_f49e5d15-b002-46b6-b28e-df6b8d8a40b6.par"
+Used Dataset: Animator: Shape File Link; { Environment: Sky Boxes } Partly Cloudy Sky
+Include PARSFILE "Animator\STL\Shape_79cf4b25-5748-487a-8e5c-a602d7f86a42.par"
+Used Dataset: Animator: Shape File Link; { Environment: Land Bowls } Light Grass
+Used Dataset: Animator: Group; { Environment Spheres } Partly Cloudy Sky with Light Grass
+Include PARSFILE "Roads\3D_Road\Road_620f39b8-19e0-4349-b10e-38bb585d88f6.ani"
+Used Dataset: Road: 3D Surface (All Properties); { Scenic Roads } Curvy Divided Highway
+
+Time to read input = 0.000992
+
+Run stopped at t = 18.36. Stop time reached.
+
+Run started: VS output file = Roads\3D_Road\Road_620f39b8-19e0-4349-b10e-38bb585d88f6.vsb
+
+Computational time ratio: RTIME = inf (real time)/(simulation time)
+

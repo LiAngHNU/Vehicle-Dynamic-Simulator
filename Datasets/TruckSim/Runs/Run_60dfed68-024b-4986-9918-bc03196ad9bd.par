@@ -1,0 +1,98 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Wind Turbine Blade Transportation`Vehicle Configurations
+#VEHICLECODE S_SS + SSS_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_60dfed68-024b-4986-9918-bc03196ad9bd
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_984a92ac-3309-4b0e-879d-d231a9148ef0.par
+#BlueLink0 Animator: Camera Setup`300 Azm, Trailer Control Point Ref.` Trailer Reference` , Animator camera`Camera_984a92ac-3309-4b0e-879d-d231a9148ef0
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 3
+#RingCtrl7 -1
+*RUN_COLOR 0 0.2 0.965
+SET_RUN_COLOR 0 0.2 0.965
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_c7a40149-0b44-492a-95b1-5fe3c9168c3d.par
+#BlueLink2 Vehicle: Loaded Combination`Long Telescopic Trailer` Very Large Vehicles` , Math Model`VehLoad_c7a40149-0b44-492a-95b1-5fe3c9168c3d
+
+PARSFILE Procedures\Proc_4c048a8a-fc0e-4052-9be3-c839d847c4eb.par
+#BlueLink28 Procedures`Telescopic Heavy Hauler Steering` Animation Asset-based Scenarios` , Procedure`Proc_4c048a8a-fc0e-4052-9be3-c839d847c4eb
+
+*SSTOP 220
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_1a3b8a4f-3476-4607-b732-fefd03eb3a28.par
+#BlueLink15 Plot: Setup`Target Offset` Rear Steer Control` , Plot`Plot_1a3b8a4f-3476-4607-b732-fefd03eb3a28
+
+PARSFILE Plot\Setup\Plot_64382d35-83e1-470d-963e-754f9b219447.par
+#BlueLink16 Plot: Setup`Rear Wheel Angle` Rear Steer Control` , Plot`Plot_64382d35-83e1-470d-963e-754f9b219447
+
+PARSFILE Plot\Setup\Plot_fb90afad-3275-4e7e-a39f-f38030e40172.par
+#BlueLink17 Plot: Setup`Control Point Path` Rear Steer Control` , Plot`Plot_fb90afad-3275-4e7e-a39f-f38030e40172
+
+
+SPECIAL_PARSFILE Runs\Run_27fefac2-9772-4947-894f-6938b8d12b02.par
+#BlueLink23 TruckSim Run Control`Mid-Length Telescopic Trailer` Vehicle Configurations` , Overlay run or ERD file`Run_27fefac2-9772-4947-894f-6938b8d12b02
+
+
+SPECIAL_PARSFILE Runs\Run_c3d86f0f-d72a-409e-beeb-f0a191d9c01e.par
+#BlueLink24 TruckSim Run Control`Short Telescopic Trailer` Vehicle Configurations` , Overlay run or ERD file`Run_c3d86f0f-d72a-409e-beeb-f0a191d9c01e
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_9490ba51-301a-40a6-8eb6-db37cea19aa0.png
+WRITE_SENSOR_DETECT
+Title Wind Turbine Blade Transportation <Vehicle Configurations>
+CATEGORY Vehicle Configurations 
+DATASET_TITLE Wind Turbine Blade Transportation
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#NOTE: For TruckSim 2020.0, this example now includes the effects of the brake system transport delay parameter, math model keyword TLAG_BK. This is a pure time delay between the master cylinder and the brake actuator.
+#
+#The examples in this category "Very Large Vehicles" make use of TruckSim's modular architecture to construct some unique vehicle configurations.
+#
+#Here, a 3 axle tractor pulls a 4 axle telescopic trailer. The telescopic trailer is at full length in this run. A reference point ahead of the rear axles on the trailer is used to calculate a lateral offset value. The value of the lateral offset is proportional to the steering applied for the rear axles.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Vehicle Configurations } Wind Turbine Blade Transportation
+#Library : TruckSim Run Control
+#DataSet : Wind Turbine Blade Transportation
+#Category: Vehicle Configurations
+#FileID  : Run_60dfed68-024b-4986-9918-bc03196ad9bd
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

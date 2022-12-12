@@ -1,0 +1,68 @@
+PARSFILE
+#FullDataName Road: Boundaries`North and West Entrances`Crossing with Curbs
+#RingCtrl0 2
+#RingCtrl1 0
+#RingCtrl2 0
+#RingCtrl3 1
+#RingCtrl4 2
+#RingCtrl5 2
+#RingCtrl6 1
+#RingCtrl7 3
+#RingCtrl9 0
+#RingCtrl10 0
+#RingCtrl11 1
+#RingCtrl12 2
+#RingCtrl13 2
+#RingCtrl14 1
+#RingCtrl15 3
+*ROAD_ID_1 1003
+*LMAX_1 4
+*LMIN_1 -10
+*ROAD_ID_2 1004
+*LMAX_2 4
+*LMIN_2 -10
+
+
+IROAD = GET_IROAD(1003)
+ROAD_SMAX_NEW_ID = 0
+ROAD_SMIN_NEW_ID = 0
+
+ISIDE = 1
+ROAD_L_BOUNDARY_CONSTANT 4
+PARSFILE Roads\Boundaries_ID\RdBdID_80e8ebfb-6f17-4207-9497-7b1aa060def9.par
+#BlueLink1 Road Boundary: New Road ID`Left Edge for 1003` Intersection, 4-Way` , Road ID vs Old S`RdBdID_80e8ebfb-6f17-4207-9497-7b1aa060def9
+
+PARSFILE Roads\Boundaries_S\RdBdS_cd693d84-b56a-4a2b-959a-c287f3e915d9.par
+#BlueLink2 Road Boundary: New Station`Linear: Negative S` ` , New S vs old S`RdBdS_cd693d84-b56a-4a2b-959a-c287f3e915d9
+
+
+ISIDE = 2
+ROAD_L_BOUNDARY_CONSTANT -10
+ROAD_NEW_ID_CONSTANT = -1
+
+IROAD = GET_IROAD(1004)
+ROAD_SMAX_NEW_ID = 0
+ROAD_SMIN_NEW_ID = 0
+
+ISIDE = 1
+ROAD_L_BOUNDARY_CONSTANT 4
+PARSFILE Roads\Boundaries_ID\RdBdID_318d0753-efcc-4daf-a639-d5d47f49279e.par
+#BlueLink7 Road Boundary: New Road ID`Left Edge for 1004` Intersection, 4-Way` , Road ID vs Old S`RdBdID_318d0753-efcc-4daf-a639-d5d47f49279e
+
+PARSFILE Roads\Boundaries_S\RdBdS_cd693d84-b56a-4a2b-959a-c287f3e915d9.par
+#BlueLink8 Road Boundary: New Station`Linear: Negative S` ` , New S vs old S`RdBdS_cd693d84-b56a-4a2b-959a-c287f3e915d9
+
+
+ISIDE = 2
+ROAD_L_BOUNDARY_CONSTANT -10
+ROAD_NEW_ID_CONSTANT = -1
+
+LOG_ENTRY Used Dataset: Road: Boundaries; { Crossing with Curbs } North and West Entrances
+#Library : Road: Boundaries
+#DataSet : North and West Entrances
+#Category: Crossing with Curbs
+#FileID  : RdBnd_e3f78d34-1fb0-4f49-9f40-a03f7d0c119f
+#Product : TruckSim 2020.1
+#VehCode Road Boundaries
+
+END

@@ -1,0 +1,162 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Modified East-West Road w/ Curbs`Highway Network
+NLANES 10
+OPTTHRESHOLD 1
+#MiscYellow0
+# 1 1 1, Road (Medium), 1, 40, 1, -5, m, 5, m, , , -500, -10, 10, , , Road
+# 1 1 0.2, Concrete (Worn), 1, 10, 1, -5.25, m, -5, m, 4, , -500, -10, 0.5, , , Random
+# 1 1 0.2, Concrete (Worn), 1, 10, 1, 5.25, m, 5, m, 4, , -500, -10, 0.5, , , Random
+# 1 1 0.2, Concrete (Worn), 1, 10, 1, -5.25, m, -5, m, 4, , 10, 500, 0.5, , , Random
+# 1 1 0.2, Concrete (Worn), 1, 10, 1, 5.25, m, 5, m, 4, , 10, 500, 0.5, , , Random
+# 1 1 1, Concrete, 1, 10, 1, -5.25, m, -7.25, m, , , 12.25, 500, , , , Random
+# 1 1 1, Concrete, 1, 10, 1, 5.25, m, 7.25, m, , , 12.25, 500, , , , Random
+# 1 1 1, Concrete, 1, 10, 1, -5.25, m, -7.25, m, , , -500, -12.25, , , , Random
+# 1 1 1, Concrete, 1, 10, 1, 5.25, m, 7.25, m, , , -500, -12.25, , , , Random
+# 1 1 1, Road (Medium), 1, 40, 1, -5, m, 5, m, , , 10, 500, 10, , , Road
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (Medium)
+SPECULAR(1) 1
+SCALE(1) 40
+LTILES(1) 1
+LIN(1) -5
+LINUNITS(1) m
+LOUT(1) 5
+LOUTUNITS(1) m
+S_START(1) -500
+S_STOP(1) -10
+SINT(1) 10
+AUTODETAIL(1) Road
+COLOR(2) 1 1 0.2
+MATERIAL(2) Concrete (Worn)
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 1
+LIN(2) -5.25
+LINUNITS(2) m
+LOUT(2) -5
+LOUTUNITS(2) m
+LDIV(2) 4
+S_START(2) -500
+S_STOP(2) -10
+SINT(2) 0.5
+AUTODETAIL(2) Random
+COLOR(3) 1 1 0.2
+MATERIAL(3) Concrete (Worn)
+SPECULAR(3) 1
+SCALE(3) 10
+LTILES(3) 1
+LIN(3) 5.25
+LINUNITS(3) m
+LOUT(3) 5
+LOUTUNITS(3) m
+LDIV(3) 4
+S_START(3) -500
+S_STOP(3) -10
+SINT(3) 0.5
+AUTODETAIL(3) Random
+COLOR(4) 1 1 0.2
+MATERIAL(4) Concrete (Worn)
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) 1
+LIN(4) -5.25
+LINUNITS(4) m
+LOUT(4) -5
+LOUTUNITS(4) m
+LDIV(4) 4
+S_START(4) 10
+S_STOP(4) 500
+SINT(4) 0.5
+AUTODETAIL(4) Random
+COLOR(5) 1 1 0.2
+MATERIAL(5) Concrete (Worn)
+SPECULAR(5) 1
+SCALE(5) 10
+LTILES(5) 1
+LIN(5) 5.25
+LINUNITS(5) m
+LOUT(5) 5
+LOUTUNITS(5) m
+LDIV(5) 4
+S_START(5) 10
+S_STOP(5) 500
+SINT(5) 0.5
+AUTODETAIL(5) Random
+COLOR(6) 1 1 1
+MATERIAL(6) Concrete
+SPECULAR(6) 1
+SCALE(6) 10
+LTILES(6) 1
+LIN(6) -5.25
+LINUNITS(6) m
+LOUT(6) -7.25
+LOUTUNITS(6) m
+S_START(6) 12.25
+S_STOP(6) 500
+AUTODETAIL(6) Random
+COLOR(7) 1 1 1
+MATERIAL(7) Concrete
+SPECULAR(7) 1
+SCALE(7) 10
+LTILES(7) 1
+LIN(7) 5.25
+LINUNITS(7) m
+LOUT(7) 7.25
+LOUTUNITS(7) m
+S_START(7) 12.25
+S_STOP(7) 500
+AUTODETAIL(7) Random
+COLOR(8) 1 1 1
+MATERIAL(8) Concrete
+SPECULAR(8) 1
+SCALE(8) 10
+LTILES(8) 1
+LIN(8) -5.25
+LINUNITS(8) m
+LOUT(8) -7.25
+LOUTUNITS(8) m
+S_START(8) -500
+S_STOP(8) -12.25
+AUTODETAIL(8) Random
+COLOR(9) 1 1 1
+MATERIAL(9) Concrete
+SPECULAR(9) 1
+SCALE(9) 10
+LTILES(9) 1
+LIN(9) 5.25
+LINUNITS(9) m
+LOUT(9) 7.25
+LOUTUNITS(9) m
+S_START(9) -500
+S_STOP(9) -12.25
+AUTODETAIL(9) Random
+COLOR(10) 1 1 1
+MATERIAL(10) Road (Medium)
+SPECULAR(10) 1
+SCALE(10) 40
+LTILES(10) 1
+LIN(10) -5
+LINUNITS(10) m
+LOUT(10) 5
+LOUTUNITS(10) m
+S_START(10) 10
+S_STOP(10) 500
+SINT(10) 10
+AUTODETAIL(10) Road
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Highway Network } Modified East-West Road w/ Curbs
+#Library : Road: Animator Surface Shapes
+#DataSet : Modified East-West Road w/ Curbs
+#Category: Highway Network
+#FileID  : RdShape_66ab3ada-5441-431c-a23a-7a668e2b4318
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

@@ -1,0 +1,109 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Big Grass, Pavement Intersection, 4-Way`Intersections
+NLANES 5
+OPTTHRESHOLD 1
+#MiscYellow0
+# 1 1 1, Grass (Light), 1, 10, 49, 10, m, 1000, m, 1, , -1000, -10, 25, 1, 0, Foliage
+# 1 1 1, Grass (Light), 1, 10, 49, -1000, m, -10, m, 1, 1, 10, 1000, 25, 1, 0, Foliage
+# 1 1 1, Grass (Light), 1, 10, 49, 10, m, 1000, m, 1, 1, 10, 1000, 25, 1, 0, Foliage
+# 1 1 1, Grass (Light), 1, 10, 49, -1000, m, -10, m, 1, 1, -1000, -10, 25, 1, 0, Foliage
+# 1 1 1, Road (No Lines), 1, 10, 2, -11, m, 11, m, 2, , -11, 11, 22, , -0.01, Road
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Grass (Light)
+SPECULAR(1) 1
+SCALE(1) 10
+LTILES(1) 49
+LIN(1) 10
+LINUNITS(1) m
+LOUT(1) 1000
+LOUTUNITS(1) m
+LDIV(1) 1
+S_START(1) -1000
+S_STOP(1) -10
+SINT(1) 25
+IPRINT(1) 1
+DZ(1) 0
+AUTODETAIL(1) Foliage
+COLOR(2) 1 1 1
+MATERIAL(2) Grass (Light)
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 49
+LIN(2) -1000
+LINUNITS(2) m
+LOUT(2) -10
+LOUTUNITS(2) m
+LDIV(2) 1
+LIPRINT(2) 1
+S_START(2) 10
+S_STOP(2) 1000
+SINT(2) 25
+IPRINT(2) 1
+DZ(2) 0
+AUTODETAIL(2) Foliage
+COLOR(3) 1 1 1
+MATERIAL(3) Grass (Light)
+SPECULAR(3) 1
+SCALE(3) 10
+LTILES(3) 49
+LIN(3) 10
+LINUNITS(3) m
+LOUT(3) 1000
+LOUTUNITS(3) m
+LDIV(3) 1
+LIPRINT(3) 1
+S_START(3) 10
+S_STOP(3) 1000
+SINT(3) 25
+IPRINT(3) 1
+DZ(3) 0
+AUTODETAIL(3) Foliage
+COLOR(4) 1 1 1
+MATERIAL(4) Grass (Light)
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) 49
+LIN(4) -1000
+LINUNITS(4) m
+LOUT(4) -10
+LOUTUNITS(4) m
+LDIV(4) 1
+LIPRINT(4) 1
+S_START(4) -1000
+S_STOP(4) -10
+SINT(4) 25
+IPRINT(4) 1
+DZ(4) 0
+AUTODETAIL(4) Foliage
+COLOR(5) 1 1 1
+MATERIAL(5) Road (No Lines)
+SPECULAR(5) 1
+SCALE(5) 10
+LTILES(5) 2
+LIN(5) -11
+LINUNITS(5) m
+LOUT(5) 11
+LOUTUNITS(5) m
+LDIV(5) 2
+S_START(5) -11
+S_STOP(5) 11
+SINT(5) 22
+DZ(5) -0.01
+AUTODETAIL(5) Road
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Intersections } Big Grass, Pavement Intersection, 4-Way
+#Library : Road: Animator Surface Shapes
+#DataSet : Big Grass, Pavement Intersection, 4-Way
+#Category: Intersections
+#FileID  : RdShape_f1779417-b381-4d8b-b700-491f720371e5
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

@@ -1,0 +1,101 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Camera Sensor: Pedestrians (Simulink)`ADAS and Active Safety
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_c7866b65-bbf1-4822-81b3-7ea08afbd002
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_a6cc7daf-2be0-4b87-a0a1-26697fe15db2.par
+#BlueLink12 Models: Simulink`Pedestrian Detection` Live Video` , Models`Simlink_a6cc7daf-2be0-4b87-a0a1-26697fe15db2
+
+PARSFILE Animator\Cameras\Camera_293071ae-9194-4088-8862-92255ece0a0f.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 48 m` Vehicle Reference` , Animator camera`Camera_293071ae-9194-4088-8862-92255ece0a0f
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+
+#RingCtrl6 0
+#RingCtrl7 -1
+OPT_BUFFER_WRITE 1
+AUTOSIZE OFF
+BLOCKING_RT_READ ON
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 1
+LIVE_SERVER_MAX_CONNECTIONS 1
+PARSFILE Vehicles\Lead_2a\Lead2a_cb692613-bfd2-4c05-bb5a-b06d0a3c3dde.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Pickup, Crew Cab DRW (Camera)` Pickup Trucks w/ Options` , Math Model`Lead2a_cb692613-bfd2-4c05-bb5a-b06d0a3c3dde
+
+PARSFILE Procedures\Proc_60c4c254-13d5-43d7-8f3f-d5f38f4b0dbb.par
+#BlueLink28 Procedures`Pedestrian Scenario` Mcity` , Procedure`Proc_60c4c254-13d5-43d7-8f3f-d5f38f4b0dbb
+
+PARSFILE Sensors_Traffic\Targets\Target_170ed067-ceb7-47ba-aecb-0e93240712b3.par
+#BlueLink9 Single Moving Object (Custom)`Woman Crossing from S=42.8, L=-7.5` Pedestrians Crossing` , Miscellaneous`Target_170ed067-ceb7-47ba-aecb-0e93240712b3
+
+PARSFILE Generic\VS_commands\GenVS_3475e725-3fee-4b70-80ff-b8574ae8673a.par
+#BlueLink10 Generic VS Commands`Camera Sensor on Upper Fr. Window` Camera Sensors` , Miscellaneous`GenVS_3475e725-3fee-4b70-80ff-b8574ae8673a
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_af769eb0-873a-40c8-98c5-3952c4c29754.png
+WRITE_SENSOR_DETECT
+Title Camera Sensor: Pedestrians (Simulink) <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Camera Sensor: Pedestrians (Simulink)
+#MiscYellow0
+PATH_ID_DM = 1002
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#The roads of this example is updated from loaded table grid to 3D tiles from VS Scene Builder.
+#
+#(Matlab 2017a or newer)
+#
+#VsV Camera Sensor and Live Video S-Function
+#
+#This example demonstrates pedestrian detection using a Camera Sensor with image processing in Simulink.
+#
+#The Camera Sensor in Simulink detects a pedestrian using a pretrained detector.
+#
+#The example can only be run with Matlab version 2017a and above, and must be used with the Computer Vision System Toolbox.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { ADAS and Active Safety } Camera Sensor: Pedestrians (Simulink)
+#Library : TruckSim Run Control
+#DataSet : Camera Sensor: Pedestrians (Simulink)
+#Category: ADAS and Active Safety
+#FileID  : Run_c7866b65-bbf1-4822-81b3-7ea08afbd002
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

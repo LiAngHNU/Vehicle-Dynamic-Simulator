@@ -1,0 +1,65 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Leg for Roundabout, D = 36 m`Roundabout, 3D, D = 36 m
+NLANES 3
+#MiscYellow0
+# 1 1 1, Road (No Centerline), 1, 10, 1, -2.1, m, 2.1, m, , , -916.4, 1066.4, 1, , , Road
+# 1 1 1, Road Transition (Light), 1, 10, -1, -4.1, m, -2.1, m, 4, , -916.4, 1066.4, 1, , , Foliage
+# 1 1 1, Grass (Light), 1, 10, 2, -24.1, m, -4.1, m, 4, , -916.4, 1066.4, 1, , , Foliage
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (No Centerline)
+SPECULAR(1) 1
+SCALE(1) 10
+LTILES(1) 1
+LIN(1) -2.1
+LINUNITS(1) m
+LOUT(1) 2.1
+LOUTUNITS(1) m
+S_START(1) -916.4
+S_STOP(1) 1066.4
+SINT(1) 1
+AUTODETAIL(1) Road
+COLOR(2) 1 1 1
+MATERIAL(2) Road Transition (Light)
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) -1
+LIN(2) -4.1
+LINUNITS(2) m
+LOUT(2) -2.1
+LOUTUNITS(2) m
+LDIV(2) 4
+S_START(2) -916.4
+S_STOP(2) 1066.4
+SINT(2) 1
+AUTODETAIL(2) Foliage
+COLOR(3) 1 1 1
+MATERIAL(3) Grass (Light)
+SPECULAR(3) 1
+SCALE(3) 10
+LTILES(3) 2
+LIN(3) -24.1
+LINUNITS(3) m
+LOUT(3) -4.1
+LOUTUNITS(3) m
+LDIV(3) 4
+S_START(3) -916.4
+S_STOP(3) 1066.4
+SINT(3) 1
+AUTODETAIL(3) Foliage
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Roundabout, 3D, D = 36 m } Leg for Roundabout, D = 36 m
+#Library : Road: Animator Surface Shapes
+#DataSet : Leg for Roundabout, D = 36 m
+#Category: Roundabout, 3D, D = 36 m
+#FileID  : RdShape_504cd7bc-7136-4e3a-b56a-c3c2242daa63
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

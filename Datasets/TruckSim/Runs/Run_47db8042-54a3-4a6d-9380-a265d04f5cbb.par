@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Sine Steer: + / - 90 deg.`Steering Tests
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_47db8042-54a3-4a6d-9380-a265d04f5cbb
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_e1c31f95-b0c9-423f-af09-82016e848b91.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 1 El, 25 m` Vehicle Reference` , Animator camera`Camera_e1c31f95-b0c9-423f-af09-82016e848b91
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+SET_RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_9e80118f-ce1c-4f40-8d35-27feac9424e2.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Conv. Van (7-spd. MT)` 2A Conventional Van` , Math Model`Lead2a_9e80118f-ce1c-4f40-8d35-27feac9424e2
+
+PARSFILE Procedures\Proc_ba677a90-43a4-4276-bfe6-4bfdea4a1839.par
+#BlueLink28 Procedures`Sine Steer @ 50 km/h` Steering Tests` , Procedure`Proc_ba677a90-43a4-4276-bfe6-4bfdea4a1839
+
+*SSTOP 0
+
+SPECIAL_PARSFILE Runs\Run_865fed96-0657-42b4-a5eb-854a72e4372a.par
+#BlueLink23 TruckSim Run Control`Extended Tires: Sine Steer` Tire Models` , Overlay run or ERD file`Run_865fed96-0657-42b4-a5eb-854a72e4372a
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Sine Steer: + / - 90 deg. <Steering Tests>
+CATEGORY Steering Tests 
+DATASET_TITLE Sine Steer: + / - 90 deg.
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates the 2-axle Conventional Van using the TruckSim internal tire model, without camber extensions, performing an open-loop Sine Wave Steer Input test.
+#
+#This example is overlaid with the simulation "Extended Tires: Sine Steer". Both examaples use nearly the same truck; the difference is that the overlaid simulation uses the TruckSim internal tire model with camber extensions.
+#
+#Use these two examples to study and understand how including the tire camber extension datasets can effect a vehicle's transient handling responses.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Steering Tests } Sine Steer: + / - 90 deg.
+#Library : TruckSim Run Control
+#DataSet : Sine Steer: + / - 90 deg.
+#Category: Steering Tests
+#FileID  : Run_47db8042-54a3-4a6d-9380-a265d04f5cbb
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

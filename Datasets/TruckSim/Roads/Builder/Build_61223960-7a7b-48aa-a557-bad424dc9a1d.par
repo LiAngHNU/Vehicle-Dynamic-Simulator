@@ -1,0 +1,96 @@
+PARSFILE
+#FullDataName Path/Road: Segment Builder (Simple 3D)`3 Turns w/ Banking`Paths with Banking
+#RingCtrl0 0
+#RingCtrl1 1
+
+SET_IPATH_FOR_ID 0
+
+DEFINE_DZ_TABLES 1 ! add 1 more DZ table
+IROAD_DZ = NROAD_DZ ! make this the active table
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for this road
+IDZ_ROAD = ROAD_N_DZ ! set index to match the current ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: 3 Turns w/ Banking
+
+#CheckBox0 0    
+OPT_PATH_LOOP 0
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 1    
+OPT_PATH_START 1
+#CheckBox4 0    
+#CheckBox5 1    
+
+PATH_ID_DM = PATH_ID
+set_description path_id 3 Turns w/ Banking
+
+#MiscYellow0
+# Ahead 200 m 0 1/m 2 1000.000 1000.000 5 0.0 Rel 5 Grade 0 50 0.8 0.8
+# Left 15 deg 800 m 15 1209.437 1209.440 10 0.2 Rel 5 Grade 5 50 0.8 0.8
+# Right 30 deg 1000 m 30 1733.029 1733.038 20 1.7 Rel 0 Grade 5 50 0.8 0.8
+# Left 15 deg 800 m 15 1942.466 1942.478 10.0 0.0 Rel 0.0 Rel 5 50 0.8 0.8
+# Ahead 200 m 0 1/m 2 2142.477796 2142.478 10.0 0 Abs -5 Abs 0.0 50 0.8 0.8
+#ENDMYellow
+
+SPATH_START 800
+NSEGMENTS 5
+X_PATH_START 0
+Y_PATH_START 0
+HEADING_START 0
+*TRANSZ 0
+*BANKWDTH 10
+
+IPATHSEG 1
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 200
+
+IPATHSEG 2
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 800
+SEGMENT_ARC 15
+
+IPATHSEG 3
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -1000
+SEGMENT_ARC 30
+
+IPATHSEG 4
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 800
+SEGMENT_ARC 15
+
+IPATHSEG 5
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 200
+*3D_DATA 4, 10 ! columns x rows
+ROAD_DZ_CARPET
+800.000000, -6.000000, -5.000000, 5.000000, 6.000000
+850.0, 0.0, 0.0, 0.0, 0.0
+950.0, 0.0, 0.0, 0.0, 0.0
+1050.0, 0.25, 0.25, -0.25, -0.25
+1159.436852, 0.25, 0.25, -0.25, -0.25
+1259.436852, -0.25, -0.25, 0.25, 0.25
+1683.028982, -0.25, -0.25, 0.25, 0.25
+1783.028982, 0.25, 0.25, -0.25, -0.25
+1892.465834, 0.25, 0.25, -0.25, -0.25
+1992.465834, 0.0, 0.0, 0.0, 0.0
+2092.477796, 0.0, 0.0, 0.0, 0.0
+ENDTABLE
+
+#EMBEDDED_NOTES
+#This road was made for some example runs involving traffic and sensors. The intent was to have a road with 3D geometry (banked turns, elevation changes) that was not too severe.
+#
+#This dataset for the road segment builder assembles five segments (straight, left turn, right turn, left turnm, straight) with transitioned banking.
+#
+#Elevation of the centerline is set independently; therefore the box "Write elevation table" is unchecked. Friction is also set independently.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Path/Road: Segment Builder (Simple 3D); { Paths with Banking } 3 Turns w/ Banking
+#Library : Path/Road: Segment Builder (Simple 3D)
+#DataSet : 3 Turns w/ Banking
+#Category: Paths with Banking
+#FileID  : Build_61223960-7a7b-48aa-a557-bad424dc9a1d
+#Product : TruckSim 2020.1
+#VehCode Path/Road Segment Builder
+
+END

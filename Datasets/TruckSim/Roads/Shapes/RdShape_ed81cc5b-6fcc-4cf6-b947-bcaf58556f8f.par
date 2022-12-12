@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Hill with Cross Slopes`Scenic Road Shapes
+NLANES 4
+OPTTHRESHOLD 1
+#MiscYellow0
+# 1 1 1, Road (Rough), 1, 20, 1, -5.05, m, 5.05, m, , , -135, 500, 1, , , Random
+# 1 1 1, Snow, 1, 10, 13, -5, m, -135, m, , , -135, 500, 1, , , Off
+# 1 1 1, Snow, 1, 10, 13, 5, m, 135, m, , , -135, 500, 1, , , Off
+# 1 1 1, Ice, 1, 10, 0.5, 5, m, 0, m, , , 3, 500, 1, , 0.02, Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (Rough)
+SPECULAR(1) 1
+SCALE(1) 20
+LTILES(1) 1
+LIN(1) -5.05
+LINUNITS(1) m
+LOUT(1) 5.05
+LOUTUNITS(1) m
+S_START(1) -135
+S_STOP(1) 500
+SINT(1) 1
+AUTODETAIL(1) Random
+COLOR(2) 1 1 1
+MATERIAL(2) Snow
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 13
+LIN(2) -5
+LINUNITS(2) m
+LOUT(2) -135
+LOUTUNITS(2) m
+S_START(2) -135
+S_STOP(2) 500
+SINT(2) 1
+AUTODETAIL(2) Off
+COLOR(3) 1 1 1
+MATERIAL(3) Snow
+SPECULAR(3) 1
+SCALE(3) 10
+LTILES(3) 13
+LIN(3) 5
+LINUNITS(3) m
+LOUT(3) 135
+LOUTUNITS(3) m
+S_START(3) -135
+S_STOP(3) 500
+SINT(3) 1
+AUTODETAIL(3) Off
+COLOR(4) 1 1 1
+MATERIAL(4) Ice
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) 0.5
+LIN(4) 5
+LINUNITS(4) m
+LOUT(4) 0
+LOUTUNITS(4) m
+S_START(4) 3
+S_STOP(4) 500
+SINT(4) 1
+DZ(4) 0.02
+AUTODETAIL(4) Random
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Scenic Road Shapes } Hill with Cross Slopes
+#Library : Road: Animator Surface Shapes
+#DataSet : Hill with Cross Slopes
+#Category: Scenic Road Shapes
+#FileID  : RdShape_ed81cc5b-6fcc-4cf6-b947-bcaf58556f8f
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

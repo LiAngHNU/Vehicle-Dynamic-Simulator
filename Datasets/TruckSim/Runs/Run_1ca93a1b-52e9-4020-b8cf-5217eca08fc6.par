@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName TruckSim Run Control`2A Conv, 8 Payloads`Vehicle Configurations
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_1ca93a1b-52e9-4020-b8cf-5217eca08fc6
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_61b39158-568e-47fa-8bf6-1dd560356592.par
+#BlueLink0 Animator: Camera Setup`25 Azm, 5 El, 35 m, No Yaw` Vehicle Reference` , Animator camera`Camera_61b39158-568e-47fa-8bf6-1dd560356592
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.4 0
+SET_RUN_COLOR 0 0.4 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_20658a56-b08d-44ff-a2d9-9088e077bc2a.par
+#BlueLink2 Vehicle: Loaded Combination`2A Conventional Van w/ 8 Payloads` Conventional Vans` , Math Model`VehLoad_20658a56-b08d-44ff-a2d9-9088e077bc2a
+
+PARSFILE Procedures\Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4.par
+#BlueLink28 Procedures`DLC @ 70 km/h` Handling Tests` , Procedure`Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title 2A Conv, 8 Payloads <Vehicle Configurations>
+CATEGORY Vehicle Configurations 
+DATASET_TITLE 2A Conv, 8 Payloads
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#TruckSim supports up to 99 payloads for each vehicle (lead unit or vehicle combination).
+#
+#This example uses a 2A Conventional Van with 8 payloads, linked on a Generic Data Group from the Vehicle: Loaded Combination screen.
+#
+#The truck's cargo box has been set to be transparent to more clearly demonstrate the placement of the 8 payloads.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Vehicle Configurations } 2A Conv, 8 Payloads
+#Library : TruckSim Run Control
+#DataSet : 2A Conv, 8 Payloads
+#Category: Vehicle Configurations
+#FileID  : Run_1ca93a1b-52e9-4020-b8cf-5217eca08fc6
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

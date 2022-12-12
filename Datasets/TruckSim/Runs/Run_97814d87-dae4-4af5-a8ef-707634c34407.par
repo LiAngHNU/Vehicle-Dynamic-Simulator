@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Reverse Blind Spot Warning`ADAS and Active Safety
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_97814d87-dae4-4af5-a8ef-707634c34407
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_ac68fa20-d219-4152-a595-c9bf68f0fc39.par
+#BlueLink0 Animator: Camera Setup`160 Azm, 20 El, 30 m` Vehicle Reference` , Animator camera`Camera_ac68fa20-d219-4152-a595-c9bf68f0fc39
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_7aefb4b1-30bb-468c-8864-a89e9b602c1b.par
+#BlueLink2 Vehicle: Loaded Combination`DRW Pickup, Blind-Spot Sens. (2, -Vx)` Pickup Trucks` , Math Model`VehLoad_7aefb4b1-30bb-468c-8864-a89e9b602c1b
+
+PARSFILE Procedures\Proc_f3b2f7ee-655e-4dd9-a16f-883a7f9e6c91.par
+#BlueLink28 Procedures`Blind Spot Detection, Reversing` ADAS and Active Safety` , Procedure`Proc_f3b2f7ee-655e-4dd9-a16f-883a7f9e6c91
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ee189bc-4102-46cf-a6ee-046ab79da53b.png
+WRITE_SENSOR_DETECT
+Title Reverse Blind Spot Warning <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Reverse Blind Spot Warning
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#Example showing a vehicle backing out of a simulated parking space.
+#
+#Two larger vehicles, one on either side of the ego vehicle, block the blind spot sensors' view of crossing traffic.
+#
+#Blind spot sensors are triggered and brakes are applied when the crossing target vehicle is detected.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { ADAS and Active Safety } Reverse Blind Spot Warning
+#Library : TruckSim Run Control
+#DataSet : Reverse Blind Spot Warning
+#Category: ADAS and Active Safety
+#FileID  : Run_97814d87-dae4-4af5-a8ef-707634c34407
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

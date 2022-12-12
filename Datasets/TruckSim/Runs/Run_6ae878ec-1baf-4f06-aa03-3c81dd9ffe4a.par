@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Many Sensors, 5-Lane Road, 3 Lanes Fwd`ADAS and Active Safety
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_6ae878ec-1baf-4f06-aa03-3c81dd9ffe4a
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b7028f29-fdf7-4233-8487-abd35f8aee05.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 10 El, 36 m` Vehicle Reference` , Animator camera`Camera_b7028f29-fdf7-4233-8487-abd35f8aee05
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_67314a72-31f0-49c5-a892-a2c610c192f0.par
+#BlueLink2 Vehicle: Loaded Combination`DRW Pickup, ADAS Sensors (4)` Pickup Trucks` , Math Model`VehLoad_67314a72-31f0-49c5-a892-a2c610c192f0
+
+PARSFILE Procedures\Proc_15835a6c-8a89-455e-9bcc-29b9ebdf42dd.par
+#BlueLink28 Procedures`Lane Departure using Lat_Veh` ADAS and Active Safety` , Procedure`Proc_15835a6c-8a89-455e-9bcc-29b9ebdf42dd
+
+PARSFILE Roads\3D_Road\Road_4055353c-9f92-4d5d-98a9-87fe1e40e114.par
+#BlueLink9 Road: 3D Surface (All Properties)`5-Lane Section` Multiple Lanes` , Miscellaneous`Road_4055353c-9f92-4d5d-98a9-87fe1e40e114
+
+PARSFILE Generic\Group\GenGrp_d558bc18-2b8a-4f95-8c9b-1b96c13ce7f9.par
+#BlueLink10 Generic Data Group`3 Lanes Fwd, 3 Traffic Groups for ACC` ADAS: Traffic for ACC & FCW` , Miscellaneous`GenGrp_d558bc18-2b8a-4f95-8c9b-1b96c13ce7f9
+
+PARSFILE Events\Events_5b501b98-46e9-4501-bc49-d182ba97ec2d.par
+#BlueLink11 Events`1. Lane Drifting Start - Drive Straight` Lane Departure Warning` , Miscellaneous`Events_5b501b98-46e9-4501-bc49-d182ba97ec2d
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ee189bc-4102-46cf-a6ee-046ab79da53b.png
+WRITE_SENSOR_DETECT
+Title Many Sensors, 5-Lane Road, 3 Lanes Fwd <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Many Sensors, 5-Lane Road, 3 Lanes Fwd
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#The ego vehicle is equipped with lane edge detection, adaptive cruise control (ACC), and blind-spot sensors, travelling on a road with forward traffic in three lanes.
+#
+#The blind spot detection shows alerts for vehicles in the adjacent lanes, the ACC controls the vehicle speed via throttle and brakes with a VS Command equation, and an Event sequence is used to show lane departures.  The time gap for the ACC can be set on the ADAS sensor screen.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { ADAS and Active Safety } Many Sensors, 5-Lane Road, 3 Lanes Fwd
+#Library : TruckSim Run Control
+#DataSet : Many Sensors, 5-Lane Road, 3 Lanes Fwd
+#Category: ADAS and Active Safety
+#FileID  : Run_6ae878ec-1baf-4f06-aa03-3c81dd9ffe4a
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

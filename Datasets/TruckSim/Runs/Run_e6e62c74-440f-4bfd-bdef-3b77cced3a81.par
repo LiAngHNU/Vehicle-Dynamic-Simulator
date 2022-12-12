@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Detectable Wall Objects`ADAS and Active Safety
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_e6e62c74-440f-4bfd-bdef-3b77cced3a81
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b7028f29-fdf7-4233-8487-abd35f8aee05.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 10 El, 36 m` Vehicle Reference` , Animator camera`Camera_b7028f29-fdf7-4233-8487-abd35f8aee05
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 on
+RT_WINDOW_CLOSE on
+#RingCtrl5 1
+LIVE_SERVER_MAX_CONNECTIONS 1
+PARSFILE Vehicles\Loaded\VehLoad_f72b6bb8-0777-431f-8935-c1942005dd17.par
+#BlueLink2 Vehicle: Loaded Combination`DRW Pickup w/ Wall Detection` Pickup Trucks` , Math Model`VehLoad_f72b6bb8-0777-431f-8935-c1942005dd17
+
+PARSFILE Procedures\Proc_c5f4db05-f7a7-4c0c-a54e-f07f1233cdb7.par
+#BlueLink28 Procedures`6-Lane Highway w/ Wall Objects` ADAS and Active Safety` , Procedure`Proc_c5f4db05-f7a7-4c0c-a54e-f07f1233cdb7
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ee189bc-4102-46cf-a6ee-046ab79da53b.png
+WRITE_SENSOR_DETECT
+Title Detectable Wall Objects <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Detectable Wall Objects
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example highlights the inclusion of detectable segment-based objects.
+#
+#In this case, the walls of the 6-Lane divided highway are able to be detected and to occlude objects that are behind them.
+#
+#A TruckSim Sensors license is required to rerun this simulation. You may still view the animation and plots.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { ADAS and Active Safety } Detectable Wall Objects
+#Library : TruckSim Run Control
+#DataSet : Detectable Wall Objects
+#Category: ADAS and Active Safety
+#FileID  : Run_e6e62c74-440f-4bfd-bdef-3b77cced3a81
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

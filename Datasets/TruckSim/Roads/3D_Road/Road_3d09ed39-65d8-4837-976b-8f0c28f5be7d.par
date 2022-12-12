@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`6-Lane Highway: Right Wall`Multiple Lanes
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_3d09ed39-65d8-4837-976b-8f0c28f5be7d.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID right_wall
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 6-Lane Highway: Right Wall
+PARSFILE Roads\Center_XY\PathXY_ff4458e7-8a36-423f-9726-28d38c3fe5b6.par
+#BlueLink0 Path: X-Y Coordinates`Alt 3 Road from FHWA` Public Road Section` , Reference Path`PathXY_ff4458e7-8a36-423f-9726-28d38c3fe5b6
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Alt 3 Road from FHWA
+PARSFILE Roads\dZ_Map\RdMapZ_d8a861b9-fdec-4838-ba80-7917be3b5687.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`6-Lane Hwy w/ Walls and Access Roads` 6-Lane Highway` , Miscellaneous`RdMapZ_d8a861b9-fdec-4838-ba80-7917be3b5687
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_3fe2e758-ae70-40e1-ad54-e424e97f78bd.par
+#BlueLink4 Road: Animator Surface Shapes`6-Ln Hwy: Right Wall for Access Road` Scenic Road Shapes` , Road shape definitions`RdShape_3fe2e758-ae70-40e1-ad54-e424e97f78bd
+
+PARSFILE Roads\dZ_Map\RdMapZ_f51cb7ac-52a1-4782-8571-3abdb4460262.par
+#BlueLink10 Road: Off-Center Elevation Map, S-L Grid`6-Lane Highway: Road Crown` 6-Lane Highway` , Miscellaneous`RdMapZ_f51cb7ac-52a1-4782-8571-3abdb4460262
+
+RR_SURF_CONSTANT 1.1
+L_CAMERA_FRONT 10
+L_CAMERA_REAR 10
+add_reference_frame road_stuff_6_Right_Wall:_Detection_(Segment_1)
+reference_frame_ghosts off
+PARSFILE Sensors_Traffic\Targets\Target_cc62fe98-5bc6-4841-9172-584a6ae03727.par
+#BlueLink6 Single Moving Object (Custom)`Right Wall: Detection (Segment 1)` 6-Lane Highway` , 3D Shapes`Target_cc62fe98-5bc6-4841-9172-584a6ae03727
+
+add_reference_frame road_stuff_7_Right_Wall:_Detection_(Segment_2)
+reference_frame_ghosts off
+PARSFILE Sensors_Traffic\Targets\Target_faf190d8-05c3-4edb-b9ed-ca65faa906dd.par
+#BlueLink7 Single Moving Object (Custom)`Right Wall: Detection (Segment 2)` 6-Lane Highway` , 3D Shapes`Target_faf190d8-05c3-4edb-b9ed-ca65faa906dd
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_b7028f29-fdf7-4233-8487-abd35f8aee05.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 10 El, 36 m` Vehicle Reference` , Camera`Camera_b7028f29-fdf7-4233-8487-abd35f8aee05
+
+parsfile Roads\3D_Road\Road_3d09ed39-65d8-4837-976b-8f0c28f5be7d.ani
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Multiple Lanes } 6-Lane Highway: Right Wall
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 6-Lane Highway: Right Wall
+#Category: Multiple Lanes
+#FileID  : Road_3d09ed39-65d8-4837-976b-8f0c28f5be7d
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName TruckSim Run Control`2A Van+1A Trl`Vehicle Configurations
+#VEHICLECODE I_S + S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_1a396491-be79-43e4-bc11-af1b0e225276
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_1154ad48-2ff8-41d9-aae5-7b8177b9af2e.par
+#BlueLink2 Vehicle: Loaded Combination`2A Euro Van (I_S) + 1A Rental Trailer (S)` European Vans` , Math Model`VehLoad_1154ad48-2ff8-41d9-aae5-7b8177b9af2e
+
+PARSFILE Procedures\Proc_fdccaa91-6052-4816-adad-68e3562e08c5.par
+#BlueLink28 Procedures`DLC @ 50 km/h` Handling Tests` , Procedure`Proc_fdccaa91-6052-4816-adad-68e3562e08c5
+
+PARSFILE Generic\Group\GenGrp_aa29b4a0-5439-4fbb-ad2f-bb4211f7d41f.par
+#BlueLink9 Generic Data Group`3 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_aa29b4a0-5439-4fbb-ad2f-bb4211f7d41f
+
+PARSFILE Plot\Setup\Plot_712a1199-3ac8-43d0-80b3-7a3572dc3bb8.par
+#BlueLink15 Plot: Setup`Hitch Forces` Hitch` , Plot`Plot_712a1199-3ac8-43d0-80b3-7a3572dc3bb8
+
+PARSFILE Plot\Setup\Plot_ae1e2c83-8feb-442b-b3a9-3ca8bb0e3211.par
+#BlueLink16 Plot: Setup`Hitch Moments` Hitch` , Plot`Plot_ae1e2c83-8feb-442b-b3a9-3ca8bb0e3211
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_f747720e-6e19-4110-bf60-110dcdd78765.png
+WRITE_SENSOR_DETECT
+Title 2A Van+1A Trl <Vehicle Configurations>
+CATEGORY Vehicle Configurations 
+DATASET_TITLE 2A Van+1A Trl
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#I_S + S
+#
+#2A Euro Van (I_S) + 1A Trailer performing a double lane change maneuver.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Vehicle Configurations } 2A Van+1A Trl
+#Library : TruckSim Run Control
+#DataSet : 2A Van+1A Trl
+#Category: Vehicle Configurations
+#FileID  : Run_1a396491-be79-43e4-bc11-af1b0e225276
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

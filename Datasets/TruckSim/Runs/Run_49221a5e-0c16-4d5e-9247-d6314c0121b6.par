@@ -1,0 +1,96 @@
+PARSFILE
+#FullDataName TruckSim Run Control`VS Terrain File: Man. Defined - Curb Hop`Road Networks: 3D Geometry and Terrain
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_49221a5e-0c16-4d5e-9247-d6314c0121b6
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_482bd937-c91e-48a2-96a8-25eea7ce17da.par
+#BlueLink0 Animator: Camera Setup`45 Azm, 30 El, 60 m Dist, 50 FoV, No Yaw` Vehicle Reference` , Animator camera`Camera_482bd937-c91e-48a2-96a8-25eea7ce17da
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.4 0
+SET_RUN_COLOR 0 0.4 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_094669b2-a10f-4634-8900-0370a94fd0b6.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`HD Utility Vehicle` Utility Vehicles` , Math Model`Lead2a_094669b2-a10f-4634-8900-0370a94fd0b6
+
+PARSFILE Procedures\Proc_61f3c9ae-3990-406e-b514-cb8e87f7a726.par
+#BlueLink28 Procedures`VS Terrain: Man. Path Entry w/Curb Hop` VS Terrain` , Procedure`Proc_61f3c9ae-3990-406e-b514-cb8e87f7a726
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55.par
+#BlueLink9 Multiple Moving Objects`1 Driver Preview Point, Set by DM` Points of Interest` , Miscellaneous`TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55
+
+PARSFILE Animator\Frames\Frame_7f73eb23-e90d-494d-b54c-5fe515849a6f.par
+#BlueLink10 Animator: Reference Frame`Example Animation Environment` ` , Miscellaneous`Frame_7f73eb23-e90d-494d-b54c-5fe515849a6f
+
+
+SPECIAL_PARSFILE Runs\Run_7c7d26ad-a6ad-4426-971a-8ddc7844ced7.par
+#BlueLink23 TruckSim Run Control`VS Terrain File: Manually Defined` Road Networks: 3D Geometry and Terrain` , Overlay run or ERD file`Run_7c7d26ad-a6ad-4426-971a-8ddc7844ced7
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_5c4405e9-20a8-45d0-96ad-d55e667f5096.png
+WRITE_SENSOR_DETECT
+Title VS Terrain File: Man. Defined - Curb Hop <Road Networks: 3D Geometry and Terrain>
+CATEGORY Road Networks: 3D Geometry and Terrain 
+DATASET_TITLE VS Terrain File: Man. Defined - Curb Hop
+#MiscYellow0
+VS_TERRAIN_FILE Scene_Import\VS_Scene_Builder\Mcity_scene.vsterrain
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example using a manual call to a VS Terrain file.  This call is similar to what is found in parsfiles that load VS Terrain files
+#
+#The box is checked for  "Advanced Settings" to define the path and filename of the VS Terrain file to be used in the example.  This file is of type .vsterrain
+#
+#This VS Terrain file includes the full 3D properties of the ground along with the friction and a tire rolling resistance coefficient
+#
+#Additionally, .obj files are manually added to show the ground surface for the of the MCity scene.  This was done by using the VS Terrain Utility to convert the MCity .vsterrain file to a .obj, then importing that file into the Animation Environment.
+#
+#The small red lines in the animation show the normal vectors of the MCity ground surface
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Road Networks: 3D Geometry and Terrain } VS Terrain File: Man. Defined - Curb Hop
+#Library : TruckSim Run Control
+#DataSet : VS Terrain File: Man. Defined - Curb Hop
+#Category: Road Networks: 3D Geometry and Terrain
+#FileID  : Run_49221a5e-0c16-4d5e-9247-d6314c0121b6
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

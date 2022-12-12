@@ -1,0 +1,77 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Japanese Signs, Trees, Shrubs`VS Visualizer Examples
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_082aa364-fd9d-449a-b65f-81de4693d729
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_12afd0d3-c9b8-47b4-9b7e-1cd0582e975b.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m` Vehicle Reference` , Animator camera`Camera_12afd0d3-c9b8-47b4-9b7e-1cd0582e975b
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_46c7d67e-b803-4bec-933d-a691b18e898b.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`LCF Van (7-spd. MT)` 2A LCF Van` , Math Model`Lead2a_46c7d67e-b803-4bec-933d-a691b18e898b
+
+PARSFILE Procedures\Proc_9907a426-153e-4b9a-b102-68aa0ac2424d.par
+#BlueLink28 Procedures`Japanese Signs, Scenery` Animation Asset-based Scenarios` , Procedure`Proc_9907a426-153e-4b9a-b102-68aa0ac2424d
+
+PARSFILE Animator\HUD\HUD_57a6c842-a5ec-4e02-972c-e5f3c3958fdd.par
+#BlueLink9 Animator: HUD`Throttle and Speed` HUD Groups` , Miscellaneous`HUD_57a6c842-a5ec-4e02-972c-e5f3c3958fdd
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Lead_2a\Lead2a_46c7d67e-b803-4bec-933d-a691b18e898b.png
+WRITE_SENSOR_DETECT
+Title Japanese Signs, Trees, Shrubs <VS Visualizer Examples>
+CATEGORY VS Visualizer Examples 
+DATASET_TITLE Japanese Signs, Trees, Shrubs
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#A 2-axle straight truck drives through an environment with animation shapes for trees, shrubs, and Japanese road signs.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { VS Visualizer Examples } Japanese Signs, Trees, Shrubs
+#Library : TruckSim Run Control
+#DataSet : Japanese Signs, Trees, Shrubs
+#Category: VS Visualizer Examples
+#FileID  : Run_082aa364-fd9d-449a-b65f-81de4693d729
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

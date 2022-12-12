@@ -1,0 +1,353 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`100-m Radius Circle, Mu = 0.9`Circular Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_73c49e66-c853-4ccd-8208-e4bf270d1324.png
+#RingCtrl0 1
+#CheckBox0 1    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 100-m Radius Circle, Mu = 0.9
+PARSFILE Roads\BuilderSegment\RoadSeg_11d95fe0-8d9d-4b2f-b48b-861ab1013a99.par
+#BlueLink0 Path: Segment Builder`100 m Radius` Circles` , Reference Path`RoadSeg_11d95fe0-8d9d-4b2f-b48b-861ab1013a99
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: 100 m Radius
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_ea7d6f58-71c6-42d0-aa52-92b3387a35cb.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.9` Constant Mu` , Friction`RdMu_ea7d6f58-71c6-42d0-aa52-92b3387a35cb
+
+PARSFILE Roads\Shapes\RdShape_740b8e92-37dc-495f-843f-12c4392d73a9.par
+#BlueLink4 Road: Animator Surface Shapes`Looped Road + 100 m Light Grass` Looped Roads` , Road shape definitions`RdShape_740b8e92-37dc-495f-843f-12c4392d73a9
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+#MiscYellow0
+DEFINE_PARAMETER R = 100; m ; ...
+     Radius of test circle
+#ENDMYellow
+
+PARSFILE Roads\Boundaries\RdBnd_0568183c-f578-4a1d-8480-fc1d91ca5579.par
+#BlueLink11 Road: Boundaries`Circle Test` Road Boundary Stop Conditions` , Miscellaneous`RdBnd_0568183c-f578-4a1d-8480-fc1d91ca5579
+
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+add_reference_frame road_stuff_7_Trees_for_100-m_Radius_Circle
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_56057bb1-8c48-4f52-b983-f7e6021418ef.par
+#BlueLink7 Road: Animator Repeated Object`Trees for 100-m Radius Circle` Trees` , 3D Shapes`AniRep_56057bb1-8c48-4f52-b983-f7e6021418ef
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_73c49e66-c853-4ccd-8208-e4bf270d1324.ani
+
+add_reference_frame road_stuff_1_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 0.286478897565
+set_offset_var_x 0.609997458337
+set_offset_var_y -21.9984750032
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_2_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 199.495912032
+set_offset_var_x 23.1090178119
+set_offset_var_y 34.7273467703
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_3_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 27.3873826073
+set_offset_var_x 54.4645047772
+set_offset_var_y -5.12933805261
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_4_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 245.49693502
+set_offset_var_x 63.0066027509
+set_offset_var_y 71.2821662784
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_5_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 43.4874966504
+set_offset_var_x 82.9276499036
+set_offset_var_y 12.5742893568
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_6_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 226.580626501
+set_offset_var_x 50.2938731729
+set_offset_var_y 52.4072244438
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_7_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 79.2973588461
+set_offset_var_x 113.196008086
+set_offset_var_y 78.6059879075
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_8_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 273.871397797
+set_offset_var_x 69.0846557234
+set_offset_var_y 104.67507299
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_9_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 95.6839517868
+set_offset_var_x 120.007051987
+set_offset_var_y 111.944349014
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_10_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 297.516783445
+set_offset_var_x 61.4096212553
+set_offset_var_y 131.990692102
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_11_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 112.013248948
+set_offset_var_x 108.006824567
+set_offset_var_y 143.666644557
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_12_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 316.003175861
+set_offset_var_x 48.0972324135
+set_offset_var_y 149.811667288
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_13_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 131.035447746
+set_offset_var_x 91.5724503975
+set_offset_var_y 179.702235403
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_14_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 340.078477612
+set_offset_var_x 23.5932407655
+set_offset_var_y 165.099193191
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_15_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 146.677195553
+set_offset_var_x 66.9664277005
+set_offset_var_y 201.858271932
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_16_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 0.714450540834
+set_offset_var_x -0.863399962428
+set_offset_var_y 169.237276841
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_17_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 165.298323895
+set_offset_var_x 29.5153397688
+set_offset_var_y 212.492376268
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_18_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 22.6401717784
+set_offset_var_x -26.6544439173
+set_offset_var_y 163.906858656
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_19_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw -178.315083164
+set_offset_var_x -3.50779079081
+set_offset_var_y 219.248418873
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_20_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 38.5470675777
+set_offset_var_x -43.149070903
+set_offset_var_y 154.154442515
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_21_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw -160.438799956
+set_offset_var_x -41.5168794363
+set_offset_var_y 216.843265625
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_22_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 65.2018659448
+set_offset_var_x -62.8578731401
+set_offset_var_y 129.041930862
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_23_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw -123.727893418
+set_offset_var_x -101.872037741
+set_offset_var_y 168.011880048
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_24_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 90.5669160036
+set_offset_var_x -69.2392705255
+set_offset_var_y 99.3148861591
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_25_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw -107.96712045
+set_offset_var_x -112.023621018
+set_offset_var_y 136.327621884
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_26_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 112.492637241
+set_offset_var_x -63.9752809343
+set_offset_var_y 73.510202091
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_27_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw -73.0378398181
+set_offset_var_x -118.605707145
+set_offset_var_y 63.824231417
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_28_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 134.418358478
+set_offset_var_x -49.4564632511
+set_offset_var_y 51.5376000742
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_29_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw -53.0173984801
+set_offset_var_x -98.4499078385
+set_offset_var_y 25.8595337687
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_30_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 157.203911921
+set_offset_var_x -26.8282517304
+set_offset_var_y 36.1659113563
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_31_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw -17.2361841742
+set_offset_var_x -36.0149900101
+set_offset_var_y -16.0860563111
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_32_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 183.428794185
+set_offset_var_x 4.14126742016
+set_offset_var_y 30.881291476
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_33_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 3.42879418494
+set_offset_var_x 7.58159676677
+set_offset_var_y -26.5385989125
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_34_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw -33.1140745438
+set_offset_var_x -69.4040670163
+set_offset_var_y -6.40847786117
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+add_reference_frame road_stuff_35_2_Oak:_Fall
+reference_frame_ghosts off
+set_offset_var_yaw 68.9362638411
+set_offset_var_x 120.359788611
+set_offset_var_y 53.6445225219
+set_offset_var_z 0
+parsfile Animator\STL\Shape_203ae6ad-5c3f-4f95-a77d-bb4542dadc07.par
+
+#EMBEDDED_NOTES
+#This track is a circular loop with a 100-m radius to the centerline. It is suitable for constant-radius understeer testing as specified in ISO 4138 and ISO 14792.
+#
+#A parameter R is defined for use in a formula for target speed in the Event-driven ISO steady-state circle procedure.
+#
+#The surface is completely flat and the coefficient of friction is a constant 0.9.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Circular Roads } 100-m Radius Circle, Mu = 0.9
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 100-m Radius Circle, Mu = 0.9
+#Category: Circular Roads
+#FileID  : Road_73c49e66-c853-4ccd-8208-e4bf270d1324
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Irregularly Shaped Object Detection`ADAS and Active Safety
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_73e03950-faa1-41a6-b532-df758f3b37c9
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_eafd3669-47e8-42af-8732-3e0c585fc9ee.par
+#BlueLink0 Animator: Camera Setup`Intersection View from SW` Fixed Camera` , Animator camera`Camera_eafd3669-47e8-42af-8732-3e0c585fc9ee
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 on
+RT_WINDOW_CLOSE on
+#RingCtrl5 1
+LIVE_SERVER_MAX_CONNECTIONS 1
+PARSFILE Vehicles\Loaded\VehLoad_26fa27e0-b5b9-438d-bee2-1e4a86fe5a33.par
+#BlueLink2 Vehicle: Loaded Combination`DRW Pickup w/ Forward Radar` Pickup Trucks` , Math Model`VehLoad_26fa27e0-b5b9-438d-bee2-1e4a86fe5a33
+
+PARSFILE Procedures\Proc_fe9a5be5-6796-4e59-820e-0e4defb88130.par
+#BlueLink28 Procedures`3-Way Intersection, Signals` Road Networks` , Procedure`Proc_fe9a5be5-6796-4e59-820e-0e4defb88130
+
+PARSFILE Generic\Links\GenLink_757a66a6-ac44-497c-aba7-f43cf0b1e9c9.par
+#BlueLink9 Generic Group of Links`Building with Support Pillar` Buildings and Props` , Miscellaneous`GenLink_757a66a6-ac44-497c-aba7-f43cf0b1e9c9
+
+PARSFILE Generic\Group\GenGrp_3d160f3c-1f80-4051-99ef-001b36c8cadc.par
+#BlueLink10 Generic Data Group`Bus for 3-Way Intersection` ADAS: Traffic Scenarios` , Miscellaneous`GenGrp_3d160f3c-1f80-4051-99ef-001b36c8cadc
+
+PARSFILE Generic\Group\GenGrp_a98c598d-b72a-4f1c-b379-bdd6f1f8067c.par
+#BlueLink11 Generic Data Group`Pedestrians at Intersection` ` , Miscellaneous`GenGrp_a98c598d-b72a-4f1c-b379-bdd6f1f8067c
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ee189bc-4102-46cf-a6ee-046ab79da53b.png
+WRITE_SENSOR_DETECT
+Title Irregularly Shaped Object Detection <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Irregularly Shaped Object Detection
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates the functionality for defining an object bounding box as an XY-defined Polygon.
+#
+#The building on the southeast corner of the intersection has a diagonal face on its northwest corner.  The polygonal bounding box follows this shape, allowing a number of objects to be detected in the space where the square bounding box would have obstructed the sensor.
+#
+#Additionally, the bus that pulls up to the traffic signal has a customized bounding box.  This allows the box to follow the curved face of the bus as well as the contours of the mirrors which extend significantly from the front and sides of the bus.
+#
+#Events and VS Commands are used to ensure that the traffic objects obey the traffic signal.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { ADAS and Active Safety } Irregularly Shaped Object Detection
+#Library : TruckSim Run Control
+#DataSet : Irregularly Shaped Object Detection
+#Category: ADAS and Active Safety
+#FileID  : Run_73e03950-faa1-41a6-b532-df758f3b37c9
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

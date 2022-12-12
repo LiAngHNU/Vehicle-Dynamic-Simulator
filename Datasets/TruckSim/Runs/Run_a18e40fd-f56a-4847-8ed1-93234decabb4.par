@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Braking - Split Mu: ABS`Brake Tests
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_a18e40fd-f56a-4847-8ed1-93234decabb4
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_293071ae-9194-4088-8862-92255ece0a0f.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 48 m` Vehicle Reference` , Animator camera`Camera_293071ae-9194-4088-8862-92255ece0a0f
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_9e67d413-6c86-46ce-9b3a-cf088f1d807a.par
+#BlueLink2 Vehicle: Loaded Combination`2A Conventional Van w/ Payload` Conventional Vans` , Math Model`VehLoad_9e67d413-6c86-46ce-9b3a-cf088f1d807a
+
+PARSFILE Procedures\Proc_2e780ea0-ca27-4fe8-8d8b-b154de458250.par
+#BlueLink28 Procedures`Braking: Split Mu (Hyd.)` Acceleration and Braking` , Procedure`Proc_2e780ea0-ca27-4fe8-8d8b-b154de458250
+
+
+SPECIAL_PARSFILE Runs\Run_fa848e33-d382-4c2f-8966-d467c858d58e.par
+#BlueLink23 TruckSim Run Control`Braking - Split Mu: No ABS` Brake Tests` , Overlay run or ERD file`Run_fa848e33-d382-4c2f-8966-d467c858d58e
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Braking - Split Mu: ABS <Brake Tests>
+CATEGORY Brake Tests 
+DATASET_TITLE Braking - Split Mu: ABS
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates the effect an ABS system can have while braking on a split-mu surface.
+#
+#The 2A Conventional Van uses the TruckSim internal ABS model. More information can be found by browsing to the Vehicle: Lead Unit with 2 Axles screen and clicking on the brake datasets, e.g., "10 kN-m Capacity, Hydraulic" for axle 2.
+#
+#For comparison, this simulation is overlaid with the example, "Braking - Split Mu: No ABS". That example has nearly the same 2-axle Conventional Van as this example, but the braking datasets do not use the TruckSim ABS system.
+#
+#Review the plots and animation to see the difference an ABS system can have on a vehicle performing a straight-line split-mu stop.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Brake Tests } Braking - Split Mu: ABS
+#Library : TruckSim Run Control
+#DataSet : Braking - Split Mu: ABS
+#Category: Brake Tests
+#FileID  : Run_a18e40fd-f56a-4847-8ed1-93234decabb4
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

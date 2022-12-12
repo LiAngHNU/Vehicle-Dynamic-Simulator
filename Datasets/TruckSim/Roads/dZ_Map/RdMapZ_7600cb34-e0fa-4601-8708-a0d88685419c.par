@@ -1,0 +1,69 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, S-L Grid`Severe Bump Course`Ride
+#CheckBox0 0    
+
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: Severe Bump Course
+set_description ROAD_DZ_ID Severe Bump Course
+#RingCtrl0 CARPET
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 8, 34 ! columns x rows
+ROAD_DZ_CARPET 2D_LINEAR
+0, -10, -4, -3, -0.1, 0.1, 3, 4, 10
+0, 0, 0, 0, 0, 0, 0, 0, 0
+50, 0, 0, 0, 0, 0, 0, 0, 0
+50.2, 0, 0, 0.1, 0.1, 0.1, 0.1, 0, 0
+50.8, 0, 0, 0.1, 0.1, 0.1, 0.1, 0, 0
+51, 0, 0, 0, 0, 0, 0, 0, 0
+52, 0, 0, 0, 0, 0, 0, 0, 0
+52.2, 0, 0, -0.1, -0.1, -0.1, -0.1, 0, 0
+52.8, 0, 0, -0.1, -0.1, -0.1, -0.1, 0, 0
+53, 0, 0, 0, 0, 0, 0, 0, 0
+60, 0, 0, 0, 0, 0, 0, 0, 0
+60.2, 0, 0, 0.1, 0.1, 0, 0, 0, 0
+60.8, 0, 0, 0.1, 0.1, 0, 0, 0, 0
+61, 0, 0, 0, 0, 0, 0, 0, 0
+62, 0, 0, 0, 0, 0, 0, 0, 0
+62.2, 0, 0, 0, 0, 0.1, 0.1, 0, 0
+62.8, 0, 0, 0, 0, 0.1, 0.1, 0, 0
+63, 0, 0, 0, 0, 0, 0, 0, 0
+64, 0, 0, 0, 0, 0, 0, 0, 0
+64.2, 0, 0, -0.1, -0.1, 0, 0, 0, 0
+64.8, 0, 0, -0.1, -0.1, 0, 0, 0, 0
+65, 0, 0, 0, 0, 0, 0, 0, 0
+66, 0, 0, 0, 0, 0, 0, 0, 0
+66.2, 0, 0, 0, 0, -0.1, -0.1, 0, 0
+66.8, 0, 0, 0, 0, -0.1, -0.1, 0, 0
+67, 0, 0, 0, 0, 0, 0, 0, 0
+68, 0, 0, 0, 0, 0, 0, 0, 0
+68.2, 0, 0, 0.1, 0.1, -0.1, -0.1, 0, 0
+68.8, 0, 0, 0.1, 0.1, -0.1, -0.1, 0, 0
+69, 0, 0, 0, 0, 0, 0, 0, 0
+70, 0, 0, 0, 0, 0, 0, 0, 0
+70.2, 0, 0, -0.1, -0.1, 0.1, 0.1, 0, 0
+70.8, 0, 0, -0.1, -0.1, 0.1, 0.1, 0, 0
+71, 0, 0, 0, 0, 0, 0, 0, 0
+100, 0, 0, 0, 0, 0, 0, 0, 0
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Ride } Severe Bump Course
+#Library : Road: Off-Center Elevation Map, S-L Grid
+#DataSet : Severe Bump Course
+#Category: Ride
+#FileID  : RdMapZ_7600cb34-e0fa-4601-8708-a0d88685419c
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L Grid
+
+END

@@ -1,0 +1,105 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Brake System Transport Delay`Brake Tests
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_a4b6ca05-d26b-45f5-b759-6688b060f68a
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b64f8781-7641-40ce-b0ed-bcc16a27d350.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 15 El, 55 m` Vehicle Reference` , Animator camera`Camera_b64f8781-7641-40ce-b0ed-bcc16a27d350
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 10
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+*RUN_COLOR 1 1 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_8c10cded-a64a-4839-a170-2938a08a58d4.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Tour Bus (I_S)` 2A Tour Bus` , Math Model`Lead2a_8c10cded-a64a-4839-a170-2938a08a58d4
+
+PARSFILE Procedures\Proc_ac4bd127-ee1c-4fcc-a24d-7b183108d9ec.par
+#BlueLink28 Procedures`ADAS RP Scenic Mountain` Driving` , Procedure`Proc_ac4bd127-ee1c-4fcc-a24d-7b183108d9ec
+
+PARSFILE Roads\3D_Road\Road_a7dd97ca-0b37-4ede-871e-1d4900cbab98.par
+#BlueLink9 Road: 3D Surface (All Properties)`ADAS RP: Scenic Mountain` Atlas and ADAS RP Map Downloads` , Miscellaneous`Road_a7dd97ca-0b37-4ede-871e-1d4900cbab98
+
+PARSFILE Animator\HUD\HUD_750fb88e-77be-4b0e-9523-30964a270490.par
+#BlueLink10 Animator: HUD`Throttle, Brakes, Speedo, Tach` HUD Groups` , Miscellaneous`HUD_750fb88e-77be-4b0e-9523-30964a270490
+
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 15
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*TSTOP 15
+*TSTART 0
+*SSTART 0
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_173ec74a-6152-49e0-b603-9caf7f493926.par
+#BlueLink15 Plot: Setup`M/C & Line Pressures (Axles 1-2)` Braking` , Plot`Plot_173ec74a-6152-49e0-b603-9caf7f493926
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_5cb9979d-3686-4654-8ce0-3c30f81bd36c.png
+WRITE_SENSOR_DETECT
+Title Brake System Transport Delay <Brake Tests>
+CATEGORY Brake Tests 
+DATASET_TITLE Brake System Transport Delay
+#MiscYellow0
+TLAG_BK(1,1) = 0.5;
+TLAG_BK(1,2) = 0.5;
+TLAG_BK(2,1) = 1.0;
+TLAG_BK(2,2) = 1.0;
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#For TruckSim 2020.0, the brake system transport delay parameter, math model keyword TLAG_BK, is now available for all TruckSim brake systems regardless of control method. Previously, only systems controlled by master cylinder pressure with an open loop table were supported.
+#
+#Here, the values for each of the four wheels are manually set to large values, showing the effects of the delay in the linked plot. Notice that the delayed value does not become available until the simulation time has equaled the lag parameter.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Brake Tests } Brake System Transport Delay
+#Library : TruckSim Run Control
+#DataSet : Brake System Transport Delay
+#Category: Brake Tests
+#FileID  : Run_a4b6ca05-d26b-45f5-b759-6688b060f68a
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

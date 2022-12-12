@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName TruckSim Run Control`ADAS Sensor Collision Detection`ADAS and Active Safety
+#VEHICLECODE I_I
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_70650f3f-53eb-4df8-bf88-3ec4743684eb
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_5e57d0ab-1307-40fe-b0a4-579025103560.par
+#BlueLink0 Animator: Camera Setup`90 Azm, 15 El, 25 m` Vehicle Reference` , Animator camera`Camera_5e57d0ab-1307-40fe-b0a4-579025103560
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_8027ca69-7234-414c-bda7-614189647a86.par
+#BlueLink2 Vehicle: Loaded Combination`2A Euro Van (Front-Facing Sensor)` European Vans` , Math Model`VehLoad_8027ca69-7234-414c-bda7-614189647a86
+
+PARSFILE Procedures\Proc_275c4378-9f9f-4fdb-aa1d-a17cf33d2869.par
+#BlueLink28 Procedures`ADAS Sensor Collision Detection` ADAS and Active Safety` , Procedure`Proc_275c4378-9f9f-4fdb-aa1d-a17cf33d2869
+
+*TSTOP 1
+
+*IMAGE_TYPE PASS_THROUGH
+WRITE_SENSOR_DETECT
+Title ADAS Sensor Collision Detection <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE ADAS Sensor Collision Detection
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#A Moving Object is set to move towards and away from the ego vehicle using a sinusoid profile.
+#
+#The point of this example is to show how to set up counters, HUD, and collision detection.
+#
+#Based on an ADAS Sensor located at the front of the ego vehicle, VS Commands are used to compare the Moving Object's detected distance and magnitude relative to a user-defined distance threshold, and trigger one of three alerts. Events are used to count the number of times the alerts are triggered, corresponding to recorded contacts made.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { ADAS and Active Safety } ADAS Sensor Collision Detection
+#Library : TruckSim Run Control
+#DataSet : ADAS Sensor Collision Detection
+#Category: ADAS and Active Safety
+#FileID  : Run_70650f3f-53eb-4df8-bf88-3ec4743684eb
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

@@ -1,0 +1,92 @@
+PARSFILE
+#FullDataName TruckSim Run Control`EQ_DYN: External Springs DLC`Extended Models
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_bdfd28c8-be8a-4255-9eed-d7322b265659
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0 1
+SET_RUN_COLOR 0 0 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_357ea657-929c-448d-8dff-0918eca9913a.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`LCF Van (Ext. Springs)` 2A LCF Van` , Math Model`Lead2a_357ea657-929c-448d-8dff-0918eca9913a
+
+PARSFILE Procedures\Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4.par
+#BlueLink28 Procedures`DLC @ 70 km/h` Handling Tests` , Procedure`Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+PARSFILE Generic\VS_commands\GenVS_4e2c20af-fe6c-4538-b368-c76ce19f81ec.par
+#BlueLink10 Generic VS Commands`EQ_DYN: External Springs` Miscellaneous Custom Controls` , Miscellaneous`GenVS_4e2c20af-fe6c-4538-b368-c76ce19f81ec
+
+*TSTOP 1
+
+SPECIAL_PARSFILE Runs\Run_f02bf0b3-4066-447e-bb5e-40a929b281c7.par
+#BlueLink23 TruckSim Run Control`Baseline` * * Quick Start Guide Example` , Overlay run or ERD file`Run_f02bf0b3-4066-447e-bb5e-40a929b281c7
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Lead_2a\Lead2a_357ea657-929c-448d-8dff-0918eca9913a.png
+WRITE_SENSOR_DETECT
+Title EQ_DYN: External Springs DLC <Extended Models>
+CATEGORY Extended Models 
+DATASET_TITLE EQ_DYN: External Springs DLC
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#The VS Command, EQ_DYN, can be used to insert equations that are processed after kinematical equations and before dynamical equations. This VS Command is used here to externally define the springs of an LCF Van.
+#
+#The 5.5T and 8.5T leaf spring linear spring rates are used for the front and rear axles respectively. The initial condition spring forces from the overlaid Baseline example are used as the initial spring forces for each wheel.
+#
+#Note:
+#Kinematical equations are used to calculate variables involving position and velocity, including the derivatives of position state variables (translational coordinates and rotation angles).
+#
+#Dynamical equations are used to calculate forces and moments, derivatives of speed state variables (translational and rotational accelerations), and miscellaneous output variables involving forces, moments, and accelerations.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Extended Models } EQ_DYN: External Springs DLC
+#Library : TruckSim Run Control
+#DataSet : EQ_DYN: External Springs DLC
+#Category: Extended Models
+#FileID  : Run_bdfd28c8-be8a-4255-9eed-d7322b265659
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

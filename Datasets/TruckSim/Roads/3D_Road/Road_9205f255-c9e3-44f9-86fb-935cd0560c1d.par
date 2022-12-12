@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Enter N, Exit W, 1003`Roundabout, Single Lane, D = 36 m
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_9205f255-c9e3-44f9-86fb-935cd0560c1d.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 1003
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Enter N, Exit W, 1003
+PARSFILE Roads\BuilderSegment\RoadSeg_e8c30f4b-3d4d-4542-b1de-3456dab9a716.par
+#BlueLink0 Path: Segment Builder`North Entrance, 1st Exit, 1003` Roundabout, D = 36 m` , Reference Path`RoadSeg_e8c30f4b-3d4d-4542-b1de-3456dab9a716
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: North Entrance, 1st Exit, 1003
+PARSFILE Roads\dZ_Map\RdMapZ_cf74d285-9d37-4240-8d17-fa4e93aaca46.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Leg for Roundabout,  D = 36 m` Roundabout, D = 36 m` , Miscellaneous`RdMapZ_cf74d285-9d37-4240-8d17-fa4e93aaca46
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_504cd7bc-7136-4e3a-b56a-c3c2242daa63.par
+#BlueLink4 Road: Animator Surface Shapes`Leg for Roundabout, D = 36 m` Roundabout, 3D, D = 36 m` , Road shape definitions`RdShape_504cd7bc-7136-4e3a-b56a-c3c2242daa63
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6__,_3D_Shapes
+reference_frame_ghosts off
+#BlueLink6 ` , 3D Shapes` , 3D Shapes` , 3D Shapes`
+
+add_reference_frame road_stuff_7__,_3D_Shapes
+reference_frame_ghosts off
+#BlueLink7 ` , 3D Shapes` , 3D Shapes` , 3D Shapes`
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_9205f255-c9e3-44f9-86fb-935cd0560c1d.ani
+
+#EMBEDDED_NOTES
+#The four legs of this roundabout have the same geometry. The reference path for each is adjusted by setting the starting X-Y coordinates and heading angle.
+#
+#This leg of the roundabout enters from the North and exits West.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Roundabout, Single Lane, D = 36 m } Enter N, Exit W, 1003
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Enter N, Exit W, 1003
+#Category: Roundabout, Single Lane, D = 36 m
+#FileID  : Road_9205f255-c9e3-44f9-86fb-935cd0560c1d
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

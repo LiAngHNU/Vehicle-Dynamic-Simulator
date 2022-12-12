@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Front In-wheel Motors`Powertrain
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_8dca42f3-d8bf-4e34-957c-82bd86d88e8d
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.4 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_04431bcb-5faf-425e-bceb-1f67c39fba16.par
+#BlueLink2 Vehicle: Loaded Combination`DRW Pickup w/ Hybrid AWD` Pickup Trucks` , Math Model`VehLoad_04431bcb-5faf-425e-bceb-1f67c39fba16
+
+PARSFILE Procedures\Proc_a07b2cfe-aad4-4b9c-b9db-1969e001a47a.par
+#BlueLink28 Procedures`Half Throttle Acceleration (AT)` Acceleration and Braking` , Procedure`Proc_a07b2cfe-aad4-4b9c-b9db-1969e001a47a
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ee189bc-4102-46cf-a6ee-046ab79da53b.png
+WRITE_SENSOR_DETECT
+Title Front In-wheel Motors <Powertrain>
+CATEGORY Powertrain 
+DATASET_TITLE Front In-wheel Motors
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#VS Commands are used to define drive torque applied to the front wheels and reacted at the unsprung mass, representing the effect of in-wheel motors such as those used in some hybrid powertrains.
+#
+#Drive torques are applied to the wheels and reacted by the unsprung mass for independent suspensions, and the sprung mass for solid axles.
+#
+#Brake torques are applied to the wheels with reactions at the unsprung mass and always oppose the direction of wheel rotation.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Powertrain } Front In-wheel Motors
+#Library : TruckSim Run Control
+#DataSet : Front In-wheel Motors
+#Category: Powertrain
+#FileID  : Run_8dca42f3-d8bf-4e34-957c-82bd86d88e8d
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

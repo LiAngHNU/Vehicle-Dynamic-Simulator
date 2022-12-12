@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName TruckSim Run Control`2A Conv, MT: Full Throttle, 1% grade`Validation of Vehicle Data
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_daffe851-3d40-4405-bf66-2b24d0731c4c
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_9e80118f-ce1c-4f40-8d35-27feac9424e2.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Conv. Van (7-spd. MT)` 2A Conventional Van` , Math Model`Lead2a_9e80118f-ce1c-4f40-8d35-27feac9424e2
+
+PARSFILE Procedures\Proc_53c0f6f2-1839-4971-b403-260998ec8b0a.par
+#BlueLink28 Procedures`Full Throttle Accel. (MT), 1% Grade` Acceleration and Braking` , Procedure`Proc_53c0f6f2-1839-4971-b403-260998ec8b0a
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+PARSFILE Animator\HUD\HUD_750fb88e-77be-4b0e-9523-30964a270490.par
+#BlueLink10 Animator: HUD`Throttle, Brakes, Speedo, Tach` HUD Groups` , Miscellaneous`HUD_750fb88e-77be-4b0e-9523-30964a270490
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title 2A Conv, MT: Full Throttle, 1% grade <Validation of Vehicle Data>
+CATEGORY Validation of Vehicle Data 
+DATASET_TITLE 2A Conv, MT: Full Throttle, 1% grade
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#2-axle Conventional Van with RWD and a 7-speed manual transmission performing a full throttle acceleration test on a road with a uniform 1% grade.
+#
+#The control is Open-Loop Throttle, ramping from 0 to 100% throttle in 2 seconds.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Validation of Vehicle Data } 2A Conv, MT: Full Throttle, 1% grade
+#Library : TruckSim Run Control
+#DataSet : 2A Conv, MT: Full Throttle, 1% grade
+#Category: Validation of Vehicle Data
+#FileID  : Run_daffe851-3d40-4405-bf66-2b24d0731c4c
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

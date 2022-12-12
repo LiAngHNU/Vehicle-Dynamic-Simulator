@@ -1,0 +1,94 @@
+PARSFILE
+#FullDataName TruckSim Run Control`4-Way Intersection, 2A Van`Road Networks: Intersections and Roundabouts
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_9175b0c9-1c0d-46f8-b54b-b279d340226d
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b7028f29-fdf7-4233-8487-abd35f8aee05.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 10 El, 36 m` Vehicle Reference` , Animator camera`Camera_b7028f29-fdf7-4233-8487-abd35f8aee05
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_9e80118f-ce1c-4f40-8d35-27feac9424e2.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Conv. Van (7-spd. MT)` 2A Conventional Van` , Math Model`Lead2a_9e80118f-ce1c-4f40-8d35-27feac9424e2
+
+PARSFILE Procedures\Proc_d76d79e2-f254-4a09-92ab-4e766095f2b0.par
+#BlueLink28 Procedures`4-Way Intersection (Straight Trucks)` Road Networks` , Procedure`Proc_d76d79e2-f254-4a09-92ab-4e766095f2b0
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+PARSFILE Generic\Group\GenGrp_0335de62-1b98-4a18-a69e-30bcb04c7754.par
+#BlueLink10 Generic Data Group`Traffic: Straight Truck Turn, 4-Way` ADAS: Traffic Scenarios` , Miscellaneous`GenGrp_0335de62-1b98-4a18-a69e-30bcb04c7754
+
+PARSFILE Animator\HUD\HUD_647507c0-a511-41d5-8437-e3b1fc5eb87f.par
+#BlueLink11 Animator: HUD`Throttle, Brakes, G-G, Speedo, Gear, Tach` HUD Groups` , Miscellaneous`HUD_647507c0-a511-41d5-8437-e3b1fc5eb87f
+
+PARSFILE Plot\Setup\Plot_246bcb1b-ad8e-4311-a1b3-faf171d44be4.par
+#BlueLink15 Plot: Setup`Road ID for Tires (Axle 1, Single Tires)` Tracking` , Plot`Plot_246bcb1b-ad8e-4311-a1b3-faf171d44be4
+
+PARSFILE Plot\Setup\Plot_3ccc6f14-4965-48a4-bffb-f352c7a91346.par
+#BlueLink16 Plot: Setup`Road ID for Tires (Axle 2)` Tracking` , Plot`Plot_3ccc6f14-4965-48a4-bffb-f352c7a91346
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title 4-Way Intersection, 2A Van <Road Networks: Intersections and Roundabouts>
+CATEGORY Road Networks: Intersections and Roundabouts 
+DATASET_TITLE 4-Way Intersection, 2A Van
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This intersection of two straight roads (East and North) has curbs on the edges which can be an issue for vehicles with trailers.
+#
+#The intersection is made from four parts, one per curb. A fifth part is included to improve the appearance in video.
+#
+#Two versions of this 4-Way Intersection are included with TruckSim: one for 2 and 3 axle straight trucks (this example), and one for articulated vehicles like tractor-trailer combinations.
+#
+#The road network and traffic datasets are the same for both examples, but this example, intended for use with 2 and 3 axle straight trucks, uses a constant radius path to negotiate the intersection.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Road Networks: Intersections and Roundabouts } 4-Way Intersection, 2A Van
+#Library : TruckSim Run Control
+#DataSet : 4-Way Intersection, 2A Van
+#Category: Road Networks: Intersections and Roundabouts
+#FileID  : Run_9175b0c9-1c0d-46f8-b54b-b279d340226d
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

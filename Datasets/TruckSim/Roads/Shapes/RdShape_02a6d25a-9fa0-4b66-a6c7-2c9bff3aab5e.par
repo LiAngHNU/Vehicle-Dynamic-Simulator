@@ -1,0 +1,301 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`6-Lane Highway (Divided)`Scenic Road Shapes
+NLANES 19
+OPTTHRESHOLD 2
+#MiscYellow0
+# 0.753 0.753 0.753, Cement (Pitted), 0.35, 2.5, 0.5, -16.422, m, -13.975, m, , , 0.0, 1000.0, 5.0, , , Foliage
+# 0.753 0.753 0.753, Cement (Pitted), 0.35, 2.5, 0.25, -13.975, m, -12.775, m, , , 0.0, 1000.0, 5.0, , , Foliage
+# 1 1 1, Pavement, 1.0, 10.0, 1.0, -12.775, m, -9.125, m, , , 0.0, 1000.0, 5.0, , , Road
+# 1 1 1, White Line, 1.0, 12.0, 1.0, -12.625, m, -12.475, m, , , 0.0, 1000.0, 5.0, , 0.005, Road
+# 1 1 1, White Line, 1.0, 12.0, 1.0, -9.2, m, -9.05, m, , , 0.0, 1000.0, 3.0, 4.0, 0.005, Road
+# 1 1 1, Pavement, 1.0, 10.0, 1.0, -9.125, m, -5.475, m, , , 0.0, 1000.0, 5.0, , , Road
+# 1 1 1, White Line, 1.0, 12.0, 1.0, -5.55, m, -5.4, m, , , 0.0, 1000.0, 3.0, 4.0, 0.005, Road
+# 1 1 1, Pavement, 1.0, 10.0, 1.0, -5.475, m, -1.825, m, , , 0.0, 1000.0, 5.0, , , Road
+# 1 1 1, White Line, 1.0, 12.0, 1.0, -2.075, m, -1.925, m, , , 0.0, 1000.0, 5.0, , 0.005, Foliage
+# 0.753 0.753 0.753, Concrete, 1.0, 15.0, 0.5, -1.825, m, 1.825, m, 4.0, , 0.0, 1000.0, 5.0, , , Foliage
+# 1 1 1, White Line, 1.0, 12.0, 1.0, 1.925, m, 2.075, m, , , 0.0, 1000.0, 5.0, , 0.005, Foliage
+# 1 1 1, Pavement, 1.0, 10.0, 1.0, 1.825, m, 5.475, m, , , 0.0, 1000.0, 5.0, , , Road
+# 1 1 1, White Line, 1.0, 12.0, 1.0, 5.4, m, 5.55, m, , , 0.0, 1000.0, 3.0, 4.0, 0.005, Road
+# 1 1 1, Pavement, 1.0, 10.0, 1.0, 5.475, m, 9.125, m, , , 0.0, 1000.0, 5.0, , , Road
+# 1 1 1, White Line, 1.0, 12.0, 1.0, 9.05, m, 9.2, m, , , 0.0, 1000.0, 3.0, 4.0, 0.005, Road
+# 1 1 1, White Line, 1.0, 12.0, 1.0, 12.475, m, 12.625, m, , , 0.0, 1000.0, 5.0, , 0.005, Road
+# 1 1 1, Pavement, 1.0, 10.0, 1.0, 9.125, m, 12.775, m, , , 0.0, 1000.0, 5.0, , , Road
+# 0.753 0.753 0.753, Cement (Pitted), 0.35, 2.5, 0.25, 12.775, m, 13.975, m, , , 0.0, 1000.0, 5.0, , , Foliage
+# 0.753 0.753 0.753, Cement (Pitted), 0.35, 2.5, 0.5, 13.975, m, 16.422, m, , , 0.0, 1000.0, 5.0, , , Foliage
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 0.753 0.753 0.753
+MATERIAL(1) Cement (Pitted)
+SPECULAR(1) 0.35
+SCALE(1) 2.5
+LTILES(1) 0.5
+LIN(1) -16.422
+LINUNITS(1) m
+LOUT(1) -13.975
+LOUTUNITS(1) m
+S_START(1) 0.0
+S_STOP(1) 1000.0
+SINT(1) 5.0
+AUTODETAIL(1) Foliage
+COLOR(2) 0.753 0.753 0.753
+MATERIAL(2) Cement (Pitted)
+SPECULAR(2) 0.35
+SCALE(2) 2.5
+LTILES(2) 0.25
+LIN(2) -13.975
+LINUNITS(2) m
+LOUT(2) -12.775
+LOUTUNITS(2) m
+S_START(2) 0.0
+S_STOP(2) 1000.0
+SINT(2) 5.0
+AUTODETAIL(2) Foliage
+COLOR(3) 1 1 1
+MATERIAL(3) Pavement
+SPECULAR(3) 1.0
+SCALE(3) 10.0
+LTILES(3) 1.0
+LIN(3) -12.775
+LINUNITS(3) m
+LOUT(3) -9.125
+LOUTUNITS(3) m
+S_START(3) 0.0
+S_STOP(3) 1000.0
+SINT(3) 5.0
+AUTODETAIL(3) Road
+COLOR(4) 1 1 1
+MATERIAL(4) White Line
+SPECULAR(4) 1.0
+SCALE(4) 12.0
+LTILES(4) 1.0
+LIN(4) -12.625
+LINUNITS(4) m
+LOUT(4) -12.475
+LOUTUNITS(4) m
+S_START(4) 0.0
+S_STOP(4) 1000.0
+SINT(4) 5.0
+DZ(4) 0.005
+AUTODETAIL(4) Road
+COLOR(5) 1 1 1
+MATERIAL(5) White Line
+SPECULAR(5) 1.0
+SCALE(5) 12.0
+LTILES(5) 1.0
+LIN(5) -9.2
+LINUNITS(5) m
+LOUT(5) -9.05
+LOUTUNITS(5) m
+S_START(5) 0.0
+S_STOP(5) 1000.0
+SINT(5) 3.0
+IPRINT(5) 4.0
+DZ(5) 0.005
+AUTODETAIL(5) Road
+COLOR(6) 1 1 1
+MATERIAL(6) Pavement
+SPECULAR(6) 1.0
+SCALE(6) 10.0
+LTILES(6) 1.0
+LIN(6) -9.125
+LINUNITS(6) m
+LOUT(6) -5.475
+LOUTUNITS(6) m
+S_START(6) 0.0
+S_STOP(6) 1000.0
+SINT(6) 5.0
+AUTODETAIL(6) Road
+COLOR(7) 1 1 1
+MATERIAL(7) White Line
+SPECULAR(7) 1.0
+SCALE(7) 12.0
+LTILES(7) 1.0
+LIN(7) -5.55
+LINUNITS(7) m
+LOUT(7) -5.4
+LOUTUNITS(7) m
+S_START(7) 0.0
+S_STOP(7) 1000.0
+SINT(7) 3.0
+IPRINT(7) 4.0
+DZ(7) 0.005
+AUTODETAIL(7) Road
+COLOR(8) 1 1 1
+MATERIAL(8) Pavement
+SPECULAR(8) 1.0
+SCALE(8) 10.0
+LTILES(8) 1.0
+LIN(8) -5.475
+LINUNITS(8) m
+LOUT(8) -1.825
+LOUTUNITS(8) m
+S_START(8) 0.0
+S_STOP(8) 1000.0
+SINT(8) 5.0
+AUTODETAIL(8) Road
+COLOR(9) 1 1 1
+MATERIAL(9) White Line
+SPECULAR(9) 1.0
+SCALE(9) 12.0
+LTILES(9) 1.0
+LIN(9) -2.075
+LINUNITS(9) m
+LOUT(9) -1.925
+LOUTUNITS(9) m
+S_START(9) 0.0
+S_STOP(9) 1000.0
+SINT(9) 5.0
+DZ(9) 0.005
+AUTODETAIL(9) Foliage
+COLOR(10) 0.753 0.753 0.753
+MATERIAL(10) Concrete
+SPECULAR(10) 1.0
+SCALE(10) 15.0
+LTILES(10) 0.5
+LIN(10) -1.825
+LINUNITS(10) m
+LOUT(10) 1.825
+LOUTUNITS(10) m
+LDIV(10) 4.0
+S_START(10) 0.0
+S_STOP(10) 1000.0
+SINT(10) 5.0
+AUTODETAIL(10) Foliage
+COLOR(11) 1 1 1
+MATERIAL(11) White Line
+SPECULAR(11) 1.0
+SCALE(11) 12.0
+LTILES(11) 1.0
+LIN(11) 1.925
+LINUNITS(11) m
+LOUT(11) 2.075
+LOUTUNITS(11) m
+S_START(11) 0.0
+S_STOP(11) 1000.0
+SINT(11) 5.0
+DZ(11) 0.005
+AUTODETAIL(11) Foliage
+COLOR(12) 1 1 1
+MATERIAL(12) Pavement
+SPECULAR(12) 1.0
+SCALE(12) 10.0
+LTILES(12) 1.0
+LIN(12) 1.825
+LINUNITS(12) m
+LOUT(12) 5.475
+LOUTUNITS(12) m
+S_START(12) 0.0
+S_STOP(12) 1000.0
+SINT(12) 5.0
+AUTODETAIL(12) Road
+COLOR(13) 1 1 1
+MATERIAL(13) White Line
+SPECULAR(13) 1.0
+SCALE(13) 12.0
+LTILES(13) 1.0
+LIN(13) 5.4
+LINUNITS(13) m
+LOUT(13) 5.55
+LOUTUNITS(13) m
+S_START(13) 0.0
+S_STOP(13) 1000.0
+SINT(13) 3.0
+IPRINT(13) 4.0
+DZ(13) 0.005
+AUTODETAIL(13) Road
+COLOR(14) 1 1 1
+MATERIAL(14) Pavement
+SPECULAR(14) 1.0
+SCALE(14) 10.0
+LTILES(14) 1.0
+LIN(14) 5.475
+LINUNITS(14) m
+LOUT(14) 9.125
+LOUTUNITS(14) m
+S_START(14) 0.0
+S_STOP(14) 1000.0
+SINT(14) 5.0
+AUTODETAIL(14) Road
+COLOR(15) 1 1 1
+MATERIAL(15) White Line
+SPECULAR(15) 1.0
+SCALE(15) 12.0
+LTILES(15) 1.0
+LIN(15) 9.05
+LINUNITS(15) m
+LOUT(15) 9.2
+LOUTUNITS(15) m
+S_START(15) 0.0
+S_STOP(15) 1000.0
+SINT(15) 3.0
+IPRINT(15) 4.0
+DZ(15) 0.005
+AUTODETAIL(15) Road
+COLOR(16) 1 1 1
+MATERIAL(16) White Line
+SPECULAR(16) 1.0
+SCALE(16) 12.0
+LTILES(16) 1.0
+LIN(16) 12.475
+LINUNITS(16) m
+LOUT(16) 12.625
+LOUTUNITS(16) m
+S_START(16) 0.0
+S_STOP(16) 1000.0
+SINT(16) 5.0
+DZ(16) 0.005
+AUTODETAIL(16) Road
+COLOR(17) 1 1 1
+MATERIAL(17) Pavement
+SPECULAR(17) 1.0
+SCALE(17) 10.0
+LTILES(17) 1.0
+LIN(17) 9.125
+LINUNITS(17) m
+LOUT(17) 12.775
+LOUTUNITS(17) m
+S_START(17) 0.0
+S_STOP(17) 1000.0
+SINT(17) 5.0
+AUTODETAIL(17) Road
+COLOR(18) 0.753 0.753 0.753
+MATERIAL(18) Cement (Pitted)
+SPECULAR(18) 0.35
+SCALE(18) 2.5
+LTILES(18) 0.25
+LIN(18) 12.775
+LINUNITS(18) m
+LOUT(18) 13.975
+LOUTUNITS(18) m
+S_START(18) 0.0
+S_STOP(18) 1000.0
+SINT(18) 5.0
+AUTODETAIL(18) Foliage
+COLOR(19) 0.753 0.753 0.753
+MATERIAL(19) Cement (Pitted)
+SPECULAR(19) 0.35
+SCALE(19) 2.5
+LTILES(19) 0.5
+LIN(19) 13.975
+LINUNITS(19) m
+LOUT(19) 16.422
+LOUTUNITS(19) m
+S_START(19) 0.0
+S_STOP(19) 1000.0
+SINT(19) 5.0
+AUTODETAIL(19) Foliage
+MTL_FILE Animator\Road_Materials\road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Scenic Road Shapes } 6-Lane Highway (Divided)
+#Library : Road: Animator Surface Shapes
+#DataSet : 6-Lane Highway (Divided)
+#Category: Scenic Road Shapes
+#FileID  : RdShape_02a6d25a-9fa0-4b66-a6c7-2c9bff3aab5e
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

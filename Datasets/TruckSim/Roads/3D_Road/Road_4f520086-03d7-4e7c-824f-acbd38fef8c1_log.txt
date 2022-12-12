@@ -1,0 +1,25 @@
+Run made by VS Road Calculator at 17:27 on May 19, 2022.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_4f520086-03d7-4e7c-824f-acbd38fef8c1.par"
+Include PARSFILE "Roads\Center_XYZ\RoadXYZ_2bb1602c-d9d3-47a5-a001-10dc82f47c21.par"
+Used Dataset: Road: X-Y-Z Coordinates of Reference Line; { Atlas } I-94 Exit 172
+Include PARSFILE "Roads\dZ_Map_V_Wdth\VarWidZ_815d1b75-28a5-487b-9325-ae40641b7ebc.par"
+Used Dataset: Road: Off-Center Elevation Map, Variable Width; { Highway Intersection Boundaries } I-94 Exit Lane Edges (Basic)
+Include PARSFILE "Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } Constant: 0.85
+Include PARSFILE "Roads\Shapes\RdShape_1435e02f-211f-4de3-9eed-77a5299e3952.par"
+Used Dataset: Road: Animator Surface Shapes; { Highway Intersection } I-94 N Exit 172 (Basic)
+Include PARSFILE "Roads\3D_Road\Road_4f520086-03d7-4e7c-824f-acbd38fef8c1.ani"
+Used Dataset: Road: 3D Surface (All Properties); { Atlas and ADAS RP Map Downloads } I-94 Exit 172 to Jackson Ave (Basic)
+
+Time to read input = 0.0007028
+Function ROAD_ZS_TABLE(1) extrapolated (out of range LOW) for X = 0 m at T = 14.4
+
+Run stopped at t = 14.4. Stop time reached.
+
+Run started: VS output file = Roads\3D_Road\Road_4f520086-03d7-4e7c-824f-acbd38fef8c1.vsb
+
+Computational time ratio: RTIME = inf (real time)/(simulation time)
+

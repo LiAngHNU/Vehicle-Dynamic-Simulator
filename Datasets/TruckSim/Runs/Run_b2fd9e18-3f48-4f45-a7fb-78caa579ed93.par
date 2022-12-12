@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Const. Radius, 10% Bank`Handling and Stability Tests
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_b2fd9e18-3f48-4f45-a7fb-78caa579ed93
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_cc71b65b-8257-41e6-b7a1-2d1ed36a3974.par
+#BlueLink2 Vehicle: Loaded Combination`2A Tour Bus (S_S), Two Payloads` Tour Buses` , Math Model`VehLoad_cc71b65b-8257-41e6-b7a1-2d1ed36a3974
+
+PARSFILE Procedures\Proc_32120b5f-f59b-4ee2-a24a-663cc3928239.par
+#BlueLink28 Procedures`500 ft Circle (10% Bank) - Ramp Speed` Handling Tests` , Procedure`Proc_32120b5f-f59b-4ee2-a24a-663cc3928239
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_5cb9979d-3686-4654-8ce0-3c30f81bd36c.png
+WRITE_SENSOR_DETECT
+Title Const. Radius, 10% Bank <Handling and Stability Tests>
+CATEGORY Handling and Stability Tests 
+DATASET_TITLE Const. Radius, 10% Bank
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#NOTE: For TruckSim 2020.0, this example now includes the effects of the brake system transport delay parameter, math model keyword TLAG_BK. This is a pure time delay between the master cylinder and the brake actuator.
+#
+#This example demonstrates a 2A Tour Bus driving on a 500-ft radius circle with a constant 10% bank angle. Roads like these might not exist at physical proving ground facilities, but you can use TruckSim to test vehicles on experimental roads such as this one here.
+#
+#The Procedure uses the Target Speed vs. Time dataset to ramp the speed from 0 km/h to 50 km/h over a period of 15 seconds.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Handling and Stability Tests } Const. Radius, 10% Bank
+#Library : TruckSim Run Control
+#DataSet : Const. Radius, 10% Bank
+#Category: Handling and Stability Tests
+#FileID  : Run_b2fd9e18-3f48-4f45-a7fb-78caa579ed93
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

@@ -1,0 +1,284 @@
+PARSFILE
+#FullDataName Scene: External Import`Rural Scene`VS Scene Builder
+#VehCode VS Terrain Scene
+ADD_REFERENCE_FRAME Straight_300_01
+add_obj Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/Straight_300_01.OSG
+vsv_enable_shadows_recursive
+SET_ANGLE_Z -90.000000
+SET_OFFSET_X 150.000000
+SET_OFFSET_Y -149.999600
+SET_OFFSET_Z 0.000000
+ADD_REFERENCE_FRAME 4_Way_02
+add_obj Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/4_Way_02.OSG
+vsv_enable_shadows_recursive
+SET_ANGLE_Z 0.000000
+SET_OFFSET_X 450.000000
+SET_OFFSET_Y -150.000000
+SET_OFFSET_Z 0.000000
+ADD_REFERENCE_FRAME Transition_Urban_Rural_01
+add_obj Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Urban/Mesh/Vsv/Transition_Urban_Rural_01.OSG
+vsv_enable_shadows_recursive
+SET_ANGLE_Z -180.000000
+SET_OFFSET_X -350.000000
+SET_OFFSET_Y -1049.999400
+SET_OFFSET_Z 0.000000
+ADD_REFERENCE_FRAME Transition_Urban_Rural_01
+add_obj Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Urban/Mesh/Vsv/Transition_Urban_Rural_01_Buildings.OSG
+SET_ANGLE_Z -180.000000
+SET_OFFSET_X -350.000000
+SET_OFFSET_Y -1049.999400
+SET_OFFSET_Z 0.000000
+ADD_REFERENCE_FRAME T_01
+add_obj Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/T_01.OSG
+vsv_enable_shadows_recursive
+SET_ANGLE_Z 0.000000
+SET_OFFSET_X -150.000000
+SET_OFFSET_Y -1050.000000
+SET_OFFSET_Z 0.000000
+ADD_REFERENCE_FRAME Straight_300_02
+add_obj Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/Straight_300_02.OSG
+vsv_enable_shadows_recursive
+SET_ANGLE_Z 0.000000
+SET_OFFSET_X -150.000000
+SET_OFFSET_Y -450.000000
+SET_OFFSET_Z 0.000000
+ADD_REFERENCE_FRAME Field_02
+add_obj Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/Field_02.OSG
+vsv_enable_shadows_recursive
+SET_ANGLE_Z 0.000000
+SET_OFFSET_X 150.000000
+SET_OFFSET_Y -450.000000
+SET_OFFSET_Z 0.000000
+ADD_REFERENCE_FRAME Field_03
+add_obj Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/Field_03.OSG
+vsv_enable_shadows_recursive
+SET_ANGLE_Z 0.000000
+SET_OFFSET_X 150.000000
+SET_OFFSET_Y -750.000000
+SET_OFFSET_Z 0.000000
+ADD_REFERENCE_FRAME Straight_300_02
+add_obj Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/Straight_300_02.OSG
+vsv_enable_shadows_recursive
+SET_ANGLE_Z 0.000000
+SET_OFFSET_X -150.000000
+SET_OFFSET_Y -750.000000
+SET_OFFSET_Z 0.000000
+ADD_REFERENCE_FRAME 90_Turn_01
+add_obj Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/90_Turn_01.OSG
+vsv_enable_shadows_recursive
+SET_ANGLE_Z 0.000000
+SET_OFFSET_X -150.000100
+SET_OFFSET_Y -150.000000
+SET_OFFSET_Z 0.000000
+
+
+DEFINE_PATHS   1
+IPATH = NPATH
+PATH_ID IPATH
+OPT_PATH_START 0
+OPT_PATH_LOOP 0
+SPATH_START 0
+PATH_ID_DM  = PATH_ID
+set_description path_id Ego_vehicle
+NSEGMENTS   1
+IPATHSEG 1
+SEGMENT_TYPE 1
+DEFINE_XY_TABLES 1
+ITAB_XY = NTAB_XY
+XY_TABLE_ID = ITAB_XY
+SET_DESCRIPTION XY_TABLE_ID Ego_vehicle Segment 1
+XY_SEGMENT_ID = XY_TABLE_ID
+SEGMENT_XY_TABLE
+-148.208000, -900.000000, -0.000023, 0.000000
+-148.208000, -840.702000, -0.000020, 59.298000
+-148.208000, -659.648800, -0.000018, 240.351200
+-148.208000, -600.000000, 0.000000, 300.000000
+-148.208000, -540.702000, -0.000020, 359.298000
+-148.208000, -359.648800, -0.000018, 540.351200
+-148.208000, -300.000000, -0.000017, 600.000000
+-148.208100, -246.078400, -0.000019, 653.921600
+-148.190200, -242.156800, -0.000019, 657.843241
+-148.158600, -238.235300, -0.000019, 661.764868
+-148.134000, -234.313700, -0.000019, 665.686545
+-148.134000, -230.392100, -0.000019, 669.608145
+-148.134000, -226.470600, -0.000019, 673.529645
+-148.134000, -222.549000, -0.000019, 677.451245
+-148.134000, -218.627400, -0.000019, 681.372845
+-148.134000, -214.705800, -0.000019, 685.294445
+-148.070900, -210.869600, -0.000019, 689.131164
+-147.781900, -207.074500, -0.000019, 692.937252
+-147.259900, -203.304500, -0.000019, 696.743219
+-146.506700, -199.573700, -0.000019, 700.549290
+-145.525300, -195.896400, -0.000019, 704.355296
+-144.319400, -192.286500, -0.000019, 708.161288
+-142.893500, -188.757700, -0.000019, 711.967286
+-141.253100, -185.323300, -0.000018, 715.773336
+-139.404400, -181.996400, -0.000018, 719.579378
+-137.354400, -178.789600, -0.000018, 723.385434
+-135.110800, -175.715200, -0.000018, 727.191440
+-132.682300, -172.784700, -0.000018, 730.997414
+-130.078000, -170.009200, -0.000018, 734.803433
+-127.307700, -167.399300, -0.000018, 738.609499
+-124.382000, -164.964900, -0.000018, 742.415550
+-121.312000, -162.715300, -0.000018, 746.221545
+-118.109400, -160.658900, -0.000018, 750.027518
+-114.786200, -158.803600, -0.000017, 753.833539
+-111.355100, -157.156300, -0.000017, 757.639593
+-107.829100, -155.723400, -0.000017, 761.445625
+-104.221600, -154.510300, -0.000017, 765.251629
+-100.546200, -153.521500, -0.000017, 769.057715
+-96.817000, -152.761000, -0.000016, 772.863670
+-93.048000, -152.231400, -0.000016, 776.669696
+-89.253500, -151.934800, -0.000016, 780.475770
+-85.421100, -151.866000, -0.000016, 784.308788
+-81.499500, -151.866000, -0.000016, 788.230388
+-77.578000, -151.866000, -0.000015, 792.151888
+-73.656400, -151.866000, -0.000015, 796.073488
+-69.734800, -151.866000, -0.000015, 799.995088
+-65.813200, -151.842700, -0.000015, 803.916757
+-61.891700, -151.826900, -0.000014, 807.838289
+-57.970100, -151.811100, -0.000014, 811.759921
+-53.880700, -151.792000, -0.000014, 815.849365
+-0.000100, -151.792000, 0.000000, 869.729965
+59.298000, -151.791600, -0.000020, 929.028065
+240.351200, -151.791600, -0.000018, 1110.081265
+300.000000, -151.791600, -0.000017, 1169.730065
+ENDTABLE
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+SMTH_MULT 1.0
+SMTH_MINACC 1.0
+JSON_FILENAME Scene_Import\VS_Scene_Builder\Rural.vsscene
+VS_TERRAIN_FILE Scene_Import\VS_Scene_Builder\Rural.vsterrain
+#RingCtrl0 1
+SMTH_PASS 1
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!  Warning: Raw Data Below  !!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!  Do Not Edit  !!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Table Columns:
+!   NOTE: Label columns are not written to parsfile.
+!
+! 0: (Text) Describes the import object type (PATH or SEGM)
+! 1: (Text) Describes the import object internal ID
+! 2: (Text) Describes the import object name
+! 3: (Text) Id of segment linked to by a path
+! 4: (Text) X Coordinate of Segment definition
+! 5: (Text) Y Coordinate of Segment definition
+! 6: (Text) Z Coordinate of Segment definition
+! 7: (Text) S Coordinate of Segment definition
+! 8: (Text) Heading of a segment linked to by a path
+! 9: (Text) RenderObject Title
+! 10: (Text) RenderObject Path
+! 11: (Text) RenderObject Z Angle
+! 12: (Text) RenderObject X Offset
+! 13: (Text) RenderObject Y Offset
+! 14: (Text) RenderObject Z Offset
+! 15: (Text) RenderObject No Shadows
+! 16: (Text) SensorObject Title
+! 17: (Text) SensorObject X
+! 18: (Text) SensorObject Y
+! 19: (Text) SensorObject Height
+! 20: (Text) SensorObject Diameter
+! 21: (Text) SensorObject Type
+! 22: (Text) SensorObject Message
+! 23: (Text) Path is looped
+#MIXTABLE0
+#NUMROWS 66
+#SEGM, 0, , , -148.208000, -900.000000, -0.000023, 0.000000, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -148.208000, -840.702000, -0.000020, 59.298000, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -148.208000, -659.648800, -0.000018, 240.351200, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -148.208000, -600.000000, 0.000000, 300.000000, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -148.208000, -540.702000, -0.000020, 359.298000, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -148.208000, -359.648800, -0.000018, 540.351200, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -148.208000, -300.000000, -0.000017, 600.000000, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -148.208100, -246.078400, -0.000019, 653.921600, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -148.190200, -242.156800, -0.000019, 657.843241, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -148.158600, -238.235300, -0.000019, 661.764869, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -148.134000, -234.313700, -0.000019, 665.686546, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -148.134000, -230.392100, -0.000019, 669.608146, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -148.134000, -226.470600, -0.000019, 673.529646, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -148.134000, -222.549000, -0.000019, 677.451246, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -148.134000, -218.627400, -0.000019, 681.372846, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -148.134000, -214.705800, -0.000019, 685.294446, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -148.070900, -210.869600, -0.000019, 689.131165, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -147.781900, -207.074500, -0.000019, 692.937253, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -147.259900, -203.304500, -0.000019, 696.743220, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -146.506700, -199.573700, -0.000019, 700.549291, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -145.525300, -195.896400, -0.000019, 704.355297, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -144.319400, -192.286500, -0.000019, 708.161288, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -142.893500, -188.757700, -0.000019, 711.967286, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -141.253100, -185.323300, -0.000018, 715.773336, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -139.404400, -181.996400, -0.000018, 719.579378, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -137.354400, -178.789600, -0.000018, 723.385435, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -135.110800, -175.715200, -0.000018, 727.191440, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -132.682300, -172.784700, -0.000018, 730.997415, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -130.078000, -170.009200, -0.000018, 734.803433, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -127.307700, -167.399300, -0.000018, 738.609500, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -124.382000, -164.964900, -0.000018, 742.415551, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -121.312000, -162.715300, -0.000018, 746.221546, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -118.109400, -160.658900, -0.000018, 750.027518, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -114.786200, -158.803600, -0.000017, 753.833540, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -111.355100, -157.156300, -0.000017, 757.639593, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -107.829100, -155.723400, -0.000017, 761.445625, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -104.221600, -154.510300, -0.000017, 765.251629, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -100.546200, -153.521500, -0.000017, 769.057715, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -96.817000, -152.761000, -0.000016, 772.863670, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -93.048000, -152.231400, -0.000016, 776.669697, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -89.253500, -151.934800, -0.000016, 780.475771, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -85.421100, -151.866000, -0.000016, 784.308788, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -81.499500, -151.866000, -0.000016, 788.230388, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -77.578000, -151.866000, -0.000015, 792.151888, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -73.656400, -151.866000, -0.000015, 796.073488, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -69.734800, -151.866000, -0.000015, 799.995088, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -65.813200, -151.842700, -0.000015, 803.916758, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -61.891700, -151.826900, -0.000014, 807.838289, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -57.970100, -151.811100, -0.000014, 811.759921, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -53.880700, -151.792000, -0.000014, 815.849366, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , -0.000100, -151.792000, 0.000000, 869.729966, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 59.298000, -151.791600, -0.000020, 929.028066, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 240.351200, -151.791600, -0.000018, 1110.081266, , , , , , , , , , , , , , , , 
+#SEGM, 0, , , 300.000000, -151.791600, -0.000017, 1169.730066, , , , , , , , , , , , , , , , 
+#PATH, 0, Ego_vehicle, 0, , , , , 0.000000, , , , , , , , , , , , , , , 0
+#REND, , , , , , , , , Straight_300_01, Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/Straight_300_01.OSG, -90.000000, 150.000000, -149.999600, 0.000000, 0, , , , , , , , 
+#REND, , , , , , , , , 4_Way_02, Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/4_Way_02.OSG, -0.000000, 450.000000, -150.000000, 0.000000, 0, , , , , , , , 
+#REND, , , , , , , , , Transition_Urban_Rural_01, Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Urban/Mesh/Vsv/Transition_Urban_Rural_01.OSG, -180.000000, -350.000000, -1049.999400, 0.000000, 0, , , , , , , , 
+#REND, , , , , , , , , Transition_Urban_Rural_01, Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Urban/Mesh/Vsv/Transition_Urban_Rural_01_Buildings.OSG, -180.000000, -350.000000, -1049.999400, 0.000000, 1, , , , , , , , 
+#REND, , , , , , , , , T_01, Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/T_01.OSG, -0.000000, -150.000000, -1050.000000, 0.000000, 0, , , , , , , , 
+#REND, , , , , , , , , Straight_300_02, Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/Straight_300_02.OSG, -0.000000, -150.000000, -450.000000, 0.000000, 0, , , , , , , , 
+#REND, , , , , , , , , Field_02, Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/Field_02.OSG, -0.000000, 150.000000, -450.000000, 0.000000, 0, , , , , , , , 
+#REND, , , , , , , , , Field_03, Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/Field_03.OSG, -0.000000, 150.000000, -750.000000, 0.000000, 0, , , , , , , , 
+#REND, , , , , , , , , Straight_300_02, Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/Straight_300_02.OSG, -0.000000, -150.000000, -750.000000, 0.000000, 0, , , , , , , , 
+#REND, , , , , , , , , 90_Turn_01, Animator/3D_Shape_Files/VS_SceneBuilder/Resources/Tilesets/Rural/Mesh/Vsv/90_Turn_01.OSG, -0.000000, -150.000100, -150.000000, 0.000000, 0, , , , , , , , 
+#, , , , , , , , , , , , , , , , , , , , , , , 
+#ENDTABLE
+
+! Table Columns:
+!   NOTE: Label columns are not written to parsfile.
+!
+! 0: (Ring) Choose Yes to set a custom Path ID
+! 1: (Text) Path ID (if active; ignored otherwise)  Specify an integer 999 or greater to identify this reference path. If a path already exists with this ID, then information from this dataset will override the properties of the existing path. If not, a new one will be added to the model.
+! 2: (Text) Path Description
+! 3: (Text) Starting Station for path
+! 4: (Text) Ending Station for path (calculated)
+! 5: (Text) Path Length (calculated)
+! 6: (Text) Start X location (Global Coordinates)
+! 7: (Text) Start Y location (Global Coordinates)
+! 8: (Ring) Choose Yes to set path as looped.
+#MIXTABLE1
+#NUMROWS 1
+#No, 1000, Ego_vehicle, 0, 1169.730, 1169.730, -148.208, -900.000, No
+#ENDTABLE
+
+LOG_ENTRY Used Dataset: Scene: External Import; { VS Scene Builder } Rural Scene
+#Library : Scene: External Import
+#DataSet : Rural Scene
+#Category: VS Scene Builder
+#FileID  : SceneImp_f1b29889-0f83-4434-8e6d-a90fc08aa446
+#Product : TruckSim 2020.1
+#VehCode VS Terrain Scene
+
+END

@@ -1,0 +1,99 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Radar Active Cruise: Second Truck`Simulink and LabVIEW
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_fff10c6c-446c-4559-9a1e-7b6e3a4020e6
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_4700daa6-ba1c-4dad-bcb2-d3a25ac2d08b.par
+#BlueLink12 Models: Simulink`ACC: Second Truck (Ext. Sen.)` Active Cruise Control` , Models`Simlink_4700daa6-ba1c-4dad-bcb2-d3a25ac2d08b
+
+PARSFILE Animator\Cameras\Camera_c40f19aa-92ca-4469-8121-69574d61ada2.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 10 El, 42 m` Vehicle Reference` , Animator camera`Camera_c40f19aa-92ca-4469-8121-69574d61ada2
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`LCF Van` 2A LCF Van` , Math Model`Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80
+
+PARSFILE Procedures\Proc_775010ea-5ed6-4c01-b334-c31f04238c6f.par
+#BlueLink28 Procedures`Radar Active Cruise Control: 2nd Truck` Sensors and Traffic` , Procedure`Proc_775010ea-5ed6-4c01-b334-c31f04238c6f
+
+
+SPECIAL_PARSFILE Runs\Run_847d4cba-de30-43e5-821a-fbd87c1c71e8.par
+#BlueLink23 TruckSim Run Control`Radar Active Cruise: First Truck` Simulink and LabVIEW` , Overlay run or ERD file`Run_847d4cba-de30-43e5-821a-fbd87c1c71e8
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Lead_2a\Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80.png
+WRITE_SENSOR_DETECT
+Title Radar Active Cruise: Second Truck <Simulink and LabVIEW>
+CATEGORY Simulink and LabVIEW 
+DATASET_TITLE Radar Active Cruise: Second Truck
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example was updated in version 2018 to use a modular solver dll.
+#
+#This example, combined with the corresponding overlaid example, demonstrates how to use two TruckSim S-Function blocks in a single Simulink model to simulate an Active Cruise Control example.
+#
+#The trailing vehicle (this vehicle) has a radar-based active cruise control system that tracks the vehicle in front of it (overlay).
+#
+#In order to run this example with Simulink, follow these steps:
+#
+#1. If running a 64-bit version of Simulink, then proceed to Step 2.
+#
+#If running a 32-bit version of Simulink, an adjustment will have to be made. Click on the blue link under the "Send to Simulink" button -- Radar Active Cruise: Second Truck (Ext. Sen.) -- and read the notes on that Models: Simulink screen. Change the specified DLL file name for the respective 64-bit math model DLL.
+#
+#After this change, return to this Run Control screen.
+#
+#2. Click the "Send to Simulink" button from this Run Control screen (i.e., the second vehicle)
+#
+#3. Click on the overlaid Run Control blue link for the first vehicle -- Radar Active Cruise: First Truck (Ext. Sen.) -- to view that Run Control dataset, and click the "Send to Simulink" button (if you haven't done so already).
+#
+#4. Go to Simulink and run the model. Output data are generated for both vehicle models.
+#
+#For more details on this example, please see the Technical Memo: "Example: Running Multiple Vehicles in Simulink."
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Simulink and LabVIEW } Radar Active Cruise: Second Truck
+#Library : TruckSim Run Control
+#DataSet : Radar Active Cruise: Second Truck
+#Category: Simulink and LabVIEW
+#FileID  : Run_fff10c6c-446c-4559-9a1e-7b6e3a4020e6
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

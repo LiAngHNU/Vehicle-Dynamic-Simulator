@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Figure 8`Road Segment Builder
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_bab5cf34-a537-4b55-9c02-5054df2331f2.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Figure 8
+PARSFILE Roads\Builder\Build_965232ae-5c80-4628-a48b-6f3b85de2fb8.par
+#BlueLink0 Path/Road: Segment Builder (Simple 3D)`Figure 8` Paths with Banking` , Reference Path`Build_965232ae-5c80-4628-a48b-6f3b85de2fb8
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Figure 8
+PARSFILE Roads\Shapes\RdShape_5ac6aaa4-74f5-4faf-b871-5d9690d38392.par
+#BlueLink4 Road: Animator Surface Shapes`Figure 8` Looped Roads` , Road shape definitions`RdShape_5ac6aaa4-74f5-4faf-b871-5d9690d38392
+
+RR_SURF_CONSTANT 1
+*IMAGE_FIT_MODE 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_265e38de-4bbf-46ee-bbc0-868db110b76d.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 3 El, 44 m` Road Reference` , Camera`Camera_265e38de-4bbf-46ee-bbc0-868db110b76d
+
+parsfile Roads\3D_Road\Road_bab5cf34-a537-4b55-9c02-5054df2331f2.ani
+
+#EMBEDDED_NOTES
+#All of the geometry for this example road was created using the Road Segment Builder.
+#
+#The Road Segment Builder is a spreadsheet tool with built-in formulas for creating straight and curved segments, elevation, and cross slope (banking), as well as road coefficients of friction.
+#
+#Follow the blue link Centerline geometry: Road Segment Builder to see where it was created.
+#
+#
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Road Segment Builder } Figure 8
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Figure 8
+#Category: Road Segment Builder
+#FileID  : Road_bab5cf34-a537-4b55-9c02-5054df2331f2
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

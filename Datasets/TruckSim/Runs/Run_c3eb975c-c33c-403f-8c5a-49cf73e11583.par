@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Split Mu on Hill: Tractor Trailer w/o ABS`Brake Tests
+#VEHICLECODE S_S + S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_c3eb975c-c33c-403f-8c5a-49cf73e11583
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_293071ae-9194-4088-8862-92255ece0a0f.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 48 m` Vehicle Reference` , Animator camera`Camera_293071ae-9194-4088-8862-92255ece0a0f
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+SET_RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_092e15ae-074f-4d7c-a3b2-5f1399a953a3.par
+#BlueLink2 Vehicle: Loaded Combination`2A Day+1A Trl, No ABS` Day-Cab Tractor-Trailers` , Math Model`VehLoad_092e15ae-074f-4d7c-a3b2-5f1399a953a3
+
+PARSFILE Procedures\Proc_6641ed51-49bd-49fd-9575-7e0022f4435b.par
+#BlueLink28 Procedures`Braking: Split Mu on Hill (Air)` Acceleration and Braking` , Procedure`Proc_6641ed51-49bd-49fd-9575-7e0022f4435b
+
+
+SPECIAL_PARSFILE Runs\Run_954c4401-fd7f-4ff2-8a4b-64b16ea292ea.par
+#BlueLink23 TruckSim Run Control`Split Mu on Hill: Tractor Trailer w/ ABS` Brake Tests` , Overlay run or ERD file`Run_954c4401-fd7f-4ff2-8a4b-64b16ea292ea
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_135ced7b-75b6-4a58-a554-9ed8958443d3.png
+WRITE_SENSOR_DETECT
+Title Split Mu on Hill: Tractor Trailer w/o ABS <Brake Tests>
+CATEGORY Brake Tests 
+DATASET_TITLE Split Mu on Hill: Tractor Trailer w/o ABS
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates a 2A tractor towing a 1A trailer performing a split-mu stop on a downhill portion of road.
+#
+#Neither the tractor nor the trailer are using the internal TruckSim ABS model.
+#
+#This example is overlaid with a test in which nearly the same tractor and trailer are used, but both have the internal TruckSim ABS model selected.
+#
+#Review the plots and animation to see what happens when an ABS system is not employed on a vehicle performing a split-mu stop.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Brake Tests } Split Mu on Hill: Tractor Trailer w/o ABS
+#Library : TruckSim Run Control
+#DataSet : Split Mu on Hill: Tractor Trailer w/o ABS
+#Category: Brake Tests
+#FileID  : Run_c3eb975c-c33c-403f-8c5a-49cf73e11583
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

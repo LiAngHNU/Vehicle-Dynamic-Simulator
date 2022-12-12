@@ -1,0 +1,372 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`90 deg. turns: 200 m Right, 100 m Left`Scenic Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_d0257a3c-777f-4024-b1e2-562f5ca2da94.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 90 deg. turns: 200 m Right, 100 m Left
+PARSFILE Roads\BuilderSegment\RoadSeg_b0a4b822-03d1-4ad7-9805-c8af6076fb0b.par
+#BlueLink0 Path: Segment Builder`200-m Radius Right, 100-m Radius Left` S-Turns` , Reference Path`RoadSeg_b0a4b822-03d1-4ad7-9805-c8af6076fb0b
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: 200-m Radius Right, 100-m Radius Left
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_159abd60-109f-41ed-9cfd-08db306b1650.par
+#BlueLink4 Road: Animator Surface Shapes`1200m Road+40m Light Grass` Roads` , Road shape definitions`RdShape_159abd60-109f-41ed-9cfd-08db306b1650
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+add_reference_frame road_stuff_7_Trees_for_Scenic_Road,_200m_RH,_100m_LH
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_a21efee4-8e15-4557-8418-92697664b338.par
+#BlueLink7 Road: Animator Repeated Object`Trees for Scenic Road, 200m RH, 100m LH` Trees` , 3D Shapes`AniRep_a21efee4-8e15-4557-8418-92697664b338
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_d0257a3c-777f-4024-b1e2-562f5ca2da94.ani
+
+add_reference_frame road_stuff_1_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 0
+set_offset_var_y -15
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_2_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 30
+set_offset_var_y 15
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_3_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 90
+set_offset_var_y -15
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_4_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 120
+set_offset_var_y 15
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_5_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 150
+set_offset_var_y -15
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_6_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 180
+set_offset_var_y 15
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_7_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 209.246146315
+set_offset_var_y -15.2312018269
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_8_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 242.713906121
+set_offset_var_y 10.7143142359
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_9_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 263.436094379
+set_offset_var_y -26.2160481232
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_10_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 303.0764908
+set_offset_var_y -11.3197491936
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_11_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 311.959485061
+set_offset_var_y -52.7244972684
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_12_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 354.231559543
+set_offset_var_y -50.2080574904
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_13_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 350.481868386
+set_offset_var_y -92.3886284492
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_14_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 391.609582413
+set_offset_var_y -102.476833894
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_15_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 375.562154581
+set_offset_var_y -141.665362957
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_16_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 411.871691948
+set_offset_var_y -163.457064276
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_17_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 384.959996375
+set_offset_var_y -196.152956856
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_18_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 417.822153631
+set_offset_var_y -221.720993672
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_19_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 402.468496353
+set_offset_var_y -260.931156204
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_20_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 444.440292227
+set_offset_var_y -264.328212101
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_21_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 453.908095211
+set_offset_var_y -305.359082726
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_22_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 490.467035211
+set_offset_var_y -284.463735309
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_23_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 518.761101962
+set_offset_var_y -315
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_24_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 548.761101962
+set_offset_var_y -285
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_25_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 578.761101962
+set_offset_var_y -315
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_26_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 608.761101962
+set_offset_var_y -285
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_27_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 638.761101962
+set_offset_var_y -315
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_28_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 668.761101962
+set_offset_var_y -285
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_29_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 698.761101962
+set_offset_var_y -315
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_30_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 728.761101962
+set_offset_var_y -285
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_31_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 758.761101962
+set_offset_var_y -315
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_32_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 788.761101962
+set_offset_var_y -285
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_33_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 818.761101962
+set_offset_var_y -315
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_34_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 848.761101962
+set_offset_var_y -285
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_35_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 878.761101962
+set_offset_var_y -315
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_36_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 908.761101962
+set_offset_var_y -285
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_37_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 928.761101962
+set_offset_var_y -315
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_38_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 958.761101962
+set_offset_var_y -285
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+add_reference_frame road_stuff_39_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 988.761101962
+set_offset_var_y -315
+set_offset_var_z 0
+parsfile Animator\STL\Shape_51952d1e-d92f-427c-bfd9-9de7455efbc9.par
+
+#EMBEDDED_NOTES
+#This is an S-turn composed of a 90 deg. right turn of 200 m radius, followed immediately by a 90 deg. left turn of 100 m radius.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Scenic Roads } 90 deg. turns: 200 m Right, 100 m Left
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 90 deg. turns: 200 m Right, 100 m Left
+#Category: Scenic Roads
+#FileID  : Road_d0257a3c-777f-4024-b1e2-562f5ca2da94
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName TruckSim Run Control`External Driver Model w/ Driver Sensors`Simulink and LabVIEW
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_306eca81-f11d-43e5-a321-90aff424ff4e
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_86202fc0-7d93-4abc-a5c4-d98e77f032c7.par
+#BlueLink12 Models: Simulink`Simple Driver Model` Steering` , Models`Simlink_86202fc0-7d93-4abc-a5c4-d98e77f032c7
+
+PARSFILE Animator\Cameras\Camera_f177b393-4607-4b3c-9b61-ceba09d3b71d.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 4.5 El, 48 m` Vehicle Reference` , Animator camera`Camera_f177b393-4607-4b3c-9b61-ceba09d3b71d
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_05b92676-94a0-495d-8a9b-f5789d420f04.par
+#BlueLink2 Vehicle: Loaded Combination`2A LCF, Payload, Driver Preview Pts` LCF Vans` , Math Model`VehLoad_05b92676-94a0-495d-8a9b-f5789d420f04
+
+PARSFILE Procedures\Proc_3260dd19-4cec-4909-a451-b9aaccca2726.par
+#BlueLink28 Procedures`External Driver Model` Driver Model, Extended and External` , Procedure`Proc_3260dd19-4cec-4909-a451-b9aaccca2726
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_9dc8d573-d8fc-4f9d-92f0-02b27f88cf1a.png
+WRITE_SENSOR_DETECT
+Title External Driver Model w/ Driver Sensors <Simulink and LabVIEW>
+CATEGORY Simulink and LabVIEW 
+DATASET_TITLE External Driver Model w/ Driver Sensors
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates the use of Simulink to define a driver model that calculates steering wheel angle for a 2A LCF Van driving on a curvy road.
+#
+#The Preview Points for External Driver Control dataset is used (linked on the Vehicle: Loaded Combination screen), which allow users to specify 5 preview points to be used by an externally defined driver model.
+#
+#The calculated steering wheel angle is set to replace the TruckSim-calculated steering wheel angle.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Simulink and LabVIEW } External Driver Model w/ Driver Sensors
+#Library : TruckSim Run Control
+#DataSet : External Driver Model w/ Driver Sensors
+#Category: Simulink and LabVIEW
+#FileID  : Run_306eca81-f11d-43e5-a321-90aff424ff4e
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

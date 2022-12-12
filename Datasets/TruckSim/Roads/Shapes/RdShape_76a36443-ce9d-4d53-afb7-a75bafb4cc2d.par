@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Big Grass, Road Network`Roundabout Network, Flat
+NLANES 1
+#MiscYellow0
+# 1 1 1, Grass (Light), 1, 20, 200, -2000, m, 2000, m, 1, 1, -2000, 2000, 25, 1, -0.04, Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Grass (Light)
+SPECULAR(1) 1
+SCALE(1) 20
+LTILES(1) 200
+LIN(1) -2000
+LINUNITS(1) m
+LOUT(1) 2000
+LOUTUNITS(1) m
+LDIV(1) 1
+LIPRINT(1) 1
+S_START(1) -2000
+S_STOP(1) 2000
+SINT(1) 25
+IPRINT(1) 1
+DZ(1) -0.04
+AUTODETAIL(1) Random
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Roundabout Network, Flat } Big Grass, Road Network
+#Library : Road: Animator Surface Shapes
+#DataSet : Big Grass, Road Network
+#Category: Roundabout Network, Flat
+#FileID  : RdShape_76a36443-ce9d-4d53-afb7-a75bafb4cc2d
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

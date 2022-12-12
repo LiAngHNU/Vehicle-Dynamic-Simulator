@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Exterior Ring Road`Parking Lot
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_6061ed25-33d4-4900-be82-ff380cb9a93a.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Exterior Ring Road
+PARSFILE Roads\Center_XY\PathXY_37103963-481e-4e3d-b99c-886800d461ee.par
+#BlueLink0 Path: X-Y Coordinates`Parking Lot: Exterior Ring Road` Parking Lot` , Reference Path`PathXY_37103963-481e-4e3d-b99c-886800d461ee
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Parking Lot: Exterior Ring Road
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_389fe670-ecae-428a-a13d-71849e7cb647.par
+#BlueLink4 Road: Animator Surface Shapes`Ring Road` Parking Lot` , Road shape definitions`RdShape_389fe670-ecae-428a-a13d-71849e7cb647
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_72ebbb07-0ed9-4606-a758-d7c406d515f8.par
+#BlueLink5 Animator: Camera Setup`Parking Lot Top` ADAS and Euro NCAP: Camera Views` , Camera`Camera_72ebbb07-0ed9-4606-a758-d7c406d515f8
+
+parsfile Roads\3D_Road\Road_6061ed25-33d4-4900-be82-ff380cb9a93a.ani
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Parking Lot } Exterior Ring Road
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Exterior Ring Road
+#Category: Parking Lot
+#FileID  : Road_6061ed25-33d4-4900-be82-ff380cb9a93a
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

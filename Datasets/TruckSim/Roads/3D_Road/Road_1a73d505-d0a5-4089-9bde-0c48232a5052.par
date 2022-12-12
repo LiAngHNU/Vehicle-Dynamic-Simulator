@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Brake Distance Test Road`Braking and Traction Control Test Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_1a73d505-d0a5-4089-9bde-0c48232a5052.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Brake Distance Test Road
+PARSFILE Roads\BuilderSegment\RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c.par
+#BlueLink0 Path: Segment Builder`Straight Path East` Straight` , Reference Path`RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight Path East
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_e011585d-4cca-4049-96ef-1bd9c237da67.par
+#BlueLink4 Road: Animator Surface Shapes`Braking Test Road` Roads` , Road shape definitions`RdShape_e011585d-4cca-4049-96ef-1bd9c237da67
+
+RR_SURF_CONSTANT 1
+*IMAGE_FIT_MODE 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_1a73d505-d0a5-4089-9bde-0c48232a5052.ani
+
+#EMBEDDED_NOTES
+#Brake distance test road.
+#
+#White line = 0 m
+#Yellow lines = 1 m
+#Red lines = 5 m
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Braking and Traction Control Test Roads } Brake Distance Test Road
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Brake Distance Test Road
+#Category: Braking and Traction Control Test Roads
+#FileID  : Road_1a73d505-d0a5-4089-9bde-0c48232a5052
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

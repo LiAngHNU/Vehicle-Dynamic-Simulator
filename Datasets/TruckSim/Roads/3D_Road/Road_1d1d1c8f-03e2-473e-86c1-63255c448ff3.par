@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Mcity Scene`VS Scene Builder
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_1d1d1c8f-03e2-473e-86c1-63255c448ff3.png
+#CheckBox0 0    
+
+PARSFILE Roads\ExScene\SceneImp_3f39538c-b4fc-4201-83ea-86b0f766191a.par
+#BlueLink0 Scene: External Import`Mcity Scene Import` VS Scene Builder` , Reference Path`SceneImp_3f39538c-b4fc-4201-83ea-86b0f766191a
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Overcast_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_9c7427e1-eb1e-41ca-a21a-68953da79276.par
+#BlueLink6 Animator: Group`Overcast Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_9c7427e1-eb1e-41ca-a21a-68953da79276
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+
+#EMBEDDED_NOTES
+#This version of Mcity was built with the Mcity tile from VS Scene Builder, along with two paths also from Scene Builder.
+#
+#Path 1 goes on State Street, around a roundabout at each end. Path 2 follows a loop around the whole area.
+#
+#Because it uses VS Terrain, it cannot be used on RT systems in the current version.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { VS Scene Builder } Mcity Scene
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Mcity Scene
+#Category: VS Scene Builder
+#FileID  : Road_1d1d1c8f-03e2-473e-86c1-63255c448ff3
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

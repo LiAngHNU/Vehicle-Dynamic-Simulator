@@ -1,0 +1,39 @@
+Run made by VS Road Calculator at 17:20 on May 08, 2022.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_ae0a4f63-b6e4-448d-ab4d-90c35cd3b1b7.par"
+Include PARSFILE "Roads\BuilderSegment\RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c.par"
+ Straight Path East <Straight>
+Used Dataset: Path: Segment Builder; { Straight } Straight Path East
+Include PARSFILE "Roads\Center_Z\RdRefZ_25cabca0-a070-4f73-8303-8673f79f5180.par"
+Used Dataset: Road: Reference Line Elevation; { Hills and Valleys } Ramp to 10% Grade
+Include PARSFILE "Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } Constant: 0.85
+Include PARSFILE "Roads\Shapes\RdShape_d1bb3bb4-1111-41a4-8a0a-60eb182ccc49.par"
+Used Dataset: Road: Animator Surface Shapes; { Roads } 1200 m One Ln Road + 100 m Light Grass
+Include PARSFILE "Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par"
+Include PARSFILE "Animator\Frames\Frame_7bb47609-7102-4b34-a50f-a8c8a02234db.par"
+Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Skybox (Vehicle X-Y-Z)
+Include PARSFILE "Animator\STL\Shape_f49e5d15-b002-46b6-b28e-df6b8d8a40b6.par"
+Used Dataset: Animator: Shape File Link; { Environment: Sky Boxes } Partly Cloudy Sky
+Include PARSFILE "Animator\STL\Shape_79cf4b25-5748-487a-8e5c-a602d7f86a42.par"
+Used Dataset: Animator: Shape File Link; { Environment: Land Bowls } Light Grass
+Used Dataset: Animator: Group; { Environment Spheres } Partly Cloudy Sky with Light Grass
+Include PARSFILE "Roads\AniGroup\AniRep_4784512a-af12-49cc-8161-28107980b464.par"
+Used Dataset: Road: Animator Repeated Object; { Hill Hold w/ Parking Brake } Road Stripes at S = 0m, 76.508m
+Include PARSFILE "Roads\3D_Road\Road_ae0a4f63-b6e4-448d-ab4d-90c35cd3b1b7.ani"
+Include PARSFILE "Animator\STL\Shape_1fe05434-c992-439b-8e7f-009b1f03e938.par"
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Rectangle for Road Stripe
+Include PARSFILE "Animator\STL\Shape_1fe05434-c992-439b-8e7f-009b1f03e938.par"
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Rectangle for Road Stripe
+Used Dataset: Road: 3D Surface (All Properties); { Hills } 1200m, 10% Grade, Waypoints
+
+Time to read input = 0.0009272
+
+Run stopped at t = 14.44. Stop time reached.
+
+Run started: VS output file = Roads\3D_Road\Road_ae0a4f63-b6e4-448d-ab4d-90c35cd3b1b7.vsb
+
+Computational time ratio: RTIME = inf (real time)/(simulation time)
+

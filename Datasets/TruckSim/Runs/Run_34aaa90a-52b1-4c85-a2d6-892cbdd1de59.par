@@ -1,0 +1,77 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Closed Loop Reversing - Turn Around`Driver Model
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_34aaa90a-52b1-4c85-a2d6-892cbdd1de59
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b7028f29-fdf7-4233-8487-abd35f8aee05.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 10 El, 36 m` Vehicle Reference` , Animator camera`Camera_b7028f29-fdf7-4233-8487-abd35f8aee05
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_0e8f42e3-6607-4e9f-8f23-092fbd4f093c.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Conv. Van (7-spd. AT, Park Tq.)` 2A Conventional Van` , Math Model`Lead2a_0e8f42e3-6607-4e9f-8f23-092fbd4f093c
+
+PARSFILE Procedures\Proc_f47ddb4d-3274-4188-b959-d66a546260a3.par
+#BlueLink28 Procedures`Reversing at Intersection` Steer Control` , Procedure`Proc_f47ddb4d-3274-4188-b959-d66a546260a3
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Closed Loop Reversing - Turn Around <Driver Model>
+CATEGORY Driver Model 
+DATASET_TITLE Closed Loop Reversing - Turn Around
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example uses the closed-loop steering control in reverse.
+#
+#A vehicle turns at an intersection, reverses back on the the first road in the opposite direction, and carries on.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Driver Model } Closed Loop Reversing - Turn Around
+#Library : TruckSim Run Control
+#DataSet : Closed Loop Reversing - Turn Around
+#Category: Driver Model
+#FileID  : Run_34aaa90a-52b1-4c85-a2d6-892cbdd1de59
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

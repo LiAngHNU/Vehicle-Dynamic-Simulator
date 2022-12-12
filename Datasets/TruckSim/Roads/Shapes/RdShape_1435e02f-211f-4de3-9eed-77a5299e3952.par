@@ -1,0 +1,131 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`I-94 N Exit 172 (Basic)`Highway Intersection
+NLANES 8
+OPTTHRESHOLD 1
+#MiscYellow0
+# 1 1 1, Road (No Centerline), 1, 20, 1, 4, edge, 5, edge, , , 740, 1289.6, 1, , , Road
+# 1 1 1, Grass (Light), 1, 20, 1, 1, edge, 2, edge, , , 740, 1289.6, 1, , , Foliage
+# 1 1 1, Grass (Light), 1, 20, 1, 6, edge, 7, edge, , , 1025, 1289.6, 1, , , Foliage
+# 1 1 1, Road Transition (Light), 1, 20, -1, 2, edge, 3, edge, , , 740, 1289.6, 1, , , Random
+# 1 1 1, Road Transition (Light), 1, 20, 1, 5, edge, 6, edge, , , 1025, 1289.6, 1, , , Random
+# 1 1 1, Road (Concrete No Lines), 1, 20, 1, 3, edge, 4, edge, , , 740, 1289.6, 1, , , Road
+# 1 1 1, Road (Concrete No Lines), 1, 20, 0.3, 5, edge, 6, edge, , , 900, 1025, 1, , , Road
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (No Centerline)
+SPECULAR(1) 1
+SCALE(1) 20
+LTILES(1) 1
+LIN(1) 4
+LINUNITS(1) edge
+LOUT(1) 5
+LOUTUNITS(1) edge
+S_START(1) 740
+S_STOP(1) 1289.6
+SINT(1) 1
+AUTODETAIL(1) Road
+COLOR(2) 1 1 1
+MATERIAL(2) Grass (Light)
+SPECULAR(2) 1
+SCALE(2) 20
+LTILES(2) 1
+LIN(2) 1
+LINUNITS(2) edge
+LOUT(2) 2
+LOUTUNITS(2) edge
+S_START(2) 740
+S_STOP(2) 1289.6
+SINT(2) 1
+AUTODETAIL(2) Foliage
+COLOR(3) 1 1 1
+MATERIAL(3) Grass (Light)
+SPECULAR(3) 1
+SCALE(3) 20
+LTILES(3) 1
+LIN(3) 6
+LINUNITS(3) edge
+LOUT(3) 7
+LOUTUNITS(3) edge
+S_START(3) 1025
+S_STOP(3) 1289.6
+SINT(3) 1
+AUTODETAIL(3) Foliage
+COLOR(4) 1 1 1
+MATERIAL(4) Road Transition (Light)
+SPECULAR(4) 1
+SCALE(4) 20
+LTILES(4) -1
+LIN(4) 2
+LINUNITS(4) edge
+LOUT(4) 3
+LOUTUNITS(4) edge
+S_START(4) 740
+S_STOP(4) 1289.6
+SINT(4) 1
+AUTODETAIL(4) Random
+COLOR(5) 1 1 1
+MATERIAL(5) Road Transition (Light)
+SPECULAR(5) 1
+SCALE(5) 20
+LTILES(5) 1
+LIN(5) 5
+LINUNITS(5) edge
+LOUT(5) 6
+LOUTUNITS(5) edge
+S_START(5) 1025
+S_STOP(5) 1289.6
+SINT(5) 1
+AUTODETAIL(5) Random
+COLOR(6) 1 1 1
+MATERIAL(6) Road (Concrete No Lines)
+SPECULAR(6) 1
+SCALE(6) 20
+LTILES(6) 1
+LIN(6) 3
+LINUNITS(6) edge
+LOUT(6) 4
+LOUTUNITS(6) edge
+S_START(6) 740
+S_STOP(6) 1289.6
+SINT(6) 1
+AUTODETAIL(6) Road
+COLOR(7) 1 1 1
+MATERIAL(7) Road (Concrete No Lines)
+SPECULAR(7) 1
+SCALE(7) 20
+LTILES(7) 0.3
+LIN(7) 5
+LINUNITS(7) edge
+LOUT(7) 6
+LOUTUNITS(7) edge
+S_START(7) 900
+S_STOP(7) 1025
+SINT(7) 1
+AUTODETAIL(7) Road
+MTL_FILE Animator\Road_Materials\road.mtl
+
+
+#EMBEDDED_NOTES
+#This uses seven edges defined in a DZ variable-width dataset.
+#
+#1-2 is grass (right)
+#2-3 is dirt-grass transition (right)
+#3-4 is an emergency lane (right)
+#4-5 is the travel lane
+#5-6 is dirt-grass transition (left)
+#6-7 is grass (left)
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Highway Intersection } I-94 N Exit 172 (Basic)
+#Library : Road: Animator Surface Shapes
+#DataSet : I-94 N Exit 172 (Basic)
+#Category: Highway Intersection
+#FileID  : RdShape_1435e02f-211f-4de3-9eed-77a5299e3952
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

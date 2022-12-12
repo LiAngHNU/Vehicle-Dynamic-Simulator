@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Transient Response Times`Handling and Stability Tests
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_228327da-f41f-4ee7-bfbc-80a94041a450
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`LCF Van` 2A LCF Van` , Math Model`Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80
+
+PARSFILE Procedures\Proc_230bcad6-158a-4cb5-a045-94ab7ef7094a.par
+#BlueLink28 Procedures`Transient Response Test` Handling Tests` , Procedure`Proc_230bcad6-158a-4cb5-a045-94ab7ef7094a
+
+*TSTOP 1
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Lead_2a\Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80.png
+WRITE_SENSOR_DETECT
+Title Transient Response Times <Handling and Stability Tests>
+CATEGORY Handling and Stability Tests 
+DATASET_TITLE Transient Response Times
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This transient handling test  uses VS Commands to "capture" the values of calculated outputs at specific times and use those values to direct the progress of a test procedure.
+#
+#A slowly increasing steer test and a step steer test are performed according to user-specified parameters appearing in the miscellaneous yellow field on the Procedures screen. The variables used are defined using VS Commands linked under:
+#
+#Procedure: Transient Response Test =>
+#Misc: Events: A) Accelerate to Speed at 50% Throttle =>
+#Misc. Data: Generic VS Commands: Define Test Variables
+#
+#The parameters that specify the test are:
+#
+#speed_in_mph: The speed is set in miles per hour to illustrate the use of units defined by the user.
+#
+#ay_test: Lateral acceleration used to obtain steer angle.
+#
+#level_i and level_f: Level_i is a fraction of the steady state steer angle. Level_f is a fraction of the steady state value of the parameter for which response time is calculated. Response time is defined as the time elapsed between steer angle reaching level_i and a parameter reaching level_f.
+#
+#time_out: A time threshold to end the run if a condition is not reached.
+#
+#time_settle: Time to allow vehicle to come to steady state after a transient input.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Handling and Stability Tests } Transient Response Times
+#Library : TruckSim Run Control
+#DataSet : Transient Response Times
+#Category: Handling and Stability Tests
+#FileID  : Run_228327da-f41f-4ee7-bfbc-80a94041a450
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

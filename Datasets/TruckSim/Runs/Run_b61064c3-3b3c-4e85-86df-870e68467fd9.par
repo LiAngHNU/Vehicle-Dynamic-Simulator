@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName TruckSim Run Control`* Unreal Engine 4 Plug-in, Lead Vehicle`External Control of Runs
+#VEHICLECODE S_S + S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_b61064c3-3b3c-4e85-86df-870e68467fd9
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Local_Dir\Local_e457f7bb-3d0a-4413-ab3e-3c32802a0a70.par
+#BlueLink12 Models: Transfer to Local Windows Directory`ue4 simfile generator` ` , Models`Local_e457f7bb-3d0a-4413-ab3e-3c32802a0a70
+
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 on
+RT_WINDOW_CLOSE on
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_d28a5168-208c-462e-8288-8f5ae3f9a7f8.par
+#BlueLink2 Vehicle: Loaded Combination`UE4 Lead Vehicle` Cab-Over Tractor-Trailers` , Math Model`VehLoad_d28a5168-208c-462e-8288-8f5ae3f9a7f8
+
+PARSFILE Procedures\Proc_45da567d-f796-4c09-9c95-517ef60f61b4.par
+#BlueLink28 Procedures`Path created in UE4` ADAS and Active Safety` , Procedure`Proc_45da567d-f796-4c09-9c95-517ef60f61b4
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_250baa4b-3981-417c-b611-233bbb112d72.par
+#BlueLink9 Multiple Moving Objects`1 Vehicle, Variable Speed` Traffic Vehicles (Forward)` , Miscellaneous`TMotion_250baa4b-3981-417c-b611-233bbb112d72
+
+
+WRITE_SENSOR_DETECT
+Title * Unreal Engine 4 Plug-in, Lead Vehicle <External Control of Runs>
+CATEGORY External Control of Runs 
+DATASET_TITLE * Unreal Engine 4 Plug-in, Lead Vehicle
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example is used with Unreal Engine 4 Plug-in.
+#
+#You have to install UE4 and also get VehicleSim plug-in from UE4 market place to run this example.
+#
+#For more information, please refer to the documentation.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { External Control of Runs } * Unreal Engine 4 Plug-in, Lead Vehicle
+#Library : TruckSim Run Control
+#DataSet : * Unreal Engine 4 Plug-in, Lead Vehicle
+#Category: External Control of Runs
+#FileID  : Run_b61064c3-3b3c-4e85-86df-870e68467fd9
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

@@ -1,0 +1,42 @@
+Run made by VS Road Calculator at 17:22 on May 08, 2022.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_2aae5b0e-72c7-447d-8b74-f7ebf477f645.par"
+Include PARSFILE "Roads\Center_XYZ\RoadXYZ_156e677d-43ff-4730-afc5-105d81e6de04.par"
+Used Dataset: Road: X-Y-Z Coordinates of Reference Line; { Road Course } Road Course
+Include PARSFILE "Roads\Friction\RdMu_53ba8241-ce81-4256-a821-f3a1975c2fa5.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Road Handling Course } Road Course, 1.0 Surface, 0.75 Grass
+Include PARSFILE "Roads\Shapes\RdShape_f5984930-c6f4-4dc6-90b4-ff719bca03fe.par"
+Used Dataset: Road: Animator Surface Shapes; { Stability Test Roads } Road Handling Course
+Include PARSFILE "Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par"
+Include PARSFILE "Animator\Frames\Frame_7bb47609-7102-4b34-a50f-a8c8a02234db.par"
+Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Skybox (Vehicle X-Y-Z)
+Include PARSFILE "Animator\STL\Shape_f49e5d15-b002-46b6-b28e-df6b8d8a40b6.par"
+Used Dataset: Animator: Shape File Link; { Environment: Sky Boxes } Partly Cloudy Sky
+Include PARSFILE "Animator\STL\Shape_79cf4b25-5748-487a-8e5c-a602d7f86a42.par"
+Used Dataset: Animator: Shape File Link; { Environment: Land Bowls } Light Grass
+Used Dataset: Animator: Group; { Environment Spheres } Partly Cloudy Sky with Light Grass
+Include PARSFILE "Animator\STL_Groups\ShpGrp_422cb9ad-7aea-4d11-9675-075faf3857f7.par"
+Include PARSFILE "Animator\STL\Shape_cdf9d685-d6c0-421a-b936-18971e84dedf.par"
+Used Dataset: Animator: Shape File Link; { Self-Contained Scenes } Road Course: Terrain
+Include PARSFILE "Animator\STL\Shape_6e074468-dd7b-42aa-b9fb-b2a9c03b01ec.par"
+Used Dataset: Animator: Shape File Link; { Self-Contained Scenes } Road Course: Apex Curbing
+Include PARSFILE "Animator\STL\Shape_f8b4b2c4-1a45-40b3-bc17-157abb4ac34c.par"
+Used Dataset: Animator: Shape File Link; { Self-Contained Scenes } Road Course: Tire Walls
+Include PARSFILE "Animator\STL\Shape_73b31fc9-8702-48f4-9029-29f88a6876de.par"
+Used Dataset: Animator: Shape File Link; { Self-Contained Scenes } Road Course: Trees
+Include PARSFILE "Animator\STL\Shape_e46b92ff-8c85-4ae8-aeaa-a9d0fe92a800.par"
+Used Dataset: Animator: Shape File Link; { Self-Contained Scenes } Road Course: Sound Wall
+Used Dataset: Animator: Shape Assembly; { Road Course } Road Course
+Include PARSFILE "Roads\3D_Road\Road_2aae5b0e-72c7-447d-8b74-f7ebf477f645.ani"
+Used Dataset: Road: 3D Surface (All Properties); { Road Course } Road Course
+
+Time to read input = 0.0019335
+
+Run stopped at t = 18.92. Stop time reached.
+
+Run started: VS output file = Roads\3D_Road\Road_2aae5b0e-72c7-447d-8b74-f7ebf477f645.vsb
+
+Computational time ratio: RTIME = inf (real time)/(simulation time)
+

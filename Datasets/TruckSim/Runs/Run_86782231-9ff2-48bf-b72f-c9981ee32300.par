@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Parking Torque Test: Zero Speed`Steering Tests
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_86782231-9ff2-48bf-b72f-c9981ee32300
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_1cf53bf3-ef4e-4184-90a0-780f176c62b0.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 1.1 El, 34.8 m` Road Reference` , Animator camera`Camera_1cf53bf3-ef4e-4184-90a0-780f176c62b0
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_0e8f42e3-6607-4e9f-8f23-092fbd4f093c.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Conv. Van (7-spd. AT, Park Tq.)` 2A Conventional Van` , Math Model`Lead2a_0e8f42e3-6607-4e9f-8f23-092fbd4f093c
+
+PARSFILE Procedures\Proc_3918de18-b44c-45dd-8efa-13facd69bd64.par
+#BlueLink28 Procedures`Sine Wave 0.2 Hz, 450 deg.` Steering Tests` , Procedure`Proc_3918de18-b44c-45dd-8efa-13facd69bd64
+
+*SSTOP 200
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Parking Torque Test: Zero Speed <Steering Tests>
+CATEGORY Steering Tests 
+DATASET_TITLE Parking Torque Test: Zero Speed
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates the 2-axle Conventional Van with Parking Torque performing a Sine Wave steering input of 0.2 Hz. The vehicle has no forward speed and does not have a payload.
+#
+#You can see the hysteresis in the steer torque plots.
+#
+#Parking torque is the steer torque felt in a parking lot maneuver or at very low vehicle speed. It is vehicle speed dependent and always resists the steering movement - the torque always acts in the opposite direction to the steering direction.
+#
+#In a real vehicle, the parking torque is caused by the tire's scrub friction as well as any friction in the steering system itself. Typically the parking torque decreases as the vehicle speed is increased and the wheels transition to rolling.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Steering Tests } Parking Torque Test: Zero Speed
+#Library : TruckSim Run Control
+#DataSet : Parking Torque Test: Zero Speed
+#Category: Steering Tests
+#FileID  : Run_86782231-9ff2-48bf-b72f-c9981ee32300
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

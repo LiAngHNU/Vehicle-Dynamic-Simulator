@@ -1,0 +1,89 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Road Signs, Pedestrians, Bicyclists`ADAS and Active Safety
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_dfef3b2f-1695-4874-9cfc-94e795775199
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_12afd0d3-c9b8-47b4-9b7e-1cd0582e975b.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m` Vehicle Reference` , Animator camera`Camera_12afd0d3-c9b8-47b4-9b7e-1cd0582e975b
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_4007d7dd-3239-46e7-9cc4-277245a7804e.par
+#BlueLink2 Vehicle: Loaded Combination`DRW Pickup w/ Sign Detection` Pickup Trucks` , Math Model`VehLoad_4007d7dd-3239-46e7-9cc4-277245a7804e
+
+PARSFILE Procedures\Proc_f5696e49-f0ae-4d9f-b188-e7fc0eac1760.par
+#BlueLink28 Procedures`3-Way Intersection, Speed Sign` Road Networks` , Procedure`Proc_f5696e49-f0ae-4d9f-b188-e7fc0eac1760
+
+PARSFILE Generic\Links\GenLink_b625ee41-cd20-492d-8376-caadee7a793f.par
+#BlueLink9 Generic Group of Links`Pedestrians at Cross Walk, Rural` ADAS: Moving Objects, incl. Pedestrians` , Miscellaneous`GenLink_b625ee41-cd20-492d-8376-caadee7a793f
+
+PARSFILE Generic\VS_commands\GenVS_20e12e9f-430d-481d-9f6d-f9d501d178f0.par
+#BlueLink10 Generic VS Commands`Watch Bike Lane` ADAS Support` , Miscellaneous`GenVS_20e12e9f-430d-481d-9f6d-f9d501d178f0
+
+PARSFILE Sensors_Traffic\Targets\Target_52def45e-2e44-4c92-a673-3f8a91fb8dda.par
+#BlueLink11 Single Moving Object (Custom)`Stop Sign` Traffic Signs and Lights` , Miscellaneous`Target_52def45e-2e44-4c92-a673-3f8a91fb8dda
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ee189bc-4102-46cf-a6ee-046ab79da53b.png
+WRITE_SENSOR_DETECT
+Title Road Signs, Pedestrians, Bicyclists <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Road Signs, Pedestrians, Bicyclists
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This intersection of two straight roads (East and North) has curbs on the edges. One road ends at the intersection, so it is a 3-way. There is a 55 mi/h speed limit sign on the N. exit.
+#
+#This run has a stop sign at the intersection,  two pedestrians walking at different speeds, and two bicyclists.
+#
+#Speeds are shown in mi/h to match the USA speed limit convention.
+#
+#Speed control information is in the Vehicle dataset with the sensors.
+#
+#A TruckSim Sensors license is required to rerun this simulation. You may still view the animation and plots.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { ADAS and Active Safety } Road Signs, Pedestrians, Bicyclists
+#Library : TruckSim Run Control
+#DataSet : Road Signs, Pedestrians, Bicyclists
+#Category: ADAS and Active Safety
+#FileID  : Run_dfef3b2f-1695-4874-9cfc-94e795775199
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

@@ -1,0 +1,104 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Simple VS/STI Model: DLC`Tire Models
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_cf71c40e-7dbe-4582-beb5-734fc2419bbb
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#BlueLink12 ` , Models` , Models` , Models`
+
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 6
+#RingCtrl7 -1
+*RUN_COLOR 0 0.4 1
+SET_RUN_COLOR 0 0.4 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_9a854459-9086-47c4-b399-b6e66ef0e932.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Conv. Van (Simple VS/STI)` 2A Conventional Van` , Math Model`Lead2a_9a854459-9086-47c4-b399-b6e66ef0e932
+
+PARSFILE Procedures\Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4.par
+#BlueLink28 Procedures`DLC @ 70 km/h` Handling Tests` , Procedure`Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+PARSFILE Plot\Setup\Plot_bfdbc915-4730-4ee5-ace2-5db22b8b319d.par
+#BlueLink15 Plot: Setup`Slip Ratios (Axles 1- 5)` Tire Kinematics` , Plot`Plot_bfdbc915-4730-4ee5-ace2-5db22b8b319d
+
+PARSFILE Plot\Setup\Plot_60033996-0231-49e9-9009-99c91c6106ea.par
+#BlueLink16 Plot: Setup`Slip Angles (Axles 1 - 4)` Tire Kinematics` , Plot`Plot_60033996-0231-49e9-9009-99c91c6106ea
+
+PARSFILE Plot\Setup\Plot_c7306601-bee0-4edc-92fb-2c670cb34a1b.par
+#BlueLink17 Plot: Setup`Longitudinal Forces` Tire Forces` , Plot`Plot_c7306601-bee0-4edc-92fb-2c670cb34a1b
+
+PARSFILE Plot\Setup\Plot_509ee5ee-5e2f-40a1-8161-c0e072452892.par
+#BlueLink18 Plot: Setup`Lateral Forces` Tire Forces` , Plot`Plot_509ee5ee-5e2f-40a1-8161-c0e072452892
+
+PARSFILE Plot\Setup\Plot_8c8bbbb6-c0c5-4f4c-a927-fdb4d43586ec.par
+#BlueLink19 Plot: Setup`Aligning Moments (Axles 1 and 2)` Tire Moments` , Plot`Plot_8c8bbbb6-c0c5-4f4c-a927-fdb4d43586ec
+
+PARSFILE Plot\Setup\Plot_1bcf06a7-bbee-4723-b512-4ea1ef6e4976.par
+#BlueLink20 Plot: Setup`Overturning Moments` Tire Moments` , Plot`Plot_1bcf06a7-bbee-4723-b512-4ea1ef6e4976
+
+
+SPECIAL_PARSFILE Runs\Run_f97b3e64-bfdd-4b8c-98b9-3e8c7d2e44c2.par
+#BlueLink23 TruckSim Run Control`Simple TYDEX/STI Model: DLC` Tire Models` , Overlay run or ERD file`Run_f97b3e64-bfdd-4b8c-98b9-3e8c7d2e44c2
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Simple VS/STI Model: DLC <Tire Models>
+CATEGORY Tire Models 
+DATASET_TITLE Simple VS/STI Model: DLC
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates the 2A Conventional Van using a simple external tire model which is based on the VS/STI (VS version of the Standard Tire Interface) format performing a double lane change maneuver at 70 km/h.
+#
+#To see how the external VS/STI tire model is incorporated into TruckSim, browse to the Vehicle: Lead Unit with 2 Axles screen and click on the Tires dataset labeled "510 mm Radius (Simple VS/STI Model)" for more information.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Tire Models } Simple VS/STI Model: DLC
+#Library : TruckSim Run Control
+#DataSet : Simple VS/STI Model: DLC
+#Category: Tire Models
+#FileID  : Run_cf71c40e-7dbe-4582-beb5-734fc2419bbb
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

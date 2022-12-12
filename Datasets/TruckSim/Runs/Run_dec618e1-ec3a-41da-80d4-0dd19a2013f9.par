@@ -1,0 +1,74 @@
+PARSFILE
+#FullDataName TruckSim Run Control`City, 2 Trucks, Pedestrians, 1 Solver`* TS 2020.1 - Multiple Vehicles
+#VEHICLECODE S_S I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_dec618e1-ec3a-41da-80d4-0dd19a2013f9
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_0c973cdb-2467-40fa-bb31-04d4f1c16774.par
+#BlueLink0 Animator: Camera Setup`City Intersection` Fixed Camera` , Animator camera`Camera_0c973cdb-2467-40fa-bb31-04d4f1c16774
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 7
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Generic\Group\GenGrp_e188a2b9-7a36-4fc2-9bce-71e8d3033d9a.par
+#BlueLink2 Generic Data Group`CIty (2 Vehicles)` Multiple Vehicles` , Math Model`GenGrp_e188a2b9-7a36-4fc2-9bce-71e8d3033d9a
+
+*TSTOP 1
+PARSFILE Plot\Setup\Plot_26dc2eb1-dd9b-4776-8f9f-09208d63924a.par
+#BlueLink15 Plot: Setup`Event Count` Event Control` , Plot`Plot_26dc2eb1-dd9b-4776-8f9f-09208d63924a
+
+
+*IMAGE_TYPE PASS_THROUGH
+WRITE_SENSOR_DETECT
+Title City, 2 Trucks, Pedestrians, 1 Solver <* TS 2020.1 - Multiple Vehicles>
+CATEGORY * TS 2020.1 - Multiple Vehicles 
+DATASET_TITLE City, 2 Trucks, Pedestrians, 1 Solver
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This screen has a set of links used to assemble two vehicles with controllers in a city environment.
+#
+#To make a new run will require a Multiple Vehicle license.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { * TS 2020.1 - Multiple Vehicles } City, 2 Trucks, Pedestrians, 1 Solver
+#Library : TruckSim Run Control
+#DataSet : City, 2 Trucks, Pedestrians, 1 Solver
+#Category: * TS 2020.1 - Multiple Vehicles
+#FileID  : Run_dec618e1-ec3a-41da-80d4-0dd19a2013f9
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

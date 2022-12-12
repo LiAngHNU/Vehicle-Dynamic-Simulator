@@ -1,0 +1,87 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Ext. ABS: Split Mu - Multi-Port`Simulink and LabVIEW
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_88a80b3c-6116-48ee-8c0a-a7dd0ed048ef
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_d7d0d76b-9a71-47f8-9fa4-f91071d06ffd.par
+#BlueLink12 Models: Simulink`ABS Controller` Braking Controls` , Models`Simlink_d7d0d76b-9a71-47f8-9fa4-f91071d06ffd
+
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+SET_RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_6f53a7db-08fa-4ac5-8444-58582195a374.par
+#BlueLink2 Vehicle: Loaded Combination`2A Conventional Van Loaded (No ABS)` Conventional Vans` , Math Model`VehLoad_6f53a7db-08fa-4ac5-8444-58582195a374
+
+PARSFILE Procedures\Proc_2e780ea0-ca27-4fe8-8d8b-b154de458250.par
+#BlueLink28 Procedures`Braking: Split Mu (Hyd.)` Acceleration and Braking` , Procedure`Proc_2e780ea0-ca27-4fe8-8d8b-b154de458250
+
+
+SPECIAL_PARSFILE Runs\Run_fa848e33-d382-4c2f-8966-d467c858d58e.par
+#BlueLink23 TruckSim Run Control`Braking - Split Mu: No ABS` Brake Tests` , Overlay run or ERD file`Run_fa848e33-d382-4c2f-8966-d467c858d58e
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Ext. ABS: Split Mu - Multi-Port <Simulink and LabVIEW>
+CATEGORY Simulink and LabVIEW 
+DATASET_TITLE Ext. ABS: Split Mu - Multi-Port
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#I/O Channel: Ports screen for Simulink models, introduced in TruckSim 9.0.
+#
+#This example demonstrates the use of an ABS controller defined in Simulink. The Simulink model calculates the wheel cylinder pressures, and these are set to replace the TruckSim-calculated wheel cylinder pressures.
+#
+#The 2A Conventional Van is performing a Split Mu stop on a flat, level road.
+#
+#This example is overlaid with the simulation "Braking - Split Mu: No ABS".
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Simulink and LabVIEW } Ext. ABS: Split Mu - Multi-Port
+#Library : TruckSim Run Control
+#DataSet : Ext. ABS: Split Mu - Multi-Port
+#Category: Simulink and LabVIEW
+#FileID  : Run_88a80b3c-6116-48ee-8c0a-a7dd0ed048ef
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

@@ -1,0 +1,87 @@
+PARSFILE
+#FullDataName TruckSim Run Control`City, Stop Sign, Animated Pedestrians`ADAS and Active Safety
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_92380c23-d9ff-4959-8af3-72f4644a66c0
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_12afd0d3-c9b8-47b4-9b7e-1cd0582e975b.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m` Vehicle Reference` , Animator camera`Camera_12afd0d3-c9b8-47b4-9b7e-1cd0582e975b
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_4007d7dd-3239-46e7-9cc4-277245a7804e.par
+#BlueLink2 Vehicle: Loaded Combination`DRW Pickup w/ Sign Detection` Pickup Trucks` , Math Model`VehLoad_4007d7dd-3239-46e7-9cc4-277245a7804e
+
+PARSFILE Procedures\Proc_93314484-1da8-421f-af46-f45bb43137fc.par
+#BlueLink28 Procedures`City 3-Way Intersection` ADAS and Active Safety` , Procedure`Proc_93314484-1da8-421f-af46-f45bb43137fc
+
+PARSFILE Generic\Links\GenLink_184bbb47-1635-46f7-a039-5d1704169fb8.par
+#BlueLink9 Generic Group of Links`Pedestrians at Cross Walk, City` ADAS: Moving Objects, incl. Pedestrians` , Miscellaneous`GenLink_184bbb47-1635-46f7-a039-5d1704169fb8
+
+PARSFILE Generic\VS_commands\GenVS_20e12e9f-430d-481d-9f6d-f9d501d178f0.par
+#BlueLink10 Generic VS Commands`Watch Bike Lane` ADAS Support` , Miscellaneous`GenVS_20e12e9f-430d-481d-9f6d-f9d501d178f0
+
+PARSFILE Sensors_Traffic\Targets\Target_20588358-c8cc-4816-be9b-d58bca6a7fac.par
+#BlueLink11 Single Moving Object (Custom)`Stop Sign, City (155, 337)` Traffic Signs and Lights` , Miscellaneous`Target_20588358-c8cc-4816-be9b-d58bca6a7fac
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ee189bc-4102-46cf-a6ee-046ab79da53b.png
+WRITE_SENSOR_DETECT
+Title City, Stop Sign, Animated Pedestrians <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE City, Stop Sign, Animated Pedestrians
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This intersection was made in VS Scene Builder. Moving objects were added: a pedestrian, two bicyclists, and a stop sign.
+#
+#The stop sign is detected by an ADAS sensor, so it was added as a target rather than VS Scene Builder "prop"
+#
+#Speeds are shown in mi/h to match the USA speed limit convention.
+#
+#A TruckSim Sensors license is required to rerun this simulation. You may still view the animation and plots.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { ADAS and Active Safety } City, Stop Sign, Animated Pedestrians
+#Library : TruckSim Run Control
+#DataSet : City, Stop Sign, Animated Pedestrians
+#Category: ADAS and Active Safety
+#FileID  : Run_92380c23-d9ff-4959-8af3-72f4644a66c0
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

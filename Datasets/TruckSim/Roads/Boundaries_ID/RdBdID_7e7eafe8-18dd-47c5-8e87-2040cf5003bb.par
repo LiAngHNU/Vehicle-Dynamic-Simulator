@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Road Boundary: New Road ID`I-94 at Exit 172`
+#CheckBox0 0    
+
+#RingCtrl0 STEP
+#RadioCtrl0 0    
+
+#DiagramOne0
+ROAD_NEW_ID_TABLE STEP
+960, -1
+988, 1002
+1030, -1
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#The run will stop if the boundary is reached anywhere except the range 9889 < s < 1030. In that range, the object or tire will switch to road ID 2002 (exit 172)
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road Boundary: New Road ID; I-94 at Exit 172
+#Library : Road Boundary: New Road ID
+#DataSet : I-94 at Exit 172
+#Category: 
+#FileID  : RdBdID_7e7eafe8-18dd-47c5-8e87-2040cf5003bb
+#Product : TruckSim 2020.1
+#VehCode Road Boundary ID
+
+END

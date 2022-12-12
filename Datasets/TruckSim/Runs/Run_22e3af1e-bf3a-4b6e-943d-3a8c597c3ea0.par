@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Mcity: ADAS - Cross Traffic (Baseline)`ADAS and Active Safety
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_22e3af1e-bf3a-4b6e-943d-3a8c597c3ea0
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_7a348bdb-e815-4591-91b4-2f04467edcb1.par
+#BlueLink0 Animator: Camera Setup`130 Azm, 18 El, 30 m` Mcity` , Animator camera`Camera_7a348bdb-e815-4591-91b4-2f04467edcb1
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 0 0
+SET_RUN_COLOR 1 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_b16ff590-912f-487c-9f43-d169c1b2cae8.par
+#BlueLink2 Vehicle: Loaded Combination`2A LCF, AEB Sensor` LCF Vans` , Math Model`VehLoad_b16ff590-912f-487c-9f43-d169c1b2cae8
+
+PARSFILE Procedures\Proc_48216df7-4193-401f-928b-fa8c7c9b7b6e.par
+#BlueLink28 Procedures`Mcity ADAS Scenario, 30 km/h` Mcity` , Procedure`Proc_48216df7-4193-401f-928b-fa8c7c9b7b6e
+
+PARSFILE Generic\VS_commands\GenVS_af0854d4-aaa6-4c0c-8ef0-ddec022ea98d.par
+#BlueLink9 Generic VS Commands`Mcity Path State Street` Mcity` , Miscellaneous`GenVS_af0854d4-aaa6-4c0c-8ef0-ddec022ea98d
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Loaded\VehLoad_b16ff590-912f-487c-9f43-d169c1b2cae8.png
+WRITE_SENSOR_DETECT
+Title Mcity: ADAS - Cross Traffic (Baseline) <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Mcity: ADAS - Cross Traffic (Baseline)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#The roads of this example is updated from loaded table grid to 3D tiles from VS Scene Builder.
+#
+#A 2-axle LCF Van with a single forward-facing ADAS sensor approaches an intersection on a North-South road in the Mcity environment.
+#
+#The ADAS Sensor Target crosses perpendicular to the ego vehicle's path, and is visually represented as a small 2-axle utility truck.
+#
+#Since the run serves as baseline case, there are no vehicle intervention controls to avoid a collision.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { ADAS and Active Safety } Mcity: ADAS - Cross Traffic (Baseline)
+#Library : TruckSim Run Control
+#DataSet : Mcity: ADAS - Cross Traffic (Baseline)
+#Category: ADAS and Active Safety
+#FileID  : Run_22e3af1e-bf3a-4b6e-943d-3a8c597c3ea0
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

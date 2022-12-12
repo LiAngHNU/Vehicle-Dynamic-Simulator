@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, Variable Width`Japanese Hilly Road: Var. Width Elev.`Variable Width Roads
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: Japanese Hilly Road: Var. Width Elev.
+set_description ROAD_DZ_ID Japanese Hilly Road: Var. Width Elev.
+#RingCtrl0 CARPET
+#RingCtrl1 1
+*3D_DATA 4, 2 ! columns x rows
+ROAD_DZ_CARPET VAR_WIDTH
+0, 1, 2, 3, 4
+-105, 0, 0, 0, 0
+100, 0, 0, 0, 0
+ENDDATA
+0, 1, 2, 3, 4
+110, -30, -5.5, 5.5, 30
+230, -20, -5.5, 5.5, 20
+265, -10, -5.5, 5.5, 20
+270, -10, -5.5, 5.5, 10
+273.7, -10, -5.5, 5.5, 10
+274.2, -8.515, -5.5, 5.5, 8.515
+275.2, -8.02, -5.5, 5.5, 8.02
+276.2, -7.73163, -5.5, 5.5, 7.73163
+277.2, -7.57501, -5.5, 5.5, 7.57501
+278.2, -7.525, -5.5, 5.5, 7.525
+279.2, -7.57501, -5.5, 5.5, 7.57501
+280.2, -7.73163, -5.5, 5.5, 7.73163
+281.2, -8.02, -5.5, 5.5, 8.02
+282.2, -8.515, -5.5, 5.5, 8.515
+282.7, -10, -5.5, 5.5, 10
+ENDCOLS
+ENDTABLE
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 4, 2 ! columns x rows
+RdTb1_CARPET 2D_LINEAR
+0, 1, 2, 3, 4
+-105, 0, 0, 0, 0
+100, 0, 0, 0, 0
+ENDTABLE
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Lateral coordinate of edge (m)
+
+#DiagramTwo1
+*3D_DATA 4, 15 ! columns x rows
+RdTb2_CARPET 2D_LINEAR
+0, 1, 2, 3, 4
+110, -30, -5.5, 5.5, 30
+230, -20, -5.5, 5.5, 20
+265, -10, -5.5, 5.5, 20
+270, -10, -5.5, 5.5, 10
+273.7, -10, -5.5, 5.5, 10
+274.2, -8.515, -5.5, 5.5, 8.515
+275.2, -8.02, -5.5, 5.5, 8.02
+276.2, -7.731625031, -5.5, 5.5, 7.731625031
+277.2, -7.575005155, -5.5, 5.5, 7.575005155
+278.2, -7.525, -5.5, 5.5, 7.525
+279.2, -7.575005155, -5.5, 5.5, 7.575005155
+280.2, -7.731625031, -5.5, 5.5, 7.731625031
+281.2, -8.02, -5.5, 5.5, 8.02
+282.2, -8.515, -5.5, 5.5, 8.515
+282.7, -10, -5.5, 5.5, 10
+ENDTABLE
+
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+SET_IROAD_DZ_FOR_ID 0
+
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, Variable Width; { Variable Width Roads } Japanese Hilly Road: Var. Width Elev.
+#Library : Road: Off-Center Elevation Map, Variable Width
+#DataSet : Japanese Hilly Road: Var. Width Elev.
+#Category: Variable Width Roads
+#FileID  : VarWidZ_1ee23fdf-f287-478f-b727-ffd768b0891f
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L, Variable Width
+
+END

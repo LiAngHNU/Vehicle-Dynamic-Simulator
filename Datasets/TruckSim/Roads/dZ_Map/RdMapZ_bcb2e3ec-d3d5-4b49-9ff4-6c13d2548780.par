@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, S-L Grid`Modified Curbs`Gutters, Curbs, Ditches
+#CheckBox0 0    
+
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: Modified Curbs
+set_description ROAD_DZ_ID Modified Curbs
+#RingCtrl0 CARPET
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 6, 6 ! columns x rows
+ROAD_DZ_CARPET 2D_LINEAR
+0, -11, -10.1, -10, 10, 10.1, 11
+-10, 0.15, 0.15, 0, 0, 0.15, 0.15
+-5, 0.15, 0.15, 0, 0, 0.15, 0.15
+-4.99, 0, 0, 0, 0, 0, 0
+4.99, 0, 0, 0, 0, 0, 0
+5, 0.15, 0.15, 0, 0, 0.15, 0.15
+10, 0.15, 0.15, 0, 0, 0.15, 0.15
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Gutters, Curbs, Ditches } Modified Curbs
+#Library : Road: Off-Center Elevation Map, S-L Grid
+#DataSet : Modified Curbs
+#Category: Gutters, Curbs, Ditches
+#FileID  : RdMapZ_bcb2e3ec-d3d5-4b49-9ff4-6c13d2548780
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L Grid
+
+END

@@ -1,0 +1,99 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, Variable Width`I-94 Exit Lane Edges (Scenic)`Highway Intersection Boundaries
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: I-94 Exit Lane Edges (Scenic)
+set_description ROAD_DZ_ID I-94 Exit Lane Edges (Scenic)
+#RingCtrl0 CARPET
+#RingCtrl1 1
+*3D_DATA 7, 6 ! columns x rows
+ROAD_DZ_CARPET VAR_WIDTH
+0, 1, 2, 3, 4, 5, 6, 7
+700, 0, 0, 0, 0, 0, 0, 0
+1028, -2, 0, 0, 0, 0, 0, 0
+1080, -5, 0, 0, 0, 0, 0, 0.4
+1175, -5, 0, 0, 0, 0, 0, 4
+1250, 0, 0, 0, 0, 0, 0, 6.6
+1280, 0, 0, 0, 0, 0, 0, 0
+ENDDATA
+0, 1, 2, 3, 4, 5, 6, 7
+700, -20, -7, -5.2, -1.9, 1.8, 2, 3
+880, -20, -7, -4.5, -1.9, 1.8, 2, 4
+920, -20, -7, -4.2, -1.9, 1.9, 2.3, 2.5
+1025, -20, -7, -4, -3, 3, 7, 8
+1220, -20, -7, -4.1, -4, 4, 6, 20
+1250, -20, -7, -4.075, -4, 4, 6, 22
+1280, -25, -7, -4.05, -4, 4, 6, 40
+1283, -25, -7, -4.51, -4.5, 4.5, 7, 40
+1286, -25, -10, -6.01, -6, 6, 10, 40
+1290, -25, -10, -9.01, -9, 9, 10, 40
+ENDCOLS
+ENDTABLE
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 7, 6 ! columns x rows
+RdTb1_CARPET 2D_LINEAR
+0, 1, 2, 3, 4, 5, 6, 7
+700, 0, 0, 0, 0, 0, 0, 0
+1028, -2, 0, 0, 0, 0, 0, 0
+1080, -5, 0, 0, 0, 0, 0, 0.4
+1175, -5, 0, 0, 0, 0, 0, 4
+1250, 0, 0, 0, 0, 0, 0, 6.6
+1280, 0, 0, 0, 0, 0, 0, 0
+ENDTABLE
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Lateral coordinate of edge (m)
+
+#DiagramTwo1
+*3D_DATA 7, 10 ! columns x rows
+RdTb2_CARPET 2D_LINEAR
+0, 1, 2, 3, 4, 5, 6, 7
+700, -20, -7, -5.2, -1.9, 1.8, 2, 3
+880, -20, -7, -4.5, -1.9, 1.8, 2, 4
+920, -20, -7, -4.2, -1.9, 1.9, 2.3, 2.5
+1025, -20, -7, -4, -3, 3, 7, 8
+1220, -20, -7, -4.1, -4, 4, 6, 20
+1250, -20, -7, -4.075, -4, 4, 6, 22
+1280, -25, -7, -4.05, -4, 4, 6, 40
+1283, -25, -7, -4.51, -4.5, 4.5, 7, 40
+1286, -25, -10, -6.01, -6, 6, 10, 40
+1290, -25, -10, -9.01, -9, 9, 10, 40
+ENDTABLE
+
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+SET_IROAD_DZ_FOR_ID 0
+
+
+#EMBEDDED_NOTES
+#There are 7 edges that are used to show lanes graphically.
+#
+#1-2 is grass (right)
+#2-3 is dirt-grass transition (right)
+#3-4 is an emergency lane (right)
+#4-5 is the travel lane
+#5-6 is dirt-grass transition (left)
+#6-7 is grass (left)
+#
+#Initially the exit is one lane (about 3.6m wide). Near the end, the emergency lane narrows to nothing, and the travel part widens to two lanes for left and right turns.
+#
+#Although this dataset can define dZ data for each edge, in this basic verions dZ is always zero. Z id defined soley as a function of station in the dataset that defines the reference path.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, Variable Width; { Highway Intersection Boundaries } I-94 Exit Lane Edges (Scenic)
+#Library : Road: Off-Center Elevation Map, Variable Width
+#DataSet : I-94 Exit Lane Edges (Scenic)
+#Category: Highway Intersection Boundaries
+#FileID  : VarWidZ_18442808-82dc-4fb5-bdfe-483a44554b46
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L, Variable Width
+
+END

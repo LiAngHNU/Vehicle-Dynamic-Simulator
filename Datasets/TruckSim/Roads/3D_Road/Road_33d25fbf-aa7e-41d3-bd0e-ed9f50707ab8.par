@@ -1,0 +1,216 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Parking Lot, East - West`Parking Lot
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_33d25fbf-aa7e-41d3-bd0e-ed9f50707ab8.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Parking Lot, East - West
+PARSFILE Roads\BuilderSegment\RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c.par
+#BlueLink0 Path: Segment Builder`Straight Path East` Straight` , Reference Path`RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight Path East
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_0b3f1182-4134-4d70-a1d1-bfdac502953f.par
+#BlueLink4 Road: Animator Surface Shapes`200m x 200m Road Surface` Flat Test Pads` , Road shape definitions`RdShape_0b3f1182-4134-4d70-a1d1-bfdac502953f
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+add_reference_frame road_stuff_7_Cones_for_Blind_Spot_Reversing_Test
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_bb3e5fd9-d21f-4c77-b470-80f6e964993e.par
+#BlueLink7 Road: Animator Repeated Object`Cones for Blind Spot Reversing Test` Cones` , 3D Shapes`AniRep_bb3e5fd9-d21f-4c77-b470-80f6e964993e
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_33d25fbf-aa7e-41d3-bd0e-ed9f50707ab8.ani
+
+add_reference_frame road_stuff_1_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -6
+set_offset_var_y -1.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_2_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x -6
+set_offset_var_y 1.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_3_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -6
+set_offset_var_y -3
+set_offset_var_z 0
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_4_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x -6
+set_offset_var_y 3
+set_offset_var_z 0
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_5_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -6
+set_offset_var_y -10
+set_offset_var_z 0
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_6_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x -6
+set_offset_var_y 10
+set_offset_var_z 0
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_7_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -6
+set_offset_var_y -20
+set_offset_var_z 0
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_8_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x -6
+set_offset_var_y 20
+set_offset_var_z 0
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_9_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -10
+set_offset_var_y -1.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_10_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x -10
+set_offset_var_y 1.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_11_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -10
+set_offset_var_y -3
+set_offset_var_z 0
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_12_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x -10
+set_offset_var_y 3
+set_offset_var_z 0
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_13_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -10
+set_offset_var_y -10
+set_offset_var_z 0
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_14_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x -10
+set_offset_var_y 10
+set_offset_var_z 0
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_15_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -10
+set_offset_var_y -20
+set_offset_var_z 0
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_16_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x -10
+set_offset_var_y 20
+set_offset_var_z 0
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_17_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -12
+set_offset_var_y -1.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_18_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x -12
+set_offset_var_y 1.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_19_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -14
+set_offset_var_y -1.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_20_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x -14
+set_offset_var_y 1.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Parking Lot } Parking Lot, East - West
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Parking Lot, East - West
+#Category: Parking Lot
+#FileID  : Road_33d25fbf-aa7e-41d3-bd0e-ed9f50707ab8
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

@@ -1,0 +1,93 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Camera Sensor: Vehicles (Matlab)`ADAS and Active Safety
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_d419dadf-3a71-4ba9-bd26-acfc602ec6e9
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_8ae22d3a-c92e-4484-adbf-72759c9d819d.par
+#BlueLink0 Animator: Camera Setup`Camera Sensor: Pickup` Sensor View` , Animator camera`Camera_8ae22d3a-c92e-4484-adbf-72759c9d819d
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 1
+LIVE_SERVER_MAX_CONNECTIONS 1
+PARSFILE Vehicles\Lead_2a\Lead2a_cb692613-bfd2-4c05-bb5a-b06d0a3c3dde.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Pickup, Crew Cab DRW (Camera)` Pickup Trucks w/ Options` , Math Model`Lead2a_cb692613-bfd2-4c05-bb5a-b06d0a3c3dde
+
+PARSFILE Procedures\Proc_90a98096-1f4a-43bc-aaae-4f006d39450a.par
+#BlueLink28 Procedures`110 km/h, 2m Right` Driver Controls` , Procedure`Proc_90a98096-1f4a-43bc-aaae-4f006d39450a
+
+PARSFILE Roads\3D_Road\Road_254626e4-6912-4d54-9b26-1ae8ad08029c.par
+#BlueLink9 Road: 3D Surface (All Properties)`4-Lane Section (Adjacent Lanes)` Multiple Lanes` , Miscellaneous`Road_254626e4-6912-4d54-9b26-1ae8ad08029c
+
+PARSFILE Generic\Group\GenGrp_146ebba6-88f2-4289-8b63-755d19fd3495.par
+#BlueLink10 Generic Data Group`ACC, 2 Lanes Fwd, 1 Lane Opp.` ADAS: Traffic for ACC & FCW` , Miscellaneous`GenGrp_146ebba6-88f2-4289-8b63-755d19fd3495
+
+PARSFILE Generic\VS_commands\GenVS_3475e725-3fee-4b70-80ff-b8574ae8673a.par
+#BlueLink11 Generic VS Commands`Camera Sensor on Upper Fr. Window` Camera Sensors` , Miscellaneous`GenVS_3475e725-3fee-4b70-80ff-b8574ae8673a
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_af769eb0-873a-40c8-98c5-3952c4c29754.png
+WRITE_SENSOR_DETECT
+Title Camera Sensor: Vehicles (Matlab) <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Camera Sensor: Vehicles (Matlab)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#VS Visualizer Camera Sensors with Matlab (no Simulink required)
+#
+#An example Matlab script is included in the TruckSim database's Extensions folder; executing this script while VS Visualizer is running will sample data from the camera's shared memory buffer and generate a 3D plot.
+#
+#The example script can be found in the TruckSim database folder:
+#Extensions\VsSharedBufferMatlab\VsSharedBufferExample.m.
+#
+#This folder also includes a readme.txt with more detail on the included files.
+#
+#In addition to the VsV Camera Sensor, this example shows the simulated vehicle with adaptive cruise control (ACC) and blind-spot detection, traveling on a road with forward traffic in two lanes and oncoming traffic in a third lane.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { ADAS and Active Safety } Camera Sensor: Vehicles (Matlab)
+#Library : TruckSim Run Control
+#DataSet : Camera Sensor: Vehicles (Matlab)
+#Category: ADAS and Active Safety
+#FileID  : Run_d419dadf-3a71-4ba9-bd26-acfc602ec6e9
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

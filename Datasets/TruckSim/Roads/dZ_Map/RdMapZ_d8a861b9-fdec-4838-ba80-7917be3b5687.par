@@ -1,0 +1,61 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, S-L Grid`6-Lane Hwy w/ Walls and Access Roads`6-Lane Highway
+#CheckBox0 0    
+
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: 6-Lane Hwy w/ Walls and Access Roads
+set_description ROAD_DZ_ID 6-Lane Hwy w/ Walls and Access Roads
+#RingCtrl0 LINEAR
+#RingCtrl1 LINEAR_FLAT
+#RingCtrl2 MULTIPLY
+ROAD_DZ_COMBINE MULTIPLY
+#RingCtrl3 1
+#RadioCtrl0 1    
+#RadioCtrl1 1    
+
+#DiagramOne0
+ROAD_DZ_TABLE LINEAR
+0, 1
+230, 1
+310, 0.03
+410, 0.03
+490, 1
+1000, 1
+ENDTABLE
+#DiagramOne1
+ROAD_DZ_L_TABLE LINEAR_FLAT
+-29.55, 6
+-21.927, 6
+-16.977, 6
+-16.976, 6.16
+-16.726, 6.16
+-16.725, 9
+-16.425, 9
+-16.424, 6
+-16.423, 3
+-16.422, 0
+0, 0
+16.422, 0
+16.423, 3
+16.424, 6
+16.425, 9
+16.725, 9
+16.726, 6.16
+16.976, 6.16
+16.977, 6
+21.927, 6
+29.55, 6
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { 6-Lane Highway } 6-Lane Hwy w/ Walls and Access Roads
+#Library : Road: Off-Center Elevation Map, S-L Grid
+#DataSet : 6-Lane Hwy w/ Walls and Access Roads
+#Category: 6-Lane Highway
+#FileID  : RdMapZ_d8a861b9-fdec-4838-ba80-7917be3b5687
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L Grid
+
+END

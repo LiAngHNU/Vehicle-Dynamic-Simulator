@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Surface: Roughness Profiles`Flat Road Roughness`
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_LOOP
+#DiagramOne0
+ISIDE 1
+Z_PROFILE_TABLE LINEAR_LOOP
+-500, 0
+500, 0
+ENDTABLE
+#DiagramOne1
+ISIDE 2
+Z_PROFILE_TABLE LINEAR_LOOP
+-500, 0
+500, 0
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+
+#EMBEDDED_NOTES
+#Example measured road roughness data.
+#
+#Road roughness is additional elevation in the road that is applied in the path of the left and right tires.  Click on the "?" for more detailed information.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Surface: Roughness Profiles; Flat Road Roughness
+#Library : Surface: Roughness Profiles
+#DataSet : Flat Road Roughness
+#Category: 
+#FileID  : Profile_6e1eb12c-d8ee-43df-833d-7f4b0319d067
+#Product : TruckSim 2020.1
+#VehCode Roughness Profile
+
+END

@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Offset Backing`Low-Speed Tracking
+#VEHICLECODE S_ISS + S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_cf8eea3b-b162-4102-b6a5-ee6ecf1242e7
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_28a56568-7d9a-48ee-9c44-e7438a6eaa28.par
+#BlueLink0 Animator: Camera Setup`View for Alley Dock` Fixed Camera` , Animator camera`Camera_28a56568-7d9a-48ee-9c44-e7438a6eaa28
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 10
+#RingCtrl2 3
+#RingCtrl3 0
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 on
+RT_WINDOW_CLOSE on
+#RingCtrl5 1
+LIVE_SERVER_MAX_CONNECTIONS 1
+PARSFILE Vehicles\Loaded\VehLoad_e07e4cc1-58a5-4024-912d-54852d8816a1.par
+#BlueLink2 Vehicle: Loaded Combination`4A Sleeper +1A Flatbed Trl` Sleeper-Cab Tractor-Trailers` , Math Model`VehLoad_e07e4cc1-58a5-4024-912d-54852d8816a1
+
+PARSFILE Procedures\Proc_7391a70e-b18c-4197-bd25-439b78bf4a78.par
+#BlueLink28 Procedures`Offset Backing` Driving` , Procedure`Proc_7391a70e-b18c-4197-bd25-439b78bf4a78
+
+#BlueLink23 TruckSim Run Control`File: LastRun.vs` ` , Overlay run or ERD file`
+
+*ERD_FILE_1 Results\Run_cf8eea3b-b162-4102-b6a5-ee6ecf1242e7\LastRun.vs
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_79dd38bb-ad38-4925-a7c0-279912b85968.png
+WRITE_SENSOR_DETECT
+Title Offset Backing <Low-Speed Tracking>
+CATEGORY Low-Speed Tracking 
+DATASET_TITLE Offset Backing
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#A tractor-trailer performs an offset backing maneuver; it pulls forward from one parking spot and reverses into another spot which is to the right of the original.
+#
+#An I-PD controller is used to steer the wheels while the truck is reversing.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Low-Speed Tracking } Offset Backing
+#Library : TruckSim Run Control
+#DataSet : Offset Backing
+#Category: Low-Speed Tracking
+#FileID  : Run_cf8eea3b-b162-4102-b6a5-ee6ecf1242e7
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

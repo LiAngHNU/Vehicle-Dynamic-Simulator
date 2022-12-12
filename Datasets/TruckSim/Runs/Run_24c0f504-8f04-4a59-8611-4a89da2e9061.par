@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Braking: Advanced, Type A Ext. ABS`Brake Tests
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_24c0f504-8f04-4a59-8611-4a89da2e9061
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_352e4b78-50e4-45a0-aaff-97d7cea5110b.par
+#BlueLink12 Models: Simulink`Type A ABS Controller` Braking Controls` , Models`Simlink_352e4b78-50e4-45a0-aaff-97d7cea5110b
+
+PARSFILE Animator\Cameras\Camera_d763e9e6-5d15-4e37-8b4a-a2943a7eeb0e.par
+#BlueLink0 Animator: Camera Setup`45 Azm, 5 El, 25 m` Vehicle Reference` , Animator camera`Camera_d763e9e6-5d15-4e37-8b4a-a2943a7eeb0e
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_cd3f6e88-ce0f-4749-87a0-5d1e2ca38557.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Euro Van (Boost, Thermal Brakes)` Large European Van` , Math Model`Lead2a_cd3f6e88-ce0f-4749-87a0-5d1e2ca38557
+
+PARSFILE Procedures\Proc_5f40371f-c2c7-4b3c-8063-75c9be9d7f06.par
+#BlueLink28 Procedures`Braking from 80 km/h, 250 N Pedal Force` Acceleration and Braking` , Procedure`Proc_5f40371f-c2c7-4b3c-8063-75c9be9d7f06
+
+PARSFILE Roads\Friction\RdMu_3b0c5b27-b912-4170-9439-b5397fef112d.par
+#BlueLink9 Road: Friction Map, S-L Grid`Constant: 0.5` Constant Mu` , Miscellaneous`RdMu_3b0c5b27-b912-4170-9439-b5397fef112d
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink11 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_f747720e-6e19-4110-bf60-110dcdd78765.png
+WRITE_SENSOR_DETECT
+Title Braking: Advanced, Type A Ext. ABS <Brake Tests>
+CATEGORY Brake Tests 
+DATASET_TITLE Braking: Advanced, Type A Ext. ABS
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#A Boost and Thermal Brake System is used with this vehicle.
+#
+#A Type A ABS Control is used, which means the pressure control is applied before the brake system proportioning.
+#
+#The import variables are Imp_PLIN_{xy}, where {xy} is the wheel/brake where the pressure is applied, e.g., for the left front wheel (L1), Imp_PLIN_L1.
+#
+#The vehicle's brake system uses pedal force input, power boost, volume-flow parameters for caliper dynamics, and thermal/fade effects.
+#
+#ABS control is provided by a Simulink model.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Brake Tests } Braking: Advanced, Type A Ext. ABS
+#Library : TruckSim Run Control
+#DataSet : Braking: Advanced, Type A Ext. ABS
+#Category: Brake Tests
+#FileID  : Run_24c0f504-8f04-4a59-8611-4a89da2e9061
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

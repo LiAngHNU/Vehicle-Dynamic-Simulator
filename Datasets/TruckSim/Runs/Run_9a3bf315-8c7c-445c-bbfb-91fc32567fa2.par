@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Braking Distance Test (Pedal Force Input)`Brake Tests
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_9a3bf315-8c7c-445c-bbfb-91fc32567fa2
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_cd3f6e88-ce0f-4749-87a0-5d1e2ca38557.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Euro Van (Boost, Thermal Brakes)` Large European Van` , Math Model`Lead2a_cd3f6e88-ce0f-4749-87a0-5d1e2ca38557
+
+PARSFILE Procedures\Proc_f943f6fd-43d7-4e16-b1df-d0a9a3bb84aa.par
+#BlueLink28 Procedures`100-0kmh Braking Distance, Pedal Force` Acceleration and Braking` , Procedure`Proc_f943f6fd-43d7-4e16-b1df-d0a9a3bb84aa
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_f747720e-6e19-4110-bf60-110dcdd78765.png
+WRITE_SENSOR_DETECT
+Title Braking Distance Test (Pedal Force Input) <Brake Tests>
+CATEGORY Brake Tests 
+DATASET_TITLE Braking Distance Test (Pedal Force Input)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#A Boost and Thermal Brake System is used with this vehicle.
+#
+#A braking distance test is performed using Pedal Force control. Events are used to reposition the vehicle to the beginning of the test road once it has slowed from the initial speed of 102 kph to the test speed of 100 kph.
+#
+#The brake control system options -- Master Cylinder Pressure, Pedal Force without Boost, and Pedal Force with Boost -- are treated as a ring control on the Brake System screen.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Brake Tests } Braking Distance Test (Pedal Force Input)
+#Library : TruckSim Run Control
+#DataSet : Braking Distance Test (Pedal Force Input)
+#Category: Brake Tests
+#FileID  : Run_9a3bf315-8c7c-445c-bbfb-91fc32567fa2
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

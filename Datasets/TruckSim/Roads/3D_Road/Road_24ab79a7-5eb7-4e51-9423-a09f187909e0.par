@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Entry W / Exit S, Path ID = 1005`Roundabout Network, Flat
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_24ab79a7-5eb7-4e51-9423-a09f187909e0.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 999
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Entry W / Exit S, Path ID = 1005
+PARSFILE Roads\BuilderSegment\RoadSeg_2b0da625-df20-4b71-ad83-f8f58d840763.par
+#BlueLink0 Path: Segment Builder`Path ID = 1005: Entry West / Exit South` Roundabout Network, Flat` , Reference Path`RoadSeg_2b0da625-df20-4b71-ad83-f8f58d840763
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Path ID = 1005: Entry West / Exit South
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_ea7d6f58-71c6-42d0-aa52-92b3387a35cb.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.9` Constant Mu` , Friction`RdMu_ea7d6f58-71c6-42d0-aa52-92b3387a35cb
+
+PARSFILE Roads\Shapes\RdShape_c4a6a598-1747-42a3-9142-6c8a7eb7a18f.par
+#BlueLink4 Road: Animator Surface Shapes`Roundabout Entry W / Exit S` Roundabout Network, Flat` , Road shape definitions`RdShape_c4a6a598-1747-42a3-9142-6c8a7eb7a18f
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF_CONSTANT 1
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_24ab79a7-5eb7-4e51-9423-a09f187909e0.ani
+
+#EMBEDDED_NOTES
+#This is one of seven roads used to generate animator graphics to show a road network.
+#
+#The same road ID = 999 is used for all seven of the roads. The surface shape files from all seven go to VS Visualizer, but only the last one loaded is used by the math model.
+#
+#On the other hand, each road has a distinct reference path with its own ID. The reference paths are used to generate the surface shapes, and are also used in the math model  by the closed-loop steering controller.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Roundabout Network, Flat } Entry W / Exit S, Path ID = 1005
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Entry W / Exit S, Path ID = 1005
+#Category: Roundabout Network, Flat
+#FileID  : Road_24ab79a7-5eb7-4e51-9423-a09f187909e0
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

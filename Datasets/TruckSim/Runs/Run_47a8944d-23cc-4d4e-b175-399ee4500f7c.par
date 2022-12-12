@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Roundabout, 3A Tractor + 1A Trl.`Road Networks: Intersections and Roundabouts
+#VEHICLECODE S_SS + S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_47a8944d-23cc-4d4e-b175-399ee4500f7c
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#BlueLink12 ` , Models` , Models` , Models`
+
+PARSFILE Animator\Cameras\Camera_ac68fa20-d219-4152-a595-c9bf68f0fc39.par
+#BlueLink0 Animator: Camera Setup`160 Azm, 20 El, 30 m` Vehicle Reference` , Animator camera`Camera_ac68fa20-d219-4152-a595-c9bf68f0fc39
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_9c3df593-15d5-4f64-9b40-b35e3fef9e79.par
+#BlueLink2 Vehicle: Loaded Combination`3A Day+1A Trl` Day-Cab Tractor-Trailers` , Math Model`VehLoad_9c3df593-15d5-4f64-9b40-b35e3fef9e79
+
+PARSFILE Procedures\Proc_fad890a7-9705-4036-8031-03187221463d.par
+#BlueLink28 Procedures`Roundabout: D = 36m` Road Networks` , Procedure`Proc_fad890a7-9705-4036-8031-03187221463d
+
+PARSFILE Events\Events_bbd12a4d-9c5e-46d4-92ca-94c8c72f0a98.par
+#BlueLink9 Events`A. Start on SE Leg` Roundabout Network, D = 36 m` , Miscellaneous`Events_bbd12a4d-9c5e-46d4-92ca-94c8c72f0a98
+
+PARSFILE Generic\Lists\GenList_e20a984f-5042-4839-a50a-93ddf35dd413.par
+#BlueLink10 Generic Data Lists`LTARG for Offtracking (Trailer)` Roundabout` , Miscellaneous`GenList_e20a984f-5042-4839-a50a-93ddf35dd413
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55.par
+#BlueLink11 Multiple Moving Objects`1 Driver Preview Point, Set by DM` Points of Interest` , Miscellaneous`TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_210bf516-a418-4707-bed2-da7b93f14f00.png
+WRITE_SENSOR_DETECT
+Title Roundabout, 3A Tractor + 1A Trl. <Road Networks: Intersections and Roundabouts>
+CATEGORY Road Networks: Intersections and Roundabouts 
+DATASET_TITLE Roundabout, 3A Tractor + 1A Trl.
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This variant has the vehicle and trailer entering and taking the 3rd exit (a right turn).
+#
+#The lateral target is adjusted during the intersection to reduce the offtracking of the trailer. The Driver Model Preview Points show the target paths.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Road Networks: Intersections and Roundabouts } Roundabout, 3A Tractor + 1A Trl.
+#Library : TruckSim Run Control
+#DataSet : Roundabout, 3A Tractor + 1A Trl.
+#Category: Road Networks: Intersections and Roundabouts
+#FileID  : Run_47a8944d-23cc-4d4e-b175-399ee4500f7c
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

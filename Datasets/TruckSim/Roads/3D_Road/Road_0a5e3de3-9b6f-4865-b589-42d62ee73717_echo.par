@@ -1,0 +1,894 @@
+PARSFILE
+! VS Road Calculator
+! Utility to calculate road and path coordinates for visualization
+! Revision 143773, June 25, 2020
+
+TITLE Default data set
+
+! Echo: Roads\3D_Road\Road_0a5e3de3-9b6f-4865-b589-42d62ee73717_echo.par
+! This run was made 11:08 on June 29, 2020.
+
+!------------------------------------------------------------------------------------
+! SYSTEM PARAMETERS (SIMULATION OPTIONS)
+!------------------------------------------------------------------------------------
+! [D] (default) indicates that a parameter was not set by reading from a Parsfile.
+! [I] indicates that changing the parameter via an Event triggers an initialization.
+! [L] indicates that the parameter is locked once the simulation starts.
+
+ID_EVENT            0 ; - ! ID number that can be assigned to the current event
+ID_RUN              0 ; - ! ID number that can be assigned to a simulation run
+NDIGITS_ECHO       10 ! [D] Max. no. of digits for printing floating-point numbers
+! NIMPORT           0 ! Number of variables activated for import (read only)
+! NOUT_ANI_LIVE     0 ! Number of variables sent live to animators (read only)
+! NOUT_EXPORT       0 ! Number of output variables activated for export (read only)
+! NOUT_WRITE        0 ! Number of output variables written to file (read only)
+OPT_ALL_WRITE       0 ! Write all outputs to file? 1 -> all, 0 -> only activated
+                      ! outputs
+OPT_BUFFER_WRITE    0 ! [D] Retain output data in memory buffer until end of run? 0
+                      ! -> no, write immediately to file, 1 -> yes, buffer during
+                      ! run and write to file after run finishes [L]
+OPT_CHECK_MATH      2 ! [D] Check for math exceptions? 2 -> as errors, 1 -> as
+                      ! warnings, 0 -> no checks
+OPT_ECHO_ALL_PARS   0 ! [D] Echo all parameters in this VS Solver? 0 -> no, 1 -> yes
+OPT_ECHO_ALL_UNITS  0 ! [D] Echo list of units and scale factors? 0 -> no, 1 -> yes
+OPT_ECHO_ICS        0 ! [D] Echo initial conditions? 0 -> no, 1 -> yes
+OPT_ECHO_KEYWORDS_LC 0 ! [D] Echo all keywords in lowercase? 0 -> no, 1 -> yes
+OPT_ERROR_DIALOG    0 ! Show pop-up dialog box if fatal error occurs: 1 -> yes
+                      ! (normal use), 0 -> no (for batch runs)
+OPT_ERROR_DUP_DEF   0 ! [D] Handle case where DEFINE_IMPORT, DEFINE_OUTPUT,
+                      ! DEFINE_PARAMETER, or DEFINE_VARIABLE attempts to define a
+                      ! variable with a name that is already in use. 0 -> write
+                      ! warning in log file, 1 -> generate error [L]
+OPT_ERROR_SHOW_ALL  0 ! [D] Show pop-up boxes for all errors: 0 -> only show the
+                      ! first, 1 -> also show subsequent errors
+OPT_LOG_DEBUG       0 ! [D] Log file writing: 0 -> normal, 1 -> crash expected
+OPT_LOG_VERBOSE     2 ! [D] Log file verbosity: 2 -> errors + most events + parsfile
+                      ! names, 0 -> errors only, 1 -> errors + events, 3 ->
+                      ! advanced diagnostics
+OPT_LOG_WARNINGS    1 ! [D] Write warnings into log file? 1 -> yes, 0 -> no
+OPT_PAUSE           0 ! [D] Pause at end of run with window open? 0 -> no, 1 -> yes
+OPT_SKIP_INIT_DYN   0 ! [D] Skip initial dynamic calculations (for some RT systems)?
+                      ! 0 -> no, 1 -> yes
+OPT_STOP            0 ! [D] Option for stopping the run: 0 -> stop when T reaches
+                      ! TSTOP; 1 -> stop when T reaches TSTOP or station reaches
+                      ! SSTOP; -1 -> run until stopped using VS Commands or
+                      ! external control
+OPT_VS_FILETYPE     1 ! [D] Type of output file: 1-> 64-bit VS, 2-> 32-bit VS, 3 ->
+                      ! 32-bit ERD, 4 -> text CSV (no binary), 0 -> no output file
+OPT_WRITE           0 ; - ! Write outputs when T > TSTART_WRITE? 1 -> write, 0 ->
+                      ! don't write; change this using VS Commands or Events
+TSTART            9.2 ; s ! Starting time for the simulation clock
+TSTART_T_EVENT      0 ; s ! [D] Event clock reset time: T_EVENT = T - TSTART_T_EVENT
+TSTART_WRITE        0 ; s ! [D] Start writing outputs when this time is reached
+TSTEP            0.04 ; s ! Time step for numerical integration [L]
+TSTOP              10 ; s ! [D] Stop when this time is reached
+! T_DT           0.04 ; s ! CALC -- Time increment between calculations
+
+!------------------------------------------------------------------------------------
+! SYSTEM CONSTANTS
+!------------------------------------------------------------------------------------
+! DR      57.29577951 ; - ! Deg/rad symbol to use in formulas (read-only)
+! G           9.80665 ; - ! Symbol for gravity constant m/s/s (read-only)
+! PI      3.141592654 ; - ! Symbol for PI to use in formulas (read-only)
+! ZERO              0 ; - ! Symbol for zero to use in VS Events (read-only)
+
+!------------------------------------------------------------------------------------
+! REFERENCE PATHS
+!------------------------------------------------------------------------------------
+! Up to 500 reference paths may be installed to provide station-based coordinate
+! systems used to define 3D road surfaces, targets for the driver model, and
+! positions of moving objects. In addition to the parameters shown in this section,
+! the paths may include spline X-Y tables (keyword = SEGMENT_XY_TABLE).
+
+! NPATH             1 ! Number of installed paths available for roads, driver model,
+                      ! and moving objects (read only)
+DEFINE_PATHS        1 ! VS Command to install reference paths
+
+PATH_ID(1)          1 ! [D] ID number for this Reference Path
+OPT_PATH_START(1)   0 ! [D] Set initial heading and X-Y coordinates of the path? 0
+                      ! -> no (legacy, using table data), 1 -> yes
+OPT_PATH_LOOP(1)    1 ! Is this path looped? 0 -> no, 1 -> yes
+SPATH_START(1)      0 ; m ! [D] Station at the start of this path
+! SPATH_LAP(1) 525.027785 ; m ! CALC -- Lap distance for this path
+! HEADING_START(1) 133.930053 ; deg ! Heading at the start of this path
+! X_PATH_START(1) 45.7489 ; m ! Global X coordinate at the start of this path
+! Y_PATH_START(1) 14.0691 ; m ! Global Y coordinate at the start of this path
+
+NSEGMENTS(1)        1 ! Number of segments in this path
+SEGMENT_TYPE(1,1)   1 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+XY_SEGMENT_ID(1,1)  1 ! XY_TABLE_ID number of spline table [I]
+! S_SEGMENT_END(1,1) 525.027785 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,1) 45.7489 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,1) 14.0691 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,1) 133.930053 ; deg ! CALC -- Heading at end of segment
+DEFINE_XY_TABLES    1 ! No. of XY spline tables (see the SPLINE TABLES section)
+
+!------------------------------------------------------------------------------------
+! ROAD SURFACES
+!------------------------------------------------------------------------------------
+! Road surfaces define elevation Z and friction MU as functions of global X and Y
+! coordinates, using a station-based coordinate system defined with a Reference
+! Path. Up to 200 surfaces may be installed to represent sections, intersections,
+! multiple lanes, etc. The Z, MU, and RR_SURF values for a road surface are
+! provided with Configurable Functions MU_ROAD, ROAD_DZ, RR_SURF, and ROAD_ZS.
+! Boundaries that control automatic switching from one road surface to another make
+! use of the Configurable Functions ROAD_L_BOUNDARY, ROAD_NEW_ID, and ROAD_NEW_S.
+
+! NROAD             1 ! Number of installed road surfaces (read only)
+NROAD_DZ            0 ! [D] Number of ROAD_DZ datasets
+DEFINE_ROADS        1 ! VS Command to define road surfaces
+CURRENT_ROAD_ID     1 ! ROAD_ID for the vehicle during initialization [I]
+
+ROAD_ID(1)          1 ! [D] ID number for this road
+ROAD_PATH_ID(1)     1 ! PATH_ID of reference path used for this road [I]
+ROAD_SMAX_NEW_ID(1) 0 ! [D] 0 -> No SMAX limit, -1 -> stop if S > ROAD_SMAX, > 0 ->
+                      ! switch to road with this ID if S > ROAD_SMAX
+ROAD_SMIN_NEW_ID(1) 0 ! [D] 0 -> No SMIN limit, -1 -> stop if S < ROAD_SMIN, > 0 ->
+                      ! switch to road with this ID if S < ROAD_SMIN
+ROAD_N_DZ(1)        0 ! [D] Number of ROAD_DZ layers added to the surface
+
+!------------------------------------------------------------------------------------
+! START AND STOP INFORMATION FOR PATH
+!------------------------------------------------------------------------------------
+N_LTARG             0 ! [D] Number of LTARG datasets that are used in this run
+PATH_ID_DM          1 ! PATH_ID of reference path for the driver and vehicle [I]
+LTARG_ID_DM         0 ! [D] LTARG_ID of reference LTARG for the driver model (0 ->
+                      ! no reference LTARG)
+OPT_INIT_PATH       1 ! [D] Set Xo, Yo, and Yaw to match path PATH_ID_DM and target
+                      ! LTARG_ID_DM at station SSTART? 1 -> yes, 0 -> no [I]
+OPT_DIRECTION       1 ! Travel direction along path PATH_ID_DM: 0 -> set to 1 or -1
+                      ! using SSTART and SSTOP values (legacy); 1 -> increasing
+                      ! station, -1 -> decreasing station [I]
+SSTART              0 ; m ! [D] Start the vehicle at this station on path PATH_ID_DM
+                      ! and possibly with target LTARG_ID_DM. The current station
+                      ! on this path is the output variable "Station", which is
+                      ! also a state variable. [I]
+
+!------------------------------------------------------------------------------------
+! CONFIGURABLE FUNCTIONS
+!------------------------------------------------------------------------------------
+
+! MU_ROAD: Tire/road friction coefficient (MU) for a road surface. Use MU = -1 for
+! original tire data (no scaling). MU can be a nonlinear CARPET function of lateral
+! position and station or a function of station (CONSTANT or TABLE) combined with a
+! function MU_ROAD_L of lateral position (CONSTANT or TABLE). Alternatively, a custom
+! equation can be defined at runtime. MU from the calculation can be adjusted with
+! MU_ROAD_GAIN and MU_ROAD_OFFSET. Station used in the calculation can be adjusted
+! with SSCALE_MU_ROAD and SSTART_MU_ROAD. Lateral position used in the calculation
+! can be adjusted with L_SCALE_MU_ROAD and L_START_MU_ROAD. This configurable
+! function supports 200 datasets; if indices shown below are not used, e.g., (2), the
+! current value of the index IROAD is used to identify the dataset when reading data.
+
+MU_ROAD_CONSTANT(1) 0.85 ; - ! Constant MU component due to station
+MU_ROAD_GAIN(1)     1 ! Gain multiplied with calculated value to get MU
+MU_ROAD_OFFSET(1)   0 ; - ! Offset added (after gain) to get MU
+MU_ROAD_COMBINE(1) ADD ! How to combine the two components
+MU_ROAD_L_CONSTANT(1) 0 ; - ! Constant MU component due to lateral position
+
+! ROAD_NEW_ID: Left/right boundary: 0 -> no boundary, -1 stop when L reaches
+! boundary, > 0 ID of adjacent road. ID is a function of S (CONSTANT, COEFFICIENT, or
+! TABLE). Alternatively, a custom equation can be defined at runtime. ID from the
+! calculation can be adjusted with ROAD_NEW_ID_GAIN and ROAD_NEW_ID_OFFSET. S used in
+! the calculation can be adjusted with SSCALE_ROAD_NEW_ID and SSTART_ROAD_NEW_ID.
+! This configurable function supports 400 datasets; if indices shown below are not
+! used, e.g., (1,2), the current values of the indices IROAD and ISIDE are used to
+! identify the dataset when reading data.
+
+ROAD_NEW_ID_CONSTANT(1,1) 0 ; - ! [D] Constant ID, Road 1, left side boundary
+ROAD_NEW_ID_OFFSET(1,1) 0 ; - ! Offset added (after gain) to get ID
+
+ROAD_NEW_ID_CONSTANT(1,2) 0 ; - ! [D] Constant ID, Road 1, right side boundary
+ROAD_NEW_ID_OFFSET(1,2) 0 ; - ! Offset added (after gain) to get ID
+
+! ROAD_ZS: Road elevation component related only to road station S. Elevation is a
+! function of station (CONSTANT, COEFFICIENT, or TABLE). Elevation from the
+! calculation can be adjusted with ROAD_ZS_GAIN and ROAD_ZS_OFFSET. Station used in
+! the calculation can be adjusted with SSCALE_ROAD_ZS and SSTART_ROAD_ZS. The
+! derivative of this function is used internally. This configurable function supports
+! 200 datasets; if indices shown below are not used, e.g., (2), the current value of
+! the index IROAD is used to identify the dataset when reading data.
+
+! 1D table: col 1 = station (m), col 2 = elevation (m)
+ROAD_ZS_TABLE(1) SPLINE_FLAT ! spline interpolation, flat-line extrapolation
+ 0, 0
+ 1.4688, 0
+ 2.9376, 0
+ 4.4064, 0
+ 5.8753, 0
+ 7.3443, 0
+ 8.8135, 0
+ 10.2828, 0
+ 11.752, 0
+ 13.2212, 0
+ 14.6903, 0
+ 16.1593, 0
+ 16.8841, -0.0004
+ 17.6089, -0.0013
+ 18.3336, -0.0025
+ 19.0583, -0.0037
+ 19.783, -0.0046
+ 20.5078, -0.0049
+ 21.2327, -0.0044
+ 21.9576, -0.0028
+ 22.6826, 0.0001
+ 23.4077, 0.0047
+ 24.1328, 0.0113
+ 24.8455, 0.0201
+ 25.5581, 0.0317
+ 26.2709, 0.0459
+ 26.9836, 0.0626
+ 27.6964, 0.0817
+ 28.409, 0.1032
+ 29.1217, 0.1269
+ 29.8343, 0.1526
+ 30.5468, 0.1804
+ 31.2593, 0.2102
+ 31.9717, 0.2417
+ 32.8421, 0.2803
+ 33.7201, 0.3169
+ 34.6046, 0.3516
+ 35.4948, 0.384
+ 36.3893, 0.4141
+ 37.2875, 0.4416
+ 38.1878, 0.4665
+ 39.0892, 0.4886
+ 39.9905, 0.5078
+ 40.8903, 0.5238
+ 41.7875, 0.5365
+ 42.5943, 0.5449
+ 43.3969, 0.5507
+ 44.1944, 0.5542
+ 44.9857, 0.5557
+ 45.77, 0.5558
+ 46.5463, 0.5547
+ 47.3134, 0.553
+ 48.0707, 0.5509
+ 48.8171, 0.549
+ 49.5516, 0.5475
+ 50.2733, 0.5469
+ 50.768, 0.5465
+ 51.2654, 0.5454
+ 51.7658, 0.5438
+ 52.2691, 0.5418
+ 52.7754, 0.5396
+ 53.2848, 0.5373
+ 53.7971, 0.5352
+ 54.3125, 0.5332
+ 54.8309, 0.5317
+ 55.3523, 0.5307
+ 55.8765, 0.5304
+ 56.3097, 0.531
+ 56.7448, 0.5324
+ 57.1818, 0.5341
+ 57.6206, 0.5357
+ 58.0612, 0.537
+ 58.5037, 0.5374
+ 58.9477, 0.5365
+ 59.3935, 0.534
+ 59.8409, 0.5296
+ 60.2898, 0.5227
+ 60.7402, 0.5129
+ 61.2473, 0.5001
+ 61.7562, 0.4868
+ 62.2667, 0.4731
+ 62.7786, 0.4588
+ 63.292, 0.444
+ 63.8066, 0.4287
+ 64.3223, 0.4128
+ 64.8393, 0.3963
+ 65.3571, 0.3793
+ 65.8757, 0.3616
+ 66.395, 0.3432
+ 67.1265, 0.3158
+ 67.8588, 0.2868
+ 68.5916, 0.2568
+ 69.3245, 0.2265
+ 70.0571, 0.1966
+ 70.7892, 0.1677
+ 71.5203, 0.1406
+ 72.2502, 0.1158
+ 72.9783, 0.0941
+ 73.7044, 0.0761
+ 74.428, 0.0626
+ 75.3437, 0.049
+ 76.2564, 0.0367
+ 77.1662, 0.0254
+ 78.0733, 0.0153
+ 78.9778, 0.0062
+ 79.8797, -0.0019
+ 80.7794, -0.0091
+ 81.6768, -0.0154
+ 82.5721, -0.0208
+ 83.4653, -0.0254
+ 84.3567, -0.0292
+ 85.1972, -0.0322
+ 86.0362, -0.0345
+ 86.8739, -0.0363
+ 87.7103, -0.0375
+ 88.5455, -0.0383
+ 89.3796, -0.0385
+ 90.2128, -0.0384
+ 91.0451, -0.0379
+ 91.8767, -0.037
+ 92.7075, -0.0358
+ 93.5378, -0.0344
+ 95.0024, -0.0313
+ 96.4661, -0.0277
+ 97.9294, -0.0237
+ 99.393, -0.0196
+ 100.8573, -0.0154
+ 102.323, -0.0114
+ 103.7905, -0.0078
+ 105.2605, -0.0046
+ 106.7334, -0.0022
+ 108.21, -0.0006
+ 109.6905, 0
+ 112.0674, 0
+ 113.9701, 0
+ 115.523, 0
+ 116.8512, 0
+ 118.0792, 0
+ 119.3318, 0
+ 120.7335, 0
+ 122.4088, 0
+ 124.4822, 0
+ 127.0787, 0
+ 130.3225, 0
+ 132.522, 0
+ 134.7997, 0
+ 137.1351, 0
+ 139.5085, 0
+ 141.9016, 0
+ 144.2979, 0
+ 146.6834, 0
+ 149.0478, 0
+ 151.3854, 0
+ 153.696, 0
+ 155.9867, 0
+ 158.5709, 0
+ 161.0284, 0
+ 163.386, 0
+ 165.669, 0
+ 167.9007, 0
+ 170.1012, 0
+ 172.2882, 0
+ 174.4757, 0
+ 176.6748, 0
+ 178.8935, 0
+ 181.1378, 0
+ 187.3623, 0
+ 193.0282, 0
+ 198.2353, 0
+ 203.0834, 0
+ 207.6721, 0
+ 212.1012, 0
+ 216.4705, 0
+ 220.8797, 0
+ 225.4288, 0
+ 230.2172, 0
+ 235.3449, 0
+ 237.4365, 0
+ 239.5724, 0
+ 241.7411, 0
+ 243.931, 0
+ 246.1306, 0
+ 248.3291, 0
+ 250.5164, 0
+ 252.684, 0
+ 254.8249, 0
+ 256.9346, 0
+ 259.0114, 0
+ 261.13, 0.001
+ 263.248, 0.0031
+ 265.374, 0.005
+ 267.5156, 0.0057
+ 269.6808, 0.0038
+ 271.8766, -0.0019
+ 274.1097, -0.0125
+ 276.3864, -0.0294
+ 278.7123, -0.0537
+ 281.0929, -0.0867
+ 283.5333, -0.1295
+ 284.0602, -0.1397
+ 284.5849, -0.1496
+ 285.1075, -0.1594
+ 285.628, -0.1691
+ 286.1464, -0.1786
+ 286.6627, -0.1882
+ 287.1769, -0.1978
+ 287.6891, -0.2074
+ 288.1993, -0.2172
+ 288.7074, -0.2272
+ 289.2135, -0.2373
+ 290.7722, -0.2681
+ 292.3122, -0.2965
+ 293.8339, -0.3227
+ 295.3379, -0.3467
+ 296.8244, -0.3686
+ 298.294, -0.3885
+ 299.7473, -0.4066
+ 301.1845, -0.4229
+ 302.6062, -0.4375
+ 304.0129, -0.4504
+ 305.4049, -0.4619
+ 306.3633, -0.4686
+ 307.3151, -0.4739
+ 308.2603, -0.478
+ 309.1992, -0.4811
+ 310.1319, -0.4832
+ 311.0585, -0.4845
+ 311.9793, -0.4852
+ 312.8943, -0.4854
+ 313.8037, -0.4854
+ 314.7077, -0.4851
+ 315.6065, -0.4849
+ 317.6836, -0.4833
+ 319.7349, -0.4794
+ 321.7622, -0.4735
+ 323.7676, -0.4657
+ 325.7529, -0.4561
+ 327.7203, -0.4449
+ 329.6715, -0.4324
+ 331.6086, -0.4185
+ 333.5336, -0.4036
+ 335.4483, -0.3877
+ 337.3548, -0.3711
+ 338.5894, -0.3589
+ 339.8218, -0.3446
+ 341.0527, -0.3284
+ 342.2825, -0.3105
+ 343.5118, -0.2913
+ 344.7412, -0.2708
+ 345.9712, -0.2494
+ 347.2022, -0.2272
+ 348.4349, -0.2046
+ 349.6698, -0.1818
+ 350.9074, -0.159
+ 352.1282, -0.1367
+ 353.3526, -0.115
+ 354.5811, -0.0938
+ 355.8144, -0.0736
+ 357.0529, -0.0545
+ 358.2971, -0.0366
+ 359.5475, -0.0203
+ 360.8046, -0.0057
+ 362.069, 0.0069
+ 363.3411, 0.0174
+ 364.6215, 0.0255
+ 366.5114, 0.0339
+ 368.4216, 0.0393
+ 370.3539, 0.0421
+ 372.3097, 0.0427
+ 374.2908, 0.0415
+ 376.2988, 0.0387
+ 378.3351, 0.0348
+ 380.4015, 0.0302
+ 382.4994, 0.0252
+ 384.6306, 0.0202
+ 386.7966, 0.0155
+ 388.891, 0.0116
+ 391.0198, 0.0085
+ 393.1842, 0.006
+ 395.3858, 0.004
+ 397.6259, 0.0026
+ 399.9058, 0.0015
+ 402.227, 0.0008
+ 404.5909, 0.0003
+ 406.9987, 0.0001
+ 409.4519, 0
+ 411.9519, 0
+ 413.8279, 0
+ 415.8498, 0
+ 417.9891, 0
+ 420.2112, 0
+ 422.4788, 0
+ 424.7524, 0
+ 426.9921, 0
+ 429.1581, 0
+ 431.212, 0
+ 433.1181, 0
+ 434.8458, 0
+ 436.8589, 0
+ 438.7763, 0
+ 440.6247, 0
+ 442.434, 0
+ 444.2378, 0
+ 446.0738, 0
+ 447.9822, 0
+ 450.0048, 0
+ 452.184, 0
+ 454.5613, 0
+ 457.1768, 0
+ 459.8169, 0
+ 462.2583, 0
+ 464.5241, 0
+ 466.6363, 0
+ 468.6164, 0
+ 470.4836, 0
+ 472.2553, 0
+ 473.9464, 0
+ 475.5688, 0
+ 477.1316, 0
+ 478.6408, 0
+ 482.9781, 0
+ 487.2655, 0
+ 491.5114, 0
+ 495.7246, 0
+ 499.9137, 0
+ 504.0874, 0
+ 508.2544, 0
+ 512.4232, 0
+ 516.6027, 0
+ 520.8013, 0
+ 525.0278, 0
+ENDTABLE
+ROAD_ZS_GAIN(1)     1 ! Gain multiplied with calculated value to get elevation
+ROAD_ZS_OFFSET(1)   0 ; m ! Offset added (after gain) to get elevation
+SSTART_ROAD_ZS(1)   0 ; m ! Offset subtracted from station
+SSCALE_ROAD_ZS(1)   1 ! Scale factor divided into (station - SSTART_ROAD_ZS)
+
+! RR_SURF: Tire/road rolling resistance surface-effect coefficient. RR_SURF can be a
+! nonlinear CARPET function of lateral position and station or a function of station
+! (CONSTANT or TABLE) combined with a function RR_SURF_L of lateral position
+! (CONSTANT or TABLE). Alternatively, a custom equation can be defined at runtime.
+! RR_SURF from the calculation can be adjusted with RR_SURF_GAIN and RR_SURF_OFFSET.
+! Station used in the calculation can be adjusted with SSCALE_RR_SURF and
+! SSTART_RR_SURF. Lateral position used in the calculation can be adjusted with
+! L_SCALE_RR_SURF and L_START_RR_SURF. This configurable function supports 200
+! datasets; if indices shown below are not used, e.g., (2), the current value of the
+! index IROAD is used to identify the dataset when reading data.
+
+RR_SURF_CONSTANT(1) 1 ; - ! Constant RR_SURF component due to station
+RR_SURF_GAIN(1)     1 ! Gain multiplied with calculated value to get RR_SURF
+RR_SURF_OFFSET(1)   0 ; - ! Offset added (after gain) to get RR_SURF
+RR_SURF_COMBINE(1) MULTIPLY ! How to combine the two components
+RR_SURF_L_CONSTANT(1) 1 ; - ! [D] Constant RR_SURF component due to lateral position
+
+!------------------------------------------------------------------------------------
+! SPLINE X-Y TABLES FOR PATH SEGMENTS
+!------------------------------------------------------------------------------------
+! Following are up to 500 tables of X-Y global coordinates used to make spline
+! segments for reference paths. Tables are listed here only if used in a path. If
+! indices shown below are not used, e.g., SEGMENT_XY_TABLE(1), the current value
+! of the index ITAB_XY is used to identify the table when reading data.
+
+! NTAB_XY 1 ! CALC -- Current number of XY spline tables for path segments
+
+XY_TABLE_ID(1)      1 ! ID number for spline table segment
+SEGMENT_XY_TABLE(1) ! table with X (m), Y (m), and calculated station S (m)
+ 45.7489, 14.0691, 0
+ 44.7252, 15.1224, 1.469
+ 43.6915, 16.1658, 2.938
+ 42.6494, 17.201, 4.406
+ 41.6005, 18.2293, 5.875
+ 40.5464, 19.2525, 7.344
+ 39.4886, 20.272, 8.813
+ 38.4286, 21.2895, 10.283
+ 37.3682, 22.3064, 11.752
+ 36.3088, 23.3244, 13.221
+ 35.2521, 24.345, 14.69
+ 34.1995, 25.3697, 16.159
+ 33.6837, 25.8789, 16.884
+ 33.1722, 26.3924, 17.609
+ 32.6649, 26.9099, 18.334
+ 32.1612, 27.431, 19.058
+ 31.661, 27.9554, 19.783
+ 31.1639, 28.4828, 20.508
+ 30.6695, 29.0129, 21.233
+ 30.1776, 29.5454, 21.958
+ 29.6879, 30.08, 22.683
+ 29.1999, 30.6163, 23.408
+ 28.7134, 31.154, 24.133
+ 28.2364, 31.6835, 24.845
+ 27.7603, 32.2138, 25.558
+ 27.2846, 32.7446, 26.271
+ 26.8091, 33.2755, 26.984
+ 26.3335, 33.8064, 27.696
+ 25.8575, 34.3368, 28.409
+ 25.3807, 34.8665, 29.122
+ 24.9029, 35.3951, 29.834
+ 24.4238, 35.9225, 30.547
+ 23.9429, 36.4482, 31.259
+ 23.4601, 36.9721, 31.972
+ 22.8597, 37.6022, 32.842
+ 22.2364, 38.2206, 33.72
+ 21.592, 38.8265, 34.605
+ 20.928, 39.4194, 35.495
+ 20.2461, 39.9984, 36.389
+ 19.5478, 40.5632, 37.287
+ 18.8347, 41.1128, 38.188
+ 18.1085, 41.6468, 39.089
+ 17.3707, 42.1645, 39.99
+ 16.623, 42.6652, 40.89
+ 15.867, 43.1483, 41.788
+ 15.1785, 43.5688, 42.594
+ 14.4857, 43.974, 43.397
+ 13.7897, 44.3634, 44.194
+ 13.0918, 44.7364, 44.986
+ 12.3931, 45.0926, 45.77
+ 11.6948, 45.4317, 46.546
+ 10.9981, 45.7529, 47.313
+ 10.3041, 46.056, 48.071
+ 9.614, 46.3404, 48.817
+ 8.9291, 46.6056, 49.552
+ 8.2505, 46.8512, 50.273
+ 7.7819, 47.0098, 50.768
+ 7.3078, 47.1604, 51.265
+ 6.8283, 47.3034, 51.766
+ 6.3436, 47.4389, 52.269
+ 5.8538, 47.5671, 52.775
+ 5.359, 47.6881, 53.285
+ 4.8596, 47.8023, 53.797
+ 4.3555, 47.9098, 54.312
+ 3.847, 48.0107, 54.831
+ 3.3343, 48.1053, 55.352
+ 2.8176, 48.1938, 55.876
+ 2.3898, 48.2621, 56.31
+ 1.9595, 48.3264, 56.745
+ 1.5267, 48.387, 57.182
+ 1.0916, 48.4439, 57.621
+ 0.6542, 48.4972, 58.061
+ 0.2146, 48.5471, 58.504
+ -0.227, 48.5936, 58.948
+ -0.6707, 48.6368, 59.393
+ -1.1163, 48.6769, 59.841
+ -1.5637, 48.714, 60.29
+ -2.0128, 48.7481, 60.74
+ -2.5187, 48.7831, 61.247
+ -3.0266, 48.8146, 61.756
+ -3.5363, 48.8429, 62.267
+ -4.0476, 48.8681, 62.779
+ -4.5605, 48.8904, 63.292
+ -5.0747, 48.9099, 63.807
+ -5.5902, 48.9268, 64.322
+ -6.1069, 48.9412, 64.839
+ -6.6246, 48.9532, 65.357
+ -7.1431, 48.9631, 65.876
+ -7.6624, 48.971, 66.395
+ -8.3938, 48.9789, 67.126
+ -9.1261, 48.9835, 67.859
+ -9.8589, 48.9854, 68.592
+ -10.5918, 48.9848, 69.325
+ -11.3244, 48.9822, 70.057
+ -12.0565, 48.978, 70.789
+ -12.7876, 48.9727, 71.52
+ -13.5174, 48.9667, 72.25
+ -14.2455, 48.9604, 72.978
+ -14.9716, 48.9542, 73.704
+ -15.6952, 48.9486, 74.428
+ -16.6108, 48.9419, 75.344
+ -17.5235, 48.9347, 76.256
+ -18.4333, 48.9272, 77.166
+ -19.3403, 48.9194, 78.073
+ -20.2448, 48.9111, 78.978
+ -21.1467, 48.9025, 79.88
+ -22.0463, 48.8936, 80.779
+ -22.9437, 48.8842, 81.677
+ -23.8389, 48.8745, 82.572
+ -24.7321, 48.8645, 83.465
+ -25.6234, 48.8541, 84.357
+ -26.4638, 48.844, 85.197
+ -27.3028, 48.8335, 86.036
+ -28.1404, 48.8228, 86.874
+ -28.9767, 48.8117, 87.71
+ -29.8119, 48.8003, 88.546
+ -30.6459, 48.7886, 89.38
+ -31.479, 48.7767, 90.213
+ -32.3112, 48.7644, 91.045
+ -33.1427, 48.7518, 91.877
+ -33.9734, 48.7389, 92.707
+ -34.8036, 48.7258, 93.538
+ -36.268, 48.7018, 95.002
+ -37.7315, 48.677, 96.466
+ -39.1946, 48.6513, 97.929
+ -40.6579, 48.6247, 99.393
+ -42.122, 48.5972, 100.857
+ -43.5874, 48.5689, 102.323
+ -45.0546, 48.5398, 103.79
+ -46.5243, 48.5098, 105.261
+ -47.9969, 48.479, 106.733
+ -49.4731, 48.4474, 108.21
+ -50.9533, 48.4149, 109.691
+ -53.3297, 48.3664, 112.067
+ -55.2321, 48.3363, 113.97
+ -56.785, 48.3217, 115.523
+ -58.1132, 48.3198, 116.851
+ -59.3412, 48.3275, 118.079
+ -60.5937, 48.3421, 119.332
+ -61.9952, 48.3606, 120.733
+ -63.6704, 48.38, 122.409
+ -65.7438, 48.3975, 124.482
+ -68.3402, 48.4101, 127.079
+ -71.584, 48.4149, 130.322
+ -73.7825, 48.3468, 132.522
+ -76.0507, 48.1394, 134.8
+ -78.3596, 47.7887, 137.135
+ -80.6801, 47.2902, 139.509
+ -82.9831, 46.6397, 141.902
+ -85.2395, 45.833, 144.298
+ -87.4201, 44.8658, 146.683
+ -89.496, 43.7338, 149.048
+ -91.438, 42.4328, 151.385
+ -93.2171, 40.9584, 153.696
+ -94.8041, 39.3065, 155.987
+ -96.4015, 37.2751, 158.571
+ -97.7627, 35.2291, 161.028
+ -98.9053, 33.1669, 163.386
+ -99.847, 31.0871, 165.669
+ -100.6052, 28.9882, 167.901
+ -101.1977, 26.8689, 170.101
+ -101.6419, 24.7275, 172.288
+ -101.9557, 22.5626, 174.476
+ -102.1564, 20.3727, 176.675
+ -102.2617, 18.1565, 178.894
+ -102.2893, 15.9124, 181.138
+ -102.2747, 9.6879, 187.362
+ -102.2617, 4.022, 193.028
+ -102.25, -1.1851, 198.235
+ -102.2387, -6.0331, 203.083
+ -102.2274, -10.6218, 207.672
+ -102.2155, -15.0509, 212.101
+ -102.2023, -19.4202, 216.471
+ -102.1874, -23.8294, 220.88
+ -102.17, -28.3784, 225.429
+ -102.1497, -33.1668, 230.217
+ -102.1259, -38.2944, 235.345
+ -102.048, -40.3846, 237.437
+ -101.8354, -42.5099, 239.572
+ -101.4892, -44.6508, 241.741
+ -101.0108, -46.7878, 243.931
+ -100.4015, -48.9013, 246.131
+ -99.6626, -50.9719, 248.329
+ -98.7954, -52.98, 250.516
+ -97.8013, -54.9062, 252.684
+ -96.6814, -56.7308, 254.825
+ -95.4372, -58.4345, 256.935
+ -94.0698, -59.9976, 259.011
+ -92.5411, -61.4645, 261.13
+ -90.8997, -62.8031, 263.248
+ -89.1502, -64.0109, 265.374
+ -87.2977, -65.0856, 267.516
+ -85.3469, -66.0249, 269.681
+ -83.3026, -66.8264, 271.877
+ -81.1697, -67.4878, 274.11
+ -78.953, -68.0069, 276.386
+ -76.6574, -68.3811, 278.712
+ -74.2876, -68.6083, 281.093
+ -71.8485, -68.686, 283.533
+ -71.3216, -68.6865, 284.06
+ -70.7969, -68.6869, 284.585
+ -70.2743, -68.6874, 285.107
+ -69.7538, -68.6879, 285.628
+ -69.2354, -68.6884, 286.146
+ -68.7191, -68.6889, 286.663
+ -68.2049, -68.6893, 287.177
+ -67.6927, -68.6898, 287.689
+ -67.1825, -68.6903, 288.199
+ -66.6744, -68.6908, 288.707
+ -66.1683, -68.6913, 289.213
+ -64.6096, -68.6928, 290.772
+ -63.0696, -68.6944, 292.312
+ -61.5479, -68.6959, 293.834
+ -60.0439, -68.6975, 295.338
+ -58.5574, -68.6991, 296.824
+ -57.0878, -68.7007, 298.294
+ -55.6345, -68.7023, 299.747
+ -54.1973, -68.704, 301.184
+ -52.7756, -68.7056, 302.606
+ -51.3689, -68.7073, 304.013
+ -49.9769, -68.7089, 305.405
+ -49.0185, -68.7101, 306.363
+ -48.0667, -68.7113, 307.315
+ -47.1215, -68.7125, 308.26
+ -46.1826, -68.7137, 309.199
+ -45.2499, -68.7148, 310.132
+ -44.3233, -68.716, 311.058
+ -43.4025, -68.7173, 311.979
+ -42.4875, -68.7185, 312.894
+ -41.5781, -68.7197, 313.804
+ -40.6741, -68.7209, 314.708
+ -39.7753, -68.7221, 315.606
+ -37.6982, -68.725, 317.684
+ -35.6469, -68.7279, 319.735
+ -33.6196, -68.7308, 321.762
+ -31.6142, -68.7338, 323.768
+ -29.6289, -68.7368, 325.753
+ -27.6615, -68.7398, 327.72
+ -25.7103, -68.7428, 329.671
+ -23.7732, -68.7459, 331.609
+ -21.8482, -68.7489, 333.534
+ -19.9335, -68.752, 335.448
+ -18.027, -68.7551, 337.355
+ -16.7924, -68.7571, 338.589
+ -15.56, -68.7592, 339.822
+ -14.3291, -68.7612, 341.053
+ -13.0993, -68.7632, 342.283
+ -11.87, -68.7653, 343.512
+ -10.6406, -68.7673, 344.741
+ -9.4106, -68.7694, 345.971
+ -8.1796, -68.7714, 347.202
+ -6.9469, -68.7735, 348.435
+ -5.712, -68.7756, 349.67
+ -4.4744, -68.7777, 350.907
+ -3.2536, -68.7797, 352.128
+ -2.0292, -68.7817, 353.353
+ -0.8007, -68.7838, 354.581
+ 0.4326, -68.7858, 355.814
+ 1.6711, -68.7879, 357.053
+ 2.9153, -68.79, 358.297
+ 4.1657, -68.792, 359.548
+ 5.4228, -68.7941, 360.805
+ 6.6872, -68.7961, 362.069
+ 7.9593, -68.7982, 363.341
+ 9.2397, -68.8003, 364.622
+ 11.1296, -68.8033, 366.511
+ 13.0398, -68.8063, 368.422
+ 14.9721, -68.8093, 370.354
+ 16.9279, -68.8123, 372.31
+ 18.909, -68.8153, 374.291
+ 20.9169, -68.8183, 376.299
+ 22.9532, -68.8213, 378.335
+ 25.0196, -68.8243, 380.401
+ 27.1175, -68.8273, 382.499
+ 29.2487, -68.8303, 384.631
+ 31.4147, -68.8333, 386.797
+ 33.5091, -68.8361, 388.891
+ 35.6379, -68.8389, 391.02
+ 37.8023, -68.8417, 393.184
+ 40.0039, -68.8445, 395.386
+ 42.244, -68.8472, 397.626
+ 44.5239, -68.85, 399.906
+ 46.8451, -68.8528, 402.227
+ 49.209, -68.8555, 404.591
+ 51.6168, -68.8582, 406.999
+ 54.07, -68.8609, 409.452
+ 56.57, -68.8636, 411.952
+ 58.4427, -68.7524, 413.828
+ 60.4387, -68.4296, 415.85
+ 62.5156, -67.9168, 417.989
+ 64.6309, -67.2361, 420.211
+ 66.7423, -66.4091, 422.479
+ 68.8073, -65.4578, 424.752
+ 70.7836, -64.4039, 426.992
+ 72.6286, -63.2692, 429.158
+ 74.3001, -62.0757, 431.212
+ 75.7556, -60.845, 433.118
+ 76.9526, -59.5991, 434.846
+ 78.2342, -58.0466, 436.859
+ 79.4058, -56.5288, 438.776
+ 80.4654, -55.0143, 440.625
+ 81.4112, -53.4719, 442.434
+ 82.2413, -51.8704, 444.238
+ 82.9538, -50.1783, 446.074
+ 83.547, -48.3645, 447.982
+ 84.0188, -46.3977, 450.005
+ 84.3675, -44.2465, 452.184
+ 84.5912, -41.8798, 454.561
+ 84.688, -39.2661, 457.177
+ 84.6355, -36.6265, 459.817
+ 84.4224, -34.1944, 462.258
+ 84.0631, -31.9573, 464.524
+ 83.5723, -29.9029, 466.636
+ 82.9643, -28.0185, 468.616
+ 82.2539, -26.2917, 470.484
+ 81.4554, -24.7101, 472.255
+ 80.5835, -23.2611, 473.946
+ 79.6526, -21.9323, 475.569
+ 78.6773, -20.7113, 477.132
+ 77.6721, -19.5855, 478.641
+ 74.7035, -16.4233, 482.978
+ 71.7665, -13.2999, 487.265
+ 68.8552, -10.2093, 491.511
+ 65.9632, -7.1453, 495.725
+ 63.0846, -4.1019, 499.914
+ 60.2132, -1.0729, 504.087
+ 57.3428, 1.9477, 508.254
+ 54.4673, 4.9661, 512.423
+ 51.5805, 7.9884, 516.603
+ 48.6765, 11.0207, 520.801
+ 45.7489, 14.0691, 525.028
+ENDTABLE
+
+
+
+END

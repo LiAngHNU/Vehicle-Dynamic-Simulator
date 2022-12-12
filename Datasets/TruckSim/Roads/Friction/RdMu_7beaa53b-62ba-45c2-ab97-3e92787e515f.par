@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Road: Friction Map, S-L Grid`Loose Shoulder at 4 m`Split Mu
+#CheckBox0 0    
+
+#RingCtrl0 2D_STEP
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Friction coefficient Mu (-)
+
+#DiagramTwo0
+*3D_DATA 2, 2 ! columns x rows
+MU_ROAD_CARPET 2D_STEP
+0, -5, -4
+0, 0.6, 0.95
+1, 0.6, 0.95
+ENDTABLE
+
+MU_ROAD_L_CONSTANT 1
+*SCALAR 0.85
+*SCALAR2 1
+
+
+LOG_ENTRY Used Dataset: Road: Friction Map, S-L Grid; { Split Mu } Loose Shoulder at 4 m
+#Library : Road: Friction Map, S-L Grid
+#DataSet : Loose Shoulder at 4 m
+#Category: Split Mu
+#FileID  : RdMu_7beaa53b-62ba-45c2-ab97-3e92787e515f
+#Product : TruckSim 2020.1
+#VehCode Mu via S-L Grid
+
+END

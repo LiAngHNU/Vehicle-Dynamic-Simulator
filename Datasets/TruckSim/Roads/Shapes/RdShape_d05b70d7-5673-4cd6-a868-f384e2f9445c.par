@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Straight w/ Curb`Intersections
+NLANES 4
+OPTTHRESHOLD 1
+#MiscYellow0
+# 1 1 1, Road (No Lines), 1, 10, 0.48, -3.6, m, .05, m, , , -1000, 1000, 1, , , Road
+# 0.878 0.878 0.878, Concrete (Curb), 1, 10, 1, -4.1, m, -3.9, m, 3, , -1000, 1000, 1, , , Random
+# 0.878 0.878 0.878, Concrete (Curb), 1, 10, 1, -3.9, m, -3.6, m, , , -1000, 1000, 1, , , Random
+# 1 1 1, Grass (Light), 1, 10, 0.25, -12, m, -4.1, m, , , -1000, 1000, 1, , 0.01, Foliage
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (No Lines)
+SPECULAR(1) 1
+SCALE(1) 10
+LTILES(1) 0.48
+LIN(1) -3.6
+LINUNITS(1) m
+LOUT(1) .05
+LOUTUNITS(1) m
+S_START(1) -1000
+S_STOP(1) 1000
+SINT(1) 1
+AUTODETAIL(1) Road
+COLOR(2) 0.878 0.878 0.878
+MATERIAL(2) Concrete (Curb)
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 1
+LIN(2) -4.1
+LINUNITS(2) m
+LOUT(2) -3.9
+LOUTUNITS(2) m
+LDIV(2) 3
+S_START(2) -1000
+S_STOP(2) 1000
+SINT(2) 1
+AUTODETAIL(2) Random
+COLOR(3) 0.878 0.878 0.878
+MATERIAL(3) Concrete (Curb)
+SPECULAR(3) 1
+SCALE(3) 10
+LTILES(3) 1
+LIN(3) -3.9
+LINUNITS(3) m
+LOUT(3) -3.6
+LOUTUNITS(3) m
+S_START(3) -1000
+S_STOP(3) 1000
+SINT(3) 1
+AUTODETAIL(3) Random
+COLOR(4) 1 1 1
+MATERIAL(4) Grass (Light)
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) 0.25
+LIN(4) -12
+LINUNITS(4) m
+LOUT(4) -4.1
+LOUTUNITS(4) m
+S_START(4) -1000
+S_STOP(4) 1000
+SINT(4) 1
+DZ(4) 0.01
+AUTODETAIL(4) Foliage
+MTL_FILE Animator\Road_Materials\road.mtl
+
+
+#EMBEDDED_NOTES
+#Changed for 2018.1: Changed grass texture to improve appearance
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Intersections } Straight w/ Curb
+#Library : Road: Animator Surface Shapes
+#DataSet : Straight w/ Curb
+#Category: Intersections
+#FileID  : RdShape_d05b70d7-5673-4cd6-a868-f384e2f9445c
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

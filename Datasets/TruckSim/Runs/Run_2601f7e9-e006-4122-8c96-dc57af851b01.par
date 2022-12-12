@@ -1,0 +1,97 @@
+PARSFILE
+#FullDataName TruckSim Run Control`J-Turn: Outrigger, Frame Flex`* More Examples (Extra License Options)
+#VEHICLECODE F_S_SS + SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_2601f7e9-e006-4122-8c96-dc57af851b01
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_245b5580-eac8-4494-a96f-0533fd4ce892.par
+#BlueLink0 Animator: Camera Setup`150 Azm, 4.5 El, 100 m` Vehicle Reference` , Animator camera`Camera_245b5580-eac8-4494-a96f-0533fd4ce892
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 5
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_c10381a3-5e47-4593-8639-a9df98b5d06c.par
+#BlueLink2 Vehicle: Loaded Combination`3A Tractor+2A Flatbed, Outriggers` Sleeper-Cab Tractor-Trailers` , Math Model`VehLoad_c10381a3-5e47-4593-8639-a9df98b5d06c
+
+PARSFILE Procedures\Proc_3621bf6e-b45f-4c75-a51b-2d960a117632.par
+#BlueLink28 Procedures`J-Turn-type Stability Testing` Stability Tests` , Procedure`Proc_3621bf6e-b45f-4c75-a51b-2d960a117632
+
+PARSFILE Generic\Group\GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa.par
+#BlueLink9 Generic Data Group`5 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa
+
+*SPEED 65
+PARSFILE Plot\Setup\Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717.par
+#BlueLink15 Plot: Setup`Vertical Forces (Axle 1, Single Tires)` Tire Forces` , Plot`Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717
+
+PARSFILE Plot\Setup\Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9.par
+#BlueLink16 Plot: Setup`Vertical Forces (Axle 2, Dual Tires)` Tire Forces` , Plot`Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9
+
+PARSFILE Plot\Setup\Plot_e644cbac-048b-4565-bf97-13fd3a72dadf.par
+#BlueLink17 Plot: Setup`Vertical Forces (Axle 3, Dual Tires)` Tire Forces` , Plot`Plot_e644cbac-048b-4565-bf97-13fd3a72dadf
+
+PARSFILE Plot\Setup\Plot_55d7f02d-4375-4c8e-afc6-2e3e65132985.par
+#BlueLink18 Plot: Setup`Vertical Forces (Axle 4, Dual Tires)` Tire Forces` , Plot`Plot_55d7f02d-4375-4c8e-afc6-2e3e65132985
+
+PARSFILE Plot\Setup\Plot_7ebca63b-53ca-4de5-9a87-a0494e363d4f.par
+#BlueLink19 Plot: Setup`Vertical Forces (Axle 5, Dual Tires)` Tire Forces` , Plot`Plot_7ebca63b-53ca-4de5-9a87-a0494e363d4f
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Loaded\VehLoad_c10381a3-5e47-4593-8639-a9df98b5d06c.png
+WRITE_SENSOR_DETECT
+Title J-Turn: Outrigger, Frame Flex <* More Examples (Extra License Options)>
+CATEGORY * More Examples (Extra License Options) 
+DATASET_TITLE J-Turn: Outrigger, Frame Flex
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates a 3A tractor towing a 2A flatbed trailer with a cargo load and outriggers performing a J-Turn-type steering maneuver. Both the tractor and trailer are using the frame torsional flexibility option.
+#
+#This example also shows how to extend TruckSim using VS Commands. Specifically, the VS Commands are used here to track reference points located on the trailer's sprung mass, and these reference points are how we define where the ends of the outriggers are located. When any of the reference points touch the ground, a vertical spring force is applied at that reference point location.
+#
+#Outriggers have mass and inertia properties that have an effect on vehicle handling. As a comparison, you can make a copy of this example and the linked vehicle, remove the outriggers, and run the simulation to test and see how the vehicle performs without them.
+#
+#NOTE: Starting in TruckSim 9, the Z coordinates of the three outrigger contact points were changed. See the Release Note: Version 9 Backward Compatibility: Reference Points and Motion Sensors.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { * More Examples (Extra License Options) } J-Turn: Outrigger, Frame Flex
+#Library : TruckSim Run Control
+#DataSet : J-Turn: Outrigger, Frame Flex
+#Category: * More Examples (Extra License Options)
+#FileID  : Run_2601f7e9-e006-4122-8c96-dc57af851b01
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

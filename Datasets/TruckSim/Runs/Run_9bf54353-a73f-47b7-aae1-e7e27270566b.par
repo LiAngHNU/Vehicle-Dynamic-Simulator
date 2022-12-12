@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Step Steer: 0 - 660 - 0 deg.`Steering Tests
+#VEHICLECODE I_S + SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_9bf54353-a73f-47b7-aae1-e7e27270566b
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_0f5c43ef-ab77-4055-86ff-be8da1e4debf.par
+#BlueLink0 Animator: Camera Setup`160 Azm, 7.4 El, 50 m` Trailer Reference` , Animator camera`Camera_0f5c43ef-ab77-4055-86ff-be8da1e4debf
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 0.6 0
+SET_RUN_COLOR 1 0.6 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_cfe2470f-a3a6-4be5-8cd5-820e8e2a3d4e.par
+#BlueLink2 Vehicle: Loaded Combination`DRW Pickup (Param. Hitch) w/ Trailer` Pickup Trucks` , Math Model`VehLoad_cfe2470f-a3a6-4be5-8cd5-820e8e2a3d4e
+
+PARSFILE Procedures\Proc_6777f65f-c34b-46c7-b584-b860a4f58be8.par
+#BlueLink28 Procedures`0-660-0 deg. Step Steer` Steering Tests` , Procedure`Proc_6777f65f-c34b-46c7-b584-b860a4f58be8
+
+PARSFILE Generic\Group\GenGrp_5f529023-ae09-4c64-b1a6-729d16aef293.par
+#BlueLink9 Generic Data Group`Tire Paths (4 Axles)` Tire Path Animations` , Miscellaneous`GenGrp_5f529023-ae09-4c64-b1a6-729d16aef293
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_1a5339c0-4baa-420e-bba9-1b937d9b12e1.png
+WRITE_SENSOR_DETECT
+Title Step Steer: 0 - 660 - 0 deg. <Steering Tests>
+CATEGORY Steering Tests 
+DATASET_TITLE Step Steer: 0 - 660 - 0 deg.
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates an open-loop steering test (i.e., Steering Wheel Angle vs. Time) for a truck/trailer vehicle combination that makes use of the parametric hitch model.
+#
+#The parametric hitch, linked to the pickup truck, is defined using data fields representing pitch, roll, and articulation. Stiffness, Damping, Friction, Bump Stop, and Preload can be specified for the hitch.
+#
+#For more information on the Parametric Hitch, click on the vehicle blue link "Dually Pickup Truck w/ Param. Hitch".
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Steering Tests } Step Steer: 0 - 660 - 0 deg.
+#Library : TruckSim Run Control
+#DataSet : Step Steer: 0 - 660 - 0 deg.
+#Category: Steering Tests
+#FileID  : Run_9bf54353-a73f-47b7-aae1-e7e27270566b
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

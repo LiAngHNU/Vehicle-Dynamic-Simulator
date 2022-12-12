@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName TruckSim Run Control`SAE Measured Tire Data (Asymmetric)`Tire Models
+#VEHICLECODE S_SS + SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_a15a4ffd-fd7f-43b9-94f6-e2bcb9299bfc
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_1a8d38d6-cf33-4cba-b039-2807c2e1357e.par
+#BlueLink2 Vehicle: Loaded Combination`3A Tractor+2A Trailer, SAE Asym Tires` Sleeper-Cab Tractor-Trailers` , Math Model`VehLoad_1a8d38d6-cf33-4cba-b039-2807c2e1357e
+
+PARSFILE Procedures\Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4.par
+#BlueLink28 Procedures`DLC @ 70 km/h` Handling Tests` , Procedure`Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+
+SPECIAL_PARSFILE Runs\Run_9a76d8ee-ca60-448d-805a-1fd20b350164.par
+#BlueLink23 TruckSim Run Control`SAE Measured Tire Data (Symmetric)` Tire Models` , Overlay run or ERD file`Run_9a76d8ee-ca60-448d-805a-1fd20b350164
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_8ba88f47-4990-40ca-bf2d-9bbebeda47ea.png
+WRITE_SENSOR_DETECT
+Title SAE Measured Tire Data (Asymmetric) <Tire Models>
+CATEGORY Tire Models 
+DATASET_TITLE SAE Measured Tire Data (Asymmetric)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#The tire data comes from the SAE Cooperative Research program conducted in the 1990s.
+#
+#These tires have asymmetric datasets.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Tire Models } SAE Measured Tire Data (Asymmetric)
+#Library : TruckSim Run Control
+#DataSet : SAE Measured Tire Data (Asymmetric)
+#Category: Tire Models
+#FileID  : Run_a15a4ffd-fd7f-43b9-94f6-e2bcb9299bfc
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

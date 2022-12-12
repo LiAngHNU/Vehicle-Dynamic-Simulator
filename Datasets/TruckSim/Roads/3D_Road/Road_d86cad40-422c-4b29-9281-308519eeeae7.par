@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`City Intersection`VS Scene Builder
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_d86cad40-422c-4b29-9281-308519eeeae7.png
+#CheckBox0 0    
+
+PARSFILE Roads\ExScene\SceneImp_46d8a163-21c4-4f8c-9c19-e3a8c480eeb5.par
+#BlueLink0 Scene: External Import`City Intersection` VS Scene Builder` , Reference Path`SceneImp_46d8a163-21c4-4f8c-9c19-e3a8c480eeb5
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_5150e6ab-585a-46a0-863f-33fdf71a9a9a.par
+#BlueLink5 Animator: Camera Setup`167 Azm, 4.6 El, 39 m` Road Reference` , Camera`Camera_5150e6ab-585a-46a0-863f-33fdf71a9a9a
+
+
+#EMBEDDED_NOTES
+#The road was created with scene builder, and includes many 3D deteails for VS Visualizer.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { VS Scene Builder } City Intersection
+#Library : Road: 3D Surface (All Properties)
+#DataSet : City Intersection
+#Category: VS Scene Builder
+#FileID  : Road_d86cad40-422c-4b29-9281-308519eeeae7
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

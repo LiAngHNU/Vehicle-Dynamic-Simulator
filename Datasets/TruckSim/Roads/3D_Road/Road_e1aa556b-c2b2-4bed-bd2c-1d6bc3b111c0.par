@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`K & C Test Rig`Test Facilities
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_e1aa556b-c2b2-4bed-bd2c-1d6bc3b111c0.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id K & C Test Rig
+PARSFILE Roads\BuilderSegment\RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c.par
+#BlueLink0 Path: Segment Builder`Straight Path East` Straight` , Reference Path`RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight Path East
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_840049a5-f85b-4910-a314-9fd8009de456.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.0` Constant Mu` , Friction`RdMu_840049a5-f85b-4910-a314-9fd8009de456
+
+PARSFILE Roads\Shapes\RdShape_fd732d47-09f3-4d86-961b-2da5134afc87.par
+#BlueLink4 Road: Animator Surface Shapes`No Machine-Generated Shapes` ` , Road shape definitions`RdShape_fd732d47-09f3-4d86-961b-2da5134afc87
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_K_&_C_Base
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_c21b68c2-c5bb-4136-b51d-e0b30ea9c3c1.par
+#BlueLink6 Animator: Group`K & C Base` K & C Machine` , 3D Shapes`Group_c21b68c2-c5bb-4136-b51d-e0b30ea9c3c1
+
+add_reference_frame road_stuff_7_K_&_C_Wheel_Pads
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_e537cbb6-a7c7-4161-b221-b939a3e33120.par
+#BlueLink7 Animator: Group`K & C Wheel Pads` K & C Machine` , 3D Shapes`Group_e537cbb6-a7c7-4161-b221-b939a3e33120
+
+add_reference_frame road_stuff_8_K_&_C_Table_Posts
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_118c146b-67b1-47ad-afda-ff45e2cd701d.par
+#BlueLink8 Animator: Group`K & C Table Posts` K & C Machine` , 3D Shapes`Group_118c146b-67b1-47ad-afda-ff45e2cd701d
+
+add_reference_frame road_stuff_9_K_&_C_Table
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_bda48721-b6ac-4289-9ba5-72be2bbd3aac.par
+#BlueLink9 Animator: Group`K & C Table` K & C Machine` , 3D Shapes`Group_bda48721-b6ac-4289-9ba5-72be2bbd3aac
+
+add_reference_frame road_stuff_12_K_&_C_Garage
+reference_frame_ghosts off
+PARSFILE Animator\STL\Shape_24d3c103-6147-4585-8cc3-22e7d64062e9.par
+#BlueLink12 Animator: Shape File Link`K & C Garage` Test Facilities` , 3D Shapes`Shape_24d3c103-6147-4585-8cc3-22e7d64062e9
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_e1aa556b-c2b2-4bed-bd2c-1d6bc3b111c0.ani
+
+#EMBEDDED_NOTES
+#Simulated K&C Rig.  Animation shapes are linked to output variables in order to create movement.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Test Facilities } K & C Test Rig
+#Library : Road: 3D Surface (All Properties)
+#DataSet : K & C Test Rig
+#Category: Test Facilities
+#FileID  : Road_e1aa556b-c2b2-4bed-bd2c-1d6bc3b111c0
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

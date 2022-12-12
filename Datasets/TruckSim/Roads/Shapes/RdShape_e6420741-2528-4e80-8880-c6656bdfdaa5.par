@@ -1,0 +1,112 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`R=16m, Inner Apron`Roundabout, 3D, D = 36 m
+NLANES 6
+#MiscYellow0
+# 1 1 1, Road (No Centerline), 1, 10, 1, -2.1, m, 2.1, m, , , 0, 100.531, 1, , 0.005, Road
+# 1 1 1, Concrete (Worn), 1, 10, 0.25, 2.1, m, 2.6, m, 4, , 0, 100.531, 0.5, , , Random
+# 0.8 0.4 0.4, Concrete (Worn), 1, 10, 1, 2.6, m, 5.4, m, 4, , 0, 100.531, 0.5, , , Random
+# 0.502 0.502 0.502, Concrete (Worn), 1, 10, 3, -16, m, -1, m, 4, , 0, 100.531, 0.5, , -0.1, Random
+# 1 1 1, Grass (Dark), 1, 10, 1, 6.1, m, 15.9, m, 4, , 0, 100.531, 1, , , Foliage
+# 1 1 1, Concrete (Worn), 1, 10, 0.25, 5.4, m, 6.1, m, 4, , 0, 100.531, 0.5, , , Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (No Centerline)
+SPECULAR(1) 1
+SCALE(1) 10
+LTILES(1) 1
+LIN(1) -2.1
+LINUNITS(1) m
+LOUT(1) 2.1
+LOUTUNITS(1) m
+S_START(1) 0
+S_STOP(1) 100.531
+SINT(1) 1
+DZ(1) 0.005
+AUTODETAIL(1) Road
+COLOR(2) 1 1 1
+MATERIAL(2) Concrete (Worn)
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 0.25
+LIN(2) 2.1
+LINUNITS(2) m
+LOUT(2) 2.6
+LOUTUNITS(2) m
+LDIV(2) 4
+S_START(2) 0
+S_STOP(2) 100.531
+SINT(2) 0.5
+AUTODETAIL(2) Random
+COLOR(3) 0.8 0.4 0.4
+MATERIAL(3) Concrete (Worn)
+SPECULAR(3) 1
+SCALE(3) 10
+LTILES(3) 1
+LIN(3) 2.6
+LINUNITS(3) m
+LOUT(3) 5.4
+LOUTUNITS(3) m
+LDIV(3) 4
+S_START(3) 0
+S_STOP(3) 100.531
+SINT(3) 0.5
+AUTODETAIL(3) Random
+COLOR(4) 0.502 0.502 0.502
+MATERIAL(4) Concrete (Worn)
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) 3
+LIN(4) -16
+LINUNITS(4) m
+LOUT(4) -1
+LOUTUNITS(4) m
+LDIV(4) 4
+S_START(4) 0
+S_STOP(4) 100.531
+SINT(4) 0.5
+DZ(4) -0.1
+AUTODETAIL(4) Random
+COLOR(5) 1 1 1
+MATERIAL(5) Grass (Dark)
+SPECULAR(5) 1
+SCALE(5) 10
+LTILES(5) 1
+LIN(5) 6.1
+LINUNITS(5) m
+LOUT(5) 15.9
+LOUTUNITS(5) m
+LDIV(5) 4
+S_START(5) 0
+S_STOP(5) 100.531
+SINT(5) 1
+AUTODETAIL(5) Foliage
+COLOR(6) 1 1 1
+MATERIAL(6) Concrete (Worn)
+SPECULAR(6) 1
+SCALE(6) 10
+LTILES(6) 0.25
+LIN(6) 5.4
+LINUNITS(6) m
+LOUT(6) 6.1
+LOUTUNITS(6) m
+LDIV(6) 4
+S_START(6) 0
+S_STOP(6) 100.531
+SINT(6) 0.5
+AUTODETAIL(6) Random
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Roundabout, 3D, D = 36 m } R=16m, Inner Apron
+#Library : Road: Animator Surface Shapes
+#DataSet : R=16m, Inner Apron
+#Category: Roundabout, 3D, D = 36 m
+#FileID  : RdShape_e6420741-2528-4e80-8880-c6656bdfdaa5
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

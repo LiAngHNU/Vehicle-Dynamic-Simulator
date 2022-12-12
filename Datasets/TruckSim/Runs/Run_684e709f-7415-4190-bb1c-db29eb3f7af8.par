@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName TruckSim Run Control`3-Point Turn`Low-Speed Tracking
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_684e709f-7415-4190-bb1c-db29eb3f7af8
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_db1579b8-2ceb-447d-8157-99fd59c8fd1b.par
+#BlueLink0 Animator: Camera Setup`254 Azm, 8 El, 15 m, No Yaw` Vehicle Reference` , Animator camera`Camera_db1579b8-2ceb-447d-8157-99fd59c8fd1b
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_0e8f42e3-6607-4e9f-8f23-092fbd4f093c.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Conv. Van (7-spd. AT, Park Tq.)` 2A Conventional Van` , Math Model`Lead2a_0e8f42e3-6607-4e9f-8f23-092fbd4f093c
+
+PARSFILE Procedures\Proc_809cfa83-5558-4465-b3c3-26a99c3a1e7b.par
+#BlueLink28 Procedures`3-Point Turn` Driver Controls` , Procedure`Proc_809cfa83-5558-4465-b3c3-26a99c3a1e7b
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55.par
+#BlueLink10 Multiple Moving Objects`1 Driver Preview Point, Set by DM` Points of Interest` , Miscellaneous`TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55
+
+PARSFILE Animator\HUD\HUD_264f659d-344a-48dd-8ad1-4fbed527e0c9.par
+#BlueLink11 Animator: HUD`Throt, Brakes, Speed, Gear, Reverse` HUD Groups` , Miscellaneous`HUD_264f659d-344a-48dd-8ad1-4fbed527e0c9
+
+*TSTOP 1
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title 3-Point Turn <Low-Speed Tracking>
+CATEGORY Low-Speed Tracking 
+DATASET_TITLE 3-Point Turn
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#In this example, the vehicle makes a 3-point turn in an intersection.
+#
+#This shows the use of speed and steer control in reverse, and using acceleration control for smooth braking and accelerating.
+#
+#It also adjusts the lateral target position for the forward turn, to avoid hitting the curb.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Low-Speed Tracking } 3-Point Turn
+#Library : TruckSim Run Control
+#DataSet : 3-Point Turn
+#Category: Low-Speed Tracking
+#FileID  : Run_684e709f-7415-4190-bb1c-db29eb3f7af8
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

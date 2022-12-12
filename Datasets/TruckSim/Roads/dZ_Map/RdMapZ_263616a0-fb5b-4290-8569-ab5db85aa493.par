@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, S-L Grid`Parking Lot: dZ for Curbs`Parking Lot
+#CheckBox0 0    
+
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: Parking Lot: dZ for Curbs
+set_description ROAD_DZ_ID Parking Lot: dZ for Curbs
+#RingCtrl0 CARPET
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 4, 2 ! columns x rows
+ROAD_DZ_CARPET 2D_LINEAR
+0, -1, 0, 0.1, 1
+0, 0, 0, 0.2, 0.2
+100, 0, 0, 0.2, 0.2
+ENDTABLE
+
+*SCALAR 0
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Parking Lot } Parking Lot: dZ for Curbs
+#Library : Road: Off-Center Elevation Map, S-L Grid
+#DataSet : Parking Lot: dZ for Curbs
+#Category: Parking Lot
+#FileID  : RdMapZ_263616a0-fb5b-4290-8569-ab5db85aa493
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L Grid
+
+END

@@ -1,0 +1,168 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Left/Right Bumps`Ride Roads and Suspension Testing
+NLANES 10
+OPTTHRESHOLD 2
+#MiscYellow0
+# 1 1 1, Road (One Lane), 1, 10, 1, -3.5, m, 3.5, m, , , -100, 650, , , 0, Road
+# 0.8 0.8 0, Concrete, 1, 10, 0.1, -3.0, m, -3.5, m, , , 115, 121, 0.01, , 0.005, Road
+# 0.8 0.8 0, Concrete, 1, 10, 0.25, -0.5, m, -3.0, m, , , 115, 121, 0.01, , 0.005, Road
+# 0.8 0.8 0, Concrete, 1, 10, 0.1, 0, m, -0.5, m, , , 115, 121, 0.01, , 0.005, Road
+# 1 1 1, Road Transition (Light), 1, 10, 1, 3.5, m, 4.5, m, , , -100, 650, , , 0, Foliage
+# 1 1 1, Road Transition (Light), 1, 10, -1, -3.5, m, -4.5, m, , , -100, 650, , , 0, Foliage
+# 0.8 0.8 0, Concrete, 1, 10, 0.1, 0, m, 0.5, m, , , 109, 115, 0.01, , 0.005, Road
+# 0.8 0.8 0, Concrete, 1, 10, 0.25, 0.5, m, 3.0, m, , , 109, 115, 0.01, , 0.005, Road
+# 0.8 0.8 0, Concrete, 1, 10, 0.1, 3.0, m, 3.5, m, , , 109, 115, 0.01, , 0.005, Road
+# 1 1 1, Grass (Light), 1, 10, 20, -100, m, 100, m, , , -100, 650, , , -0.1, Foliage
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (One Lane)
+SPECULAR(1) 1
+SCALE(1) 10
+LTILES(1) 1
+LIN(1) -3.5
+LINUNITS(1) m
+LOUT(1) 3.5
+LOUTUNITS(1) m
+S_START(1) -100
+S_STOP(1) 650
+DZ(1) 0
+AUTODETAIL(1) Road
+COLOR(2) 0.8 0.8 0
+MATERIAL(2) Concrete
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 0.1
+LIN(2) -3.0
+LINUNITS(2) m
+LOUT(2) -3.5
+LOUTUNITS(2) m
+S_START(2) 115
+S_STOP(2) 121
+SINT(2) 0.01
+DZ(2) 0.005
+AUTODETAIL(2) Road
+COLOR(3) 0.8 0.8 0
+MATERIAL(3) Concrete
+SPECULAR(3) 1
+SCALE(3) 10
+LTILES(3) 0.25
+LIN(3) -0.5
+LINUNITS(3) m
+LOUT(3) -3.0
+LOUTUNITS(3) m
+S_START(3) 115
+S_STOP(3) 121
+SINT(3) 0.01
+DZ(3) 0.005
+AUTODETAIL(3) Road
+COLOR(4) 0.8 0.8 0
+MATERIAL(4) Concrete
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) 0.1
+LIN(4) 0
+LINUNITS(4) m
+LOUT(4) -0.5
+LOUTUNITS(4) m
+S_START(4) 115
+S_STOP(4) 121
+SINT(4) 0.01
+DZ(4) 0.005
+AUTODETAIL(4) Road
+COLOR(5) 1 1 1
+MATERIAL(5) Road Transition (Light)
+SPECULAR(5) 1
+SCALE(5) 10
+LTILES(5) 1
+LIN(5) 3.5
+LINUNITS(5) m
+LOUT(5) 4.5
+LOUTUNITS(5) m
+S_START(5) -100
+S_STOP(5) 650
+DZ(5) 0
+AUTODETAIL(5) Foliage
+COLOR(6) 1 1 1
+MATERIAL(6) Road Transition (Light)
+SPECULAR(6) 1
+SCALE(6) 10
+LTILES(6) -1
+LIN(6) -3.5
+LINUNITS(6) m
+LOUT(6) -4.5
+LOUTUNITS(6) m
+S_START(6) -100
+S_STOP(6) 650
+DZ(6) 0
+AUTODETAIL(6) Foliage
+COLOR(7) 0.8 0.8 0
+MATERIAL(7) Concrete
+SPECULAR(7) 1
+SCALE(7) 10
+LTILES(7) 0.1
+LIN(7) 0
+LINUNITS(7) m
+LOUT(7) 0.5
+LOUTUNITS(7) m
+S_START(7) 109
+S_STOP(7) 115
+SINT(7) 0.01
+DZ(7) 0.005
+AUTODETAIL(7) Road
+COLOR(8) 0.8 0.8 0
+MATERIAL(8) Concrete
+SPECULAR(8) 1
+SCALE(8) 10
+LTILES(8) 0.25
+LIN(8) 0.5
+LINUNITS(8) m
+LOUT(8) 3.0
+LOUTUNITS(8) m
+S_START(8) 109
+S_STOP(8) 115
+SINT(8) 0.01
+DZ(8) 0.005
+AUTODETAIL(8) Road
+COLOR(9) 0.8 0.8 0
+MATERIAL(9) Concrete
+SPECULAR(9) 1
+SCALE(9) 10
+LTILES(9) 0.1
+LIN(9) 3.0
+LINUNITS(9) m
+LOUT(9) 3.5
+LOUTUNITS(9) m
+S_START(9) 109
+S_STOP(9) 115
+SINT(9) 0.01
+DZ(9) 0.005
+AUTODETAIL(9) Road
+COLOR(10) 1 1 1
+MATERIAL(10) Grass (Light)
+SPECULAR(10) 1
+SCALE(10) 10
+LTILES(10) 20
+LIN(10) -100
+LINUNITS(10) m
+LOUT(10) 100
+LOUTUNITS(10) m
+S_START(10) -100
+S_STOP(10) 650
+DZ(10) -0.1
+AUTODETAIL(10) Foliage
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Ride Roads and Suspension Testing } Left/Right Bumps
+#Library : Road: Animator Surface Shapes
+#DataSet : Left/Right Bumps
+#Category: Ride Roads and Suspension Testing
+#FileID  : RdShape_74759495-9116-4d3b-a637-9c0cc4fdca79
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName TruckSim Run Control`9A Mobile crane w/ 5 driven axles`Vehicle Configurations
+#VEHICLECODE ss_sss_ss_ss
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_93c26620-3fde-4a8d-8f24-2976ec8d49fa
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 1 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Generic\Links\GenLink_ddbbf8e9-5c94-410e-b3de-e45933aa3874.par
+#BlueLink2 Generic Group of Links`9A Mobile Crane w/ 5 driven axles` Mobile Crane` , Math Model`GenLink_ddbbf8e9-5c94-410e-b3de-e45933aa3874
+
+PARSFILE Procedures\Proc_f1d056af-b3d8-4b2b-a4d6-a80c3ea5d254.par
+#BlueLink28 Procedures`Four Small Bumps` Ride Tests` , Procedure`Proc_f1d056af-b3d8-4b2b-a4d6-a80c3ea5d254
+
+PARSFILE Generic\Group\GenGrp_a285032f-2447-441d-a2c1-4896e9579705.par
+#BlueLink9 Generic Data Group`9 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_a285032f-2447-441d-a2c1-4896e9579705
+
+*SSTOP 220
+
+*IMAGE_TYPE DEFAULT
+WRITE_SENSOR_DETECT
+Title 9A Mobile crane w/ 5 driven axles <Vehicle Configurations>
+CATEGORY Vehicle Configurations 
+DATASET_TITLE 9A Mobile crane w/ 5 driven axles
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example makes use of TruckSim's modular architecture to construct some unique vehicle configurations. The vehicles are not intended to represent any specific real-world vehicles, but to exercise TruckSim's capabilities and show methods for creating special vehicles.
+#
+#Here, a 9 axle lead unit is assembled using Symbol Stack operations and Generic screens to represent a large mobile crane.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Vehicle Configurations } 9A Mobile crane w/ 5 driven axles
+#Library : TruckSim Run Control
+#DataSet : 9A Mobile crane w/ 5 driven axles
+#Category: Vehicle Configurations
+#FileID  : Run_93c26620-3fde-4a8d-8f24-2976ec8d49fa
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

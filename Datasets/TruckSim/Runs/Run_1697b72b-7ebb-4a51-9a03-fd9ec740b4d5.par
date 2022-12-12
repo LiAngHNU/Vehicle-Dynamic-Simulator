@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Extended Tires: Small Bump`Tire Models
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_1697b72b-7ebb-4a51-9a03-fd9ec740b4d5
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_f7554333-df25-4cb0-9949-01a3d4268e99.par
+#BlueLink0 Animator: Camera Setup`90 Azm, 5 El, 45 m, No Yaw` Vehicle Reference` , Animator camera`Camera_f7554333-df25-4cb0-9949-01a3d4268e99
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_f518d0e5-67c5-44ac-83d3-54d8064b7f2e.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Conv. Van (Extended Tires: Sym)` 2A Conventional Van` , Math Model`Lead2a_f518d0e5-67c5-44ac-83d3-54d8064b7f2e
+
+PARSFILE Procedures\Proc_78259fc7-7b4a-4d9f-b95e-8aefa2d8676d.par
+#BlueLink28 Procedures`Sharp Bump for Tire Test` Ride Tests` , Procedure`Proc_78259fc7-7b4a-4d9f-b95e-8aefa2d8676d
+
+PARSFILE Generic\Group\GenGrp_ea02ab46-84e2-4a4d-80d0-198ca16c210a.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz @ WC` Tire Force Arrows` , Miscellaneous`GenGrp_ea02ab46-84e2-4a4d-80d0-198ca16c210a
+
+*TSTEP 0.001
+*FREQ_MODEL 1000
+*TSTEP_OUT 0.001
+*FREQ_OUT 1000
+tstep 0.001
+iprint 1
+
+SPECIAL_PARSFILE Runs\Run_7f283c6d-8ad9-4852-ac26-8ecb35a445c9.par
+#BlueLink23 TruckSim Run Control`MF-Tyre, Sym.: Small Bump` Tire Models` , Overlay run or ERD file`Run_7f283c6d-8ad9-4852-ac26-8ecb35a445c9
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Extended Tires: Small Bump <Tire Models>
+CATEGORY Tire Models 
+DATASET_TITLE Extended Tires: Small Bump
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example shows the 2A Conventional Van with the TruckSim internal camber extension tire model driving over a small, sharp bump.
+#
+#The original data source is the "510 mm Radius (MF-Tyre, Symmetric)" tire dataset.
+#
+#This example is overlaid with the simulation "MF-Tyre, Sym.: Small Bump."
+#
+#The MF-Tyre / MF-Swift (Symmetric) dataset and the TruckSim Extended Tire dataset are based on different tire models, although they share the same tire characteristics.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Tire Models } Extended Tires: Small Bump
+#Library : TruckSim Run Control
+#DataSet : Extended Tires: Small Bump
+#Category: Tire Models
+#FileID  : Run_1697b72b-7ebb-4a51-9a03-fd9ec740b4d5
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

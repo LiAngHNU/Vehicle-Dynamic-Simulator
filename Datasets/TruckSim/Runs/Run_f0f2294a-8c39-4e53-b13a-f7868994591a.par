@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Jounce & Rebound Stops: Small Bumps`Suspension and Ride
+#VEHICLECODE S_SS + SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_f0f2294a-8c39-4e53-b13a-f7868994591a
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_245b5580-eac8-4494-a96f-0533fd4ce892.par
+#BlueLink0 Animator: Camera Setup`150 Azm, 4.5 El, 100 m` Vehicle Reference` , Animator camera`Camera_245b5580-eac8-4494-a96f-0533fd4ce892
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 1 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_6b1f54ce-14f7-4c5d-a1f1-060fa5498148.par
+#BlueLink2 Vehicle: Loaded Combination`3A Tractor w/ 2A Flatbed Trl.` Sleeper-Cab Tractor-Trailers` , Math Model`VehLoad_6b1f54ce-14f7-4c5d-a1f1-060fa5498148
+
+PARSFILE Procedures\Proc_e35a35e1-8d82-4a47-9b25-634f0f787e24.par
+#BlueLink28 Procedures`Four Small Bumps, 0.3 m incr. elev.` Ride Tests` , Procedure`Proc_e35a35e1-8d82-4a47-9b25-634f0f787e24
+
+PARSFILE Generic\Group\GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa.par
+#BlueLink9 Generic Data Group`5 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa
+
+*SSTOP 220
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_8ba88f47-4990-40ca-bf2d-9bbebeda47ea.png
+WRITE_SENSOR_DETECT
+Title Jounce & Rebound Stops: Small Bumps <Suspension and Ride>
+CATEGORY Suspension and Ride 
+DATASET_TITLE Jounce & Rebound Stops: Small Bumps
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates a 3A tractor towing a 2A flatbed trailer, loaded with 2 crates, traveling over a series of small bumps.
+#
+#The bumps are relatively small (0.3-m above the road surface), however by traveling at a constant target speed of 15 km/h, this example exercises the vehicle's suspension and effectively shows the jounce bumper forces.
+#
+#Note that the tandem suspension on the 3A tractor has load sharing specified, while the trailer axles do not use tandem load sharing.
+#
+#The example can be used to study the suspension's jounce bumpers, as well as the tandem load sharing and powertrain torque distribution.
+#
+#Tests like these, in which various bumps are added to the road surface, should be run at a slow speed to allow the vehicle's tires and suspension to realistically travel over the road features.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Suspension and Ride } Jounce & Rebound Stops: Small Bumps
+#Library : TruckSim Run Control
+#DataSet : Jounce & Rebound Stops: Small Bumps
+#Category: Suspension and Ride
+#FileID  : Run_f0f2294a-8c39-4e53-b13a-f7868994591a
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

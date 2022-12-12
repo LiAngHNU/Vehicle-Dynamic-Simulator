@@ -1,0 +1,104 @@
+PARSFILE
+#FullDataName TruckSim Run Control`City (4 Parallel Solvers): Truck 4`* TS 2020.1 - Multiple Vehicles
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_cb21c5ea-0b9c-4ef3-b5b9-9bf1841df4b0
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_f969b136-fa8e-4cbf-ba3f-496bea66a097.par
+#BlueLink12 Models: Simulink`Autonomous Vehicle` Multi-Vehicle` , Models`Simlink_f969b136-fa8e-4cbf-ba3f-496bea66a097
+
+PARSFILE Animator\Cameras\Camera_0c973cdb-2467-40fa-bb31-04d4f1c16774.par
+#BlueLink0 Animator: Camera Setup`City Intersection` Fixed Camera` , Animator camera`Camera_0c973cdb-2467-40fa-bb31-04d4f1c16774
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 1 0
+SET_RUN_COLOR 1 1 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Generic\GroupMore\GenGrpM_f9b3e7b2-cda5-4a46-9774-e295e3be5405.par
+#BlueLink2 Generic Data Group (More)`Vehicle 4 (Yellow), Solo` Multiple Vehicles (Running Solo)` , Math Model`GenGrpM_f9b3e7b2-cda5-4a46-9774-e295e3be5405
+
+PARSFILE Procedures\Proc_dadfa789-0608-4782-b3d2-d381e0d8b64d.par
+#BlueLink28 Procedures`Autonomous Driving: City Intersection` Multi-Vehicle` , Procedure`Proc_dadfa789-0608-4782-b3d2-d381e0d8b64d
+
+PARSFILE Generic\Links\GenLink_5365030c-f8b9-447a-b8e0-49917dcac770.par
+#BlueLink9 Generic Group of Links`City Intersection Paths` VS Scene Builder Paths` , Miscellaneous`GenLink_5365030c-f8b9-447a-b8e0-49917dcac770
+
+*TSTOP 1
+
+SPECIAL_PARSFILE Runs\Run_43667604-72f6-4753-b3e8-5669faf14c4d.par
+#BlueLink23 TruckSim Run Control`City (4 Parallel Solvers): Truck 1` * TS 2020.1 - Multiple Vehicles` , Overlay run or ERD file`Run_43667604-72f6-4753-b3e8-5669faf14c4d
+
+
+SPECIAL_PARSFILE Runs\Run_7c30f1e9-0af4-46c6-bbad-59804c7de169.par
+#BlueLink24 TruckSim Run Control`City (4 Parallel Solvers): Truck 2` * TS 2020.1 - Multiple Vehicles` , Overlay run or ERD file`Run_7c30f1e9-0af4-46c6-bbad-59804c7de169
+
+
+SPECIAL_PARSFILE Runs\Run_5d8195c3-1800-4480-aacd-0f6a6b14488d.par
+#BlueLink25 TruckSim Run Control`City (4 Parallel Solvers): Truck 3` * TS 2020.1 - Multiple Vehicles` , Overlay run or ERD file`Run_5d8195c3-1800-4480-aacd-0f6a6b14488d
+
+
+*IMAGE_TYPE PASS_THROUGH
+WRITE_SENSOR_DETECT
+Title City (4 Parallel Solvers): Truck 4 <* TS 2020.1 - Multiple Vehicles>
+CATEGORY * TS 2020.1 - Multiple Vehicles 
+DATASET_TITLE City (4 Parallel Solvers): Truck 4
+#MiscYellow0
+VS_TERRAIN_FILE Scene_Import\VS_Scene_Builder\City_Intersection_Many_Paths.vsterrain
+SSTART 90
+path_id_dm 1004
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#WARNING: do not click Run or Send to Simulink! Use the new 'Parallel Solvers' Library (Batch/Parallel Solvers) to run this example.
+#
+#To make a new run from Simulink, you  need two parallel solver licenses (a standard CarSim package supports two parallel solvers).
+#
+#This is 4 of 4 Run Control datasets used to simultaneously simulate four vehicles that interact with signs, pedestrians, and each other.
+#
+#This dataset does not link to the 3D road dataset; instead, it has alink to paths from that dataset, plus the pathname for the VS  Terrain file. This is done so Visualizer only loads one set of 3D shapes for the roads and buildings.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { * TS 2020.1 - Multiple Vehicles } City (4 Parallel Solvers): Truck 4
+#Library : TruckSim Run Control
+#DataSet : City (4 Parallel Solvers): Truck 4
+#Category: * TS 2020.1 - Multiple Vehicles
+#FileID  : Run_cb21c5ea-0b9c-4ef3-b5b9-9bf1841df4b0
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

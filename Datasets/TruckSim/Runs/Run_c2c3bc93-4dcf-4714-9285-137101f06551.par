@@ -1,0 +1,74 @@
+PARSFILE
+#FullDataName TruckSim Run Control`River Crossing`Road Networks: 3D Geometry and Terrain
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_c2c3bc93-4dcf-4714-9285-137101f06551
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_746997e2-b13b-4d5b-be5f-c7524ca68024.par
+#BlueLink0 Animator: Camera Setup`150 Azm, 2.5 El, 25 m` Vehicle Reference` , Animator camera`Camera_746997e2-b13b-4d5b-be5f-c7524ca68024
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_692b8a6d-30b7-4d6d-992b-ad5a0d5cbb22.par
+#BlueLink2 Vehicle: Loaded Combination`HD Utility Vehicle w/ Crate` Misc. Utility Trucks` , Math Model`VehLoad_692b8a6d-30b7-4d6d-992b-ad5a0d5cbb22
+
+PARSFILE Procedures\Proc_c3a5e64a-169b-4805-9775-f4b05308747f.par
+#BlueLink28 Procedures`River Crossing` Driving` , Procedure`Proc_c3a5e64a-169b-4805-9775-f4b05308747f
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_5c4405e9-20a8-45d0-96ad-d55e667f5096.png
+WRITE_SENSOR_DETECT
+Title River Crossing <Road Networks: 3D Geometry and Terrain>
+CATEGORY Road Networks: 3D Geometry and Terrain 
+DATASET_TITLE River Crossing
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#The example demonstrates a vehicle driving through a simulated river crossing.
+#
+#The river crossing was created using two seperate TruckSim roads: one to simulate the river and the other to simulate the river bed. For more information, click on the Procedure dataset "River Crossing."
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Road Networks: 3D Geometry and Terrain } River Crossing
+#Library : TruckSim Run Control
+#DataSet : River Crossing
+#Category: Road Networks: 3D Geometry and Terrain
+#FileID  : Run_c2c3bc93-4dcf-4714-9285-137101f06551
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

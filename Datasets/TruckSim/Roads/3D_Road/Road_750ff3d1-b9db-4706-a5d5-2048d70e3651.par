@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Road 1000:  Highway`Path Change Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_750ff3d1-b9db-4706-a5d5-2048d70e3651.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 1000
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Road 1000:  Highway
+PARSFILE Roads\BuilderSegment\RoadSeg_f8ad5287-def0-40e6-aa6e-503793298f43.par
+#BlueLink0 Path: Segment Builder`Path 1000: Highway` Lane Change Paths` , Reference Path`RoadSeg_f8ad5287-def0-40e6-aa6e-503793298f43
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Path 1000: Highway
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_6cb6dc5b-b1b8-43b8-bb1f-b832f0a407ed.par
+#BlueLink4 Road: Animator Surface Shapes`Left Lane` Lane Change Roads` , Road shape definitions`RdShape_6cb6dc5b-b1b8-43b8-bb1f-b832f0a407ed
+
+RR_SURF_CONSTANT 1.0
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_d4c450d6-372b-4662-b26d-43e2a7e034fd.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 39 m` Road Reference` , Camera`Camera_d4c450d6-372b-4662-b26d-43e2a7e034fd
+
+parsfile Roads\3D_Road\Road_750ff3d1-b9db-4706-a5d5-2048d70e3651.ani
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Path Change Roads } Road 1000:  Highway
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Road 1000:  Highway
+#Category: Path Change Roads
+#FileID  : Road_750ff3d1-b9db-4706-a5d5-2048d70e3651
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

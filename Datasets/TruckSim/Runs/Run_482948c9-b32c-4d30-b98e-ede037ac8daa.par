@@ -1,0 +1,96 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Props and Environmental Objects`VS Visualizer Examples
+#VEHICLECODE I_I
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_482948c9-b32c-4d30-b98e-ede037ac8daa
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_ac8c3f8b-24c8-47d4-aac0-7bfde62226f0.par
+#BlueLink0 Animator: Camera Setup`Fixed Rear Follow Camera` Driver View` , Animator camera`Camera_ac8c3f8b-24c8-47d4-aac0-7bfde62226f0
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 on
+RT_WINDOW_CLOSE on
+#RingCtrl5 1
+LIVE_SERVER_MAX_CONNECTIONS 1
+PARSFILE Vehicles\Lead_2a\Lead2a_6bce466e-51db-4635-9012-3917a5cc4de6.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Compact Utility Truck (I_I)` Utility Vehicles` , Math Model`Lead2a_6bce466e-51db-4635-9012-3917a5cc4de6
+
+PARSFILE Procedures\Proc_baaf7b06-e881-446d-b650-d05bea358c05.par
+#BlueLink28 Procedures`Parking Lot: One Complete Lap` Animation Asset-based Scenarios` , Procedure`Proc_baaf7b06-e881-446d-b650-d05bea358c05
+
+PARSFILE Generic\Links\GenLink_a1b9a649-a49f-4c37-aec4-cd4af817299b.par
+#BlueLink9 Generic Group of Links`Environmental Objects and Props` Environments` , Miscellaneous`GenLink_a1b9a649-a49f-4c37-aec4-cd4af817299b
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_2127a307-7381-4804-bac7-d7bef50b3e45.par
+#BlueLink10 Multiple Moving Objects`Parked Motorcycles` Parked Vehicles` , Miscellaneous`TMotion_2127a307-7381-4804-bac7-d7bef50b3e45
+
+PARSFILE Roads\3D_Road\Road_5cde8494-d541-4c7f-977f-548f5086c63e.par
+#BlueLink11 Road: 3D Surface (All Properties)`Fence Samples` Parking Lot` , Miscellaneous`Road_5cde8494-d541-4c7f-977f-548f5086c63e
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_1d7d0caf-7609-48e8-af6d-bbc086475760.png
+WRITE_SENSOR_DETECT
+Title Props and Environmental Objects <VS Visualizer Examples>
+CATEGORY VS Visualizer Examples 
+DATASET_TITLE Props and Environmental Objects
+#MiscYellow0
+PATH_ID_DM = 1001
+CURRENT_ROAD_ID = 1002
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This scene consists of a basic parking lot with new animator objects "parked" in the spaces.  The ego vehicle makes one lap, traveling slowly, around the parking lot.
+#
+#The scene features these animated objects:
+#* Wind Turbine
+#* Pump Jack
+#* Agricultural Windmill
+#
+#The animated objects are located directly ahead of the ego vehicle, in the distance so that they are scaled appropriately.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { VS Visualizer Examples } Props and Environmental Objects
+#Library : TruckSim Run Control
+#DataSet : Props and Environmental Objects
+#Category: VS Visualizer Examples
+#FileID  : Run_482948c9-b32c-4d30-b98e-ede037ac8daa
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

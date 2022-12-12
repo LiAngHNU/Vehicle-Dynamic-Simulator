@@ -1,0 +1,283 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`I-94 (Scenic)`Highway Intersection
+NLANES 18
+OPTTHRESHOLD 1
+#MiscYellow0
+# 1 1 1, Road (Medium), 1, 20, 1, -3.9, m, 3.9, m, , , 0, 2000, 5, , , Road
+# 1 1 1, Road (Concrete No Lines), 1, 10, 1, 3.9, m, 11, m, , , 0, 2000, 5, , , Road
+# 1 1 1, Road (Medium), 1, 20, 1, 11, m, 18.8, m, , , 0, 2000, 5, , , Road
+# 1 1 1, Road (Concrete No Lines), 1, 10, 1, 18.8, m, 22.1, m, , , 0, 2000, 5, , , Road
+# 1 1 1, Road (Concrete No Lines), 1, 10, 1, -7.2, m, -3.9, m, , , 0, 742, 5, , , Road
+# 1 1 1, Road Transition (Light), 1, 20, -1, -9.2, m, -7.2, m, , , 0, 742, 5, , , Foliage
+# 1 1 1, Road Transition (Light), 1, 20, 1, 22.1, m, 24.2, m, , , 0, 1310, 5, , , Foliage
+# 1 1 1, Grass (Light), 1, 20, 0.5, -9.2, m, -23, m, , , 0, 741, 5, , , Foliage
+# 1 1 1, Road (Concrete No Lines), 1, 20, 1, -7.2, m, -3.9, m, , , 1025, 2000, 5, , , Road
+# 1 1 1, Grass (Light), 1, 20, 0.5, 7, edge, 8, edge, , , 0, 1310, 5, , , Foliage
+# 1 1 1, Concrete, 1, 20, 1, 3, edge, 4, edge, , , 1245, 1357.08, 5, , , Random
+# 1 1 1, Concrete, 1, 20, 1, 5, edge, 6, edge, , , 1245, 1367.08, 5, , , Random
+# 1 1 1, Grass (Light), 1, 20, 0.5, 7, edge, 8, edge, , , 1367.08, 2000, 5, , , Foliage
+# 1 1 1, Grass (Light), 1, 20, 0.5, 1, edge, 2, edge, , , 1335.08, 2000, 5, , , Foliage
+# 1 1 1, Road Transition (Light), 1, 20, 1, 22.1, m, 24.2, m, , , 1367.08, 2000, 5, , , Foliage
+# 1 1 1, Road Transition (Light), 1, 20, -1, -9.2, m, -7.2, m, , , 1335.08, 2000, 5, , , Foliage
+# 1 1 1, Road (No Lines), 1, 20, 0.01, -3.5, m, -3.8, m, , , 746, 919, 3, , 0.01, Road
+# 1 1 1, No Texture, 1, 20, 1, -3.58, m, -3.72, m, , , 746, 919, 3, 4, 0.02, Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (Medium)
+SPECULAR(1) 1
+SCALE(1) 20
+LTILES(1) 1
+LIN(1) -3.9
+LINUNITS(1) m
+LOUT(1) 3.9
+LOUTUNITS(1) m
+S_START(1) 0
+S_STOP(1) 2000
+SINT(1) 5
+AUTODETAIL(1) Road
+COLOR(2) 1 1 1
+MATERIAL(2) Road (Concrete No Lines)
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 1
+LIN(2) 3.9
+LINUNITS(2) m
+LOUT(2) 11
+LOUTUNITS(2) m
+S_START(2) 0
+S_STOP(2) 2000
+SINT(2) 5
+AUTODETAIL(2) Road
+COLOR(3) 1 1 1
+MATERIAL(3) Road (Medium)
+SPECULAR(3) 1
+SCALE(3) 20
+LTILES(3) 1
+LIN(3) 11
+LINUNITS(3) m
+LOUT(3) 18.8
+LOUTUNITS(3) m
+S_START(3) 0
+S_STOP(3) 2000
+SINT(3) 5
+AUTODETAIL(3) Road
+COLOR(4) 1 1 1
+MATERIAL(4) Road (Concrete No Lines)
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) 1
+LIN(4) 18.8
+LINUNITS(4) m
+LOUT(4) 22.1
+LOUTUNITS(4) m
+S_START(4) 0
+S_STOP(4) 2000
+SINT(4) 5
+AUTODETAIL(4) Road
+COLOR(5) 1 1 1
+MATERIAL(5) Road (Concrete No Lines)
+SPECULAR(5) 1
+SCALE(5) 10
+LTILES(5) 1
+LIN(5) -7.2
+LINUNITS(5) m
+LOUT(5) -3.9
+LOUTUNITS(5) m
+S_START(5) 0
+S_STOP(5) 742
+SINT(5) 5
+AUTODETAIL(5) Road
+COLOR(6) 1 1 1
+MATERIAL(6) Road Transition (Light)
+SPECULAR(6) 1
+SCALE(6) 20
+LTILES(6) -1
+LIN(6) -9.2
+LINUNITS(6) m
+LOUT(6) -7.2
+LOUTUNITS(6) m
+S_START(6) 0
+S_STOP(6) 742
+SINT(6) 5
+AUTODETAIL(6) Foliage
+COLOR(7) 1 1 1
+MATERIAL(7) Road Transition (Light)
+SPECULAR(7) 1
+SCALE(7) 20
+LTILES(7) 1
+LIN(7) 22.1
+LINUNITS(7) m
+LOUT(7) 24.2
+LOUTUNITS(7) m
+S_START(7) 0
+S_STOP(7) 1310
+SINT(7) 5
+AUTODETAIL(7) Foliage
+COLOR(8) 1 1 1
+MATERIAL(8) Grass (Light)
+SPECULAR(8) 1
+SCALE(8) 20
+LTILES(8) 0.5
+LIN(8) -9.2
+LINUNITS(8) m
+LOUT(8) -23
+LOUTUNITS(8) m
+S_START(8) 0
+S_STOP(8) 741
+SINT(8) 5
+AUTODETAIL(8) Foliage
+COLOR(9) 1 1 1
+MATERIAL(9) Road (Concrete No Lines)
+SPECULAR(9) 1
+SCALE(9) 20
+LTILES(9) 1
+LIN(9) -7.2
+LINUNITS(9) m
+LOUT(9) -3.9
+LOUTUNITS(9) m
+S_START(9) 1025
+S_STOP(9) 2000
+SINT(9) 5
+AUTODETAIL(9) Road
+COLOR(10) 1 1 1
+MATERIAL(10) Grass (Light)
+SPECULAR(10) 1
+SCALE(10) 20
+LTILES(10) 0.5
+LIN(10) 7
+LINUNITS(10) edge
+LOUT(10) 8
+LOUTUNITS(10) edge
+S_START(10) 0
+S_STOP(10) 1310
+SINT(10) 5
+AUTODETAIL(10) Foliage
+COLOR(11) 1 1 1
+MATERIAL(11) Concrete
+SPECULAR(11) 1
+SCALE(11) 20
+LTILES(11) 1
+LIN(11) 3
+LINUNITS(11) edge
+LOUT(11) 4
+LOUTUNITS(11) edge
+S_START(11) 1245
+S_STOP(11) 1357.08
+SINT(11) 5
+AUTODETAIL(11) Random
+COLOR(12) 1 1 1
+MATERIAL(12) Concrete
+SPECULAR(12) 1
+SCALE(12) 20
+LTILES(12) 1
+LIN(12) 5
+LINUNITS(12) edge
+LOUT(12) 6
+LOUTUNITS(12) edge
+S_START(12) 1245
+S_STOP(12) 1367.08
+SINT(12) 5
+AUTODETAIL(12) Random
+COLOR(13) 1 1 1
+MATERIAL(13) Grass (Light)
+SPECULAR(13) 1
+SCALE(13) 20
+LTILES(13) 0.5
+LIN(13) 7
+LINUNITS(13) edge
+LOUT(13) 8
+LOUTUNITS(13) edge
+S_START(13) 1367.08
+S_STOP(13) 2000
+SINT(13) 5
+AUTODETAIL(13) Foliage
+COLOR(14) 1 1 1
+MATERIAL(14) Grass (Light)
+SPECULAR(14) 1
+SCALE(14) 20
+LTILES(14) 0.5
+LIN(14) 1
+LINUNITS(14) edge
+LOUT(14) 2
+LOUTUNITS(14) edge
+S_START(14) 1335.08
+S_STOP(14) 2000
+SINT(14) 5
+AUTODETAIL(14) Foliage
+COLOR(15) 1 1 1
+MATERIAL(15) Road Transition (Light)
+SPECULAR(15) 1
+SCALE(15) 20
+LTILES(15) 1
+LIN(15) 22.1
+LINUNITS(15) m
+LOUT(15) 24.2
+LOUTUNITS(15) m
+S_START(15) 1367.08
+S_STOP(15) 2000
+SINT(15) 5
+AUTODETAIL(15) Foliage
+COLOR(16) 1 1 1
+MATERIAL(16) Road Transition (Light)
+SPECULAR(16) 1
+SCALE(16) 20
+LTILES(16) -1
+LIN(16) -9.2
+LINUNITS(16) m
+LOUT(16) -7.2
+LOUTUNITS(16) m
+S_START(16) 1335.08
+S_STOP(16) 2000
+SINT(16) 5
+AUTODETAIL(16) Foliage
+COLOR(17) 1 1 1
+MATERIAL(17) Road (No Lines)
+SPECULAR(17) 1
+SCALE(17) 20
+LTILES(17) 0.01
+LIN(17) -3.5
+LINUNITS(17) m
+LOUT(17) -3.8
+LOUTUNITS(17) m
+S_START(17) 746
+S_STOP(17) 919
+SINT(17) 3
+DZ(17) 0.01
+AUTODETAIL(17) Road
+COLOR(18) 1 1 1
+MATERIAL(18) No Texture
+SPECULAR(18) 1
+SCALE(18) 20
+LTILES(18) 1
+LIN(18) -3.58
+LINUNITS(18) m
+LOUT(18) -3.72
+LOUTUNITS(18) m
+S_START(18) 746
+S_STOP(18) 919
+SINT(18) 3
+IPRINT(18) 4
+DZ(18) 0.02
+AUTODETAIL(18) Random
+MTL_FILE Animator\Road_Materials\road.mtl
+
+
+#EMBEDDED_NOTES
+#This shows two lanes going north, two going south, and a 6.7m concrete separator. The stopping lane on the right side ends at 870m where exit 172 starts.
+#
+#The  stop lane and grass on the right side are a little low so they don't hide the exit.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Highway Intersection } I-94 (Scenic)
+#Library : Road: Animator Surface Shapes
+#DataSet : I-94 (Scenic)
+#Category: Highway Intersection
+#FileID  : RdShape_93ebec31-837f-4b69-b231-b33d3adb736b
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName TruckSim Run Control`4A LCF+2A Trl`Vehicle Configurations
+#VEHICLECODE SS_SS + SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_e856686b-3d96-4a81-a600-40fde112f84d
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_f14ac500-33d3-4a9e-ad80-58e20b1c05f8.par
+#BlueLink2 Vehicle: Loaded Combination`4A LCF+2A Trl` LCF Vans` , Math Model`VehLoad_f14ac500-33d3-4a9e-ad80-58e20b1c05f8
+
+PARSFILE Procedures\Proc_fdccaa91-6052-4816-adad-68e3562e08c5.par
+#BlueLink28 Procedures`DLC @ 50 km/h` Handling Tests` , Procedure`Proc_fdccaa91-6052-4816-adad-68e3562e08c5
+
+PARSFILE Generic\Group\GenGrp_7c3148c6-de37-4027-be86-a5d25fcb2727.par
+#BlueLink9 Generic Data Group`6 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_7c3148c6-de37-4027-be86-a5d25fcb2727
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_b40669f7-76a5-4460-a89b-ae9179cf04f0.png
+WRITE_SENSOR_DETECT
+Title 4A LCF+2A Trl <Vehicle Configurations>
+CATEGORY Vehicle Configurations 
+DATASET_TITLE 4A LCF+2A Trl
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#SS_SS + SS
+#
+#4A LCF Van + 2A ballast trailer performing a double lane change maneuver.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Vehicle Configurations } 4A LCF+2A Trl
+#Library : TruckSim Run Control
+#DataSet : 4A LCF+2A Trl
+#Category: Vehicle Configurations
+#FileID  : Run_e856686b-3d96-4a81-a600-40fde112f84d
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

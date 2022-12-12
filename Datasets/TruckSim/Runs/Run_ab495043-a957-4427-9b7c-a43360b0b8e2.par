@@ -1,0 +1,96 @@
+PARSFILE
+#FullDataName TruckSim Run Control`PBS  C2(A): Gradeability (Motion), 20%`Performance Based Standards (PBS)
+#VEHICLECODE S_SS + SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_ab495043-a957-4427-9b7c-a43360b0b8e2
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#BlueLink12 ` , Models` , Models` , Models`
+
+PARSFILE Animator\Cameras\Camera_245b5580-eac8-4494-a96f-0533fd4ce892.par
+#BlueLink0 Animator: Camera Setup`150 Azm, 4.5 El, 100 m` Vehicle Reference` , Animator camera`Camera_245b5580-eac8-4494-a96f-0533fd4ce892
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_8a9b7bd4-c9f9-4b2b-952d-0f7b28567469.par
+#BlueLink2 Vehicle: Loaded Combination`3A Tractor w/ 2A Van Trailer (80,000 lb)` Sleeper-Cab Tractor-Trailers` , Math Model`VehLoad_8a9b7bd4-c9f9-4b2b-952d-0f7b28567469
+
+PARSFILE Procedures\Proc_0207966d-afc4-4a6a-a722-6fa5c841922d.par
+#BlueLink28 Procedures`PBS C2(A): Gradeability, Maintain Motion` PBS (Performance Based Standards)` , Procedure`Proc_0207966d-afc4-4a6a-a722-6fa5c841922d
+
+PARSFILE Roads\3D_Road\Road_87e59496-4562-4c5c-a2bf-21fcbe7e5886.par
+#BlueLink9 Road: 3D Surface (All Properties)`PBS: 20% Grade` PBS Tests` , Miscellaneous`Road_87e59496-4562-4c5c-a2bf-21fcbe7e5886
+
+PARSFILE Generic\Group\GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa.par
+#BlueLink10 Generic Data Group`5 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa
+
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a.par
+#BlueLink15 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink16 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Loaded\VehLoad_8a9b7bd4-c9f9-4b2b-952d-0f7b28567469.png
+#BlueLink13 ` , Output Variables` , Output Variables` , Output Variables`
+
+WRITE_SENSOR_DETECT
+Title PBS  C2(A): Gradeability (Motion), 20% <Performance Based Standards (PBS)>
+CATEGORY Performance Based Standards (PBS) 
+DATASET_TITLE PBS  C2(A): Gradeability (Motion), 20%
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example applies the PBS C2(A): Gradeability (Maintain Motion) procedure using a road with a 20% grade.
+#
+#The procedure puts the vehicle into first gear with full throttle for this test. These controls may not be appropriate for every vehicle, so change the gear and / or throttle setting accordingly.
+#
+#If the vehicle reaches a steady speed it passes the test. If not, try a road with a less severe grade.
+#
+#The PBS documentation specifies different road grades based on the PBS Road Class. You choose a road with the appropriate grade based on the PBS Road Class you are testing.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Performance Based Standards (PBS) } PBS  C2(A): Gradeability (Motion), 20%
+#Library : TruckSim Run Control
+#DataSet : PBS  C2(A): Gradeability (Motion), 20%
+#Category: Performance Based Standards (PBS)
+#FileID  : Run_ab495043-a957-4427-9b7c-a43360b0b8e2
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

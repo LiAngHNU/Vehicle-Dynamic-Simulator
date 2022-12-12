@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`I-94 Exit 172 to Jackson Ave (Raw GPS)`Atlas and ADAS RP Map Downloads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_4b963a7f-ad36-493b-8e56-ef15e8b1f473.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id I-94 Exit 172 to Jackson Ave (Raw GPS)
+PARSFILE Roads\ExScene\SceneImp_2117a73e-b0c4-45fc-bbc4-17dd87714796.par
+#BlueLink0 Scene: External Import`Exit 172 (Jackson Ave), Raw GPS` Atlas` , Reference Path`SceneImp_2117a73e-b0c4-45fc-bbc4-17dd87714796
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Exit 172 (Jackson Ave), Raw GPS
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_090391f1-547e-4f6a-814b-3e480979d21c.par
+#BlueLink4 Road: Animator Surface Shapes`I-94 N Exit 172 (Raw GPS)` Highway Intersection` , Road shape definitions`RdShape_090391f1-547e-4f6a-814b-3e480979d21c
+
+RR_SURF_CONSTANT 1.0
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_d4c450d6-372b-4662-b26d-43e2a7e034fd.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 39 m` Road Reference` , Camera`Camera_d4c450d6-372b-4662-b26d-43e2a7e034fd
+
+parsfile Roads\3D_Road\Road_4b963a7f-ad36-493b-8e56-ef15e8b1f473.ani
+
+#EMBEDDED_NOTES
+#This dataset is for exit 172 from I-94 in Ann Arbor. The XYZ coordinates are anchored to the GPS reference linked to the I-94 section.
+#
+#The path starts on I-94, follows the exit, then turns right onto Jacksone Ave.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Atlas and ADAS RP Map Downloads } I-94 Exit 172 to Jackson Ave (Raw GPS)
+#Library : Road: 3D Surface (All Properties)
+#DataSet : I-94 Exit 172 to Jackson Ave (Raw GPS)
+#Category: Atlas and ADAS RP Map Downloads
+#FileID  : Road_4b963a7f-ad36-493b-8e56-ef15e8b1f473
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

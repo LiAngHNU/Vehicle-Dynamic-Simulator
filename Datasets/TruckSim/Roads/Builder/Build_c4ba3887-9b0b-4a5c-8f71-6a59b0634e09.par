@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Path/Road: Segment Builder (Simple 3D)`100 m Radius Loop, ID = 1006`Roundabout (Small)
+#RingCtrl0 3
+#RingCtrl1 2
+
+SET_IPATH_FOR_ID 1006
+#CheckBox0 1    
+OPT_PATH_LOOP 1
+#CheckBox3 1    
+OPT_PATH_START 1
+
+PATH_ID_DM = PATH_ID
+set_description path_id 100 m Radius Loop, ID = 1006
+
+#MiscYellow0
+# Right 360 deg 100 m 360 628.318531 628.319 10.0 0.0 Rel 0.0 Rel 0.0 10 0.8 0.8
+#ENDMYellow
+
+SPATH_START 0
+NSEGMENTS 1
+X_PATH_START 0
+Y_PATH_START -100
+HEADING_START 180
+*TRANSZ 0
+
+IPATHSEG 1
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -100
+SEGMENT_ARC 360
+
+#EMBEDDED_NOTES
+#This circle is centered at (0,0) with station increasing in the counter-clockwise direction, given the starting heading of 180 deg.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Path/Road: Segment Builder (Simple 3D); { Roundabout (Small) } 100 m Radius Loop, ID = 1006
+#Library : Path/Road: Segment Builder (Simple 3D)
+#DataSet : 100 m Radius Loop, ID = 1006
+#Category: Roundabout (Small)
+#FileID  : Build_c4ba3887-9b0b-4a5c-8f71-6a59b0634e09
+#Product : TruckSim 2020.1
+#VehCode Path/Road Segment Builder
+
+END

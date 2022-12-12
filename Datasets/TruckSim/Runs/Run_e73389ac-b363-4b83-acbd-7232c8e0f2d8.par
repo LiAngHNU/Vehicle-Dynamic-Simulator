@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Output to Excel (ERD to CSV/MAT)`Output Options
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_e73389ac-b363-4b83-acbd-7232c8e0f2d8
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 4
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_84263c77-d0d4-47ba-b039-1c7964ca12e1.par
+#BlueLink2 Vehicle: Loaded Combination`Delivery Truck (S_S) w/ Payload` Misc. Utility Trucks` , Math Model`VehLoad_84263c77-d0d4-47ba-b039-1c7964ca12e1
+
+PARSFILE Procedures\Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4.par
+#BlueLink28 Procedures`DLC @ 70 km/h` Handling Tests` , Procedure`Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_8f7dac3f-b802-4072-9832-f4b98d0cc372.png
+PARSFILE IO_Channels\W_Channels\Write_dc8bc2e0-07f2-4e4f-ba78-a2a662821bf1.par
+#BlueLink13 I/O Channels: Write`Copy 3 Variables to Excel and MATLAB` ` , Output Variables`Write_dc8bc2e0-07f2-4e4f-ba78-a2a662821bf1
+
+WRITE_SENSOR_DETECT
+Title Output to Excel (ERD to CSV/MAT) <Output Options>
+CATEGORY Output Options 
+DATASET_TITLE Output to Excel (ERD to CSV/MAT)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates how to set up a simulation where both a .CSV file and a .MAT file are created automatically. These output files contain a selection of three data channels from this simulation.
+#
+#The VS/ERD File Utility is used to create an .INI file identifying outputs to be written to the .CSV and .MAT files.
+#
+#The list of outputs in the .INI file must be a subset of the outputs listed in the "Output Variables: Write Channels" dataset linked on this screen. Click on the blue link -- Copy 3 Variables to Excel and MATLAB -- to see how this is set up.
+#
+#More information on the VS/ERD File Utility can be found by clicking on the Tools drop-down menu and selecting "VS/ERD File Utility".
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Output Options } Output to Excel (ERD to CSV/MAT)
+#Library : TruckSim Run Control
+#DataSet : Output to Excel (ERD to CSV/MAT)
+#Category: Output Options
+#FileID  : Run_e73389ac-b363-4b83-acbd-7232c8e0f2d8
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

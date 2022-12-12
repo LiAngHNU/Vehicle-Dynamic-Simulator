@@ -1,0 +1,129 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Road Handling Course`Stability Test Roads
+NLANES 8
+OPTTHRESHOLD 20
+#MiscYellow0
+# 0.878 0.878 0.878, Road (One Lane), 1, 20, 1, -5, m, 5, m, , , 0, 3000, 2, , , Foliage
+# red, No Texture, 1, , , 5, m, 6, m, , , 1349.60, 1349.80, 2, , 0.02, Foliage
+# white, No Texture, 1, , , -6, m, 6, m, , , 0, 0.3, 0.1, , 0.02, Random
+# 0.878 0.878 0.878, Road Transition (Dark), 1, 10, 1, 5, m, 6, m, , , 0, 3000, 2, , , Random
+# 0.878 0.878 0.878, Road Transition (Dark), 1, 10, -1, -5, m, -6, m, , , 0, 3000, 2, , , Random
+# red, No Texture, 1, , , 5, m, 6, m, , , 1380.08, 1380.28, 2, , 0.02, Random
+# red, No Texture, 1, , , 5, m, 6, m, , , 1410.56, 1410.76, 2, , 0.02, Random
+# red, No Texture, 1, , , 5, m, 6, m, , , 1319.12, 1319.32, 1, , 0.025, Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 0.878 0.878 0.878
+MATERIAL(1) Road (One Lane)
+SPECULAR(1) 1
+SCALE(1) 20
+LTILES(1) 1
+LIN(1) -5
+LINUNITS(1) m
+LOUT(1) 5
+LOUTUNITS(1) m
+S_START(1) 0
+S_STOP(1) 3000
+SINT(1) 2
+AUTODETAIL(1) Foliage
+COLOR(2) red
+MATERIAL(2) No Texture
+SPECULAR(2) 1
+LIN(2) 5
+LINUNITS(2) m
+LOUT(2) 6
+LOUTUNITS(2) m
+S_START(2) 1349.60
+S_STOP(2) 1349.80
+SINT(2) 2
+DZ(2) 0.02
+AUTODETAIL(2) Foliage
+COLOR(3) white
+MATERIAL(3) No Texture
+SPECULAR(3) 1
+LIN(3) -6
+LINUNITS(3) m
+LOUT(3) 6
+LOUTUNITS(3) m
+S_START(3) 0
+S_STOP(3) 0.3
+SINT(3) 0.1
+DZ(3) 0.02
+AUTODETAIL(3) Random
+COLOR(4) 0.878 0.878 0.878
+MATERIAL(4) Road Transition (Dark)
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) 1
+LIN(4) 5
+LINUNITS(4) m
+LOUT(4) 6
+LOUTUNITS(4) m
+S_START(4) 0
+S_STOP(4) 3000
+SINT(4) 2
+AUTODETAIL(4) Random
+COLOR(5) 0.878 0.878 0.878
+MATERIAL(5) Road Transition (Dark)
+SPECULAR(5) 1
+SCALE(5) 10
+LTILES(5) -1
+LIN(5) -5
+LINUNITS(5) m
+LOUT(5) -6
+LOUTUNITS(5) m
+S_START(5) 0
+S_STOP(5) 3000
+SINT(5) 2
+AUTODETAIL(5) Random
+COLOR(6) red
+MATERIAL(6) No Texture
+SPECULAR(6) 1
+LIN(6) 5
+LINUNITS(6) m
+LOUT(6) 6
+LOUTUNITS(6) m
+S_START(6) 1380.08
+S_STOP(6) 1380.28
+SINT(6) 2
+DZ(6) 0.02
+AUTODETAIL(6) Random
+COLOR(7) red
+MATERIAL(7) No Texture
+SPECULAR(7) 1
+LIN(7) 5
+LINUNITS(7) m
+LOUT(7) 6
+LOUTUNITS(7) m
+S_START(7) 1410.56
+S_STOP(7) 1410.76
+SINT(7) 2
+DZ(7) 0.02
+AUTODETAIL(7) Random
+COLOR(8) red
+MATERIAL(8) No Texture
+SPECULAR(8) 1
+LIN(8) 5
+LINUNITS(8) m
+LOUT(8) 6
+LOUTUNITS(8) m
+S_START(8) 1319.12
+S_STOP(8) 1319.32
+SINT(8) 1
+DZ(8) 0.025
+AUTODETAIL(8) Random
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Stability Test Roads } Road Handling Course
+#Library : Road: Animator Surface Shapes
+#DataSet : Road Handling Course
+#Category: Stability Test Roads
+#FileID  : RdShape_f5984930-c6f4-4dc6-90b4-ff719bca03fe
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

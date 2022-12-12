@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, S-L Grid`2003: Lane with Curb and Cross-Slope`Gutters, Curbs, Ditches
+#CheckBox0 0    
+
+SET_IROAD_DZ_FOR_ID 2003
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: 2003: Lane with Curb and Cross-Slope
+set_description ROAD_DZ_ID 2003: Lane with Curb and Cross-Slope
+#RingCtrl0 CARPET
+#RingCtrl3 2
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 7, 6 ! columns x rows
+ROAD_DZ_CARPET 2D_LINEAR
+0, -12, -5, -4, -3.9, -3.6, 0, 1
+-20, 0, 0.06, 0.06, -0.1, -0.1, 0, 0
+-18, 0, 0.06, 0.06, -0.1, -0.1, 0, 0
+-8, 0, 0.16, 0.16, 0, 0, 0, 0
+8, 0, 0.16, 0.16, 0, 0, 0, 0
+18, 0, 0.06, 0.06, -0.1, -0.1, 0, 0
+20, 0, 0.06, 0.06, -0.1, -0.1, 0, 0
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#This is the 3D surface for the right-lane of a straight road oriented North-South, used as part of the 3-way intersection.
+#
+#At the intersection, the elevation of the road is zero at L = 0 m (lane edge and road centerline), and the curb is 0.16 m
+#
+#At +/- 8 m of Station, the elevation decreases from 0 m to -0.1 m, with a corresponding decrease i nthe curb height to 0.06 m.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Gutters, Curbs, Ditches } 2003: Lane with Curb and Cross-Slope
+#Library : Road: Off-Center Elevation Map, S-L Grid
+#DataSet : 2003: Lane with Curb and Cross-Slope
+#Category: Gutters, Curbs, Ditches
+#FileID  : RdMapZ_b0c3abca-1068-458d-a7d6-15a24b9ddd4c
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L Grid
+
+END

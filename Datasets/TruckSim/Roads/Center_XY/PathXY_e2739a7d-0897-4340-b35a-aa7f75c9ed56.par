@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Path: X-Y Coordinates`Mcity State St.`Mcity
+#RingCtrl0 1
+SET_IPATH_FOR_ID 0
+DEFINE_XY_TABLES 1
+ITAB_XY = NTAB_XY
+XY_TABLE_ID = ITAB_XY
+SET_DESCRIPTION PATH_ID Mcity State St.
+SET_DESCRIPTION XY_TABLE_ID Mcity State St.
+IPATHSEG = 1
+PATH_ID_DM = PATH_ID
+SEGMENT_TYPE = 1
+XY_SEGMENT_ID = XY_TABLE_ID
+
+#CheckBox0 0    
+OPT_PATH_LOOP 0
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox4 0    
+
+#RadioCtrl0 0    
+
+SPATH_START 0
+#DiagramOne0
+SEGMENT_XY_TABLE
+-81.0000, -80.0000, 0.0000
+-81.0000, 40.0000, 120.0000
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Path: X-Y Coordinates; { Mcity } Mcity State St.
+#Library : Path: X-Y Coordinates
+#DataSet : Mcity State St.
+#Category: Mcity
+#FileID  : PathXY_e2739a7d-0897-4340-b35a-aa7f75c9ed56
+#Product : TruckSim 2020.1
+#VehCode X-Y Coordinates of Path
+
+END

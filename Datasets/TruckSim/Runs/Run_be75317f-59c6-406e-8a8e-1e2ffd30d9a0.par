@@ -1,0 +1,101 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Chassis Twist Road, Frame Flex`* More Examples (Extra License Options)
+#VEHICLECODE F_S_S + SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_be75317f-59c6-406e-8a8e-1e2ffd30d9a0
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_e1c31f95-b0c9-423f-af09-82016e848b91.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 1 El, 25 m` Vehicle Reference` , Animator camera`Camera_e1c31f95-b0c9-423f-af09-82016e848b91
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 7
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_30753c9c-9a86-435e-92df-6bf3b83ab109.par
+#BlueLink2 Vehicle: Loaded Combination`2A Euro+2A Trl (Transparent)` Cab-Over Tractor-Trailers` , Math Model`VehLoad_30753c9c-9a86-435e-92df-6bf3b83ab109
+
+PARSFILE Procedures\Proc_93a9e5a5-8b1a-44f2-9bb1-aff35de226b7.par
+#BlueLink28 Procedures`Chassis Twist Road Sine Wave Course` Ride Tests` , Procedure`Proc_93a9e5a5-8b1a-44f2-9bb1-aff35de226b7
+
+PARSFILE Plot\Setup\Plot_8479b443-e2bc-4425-bfbe-906aac267d79.par
+#BlueLink15 Plot: Setup`Cab Roll` Suspended Cab` , Plot`Plot_8479b443-e2bc-4425-bfbe-906aac267d79
+
+PARSFILE Plot\Setup\Plot_2053f0b1-5ce2-475f-9498-a8ec278ee79f.par
+#BlueLink16 Plot: Setup`Cab Pitch` Suspended Cab` , Plot`Plot_2053f0b1-5ce2-475f-9498-a8ec278ee79f
+
+PARSFILE Plot\Setup\Plot_372e37c8-1212-4792-aa2a-1a0fc1031505.par
+#BlueLink17 Plot: Setup`Cab Origin Height` Suspended Cab` , Plot`Plot_372e37c8-1212-4792-aa2a-1a0fc1031505
+
+PARSFILE Plot\Setup\Plot_88afde06-920f-49c3-b38d-7b30c8c4c7fb.par
+#BlueLink18 Plot: Setup`Cab Mount Spring Force` Suspended Cab` , Plot`Plot_88afde06-920f-49c3-b38d-7b30c8c4c7fb
+
+PARSFILE Plot\Setup\Plot_913687c8-23ae-415e-8360-8881f1759170.par
+#BlueLink19 Plot: Setup`Cab Mount Deflection` Suspended Cab` , Plot`Plot_913687c8-23ae-415e-8360-8881f1759170
+
+PARSFILE Plot\Setup\Plot_091a72b3-2330-464b-b8f2-8db00159fe4b.par
+#BlueLink20 Plot: Setup`Cab Mount Damper Force` Suspended Cab` , Plot`Plot_091a72b3-2330-464b-b8f2-8db00159fe4b
+
+PARSFILE Plot\Setup\Plot_dbee069a-a1cd-46ed-9375-65e2248f3211.par
+#BlueLink21 Plot: Setup`Cab CG Height` Suspended Cab` , Plot`Plot_dbee069a-a1cd-46ed-9375-65e2248f3211
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Loaded\VehLoad_30753c9c-9a86-435e-92df-6bf3b83ab109.png
+WRITE_SENSOR_DETECT
+Title Chassis Twist Road, Frame Flex <* More Examples (Extra License Options)>
+CATEGORY * More Examples (Extra License Options) 
+DATASET_TITLE Chassis Twist Road, Frame Flex
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates a 2A tractor with a suspended cab and a 2A trailer, both with frame torsional flexibility. These features are part of the TruckSim Frame Twist license option.
+#
+#The tractor's vehicle body animation shape has been made transparent to make it easier to see the frame rails twisting and cab mount forces react to the chassis twist road.
+#
+#For more information on how the suspended cab and frame torsional flexibility were set up, click on the vehicle dataset "2A Cab Over w/ 2A Trl (Susp. Cab)", and then follow the links to the tractor's and trailer's respective sprung mass datasets.
+#
+#The vehicle combination is driving on a Chassis Twist Road with a constant target speed of 5 kph. For more information on how this test was set up, click on the Procedure dataset "Chassis Twist Road Sine Wave Course."
+#
+#Note the plots specified on the Run Control screen. Since the cab is treated as a seperate suspended body in this vehicle, these plots allow you to study the dynamic behavior of the cab in detail.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { * More Examples (Extra License Options) } Chassis Twist Road, Frame Flex
+#Library : TruckSim Run Control
+#DataSet : Chassis Twist Road, Frame Flex
+#Category: * More Examples (Extra License Options)
+#FileID  : Run_be75317f-59c6-406e-8a8e-1e2ffd30d9a0
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName TruckSim Run Control`3A Day+3 1A Trls+2 1A Dollies`Vehicle Configurations
+#VEHICLECODE S_SS + S + dS + S + dS + S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_b3a26782-f533-44df-bc32-ba309564a0af
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Generic\Links\GenLink_314fef05-ce91-4288-b621-8a7913144f37.par
+#BlueLink2 Generic Group of Links`3A Day+3x1A Trls+2x1A Dollies, Crates` Tractor Trailer Vehicle Combinations` , Math Model`GenLink_314fef05-ce91-4288-b621-8a7913144f37
+
+PARSFILE Procedures\Proc_fdccaa91-6052-4816-adad-68e3562e08c5.par
+#BlueLink28 Procedures`DLC @ 50 km/h` Handling Tests` , Procedure`Proc_fdccaa91-6052-4816-adad-68e3562e08c5
+
+PARSFILE Generic\Group\GenGrp_0efbe827-f11e-47f7-a8e8-0369f373945b.par
+#BlueLink9 Generic Data Group`8 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_0efbe827-f11e-47f7-a8e8-0369f373945b
+
+PARSFILE Plot\Setup\Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5.par
+#BlueLink15 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5
+
+PARSFILE Plot\Setup\Plot_8aa6411f-4f0f-45db-b32c-d612009087f2.par
+#BlueLink16 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8aa6411f-4f0f-45db-b32c-d612009087f2
+
+
+*IMAGE_TYPE DEFAULT
+WRITE_SENSOR_DETECT
+Title 3A Day+3 1A Trls+2 1A Dollies <Vehicle Configurations>
+CATEGORY Vehicle Configurations 
+DATASET_TITLE 3A Day+3 1A Trls+2 1A Dollies
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#S_SS + S + dS + S + dS + S
+#
+#3A Cab-Over Tractor + 1A Trailer + 1A dolly + 1A Trailer + 1A dolly + 1A Trailer performing a double lane change maneuver.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Vehicle Configurations } 3A Day+3 1A Trls+2 1A Dollies
+#Library : TruckSim Run Control
+#DataSet : 3A Day+3 1A Trls+2 1A Dollies
+#Category: Vehicle Configurations
+#FileID  : Run_b3a26782-f533-44df-bc32-ba309564a0af
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

@@ -1,0 +1,87 @@
+PARSFILE
+#FullDataName TruckSim Run Control`ISO Steady-State Circle, Road Reverse`Handling and Stability Tests
+#VEHICLECODE S_SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_6d0e478b-7ed4-4d38-b6ea-b73f486c25a8
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 0
+#RingCtrl3 1
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_3a\Lead3a_9e25d126-51f7-4fcd-902a-89d256db0b7a.par
+#BlueLink2 Vehicle: Lead Unit with 3 Axles`3A Sleeper (18 Spd)` 3A Tractors` , Math Model`Lead3a_9e25d126-51f7-4fcd-902a-89d256db0b7a
+
+PARSFILE Procedures\Proc_8780e5a5-95c0-484a-b0c0-eb712ff235c5.par
+#BlueLink28 Procedures`ISO Steady-State Circle Series` Handling Tests` , Procedure`Proc_8780e5a5-95c0-484a-b0c0-eb712ff235c5
+
+PARSFILE Roads\3D_Road\Road_73c49e66-c853-4ccd-8208-e4bf270d1324.par
+#BlueLink9 Road: 3D Surface (All Properties)`100-m Radius Circle, Mu = 0.9` Circular Roads` , Miscellaneous`Road_73c49e66-c853-4ccd-8208-e4bf270d1324
+
+OPT_STOP 0
+OPT_DIRECTION -1
+
+SPECIAL_PARSFILE Runs\Run_05254871-0be7-486a-b1ae-5f7a532bd3a8.par
+#BlueLink23 TruckSim Run Control`ISO Steady-State Circle, R = 100` Handling and Stability Tests` , Overlay run or ERD file`Run_05254871-0be7-486a-b1ae-5f7a532bd3a8
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_8ba88f47-4990-40ca-bf2d-9bbebeda47ea.png
+WRITE_SENSOR_DETECT
+Title ISO Steady-State Circle, Road Reverse <Handling and Stability Tests>
+CATEGORY Handling and Stability Tests 
+DATASET_TITLE ISO Steady-State Circle, Road Reverse
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example illustrates the measurement of a vehicle's understeer gradient by the constant radius test method as described in ISO 4138 and ISO 14792.
+#
+#Revised for 2020.1 to use OPT_DM =3.
+#
+#Writing to file is limited in order to generate clean cross-plots. The time between samples is too large for animation to work; hence, animation is disabled.
+#
+#This run uses the ISO-recommended 100-m radius path, and negative (right-hand) steering by using the Road Reverse option for following the circular path.
+#
+#The programming of this procedure is described in detail in the tech memo "Making Advanced Procedures with VS Commands." (See Help -> Technical Memos.)
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Handling and Stability Tests } ISO Steady-State Circle, Road Reverse
+#Library : TruckSim Run Control
+#DataSet : ISO Steady-State Circle, Road Reverse
+#Category: Handling and Stability Tests
+#FileID  : Run_6d0e478b-7ed4-4d38-b6ea-b73f486c25a8
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

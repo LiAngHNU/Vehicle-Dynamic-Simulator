@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Road: Rolling Resistance Map, S-L Grid`Handling Course Rolling Resistance`Handling Course
+#CheckBox0 0    
+
+#RingCtrl0 2D_STEP
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Rolling resistance coefficient (-)
+
+#DiagramTwo0
+*3D_DATA 7, 29 ! columns x rows
+RR_SURF_CARPET 2D_STEP
+0, -10, -7.32, -3.66, -3.6599, 0, 0.1, 1
+0, 2, 1.4, 1.4, 1.4, 1.4, 2, 2
+191.184, 2, 1, 1, 1.4, 1.4, 2, 2
+231, 2, 1, 1, 1.4, 1.4, 2, 2
+231.1, 2, 1.4, 1.4, 1.4, 1.4, 2, 2
+393.697, 2, 1, 1, 1.4, 1.4, 2, 2
+425.177, 2, 1, 1, 1.4, 1.4, 2, 2
+425.178, 2, 1.4, 1.4, 1.4, 1.4, 2, 2
+491.136, 2, 1.4, 1.4, 1, 1, 2, 2
+543.344, 2, 1.4, 1.4, 1, 1, 2, 2
+543.345, 2, 1.4, 1.4, 1.4, 1.4, 2, 2
+589.333, 2, 1, 1, 1.4, 1.4, 2, 2
+612.444, 2, 1, 1, 1.4, 1.4, 2, 2
+612.445, 2, 1.4, 1.4, 1.4, 1.4, 2, 2
+687.845, 2, 1, 1, 1.4, 1.4, 2, 2
+726.808, 2, 1, 1, 1.4, 1.4, 2, 2
+726.809, 2, 1.4, 1.4, 1.4, 1.4, 2, 2
+1406.42, 2, 1, 1, 1.4, 1.4, 2, 2
+1450.67, 2, 1, 1, 1.4, 1.4, 2, 2
+1450.671, 2, 1.4, 1.4, 1.4, 1.4, 2, 2
+1574.12, 2, 1, 1, 1.4, 1.4, 2, 2
+1660.01, 2, 1, 1, 1.4, 1.4, 2, 2
+1660.011, 2, 1.4, 1.4, 1.4, 1.4, 2, 2
+1707.98, 2, 1, 1, 1, 1, 2, 2
+1789.19, 2, 1, 1, 1, 1, 2, 2
+1789.2, 2, 1.4, 1.4, 1.4, 1.4, 2, 2
+1964.44, 2, 1.4, 1.4, 1, 1, 2, 2
+1999.52, 2, 1.4, 1.4, 1, 1, 2, 2
+1999.521, 2, 1.4, 1.4, 1.4, 1.4, 2, 2
+2276, 2, 1.4, 1.4, 1.4, 1.4, 2, 2
+ENDTABLE
+
+
+
+LOG_ENTRY Used Dataset: Road: Rolling Resistance Map, S-L Grid; { Handling Course } Handling Course Rolling Resistance
+#Library : Road: Rolling Resistance Map, S-L Grid
+#DataSet : Handling Course Rolling Resistance
+#Category: Handling Course
+#FileID  : RdRr_e50e6f84-f1ce-4bde-b26b-7ac1a4a15091
+#Product : TruckSim 2020.1
+#VehCode RR via S-L Grid
+
+END

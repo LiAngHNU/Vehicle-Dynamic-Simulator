@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName TruckSim Run Control`MF-Tyre, Asym.: Acc./Brk`Tire Models
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_6edd506f-a16e-4b3d-b6d3-c03e7493935b
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#BlueLink12 ` , Models` , Models` , Models`
+
+PARSFILE Animator\Cameras\Camera_d14a8296-6736-4daf-8562-965531be5132.par
+#BlueLink0 Animator: Camera Setup`16 Azm, 3.6 El, 51 m` Road Reference` , Animator camera`Camera_d14a8296-6736-4daf-8562-965531be5132
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 12
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+*RUN_COLOR 0 0.4 1
+SET_RUN_COLOR 0 0.4 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_02f26773-75c3-4d4e-b3f0-56de1e05e78a.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Conv. Van (MF-Tyre: Asymmetric)` 2A Conventional Van` , Math Model`Lead2a_02f26773-75c3-4d4e-b3f0-56de1e05e78a
+
+PARSFILE Procedures\Proc_5d9fc992-24ae-47ee-b261-84034bc83f88.par
+#BlueLink28 Procedures`Accel. then Brake` Acceleration and Braking` , Procedure`Proc_5d9fc992-24ae-47ee-b261-84034bc83f88
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+PARSFILE Plot\Setup\Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8.par
+#BlueLink15 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title MF-Tyre, Asym.: Acc./Brk <Tire Models>
+CATEGORY Tire Models 
+DATASET_TITLE MF-Tyre, Asym.: Acc./Brk
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates the 2A Conventional Van with the Delft-Tyre model (including asymmetric tire properties between the left and right sides) performing an acceleration/brake test.
+#
+#To see how the MF-Tyre data is incorporated into TruckSim, browse to the Vehicle: Lead Unit with 2 Axles screen and click on the Tires dataset labeled "510 mm Radius, MF-Tyre: Asymmetric" for more information.
+#
+#This example is overlaid with the simulation "TS 9 Extended Camber: Asym. - Acc./Brk," under "* TS 9.0 Tire Models" category.
+#
+#The MF-Tyre / MF-Swift (Asymmetric) dataset and the TruckSim Extended Asymmetric Tire dataset are based on different tire models, although they share the same tire characteristics.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Tire Models } MF-Tyre, Asym.: Acc./Brk
+#Library : TruckSim Run Control
+#DataSet : MF-Tyre, Asym.: Acc./Brk
+#Category: Tire Models
+#FileID  : Run_6edd506f-a16e-4b3d-b6d3-c03e7493935b
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

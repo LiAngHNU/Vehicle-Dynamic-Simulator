@@ -1,0 +1,107 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, Variable Width`Jackson Boundary`Highway Intersection Boundaries
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: Jackson Boundary
+set_description ROAD_DZ_ID Jackson Boundary
+#RingCtrl0 CARPET
+#RingCtrl1 1
+*3D_DATA 5, 11 ! columns x rows
+ROAD_DZ_CARPET VAR_WIDTH
+0, 1, 2, 3, 4, 5
+0, 0, 0, 0, 0, 0
+262.5, 0.757929, 0, 0, 0, 2
+270, 0.775286, 0, 0, 0, 4.673
+280, 0.81, 0, 0, 0, 4.95799
+302, 5.85, 0, 0, 0, 5.52796
+315.16, 6.10267, 0, 0, 0, 5.96
+324.8, 6.26333, 0, 0, 0, 0
+339, 6.5, 0, 0, 0, 0
+358.66, 7.3, 0, 0, 0, 0
+368, 0, 0, 0, 0, 0
+500, 0, 0, 0, 0, 0
+ENDDATA
+0, 1, 2, 3, 4, 5
+0, -20, -10, 0, 10, 20
+260, -37.5, -10, 0, 10, 25
+270, -36, -10, 0, 10, 25
+280, -33.5, -10, 0, 10, 20
+302, -21, -10, 0, 10, 20
+315.16, -22.2157, -10, 0, 10, 21
+324.8, -23.6246, -10, 0, 10, 35
+339, -25.7, -10, 0, 10, 30
+358.66, -52.71, -10, 0, 10, 25
+368, -30, -10, 0, 10, 20
+390, -20, -10, 0, 10, 20
+500, -20, -10, 0, 10, 20
+ENDCOLS
+ENDTABLE
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 5, 11 ! columns x rows
+RdTb1_CARPET 2D_LINEAR
+0, 1, 2, 3, 4, 5
+0, 0, 0, 0, 0, 0
+262.5, 0.757928571, 0, 0, 0, 2
+270, 0.775285714, 0, 0, 0, 4.673
+280, 0.81, 0, 0, 0, 4.957986714
+302, 5.85, 0, 0, 0, 5.527960142
+315.16, 6.102666667, 0, 0, 0, 5.96
+324.8, 6.263333333, 0, 0, 0, 0
+339, 6.5, 0, 0, 0, 0
+358.66, 7.3, 0, 0, 0, 0
+368, 0, 0, 0, 0, 0
+500, 0, 0, 0, 0, 0
+ENDTABLE
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Lateral coordinate of edge (m)
+
+#DiagramTwo1
+*3D_DATA 5, 12 ! columns x rows
+RdTb2_CARPET 2D_LINEAR
+0, 1, 2, 3, 4, 5
+0, -20, -10, 0, 10, 20
+260, -37.5, -10, 0, 10, 25
+270, -36, -10, 0, 10, 25
+280, -33.5, -10, 0, 10, 20
+302, -21, -10, 0, 10, 20
+315.16, -22.21569231, -10, 0, 10, 21
+324.8, -23.62461538, -10, 0, 10, 35
+339, -25.7, -10, 0, 10, 30
+358.66, -52.71, -10, 0, 10, 25
+368, -30, -10, 0, 10, 20
+390, -20, -10, 0, 10, 20
+500, -20, -10, 0, 10, 20
+ENDTABLE
+
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+SET_IROAD_DZ_FOR_ID 0
+
+
+#EMBEDDED_NOTES
+#There are 5 edges that are used to show lanes graphically.
+#
+#1-2 is grass (right)
+#4-5 is grass (left)
+#
+#Forms terrain around I-94 bridge over Jackson.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, Variable Width; { Highway Intersection Boundaries } Jackson Boundary
+#Library : Road: Off-Center Elevation Map, Variable Width
+#DataSet : Jackson Boundary
+#Category: Highway Intersection Boundaries
+#FileID  : VarWidZ_86fd20e8-fcc2-4685-ac56-6630c6e5b1c5
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L, Variable Width
+
+END

@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Road: Friction Map, S-L Grid`Mu = 0.2 Test Pad; 0.85 Everywhere Else`Split Mu
+#CheckBox0 0    
+
+#RingCtrl0 2D_STEP
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Friction coefficient Mu (-)
+
+#DiagramTwo0
+*3D_DATA 4, 4 ! columns x rows
+MU_ROAD_CARPET 2D_STEP
+0, -5, -4, 4, 5
+0, 0.85, 0.85, 0.85, 0.85
+10, 0.85, 0.2, 0.85, 0.85
+150, 0.85, 0.85, 0.85, 0.85
+160, 0.85, 0.85, 0.85, 0.85
+ENDTABLE
+
+*SCALAR 0.85
+
+
+#EMBEDDED_NOTES
+#The lines in the plot are horizontal and vertical, making them hard to see. Click the Vew 3D Map button for a better view.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Friction Map, S-L Grid; { Split Mu } Mu = 0.2 Test Pad; 0.85 Everywhere Else
+#Library : Road: Friction Map, S-L Grid
+#DataSet : Mu = 0.2 Test Pad; 0.85 Everywhere Else
+#Category: Split Mu
+#FileID  : RdMu_d6b53c9d-e3c4-4075-af6f-05b6df3a24a5
+#Product : TruckSim 2020.1
+#VehCode Mu via S-L Grid
+
+END

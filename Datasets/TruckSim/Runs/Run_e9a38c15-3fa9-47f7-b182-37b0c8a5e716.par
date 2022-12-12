@@ -1,0 +1,98 @@
+PARSFILE
+#FullDataName TruckSim Run Control`SI Units Data Output`Output Options
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_e9a38c15-3fa9-47f7-b182-37b0c8a5e716
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.4 0.8
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_b3c70bea-094a-42f1-8fce-bcbb650dd35e.par
+#BlueLink2 Vehicle: Loaded Combination`Large European Van w/ Box` European Vans` , Math Model`VehLoad_b3c70bea-094a-42f1-8fce-bcbb650dd35e
+
+PARSFILE Procedures\Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4.par
+#BlueLink28 Procedures`DLC @ 70 km/h` Handling Tests` , Procedure`Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4
+
+PARSFILE Generic\VS_commands\GenVS_5b8f12fd-813c-4065-a236-d1efe025bcad.par
+#BlueLink9 Generic VS Commands`SI Units` Alternate Unit Systems` , Miscellaneous`GenVS_5b8f12fd-813c-4065-a236-d1efe025bcad
+
+PARSFILE Generic\VS_commands\GenVS_9da8a7e3-4a76-4f67-8cbe-9618b923c2bd.par
+#BlueLink10 Generic VS Commands`Force Euler Angles to Degrees` Alternate Unit Systems` , Miscellaneous`GenVS_9da8a7e3-4a76-4f67-8cbe-9618b923c2bd
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink11 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_e74a615a-a0ec-4e5f-8bdd-4cb45609b66f.png
+WRITE_SENSOR_DETECT
+Title SI Units Data Output <Output Options>
+CATEGORY Output Options 
+DATASET_TITLE SI Units Data Output
+#MiscYellow0
+OPT_ECHO_ALL_UNITS 1
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates how to convert and display TruckSim output variables in alternate units. In this case, the SI system is used with accelerations in m/s^2, most angles in radians, etc.
+#
+#Note that the units information should be provided to the math model AFTER all vehicle and control datasets are read, to avoid conflicts with the units used for the vehicle properties, steering inputs, etc.
+#
+#Two sets of VS Commands are used to change units in this example and both are linked here, on the Run Control screen.
+#
+#The first, "SI Units," redefines almost all of the units in the math model to SI.
+#
+#The second, "Force Euler Angles to Degrees," sets a few angular variables to use degrees to support "standard" animator settings. Note that if this second set of VS Commands is not used, then the animations don't show Euler rotations properly.
+#
+#The plots display all angles in radians.
+#
+#The misc. yellow field on this screen sets OPT_ECHO_ALL_UNITS to 1, so all units-related settings are documented at the top of the echo file. Use the drop-down menu in the lower-right corner of this screen and select either the "Echo file with initial conditions" or the "Echo file with final conditions." Then click the View button in the lower-right corner of the screen to see this file selection.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Output Options } SI Units Data Output
+#Library : TruckSim Run Control
+#DataSet : SI Units Data Output
+#Category: Output Options
+#FileID  : Run_e9a38c15-3fa9-47f7-b182-37b0c8a5e716
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

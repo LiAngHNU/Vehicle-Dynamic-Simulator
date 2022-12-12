@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Sine Sweep Steer Test`Steering Tests
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_cb923245-d5d2-40ab-a07f-f0311cb8fb25
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_12afd0d3-c9b8-47b4-9b7e-1cd0582e975b.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m` Vehicle Reference` , Animator camera`Camera_12afd0d3-c9b8-47b4-9b7e-1cd0582e975b
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 5
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+SET_RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_dce0ba6f-440e-479a-ba80-b23ea521de1c.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Pickup, Reg. Cab DRW` Pickup Trucks` , Math Model`Lead2a_dce0ba6f-440e-479a-ba80-b23ea521de1c
+
+PARSFILE Procedures\Proc_8d6624f3-b861-4d97-a0e1-c380c26644b3.par
+#BlueLink28 Procedures`Sine Sweep Steer @ 60 km/h` Steering Tests` , Procedure`Proc_8d6624f3-b861-4d97-a0e1-c380c26644b3
+
+PARSFILE Animator\Groups\Group_4a9c5f1c-004d-4a20-b2a7-122950d5996a.par
+#BlueLink9 Animator: Group`Steer Torque Text` HUD` , Miscellaneous`Group_4a9c5f1c-004d-4a20-b2a7-122950d5996a
+
+*SSTOP 0
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_2a7c5c10-25ca-44b3-8034-dbf1de646707.png
+PARSFILE IO_Channels\W_Channels\Write_dc8bc2e0-07f2-4e4f-ba78-a2a662821bf1.par
+#BlueLink13 I/O Channels: Write`Copy 3 Variables to Excel and MATLAB` ` , Output Variables`Write_dc8bc2e0-07f2-4e4f-ba78-a2a662821bf1
+
+WRITE_SENSOR_DETECT
+Title Sine Sweep Steer Test <Steering Tests>
+CATEGORY Steering Tests 
+DATASET_TITLE Sine Sweep Steer Test
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This determines the frequency response of the truck to steering input, as described in the technical memo: "Spectrum Analysis with VehicleSim Models."
+#
+#The simulation results are converted to M-format for MATLAB using the ERD converter. This requires that the output be set to ERD.
+#
+#Details for processing the data in MATLAB are provided in the tech memo, "Help->Technical Memos->Spectrum Analysis with VehicleSim Models."
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Steering Tests } Sine Sweep Steer Test
+#Library : TruckSim Run Control
+#DataSet : Sine Sweep Steer Test
+#Category: Steering Tests
+#FileID  : Run_cb923245-d5d2-40ab-a07f-f0311cb8fb25
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

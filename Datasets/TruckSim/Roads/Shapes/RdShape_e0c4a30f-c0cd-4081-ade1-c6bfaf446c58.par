@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`16-m Radius Boundary Visualization`Roundabout, 3D, D = 36 m
+NLANES 2
+#MiscYellow0
+# 1 1 1, Road (No Centerline), 1, 10, 1, -2.1, m, 2.1, m, , , 0, 100.531, 1, , , Road
+# 1 0 0, Concrete (Worn), 1, 20, 1, -2.1, m, -5, m, , , , 100.532, 1, , 0.025, Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (No Centerline)
+SPECULAR(1) 1
+SCALE(1) 10
+LTILES(1) 1
+LIN(1) -2.1
+LINUNITS(1) m
+LOUT(1) 2.1
+LOUTUNITS(1) m
+S_START(1) 0
+S_STOP(1) 100.531
+SINT(1) 1
+AUTODETAIL(1) Road
+COLOR(2) 1 0 0
+MATERIAL(2) Concrete (Worn)
+SPECULAR(2) 1
+SCALE(2) 20
+LTILES(2) 1
+LIN(2) -2.1
+LINUNITS(2) m
+LOUT(2) -5
+LOUTUNITS(2) m
+S_STOP(2) 100.532
+SINT(2) 1
+DZ(2) 0.025
+AUTODETAIL(2) Random
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Roundabout, 3D, D = 36 m } 16-m Radius Boundary Visualization
+#Library : Road: Animator Surface Shapes
+#DataSet : 16-m Radius Boundary Visualization
+#Category: Roundabout, 3D, D = 36 m
+#FileID  : RdShape_e0c4a30f-c0cd-4081-ade1-c6bfaf446c58
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

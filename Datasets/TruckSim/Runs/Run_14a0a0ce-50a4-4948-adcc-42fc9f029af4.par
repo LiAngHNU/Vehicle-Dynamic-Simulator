@@ -1,0 +1,77 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Step Steer, 5 Accel. & Rate Sensors`Output Options
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_14a0a0ce-50a4-4948-adcc-42fc9f029af4
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_245b5580-eac8-4494-a96f-0533fd4ce892.par
+#BlueLink0 Animator: Camera Setup`150 Azm, 4.5 El, 100 m` Vehicle Reference` , Animator camera`Camera_245b5580-eac8-4494-a96f-0533fd4ce892
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_d4729ac2-9b6c-4bb2-b187-a9bd949bef7a.par
+#BlueLink2 Vehicle: Loaded Combination`2A Conv Loaded, 5 Accel & Rate Sensors` Conventional Vans` , Math Model`VehLoad_d4729ac2-9b6c-4bb2-b187-a9bd949bef7a
+
+PARSFILE Procedures\Proc_e2787994-c971-4ccf-a08d-bc10a4461ec0.par
+#BlueLink28 Procedures`270 deg. Step Steer @ 40 km/h` Steering Tests` , Procedure`Proc_e2787994-c971-4ccf-a08d-bc10a4461ec0
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Step Steer, 5 Accel. & Rate Sensors <Output Options>
+CATEGORY Output Options 
+DATASET_TITLE Step Steer, 5 Accel. & Rate Sensors
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates a Conventional Van with a payload, with five acceleration and rate sensors, performing a 270-deg. open-loop steering test at a constant target speed of 40 km/h.
+#
+#The acceleration and rate sensors simulate the accelerometers and rate sensors you would instrument a test vehicle with, and are linked from the Vehicle: Loaded Combination screen. A set of plots corresponding to these motion sensors are linked on the Acceleration and Rate Sensors screen.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Output Options } Step Steer, 5 Accel. & Rate Sensors
+#Library : TruckSim Run Control
+#DataSet : Step Steer, 5 Accel. & Rate Sensors
+#Category: Output Options
+#FileID  : Run_14a0a0ce-50a4-4948-adcc-42fc9f029af4
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

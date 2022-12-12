@@ -1,0 +1,64 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`1200m Road+50m Dark Grass`Roads
+NLANES 3
+OPTTHRESHOLD 1
+#MiscYellow0
+# 1 1 1, Road (Medium), 1, 20, 1, 1, edge, 2, edge, , , -100, 1200, 1, , , Road
+# 1 1 1, Grass (Light), 1, 10, 5, -50, m, 1, edge, , , -100, 1200, 1, , , Foliage
+# 1 1 1, Grass (Light), 1, 10, 5, 2, edge, 50, m, , , -100, 1200, 1, , , Foliage
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (Medium)
+SPECULAR(1) 1
+SCALE(1) 20
+LTILES(1) 1
+LIN(1) 1
+LINUNITS(1) edge
+LOUT(1) 2
+LOUTUNITS(1) edge
+S_START(1) -100
+S_STOP(1) 1200
+SINT(1) 1
+AUTODETAIL(1) Road
+COLOR(2) 1 1 1
+MATERIAL(2) Grass (Light)
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 5
+LIN(2) -50
+LINUNITS(2) m
+LOUT(2) 1
+LOUTUNITS(2) edge
+S_START(2) -100
+S_STOP(2) 1200
+SINT(2) 1
+AUTODETAIL(2) Foliage
+COLOR(3) 1 1 1
+MATERIAL(3) Grass (Light)
+SPECULAR(3) 1
+SCALE(3) 10
+LTILES(3) 5
+LIN(3) 2
+LINUNITS(3) edge
+LOUT(3) 50
+LOUTUNITS(3) m
+S_START(3) -100
+S_STOP(3) 1200
+SINT(3) 1
+AUTODETAIL(3) Foliage
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Roads } 1200m Road+50m Dark Grass
+#Library : Road: Animator Surface Shapes
+#DataSet : 1200m Road+50m Dark Grass
+#Category: Roads
+#FileID  : RdShape_4f8478c0-fec4-4cb5-af18-9da72ede89fb
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

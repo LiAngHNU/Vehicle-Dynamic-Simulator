@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName TruckSim Run Control`B-Train Heavy Hauler`Vehicle Configurations
+#VEHICLECODE S_SS + SSS + SSS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_a7128cb6-e148-4dbb-9c4f-82315adf7bfc
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_7659749c-09d5-498b-99c1-93a948ea563d.par
+#BlueLink0 Animator: Camera Setup`350 Azm, 2.7 El, 27 m` Vehicle Reference` , Animator camera`Camera_7659749c-09d5-498b-99c1-93a948ea563d
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_1e8ef6ba-6ca4-4677-90cc-72e18ec87bfb.par
+#BlueLink2 Vehicle: Loaded Combination`3A Tractor w/ Heavy Hauler Trailers` Sleeper-Cab Tractor-Trailers` , Math Model`VehLoad_1e8ef6ba-6ca4-4677-90cc-72e18ec87bfb
+
+PARSFILE Procedures\Proc_bb1423fd-01ac-4a3b-9528-4149bfd42f89.par
+#BlueLink28 Procedures`Scenic Road Driving` Driving` , Procedure`Proc_bb1423fd-01ac-4a3b-9528-4149bfd42f89
+
+PARSFILE Generic\Group\GenGrp_a285032f-2447-441d-a2c1-4896e9579705.par
+#BlueLink9 Generic Data Group`9 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_a285032f-2447-441d-a2c1-4896e9579705
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_8ba88f47-4990-40ca-bf2d-9bbebeda47ea.png
+WRITE_SENSOR_DETECT
+Title B-Train Heavy Hauler <Vehicle Configurations>
+CATEGORY Vehicle Configurations 
+DATASET_TITLE B-Train Heavy Hauler
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#NOTE: For TruckSim 2020.0, this example now includes the effects of the brake system transport delay parameter, math model keyword TLAG_BK. This is a pure time delay between the master cylinder and the brake actuator.
+#
+#S_SS + SSS + SSS
+#
+#A B-Train vehicle combination with two 3A trailers driving on a scenic road with small elevation changes and superelevation (i.e., road banking in turns).
+#
+#This vehicle is modeled as a heavy hauler configuration, with a large barrel as a payload.
+#
+#A B-Train, or B-Double, is a vehicle combination in which the two trailers are linked by a 5th wheel on the first trailer.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Vehicle Configurations } B-Train Heavy Hauler
+#Library : TruckSim Run Control
+#DataSet : B-Train Heavy Hauler
+#Category: Vehicle Configurations
+#FileID  : Run_a7128cb6-e148-4dbb-9c4f-82315adf7bfc
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

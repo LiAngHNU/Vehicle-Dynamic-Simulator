@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Bounce Sine Sweep`Ride Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_5a202a16-0a57-404d-b9ca-57578ff8b5d5.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Bounce Sine Sweep
+PARSFILE Roads\BuilderSegment\RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c.par
+#BlueLink0 Path: Segment Builder`Straight Path East` Straight` , Reference Path`RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight Path East
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+PARSFILE Roads\dZ_Map\RdMapZ_cf9a0993-2cbf-41e3-a9d0-743b40ada296.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Bounce Road Edges` Ride` , Miscellaneous`RdMapZ_cf9a0993-2cbf-41e3-a9d0-743b40ada296
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_704b98d7-d715-4451-aa5b-561f65ac03ed.par
+#BlueLink4 Road: Animator Surface Shapes`Sine Sweep Ride Test` Ride Roads and Suspension Testing` , Road shape definitions`RdShape_704b98d7-d715-4451-aa5b-561f65ac03ed
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_ee6f517f-f3ec-4f6c-bb1f-7feb10468033.par
+#BlueLink5 Animator: Camera Setup`90 Azm, 5 El, 23 m` Road Reference` , Camera`Camera_ee6f517f-f3ec-4f6c-bb1f-7feb10468033
+
+parsfile Roads\3D_Road\Road_5a202a16-0a57-404d-b9ca-57578ff8b5d5.ani
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Ride Roads } Bounce Sine Sweep
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Bounce Sine Sweep
+#Category: Ride Roads
+#FileID  : Road_5a202a16-0a57-404d-b9ca-57578ff8b5d5
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

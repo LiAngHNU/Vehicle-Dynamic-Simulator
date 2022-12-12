@@ -1,0 +1,103 @@
+PARSFILE
+#FullDataName Road: Boundaries`3-Way Intersection, No West Entrance`Crossing with Curbs
+#RingCtrl0 3
+#RingCtrl1 0
+#RingCtrl2 0
+#RingCtrl3 2
+#RingCtrl4 2
+#RingCtrl5 2
+#RingCtrl6 1
+#RingCtrl7 3
+#RingCtrl9 0
+#RingCtrl10 0
+#RingCtrl11 2
+#RingCtrl12 2
+#RingCtrl13 2
+#RingCtrl14 1
+#RingCtrl15 3
+#RingCtrl17 0
+#RingCtrl18 0
+#RingCtrl19 1
+#RingCtrl20 2
+#RingCtrl21 2
+#RingCtrl22 1
+#RingCtrl23 3
+*ROAD_ID_1 1001
+*LMAX_1 -.1
+*LMIN_1 -15
+*ROAD_ID_2 1002
+*LMAX_2 0.1
+*LMIN_2 -15
+*ROAD_ID_3 1013
+*LMAX_3 0.1
+*LMIN_3 -15
+
+
+IROAD = GET_IROAD(1001)
+ROAD_SMAX_NEW_ID = 0
+ROAD_SMIN_NEW_ID = 0
+
+ISIDE = 1
+PARSFILE Roads\Boundaries_L\RdBdL_eef83c43-0134-4819-be75-792d42f3c7d9.par
+#BlueLink0 Road Boundary: Lateral Edge`Turn into 3-Way Intersection` Intersections and Roundabouts` , Lmax vs. station`RdBdL_eef83c43-0134-4819-be75-792d42f3c7d9
+
+PARSFILE Roads\Boundaries_ID\RdBdID_341c1df3-1f5b-430d-ab2d-460c4f6737d3.par
+#BlueLink1 Road Boundary: New Road ID`Left Edge for 1001` Intersection, 3-Way` , Road ID vs Old S`RdBdID_341c1df3-1f5b-430d-ab2d-460c4f6737d3
+
+PARSFILE Roads\Boundaries_S\RdBdS_cd693d84-b56a-4a2b-959a-c287f3e915d9.par
+#BlueLink2 Road Boundary: New Station`Linear: Negative S` ` , New S vs old S`RdBdS_cd693d84-b56a-4a2b-959a-c287f3e915d9
+
+
+ISIDE = 2
+ROAD_L_BOUNDARY_CONSTANT -15
+ROAD_NEW_ID_CONSTANT = -1
+
+IROAD = GET_IROAD(1002)
+ROAD_SMAX_NEW_ID = 0
+ROAD_SMIN_NEW_ID = 0
+
+ISIDE = 1
+PARSFILE Roads\Boundaries_L\RdBdL_eef83c43-0134-4819-be75-792d42f3c7d9.par
+#BlueLink6 Road Boundary: Lateral Edge`Turn into 3-Way Intersection` Intersections and Roundabouts` , Lmax vs. station`RdBdL_eef83c43-0134-4819-be75-792d42f3c7d9
+
+PARSFILE Roads\Boundaries_ID\RdBdID_22073202-4b0f-42fb-8084-a8347d7f5cf7.par
+#BlueLink7 Road Boundary: New Road ID`Left Edge for 1002` Intersection, 3-Way` , Road ID vs Old S`RdBdID_22073202-4b0f-42fb-8084-a8347d7f5cf7
+
+PARSFILE Roads\Boundaries_S\RdBdS_cd693d84-b56a-4a2b-959a-c287f3e915d9.par
+#BlueLink8 Road Boundary: New Station`Linear: Negative S` ` , New S vs old S`RdBdS_cd693d84-b56a-4a2b-959a-c287f3e915d9
+
+
+ISIDE = 2
+ROAD_L_BOUNDARY_CONSTANT -15
+ROAD_NEW_ID_CONSTANT = -1
+
+IROAD = GET_IROAD(1013)
+ROAD_SMAX_NEW_ID = 0
+ROAD_SMIN_NEW_ID = 0
+
+ISIDE = 1
+ROAD_L_BOUNDARY_CONSTANT 0.1
+PARSFILE Roads\Boundaries_ID\RdBdID_8c28255b-5cff-40f7-8bfa-70c4acda12ef.par
+#BlueLink13 Road Boundary: New Road ID`Left Edge for 1013` Intersection, 3-Way` , Road ID vs Old S`RdBdID_8c28255b-5cff-40f7-8bfa-70c4acda12ef
+
+PARSFILE Roads\Boundaries_S\RdBdS_cd693d84-b56a-4a2b-959a-c287f3e915d9.par
+#BlueLink14 Road Boundary: New Station`Linear: Negative S` ` , New S vs old S`RdBdS_cd693d84-b56a-4a2b-959a-c287f3e915d9
+
+
+ISIDE = 2
+ROAD_L_BOUNDARY_CONSTANT -15
+ROAD_NEW_ID_CONSTANT = -1
+
+#EMBEDDED_NOTES
+#The three road surfaces have unlimited station. All will stop the simulation if the vehicle goes off-right to the right. All will switch to an adjacent road if the vehicle goes to the left.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Boundaries; { Crossing with Curbs } 3-Way Intersection, No West Entrance
+#Library : Road: Boundaries
+#DataSet : 3-Way Intersection, No West Entrance
+#Category: Crossing with Curbs
+#FileID  : RdBnd_aa347c8d-206c-4395-a139-addb6da9da32
+#Product : TruckSim 2020.1
+#VehCode Road Boundaries
+
+END

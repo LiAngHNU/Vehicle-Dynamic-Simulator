@@ -1,0 +1,181 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Road w/ Median`Variable Width Roads
+NLANES 11
+OPTTHRESHOLD 2
+#MiscYellow0
+# 1 1 1, Grass (Light), 1, 10, 10, 1, edge, 2, edge, 200, , -500, 600, , , 0, Foliage
+# 1 1 0.8, Cement (Pitted), 1, 10, 0.75, 2, edge, 4, edge, 3, , -500, 600, , , 0, Random
+# 1 1 1, Road (One Lane), 1, 20, 1, 4, edge, 10, edge, , , -500, 600, , , 0, Road
+# 1 1 0, Snow, 1, 10, 0.1, 5, edge, 6, edge, , , -500, 100, , , 0.02, Random
+# 1 1 0.8, Cement (Pitted), 1, 10, 1.5, 5, edge, 9, edge, 20, , 100, 330, , , 0.02, Random
+# 1 1 0, Snow, 1, 10, 0.1, 8, edge, 9, edge, , , -500, 100, , , 0.02, Random
+# 1 1 0.8, Cement (Pitted), 1, 10, 0.75, 10, edge, 12, edge, 3, , -500, 600, , , 0, Random
+# 1 1 1, Grass (Light), 1, 30, 10, 12, edge, 13, edge, , , -500, 600, , , 0, Foliage
+# 1 1 0, Snow, 1, 10, 0.1, 5, edge, 6, edge, , , 330, 600, , , 0.02, Off
+# 1 1 0, Snow, 1, 10, 0.1, 8, edge, 9, edge, , , 330, 600, , , 0.02, Off
+# 1 1 1, Road Transition (Light), 1, 30, -1, -15, m, -4.75, m, 10, , -500, 600, , , 0.02, Foliage
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Grass (Light)
+SPECULAR(1) 1
+SCALE(1) 10
+LTILES(1) 10
+LIN(1) 1
+LINUNITS(1) edge
+LOUT(1) 2
+LOUTUNITS(1) edge
+LDIV(1) 200
+S_START(1) -500
+S_STOP(1) 600
+DZ(1) 0
+AUTODETAIL(1) Foliage
+COLOR(2) 1 1 0.8
+MATERIAL(2) Cement (Pitted)
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 0.75
+LIN(2) 2
+LINUNITS(2) edge
+LOUT(2) 4
+LOUTUNITS(2) edge
+LDIV(2) 3
+S_START(2) -500
+S_STOP(2) 600
+DZ(2) 0
+AUTODETAIL(2) Random
+COLOR(3) 1 1 1
+MATERIAL(3) Road (One Lane)
+SPECULAR(3) 1
+SCALE(3) 20
+LTILES(3) 1
+LIN(3) 4
+LINUNITS(3) edge
+LOUT(3) 10
+LOUTUNITS(3) edge
+S_START(3) -500
+S_STOP(3) 600
+DZ(3) 0
+AUTODETAIL(3) Road
+COLOR(4) 1 1 0
+MATERIAL(4) Snow
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) 0.1
+LIN(4) 5
+LINUNITS(4) edge
+LOUT(4) 6
+LOUTUNITS(4) edge
+S_START(4) -500
+S_STOP(4) 100
+DZ(4) 0.02
+AUTODETAIL(4) Random
+COLOR(5) 1 1 0.8
+MATERIAL(5) Cement (Pitted)
+SPECULAR(5) 1
+SCALE(5) 10
+LTILES(5) 1.5
+LIN(5) 5
+LINUNITS(5) edge
+LOUT(5) 9
+LOUTUNITS(5) edge
+LDIV(5) 20
+S_START(5) 100
+S_STOP(5) 330
+DZ(5) 0.02
+AUTODETAIL(5) Random
+COLOR(6) 1 1 0
+MATERIAL(6) Snow
+SPECULAR(6) 1
+SCALE(6) 10
+LTILES(6) 0.1
+LIN(6) 8
+LINUNITS(6) edge
+LOUT(6) 9
+LOUTUNITS(6) edge
+S_START(6) -500
+S_STOP(6) 100
+DZ(6) 0.02
+AUTODETAIL(6) Random
+COLOR(7) 1 1 0.8
+MATERIAL(7) Cement (Pitted)
+SPECULAR(7) 1
+SCALE(7) 10
+LTILES(7) 0.75
+LIN(7) 10
+LINUNITS(7) edge
+LOUT(7) 12
+LOUTUNITS(7) edge
+LDIV(7) 3
+S_START(7) -500
+S_STOP(7) 600
+DZ(7) 0
+AUTODETAIL(7) Random
+COLOR(8) 1 1 1
+MATERIAL(8) Grass (Light)
+SPECULAR(8) 1
+SCALE(8) 30
+LTILES(8) 10
+LIN(8) 12
+LINUNITS(8) edge
+LOUT(8) 13
+LOUTUNITS(8) edge
+S_START(8) -500
+S_STOP(8) 600
+DZ(8) 0
+AUTODETAIL(8) Foliage
+COLOR(9) 1 1 0
+MATERIAL(9) Snow
+SPECULAR(9) 1
+SCALE(9) 10
+LTILES(9) 0.1
+LIN(9) 5
+LINUNITS(9) edge
+LOUT(9) 6
+LOUTUNITS(9) edge
+S_START(9) 330
+S_STOP(9) 600
+DZ(9) 0.02
+AUTODETAIL(9) Off
+COLOR(10) 1 1 0
+MATERIAL(10) Snow
+SPECULAR(10) 1
+SCALE(10) 10
+LTILES(10) 0.1
+LIN(10) 8
+LINUNITS(10) edge
+LOUT(10) 9
+LOUTUNITS(10) edge
+S_START(10) 330
+S_STOP(10) 600
+DZ(10) 0.02
+AUTODETAIL(10) Off
+COLOR(11) 1 1 1
+MATERIAL(11) Road Transition (Light)
+SPECULAR(11) 1
+SCALE(11) 30
+LTILES(11) -1
+LIN(11) -15
+LINUNITS(11) m
+LOUT(11) -4.75
+LOUTUNITS(11) m
+LDIV(11) 10
+S_START(11) -500
+S_STOP(11) 600
+DZ(11) 0.02
+AUTODETAIL(11) Foliage
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Variable Width Roads } Road w/ Median
+#Library : Road: Animator Surface Shapes
+#DataSet : Road w/ Median
+#Category: Variable Width Roads
+#FileID  : RdShape_8167dca2-974e-4b6b-b3a1-97423e418a4d
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Path: X-Y Coordinates`Mcity: East to West on Main St.`Mcity
+#RingCtrl0 2
+SET_IPATH_FOR_ID 1002
+SET_ITAB_XY_FOR_ID 1002
+SET_DESCRIPTION PATH_ID Mcity: East to West on Main St.
+SET_DESCRIPTION XY_TABLE_ID Mcity: East to West on Main St.
+IPATHSEG = 1
+PATH_ID_DM = PATH_ID
+SEGMENT_TYPE = 1
+XY_SEGMENT_ID = XY_TABLE_ID
+
+#CheckBox0 0    
+OPT_PATH_LOOP 0
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox4 0    
+
+#RadioCtrl0 0    
+
+SPATH_START 0
+#DiagramOne0
+SEGMENT_XY_TABLE
+-48.0000, 131.3340, 0.0000
+-41.8653, 131.3340, 6.1347
+-8.6443, 131.4540, 39.3559
+4.3196, 130.6350, 52.3457
+15.4255, 129.7560, 63.4863
+ENDTABLE
+
+#EMBEDDED_NOTES
+#Path points were found by using VS Scene Builder, moving mouse over Mcity tile and noting global X and Y values.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Path: X-Y Coordinates; { Mcity } Mcity: East to West on Main St.
+#Library : Path: X-Y Coordinates
+#DataSet : Mcity: East to West on Main St.
+#Category: Mcity
+#FileID  : PathXY_fba85211-68fd-4307-8756-da2183404519
+#Product : TruckSim 2020.1
+#VehCode X-Y Coordinates of Path
+
+END

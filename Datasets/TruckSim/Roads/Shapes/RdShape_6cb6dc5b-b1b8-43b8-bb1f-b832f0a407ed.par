@@ -1,0 +1,93 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Left Lane`Lane Change Roads
+NLANES 5
+OPTTHRESHOLD 0
+#MiscYellow0
+# 1 1 1, Pavement, 1, 10, 1, -2, m, 2, m, , , -10, 210, , , , Road
+# 1 1 1, White Line, 1, 5, 1, -1.95, m, -1.85, m, , , -10, 210, 4, 1, 0.005, Random
+# 1 1 1, White Line, 1, 5, 1, 1.85, m, 1.95, m, , , -10, 210, 4, 1, 0.005, Random
+# 1 1 1, Road Transition (Light), 0.8, 10, 1, 2, m, 4, m, , , -10, 210, , , , Foliage
+# 1 1 1, Grass (Light), 1, 10, 5, 4, m, 54, m, , , -10, 210, , , , Foliage
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Pavement
+SPECULAR(1) 1
+SCALE(1) 10
+LTILES(1) 1
+LIN(1) -2
+LINUNITS(1) m
+LOUT(1) 2
+LOUTUNITS(1) m
+S_START(1) -10
+S_STOP(1) 210
+AUTODETAIL(1) Road
+COLOR(2) 1 1 1
+MATERIAL(2) White Line
+SPECULAR(2) 1
+SCALE(2) 5
+LTILES(2) 1
+LIN(2) -1.95
+LINUNITS(2) m
+LOUT(2) -1.85
+LOUTUNITS(2) m
+S_START(2) -10
+S_STOP(2) 210
+SINT(2) 4
+IPRINT(2) 1
+DZ(2) 0.005
+AUTODETAIL(2) Random
+COLOR(3) 1 1 1
+MATERIAL(3) White Line
+SPECULAR(3) 1
+SCALE(3) 5
+LTILES(3) 1
+LIN(3) 1.85
+LINUNITS(3) m
+LOUT(3) 1.95
+LOUTUNITS(3) m
+S_START(3) -10
+S_STOP(3) 210
+SINT(3) 4
+IPRINT(3) 1
+DZ(3) 0.005
+AUTODETAIL(3) Random
+COLOR(4) 1 1 1
+MATERIAL(4) Road Transition (Light)
+SPECULAR(4) 0.8
+SCALE(4) 10
+LTILES(4) 1
+LIN(4) 2
+LINUNITS(4) m
+LOUT(4) 4
+LOUTUNITS(4) m
+S_START(4) -10
+S_STOP(4) 210
+AUTODETAIL(4) Foliage
+COLOR(5) 1 1 1
+MATERIAL(5) Grass (Light)
+SPECULAR(5) 1
+SCALE(5) 10
+LTILES(5) 5
+LIN(5) 4
+LINUNITS(5) m
+LOUT(5) 54
+LOUTUNITS(5) m
+S_START(5) -10
+S_STOP(5) 210
+AUTODETAIL(5) Foliage
+MTL_FILE Animator\Road_Materials\road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Lane Change Roads } Left Lane
+#Library : Road: Animator Surface Shapes
+#DataSet : Left Lane
+#Category: Lane Change Roads
+#FileID  : RdShape_6cb6dc5b-b1b8-43b8-bb1f-b832f0a407ed
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Road w/ Median`Road Networks: 3D Geometry and Terrain
+#VEHICLECODE S_SS + dSS + SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_c16c042b-e139-4456-ad62-fd62dac36a44
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_11889618-f473-4866-be04-5cf968fea505.par
+#BlueLink0 Animator: Camera Setup`350 Azm, 6 El, 52 m` Vehicle Reference` , Animator camera`Camera_11889618-f473-4866-be04-5cf968fea505
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_1c1cdf2d-3674-4b1c-aed2-eca8b8448606.par
+#BlueLink2 Vehicle: Loaded Combination`3A Dump Truck w/ 2A Dolly and 2A Trl.` Dump Trucks` , Math Model`VehLoad_1c1cdf2d-3674-4b1c-aed2-eca8b8448606
+
+PARSFILE Procedures\Proc_9c46f8ff-e862-4ec7-adc3-115e5e84164d.par
+#BlueLink28 Procedures`Road w/ Median` Driving` , Procedure`Proc_9c46f8ff-e862-4ec7-adc3-115e5e84164d
+
+PARSFILE Control\Gear_mt\GearOL_54578c56-3581-4449-a90d-bd53e3ed8f34.par
+#BlueLink6 Control: Shifting (Open Loop)`Constant: 18th Gear` Constant` , Shifting control`GearOL_54578c56-3581-4449-a90d-bd53e3ed8f34
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_5e99b800-fddc-4e1b-a23d-d8a55608d47a.png
+WRITE_SENSOR_DETECT
+Title Road w/ Median <Road Networks: 3D Geometry and Terrain>
+CATEGORY Road Networks: 3D Geometry and Terrain 
+DATASET_TITLE Road w/ Median
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates how variable width roads can be constructed in TruckSim using the Off-Center Elevation datasets linked on the Road: 3D Surface screen.
+#
+#This example road has a center median, rounded curbs, a ditch and embankment to one side, and road roughness.
+#
+#For more information, please click on the Procedure dataset "Road w/ Median".
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Road Networks: 3D Geometry and Terrain } Road w/ Median
+#Library : TruckSim Run Control
+#DataSet : Road w/ Median
+#Category: Road Networks: 3D Geometry and Terrain
+#FileID  : Run_c16c042b-e139-4456-ad62-fd62dac36a44
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

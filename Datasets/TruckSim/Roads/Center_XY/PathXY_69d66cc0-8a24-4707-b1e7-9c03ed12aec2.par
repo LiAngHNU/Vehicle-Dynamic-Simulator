@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Path: X-Y Coordinates`Global Y-Axis`Straight
+#RingCtrl0 2
+SET_IPATH_FOR_ID 9998
+DEFINE_XY_TABLES 1
+ITAB_XY = NTAB_XY
+XY_TABLE_ID = ITAB_XY
+SET_DESCRIPTION PATH_ID Global Y-Axis
+SET_DESCRIPTION XY_TABLE_ID Global Y-Axis
+IPATHSEG = 1
+PATH_ID_DM = PATH_ID
+SEGMENT_TYPE = 1
+XY_SEGMENT_ID = XY_TABLE_ID
+
+#CheckBox0 0    
+OPT_PATH_LOOP 0
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox4 0    
+
+#RadioCtrl0 0    
+
+#DiagramOne0
+SEGMENT_XY_TABLE
+0.0000, 0.0000, 0.0000
+0.0000, 1.0000, 1.0000
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Path: X-Y Coordinates; { Straight } Global Y-Axis
+#Library : Path: X-Y Coordinates
+#DataSet : Global Y-Axis
+#Category: Straight
+#FileID  : PathXY_69d66cc0-8a24-4707-b1e7-9c03ed12aec2
+#Product : TruckSim 2020.1
+#VehCode X-Y Coordinates of Path
+
+END

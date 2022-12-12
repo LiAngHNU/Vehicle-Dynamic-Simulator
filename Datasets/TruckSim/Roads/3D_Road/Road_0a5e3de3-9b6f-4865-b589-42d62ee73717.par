@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Road for UE4`
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Road for UE4
+PARSFILE Roads\Center_XYZ\RoadXYZ_ac585de6-711a-4365-b666-69f54f9f5737.par
+#BlueLink0 Road: X-Y-Z Coordinates of Reference Line`Path taken from UE4 Project` Unreal Engine (UE4)` , Reference Path`RoadXYZ_ac585de6-711a-4365-b666-69f54f9f5737
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Path taken from UE4 Project
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+parsfile Roads\3D_Road\Road_0a5e3de3-9b6f-4865-b589-42d62ee73717.ani
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); Road for UE4
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Road for UE4
+#Category: 
+#FileID  : Road_0a5e3de3-9b6f-4865-b589-42d62ee73717
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

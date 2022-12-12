@@ -1,0 +1,235 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Modified North-South Road w/ Curbs`Highway Network
+NLANES 15
+OPTTHRESHOLD 1
+#MiscYellow0
+# 1 1 1, Road (Medium), 1, 40, 2, -10, m, 10, m, , , -500, -5, 10, , , Road
+# 1 1 0.2, Concrete (Worn), 1, 10, 1, -10.25, m, -10, m, 4, , -500, -5, 0.5, , , Random
+# 1 1 0.2, Concrete (Worn), 1, 10, 1, 10.25, m, 10, m, 4, , -500, -5, 0.5, , , Random
+# 1 1 0.2, Concrete (Worn), 1, 10, 1, -10.25, m, -10, m, 4, , 5, 500, 0.5, , , Random
+# 1 1 0.2, Concrete (Worn), 1, 10, 1, 10.25, m, 10, m, 4, , 5, 500, 0.5, , , Random
+# 1 1 1, Grass (Light), 1, 30, 9, -12.25, m, -500, m, , , 7.25, 500, 10, , -0.0075, Foliage
+# 1 1 1, Grass (Light), 1, 30, 9, 12.25, m, 500, m, , , 7.25, 500, 10, , -0.0075, Foliage
+# 1 1 1, Grass (Light), 1, 30, 9, -12.25, m, -500, m, , , -500, -7.25, 10, , -0.0075, Foliage
+# 1 1 1, Grass (Light), 1, 30, 9, 12.25, m, 500, m, , , -500, -7.25, 10, , -0.0075, Foliage
+# 1 1 1, Concrete, 1, 10, 1, -10.25, m, -12.25, m, , , -500, -5.25, , , , Random
+# 1 1 1, Concrete, 1, 10, 1, 10.25, m, 12.25, m, , , -500, -5.25, , , , Random
+# 1 1 1, Concrete, 1, 10, 1, -10.25, m, -12.25, m, , , 5.25, 500, , , , Random
+# 1 1 1, Concrete, 1, 10, 1, 10.25, m, 12.25, m, , , 5.25, 500, , , , Random
+# 1 1 1, Road (No Lines), 1, 60, 1, -10, m, 10, m, , , -5, 5, , , , Random
+# 1 1 1, Road (Medium), 1, 40, 2, -10, m, 10, m, , , 5, 500, 10, , , Road
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (Medium)
+SPECULAR(1) 1
+SCALE(1) 40
+LTILES(1) 2
+LIN(1) -10
+LINUNITS(1) m
+LOUT(1) 10
+LOUTUNITS(1) m
+S_START(1) -500
+S_STOP(1) -5
+SINT(1) 10
+AUTODETAIL(1) Road
+COLOR(2) 1 1 0.2
+MATERIAL(2) Concrete (Worn)
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 1
+LIN(2) -10.25
+LINUNITS(2) m
+LOUT(2) -10
+LOUTUNITS(2) m
+LDIV(2) 4
+S_START(2) -500
+S_STOP(2) -5
+SINT(2) 0.5
+AUTODETAIL(2) Random
+COLOR(3) 1 1 0.2
+MATERIAL(3) Concrete (Worn)
+SPECULAR(3) 1
+SCALE(3) 10
+LTILES(3) 1
+LIN(3) 10.25
+LINUNITS(3) m
+LOUT(3) 10
+LOUTUNITS(3) m
+LDIV(3) 4
+S_START(3) -500
+S_STOP(3) -5
+SINT(3) 0.5
+AUTODETAIL(3) Random
+COLOR(4) 1 1 0.2
+MATERIAL(4) Concrete (Worn)
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) 1
+LIN(4) -10.25
+LINUNITS(4) m
+LOUT(4) -10
+LOUTUNITS(4) m
+LDIV(4) 4
+S_START(4) 5
+S_STOP(4) 500
+SINT(4) 0.5
+AUTODETAIL(4) Random
+COLOR(5) 1 1 0.2
+MATERIAL(5) Concrete (Worn)
+SPECULAR(5) 1
+SCALE(5) 10
+LTILES(5) 1
+LIN(5) 10.25
+LINUNITS(5) m
+LOUT(5) 10
+LOUTUNITS(5) m
+LDIV(5) 4
+S_START(5) 5
+S_STOP(5) 500
+SINT(5) 0.5
+AUTODETAIL(5) Random
+COLOR(6) 1 1 1
+MATERIAL(6) Grass (Light)
+SPECULAR(6) 1
+SCALE(6) 30
+LTILES(6) 9
+LIN(6) -12.25
+LINUNITS(6) m
+LOUT(6) -500
+LOUTUNITS(6) m
+S_START(6) 7.25
+S_STOP(6) 500
+SINT(6) 10
+DZ(6) -0.0075
+AUTODETAIL(6) Foliage
+COLOR(7) 1 1 1
+MATERIAL(7) Grass (Light)
+SPECULAR(7) 1
+SCALE(7) 30
+LTILES(7) 9
+LIN(7) 12.25
+LINUNITS(7) m
+LOUT(7) 500
+LOUTUNITS(7) m
+S_START(7) 7.25
+S_STOP(7) 500
+SINT(7) 10
+DZ(7) -0.0075
+AUTODETAIL(7) Foliage
+COLOR(8) 1 1 1
+MATERIAL(8) Grass (Light)
+SPECULAR(8) 1
+SCALE(8) 30
+LTILES(8) 9
+LIN(8) -12.25
+LINUNITS(8) m
+LOUT(8) -500
+LOUTUNITS(8) m
+S_START(8) -500
+S_STOP(8) -7.25
+SINT(8) 10
+DZ(8) -0.0075
+AUTODETAIL(8) Foliage
+COLOR(9) 1 1 1
+MATERIAL(9) Grass (Light)
+SPECULAR(9) 1
+SCALE(9) 30
+LTILES(9) 9
+LIN(9) 12.25
+LINUNITS(9) m
+LOUT(9) 500
+LOUTUNITS(9) m
+S_START(9) -500
+S_STOP(9) -7.25
+SINT(9) 10
+DZ(9) -0.0075
+AUTODETAIL(9) Foliage
+COLOR(10) 1 1 1
+MATERIAL(10) Concrete
+SPECULAR(10) 1
+SCALE(10) 10
+LTILES(10) 1
+LIN(10) -10.25
+LINUNITS(10) m
+LOUT(10) -12.25
+LOUTUNITS(10) m
+S_START(10) -500
+S_STOP(10) -5.25
+AUTODETAIL(10) Random
+COLOR(11) 1 1 1
+MATERIAL(11) Concrete
+SPECULAR(11) 1
+SCALE(11) 10
+LTILES(11) 1
+LIN(11) 10.25
+LINUNITS(11) m
+LOUT(11) 12.25
+LOUTUNITS(11) m
+S_START(11) -500
+S_STOP(11) -5.25
+AUTODETAIL(11) Random
+COLOR(12) 1 1 1
+MATERIAL(12) Concrete
+SPECULAR(12) 1
+SCALE(12) 10
+LTILES(12) 1
+LIN(12) -10.25
+LINUNITS(12) m
+LOUT(12) -12.25
+LOUTUNITS(12) m
+S_START(12) 5.25
+S_STOP(12) 500
+AUTODETAIL(12) Random
+COLOR(13) 1 1 1
+MATERIAL(13) Concrete
+SPECULAR(13) 1
+SCALE(13) 10
+LTILES(13) 1
+LIN(13) 10.25
+LINUNITS(13) m
+LOUT(13) 12.25
+LOUTUNITS(13) m
+S_START(13) 5.25
+S_STOP(13) 500
+AUTODETAIL(13) Random
+COLOR(14) 1 1 1
+MATERIAL(14) Road (No Lines)
+SPECULAR(14) 1
+SCALE(14) 60
+LTILES(14) 1
+LIN(14) -10
+LINUNITS(14) m
+LOUT(14) 10
+LOUTUNITS(14) m
+S_START(14) -5
+S_STOP(14) 5
+AUTODETAIL(14) Random
+COLOR(15) 1 1 1
+MATERIAL(15) Road (Medium)
+SPECULAR(15) 1
+SCALE(15) 40
+LTILES(15) 2
+LIN(15) -10
+LINUNITS(15) m
+LOUT(15) 10
+LOUTUNITS(15) m
+S_START(15) 5
+S_STOP(15) 500
+SINT(15) 10
+AUTODETAIL(15) Road
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Highway Network } Modified North-South Road w/ Curbs
+#Library : Road: Animator Surface Shapes
+#DataSet : Modified North-South Road w/ Curbs
+#Category: Highway Network
+#FileID  : RdShape_7cec73c5-4b28-44d5-aaea-4023c86274b5
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

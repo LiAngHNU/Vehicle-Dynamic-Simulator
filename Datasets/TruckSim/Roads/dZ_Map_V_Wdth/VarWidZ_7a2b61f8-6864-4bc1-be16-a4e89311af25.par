@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, Variable Width`Railroad Tracks`Variable Width Roads
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: Railroad Tracks
+set_description ROAD_DZ_ID Railroad Tracks
+#RingCtrl0 CARPET
+#RingCtrl1 1
+*3D_DATA 14, 2 ! columns x rows
+ROAD_DZ_CARPET VAR_WIDTH
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
+-105, 0, 0, 0.2, 0.4, 0.35, 0.35, 0.4, 0.4, 0.35, 0.35, 0.4, 0.2, 0, 0
+100, 0, 0, 0.2, 0.4, 0.35, 0.35, 0.4, 0.4, 0.35, 0.35, 0.4, 0.2, 0, 0
+ENDDATA
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
+-102.343, 156, 156.348, 167.45, 171.626, 171.655, 171.809, 171.869, 174.645, 174.683, 174.849, 174.893, 179.047, 190.146, 190.5
+97.657, -190.5, -190.062, -178.96, -174.784, -174.755, -174.601, -174.542, -171.765, -171.728, -171.562, -171.517, -167.363, -156.264, -156
+ENDCOLS
+ENDTABLE
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 14, 2 ! columns x rows
+RdTb1_CARPET 2D_LINEAR
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
+-105, 0, 0, 0.2, 0.4, 0.35, 0.35, 0.4, 0.4, 0.35, 0.35, 0.4, 0.2, 0, 0
+100, 0, 0, 0.2, 0.4, 0.35, 0.35, 0.4, 0.4, 0.35, 0.35, 0.4, 0.2, 0, 0
+ENDTABLE
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Lateral coordinate of edge (m)
+
+#DiagramTwo1
+*3D_DATA 14, 2 ! columns x rows
+RdTb2_CARPET 2D_LINEAR
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
+-102.342988, 156, 156.347916, 167.45024, 171.626084, 171.654892, 171.809416, 171.8685, 174.645232, 174.682588, 174.848572, 174.893128, 179.047088, 190.146332, 190.5
+97.657028, -190.5, -190.062224, -178.9599, -174.784056, -174.755248, -174.600708, -174.541624, -171.764892, -171.72754, -171.561552, -171.517, -167.363036, -156.263792, -156
+ENDTABLE
+
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+SET_IROAD_DZ_FOR_ID 0
+
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, Variable Width; { Variable Width Roads } Railroad Tracks
+#Library : Road: Off-Center Elevation Map, Variable Width
+#DataSet : Railroad Tracks
+#Category: Variable Width Roads
+#FileID  : VarWidZ_7a2b61f8-6864-4bc1-be16-a4e89311af25
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L, Variable Width
+
+END

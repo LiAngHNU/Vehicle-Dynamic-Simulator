@@ -1,0 +1,88 @@
+PARSFILE
+#FullDataName TruckSim Run Control`65 km/h, DLC`Handling and Stability Tests
+#VEHICLECODE S_SS + SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_83ef414a-88ac-4238-8220-63e0463b2bac
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_245b5580-eac8-4494-a96f-0533fd4ce892.par
+#BlueLink0 Animator: Camera Setup`150 Azm, 4.5 El, 100 m` Vehicle Reference` , Animator camera`Camera_245b5580-eac8-4494-a96f-0533fd4ce892
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 3
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_06bef8e1-fa26-4463-83cd-71c2940cb169.par
+#BlueLink2 Vehicle: Loaded Combination`3A Day+2A Lowboy Trl.` Day-Cab Tractor-Trailers` , Math Model`VehLoad_06bef8e1-fa26-4463-83cd-71c2940cb169
+
+PARSFILE Procedures\Proc_43636e38-b8f6-44e0-b2b8-093d48d377ad.par
+#BlueLink28 Procedures`DLC @ 65 km/h` Handling Tests` , Procedure`Proc_43636e38-b8f6-44e0-b2b8-093d48d377ad
+
+PARSFILE Generic\Group\GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa.par
+#BlueLink9 Generic Data Group`5 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa
+
+PARSFILE Plot\Setup\Plot_6daa361a-9613-477b-b0ba-ecec097e5c0e.par
+#BlueLink15 Plot: Setup`Hitch: Articulation Angle` Hitch` , Plot`Plot_6daa361a-9613-477b-b0ba-ecec097e5c0e
+
+PARSFILE Plot\Setup\Plot_712a1199-3ac8-43d0-80b3-7a3572dc3bb8.par
+#BlueLink16 Plot: Setup`Hitch Forces` Hitch` , Plot`Plot_712a1199-3ac8-43d0-80b3-7a3572dc3bb8
+
+PARSFILE Plot\Setup\Plot_ae1e2c83-8feb-442b-b3a9-3ca8bb0e3211.par
+#BlueLink17 Plot: Setup`Hitch Moments` Hitch` , Plot`Plot_ae1e2c83-8feb-442b-b3a9-3ca8bb0e3211
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_210bf516-a418-4707-bed2-da7b93f14f00.png
+WRITE_SENSOR_DETECT
+Title 65 km/h, DLC <Handling and Stability Tests>
+CATEGORY Handling and Stability Tests 
+DATASET_TITLE 65 km/h, DLC
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates a 3A tractor towing a 2A Lowboy trailer performing a double lane change on a 0.85-mu surface with a constant target speed of 65 km/h.
+#
+#The Lowboy trailer has two payloads, both represented by an agricultural-type tractor animation shape.
+#
+#Examples like these are useful for studying the effects various types of payloads have on the transient handling behavior of combination vehicles.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Handling and Stability Tests } 65 km/h, DLC
+#Library : TruckSim Run Control
+#DataSet : 65 km/h, DLC
+#Category: Handling and Stability Tests
+#FileID  : Run_83ef414a-88ac-4238-8220-63e0463b2bac
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

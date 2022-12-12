@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName TruckSim Run Control`5A Tractor+3 14A Trailers`Vehicle Configurations
+#VEHICLECODE ss_sss + sss_sss_sss_sss_ss + sss_sss_sss_sss_ss + sss_sss_sss_sss_ss
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_05fea403-0787-48a3-b88c-2ecd435e34cd
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 1 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Generic\Links\GenLink_0ac0a87f-dc94-41d5-be56-c0f75f9a4798.par
+#BlueLink2 Generic Group of Links`5A Tractor+3x14 SA Trailers` Tractor Trailer Vehicle Combinations` , Math Model`GenLink_0ac0a87f-dc94-41d5-be56-c0f75f9a4798
+
+PARSFILE Procedures\Proc_e35a35e1-8d82-4a47-9b25-634f0f787e24.par
+#BlueLink28 Procedures`Four Small Bumps, 0.3 m incr. elev.` Ride Tests` , Procedure`Proc_e35a35e1-8d82-4a47-9b25-634f0f787e24
+
+*SSTOP 220
+
+*IMAGE_TYPE DEFAULT
+WRITE_SENSOR_DETECT
+Title 5A Tractor+3 14A Trailers <Vehicle Configurations>
+CATEGORY Vehicle Configurations 
+DATASET_TITLE 5A Tractor+3 14A Trailers
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example makes use of TruckSim's modular architecture to construct some unique vehicle configurations. The vehicles are not intended to represent any specific real-world vehicles, but to exercise TruckSim's capabilities and show methods for creating special vehicles.
+#
+#Here, a 5 axle tractor pulls 3 trailers having 14 axles each. Symbol Stack operations are used extensively to assemble the parts of trailers whose configurations are not supported by browser screens.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Vehicle Configurations } 5A Tractor+3 14A Trailers
+#Library : TruckSim Run Control
+#DataSet : 5A Tractor+3 14A Trailers
+#Category: Vehicle Configurations
+#FileID  : Run_05fea403-0787-48a3-b88c-2ecd435e34cd
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

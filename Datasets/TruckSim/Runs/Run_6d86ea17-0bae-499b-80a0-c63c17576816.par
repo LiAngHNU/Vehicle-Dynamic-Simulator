@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Steering Stops & Torque Control, Right`Steering Tests
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_6d86ea17-0bae-499b-80a0-c63c17576816
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 8
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+*RUN_COLOR 1 0 0
+SET_RUN_COLOR 1 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_334c7308-5ff8-4d68-bd0a-207e369b8122.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`LCF Van (Steering Stops)` 2A LCF Van` , Math Model`Lead2a_334c7308-5ff8-4d68-bd0a-207e369b8122
+
+PARSFILE Procedures\Proc_3660945b-6d73-401a-b21d-03811e882066.par
+#BlueLink28 Procedures`Open Loop Steer Torque: Ramp to Right` Driver Controls` , Procedure`Proc_3660945b-6d73-401a-b21d-03811e882066
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+*TSTOP 1
+PARSFILE Plot\Setup\Plot_4de1fba3-79a5-40bd-bbff-00ddd5587914.par
+#BlueLink15 Plot: Setup`Steering Stops` Steering` , Plot`Plot_4de1fba3-79a5-40bd-bbff-00ddd5587914
+
+#BlueLink23 TruckSim Run Control`Baseline` * * Quick Start Guide Example` , Overlay run or ERD file`Run_f02bf0b3-4066-447e-bb5e-40a929b281c7
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Lead_2a\Lead2a_334c7308-5ff8-4d68-bd0a-207e369b8122.png
+WRITE_SENSOR_DETECT
+Title Steering Stops & Torque Control, Right <Steering Tests>
+CATEGORY Steering Tests 
+DATASET_TITLE Steering Stops & Torque Control, Right
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#TruckSim 2019 supports steering stops in the Steering System. This example steers right.
+#
+#In Open Loop Torque control, it is possible to apply sustained steer torque exceeding any reaction torque, causing unrealistic steer angles. To prevent this, steering stops are now supported.
+#
+#Steering stops are also helpful in driving simulators, producing a realistic steer feedback torque at the limit of steer. (Scroll)
+#
+#In other applications controlling steering wheel angle, steering stops are unnecessary because the input angle is directly controlled. If steering stops are used, the system can become stiff when a stop is reached, causing the model to fail.
+#
+#In most cases, an event should be linked to control the model behavior when steer limits are reached, to prevent excessive steer torque and possible instability.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Steering Tests } Steering Stops & Torque Control, Right
+#Library : TruckSim Run Control
+#DataSet : Steering Stops & Torque Control, Right
+#Category: Steering Tests
+#FileID  : Run_6d86ea17-0bae-499b-80a0-c63c17576816
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

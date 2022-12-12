@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Path: X-Y Coordinates`City Intersection: 1003`Scene Builder Tile Paths
+#RingCtrl0 2
+SET_IPATH_FOR_ID 1003
+DEFINE_XY_TABLES 1
+ITAB_XY = NTAB_XY
+XY_TABLE_ID = ITAB_XY
+SET_DESCRIPTION PATH_ID City Intersection: 1003
+SET_DESCRIPTION XY_TABLE_ID City Intersection: 1003
+IPATHSEG = 1
+PATH_ID_DM = PATH_ID
+SEGMENT_TYPE = 1
+XY_SEGMENT_ID = XY_TABLE_ID
+
+#CheckBox0 0    
+OPT_PATH_LOOP 0
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox4 0    
+
+#RadioCtrl0 1    
+
+#DiagramOne0
+SEGMENT_XY_TABLE
+0.0000, 146.3420, 0.0000
+100.0000, 146.3420, 100.0000
+200.0000, 146.3420, 200.0000
+300.0000, 146.3420, 300.0000
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Path: X-Y Coordinates; { Scene Builder Tile Paths } City Intersection: 1003
+#Library : Path: X-Y Coordinates
+#DataSet : City Intersection: 1003
+#Category: Scene Builder Tile Paths
+#FileID  : PathXY_47576f65-8cd9-4bd9-81c9-821ae785b810
+#Product : TruckSim 2020.1
+#VehCode X-Y Coordinates of Path
+
+END

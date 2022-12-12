@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Reverse DLC: Tour Bus`Low-Speed Tracking
+#VEHICLECODE S_SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_d0bb646b-0d8a-4c3e-9575-ebe5dbbd7660
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_cab1809d-9038-447e-a68d-b3432420a8f6.par
+#BlueLink0 Animator: Camera Setup`10 Azm, 10 El, 50 m` Vehicle Reference` , Animator camera`Camera_cab1809d-9038-447e-a68d-b3432420a8f6
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 on
+RT_WINDOW_CLOSE on
+#RingCtrl5 1
+LIVE_SERVER_MAX_CONNECTIONS 1
+PARSFILE Vehicles\Loaded\VehLoad_b8e28542-e7d9-4105-bc67-a8d6c3d35654.par
+#BlueLink2 Vehicle: Loaded Combination`3A Tour Bus (S_SS), Two Payloads` Tour Buses` , Math Model`VehLoad_b8e28542-e7d9-4105-bc67-a8d6c3d35654
+
+PARSFILE Procedures\Proc_ae98405f-ff7c-4c8d-a172-ed8cd83c6a53.par
+#BlueLink28 Procedures`DLC @ -10 km/h` Handling Tests` , Procedure`Proc_ae98405f-ff7c-4c8d-a172-ed8cd83c6a53
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55.par
+#BlueLink9 Multiple Moving Objects`1 Driver Preview Point, Set by DM` Points of Interest` , Miscellaneous`TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_cca5b92d-3920-4afe-a207-0cfc6e721644.png
+WRITE_SENSOR_DETECT
+Title Reverse DLC: Tour Bus <Low-Speed Tracking>
+CATEGORY Low-Speed Tracking 
+DATASET_TITLE Reverse DLC: Tour Bus
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates the built-in, single preview-point controller's ability to execute a low-speed "double lane change" maneuver in reverse.
+#
+#Note: The built-in controller is unable to reverse vehicles with trailers. However, a relatively simple VS Command controller can be used for vehicles with single trailers. See the "Reverse DLC: Tractor-Trailer" example.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Low-Speed Tracking } Reverse DLC: Tour Bus
+#Library : TruckSim Run Control
+#DataSet : Reverse DLC: Tour Bus
+#Category: Low-Speed Tracking
+#FileID  : Run_d0bb646b-0d8a-4c3e-9575-ebe5dbbd7660
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

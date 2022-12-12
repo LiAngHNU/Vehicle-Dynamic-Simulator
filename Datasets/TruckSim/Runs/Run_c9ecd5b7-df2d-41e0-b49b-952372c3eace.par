@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName TruckSim Run Control`3A Box, Payload`Vehicle Configurations
+#VEHICLECODE I_SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_c9ecd5b7-df2d-41e0-b49b-952372c3eace
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_3dc6d761-4d6f-4946-a6a5-9f74ba8f27d5.par
+#BlueLink2 Vehicle: Loaded Combination`3A Conv. Van (I_SS) w/ Payload` Conventional Vans` , Math Model`VehLoad_3dc6d761-4d6f-4946-a6a5-9f74ba8f27d5
+
+PARSFILE Procedures\Proc_fdccaa91-6052-4816-adad-68e3562e08c5.par
+#BlueLink28 Procedures`DLC @ 50 km/h` Handling Tests` , Procedure`Proc_fdccaa91-6052-4816-adad-68e3562e08c5
+
+PARSFILE Generic\Group\GenGrp_aa29b4a0-5439-4fbb-ad2f-bb4211f7d41f.par
+#BlueLink9 Generic Data Group`3 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_aa29b4a0-5439-4fbb-ad2f-bb4211f7d41f
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_954205fa-e7b5-4c32-be37-65abc905e7f2.png
+WRITE_SENSOR_DETECT
+Title 3A Box, Payload <Vehicle Configurations>
+CATEGORY Vehicle Configurations 
+DATASET_TITLE 3A Box, Payload
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#I_SS
+#
+#3A Box Van (I_SS) with a 5000 kg payload performing a double lane change maneuver.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Vehicle Configurations } 3A Box, Payload
+#Library : TruckSim Run Control
+#DataSet : 3A Box, Payload
+#Category: Vehicle Configurations
+#FileID  : Run_c9ecd5b7-df2d-41e0-b49b-952372c3eace
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

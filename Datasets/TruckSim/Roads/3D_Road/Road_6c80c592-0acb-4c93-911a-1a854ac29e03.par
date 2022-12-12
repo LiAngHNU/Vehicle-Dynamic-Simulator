@@ -1,0 +1,2935 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`I-94 North, Near Exit 172 (Basic)`Atlas and ADAS RP Map Downloads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_6c80c592-0acb-4c93-911a-1a854ac29e03.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 1094
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id I-94 North, Near Exit 172 (Basic)
+PARSFILE Roads\ExScene\SceneImp_9b5a7793-bba8-47a2-8978-19ff12785807.par
+#BlueLink0 Scene: External Import`I-94, Exit 172 (Jackson Ave)` Atlas` , Reference Path`SceneImp_9b5a7793-bba8-47a2-8978-19ff12785807
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: I-94, Exit 172 (Jackson Ave)
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_3586a32c-e988-4b9f-85fd-0ed1c9d9acbd.par
+#BlueLink4 Road: Animator Surface Shapes`I-94 (Basic)` Highway Intersection` , Road shape definitions`RdShape_3586a32c-e988-4b9f-85fd-0ed1c9d9acbd
+
+RR_SURF_CONSTANT 1.0
+add_reference_frame road_stuff_6_Concrete_Barrier
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_65a465de-24c4-494f-bc91-bfde10ba54f9.par
+#BlueLink6 Road: Animator Repeated Object`Concrete Barrier` Highway Intersection` , 3D Shapes`AniRep_65a465de-24c4-494f-bc91-bfde10ba54f9
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_d4c450d6-372b-4662-b26d-43e2a7e034fd.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 39 m` Road Reference` , Camera`Camera_d4c450d6-372b-4662-b26d-43e2a7e034fd
+
+parsfile Roads\3D_Road\Road_6c80c592-0acb-4c93-911a-1a854ac29e03.ani
+
+add_reference_frame road_stuff_1_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.158159808
+set_offset_var_pitch -0.00160757556423
+set_offset_var_roll 0
+set_offset_var_x -7.1437452496
+set_offset_var_y 7.36323602643
+set_offset_var_z -9.82993831551e-05
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_2_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.157846475
+set_offset_var_pitch -0.00297781589455
+set_offset_var_roll 0
+set_offset_var_x -6.84625197099
+set_offset_var_y 13.3558973787
+set_offset_var_z -0.000338451367559
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_3_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.157539396
+set_offset_var_pitch -0.00434096550892
+set_offset_var_roll 0
+set_offset_var_x -6.54872628761
+set_offset_var_y 19.3485563101
+set_offset_var_z -0.000721722668105
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_4_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.157238572
+set_offset_var_pitch -0.00569702438371
+set_offset_var_roll 0
+set_offset_var_x -6.25116885366
+set_offset_var_y 25.3412128528
+set_offset_var_z -0.00124737045078
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_5_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.156944002
+set_offset_var_pitch -0.00704599249534
+set_offset_var_roll 0
+set_offset_var_x -5.95358032333
+set_offset_var_y 31.3338670392
+set_offset_var_z -0.00191465188158
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_6_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.156655687
+set_offset_var_pitch -0.00838786982028
+set_offset_var_roll 0
+set_offset_var_x -5.65596135083
+set_offset_var_y 37.3265189016
+set_offset_var_z -0.00272282412648
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_7_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.156373626
+set_offset_var_pitch -0.00972265633505
+set_offset_var_roll 0
+set_offset_var_x -5.35831259034
+set_offset_var_y 43.3191684724
+set_offset_var_z -0.00367114435148
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_8_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.15609782
+set_offset_var_pitch -0.0110503520162
+set_offset_var_roll 0
+set_offset_var_x -5.06063469605
+set_offset_var_y 49.3118157838
+set_offset_var_z -0.00475886972256
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_9_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.155828268
+set_offset_var_pitch -0.0123709568404
+set_offset_var_roll 0
+set_offset_var_x -4.76292832217
+set_offset_var_y 55.3044608682
+set_offset_var_z -0.00598525740571
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_10_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.155564972
+set_offset_var_pitch -0.0136844707842
+set_offset_var_roll 0
+set_offset_var_x -4.46519412287
+set_offset_var_y 61.2971037579
+set_offset_var_z -0.00734956456691
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_11_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.155307929
+set_offset_var_pitch -0.0149908938243
+set_offset_var_roll 0
+set_offset_var_x -4.16743275236
+set_offset_var_y 67.2897444853
+set_offset_var_z -0.00885104837217
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_12_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.155057142
+set_offset_var_pitch -0.0162902259375
+set_offset_var_roll 0
+set_offset_var_x -3.86964486482
+set_offset_var_y 73.2823830826
+set_offset_var_z -0.0104889659875
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_13_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.154812609
+set_offset_var_pitch -0.0175824671006
+set_offset_var_roll 0
+set_offset_var_x -3.57183111446
+set_offset_var_y 79.2750195823
+set_offset_var_z -0.0122625745788
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_14_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.15457433
+set_offset_var_pitch -0.0188676172904
+set_offset_var_roll 0
+set_offset_var_x -3.27399215545
+set_offset_var_y 85.2676540166
+set_offset_var_z -0.0141711313121
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_15_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.154342306
+set_offset_var_pitch -0.0201456764836
+set_offset_var_roll 0
+set_offset_var_x -2.97612864199
+set_offset_var_y 91.2602864178
+set_offset_var_z -0.0162138933534
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_16_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.154116537
+set_offset_var_pitch -0.0214166446574
+set_offset_var_roll 0
+set_offset_var_x -2.67824122827
+set_offset_var_y 97.2529168183
+set_offset_var_z -0.0183901178687
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_17_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.153897022
+set_offset_var_pitch -0.0226805217885
+set_offset_var_roll 0
+set_offset_var_x -2.38033056849
+set_offset_var_y 103.24554525
+set_offset_var_z -0.020699062024
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_18_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.153683762
+set_offset_var_pitch -0.023937307854
+set_offset_var_roll 0
+set_offset_var_x -2.08239731682
+set_offset_var_y 109.238171746
+set_offset_var_z -0.0231399829852
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_19_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.153476757
+set_offset_var_pitch -0.0251870028309
+set_offset_var_roll 0
+set_offset_var_x -1.78444212747
+set_offset_var_y 115.230796339
+set_offset_var_z -0.0257121379184
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_20_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.153276006
+set_offset_var_pitch -0.0264296066963
+set_offset_var_roll 0
+set_offset_var_x -1.48646565463
+set_offset_var_y 121.22341906
+set_offset_var_z -0.0284147839895
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_21_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.153081509
+set_offset_var_pitch -0.0276651194272
+set_offset_var_roll 0
+set_offset_var_x -1.18846855247
+set_offset_var_y 127.216039941
+set_offset_var_z -0.0312471783646
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_22_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.152893268
+set_offset_var_pitch -0.0288935410008
+set_offset_var_roll 0
+set_offset_var_x -0.8904514752
+set_offset_var_y 133.208659016
+set_offset_var_z -0.0342085782095
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_23_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.152711281
+set_offset_var_pitch -0.0301148713942
+set_offset_var_roll 0
+set_offset_var_x -0.592415076999
+set_offset_var_y 139.201276317
+set_offset_var_z -0.0372982406904
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_24_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.152535548
+set_offset_var_pitch -0.0313291105848
+set_offset_var_roll 0
+set_offset_var_x -0.294360012057
+set_offset_var_y 145.193891875
+set_offset_var_z -0.0405154229731
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_25_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.15236607
+set_offset_var_pitch -0.0325362585496
+set_offset_var_roll 0
+set_offset_var_x 0.00371306543718
+set_offset_var_y 151.186505724
+set_offset_var_z -0.0438593822238
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_26_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.152202847
+set_offset_var_pitch -0.0337363152661
+set_offset_var_roll 0
+set_offset_var_x 0.301803501294
+set_offset_var_y 157.179117895
+set_offset_var_z -0.0473293756083
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_27_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.152045878
+set_offset_var_pitch -0.0349292807115
+set_offset_var_roll 0
+set_offset_var_x 0.599910641327
+set_offset_var_y 163.171728421
+set_offset_var_z -0.0509246602926
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_28_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.151895164
+set_offset_var_pitch -0.0361151548631
+set_offset_var_roll 0
+set_offset_var_x 0.898033831346
+set_offset_var_y 169.164337334
+set_offset_var_z -0.0546444934428
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_29_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.151750704
+set_offset_var_pitch -0.0372939376983
+set_offset_var_roll 0
+set_offset_var_x 1.19617241717
+set_offset_var_y 175.156944667
+set_offset_var_z -0.0584881322248
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_30_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.151612499
+set_offset_var_pitch -0.0384656291947
+set_offset_var_roll 0
+set_offset_var_x 1.4943257446
+set_offset_var_y 181.149550452
+set_offset_var_z -0.0624548338046
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_31_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.151480549
+set_offset_var_pitch -0.0396302293295
+set_offset_var_roll 0
+set_offset_var_x 1.79249315946
+set_offset_var_y 187.142154721
+set_offset_var_z -0.0665438553483
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_32_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.151354853
+set_offset_var_pitch -0.0407877380803
+set_offset_var_roll 0
+set_offset_var_x 2.09067400755
+set_offset_var_y 193.134757506
+set_offset_var_z -0.0707544540217
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_33_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.151235412
+set_offset_var_pitch -0.0419381554246
+set_offset_var_roll 0
+set_offset_var_x 2.3888676347
+set_offset_var_y 199.12735884
+set_offset_var_z -0.0750858869909
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_34_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.151122225
+set_offset_var_pitch -0.0430814813399
+set_offset_var_roll 0
+set_offset_var_x 2.68707338672
+set_offset_var_y 205.119958755
+set_offset_var_z -0.0795374114219
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_35_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.151015293
+set_offset_var_pitch -0.0442177158038
+set_offset_var_roll 0
+set_offset_var_x 2.98529060942
+set_offset_var_y 211.112557284
+set_offset_var_z -0.0841082844806
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_36_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150914615
+set_offset_var_pitch -0.0453468587939
+set_offset_var_roll 0
+set_offset_var_x 3.28351864861
+set_offset_var_y 217.105154458
+set_offset_var_z -0.0887977633331
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_37_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150820193
+set_offset_var_pitch -0.0464689102879
+set_offset_var_roll 0
+set_offset_var_x 3.58175685011
+set_offset_var_y 223.097750311
+set_offset_var_z -0.0936051051453
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_38_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150732024
+set_offset_var_pitch -0.0475838702633
+set_offset_var_roll 0
+set_offset_var_x 3.88000455973
+set_offset_var_y 229.090344874
+set_offset_var_z -0.0985295670832
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_39_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150650111
+set_offset_var_pitch -0.0486917386979
+set_offset_var_roll 0
+set_offset_var_x 4.1782611233
+set_offset_var_y 235.08293818
+set_offset_var_z -0.103570406313
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_40_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150574451
+set_offset_var_pitch -0.0497925155694
+set_offset_var_roll 0
+set_offset_var_x 4.47652588662
+set_offset_var_y 241.07553026
+set_offset_var_z -0.10872688
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_41_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150505047
+set_offset_var_pitch -0.0508862008555
+set_offset_var_roll 0
+set_offset_var_x 4.77479819551
+set_offset_var_y 247.068121149
+set_offset_var_z -0.113998245311
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_42_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150441897
+set_offset_var_pitch -0.051972794534
+set_offset_var_roll 0
+set_offset_var_x 5.07307739579
+set_offset_var_y 253.060710877
+set_offset_var_z -0.119383759412
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_43_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150385002
+set_offset_var_pitch -0.0530522965827
+set_offset_var_roll 0
+set_offset_var_x 5.37136283327
+set_offset_var_y 259.053299477
+set_offset_var_z -0.124882679468
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_44_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150334361
+set_offset_var_pitch -0.0541247069794
+set_offset_var_roll 0
+set_offset_var_x 5.66965385377
+set_offset_var_y 265.045886981
+set_offset_var_z -0.130494262646
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_45_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150289975
+set_offset_var_pitch -0.0551900257019
+set_offset_var_roll 0
+set_offset_var_x 5.9679498031
+set_offset_var_y 271.038473423
+set_offset_var_z -0.136217766112
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_46_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150251843
+set_offset_var_pitch -0.0562482527281
+set_offset_var_roll 0
+set_offset_var_x 6.26625002709
+set_offset_var_y 277.031058833
+set_offset_var_z -0.142052447031
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_47_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150219966
+set_offset_var_pitch -0.057299388036
+set_offset_var_roll 0
+set_offset_var_x 6.56455387155
+set_offset_var_y 283.023643245
+set_offset_var_z -0.14799756257
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_48_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150194344
+set_offset_var_pitch -0.0583434316034
+set_offset_var_roll 0
+set_offset_var_x 6.8628606823
+set_offset_var_y 289.01622669
+set_offset_var_z -0.154052369894
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_49_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150174976
+set_offset_var_pitch -0.0593803834082
+set_offset_var_roll 0
+set_offset_var_x 7.16116980515
+set_offset_var_y 295.008809202
+set_offset_var_z -0.16021612617
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_50_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150161863
+set_offset_var_pitch -0.0604102434284
+set_offset_var_roll 0
+set_offset_var_x 7.45948058593
+set_offset_var_y 301.001390811
+set_offset_var_z -0.166488088564
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_51_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150155004
+set_offset_var_pitch -0.0614330116421
+set_offset_var_roll 0
+set_offset_var_x 7.75779237044
+set_offset_var_y 306.993971552
+set_offset_var_z -0.172867514241
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_52_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.1501544
+set_offset_var_pitch -0.0624486880272
+set_offset_var_roll 0
+set_offset_var_x 8.05610450452
+set_offset_var_y 312.986551455
+set_offset_var_z -0.179353660368
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_53_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150160051
+set_offset_var_pitch -0.0634572725617
+set_offset_var_roll 0
+set_offset_var_x 8.35441633398
+set_offset_var_y 318.979130554
+set_offset_var_z -0.18594578411
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_54_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150171956
+set_offset_var_pitch -0.0644587652237
+set_offset_var_roll 0
+set_offset_var_x 8.65272720464
+set_offset_var_y 324.97170888
+set_offset_var_z -0.192643142634
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_55_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150190116
+set_offset_var_pitch -0.0654531659912
+set_offset_var_roll 0
+set_offset_var_x 8.95103646232
+set_offset_var_y 330.964286467
+set_offset_var_z -0.199444993105
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_56_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.15021453
+set_offset_var_pitch -0.0664404748424
+set_offset_var_roll 0
+set_offset_var_x 9.24934345284
+set_offset_var_y 336.956863346
+set_offset_var_z -0.20635059269
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_57_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150245199
+set_offset_var_pitch -0.0674206917553
+set_offset_var_roll 0
+set_offset_var_x 9.54764752201
+set_offset_var_y 342.949439549
+set_offset_var_z -0.213359198554
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_58_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150282122
+set_offset_var_pitch -0.0683938167081
+set_offset_var_roll 0
+set_offset_var_x 9.84594801566
+set_offset_var_y 348.942015109
+set_offset_var_z -0.220470067864
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_59_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150325301
+set_offset_var_pitch -0.0693598496789
+set_offset_var_roll 0
+set_offset_var_x 10.1442442796
+set_offset_var_y 354.934590059
+set_offset_var_z -0.227682457785
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_60_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150374733
+set_offset_var_pitch -0.0703187906459
+set_offset_var_roll 0
+set_offset_var_x 10.4425356597
+set_offset_var_y 360.92716443
+set_offset_var_z -0.234995625484
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_61_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150430421
+set_offset_var_pitch -0.0712706395872
+set_offset_var_roll 0
+set_offset_var_x 10.7408215017
+set_offset_var_y 366.919738255
+set_offset_var_z -0.242408828126
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_62_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150492362
+set_offset_var_pitch -0.0722153964811
+set_offset_var_roll 0
+set_offset_var_x 11.0391011515
+set_offset_var_y 372.912311567
+set_offset_var_z -0.249921322878
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_63_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150560559
+set_offset_var_pitch -0.0731530613058
+set_offset_var_roll 0
+set_offset_var_x 11.3373739548
+set_offset_var_y 378.904884397
+set_offset_var_z -0.257532366905
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_64_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.15063501
+set_offset_var_pitch -0.0740836340394
+set_offset_var_roll 0
+set_offset_var_x 11.6356392576
+set_offset_var_y 384.897456777
+set_offset_var_z -0.265241217373
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_65_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150715716
+set_offset_var_pitch -0.0750071146603
+set_offset_var_roll 0
+set_offset_var_x 11.9338964056
+set_offset_var_y 390.890028742
+set_offset_var_z -0.273047131449
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_66_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150802676
+set_offset_var_pitch -0.0759235031466
+set_offset_var_roll 0
+set_offset_var_x 12.2321447446
+set_offset_var_y 396.882600321
+set_offset_var_z -0.280949366298
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_67_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.150895891
+set_offset_var_pitch -0.0768327994768
+set_offset_var_roll 0
+set_offset_var_x 12.5303836205
+set_offset_var_y 402.875171549
+set_offset_var_z -0.288947179086
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_68_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.15099536
+set_offset_var_pitch -0.077735003629
+set_offset_var_roll 0
+set_offset_var_x 12.8286123791
+set_offset_var_y 408.867742457
+set_offset_var_z -0.29703982698
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_69_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.151101084
+set_offset_var_pitch -0.0786301155816
+set_offset_var_roll 0
+set_offset_var_x 13.1268303663
+set_offset_var_y 414.860313077
+set_offset_var_z -0.305226567145
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_70_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.151213063
+set_offset_var_pitch -0.0795181353129
+set_offset_var_roll 0
+set_offset_var_x 13.4250369277
+set_offset_var_y 420.852883442
+set_offset_var_z -0.313506656748
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_71_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.151331296
+set_offset_var_pitch -0.0803990628012
+set_offset_var_roll 0
+set_offset_var_x 13.7232314094
+set_offset_var_y 426.845453584
+set_offset_var_z -0.321879352954
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_72_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.151455784
+set_offset_var_pitch -0.0812728980248
+set_offset_var_roll 0
+set_offset_var_x 14.021413157
+set_offset_var_y 432.838023536
+set_offset_var_z -0.330343912929
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_73_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.151586526
+set_offset_var_pitch -0.0821396409622
+set_offset_var_roll 0
+set_offset_var_x 14.3195815164
+set_offset_var_y 438.83059333
+set_offset_var_z -0.338899593839
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_74_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.151723523
+set_offset_var_pitch -0.0829992915916
+set_offset_var_roll 0
+set_offset_var_x 14.6177358335
+set_offset_var_y 444.823162998
+set_offset_var_z -0.347545652851
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_75_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.151866775
+set_offset_var_pitch -0.0838518498916
+set_offset_var_roll 0
+set_offset_var_x 14.9158754541
+set_offset_var_y 450.815732572
+set_offset_var_z -0.35628134713
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_76_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.152016281
+set_offset_var_pitch -0.0846973158403
+set_offset_var_roll 0
+set_offset_var_x 15.2139997239
+set_offset_var_y 456.808302085
+set_offset_var_z -0.365105933843
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_77_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.152172041
+set_offset_var_pitch -0.0855356894164
+set_offset_var_roll 0
+set_offset_var_x 15.5121079888
+set_offset_var_y 462.80087157
+set_offset_var_z -0.374018670154
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_78_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.152334057
+set_offset_var_pitch -0.0863669705981
+set_offset_var_roll 0
+set_offset_var_x 15.8101995947
+set_offset_var_y 468.793441058
+set_offset_var_z -0.383018813231
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_79_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.152502327
+set_offset_var_pitch -0.0871911593639
+set_offset_var_roll 0
+set_offset_var_x 16.1082738874
+set_offset_var_y 474.786010581
+set_offset_var_z -0.392105620239
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_80_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.152676851
+set_offset_var_pitch -0.0880082556923
+set_offset_var_roll 0
+set_offset_var_x 16.4063302126
+set_offset_var_y 480.778580173
+set_offset_var_z -0.401278348344
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_81_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.15285763
+set_offset_var_pitch -0.0888182595616
+set_offset_var_roll 0
+set_offset_var_x 16.7043679163
+set_offset_var_y 486.771149865
+set_offset_var_z -0.410536254712
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_82_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.153044664
+set_offset_var_pitch -0.0896211709503
+set_offset_var_roll 0
+set_offset_var_x 17.0023863442
+set_offset_var_y 492.76371969
+set_offset_var_z -0.41987859651
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_83_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.153237952
+set_offset_var_pitch -0.0904169898369
+set_offset_var_roll 0
+set_offset_var_x 17.3003848422
+set_offset_var_y 498.75628968
+set_offset_var_z -0.429304630903
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_84_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.153437495
+set_offset_var_pitch -0.0912057161999
+set_offset_var_roll 0
+set_offset_var_x 17.598362756
+set_offset_var_y 504.748859867
+set_offset_var_z -0.438813615057
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_85_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.153643293
+set_offset_var_pitch -0.0919873500177
+set_offset_var_roll 0
+set_offset_var_x 17.8963194316
+set_offset_var_y 510.741430284
+set_offset_var_z -0.448404806138
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_86_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.153855345
+set_offset_var_pitch -0.0927618912688
+set_offset_var_roll 0
+set_offset_var_x 18.1942542148
+set_offset_var_y 516.734000963
+set_offset_var_z -0.458077461312
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_87_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.154073651
+set_offset_var_pitch -0.0935293399317
+set_offset_var_roll 0
+set_offset_var_x 18.4921664513
+set_offset_var_y 522.726571937
+set_offset_var_z -0.467830837745
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_88_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.154298213
+set_offset_var_pitch -0.0942896959849
+set_offset_var_roll 0
+set_offset_var_x 18.7900554871
+set_offset_var_y 528.719143237
+set_offset_var_z -0.477664192604
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_89_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.154529028
+set_offset_var_pitch -0.0950429594069
+set_offset_var_roll 0
+set_offset_var_x 19.0879206679
+set_offset_var_y 534.711714897
+set_offset_var_z -0.487576783053
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_90_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.154766099
+set_offset_var_pitch -0.0957891301762
+set_offset_var_roll 0
+set_offset_var_x 19.3857613395
+set_offset_var_y 540.704286947
+set_offset_var_z -0.49756786626
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_91_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.155009424
+set_offset_var_pitch -0.0965282082713
+set_offset_var_roll 0
+set_offset_var_x 19.6835768479
+set_offset_var_y 546.696859422
+set_offset_var_z -0.50763669939
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_92_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.155259003
+set_offset_var_pitch -0.0972601936708
+set_offset_var_roll 0
+set_offset_var_x 19.9813665387
+set_offset_var_y 552.689432352
+set_offset_var_z -0.517782539608
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_93_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.155514838
+set_offset_var_pitch -0.0979850863532
+set_offset_var_roll 0
+set_offset_var_x 20.279129758
+set_offset_var_y 558.682005771
+set_offset_var_z -0.528004644082
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_94_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.155776926
+set_offset_var_pitch -0.098702886297
+set_offset_var_roll 0
+set_offset_var_x 20.5768658514
+set_offset_var_y 564.67457971
+set_offset_var_z -0.538302269977
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_95_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.15604527
+set_offset_var_pitch -0.0994135934807
+set_offset_var_roll 0
+set_offset_var_x 20.8745741648
+set_offset_var_y 570.667154203
+set_offset_var_z -0.548674674459
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_96_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.156319868
+set_offset_var_pitch -0.100117207883
+set_offset_var_roll 0
+set_offset_var_x 21.1722540441
+set_offset_var_y 576.65972928
+set_offset_var_z -0.559121114694
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_97_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.15660072
+set_offset_var_pitch -0.100813729482
+set_offset_var_roll 0
+set_offset_var_x 21.4699048351
+set_offset_var_y 582.652304976
+set_offset_var_z -0.569640847848
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_98_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.156887827
+set_offset_var_pitch -0.101503158257
+set_offset_var_roll 0
+set_offset_var_x 21.7675258835
+set_offset_var_y 588.644881321
+set_offset_var_z -0.580233131087
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_99_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.157181189
+set_offset_var_pitch -0.102185494186
+set_offset_var_roll 0
+set_offset_var_x 22.0651165353
+set_offset_var_y 594.637458349
+set_offset_var_z -0.590897221577
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_100_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.157480806
+set_offset_var_pitch -0.102860737247
+set_offset_var_roll 0
+set_offset_var_x 22.3626761363
+set_offset_var_y 600.630036091
+set_offset_var_z -0.601632376484
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_101_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.157786676
+set_offset_var_pitch -0.10352888742
+set_offset_var_roll 0
+set_offset_var_x 22.6602040323
+set_offset_var_y 606.62261458
+set_offset_var_z -0.612437852973
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_102_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.158098802
+set_offset_var_pitch -0.104189944683
+set_offset_var_roll 0
+set_offset_var_x 22.9576995691
+set_offset_var_y 612.615193849
+set_offset_var_z -0.623312908212
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_103_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.158417182
+set_offset_var_pitch -0.104843909014
+set_offset_var_roll 0
+set_offset_var_x 23.2551620926
+set_offset_var_y 618.607773929
+set_offset_var_z -0.634256799366
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_104_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.158741817
+set_offset_var_pitch -0.105490780391
+set_offset_var_roll 0
+set_offset_var_x 23.5525909485
+set_offset_var_y 624.600354853
+set_offset_var_z -0.6452687836
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_105_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.159072706
+set_offset_var_pitch -0.106130558795
+set_offset_var_roll 0
+set_offset_var_x 23.8499854829
+set_offset_var_y 630.592936653
+set_offset_var_z -0.656348118082
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_106_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.15940985
+set_offset_var_pitch -0.106763244202
+set_offset_var_roll 0
+set_offset_var_x 24.1473450413
+set_offset_var_y 636.585519361
+set_offset_var_z -0.667494059976
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_107_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.159753248
+set_offset_var_pitch -0.107388836592
+set_offset_var_roll 0
+set_offset_var_x 24.4446689698
+set_offset_var_y 642.578103011
+set_offset_var_z -0.67870586645
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_108_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.160102902
+set_offset_var_pitch -0.108007335943
+set_offset_var_roll 0
+set_offset_var_x 24.7419566141
+set_offset_var_y 648.570687634
+set_offset_var_z -0.689982794668
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_109_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.160458809
+set_offset_var_pitch -0.108618742234
+set_offset_var_roll 0
+set_offset_var_x 25.0392073201
+set_offset_var_y 654.563273262
+set_offset_var_z -0.701324101797
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_110_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.160820971
+set_offset_var_pitch -0.109223055443
+set_offset_var_roll 0
+set_offset_var_x 25.3364204336
+set_offset_var_y 660.555859929
+set_offset_var_z -0.712729045003
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_111_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.161189388
+set_offset_var_pitch -0.109820275548
+set_offset_var_roll 0
+set_offset_var_x 25.6335953004
+set_offset_var_y 666.548447665
+set_offset_var_z -0.724196881452
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_112_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.16156406
+set_offset_var_pitch -0.11041040253
+set_offset_var_roll 0
+set_offset_var_x 25.9307312663
+set_offset_var_y 672.541036504
+set_offset_var_z -0.735726868309
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_113_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.161944986
+set_offset_var_pitch -0.110993436365
+set_offset_var_roll 0
+set_offset_var_x 26.2278276773
+set_offset_var_y 678.533626478
+set_offset_var_z -0.747318262741
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_114_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.162332166
+set_offset_var_pitch -0.111569377033
+set_offset_var_roll 0
+set_offset_var_x 26.5248838791
+set_offset_var_y 684.526217619
+set_offset_var_z -0.758970321915
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_115_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.162725602
+set_offset_var_pitch -0.112138224511
+set_offset_var_roll 0
+set_offset_var_x 26.8218992176
+set_offset_var_y 690.518809959
+set_offset_var_z -0.770682302995
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_116_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.163125291
+set_offset_var_pitch -0.11269997878
+set_offset_var_roll 0
+set_offset_var_x 27.1188730386
+set_offset_var_y 696.511403531
+set_offset_var_z -0.782453463147
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_117_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.163531236
+set_offset_var_pitch -0.113254639817
+set_offset_var_roll 0
+set_offset_var_x 27.415804688
+set_offset_var_y 702.503998368
+set_offset_var_z -0.794283059539
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_118_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.163943435
+set_offset_var_pitch -0.1138022076
+set_offset_var_roll 0
+set_offset_var_x 27.7126935115
+set_offset_var_y 708.4965945
+set_offset_var_z -0.806170349335
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_119_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.164361888
+set_offset_var_pitch -0.114342682109
+set_offset_var_roll 0
+set_offset_var_x 28.0095388551
+set_offset_var_y 714.489191962
+set_offset_var_z -0.818114589702
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_120_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.164786597
+set_offset_var_pitch -0.114876063321
+set_offset_var_roll 0
+set_offset_var_x 28.3063400645
+set_offset_var_y 720.481790785
+set_offset_var_z -0.830115037806
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_121_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.165217559
+set_offset_var_pitch -0.115402351216
+set_offset_var_roll 0
+set_offset_var_x 28.6030964856
+set_offset_var_y 726.474391001
+set_offset_var_z -0.842170950812
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_122_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.165654777
+set_offset_var_pitch -0.115921545772
+set_offset_var_roll 0
+set_offset_var_x 28.8998074642
+set_offset_var_y 732.466992643
+set_offset_var_z -0.854281585887
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_123_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.166098249
+set_offset_var_pitch -0.116433646967
+set_offset_var_roll 0
+set_offset_var_x 29.1964723463
+set_offset_var_y 738.459595743
+set_offset_var_z -0.866446200197
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_124_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.166547975
+set_offset_var_pitch -0.11693865478
+set_offset_var_roll 0
+set_offset_var_x 29.4930904775
+set_offset_var_y 744.452200333
+set_offset_var_z -0.878664050908
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_125_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.167003956
+set_offset_var_pitch -0.11743656919
+set_offset_var_roll 0
+set_offset_var_x 29.7896612037
+set_offset_var_y 750.444806446
+set_offset_var_z -0.890934395185
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_126_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.167466192
+set_offset_var_pitch -0.117927390175
+set_offset_var_roll 0
+set_offset_var_x 30.0861838709
+set_offset_var_y 756.437414115
+set_offset_var_z -0.903256490194
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_127_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.167934682
+set_offset_var_pitch -0.118411117713
+set_offset_var_roll 0
+set_offset_var_x 30.3826578247
+set_offset_var_y 762.43002337
+set_offset_var_z -0.915629593103
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_128_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.168409427
+set_offset_var_pitch -0.118887751784
+set_offset_var_roll 0
+set_offset_var_x 30.6790824112
+set_offset_var_y 768.422634245
+set_offset_var_z -0.928052961076
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_129_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.168890427
+set_offset_var_pitch -0.119357292365
+set_offset_var_roll 0
+set_offset_var_x 30.975456976
+set_offset_var_y 774.415246773
+set_offset_var_z -0.94052585128
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_130_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.169377681
+set_offset_var_pitch -0.119819739435
+set_offset_var_roll 0
+set_offset_var_x 31.2717808651
+set_offset_var_y 780.407860984
+set_offset_var_z -0.95304752088
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_131_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.169871189
+set_offset_var_pitch -0.120275092973
+set_offset_var_roll 0
+set_offset_var_x 31.5680534242
+set_offset_var_y 786.400476913
+set_offset_var_z -0.965617227043
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_132_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.170370953
+set_offset_var_pitch -0.120723352957
+set_offset_var_roll 0
+set_offset_var_x 31.8642739993
+set_offset_var_y 792.39309459
+set_offset_var_z -0.978234226934
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_133_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.170876971
+set_offset_var_pitch -0.121164519365
+set_offset_var_roll 0
+set_offset_var_x 32.1604419361
+set_offset_var_y 798.385714049
+set_offset_var_z -0.99089777772
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_134_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.171389243
+set_offset_var_pitch -0.121598592176
+set_offset_var_roll 0
+set_offset_var_x 32.4565565805
+set_offset_var_y 804.378335321
+set_offset_var_z -1.00360713657
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_135_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.17190777
+set_offset_var_pitch -0.122025571369
+set_offset_var_roll 0
+set_offset_var_x 32.7526172784
+set_offset_var_y 810.37095844
+set_offset_var_z -1.01636156064
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_136_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.172432552
+set_offset_var_pitch -0.122445456922
+set_offset_var_roll 0
+set_offset_var_x 33.0486233755
+set_offset_var_y 816.363583436
+set_offset_var_z -1.02916030711
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_137_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.172963588
+set_offset_var_pitch -0.122858248814
+set_offset_var_roll 0
+set_offset_var_x 33.3445742178
+set_offset_var_y 822.356210343
+set_offset_var_z -1.04200263313
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_138_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.173500879
+set_offset_var_pitch -0.123263947022
+set_offset_var_roll 0
+set_offset_var_x 33.6404691511
+set_offset_var_y 828.348839194
+set_offset_var_z -1.05488779588
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_139_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.174044424
+set_offset_var_pitch -0.123662551526
+set_offset_var_roll 0
+set_offset_var_x 33.9363075211
+set_offset_var_y 834.341470019
+set_offset_var_z -1.06781505252
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_140_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.174594224
+set_offset_var_pitch -0.124054062303
+set_offset_var_roll 0
+set_offset_var_x 34.2320886738
+set_offset_var_y 840.334102852
+set_offset_var_z -1.08078366021
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_141_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.175150279
+set_offset_var_pitch -0.124438479333
+set_offset_var_roll 0
+set_offset_var_x 34.527811955
+set_offset_var_y 846.326737725
+set_offset_var_z -1.09379287613
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_142_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.175712588
+set_offset_var_pitch -0.124815802593
+set_offset_var_roll 0
+set_offset_var_x 34.8234767105
+set_offset_var_y 852.31937467
+set_offset_var_z -1.10684195744
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_143_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.176281152
+set_offset_var_pitch -0.125186032063
+set_offset_var_roll 0
+set_offset_var_x 35.1190822862
+set_offset_var_y 858.31201372
+set_offset_var_z -1.1199301613
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_144_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.17685597
+set_offset_var_pitch -0.12554916772
+set_offset_var_roll 0
+set_offset_var_x 35.4146280279
+set_offset_var_y 864.304654907
+set_offset_var_z -1.13305674488
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_145_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.177437043
+set_offset_var_pitch -0.125905209542
+set_offset_var_roll 0
+set_offset_var_x 35.7101132815
+set_offset_var_y 870.297298263
+set_offset_var_z -1.14622096535
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_146_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.178024371
+set_offset_var_pitch -0.126254157509
+set_offset_var_roll 0
+set_offset_var_x 36.0055373928
+set_offset_var_y 876.28994382
+set_offset_var_z -1.15942207987
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_147_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.178617953
+set_offset_var_pitch -0.126596011599
+set_offset_var_roll 0
+set_offset_var_x 36.3008997077
+set_offset_var_y 882.282591612
+set_offset_var_z -1.17265934561
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_148_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.179217789
+set_offset_var_pitch -0.12693077179
+set_offset_var_roll 0
+set_offset_var_x 36.5961995719
+set_offset_var_y 888.275241669
+set_offset_var_z -1.18593201973
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_149_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.179823881
+set_offset_var_pitch -0.12725843806
+set_offset_var_roll 0
+set_offset_var_x 36.8914363314
+set_offset_var_y 894.267894025
+set_offset_var_z -1.1992393594
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_150_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.180436227
+set_offset_var_pitch -0.127579010388
+set_offset_var_roll 0
+set_offset_var_x 37.186609332
+set_offset_var_y 900.260548712
+set_offset_var_z -1.21258062179
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_151_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.181054827
+set_offset_var_pitch -0.127892488752
+set_offset_var_roll 0
+set_offset_var_x 37.4817179195
+set_offset_var_y 906.253205762
+set_offset_var_z -1.22595506407
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_152_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.181679682
+set_offset_var_pitch -0.128198873131
+set_offset_var_roll 0
+set_offset_var_x 37.7767614398
+set_offset_var_y 912.245865208
+set_offset_var_z -1.23936194339
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_153_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.182310792
+set_offset_var_pitch -0.128498163502
+set_offset_var_roll 0
+set_offset_var_x 38.0717392387
+set_offset_var_y 918.238527081
+set_offset_var_z -1.25280051692
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_154_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.182948156
+set_offset_var_pitch -0.128790359845
+set_offset_var_roll 0
+set_offset_var_x 38.3666506621
+set_offset_var_y 924.231191415
+set_offset_var_z -1.26627004184
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_155_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.183591775
+set_offset_var_pitch -0.129075462136
+set_offset_var_roll 0
+set_offset_var_x 38.6614950558
+set_offset_var_y 930.223858241
+set_offset_var_z -1.2797697753
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_156_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.15412049
+set_offset_var_pitch -0.129054741985
+set_offset_var_roll 0
+set_offset_var_x 38.9585167771
+set_offset_var_y 936.220634266
+set_offset_var_z -1.29328742924
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_157_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.225075611
+set_offset_var_pitch -0.128063067629
+set_offset_var_roll 0
+set_offset_var_x 39.2532556981
+set_offset_var_y 942.204820879
+set_offset_var_z -1.30674369872
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_158_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.407543986
+set_offset_var_pitch -0.126079932548
+set_offset_var_roll 0
+set_offset_var_x 39.5340801108
+set_offset_var_y 948.175142388
+set_offset_var_z -1.32003515805
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_159_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 267.701559021
+set_offset_var_pitch -0.123103264849
+set_offset_var_roll 0
+set_offset_var_x 39.7894446012
+set_offset_var_y 954.131761811
+set_offset_var_z -1.33305834966
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_160_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 268.10716848
+set_offset_var_pitch -0.119130986657
+set_offset_var_roll 0
+set_offset_var_x 40.0078890283
+set_offset_var_y 960.074838076
+set_offset_var_z -1.34570981597
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_161_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 268.62440105
+set_offset_var_pitch -0.114161014125
+set_offset_var_roll 0
+set_offset_var_x 40.1780388663
+set_offset_var_y 966.004532584
+set_offset_var_z -1.35788609942
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_162_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 269.206030919
+set_offset_var_pitch -0.108190389776
+set_offset_var_roll 0
+set_offset_var_x 40.2889157986
+set_offset_var_y 971.927188931
+set_offset_var_z -1.36948376861
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_163_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 269.368286243
+set_offset_var_pitch -0.102259055209
+set_offset_var_roll 0
+set_offset_var_x 40.3631936377
+set_offset_var_y 977.905468912
+set_offset_var_z -1.38044252548
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_164_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 269.518583571
+set_offset_var_pitch -0.0972465985002
+set_offset_var_roll 0
+set_offset_var_x 40.421180394
+set_offset_var_y 983.885490784
+set_offset_var_z -1.39083311902
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_165_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 269.656921957
+set_offset_var_pitch -0.0931524571749
+set_offset_var_roll 0
+set_offset_var_x 40.4641157945
+set_offset_var_y 989.867228435
+set_offset_var_z -1.40075109365
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_166_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 269.783301178
+set_offset_var_pitch -0.0899760689974
+set_offset_var_roll 0
+set_offset_var_x 40.4932405439
+set_offset_var_y 995.850655593
+set_offset_var_z -1.41029199378
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_167_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 269.897721555
+set_offset_var_pitch -0.0877168720025
+set_offset_var_roll 0
+set_offset_var_x 40.5097963263
+set_offset_var_y 1001.83574586
+set_offset_var_z -1.41955136383
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_168_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 270.00018378
+set_offset_var_pitch -0.0863743045199
+set_offset_var_roll 0
+set_offset_var_x 40.5150258057
+set_offset_var_y 1007.82247274
+set_offset_var_z -1.42862474819
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_169_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 270.090688776
+set_offset_var_pitch -0.0859478051916
+set_offset_var_roll 0
+set_offset_var_x 40.5101726272
+set_offset_var_y 1013.81080967
+set_offset_var_z -1.4376076913
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_170_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 270.169237558
+set_offset_var_pitch -0.0864368129817
+set_offset_var_roll 0
+set_offset_var_x 40.4964814163
+set_offset_var_y 1019.80073006
+set_offset_var_z -1.44659573756
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_171_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 270.235831112
+set_offset_var_pitch -0.0878407671796
+set_offset_var_roll 0
+set_offset_var_x 40.4751977791
+set_offset_var_y 1025.79220728
+set_offset_var_z -1.45568443139
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_172_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 270.290470301
+set_offset_var_pitch -0.0901591073961
+set_offset_var_roll 0
+set_offset_var_x 40.4475683021
+set_offset_var_y 1031.78521474
+set_offset_var_z -1.4649693172
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_173_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 270.333155768
+set_offset_var_pitch -0.0933912735524
+set_offset_var_roll 0
+set_offset_var_x 40.4148405514
+set_offset_var_y 1037.77972585
+set_offset_var_z -1.47454593941
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_174_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 270.363887874
+set_offset_var_pitch -0.0975367058625
+set_offset_var_roll 0
+set_offset_var_x 40.3782630725
+set_offset_var_y 1043.77571404
+set_offset_var_z -1.48450984242
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_175_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 270.425821437
+set_offset_var_pitch -0.102516899215
+set_offset_var_roll 0
+set_offset_var_x 40.3384997892
+set_offset_var_y 1049.76750731
+set_offset_var_z -1.49495579043
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_176_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 270.59348968
+set_offset_var_pitch -0.106867583452
+set_offset_var_roll 0
+set_offset_var_x 40.2852925379
+set_offset_var_y 1055.74537447
+set_offset_var_z -1.50590552732
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_177_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 270.757526507
+set_offset_var_pitch -0.110034726244
+set_offset_var_roll 0
+set_offset_var_x 40.2147752852
+set_offset_var_y 1061.7235973
+set_offset_var_z -1.51724923603
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_178_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 270.917934563
+set_offset_var_pitch -0.112018704364
+set_offset_var_roll 0
+set_offset_var_x 40.12732453
+set_offset_var_y 1067.70211619
+set_offset_var_z -1.52886332329
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_179_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 271.074716605
+set_offset_var_pitch -0.112819894176
+set_offset_var_roll 0
+set_offset_var_x 40.0233168659
+set_offset_var_y 1073.68087148
+set_offset_var_z -1.54062419583
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_180_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 271.227875488
+set_offset_var_pitch -0.112438671608
+set_offset_var_roll 0
+set_offset_var_x 39.9031289805
+set_offset_var_y 1079.6598035
+set_offset_var_z -1.55240826037
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_181_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 271.377414144
+set_offset_var_pitch -0.110875412143
+set_offset_var_roll 0
+set_offset_var_x 39.7671376557
+set_offset_var_y 1085.63885252
+set_offset_var_z -1.56409192364
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_182_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 271.523335564
+set_offset_var_pitch -0.108130490827
+set_offset_var_roll 0
+set_offset_var_x 39.6157197676
+set_offset_var_y 1091.6179588
+set_offset_var_z -1.57555159236
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_183_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 271.665642778
+set_offset_var_pitch -0.104204282285
+set_offset_var_roll 0
+set_offset_var_x 39.4492522862
+set_offset_var_y 1097.5970626
+set_offset_var_z -1.58666367326
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_184_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 271.666831303
+set_offset_var_pitch -0.0999834973346
+set_offset_var_roll 0
+set_offset_var_x 39.2747246876
+set_offset_var_y 1103.59438806
+set_offset_var_z -1.59733410366
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_185_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 271.670522205
+set_offset_var_pitch -0.0963507639554
+set_offset_var_roll 0
+set_offset_var_x 39.1000585621
+set_offset_var_y 1109.59141785
+set_offset_var_z -1.6075922421
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_186_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 271.678816481
+set_offset_var_pitch -0.093306150304
+set_offset_var_roll 0
+set_offset_var_x 38.9247819848
+set_offset_var_y 1115.58785542
+set_offset_var_z -1.61749968607
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_187_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 271.691714104
+set_offset_var_pitch -0.0908499481472
+set_offset_var_roll 0
+set_offset_var_x 38.7484135695
+set_offset_var_y 1121.58367909
+set_offset_var_z -1.62711803317
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_188_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 271.709215082
+set_offset_var_pitch -0.0889824493688
+set_offset_var_roll 0
+set_offset_var_x 38.5704720752
+set_offset_var_y 1127.57886718
+set_offset_var_z -1.63650888098
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_189_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 271.731319453
+set_offset_var_pitch -0.0877039459778
+set_offset_var_roll 0
+set_offset_var_x 38.3904764061
+set_offset_var_y 1133.57339801
+set_offset_var_z -1.64573382709
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_190_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 271.758027281
+set_offset_var_pitch -0.0870147301138
+set_offset_var_roll 0
+set_offset_var_x 38.2079456119
+set_offset_var_y 1139.56724988
+set_offset_var_z -1.65485446908
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_191_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 271.789338652
+set_offset_var_pitch -0.0869150940518
+set_offset_var_roll 0
+set_offset_var_x 38.0223988873
+set_offset_var_y 1145.56040113
+set_offset_var_z -1.66393240453
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_192_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 271.825253672
+set_offset_var_pitch -0.0874053302039
+set_offset_var_roll 0
+set_offset_var_x 37.8333555726
+set_offset_var_y 1151.55283007
+set_offset_var_z -1.67302923104
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_193_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 271.865772457
+set_offset_var_pitch -0.08848573112
+set_offset_var_roll 0
+set_offset_var_x 37.6403351529
+set_offset_var_y 1157.54451503
+set_offset_var_z -1.68220654619
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_194_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 271.910895127
+set_offset_var_pitch -0.0901565894861
+set_offset_var_roll 0
+set_offset_var_x 37.4428572589
+set_offset_var_y 1163.53543435
+set_offset_var_z -1.69152594757
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_195_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 271.960621799
+set_offset_var_pitch -0.0924181981214
+set_offset_var_roll 0
+set_offset_var_x 37.2404416662
+set_offset_var_y 1169.52556635
+set_offset_var_z -1.70104903276
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_196_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 272.014952578
+set_offset_var_pitch -0.0952708499722
+set_offset_var_roll 0
+set_offset_var_x 37.0326082956
+set_offset_var_y 1175.5148894
+set_offset_var_z -1.71083739935
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_197_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 272.073887548
+set_offset_var_pitch -0.0987148381055
+set_offset_var_roll 0
+set_offset_var_x 36.8188772129
+set_offset_var_y 1181.50338185
+set_offset_var_z -1.72095264492
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_198_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 272.13742676
+set_offset_var_pitch -0.1027504557
+set_offset_var_roll 0
+set_offset_var_x 36.598768629
+set_offset_var_y 1187.49102208
+set_offset_var_z -1.73145636706
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_199_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 272.20557022
+set_offset_var_pitch -0.107377996033
+set_offset_var_roll 0
+set_offset_var_x 36.3718028994
+set_offset_var_y 1193.47778846
+set_offset_var_z -1.74241016336
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_200_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 272.27831788
+set_offset_var_pitch -0.112597752472
+set_offset_var_roll 0
+set_offset_var_x 36.1375005245
+set_offset_var_y 1199.46365941
+set_offset_var_z -1.75387563141
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_201_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 272.355669623
+set_offset_var_pitch -0.118410018455
+set_offset_var_roll 0
+set_offset_var_x 35.8953821492
+set_offset_var_y 1205.44861335
+set_offset_var_z -1.76591436878
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_202_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 272.437625246
+set_offset_var_pitch -0.124815087477
+set_offset_var_roll 0
+set_offset_var_x 35.6449685627
+set_offset_var_y 1211.43262873
+set_offset_var_z -1.77858797307
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_203_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 272.752276567
+set_offset_var_pitch -0.133910243757
+set_offset_var_roll 0
+set_offset_var_x 35.3825757783
+set_offset_var_y 1217.38581855
+set_offset_var_z -1.79198426326
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_204_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 273.478698686
+set_offset_var_pitch -0.16526920553
+set_offset_var_roll 0
+set_offset_var_x 35.0621618524
+set_offset_var_y 1223.28358134
+set_offset_var_z -1.80730122173
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_205_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 274.273756755
+set_offset_var_pitch -0.223866270468
+set_offset_var_roll 0
+set_offset_var_x 34.6640346827
+set_offset_var_y 1229.16833984
+set_offset_var_z -1.82723382128
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_206_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 275.13795413
+set_offset_var_pitch -0.30993941929
+set_offset_var_roll 0
+set_offset_var_x 34.1815044526
+set_offset_var_y 1235.0375239
+set_offset_var_z -1.85458279553
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_207_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 276.07175906
+set_offset_var_pitch -0.423728552493
+set_offset_var_roll 0
+set_offset_var_x 33.6079161401
+set_offset_var_y 1240.88858198
+set_offset_var_z -1.89214887806
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_208_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 277.039454283
+set_offset_var_pitch -0.564819788655
+set_offset_var_roll 0
+set_offset_var_x 32.9362698439
+set_offset_var_y 1246.72373385
+set_offset_var_z -1.94273146618
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_209_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 277.809655704
+set_offset_var_pitch -0.694628949184
+set_offset_var_roll 0
+set_offset_var_x 32.1747663717
+set_offset_var_y 1252.5754035
+set_offset_var_z -2.00773302691
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_210_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 278.699437267
+set_offset_var_pitch -0.791293042511
+set_offset_var_roll 0
+set_offset_var_x 31.3306164571
+set_offset_var_y 1258.4014468
+set_offset_var_z -2.08451468207
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_211_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 279.709698071
+set_offset_var_pitch -0.855001804741
+set_offset_var_roll 0
+set_offset_var_x 30.3925369789
+set_offset_var_y 1264.19700784
+set_offset_var_z -2.16971097304
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_212_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 280.841297958
+set_offset_var_pitch -0.885942813848
+set_offset_var_roll 0
+set_offset_var_x 29.3493453135
+set_offset_var_y 1269.95727781
+set_offset_var_z -2.25995644117
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_213_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 282.094922828
+set_offset_var_pitch -0.8843008978
+set_offset_var_roll 0
+set_offset_var_x 28.1899551864
+set_offset_var_y 1275.67752145
+set_offset_var_z -2.35188562785
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_214_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 282.408789738
+set_offset_var_pitch -0.864650192466
+set_offset_var_roll 0
+set_offset_var_x 26.9167917486
+set_offset_var_y 1281.49906112
+set_offset_var_z -2.44250134897
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_215_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 282.537730848
+set_offset_var_pitch -0.849331902358
+set_offset_var_roll 0
+set_offset_var_x 25.624558605
+set_offset_var_y 1287.34169314
+set_offset_var_z -2.53126438291
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_216_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 282.687576239
+set_offset_var_pitch -0.838540619954
+set_offset_var_roll 0
+set_offset_var_x 24.3186380752
+set_offset_var_y 1293.17882652
+set_offset_var_z -2.61864179458
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_217_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 282.858335461
+set_offset_var_pitch -0.832281494541
+set_offset_var_roll 0
+set_offset_var_x 22.9969549339
+set_offset_var_y 1299.00979865
+set_offset_var_z -2.7051036757
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_218_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 283.050020048
+set_offset_var_pitch -0.830559650246
+set_offset_var_roll 0
+set_offset_var_x 21.6574369238
+set_offset_var_y 1304.83394747
+set_offset_var_z -2.791120118
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_219_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 283.262642833
+set_offset_var_pitch -0.83338018711
+set_offset_var_roll 0
+set_offset_var_x 20.2980147335
+set_offset_var_y 1310.65061156
+set_offset_var_z -2.8771612132
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_220_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 283.496217185
+set_offset_var_pitch -0.840748181308
+set_offset_var_roll 0
+set_offset_var_x 18.9166219706
+set_offset_var_y 1316.45913034
+set_offset_var_z -2.96369705301
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_221_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 283.750756159
+set_offset_var_pitch -0.852668684511
+set_offset_var_roll 0
+set_offset_var_x 17.5111951287
+set_offset_var_y 1322.25884419
+set_offset_var_z -3.05119772916
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_222_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 284.026271555
+set_offset_var_pitch -0.869146722387
+set_offset_var_roll 0
+set_offset_var_x 16.0796735466
+set_offset_var_y 1328.04909467
+set_offset_var_z -3.14013333337
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_223_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 284.322772899
+set_offset_var_pitch -0.890187292229
+set_offset_var_roll 0
+set_offset_var_x 14.6199993589
+set_offset_var_y 1333.82922469
+set_offset_var_z -3.23097395735
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_224_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 284.640266332
+set_offset_var_pitch -0.91579535971
+set_offset_var_roll 0
+set_offset_var_x 13.1301174366
+set_offset_var_y 1339.59857871
+set_offset_var_z -3.32418969283
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_225_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 284.978753414
+set_offset_var_pitch -0.94597585475
+set_offset_var_roll 0
+set_offset_var_x 11.6079753153
+set_offset_var_y 1345.356503
+set_offset_var_z -3.42025063153
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_226_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 285.414683823
+set_offset_var_pitch -0.980684969889
+set_offset_var_roll 0
+set_offset_var_x 10.0540670102
+set_offset_var_y 1351.09266146
+set_offset_var_z -3.51962686618
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_227_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 288.041452292
+set_offset_var_pitch -1.01954214421
+set_offset_var_roll 0
+set_offset_var_x 8.42040789276
+set_offset_var_y 1356.504259
+set_offset_var_z -3.62283524881
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_228_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 289.871740302
+set_offset_var_pitch -1.0653229704
+set_offset_var_roll 0
+set_offset_var_x 6.54293293887
+set_offset_var_y 1361.94881361
+set_offset_var_z -3.73056425104
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_229_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 290.905273893
+set_offset_var_pitch -1.1179979871
+set_offset_var_roll 0
+set_offset_var_x 4.49170186865
+set_offset_var_y 1367.44784365
+set_offset_var_z -3.84354170795
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_230_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 291.145255642
+set_offset_var_pitch -1.17753774204
+set_offset_var_roll 0
+set_offset_var_x 2.34116749458
+set_offset_var_y 1373.02350261
+set_offset_var_z -3.9624954546
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_231_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 290.59239238
+set_offset_var_pitch -1.24391276996
+set_offset_var_roll 0
+set_offset_var_x 0.169760816867
+set_offset_var_y 1378.69967696
+set_offset_var_z -4.08815332606
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_232_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 290.863519873
+set_offset_var_pitch -1.31142333318
+set_offset_var_roll 0
+set_offset_var_x -1.92610181031
+set_offset_var_y 1384.28400333
+set_offset_var_z -4.22099155532
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_233_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 291.350783355
+set_offset_var_pitch -1.35405569967
+set_offset_var_roll 0
+set_offset_var_x -4.06591663915
+set_offset_var_y 1389.82116329
+set_offset_var_z -4.35929330489
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_234_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 291.580624761
+set_offset_var_pitch -1.36924087553
+set_offset_var_roll 0
+set_offset_var_x -6.2527698379
+set_offset_var_y 1395.37643525
+set_offset_var_z -4.50021118126
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_235_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 291.553094321
+set_offset_var_pitch -1.3567555483
+set_offset_var_roll 0
+set_offset_var_x -8.46178350253
+set_offset_var_y 1400.95909882
+set_offset_var_z -4.64088840687
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_236_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 295.112710106
+set_offset_var_pitch -1.42272905463
+set_offset_var_roll 0
+set_offset_var_x -10.6706393148
+set_offset_var_y 1406.03250585
+set_offset_var_z -4.78233062072
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_237_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 294.863861222
+set_offset_var_pitch -1.52884499503
+set_offset_var_roll 0
+set_offset_var_x -13.2166195111
+set_offset_var_y 1411.50257054
+set_offset_var_z -4.93459623601
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_238_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 294.967070186
+set_offset_var_pitch -1.60200908291
+set_offset_var_roll 0
+set_offset_var_x -15.7364510532
+set_offset_var_y 1416.934542
+set_offset_var_z -5.09629702686
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_239_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 295.422393771
+set_offset_var_pitch -1.64235038592
+set_offset_var_roll 0
+set_offset_var_x -18.2628608972
+set_offset_var_y 1422.3119414
+set_offset_var_z -5.26405949054
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_240_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 296.230115568
+set_offset_var_pitch -1.6499946239
+set_offset_var_roll 0
+set_offset_var_x -20.8277970518
+set_offset_var_y 1427.6186319
+set_offset_var_z -5.43451012437
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_241_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 297.390229664
+set_offset_var_pitch -1.62506381463
+set_offset_var_roll 0
+set_offset_var_x -23.4624714141
+set_offset_var_y 1432.83891056
+set_offset_var_z -5.60427542561
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_242_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 297.74863586
+set_offset_var_pitch -1.58740492063
+set_offset_var_roll 0
+set_offset_var_x -26.2202121149
+set_offset_var_y 1438.11506625
+set_offset_var_z -5.77055040214
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_243_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 298.077280821
+set_offset_var_pitch -1.55636840752
+set_offset_var_roll 0
+set_offset_var_x -29.0090152109
+set_offset_var_y 1443.37987021
+set_offset_var_z -5.93322017301
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_244_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 298.435518125
+set_offset_var_pitch -1.53188161778
+set_offset_var_roll 0
+set_offset_var_x -31.8276012803
+set_offset_var_y 1448.62465502
+set_offset_var_z -6.09296475792
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_245_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 298.823401775
+set_offset_var_pitch -1.5139511362
+set_offset_var_roll 0
+set_offset_var_x -34.6784158607
+set_offset_var_y 1453.84756866
+set_offset_var_z -6.25046429466
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_246_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 299.240984244
+set_offset_var_pitch -1.50258342415
+set_offset_var_roll 0
+set_offset_var_x -37.5638996124
+set_offset_var_y 1459.04676313
+set_offset_var_z -6.40639892098
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_247_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 299.688313362
+set_offset_var_pitch -1.49778482618
+set_offset_var_roll 0
+set_offset_var_x -40.4864886049
+set_offset_var_y 1464.22039495
+set_offset_var_z -6.56144877465
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_248_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 300.165428939
+set_offset_var_pitch -1.49956157412
+set_offset_var_roll 0
+set_offset_var_x -43.4486146519
+set_offset_var_y 1469.36662576
+set_offset_var_z -6.71629399344
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_249_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 301.177295953
+set_offset_var_pitch -1.5029947248
+set_offset_var_roll 0
+set_offset_var_x -46.4279657313
+set_offset_var_y 1474.42114065
+set_offset_var_z -6.87158067381
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_250_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 302.55804757
+set_offset_var_pitch -1.48396951063
+set_offset_var_roll 0
+set_offset_var_x -49.5038396453
+set_offset_var_y 1479.35949763
+set_offset_var_z -7.02662533758
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_251_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 303.366201318
+set_offset_var_pitch -1.44082714878
+set_offset_var_roll 0
+set_offset_var_x -52.7151315134
+set_offset_var_y 1484.30243032
+set_offset_var_z -7.17901373568
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_252_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 303.602266394
+set_offset_var_pitch -1.37383445794
+set_offset_var_roll 0
+set_offset_var_x -56.0135449576
+set_offset_var_y 1489.27972308
+set_offset_var_z -7.32621558527
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_253_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 303.266645986
+set_offset_var_pitch -1.28325309225
+set_offset_var_roll 0
+set_offset_var_x -59.3488854452
+set_offset_var_y 1494.32235975
+set_offset_var_z -7.46570060348
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_254_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 301.642683349
+set_offset_var_pitch -1.17231611305
+set_offset_var_roll 0
+set_offset_var_x -62.7151468778
+set_offset_var_y 1499.54476586
+set_offset_var_z -7.5949409365
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_255_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 299.67247557
+set_offset_var_pitch -1.10829979815
+set_offset_var_roll 0
+set_offset_var_x -65.8426730016
+set_offset_var_y 1504.98471604
+set_offset_var_z -7.713542513
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_256_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 307.27480192
+set_offset_var_pitch -1.10806933908
+set_offset_var_roll 0
+set_offset_var_x -68.5290108003
+set_offset_var_y 1509.20058297
+set_offset_var_z -7.82715550927
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_257_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 309.247671159
+set_offset_var_pitch -1.13296071785
+set_offset_var_roll 0
+set_offset_var_x -72.1509611381
+set_offset_var_y 1513.65511556
+set_offset_var_z -7.94172909823
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_258_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 309.332617312
+set_offset_var_pitch -1.14942986862
+set_offset_var_roll 0
+set_offset_var_x -75.9440017302
+set_offset_var_y 1518.2914939
+set_offset_var_z -8.05842953536
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_259_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 309.458316868
+set_offset_var_pitch -1.1591769575
+set_offset_var_roll 0
+set_offset_var_x -79.7425755993
+set_offset_var_y 1522.91725986
+set_offset_var_z -8.17657563087
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_260_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 309.624779958
+set_offset_var_pitch -1.16222014017
+set_offset_var_roll 0
+set_offset_var_x -83.5497412633
+set_offset_var_y 1527.52946256
+set_offset_var_z -8.29548223455
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_261_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 309.832027011
+set_offset_var_pitch -1.15857741388
+set_offset_var_roll 0
+set_offset_var_x -87.3685477101
+set_offset_var_y 1532.1251575
+set_offset_var_z -8.41446419621
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_262_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 310.08008623
+set_offset_var_pitch -1.14826661732
+set_offset_var_roll 0
+set_offset_var_x -91.2020346871
+set_offset_var_y 1536.70140695
+set_offset_var_z -8.53283636564
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_263_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 310.368990447
+set_offset_var_pitch -1.13130543322
+set_offset_var_roll 0
+set_offset_var_x -95.0532330678
+set_offset_var_y 1541.25528047
+set_offset_var_z -8.64991359265
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_264_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 310.698773354
+set_offset_var_pitch -1.10771139366
+set_offset_var_roll 0
+set_offset_var_x -98.9251653026
+set_offset_var_y 1545.78385549
+set_offset_var_z -8.76501072701
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_265_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 311.069465103
+set_offset_var_pitch -1.0775018879
+set_offset_var_roll 0
+set_offset_var_x -102.820845964
+set_offset_var_y 1550.28421797
+set_offset_var_z -8.87744261854
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_266_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 311.481087262
+set_offset_var_pitch -1.04069417285
+set_offset_var_roll 0
+set_offset_var_x -106.743282396
+set_offset_var_y 1554.75346319
+set_offset_var_z -8.98652411703
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_267_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 311.933647141
+set_offset_var_pitch -0.997305386105
+set_offset_var_roll 0
+set_offset_var_x -110.695475477
+set_offset_var_y 1559.1886965
+set_offset_var_z -9.09157007227
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_268_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 312.427131485
+set_offset_var_pitch -0.947352561324
+set_offset_var_roll 0
+set_offset_var_x -114.680420509
+set_offset_var_y 1563.58703426
+set_offset_var_z -9.19189533406
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_269_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 312.985321796
+set_offset_var_pitch -0.890862808528
+set_offset_var_roll 0
+set_offset_var_x -118.698998399
+set_offset_var_y 1567.94330703
+set_offset_var_z -9.28681475339
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_270_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 314.703941577
+set_offset_var_pitch -0.834338355638
+set_offset_var_roll 0
+set_offset_var_x -122.699943614
+set_offset_var_y 1572.1050528
+set_offset_var_z -9.37585641563
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_271_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 316.110882067
+set_offset_var_pitch -0.782958882863
+set_offset_var_roll 0
+set_offset_var_x -126.841861544
+set_offset_var_y 1576.18464851
+set_offset_var_z -9.45935647124
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_272_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 317.205146606
+set_offset_var_pitch -0.736719126043
+set_offset_var_roll 0
+set_offset_var_x -131.103543908
+set_offset_var_y 1580.20279634
+set_offset_var_z -9.53784245306
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_273_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 317.987188688
+set_offset_var_pitch -0.695613746244
+set_offset_var_roll 0
+set_offset_var_x -135.463100069
+set_offset_var_y 1584.18046118
+set_offset_var_z -9.61184189396
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_274_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 318.457935625
+set_offset_var_pitch -0.659637341095
+set_offset_var_roll 0
+set_offset_var_x -139.898086596
+set_offset_var_y 1588.13901243
+set_offset_var_z -9.68188232678
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_275_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 318.618094703
+set_offset_var_pitch -0.628784454847
+set_offset_var_roll 0
+set_offset_var_x -144.385609807
+set_offset_var_y 1592.10031415
+set_offset_var_z -9.74849128438
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_276_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 318.467738988
+set_offset_var_pitch -0.603049587158
+set_offset_var_roll 0
+set_offset_var_x -148.902390609
+set_offset_var_y 1596.08677484
+set_offset_var_z -9.8121962996
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_277_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 318.843744656
+set_offset_var_pitch -0.580512924007
+set_offset_var_roll 0
+set_offset_var_x -153.356696047
+set_offset_var_y 1600.03377604
+set_offset_var_z -9.87349119617
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_278_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 319.875942565
+set_offset_var_pitch -0.546524271372
+set_offset_var_roll 0
+set_offset_var_x -157.808672028
+set_offset_var_y 1603.85140842
+set_offset_var_z -9.93194531933
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_279_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 320.596272079
+set_offset_var_pitch -0.498028423508
+set_offset_var_roll 0
+set_offset_var_x -162.350638508
+set_offset_var_y 1607.62724444
+set_offset_var_z -9.98611218434
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_280_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 321.00504644
+set_offset_var_pitch -0.435010105979
+set_offset_var_roll 0
+set_offset_var_x -166.961740798
+set_offset_var_y 1611.38437204
+set_offset_var_z -10.0344932761
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_281_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 321.102537379
+set_offset_var_pitch -0.357454001309
+set_offset_var_roll 0
+set_offset_var_x -171.620684556
+set_offset_var_y 1615.14638069
+set_offset_var_z -10.0755900796
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_282_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 321.44854578
+set_offset_var_pitch -0.293816341516
+set_offset_var_roll 0
+set_offset_var_x -176.262804012
+set_offset_var_y 1618.87895802
+set_offset_var_z -10.1087919439
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_283_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 322.720690162
+set_offset_var_pitch -0.279214018246
+set_offset_var_roll 0
+set_offset_var_x -180.861672244
+set_offset_var_y 1622.47134476
+set_offset_var_z -10.1378498537
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_284_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 324.922837567
+set_offset_var_pitch -0.314213875129
+set_offset_var_roll 0
+set_offset_var_x -185.466922259
+set_offset_var_y 1625.8492574
+set_offset_var_z -10.1678519304
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_285_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 325.86915089
+set_offset_var_pitch -0.365498778936
+set_offset_var_roll 0
+set_offset_var_x -190.308718232
+set_offset_var_y 1629.17860461
+set_offset_var_z -10.2029026339
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_286_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 326.509465153
+set_offset_var_pitch -0.389698136492
+set_offset_var_roll 0
+set_offset_var_x -195.225151697
+set_offset_var_y 1632.46977442
+set_offset_var_z -10.2419271684
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_287_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 327.014257028
+set_offset_var_pitch -0.386877993969
+set_offset_var_roll 0
+set_offset_var_x -200.189476241
+set_offset_var_y 1635.72164493
+set_offset_var_z -10.2821527743
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+add_reference_frame road_stuff_288_1_Concrete_Barrier
+reference_frame_ghosts off
+set_offset_var_yaw 327.383636367
+set_offset_var_pitch -0.3572496445
+set_offset_var_roll 0
+set_offset_var_x -205.193618186
+set_offset_var_y 1638.94531905
+set_offset_var_z -10.3208057028
+parsfile Animator\STL\Shape_da35307a-7c17-410a-ad0b-74cd82554640.par
+
+#EMBEDDED_NOTES
+#This dataset anchors the vehicle X-Y-Z system. The GPS data for the first point of the path is set in the misc field. The road reference path starts at S = 0 and ends at S = 2311.
+#
+#The reference line is between the two N-bound lanes.
+#
+#The exit lane begins at about S = 870. If the vehicle takes the exit , the boundary (defined elsewhere) switches to road ID 1002 at S = 988 when L < -4.
+#
+#The graphics are basic, using road surfaces and concrete. A concrete barrier is added at L = 7.5, putting it in the middle of the center the N and S-bound lanes.
+#
+#Separate GPS paths can be obtained for N and S bound directions. This simple version only uses the N-bound path. Therefore, south-bound lanes are parallel, which is OK for cosmetic purposes.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Atlas and ADAS RP Map Downloads } I-94 North, Near Exit 172 (Basic)
+#Library : Road: 3D Surface (All Properties)
+#DataSet : I-94 North, Near Exit 172 (Basic)
+#Category: Atlas and ADAS RP Map Downloads
+#FileID  : Road_6c80c592-0acb-4c93-911a-1a854ac29e03
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

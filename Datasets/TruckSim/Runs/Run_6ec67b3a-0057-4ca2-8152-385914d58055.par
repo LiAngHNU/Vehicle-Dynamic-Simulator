@@ -1,0 +1,108 @@
+PARSFILE
+#FullDataName TruckSim Run Control`PBS C12-C13: Lane Change, Right`Performance Based Standards (PBS)
+#VEHICLECODE S_SS + dSS + SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_6ec67b3a-0057-4ca2-8152-385914d58055
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#BlueLink12 ` , Models` , Models` , Models`
+
+PARSFILE Animator\Cameras\Camera_2f297a2a-ddb7-42f4-ae83-067b2569451e.par
+#BlueLink0 Animator: Camera Setup`351 Azm, 2.7 El, 92 m` Vehicle Reference` , Animator camera`Camera_2f297a2a-ddb7-42f4-ae83-067b2569451e
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 3
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+SET_RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_2dfccab5-e06a-43d2-a548-25ce0254ec11.par
+#BlueLink2 Vehicle: Loaded Combination`S_SS + dSS + SS w/ Payloads` Dump Trucks` , Math Model`VehLoad_2dfccab5-e06a-43d2-a548-25ce0254ec11
+
+PARSFILE Procedures\Proc_815ffceb-7730-4a87-ba60-d2485821fa4f.par
+#BlueLink28 Procedures`PBS C12-13: ISO 14791 Lane Change` PBS (Performance Based Standards)` , Procedure`Proc_815ffceb-7730-4a87-ba60-d2485821fa4f
+
+PARSFILE Generic\Group\GenGrp_f9fd1534-80bb-4017-8c4b-6f8cd81aa546.par
+#BlueLink9 Generic Data Group`7 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_f9fd1534-80bb-4017-8c4b-6f8cd81aa546
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55.par
+#BlueLink10 Multiple Moving Objects`1 Driver Preview Point, Set by DM` Points of Interest` , Miscellaneous`TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55
+
+PARSFILE Plot\Setup\Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9.par
+#BlueLink15 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9
+
+PARSFILE Plot\Setup\Plot_6a9be8bd-746e-445f-8506-640a64f59970.par
+#BlueLink16 Plot: Setup`Lateral Tracking Error` PBS (Performance Based Standards)` , Plot`Plot_6a9be8bd-746e-445f-8506-640a64f59970
+
+PARSFILE Plot\Setup\Plot_6ab65115-f524-4f04-aecb-33140a974c8d.par
+#BlueLink17 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_6ab65115-f524-4f04-aecb-33140a974c8d
+
+
+SPECIAL_PARSFILE Runs\Run_00142deb-46a7-463b-9dff-86f85c825874.par
+#BlueLink23 TruckSim Run Control`PBS C12-C13: Lane Change, Left` Performance Based Standards (PBS)` , Overlay run or ERD file`Run_00142deb-46a7-463b-9dff-86f85c825874
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_5e99b800-fddc-4e1b-a23d-d8a55608d47a.png
+#BlueLink13 ` , Output Variables` , Output Variables` , Output Variables`
+
+WRITE_SENSOR_DETECT
+Title PBS C12-C13: Lane Change, Right <Performance Based Standards (PBS)>
+CATEGORY Performance Based Standards (PBS) 
+DATASET_TITLE PBS C12-C13: Lane Change, Right
+#MiscYellow0
+LTARG_GAIN -AY_TARGET
+! Do not reduce speed overshoot in Speed
+! Controller.
+OPT_AUTO_RESET_IC = 0
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#NOTE: For TruckSim 2020.0, this example now includes the effects of the brake system transport delay parameter, math model keyword TLAG_BK. This is a pure time delay between the master cylinder and the brake actuator.
+#
+#This example applies the PBS C12 - C13 Lane Change procedure, which in turn refers to ISO 14791.
+#
+#This dataset is nearly identical to the lane change to the left. However, the amplitude is set to a negative acceleration, resulting in the truck performing a lane change to the right.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Performance Based Standards (PBS) } PBS C12-C13: Lane Change, Right
+#Library : TruckSim Run Control
+#DataSet : PBS C12-C13: Lane Change, Right
+#Category: Performance Based Standards (PBS)
+#FileID  : Run_6ec67b3a-0057-4ca2-8152-385914d58055
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

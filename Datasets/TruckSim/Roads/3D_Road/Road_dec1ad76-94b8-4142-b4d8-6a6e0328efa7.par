@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Big Grass`Roundabout, Single Lane, D = 36 m
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_dec1ad76-94b8-4142-b4d8-6a6e0328efa7.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Big Grass
+PARSFILE Roads\BuilderSegment\RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c.par
+#BlueLink0 Path: Segment Builder`Straight Path East` Straight` , Reference Path`RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight Path East
+PARSFILE Roads\Shapes\RdShape_2195f080-42a4-40b4-86f8-24abeeb7bdd7.par
+#BlueLink4 Road: Animator Surface Shapes`Big Grass, dZ = -0.3` Roundabout, 3D, D = 36 m` , Road shape definitions`RdShape_2195f080-42a4-40b4-86f8-24abeeb7bdd7
+
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_dec1ad76-94b8-4142-b4d8-6a6e0328efa7.ani
+
+#EMBEDDED_NOTES
+#This dataset provides a flat reference surface with links to animator datasets that show grass and sky.
+#
+#It is intended for use with mulitple road datasets such as the example roundabout that each have animation only for a portion of the network.
+#
+#In this case, the surface shape is lowered by 0.3 m to avoid visual interfence with the roundabout sections that have elevation as low as -0.2 m.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Roundabout, Single Lane, D = 36 m } Big Grass
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Big Grass
+#Category: Roundabout, Single Lane, D = 36 m
+#FileID  : Road_dec1ad76-94b8-4142-b4d8-6a6e0328efa7
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

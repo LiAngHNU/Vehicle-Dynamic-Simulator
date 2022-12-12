@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`1200 m, One Lane, Mu = 0.3 @ 8 m`Straight
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_08b83349-a619-4fc7-81c5-3a9dcab30aca.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 1200 m, One Lane, Mu = 0.3 @ 8 m
+PARSFILE Roads\BuilderSegment\RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c.par
+#BlueLink0 Path: Segment Builder`Straight Path East` Straight` , Reference Path`RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight Path East
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_f7fa27ba-e804-4128-976d-f70ca4caf94c.par
+#BlueLink3 Road: Friction Map, S-L Grid`Step: Mu 0.3 @ 8 m` Split Mu` , Friction`RdMu_f7fa27ba-e804-4128-976d-f70ca4caf94c
+
+PARSFILE Roads\Shapes\RdShape_557aa481-dc97-4774-b8c3-923da1f9e7ae.par
+#BlueLink4 Road: Animator Surface Shapes`Low Mu (Wet Tile) at 8 m` Variable Friction` , Road shape definitions`RdShape_557aa481-dc97-4774-b8c3-923da1f9e7ae
+
+RR_SURF_CONSTANT 1
+*IMAGE_FIT_MODE 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_08b83349-a619-4fc7-81c5-3a9dcab30aca.ani
+
+#EMBEDDED_NOTES
+#Flat and straight. Mu is transitioned from 1.0 to 0.3 at road station of 8 m.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Straight } 1200 m, One Lane, Mu = 0.3 @ 8 m
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 1200 m, One Lane, Mu = 0.3 @ 8 m
+#Category: Straight
+#FileID  : Road_08b83349-a619-4fc7-81c5-3a9dcab30aca
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

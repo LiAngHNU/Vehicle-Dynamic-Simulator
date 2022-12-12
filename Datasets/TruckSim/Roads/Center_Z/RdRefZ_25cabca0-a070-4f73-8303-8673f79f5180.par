@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Road: Reference Line Elevation`Ramp to 10% Grade`Hills and Valleys
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RadioCtrl0 0    
+
+#DiagramOne0
+ROAD_ZS_TABLE SPLINE
+-20, 0
+-10, 0
+-5, 0
+0, 0
+10, 0.1
+20, 0.4
+30, 1
+40, 2
+50, 3
+60, 4
+70, 5
+80, 6
+90, 7
+100, 8
+110, 9
+120, 10
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Road: Reference Line Elevation; { Hills and Valleys } Ramp to 10% Grade
+#Library : Road: Reference Line Elevation
+#DataSet : Ramp to 10% Grade
+#Category: Hills and Valleys
+#FileID  : RdRefZ_25cabca0-a070-4f73-8303-8673f79f5180
+#Product : TruckSim 2020.1
+#VehCode Zs vs S
+
+END

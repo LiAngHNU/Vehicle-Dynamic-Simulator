@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Looped Road with Banking`Road Segment Builder
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_32c6b5d6-4597-4095-bd25-d037bf3262eb.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Looped Road with Banking
+PARSFILE Roads\Builder\Build_ecc721ed-a919-471d-93c0-393c89d7df90.par
+#BlueLink0 Path/Road: Segment Builder (Simple 3D)`Loop w/ Banking` Paths with Banking` , Reference Path`Build_ecc721ed-a919-471d-93c0-393c89d7df90
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Loop w/ Banking
+PARSFILE Roads\Shapes\RdShape_6813c94a-89ea-44f6-b89a-82cffdb67e82.par
+#BlueLink4 Road: Animator Surface Shapes`1200m Road for Loop w/ Banking` Looped Roads` , Road shape definitions`RdShape_6813c94a-89ea-44f6-b89a-82cffdb67e82
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_265e38de-4bbf-46ee-bbc0-868db110b76d.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 3 El, 44 m` Road Reference` , Camera`Camera_265e38de-4bbf-46ee-bbc0-868db110b76d
+
+parsfile Roads\3D_Road\Road_32c6b5d6-4597-4095-bd25-d037bf3262eb.ani
+
+#EMBEDDED_NOTES
+#All of the geometry for this example road was created using the Road Segment Builder.
+#
+#The Road Segment Builder is a spreadsheet tool with built-in formulas for creating straight and curved segments, elevation, and cross slope (banking), as well as road coefficients of friction.
+#
+#Follow the blue link Centerline geometry: Road Segment Builder to see where it was created.
+#
+#
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Road Segment Builder } Looped Road with Banking
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Looped Road with Banking
+#Category: Road Segment Builder
+#FileID  : Road_32c6b5d6-4597-4095-bd25-d037bf3262eb
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

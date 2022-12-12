@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Stability Test: 500m Straight, Left Turn`Handling and Stability Tests
+#VEHICLECODE S_SS + S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_4dbc059f-55cf-4694-8e17-5fc494ef9c49
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_6c981aa4-d700-477a-afa3-49e40269567a.par
+#BlueLink2 Vehicle: Loaded Combination`3A Tractor w/ 1A Flatbed Trailer` Sleeper-Cab Tractor-Trailers` , Math Model`VehLoad_6c981aa4-d700-477a-afa3-49e40269567a
+
+PARSFILE Procedures\Proc_f9df6315-7a7a-47b8-8162-e503ce8c56fa.par
+#BlueLink28 Procedures`500 m Straight, 45.72 m Left Turn` Stability Tests` , Procedure`Proc_f9df6315-7a7a-47b8-8162-e503ce8c56fa
+
+OPT_VS_FILETYPE 1
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_8ba88f47-4990-40ca-bf2d-9bbebeda47ea.png
+WRITE_SENSOR_DETECT
+Title Stability Test: 500m Straight, Left Turn <Handling and Stability Tests>
+CATEGORY Handling and Stability Tests 
+DATASET_TITLE Stability Test: 500m Straight, Left Turn
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#Stability test road, for tests such as FMVSS 136.
+#
+#The road and path used in this example are of the type employed by commercial vehicle manufacturers and suppliers to test and evaluate electronic stability control systems.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Handling and Stability Tests } Stability Test: 500m Straight, Left Turn
+#Library : TruckSim Run Control
+#DataSet : Stability Test: 500m Straight, Left Turn
+#Category: Handling and Stability Tests
+#FileID  : Run_4dbc059f-55cf-4694-8e17-5fc494ef9c49
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

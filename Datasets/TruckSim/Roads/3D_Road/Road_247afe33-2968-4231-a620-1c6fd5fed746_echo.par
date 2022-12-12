@@ -1,0 +1,655 @@
+PARSFILE
+! VS Road Calculator
+! Utility to calculate road and path coordinates for visualization
+! Revision 143773, June 25, 2020
+
+TITLE Default data set
+
+! Echo: Roads\3D_Road\Road_247afe33-2968-4231-a620-1c6fd5fed746_echo.par
+! This run was made 11:47 on June 29, 2020.
+
+!------------------------------------------------------------------------------------
+! SYSTEM PARAMETERS (SIMULATION OPTIONS)
+!------------------------------------------------------------------------------------
+! [D] (default) indicates that a parameter was not set by reading from a Parsfile.
+! [I] indicates that changing the parameter via an Event triggers an initialization.
+! [L] indicates that the parameter is locked once the simulation starts.
+
+ID_EVENT            0 ; - ! ID number that can be assigned to the current event
+ID_RUN              0 ; - ! ID number that can be assigned to a simulation run
+IPRINT              1 ! Print interval: output time step TSTEP_WRITE = TSTEP*IPRINT;
+                      ! set IPRINT = 0 for debug (TSTEP_WRITE = T_DT) [L]
+NDIGITS_ECHO       10 ! [D] Max. no. of digits for printing floating-point numbers
+! NIMPORT           0 ! Number of variables activated for import (read only)
+! NOUT_ANI_LIVE     3 ! Number of variables sent live to animators (read only)
+! NOUT_EXPORT       0 ! Number of output variables activated for export (read only)
+! NOUT_WRITE        3 ! Number of output variables written to file (read only)
+OPT_ALL_WRITE       0 ! Write all outputs to file? 1 -> all, 0 -> only activated
+                      ! outputs
+OPT_BUFFER_WRITE    0 ! [D] Retain output data in memory buffer until end of run? 0
+                      ! -> no, write immediately to file, 1 -> yes, buffer during
+                      ! run and write to file after run finishes [L]
+OPT_CHECK_MATH      2 ! [D] Check for math exceptions? 2 -> as errors, 1 -> as
+                      ! warnings, 0 -> no checks
+OPT_ECHO_ALL_PARS   0 ! [D] Echo all parameters in this VS Solver? 0 -> no, 1 -> yes
+OPT_ECHO_ALL_UNITS  0 ! [D] Echo list of units and scale factors? 0 -> no, 1 -> yes
+OPT_ECHO_ANI_LIVE   0 ! [D] Echo variables sent live to video? 0 -> no, 1 -> yes
+OPT_ECHO_ICS        0 ! [D] Echo initial conditions? 0 -> no, 1 -> yes
+OPT_ECHO_KEYWORDS_LC 0 ! [D] Echo all keywords in lowercase? 0 -> no, 1 -> yes
+OPT_ECHO_WRITE      0 ! [D] Echo written outputs? 0 -> no, 1 -> yes
+OPT_ERROR_DIALOG    0 ! Show pop-up dialog box if fatal error occurs: 1 -> yes
+                      ! (normal use), 0 -> no (for batch runs)
+OPT_ERROR_DUP_DEF   0 ! [D] Handle case where DEFINE_IMPORT, DEFINE_OUTPUT,
+                      ! DEFINE_PARAMETER, or DEFINE_VARIABLE attempts to define a
+                      ! variable with a name that is already in use. 0 -> write
+                      ! warning in log file, 1 -> generate error [L]
+OPT_ERROR_SHOW_ALL  0 ! [D] Show pop-up boxes for all errors: 0 -> only show the
+                      ! first, 1 -> also show subsequent errors
+OPT_LOG_DEBUG       0 ! [D] Log file writing: 0 -> normal, 1 -> crash expected
+OPT_LOG_VERBOSE     2 ! [D] Log file verbosity: 2 -> errors + most events + parsfile
+                      ! names, 0 -> errors only, 1 -> errors + events, 3 ->
+                      ! advanced diagnostics
+OPT_LOG_WARNINGS    1 ! [D] Write warnings into log file? 1 -> yes, 0 -> no
+OPT_PAUSE           0 ! [D] Pause at end of run with window open? 0 -> no, 1 -> yes
+OPT_SKIP_INIT_DYN   0 ! [D] Skip initial dynamic calculations (for some RT systems)?
+                      ! 0 -> no, 1 -> yes
+OPT_SORT_WRITE      1 ! [D] Sort written outputs? 1 -> alphabetical, 0 -> as entered
+OPT_STOP            0 ! [D] Option for stopping the run: 0 -> stop when T reaches
+                      ! TSTOP; 1 -> stop when T reaches TSTOP or station reaches
+                      ! SSTOP; -1 -> run until stopped using VS Commands or
+                      ! external control
+OPT_VS_FILETYPE     1 ! [D] Type of output file: 1-> 64-bit VS, 2-> 32-bit VS, 3 ->
+                      ! 32-bit ERD, 4 -> text CSV (no binary), 0 -> no output file
+OPT_WRITE           0 ; - ! Write outputs when T > TSTART_WRITE? 1 -> write, 0 ->
+                      ! don't write; change this using VS Commands or Events
+TSTART           7.52 ; s ! Starting time for the simulation clock
+TSTART_T_EVENT      0 ; s ! [D] Event clock reset time: T_EVENT = T - TSTART_T_EVENT
+TSTART_WRITE        0 ; s ! [D] Start writing outputs when this time is reached
+TSTEP            0.04 ; s ! Time step for numerical integration [L]
+! TSTEP_WRITE    0.04 ; s ! CALC -- Time interval in output time-series file
+TSTOP              10 ; s ! [D] Stop when this time is reached
+! T_DT           0.04 ; s ! CALC -- Time increment between calculations
+
+!------------------------------------------------------------------------------------
+! SYSTEM CONSTANTS
+!------------------------------------------------------------------------------------
+! DR      57.29577951 ; - ! Deg/rad symbol to use in formulas (read-only)
+! G           9.80665 ; - ! Symbol for gravity constant m/s/s (read-only)
+! PI      3.141592654 ; - ! Symbol for PI to use in formulas (read-only)
+! ZERO              0 ; - ! Symbol for zero to use in VS Events (read-only)
+
+!------------------------------------------------------------------------------------
+! REFERENCE PATHS
+!------------------------------------------------------------------------------------
+! Up to 500 reference paths may be installed to provide station-based coordinate
+! systems used to define 3D road surfaces, targets for the driver model, and
+! positions of moving objects. In addition to the parameters shown in this section,
+! the paths may include spline X-Y tables (keyword = SEGMENT_XY_TABLE).
+
+! NPATH             1 ! Number of installed paths available for roads, driver model,
+                      ! and moving objects (read only)
+DEFINE_PATHS        1 ! VS Command to install reference paths
+
+PATH_ID(1)          1 ! [D] ID number for this Reference Path
+OPT_PATH_START(1)   0 ! Set initial heading and X-Y coordinates of the path? 0 -> no
+                      ! (legacy, using table data), 1 -> yes
+OPT_PATH_LOOP(1)    0 ! Is this path looped? 0 -> no, 1 -> yes
+SPATH_START(1)      0 ; m ! Station at the start of this path
+! HEADING_START(1)  0 ; deg ! Heading at the start of this path
+! X_PATH_START(1)   0 ; m ! Global X coordinate at the start of this path
+! Y_PATH_START(1)   0 ; m ! Global Y coordinate at the start of this path
+
+NSEGMENTS(1)        1 ! Number of segments in this path
+SEGMENT_TYPE(1,1)   0 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_LENGTH(1,1) 200 ; m ! Segment length
+! S_SEGMENT_END(1,1) 200 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,1) 200 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,1) 0 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,1)  0 ; deg ! CALC -- Heading at end of segment
+
+!------------------------------------------------------------------------------------
+! ROAD SURFACES
+!------------------------------------------------------------------------------------
+! Road surfaces define elevation Z and friction MU as functions of global X and Y
+! coordinates, using a station-based coordinate system defined with a Reference
+! Path. Up to 200 surfaces may be installed to represent sections, intersections,
+! multiple lanes, etc. The Z, MU, and RR_SURF values for a road surface are
+! provided with Configurable Functions MU_ROAD, ROAD_DZ, RR_SURF, and ROAD_ZS.
+! Boundaries that control automatic switching from one road surface to another make
+! use of the Configurable Functions ROAD_L_BOUNDARY, ROAD_NEW_ID, and ROAD_NEW_S.
+
+! NROAD             1 ! Number of installed road surfaces (read only)
+NROAD_DZ            1 ! Number of ROAD_DZ datasets
+DEFINE_ROADS        1 ! VS Command to define road surfaces
+CURRENT_ROAD_ID     1 ! ROAD_ID for the vehicle during initialization [I]
+
+ROAD_ID(1)          1 ! [D] ID number for this road
+ROAD_PATH_ID(1)     1 ! PATH_ID of reference path used for this road [I]
+ROAD_SMAX_NEW_ID(1) 0 ! [D] 0 -> No SMAX limit, -1 -> stop if S > ROAD_SMAX, > 0 ->
+                      ! switch to road with this ID if S > ROAD_SMAX
+ROAD_SMIN_NEW_ID(1) 0 ! [D] 0 -> No SMIN limit, -1 -> stop if S < ROAD_SMIN, > 0 ->
+                      ! switch to road with this ID if S < ROAD_SMIN
+ROAD_N_DZ(1)        1 ! Number of ROAD_DZ layers added to the surface
+RD_DZ_ID(1,1)       1 ! ROAD_DZ_ID for a ROAD_DZ layer added to this surface
+
+!------------------------------------------------------------------------------------
+! START AND STOP INFORMATION FOR PATH
+!------------------------------------------------------------------------------------
+N_LTARG             0 ! [D] Number of LTARG datasets that are used in this run
+PATH_ID_DM          1 ! PATH_ID of reference path for the driver and vehicle [I]
+LTARG_ID_DM         0 ! [D] LTARG_ID of reference LTARG for the driver model (0 ->
+                      ! no reference LTARG)
+OPT_INIT_PATH       1 ! [D] Set Xo, Yo, and Yaw to match path PATH_ID_DM and target
+                      ! LTARG_ID_DM at station SSTART? 1 -> yes, 0 -> no [I]
+OPT_DIRECTION       1 ! Travel direction along path PATH_ID_DM: 0 -> set to 1 or -1
+                      ! using SSTART and SSTOP values (legacy); 1 -> increasing
+                      ! station, -1 -> decreasing station [I]
+SSTART              0 ; m ! [D] Start the vehicle at this station on path PATH_ID_DM
+                      ! and possibly with target LTARG_ID_DM. The current station
+                      ! on this path is the output variable "Station", which is
+                      ! also a state variable. [I]
+
+!------------------------------------------------------------------------------------
+! CONFIGURABLE FUNCTIONS
+!------------------------------------------------------------------------------------
+
+! MU_ROAD: Tire/road friction coefficient (MU) for a road surface. Use MU = -1 for
+! original tire data (no scaling). MU can be a nonlinear CARPET function of lateral
+! position and station or a function of station (CONSTANT or TABLE) combined with a
+! function MU_ROAD_L of lateral position (CONSTANT or TABLE). Alternatively, a custom
+! equation can be defined at runtime. MU from the calculation can be adjusted with
+! MU_ROAD_GAIN and MU_ROAD_OFFSET. Station used in the calculation can be adjusted
+! with SSCALE_MU_ROAD and SSTART_MU_ROAD. Lateral position used in the calculation
+! can be adjusted with L_SCALE_MU_ROAD and L_START_MU_ROAD. This configurable
+! function supports 200 datasets; if indices shown below are not used, e.g., (2), the
+! current value of the index IROAD is used to identify the dataset when reading data.
+
+MU_ROAD_CONSTANT(1) 0.85 ; - ! Constant MU component due to station
+MU_ROAD_GAIN(1)     1 ! Gain multiplied with calculated value to get MU
+MU_ROAD_OFFSET(1)   0 ; - ! Offset added (after gain) to get MU
+MU_ROAD_COMBINE(1) ADD ! How to combine the two components
+MU_ROAD_L_CONSTANT(1) 0 ; - ! Constant MU component due to lateral position
+
+! ROAD_DZ: Incremental elevation added to a road surface. DZ can be a nonlinear
+! CARPET function of lateral position and station or a function of station (CONSTANT,
+! COEFFICIENT, or TABLE) combined with a function ROAD_DZ_L of lateral position
+! (CONSTANT, COEFFICIENT, or TABLE). DZ from the calculation can be adjusted with
+! ROAD_DZ_GAIN and ROAD_DZ_OFFSET. Station used in the calculation can be adjusted
+! with SSCALE_ROAD_DZ and SSTART_ROAD_DZ. Lateral position used in the calculation
+! can be adjusted with L_SCALE_ROAD_DZ and L_START_ROAD_DZ. The derivative of this
+! function is used internally. This configurable function supports 200 datasets; if
+! indices shown below are not used, e.g., (2), the current value of the index
+! IROAD_DZ is used to identify the dataset when reading data.
+
+ROAD_DZ_ID(1)       1  ! User-defined ID number for this dataset
+
+! 1D table: col 1 = station (m), col 2 = dZ (m)
+ROAD_DZ_TABLE(1) SPLINE_FLAT ! spline interpolation, flat-line extrapolation
+ -1, 0
+ 0, 0
+ 1.2, -0.0069
+ 2.4, -0.01935
+ 3.58, -0.0354
+ 4.76, -0.0543
+ 5.92, -0.0756
+ 7.1, -0.09885
+ 8.26, -0.12375
+ 9.4, -0.14985
+ 10.56, -0.17685
+ 11.7, -0.204
+ 12.84, -0.23055
+ 13.98, -0.2556
+ 15.1, -0.2778
+ 16.22, -0.2955
+ 17.34, -0.30735
+ 18.46, -0.31125
+ 19.56, -0.3054
+ 20.66, -0.2883
+ 21.76, -0.25845
+ 22.84, -0.21585
+ 23.92, -0.1611
+ 25, -0.09615
+ 26.08, -0.0252
+ 27.14, 0.0459
+ 28.2, 0.1107
+ 29.26, 0.16095
+ 30.32, 0.18945
+ 31.36, 0.1905
+ 32.4, 0.1623
+ 33.44, 0.10695
+ 34.46, 0.0333
+ 35.48, -0.04515
+ 36.5, -0.1119
+ 37.52, -0.15165
+ 38.52, -0.15285
+ 39.54, -0.11295
+ 40.54, -0.04185
+ 41.52, 0.0402
+ 42.52, 0.10815
+ 43.5, 0.1374
+ 44.48, 0.11595
+ 45.46, 0.05115
+ 46.44, -0.0339
+ 47.4, -0.10215
+ 48.36, -0.12375
+ 49.32, -0.0867
+ 50.26, -0.0075
+ 51.2, 0.07395
+ 52.16, 0.11415
+ 53.08, 0.0894
+ 54.02, 0.01245
+ 54.94, -0.07005
+ 55.88, -0.10725
+ 56.8, -0.07275
+ 57.7, 0.01065
+ 58.6, 0.0849
+ 59.52, 0.096
+ 60.42, 0.0342
+ 61.32, -0.0534
+ 62.2, -0.0963
+ 63.08, -0.05835
+ 63.98, 0.02955
+ 64.84, 0.08925
+ 65.72, 0.0669
+ 66.6, -0.01725
+ 67.46, -0.0837
+ 68.32, -0.06645
+ 69.18, 0.01785
+ 70.02, 0.0822
+ 70.88, 0.05865
+ 71.72, -0.02865
+ 72.56, -0.08235
+ 73.4, -0.0417
+ 74.22, 0.0468
+ 75.04, 0.0783
+ 75.88, 0.01455
+ 76.68, -0.066
+ 77.5, -0.06225
+ 78.32, 0.02205
+ 79.12, 0.07575
+ 79.92, 0.02775
+ 80.72, -0.0567
+ 81.52, -0.0618
+ 82.32, 0.0204
+ 83.1, 0.07215
+ 83.88, 0.0186
+ 84.66, -0.06135
+ 85.44, -0.0486
+ 86.2, 0.03735
+ 86.96, 0.0648
+ 87.74, -0.0099
+ 88.48, -0.06765
+ 89.24, -0.0165
+ 90, 0.06075
+ 90.74, 0.03735
+ 91.48, -0.0477
+ 92.24, -0.05085
+ 92.96, 0.03285
+ 93.7, 0.05865
+ 94.44, -0.0183
+ 95.16, -0.06195
+ 95.88, 0.0054
+ 96.6, 0.0621
+ 97.32, 0.0054
+ 98.02, -0.06045
+ 98.74, -0.01275
+ 99.44, 0.0582
+ 100.14, 0.01785
+ 100.84, -0.0561
+ 101.54, -0.02115
+ 102.22, 0.05415
+ 102.92, 0.0228
+ 103.6, -0.05295
+ 104.28, -0.0231
+ 104.96, 0.0528
+ 105.62, 0.02115
+ 106.3, -0.05295
+ 106.96, -0.018
+ 107.62, 0.05355
+ 108.28, 0.0126
+ 108.94, -0.05415
+ 109.6, -0.0072
+ 110.24, 0.0543
+ 110.9, -0.0012
+ 111.54, -0.05355
+ 112.18, 0.00915
+ 112.82, 0.0513
+ 113.44, -0.0186
+ 114.08, -0.0471
+ 114.72, 0.02865
+ 115.34, 0.04005
+ 115.96, -0.0369
+ 116.58, -0.03075
+ 117.2, 0.0447
+ 117.8, 0.0195
+ 118.4, -0.04905
+ 119.02, -0.0057
+ 119.62, 0.0501
+ 120.22, -0.00975
+ 120.82, -0.0468
+ 121.42, 0.0243
+ 122, 0.03825
+ 122.6, -0.03615
+ 123.18, -0.0264
+ 123.76, 0.0447
+ 124.34, 0.00975
+ 124.92, -0.048
+ 125.5, 0.00795
+ 126.06, 0.0447
+ 126.64, -0.0243
+ 127.2, -0.0348
+ 127.76, 0.03765
+ 128.32, 0.01995
+ 128.88, -0.0453
+ 129.44, -0.00135
+ 129.98, 0.04545
+ 130.52, -0.0168
+ 131.08, -0.0375
+ 131.62, 0.03345
+ 132.16, 0.0234
+ 132.7, -0.04275
+ 133.24, -0.0048
+ 133.76, 0.04455
+ 134.3, -0.01515
+ 134.82, -0.03735
+ 135.36, 0.03225
+ 135.88, 0.0225
+ 136.4, -0.042
+ 136.9, -0.00375
+ 137.42, 0.04305
+ 137.94, -0.0171
+ 138.44, -0.03525
+ 138.94, 0.0324
+ 139.44, 0.0201
+ 139.96, -0.0417
+ 140.46, 0.0006
+ 140.96, 0.04125
+ 141.44, -0.0192
+ 141.94, -0.03165
+ 142.42, 0.0345
+ 142.92, 0.015
+ 143.4, -0.0414
+ 143.88, 0.0051
+ 144.36, 0.0393
+ 144.84, -0.02295
+ 145.3, -0.0282
+ 145.78, 0.03585
+ 146.24, 0.0108
+ 146.72, -0.04095
+ 147.18, 0.009
+ 147.64, 0.0363
+ 148.1, -0.02565
+ 148.56, -0.02355
+ 149.02, 0.0372
+ 149.48, 0.00705
+ 149.92, -0.0399
+ 150.38, 0.012
+ 150.82, 0.03405
+ 151.26, -0.0273
+ 151.72, -0.021
+ 152.16, 0.03735
+ 152.58, 0.0051
+ 153.02, -0.039
+ 153.46, 0.01275
+ 153.88, 0.033
+ 154.32, -0.02775
+ 154.74, -0.02085
+ 155.16, 0.0363
+ 155.6, 0.0051
+ 156.02, -0.03825
+ 156.44, 0.0114
+ 156.84, 0.0333
+ 157.26, -0.02535
+ 157.68, -0.02205
+ 158.08, 0.03465
+ 158.5, 0.0081
+ 158.9, -0.0378
+ 159.32, 0.0078
+ 159.72, 0.03465
+ 160.12, -0.021
+ 160.52, -0.0261
+ 160.9, 0.03075
+ 161.3, 0.01395
+ 161.7, -0.0363
+ 162.08, -0.00165
+ 162.48, 0.03645
+ 162.86, -0.0117
+ 163.24, -0.03225
+ 163.62, 0.0231
+ 164, 0.0237
+ 164.38, -0.0312
+ 164.76, -0.01365
+ 165.14, 0.03555
+ 165.52, 0.0015
+ 165.88, -0.036
+ 166.26, 0.01035
+ 166.62, 0.03255
+ 166.98, -0.01935
+ 167.36, -0.0267
+ 167.72, 0.0273
+ 168.08, 0.01905
+ 168.44, -0.03255
+ 168.8, -0.00945
+ 169.14, 0.0351
+ 169.5, 0.00105
+ 169.84, -0.0351
+ 170.2, 0.0081
+ 170.54, 0.0333
+ 170.9, -0.01605
+ 171.24, -0.02925
+ 171.58, 0.0225
+ 171.92, 0.02475
+ 172.26, -0.02745
+ 172.6, -0.0189
+ 172.94, 0.03075
+ 173.28, 0.01275
+ 173.6, -0.03285
+ 173.94, -0.00705
+ 174.26, 0.0342
+ 174.6, 0.0018
+ 174.92, -0.03435
+ 175.24, 0.00285
+ 175.56, 0.0336
+ 175.88, -0.0078
+ 176.2, -0.03255
+ 176.52, 0.012
+ 176.84, 0.03135
+ 177.16, -0.01515
+ 177.48, -0.0297
+ 177.78, 0.0174
+ 178.1, 0.02805
+ 178.4, -0.0189
+ 178.72, -0.0267
+ 179.02, 0.02085
+ 179.32, 0.0258
+ 179.62, -0.0219
+ 179.92, -0.02535
+ 180.22, 0.02235
+ 180.52, 0.02475
+ 180.82, -0.0222
+ 181.12, -0.0246
+ 181.4, 0.02235
+ 181.7, 0.02505
+ 182, -0.02175
+ 182.28, -0.0252
+ 182.56, 0.02055
+ 182.86, 0.02595
+ 183.14, -0.0186
+ 183.42, -0.02715
+ 183.7, 0.0168
+ 183.98, 0.02865
+ 184.26, -0.01425
+ 184.54, -0.02985
+ 184.82, 0.0105
+ 185.1, 0.03105
+ 185.36, -0.0072
+ 185.64, -0.03195
+ 185.92, 0.00285
+ 186.18, 0.03225
+ 186.44, 0.00255
+ 186.72, -0.03165
+ 186.98, -0.0075
+ 187.24, 0.0303
+ 187.52, 0.0132
+ 187.76, -0.02715
+ 188.04, -0.0192
+ 188.28, 0.0228
+ 188.56, 0.024
+ 188.8, -0.01785
+ 189.06, -0.0282
+ 189.32, 0.0099
+ 189.56, 0.03105
+ 189.82, -0.0015
+ 190.08, -0.0315
+ 190.32, -0.0066
+ 190.56, 0.02955
+ 190.82, 0.01515
+ 191.06, -0.02415
+ 191.3, -0.0231
+ 191.54, 0.01665
+ 191.78, 0.0291
+ 192.02, -0.0063
+ 192.26, -0.0312
+ 192.5, -0.0045
+ 192.74, 0.02955
+ 192.98, 0.01575
+ 193.2, -0.02295
+ 193.44, -0.0243
+ 193.68, 0.0138
+ 193.92, 0.03
+ 194.14, -0.0003
+ 194.36, -0.0303
+ 194.6, -0.01305
+ 194.82, 0.0249
+ 195.04, 0.02355
+ 195.28, -0.0138
+ 195.5, -0.02985
+ 195.72, -0.0015
+ 195.94, 0.0294
+ 196.16, 0.0162
+ 196.38, -0.0216
+ 196.6, -0.02655
+ 196.8, 0.00735
+ 197.02, 0.03045
+ 197.24, 0.00855
+ 197.44, -0.02505
+ 197.66, -0.02295
+ 197.88, 0.01185
+ 198.08, 0.03
+ 198.3, 0.00465
+ 198.5, -0.02715
+ 198.72, -0.0207
+ 198.92, 0.0135
+ 199.12, 0.0297
+ 199.32, 0.0051
+ 199.52, -0.02685
+ 199.72, -0.0216
+ 199.92, 0.0126
+ 200.12, 0.02985
+ 200.32, 0.00705
+ 200.52, -0.0252
+ 200.72, -0.0243
+ 200.92, 0.0087
+ 201.12, 0.0297
+ 201.3, 0.01305
+ 201.5, -0.02115
+ 201.7, -0.02715
+ 201.88, 0.00015
+ 202.08, 0.02775
+ 202.26, 0.0198
+ 202.44, -0.0123
+ 202.64, -0.02955
+ 202.82, -0.01005
+ 203, 0.02145
+ 203.2, 0.02715
+ 203.38, 0
+ 203.56, -0.02715
+ 203.74, -0.0213
+ 203.92, 0.009
+ 204.1, 0.02925
+ 204.28, 0.015
+ 204.46, -0.0174
+ 204.64, -0.0288
+ 204.82, -0.00735
+ 205, 0.02235
+ 205.16, 0.02655
+ 205.34, 0.0018
+ 205.52, -0.02565
+ 205.68, -0.02445
+ 205.86, 0.0042
+ 206.02, 0.02745
+ 206.2, 0.02145
+ 206.36, -0.0075
+ 206.52, -0.02835
+ 206.7, -0.01875
+ 206.86, 0.01095
+ 207.04, 0.0288
+ 207.2, 0.01695
+ 207.36, -0.0132
+ 207.52, -0.0288
+ 208, 0
+ 209, 0
+ 210, 0
+ENDTABLE
+ROAD_DZ_GAIN(1)     1 ! Gain multiplied with calculated value to get dZ
+ROAD_DZ_OFFSET(1)   0 ; m ! Offset added (after gain) to get dZ
+SSTART_ROAD_DZ(1)   0 ; m ! Offset subtracted from station
+SSCALE_ROAD_DZ(1)   1 ! Scale factor divided into (station - SSTART_ROAD_DZ)
+ROAD_DZ_COMBINE(1) MULTIPLY ! How to combine the two components
+
+! 1D table: col 1 = lateral position (m), col 2 = dZ component due to lateral position (-)
+ROAD_DZ_L_TABLE(1) LINEAR_FLAT ! linear interpolation, flat-line extrapolation
+ -2.5, 0
+ -2, -1
+ 2, 1
+ 2.5, 0
+ENDTABLE
+L_START_ROAD_DZ(1)  0 ; m ! Offset subtracted from lateral position
+L_SCALE_ROAD_DZ(1)  1 ! Scale factor divided into (lateral position -
+                      ! L_START_ROAD_DZ)
+
+! ROAD_NEW_ID: Left/right boundary: 0 -> no boundary, -1 stop when L reaches
+! boundary, > 0 ID of adjacent road. ID is a function of S (CONSTANT, COEFFICIENT, or
+! TABLE). Alternatively, a custom equation can be defined at runtime. ID from the
+! calculation can be adjusted with ROAD_NEW_ID_GAIN and ROAD_NEW_ID_OFFSET. S used in
+! the calculation can be adjusted with SSCALE_ROAD_NEW_ID and SSTART_ROAD_NEW_ID.
+! This configurable function supports 400 datasets; if indices shown below are not
+! used, e.g., (1,2), the current values of the indices IROAD and ISIDE are used to
+! identify the dataset when reading data.
+
+ROAD_NEW_ID_CONSTANT(1,1) 0 ; - ! [D] Constant ID, Road 1, left side boundary
+ROAD_NEW_ID_OFFSET(1,1) 0 ; - ! Offset added (after gain) to get ID
+
+ROAD_NEW_ID_CONSTANT(1,2) 0 ; - ! [D] Constant ID, Road 1, right side boundary
+ROAD_NEW_ID_OFFSET(1,2) 0 ; - ! Offset added (after gain) to get ID
+
+! ROAD_ZS: Road elevation component related only to road station S. Elevation is a
+! function of station (CONSTANT, COEFFICIENT, or TABLE). Elevation from the
+! calculation can be adjusted with ROAD_ZS_GAIN and ROAD_ZS_OFFSET. Station used in
+! the calculation can be adjusted with SSCALE_ROAD_ZS and SSTART_ROAD_ZS. The
+! derivative of this function is used internally. This configurable function supports
+! 200 datasets; if indices shown below are not used, e.g., (2), the current value of
+! the index IROAD is used to identify the dataset when reading data.
+
+ROAD_ZS_CONSTANT(1) 0 ; m ! [D] Constant elevation
+ROAD_ZS_OFFSET(1)   0 ; m ! Offset added (after gain) to get elevation
+
+! RR_SURF: Tire/road rolling resistance surface-effect coefficient. RR_SURF can be a
+! nonlinear CARPET function of lateral position and station or a function of station
+! (CONSTANT or TABLE) combined with a function RR_SURF_L of lateral position
+! (CONSTANT or TABLE). Alternatively, a custom equation can be defined at runtime.
+! RR_SURF from the calculation can be adjusted with RR_SURF_GAIN and RR_SURF_OFFSET.
+! Station used in the calculation can be adjusted with SSCALE_RR_SURF and
+! SSTART_RR_SURF. Lateral position used in the calculation can be adjusted with
+! L_SCALE_RR_SURF and L_START_RR_SURF. This configurable function supports 200
+! datasets; if indices shown below are not used, e.g., (2), the current value of the
+! index IROAD is used to identify the dataset when reading data.
+
+RR_SURF_CONSTANT(1) 1 ; - ! Constant RR_SURF component due to station
+RR_SURF_GAIN(1)     1 ! Gain multiplied with calculated value to get RR_SURF
+RR_SURF_OFFSET(1)   0 ; - ! Offset added (after gain) to get RR_SURF
+RR_SURF_COMBINE(1) MULTIPLY ! How to combine the two components
+RR_SURF_L_CONSTANT(1) 1 ; - ! [D] Constant RR_SURF component due to lateral position
+
+
+END

@@ -1,0 +1,65 @@
+PARSFILE
+#FullDataName Road: Boundaries`Lane Change: Road IDs 1000 and 2000`
+#RingCtrl0 2
+#RingCtrl1 0
+#RingCtrl2 0
+#RingCtrl3 3
+#RingCtrl6 1
+#RingCtrl7 2
+#RingCtrl8 2
+#RingCtrl9 0
+#RingCtrl10 0
+#RingCtrl11 1
+#RingCtrl12 2
+#RingCtrl13 2
+#RingCtrl14 1
+#RingCtrl15 3
+*ROAD_ID_1 1000
+*LMIN_1 -2.1
+*ROAD_ID_2 2000
+*LMAX_2 2.1
+*LMIN_2 -13
+
+
+IROAD = GET_IROAD(1000)
+ROAD_SMAX_NEW_ID = 0
+ROAD_SMIN_NEW_ID = 0
+
+ISIDE = 1
+ROAD_NEW_ID_CONSTANT = 0
+
+ISIDE = 2
+ROAD_L_BOUNDARY_CONSTANT -2.1
+PARSFILE Roads\Boundaries_ID\RdBdID_7ea3ca84-7b2e-45a1-be2d-887edd922769.par
+#BlueLink4 Road Boundary: New Road ID`Highway to Entrance Ramp` Lane Change Roads` , Road ID vs station`RdBdID_7ea3ca84-7b2e-45a1-be2d-887edd922769
+
+PARSFILE Roads\Boundaries_S\RdBdS_b8a885c5-a134-4920-b0bb-9e9ae21df7cc.par
+#BlueLink5 Road Boundary: New Station`Entrance Ramp = f(Highway)` Lane Change Roads` , New S vs old S`RdBdS_b8a885c5-a134-4920-b0bb-9e9ae21df7cc
+
+
+IROAD = GET_IROAD(2000)
+ROAD_SMAX_NEW_ID = 0
+ROAD_SMIN_NEW_ID = 0
+
+ISIDE = 1
+ROAD_L_BOUNDARY_CONSTANT 2.1
+PARSFILE Roads\Boundaries_ID\RdBdID_25358039-d893-4f7e-af89-61221507a87d.par
+#BlueLink7 Road Boundary: New Road ID`Entrance Ramp to Highway` Lane Change Roads` , Road ID vs Old S`RdBdID_25358039-d893-4f7e-af89-61221507a87d
+
+PARSFILE Roads\Boundaries_S\RdBdS_114ba2a3-33f9-49fa-b8c3-e29d4916c576.par
+#BlueLink8 Road Boundary: New Station`Highway = f(Entrance Ramp)` Lane Change Roads` , New S vs old S`RdBdS_114ba2a3-33f9-49fa-b8c3-e29d4916c576
+
+
+ISIDE = 2
+ROAD_L_BOUNDARY_CONSTANT -13
+ROAD_NEW_ID_CONSTANT = -1
+
+LOG_ENTRY Used Dataset: Road: Boundaries; Lane Change: Road IDs 1000 and 2000
+#Library : Road: Boundaries
+#DataSet : Lane Change: Road IDs 1000 and 2000
+#Category: 
+#FileID  : RdBnd_d8a30ddb-4cea-4e4b-94a4-360a683c4ba6
+#Product : TruckSim 2020.1
+#VehCode Road Boundaries
+
+END

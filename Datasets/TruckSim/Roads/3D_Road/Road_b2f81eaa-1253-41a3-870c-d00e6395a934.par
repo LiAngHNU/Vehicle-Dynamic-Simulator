@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Pavement`Parking Lot
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_b2f81eaa-1253-41a3-870c-d00e6395a934.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 1002
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Pavement
+PARSFILE Roads\Center_XY\PathXY_b731e8cf-c781-4948-a5e9-abb1be977155.par
+#BlueLink0 Path: X-Y Coordinates`Parking Lot: Lot Definition Path` Parking Lot` , Reference Path`PathXY_b731e8cf-c781-4948-a5e9-abb1be977155
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Parking Lot: Lot Definition Path
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+PARSFILE Roads\dZ_Map\RdMapZ_af2e18e1-fd14-4e1f-aaaa-bf627c257953.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Parking Lot: Major Geometry` Parking Lot` , Miscellaneous`RdMapZ_af2e18e1-fd14-4e1f-aaaa-bf627c257953
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_fc673751-9d49-47f2-ae45-bc70bc8457d1.par
+#BlueLink4 Road: Animator Surface Shapes`Pavement` Parking Lot` , Road shape definitions`RdShape_fc673751-9d49-47f2-ae45-bc70bc8457d1
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_72ebbb07-0ed9-4606-a758-d7c406d515f8.par
+#BlueLink5 Animator: Camera Setup`Parking Lot Top` ADAS and Euro NCAP: Camera Views` , Camera`Camera_72ebbb07-0ed9-4606-a758-d7c406d515f8
+
+parsfile Roads\3D_Road\Road_b2f81eaa-1253-41a3-870c-d00e6395a934.ani
+
+#EMBEDDED_NOTES
+#This 3D Road dataset handles the larger flat areas that do not have to be represented with as many polygons.
+#
+#Separating out the larger surface areas from the more detailed areas like curbs can improve animation performance by reducing the overall polygon count.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Parking Lot } Pavement
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Pavement
+#Category: Parking Lot
+#FileID  : Road_b2f81eaa-1253-41a3-870c-d00e6395a934
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

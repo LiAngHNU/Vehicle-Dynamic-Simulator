@@ -1,0 +1,89 @@
+PARSFILE
+#FullDataName TruckSim Run Control`3A Conv+2A Trl`Vehicle Configurations
+#VEHICLECODE I_SI + SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_56b20ca3-f8ce-49de-80fc-1fbe65d82587
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_1b8fe126-c349-45fd-ae41-b63621e09dcf.par
+#BlueLink2 Vehicle: Loaded Combination`3A Conv. Van (I_SI) + 2A Trailer` Conventional Vans` , Math Model`VehLoad_1b8fe126-c349-45fd-ae41-b63621e09dcf
+
+PARSFILE Procedures\Proc_fdccaa91-6052-4816-adad-68e3562e08c5.par
+#BlueLink28 Procedures`DLC @ 50 km/h` Handling Tests` , Procedure`Proc_fdccaa91-6052-4816-adad-68e3562e08c5
+
+PARSFILE Generic\Group\GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa.par
+#BlueLink9 Generic Data Group`5 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa
+
+PARSFILE Plot\Setup\Plot_712a1199-3ac8-43d0-80b3-7a3572dc3bb8.par
+#BlueLink15 Plot: Setup`Hitch Forces` Hitch` , Plot`Plot_712a1199-3ac8-43d0-80b3-7a3572dc3bb8
+
+PARSFILE Plot\Setup\Plot_ae1e2c83-8feb-442b-b3a9-3ca8bb0e3211.par
+#BlueLink16 Plot: Setup`Hitch Moments` Hitch` , Plot`Plot_ae1e2c83-8feb-442b-b3a9-3ca8bb0e3211
+
+
+*IMAGE_TYPE DEFAULT
+WRITE_SENSOR_DETECT
+Title 3A Conv+2A Trl <Vehicle Configurations>
+CATEGORY Vehicle Configurations 
+DATASET_TITLE 3A Conv+2A Trl
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#I_SI + SS
+#
+#3A Conventional Van (I_SI) + 2A ballast trailer performing a double lane change maneuver.
+#
+#In this configuration, axle 3 is not driven by the powertrain but it used to enable additional load carrying capability. When not needed, this axle can be raised.
+#
+#The trailer animation shape is represented as a ballast trailer, a type commonly used for brake testing.
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Vehicle Configurations } 3A Conv+2A Trl
+#Library : TruckSim Run Control
+#DataSet : 3A Conv+2A Trl
+#Category: Vehicle Configurations
+#FileID  : Run_56b20ca3-f8ce-49de-80fc-1fbe65d82587
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

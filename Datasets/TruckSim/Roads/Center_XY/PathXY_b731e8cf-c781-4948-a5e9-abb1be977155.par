@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Path: X-Y Coordinates`Parking Lot: Lot Definition Path`Parking Lot
+#RingCtrl0 2
+SET_IPATH_FOR_ID 1002
+SET_ITAB_XY_FOR_ID 1002
+SET_DESCRIPTION PATH_ID Parking Lot: Lot Definition Path
+SET_DESCRIPTION XY_TABLE_ID Parking Lot: Lot Definition Path
+IPATHSEG = 1
+PATH_ID_DM = PATH_ID
+SEGMENT_TYPE = 1
+XY_SEGMENT_ID = XY_TABLE_ID
+
+#CheckBox0 0    
+OPT_PATH_LOOP 0
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox4 0    
+
+#RadioCtrl0 0    
+
+#DiagramOne0
+SEGMENT_XY_TABLE
+0.0000, 0.0000, 0.0000
+0.0000, 40.0000, 40.0000
+ENDTABLE
+
+#EMBEDDED_NOTES
+#This 40 m line defines the Eastern most boundary of the parking lot.  This was done to make the definition of the lot striping and other lot features as easy as possible (all positive values for L)
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Path: X-Y Coordinates; { Parking Lot } Parking Lot: Lot Definition Path
+#Library : Path: X-Y Coordinates
+#DataSet : Parking Lot: Lot Definition Path
+#Category: Parking Lot
+#FileID  : PathXY_b731e8cf-c781-4948-a5e9-abb1be977155
+#Product : TruckSim 2020.1
+#VehCode X-Y Coordinates of Path
+
+END

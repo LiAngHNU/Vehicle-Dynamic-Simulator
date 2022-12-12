@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Roundabout (Small) Entry S/ Exit E 1002`Road Networks
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_23c243fd-2b3c-4fca-94ae-c23f6a1c4b8e.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 1002
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Roundabout (Small) Entry S/ Exit E 1002
+PARSFILE Roads\Builder\Build_eaf4587e-3002-4c08-b9f3-8c97dfde2fdc.par
+#BlueLink0 Path/Road: Segment Builder (Simple 3D)`Entry South/ Exit East, ID = 1002` Roundabout (Small)` , Reference Path`Build_eaf4587e-3002-4c08-b9f3-8c97dfde2fdc
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Entry South/ Exit East, ID = 1002
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_ea7d6f58-71c6-42d0-aa52-92b3387a35cb.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.9` Constant Mu` , Friction`RdMu_ea7d6f58-71c6-42d0-aa52-92b3387a35cb
+
+PARSFILE Roads\Shapes\RdShape_da4639f2-4892-4861-91f6-622e326ec1c0.par
+#BlueLink4 Road: Animator Surface Shapes`Roundabout Entry S / Exit E` Roundabout Network, Flat` , Road shape definitions`RdShape_da4639f2-4892-4861-91f6-622e326ec1c0
+
+RR_SURF_CONSTANT 1.0
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_23c243fd-2b3c-4fca-94ae-c23f6a1c4b8e.ani
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Road Networks } Roundabout (Small) Entry S/ Exit E 1002
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Roundabout (Small) Entry S/ Exit E 1002
+#Category: Road Networks
+#FileID  : Road_23c243fd-2b3c-4fca-94ae-c23f6a1c4b8e
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

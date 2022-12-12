@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`City Road Loop`VS Scene Builder
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_d331a910-5766-4c34-8745-f624bdb521ea.png
+#CheckBox0 0    
+
+PARSFILE Roads\ExScene\SceneImp_a0673c62-0633-48f7-90b6-67dda6808440.par
+#BlueLink0 Scene: External Import`City Scene Loop` VS Scene Builder` , Reference Path`SceneImp_a0673c62-0633-48f7-90b6-67dda6808440
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+
+#EMBEDDED_NOTES
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { VS Scene Builder } City Road Loop
+#Library : Road: 3D Surface (All Properties)
+#DataSet : City Road Loop
+#Category: VS Scene Builder
+#FileID  : Road_d331a910-5766-4c34-8745-f624bdb521ea
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

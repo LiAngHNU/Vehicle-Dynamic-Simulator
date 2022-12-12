@@ -1,0 +1,124 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`ADAS RP: Mountain Road`Atlas
+NLANES 7
+OPTTHRESHOLD 1
+#MiscYellow0
+# 1 1 1, Road (No Centerline), 1, 20, 1, -3.1, m, 3.1, m, , , -50, 2930, 2, , , Road
+# 1 1 1, Transition (Dirt Dark), 1, 20, 1, 3.1, m, 5, m, , , -50, 2930, 2, , , Random
+# 1 1 1, Transition (Dirt Dark), 1, 20, -1, -3.1, m, -5, m, , , -50, 2930, 2, , , Random
+# 1 1 1, Dirt (Dark), 1, 20, 3, -5, m, -40, m, 17, , -50, 2930, 2, , , Random
+# 1 1 1, Dirt (Dark), 1, 20, 3, 5, m, 35, m, 15, , -50, 2930, 2, , , Random
+# 1 1 1, Yellow Line, 1, 20, 1, -.1, m, -.3, m, , , -50, 2930, 2, , .05, Random
+# 1 1 1, Yellow Line, 1, 20, 1, .1, m, .3, m, , , -50, 2930, 2, , .05, Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (No Centerline)
+SPECULAR(1) 1
+SCALE(1) 20
+LTILES(1) 1
+LIN(1) -3.1
+LINUNITS(1) m
+LOUT(1) 3.1
+LOUTUNITS(1) m
+S_START(1) -50
+S_STOP(1) 2930
+SINT(1) 2
+AUTODETAIL(1) Road
+COLOR(2) 1 1 1
+MATERIAL(2) Transition (Dirt Dark)
+SPECULAR(2) 1
+SCALE(2) 20
+LTILES(2) 1
+LIN(2) 3.1
+LINUNITS(2) m
+LOUT(2) 5
+LOUTUNITS(2) m
+S_START(2) -50
+S_STOP(2) 2930
+SINT(2) 2
+AUTODETAIL(2) Random
+COLOR(3) 1 1 1
+MATERIAL(3) Transition (Dirt Dark)
+SPECULAR(3) 1
+SCALE(3) 20
+LTILES(3) -1
+LIN(3) -3.1
+LINUNITS(3) m
+LOUT(3) -5
+LOUTUNITS(3) m
+S_START(3) -50
+S_STOP(3) 2930
+SINT(3) 2
+AUTODETAIL(3) Random
+COLOR(4) 1 1 1
+MATERIAL(4) Dirt (Dark)
+SPECULAR(4) 1
+SCALE(4) 20
+LTILES(4) 3
+LIN(4) -5
+LINUNITS(4) m
+LOUT(4) -40
+LOUTUNITS(4) m
+LDIV(4) 17
+S_START(4) -50
+S_STOP(4) 2930
+SINT(4) 2
+AUTODETAIL(4) Random
+COLOR(5) 1 1 1
+MATERIAL(5) Dirt (Dark)
+SPECULAR(5) 1
+SCALE(5) 20
+LTILES(5) 3
+LIN(5) 5
+LINUNITS(5) m
+LOUT(5) 35
+LOUTUNITS(5) m
+LDIV(5) 15
+S_START(5) -50
+S_STOP(5) 2930
+SINT(5) 2
+AUTODETAIL(5) Random
+COLOR(6) 1 1 1
+MATERIAL(6) Yellow Line
+SPECULAR(6) 1
+SCALE(6) 20
+LTILES(6) 1
+LIN(6) -.1
+LINUNITS(6) m
+LOUT(6) -.3
+LOUTUNITS(6) m
+S_START(6) -50
+S_STOP(6) 2930
+SINT(6) 2
+DZ(6) .05
+AUTODETAIL(6) Random
+COLOR(7) 1 1 1
+MATERIAL(7) Yellow Line
+SPECULAR(7) 1
+SCALE(7) 20
+LTILES(7) 1
+LIN(7) .1
+LINUNITS(7) m
+LOUT(7) .3
+LOUTUNITS(7) m
+S_START(7) -50
+S_STOP(7) 2930
+SINT(7) 2
+DZ(7) .05
+AUTODETAIL(7) Random
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Atlas } ADAS RP: Mountain Road
+#Library : Road: Animator Surface Shapes
+#DataSet : ADAS RP: Mountain Road
+#Category: Atlas
+#FileID  : RdShape_bb1f2424-d426-40c6-9318-2562faa5a47e
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

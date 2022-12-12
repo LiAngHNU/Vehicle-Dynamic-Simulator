@@ -1,0 +1,87 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Steer Controller, External C & Simulink`Extended Models
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_63795a71-6f1b-47da-a153-6a16d59f60a5
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_9d011910-eaa6-4d61-954c-85374b07277f.par
+#BlueLink12 Models: Simulink`Custom Steer S-Function` Steering` , Models`Simlink_9d011910-eaa6-4d61-954c-85374b07277f
+
+PARSFILE Animator\Cameras\Camera_c40f19aa-92ca-4469-8121-69574d61ada2.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 10 El, 42 m` Vehicle Reference` , Animator camera`Camera_c40f19aa-92ca-4469-8121-69574d61ada2
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_9e67d413-6c86-46ce-9b3a-cf088f1d807a.par
+#BlueLink2 Vehicle: Loaded Combination`2A Conventional Van w/ Payload` Conventional Vans` , Math Model`VehLoad_9e67d413-6c86-46ce-9b3a-cf088f1d807a
+
+PARSFILE Procedures\Proc_e989e571-a312-443f-953e-c45073d35ef7.par
+#BlueLink28 Procedures`Extended Driver Model` Driver Model, Extended and External` , Procedure`Proc_e989e571-a312-443f-953e-c45073d35ef7
+
+
+SPECIAL_PARSFILE Runs\Run_e6a98331-8689-4419-a102-93d0b68143fa.par
+#BlueLink23 TruckSim Run Control`Simple Steer Control with VS Commands` Extended Models` , Overlay run or ERD file`Run_e6a98331-8689-4419-a102-93d0b68143fa
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Steer Controller, External C & Simulink <Extended Models>
+CATEGORY Extended Models 
+DATASET_TITLE Steer Controller, External C & Simulink
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates using external C code with Simulink to extend TruckSim models.
+#
+#The same C source code file used for the "Steer Controller with External C Code" example is used here to make an alternative Simulink S-Function. The C-code is located in the TruckSim database in the folder Extensions\Custom_C.
+#
+#This run also uses a simple Simulink model with a block to support the new, custom S-Function. Click on the blue link "Custom Steer S-Function" to see where this simple Simulink model is located in the TruckSim database.
+#
+#For comparison, this simulation is overlaid with another example, "Steer Controller with VS Commands." That example has the same 2-axle Conventional Van but uses a steer controller implemented with VS Commands.
+#
+#Note: This feature is supported by Matlab R2010b and newer. Older versions of Matlab may not work.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Extended Models } Steer Controller, External C & Simulink
+#Library : TruckSim Run Control
+#DataSet : Steer Controller, External C & Simulink
+#Category: Extended Models
+#FileID  : Run_63795a71-6f1b-47da-a153-6a16d59f60a5
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

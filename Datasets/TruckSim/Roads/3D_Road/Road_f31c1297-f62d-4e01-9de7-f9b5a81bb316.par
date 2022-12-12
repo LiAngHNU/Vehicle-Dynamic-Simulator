@@ -1,0 +1,53 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`152.4-m Radius Circle, Mu = 0.85`Circular Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_f31c1297-f62d-4e01-9de7-f9b5a81bb316.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 152.4-m Radius Circle, Mu = 0.85
+PARSFILE Roads\BuilderSegment\RoadSeg_932476b2-4409-4bc6-8424-118e516cba94.par
+#BlueLink0 Path: Segment Builder`152.4-m (500-ft) Radius` Circles` , Reference Path`RoadSeg_932476b2-4409-4bc6-8424-118e516cba94
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: 152.4-m (500-ft) Radius
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_d1bb3bb4-1111-41a4-8a0a-60eb182ccc49.par
+#BlueLink4 Road: Animator Surface Shapes`1200 m One Ln Road + 100 m Light Grass` Roads` , Road shape definitions`RdShape_d1bb3bb4-1111-41a4-8a0a-60eb182ccc49
+
+RR_SURF_CONSTANT 1.0
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_265e38de-4bbf-46ee-bbc0-868db110b76d.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 3 El, 44 m` Road Reference` , Camera`Camera_265e38de-4bbf-46ee-bbc0-868db110b76d
+
+parsfile Roads\3D_Road\Road_f31c1297-f62d-4e01-9de7-f9b5a81bb316.ani
+
+#EMBEDDED_NOTES
+#152.4-m (500-ft) Radius Circle with no cross-slope
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Circular Roads } 152.4-m Radius Circle, Mu = 0.85
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 152.4-m Radius Circle, Mu = 0.85
+#Category: Circular Roads
+#FileID  : Road_f31c1297-f62d-4e01-9de7-f9b5a81bb316
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

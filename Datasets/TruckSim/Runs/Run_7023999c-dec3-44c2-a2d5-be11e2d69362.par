@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Step Steer, 10 Reference Points`Output Options
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_7023999c-dec3-44c2-a2d5-be11e2d69362
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_245b5580-eac8-4494-a96f-0533fd4ce892.par
+#BlueLink0 Animator: Camera Setup`150 Azm, 4.5 El, 100 m` Vehicle Reference` , Animator camera`Camera_245b5580-eac8-4494-a96f-0533fd4ce892
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_f0907a85-b63a-4388-a1ef-b2f5b5cf8799.par
+#BlueLink2 Vehicle: Loaded Combination`2A Conv. Van Loaded w/ 10 Ref. Pt.` Conventional Vans` , Math Model`VehLoad_f0907a85-b63a-4388-a1ef-b2f5b5cf8799
+
+PARSFILE Procedures\Proc_e2787994-c971-4ccf-a08d-bc10a4461ec0.par
+#BlueLink28 Procedures`270 deg. Step Steer @ 40 km/h` Steering Tests` , Procedure`Proc_e2787994-c971-4ccf-a08d-bc10a4461ec0
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Step Steer, 10 Reference Points <Output Options>
+CATEGORY Output Options 
+DATASET_TITLE Step Steer, 10 Reference Points
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates a Conventional Van with a payload, with 10 reference points, performing a 270-deg. open-loop steering test at a constant target speed of 40 km/h.
+#
+#The reference points are defined with respect to the sprung mass coordinate system origin and can be used to track the Global X-Y positions of these vehicle locations.
+#
+#Use the position sensor tracking plot, linked on the Reference Points and External Forces screen, to track the vehicle's sensor paths throughout the maneuver.
+#
+#Note:
+#Reference Points are points specified at up to 10 locations on the sprung mass. Output variables are generated for the global coordinates of each point. Optionally, three forces can be defined at each point to simulate external forces applied to the sprung mass.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Output Options } Step Steer, 10 Reference Points
+#Library : TruckSim Run Control
+#DataSet : Step Steer, 10 Reference Points
+#Category: Output Options
+#FileID  : Run_7023999c-dec3-44c2-a2d5-be11e2d69362
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

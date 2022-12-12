@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Static Steer Test - Brakes Off`Steering Tests
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_1f0621a2-c485-4dad-8cda-17f0a5dc6f1e
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+*RUN_COLOR 0 0.8 0.004
+SET_RUN_COLOR 0 0.8 0.004
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_401fc56a-f7f4-4aed-b57c-4ed2658a6280.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`LCF Van (Power Steer)` 2A LCF Van` , Math Model`Lead2a_401fc56a-f7f4-4aed-b57c-4ed2658a6280
+
+PARSFILE Procedures\Proc_66173eb7-7883-4f0a-90c0-cb55717e201d.par
+#BlueLink28 Procedures`Static Steer Test - Brakes Off` Steering Tests` , Procedure`Proc_66173eb7-7883-4f0a-90c0-cb55717e201d
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+*TSTOP 1
+PARSFILE Plot\Setup\Plot_c3bc997f-caac-4c8e-8974-69ef71d2b82c.par
+#BlueLink15 Plot: Setup`Steer Torque` Steering` , Plot`Plot_c3bc997f-caac-4c8e-8974-69ef71d2b82c
+
+#BlueLink23 TruckSim Run Control`Baseline` * * Quick Start Guide Example` , Overlay run or ERD file`Run_f02bf0b3-4066-447e-bb5e-40a929b281c7
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Lead_2a\Lead2a_401fc56a-f7f4-4aed-b57c-4ed2658a6280.png
+WRITE_SENSOR_DETECT
+Title Static Steer Test - Brakes Off <Steering Tests>
+CATEGORY Steering Tests 
+DATASET_TITLE Static Steer Test - Brakes Off
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#A vehicle equipped with Column Assist power steering performs a static (zero speed) steer test by open loop control. The brakes are not applied.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Steering Tests } Static Steer Test - Brakes Off
+#Library : TruckSim Run Control
+#DataSet : Static Steer Test - Brakes Off
+#Category: Steering Tests
+#FileID  : Run_1f0621a2-c485-4dad-8cda-17f0a5dc6f1e
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

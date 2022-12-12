@@ -1,0 +1,87 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Baseline (nominal profile)`Road Networks: 3D Geometry and Terrain
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_6fbde29c-741c-4130-ac9a-070a3597104d
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.2 0.6 0
+SET_RUN_COLOR 0.2 0.6 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`LCF Van` 2A LCF Van` , Math Model`Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80
+
+PARSFILE Procedures\Proc_98d6c26e-b02b-4d8d-8fb6-ea222c3d1f6b.par
+#BlueLink28 Procedures`DLC @ 70 km/h (nominal)` Handling Tests` , Procedure`Proc_98d6c26e-b02b-4d8d-8fb6-ea222c3d1f6b
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+
+SPECIAL_PARSFILE Runs\Run_8f2d1318-7023-460f-a558-fcd248017c81.par
+#BlueLink23 TruckSim Run Control`Baseline (loaded road profile)` Road Networks: 3D Geometry and Terrain` , Overlay run or ERD file`Run_8f2d1318-7023-460f-a558-fcd248017c81
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Lead_2a\Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80.png
+WRITE_SENSOR_DETECT
+Title Baseline (nominal profile) <Road Networks: 3D Geometry and Terrain>
+CATEGORY Road Networks: 3D Geometry and Terrain 
+DATASET_TITLE Baseline (nominal profile)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#TruckSim 2017 supports loading tables from an external file.
+#
+#This example shows the nominal case of using a dataset from the library Surface: Roughness Profile to compare with the same data loaded from an external VS/ERD file.
+#
+#The Roughness Profile dataset, "Rough Road 02 - 92 in/mi (1.45 m/km)", is linked on the Road: 3D Surface (All Properties) dataset named "Double Lane Change, Mu = 0.85 (nominal)".
+#
+#The overlaid run is named "Baseline (loaded road profile)".
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Road Networks: 3D Geometry and Terrain } Baseline (nominal profile)
+#Library : TruckSim Run Control
+#DataSet : Baseline (nominal profile)
+#Category: Road Networks: 3D Geometry and Terrain
+#FileID  : Run_6fbde29c-741c-4130-ac9a-070a3597104d
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

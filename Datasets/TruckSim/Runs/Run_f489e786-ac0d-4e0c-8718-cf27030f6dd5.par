@@ -1,0 +1,96 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Changing Paths: Similar Station`Extended Models
+#VEHICLECODE S_SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_f489e786-ac0d-4e0c-8718-cf27030f6dd5
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b7028f29-fdf7-4233-8487-abd35f8aee05.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 10 El, 36 m` Vehicle Reference` , Animator camera`Camera_b7028f29-fdf7-4233-8487-abd35f8aee05
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+
+#RingCtrl6 5
+#RingCtrl7 -1
+*RUN_COLOR 1 0.6 0
+SET_RUN_COLOR 1 0.6 0
+#RingCtrl4 on
+RT_WINDOW_CLOSE on
+#RingCtrl5 1
+LIVE_SERVER_MAX_CONNECTIONS 1
+PARSFILE Vehicles\Lead_3a\Lead3a_0acbf48f-de89-4017-b8d9-e6da5c0404ca.par
+#BlueLink2 Vehicle: Lead Unit with 3 Axles`3A Cab-Over (High Definition)` 3A Tractors` , Math Model`Lead3a_0acbf48f-de89-4017-b8d9-e6da5c0404ca
+
+PARSFILE Procedures\Proc_664014f5-8876-4af8-b8d6-4bccd2f6e98f.par
+#BlueLink28 Procedures`Changing Lanes: Similar Station` Event Triggered Tests` , Procedure`Proc_664014f5-8876-4af8-b8d6-4bccd2f6e98f
+
+PARSFILE Plot\Setup\Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8.par
+#BlueLink15 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8
+
+PARSFILE Plot\Setup\Plot_3e3b28dc-e304-43c5-815e-d85d7906ed42.par
+#BlueLink16 Plot: Setup`Station vs. t_stamp` Tracking` , Plot`Plot_3e3b28dc-e304-43c5-815e-d85d7906ed42
+
+PARSFILE Plot\Setup\Plot_92e94740-7813-4c8a-9bea-c62fff972287.par
+#BlueLink17 Plot: Setup`Road ID for Tires` Tracking` , Plot`Plot_92e94740-7813-4c8a-9bea-c62fff972287
+
+PARSFILE Plot\Setup\Plot_b1b8c3c1-9c5a-43a4-bca8-fe8f9944d06f.par
+#BlueLink18 Plot: Setup`Road Station for Tires` Tracking` , Plot`Plot_b1b8c3c1-9c5a-43a4-bca8-fe8f9944d06f
+
+PARSFILE Plot\Setup\Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9.par
+#BlueLink19 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_9648bddc-fae7-4223-846d-5e4be8d71592.png
+WRITE_SENSOR_DETECT
+Title Changing Paths: Similar Station <Extended Models>
+CATEGORY Extended Models 
+DATASET_TITLE Changing Paths: Similar Station
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#In this example, the path used by the driver model (PATH_ID_DM) is changed with an event. The new path (ID = 2000) has a loop, such that the X-Y coordinates of the vehicle can be matched to multiple S-L coordinates on the new path.
+#
+#The S-L value found when the path is switched is for S similar to the station on the previous path, which is not the closest to the vehicle.
+#
+#This causes the vehicle to steer off of the intended road surface, trying to reach the target station.  A road boundary stops the simulation before the vehicle can drive off of the defined area.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Extended Models } Changing Paths: Similar Station
+#Library : TruckSim Run Control
+#DataSet : Changing Paths: Similar Station
+#Category: Extended Models
+#FileID  : Run_f489e786-ac0d-4e0c-8718-cf27030f6dd5
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

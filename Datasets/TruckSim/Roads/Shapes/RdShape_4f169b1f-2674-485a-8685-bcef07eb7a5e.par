@@ -1,0 +1,144 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Straight w/ Wandering Ruts`Variable Width Roads
+NLANES 8
+OPTTHRESHOLD 2
+#MiscYellow0
+# 1 1 1, Road (Rough), 1, 20, 1, 1, edge, 51, edge, 10, , -100, 500, 0.5, , -0.04, Road
+# 0.753 0.753 0.753, Pavement, 1, 10, 0.25, 3, edge, 13, edge, 10, , 0, 200, 0.5, , , Off
+# 0.753 0.753 0.753, Pavement, 1, 10, 0.25, 15, edge, 25, edge, 10, , 0, 200, 0.5, , , Off
+# 0.753 0.753 0.753, Pavement, 1, 10, 0.25, 27, edge, 37, edge, 10, , 0, 200, 0.5, , , Off
+# 0.753 0.753 0.753, Pavement, 1, 10, 0.25, 39, edge, 49, edge, 10, , 0, 200, 0.5, , , Random
+# 1 1 1, Road Transition (Light), 1, 10, -1, -5, m, -6.5, m, 10, , -100, 500, 0.5, , -0.04, Foliage
+# 1 1 1, Road Transition (Light), 1, 10, 1, 5, m, 6.5, m, 10, , -100, 500, 0.5, , -0.04, Foliage
+# 1 1 1, Grass (Light), 1, 10, 20, -100, m, 100, m, , , -100, 500, , , -0.075, Foliage
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (Rough)
+SPECULAR(1) 1
+SCALE(1) 20
+LTILES(1) 1
+LIN(1) 1
+LINUNITS(1) edge
+LOUT(1) 51
+LOUTUNITS(1) edge
+LDIV(1) 10
+S_START(1) -100
+S_STOP(1) 500
+SINT(1) 0.5
+DZ(1) -0.04
+AUTODETAIL(1) Road
+COLOR(2) 0.753 0.753 0.753
+MATERIAL(2) Pavement
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 0.25
+LIN(2) 3
+LINUNITS(2) edge
+LOUT(2) 13
+LOUTUNITS(2) edge
+LDIV(2) 10
+S_START(2) 0
+S_STOP(2) 200
+SINT(2) 0.5
+AUTODETAIL(2) Off
+COLOR(3) 0.753 0.753 0.753
+MATERIAL(3) Pavement
+SPECULAR(3) 1
+SCALE(3) 10
+LTILES(3) 0.25
+LIN(3) 15
+LINUNITS(3) edge
+LOUT(3) 25
+LOUTUNITS(3) edge
+LDIV(3) 10
+S_START(3) 0
+S_STOP(3) 200
+SINT(3) 0.5
+AUTODETAIL(3) Off
+COLOR(4) 0.753 0.753 0.753
+MATERIAL(4) Pavement
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) 0.25
+LIN(4) 27
+LINUNITS(4) edge
+LOUT(4) 37
+LOUTUNITS(4) edge
+LDIV(4) 10
+S_START(4) 0
+S_STOP(4) 200
+SINT(4) 0.5
+AUTODETAIL(4) Off
+COLOR(5) 0.753 0.753 0.753
+MATERIAL(5) Pavement
+SPECULAR(5) 1
+SCALE(5) 10
+LTILES(5) 0.25
+LIN(5) 39
+LINUNITS(5) edge
+LOUT(5) 49
+LOUTUNITS(5) edge
+LDIV(5) 10
+S_START(5) 0
+S_STOP(5) 200
+SINT(5) 0.5
+AUTODETAIL(5) Random
+COLOR(6) 1 1 1
+MATERIAL(6) Road Transition (Light)
+SPECULAR(6) 1
+SCALE(6) 10
+LTILES(6) -1
+LIN(6) -5
+LINUNITS(6) m
+LOUT(6) -6.5
+LOUTUNITS(6) m
+LDIV(6) 10
+S_START(6) -100
+S_STOP(6) 500
+SINT(6) 0.5
+DZ(6) -0.04
+AUTODETAIL(6) Foliage
+COLOR(7) 1 1 1
+MATERIAL(7) Road Transition (Light)
+SPECULAR(7) 1
+SCALE(7) 10
+LTILES(7) 1
+LIN(7) 5
+LINUNITS(7) m
+LOUT(7) 6.5
+LOUTUNITS(7) m
+LDIV(7) 10
+S_START(7) -100
+S_STOP(7) 500
+SINT(7) 0.5
+DZ(7) -0.04
+AUTODETAIL(7) Foliage
+COLOR(8) 1 1 1
+MATERIAL(8) Grass (Light)
+SPECULAR(8) 1
+SCALE(8) 10
+LTILES(8) 20
+LIN(8) -100
+LINUNITS(8) m
+LOUT(8) 100
+LOUTUNITS(8) m
+S_START(8) -100
+S_STOP(8) 500
+DZ(8) -0.075
+AUTODETAIL(8) Foliage
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Variable Width Roads } Straight w/ Wandering Ruts
+#Library : Road: Animator Surface Shapes
+#DataSet : Straight w/ Wandering Ruts
+#Category: Variable Width Roads
+#FileID  : RdShape_4f169b1f-2674-485a-8685-bcef07eb7a5e
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

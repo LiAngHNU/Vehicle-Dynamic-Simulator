@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, S-L Grid`Cross-slope, Curb for Intersection`Gutters, Curbs, Ditches
+#CheckBox0 0    
+
+SET_IROAD_DZ_FOR_ID 2001
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: Cross-slope, Curb for Intersection
+set_description ROAD_DZ_ID Cross-slope, Curb for Intersection
+#RingCtrl0 CARPET
+#RingCtrl3 2
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 7, 6 ! columns x rows
+ROAD_DZ_CARPET 2D_LINEAR
+0, -12, -5, -4, -3.9, -3.6, 0, 1
+-20, 0, 0.06, 0.06, -0.1, -0.1, 0, 0
+-18, 0, 0.06, 0.06, -0.1, -0.1, 0, 0
+-8, 0, 0.16, 0.16, 0, 0, 0, 0
+8, 0, 0.16, 0.16, 0, 0, 0, 0
+18, 0, 0.06, 0.06, -0.1, -0.1, 0, 0
+20, 0, 0.06, 0.06, -0.1, -0.1, 0, 0
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#This is the 3D surface for the right lane of a curved road, used in the example 3-way and 4-way intersections.
+#
+#In the straight sections, the elevation is zero at L = 0 (lane edge and road centerline), dropping to 0.1 at -4.3 m. A curb goes up 0.16m  at -4.6.
+#
+#In the intersection, the cross-slope is eliminated, and the curb is 0.1 m higher. A transision from straight to intesection occurs for station S between -18 and -8 m, and then back between 8 and 18 m.
+#
+#Changed for 2018.1: Added custom ID to allow multiple instances.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Gutters, Curbs, Ditches } Cross-slope, Curb for Intersection
+#Library : Road: Off-Center Elevation Map, S-L Grid
+#DataSet : Cross-slope, Curb for Intersection
+#Category: Gutters, Curbs, Ditches
+#FileID  : RdMapZ_6efd998e-857b-4b19-ab53-7e21922819e9
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L Grid
+
+END

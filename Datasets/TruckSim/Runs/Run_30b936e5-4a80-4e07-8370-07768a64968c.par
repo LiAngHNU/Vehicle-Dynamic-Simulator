@@ -1,0 +1,88 @@
+PARSFILE
+#FullDataName TruckSim Run Control`2A Tractor+14 Dollies & Semitrailers`Vehicle Configurations
+#VEHICLECODE s_s + s + ds + s + ds + s + ds + s + ds + s + ds + s + ds + s + ds + s
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_30b936e5-4a80-4e07-8370-07768a64968c
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_224cf8be-922d-42cf-9230-21d63f232ab5.par
+#BlueLink0 Animator: Camera Setup`Fixed View High - Looking West` Fixed Camera` , Animator camera`Camera_224cf8be-922d-42cf-9230-21d63f232ab5
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 1
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 1 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Generic\Links\GenLink_368cc4d4-76ce-44ca-93c4-5f85a1fc8839.par
+#BlueLink2 Generic Group of Links`2A Tractor + 14 Dollies and Semitrailers` Tractor Trailer Vehicle Combinations` , Math Model`GenLink_368cc4d4-76ce-44ca-93c4-5f85a1fc8839
+
+PARSFILE Procedures\Proc_30233691-a30e-4202-a127-627684b518c0.par
+#BlueLink28 Procedures`DLC @ 40 km/h` Handling Tests` , Procedure`Proc_30233691-a30e-4202-a127-627684b518c0
+
+OPT_STOP 1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 20
+SSTOP 1200
+OPT_DIRECTION 0
+*SPEED 100
+*TSTOP 20
+*TSTART 0
+*SSTART 0
+*SSTOP 1200
+
+*IMAGE_TYPE DEFAULT
+WRITE_SENSOR_DETECT
+Title 2A Tractor+14 Dollies & Semitrailers <Vehicle Configurations>
+CATEGORY Vehicle Configurations 
+DATASET_TITLE 2A Tractor+14 Dollies & Semitrailers
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example makes use of TruckSim's modular architecture to construct some unique vehicle configurations. The vehicles are not intended to represent any specific real-world vehicles, but to exercise TruckSim's capabilities and show methods for creating special vehicles.
+#
+#Here, a 2A tractor pulls 8 single axle trailers connected by single axle dollies. Overall, the vehicle has 15 units.
+#
+#Stoptime is set here to override settings chosen when  this procedure is used for smaller vehicles
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Vehicle Configurations } 2A Tractor+14 Dollies & Semitrailers
+#Library : TruckSim Run Control
+#DataSet : 2A Tractor+14 Dollies & Semitrailers
+#Category: Vehicle Configurations
+#FileID  : Run_30b936e5-4a80-4e07-8370-07768a64968c
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

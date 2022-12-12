@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`3-Way Intersection`VS Scene Builder
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_2eaa92b1-ead4-4a8a-a1c8-05377394acd9.png
+#CheckBox0 0    
+
+PARSFILE Roads\ExScene\SceneImp_fbe7a5bd-5817-41cb-afe0-dfe57a866894.par
+#BlueLink0 Scene: External Import`City Intersection, 3-Way` VS Scene Builder` , Reference Path`SceneImp_fbe7a5bd-5817-41cb-afe0-dfe57a866894
+
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_5150e6ab-585a-46a0-863f-33fdf71a9a9a.par
+#BlueLink5 Animator: Camera Setup`167 Azm, 4.6 El, 39 m` Road Reference` , Camera`Camera_5150e6ab-585a-46a0-863f-33fdf71a9a9a
+
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { VS Scene Builder } 3-Way Intersection
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 3-Way Intersection
+#Category: VS Scene Builder
+#FileID  : Road_2eaa92b1-ead4-4a8a-a1c8-05377394acd9
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

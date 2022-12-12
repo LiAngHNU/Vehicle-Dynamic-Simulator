@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Animated Deer`ADAS and Active Safety
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_97a106e2-27c5-4ede-8323-8918cd7bf30f
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_e8334fc3-71b0-4d16-abaf-29cafb080d9a.par
+#BlueLink0 Animator: Camera Setup`Fixed View for Deer Crossing` Fixed Camera` , Animator camera`Camera_e8334fc3-71b0-4d16-abaf-29cafb080d9a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_b16ff590-912f-487c-9f43-d169c1b2cae8.par
+#BlueLink2 Vehicle: Loaded Combination`2A LCF, AEB Sensor` LCF Vans` , Math Model`VehLoad_b16ff590-912f-487c-9f43-d169c1b2cae8
+
+PARSFILE Procedures\Proc_8f108eca-00d9-466c-aad9-c76ca6117fe8.par
+#BlueLink28 Procedures`Deer Crossing` Animation Asset-based Scenarios` , Procedure`Proc_8f108eca-00d9-466c-aad9-c76ca6117fe8
+
+PARSFILE Generic\Links\GenLink_88a24004-e0cc-45d7-80fa-d636367e41cd.par
+#BlueLink9 Generic Group of Links`Animated Deer` ADAS: Moving Objects, incl. Pedestrians` , Miscellaneous`GenLink_88a24004-e0cc-45d7-80fa-d636367e41cd
+
+PARSFILE Generic\VS_commands\GenVS_2ef47437-1fed-4053-a9de-efcbbe371c3f.par
+#BlueLink10 Generic VS Commands`Mcity: FCW Booleans and HUD Alert` Mcity` , Miscellaneous`GenVS_2ef47437-1fed-4053-a9de-efcbbe371c3f
+
+#BlueLink11 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Loaded\VehLoad_b16ff590-912f-487c-9f43-d169c1b2cae8.png
+WRITE_SENSOR_DETECT
+Title Animated Deer <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Animated Deer
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#A driver in a Van installed with an AEB sensor system narrowly avoids deer on the highway.
+#
+#A TruckSim Sensors license is required to rerun this simulation. You may still view the animation and plots.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { ADAS and Active Safety } Animated Deer
+#Library : TruckSim Run Control
+#DataSet : Animated Deer
+#Category: ADAS and Active Safety
+#FileID  : Run_97a106e2-27c5-4ede-8323-8918cd7bf30f
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Configurable Heads Up Display (HUD)`VS Visualizer Examples
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_9c016b98-9ff8-4dec-8cb0-7dbbb85c1843
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_46c7d67e-b803-4bec-933d-a691b18e898b.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`LCF Van (7-spd. MT)` 2A LCF Van` , Math Model`Lead2a_46c7d67e-b803-4bec-933d-a691b18e898b
+
+PARSFILE Procedures\Proc_32120b5f-f59b-4ee2-a24a-663cc3928239.par
+#BlueLink28 Procedures`500 ft Circle (10% Bank) - Ramp Speed` Handling Tests` , Procedure`Proc_32120b5f-f59b-4ee2-a24a-663cc3928239
+
+PARSFILE Animator\Groups\Group_3b736c61-873a-42ef-92ad-60ec04c5b7db.par
+#BlueLink9 Animator: Group`Configurable HUD Text` HUD` , Miscellaneous`Group_3b736c61-873a-42ef-92ad-60ec04c5b7db
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Lead_2a\Lead2a_46c7d67e-b803-4bec-933d-a691b18e898b.png
+WRITE_SENSOR_DETECT
+Title Configurable Heads Up Display (HUD) <VS Visualizer Examples>
+CATEGORY VS Visualizer Examples 
+DATASET_TITLE Configurable Heads Up Display (HUD)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates Heads-Up-Display (HUD) elements in VsVisualizer.
+#
+#The VsVisualizer HUD elements are defined in HUD Animator Datasets. To see how this was set up, click on the blue link "Configurable HUD Text."
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { VS Visualizer Examples } Configurable Heads Up Display (HUD)
+#Library : TruckSim Run Control
+#DataSet : Configurable Heads Up Display (HUD)
+#Category: VS Visualizer Examples
+#FileID  : Run_9c016b98-9ff8-4dec-8cb0-7dbbb85c1843
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

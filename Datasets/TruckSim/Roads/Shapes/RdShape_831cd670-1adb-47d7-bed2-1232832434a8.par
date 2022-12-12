@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Split Mu at 3 m`Variable Friction
+NLANES 4
+OPTTHRESHOLD 1
+#MiscYellow0
+# 0.878 0.878 0.878, Road (No Centerline), 1, 10, 1, -5, m, 5, m, , , -500, 1200, 3, , , Road
+# 1 1 1, Ice, 1, 10, 0.5, 0, m, 5, m, , , 3, 1200, 3, , 0.02, Off
+# 0.937 0.937 0.937, Snow, 1, 10, 6.5, -5, m, -70, m, , , -500, 1200, 10, , , Off
+# 0.937 0.937 0.937, Snow, 1, 10, 6.5, 5, m, 70, m, , , -500, 1200, 10, , , Off
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 0.878 0.878 0.878
+MATERIAL(1) Road (No Centerline)
+SPECULAR(1) 1
+SCALE(1) 10
+LTILES(1) 1
+LIN(1) -5
+LINUNITS(1) m
+LOUT(1) 5
+LOUTUNITS(1) m
+S_START(1) -500
+S_STOP(1) 1200
+SINT(1) 3
+AUTODETAIL(1) Road
+COLOR(2) 1 1 1
+MATERIAL(2) Ice
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 0.5
+LIN(2) 0
+LINUNITS(2) m
+LOUT(2) 5
+LOUTUNITS(2) m
+S_START(2) 3
+S_STOP(2) 1200
+SINT(2) 3
+DZ(2) 0.02
+AUTODETAIL(2) Off
+COLOR(3) 0.937 0.937 0.937
+MATERIAL(3) Snow
+SPECULAR(3) 1
+SCALE(3) 10
+LTILES(3) 6.5
+LIN(3) -5
+LINUNITS(3) m
+LOUT(3) -70
+LOUTUNITS(3) m
+S_START(3) -500
+S_STOP(3) 1200
+SINT(3) 10
+AUTODETAIL(3) Off
+COLOR(4) 0.937 0.937 0.937
+MATERIAL(4) Snow
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) 6.5
+LIN(4) 5
+LINUNITS(4) m
+LOUT(4) 70
+LOUTUNITS(4) m
+S_START(4) -500
+S_STOP(4) 1200
+SINT(4) 10
+AUTODETAIL(4) Off
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Variable Friction } Split Mu at 3 m
+#Library : Road: Animator Surface Shapes
+#DataSet : Split Mu at 3 m
+#Category: Variable Friction
+#FileID  : RdShape_831cd670-1adb-47d7-bed2-1232832434a8
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

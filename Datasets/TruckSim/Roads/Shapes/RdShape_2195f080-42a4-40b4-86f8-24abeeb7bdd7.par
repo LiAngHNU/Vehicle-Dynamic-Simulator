@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Big Grass, dZ = -0.3`Roundabout, 3D, D = 36 m
+NLANES 1
+#MiscYellow0
+# 1 1 1, Grass (Light), 1, 20, 100, -1000, m, 1000, m, 1, 1, -1000, 1000, 25, 1, -0.3, Foliage
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Grass (Light)
+SPECULAR(1) 1
+SCALE(1) 20
+LTILES(1) 100
+LIN(1) -1000
+LINUNITS(1) m
+LOUT(1) 1000
+LOUTUNITS(1) m
+LDIV(1) 1
+LIPRINT(1) 1
+S_START(1) -1000
+S_STOP(1) 1000
+SINT(1) 25
+IPRINT(1) 1
+DZ(1) -0.3
+AUTODETAIL(1) Foliage
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+#EMBEDDED_NOTES
+#This surface shape is lowered by 0.3 m to avoid visual interfence with the roundabout sections that have elevation as low as -0.2 m.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Roundabout, 3D, D = 36 m } Big Grass, dZ = -0.3
+#Library : Road: Animator Surface Shapes
+#DataSet : Big Grass, dZ = -0.3
+#Category: Roundabout, 3D, D = 36 m
+#FileID  : RdShape_2195f080-42a4-40b4-86f8-24abeeb7bdd7
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

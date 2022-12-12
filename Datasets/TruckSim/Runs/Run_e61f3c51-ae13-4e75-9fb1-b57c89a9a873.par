@@ -1,0 +1,113 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Five-Vehicle Platoon: Truck 4`Multiple Vehicles
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_e61f3c51-ae13-4e75-9fb1-b57c89a9a873
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_f44e35ad-ce32-4bf0-a5c1-66990e3c1f92.par
+#BlueLink12 Models: Simulink`Five-Vehicle Platoon: Truck 4` Multi-Vehicle` , Models`Simlink_f44e35ad-ce32-4bf0-a5c1-66990e3c1f92
+
+PARSFILE Animator\Cameras\Camera_d6adeb35-4b86-4cf7-a120-86de684d0364.par
+#BlueLink0 Animator: Camera Setup`350 Azm, 20 El, 180 m, No Yaw` Vehicle Reference` , Animator camera`Camera_d6adeb35-4b86-4cf7-a120-86de684d0364
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 8
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0 0
+SET_RUN_COLOR 0 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_dce0ba6f-440e-479a-ba80-b23ea521de1c.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Pickup, Reg. Cab DRW` Pickup Trucks` , Math Model`Lead2a_dce0ba6f-440e-479a-ba80-b23ea521de1c
+
+PARSFILE Procedures\Proc_4fac0f36-b20c-460c-9708-2a31807ad7dd.par
+#BlueLink28 Procedures`Platoon Trailing Trucks` Multi-Vehicle` , Procedure`Proc_4fac0f36-b20c-460c-9708-2a31807ad7dd
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55.par
+#BlueLink9 Multiple Moving Objects`1 Driver Preview Point, Set by DM` Points of Interest` , Miscellaneous`TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55
+
+PARSFILE Animator\Arrows\Arrows_a1791875-7260-4a1a-a33f-6863980dc46b.par
+#BlueLink10 Animator: Wheel Arrows and Other Indicators`Paint Tire Path (Black)` Tire Paths` , Miscellaneous`Arrows_a1791875-7260-4a1a-a33f-6863980dc46b
+
+PARSFILE Animator\Frames\Frame_62ec4627-3beb-4458-8350-7eeb126aee2c.par
+#BlueLink11 Animator: Reference Frame`Numbered Sphere for Car 4` Platooning` , Miscellaneous`Frame_62ec4627-3beb-4458-8350-7eeb126aee2c
+
+*TSTOP 1
+
+SPECIAL_PARSFILE Runs\Run_9eec49cb-86ac-4fb8-a433-be38fbc6f74a.par
+#BlueLink23 TruckSim Run Control`Five-Vehicle Platoon: Truck 1` Multiple Vehicles` , Overlay run or ERD file`Run_9eec49cb-86ac-4fb8-a433-be38fbc6f74a
+
+
+SPECIAL_PARSFILE Runs\Run_1ad167fe-8b53-4cb8-99b4-ad852ff4770c.par
+#BlueLink24 TruckSim Run Control`Five-Vehicle Platoon: Truck 2` Multiple Vehicles` , Overlay run or ERD file`Run_1ad167fe-8b53-4cb8-99b4-ad852ff4770c
+
+
+SPECIAL_PARSFILE Runs\Run_5730e988-b4d4-4772-be7d-4533cb16c5b7.par
+#BlueLink25 TruckSim Run Control`Five-Vehicle Platoon: Truck 3` Multiple Vehicles` , Overlay run or ERD file`Run_5730e988-b4d4-4772-be7d-4533cb16c5b7
+
+
+SPECIAL_PARSFILE Runs\Run_fa81cb4e-d4ef-40f0-8337-1f36cd000779.par
+#BlueLink26 TruckSim Run Control`Five-Vehicle Platoon: Truck 5` Multiple Vehicles` , Overlay run or ERD file`Run_fa81cb4e-d4ef-40f0-8337-1f36cd000779
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_2a7c5c10-25ca-44b3-8034-dbf1de646707.png
+WRITE_SENSOR_DETECT
+Title Five-Vehicle Platoon: Truck 4 <Multiple Vehicles>
+CATEGORY Multiple Vehicles 
+DATASET_TITLE Five-Vehicle Platoon: Truck 4
+#MiscYellow0
+SSTART -30
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#WARNING: do not click Run or Send to Simulink! Use the new 'Multiple Vehicles' Library (Batch/Multiple Vehicles) to run this example.
+#
+#This is 4 of 5 Run Control datasets use to simultaneously simulate five vehicles that interact with each other. New for 2020.0 release is the Multiple Vehicles library (Batch/Multiple Vehicles) that allows the user to easily run parallel solver examples.
+#
+#A shared simulink model uses parallel solvers to simulate five vehicles across  five TruckSim Runs: Platoon Truck 1-5. View the results from any of the five Platoon Run Control screens.
+#
+#To make a new run from Simulink, you may need additional parallel solver licenses (a standard TruckSim package supports two parallel model instsances). If you do not have enough parallel solver licenses needed to run this simulation, please check the platoon example with two vehicles: that example runs with any TruckSim license.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Multiple Vehicles } Five-Vehicle Platoon: Truck 4
+#Library : TruckSim Run Control
+#DataSet : Five-Vehicle Platoon: Truck 4
+#Category: Multiple Vehicles
+#FileID  : Run_e61f3c51-ae13-4e75-9fb1-b57c89a9a873
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

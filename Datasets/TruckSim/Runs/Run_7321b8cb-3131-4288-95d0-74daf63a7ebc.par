@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName TruckSim Run Control`ACC, 4-Lane Road, Fwd and Opp Traffic`ADAS and Active Safety
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_7321b8cb-3131-4288-95d0-74daf63a7ebc
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b7028f29-fdf7-4233-8487-abd35f8aee05.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 10 El, 36 m` Vehicle Reference` , Animator camera`Camera_b7028f29-fdf7-4233-8487-abd35f8aee05
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_bb54cb7b-86fc-48bb-ab0d-32ad66170581.par
+#BlueLink2 Vehicle: Loaded Combination`DRW Pickup, ACC & Blind-Spot Sensors` Pickup Trucks` , Math Model`VehLoad_bb54cb7b-86fc-48bb-ab0d-32ad66170581
+
+PARSFILE Procedures\Proc_90a98096-1f4a-43bc-aaae-4f006d39450a.par
+#BlueLink28 Procedures`110 km/h, 2m Right` Driver Controls` , Procedure`Proc_90a98096-1f4a-43bc-aaae-4f006d39450a
+
+PARSFILE Roads\3D_Road\Road_254626e4-6912-4d54-9b26-1ae8ad08029c.par
+#BlueLink9 Road: 3D Surface (All Properties)`4-Lane Section (Adjacent Lanes)` Multiple Lanes` , Miscellaneous`Road_254626e4-6912-4d54-9b26-1ae8ad08029c
+
+PARSFILE Generic\Group\GenGrp_e1e977b5-b693-4e76-bb03-90da295a5a5e.par
+#BlueLink10 Generic Data Group`14 Vehicles: 2 Lanes Fwd, 1 Lane Opp.` ADAS: Traffic for ACC & FCW` , Miscellaneous`GenGrp_e1e977b5-b693-4e76-bb03-90da295a5a5e
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink15 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_2d2786e5-c3c2-4125-8bc1-eab0f4b9bed3.par
+#BlueLink16 Plot: Setup`Distance: S1 (2 Objects)` ADAS Sensor Detections` , Plot`Plot_2d2786e5-c3c2-4125-8bc1-eab0f4b9bed3
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ee189bc-4102-46cf-a6ee-046ab79da53b.png
+WRITE_SENSOR_DETECT
+Title ACC, 4-Lane Road, Fwd and Opp Traffic <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE ACC, 4-Lane Road, Fwd and Opp Traffic
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#The ego vehicle is equipped with adaptive cruise control (ACC) and blind-spot detection, travelling on a road with forward traffic in two lanes and on-coming traffic in a third lane.
+#
+#The blind spot detection shows alerts for vehicles in the right lane, while the ACC controls the vehicle speed via throttle and brakes with a VS Command equation.  The time gap for the ACC can be modified on the ADAS sensor screen.  The number of bars displayed on the ACC HUD is dependent on the time gap.
+#
+#The blind spot detection signals include a low-pass filter that prevents alerts from flashing when on-coming vehicles are detected.
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { ADAS and Active Safety } ACC, 4-Lane Road, Fwd and Opp Traffic
+#Library : TruckSim Run Control
+#DataSet : ACC, 4-Lane Road, Fwd and Opp Traffic
+#Category: ADAS and Active Safety
+#FileID  : Run_7321b8cb-3131-4288-95d0-74daf63a7ebc
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Steer Controller w/ Embedded Python`Embedded Python
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_fa86f996-8fc5-4e5e-b0b8-f646c21ca1bd
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_c40f19aa-92ca-4469-8121-69574d61ada2.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 10 El, 42 m` Vehicle Reference` , Animator camera`Camera_c40f19aa-92ca-4469-8121-69574d61ada2
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.4 1
+SET_RUN_COLOR 0 0.4 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_9e67d413-6c86-46ce-9b3a-cf088f1d807a.par
+#BlueLink2 Vehicle: Loaded Combination`2A Conventional Van w/ Payload` Conventional Vans` , Math Model`VehLoad_9e67d413-6c86-46ce-9b3a-cf088f1d807a
+
+PARSFILE Procedures\Proc_e989e571-a312-443f-953e-c45073d35ef7.par
+#BlueLink28 Procedures`Extended Driver Model` Driver Model, Extended and External` , Procedure`Proc_e989e571-a312-443f-953e-c45073d35ef7
+
+PARSFILE Generic\VS_commands\GenVS_284503c7-4c79-4d0f-9cd1-0728f8694fe2.par
+#BlueLink9 Generic VS Commands`Steer Controller with Embedded Python` Miscellaneous Custom Controls` , Miscellaneous`GenVS_284503c7-4c79-4d0f-9cd1-0728f8694fe2
+
+
+SPECIAL_PARSFILE Runs\Run_e6a98331-8689-4419-a102-93d0b68143fa.par
+#BlueLink23 TruckSim Run Control`Simple Steer Control with VS Commands` Extended Models` , Overlay run or ERD file`Run_e6a98331-8689-4419-a102-93d0b68143fa
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Steer Controller w/ Embedded Python <Embedded Python>
+CATEGORY Embedded Python 
+DATASET_TITLE Steer Controller w/ Embedded Python
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates how VS Commands may be used to extend a model, as  described in the Tech Memo available from the Help menu -> Technical Memos -> Example: Extending a Model with VS Commands and the API.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Embedded Python } Steer Controller w/ Embedded Python
+#Library : TruckSim Run Control
+#DataSet : Steer Controller w/ Embedded Python
+#Category: Embedded Python
+#FileID  : Run_fa86f996-8fc5-4e5e-b0b8-f646c21ca1bd
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

@@ -1,0 +1,66 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Entry Road (South)`Roundabout Network, Flat
+NLANES 3
+#MiscYellow0
+# 1 1 1, Road (Medium), 1, 50, 1, -4, m, 4, m, , , -200, -26.25, 5, , 0.04, Road
+# 1 1 1, Road Transition (Light), 1, 25, 1, 4, m, 7.1, m, , , -200, -26.25, 5, , 0.04, Foliage
+# 1 1 1, Road Transition (Light), 1, 25, -0.969, -4, m, -7.1, m, , , -200, -26.25, 5, , 0.04, Foliage
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (Medium)
+SPECULAR(1) 1
+SCALE(1) 50
+LTILES(1) 1
+LIN(1) -4
+LINUNITS(1) m
+LOUT(1) 4
+LOUTUNITS(1) m
+S_START(1) -200
+S_STOP(1) -26.25
+SINT(1) 5
+DZ(1) 0.04
+AUTODETAIL(1) Road
+COLOR(2) 1 1 1
+MATERIAL(2) Road Transition (Light)
+SPECULAR(2) 1
+SCALE(2) 25
+LTILES(2) 1
+LIN(2) 4
+LINUNITS(2) m
+LOUT(2) 7.1
+LOUTUNITS(2) m
+S_START(2) -200
+S_STOP(2) -26.25
+SINT(2) 5
+DZ(2) 0.04
+AUTODETAIL(2) Foliage
+COLOR(3) 1 1 1
+MATERIAL(3) Road Transition (Light)
+SPECULAR(3) 1
+SCALE(3) 25
+LTILES(3) -0.969
+LIN(3) -4
+LINUNITS(3) m
+LOUT(3) -7.1
+LOUTUNITS(3) m
+S_START(3) -200
+S_STOP(3) -26.25
+SINT(3) 5
+DZ(3) 0.04
+AUTODETAIL(3) Foliage
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Roundabout Network, Flat } Entry Road (South)
+#Library : Road: Animator Surface Shapes
+#DataSet : Entry Road (South)
+#Category: Roundabout Network, Flat
+#FileID  : RdShape_8c66b42b-6937-4d81-bad5-6c9da604498b
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

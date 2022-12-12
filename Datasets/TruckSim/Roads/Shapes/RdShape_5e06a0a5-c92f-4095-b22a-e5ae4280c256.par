@@ -1,0 +1,212 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Drive Along the Coast w/ Gap`Scenic Road Shapes
+NLANES 14
+OPTTHRESHOLD 1
+#MiscYellow0
+# 1 1 1, Road (Rough), 1, 20, 1, -4.1, m, 4.1, m, , , -100, 1100, 2, , , Road
+# 0.702 0.694 0.584, Stucco (Medium), 1, 10, 0.6, -10, m, -13, m, , , -100, 1100, 2, , , Random
+# 0.486 0.435 0.353, Stucco (Smooth), 1, 10, 1, 6, m, 16, m, 1, , -100, 1100, 2, , , Random
+# 0.486 0.435 0.353, Stucco (Smooth), 1, 10, 0.4, -6, m, -10, m, , , -100, 1100, 2, , , Random
+# 1 1 1, Water, 1, 20, 12.2, -13, m, -500, m, , , -100, 1100, 2, , , Random
+# 0.486 0.435 0.353, No Texture, 1, , , -5.8, m, -5.825, m, , , -100, 1100, 0.2, 25, , Random
+# 0.486 0.435 0.353, No Texture, 1, , , -5.975, m, -5.825, m, , , -100, 1100, 0.2, 25, , Random
+# 0.486 0.435 0.353, Stucco (Smooth), 1, 10, 8, 16, m, 100, m, 15.8, , -100, 1100, 1, , , Random
+# 0.69 0.69 0.69, No Texture, 1, , , -5.825, m, -5.85, m, , , -100, 1100, 2, , , Random
+# 0.69 0.69 0.69, No Texture, 1, , , -5.85, m, -5.95, m, , , -100, 1100, 2, , , Random
+# 0.69 0.69 0.69, No Texture, 1, , , -5.95, m, -5.975, m, , , -100, 1100, 2, , , Random
+# 1 1 1, Pavement, 1, 10, 0.19, -4.1, m, -6, m, , , -100, 1100, 2, , , Random
+# 1 1 1, Pavement, 1, 10, 0.19, 4.1, m, 6, m, , , -100, 1100, 2, , , Random
+# 0.486 0.435 0.353, Stucco (Smooth), 1, 10, 40, 100, m, 500, m, , , -100, 1100, 1, , , Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (Rough)
+SPECULAR(1) 1
+SCALE(1) 20
+LTILES(1) 1
+LIN(1) -4.1
+LINUNITS(1) m
+LOUT(1) 4.1
+LOUTUNITS(1) m
+S_START(1) -100
+S_STOP(1) 1100
+SINT(1) 2
+AUTODETAIL(1) Road
+COLOR(2) 0.702 0.694 0.584
+MATERIAL(2) Stucco (Medium)
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 0.6
+LIN(2) -10
+LINUNITS(2) m
+LOUT(2) -13
+LOUTUNITS(2) m
+S_START(2) -100
+S_STOP(2) 1100
+SINT(2) 2
+AUTODETAIL(2) Random
+COLOR(3) 0.486 0.435 0.353
+MATERIAL(3) Stucco (Smooth)
+SPECULAR(3) 1
+SCALE(3) 10
+LTILES(3) 1
+LIN(3) 6
+LINUNITS(3) m
+LOUT(3) 16
+LOUTUNITS(3) m
+LDIV(3) 1
+S_START(3) -100
+S_STOP(3) 1100
+SINT(3) 2
+AUTODETAIL(3) Random
+COLOR(4) 0.486 0.435 0.353
+MATERIAL(4) Stucco (Smooth)
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) 0.4
+LIN(4) -6
+LINUNITS(4) m
+LOUT(4) -10
+LOUTUNITS(4) m
+S_START(4) -100
+S_STOP(4) 1100
+SINT(4) 2
+AUTODETAIL(4) Random
+COLOR(5) 1 1 1
+MATERIAL(5) Water
+SPECULAR(5) 1
+SCALE(5) 20
+LTILES(5) 12.2
+LIN(5) -13
+LINUNITS(5) m
+LOUT(5) -500
+LOUTUNITS(5) m
+S_START(5) -100
+S_STOP(5) 1100
+SINT(5) 2
+AUTODETAIL(5) Random
+COLOR(6) 0.486 0.435 0.353
+MATERIAL(6) No Texture
+SPECULAR(6) 1
+LIN(6) -5.8
+LINUNITS(6) m
+LOUT(6) -5.825
+LOUTUNITS(6) m
+S_START(6) -100
+S_STOP(6) 1100
+SINT(6) 0.2
+IPRINT(6) 25
+AUTODETAIL(6) Random
+COLOR(7) 0.486 0.435 0.353
+MATERIAL(7) No Texture
+SPECULAR(7) 1
+LIN(7) -5.975
+LINUNITS(7) m
+LOUT(7) -5.825
+LOUTUNITS(7) m
+S_START(7) -100
+S_STOP(7) 1100
+SINT(7) 0.2
+IPRINT(7) 25
+AUTODETAIL(7) Random
+COLOR(8) 0.486 0.435 0.353
+MATERIAL(8) Stucco (Smooth)
+SPECULAR(8) 1
+SCALE(8) 10
+LTILES(8) 8
+LIN(8) 16
+LINUNITS(8) m
+LOUT(8) 100
+LOUTUNITS(8) m
+LDIV(8) 15.8
+S_START(8) -100
+S_STOP(8) 1100
+SINT(8) 1
+AUTODETAIL(8) Random
+COLOR(9) 0.69 0.69 0.69
+MATERIAL(9) No Texture
+SPECULAR(9) 1
+LIN(9) -5.825
+LINUNITS(9) m
+LOUT(9) -5.85
+LOUTUNITS(9) m
+S_START(9) -100
+S_STOP(9) 1100
+SINT(9) 2
+AUTODETAIL(9) Random
+COLOR(10) 0.69 0.69 0.69
+MATERIAL(10) No Texture
+SPECULAR(10) 1
+LIN(10) -5.85
+LINUNITS(10) m
+LOUT(10) -5.95
+LOUTUNITS(10) m
+S_START(10) -100
+S_STOP(10) 1100
+SINT(10) 2
+AUTODETAIL(10) Random
+COLOR(11) 0.69 0.69 0.69
+MATERIAL(11) No Texture
+SPECULAR(11) 1
+LIN(11) -5.95
+LINUNITS(11) m
+LOUT(11) -5.975
+LOUTUNITS(11) m
+S_START(11) -100
+S_STOP(11) 1100
+SINT(11) 2
+AUTODETAIL(11) Random
+COLOR(12) 1 1 1
+MATERIAL(12) Pavement
+SPECULAR(12) 1
+SCALE(12) 10
+LTILES(12) 0.19
+LIN(12) -4.1
+LINUNITS(12) m
+LOUT(12) -6
+LOUTUNITS(12) m
+S_START(12) -100
+S_STOP(12) 1100
+SINT(12) 2
+AUTODETAIL(12) Random
+COLOR(13) 1 1 1
+MATERIAL(13) Pavement
+SPECULAR(13) 1
+SCALE(13) 10
+LTILES(13) 0.19
+LIN(13) 4.1
+LINUNITS(13) m
+LOUT(13) 6
+LOUTUNITS(13) m
+S_START(13) -100
+S_STOP(13) 1100
+SINT(13) 2
+AUTODETAIL(13) Random
+COLOR(14) 0.486 0.435 0.353
+MATERIAL(14) Stucco (Smooth)
+SPECULAR(14) 1
+SCALE(14) 10
+LTILES(14) 40
+LIN(14) 100
+LINUNITS(14) m
+LOUT(14) 500
+LOUTUNITS(14) m
+S_START(14) -100
+S_STOP(14) 1100
+SINT(14) 1
+AUTODETAIL(14) Random
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Scenic Road Shapes } Drive Along the Coast w/ Gap
+#Library : Road: Animator Surface Shapes
+#DataSet : Drive Along the Coast w/ Gap
+#Category: Scenic Road Shapes
+#FileID  : RdShape_5e06a0a5-c92f-4095-b22a-e5ae4280c256
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

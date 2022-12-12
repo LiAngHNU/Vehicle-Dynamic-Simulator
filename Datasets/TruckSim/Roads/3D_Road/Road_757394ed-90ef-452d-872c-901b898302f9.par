@@ -1,0 +1,66 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Mcity`Self-Contained Scenes
+*IMAGE_TYPE CUSTOM
+*IMAGE_FILE Roads\3D_Road\Road_757394ed-90ef-452d-872c-901b898302f9 .png
+#RingCtrl0 1
+#CheckBox0 1    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Mcity
+PARSFILE Roads\BuilderSegment\RoadSeg_bd856176-cdd5-441d-a7be-37717ace11fc.par
+#BlueLink0 Path: Segment Builder`Mcity: Straight Path North` Mcity` , Reference Path`RoadSeg_bd856176-cdd5-441d-a7be-37717ace11fc
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Mcity: Straight Path North
+PARSFILE Roads\Center_Z\RdRefZ_c65aa3b5-7a55-4cbf-a30f-584a77fcebcd.par
+#BlueLink1 Road: Reference Line Elevation`Mcity Baseline` Flat` , Path Elevation`RdRefZ_c65aa3b5-7a55-4cbf-a30f-584a77fcebcd
+
+PARSFILE Generic\VS_commands\GenVS_621a92b2-54e9-4c7a-945d-d688b59ee39a.par
+#BlueLink2 Generic VS Commands`Mcity: Loaded Elevation Data` Mcity` , Miscellaneous`GenVS_621a92b2-54e9-4c7a-945d-d688b59ee39a
+
+PARSFILE Roads\Shapes\RdShape_fd732d47-09f3-4d86-961b-2da5134afc87.par
+#BlueLink4 Road: Animator Surface Shapes`No Machine-Generated Shapes` ` , Road shape definitions`RdShape_fd732d47-09f3-4d86-961b-2da5134afc87
+
+PARSFILE Generic\VS_commands\GenVS_07dd6abb-d6ee-4ab6-bea6-588d5c53dd27.par
+#BlueLink10 Generic VS Commands`Mcity: Loaded Mu Data` Mcity` , Miscellaneous`GenVS_07dd6abb-d6ee-4ab6-bea6-588d5c53dd27
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+#MiscYellow0
+!Lat. and Long. of Grid(0,0) at Mcity
+GPS_REF_LAT       42.30095833
+GPS_REF_LONG -83.69758056
+#ENDMYellow
+
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+add_reference_frame road_stuff_7_Mcity
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_70db3041-edc5-4a31-a89a-dd813f5a8b2a.par
+#BlueLink7 Animator: Group`Mcity` Test Facilities` , 3D Shapes`Group_70db3041-edc5-4a31-a89a-dd813f5a8b2a
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_4e0270ba-8a76-4538-bd60-fd137c961288.par
+#BlueLink5 Animator: Camera Setup`Mcity Scene View` Mcity` , Camera`Camera_4e0270ba-8a76-4538-bd60-fd137c961288
+
+parsfile Roads\3D_Road\Road_757394ed-90ef-452d-872c-901b898302f9.ani
+
+#EMBEDDED_NOTES
+#The Mcity site is defined with a single path segment, directed northward.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Self-Contained Scenes } Mcity
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Mcity
+#Category: Self-Contained Scenes
+#FileID  : Road_757394ed-90ef-452d-872c-901b898302f9
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

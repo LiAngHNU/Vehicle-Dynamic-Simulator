@@ -1,0 +1,69 @@
+PARSFILE
+#FullDataName Road: Boundaries`Atlas: I-94 Exit 172`Atlas Intersection
+#RingCtrl0 2
+#RingCtrl1 0
+#RingCtrl2 0
+#RingCtrl3 3
+#RingCtrl6 2
+#RingCtrl7 2
+#RingCtrl8 3
+#RingCtrl9 1
+#RingCtrl10 0
+#RingCtrl11 1
+#RingCtrl12 3
+#RingCtrl14 1
+#RingCtrl15 3
+*ROAD_ID_1 1094
+*LMAX_1 8
+*LMIN_NEW_ID_1 1002
+*LMIN_NEW_S_1 0
+*ROAD_ID_2 1002
+*SMAX_2 1289
+*SMAX_NEW_ID_2 1001
+*SMAX_NEW_S_2 380
+*SMIN_2 0
+*SMIN_NEW_ID_2 1094
+*SMIN_NEW_S_2 900
+*LMAX_2 12
+*LMIN_2 -6
+
+
+IROAD = GET_IROAD(1094)
+ROAD_SMAX_NEW_ID = 0
+ROAD_SMIN_NEW_ID = 0
+
+ISIDE = 1
+ROAD_NEW_ID_CONSTANT = 0
+
+ISIDE = 2
+PARSFILE Roads\Boundaries_L\RdBdL_c05975e4-6e67-4a11-80d1-93e154701db4.par
+#BlueLink3 Road Boundary: Lateral Edge`I-94 Exit 172` Atlas Examples` , Lmin vs. station`RdBdL_c05975e4-6e67-4a11-80d1-93e154701db4
+
+PARSFILE Roads\Boundaries_ID\RdBdID_7e7eafe8-18dd-47c5-8e87-2040cf5003bb.par
+#BlueLink4 Road Boundary: New Road ID`I-94 at Exit 172` ` , Road ID vs station`RdBdID_7e7eafe8-18dd-47c5-8e87-2040cf5003bb
+
+ROAD_NEW_S_COEFFICIENT = 1
+
+IROAD = GET_IROAD(1002)
+ROAD_SMAX 1289
+ROAD_SMAX_NEW_ID 1001
+ROAD_SMAX_NEW_S 380
+ROAD_SMIN_NEW_ID = 0
+
+ISIDE = 1
+ROAD_L_BOUNDARY_CONSTANT 12
+ROAD_NEW_ID_CONSTANT = -1
+
+ISIDE = 2
+ROAD_L_BOUNDARY_CONSTANT -6
+ROAD_NEW_ID_CONSTANT = -1
+
+LOG_ENTRY Used Dataset: Road: Boundaries; { Atlas Intersection } Atlas: I-94 Exit 172
+#Library : Road: Boundaries
+#DataSet : Atlas: I-94 Exit 172
+#Category: Atlas Intersection
+#FileID  : RdBnd_a8b2f48f-57e3-4eba-86dd-f7739efdcad6
+#Product : TruckSim 2020.1
+#VehCode Road Boundaries
+
+END

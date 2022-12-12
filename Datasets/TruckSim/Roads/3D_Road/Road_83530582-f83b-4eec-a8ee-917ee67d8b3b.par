@@ -1,0 +1,371 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Split Mu Straight`Braking and Traction Control Test Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_83530582-f83b-4eec-a8ee-917ee67d8b3b.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Split Mu Straight
+PARSFILE Roads\BuilderSegment\RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c.par
+#BlueLink0 Path: Segment Builder`Straight Path East` Straight` , Reference Path`RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight Path East
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_75039b30-f51d-46dc-84a9-b67fefd14a15.par
+#BlueLink3 Road: Friction Map, S-L Grid`Split Mu @ 3 m, 0.2 Left / 0.5 Right` Split Mu` , Friction`RdMu_75039b30-f51d-46dc-84a9-b67fefd14a15
+
+PARSFILE Roads\Shapes\RdShape_831cd670-1adb-47d7-bed2-1232832434a8.par
+#BlueLink4 Road: Animator Surface Shapes`Split Mu at 3 m` Variable Friction` , Road shape definitions`RdShape_831cd670-1adb-47d7-bed2-1232832434a8
+
+RR_SURF_CONSTANT 1
+*IMAGE_FIT_MODE 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Overcast_Sky_with_Snow
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_dd7aa802-72ab-497d-b33f-1f5e0f1a76f1.par
+#BlueLink6 Animator: Group`Overcast Sky with Snow` Environment Spheres` , 3D Shapes`Group_dd7aa802-72ab-497d-b33f-1f5e0f1a76f1
+
+add_reference_frame road_stuff_7_Snow_Covered_Trees_(-15,_1165)
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_8d0e48e4-fd54-48ff-a498-3cd9c7cabcce.par
+#BlueLink7 Road: Animator Repeated Object`Snow Covered Trees (-15, 1165)` Trees` , 3D Shapes`AniRep_8d0e48e4-fd54-48ff-a498-3cd9c7cabcce
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_83530582-f83b-4eec-a8ee-917ee67d8b3b.ani
+
+add_reference_frame road_stuff_1_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x -15
+set_offset_var_y 22.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_2_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 31
+set_offset_var_y -33
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_3_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 60
+set_offset_var_y 28.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_4_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 87
+set_offset_var_y -30
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_5_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 146
+set_offset_var_y 25.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_6_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 180
+set_offset_var_y -33
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_7_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 210
+set_offset_var_y 31.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_8_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 231
+set_offset_var_y -21
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_9_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 269
+set_offset_var_y 22.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_10_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 291
+set_offset_var_y -31.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_11_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 321
+set_offset_var_y 22.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_12_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 364
+set_offset_var_y -27
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_13_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 382
+set_offset_var_y 33
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_14_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 427
+set_offset_var_y -25.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_15_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 450
+set_offset_var_y 33
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_16_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 472
+set_offset_var_y -21
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_17_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 519
+set_offset_var_y 27
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_18_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 535
+set_offset_var_y -27
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_19_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 569
+set_offset_var_y 24
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_20_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 594
+set_offset_var_y -21
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_21_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 638
+set_offset_var_y 28.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_22_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 661
+set_offset_var_y -28.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_23_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 692
+set_offset_var_y 19.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_24_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 719
+set_offset_var_y -28.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_25_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 744
+set_offset_var_y 21
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_26_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 777
+set_offset_var_y 31.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_27_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 810
+set_offset_var_y 28.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_28_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 834
+set_offset_var_y -28.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_29_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 878
+set_offset_var_y 25.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_30_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 896
+set_offset_var_y -25.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_31_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 930
+set_offset_var_y 31.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_32_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 956
+set_offset_var_y -25.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_33_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 997
+set_offset_var_y 30
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_34_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 1019
+set_offset_var_y -30
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_35_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 1050
+set_offset_var_y 19.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_36_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 1071
+set_offset_var_y -22.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_37_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 1093
+set_offset_var_y 19.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_38_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 1133
+set_offset_var_y -31.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_39_2_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 1165
+set_offset_var_y 25.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+#EMBEDDED_NOTES
+#You can put any friction surface on a road with VehicleSim products.  Here a split-mu road is demonstrated.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Braking and Traction Control Test Roads } Split Mu Straight
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Split Mu Straight
+#Category: Braking and Traction Control Test Roads
+#FileID  : Road_83530582-f83b-4eec-a8ee-917ee67d8b3b
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

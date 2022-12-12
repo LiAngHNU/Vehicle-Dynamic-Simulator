@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, S-L Grid`Road w/ Low Shoulder at 5 m`Roads
+#CheckBox0 0    
+
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: Road w/ Low Shoulder at 5 m
+set_description ROAD_DZ_ID Road w/ Low Shoulder at 5 m
+#RingCtrl0 2D_SPLINE
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 7, 21 ! columns x rows
+ROAD_DZ_CARPET 2D_SPLINE
+0, -10, -7, -5, 0, 5, 7, 10
+0, -0.6, -0.6, -0.1, 0, -0.1, -0.6, -0.6
+253.26, -0.6, -0.6, -0.1, 0, -0.1, -0.6, -0.6
+277.84, -0.4, -0.4, 0.1, 0, -0.1, -0.6, -0.6
+283.06, -0.4, -0.4, 0.142, 0, -0.142, -0.6, -0.6
+303.26, -0.3, -0.3, 0.2, 0, -0.306, -0.8, -0.8
+312.86, -0.1, -0.1, 0.385, 0, -0.385, -0.9, -0.9
+373.64, -0.1, -0.1, 0.385, 0, -0.385, -0.9, -0.9
+403.44, -0.3, -0.3, 0.27, 0, -0.27, -0.8, -0.8
+473.94, -0.5, -0.5, 0, 0, 0, -0.5, -0.5
+545.43, -0.7, -0.7, -0.27, 0, 0.27, -0.3, -0.3
+575.54, -0.9, -0.9, -0.39, 0, 0.39, -0.1, -0.1
+645.75, -0.9, -0.9, -0.39, 0, 0.39, -0.1, -0.1
+699.45, -0.9, -0.9, -0.39, 0, 0.39, -0.1, -0.1
+729.56, -0.8, -0.8, -0.228, 0, 0.228, -0.3, -0.3
+772.01, -0.5, -0.5, 0, 0, 0, -0.5, -0.5
+815.71, -0.3, -0.3, 0.235, 0, -0.235, -0.7, -0.7
+846.43, -0.1, -0.1, 0.4, 0, -0.4, -0.9, -0.9
+958.07, -0.1, -0.1, 0.4, 0, -0.4, -0.9, -0.9
+988.79, -0.75, -0.75, -0.25, 0, -0.25, -0.75, -0.75
+1041.8, -0.5, -0.5, 0, 0, 0, -0.5, -0.5
+1200, -0.5, -0.5, 0, 0, 0, -0.5, -0.5
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Roads } Road w/ Low Shoulder at 5 m
+#Library : Road: Off-Center Elevation Map, S-L Grid
+#DataSet : Road w/ Low Shoulder at 5 m
+#Category: Roads
+#FileID  : RdMapZ_e2cf805e-caeb-48e8-a609-92ee207ddb59
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L Grid
+
+END

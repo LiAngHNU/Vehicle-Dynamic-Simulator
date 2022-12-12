@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Striping`Parking Lot
+*IMAGE_TYPE DEFAULT
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Striping
+PARSFILE Roads\Center_XY\PathXY_b731e8cf-c781-4948-a5e9-abb1be977155.par
+#BlueLink0 Path: X-Y Coordinates`Parking Lot: Lot Definition Path` Parking Lot` , Reference Path`PathXY_b731e8cf-c781-4948-a5e9-abb1be977155
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Parking Lot: Lot Definition Path
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_e4435070-8349-4a26-b4bf-83e0653c6ecd.par
+#BlueLink4 Road: Animator Surface Shapes`Surface Striping` Parking Lot` , Road shape definitions`RdShape_e4435070-8349-4a26-b4bf-83e0653c6ecd
+
+parsfile Roads\3D_Road\Road_3f9a5aa7-b82d-4a3b-a5f5-64b5c6895f9b.ani
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Parking Lot } Striping
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Striping
+#Category: Parking Lot
+#FileID  : Road_3f9a5aa7-b82d-4a3b-a5f5-64b5c6895f9b
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

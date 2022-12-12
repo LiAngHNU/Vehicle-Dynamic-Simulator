@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Clothoid Connectors (Table-Defined)`Road Networks: 3D Geometry and Terrain
+#VEHICLECODE S_SS + SS + dSS + SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_eae23458-fb35-4839-8a6b-a572022d9e2f
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_3d2e9b1d-8079-4fd6-ac93-75e96d6d49be.par
+#BlueLink2 Vehicle: Loaded Combination`3A Tractor+2x2A Trl+2A Dolly` Sleeper-Cab Tractor-Trailers` , Math Model`VehLoad_3d2e9b1d-8079-4fd6-ac93-75e96d6d49be
+
+PARSFILE Procedures\Proc_f29da0c1-c909-4b14-af7d-0e00d3d3c0da.par
+#BlueLink28 Procedures`S-Turns from Linked Tables` Road Networks` , Procedure`Proc_f29da0c1-c909-4b14-af7d-0e00d3d3c0da
+
+PARSFILE Generic\Group\GenGrp_a285032f-2447-441d-a2c1-4896e9579705.par
+#BlueLink10 Generic Data Group`9 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_a285032f-2447-441d-a2c1-4896e9579705
+
+
+SPECIAL_PARSFILE Runs\Run_4fa72415-0475-4e35-abb0-84955519bcb3.par
+#BlueLink23 TruckSim Run Control`Clothoid Connectors (Automatic)` Road Networks: 3D Geometry and Terrain` , Overlay run or ERD file`Run_4fa72415-0475-4e35-abb0-84955519bcb3
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_8ba88f47-4990-40ca-bf2d-9bbebeda47ea.png
+WRITE_SENSOR_DETECT
+Title Clothoid Connectors (Table-Defined) <Road Networks: 3D Geometry and Terrain>
+CATEGORY Road Networks: 3D Geometry and Terrain 
+DATASET_TITLE Clothoid Connectors (Table-Defined)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This is an example of building S-Turns into and out of a short piece of highway.
+#
+#The Path Segment Builder is used along with User-defined X-Y tables representing the clothoid connector segments. The built-in TruckSim Calculator (Tools -> Calculator) can be used to generate the clothoid sections.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Road Networks: 3D Geometry and Terrain } Clothoid Connectors (Table-Defined)
+#Library : TruckSim Run Control
+#DataSet : Clothoid Connectors (Table-Defined)
+#Category: Road Networks: 3D Geometry and Terrain
+#FileID  : Run_eae23458-fb35-4839-8a6b-a572022d9e2f
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

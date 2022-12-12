@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Road w/ Surface Roughness`Road Networks: 3D Geometry and Terrain
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_510b88e0-db10-4e3a-a1cb-0db08bf5465c
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_faaa7c4f-c18d-4521-a00a-ecbdc3076f4f.par
+#BlueLink2 Vehicle: Loaded Combination`2A Tour Bus (I_S), Two Payloads` Tour Buses` , Math Model`VehLoad_faaa7c4f-c18d-4521-a00a-ecbdc3076f4f
+
+PARSFILE Procedures\Proc_051b3057-0544-44ef-b945-33f3ea876417.par
+#BlueLink28 Procedures`Constant Speed, Road w/ Roughness` Driving` , Procedure`Proc_051b3057-0544-44ef-b945-33f3ea876417
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_5cb9979d-3686-4654-8ce0-3c30f81bd36c.png
+WRITE_SENSOR_DETECT
+Title Road w/ Surface Roughness <Road Networks: 3D Geometry and Terrain>
+CATEGORY Road Networks: 3D Geometry and Terrain 
+DATASET_TITLE Road w/ Surface Roughness
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates the use of road roughness profiles in TruckSim. In this case, the road roughness dataset is linked on the Procedure screen, after the road dataset.
+#
+#Since road roughness may be different at the left and right wheel tracks of a vehicle, TruckSim supports two sets of data on the Surface: Roughness Profiles screen: one for each measured wheel track.
+#
+#These roughness profiles are not applied to the entire road surface; rather, they follow the vehicle as it performs its maneuver. In this context, they are referred to as Wandering Profiles.
+#
+#Roughness profiles may be applied to any road dataset in TruckSim.
+#
+#For more information on road profiles, please see the following reference document available from the Help drop-down menu:
+#Reference Manuals: The Little Book of Profiling
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Road Networks: 3D Geometry and Terrain } Road w/ Surface Roughness
+#Library : TruckSim Run Control
+#DataSet : Road w/ Surface Roughness
+#Category: Road Networks: 3D Geometry and Terrain
+#FileID  : Run_510b88e0-db10-4e3a-a1cb-0db08bf5465c
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

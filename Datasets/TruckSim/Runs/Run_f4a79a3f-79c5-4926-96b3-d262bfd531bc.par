@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName TruckSim Run Control`2A Conv, AT: Full Throttle, Flat Road`Validation of Vehicle Data
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_f4a79a3f-79c5-4926-96b3-d262bfd531bc
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_0e8f42e3-6607-4e9f-8f23-092fbd4f093c.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Conv. Van (7-spd. AT, Park Tq.)` 2A Conventional Van` , Math Model`Lead2a_0e8f42e3-6607-4e9f-8f23-092fbd4f093c
+
+PARSFILE Procedures\Proc_0b574e93-7a78-4c10-972f-330c85ce5165.par
+#BlueLink28 Procedures`Full Throttle Accel. (AT), Flat Road` Acceleration and Braking` , Procedure`Proc_0b574e93-7a78-4c10-972f-330c85ce5165
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+PARSFILE Animator\HUD\HUD_647507c0-a511-41d5-8437-e3b1fc5eb87f.par
+#BlueLink10 Animator: HUD`Throttle, Brakes, G-G, Speedo, Gear, Tach` HUD Groups` , Miscellaneous`HUD_647507c0-a511-41d5-8437-e3b1fc5eb87f
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title 2A Conv, AT: Full Throttle, Flat Road <Validation of Vehicle Data>
+CATEGORY Validation of Vehicle Data 
+DATASET_TITLE 2A Conv, AT: Full Throttle, Flat Road
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#2-axle Conventional Van with RWD and a 7-speed automatic transmission performing a full throttle acceleration test on a flat road.
+#
+#The control is Open-Loop Throttle, ramping from 0 to 100% throttle in 2 seconds.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Validation of Vehicle Data } 2A Conv, AT: Full Throttle, Flat Road
+#Library : TruckSim Run Control
+#DataSet : 2A Conv, AT: Full Throttle, Flat Road
+#Category: Validation of Vehicle Data
+#FileID  : Run_f4a79a3f-79c5-4926-96b3-d262bfd531bc
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

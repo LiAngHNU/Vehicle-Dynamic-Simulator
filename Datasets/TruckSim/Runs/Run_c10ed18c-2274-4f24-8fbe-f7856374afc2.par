@@ -1,0 +1,87 @@
+PARSFILE
+#FullDataName TruckSim Run Control`External Four Wheel Steering`Simulink and LabVIEW
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_c10ed18c-2274-4f24-8fbe-f7856374afc2
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_fdd876d5-ea31-4f9d-9364-605f134bd4b5.par
+#BlueLink12 Models: Simulink`Four Wheel Steering System` Steering` , Models`Simlink_fdd876d5-ea31-4f9d-9364-605f134bd4b5
+
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_cc71b65b-8257-41e6-b7a1-2d1ed36a3974.par
+#BlueLink2 Vehicle: Loaded Combination`2A Tour Bus (S_S), Two Payloads` Tour Buses` , Math Model`VehLoad_cc71b65b-8257-41e6-b7a1-2d1ed36a3974
+
+PARSFILE Procedures\Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4.par
+#BlueLink28 Procedures`DLC @ 70 km/h` Handling Tests` , Procedure`Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_5cb9979d-3686-4654-8ce0-3c30f81bd36c.png
+WRITE_SENSOR_DETECT
+Title External Four Wheel Steering <Simulink and LabVIEW>
+CATEGORY Simulink and LabVIEW 
+DATASET_TITLE External Four Wheel Steering
+#MiscYellow0
+opt_steer_ext(2) 4
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates the use of Simulink to define a Four Wheel Steering System on a 2A Tour Bus that is performing a double lane change at 70 km/h.
+#
+#The Simulink model calculates the road wheel steer angle of the rear wheels.
+#
+#Opt_Steer_Ext(2) 4 must be set in order to use the import variables for the rear road wheel steer angles.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Simulink and LabVIEW } External Four Wheel Steering
+#Library : TruckSim Run Control
+#DataSet : External Four Wheel Steering
+#Category: Simulink and LabVIEW
+#FileID  : Run_c10ed18c-2274-4f24-8fbe-f7856374afc2
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

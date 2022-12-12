@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName TruckSim Run Control`AVL Cruise: Accel. and Brake on Circle`* More Examples (Extra License Options)
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_6764cef0-1575-4f3f-af5a-4b6f008a3f62
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#BlueLink12 ` , Models` , Models` , Models`
+
+PARSFILE Animator\Cameras\Camera_a8c70d40-bbba-4af6-8ded-c01f83a61b6a.par
+#BlueLink0 Animator: Camera Setup`35 Azm, 5 El, 13.5 m` Vehicle Reference` , Animator camera`Camera_a8c70d40-bbba-4af6-8ded-c01f83a61b6a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 14
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_5efef9f5-85bf-43fd-aed3-240eeb218f03.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Conv. Van (AVL Cruise: 4x2, MT)` 2A Conventional Van` , Math Model`Lead2a_5efef9f5-85bf-43fd-aed3-240eeb218f03
+
+PARSFILE Procedures\Proc_8c5df680-101d-40e0-95c8-de17634341b5.par
+#BlueLink28 Procedures`0-65-0kmh on Circle (MT)` Acceleration and Braking` , Procedure`Proc_8c5df680-101d-40e0-95c8-de17634341b5
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+*SPEED 0
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title AVL Cruise: Accel. and Brake on Circle <* More Examples (Extra License Options)>
+CATEGORY * More Examples (Extra License Options) 
+DATASET_TITLE AVL Cruise: Accel. and Brake on Circle
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example uses the AVL Cruise powertrain model (4x2).
+#
+#TruckSim supports the AVL Cruise model (version 2011.1 or newer), but the following separate licenses are required:
+#
+#1. AVL Cruise license (available from AVL) and
+#2. TruckSim External Powertrain Interface license (available from Mechanical Simulation).
+#
+#In order to execute Cruise with TruckSim correctly, you have to set the following files on the Powertrain: AVL Cruise screen:
+#
+#a. Cruise solver file (cruiseNT.dll), which should be version 2011.1 or newer, or an optional project embedded solver (CMC dll), and
+#b. Cruise project file (***.prj), if the solver is not CMC dll.
+#
+#If you don't have these necessary licenses, you can still view the simulation results provided with TruckSim by clicking the "Video" and "Plot" buttons.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { * More Examples (Extra License Options) } AVL Cruise: Accel. and Brake on Circle
+#Library : TruckSim Run Control
+#DataSet : AVL Cruise: Accel. and Brake on Circle
+#Category: * More Examples (Extra License Options)
+#FileID  : Run_6764cef0-1575-4f3f-af5a-4b6f008a3f62
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

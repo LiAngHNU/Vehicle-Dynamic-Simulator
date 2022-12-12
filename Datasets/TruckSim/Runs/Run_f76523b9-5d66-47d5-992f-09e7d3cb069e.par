@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Semi-Active Suspension: Sine Sweep`Simulink and LabVIEW
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_f76523b9-5d66-47d5-992f-09e7d3cb069e
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_c9761402-1533-48fa-81a1-999f93a85f1a.par
+#BlueLink12 Models: Simulink`Semi-Active Suspension` ` , Models`Simlink_c9761402-1533-48fa-81a1-999f93a85f1a
+
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.4 1
+SET_RUN_COLOR 0 0.4 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_d4729ac2-9b6c-4bb2-b187-a9bd949bef7a.par
+#BlueLink2 Vehicle: Loaded Combination`2A Conv Loaded, 5 Accel & Rate Sensors` Conventional Vans` , Math Model`VehLoad_d4729ac2-9b6c-4bb2-b187-a9bd949bef7a
+
+PARSFILE Procedures\Proc_289a6952-478f-4d9f-8885-a556b4216383.par
+#BlueLink28 Procedures`Bounce Sine Sweep Test` Ride Tests` , Procedure`Proc_289a6952-478f-4d9f-8885-a556b4216383
+
+
+SPECIAL_PARSFILE Runs\Run_9c14da27-2ec7-4e44-b523-c319e350a223.par
+#BlueLink23 TruckSim Run Control`Sine Sweep: Bounce` Suspension and Ride` , Overlay run or ERD file`Run_9c14da27-2ec7-4e44-b523-c319e350a223
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Semi-Active Suspension: Sine Sweep <Simulink and LabVIEW>
+CATEGORY Simulink and LabVIEW 
+DATASET_TITLE Semi-Active Suspension: Sine Sweep
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates the use of a Semi-Active Suspension defined in Simulink on a vehicle driving over the Bounce Sine Sweep Test road.
+#
+#The Simulink model calculates the damper forces, and these are set to replace the TruckSim-calculated damper forces.
+#
+#The example is overlaid with the simulation "Bounce Sine Sweep". That example uses the same 2A Conventional Van as this example, except the overlaid vehicle does not use a Simulink-defined Semi-Active Suspension.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Simulink and LabVIEW } Semi-Active Suspension: Sine Sweep
+#Library : TruckSim Run Control
+#DataSet : Semi-Active Suspension: Sine Sweep
+#Category: Simulink and LabVIEW
+#FileID  : Run_f76523b9-5d66-47d5-992f-09e7d3cb069e
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

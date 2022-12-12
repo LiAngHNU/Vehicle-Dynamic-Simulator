@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`1200 m, One Lane, Mu = 0.85, No Sky`Straight
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_e71e38da-d49c-4a48-83d9-184ea44f203d.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 1200 m, One Lane, Mu = 0.85, No Sky
+PARSFILE Roads\BuilderSegment\RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c.par
+#BlueLink0 Path: Segment Builder`Straight Path East` Straight` , Reference Path`RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight Path East
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_d1bb3bb4-1111-41a4-8a0a-60eb182ccc49.par
+#BlueLink4 Road: Animator Surface Shapes`1200 m One Ln Road + 100 m Light Grass` Roads` , Road shape definitions`RdShape_d1bb3bb4-1111-41a4-8a0a-60eb182ccc49
+
+RR_SURF_CONSTANT 1
+*IMAGE_FIT_MODE 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_e71e38da-d49c-4a48-83d9-184ea44f203d.ani
+
+#EMBEDDED_NOTES
+#This Road: 3D Surface (All Properties) dataset does not have any linked animator shapes to represent the sky.
+#
+#As originally built, this dataset is linked to a Run and a Procedure that use the Acceleration Field import variables to simulate the effect of a vehicle driving up a hill. A corresponding Animator: Reference Frame is linked with the VS Commands with a pitch-adjusted skybox.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Straight } 1200 m, One Lane, Mu = 0.85, No Sky
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 1200 m, One Lane, Mu = 0.85, No Sky
+#Category: Straight
+#FileID  : Road_e71e38da-d49c-4a48-83d9-184ea44f203d
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

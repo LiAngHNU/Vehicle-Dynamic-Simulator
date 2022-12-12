@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, S-L Grid`Driveway Gutter`Gutters, Curbs, Ditches
+#CheckBox0 0    
+
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: Driveway Gutter
+set_description ROAD_DZ_ID Driveway Gutter
+#RingCtrl0 CONSTANT
+#RingCtrl1 SPLINE_FLAT
+#RingCtrl2 ADD
+ROAD_DZ_COMBINE ADD
+#RingCtrl3 1
+#RadioCtrl0 1    
+#RadioCtrl1 0    
+
+ROAD_DZ_CONSTANT 0
+#DiagramOne1
+ROAD_DZ_L_TABLE SPLINE_FLAT
+5, 0
+5.05, 0.0003014
+5.1, 0.0007369
+5.15, 0.001933
+5.2, 0.004671
+5.25, 0.01188
+5.3, 0.02679
+5.35, 0.05797
+5.4, 0.1
+5.45, 0.1451
+5.5, 0.1732
+5.55, 0.1889
+5.6, 0.1953
+5.65, 0.1982
+5.7, 0.1993
+5.75, 0.1995
+5.8, 0.2
+ENDTABLE
+*SCALAR 0
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Gutters, Curbs, Ditches } Driveway Gutter
+#Library : Road: Off-Center Elevation Map, S-L Grid
+#DataSet : Driveway Gutter
+#Category: Gutters, Curbs, Ditches
+#FileID  : RdMapZ_cc163303-bd20-4990-a6ec-24089c270ae5
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L Grid
+
+END

@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, S-L Grid`River Bed`2D Spline
+#CheckBox0 0    
+
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: River Bed
+set_description ROAD_DZ_ID River Bed
+#RingCtrl0 2D_SPLINE
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 7, 21 ! columns x rows
+ROAD_DZ_CARPET 2D_SPLINE
+0, -10, -7, -5, 0, 5, 7, 10
+0, 0.9, 0.9, 0.15, 0, 0.15, 0.9, 0.9
+253.257, 0.9, 0.9, 0.15, 0, 0.15, 0.9, 0.9
+277.836, 0.9, 0.9, -0.15, 0, 0.15, 0.9, 0.9
+283.059, 0.9, 0.9, -0.213, 0, 0.213, 0.9, 0.9
+303.26, 0.9, 0.9, -0.3, 0, 0.459, 0.9, 0.9
+312.861, 0.9, 0.9, -0.5775, 0, 0.5775, 0.9, 0.9
+373.641, 0.9, 0.9, -0.5775, 0, 0.5775, 0.9, 0.9
+403.443, 0.9, 0.9, -0.405, 0, 0.405, 0.9, 0.9
+473.938, 0.9, 0.9, 0, 0, 0, 0.9, 0.9
+545.427, 0.9, 0.9, 0.405, 0, -0.405, 0.9, 0.9
+575.537, 0.9, 0.9, 0.585, 0, -0.585, 0.9, 0.9
+645.75, 0.9, 0.9, 0.585, 0, -0.585, 0.9, 0.9
+699.452, 0.9, 0.9, 0.585, 0, -0.585, 0.9, 0.9
+729.561, 0.9, 0.9, 0.342, 0, -0.342, 0.9, 0.9
+772.013, 0.9, 0.9, 0, 0, 0, 0.9, 0.9
+815.71, 0.9, 0.9, -0.3525, 0, 0.3525, 0.9, 0.9
+846.434, 0.9, 0.9, -0.6, 0, 0.6, 0.9, 0.9
+958.065, 0.9, 0.9, -0.6, 0, 0.6, 0.9, 0.9
+988.789, 0.9, 0.9, 0.375, 0, 0.375, 0.9, 0.9
+1041.75, 0.9, 0.9, 0, 0, 0, 0.9, 0.9
+1200, 0.9, 0.9, 0, 0, 0, 0.9, 0.9
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { 2D Spline } River Bed
+#Library : Road: Off-Center Elevation Map, S-L Grid
+#DataSet : River Bed
+#Category: 2D Spline
+#FileID  : RdMapZ_3b9e8f25-3752-4465-af6f-67e99a6b4c73
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L Grid
+
+END

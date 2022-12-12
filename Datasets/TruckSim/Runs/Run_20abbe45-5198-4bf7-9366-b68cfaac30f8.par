@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Scene Builder: Intersection, Truck, ACC`Scene Import
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_20abbe45-5198-4bf7-9366-b68cfaac30f8
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_12afd0d3-c9b8-47b4-9b7e-1cd0582e975b.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m` Vehicle Reference` , Animator camera`Camera_12afd0d3-c9b8-47b4-9b7e-1cd0582e975b
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 4
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_40a1cb65-8cd1-41f1-960d-97568e5283f5.par
+#BlueLink2 Vehicle: Loaded Combination`DRW Pickup w/ ACC` Pickup Trucks` , Math Model`VehLoad_40a1cb65-8cd1-41f1-960d-97568e5283f5
+
+PARSFILE Procedures\Proc_a9da59ba-9459-4f10-8a85-f453ee12813c.par
+#BlueLink28 Procedures`Rural Intersection Scene` VS Scene Builder` , Procedure`Proc_a9da59ba-9459-4f10-8a85-f453ee12813c
+
+PARSFILE Generic\Group\GenGrp_9e620f41-8674-4347-b2ce-7d273b460568.par
+#BlueLink9 Generic Data Group`Tractor-semitrailer making right turn` ADAS: Traffic Scenarios` , Miscellaneous`GenGrp_9e620f41-8674-4347-b2ce-7d273b460568
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ee189bc-4102-46cf-a6ee-046ab79da53b.png
+WRITE_SENSOR_DETECT
+Title Scene Builder: Intersection, Truck, ACC <Scene Import>
+CATEGORY Scene Import 
+DATASET_TITLE Scene Builder: Intersection, Truck, ACC
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#The data representing the X-Y path of the road as well as the animated scenario were created using the VS Scene Builder tool.
+#
+#The VS Scene Builder tool is accessed from the Tools drop-down menu.
+#
+#This example also shows a target tractor semitrailer with offtracking in the low-speed turn.
+#
+#An ADAS Sensors license is required to run this simulation. You may still view the animation and plots.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Scene Import } Scene Builder: Intersection, Truck, ACC
+#Library : TruckSim Run Control
+#DataSet : Scene Builder: Intersection, Truck, ACC
+#Category: Scene Import
+#FileID  : Run_20abbe45-5198-4bf7-9366-b68cfaac30f8
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

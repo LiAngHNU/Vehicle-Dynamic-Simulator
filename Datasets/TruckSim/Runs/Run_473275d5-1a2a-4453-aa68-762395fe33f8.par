@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Variable Contact Patch Dimensions`Tire Models
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_473275d5-1a2a-4453-aa68-762395fe33f8
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_41978f36-4f18-4d5c-ab02-fc60fe430e15.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 18 m` Vehicle Reference` , Animator camera`Camera_41978f36-4f18-4d5c-ab02-fc60fe430e15
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.2 0.6
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_dce0ba6f-440e-479a-ba80-b23ea521de1c.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Pickup, Reg. Cab DRW` Pickup Trucks` , Math Model`Lead2a_dce0ba6f-440e-479a-ba80-b23ea521de1c
+
+PARSFILE Procedures\Proc_9ae0d799-3198-49c6-8b8d-1f20060bcc94.par
+#BlueLink28 Procedures`Drift into Curb` Driving` , Procedure`Proc_9ae0d799-3198-49c6-8b8d-1f20060bcc94
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_2a7c5c10-25ca-44b3-8034-dbf1de646707.png
+WRITE_SENSOR_DETECT
+Title Variable Contact Patch Dimensions <Tire Models>
+CATEGORY Tire Models 
+DATASET_TITLE Variable Contact Patch Dimensions
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates a tire dataset with variable contact patch dimensions vs. tire compression, new for TruckSim 8.2.
+#
+#Generic tables are linked on the tire data screen for the contact patch: one for the contact patch length (X direction), and one for the contact patch width (Y direction), each changing with tire compression.
+#
+#To see how the tire datasets are constructed, browse to the Vehicle: Assembly screen and click on the tires dataset "2000kg Steer, 2000kg Drive (425 mm)"  and then the link for the tires for more information.
+#
+#This truck and linked example procedure, "Drift into Curb", were matched together since the vehicle's high ground clearance clearly shows the front tires, and the vehicle has enough suspension articulation such that the tires do not lose contact with the ground when they impact the curb. With the variable contact patch, the tire no longer only contacts the road at the tire contact patch center, but instead will move laterally and fore/aft as it makes contact with the curb.
+#
+#This example is best viewed in slow motion.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Tire Models } Variable Contact Patch Dimensions
+#Library : TruckSim Run Control
+#DataSet : Variable Contact Patch Dimensions
+#Category: Tire Models
+#FileID  : Run_473275d5-1a2a-4453-aa68-762395fe33f8
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

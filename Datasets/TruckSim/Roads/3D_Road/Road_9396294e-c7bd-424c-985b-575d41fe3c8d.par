@@ -1,0 +1,1324 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`I-94 Exit 172 to Jackson Ave (Scenic)`Atlas and ADAS RP Map Downloads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_9396294e-c7bd-424c-985b-575d41fe3c8d.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 1002
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id I-94 Exit 172 to Jackson Ave (Scenic)
+PARSFILE Roads\Center_XYZ\RoadXYZ_2bb1602c-d9d3-47a5-a001-10dc82f47c21.par
+#BlueLink0 Road: X-Y-Z Coordinates of Reference Line`I-94 Exit 172` Atlas` , Reference Path`RoadXYZ_2bb1602c-d9d3-47a5-a001-10dc82f47c21
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: I-94 Exit 172
+PARSFILE Roads\dZ_Map_V_Wdth\VarWidZ_18442808-82dc-4fb5-bdfe-483a44554b46.par
+#BlueLink2 Road: Off-Center Elevation Map, Variable Width`I-94 Exit Lane Edges (Scenic)` Highway Intersection Boundaries` , Miscellaneous`VarWidZ_18442808-82dc-4fb5-bdfe-483a44554b46
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_2e6eae96-82ba-4ba6-8fe5-bc21fb564880.par
+#BlueLink4 Road: Animator Surface Shapes`I-94 N Exit 172 (Scenic)` Highway Intersection` , Road shape definitions`RdShape_2e6eae96-82ba-4ba6-8fe5-bc21fb564880
+
+RR_SURF_CONSTANT 1.0
+add_reference_frame road_stuff_6_Forest_along_Exit
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_40cdb791-0bfa-4af7-b208-b30f8d017a6e.par
+#BlueLink6 Road: Animator Repeated Object`Forest along Exit` Highway Intersection` , 3D Shapes`AniRep_40cdb791-0bfa-4af7-b208-b30f8d017a6e
+
+add_reference_frame road_stuff_7_Guard_Rail,_Exit_172
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_2b7b8559-e9b0-4da5-9819-d2a7f5e6da7b.par
+#BlueLink7 Road: Animator Repeated Object`Guard Rail, Exit 172` Highway Intersection` , 3D Shapes`AniRep_2b7b8559-e9b0-4da5-9819-d2a7f5e6da7b
+
+add_reference_frame road_stuff_8_Guard_Rail,_Exit_172_(Taper)
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_5306473e-f775-4475-8d34-0e757d91baf2.par
+#BlueLink8 Road: Animator Repeated Object`Guard Rail, Exit 172 (Taper)` Highway Intersection` , 3D Shapes`AniRep_5306473e-f775-4475-8d34-0e757d91baf2
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_d4c450d6-372b-4662-b26d-43e2a7e034fd.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 39 m` Road Reference` , Camera`Camera_d4c450d6-372b-4662-b26d-43e2a7e034fd
+
+parsfile Roads\3D_Road\Road_9396294e-c7bd-424c-985b-575d41fe3c8d.ani
+
+add_reference_frame road_stuff_1_1_Mixed_Forest,_Small_Scale
+reference_frame_ghosts off
+set_offset_var_yaw 268.165044753
+set_offset_var_x 57.9114816718
+set_offset_var_y 1148.96925864
+set_offset_var_z -4.62477405512
+parsfile Animator\STL\Shape_10f310b3-4ffa-4298-acb0-89220910c7b2.par
+
+add_reference_frame road_stuff_2_1_Mixed_Forest,_Small_Scale
+reference_frame_ghosts off
+set_offset_var_yaw 269.566045895
+set_offset_var_x 58.4169005212
+set_offset_var_y 1198.77864194
+set_offset_var_z -6.23260293521
+parsfile Animator\STL\Shape_10f310b3-4ffa-4298-acb0-89220910c7b2.par
+
+add_reference_frame road_stuff_3_1_Mixed_Forest,_Small_Scale
+reference_frame_ghosts off
+set_offset_var_yaw 265.010423505
+set_offset_var_x 57.2307910096
+set_offset_var_y 1244.57595461
+set_offset_var_z -6.95682699544
+parsfile Animator\STL\Shape_10f310b3-4ffa-4298-acb0-89220910c7b2.par
+
+add_reference_frame road_stuff_4_1_Mixed_Forest,_Small_Scale
+reference_frame_ghosts off
+set_offset_var_yaw 85.9893404735
+set_offset_var_x 64.1937208909
+set_offset_var_y 938.328253018
+set_offset_var_z -1.76123444135
+parsfile Animator\STL\Shape_10f310b3-4ffa-4298-acb0-89220910c7b2.par
+
+add_reference_frame road_stuff_5_1_Mixed_Forest,_Small_Scale
+reference_frame_ghosts off
+set_offset_var_yaw 86.1496737851
+set_offset_var_x 67.9391726726
+set_offset_var_y 978.197490265
+set_offset_var_z -2.04380304436
+parsfile Animator\STL\Shape_10f310b3-4ffa-4298-acb0-89220910c7b2.par
+
+add_reference_frame road_stuff_6_1_Mixed_Forest,_Small_Scale
+reference_frame_ghosts off
+set_offset_var_yaw 87.6559574003
+set_offset_var_x 68.9280384273
+set_offset_var_y 1018.50340021
+set_offset_var_z -2.09642009398
+parsfile Animator\STL\Shape_10f310b3-4ffa-4298-acb0-89220910c7b2.par
+
+add_reference_frame road_stuff_7_1_Mixed_Forest,_Small_Scale
+reference_frame_ghosts off
+set_offset_var_yaw 85.7710198349
+set_offset_var_x 74.3842403252
+set_offset_var_y 1057.84224091
+set_offset_var_z -4.09394650964
+parsfile Animator\STL\Shape_10f310b3-4ffa-4298-acb0-89220910c7b2.par
+
+add_reference_frame road_stuff_8_1_Mixed_Forest,_Small_Scale
+reference_frame_ghosts off
+set_offset_var_yaw 86.6096072323
+set_offset_var_x 76.1969681834
+set_offset_var_y 1098.00815053
+set_offset_var_z -5.41224658541
+parsfile Animator\STL\Shape_10f310b3-4ffa-4298-acb0-89220910c7b2.par
+
+add_reference_frame road_stuff_9_1_Mixed_Forest,_Small_Scale
+reference_frame_ghosts off
+set_offset_var_yaw 87.9288950517
+set_offset_var_x 80.0573927639
+set_offset_var_y 1138.1922363
+set_offset_var_z -7.67103279318
+parsfile Animator\STL\Shape_10f310b3-4ffa-4298-acb0-89220910c7b2.par
+
+add_reference_frame road_stuff_10_1_Mixed_Forest,_Small_Scale
+reference_frame_ghosts off
+set_offset_var_yaw 89.0216723469
+set_offset_var_x 80.1867796301
+set_offset_var_y 1178.48029393
+set_offset_var_z -8.71192332353
+parsfile Animator\STL\Shape_10f310b3-4ffa-4298-acb0-89220910c7b2.par
+
+add_reference_frame road_stuff_11_1_Mixed_Forest,_Small_Scale
+reference_frame_ghosts off
+set_offset_var_yaw 89.4699171481
+set_offset_var_x 81.5656593054
+set_offset_var_y 1218.57949923
+set_offset_var_z -8.93041908548
+parsfile Animator\STL\Shape_10f310b3-4ffa-4298-acb0-89220910c7b2.par
+
+add_reference_frame road_stuff_1_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.1465448025
+set_offset_var_pitch 0.0481611581758
+set_offset_var_roll 0
+set_offset_var_x 44.3767979135
+set_offset_var_y 741.245256163
+set_offset_var_z -0.936756403507
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_2_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.1300298429
+set_offset_var_pitch 0.0519903941262
+set_offset_var_roll 0
+set_offset_var_x 44.61241815
+set_offset_var_y 744.735793526
+set_offset_var_z -0.939814277247
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_3_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.1140092474
+set_offset_var_pitch 0.0557267417238
+set_offset_var_roll 0
+set_offset_var_x 44.8490325159
+set_offset_var_y 748.226309337
+set_offset_var_z -0.943103170264
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_4_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.098483018
+set_offset_var_pitch 0.0593702059696
+set_offset_var_roll 0
+set_offset_var_x 45.0866109182
+set_offset_var_y 751.71680562
+set_offset_var_z -0.946617419475
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_5_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.083451156
+set_offset_var_pitch 0.0629207918677
+set_offset_var_roll 0
+set_offset_var_x 45.3251232629
+set_offset_var_y 755.207284396
+set_offset_var_z -0.950351361797
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_6_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.0689136626
+set_offset_var_pitch 0.0663785044257
+set_offset_var_roll 0
+set_offset_var_x 45.5645394548
+set_offset_var_y 758.69774769
+set_offset_var_z -0.954299334145
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_7_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.0548705385
+set_offset_var_pitch 0.0697433486538
+set_offset_var_roll 0
+set_offset_var_x 45.8048293975
+set_offset_var_y 762.188197522
+set_offset_var_z -0.958455673437
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_8_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.041321784
+set_offset_var_pitch 0.0730153295647
+set_offset_var_roll 0
+set_offset_var_x 46.0459629935
+set_offset_var_y 765.678635916
+set_offset_var_z -0.962814716588
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_9_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.0282673993
+set_offset_var_pitch 0.0761944521734
+set_offset_var_roll 0
+set_offset_var_x 46.2879101441
+set_offset_var_y 769.169064895
+set_offset_var_z -0.967370800514
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_10_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.0157073841
+set_offset_var_pitch 0.0792807214971
+set_offset_var_roll 0
+set_offset_var_x 46.5306407495
+set_offset_var_y 772.65948648
+set_offset_var_z -0.972118262133
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_11_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.003641738
+set_offset_var_pitch 0.0822741425546
+set_offset_var_roll 0
+set_offset_var_x 46.7741247086
+set_offset_var_y 776.149902696
+set_offset_var_z -0.977051438361
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_12_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9920704605
+set_offset_var_pitch 0.0851747203663
+set_offset_var_roll 0
+set_offset_var_x 47.0183319193
+set_offset_var_y 779.640315564
+set_offset_var_z -0.982164666113
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_13_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9809935506
+set_offset_var_pitch 0.0879824599537
+set_offset_var_roll 0
+set_offset_var_x 47.2632322783
+set_offset_var_y 783.130727108
+set_offset_var_z -0.987452282306
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_14_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9704110073
+set_offset_var_pitch 0.0906973663397
+set_offset_var_roll 0
+set_offset_var_x 47.508795681
+set_offset_var_y 786.62113935
+set_offset_var_z -0.992908623856
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_15_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9603228297
+set_offset_var_pitch 0.0933194445477
+set_offset_var_roll 0
+set_offset_var_x 47.7549920218
+set_offset_var_y 790.111554313
+set_offset_var_z -0.998528027681
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_16_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9507290164
+set_offset_var_pitch 0.095848699602
+set_offset_var_roll 0
+set_offset_var_x 48.0017911938
+set_offset_var_y 793.601974021
+set_offset_var_z -1.0043048307
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_17_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9416295661
+set_offset_var_pitch 0.0982851365272
+set_offset_var_roll 0
+set_offset_var_x 48.2491630892
+set_offset_var_y 797.092400496
+set_offset_var_z -1.01023336982
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_18_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9330244775
+set_offset_var_pitch 0.100628760348
+set_offset_var_roll 0
+set_offset_var_x 48.4970775988
+set_offset_var_y 800.582835762
+set_offset_var_z -1.01630798196
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_19_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9249137491
+set_offset_var_pitch 0.10287957609
+set_offset_var_roll 0
+set_offset_var_x 48.7455046122
+set_offset_var_y 804.073281842
+set_offset_var_z -1.02252300404
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_20_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9172973795
+set_offset_var_pitch 0.105037588776
+set_offset_var_roll 0
+set_offset_var_x 48.9944140181
+set_offset_var_y 807.563740759
+set_offset_var_z -1.02887277298
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_21_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9101753671
+set_offset_var_pitch 0.107102803433
+set_offset_var_roll 0
+set_offset_var_x 49.2437757038
+set_offset_var_y 811.054214537
+set_offset_var_z -1.03535162569
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_22_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9035477106
+set_offset_var_pitch 0.109075225083
+set_offset_var_roll 0
+set_offset_var_x 49.4935595555
+set_offset_var_y 814.544705198
+set_offset_var_z -1.04195389909
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_23_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8974144086
+set_offset_var_pitch 0.110954858749
+set_offset_var_roll 0
+set_offset_var_x 49.7437354584
+set_offset_var_y 818.035214767
+set_offset_var_z -1.04867393009
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_24_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8917754595
+set_offset_var_pitch 0.112741709455
+set_offset_var_roll 0
+set_offset_var_x 49.9942732963
+set_offset_var_y 821.525745268
+set_offset_var_z -1.05550605562
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_25_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8866308622
+set_offset_var_pitch 0.114435782222
+set_offset_var_roll 0
+set_offset_var_x 50.245142952
+set_offset_var_y 825.016298723
+set_offset_var_z -1.06244461258
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_26_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8819806152
+set_offset_var_pitch 0.116037082069
+set_offset_var_roll 0
+set_offset_var_x 50.496314307
+set_offset_var_y 828.506877157
+set_offset_var_z -1.06948393789
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_27_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8778247175
+set_offset_var_pitch 0.117545614016
+set_offset_var_roll 0
+set_offset_var_x 50.747757242
+set_offset_var_y 831.997482594
+set_offset_var_z -1.07661836847
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_28_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8741631679
+set_offset_var_pitch 0.118961383082
+set_offset_var_roll 0
+set_offset_var_x 50.999441636
+set_offset_var_y 835.488117057
+set_offset_var_z -1.08384224125
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_29_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8709959653
+set_offset_var_pitch 0.120284394281
+set_offset_var_roll 0
+set_offset_var_x 51.2513373673
+set_offset_var_y 838.978782571
+set_offset_var_z -1.09114989312
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_30_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8683231089
+set_offset_var_pitch 0.121514652628
+set_offset_var_roll 0
+set_offset_var_x 51.5034143127
+set_offset_var_y 842.469481159
+set_offset_var_z -1.09853566101
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_31_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8661445979
+set_offset_var_pitch 0.122652163138
+set_offset_var_roll 0
+set_offset_var_x 51.7556423482
+set_offset_var_y 845.960214847
+set_offset_var_z -1.10599388184
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_32_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8644604316
+set_offset_var_pitch 0.12369693082
+set_offset_var_roll 0
+set_offset_var_x 52.0079913484
+set_offset_var_y 849.450985658
+set_offset_var_z -1.11351889251
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_33_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8632706095
+set_offset_var_pitch 0.124648960683
+set_offset_var_roll 0
+set_offset_var_x 52.2604311867
+set_offset_var_y 852.941795617
+set_offset_var_z -1.12110502996
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_34_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.862575131
+set_offset_var_pitch 0.125508257737
+set_offset_var_roll 0
+set_offset_var_x 52.5129317355
+set_offset_var_y 856.432646748
+set_offset_var_z -1.12874663109
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_35_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.862373996
+set_offset_var_pitch 0.126274826985
+set_offset_var_roll 0
+set_offset_var_x 52.765462866
+set_offset_var_y 859.923541077
+set_offset_var_z -1.13643803282
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_36_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8626672041
+set_offset_var_pitch 0.12694867343
+set_offset_var_roll 0
+set_offset_var_x 53.0179944481
+set_offset_var_y 863.414480627
+set_offset_var_z -1.14417357207
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_37_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8634547555
+set_offset_var_pitch 0.127529802075
+set_offset_var_roll 0
+set_offset_var_x 53.2704963509
+set_offset_var_y 866.905467424
+set_offset_var_z -1.15194758575
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_38_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8647366501
+set_offset_var_pitch 0.128018217917
+set_offset_var_roll 0
+set_offset_var_x 53.5229384419
+set_offset_var_y 870.396503492
+set_offset_var_z -1.15975441078
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_39_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8665128882
+set_offset_var_pitch 0.128413925952
+set_offset_var_roll 0
+set_offset_var_x 53.7752905877
+set_offset_var_y 873.887590856
+set_offset_var_z -1.16758838407
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_40_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8687834701
+set_offset_var_pitch 0.128716931177
+set_offset_var_roll 0
+set_offset_var_x 54.0275226537
+set_offset_var_y 877.378731542
+set_offset_var_z -1.17544384255
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_41_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8715483963
+set_offset_var_pitch 0.128927238581
+set_offset_var_roll 0
+set_offset_var_x 54.2796045041
+set_offset_var_y 880.869927575
+set_offset_var_z -1.18331512313
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_42_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8748076673
+set_offset_var_pitch 0.129044853155
+set_offset_var_roll 0
+set_offset_var_x 54.5315060021
+set_offset_var_y 884.361180981
+set_offset_var_z -1.19119656272
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_43_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8785612839
+set_offset_var_pitch 0.129069779886
+set_offset_var_roll 0
+set_offset_var_x 54.7831970095
+set_offset_var_y 887.852493783
+set_offset_var_z -1.19908249824
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_44_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8828092469
+set_offset_var_pitch 0.129002023758
+set_offset_var_roll 0
+set_offset_var_x 55.0346473871
+set_offset_var_y 891.343868009
+set_offset_var_z -1.20696726661
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_45_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8875515571
+set_offset_var_pitch 0.128841589755
+set_offset_var_roll 0
+set_offset_var_x 55.2858269945
+set_offset_var_y 894.835305683
+set_offset_var_z -1.21484520475
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_46_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8927882155
+set_offset_var_pitch 0.128588482855
+set_offset_var_roll 0
+set_offset_var_x 55.5367056902
+set_offset_var_y 898.326808831
+set_offset_var_z -1.22271064956
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_47_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8985192231
+set_offset_var_pitch 0.128242708037
+set_offset_var_roll 0
+set_offset_var_x 55.7872533313
+set_offset_var_y 901.818379479
+set_offset_var_z -1.23055793797
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_48_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9047445811
+set_offset_var_pitch 0.127804270277
+set_offset_var_roll 0
+set_offset_var_x 56.0374397742
+set_offset_var_y 905.310019653
+set_offset_var_z -1.2383814069
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_49_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9114642906
+set_offset_var_pitch 0.127273174546
+set_offset_var_roll 0
+set_offset_var_x 56.2872348737
+set_offset_var_y 908.801731379
+set_offset_var_z -1.24617539325
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_50_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9186783527
+set_offset_var_pitch 0.126649425815
+set_offset_var_roll 0
+set_offset_var_x 56.5366084836
+set_offset_var_y 912.293516682
+set_offset_var_z -1.25393423395
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_51_2_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9263867689
+set_offset_var_pitch 0.125933029054
+set_offset_var_roll 0
+set_offset_var_x 56.7855304566
+set_offset_var_y 915.78537759
+set_offset_var_z -1.26165226591
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_1_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.933387449
+set_offset_var_pitch 0.125245238183
+set_offset_var_roll 0
+set_offset_var_x 56.9985098286
+set_offset_var_y 918.778462935
+set_offset_var_z -1.26823094873
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_2_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9420139542
+set_offset_var_pitch 0.124357139028
+set_offset_var_roll 0
+set_offset_var_x 57.2116008077
+set_offset_var_y 922.272946435
+set_offset_var_z -1.27585816853
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_3_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9511348167
+set_offset_var_pitch 0.123376430336
+set_offset_var_roll 0
+set_offset_var_x 57.4241532206
+set_offset_var_y 925.767500214
+set_offset_var_z -1.28342839935
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_4_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9607500378
+set_offset_var_pitch 0.122303115518
+set_offset_var_roll 0
+set_offset_var_x 57.6361368543
+set_offset_var_y 929.262125392
+set_offset_var_z -1.29093597811
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_5_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9708596184
+set_offset_var_pitch 0.121137197851
+set_offset_var_roll 0
+set_offset_var_x 57.8475214952
+set_offset_var_y 932.756823093
+set_offset_var_z -1.29837524172
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_6_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9814635596
+set_offset_var_pitch 0.119878680473
+set_offset_var_roll 0
+set_offset_var_x 58.0582769293
+set_offset_var_y 936.251594439
+set_offset_var_z -1.30574052711
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_7_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9925618622
+set_offset_var_pitch 0.11852756639
+set_offset_var_roll 0
+set_offset_var_x 58.268372942
+set_offset_var_y 939.746440553
+set_offset_var_z -1.31302617118
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_8_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.004154527
+set_offset_var_pitch 0.11708385847
+set_offset_var_roll 0
+set_offset_var_x 58.4777793185
+set_offset_var_y 943.241362557
+set_offset_var_z -1.32022651086
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_9_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.0162415544
+set_offset_var_pitch 0.115547559445
+set_offset_var_roll 0
+set_offset_var_x 58.6864658434
+set_offset_var_y 946.736361574
+set_offset_var_z -1.32733588306
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_10_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.028822945
+set_offset_var_pitch 0.113918671915
+set_offset_var_roll 0
+set_offset_var_x 58.8944023009
+set_offset_var_y 950.231438726
+set_offset_var_z -1.33434862469
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_11_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.0418986989
+set_offset_var_pitch 0.112197198343
+set_offset_var_roll 0
+set_offset_var_x 59.101558475
+set_offset_var_y 953.726595136
+set_offset_var_z -1.34125907268
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_12_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.0554688159
+set_offset_var_pitch 0.110383141056
+set_offset_var_roll 0
+set_offset_var_x 59.3079041494
+set_offset_var_y 957.221831926
+set_offset_var_z -1.34806156394
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_13_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.0695332959
+set_offset_var_pitch 0.108476502248
+set_offset_var_roll 0
+set_offset_var_x 59.5134091075
+set_offset_var_y 960.71715022
+set_offset_var_z -1.35475043539
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_14_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.0840921381
+set_offset_var_pitch 0.106477283977
+set_offset_var_roll 0
+set_offset_var_x 59.7180431326
+set_offset_var_y 964.212551138
+set_offset_var_z -1.36132002394
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_15_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.0991453416
+set_offset_var_pitch 0.104385488167
+set_offset_var_roll 0
+set_offset_var_x 59.9217760077
+set_offset_var_y 967.708035805
+set_offset_var_z -1.3677646665
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_16_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.114692905
+set_offset_var_pitch 0.102201116609
+set_offset_var_roll 0
+set_offset_var_x 60.1245775158
+set_offset_var_y 971.203605341
+set_offset_var_z -1.37407870001
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_17_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.1307348266
+set_offset_var_pitch 0.0999241709575
+set_offset_var_roll 0
+set_offset_var_x 60.3264174397
+set_offset_var_y 974.699260871
+set_offset_var_z -1.38025646136
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_18_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.1472711043
+set_offset_var_pitch 0.0975546527343
+set_offset_var_roll 0
+set_offset_var_x 60.5272655623
+set_offset_var_y 978.195003515
+set_offset_var_z -1.38629228748
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_19_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.1643017353
+set_offset_var_pitch 0.0950925633273
+set_offset_var_roll 0
+set_offset_var_x 60.7270916663
+set_offset_var_y 981.690834397
+set_offset_var_z -1.39218051529
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_20_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.1818267167
+set_offset_var_pitch 0.0925379039908
+set_offset_var_roll 0
+set_offset_var_x 60.9258655347
+set_offset_var_y 985.186754638
+set_offset_var_z -1.3979154817
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_21_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.4789227007
+set_offset_var_pitch 0.0912028945023
+set_offset_var_roll 0
+set_offset_var_x 61.119508356
+set_offset_var_y 988.704939489
+set_offset_var_z -1.40350821079
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_22_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.8829669183
+set_offset_var_pitch 0.0958975741344
+set_offset_var_roll 0
+set_offset_var_x 61.2886639673
+set_offset_var_y 992.232471772
+set_offset_var_z -1.40919238179
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_23_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 87.2165544063
+set_offset_var_pitch 0.10706912354
+set_offset_var_roll 0
+set_offset_var_x 61.4348160721
+set_offset_var_y 995.7553354
+set_offset_var_z -1.41536022107
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_24_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 87.4796705947
+set_offset_var_pitch 0.124720956976
+set_offset_var_roll 0
+set_offset_var_x 61.5623672534
+set_offset_var_y 999.273415535
+set_offset_var_z -1.42240735539
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_25_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 87.6723210297
+set_offset_var_pitch 0.148856367824
+set_offset_var_roll 0
+set_offset_var_x 61.6756974635
+set_offset_var_y 1002.78660094
+set_offset_var_z -1.43072941146
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_26_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 87.7945194331
+set_offset_var_pitch 0.1794785216
+set_offset_var_roll 0
+set_offset_var_x 61.7791647205
+set_offset_var_y 1006.29478248
+set_offset_var_z -1.440722016
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_27_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 87.8462789621
+set_offset_var_pitch 0.216590446464
+set_offset_var_roll 0
+set_offset_var_x 61.8771058621
+set_offset_var_y 1009.79785209
+set_offset_var_z -1.45278079576
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_28_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 87.8276066695
+set_offset_var_pitch 0.26019502122
+set_offset_var_roll 0
+set_offset_var_x 61.9738373256
+set_offset_var_y 1013.29570211
+set_offset_var_z -1.46730137746
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_29_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 87.7385011589
+set_offset_var_pitch 0.310294960808
+set_offset_var_roll 0
+set_offset_var_x 62.0736559407
+set_offset_var_y 1016.78822496
+set_offset_var_z -1.48467938782
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_30_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 87.5789534306
+set_offset_var_pitch 0.366892799267
+set_offset_var_roll 0
+set_offset_var_x 62.180839724
+set_offset_var_y 1020.27531331
+set_offset_var_z -1.50531045358
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_31_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 87.3489509205
+set_offset_var_pitch 0.42999087018
+set_offset_var_roll 0
+set_offset_var_x 62.2996486808
+set_offset_var_y 1023.75686044
+set_offset_var_z -1.52959020146
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_32_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 87.0484847353
+set_offset_var_pitch 0.499591284588
+set_offset_var_roll 0
+set_offset_var_x 62.4343256221
+set_offset_var_y 1027.23276103
+set_offset_var_z -1.55791425819
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_33_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.6775600876
+set_offset_var_pitch 0.575695906384
+set_offset_var_roll 0
+set_offset_var_x 62.5890970183
+set_offset_var_y 1030.70291222
+set_offset_var_z -1.5906782505
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_34_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.4453579896
+set_offset_var_pitch 0.655994436024
+set_offset_var_roll 0
+set_offset_var_x 62.764581581
+set_offset_var_y 1034.18217405
+set_offset_var_z -1.62824541641
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_35_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.293764712
+set_offset_var_pitch 0.735084175834
+set_offset_var_roll 0
+set_offset_var_x 62.9506923072
+set_offset_var_y 1037.66671214
+set_offset_var_z -1.6706867568
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_36_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.1605912498
+set_offset_var_pitch 0.812752756963
+set_offset_var_roll 0
+set_offset_var_x 63.1704971981
+set_offset_var_y 1041.15049162
+set_offset_var_z -1.71791830506
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_37_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.0458382366
+set_offset_var_pitch 0.888997250916
+set_offset_var_roll 0
+set_offset_var_x 63.4079060862
+set_offset_var_y 1044.63443274
+set_offset_var_z -1.76985467342
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_38_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9495054322
+set_offset_var_pitch 0.963815963637
+set_offset_var_roll 0
+set_offset_var_x 63.6518246421
+set_offset_var_y 1048.11925136
+set_offset_var_z -1.8264104741
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_39_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8715920783
+set_offset_var_pitch 1.03720949612
+set_offset_var_roll 0
+set_offset_var_x 63.9011363806
+set_offset_var_y 1051.60501695
+set_offset_var_z -1.88750031936
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_40_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8120971976
+set_offset_var_pitch 1.10917847384
+set_offset_var_roll 0
+set_offset_var_x 64.1547235765
+set_offset_var_y 1055.09179903
+set_offset_var_z -1.95303882141
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_41_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.7710198349
+set_offset_var_pitch 1.17972354538
+set_offset_var_roll 0
+set_offset_var_x 64.4114672669
+set_offset_var_y 1058.5796672
+set_offset_var_z -2.02294059248
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_42_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.7483592416
+set_offset_var_pitch 1.24884538107
+set_offset_var_roll 0
+set_offset_var_x 64.6702472527
+set_offset_var_y 1062.06869116
+set_offset_var_z -2.09712024483
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_43_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.7441150035
+set_offset_var_pitch 1.31654467169
+set_offset_var_roll 0
+set_offset_var_x 64.9299420997
+set_offset_var_y 1065.55894073
+set_offset_var_z -2.17549239066
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_44_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.7582871101
+set_offset_var_pitch 1.38282212715
+set_offset_var_roll 0
+set_offset_var_x 65.1894291392
+set_offset_var_y 1069.05048583
+set_offset_var_z -2.25797164223
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_45_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.7908759687
+set_offset_var_pitch 1.44767847523
+set_offset_var_roll 0
+set_offset_var_x 65.4475844684
+set_offset_var_y 1072.54339652
+set_offset_var_z -2.34447261175
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_46_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.8418823598
+set_offset_var_pitch 1.51111446038
+set_offset_var_roll 0
+set_offset_var_x 65.7032829499
+set_offset_var_y 1076.03774297
+set_offset_var_z -2.43490991147
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_47_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9113073365
+set_offset_var_pitch 1.57313084247
+set_offset_var_roll 0
+set_offset_var_x 65.9553982103
+set_offset_var_y 1079.53359546
+set_offset_var_z -2.52919815361
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_48_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 85.9991520663
+set_offset_var_pitch 1.63372839564
+set_offset_var_roll 0
+set_offset_var_x 66.2028026392
+set_offset_var_y 1083.03102433
+set_offset_var_z -2.62725195041
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_49_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.1054176158
+set_offset_var_pitch 1.69290790712
+set_offset_var_roll 0
+set_offset_var_x 66.4443673871
+set_offset_var_y 1086.53010003
+set_offset_var_z -2.7289859141
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_50_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.2301046785
+set_offset_var_pitch 1.75067017615
+set_offset_var_roll 0
+set_offset_var_x 66.6789623634
+set_offset_var_y 1090.03089303
+set_offset_var_z -2.83431465691
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_51_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.373213245
+set_offset_var_pitch 1.80701601288
+set_offset_var_roll 0
+set_offset_var_x 66.9054562345
+set_offset_var_y 1093.53347379
+set_offset_var_z -2.94315279108
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_52_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.5347422167
+set_offset_var_pitch 1.86194623726
+set_offset_var_roll 0
+set_offset_var_x 67.1227164214
+set_offset_var_y 1097.03791275
+set_offset_var_z -3.05541492884
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_53_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.7146889617
+set_offset_var_pitch 1.91546167807
+set_offset_var_roll 0
+set_offset_var_x 67.329609099
+set_offset_var_y 1100.54428026
+set_offset_var_z -3.17101568241
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_54_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 86.9130488144
+set_offset_var_pitch 1.96756317187
+set_offset_var_roll 0
+set_offset_var_x 67.5249991951
+set_offset_var_y 1104.05264654
+set_offset_var_z -3.28986966404
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_55_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 87.0318164662
+set_offset_var_pitch 2.01743739262
+set_offset_var_roll 0
+set_offset_var_x 67.7102250015
+set_offset_var_y 1107.55605067
+set_offset_var_z -3.41186841764
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_56_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 87.1456022559
+set_offset_var_pitch 2.06352229932
+set_offset_var_roll 0
+set_offset_var_x 67.8883774839
+set_offset_var_y 1111.05948939
+set_offset_var_z -3.53680545621
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_57_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 87.2562047674
+set_offset_var_pitch 2.10581105296
+set_offset_var_roll 0
+set_offset_var_x 68.0596594516
+set_offset_var_y 1114.56306788
+set_offset_var_z -3.66444825691
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_58_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 87.3636242332
+set_offset_var_pitch 2.14430406652
+set_offset_var_roll 0
+set_offset_var_x 68.2242658122
+set_offset_var_y 1118.06676604
+set_offset_var_z -3.79456429667
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_59_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 87.4678609658
+set_offset_var_pitch 2.17900172021
+set_offset_var_roll 0
+set_offset_var_x 68.382391437
+set_offset_var_y 1121.57056376
+set_offset_var_z -3.92692105248
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_60_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 87.5689153472
+set_offset_var_pitch 2.2099043564
+set_offset_var_roll 0
+set_offset_var_x 68.5342311606
+set_offset_var_y 1125.07444096
+set_offset_var_z -4.06128600126
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_61_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 87.6667878198
+set_offset_var_pitch 2.23701227512
+set_offset_var_roll 0
+set_offset_var_x 68.6799797807
+set_offset_var_y 1128.57837756
+set_offset_var_z -4.19742661999
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_62_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 87.7614788763
+set_offset_var_pitch 2.26032572992
+set_offset_var_roll 0
+set_offset_var_x 68.8198320584
+set_offset_var_y 1132.0823535
+set_offset_var_z -4.33511038561
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_63_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 87.8529890514
+set_offset_var_pitch 2.27984492436
+set_offset_var_roll 0
+set_offset_var_x 68.9539827175
+set_offset_var_y 1135.58634871
+set_offset_var_z -4.47410477508
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_64_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 87.9413189123
+set_offset_var_pitch 2.29557000897
+set_offset_var_roll 0
+set_offset_var_x 69.0826264451
+set_offset_var_y 1139.09034314
+set_offset_var_z -4.61417726536
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_65_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 88.0264690511
+set_offset_var_pitch 2.30750107861
+set_offset_var_roll 0
+set_offset_var_x 69.2059578914
+set_offset_var_y 1142.59431675
+set_offset_var_z -4.75509533339
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+add_reference_frame road_stuff_66_3_Guard_Rail:_Repeatable_Center_Section
+reference_frame_ghosts off
+set_offset_var_yaw 88.1084400757
+set_offset_var_pitch 2.31563817048
+set_offset_var_roll 0
+set_offset_var_x 69.3241716694
+set_offset_var_y 1146.09824949
+set_offset_var_z -4.89662645613
+parsfile Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+#EMBEDDED_NOTES
+#This dataset is for exit 172 from I-94 in Ann Arbor. The XYZ coordinates are anchored to the GPS reference linked to the I-94 section, ID = 1094.
+#
+#The XYZ data were adjusted to provide continuity with I-94 and Jackson. This was done with the X-Y-Z road library, with data copied from a Scene External Import dataset.
+#
+#Station for this surface initially matches I-94. It becomes visible at S = 800 and ends at S = 1288.
+#
+#The exit is initially wider than a single lane, but not as wide as two lanes. It widens as it approaches Jackson, where it is a little wider than two lanes.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Atlas and ADAS RP Map Downloads } I-94 Exit 172 to Jackson Ave (Scenic)
+#Library : Road: 3D Surface (All Properties)
+#DataSet : I-94 Exit 172 to Jackson Ave (Scenic)
+#Category: Atlas and ADAS RP Map Downloads
+#FileID  : Road_9396294e-c7bd-424c-985b-575d41fe3c8d
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

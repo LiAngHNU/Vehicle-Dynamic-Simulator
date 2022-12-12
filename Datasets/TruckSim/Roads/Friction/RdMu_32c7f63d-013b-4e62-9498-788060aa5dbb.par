@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Road: Friction Map, S-L Grid`Mu = 0.5 Test Pad; 0.85 Everywhere Else`Split Mu
+#CheckBox0 0    
+
+#RingCtrl0 2D_STEP
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Friction coefficient Mu (-)
+
+#DiagramTwo0
+*3D_DATA 4, 3 ! columns x rows
+MU_ROAD_CARPET 2D_STEP
+0, -10, -9, 9, 10
+-200, 0.85, 0.85, 0.85, 0.85
+-100, 0.85, 0.5, 0.85, 0.85
+400, 0.85, 0.85, 0.85, 0.85
+ENDTABLE
+
+*SCALAR 0.85
+
+
+#EMBEDDED_NOTES
+#The friction is 0.5 from  -100 < s < +400 and -9 m < L < +9 m.
+#
+#Mu is 0.85 everywhere else.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Friction Map, S-L Grid; { Split Mu } Mu = 0.5 Test Pad; 0.85 Everywhere Else
+#Library : Road: Friction Map, S-L Grid
+#DataSet : Mu = 0.5 Test Pad; 0.85 Everywhere Else
+#Category: Split Mu
+#FileID  : RdMu_32c7f63d-013b-4e62-9498-788060aa5dbb
+#Product : TruckSim 2020.1
+#VehCode Mu via S-L Grid
+
+END

@@ -1,0 +1,104 @@
+PARSFILE
+#FullDataName TruckSim Run Control`FTire: Small Bump`* More Examples (Extra License Options)
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_02e8a68d-1ea4-45f8-a019-605b10224e61
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_31e5f92f-1c15-4ca8-bfcc-b3d172b5188e.par
+#BlueLink0 Animator: Camera Setup`90 Azm, 5 El, 45 m` Vehicle Reference` , Animator camera`Camera_31e5f92f-1c15-4ca8-bfcc-b3d172b5188e
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 13
+#RingCtrl2 1
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_498944ff-dff3-4c73-859b-7a02f76a0d2d.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Tour Bus (FTire, I_S)` 2A Tour Bus` , Math Model`Lead2a_498944ff-dff3-4c73-859b-7a02f76a0d2d
+
+PARSFILE Procedures\Proc_78259fc7-7b4a-4d9f-b95e-8aefa2d8676d.par
+#BlueLink28 Procedures`Sharp Bump for Tire Test` Ride Tests` , Procedure`Proc_78259fc7-7b4a-4d9f-b95e-8aefa2d8676d
+
+PARSFILE Generic\Group\GenGrp_ea02ab46-84e2-4a4d-80d0-198ca16c210a.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz @ WC` Tire Force Arrows` , Miscellaneous`GenGrp_ea02ab46-84e2-4a4d-80d0-198ca16c210a
+
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.0005
+*FREQ_OUT 2000
+tstep 0.0005
+iprint 1
+OPT_STOP 1
+TSTART 0
+SSTART 102
+TSTART_WRITE = 0;
+TSTOP 5
+SSTOP 115
+OPT_DIRECTION 0
+*TSTOP 5
+*TSTART 0
+*SSTART 102
+*SSTOP 115
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_5cb9979d-3686-4654-8ce0-3c30f81bd36c.png
+WRITE_SENSOR_DETECT
+Title FTire: Small Bump <* More Examples (Extra License Options)>
+CATEGORY * More Examples (Extra License Options) 
+DATASET_TITLE FTire: Small Bump
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example uses the COSIN / FTire model.
+#
+#FTire runs much slower than real time due to the complexity of the COSIN / FTire model. Each tire takes about 20 times real-time, so a 4 tire simulation runs about 80 times slower than real-time.
+#
+#A separate license is required from COSIN. The license is available from www.ftire.com.
+#
+#In order to execute FTire with TruckSim correctly, you have to set the following files on the Tire screen, etc.:
+#
+#Tire program file (CTI.DLL): Users must specify the location of this file from the FTire data screen in TruckSim.
+#
+#For purchased FTire licenses: You may obtain a license file from COSIN whose file name typically looks like "cosinlm_ftlib_mac_************.lic". You must rename the license file to "cosinlm.dat" and place the file under the TruckSim working directory: TruckSim's database default root, usually D:\Dev\trunk\Image\TruckSim\Core\TruckSim_Data.
+#
+#(Optional) The FTire animation program (cosingl.exe) exists in TruckSim_Data\Extensions\FTire. In order to display the FTire animation simultaneously with the calculation, place "cosingl.exe" under the working directory (i.e., TruckSim's database root is the default location).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { * More Examples (Extra License Options) } FTire: Small Bump
+#Library : TruckSim Run Control
+#DataSet : FTire: Small Bump
+#Category: * More Examples (Extra License Options)
+#FileID  : Run_02e8a68d-1ea4-45f8-a019-605b10224e61
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

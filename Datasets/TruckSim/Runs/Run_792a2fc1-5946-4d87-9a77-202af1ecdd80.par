@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Railroad Track Crossing`Road Networks: 3D Geometry and Terrain
+#VEHICLECODE S_SS + S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_792a2fc1-5946-4d87-9a77-202af1ecdd80
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_133008a4-a19c-40b9-a05d-3a2d60437a8c.par
+#BlueLink0 Animator: Camera Setup`160 Azm, 10 El, 28 m` Vehicle Reference` , Animator camera`Camera_133008a4-a19c-40b9-a05d-3a2d60437a8c
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_9c3df593-15d5-4f64-9b40-b35e3fef9e79.par
+#BlueLink2 Vehicle: Loaded Combination`3A Day+1A Trl` Day-Cab Tractor-Trailers` , Math Model`VehLoad_9c3df593-15d5-4f64-9b40-b35e3fef9e79
+
+PARSFILE Procedures\Proc_c9aac47a-a30c-4c69-90d4-ece168622377.par
+#BlueLink28 Procedures`Railroad Track Crossing` Driving` , Procedure`Proc_c9aac47a-a30c-4c69-90d4-ece168622377
+
+PARSFILE Generic\Group\GenGrp_6a9e56b7-5200-4f87-a50a-a4543703f7b8.par
+#BlueLink9 Generic Data Group`4 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_6a9e56b7-5200-4f87-a50a-a4543703f7b8
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_210bf516-a418-4707-bed2-da7b93f14f00.png
+WRITE_SENSOR_DETECT
+Title Railroad Track Crossing <Road Networks: 3D Geometry and Terrain>
+CATEGORY Road Networks: 3D Geometry and Terrain 
+DATASET_TITLE Railroad Track Crossing
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#NOTE: For TruckSim 2020.0, this example now includes the effects of the brake system transport delay parameter, math model keyword TLAG_BK. This is a pure time delay between the master cylinder and the brake actuator.
+#
+#This example shows a 3A Day Cab towing a 1A trailer with a payload crossing railroad tracks set at an angle with respect to the main road. Target Speed vs. Station is used to provide both the acceleration and braking control for this simulation.
+#
+#You can study this example to learn how to utilize the Target Speed vs. Station screen to control the vehicle's speed profile, as well as how to use the variable width roads in TruckSim to model a ballasted railroad track or similar surface as well as two crossing roads.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Road Networks: 3D Geometry and Terrain } Railroad Track Crossing
+#Library : TruckSim Run Control
+#DataSet : Railroad Track Crossing
+#Category: Road Networks: 3D Geometry and Terrain
+#FileID  : Run_792a2fc1-5946-4d87-9a77-202af1ecdd80
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

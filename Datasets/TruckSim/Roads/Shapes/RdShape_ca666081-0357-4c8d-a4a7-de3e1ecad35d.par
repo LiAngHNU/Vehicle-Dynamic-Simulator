@@ -1,0 +1,64 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`5 m Grid`Flat Test Pads
+NLANES 3
+#MiscYellow0
+# 1 1 1, Grass (Light), 1, 30, 5, 10, m, 100, m, , , -100, 400, 100, , , Foliage
+# 1 1 1, Grass (Light), 1, 30, 5, -100, m, -10, m, , , -100, 400, 100, , , Foliage
+# 0.753 0.735 0.735, Checkerboard, 1, 10, 2, 10, m, -10, m, 3, , -100, 400, 5, , , Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Grass (Light)
+SPECULAR(1) 1
+SCALE(1) 30
+LTILES(1) 5
+LIN(1) 10
+LINUNITS(1) m
+LOUT(1) 100
+LOUTUNITS(1) m
+S_START(1) -100
+S_STOP(1) 400
+SINT(1) 100
+AUTODETAIL(1) Foliage
+COLOR(2) 1 1 1
+MATERIAL(2) Grass (Light)
+SPECULAR(2) 1
+SCALE(2) 30
+LTILES(2) 5
+LIN(2) -100
+LINUNITS(2) m
+LOUT(2) -10
+LOUTUNITS(2) m
+S_START(2) -100
+S_STOP(2) 400
+SINT(2) 100
+AUTODETAIL(2) Foliage
+COLOR(3) 0.753 0.735 0.735
+MATERIAL(3) Checkerboard
+SPECULAR(3) 1
+SCALE(3) 10
+LTILES(3) 2
+LIN(3) 10
+LINUNITS(3) m
+LOUT(3) -10
+LOUTUNITS(3) m
+LDIV(3) 3
+S_START(3) -100
+S_STOP(3) 400
+SINT(3) 5
+AUTODETAIL(3) Random
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Flat Test Pads } 5 m Grid
+#Library : Road: Animator Surface Shapes
+#DataSet : 5 m Grid
+#Category: Flat Test Pads
+#FileID  : RdShape_ca666081-0357-4c8d-a4a7-de3e1ecad35d
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Target Distance Check`Scenic Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_502646b8-270d-469a-a458-43660d29d91d.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Target Distance Check
+PARSFILE Roads\Center_XY\PathXY_9a6b87b4-8e9b-4f31-9c28-06cae64b30de.par
+#BlueLink0 Path: X-Y Coordinates`Target Distance Check` Testing and Diagnostic Paths` , Reference Path`PathXY_9a6b87b4-8e9b-4f31-9c28-06cae64b30de
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Target Distance Check
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_b9196394-f9d5-4606-b83a-9a9a23d5a0a2.par
+#BlueLink4 Road: Animator Surface Shapes`Rough Road Texture` Roads` , Road shape definitions`RdShape_b9196394-f9d5-4606-b83a-9a9a23d5a0a2
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF_CONSTANT 1.0
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_7_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink7 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_265e38de-4bbf-46ee-bbc0-868db110b76d.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 3 El, 44 m` Road Reference` , Camera`Camera_265e38de-4bbf-46ee-bbc0-868db110b76d
+
+parsfile Roads\3D_Road\Road_502646b8-270d-469a-a458-43660d29d91d.ani
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Scenic Roads } Target Distance Check
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Target Distance Check
+#Category: Scenic Roads
+#FileID  : Road_502646b8-270d-469a-a458-43660d29d91d
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

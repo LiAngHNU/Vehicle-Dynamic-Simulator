@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Fade Test, Repeated 0-100-0 km/h`Brake Tests
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_21b79ecd-3e10-4135-88c5-9250737749ae
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_d763e9e6-5d15-4e37-8b4a-a2943a7eeb0e.par
+#BlueLink0 Animator: Camera Setup`45 Azm, 5 El, 25 m` Vehicle Reference` , Animator camera`Camera_d763e9e6-5d15-4e37-8b4a-a2943a7eeb0e
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_cd3f6e88-ce0f-4749-87a0-5d1e2ca38557.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Euro Van (Boost, Thermal Brakes)` Large European Van` , Math Model`Lead2a_cd3f6e88-ce0f-4749-87a0-5d1e2ca38557
+
+PARSFILE Procedures\Proc_51bcb1b6-f91a-498e-8753-c49b61a0c531.par
+#BlueLink28 Procedures`Brake Fade Test Initialization` Acceleration and Braking` , Procedure`Proc_51bcb1b6-f91a-498e-8753-c49b61a0c531
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_f747720e-6e19-4110-bf60-110dcdd78765.png
+WRITE_SENSOR_DETECT
+Title Fade Test, Repeated 0-100-0 km/h <Brake Tests>
+CATEGORY Brake Tests 
+DATASET_TITLE Fade Test, Repeated 0-100-0 km/h
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#A Boost and Thermal Brake System is used with this vehicle.
+#
+#A brake fade test is modelled using Pedal Force Control and Events.
+#
+#The vehicle makes repeated 0-100-0 km/h test cycles, and the Events are used to reset the vehicle's position to Station = 0 m for the beginning of each test cycle.
+#
+#The plot show that the brake rotors must reach their ideal operating temperature before they can generate enough brake torque to drive the wheels below their ABS slip target, thus engaging the ABS. This happens at the end of Stop 1, and in Stops 2, 3, 4, and 5. A small amount of ABS cycling happens at the beginning of Stop 6.
+#
+#As the rotor temperatures increase beyond their operating range, the amount of brake torque they can generate decreases, preventing the brakes from driving the wheels below their ABS slip target. This is equivalent to brake pad fade and when this happens, the ABS does not engage. This effect may be seen in the plots for Brake Torque and Longitudinal Accel. of CG's.
+#
+#Also shown is the animation of the brake rotors glowing from the simulated heat rise.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Brake Tests } Fade Test, Repeated 0-100-0 km/h
+#Library : TruckSim Run Control
+#DataSet : Fade Test, Repeated 0-100-0 km/h
+#Category: Brake Tests
+#FileID  : Run_21b79ecd-3e10-4135-88c5-9250737749ae
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

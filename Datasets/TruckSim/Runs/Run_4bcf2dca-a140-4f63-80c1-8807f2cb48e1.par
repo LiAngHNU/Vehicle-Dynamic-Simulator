@@ -1,0 +1,97 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Roughness Profile 04: 55 in/mi`Road Networks: 3D Geometry and Terrain
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_4bcf2dca-a140-4f63-80c1-8807f2cb48e1
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_9e80118f-ce1c-4f40-8d35-27feac9424e2.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Conv. Van (7-spd. MT)` 2A Conventional Van` , Math Model`Lead2a_9e80118f-ce1c-4f40-8d35-27feac9424e2
+
+PARSFILE Procedures\Proc_06bad3af-f1f7-4777-8c60-a4f93f4f150a.par
+#BlueLink28 Procedures`Straight Driving, Constant Speed` Driving` , Procedure`Proc_06bad3af-f1f7-4777-8c60-a4f93f4f150a
+
+PARSFILE Roads\Profiles\Profile_c7863dc9-2fb3-4bdf-b541-01e1c6e1e029.par
+#BlueLink9 Surface: Roughness Profiles`Rough Road 04 - 55 in/mi (0.87 m/km)` Road Roughness: Sample Data` , Miscellaneous`Profile_c7863dc9-2fb3-4bdf-b541-01e1c6e1e029
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink10 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+INSTALL_SPEED_CONTROLLER
+Opt_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Set from the Run Control screen
+SPEED_TARGET_CONSTANT 112.65
+OPT_SC_ENGINE_BRAKING 0
+*SPEED 112.65
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Roughness Profile 04: 55 in/mi <Road Networks: 3D Geometry and Terrain>
+CATEGORY Road Networks: 3D Geometry and Terrain 
+DATASET_TITLE Roughness Profile 04: 55 in/mi
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#Rough Road 04:
+#
+#New Asphalt Overlay
+#55 in/mi (0.87 m/km) IRI
+#Test Road Speed Limit = 70 mph (112.65 kph)
+#M-14 East, East of US-23 Interchange
+#
+#IRI = International Roughness Index
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Road Networks: 3D Geometry and Terrain } Roughness Profile 04: 55 in/mi
+#Library : TruckSim Run Control
+#DataSet : Roughness Profile 04: 55 in/mi
+#Category: Road Networks: 3D Geometry and Terrain
+#FileID  : Run_4bcf2dca-a140-4f63-80c1-8807f2cb48e1
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

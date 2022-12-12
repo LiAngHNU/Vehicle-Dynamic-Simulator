@@ -1,0 +1,22 @@
+Run made by VS Road Calculator at 13:45 on May 16, 2022.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_23c243fd-2b3c-4fca-94ae-c23f6a1c4b8e.par"
+Include PARSFILE "Roads\Builder\Build_eaf4587e-3002-4c08-b9f3-8c97dfde2fdc.par"
+Used Dataset: Path/Road: Segment Builder (Simple 3D); { Roundabout (Small) } Entry South/ Exit East, ID = 1002
+Include PARSFILE "Roads\Friction\RdMu_ea7d6f58-71c6-42d0-aa52-92b3387a35cb.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } Constant: 0.9
+Include PARSFILE "Roads\Shapes\RdShape_da4639f2-4892-4861-91f6-622e326ec1c0.par"
+Used Dataset: Road: Animator Surface Shapes; { Roundabout Network, Flat } Roundabout Entry S / Exit E
+Include PARSFILE "Roads\3D_Road\Road_23c243fd-2b3c-4fca-94ae-c23f6a1c4b8e.ani"
+Used Dataset: Road: 3D Surface (All Properties); { Road Networks } Roundabout (Small) Entry S/ Exit E 1002
+
+Time to read input = 0.0005983
+
+Run started: VS output file = Roads\3D_Road\Road_23c243fd-2b3c-4fca-94ae-c23f6a1c4b8e.vsb
+
+Run stopped at t = 6.16. External control (manual or external model)
+
+Computational time ratio: RTIME = inf (real time)/(simulation time)
+

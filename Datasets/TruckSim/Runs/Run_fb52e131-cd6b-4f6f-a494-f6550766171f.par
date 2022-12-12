@@ -1,0 +1,100 @@
+PARSFILE
+#FullDataName TruckSim Run Control`2A LCF, Trace Lines: Bounce Sine Sweep`VS Visualizer Examples
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_fb52e131-cd6b-4f6f-a494-f6550766171f
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_41978f36-4f18-4d5c-ab02-fc60fe430e15.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 18 m` Vehicle Reference` , Animator camera`Camera_41978f36-4f18-4d5c-ab02-fc60fe430e15
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 1
+#RingCtrl1 10
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_6c0706e2-659f-4977-830c-b14e4a9e394f.par
+#BlueLink2 Vehicle: Loaded Combination`2A LCF, Motion Sensors, Trace Lines` LCF Vans` , Math Model`VehLoad_6c0706e2-659f-4977-830c-b14e4a9e394f
+
+PARSFILE Procedures\Proc_289a6952-478f-4d9f-8885-a556b4216383.par
+#BlueLink28 Procedures`Bounce Sine Sweep Test` Ride Tests` , Procedure`Proc_289a6952-478f-4d9f-8885-a556b4216383
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55.par
+#BlueLink10 Multiple Moving Objects`1 Driver Preview Point, Set by DM` Points of Interest` , Miscellaneous`TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55
+
+INSTALL_SPEED_CONTROLLER
+Opt_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Set from the Run Control screen
+SPEED_TARGET_CONSTANT 15
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink6 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+OPT_STOP 0
+TSTOP 60
+OPT_DIRECTION 1
+*SPEED 15
+*TSTOP 60
+
+*IMAGE_TYPE PASS_THROUGH
+WRITE_SENSOR_DETECT
+Title 2A LCF, Trace Lines: Bounce Sine Sweep <VS Visualizer Examples>
+CATEGORY VS Visualizer Examples 
+DATASET_TITLE 2A LCF, Trace Lines: Bounce Sine Sweep
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#2A LCF Van w/ Motion Sensors and Animated Trace Lines, performing a Bounce Sine Sweep Test.
+#
+#Several types of Animated Trace Lines are used to show the trajectories of various locations on the vehicle, and are common in physical testing when a long exposure photograph is used to capture the motion of the vehicle.
+#
+#The animation shape of the vehicle is unlinked to clearly show the Motion Sensor locations and trace lines.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { VS Visualizer Examples } 2A LCF, Trace Lines: Bounce Sine Sweep
+#Library : TruckSim Run Control
+#DataSet : 2A LCF, Trace Lines: Bounce Sine Sweep
+#Category: VS Visualizer Examples
+#FileID  : Run_fb52e131-cd6b-4f6f-a494-f6550766171f
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

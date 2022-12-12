@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName TruckSim Run Control`4A Day+2 2A Flatbeds`Vehicle Configurations
+#VEHICLECODE S_SSS + SS + SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_0a662892-e28d-445b-a154-fd2bad94762a
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_b12560cc-bb4a-4b8a-823f-687863f3bfa7.par
+#BlueLink2 Vehicle: Loaded Combination`4A Day+2x2A Trl` Day-Cab Tractor-Trailers` , Math Model`VehLoad_b12560cc-bb4a-4b8a-823f-687863f3bfa7
+
+PARSFILE Procedures\Proc_30233691-a30e-4202-a127-627684b518c0.par
+#BlueLink28 Procedures`DLC @ 40 km/h` Handling Tests` , Procedure`Proc_30233691-a30e-4202-a127-627684b518c0
+
+PARSFILE Generic\Group\GenGrp_0efbe827-f11e-47f7-a8e8-0369f373945b.par
+#BlueLink9 Generic Data Group`8 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_0efbe827-f11e-47f7-a8e8-0369f373945b
+
+
+*IMAGE_TYPE DEFAULT
+WRITE_SENSOR_DETECT
+Title 4A Day+2 2A Flatbeds <Vehicle Configurations>
+CATEGORY Vehicle Configurations 
+DATASET_TITLE 4A Day+2 2A Flatbeds
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#S_SSS + SS + SS
+#
+#4A Day Cab + 2A Flatbed Trailer + 2A Flatbed Trailer performing a double lane change.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Vehicle Configurations } 4A Day+2 2A Flatbeds
+#Library : TruckSim Run Control
+#DataSet : 4A Day+2 2A Flatbeds
+#Category: Vehicle Configurations
+#FileID  : Run_0a662892-e28d-445b-a154-fd2bad94762a
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

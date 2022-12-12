@@ -1,0 +1,88 @@
+PARSFILE
+#FullDataName TruckSim Run Control`High-Definition Cab`VS Visualizer Examples
+#VEHICLECODE S_SS + SSS_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_81745f7a-ee29-499e-ad38-4b730d859209
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_8d52f4c4-d34c-40f5-b476-b19fa43cd2c9.par
+#BlueLink0 Animator: Camera Setup`-20 Azm, 7.3 El, 22m, No Yaw` Vehicle Reference` , Animator camera`Camera_8d52f4c4-d34c-40f5-b476-b19fa43cd2c9
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 3
+#RingCtrl7 -1
+*RUN_COLOR 0 0.6 0
+SET_RUN_COLOR 0 0.6 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_c8b5adf2-f474-4240-8b90-4be92e7bb4b5.par
+#BlueLink2 Vehicle: Loaded Combination`High-Definition Cab-Over Tractor` Cab-Over Tractor-Trailers` , Math Model`VehLoad_c8b5adf2-f474-4240-8b90-4be92e7bb4b5
+
+PARSFILE Procedures\Proc_5ef3ad44-9f62-4250-9d96-8221248a1362.par
+#BlueLink28 Procedures`Telescopic Heavy Hauler on Highway` Animation Asset-based Scenarios` , Procedure`Proc_5ef3ad44-9f62-4250-9d96-8221248a1362
+
+*SSTOP 220
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_1a3b8a4f-3476-4607-b732-fefd03eb3a28.par
+#BlueLink15 Plot: Setup`Target Offset` Rear Steer Control` , Plot`Plot_1a3b8a4f-3476-4607-b732-fefd03eb3a28
+
+PARSFILE Plot\Setup\Plot_64382d35-83e1-470d-963e-754f9b219447.par
+#BlueLink16 Plot: Setup`Rear Wheel Angle` Rear Steer Control` , Plot`Plot_64382d35-83e1-470d-963e-754f9b219447
+
+PARSFILE Plot\Setup\Plot_fb90afad-3275-4e7e-a39f-f38030e40172.par
+#BlueLink17 Plot: Setup`Control Point Path` Rear Steer Control` , Plot`Plot_fb90afad-3275-4e7e-a39f-f38030e40172
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_9648bddc-fae7-4223-846d-5e4be8d71592.png
+WRITE_SENSOR_DETECT
+Title High-Definition Cab <VS Visualizer Examples>
+CATEGORY VS Visualizer Examples 
+DATASET_TITLE High-Definition Cab
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example highlights the rendering capabilities of VS Visualizer with a high resolution Cab-Over tractor pulling a telescopic trailer transporting a wind turbine blade.
+#
+#The rear wheels of the trailer are able to steer, following the path based on a control point on the target path.  An LTARG dataset is required by the steered trailer wheels.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { VS Visualizer Examples } High-Definition Cab
+#Library : TruckSim Run Control
+#DataSet : High-Definition Cab
+#Category: VS Visualizer Examples
+#FileID  : Run_81745f7a-ee29-499e-ad38-4b730d859209
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

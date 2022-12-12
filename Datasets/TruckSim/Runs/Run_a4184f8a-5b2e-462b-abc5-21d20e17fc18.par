@@ -1,0 +1,89 @@
+PARSFILE
+#FullDataName TruckSim Run Control`2A Cab+3A Trl (Frame Flex)`Vehicle Configurations
+#VEHICLECODE F_I_S + SSS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_a4184f8a-5b2e-462b-abc5-21d20e17fc18
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0 0.6
+SET_RUN_COLOR 0 0 0.6
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_fe20168c-ab81-41c2-81c9-70882558e7ef.par
+#BlueLink2 Vehicle: Loaded Combination`2A Euro+3A Trl (Frame Flex)` Cab-Over Tractor-Trailers` , Math Model`VehLoad_fe20168c-ab81-41c2-81c9-70882558e7ef
+
+PARSFILE Procedures\Proc_fdccaa91-6052-4816-adad-68e3562e08c5.par
+#BlueLink28 Procedures`DLC @ 50 km/h` Handling Tests` , Procedure`Proc_fdccaa91-6052-4816-adad-68e3562e08c5
+
+PARSFILE Generic\Group\GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa.par
+#BlueLink9 Generic Data Group`5 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa
+
+
+SPECIAL_PARSFILE Runs\Run_e529049f-af1d-4343-b366-5f110f834ec3.par
+#BlueLink23 TruckSim Run Control`2A Cab+3A Trl` Vehicle Configurations` , Overlay run or ERD file`Run_e529049f-af1d-4343-b366-5f110f834ec3
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_ce6ae7f3-6533-49c9-b787-db926285b341.png
+WRITE_SENSOR_DETECT
+Title 2A Cab+3A Trl (Frame Flex) <Vehicle Configurations>
+CATEGORY Vehicle Configurations 
+DATASET_TITLE 2A Cab+3A Trl (Frame Flex)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#F_I_S + SSS
+#
+#2A Cab-Over Tractor + 3A Trailer performing a double lane change maneuver.
+#
+#This truck-trailer combination uses the Frame Torsional Flexibility solver, requiring the TruckSim Frame Flex license option to run the math model.
+#
+#If you don't have this license option, you can still view the plots and animation.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Vehicle Configurations } 2A Cab+3A Trl (Frame Flex)
+#Library : TruckSim Run Control
+#DataSet : 2A Cab+3A Trl (Frame Flex)
+#Category: Vehicle Configurations
+#FileID  : Run_a4184f8a-5b2e-462b-abc5-21d20e17fc18
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

@@ -1,0 +1,95 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Clothoid Segments from Linked Tables`Clothoid Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_b9fc0922-088e-48ef-94e0-bb21f0feda7c.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Clothoid Segments from Linked Tables
+PARSFILE Roads\BuilderSegment\RoadSeg_d2fdf79c-4f90-42b5-abcd-2e014989ea25.par
+#BlueLink0 Path: Segment Builder`S-Turns from Linked Tables` S-Turns` , Reference Path`RoadSeg_d2fdf79c-4f90-42b5-abcd-2e014989ea25
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: S-Turns from Linked Tables
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_a259b7f8-9cb2-4da1-bfb8-e40c3faf180f.par
+#BlueLink4 Road: Animator Surface Shapes`Clothoid S-Turn` Scenic Road Shapes` , Road shape definitions`RdShape_a259b7f8-9cb2-4da1-bfb8-e40c3faf180f
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+add_reference_frame road_stuff_8_S-Curve_(-5.5_m,_Lateral_position)
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_f7ee78eb-7de0-48a4-bdb8-0f6f034a2e99.par
+#BlueLink8 Road: Animator Repeated Object`S-Curve (-5.5 m, Lateral position)` Signs` , 3D Shapes`AniRep_f7ee78eb-7de0-48a4-bdb8-0f6f034a2e99
+
+add_reference_frame road_stuff_9_Speed_Limit_70_(-5.5_m,_Lateral_position)
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_57556d31-0bd4-4440-8df7-0796ee9a46a7.par
+#BlueLink9 Road: Animator Repeated Object`Speed Limit 70 (-5.5 m, Lateral position)` Signs` , 3D Shapes`AniRep_57556d31-0bd4-4440-8df7-0796ee9a46a7
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_b9fc0922-088e-48ef-94e0-bb21f0feda7c.ani
+
+add_reference_frame road_stuff_1_3_US:_S-Curve
+reference_frame_ghosts off
+set_offset_var_yaw 196.113803862
+set_offset_var_x 200.344404854
+set_offset_var_y 8.69925372555
+set_offset_var_z 0
+parsfile Animator\STL\Shape_efa720bc-9371-44fd-8c75-17c2a77cf0a5.par
+
+add_reference_frame road_stuff_2_3_US:_S-Curve
+reference_frame_ghosts off
+set_offset_var_yaw 203.62830736
+set_offset_var_x 572.841371213
+set_offset_var_y 458.033454088
+set_offset_var_z 0
+parsfile Animator\STL\Shape_efa720bc-9371-44fd-8c75-17c2a77cf0a5.par
+
+add_reference_frame road_stuff_1_4_US:_Speed_Limit:_70_mph_(48in_x_60in)
+reference_frame_ghosts off
+set_offset_var_yaw 241.860256272
+set_offset_var_x 346.573745129
+set_offset_var_y 141.257392166
+set_offset_var_z 0
+parsfile Animator\STL\Shape_421cfb1a-0f6e-4ddc-aff0-074b9d7a6395.par
+
+add_reference_frame road_stuff_2_4_US:_Speed_Limit:_70_mph_(48in_x_60in)
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 768.318953492
+set_offset_var_y 474.339396085
+set_offset_var_z 0
+parsfile Animator\STL\Shape_421cfb1a-0f6e-4ddc-aff0-074b9d7a6395.par
+
+#EMBEDDED_NOTES
+#S-Turns from Linked Tables in Multi--type Segment Builder
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Clothoid Roads } Clothoid Segments from Linked Tables
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Clothoid Segments from Linked Tables
+#Category: Clothoid Roads
+#FileID  : Road_b9fc0922-088e-48ef-94e0-bb21f0feda7c
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

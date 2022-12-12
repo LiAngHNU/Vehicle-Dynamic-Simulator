@@ -1,0 +1,103 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Atlas: 3D Highway Exit (Scenic)`Scene Import
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_f1a4e329-f1b9-44a2-8750-e6f571f2a8ce
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_51b19232-df25-4402-948c-54ff37ef0d68.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 2 El, 80 m` Vehicle Reference` , Animator camera`Camera_51b19232-df25-4402-948c-54ff37ef0d68
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 1
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.4 0.4
+SET_RUN_COLOR 0 0.4 0.4
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`LCF Van` 2A LCF Van` , Math Model`Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80
+
+PARSFILE Procedures\Proc_c19198f5-4977-46d3-8453-994f9d25cc85.par
+#BlueLink28 Procedures`Highway Intersection` Driving` , Procedure`Proc_c19198f5-4977-46d3-8453-994f9d25cc85
+
+PARSFILE Generic\Links\GenLink_1c0ab883-9458-4537-b079-48d929931ddc.par
+#BlueLink9 Generic Group of Links`3D Highway Exit, I-94 Exit 172, Scenic` Roads and Paths` , Miscellaneous`GenLink_1c0ab883-9458-4537-b079-48d929931ddc
+
+PARSFILE Generic\Links\GenLink_ff67c96d-592e-421d-8383-29f00944bac9.par
+#BlueLink10 Generic Group of Links`Traffic Vehicles` Highway Intersection` , Miscellaneous`GenLink_ff67c96d-592e-421d-8383-29f00944bac9
+
+OPT_STOP 1
+TSTART 0
+SSTART 500
+TSTART_WRITE = 0;
+TSTOP 37
+SSTOP 2000
+OPT_DIRECTION 0
+*TSTOP 37
+*TSTART 0
+*SSTART 500
+*SSTOP 2000
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Lead_2a\Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80.png
+WRITE_SENSOR_DETECT
+Title Atlas: 3D Highway Exit (Scenic) <Scene Import>
+CATEGORY Scene Import 
+DATASET_TITLE Atlas: 3D Highway Exit (Scenic)
+#MiscYellow0
+CURRENT_ROAD_ID 1094
+PATH_ID_DM 2002
+LTARG_ID_DM 2002
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This run takes place near exit 172 from north-bound I-94 in Ann Arbor. Three road surfaces are joined to define the interchange: I-94 North, Jackson Ave., and Exit 172. All three are based on GPS data downloaded from atlas.carsim.com. This example is described in the Help document "Connecting 3D Roads from Atlas."
+#
+#This dataset can be set to drive along I-94 (PATH_ID = 1094), Jackson Ave  (PATH_ID = 1001), or exit I-94 onto Jackson Ave  (PATH_ID = 2001 and 2002). Ensure the CURRENT_ROAD_ID value is set to the 1094 or 1001 (Jackson).
+#
+#Set LTARG_ID_DM to 1 if continuing along I-94, 2001 if turning right onto Jackson, or 2002 if turning left.
+#
+#Traffic Vehicles are added with the link here. (Break the link to run the simulation w/o traffic.)
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Scene Import } Atlas: 3D Highway Exit (Scenic)
+#Library : TruckSim Run Control
+#DataSet : Atlas: 3D Highway Exit (Scenic)
+#Category: Scene Import
+#FileID  : Run_f1a4e329-f1b9-44a2-8750-e6f571f2a8ce
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

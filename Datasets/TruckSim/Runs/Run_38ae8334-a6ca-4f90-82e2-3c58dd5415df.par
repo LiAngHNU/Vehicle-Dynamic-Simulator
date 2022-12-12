@@ -1,0 +1,101 @@
+PARSFILE
+#FullDataName TruckSim Run Control`MF-Tyre Sweep Alpha (Fz = 2000 N)`Tire Tester: MF-Tyre
+#VEHICLECODE Tire (External)
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_38ae8334-a6ca-4f90-82e2-3c58dd5415df
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 1
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 4
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Tires\External\TireExt_23d606e5-ccc7-4c91-b0ca-67ebf7e838d4.par
+#BlueLink2 Tire (External)`510 mm Radius (MF-Tyre, Static)` * MF-Tyre / MF-Swift` , Math Model`TireExt_23d606e5-ccc7-4c91-b0ca-67ebf7e838d4
+
+PARSFILE Tire_Tester\TestTire_fab36104-f4c9-4137-8f2a-32ace8766bb1.par
+#BlueLink28 Tire Tester`Sweep Alpha: Fz = 20000 N` Sweep Alpha +/- 40 deg` , Procedure`TestTire_fab36104-f4c9-4137-8f2a-32ace8766bb1
+
+
+SPECIAL_PARSFILE Runs\Run_2e3631f4-6b6c-4533-9616-241620503d60.par
+#BlueLink23 TruckSim Run Control`MF-Tyre Sweep Alpha (Fz = 8000N)` Tire Tester: MF-Tyre` , Overlay run or ERD file`Run_2e3631f4-6b6c-4533-9616-241620503d60
+
+
+SPECIAL_PARSFILE Runs\Run_463f7ac3-9288-490f-a0ae-c4818ffa3d5e.par
+#BlueLink24 TruckSim Run Control`MF-Tyre Sweep Alpha (Fz = 20000N)` Tire Tester: MF-Tyre` , Overlay run or ERD file`Run_463f7ac3-9288-490f-a0ae-c4818ffa3d5e
+
+
+SPECIAL_PARSFILE Runs\Run_24c612a9-d8ed-406b-b851-5ad78bb26a82.par
+#BlueLink25 TruckSim Run Control`MF-Tyre Sweep Alpha (Fz = 40000N)` Tire Tester: MF-Tyre` , Overlay run or ERD file`Run_24c612a9-d8ed-406b-b851-5ad78bb26a82
+
+
+SPECIAL_PARSFILE Runs\Run_de93cea5-53e2-4808-95ff-9dbc8238adc5.par
+#BlueLink26 TruckSim Run Control`MF-Tyre Sweep Alpha (Fz = 60000N)` Tire Tester: MF-Tyre` , Overlay run or ERD file`Run_de93cea5-53e2-4808-95ff-9dbc8238adc5
+
+
+*IMAGE_TYPE DEFAULT
+PARSFILE IO_Channels\W_Channels\Write_73f85ec3-df3e-41b9-8300-c4b1c96e0f2d.par
+#BlueLink13 I/O Channels: Write`All Outputs with Tire for Excel` Tire Tester` , Output Variables`Write_73f85ec3-df3e-41b9-8300-c4b1c96e0f2d
+
+WRITE_SENSOR_DETECT
+Title MF-Tyre Sweep Alpha (Fz = 2000 N) <Tire Tester: MF-Tyre>
+CATEGORY Tire Tester: MF-Tyre 
+DATASET_TITLE MF-Tyre Sweep Alpha (Fz = 2000 N)
+#MiscYellow0
+! Set the vertical load for this test
+FZ_TEST 2000
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#The Tire Tester makes direct use of the TruckSim tire models to simulate a steady state tire test.
+#
+#With the Tire Tester, you can examine the output of the tire equations under any conditions of slip angle, slip ratio, inclination, vertical load, and road coefficient of friction.
+#
+#This example sweeps the slip angle from -10 deg to +10 deg while holding the inclination angle at a constant 0 degrees and a vertical load at 2000 N, defind here on the Run Control screen in the Misc. yellow field.
+#
+#It is overlaid with simulations at Fz = 4000 N and Fz = 6000 N.
+#
+#The Tire Tester produces outputs for 6 tire forces and moments: Fx, Fy, Fz, Mx, My, and Mz, and 3 kinematic variables: slip angle (alpha), slip ratio (kappa), and inclination angle (gamma).
+#
+#There is no animator camera linked because we are not interested in the animation for these simulations.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Tire Tester: MF-Tyre } MF-Tyre Sweep Alpha (Fz = 2000 N)
+#Library : TruckSim Run Control
+#DataSet : MF-Tyre Sweep Alpha (Fz = 2000 N)
+#Category: Tire Tester: MF-Tyre
+#FileID  : Run_38ae8334-a6ca-4f90-82e2-3c58dd5415df
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

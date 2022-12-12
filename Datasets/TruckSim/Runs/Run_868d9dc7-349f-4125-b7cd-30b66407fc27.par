@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Simple Example 3: Braking`Embedded Python
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_868d9dc7-349f-4125-b7cd-30b66407fc27
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`LCF Van` 2A LCF Van` , Math Model`Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80
+
+PARSFILE Procedures\Proc_06bad3af-f1f7-4777-8c60-a4f93f4f150a.par
+#BlueLink28 Procedures`Straight Driving, Constant Speed` Driving` , Procedure`Proc_06bad3af-f1f7-4777-8c60-a4f93f4f150a
+
+PARSFILE Generic\VS_commands\GenVS_a0961b05-87b8-465b-a621-3d64d123e89b.par
+#BlueLink9 Generic VS Commands`Constant Braking` Embedded Python` , Miscellaneous`GenVS_a0961b05-87b8-465b-a621-3d64d123e89b
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink10 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+OPT_STOP 0
+TSTOP 10
+OPT_DIRECTION 1
+*TSTOP 10
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Lead_2a\Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80.png
+WRITE_SENSOR_DETECT
+Title Simple Example 3: Braking <Embedded Python>
+CATEGORY Embedded Python 
+DATASET_TITLE Simple Example 3: Braking
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example shows how to utilize an output table with an embedded Python script.
+#
+#The Python file can be found at:
+#Extensions\Python\constant_braking.py
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Embedded Python } Simple Example 3: Braking
+#Library : TruckSim Run Control
+#DataSet : Simple Example 3: Braking
+#Category: Embedded Python
+#FileID  : Run_868d9dc7-349f-4125-b7cd-30b66407fc27
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

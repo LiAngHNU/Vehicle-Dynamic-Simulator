@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName TruckSim Run Control`MF-Tyre Sweep Gamma (Fz = 40000N)`Tire Tester: MF-Tyre
+#VEHICLECODE Tire (External)
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_9d698d8a-3d51-43b1-8953-76d625975e6e
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 1
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 4
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Tires\External\TireExt_23d606e5-ccc7-4c91-b0ca-67ebf7e838d4.par
+#BlueLink2 Tire (External)`510 mm Radius (MF-Tyre, Static)` * MF-Tyre / MF-Swift` , Math Model`TireExt_23d606e5-ccc7-4c91-b0ca-67ebf7e838d4
+
+PARSFILE Tire_Tester\TestTire_f63c30b0-9349-4370-93f7-65ce591b63f2.par
+#BlueLink28 Tire Tester`Sweep Gamma: Fz = 20000 N` Sweep Gamma +/- 5 deg` , Procedure`TestTire_f63c30b0-9349-4370-93f7-65ce591b63f2
+
+
+*IMAGE_TYPE DEFAULT
+PARSFILE IO_Channels\W_Channels\Write_73f85ec3-df3e-41b9-8300-c4b1c96e0f2d.par
+#BlueLink13 I/O Channels: Write`All Outputs with Tire for Excel` Tire Tester` , Output Variables`Write_73f85ec3-df3e-41b9-8300-c4b1c96e0f2d
+
+WRITE_SENSOR_DETECT
+Title MF-Tyre Sweep Gamma (Fz = 40000N) <Tire Tester: MF-Tyre>
+CATEGORY Tire Tester: MF-Tyre 
+DATASET_TITLE MF-Tyre Sweep Gamma (Fz = 40000N)
+#MiscYellow0
+! Set the vertical load for this test
+FZ_TEST 40000
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#The Tire Tester makes direct use of the TruckSim tire models to simulate a steady state tire test.
+#
+#With the Tire Tester, you can examine the output of the tire equations under any conditions of slip angle, slip ratio, inclination, vertical load, and road coefficient of friction.
+#
+#This example sweeps the inclination angle from -5 deg to +5 deg while holding the slip angle at a constant 0 degrees and a vertical load at 4000 N.
+#
+#The Tire Tester produces outputs for 6 tire forces and moments: Fx, Fy, Fz, Mx, My, and Mz, and 3 kinematic variables: slip angle (alpha), slip ratio (kappa), and inclination angle (gamma).
+#
+#There is no animator camera linked because we are not interested in the animation for these simulations.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Tire Tester: MF-Tyre } MF-Tyre Sweep Gamma (Fz = 40000N)
+#Library : TruckSim Run Control
+#DataSet : MF-Tyre Sweep Gamma (Fz = 40000N)
+#Category: Tire Tester: MF-Tyre
+#FileID  : Run_9d698d8a-3d51-43b1-8953-76d625975e6e
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

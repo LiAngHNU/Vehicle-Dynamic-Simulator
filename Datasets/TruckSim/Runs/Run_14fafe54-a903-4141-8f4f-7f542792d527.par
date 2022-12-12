@@ -1,0 +1,99 @@
+PARSFILE
+#FullDataName TruckSim Run Control`4-Way Intersection, 2A Tractor+1A Trl.`Road Networks: Intersections and Roundabouts
+#VEHICLECODE S_S + S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_14fafe54-a903-4141-8f4f-7f542792d527
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_0f5c43ef-ab77-4055-86ff-be8da1e4debf.par
+#BlueLink0 Animator: Camera Setup`160 Azm, 7.4 El, 50 m` Trailer Reference` , Animator camera`Camera_0f5c43ef-ab77-4055-86ff-be8da1e4debf
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 3
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_c74d3de9-ee0a-4988-8ae8-b3fafdd7153b.par
+#BlueLink2 Vehicle: Loaded Combination`2A Day+1A Trl, ABS` Day-Cab Tractor-Trailers` , Math Model`VehLoad_c74d3de9-ee0a-4988-8ae8-b3fafdd7153b
+
+PARSFILE Procedures\Proc_2fc17831-5f83-4309-820c-f0d3a62fcc35.par
+#BlueLink28 Procedures`4-Way Intersection (Articulated Trucks)` Road Networks` , Procedure`Proc_2fc17831-5f83-4309-820c-f0d3a62fcc35
+
+PARSFILE Generic\Group\GenGrp_aa29b4a0-5439-4fbb-ad2f-bb4211f7d41f.par
+#BlueLink9 Generic Data Group`3 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_aa29b4a0-5439-4fbb-ad2f-bb4211f7d41f
+
+PARSFILE Generic\Group\GenGrp_e3258a0a-4221-48d9-bde4-c7c8a7a0181b.par
+#BlueLink10 Generic Data Group`Traffic: Articulated Truck Turn, 4-Way` ADAS: Traffic Scenarios` , Miscellaneous`GenGrp_e3258a0a-4221-48d9-bde4-c7c8a7a0181b
+
+PARSFILE Animator\HUD\HUD_647507c0-a511-41d5-8437-e3b1fc5eb87f.par
+#BlueLink11 Animator: HUD`Throttle, Brakes, G-G, Speedo, Gear, Tach` HUD Groups` , Miscellaneous`HUD_647507c0-a511-41d5-8437-e3b1fc5eb87f
+
+PARSFILE Plot\Setup\Plot_246bcb1b-ad8e-4311-a1b3-faf171d44be4.par
+#BlueLink15 Plot: Setup`Road ID for Tires (Axle 1, Single Tires)` Tracking` , Plot`Plot_246bcb1b-ad8e-4311-a1b3-faf171d44be4
+
+PARSFILE Plot\Setup\Plot_3ccc6f14-4965-48a4-bffb-f352c7a91346.par
+#BlueLink16 Plot: Setup`Road ID for Tires (Axle 2)` Tracking` , Plot`Plot_3ccc6f14-4965-48a4-bffb-f352c7a91346
+
+PARSFILE Plot\Setup\Plot_1039846c-c66b-4824-875a-62cd47a7d223.par
+#BlueLink17 Plot: Setup`Road ID for Tires (Axle 3)` Tracking` , Plot`Plot_1039846c-c66b-4824-875a-62cd47a7d223
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_135ced7b-75b6-4a58-a554-9ed8958443d3.png
+WRITE_SENSOR_DETECT
+Title 4-Way Intersection, 2A Tractor+1A Trl. <Road Networks: Intersections and Roundabouts>
+CATEGORY Road Networks: Intersections and Roundabouts 
+DATASET_TITLE 4-Way Intersection, 2A Tractor+1A Trl.
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#NOTE: For TruckSim 2020.0, this example now includes the effects of the brake system transport delay parameter, math model keyword TLAG_BK. This is a pure time delay between the master cylinder and the brake actuator.
+#
+#This intersection of two straight roads (East and North) has curbs on the edges, which can be an issue for vehicles with trailers.
+#
+#The intersection is made from four parts, one per curb. A fifth part is included to improve the appearance in video.
+#
+#Two versions of this 4-Way Intersection are included with TruckSim: one for shorter straight trucks, and one for articulated vehicles like tractor-trailer combinations (this example).
+#
+#The road network and traffic datasets are the same for both examples, but this example, intended for use with articulated vehicles, uses a different target path to negotiate the right turn.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Road Networks: Intersections and Roundabouts } 4-Way Intersection, 2A Tractor+1A Trl.
+#Library : TruckSim Run Control
+#DataSet : 4-Way Intersection, 2A Tractor+1A Trl.
+#Category: Road Networks: Intersections and Roundabouts
+#FileID  : Run_14fafe54-a903-4141-8f4f-7f542792d527
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

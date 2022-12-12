@@ -1,0 +1,92 @@
+PARSFILE
+#FullDataName Path: Segment Builder`West Entrance, 3d Exit, 1024`Roundabout, D = 36 m
+#RingCtrl0 2
+SET_IPATH_FOR_ID 1024
+#CheckBox0 1    
+OPT_PATH_START 1
+#CheckBox1 0    
+OPT_PATH_LOOP 0
+
+SPATH_START 0
+X_PATH_START -83.6
+Y_PATH_START -2.1
+HEADING_START 0
+PATH_ID_DM = PATH_ID
+set_description path_id West Entrance, 3d Exit, 1024
+
+NSEGMENTS 5
+*TABLEROWS 5
+
+! Table Columns:
+!   NOTE: Label columns are not written to parsfile.
+!
+! 0: (Ring) Specify the type of segment. Circular arcs can be specified using radius or curvature (inverse radius). The table option provides a link to a dataset from the X-Y Coordinates for Segment library. The clothoid option will automatically generate an X-Y table with a specified length that maintains continuity with adjacent segments (the preceding and following rows in the table).
+! 1: (BlueLink) Link to a dataset from the X-Y Coordinates for Segment library.
+! 2: (Text) Length of straight segment in meters.
+! 3: (Label) Specify the length of a straight segment with meters.
+! 4: (Text) Segment radius: use a positive radius for a left turn, negative for a right turn.
+! 5: (Label) Specify radius with meters. Use a positive number for a left turn, negative number for a right turn.
+! 6: (Text) Length of segment arc, specified with arc length (m) or central angle (deg).
+! 7: (Ring) Specify arc size with central angle (deg) or arc length (m).
+! 8: (Text) Segment curvature (inverse of radius, 1/m): use a positive curvature for a left turn, negative for a right turn
+! 9: (Label) Specify segment curvature with 1/meter (inverse of radius). Use a positive number for a left turn, negative for a right turn.
+! 10: (Text) Length of segment arc, specified with arc length (m) or central angle (deg).
+! 11: (Ring) Specify arc size with central angle (deg) or arc length (m).
+! 12: (Text) Length of clothoid segment in meters. This will automatically generate an X-Y table that has this overall length and maintains continuity with the adjacent segments (the preceding and following rows in the table).
+! 13: (Label) Specify the length of a clothoid segment with meters.
+#MIXTABLE0
+#NUMROWS 5
+#straight, , 50, 16, 360, deg, 0.01, 90, deg, 400
+#radius, , 50, -31.5, 45, deg, 0.01, 90, deg, 400
+#radius, , 50, 16, 180, deg, 0.01, 90, deg, 400
+#radius, , 50, -31.5, 45, deg, 0.01, 90, deg, 400
+#straight, , 50, 100, 90, deg, 0.01, 90, deg, 400
+#ENDTABLE
+
+! Segment 1, straight
+IPATHSEG 1
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 50
+
+! Segment 2, radius
+IPATHSEG 2
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -31.500000
+SEGMENT_ARC 45.000000
+
+! Segment 3, radius
+IPATHSEG 3
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 16.000000
+SEGMENT_ARC 180.000000
+
+! Segment 4, radius
+IPATHSEG 4
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -31.500000
+SEGMENT_ARC 45.000000
+
+! Segment 5, straight
+IPATHSEG 5
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 50
+
+Title West Entrance, 3d Exit, 1024 <Roundabout, D = 36 m>
+
+#EMBEDDED_NOTES
+#This path enters the roundabout from the West and exits to the North, taking the third exit.
+#
+#This path covers three road surfaces, starting with the entrance, then the circle, then the exit.
+#
+#If this path is used to control moving objects, do not use the recycling feature because the jump will not handle the change in road surfaces (separate entrance and exit roads) automatically.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Path: Segment Builder; { Roundabout, D = 36 m } West Entrance, 3d Exit, 1024
+#Library : Path: Segment Builder
+#DataSet : West Entrance, 3d Exit, 1024
+#Category: Roundabout, D = 36 m
+#FileID  : RoadSeg_982e0f07-f629-46be-bfc1-c66d00e1e85d
+#Product : TruckSim 2020.1
+#VehCode Path Segment Builder
+
+END

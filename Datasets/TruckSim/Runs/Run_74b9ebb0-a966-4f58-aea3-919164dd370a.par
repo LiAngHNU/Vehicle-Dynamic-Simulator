@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName TruckSim Run Control`K & C Roll Stiffness Test`Suspension and Ride
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_74b9ebb0-a966-4f58-aea3-919164dd370a
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_877a51fe-d620-44dc-ad6e-a0ac9a1a30f1.par
+#BlueLink0 Animator: Camera Setup`K & C View` Test Rig Cameras` , Animator camera`Camera_877a51fe-d620-44dc-ad6e-a0ac9a1a30f1
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 0 0
+SET_RUN_COLOR 1 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_71ffc96f-7a7f-4b28-bc9c-1cfde387d4d0.par
+#BlueLink2 Vehicle: Loaded Combination`DRW Pickup, K&C Ref. Points` Pickup Trucks` , Math Model`VehLoad_71ffc96f-7a7f-4b28-bc9c-1cfde387d4d0
+
+PARSFILE Procedures\Proc_f8660d20-712f-436e-b744-c973ab457d57.par
+#BlueLink28 Procedures`K & C Roll Test` Kinematics and Compliance Testing` , Procedure`Proc_f8660d20-712f-436e-b744-c973ab457d57
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ee189bc-4102-46cf-a6ee-046ab79da53b.png
+WRITE_SENSOR_DETECT
+Title K & C Roll Stiffness Test <Suspension and Ride>
+CATEGORY Suspension and Ride 
+DATASET_TITLE K & C Roll Stiffness Test
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#Simulated Kinematics and Compliance Roll Test.
+#
+#The simulated Kinematics and Compliance Rig can be used to verify that the suspension data in the vehicle dataset results in performance of the simulated vehicle matching the expected or actual results from an in-vehicle test.
+#
+#The Roll Stiffness Test is defined with VS Commands. You can view these commands by clicking on the Procedure blue link "K & C Roll Test", then clicking on the link for Generic VS Commands: K & C Roll Test VS.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Suspension and Ride } K & C Roll Stiffness Test
+#Library : TruckSim Run Control
+#DataSet : K & C Roll Stiffness Test
+#Category: Suspension and Ride
+#FileID  : Run_74b9ebb0-a966-4f58-aea3-919164dd370a
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

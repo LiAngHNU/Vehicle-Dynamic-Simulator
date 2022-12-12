@@ -1,0 +1,138 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`200 m Wide 400 m Long w/ Bumps`Ride Roads and Suspension Testing
+NLANES 8
+OPTTHRESHOLD 1
+#MiscYellow0
+# 1 1 1, Road (Rough), 1, 20, 1, -3.5, m, 3.5, m, , , -100, 400, 0.5, , , Road
+# 1 1 1, Grass (Light), 1, 10, 20, -100, m, 100, m, , , -100, 400, 0.25, , , Foliage
+# 1 1 1, Dirt Transition, 1, 10, -1, -3.5, m, -4.5, m, , , -100, 400, 0.5, , , Foliage
+# 1 1 1, Dirt Transition, 1, 10, 1, 3.5, m, 4.5, m, , , -100, 400, 0.5, , , Foliage
+# 1 1 1, Dirt, 1, 10, 1, -3.5, m, 3.5, m, , , 10, 15, 0.25, , 0.02, Random
+# 1 1 1, Dirt, 1, 10, 1, -3.5, m, 3.5, m, , , 30, 35, 0.25, , 0.02, Random
+# 1 1 1, Dirt, 1, 10, 1, -3.5, m, 3.5, m, , , 90, 95, 0.25, , 0.02, Random
+# 1 1 1, Dirt, 1, 10, 1, -3.5, m, 3.5, m, , , 98, 103, 0.258, , 0.02, Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (Rough)
+SPECULAR(1) 1
+SCALE(1) 20
+LTILES(1) 1
+LIN(1) -3.5
+LINUNITS(1) m
+LOUT(1) 3.5
+LOUTUNITS(1) m
+S_START(1) -100
+S_STOP(1) 400
+SINT(1) 0.5
+AUTODETAIL(1) Road
+COLOR(2) 1 1 1
+MATERIAL(2) Grass (Light)
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 20
+LIN(2) -100
+LINUNITS(2) m
+LOUT(2) 100
+LOUTUNITS(2) m
+S_START(2) -100
+S_STOP(2) 400
+SINT(2) 0.25
+AUTODETAIL(2) Foliage
+COLOR(3) 1 1 1
+MATERIAL(3) Dirt Transition
+SPECULAR(3) 1
+SCALE(3) 10
+LTILES(3) -1
+LIN(3) -3.5
+LINUNITS(3) m
+LOUT(3) -4.5
+LOUTUNITS(3) m
+S_START(3) -100
+S_STOP(3) 400
+SINT(3) 0.5
+AUTODETAIL(3) Foliage
+COLOR(4) 1 1 1
+MATERIAL(4) Dirt Transition
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) 1
+LIN(4) 3.5
+LINUNITS(4) m
+LOUT(4) 4.5
+LOUTUNITS(4) m
+S_START(4) -100
+S_STOP(4) 400
+SINT(4) 0.5
+AUTODETAIL(4) Foliage
+COLOR(5) 1 1 1
+MATERIAL(5) Dirt
+SPECULAR(5) 1
+SCALE(5) 10
+LTILES(5) 1
+LIN(5) -3.5
+LINUNITS(5) m
+LOUT(5) 3.5
+LOUTUNITS(5) m
+S_START(5) 10
+S_STOP(5) 15
+SINT(5) 0.25
+DZ(5) 0.02
+AUTODETAIL(5) Random
+COLOR(6) 1 1 1
+MATERIAL(6) Dirt
+SPECULAR(6) 1
+SCALE(6) 10
+LTILES(6) 1
+LIN(6) -3.5
+LINUNITS(6) m
+LOUT(6) 3.5
+LOUTUNITS(6) m
+S_START(6) 30
+S_STOP(6) 35
+SINT(6) 0.25
+DZ(6) 0.02
+AUTODETAIL(6) Random
+COLOR(7) 1 1 1
+MATERIAL(7) Dirt
+SPECULAR(7) 1
+SCALE(7) 10
+LTILES(7) 1
+LIN(7) -3.5
+LINUNITS(7) m
+LOUT(7) 3.5
+LOUTUNITS(7) m
+S_START(7) 90
+S_STOP(7) 95
+SINT(7) 0.25
+DZ(7) 0.02
+AUTODETAIL(7) Random
+COLOR(8) 1 1 1
+MATERIAL(8) Dirt
+SPECULAR(8) 1
+SCALE(8) 10
+LTILES(8) 1
+LIN(8) -3.5
+LINUNITS(8) m
+LOUT(8) 3.5
+LOUTUNITS(8) m
+S_START(8) 98
+S_STOP(8) 103
+SINT(8) 0.258
+DZ(8) 0.02
+AUTODETAIL(8) Random
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Ride Roads and Suspension Testing } 200 m Wide 400 m Long w/ Bumps
+#Library : Road: Animator Surface Shapes
+#DataSet : 200 m Wide 400 m Long w/ Bumps
+#Category: Ride Roads and Suspension Testing
+#FileID  : RdShape_37f99924-b92b-4833-8c85-632f85931223
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

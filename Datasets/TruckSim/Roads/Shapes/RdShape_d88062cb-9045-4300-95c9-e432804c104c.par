@@ -1,0 +1,253 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Japanese Env.: Hilly Road w/ Turns`Japanese Environment
+NLANES 15
+OPTTHRESHOLD 2
+#MiscYellow0
+# 1 1 1, Road (Medium), 1, 20, 1, -4, m, 4, m, , , 109, 270, .1, , 0, Road
+# 1 1 1, Road Transition (Light), 1, 10, -1, -5.5, m, -4, m, , , 109, 270, .1, , 0, Random
+# 1 1 1, Road Transition (Light), 1, 10, 1, 4, m, 5.5, m, , , 109, 270, .1, , 0, Random
+# 1 1 1, Grass (Light), 1, 10, 1, 1, edge, 2, edge, 15, , 109, 270, .1, , 0, Foliage
+# 1 1 1, Grass (Light), 1, 10, 5, 3, edge, 4, edge, 15, , 109, 270, .1, , 0, Foliage
+# 1 1 1, Road (No Centerline), 1, 20, 1, -4, m, 4, m, , , 270, 286, .1, , 0, Road
+# .7 .7 .7, Concrete (Curb), 1, 10, -1, -5.5, m, -4, m, , , 270, 286, .1, , 0, Random
+# .7 .7 .7, Concrete (Curb), 1, 10, 1, 4, m, 5.5, m, , , 270, 286, .1, , 0, Random
+# .7 .7 .7, Concrete, 1, 10, -1, 1, edge, 2, edge, 15, , 270, 286, .1, , 0, Foliage
+# .7 .7 .7, Concrete, 1, 10, 5, 3, edge, 4, edge, 15, , 270, 286, .1, , 0, Foliage
+# 1 1 1, Road (Medium), 1, 20, 1, -4, m, 4, m, , , 286, 600, .1, , 0, Road
+# 1 1 1, Road Transition (Light), 1, 10, -1, -5.5, m, -4, m, , , 286, 600, .1, , 0, Random
+# 1 1 1, Road Transition (Light), 1, 10, 1, 4, m, 5.5, m, , , 286, 600, .1, , 0, Random
+# 1 1 1, Grass (Light), 1, 10, 1, 1, edge, 2, edge, 15, , 286, 600, .1, , 0, Foliage
+# 1 1 1, Grass (Light), 1, 10, 5, 3, edge, 4, edge, 15, , 286, 600, .1, , 0, Foliage
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (Medium)
+SPECULAR(1) 1
+SCALE(1) 20
+LTILES(1) 1
+LIN(1) -4
+LINUNITS(1) m
+LOUT(1) 4
+LOUTUNITS(1) m
+S_START(1) 109
+S_STOP(1) 270
+SINT(1) .1
+DZ(1) 0
+AUTODETAIL(1) Road
+COLOR(2) 1 1 1
+MATERIAL(2) Road Transition (Light)
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) -1
+LIN(2) -5.5
+LINUNITS(2) m
+LOUT(2) -4
+LOUTUNITS(2) m
+S_START(2) 109
+S_STOP(2) 270
+SINT(2) .1
+DZ(2) 0
+AUTODETAIL(2) Random
+COLOR(3) 1 1 1
+MATERIAL(3) Road Transition (Light)
+SPECULAR(3) 1
+SCALE(3) 10
+LTILES(3) 1
+LIN(3) 4
+LINUNITS(3) m
+LOUT(3) 5.5
+LOUTUNITS(3) m
+S_START(3) 109
+S_STOP(3) 270
+SINT(3) .1
+DZ(3) 0
+AUTODETAIL(3) Random
+COLOR(4) 1 1 1
+MATERIAL(4) Grass (Light)
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) 1
+LIN(4) 1
+LINUNITS(4) edge
+LOUT(4) 2
+LOUTUNITS(4) edge
+LDIV(4) 15
+S_START(4) 109
+S_STOP(4) 270
+SINT(4) .1
+DZ(4) 0
+AUTODETAIL(4) Foliage
+COLOR(5) 1 1 1
+MATERIAL(5) Grass (Light)
+SPECULAR(5) 1
+SCALE(5) 10
+LTILES(5) 5
+LIN(5) 3
+LINUNITS(5) edge
+LOUT(5) 4
+LOUTUNITS(5) edge
+LDIV(5) 15
+S_START(5) 109
+S_STOP(5) 270
+SINT(5) .1
+DZ(5) 0
+AUTODETAIL(5) Foliage
+COLOR(6) 1 1 1
+MATERIAL(6) Road (No Centerline)
+SPECULAR(6) 1
+SCALE(6) 20
+LTILES(6) 1
+LIN(6) -4
+LINUNITS(6) m
+LOUT(6) 4
+LOUTUNITS(6) m
+S_START(6) 270
+S_STOP(6) 286
+SINT(6) .1
+DZ(6) 0
+AUTODETAIL(6) Road
+COLOR(7) .7 .7 .7
+MATERIAL(7) Concrete (Curb)
+SPECULAR(7) 1
+SCALE(7) 10
+LTILES(7) -1
+LIN(7) -5.5
+LINUNITS(7) m
+LOUT(7) -4
+LOUTUNITS(7) m
+S_START(7) 270
+S_STOP(7) 286
+SINT(7) .1
+DZ(7) 0
+AUTODETAIL(7) Random
+COLOR(8) .7 .7 .7
+MATERIAL(8) Concrete (Curb)
+SPECULAR(8) 1
+SCALE(8) 10
+LTILES(8) 1
+LIN(8) 4
+LINUNITS(8) m
+LOUT(8) 5.5
+LOUTUNITS(8) m
+S_START(8) 270
+S_STOP(8) 286
+SINT(8) .1
+DZ(8) 0
+AUTODETAIL(8) Random
+COLOR(9) .7 .7 .7
+MATERIAL(9) Concrete
+SPECULAR(9) 1
+SCALE(9) 10
+LTILES(9) -1
+LIN(9) 1
+LINUNITS(9) edge
+LOUT(9) 2
+LOUTUNITS(9) edge
+LDIV(9) 15
+S_START(9) 270
+S_STOP(9) 286
+SINT(9) .1
+DZ(9) 0
+AUTODETAIL(9) Foliage
+COLOR(10) .7 .7 .7
+MATERIAL(10) Concrete
+SPECULAR(10) 1
+SCALE(10) 10
+LTILES(10) 5
+LIN(10) 3
+LINUNITS(10) edge
+LOUT(10) 4
+LOUTUNITS(10) edge
+LDIV(10) 15
+S_START(10) 270
+S_STOP(10) 286
+SINT(10) .1
+DZ(10) 0
+AUTODETAIL(10) Foliage
+COLOR(11) 1 1 1
+MATERIAL(11) Road (Medium)
+SPECULAR(11) 1
+SCALE(11) 20
+LTILES(11) 1
+LIN(11) -4
+LINUNITS(11) m
+LOUT(11) 4
+LOUTUNITS(11) m
+S_START(11) 286
+S_STOP(11) 600
+SINT(11) .1
+DZ(11) 0
+AUTODETAIL(11) Road
+COLOR(12) 1 1 1
+MATERIAL(12) Road Transition (Light)
+SPECULAR(12) 1
+SCALE(12) 10
+LTILES(12) -1
+LIN(12) -5.5
+LINUNITS(12) m
+LOUT(12) -4
+LOUTUNITS(12) m
+S_START(12) 286
+S_STOP(12) 600
+SINT(12) .1
+DZ(12) 0
+AUTODETAIL(12) Random
+COLOR(13) 1 1 1
+MATERIAL(13) Road Transition (Light)
+SPECULAR(13) 1
+SCALE(13) 10
+LTILES(13) 1
+LIN(13) 4
+LINUNITS(13) m
+LOUT(13) 5.5
+LOUTUNITS(13) m
+S_START(13) 286
+S_STOP(13) 600
+SINT(13) .1
+DZ(13) 0
+AUTODETAIL(13) Random
+COLOR(14) 1 1 1
+MATERIAL(14) Grass (Light)
+SPECULAR(14) 1
+SCALE(14) 10
+LTILES(14) 1
+LIN(14) 1
+LINUNITS(14) edge
+LOUT(14) 2
+LOUTUNITS(14) edge
+LDIV(14) 15
+S_START(14) 286
+S_STOP(14) 600
+SINT(14) .1
+DZ(14) 0
+AUTODETAIL(14) Foliage
+COLOR(15) 1 1 1
+MATERIAL(15) Grass (Light)
+SPECULAR(15) 1
+SCALE(15) 10
+LTILES(15) 5
+LIN(15) 3
+LINUNITS(15) edge
+LOUT(15) 4
+LOUTUNITS(15) edge
+LDIV(15) 15
+S_START(15) 286
+S_STOP(15) 600
+SINT(15) .1
+DZ(15) 0
+AUTODETAIL(15) Foliage
+MTL_FILE Animator\Road_Materials\road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Japanese Environment } Japanese Env.: Hilly Road w/ Turns
+#Library : Road: Animator Surface Shapes
+#DataSet : Japanese Env.: Hilly Road w/ Turns
+#Category: Japanese Environment
+#FileID  : RdShape_d88062cb-9045-4300-95c9-e432804c104c
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Tilt Table Road`PBS Tests
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_9e100ea0-cbbd-4f2d-a298-593ab5ab8e2f.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Tilt Table Road
+PARSFILE Roads\BuilderSegment\RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c.par
+#BlueLink0 Path: Segment Builder`Straight Path East` Straight` , Reference Path`RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight Path East
+PARSFILE Roads\Friction\RdMu_4f2f2491-f28f-499f-b597-378d010449da.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 2.0 (Tilt Table)` Constant Mu` , Friction`RdMu_4f2f2491-f28f-499f-b597-378d010449da
+
+PARSFILE Roads\Shapes\RdShape_e629bef4-89b3-4a54-a25b-c76081077abd.par
+#BlueLink4 Road: Animator Surface Shapes`Tilt Table Road` Test Facilities` , Road shape definitions`RdShape_e629bef4-89b3-4a54-a25b-c76081077abd
+
+RR_SURF_CONSTANT 1.0
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_9e100ea0-cbbd-4f2d-a298-593ab5ab8e2f.ani
+
+#EMBEDDED_NOTES
+#Road with animation shapes for the tilt table.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { PBS Tests } Tilt Table Road
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Tilt Table Road
+#Category: PBS Tests
+#FileID  : Road_9e100ea0-cbbd-4f2d-a298-593ab5ab8e2f
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

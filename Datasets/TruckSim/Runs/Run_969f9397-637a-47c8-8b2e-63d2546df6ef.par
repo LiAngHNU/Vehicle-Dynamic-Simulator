@@ -1,0 +1,95 @@
+PARSFILE
+#FullDataName TruckSim Run Control`MF-Swift (Rigid Ring): Acc./Brk`* More Examples (Extra License Options)
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_969f9397-637a-47c8-8b2e-63d2546df6ef
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#BlueLink12 ` , Models` , Models` , Models`
+
+PARSFILE Animator\Cameras\Camera_d14a8296-6736-4daf-8562-965531be5132.par
+#BlueLink0 Animator: Camera Setup`16 Azm, 3.6 El, 51 m` Road Reference` , Animator camera`Camera_d14a8296-6736-4daf-8562-965531be5132
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 12
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+SET_RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_53d29414-1f4f-4be0-aa02-30cae0ff4fd9.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Conv. Van (MF-Swift: Rigid Ring)` 2A Conventional Van` , Math Model`Lead2a_53d29414-1f4f-4be0-aa02-30cae0ff4fd9
+
+PARSFILE Procedures\Proc_5d9fc992-24ae-47ee-b261-84034bc83f88.par
+#BlueLink28 Procedures`Accel. then Brake` Acceleration and Braking` , Procedure`Proc_5d9fc992-24ae-47ee-b261-84034bc83f88
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+PARSFILE Plot\Setup\Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8.par
+#BlueLink15 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8
+
+
+SPECIAL_PARSFILE Runs\Run_6edd506f-a16e-4b3d-b6d3-c03e7493935b.par
+#BlueLink23 TruckSim Run Control`MF-Tyre, Asym.: Acc./Brk` Tire Models` , Overlay run or ERD file`Run_6edd506f-a16e-4b3d-b6d3-c03e7493935b
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title MF-Swift (Rigid Ring): Acc./Brk <* More Examples (Extra License Options)>
+CATEGORY * More Examples (Extra License Options) 
+DATASET_TITLE MF-Swift (Rigid Ring): Acc./Brk
+#MiscYellow0
+OPT_INIT_PATH 0
+SV_XO 0
+SV_YO 5
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates the 2A Conventional Van using the MF-Swift model (including asymmetric tire properties between the left and right sides) performing a double lane change maneuver at 70 km/h.
+#
+#To see how the MF-Swift data is incorporated into TruckSim, browse to the Vehicle: Lead Unit with 2 Axles screen and click on the Tires dataset labeled "510 mm Radius, MF-Swift: Rigid Ring" for more information.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { * More Examples (Extra License Options) } MF-Swift (Rigid Ring): Acc./Brk
+#Library : TruckSim Run Control
+#DataSet : MF-Swift (Rigid Ring): Acc./Brk
+#Category: * More Examples (Extra License Options)
+#FileID  : Run_969f9397-637a-47c8-8b2e-63d2546df6ef
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

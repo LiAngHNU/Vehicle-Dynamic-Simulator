@@ -1,0 +1,432 @@
+PARSFILE
+! VS Road Calculator
+! Utility to calculate road and path coordinates for visualization
+! Revision 143773, June 25, 2020
+
+TITLE Mcity Scene <VS Scene Builder>
+
+! Echo: Roads\3D_Road\Road_1d1d1c8f-03e2-473e-86c1-63255c448ff3_echo.par
+! This run was made 10:32 on June 29, 2020.
+
+!------------------------------------------------------------------------------------
+! SYSTEM PARAMETERS (SIMULATION OPTIONS)
+!------------------------------------------------------------------------------------
+! [D] (default) indicates that a parameter was not set by reading from a Parsfile.
+! [I] indicates that changing the parameter via an Event triggers an initialization.
+! [L] indicates that the parameter is locked once the simulation starts.
+
+ID_EVENT            0 ; - ! ID number that can be assigned to the current event
+ID_RUN              0 ; - ! ID number that can be assigned to a simulation run
+NDIGITS_ECHO       10 ! [D] Max. no. of digits for printing floating-point numbers
+! NIMPORT           0 ! Number of variables activated for import (read only)
+! NOUT_ANI_LIVE     0 ! Number of variables sent live to animators (read only)
+! NOUT_EXPORT       0 ! Number of output variables activated for export (read only)
+! NOUT_WRITE        0 ! Number of output variables written to file (read only)
+OPT_ALL_WRITE       0 ! Write all outputs to file? 1 -> all, 0 -> only activated
+                      ! outputs
+OPT_BUFFER_WRITE    0 ! [D] Retain output data in memory buffer until end of run? 0
+                      ! -> no, write immediately to file, 1 -> yes, buffer during
+                      ! run and write to file after run finishes [L]
+OPT_CHECK_MATH      2 ! [D] Check for math exceptions? 2 -> as errors, 1 -> as
+                      ! warnings, 0 -> no checks
+OPT_ECHO_ALL_PARS   0 ! [D] Echo all parameters in this VS Solver? 0 -> no, 1 -> yes
+OPT_ECHO_ALL_UNITS  0 ! [D] Echo list of units and scale factors? 0 -> no, 1 -> yes
+OPT_ECHO_ICS        0 ! [D] Echo initial conditions? 0 -> no, 1 -> yes
+OPT_ECHO_KEYWORDS_LC 0 ! [D] Echo all keywords in lowercase? 0 -> no, 1 -> yes
+OPT_ERROR_DIALOG    0 ! Show pop-up dialog box if fatal error occurs: 1 -> yes
+                      ! (normal use), 0 -> no (for batch runs)
+OPT_ERROR_DUP_DEF   0 ! [D] Handle case where DEFINE_IMPORT, DEFINE_OUTPUT,
+                      ! DEFINE_PARAMETER, or DEFINE_VARIABLE attempts to define a
+                      ! variable with a name that is already in use. 0 -> write
+                      ! warning in log file, 1 -> generate error [L]
+OPT_ERROR_SHOW_ALL  0 ! [D] Show pop-up boxes for all errors: 0 -> only show the
+                      ! first, 1 -> also show subsequent errors
+OPT_LOG_DEBUG       0 ! [D] Log file writing: 0 -> normal, 1 -> crash expected
+OPT_LOG_VERBOSE     2 ! [D] Log file verbosity: 2 -> errors + most events + parsfile
+                      ! names, 0 -> errors only, 1 -> errors + events, 3 ->
+                      ! advanced diagnostics
+OPT_LOG_WARNINGS    1 ! [D] Write warnings into log file? 1 -> yes, 0 -> no
+OPT_PAUSE           0 ! [D] Pause at end of run with window open? 0 -> no, 1 -> yes
+OPT_SKIP_INIT_DYN   0 ! [D] Skip initial dynamic calculations (for some RT systems)?
+                      ! 0 -> no, 1 -> yes
+OPT_STOP            0 ! [D] Option for stopping the run: 0 -> stop when T reaches
+                      ! TSTOP; 1 -> stop when T reaches TSTOP or station reaches
+                      ! SSTOP; -1 -> run until stopped using VS Commands or
+                      ! external control
+OPT_VS_FILETYPE     1 ! [D] Type of output file: 1-> 64-bit VS, 2-> 32-bit VS, 3 ->
+                      ! 32-bit ERD, 4 -> text CSV (no binary), 0 -> no output file
+OPT_WRITE           0 ; - ! Write outputs when T > TSTART_WRITE? 1 -> write, 0 ->
+                      ! don't write; change this using VS Commands or Events
+TSTART          12.84 ; s ! Starting time for the simulation clock
+TSTART_T_EVENT      0 ; s ! [D] Event clock reset time: T_EVENT = T - TSTART_T_EVENT
+TSTART_WRITE        0 ; s ! [D] Start writing outputs when this time is reached
+TSTEP            0.04 ; s ! Time step for numerical integration [L]
+TSTOP         12.8396 ; s ! Stop when this time is reached
+! T_DT           0.04 ; s ! CALC -- Time increment between calculations
+
+!------------------------------------------------------------------------------------
+! SYSTEM CONSTANTS
+!------------------------------------------------------------------------------------
+! DR      57.29577951 ; - ! Deg/rad symbol to use in formulas (read-only)
+! G           9.80665 ; - ! Symbol for gravity constant m/s/s (read-only)
+! PI      3.141592654 ; - ! Symbol for PI to use in formulas (read-only)
+! ZERO              0 ; - ! Symbol for zero to use in VS Events (read-only)
+
+!------------------------------------------------------------------------------------
+! REFERENCE PATHS
+!------------------------------------------------------------------------------------
+! Up to 500 reference paths may be installed to provide station-based coordinate
+! systems used to define 3D road surfaces, targets for the driver model, and
+! positions of moving objects. In addition to the parameters shown in this section,
+! the paths may include spline X-Y tables (keyword = SEGMENT_XY_TABLE).
+
+! NPATH             2 ! Number of installed paths available for roads, driver model,
+                      ! and moving objects (read only)
+DEFINE_PATHS        2 ! VS Command to install reference paths
+
+PATH_ID(1)          1 ! ID number for this Reference Path
+OPT_PATH_START(1)   0 ! Set initial heading and X-Y coordinates of the path? 0 -> no
+                      ! (legacy, using table data), 1 -> yes
+OPT_PATH_LOOP(1)    1 ! Is this path looped? 0 -> no, 1 -> yes
+SPATH_START(1)      0 ; m ! Station at the start of this path
+! SPATH_LAP(1) 491.9778745 ; m ! CALC -- Lap distance for this path
+! HEADING_START(1) 90.86663058 ; deg ! Heading at the start of this path
+! X_PATH_START(1) -49.435153 ; m ! Global X coordinate at the start of this path
+! Y_PATH_START(1) 58.184081 ; m ! Global Y coordinate at the start of this path
+
+NSEGMENTS(1)        1 ! Number of segments in this path
+SEGMENT_TYPE(1,1)   1 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+XY_SEGMENT_ID(1,1)  1 ! XY_TABLE_ID number of spline table [I]
+! S_SEGMENT_END(1,1) 491.9778745 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,1) -49.435153 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,1) 58.184081 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,1) 90.86663058 ; deg ! CALC -- Heading at end of segment
+DEFINE_XY_TABLES    2 ! No. of XY spline tables (see the SPLINE TABLES section)
+
+PATH_ID(2)          2 ! ID number for this Reference Path
+OPT_PATH_START(2)   0 ! Set initial heading and X-Y coords? 0 -> no, 1 -> yes
+OPT_PATH_LOOP(2)    1 ! Is this path looped? 0 -> no, 1 -> yes
+SPATH_START(2)      0 ; m ! Station at the start of this path
+! SPATH_LAP(2) 1025.044958 ; m ! CALC -- Lap distance for this path
+! HEADING_START(2) -90.38991684 ; deg ! Heading at the start of this path
+! X_PATH_START(2) 3.502747 ; m ! Global X coordinate at the start of this path
+! Y_PATH_START(2) 298.153681 ; m ! Global Y coordinate at the start of this path
+
+NSEGMENTS(2)        1 ! Number of segments in this path
+SEGMENT_TYPE(2,1)   1 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+XY_SEGMENT_ID(2,1)  2 ! XY_TABLE_ID number of spline table [I]
+! S_SEGMENT_END(2,1) 1025.044958 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(2,1) 3.502747 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(2,1) 298.153681 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(2,1) -90.38991684 ; deg ! CALC -- Heading at end of segment
+
+!------------------------------------------------------------------------------------
+! ROAD SURFACES
+!------------------------------------------------------------------------------------
+! A VS Terrain surface defines elevation Z, friction MU, and rolling resistance
+! RR_SURF as functions of global X and Y coordinates. The terrain data is contained
+! in a single vsterrain file loaded with the command VS_TERRAIN_FILE.
+
+! CURRENT_ROAD_ID   1 ! ROAD_ID for the vehicle during initialization [I]
+
+!------------------------------------------------------------------------------------
+! START AND STOP INFORMATION FOR PATH
+!------------------------------------------------------------------------------------
+N_LTARG             0 ! [D] Number of LTARG datasets that are used in this run
+PATH_ID_DM          2 ! PATH_ID of reference path for the driver and vehicle [I]
+LTARG_ID_DM         0 ! [D] LTARG_ID of reference LTARG for the driver model (0 ->
+                      ! no reference LTARG)
+OPT_INIT_PATH       1 ! [D] Set Xo, Yo, and Yaw to match path PATH_ID_DM and target
+                      ! LTARG_ID_DM at station SSTART? 1 -> yes, 0 -> no [I]
+OPT_INIT_STA_ROAD   1 ! [D] Find vehicle road station "Sta_Road" automatically when
+                      ! the reference path for CURRENT_ROAD_ID is not PATH_ID_DM? 1
+                      ! -> yes, 0 -> no [I]
+OPT_DIRECTION       1 ! Travel direction along path PATH_ID_DM: 0 -> set to 1 or -1
+                      ! using SSTART and SSTOP values (legacy); 1 -> increasing
+                      ! station, -1 -> decreasing station [I]
+SSTART              0 ; m ! [D] Start the vehicle at this station on path PATH_ID_DM
+                      ! and possibly with target LTARG_ID_DM. The current station
+                      ! on this path is the output variable "Station", which is
+                      ! also a state variable. [I]
+
+!------------------------------------------------------------------------------------
+! CONFIGURABLE FUNCTIONS
+!------------------------------------------------------------------------------------
+
+!------------------------------------------------------------------------------------
+! SPLINE X-Y TABLES FOR PATH SEGMENTS
+!------------------------------------------------------------------------------------
+! Following are up to 500 tables of X-Y global coordinates used to make spline
+! segments for reference paths. Tables are listed here only if used in a path. If
+! indices shown below are not used, e.g., SEGMENT_XY_TABLE(1), the current value
+! of the index ITAB_XY is used to identify the table when reading data.
+
+! NTAB_XY 2 ! CALC -- Current number of XY spline tables for path segments
+
+XY_TABLE_ID(1)      1 ! ID number for spline table segment
+SEGMENT_XY_TABLE(1) ! table with X (m), Y (m), and calculated station S (m)
+ -49.4352, 58.1841, 0
+ -49.6909, 83.1561, 24.973
+ -49.7774, 103.3013, 45.119
+ -49.8946, 112.7599, 54.578
+ -50.117, 120.8272, 62.648
+ -50.2489, 123.1401, 64.965
+ -50.2518, 127.1718, 68.997
+ -50.117, 134.7196, 76.546
+ -50.172, 144.5327, 86.359
+ -50.4579, 155.7709, 97.601
+ -50.1522, 166.8682, 108.702
+ -49.752, 178.0398, 119.881
+ -49.5336, 180.1303, 121.983
+ -49.225, 182.0734, 123.95
+ -48.5826, 184.2104, 126.182
+ -47.7415, 186.127, 128.275
+ -46.6812, 187.8917, 130.334
+ -45.2738, 189.6357, 132.575
+ -44.1501, 191.0993, 134.42
+ -43.1519, 193.1112, 136.666
+ -42.6835, 195.1723, 138.78
+ -42.4467, 197.5362, 141.155
+ -42.5568, 199.8107, 143.432
+ -43.1097, 201.899, 145.593
+ -44.5154, 204.2094, 148.297
+ -45.84, 205.6452, 150.251
+ -47.6831, 207.0675, 152.579
+ -49.4794, 207.9399, 154.576
+ -52.1303, 208.4879, 157.283
+ -54.6892, 208.5114, 159.842
+ -56.8172, 208.2001, 161.992
+ -59.1851, 207.4088, 164.489
+ -61.1848, 206.0395, 166.912
+ -62.9835, 204.0479, 169.596
+ -64.5192, 201.4634, 172.602
+ -65.205, 199.1335, 175.031
+ -65.3093, 197.5358, 176.632
+ -65.1337, 195.7133, 178.463
+ -64.476, 193.5671, 180.708
+ -63.7546, 192.1323, 182.314
+ -62.5308, 190.3275, 184.494
+ -61.2699, 188.7371, 186.524
+ -59.9216, 187.0241, 188.704
+ -58.6671, 185.0531, 191.04
+ -57.9632, 183.4483, 192.793
+ -57.4563, 181.8031, 194.514
+ -57.1449, 180.1727, 196.174
+ -57.0161, 178.4013, 197.95
+ -56.9087, 162.7238, 213.628
+ -57.0696, 148.7871, 227.566
+ -57.1233, 137.19, 239.163
+ -57.1769, 120.5997, 255.753
+ -57.0695, 98.3182, 278.035
+ -57.0158, 81.7279, 294.625
+ -56.2807, 56.071, 320.293
+ -56.1177, 51.4367, 324.93
+ -56.1185, 49.2427, 327.124
+ -56.1883, 46.787, 329.581
+ -56.3716, 43.9259, 332.448
+ -56.5379, 42.2206, 334.161
+ -57.0622, 39.8404, 336.598
+ -58.7017, 36.2541, 340.542
+ -61.865, 30.9257, 346.738
+ -64.1355, 27.5089, 350.841
+ -66.0604, 25.1717, 353.868
+ -69.8852, 20.7289, 359.731
+ -71.3412, 18.7534, 362.185
+ -72.5048, 16.7021, 364.543
+ -73.6505, 13.9302, 367.543
+ -74.3296, 11.4146, 370.148
+ -74.6159, 9.3661, 372.217
+ -74.7022, 7.5948, 373.99
+ -74.3609, 3.8574, 377.743
+ -73.4621, 0.5698, 381.151
+ -71.9899, -2.5853, 384.633
+ -69.7998, -5.6878, 388.431
+ -66.703, -8.6307, 392.703
+ -62.7872, -11.0009, 397.28
+ -58.2943, -12.4678, 402.006
+ -54.2364, -12.871, 406.084
+ -50.2329, -12.4787, 410.107
+ -46.4243, -11.324, 414.087
+ -43.0865, -9.5644, 417.86
+ -40.7299, -7.7745, 420.819
+ -38.7465, -5.7735, 423.637
+ -36.8527, -3.2028, 426.83
+ -35.495, -0.6328, 429.736
+ -34.6395, 1.6823, 432.204
+ -33.9702, 4.7282, 435.323
+ -33.7705, 7.5948, 438.196
+ -34.2201, 11.9506, 442.575
+ -35.6804, 16.2467, 447.113
+ -38.426, 21.0565, 452.651
+ -41.2095, 25.413, 457.821
+ -43.0791, 28.8166, 461.704
+ -44.8335, 33.0412, 466.279
+ -46.4027, 37.7858, 471.276
+ -47.7121, 42.5043, 476.173
+ -48.6356, 47.1885, 480.947
+ -49.2326, 52.8587, 486.649
+ -49.4352, 58.1841, 491.978
+ENDTABLE
+
+XY_TABLE_ID(2)      2 ! ID number for spline table segment
+SEGMENT_XY_TABLE(2) ! table with X (m), Y (m), and calculated station S (m)
+ 3.5027, 298.1537, 0
+ 3.5453, 278.1565, 19.997
+ 3.5233, 261.8926, 36.261
+ 3.3703, 258.1707, 39.986
+ 2.6555, 254.5319, 43.695
+ 1.3289, 250.4226, 48.013
+ -0.41, 246.8596, 51.977
+ -2.5136, 243.5258, 55.919
+ -5.004, 240.4073, 59.91
+ -7.3558, 238.1961, 63.138
+ -9.6213, 236.4388, 66.005
+ -13.3728, 234.184, 70.382
+ -16.5388, 232.8405, 73.822
+ -20.3589, 231.3557, 77.92
+ -23.5303, 229.9457, 81.391
+ -26.9446, 227.9682, 85.337
+ -29.6296, 225.8767, 88.74
+ -32.1114, 223.4924, 92.182
+ -34.4507, 221.0309, 95.577
+ -38.6633, 216.3821, 101.851
+ -41.9005, 213.135, 106.436
+ -43.2098, 212.0336, 108.147
+ -45.3303, 210.7195, 110.642
+ -47.603, 209.8151, 113.088
+ -50.0712, 209.1603, 115.641
+ -52.1648, 208.8174, 117.763
+ -54.4387, 208.6379, 120.044
+ -56.2786, 208.4003, 121.899
+ -58.0627, 207.8673, 123.761
+ -59.6569, 207.1157, 125.523
+ -61.2537, 205.9602, 127.494
+ -62.5774, 204.4969, 129.468
+ -63.8745, 202.8256, 131.583
+ -65.0708, 201.3849, 133.456
+ -66.3386, 200.1381, 135.234
+ -69.0739, 198.1942, 138.59
+ -72.4173, 196.4938, 142.341
+ -75.4623, 195.0521, 145.71
+ -77.9896, 193.6168, 148.616
+ -80.1654, 192.1536, 151.238
+ -82.261, 190.4547, 153.936
+ -83.7833, 188.9502, 156.076
+ -85.2563, 187.2499, 158.326
+ -86.7842, 185.1305, 160.938
+ -88.0882, 182.9569, 163.473
+ -89.2737, 180.6543, 166.063
+ -90.3563, 178.0808, 168.855
+ -91.1393, 175.6788, 171.381
+ -91.7768, 173.2919, 173.852
+ -92.2992, 170.6617, 176.534
+ -92.5424, 168.2646, 178.943
+ -92.6173, 165.2291, 181.979
+ -92.669, 161.8975, 185.311
+ -92.7287, 154.9517, 192.257
+ -92.7287, 136.0283, 211.181
+ -92.7134, 128.299, 218.91
+ -92.9036, 123.3002, 223.913
+ -93.2744, 117.8884, 229.337
+ -94.2024, 109.2855, 237.99
+ -95.6355, 96.8419, 250.516
+ -96.7835, 86.7461, 260.677
+ -98.074, 75.6189, 271.878
+ -99.4783, 63.589, 283.99
+ -101.0318, 49.9332, 297.734
+ -101.6478, 44.1834, 303.517
+ -101.9014, 41.2587, 306.452
+ -102.3513, 34.8944, 312.832
+ -102.6464, 28.7554, 318.979
+ -102.6956, 26.6465, 321.088
+ -102.7398, 23.3183, 324.416
+ -102.7328, 18.0281, 329.707
+ -102.7245, 9.169, 338.566
+ -102.7115, -7.4642, 355.199
+ -102.7359, -28.4969, 376.232
+ -102.5741, -31.1391, 378.879
+ -102.1383, -34.0322, 381.805
+ -101.3955, -37.1798, 385.039
+ -100.4425, -40.1282, 388.137
+ -98.9639, -43.299, 391.636
+ -97.6879, -45.6195, 394.284
+ -95.7766, -48.7319, 397.936
+ -92.849, -52.5429, 402.742
+ -90.2025, -55.1429, 406.452
+ -86.7577, -57.9616, 410.903
+ -84.0139, -59.6482, 414.124
+ -81.2177, -60.9198, 417.196
+ -78.855, -61.7963, 419.716
+ -75.846, -62.7104, 422.86
+ -73.2817, -63.2634, 425.484
+ -70.7194, -63.681, 428.08
+ -67.6775, -63.9088, 431.13
+ -64.9065, -63.7852, 433.904
+ -61.22, -63.4847, 437.603
+ -57.9115, -63.1406, 440.929
+ -54.6405, -62.7276, 444.226
+ -36.2595, -59.9554, 462.815
+ -7.8691, -55.7707, 491.512
+ 11.832, -52.9834, 511.409
+ 19.7467, -51.4861, 519.464
+ 24.0715, -49.784, 524.112
+ 27.5514, -48.0066, 528.02
+ 31.6301, -45.5134, 532.8
+ 36.1002, -41.836, 538.588
+ 38.2917, -39.2529, 541.976
+ 40.8089, -35.7769, 546.268
+ 43.0742, -31.7346, 550.901
+ 45.0195, -25.9259, 557.027
+ 45.7547, -19.6127, 563.383
+ 46.0828, -11.1806, 571.821
+ 46.1042, -2.0608, 580.941
+ 45.984, 59.651, 642.653
+ 45.9842, 87.9757, 670.978
+ 45.8639, 121.6038, 704.606
+ 46.72, 132.7847, 715.82
+ 49.5815, 147.6603, 730.968
+ 52.4122, 157.5495, 741.255
+ 55.5903, 167.966, 752.145
+ 59.4393, 179.6995, 764.494
+ 64.1717, 191.4254, 777.139
+ 77.9415, 219.1452, 808.09
+ 98.3642, 260.1092, 853.863
+ 103.001, 270.2086, 864.976
+ 105.9393, 279.3571, 874.584
+ 106.9424, 286.2326, 881.533
+ 106.919, 291.9185, 887.219
+ 106.217, 297.1106, 892.458
+ 104.4397, 301.6466, 897.33
+ 101.5345, 305.7995, 902.398
+ 96.0479, 311.2876, 910.158
+ 90.1795, 315.6244, 917.455
+ 81.2847, 320.1908, 927.454
+ 71.226, 323.2863, 937.978
+ 64.019, 325.1044, 945.411
+ 51.5287, 327.2893, 958.091
+ 38.7871, 328.836, 970.926
+ 34.4478, 329.2655, 975.286
+ 30.8609, 329.3475, 978.874
+ 27.1181, 328.9106, 982.642
+ 23.9148, 328.1969, 985.924
+ 20.9022, 327.085, 989.136
+ 17.6079, 325.5122, 992.786
+ 15.0288, 323.6601, 995.961
+ 11.8124, 320.8672, 1000.221
+ 10.041, 318.6467, 1003.062
+ 7.5788, 315.1568, 1007.333
+ 6.0169, 312.3444, 1010.55
+ 4.8141, 308.8665, 1014.23
+ 4.1845, 305.8242, 1017.336
+ 3.7106, 302.4459, 1020.748
+ 3.5027, 298.1537, 1025.045
+ENDTABLE
+
+
+!------------------------------------------------------------------------------------
+! VS TERRAIN
+!------------------------------------------------------------------------------------
+VS_TERRAIN_FILE Scene_Import\VS_Scene_Builder\Mcity_scene.vsterrain ;
+
+
+END

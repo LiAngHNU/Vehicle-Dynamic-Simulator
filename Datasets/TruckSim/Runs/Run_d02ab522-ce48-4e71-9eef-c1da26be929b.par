@@ -1,0 +1,113 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Van+3A Trl, Right Lane Change`Validation of Vehicle Data
+#VEHICLECODE I_S + SSS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_d02ab522-ce48-4e71-9eef-c1da26be929b
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 4
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+SET_RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_058c8346-7fb0-403c-9c9f-599d8ee2bcb5.par
+#BlueLink2 Vehicle: Loaded Combination`2A Van + 3A Flatbed` European Vans` , Math Model`VehLoad_058c8346-7fb0-403c-9c9f-599d8ee2bcb5
+
+PARSFILE Procedures\Proc_6b0c2d02-baf9-4f50-b629-90ed28faf0d9.par
+#BlueLink28 Procedures`ISO 14791 Lane Change, Ay_Target` Stability Tests` , Procedure`Proc_6b0c2d02-baf9-4f50-b629-90ed28faf0d9
+
+PARSFILE Generic\Group\GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa.par
+#BlueLink9 Generic Data Group`5 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55.par
+#BlueLink10 Multiple Moving Objects`1 Driver Preview Point, Set by DM` Points of Interest` , Miscellaneous`TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55
+
+PARSFILE Plot\Setup\Plot_712a1199-3ac8-43d0-80b3-7a3572dc3bb8.par
+#BlueLink15 Plot: Setup`Hitch Forces` Hitch` , Plot`Plot_712a1199-3ac8-43d0-80b3-7a3572dc3bb8
+
+PARSFILE Plot\Setup\Plot_c3bccf1f-980c-453e-88fc-06b3fa4c8b2d.par
+#BlueLink16 Plot: Setup`Hitch Angular Rates` Hitch` , Plot`Plot_c3bccf1f-980c-453e-88fc-06b3fa4c8b2d
+
+PARSFILE Plot\Setup\Plot_b22de939-8faa-4c5c-9b6d-67c50a6daaa2.par
+#BlueLink17 Plot: Setup`Spring Forces (Axles 3 - 5)` Suspension Forces and Moments` , Plot`Plot_b22de939-8faa-4c5c-9b6d-67c50a6daaa2
+
+PARSFILE Plot\Setup\Plot_b223b7f0-6431-4a6a-8b5e-7438f67cdd82.par
+#BlueLink18 Plot: Setup`Spring Compression (Axles 3 - 5)` Suspension Motion` , Plot`Plot_b223b7f0-6431-4a6a-8b5e-7438f67cdd82
+
+
+SPECIAL_PARSFILE Runs\Run_41a8adcd-f22b-4715-a5b5-04c1ae1db74e.par
+#BlueLink23 TruckSim Run Control`Van+3A Trl, Left Lane Change` Validation of Vehicle Data` , Overlay run or ERD file`Run_41a8adcd-f22b-4715-a5b5-04c1ae1db74e
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Lead_2a\Lead2a_39375b25-3633-4ec1-ad5c-52a861987549.png
+WRITE_SENSOR_DETECT
+Title Van+3A Trl, Right Lane Change <Validation of Vehicle Data>
+CATEGORY Validation of Vehicle Data 
+DATASET_TITLE Van+3A Trl, Right Lane Change
+#MiscYellow0
+LTARG_GAIN -AY_TARGET
+! Do not reduce speed overshoot in Speed
+! Controller.
+OPT_AUTO_RESET_IC = 0
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example applies the PBS C12 - C13 Lane Change procedure, which in turn refers to ISO 14791.
+#
+#This dataset is nearly identical to the lane change to the left. However, the amplitude is set to a negative acceleration, resulting in the tow vehicle with trailer performing a lane change to the right.
+#
+#The ISO lane change is set to match the PBS specifications: lateral acceleration of 0.15 g's, speed of 88 km/h, and frequency of 0.4 Hz.
+#
+#PBS specifies that the driver tracking error be less than 30 mm. A new output variable is defined with a VS Command and plotted.
+#
+#Plots of lateral acceleration can be evaluated as would be done with test data for C12.
+#
+#Plots of Y vs. X for axle centers can be checked for the offtracking requirements of C13.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Validation of Vehicle Data } Van+3A Trl, Right Lane Change
+#Library : TruckSim Run Control
+#DataSet : Van+3A Trl, Right Lane Change
+#Category: Validation of Vehicle Data
+#FileID  : Run_d02ab522-ce48-4e71-9eef-c1da26be929b
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

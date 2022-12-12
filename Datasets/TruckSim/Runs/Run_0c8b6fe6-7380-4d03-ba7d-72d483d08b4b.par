@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName TruckSim Run Control`4A Conventional Van`Vehicle Configurations
+#VEHICLECODE S_SSS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_0c8b6fe6-7380-4d03-ba7d-72d483d08b4b
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_61b39158-568e-47fa-8bf6-1dd560356592.par
+#BlueLink0 Animator: Camera Setup`25 Azm, 5 El, 35 m, No Yaw` Vehicle Reference` , Animator camera`Camera_61b39158-568e-47fa-8bf6-1dd560356592
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_4a\Lead4a_524c1e69-1377-470f-bc2d-011a3ff239f8.par
+#BlueLink2 Vehicle: Lead Unit with 4 Axles`4A Conv. Van (S_SSS), Pintle Hitch` 4A Vans` , Math Model`Lead4a_524c1e69-1377-470f-bc2d-011a3ff239f8
+
+PARSFILE Procedures\Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4.par
+#BlueLink28 Procedures`DLC @ 70 km/h` Handling Tests` , Procedure`Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4
+
+PARSFILE Generic\Group\GenGrp_6a9e56b7-5200-4f87-a50a-a4543703f7b8.par
+#BlueLink9 Generic Data Group`4 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_6a9e56b7-5200-4f87-a50a-a4543703f7b8
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_215d2921-d67d-4eaf-b5d4-6dda4307af89.png
+WRITE_SENSOR_DETECT
+Title 4A Conventional Van <Vehicle Configurations>
+CATEGORY Vehicle Configurations 
+DATASET_TITLE 4A Conventional Van
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#S_SSS
+#
+#4A Conventional Van performing a double lane change maneuver.
+#
+#This vehicle uses tridem spring load sharing between axles 2, 3, and 4.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Vehicle Configurations } 4A Conventional Van
+#Library : TruckSim Run Control
+#DataSet : 4A Conventional Van
+#Category: Vehicle Configurations
+#FileID  : Run_0c8b6fe6-7380-4d03-ba7d-72d483d08b4b
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

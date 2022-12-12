@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Path: X-Y Coordinates`Short, Twisty Road`Off-Road
+#RingCtrl0 1
+SET_IPATH_FOR_ID 0
+DEFINE_XY_TABLES 1
+ITAB_XY = NTAB_XY
+XY_TABLE_ID = ITAB_XY
+SET_DESCRIPTION PATH_ID Short, Twisty Road
+SET_DESCRIPTION XY_TABLE_ID Short, Twisty Road
+IPATHSEG = 1
+PATH_ID_DM = PATH_ID
+SEGMENT_TYPE = 1
+XY_SEGMENT_ID = XY_TABLE_ID
+
+#CheckBox0 0    
+OPT_PATH_LOOP 0
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox4 0    
+
+#RadioCtrl0 0    
+
+SPATH_START -50
+#DiagramOne0
+SEGMENT_XY_TABLE
+-50.0000, 0.0000, -50.0000
+-40.0000, -5.0000, -38.8197
+-35.0000, -2.5000, -33.2295
+-30.0000, 2.5000, -26.1584
+-20.0000, 2.5000, -16.1584
+-10.0000, 0.0000, -5.8507
+0.0000, 0.0000, 4.1493
+5.0000, 1.5000, 9.3695
+10.0000, 2.0000, 14.3944
+20.0000, 2.5000, 24.4069
+35.0000, -2.5000, 40.2183
+45.0000, 0.0000, 50.5261
+50.0000, 0.0000, 55.5261
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Path: X-Y Coordinates; { Off-Road } Short, Twisty Road
+#Library : Path: X-Y Coordinates
+#DataSet : Short, Twisty Road
+#Category: Off-Road
+#FileID  : PathXY_2c28fdb4-2859-4cd2-80c2-06b61720c252
+#Product : TruckSim 2020.1
+#VehCode X-Y Coordinates of Path
+
+END

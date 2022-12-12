@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Road: Boundaries`Handling Course`Road Boundary Stop Conditions
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+#RingCtrl3 1
+#RingCtrl4 3
+#RingCtrl6 1
+#RingCtrl7 3
+*ROAD_ID_1 road_id
+*LMAX_1 1
+*LMIN_1 -9
+
+
+IROAD = GET_IROAD(road_id)
+ROAD_SMAX_NEW_ID = 0
+ROAD_SMIN_NEW_ID = 0
+
+ISIDE = 1
+ROAD_L_BOUNDARY_CONSTANT 1
+ROAD_NEW_ID_CONSTANT = -1
+
+ISIDE = 2
+ROAD_L_BOUNDARY_CONSTANT -9
+ROAD_NEW_ID_CONSTANT = -1
+
+#EMBEDDED_NOTES
+#These limits apply to the current road, and were set up for the handling course example. It is defined with the left edge, so the bounary for the left side is 1 m, for the right side -9 which includes that track width.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Boundaries; { Road Boundary Stop Conditions } Handling Course
+#Library : Road: Boundaries
+#DataSet : Handling Course
+#Category: Road Boundary Stop Conditions
+#FileID  : RdBnd_f658c7c3-6007-4ca2-ad16-6682a99f16e4
+#Product : TruckSim 2020.1
+#VehCode Road Boundaries
+
+END

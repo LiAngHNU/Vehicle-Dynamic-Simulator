@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName TruckSim Run Control`3A Conventional Van`Vehicle Configurations
+#VEHICLECODE I_SI
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_9231ab31-bbaf-46d8-8fde-d6f8263cdee2
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_61b39158-568e-47fa-8bf6-1dd560356592.par
+#BlueLink0 Animator: Camera Setup`25 Azm, 5 El, 35 m, No Yaw` Vehicle Reference` , Animator camera`Camera_61b39158-568e-47fa-8bf6-1dd560356592
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_3a\Lead3a_267d4445-f6be-42f2-930f-4bb0f0619abd.par
+#BlueLink2 Vehicle: Lead Unit with 3 Axles`3A Conv Van (I_SI)` 3A Conventional Van` , Math Model`Lead3a_267d4445-f6be-42f2-930f-4bb0f0619abd
+
+PARSFILE Procedures\Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4.par
+#BlueLink28 Procedures`DLC @ 70 km/h` Handling Tests` , Procedure`Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4
+
+PARSFILE Generic\Group\GenGrp_aa29b4a0-5439-4fbb-ad2f-bb4211f7d41f.par
+#BlueLink9 Generic Data Group`3 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_aa29b4a0-5439-4fbb-ad2f-bb4211f7d41f
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_37675ca0-b0bd-4786-924e-7c2fe233677a.png
+WRITE_SENSOR_DETECT
+Title 3A Conventional Van <Vehicle Configurations>
+CATEGORY Vehicle Configurations 
+DATASET_TITLE 3A Conventional Van
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#I_SI
+#
+#3A Conventional Van (I_SI) performing a double lane change maneuver.
+#
+#In this configuration, axle 3 is not driven by the powertrain but it used to enable additional load carrying capability. When not needed, this axle can be raised.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Vehicle Configurations } 3A Conventional Van
+#Library : TruckSim Run Control
+#DataSet : 3A Conventional Van
+#Category: Vehicle Configurations
+#FileID  : Run_9231ab31-bbaf-46d8-8fde-d6f8263cdee2
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

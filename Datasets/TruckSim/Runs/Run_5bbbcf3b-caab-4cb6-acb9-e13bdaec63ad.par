@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName TruckSim Run Control`70 km/h, DLC`Handling and Stability Tests
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_5bbbcf3b-caab-4cb6-acb9-e13bdaec63ad
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_faaa7c4f-c18d-4521-a00a-ecbdc3076f4f.par
+#BlueLink2 Vehicle: Loaded Combination`2A Tour Bus (I_S), Two Payloads` Tour Buses` , Math Model`VehLoad_faaa7c4f-c18d-4521-a00a-ecbdc3076f4f
+
+PARSFILE Procedures\Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4.par
+#BlueLink28 Procedures`DLC @ 70 km/h` Handling Tests` , Procedure`Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_5cb9979d-3686-4654-8ce0-3c30f81bd36c.png
+WRITE_SENSOR_DETECT
+Title 70 km/h, DLC <Handling and Stability Tests>
+CATEGORY Handling and Stability Tests 
+DATASET_TITLE 70 km/h, DLC
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates a Tour Bus with an independent front and solid axle rear suspension performing a double lane change maneuver on a 0.85-mu surface
+#
+#The double lane change procedure linked here is the same used in the Quick Start Guide.
+#
+#For comparison purposes you could make a copy of this dataset, link the new dataset to the Tour Bus with a solid front and solid rear axle, and overlay the results of the two tests. This would give you some idea of the different handling properties afforded by each suspension configuration.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Handling and Stability Tests } 70 km/h, DLC
+#Library : TruckSim Run Control
+#DataSet : 70 km/h, DLC
+#Category: Handling and Stability Tests
+#FileID  : Run_5bbbcf3b-caab-4cb6-acb9-e13bdaec63ad
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

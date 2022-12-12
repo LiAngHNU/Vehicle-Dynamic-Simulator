@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, S-L Grid`6-Lane Highway: Road Crown`6-Lane Highway
+#CheckBox0 0    
+
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: 6-Lane Highway: Road Crown
+set_description ROAD_DZ_ID 6-Lane Highway: Road Crown
+#RingCtrl0 CONSTANT
+#RingCtrl1 LINEAR_FLAT
+#RingCtrl2 ADD
+ROAD_DZ_COMBINE ADD
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 1    
+
+ROAD_DZ_CONSTANT 0
+#DiagramOne1
+ROAD_DZ_L_TABLE LINEAR_FLAT
+-29.55, 0.15
+-16.425, 0.15
+-13.975, 0
+-7.3, 0.15
+-1.095, 0
+-0.365, 0.1
+0.365, 0.1
+1.095, 0
+7.3, 0.15
+13.975, 0
+16.425, 0.15
+29.55, 0.15
+ENDTABLE
+*SCALAR 0
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { 6-Lane Highway } 6-Lane Highway: Road Crown
+#Library : Road: Off-Center Elevation Map, S-L Grid
+#DataSet : 6-Lane Highway: Road Crown
+#Category: 6-Lane Highway
+#FileID  : RdMapZ_f51cb7ac-52a1-4782-8571-3abdb4460262
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L Grid
+
+END

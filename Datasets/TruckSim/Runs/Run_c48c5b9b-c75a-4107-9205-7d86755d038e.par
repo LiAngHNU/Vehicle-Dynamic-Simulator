@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Rear Twin Clutch Control`Simulink and LabVIEW
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_c48c5b9b-c75a-4107-9205-7d86755d038e
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_bfdb16b6-627e-4ccb-b593-c6e35ed5fa71.par
+#BlueLink12 Models: Simulink`Differential Controller` External Powertrain` , Models`Simlink_bfdb16b6-627e-4ccb-b593-c6e35ed5fa71
+
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 3
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_174f76e0-6c9c-418b-bd41-c39408f5e28d.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Pickup, Reg. Cab DRW (Twin Clutch Diff.)` Pickup Trucks w/ Options` , Math Model`Lead2a_174f76e0-6c9c-418b-bd41-c39408f5e28d
+
+PARSFILE Procedures\Proc_a07b2cfe-aad4-4b9c-b9db-1969e001a47a.par
+#BlueLink28 Procedures`Half Throttle Acceleration (AT)` Acceleration and Braking` , Procedure`Proc_a07b2cfe-aad4-4b9c-b9db-1969e001a47a
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+PARSFILE Control\Steer\StrSW_9419b1df-a776-4d94-97e4-93750a8c097b.par
+#BlueLink3 Control: Steering (Open Loop)`Constant: 0 deg.` Constant` , Steering`StrSW_9419b1df-a776-4d94-97e4-93750a8c097b
+
+PARSFILE Plot\Setup\Plot_4c8544e7-955b-4289-9ded-372d609d46e7.par
+#BlueLink15 Plot: Setup`Twin Clutch Control Input` Controls: Chassis and Powertrain` , Plot`Plot_4c8544e7-955b-4289-9ded-372d609d46e7
+
+PARSFILE Plot\Setup\Plot_a5b78349-b8a5-41ac-802a-b6dea19c6fbf.par
+#BlueLink16 Plot: Setup`Twin Clutch Torque` Powertrain` , Plot`Plot_a5b78349-b8a5-41ac-802a-b6dea19c6fbf
+
+PARSFILE Plot\Setup\Plot_e7b41872-2b40-4556-aa0d-7e348d4a1a61.par
+#BlueLink17 Plot: Setup`My_Dr -- Wheel Drive Torque (Axle 2)` Powertrain` , Plot`Plot_e7b41872-2b40-4556-aa0d-7e348d4a1a61
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_2a7c5c10-25ca-44b3-8034-dbf1de646707.png
+WRITE_SENSOR_DETECT
+Title Rear Twin Clutch Control <Simulink and LabVIEW>
+CATEGORY Simulink and LabVIEW 
+DATASET_TITLE Rear Twin Clutch Control
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates the use of Simulink to define a Clutch Control for the rear differential on a 2A Dually Pickup Truck that is performing a 1/2 Throttle Acceleration.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Simulink and LabVIEW } Rear Twin Clutch Control
+#Library : TruckSim Run Control
+#DataSet : Rear Twin Clutch Control
+#Category: Simulink and LabVIEW
+#FileID  : Run_c48c5b9b-c75a-4107-9205-7d86755d038e
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

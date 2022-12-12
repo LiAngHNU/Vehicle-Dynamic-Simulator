@@ -1,0 +1,107 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, Variable Width`I-94 Near Exit 712, 3D cosmetics`Highway Intersection Boundaries
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: I-94 Near Exit 712, 3D cosmetics
+set_description ROAD_DZ_ID I-94 Near Exit 712, 3D cosmetics
+#RingCtrl0 CARPET
+#RingCtrl1 1
+*3D_DATA 8, 11 ! columns x rows
+ROAD_DZ_CARPET VAR_WIDTH
+0, 1, 2, 3, 4, 5, 6, 7, 8
+300, -2, 0, 0, 0, 0, 0, 0, -3
+900, -2, 0, 0, 0, 0, 0, 0, -5
+1244.99, 0, 0, 0, 0, 0, 0, 0, -5
+1245, 0, 0, -1.5, 0, 0, -1.5, 0, -5
+1313.31, 0, 0, -1.5, 0, 0, -1.5, 0, -5
+1313.32, 0, 0, -1.5, 0, 0, -1.5, 0, -5
+1335.08, -6, 0, -1.5, 0, 0, -1.5, 0, -5
+1335.09, -6, 0, -1.5, 0, 0, -1.5, 0, -5
+1367.08, -6, 0, -1.5, 0, 0, -1.5, 0, -5
+1367.09, -6, 0, 0, 0, 0, 0, 0, -5
+2000, -6, 0, 0, 0, 0, 0, 0, -5
+ENDDATA
+0, 1, 2, 3, 4, 5, 6, 7, 8
+300, -45, -9.2, -7.3, -7.2, 22.1, 22.2, 24.2, 55
+900, -45, -9.2, -7.3, -7.2, 22.1, 22.2, 24.2, 55
+1244.99, -45, -9.2, -7.3, -7.2, 22.1, 22.2, 24.2, 55
+1245, -9.201, -9.2, -7.3, -7.2, 22.1, 22.2, 24.2, 55
+1313.31, -9.201, -9.2, -7.3, -7.2, 22.1, 22.2, 24.2, 50
+1313.32, -9.201, -9.2, -7.3, -7.2, 22.1, 22.2, 24.2, 50
+1335.08, -9.201, -9.2, -7.3, -7.2, 22.1, 22.2, 24.2, 24.201
+1335.09, -25, -9.2, -7.3, -7.2, 22.1, 22.2, 24.2, 24.201
+1367.08, -25, -9.2, -7.3, -7.2, 22.1, 22.2, 24.2, 35
+1367.09, -25, -9.2, -7.3, -7.2, 22.1, 22.2, 24.2, 35
+2000, -25, -9.2, -7.3, -7.2, 22.1, 22.2, 24.2, 55
+ENDCOLS
+ENDTABLE
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 8, 11 ! columns x rows
+RdTb1_CARPET 2D_LINEAR
+0, 1, 2, 3, 4, 5, 6, 7, 8
+300, -2, 0, 0, 0, 0, 0, 0, -3
+900, -2, 0, 0, 0, 0, 0, 0, -5
+1244.99, 0, 0, 0, 0, 0, 0, 0, -5
+1245, 0, 0, -1.5, 0, 0, -1.5, 0, -5
+1313.31, 0, 0, -1.5, 0, 0, -1.5, 0, -5
+1313.32, 0, 0, -1.5, 0, 0, -1.5, 0, -5
+1335.08, -6, 0, -1.5, 0, 0, -1.5, 0, -5
+1335.09, -6, 0, -1.5, 0, 0, -1.5, 0, -5
+1367.08, -6, 0, -1.5, 0, 0, -1.5, 0, -5
+1367.09, -6, 0, 0, 0, 0, 0, 0, -5
+2000, -6, 0, 0, 0, 0, 0, 0, -5
+ENDTABLE
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Lateral coordinate of edge (m)
+
+#DiagramTwo1
+*3D_DATA 8, 11 ! columns x rows
+RdTb2_CARPET 2D_LINEAR
+0, 1, 2, 3, 4, 5, 6, 7, 8
+300, -45, -9.2, -7.3, -7.2, 22.1, 22.2, 24.2, 55
+900, -45, -9.2, -7.3, -7.2, 22.1, 22.2, 24.2, 55
+1244.99, -45, -9.2, -7.3, -7.2, 22.1, 22.2, 24.2, 55
+1245, -9.201, -9.2, -7.3, -7.2, 22.1, 22.2, 24.2, 55
+1313.31, -9.201, -9.2, -7.3, -7.2, 22.1, 22.2, 24.2, 50
+1313.32, -9.201, -9.2, -7.3, -7.2, 22.1, 22.2, 24.2, 50
+1335.08, -9.201, -9.2, -7.3, -7.2, 22.1, 22.2, 24.2, 24.201
+1335.09, -25, -9.2, -7.3, -7.2, 22.1, 22.2, 24.2, 24.201
+1367.08, -25, -9.2, -7.3, -7.2, 22.1, 22.2, 24.2, 35
+1367.09, -25, -9.2, -7.3, -7.2, 22.1, 22.2, 24.2, 35
+2000, -25, -9.2, -7.3, -7.2, 22.1, 22.2, 24.2, 55
+ENDTABLE
+
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+SET_IROAD_DZ_FOR_ID 0
+
+
+#EMBEDDED_NOTES
+#There are 8 edges that are used to show lanes graphically.
+#
+#1-2 is grass (right)
+#3-4 is concrete bridge siding (right)
+#5-6 is concrete bridge siding (left)
+#7-8 is grass travel (left)
+#
+#I-94 has an exit on the right and a bridge shortly after the exit.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, Variable Width; { Highway Intersection Boundaries } I-94 Near Exit 712, 3D cosmetics
+#Library : Road: Off-Center Elevation Map, Variable Width
+#DataSet : I-94 Near Exit 712, 3D cosmetics
+#Category: Highway Intersection Boundaries
+#FileID  : VarWidZ_57082f57-394a-4dc0-9ef3-91160499efc0
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L, Variable Width
+
+END

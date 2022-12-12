@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Update Path with Embedded Python`Embedded Python
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_05e83db9-e408-42da-be9c-252ddb280fd5
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b7028f29-fdf7-4233-8487-abd35f8aee05.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 10 El, 36 m` Vehicle Reference` , Animator camera`Camera_b7028f29-fdf7-4233-8487-abd35f8aee05
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_27e6464d-d461-494b-a160-42df59864abe.par
+#BlueLink2 Vehicle: Loaded Combination`DRW Pickup w/ AEB Sensor` Pickup Trucks` , Math Model`VehLoad_27e6464d-d461-494b-a160-42df59864abe
+
+PARSFILE Procedures\Proc_6dd1e7aa-40e5-41cb-be3f-ec4c8bb7f995.par
+#BlueLink28 Procedures`Update Path to Avoid Collision` Driver Controls` , Procedure`Proc_6dd1e7aa-40e5-41cb-be3f-ec4c8bb7f995
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55.par
+#BlueLink9 Multiple Moving Objects`1 Driver Preview Point, Set by DM` Points of Interest` , Miscellaneous`TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55
+
+PARSFILE Generic\Links\GenLink_d5353de4-8a71-4e42-aeee-92faf02f44cb.par
+#BlueLink10 Generic Group of Links`Deer placement for Update Path` ADAS: Moving Objects, incl. Pedestrians` , Miscellaneous`GenLink_d5353de4-8a71-4e42-aeee-92faf02f44cb
+
+PARSFILE Events\Events_49877005-9692-44b9-aa5c-e8742b16dd42.par
+#BlueLink11 Events`Avoid Obstruction` Embedded Python: Obstacle Detection` , Miscellaneous`Events_49877005-9692-44b9-aa5c-e8742b16dd42
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink15 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_2d2786e5-c3c2-4125-8bc1-eab0f4b9bed3.par
+#BlueLink16 Plot: Setup`Distance: S1 (2 Objects)` ADAS Sensor Detections` , Plot`Plot_2d2786e5-c3c2-4125-8bc1-eab0f4b9bed3
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ee189bc-4102-46cf-a6ee-046ab79da53b.png
+WRITE_SENSOR_DETECT
+Title Update Path with Embedded Python <Embedded Python>
+CATEGORY Embedded Python 
+DATASET_TITLE Update Path with Embedded Python
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This is a basic demonstration that uses embedded python to take inputs from the running vehicle and produce an updated path to avoid the detected obstruction.
+#
+#The last obstruction can be set optionally to be placed randomly in its location when the simulation is run again.
+#
+#A TruckSim Sensors license is required to rerun this simulation. You may still view the animation and plots.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Embedded Python } Update Path with Embedded Python
+#Library : TruckSim Run Control
+#DataSet : Update Path with Embedded Python
+#Category: Embedded Python
+#FileID  : Run_05e83db9-e408-42da-be9c-252ddb280fd5
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

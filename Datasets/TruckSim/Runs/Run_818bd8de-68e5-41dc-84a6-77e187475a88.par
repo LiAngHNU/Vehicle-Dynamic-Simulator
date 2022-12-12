@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName TruckSim Run Control`5A Sleeper Cab (SS_SSS)`Vehicle Configurations
+#VEHICLECODE SS_SSS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_818bd8de-68e5-41dc-84a6-77e187475a88
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_5a\Lead45_d1762bc2-dc29-43a0-902d-fbb7357f0c97.par
+#BlueLink2 Vehicle: Lead Unit with 5 Axles`5A Tractor (SS_SSS)` 5-Axle Lead Units` , Math Model`Lead45_d1762bc2-dc29-43a0-902d-fbb7357f0c97
+
+PARSFILE Procedures\Proc_6f7e46af-db86-44e0-b550-09e866e25bd3.par
+#BlueLink28 Procedures`DLC @ 70 km/h, TSTART = -3.5s` Handling Tests` , Procedure`Proc_6f7e46af-db86-44e0-b550-09e866e25bd3
+
+PARSFILE Generic\Group\GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa.par
+#BlueLink9 Generic Data Group`5 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa
+
+
+*IMAGE_TYPE DEFAULT
+WRITE_SENSOR_DETECT
+Title 5A Sleeper Cab (SS_SSS) <Vehicle Configurations>
+CATEGORY Vehicle Configurations 
+DATASET_TITLE 5A Sleeper Cab (SS_SSS)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#SS_SSS
+#
+#5A Tractor performing a double lane change maneuver.
+#
+#Note that the Procedure gives the vehicle 3.6 seconds to initialize before the Double Lane Change Maneuver begins.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Vehicle Configurations } 5A Sleeper Cab (SS_SSS)
+#Library : TruckSim Run Control
+#DataSet : 5A Sleeper Cab (SS_SSS)
+#Category: Vehicle Configurations
+#FileID  : Run_818bd8de-68e5-41dc-84a6-77e187475a88
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

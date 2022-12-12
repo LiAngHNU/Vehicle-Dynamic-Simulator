@@ -1,0 +1,92 @@
+PARSFILE
+#FullDataName TruckSim Run Control`J-turn with ESC`Handling and Stability Tests
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_bafbed1e-5640-42c4-94fe-b90401a744b1
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_bae88565-616d-4c18-887c-a216193d3186.par
+#BlueLink2 Vehicle: Loaded Combination`2A LCF, 2 Channel ABS, Loaded` LCF Vans` , Math Model`VehLoad_bae88565-616d-4c18-887c-a216193d3186
+
+PARSFILE Procedures\Proc_f9df6315-7a7a-47b8-8162-e503ce8c56fa.par
+#BlueLink28 Procedures`500 m Straight, 45.72 m Left Turn` Stability Tests` , Procedure`Proc_f9df6315-7a7a-47b8-8162-e503ce8c56fa
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+PARSFILE Control\ESC\ESC_d2359cf0-0fa3-4fa7-84ea-a5c524d8c9d8.par
+#BlueLink11 Control: Electronic Stability (ESC)`Basic ESC` ` , Miscellaneous`ESC_d2359cf0-0fa3-4fa7-84ea-a5c524d8c9d8
+
+
+SPECIAL_PARSFILE Runs\Run_9163c1c5-ef60-4da7-884c-4a937fd6d4d5.par
+#BlueLink23 TruckSim Run Control`J-turn without ESC` Handling and Stability Tests` , Overlay run or ERD file`Run_9163c1c5-ef60-4da7-884c-4a937fd6d4d5
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Loaded\VehLoad_bae88565-616d-4c18-887c-a216193d3186.png
+WRITE_SENSOR_DETECT
+Title J-turn with ESC <Handling and Stability Tests>
+CATEGORY Handling and Stability Tests 
+DATASET_TITLE J-turn with ESC
+#MiscYellow0
+SPEED = 60
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This demonstrates a basic Electronic Stability Control (ESC).
+#
+#Since the ESC modulates the brakes individually to modify yaw rate, the vehicle must have a brake pressure modulator for each wheel.
+#
+#Since each wheel has brake pressure modulation, 2 Channel ABS is used. With single channel ABS, the yaw rate control is defeated because wheels are not braked individually.
+#
+#The stability test road defined in the procedure can be used for tests such as FMVSS 136.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Handling and Stability Tests } J-turn with ESC
+#Library : TruckSim Run Control
+#DataSet : J-turn with ESC
+#Category: Handling and Stability Tests
+#FileID  : Run_bafbed1e-5640-42c4-94fe-b90401a744b1
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

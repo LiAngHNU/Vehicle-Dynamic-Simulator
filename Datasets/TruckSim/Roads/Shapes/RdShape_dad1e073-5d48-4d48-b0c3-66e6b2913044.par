@@ -1,0 +1,134 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Four Lanes (Divided)`Lane-Keeping Assist Roads
+NLANES 8
+OPTTHRESHOLD 1
+#MiscYellow0
+# 1 1 1, Road (Medium), 1, 20, 1, 4, m, -4, m, , , -100, 2000, 5, , , Road
+# 1 1 1, Road Transition (Light), 1, 10, 1, 20, m, 25, m, , , -100, 2000, 5, , , Foliage
+# 1 1 1, Road (Medium), 1, 20, 1, 12, m, 20, m, , , -100, 2000, 5, , , Road
+# 1 1 1, Road Transition (Light), 1, 10, -1, -9, m, -4, m, , , -100, 2000, 5, , , Foliage
+# 1 1 1, Road Transition (Dark), 1, 10, 1, 4, m, 8, m, , , -100, 2000, 5, , , Foliage
+# 1 1 1, Road Transition (Dark), 1, 10, -1, 8, m, 12, m, , , -100, 2000, 5, , , Foliage
+# 1 1 1, Grass (Light), 1, 10, 3, 25, m, 50, m, , , -100, 2000, 5, , , Foliage
+# 1 1 1, Grass (Light), 1, 10, 3, -9, m, -35, m, , , -100, 2000, 5, , , Foliage
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (Medium)
+SPECULAR(1) 1
+SCALE(1) 20
+LTILES(1) 1
+LIN(1) 4
+LINUNITS(1) m
+LOUT(1) -4
+LOUTUNITS(1) m
+S_START(1) -100
+S_STOP(1) 2000
+SINT(1) 5
+AUTODETAIL(1) Road
+COLOR(2) 1 1 1
+MATERIAL(2) Road Transition (Light)
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 1
+LIN(2) 20
+LINUNITS(2) m
+LOUT(2) 25
+LOUTUNITS(2) m
+S_START(2) -100
+S_STOP(2) 2000
+SINT(2) 5
+AUTODETAIL(2) Foliage
+COLOR(3) 1 1 1
+MATERIAL(3) Road (Medium)
+SPECULAR(3) 1
+SCALE(3) 20
+LTILES(3) 1
+LIN(3) 12
+LINUNITS(3) m
+LOUT(3) 20
+LOUTUNITS(3) m
+S_START(3) -100
+S_STOP(3) 2000
+SINT(3) 5
+AUTODETAIL(3) Road
+COLOR(4) 1 1 1
+MATERIAL(4) Road Transition (Light)
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) -1
+LIN(4) -9
+LINUNITS(4) m
+LOUT(4) -4
+LOUTUNITS(4) m
+S_START(4) -100
+S_STOP(4) 2000
+SINT(4) 5
+AUTODETAIL(4) Foliage
+COLOR(5) 1 1 1
+MATERIAL(5) Road Transition (Dark)
+SPECULAR(5) 1
+SCALE(5) 10
+LTILES(5) 1
+LIN(5) 4
+LINUNITS(5) m
+LOUT(5) 8
+LOUTUNITS(5) m
+S_START(5) -100
+S_STOP(5) 2000
+SINT(5) 5
+AUTODETAIL(5) Foliage
+COLOR(6) 1 1 1
+MATERIAL(6) Road Transition (Dark)
+SPECULAR(6) 1
+SCALE(6) 10
+LTILES(6) -1
+LIN(6) 8
+LINUNITS(6) m
+LOUT(6) 12
+LOUTUNITS(6) m
+S_START(6) -100
+S_STOP(6) 2000
+SINT(6) 5
+AUTODETAIL(6) Foliage
+COLOR(7) 1 1 1
+MATERIAL(7) Grass (Light)
+SPECULAR(7) 1
+SCALE(7) 10
+LTILES(7) 3
+LIN(7) 25
+LINUNITS(7) m
+LOUT(7) 50
+LOUTUNITS(7) m
+S_START(7) -100
+S_STOP(7) 2000
+SINT(7) 5
+AUTODETAIL(7) Foliage
+COLOR(8) 1 1 1
+MATERIAL(8) Grass (Light)
+SPECULAR(8) 1
+SCALE(8) 10
+LTILES(8) 3
+LIN(8) -9
+LINUNITS(8) m
+LOUT(8) -35
+LOUTUNITS(8) m
+S_START(8) -100
+S_STOP(8) 2000
+SINT(8) 5
+AUTODETAIL(8) Foliage
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Lane-Keeping Assist Roads } Four Lanes (Divided)
+#Library : Road: Animator Surface Shapes
+#DataSet : Four Lanes (Divided)
+#Category: Lane-Keeping Assist Roads
+#FileID  : RdShape_dad1e073-5d48-4d48-b0c3-66e6b2913044
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

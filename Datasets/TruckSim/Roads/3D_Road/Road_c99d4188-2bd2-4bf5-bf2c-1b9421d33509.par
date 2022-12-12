@@ -1,0 +1,239 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Hill with Cross Slopes`Braking and Traction Control Test Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_c99d4188-2bd2-4bf5-bf2c-1b9421d33509.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Hill with Cross Slopes
+PARSFILE Roads\BuilderSegment\RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c.par
+#BlueLink0 Path: Segment Builder`Straight Path East` Straight` , Reference Path`RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight Path East
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+PARSFILE Roads\dZ_Map\RdMapZ_f31db39a-049f-44cc-bda2-3e225ddf5713.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`2D Linear: Hill with Cross Slopes` Banks and Cross-Slopes` , Miscellaneous`RdMapZ_f31db39a-049f-44cc-bda2-3e225ddf5713
+
+PARSFILE Roads\Friction\RdMu_75039b30-f51d-46dc-84a9-b67fefd14a15.par
+#BlueLink3 Road: Friction Map, S-L Grid`Split Mu @ 3 m, 0.2 Left / 0.5 Right` Split Mu` , Friction`RdMu_75039b30-f51d-46dc-84a9-b67fefd14a15
+
+PARSFILE Roads\Shapes\RdShape_ed81cc5b-6fcc-4cf6-b947-bcaf58556f8f.par
+#BlueLink4 Road: Animator Surface Shapes`Hill with Cross Slopes` Scenic Road Shapes` , Road shape definitions`RdShape_ed81cc5b-6fcc-4cf6-b947-bcaf58556f8f
+
+RR_SURF_CONSTANT 1.00
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Snow_Covered_Trees_(-135,135)
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_810c4064-c713-48fb-89eb-d1f29019ba40.par
+#BlueLink6 Road: Animator Repeated Object`Snow Covered Trees (-135,135)` Trees` , 3D Shapes`AniRep_810c4064-c713-48fb-89eb-d1f29019ba40
+
+add_reference_frame road_stuff_7_Overcast_Sky_with_Snow
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_dd7aa802-72ab-497d-b33f-1f5e0f1a76f1.par
+#BlueLink7 Animator: Group`Overcast Sky with Snow` Environment Spheres` , 3D Shapes`Group_dd7aa802-72ab-497d-b33f-1f5e0f1a76f1
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_265e38de-4bbf-46ee-bbc0-868db110b76d.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 3 El, 44 m` Road Reference` , Camera`Camera_265e38de-4bbf-46ee-bbc0-868db110b76d
+
+parsfile Roads\3D_Road\Road_c99d4188-2bd2-4bf5-bf2c-1b9421d33509.ani
+
+add_reference_frame road_stuff_1_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x -135
+set_offset_var_y 33
+set_offset_var_z -10.96
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_2_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x -110
+set_offset_var_y 36
+set_offset_var_z -10.2525
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_3_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x -81
+set_offset_var_y 33
+set_offset_var_z -6.882
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_4_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x -53
+set_offset_var_y 16.5
+set_offset_var_z -2.7825
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_5_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x -23
+set_offset_var_y 33
+set_offset_var_z -4.44
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_6_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 5
+set_offset_var_y 18
+set_offset_var_z -6.415
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_7_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 32
+set_offset_var_y 16.5
+set_offset_var_z -8.962375
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_8_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 66
+set_offset_var_y 25.5
+set_offset_var_z -10.645
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_9_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 98
+set_offset_var_y 39
+set_offset_var_z -10.598
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_10_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 127
+set_offset_var_y 43.5
+set_offset_var_z -9.5485
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_11_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -135
+set_offset_var_y -39
+set_offset_var_z -1.65
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_12_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -106
+set_offset_var_y -31.5
+set_offset_var_z -1.165
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_13_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -78
+set_offset_var_y -24
+set_offset_var_z -1.15
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_14_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -52
+set_offset_var_y -37.5
+set_offset_var_z 0.759375
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_15_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -25
+set_offset_var_y -36
+set_offset_var_z -0.1725
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_16_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 4
+set_offset_var_y -24
+set_offset_var_z -3.92
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_17_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 30
+set_offset_var_y -15
+set_offset_var_z -7.15
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_18_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 35
+set_offset_var_y -43.5
+set_offset_var_z -5.145
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_19_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 50
+set_offset_var_y -15
+set_offset_var_z -9.15
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_20_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 62
+set_offset_var_y -39
+set_offset_var_z -8.43
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_21_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 90
+set_offset_var_y -27
+set_offset_var_z -10.61
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_22_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 106.784401114
+set_offset_var_y -28.3555555556
+set_offset_var_z -10.0919376447
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+add_reference_frame road_stuff_23_1_Pine:_Winter
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 30.0430420712
+set_offset_var_y -15.0909952607
+set_offset_var_z -7.14793453887
+parsfile Animator\STL\Shape_7fe64a09-2680-4468-8333-0ba77fb95df7.par
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Braking and Traction Control Test Roads } Hill with Cross Slopes
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Hill with Cross Slopes
+#Category: Braking and Traction Control Test Roads
+#FileID  : Road_c99d4188-2bd2-4bf5-bf2c-1b9421d33509
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

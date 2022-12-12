@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Sine Sweep: Bounce`Suspension and Ride
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_9c14da27-2ec7-4e44-b523-c319e350a223
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_d14a8296-6736-4daf-8562-965531be5132.par
+#BlueLink0 Animator: Camera Setup`16 Azm, 3.6 El, 51 m` Road Reference` , Animator camera`Camera_d14a8296-6736-4daf-8562-965531be5132
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_d4729ac2-9b6c-4bb2-b187-a9bd949bef7a.par
+#BlueLink2 Vehicle: Loaded Combination`2A Conv Loaded, 5 Accel & Rate Sensors` Conventional Vans` , Math Model`VehLoad_d4729ac2-9b6c-4bb2-b187-a9bd949bef7a
+
+PARSFILE Procedures\Proc_289a6952-478f-4d9f-8885-a556b4216383.par
+#BlueLink28 Procedures`Bounce Sine Sweep Test` Ride Tests` , Procedure`Proc_289a6952-478f-4d9f-8885-a556b4216383
+
+*TSTEP 0.001
+*FREQ_MODEL 1000
+*TSTEP_OUT 0.004
+*FREQ_OUT 250
+tstep 0.001
+iprint 4
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Sine Sweep: Bounce <Suspension and Ride>
+CATEGORY Suspension and Ride 
+DATASET_TITLE Sine Sweep: Bounce
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates the use of a synthesized bounce sine sweep road to excite the ride dynamics of a vehicle.
+#
+#The vehicle linked to this example is the 2A Conventional Van with a payload, with five acceleration and rate sensors. The acceleration and rate sensors simulate the accelerometers and rate sensors you would instrument a test vehicle with.
+#
+#You can use the plots and animation to analyze the results of this test to study and understand the effects this type of road has on the tire and damper forces, suspension behavior, etc.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Suspension and Ride } Sine Sweep: Bounce
+#Library : TruckSim Run Control
+#DataSet : Sine Sweep: Bounce
+#Category: Suspension and Ride
+#FileID  : Run_9c14da27-2ec7-4e44-b523-c319e350a223
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

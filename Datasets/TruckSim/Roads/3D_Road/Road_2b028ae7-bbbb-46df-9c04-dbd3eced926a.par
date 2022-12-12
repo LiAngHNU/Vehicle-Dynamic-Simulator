@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`I-94 North, Near Exit 172 (Raw GPS)`Atlas and ADAS RP Map Downloads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_2b028ae7-bbbb-46df-9c04-dbd3eced926a.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id I-94 North, Near Exit 172 (Raw GPS)
+PARSFILE Roads\ExScene\SceneImp_a4a79779-ffe1-479c-b98e-e730c08c0ec4.par
+#BlueLink0 Scene: External Import`I-94, Exit 172 (Jackson Ave), Raw GPS` Atlas` , Reference Path`SceneImp_a4a79779-ffe1-479c-b98e-e730c08c0ec4
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: I-94, Exit 172 (Jackson Ave), Raw GPS
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_bdc66658-5d51-44e5-8cc6-e0d1f0e3a14c.par
+#BlueLink4 Road: Animator Surface Shapes`I-94 (Minimal)` Highway Intersection` , Road shape definitions`RdShape_bdc66658-5d51-44e5-8cc6-e0d1f0e3a14c
+
+RR_SURF_CONSTANT 1.0
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_d4c450d6-372b-4662-b26d-43e2a7e034fd.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 39 m` Road Reference` , Camera`Camera_d4c450d6-372b-4662-b26d-43e2a7e034fd
+
+parsfile Roads\3D_Road\Road_2b028ae7-bbbb-46df-9c04-dbd3eced926a.ani
+
+#EMBEDDED_NOTES
+#This dataset anchors the vehicle X-Y-Z system.
+#
+#The reference line is between the two  lanes, and a minimal surface dataset shows the lanes.
+#
+#Without editing, the road surface shows problems. The most visible is that the Z coordinates dip down where a bridge crosses Jackson Road.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Atlas and ADAS RP Map Downloads } I-94 North, Near Exit 172 (Raw GPS)
+#Library : Road: 3D Surface (All Properties)
+#DataSet : I-94 North, Near Exit 172 (Raw GPS)
+#Category: Atlas and ADAS RP Map Downloads
+#FileID  : Road_2b028ae7-bbbb-46df-9c04-dbd3eced926a
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

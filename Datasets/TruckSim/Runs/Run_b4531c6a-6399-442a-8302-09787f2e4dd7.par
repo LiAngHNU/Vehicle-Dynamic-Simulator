@@ -1,0 +1,97 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Lane Departure Warning, Divided`ADAS and Active Safety
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_b4531c6a-6399-442a-8302-09787f2e4dd7
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b7028f29-fdf7-4233-8487-abd35f8aee05.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 10 El, 36 m` Vehicle Reference` , Animator camera`Camera_b7028f29-fdf7-4233-8487-abd35f8aee05
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_b923c00f-885d-493d-b7b3-17378abf8636.par
+#BlueLink2 Vehicle: Loaded Combination`DRW Pickup, ADAS Lane & Blind-Spot` Pickup Trucks` , Math Model`VehLoad_b923c00f-885d-493d-b7b3-17378abf8636
+
+PARSFILE Procedures\Proc_15835a6c-8a89-455e-9bcc-29b9ebdf42dd.par
+#BlueLink28 Procedures`Lane Departure using Lat_Veh` ADAS and Active Safety` , Procedure`Proc_15835a6c-8a89-455e-9bcc-29b9ebdf42dd
+
+PARSFILE Roads\3D_Road\Road_2d020066-d170-461b-a680-2d8408718ba5.par
+#BlueLink9 Road: 3D Surface (All Properties)`4-Lane Section (Divided)` Multiple Lanes` , Miscellaneous`Road_2d020066-d170-461b-a680-2d8408718ba5
+
+PARSFILE Generic\Group\GenGrp_b694a48b-820c-41ea-94af-7de2d38d7b04.par
+#BlueLink10 Generic Data Group`Traffic, Two Lanes, Forward` ADAS: Traffic for ACC & FCW` , Miscellaneous`GenGrp_b694a48b-820c-41ea-94af-7de2d38d7b04
+
+PARSFILE Events\Events_5b501b98-46e9-4501-bc49-d182ba97ec2d.par
+#BlueLink11 Events`1. Lane Drifting Start - Drive Straight` Lane Departure Warning` , Miscellaneous`Events_5b501b98-46e9-4501-bc49-d182ba97ec2d
+
+PARSFILE Plot\Setup\Plot_b36dc949-47ae-41cd-87f7-5ccd7a2a2db4.par
+#BlueLink15 Plot: Setup`Sensor 1: IDs Objects 1-15` ADAS Sensor Detections` , Plot`Plot_b36dc949-47ae-41cd-87f7-5ccd7a2a2db4
+
+PARSFILE Plot\Setup\Plot_7a4900c7-68a0-40d3-8796-6256354312c8.par
+#BlueLink16 Plot: Setup`Magnitude: Sensor 1, Objects 1-15` ADAS Sensor Detections` , Plot`Plot_7a4900c7-68a0-40d3-8796-6256354312c8
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ee189bc-4102-46cf-a6ee-046ab79da53b.png
+WRITE_SENSOR_DETECT
+Title Lane Departure Warning, Divided <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Lane Departure Warning, Divided
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#Example demonstrating lane detection sensors for three lane edges that are defined using output variables defined with VS Commands: L_Edge_L and L_Edge_R.
+#
+#With the driver preview path, you can see the target path drift to the side of the lane, at which point the lane edge detection is checked.
+#
+#The traffic vehicles occlude some of the lane edge  markers.
+#
+#A front-facing ADAS sensor is configured to only detect targets down low. The moving point targets are defined to follow lane edges at 5-m intervals in front of the sensor.
+#
+#This example also has blind spot detection sensors that generate HUD alerts when traffic vehicles in the parallel lanes enter the blind spots of the ego vehicle.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { ADAS and Active Safety } Lane Departure Warning, Divided
+#Library : TruckSim Run Control
+#DataSet : Lane Departure Warning, Divided
+#Category: ADAS and Active Safety
+#FileID  : Run_b4531c6a-6399-442a-8302-09787f2e4dd7
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

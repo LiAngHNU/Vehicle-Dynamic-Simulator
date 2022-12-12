@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName TruckSim Run Control`DLC w/ Double Trailers`Handling and Stability Tests
+#VEHICLECODE S_S + S + dS + S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_b333e9c4-0731-4ab5-a094-6bfd5a1fcf09
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_cab1809d-9038-447e-a68d-b3432420a8f6.par
+#BlueLink0 Animator: Camera Setup`10 Azm, 10 El, 50 m` Vehicle Reference` , Animator camera`Camera_cab1809d-9038-447e-a68d-b3432420a8f6
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_143f99f9-087f-46cf-b555-726f174832c1.par
+#BlueLink2 Vehicle: Loaded Combination`2A Day, 2x1A Trl` Day-Cab Tractor-Trailers` , Math Model`VehLoad_143f99f9-087f-46cf-b555-726f174832c1
+
+PARSFILE Procedures\Proc_43636e38-b8f6-44e0-b2b8-093d48d377ad.par
+#BlueLink28 Procedures`DLC @ 65 km/h` Handling Tests` , Procedure`Proc_43636e38-b8f6-44e0-b2b8-093d48d377ad
+
+INSTALL_SPEED_CONTROLLER
+Opt_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Set from the Run Control screen
+SPEED_TARGET_CONSTANT 50
+OPT_SC_ENGINE_BRAKING 0
+*SPEED 50
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_135ced7b-75b6-4a58-a554-9ed8958443d3.png
+WRITE_SENSOR_DETECT
+Title DLC w/ Double Trailers <Handling and Stability Tests>
+CATEGORY Handling and Stability Tests 
+DATASET_TITLE DLC w/ Double Trailers
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#The example demonstrates how to model a 2A tractor towing a two 1A trailers, with the trailers linked by a 1A dolly.
+#
+#The vehicle combination is performing a double lane change on a 0.85-mu surface with a constant target speed of 50 km/h.
+#
+#Both of the trailers have payloads added to them.
+#
+#Examples like these are useful for studying the effects various types of payloads have on the transient handling behavior of combination vehicles.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Handling and Stability Tests } DLC w/ Double Trailers
+#Library : TruckSim Run Control
+#DataSet : DLC w/ Double Trailers
+#Category: Handling and Stability Tests
+#FileID  : Run_b333e9c4-0731-4ab5-a094-6bfd5a1fcf09
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

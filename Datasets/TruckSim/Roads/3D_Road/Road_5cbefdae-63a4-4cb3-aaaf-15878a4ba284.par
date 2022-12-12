@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`6-Lane Highway: Left Access Road`Multiple Lanes
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_5cbefdae-63a4-4cb3-aaaf-15878a4ba284.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID left_access_rd
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 6-Lane Highway: Left Access Road
+PARSFILE Roads\Center_XY\PathXY_ff4458e7-8a36-423f-9726-28d38c3fe5b6.par
+#BlueLink0 Path: X-Y Coordinates`Alt 3 Road from FHWA` Public Road Section` , Reference Path`PathXY_ff4458e7-8a36-423f-9726-28d38c3fe5b6
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Alt 3 Road from FHWA
+PARSFILE Roads\dZ_Map\RdMapZ_d8a861b9-fdec-4838-ba80-7917be3b5687.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`6-Lane Hwy w/ Walls and Access Roads` 6-Lane Highway` , Miscellaneous`RdMapZ_d8a861b9-fdec-4838-ba80-7917be3b5687
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_d339e058-2bf4-4a6c-9618-eda5d1caf570.par
+#BlueLink4 Road: Animator Surface Shapes`6-Ln Hwy: Left Access Road` Scenic Road Shapes` , Road shape definitions`RdShape_d339e058-2bf4-4a6c-9618-eda5d1caf570
+
+PARSFILE Roads\dZ_Map\RdMapZ_f51cb7ac-52a1-4782-8571-3abdb4460262.par
+#BlueLink10 Road: Off-Center Elevation Map, S-L Grid`6-Lane Highway: Road Crown` 6-Lane Highway` , Miscellaneous`RdMapZ_f51cb7ac-52a1-4782-8571-3abdb4460262
+
+RR_SURF_CONSTANT 1.1
+L_CAMERA_FRONT 10
+L_CAMERA_REAR 10
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_b7028f29-fdf7-4233-8487-abd35f8aee05.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 10 El, 36 m` Vehicle Reference` , Camera`Camera_b7028f29-fdf7-4233-8487-abd35f8aee05
+
+parsfile Roads\3D_Road\Road_5cbefdae-63a4-4cb3-aaaf-15878a4ba284.ani
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Multiple Lanes } 6-Lane Highway: Left Access Road
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 6-Lane Highway: Left Access Road
+#Category: Multiple Lanes
+#FileID  : Road_5cbefdae-63a4-4cb3-aaaf-15878a4ba284
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

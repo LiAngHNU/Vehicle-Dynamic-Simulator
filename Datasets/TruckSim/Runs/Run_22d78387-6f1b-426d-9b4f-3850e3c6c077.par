@@ -1,0 +1,98 @@
+PARSFILE
+#FullDataName TruckSim Run Control`3A Tractor+2A B-Train+2A Trl`Vehicle Configurations
+#VEHICLECODE S_SS + SS + SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_22d78387-6f1b-426d-9b4f-3850e3c6c077
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 3
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_f44feab4-e4ad-463d-95d9-49e96d93550c.par
+#BlueLink2 Vehicle: Loaded Combination`3A Tractor w/ 2A B-Train Trl. + 2A Trl.` Sleeper-Cab Tractor-Trailers` , Math Model`VehLoad_f44feab4-e4ad-463d-95d9-49e96d93550c
+
+PARSFILE Procedures\Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4.par
+#BlueLink28 Procedures`DLC @ 70 km/h` Handling Tests` , Procedure`Proc_9a03cbe8-aae9-49d0-bc50-a22ba8f350e4
+
+PARSFILE Generic\Group\GenGrp_f9fd1534-80bb-4017-8c4b-6f8cd81aa546.par
+#BlueLink9 Generic Data Group`7 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_f9fd1534-80bb-4017-8c4b-6f8cd81aa546
+
+PARSFILE Control\Gear_mt\GearOL_9ef2d086-519f-45e0-86fb-232d3f4a48a2.par
+#BlueLink6 Control: Shifting (Open Loop)`Constant: 16th Gear` Constant` , Shifting control`GearOL_9ef2d086-519f-45e0-86fb-232d3f4a48a2
+
+PARSFILE Plot\Setup\Plot_6daa361a-9613-477b-b0ba-ecec097e5c0e.par
+#BlueLink15 Plot: Setup`Hitch: Articulation Angle` Hitch` , Plot`Plot_6daa361a-9613-477b-b0ba-ecec097e5c0e
+
+PARSFILE Plot\Setup\Plot_712a1199-3ac8-43d0-80b3-7a3572dc3bb8.par
+#BlueLink16 Plot: Setup`Hitch Forces` Hitch` , Plot`Plot_712a1199-3ac8-43d0-80b3-7a3572dc3bb8
+
+PARSFILE Plot\Setup\Plot_ae1e2c83-8feb-442b-b3a9-3ca8bb0e3211.par
+#BlueLink17 Plot: Setup`Hitch Moments` Hitch` , Plot`Plot_ae1e2c83-8feb-442b-b3a9-3ca8bb0e3211
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_8ba88f47-4990-40ca-bf2d-9bbebeda47ea.png
+WRITE_SENSOR_DETECT
+Title 3A Tractor+2A B-Train+2A Trl <Vehicle Configurations>
+CATEGORY Vehicle Configurations 
+DATASET_TITLE 3A Tractor+2A B-Train+2A Trl
+#MiscYellow0
+! Vehicle-specific preview time:
+TPREV_CONSTANT 0.8
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#S_SS + SS + SS
+#
+#A B-Train vehicle combination with two 2A trailers performing a double lane change manuever.
+#
+#A B-Train, or B-Double, is a vehicle combination in which the two trailers are linked by a 5th wheel on the first trailer.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Vehicle Configurations } 3A Tractor+2A B-Train+2A Trl
+#Library : TruckSim Run Control
+#DataSet : 3A Tractor+2A B-Train+2A Trl
+#Category: Vehicle Configurations
+#FileID  : Run_22d78387-6f1b-426d-9b4f-3850e3c6c077
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

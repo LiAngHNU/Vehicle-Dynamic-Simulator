@@ -1,0 +1,115 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Right Turn w/ Curb`Intersections
+NLANES 6
+OPTTHRESHOLD 1
+#MiscYellow0
+# 1 1 1, Road (No Lines), 1, 20, 1, -3.6, m, 0, m, , , -1000, 1000, 1, , , Road
+# 0.878 0.878 0.878, Concrete (Curb), 1, 20, 0.1, -3.9, m, -3.6, m, 3, , -1000, 1000, 1, , , Random
+# 0.878 0.878 0.878, Concrete (Curb), 1, 20, 0.1, -4.1, m, -3.9, m, , , -1000, 1000, 1, , , Random
+# 1 1 1, Grass (Light), 1, 20, 0.4, -12, m, -4.1, m, , , -1000, 1000, 1, , , Foliage
+# 1 1 1, White Line, 1, 20, 1, -.08, m, 0.08, m, , , -1000, -10, 3, 3, 0.005, Random
+# 1 1 1, White Line, 1, 20, 1, -.08, m, 0.08, m, , , 10, 1000, 3, 3, 0.005, Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (No Lines)
+SPECULAR(1) 1
+SCALE(1) 20
+LTILES(1) 1
+LIN(1) -3.6
+LINUNITS(1) m
+LOUT(1) 0
+LOUTUNITS(1) m
+S_START(1) -1000
+S_STOP(1) 1000
+SINT(1) 1
+AUTODETAIL(1) Road
+COLOR(2) 0.878 0.878 0.878
+MATERIAL(2) Concrete (Curb)
+SPECULAR(2) 1
+SCALE(2) 20
+LTILES(2) 0.1
+LIN(2) -3.9
+LINUNITS(2) m
+LOUT(2) -3.6
+LOUTUNITS(2) m
+LDIV(2) 3
+S_START(2) -1000
+S_STOP(2) 1000
+SINT(2) 1
+AUTODETAIL(2) Random
+COLOR(3) 0.878 0.878 0.878
+MATERIAL(3) Concrete (Curb)
+SPECULAR(3) 1
+SCALE(3) 20
+LTILES(3) 0.1
+LIN(3) -4.1
+LINUNITS(3) m
+LOUT(3) -3.9
+LOUTUNITS(3) m
+S_START(3) -1000
+S_STOP(3) 1000
+SINT(3) 1
+AUTODETAIL(3) Random
+COLOR(4) 1 1 1
+MATERIAL(4) Grass (Light)
+SPECULAR(4) 1
+SCALE(4) 20
+LTILES(4) 0.4
+LIN(4) -12
+LINUNITS(4) m
+LOUT(4) -4.1
+LOUTUNITS(4) m
+S_START(4) -1000
+S_STOP(4) 1000
+SINT(4) 1
+AUTODETAIL(4) Foliage
+COLOR(5) 1 1 1
+MATERIAL(5) White Line
+SPECULAR(5) 1
+SCALE(5) 20
+LTILES(5) 1
+LIN(5) -.08
+LINUNITS(5) m
+LOUT(5) 0.08
+LOUTUNITS(5) m
+S_START(5) -1000
+S_STOP(5) -10
+SINT(5) 3
+IPRINT(5) 3
+DZ(5) 0.005
+AUTODETAIL(5) Random
+COLOR(6) 1 1 1
+MATERIAL(6) White Line
+SPECULAR(6) 1
+SCALE(6) 20
+LTILES(6) 1
+LIN(6) -.08
+LINUNITS(6) m
+LOUT(6) 0.08
+LOUTUNITS(6) m
+S_START(6) 10
+S_STOP(6) 1000
+SINT(6) 3
+IPRINT(6) 3
+DZ(6) 0.005
+AUTODETAIL(6) Random
+MTL_FILE Animator\Road_Materials\road.mtl
+
+
+#EMBEDDED_NOTES
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Intersections } Right Turn w/ Curb
+#Library : Road: Animator Surface Shapes
+#DataSet : Right Turn w/ Curb
+#Category: Intersections
+#FileID  : RdShape_279934d1-1a5b-49a4-a267-2abe42e65532
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

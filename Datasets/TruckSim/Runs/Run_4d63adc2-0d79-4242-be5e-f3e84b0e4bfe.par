@@ -1,0 +1,116 @@
+PARSFILE
+#FullDataName TruckSim Run Control`City (2 Parallel Solvers): Truck 1`* TS 2020.1 - Multiple Vehicles
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_4d63adc2-0d79-4242-be5e-f3e84b0e4bfe
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_4b825926-8e7a-4c6c-8ac5-dd5e5a8b78af.par
+#BlueLink12 Models: Simulink`Autnomous (Detect One Vehicle)` Multi-Vehicle` , Models`Simlink_4b825926-8e7a-4c6c-8ac5-dd5e5a8b78af
+
+PARSFILE Animator\Cameras\Camera_0c973cdb-2467-40fa-bb31-04d4f1c16774.par
+#BlueLink0 Animator: Camera Setup`City Intersection` Fixed Camera` , Animator camera`Camera_0c973cdb-2467-40fa-bb31-04d4f1c16774
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 1    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 8
+#RingCtrl7 -1
+*RUN_COLOR 0 0.2 1
+SET_RUN_COLOR 0 0.2 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Generic\GroupMore\GenGrpM_19398a10-e740-4554-a3d0-ae15f49620d1.par
+#BlueLink2 Generic Data Group (More)`Vehicle 1 (Blue), Solo` Multiple Vehicles (Running Solo)` , Math Model`GenGrpM_19398a10-e740-4554-a3d0-ae15f49620d1
+
+PARSFILE Procedures\Proc_5d5aee3e-e0c0-4dbb-95b6-4d951d3ff79b.par
+#BlueLink28 Procedures`Autonomous Driving: City (2-Car)` Multi-Vehicle` , Procedure`Proc_5d5aee3e-e0c0-4dbb-95b6-4d951d3ff79b
+
+PARSFILE Roads\3D_Road\Road_d86cad40-422c-4b29-9281-308519eeeae7.par
+#BlueLink9 Road: 3D Surface (All Properties)`City Intersection` VS Scene Builder` , Miscellaneous`Road_d86cad40-422c-4b29-9281-308519eeeae7
+
+*TSTOP 1
+PARSFILE Plot\Setup\Plot_6e732c3d-91dd-4177-a6c2-c73bd24db34d.par
+#BlueLink15 Plot: Setup`Speed Limit, Target, and Actual` Speed Controller` , Plot`Plot_6e732c3d-91dd-4177-a6c2-c73bd24db34d
+
+PARSFILE Plot\Setup\Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd.par
+#BlueLink16 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd
+
+PARSFILE Plot\Setup\Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806.par
+#BlueLink17 Plot: Setup`Brake Control: Master Cyl. Pressure` Braking` , Plot`Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806
+
+PARSFILE Plot\Setup\Plot_2b6a3c36-224b-459f-9276-82732f9dd1c6.par
+#BlueLink18 Plot: Setup`Gear Selection` Powertrain` , Plot`Plot_2b6a3c36-224b-459f-9276-82732f9dd1c6
+
+PARSFILE Plot\Setup\Plot_3f53ad8f-9c1d-4fd2-a4f4-f5f1fb1b1662.par
+#BlueLink19 Plot: Setup`My_Dr (Wheel Drive Torques, Lead Unit)` Powertrain` , Plot`Plot_3f53ad8f-9c1d-4fd2-a4f4-f5f1fb1b1662
+
+PARSFILE Plot\Setup\Plot_0aff382f-c589-4818-8024-b7e9c0e473fd.par
+#BlueLink20 Plot: Setup`Engine Torque` Powertrain` , Plot`Plot_0aff382f-c589-4818-8024-b7e9c0e473fd
+
+PARSFILE Plot\Setup\Plot_92c3bffb-a766-4f7d-9f5e-73059542ee31.par
+#BlueLink21 Plot: Setup`Engine RPM` Powertrain` , Plot`Plot_92c3bffb-a766-4f7d-9f5e-73059542ee31
+
+
+SPECIAL_PARSFILE Runs\Run_f0756479-c969-4caa-afe5-38304797fcbf.par
+#BlueLink23 TruckSim Run Control`City (2 Parallel Solvers): Truck 2` * TS 2020.1 - Multiple Vehicles` , Overlay run or ERD file`Run_f0756479-c969-4caa-afe5-38304797fcbf
+
+
+*IMAGE_TYPE PASS_THROUGH
+
+OPT_ALL_WRITE 1
+WRITE_SENSOR_DETECT
+Title City (2 Parallel Solvers): Truck 1 <* TS 2020.1 - Multiple Vehicles>
+CATEGORY * TS 2020.1 - Multiple Vehicles 
+DATASET_TITLE City (2 Parallel Solvers): Truck 1
+#MiscYellow0
+SSTART 80
+path_id_dm 1000
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#WARNING: do not click Run or Send to Simulink! Use the 'Parallel Solvers' Library  (Batch/Parallel Solvers) to run this example.
+#
+#This is 1 of 2 Run Control datasets used to simultaneously simulate two vehicles that interact with each other.
+#
+#This dataset includes a link to the 3D road dataset, which also includes a set of 3D shapes for the roads and buildings, and a set of paths used for the vehicle and other actors.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { * TS 2020.1 - Multiple Vehicles } City (2 Parallel Solvers): Truck 1
+#Library : TruckSim Run Control
+#DataSet : City (2 Parallel Solvers): Truck 1
+#Category: * TS 2020.1 - Multiple Vehicles
+#FileID  : Run_4d63adc2-0d79-4242-be5e-f3e84b0e4bfe
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

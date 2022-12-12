@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Pwr Rack & Pinion Steer, Sine Sweep`Steering Tests
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_9c34f295-e194-402a-bc73-be3ca06894d7
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_41978f36-4f18-4d5c-ab02-fc60fe430e15.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 18 m` Vehicle Reference` , Animator camera`Camera_41978f36-4f18-4d5c-ab02-fc60fe430e15
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 4
+#RingCtrl7 -1
+*RUN_COLOR 1 0 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_2961e7f0-b454-4d80-9e12-8ad3c33b1ddb.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Pickup, Reg. Cab DRW (R&P Steer)` Pickup Trucks w/ Options` , Math Model`Lead2a_2961e7f0-b454-4d80-9e12-8ad3c33b1ddb
+
+PARSFILE Procedures\Proc_8d6624f3-b861-4d97-a0e1-c380c26644b3.par
+#BlueLink28 Procedures`Sine Sweep Steer @ 60 km/h` Steering Tests` , Procedure`Proc_8d6624f3-b861-4d97-a0e1-c380c26644b3
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+PARSFILE Plot\Setup\Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f.par
+#BlueLink15 Plot: Setup`Road Wheel Steer (Axle 1)` Steering` , Plot`Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f
+
+PARSFILE Plot\Setup\Plot_a00d7f4a-1c00-448b-b22c-06bd0119b668.par
+#BlueLink16 Plot: Setup`Boost Force vs. T-Bar Torque` Steering` , Plot`Plot_a00d7f4a-1c00-448b-b22c-06bd0119b668
+
+PARSFILE Plot\Setup\Plot_d195b221-361d-447c-ba1f-257445731894.par
+#BlueLink17 Plot: Setup`Boost Force vs. Time` Steering` , Plot`Plot_d195b221-361d-447c-ba1f-257445731894
+
+PARSFILE Plot\Setup\Plot_637b8350-a6b4-4316-b81b-12f50955df56.par
+#BlueLink18 Plot: Setup`Steer Torque vs. Steer Angle` Steering` , Plot`Plot_637b8350-a6b4-4316-b81b-12f50955df56
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_2a7c5c10-25ca-44b3-8034-dbf1de646707.png
+WRITE_SENSOR_DETECT
+Title Pwr Rack & Pinion Steer, Sine Sweep <Steering Tests>
+CATEGORY Steering Tests 
+DATASET_TITLE Pwr Rack & Pinion Steer, Sine Sweep
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#In this example, a full-size pickup truck has a rack and pinion steering system and is performing a Sine Sweep Steering maneuver.
+#
+#In the vehicle model, the "Steering Column and Assist" library contains global data about the steering system and the steering assist mechanism (e.g. Gear Torque, Column Torque, or Rack Force).  While the individual axle steering datasets use the "Steering System" library to define the axle specific steering information.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Steering Tests } Pwr Rack & Pinion Steer, Sine Sweep
+#Library : TruckSim Run Control
+#DataSet : Pwr Rack & Pinion Steer, Sine Sweep
+#Category: Steering Tests
+#FileID  : Run_9c34f295-e194-402a-bc73-be3ca06894d7
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Highway Extension`* * * Vehicle Dynamic Simulator
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_d1cf2a57-0129-41b7-920c-0b84f759ced1.png
+#CheckBox0 0    
+
+PARSFILE Roads\ExScene\SceneImp_99f9a486-6bde-439d-b166-e86745e97b1f.par
+#BlueLink0 Scene: External Import`Highway Scene Extension` VS Scene Builder` , Reference Path`SceneImp_99f9a486-6bde-439d-b166-e86745e97b1f
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+
+#EMBEDDED_NOTES
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { * * * Vehicle Dynamic Simulator } Highway Extension
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Highway Extension
+#Category: * * * Vehicle Dynamic Simulator
+#FileID  : Road_d1cf2a57-0129-41b7-920c-0b84f759ced1
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

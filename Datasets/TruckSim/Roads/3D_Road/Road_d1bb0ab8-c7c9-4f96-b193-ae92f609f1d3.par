@@ -1,0 +1,59 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`1001: Enter South, Exit East`Intersection, 3D Roads with Curbs
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_d1bb0ab8-c7c9-4f96-b193-ae92f609f1d3.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 1001
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 1001: Enter South, Exit East
+PARSFILE Roads\BuilderSegment\RoadSeg_97f18c2c-4040-41bf-ab2f-e1d0d9961e48.par
+#BlueLink0 Path: Segment Builder`1001: South Entrance, Right Turn` Crossing with Curbs` , Reference Path`RoadSeg_97f18c2c-4040-41bf-ab2f-e1d0d9961e48
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: 1001: South Entrance, Right Turn
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+PARSFILE Roads\dZ_Map\RdMapZ_6efd998e-857b-4b19-ab53-7e21922819e9.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Cross-slope, Curb for Intersection` Gutters, Curbs, Ditches` , Miscellaneous`RdMapZ_6efd998e-857b-4b19-ab53-7e21922819e9
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_769bac52-a4f7-4bd4-af7c-b5231fd66f5e.par
+#BlueLink4 Road: Animator Surface Shapes`Right Turn w/ Curb, Crosswalk @ 10m` Intersections` , Road shape definitions`RdShape_769bac52-a4f7-4bd4-af7c-b5231fd66f5e
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_7__,_3D_Shapes
+reference_frame_ghosts off
+#BlueLink7 ` , 3D Shapes` , 3D Shapes` , 3D Shapes`
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_d1bb0ab8-c7c9-4f96-b193-ae92f609f1d3.ani
+
+#EMBEDDED_NOTES
+#This road is shared by the 3- and 4-way intersection examples. It enters from the South and exits East.
+#
+#The lane has cross-slope of about 2.5% when straight, but transitions to flat for the intersection.
+#
+#This includes a pedestrian crosswalk.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Intersection, 3D Roads with Curbs } 1001: Enter South, Exit East
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 1001: Enter South, Exit East
+#Category: Intersection, 3D Roads with Curbs
+#FileID  : Road_d1bb0ab8-c7c9-4f96-b193-ae92f609f1d3
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

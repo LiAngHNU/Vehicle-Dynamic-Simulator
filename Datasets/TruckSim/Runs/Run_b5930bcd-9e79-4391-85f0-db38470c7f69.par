@@ -1,0 +1,98 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Active Transfer Case Control - Multi-Port`Simulink and LabVIEW
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_b5930bcd-9e79-4391-85f0-db38470c7f69
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_3776ad76-44ac-44e6-a574-a43a00c4156a.par
+#BlueLink12 Models: Simulink`Differential Controller Multi-Port` External Powertrain` , Models`Simlink_3776ad76-44ac-44e6-a574-a43a00c4156a
+
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+*RUN_COLOR 0.4 0.6 0.6
+SET_RUN_COLOR 0.4 0.6 0.6
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_bf9b21b9-3eef-4fb1-9200-d7e57a5db62e.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Pickup, Reg. Cab DRW (Active T. Case)` Pickup Trucks w/ Options` , Math Model`Lead2a_bf9b21b9-3eef-4fb1-9200-d7e57a5db62e
+
+PARSFILE Procedures\Proc_a07b2cfe-aad4-4b9c-b9db-1969e001a47a.par
+#BlueLink28 Procedures`Half Throttle Acceleration (AT)` Acceleration and Braking` , Procedure`Proc_a07b2cfe-aad4-4b9c-b9db-1969e001a47a
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+PARSFILE Control\Driver\StrDM_14e91fd3-2e8e-4d60-825f-31edcd1ceb42.par
+#BlueLink3 Control: Steering by the Closed-loop Driver Model`2.5m Left, Variable Speed Preview` Constant Position: Non-Zero Offset` , Steering`StrDM_14e91fd3-2e8e-4d60-825f-31edcd1ceb42
+
+PARSFILE Plot\Setup\Plot_6bdc1c19-d64e-4fe8-9163-93d1db3ffd04.par
+#BlueLink15 Plot: Setup`Central Clutch Control Input` Controls: Chassis and Powertrain` , Plot`Plot_6bdc1c19-d64e-4fe8-9163-93d1db3ffd04
+
+PARSFILE Plot\Setup\Plot_b00ded08-10b5-4697-9c96-ecb26e588c25.par
+#BlueLink16 Plot: Setup`Central ClutchTorque` Powertrain` , Plot`Plot_b00ded08-10b5-4697-9c96-ecb26e588c25
+
+
+SPECIAL_PARSFILE Runs\Run_b2a91e77-4768-44ed-a4e4-8deb2406300c.par
+#BlueLink23 TruckSim Run Control`Active Transfer Case Control` Simulink and LabVIEW` , Overlay run or ERD file`Run_b2a91e77-4768-44ed-a4e4-8deb2406300c
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_2a7c5c10-25ca-44b3-8034-dbf1de646707.png
+WRITE_SENSOR_DETECT
+Title Active Transfer Case Control - Multi-Port <Simulink and LabVIEW>
+CATEGORY Simulink and LabVIEW 
+DATASET_TITLE Active Transfer Case Control - Multi-Port
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#I/O Channel: Ports screen for Simulink models, introduced in TruckSim 9.0.
+#
+#This example makes use of an Active Transfer Case modeled in Simulink; the vehicle is performing a 1/2 Throttle acceleration test.
+#
+#Since the TruckSim powertrain model involves some detailed interactions between variables, it is necessary that certain components are handled with an external model.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Simulink and LabVIEW } Active Transfer Case Control - Multi-Port
+#Library : TruckSim Run Control
+#DataSet : Active Transfer Case Control - Multi-Port
+#Category: Simulink and LabVIEW
+#FileID  : Run_b5930bcd-9e79-4391-85f0-db38470c7f69
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

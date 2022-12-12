@@ -1,0 +1,108 @@
+PARSFILE
+#FullDataName TruckSim Run Control`AEB  CCRb: - 6 m/s^2, 40 m`AEB: Automated Emergency Braking
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_19f154f1-e800-49de-a69e-a18f8bfcc9ca
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_6a030c0f-0bb9-408f-96f1-b927223d953f.par
+#BlueLink0 Animator: Camera Setup`Automated Emergency Braking` ADAS and Euro NCAP: Camera Views` , Animator camera`Camera_6a030c0f-0bb9-408f-96f1-b927223d953f
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 4
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_41ebdb95-0ba5-44b9-a660-3ca9d1f31173.par
+#BlueLink2 Vehicle: Loaded Combination`DRW Pickup, FCW Sen. & AEB Alerts` Pickup Trucks` , Math Model`VehLoad_41ebdb95-0ba5-44b9-a660-3ca9d1f31173
+
+PARSFILE Procedures\Proc_96e5d50f-f3b2-412d-bebd-033129c53d94.par
+#BlueLink28 Procedures`AEB Single Test: CCRb` AEB: Automated Emergency Braking` , Procedure`Proc_96e5d50f-f3b2-412d-bebd-033129c53d94
+
+PARSFILE Control\Speed_t\SpdTime_dd7432b5-1fe2-4300-bb89-c54ce55c5bf7.par
+#BlueLink9 Control: Speed (Closed Loop) Using Target Speed`50-0kmh, -6 m/s/s, ISPEED = 2` AEB CCRb Target Speed` , Miscellaneous`SpdTime_dd7432b5-1fe2-4300-bb89-c54ce55c5bf7
+
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_8c9bbc88-a890-4baf-9791-b05739354da1.par
+#BlueLink15 Plot: Setup`Euro NCAP: AEB Booleans` ADAS and AEB Alerts and Commands` , Plot`Plot_8c9bbc88-a890-4baf-9791-b05739354da1
+
+PARSFILE Plot\Setup\Plot_2d2786e5-c3c2-4125-8bc1-eab0f4b9bed3.par
+#BlueLink16 Plot: Setup`Distance: S1 (2 Objects)` ADAS Sensor Detections` , Plot`Plot_2d2786e5-c3c2-4125-8bc1-eab0f4b9bed3
+
+PARSFILE Plot\Setup\Plot_0f5f145e-bfe3-4292-aa9c-4c6d76236efd.par
+#BlueLink17 Plot: Setup`Euro NCAP: Longitudinal Speeds (AEB)` ADAS and AEB Alerts and Commands` , Plot`Plot_0f5f145e-bfe3-4292-aa9c-4c6d76236efd
+
+PARSFILE Plot\Setup\Plot_6ab65115-f524-4f04-aecb-33140a974c8d.par
+#BlueLink18 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_6ab65115-f524-4f04-aecb-33140a974c8d
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ee189bc-4102-46cf-a6ee-046ab79da53b.png
+WRITE_SENSOR_DETECT
+Title AEB  CCRb: - 6 m/s^2, 40 m <AEB: Automated Emergency Braking>
+CATEGORY AEB: Automated Emergency Braking 
+DATASET_TITLE AEB  CCRb: - 6 m/s^2, 40 m
+#MiscYellow0
+START_DISTANCE = 40; m
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#For TruckSim 2018, the ADAS Sensors have been moved to the Vehicle: Loaded Combination screen.
+#
+#AEB : Autonomous Emergency Braking
+#CCRb : Car-to-Car Rear during Braking
+#EVT : Euro Vehicle Target
+#VUT : Vehicle Under Test
+#
+#The procedure in this simulation is based on a test scenario published by Euro NCAP for AEB systems. Here, a target is moving at 50 km/h and decelerates at 6 m/s^2. The VUT is trailing with a distance of 40 m.
+#
+#The EVT speed is defined with an output parameter Vx_EVT that can be set with a constant or an equation.
+#
+#This test has four combinations of two variants: the target can decelerate at 2 or 6 m/s^2; the initial distance can be either 12 or 40 m.
+#
+#Set the target speed time history with the blue link on this page; set START_DISTANCE in the misc. yellow field.
+#
+#The HUD alert and speed controller are very simple for this example. They are provided to demonstrate the scenario, and are not based on any known control system specification.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { AEB: Automated Emergency Braking } AEB  CCRb: - 6 m/s^2, 40 m
+#Library : TruckSim Run Control
+#DataSet : AEB  CCRb: - 6 m/s^2, 40 m
+#Category: AEB: Automated Emergency Braking
+#FileID  : Run_19f154f1-e800-49de-a69e-a18f8bfcc9ca
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

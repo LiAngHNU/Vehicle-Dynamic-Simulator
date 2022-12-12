@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, Variable Width`Roundabout Boundary Visualization`Roundabout
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: Roundabout Boundary Visualization
+set_description ROAD_DZ_ID Roundabout Boundary Visualization
+#RingCtrl0 CARPET
+#RingCtrl1 1
+*3D_DATA 2, 2 ! columns x rows
+ROAD_DZ_CARPET VAR_WIDTH
+0, 1, 2
+0, 0, 0
+100, 0, 0
+ENDDATA
+0, 1, 2
+45, 2.099, 2.1
+53, 2.1, 2.3
+63, 2.1, 5
+68, -3.01, -3
+82, -3.01, -3
+87, 2.1, 5
+97, 2.1, 2.3
+105, 2.099, 2.1
+ENDCOLS
+ENDTABLE
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 2, 2 ! columns x rows
+RdTb1_CARPET 2D_LINEAR
+0, 1, 2
+0, 0, 0
+100, 0, 0
+ENDTABLE
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Lateral coordinate of edge (m)
+
+#DiagramTwo1
+*3D_DATA 2, 8 ! columns x rows
+RdTb2_CARPET 2D_LINEAR
+0, 1, 2
+45, 2.099, 2.1
+53, 2.1, 2.3
+63, 2.1, 5
+68, -3.01, -3
+82, -3.01, -3
+87, 2.1, 5
+97, 2.1, 2.3
+105, 2.099, 2.1
+ENDTABLE
+
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+SET_IROAD_DZ_FOR_ID 0
+
+
+#EMBEDDED_NOTES
+#This dataset exists to check the left-edge boundaries for the roundabout legs. The boundaries are specified with a maximum L as a function of station S. Because the roads curve, it is not easy to see how the boundaries overlap for adjacent roads.
+#
+#The Road Surface Shapes screen allows lanes to be defined with edge numbers that are taken from datasets in this library (Var. Width). To see the boundary, this dataset defines two edges, where edge 2 has the same coordinates of L vs S  that are used to define the left-edge boundary.
+#
+#All elevation values are zero (bottom table), so this will have no effect on the math model, other than to force some extra calculations. This dataset is used only as a tool, to develop boundary coordinates; it should not be used after the datasets are tested.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, Variable Width; { Roundabout } Roundabout Boundary Visualization
+#Library : Road: Off-Center Elevation Map, Variable Width
+#DataSet : Roundabout Boundary Visualization
+#Category: Roundabout
+#FileID  : VarWidZ_cae79fce-7476-41ab-8d40-e09e7d478cce
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L, Variable Width
+
+END

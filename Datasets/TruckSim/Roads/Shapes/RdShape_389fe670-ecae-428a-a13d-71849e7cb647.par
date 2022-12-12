@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Ring Road`Parking Lot
+NLANES 4
+#MiscYellow0
+# 1 1 1, Road (Smooth), 1, 20, 1, -6, m, 6, m, 1, , 0, 312.02, 1, , -0.01, Road
+# 0.392 0.439 0.518, Pavement, 1, 20, 0.1, 6, m, 6.1, m, 1, , 0, 312.02, 1, , -0.01, Random
+# 1 1 1, Road Transition (Light), 1, 20, -1, -6, m, -8, m, 1, , 0, 312.02, 1, , -0.01, Road
+# 1 1 1, Grass (Light), 1, 20, 3, -47, m, -8, m, 1, , 0, 312.02, 1, , -0.01, Foliage
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (Smooth)
+SPECULAR(1) 1
+SCALE(1) 20
+LTILES(1) 1
+LIN(1) -6
+LINUNITS(1) m
+LOUT(1) 6
+LOUTUNITS(1) m
+LDIV(1) 1
+S_START(1) 0
+S_STOP(1) 312.02
+SINT(1) 1
+DZ(1) -0.01
+AUTODETAIL(1) Road
+COLOR(2) 0.392 0.439 0.518
+MATERIAL(2) Pavement
+SPECULAR(2) 1
+SCALE(2) 20
+LTILES(2) 0.1
+LIN(2) 6
+LINUNITS(2) m
+LOUT(2) 6.1
+LOUTUNITS(2) m
+LDIV(2) 1
+S_START(2) 0
+S_STOP(2) 312.02
+SINT(2) 1
+DZ(2) -0.01
+AUTODETAIL(2) Random
+COLOR(3) 1 1 1
+MATERIAL(3) Road Transition (Light)
+SPECULAR(3) 1
+SCALE(3) 20
+LTILES(3) -1
+LIN(3) -6
+LINUNITS(3) m
+LOUT(3) -8
+LOUTUNITS(3) m
+LDIV(3) 1
+S_START(3) 0
+S_STOP(3) 312.02
+SINT(3) 1
+DZ(3) -0.01
+AUTODETAIL(3) Road
+COLOR(4) 1 1 1
+MATERIAL(4) Grass (Light)
+SPECULAR(4) 1
+SCALE(4) 20
+LTILES(4) 3
+LIN(4) -47
+LINUNITS(4) m
+LOUT(4) -8
+LOUTUNITS(4) m
+LDIV(4) 1
+S_START(4) 0
+S_STOP(4) 312.02
+SINT(4) 1
+DZ(4) -0.01
+AUTODETAIL(4) Foliage
+MTL_FILE Animator\Road_Materials\road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Parking Lot } Ring Road
+#Library : Road: Animator Surface Shapes
+#DataSet : Ring Road
+#Category: Parking Lot
+#FileID  : RdShape_389fe670-ecae-428a-a13d-71849e7cb647
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

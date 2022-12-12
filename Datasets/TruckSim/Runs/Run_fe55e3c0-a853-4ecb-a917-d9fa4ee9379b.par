@@ -1,0 +1,77 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Target Import: Vehicle at Zero Speed`Driver Model
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_fe55e3c0-a853-4ecb-a917-d9fa4ee9379b
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_a8c70d40-bbba-4af6-8ded-c01f83a61b6a.par
+#BlueLink0 Animator: Camera Setup`35 Azm, 5 El, 13.5 m` Vehicle Reference` , Animator camera`Camera_a8c70d40-bbba-4af6-8ded-c01f83a61b6a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_0e8f42e3-6607-4e9f-8f23-092fbd4f093c.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Conv. Van (7-spd. AT, Park Tq.)` 2A Conventional Van` , Math Model`Lead2a_0e8f42e3-6607-4e9f-8f23-092fbd4f093c
+
+PARSFILE Procedures\Proc_4281f9c6-f0a5-4703-b648-2ae9bdb62387.par
+#BlueLink28 Procedures`Single Point Steer Control - 0 km/h` Driver Controls` , Procedure`Proc_4281f9c6-f0a5-4703-b648-2ae9bdb62387
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55.par
+#BlueLink9 Multiple Moving Objects`1 Driver Preview Point, Set by DM` Points of Interest` , Miscellaneous`TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Target Import: Vehicle at Zero Speed <Driver Model>
+CATEGORY Driver Model 
+DATASET_TITLE Target Import: Vehicle at Zero Speed
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#Because the Single Point Steering Controller relies solely on a geometric solution based on a target point location, it can function at zero speed.
+#
+#At zero speed, the notion of obtaining a target point from a path and preview time doesn't make sense, but the single point has only 2 coordinates, so importing them from VS Commands or any valid import source is a simple matter.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Driver Model } Target Import: Vehicle at Zero Speed
+#Library : TruckSim Run Control
+#DataSet : Target Import: Vehicle at Zero Speed
+#Category: Driver Model
+#FileID  : Run_fe55e3c0-a853-4ecb-a917-d9fa4ee9379b
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

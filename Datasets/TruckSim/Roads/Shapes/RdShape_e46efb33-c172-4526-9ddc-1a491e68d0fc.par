@@ -1,0 +1,137 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Right Lane`Lane Change Roads
+NLANES 8
+OPTTHRESHOLD 0
+#MiscYellow0
+# 1 1 1, Pavement, 1, 10, 1, -2, m, 2, m, , , -10, 940, 1, , , Road
+# 1 1 1, Yellow Line, 1, 5, 1, -1.95, m, -1.85, m, , , -10, 940, 1, , 0.005, Random
+# 1 1 1, Yellow Line, 1, 5, 1, 1.85, m, 1.95, m, , , -10, 940, 1, , 0.005, Random
+# 1 1 1, Road Transition (Light), 0.8, 10, -1, -2, m, -4, m, , , -10, 940, 1, , , Foliage
+# 1 1 1, Grass (Light), 1, 10, 1, -4, m, -14, m, , , -10, 940, 1, , , Foliage
+# 1 1 1, Road Transition (Light), 0.8, 10, 1, 2, m, 4, m, , , -10, 628, 1, , , Foliage
+# 1 1 1, Grass (Light), 1, 10, 1, 4, m, 14, m, , , -10, 628, 1, , , Foliage
+# 1 0 0, White Line, 1, 5, 1, -12.95, m, -13.05, m, , , 728, 940, 1, , 0.005, Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Pavement
+SPECULAR(1) 1
+SCALE(1) 10
+LTILES(1) 1
+LIN(1) -2
+LINUNITS(1) m
+LOUT(1) 2
+LOUTUNITS(1) m
+S_START(1) -10
+S_STOP(1) 940
+SINT(1) 1
+AUTODETAIL(1) Road
+COLOR(2) 1 1 1
+MATERIAL(2) Yellow Line
+SPECULAR(2) 1
+SCALE(2) 5
+LTILES(2) 1
+LIN(2) -1.95
+LINUNITS(2) m
+LOUT(2) -1.85
+LOUTUNITS(2) m
+S_START(2) -10
+S_STOP(2) 940
+SINT(2) 1
+DZ(2) 0.005
+AUTODETAIL(2) Random
+COLOR(3) 1 1 1
+MATERIAL(3) Yellow Line
+SPECULAR(3) 1
+SCALE(3) 5
+LTILES(3) 1
+LIN(3) 1.85
+LINUNITS(3) m
+LOUT(3) 1.95
+LOUTUNITS(3) m
+S_START(3) -10
+S_STOP(3) 940
+SINT(3) 1
+DZ(3) 0.005
+AUTODETAIL(3) Random
+COLOR(4) 1 1 1
+MATERIAL(4) Road Transition (Light)
+SPECULAR(4) 0.8
+SCALE(4) 10
+LTILES(4) -1
+LIN(4) -2
+LINUNITS(4) m
+LOUT(4) -4
+LOUTUNITS(4) m
+S_START(4) -10
+S_STOP(4) 940
+SINT(4) 1
+AUTODETAIL(4) Foliage
+COLOR(5) 1 1 1
+MATERIAL(5) Grass (Light)
+SPECULAR(5) 1
+SCALE(5) 10
+LTILES(5) 1
+LIN(5) -4
+LINUNITS(5) m
+LOUT(5) -14
+LOUTUNITS(5) m
+S_START(5) -10
+S_STOP(5) 940
+SINT(5) 1
+AUTODETAIL(5) Foliage
+COLOR(6) 1 1 1
+MATERIAL(6) Road Transition (Light)
+SPECULAR(6) 0.8
+SCALE(6) 10
+LTILES(6) 1
+LIN(6) 2
+LINUNITS(6) m
+LOUT(6) 4
+LOUTUNITS(6) m
+S_START(6) -10
+S_STOP(6) 628
+SINT(6) 1
+AUTODETAIL(6) Foliage
+COLOR(7) 1 1 1
+MATERIAL(7) Grass (Light)
+SPECULAR(7) 1
+SCALE(7) 10
+LTILES(7) 1
+LIN(7) 4
+LINUNITS(7) m
+LOUT(7) 14
+LOUTUNITS(7) m
+S_START(7) -10
+S_STOP(7) 628
+SINT(7) 1
+AUTODETAIL(7) Foliage
+COLOR(8) 1 0 0
+MATERIAL(8) White Line
+SPECULAR(8) 1
+SCALE(8) 5
+LTILES(8) 1
+LIN(8) -12.95
+LINUNITS(8) m
+LOUT(8) -13.05
+LOUTUNITS(8) m
+S_START(8) 728
+S_STOP(8) 940
+SINT(8) 1
+DZ(8) 0.005
+AUTODETAIL(8) Random
+MTL_FILE Animator\Road_Materials\road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Lane Change Roads } Right Lane
+#Library : Road: Animator Surface Shapes
+#DataSet : Right Lane
+#Category: Lane Change Roads
+#FileID  : RdShape_e46efb33-c172-4526-9ddc-1a491e68d0fc
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

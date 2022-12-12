@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Step Steer: 0 deg. to 180 deg.`Steering Tests
+#VEHICLECODE S_SS + SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_0a369406-38c2-45b0-aa3e-b7f8e771fcc5
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_0f5c43ef-ab77-4055-86ff-be8da1e4debf.par
+#BlueLink0 Animator: Camera Setup`160 Azm, 7.4 El, 50 m` Trailer Reference` , Animator camera`Camera_0f5c43ef-ab77-4055-86ff-be8da1e4debf
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 1 1
+SET_RUN_COLOR 1 1 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_0ecb9eb4-f5e9-48cb-9d3a-474fc758e07b.par
+#BlueLink2 Vehicle: Loaded Combination`3A Day+2A Shipping Container Trl` Day-Cab Tractor-Trailers` , Math Model`VehLoad_0ecb9eb4-f5e9-48cb-9d3a-474fc758e07b
+
+PARSFILE Procedures\Proc_4d537a85-02e1-4577-9f9e-a6abb04a0d7d.par
+#BlueLink28 Procedures`180 deg. Step Steer @ 40 km/h` Steering Tests` , Procedure`Proc_4d537a85-02e1-4577-9f9e-a6abb04a0d7d
+
+PARSFILE Generic\Group\GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa.par
+#BlueLink9 Generic Data Group`5 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa
+
+PARSFILE Control\Gear_mt\GearOL_9ef2d086-519f-45e0-86fb-232d3f4a48a2.par
+#BlueLink6 Control: Shifting (Open Loop)`Constant: 16th Gear` Constant` , Shifting control`GearOL_9ef2d086-519f-45e0-86fb-232d3f4a48a2
+
+*SSTART -50
+*SSTOP 0
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_210bf516-a418-4707-bed2-da7b93f14f00.png
+WRITE_SENSOR_DETECT
+Title Step Steer: 0 deg. to 180 deg. <Steering Tests>
+CATEGORY Steering Tests 
+DATASET_TITLE Step Steer: 0 deg. to 180 deg.
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates a 0 deg. - 180 deg. open-loop steering test (i.e., Steering Wheel Angle vs. Time) at a constant target speed with a 3A tractor towing a 2A trailer.
+#
+#Simple steering input tests like these are useful for evaluating a vehicle's quasi-steady state responses.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Steering Tests } Step Steer: 0 deg. to 180 deg.
+#Library : TruckSim Run Control
+#DataSet : Step Steer: 0 deg. to 180 deg.
+#Category: Steering Tests
+#FileID  : Run_0a369406-38c2-45b0-aa3e-b7f8e771fcc5
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

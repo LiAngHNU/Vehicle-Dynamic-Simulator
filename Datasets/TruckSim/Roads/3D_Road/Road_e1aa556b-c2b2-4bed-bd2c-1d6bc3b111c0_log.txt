@@ -1,0 +1,65 @@
+Run made by VS Road Calculator at 08:58 on November 24, 2022.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_e1aa556b-c2b2-4bed-bd2c-1d6bc3b111c0.par"
+Include PARSFILE "Roads\BuilderSegment\RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c.par"
+ Straight Path East <Straight>
+Used Dataset: Path: Segment Builder; { Straight } Straight Path East
+Include PARSFILE "Roads\Friction\RdMu_840049a5-f85b-4910-a314-9fd8009de456.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } Constant: 0.0
+Include PARSFILE "Roads\Shapes\RdShape_fd732d47-09f3-4d86-961b-2da5134afc87.par"
+Used Dataset: Road: Animator Surface Shapes; No Machine-Generated Shapes
+Include PARSFILE "Animator\Groups\Group_c21b68c2-c5bb-4136-b51d-e0b30ea9c3c1.par"
+Include PARSFILE "Animator\STL\Shape_e5a875b0-c9d5-4045-b802-6df62c38e1a6.par"
+Used Dataset: Animator: Shape File Link; { Test Facilities } K & C Machine: Base
+Used Dataset: Animator: Group; { K & C Machine } K & C Base
+Include PARSFILE "Animator\Groups\Group_e537cbb6-a7c7-4161-b221-b939a3e33120.par"
+Include PARSFILE "Animator\Frames\Frame_c99bdb70-03cd-4aea-9d92-4716c9f8b5d9.par"
+Used Dataset: Animator: Reference Frame; { K & C Machine } L1 Wheel Pads
+Include PARSFILE "Animator\STL\Shape_1e40bf28-e8d2-4598-8b20-137af3c38031.par"
+Used Dataset: Animator: Shape File Link; { Test Facilities } K & C Machine: Wheel Pad
+Include PARSFILE "Animator\Frames\Frame_9fcfc3b7-f4e8-40ec-868c-94f120cb9a00.par"
+Used Dataset: Animator: Reference Frame; { K & C Machine } R1 Wheel Pads
+Include PARSFILE "Animator\STL\Shape_1e40bf28-e8d2-4598-8b20-137af3c38031.par"
+Used Dataset: Animator: Shape File Link; { Test Facilities } K & C Machine: Wheel Pad
+Include PARSFILE "Animator\Frames\Frame_01c36559-9016-4efc-8ca8-3e46a47b679a.par"
+Used Dataset: Animator: Reference Frame; { K & C Machine } L2 Wheel Pads
+Include PARSFILE "Animator\STL\Shape_1e40bf28-e8d2-4598-8b20-137af3c38031.par"
+Used Dataset: Animator: Shape File Link; { Test Facilities } K & C Machine: Wheel Pad
+Include PARSFILE "Animator\Frames\Frame_c507c123-13df-41ab-b856-463a5a64970f.par"
+Used Dataset: Animator: Reference Frame; { K & C Machine } R2 Wheel Pads
+Include PARSFILE "Animator\STL\Shape_1e40bf28-e8d2-4598-8b20-137af3c38031.par"
+Used Dataset: Animator: Shape File Link; { Test Facilities } K & C Machine: Wheel Pad
+Used Dataset: Animator: Group; { K & C Machine } K & C Wheel Pads
+Include PARSFILE "Animator\Groups\Group_118c146b-67b1-47ad-afda-ff45e2cd701d.par"
+Include PARSFILE "Animator\Frames\Frame_09fb78ba-59b2-4f78-80bc-7ae78a4adb33.par"
+Used Dataset: Animator: Reference Frame; { K & C Machine } K & C Table Posts
+Include PARSFILE "Animator\STL\Shape_1bf54954-40c5-47ed-8d04-a1037ed769da.par"
+Used Dataset: Animator: Shape File Link; { Test Facilities } Test Rig Post R1
+Include PARSFILE "Animator\STL\Shape_a7fd95e4-8bf6-4711-b590-faaf794120dd.par"
+Used Dataset: Animator: Shape File Link; { Test Facilities } Test Rig Post R2
+Include PARSFILE "Animator\STL\Shape_3c9d062f-3e67-406a-86c2-cc1b34af7e4e.par"
+Used Dataset: Animator: Shape File Link; { Test Facilities } Test Rig Post L1
+Include PARSFILE "Animator\STL\Shape_ada659fb-8afe-4f7a-9a9c-e71cbc0c901b.par"
+Used Dataset: Animator: Shape File Link; { Test Facilities } Test Rig Post L2
+Used Dataset: Animator: Group; { K & C Machine } K & C Table Posts
+Include PARSFILE "Animator\Groups\Group_bda48721-b6ac-4289-9ba5-72be2bbd3aac.par"
+Include PARSFILE "Animator\Frames\Frame_6fd365fa-1165-4621-9343-2dbeba92f1b8.par"
+Used Dataset: Animator: Reference Frame; { K & C Machine } K & C Table
+Include PARSFILE "Animator\STL\Shape_7eae8170-2188-45ec-bcfd-1a4e93c8c8e2.par"
+Used Dataset: Animator: Shape File Link; { Test Facilities } K & C Machine: Table
+Used Dataset: Animator: Group; { K & C Machine } K & C Table
+Include PARSFILE "Animator\STL\Shape_24d3c103-6147-4585-8cc3-22e7d64062e9.par"
+Used Dataset: Animator: Shape File Link; { Test Facilities } K & C Garage
+Include PARSFILE "Roads\3D_Road\Road_e1aa556b-c2b2-4bed-bd2c-1d6bc3b111c0.ani"
+Used Dataset: Road: 3D Surface (All Properties); { Test Facilities } K & C Test Rig
+
+Time to read input = 0.00155
+
+Run stopped at t = 40. Stop time reached.
+
+Run started: VS output file = Roads\3D_Road\Road_e1aa556b-c2b2-4bed-bd2c-1d6bc3b111c0.vsb
+
+Computational time ratio: RTIME = inf (real time)/(simulation time)
+

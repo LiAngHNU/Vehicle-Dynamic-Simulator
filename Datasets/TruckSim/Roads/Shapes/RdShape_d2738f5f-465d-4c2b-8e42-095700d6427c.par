@@ -1,0 +1,162 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Railroad Tracks`Variable Width Roads
+NLANES 10
+OPTTHRESHOLD 2
+#MiscYellow0
+# 0.329 0.247 0.0863, No Texture, 1, , , 4, edge, 7, edge, 10, , -95, 95, 1, , , Random
+# 0.329 0.247 0.0863, No Texture, 1, , , 8, edge, 11, edge, 10, , -95, 95, 1, , , Random
+# 1 1 1, Pavement, 1, 4, 1, 7, edge, 8, edge, , , -95, 95, 1, , , Random
+# 1 1 1, Pavement, 1, 8, 2, 1, edge, 4, edge, 10, , -95, 95, 1, , , Random
+# 1 1 1, Pavement, 1, 8, 2, 11, edge, 14, edge, 10, , -95, 95, 1, , , Random
+# 1 1 1, Road (Medium), 1, 20, 1, -4, m, 4, m, , , -200, 200, 400, , , Road
+# 1 1 1, Road Transition (Light), 1, 10, -1, -5.5, m, -4, m, , , -200, 200, 400, , , Random
+# 1 1 1, Road Transition (Light), 1, 10, 1, 4, m, 5.5, m, , , -200, 200, 400, , , Random
+# 1 1 1, Grass (Light), 1, 10, 20, -200, m, -5.5, m, , , -200, 200, 400, , , Foliage
+# 1 1 1, Grass (Light), 1, 10, 20, 5.5, m, 200, m, , , -200, 200, 400, , , Foliage
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 0.329 0.247 0.0863
+MATERIAL(1) No Texture
+SPECULAR(1) 1
+LIN(1) 4
+LINUNITS(1) edge
+LOUT(1) 7
+LOUTUNITS(1) edge
+LDIV(1) 10
+S_START(1) -95
+S_STOP(1) 95
+SINT(1) 1
+AUTODETAIL(1) Random
+COLOR(2) 0.329 0.247 0.0863
+MATERIAL(2) No Texture
+SPECULAR(2) 1
+LIN(2) 8
+LINUNITS(2) edge
+LOUT(2) 11
+LOUTUNITS(2) edge
+LDIV(2) 10
+S_START(2) -95
+S_STOP(2) 95
+SINT(2) 1
+AUTODETAIL(2) Random
+COLOR(3) 1 1 1
+MATERIAL(3) Pavement
+SPECULAR(3) 1
+SCALE(3) 4
+LTILES(3) 1
+LIN(3) 7
+LINUNITS(3) edge
+LOUT(3) 8
+LOUTUNITS(3) edge
+S_START(3) -95
+S_STOP(3) 95
+SINT(3) 1
+AUTODETAIL(3) Random
+COLOR(4) 1 1 1
+MATERIAL(4) Pavement
+SPECULAR(4) 1
+SCALE(4) 8
+LTILES(4) 2
+LIN(4) 1
+LINUNITS(4) edge
+LOUT(4) 4
+LOUTUNITS(4) edge
+LDIV(4) 10
+S_START(4) -95
+S_STOP(4) 95
+SINT(4) 1
+AUTODETAIL(4) Random
+COLOR(5) 1 1 1
+MATERIAL(5) Pavement
+SPECULAR(5) 1
+SCALE(5) 8
+LTILES(5) 2
+LIN(5) 11
+LINUNITS(5) edge
+LOUT(5) 14
+LOUTUNITS(5) edge
+LDIV(5) 10
+S_START(5) -95
+S_STOP(5) 95
+SINT(5) 1
+AUTODETAIL(5) Random
+COLOR(6) 1 1 1
+MATERIAL(6) Road (Medium)
+SPECULAR(6) 1
+SCALE(6) 20
+LTILES(6) 1
+LIN(6) -4
+LINUNITS(6) m
+LOUT(6) 4
+LOUTUNITS(6) m
+S_START(6) -200
+S_STOP(6) 200
+SINT(6) 400
+AUTODETAIL(6) Road
+COLOR(7) 1 1 1
+MATERIAL(7) Road Transition (Light)
+SPECULAR(7) 1
+SCALE(7) 10
+LTILES(7) -1
+LIN(7) -5.5
+LINUNITS(7) m
+LOUT(7) -4
+LOUTUNITS(7) m
+S_START(7) -200
+S_STOP(7) 200
+SINT(7) 400
+AUTODETAIL(7) Random
+COLOR(8) 1 1 1
+MATERIAL(8) Road Transition (Light)
+SPECULAR(8) 1
+SCALE(8) 10
+LTILES(8) 1
+LIN(8) 4
+LINUNITS(8) m
+LOUT(8) 5.5
+LOUTUNITS(8) m
+S_START(8) -200
+S_STOP(8) 200
+SINT(8) 400
+AUTODETAIL(8) Random
+COLOR(9) 1 1 1
+MATERIAL(9) Grass (Light)
+SPECULAR(9) 1
+SCALE(9) 10
+LTILES(9) 20
+LIN(9) -200
+LINUNITS(9) m
+LOUT(9) -5.5
+LOUTUNITS(9) m
+S_START(9) -200
+S_STOP(9) 200
+SINT(9) 400
+AUTODETAIL(9) Foliage
+COLOR(10) 1 1 1
+MATERIAL(10) Grass (Light)
+SPECULAR(10) 1
+SCALE(10) 10
+LTILES(10) 20
+LIN(10) 5.5
+LINUNITS(10) m
+LOUT(10) 200
+LOUTUNITS(10) m
+S_START(10) -200
+S_STOP(10) 200
+SINT(10) 400
+AUTODETAIL(10) Foliage
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Variable Width Roads } Railroad Tracks
+#Library : Road: Animator Surface Shapes
+#DataSet : Railroad Tracks
+#Category: Variable Width Roads
+#FileID  : RdShape_d2738f5f-465d-4c2b-8e42-095700d6427c
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

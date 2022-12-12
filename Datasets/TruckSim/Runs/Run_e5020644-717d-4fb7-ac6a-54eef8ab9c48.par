@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Left / Right Bumps, Ind. Susp.: I_I`Suspension and Ride
+#VEHICLECODE I_I
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_e5020644-717d-4fb7-ac6a-54eef8ab9c48
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_41978f36-4f18-4d5c-ab02-fc60fe430e15.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 18 m` Vehicle Reference` , Animator camera`Camera_41978f36-4f18-4d5c-ab02-fc60fe430e15
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_c6edc578-1ac1-4d0f-a787-fcd7159b8846.par
+#BlueLink2 Vehicle: Loaded Combination`Compact Utility Truck (I_I)` Misc. Utility Trucks` , Math Model`VehLoad_c6edc578-1ac1-4d0f-a787-fcd7159b8846
+
+PARSFILE Procedures\Proc_81270a0e-5382-413d-adf1-9d51ace597af.par
+#BlueLink28 Procedures`Left / Right Bumps` Ride Tests` , Procedure`Proc_81270a0e-5382-413d-adf1-9d51ace597af
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_1d7d0caf-7609-48e8-af6d-bbc086475760.png
+WRITE_SENSOR_DETECT
+Title Left / Right Bumps, Ind. Susp.: I_I <Suspension and Ride>
+CATEGORY Suspension and Ride 
+DATASET_TITLE Left / Right Bumps, Ind. Susp.: I_I
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates the Compact Utility Truck with a cargo load consisting of three separate drums, driving on a straight, flat road with some Left / Right Bumps.
+#
+#This example can be used to investigate the effects the Left / Right Bumps have on the vehicle's roll and pitch, the suspension's kinematic behavior, and the road wheel steer that results from traveling over alternating bumps.
+#
+#Tests like these, in which various bumps are added to the road surface, should be run at a slow speed to allow the vehicle's tires and suspension to realistically travel over the road features.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Suspension and Ride } Left / Right Bumps, Ind. Susp.: I_I
+#Library : TruckSim Run Control
+#DataSet : Left / Right Bumps, Ind. Susp.: I_I
+#Category: Suspension and Ride
+#FileID  : Run_e5020644-717d-4fb7-ac6a-54eef8ab9c48
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

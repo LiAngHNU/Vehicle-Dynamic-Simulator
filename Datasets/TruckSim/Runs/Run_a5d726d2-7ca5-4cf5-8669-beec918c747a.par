@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Preview Speed Control, Torque Steer`Driver Model
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_a5d726d2-7ca5-4cf5-8669-beec918c747a
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_e1c31f95-b0c9-423f-af09-82016e848b91.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 1 El, 25 m` Vehicle Reference` , Animator camera`Camera_e1c31f95-b0c9-423f-af09-82016e848b91
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+*RUN_COLOR 0 0 1
+SET_RUN_COLOR 0 0 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_3885cd67-73c9-4f13-bf37-ad39f903c99e.par
+#BlueLink2 Vehicle: Loaded Combination`2A Conv, Payload (Str Torque)` Conventional Vans` , Math Model`VehLoad_3885cd67-73c9-4f13-bf37-ad39f903c99e
+
+PARSFILE Procedures\Proc_7d666aca-a9c5-49a4-b220-428c71fdeda2.par
+#BlueLink28 Procedures`Figure 8 with Control by Torque` Driver Controls` , Procedure`Proc_7d666aca-a9c5-49a4-b220-428c71fdeda2
+
+PARSFILE Generic\Group\GenGrp_6a9e56b7-5200-4f87-a50a-a4543703f7b8.par
+#BlueLink9 Generic Data Group`4 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_6a9e56b7-5200-4f87-a50a-a4543703f7b8
+
+PARSFILE Plot\Setup\Plot_c3bc997f-caac-4c8e-8974-69ef71d2b82c.par
+#BlueLink15 Plot: Setup`Steer Torque` Steering` , Plot`Plot_c3bc997f-caac-4c8e-8974-69ef71d2b82c
+
+
+SPECIAL_PARSFILE Runs\Run_a2d72960-0fea-411d-8047-82f1bfd3842b.par
+#BlueLink23 TruckSim Run Control`Preview Speed Control: Figure 8` Driver Model` , Overlay run or ERD file`Run_a2d72960-0fea-411d-8047-82f1bfd3842b
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Preview Speed Control, Torque Steer <Driver Model>
+CATEGORY Driver Model 
+DATASET_TITLE Preview Speed Control, Torque Steer
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates the TruckSim Closed-loop Speed Control using a Path Preview on a Figure 8 road.
+#
+#This example uses steering wheel torque to obtain the steering wheel angle calcuated by the Closed Loop Steering Controller.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Driver Model } Preview Speed Control, Torque Steer
+#Library : TruckSim Run Control
+#DataSet : Preview Speed Control, Torque Steer
+#Category: Driver Model
+#FileID  : Run_a5d726d2-7ca5-4cf5-8669-beec918c747a
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

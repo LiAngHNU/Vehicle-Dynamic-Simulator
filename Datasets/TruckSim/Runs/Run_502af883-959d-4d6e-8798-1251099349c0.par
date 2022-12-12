@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName TruckSim Run Control`ADAS RP: Scenic Mountain`Scene Import
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_502af883-959d-4d6e-8798-1251099349c0
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b64f8781-7641-40ce-b0ed-bcc16a27d350.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 15 El, 55 m` Vehicle Reference` , Animator camera`Camera_b64f8781-7641-40ce-b0ed-bcc16a27d350
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 1 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_8c10cded-a64a-4839-a170-2938a08a58d4.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Tour Bus (I_S)` 2A Tour Bus` , Math Model`Lead2a_8c10cded-a64a-4839-a170-2938a08a58d4
+
+PARSFILE Procedures\Proc_ac4bd127-ee1c-4fcc-a24d-7b183108d9ec.par
+#BlueLink28 Procedures`ADAS RP Scenic Mountain` Driving` , Procedure`Proc_ac4bd127-ee1c-4fcc-a24d-7b183108d9ec
+
+PARSFILE Roads\3D_Road\Road_a7dd97ca-0b37-4ede-871e-1d4900cbab98.par
+#BlueLink9 Road: 3D Surface (All Properties)`ADAS RP: Scenic Mountain` Atlas and ADAS RP Map Downloads` , Miscellaneous`Road_a7dd97ca-0b37-4ede-871e-1d4900cbab98
+
+PARSFILE Animator\HUD\HUD_750fb88e-77be-4b0e-9523-30964a270490.par
+#BlueLink10 Animator: HUD`Throttle, Brakes, Speedo, Tach` HUD Groups` , Miscellaneous`HUD_750fb88e-77be-4b0e-9523-30964a270490
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_5cb9979d-3686-4654-8ce0-3c30f81bd36c.png
+WRITE_SENSOR_DETECT
+Title ADAS RP: Scenic Mountain <Scene Import>
+CATEGORY Scene Import 
+DATASET_TITLE ADAS RP: Scenic Mountain
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#NOTE: For TruckSim 2020.0, this example now includes the effects of the brake system transport delay parameter, math model keyword TLAG_BK. This is a pure time delay between the master cylinder and the brake actuator.
+#
+#This example uses a custom Procedure with an imported path from ADAS RP. Follow the blue links with ADAS RP to see the controls.
+#
+#Reference the Technical Memo for the ADAS RP Path Plugin located in Help->Technical Memos-> ADAS RP Path Plugin.
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Scene Import } ADAS RP: Scenic Mountain
+#Library : TruckSim Run Control
+#DataSet : ADAS RP: Scenic Mountain
+#Category: Scene Import
+#FileID  : Run_502af883-959d-4d6e-8798-1251099349c0
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

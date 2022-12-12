@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`PBS C5: 3% Cross-slope with Variation`PBS Tests
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_2e63b1e8-5f4b-4c7d-ac89-ea3370ff18c7.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 5001
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id PBS C5: 3% Cross-slope with Variation
+PARSFILE Roads\BuilderSegment\RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c.par
+#BlueLink0 Path: Segment Builder`Straight Path East` Straight` , Reference Path`RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight Path East
+PARSFILE Roads\dZ_Map\RdMapZ_8c362854-ac45-45a8-8505-0f9fdf62c316.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`3% Cross-slope (Constant)` PBS Tests` , Miscellaneous`RdMapZ_8c362854-ac45-45a8-8505-0f9fdf62c316
+
+PARSFILE Roads\Friction\RdMu_b9002147-95c5-413a-83ea-2e94873c1c62.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.8` Constant Mu` , Friction`RdMu_b9002147-95c5-413a-83ea-2e94873c1c62
+
+PARSFILE Roads\Shapes\RdShape_d1bb3bb4-1111-41a4-8a0a-60eb182ccc49.par
+#BlueLink4 Road: Animator Surface Shapes`1200 m One Ln Road + 100 m Light Grass` Roads` , Road shape definitions`RdShape_d1bb3bb4-1111-41a4-8a0a-60eb182ccc49
+
+PARSFILE Roads\dZ_Map\RdMapZ_9907d10e-e209-487a-81d8-06ae79bdcca2.par
+#BlueLink10 Road: Off-Center Elevation Map, S-L Grid`1.5% Cross-slope (200-m Sine)` PBS Tests` , Miscellaneous`RdMapZ_9907d10e-e209-487a-81d8-06ae79bdcca2
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_265e38de-4bbf-46ee-bbc0-868db110b76d.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 3 El, 44 m` Road Reference` , Camera`Camera_265e38de-4bbf-46ee-bbc0-868db110b76d
+
+parsfile Roads\3D_Road\Road_2e63b1e8-5f4b-4c7d-ac89-ea3370ff18c7.ani
+
+#EMBEDDED_NOTES
+#This is a straight road with a 3% cross-slope and a variation in cross-slope based on a 200-m sine wave.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { PBS Tests } PBS C5: 3% Cross-slope with Variation
+#Library : Road: 3D Surface (All Properties)
+#DataSet : PBS C5: 3% Cross-slope with Variation
+#Category: PBS Tests
+#FileID  : Road_2e63b1e8-5f4b-4c7d-ac89-ea3370ff18c7
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

@@ -1,0 +1,172 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Right Turn w/ Curb, Crosswalk @ 10m`Intersections
+NLANES 10
+OPTTHRESHOLD 1
+#MiscYellow0
+# 1 1 1, Road (No Lines), 1, 10, 1, -3.6, m, 0.05, m, , , -1000, 1000, 1, , , Road
+# 0.878 0.878 0.878, Concrete (Curb), 1, 10, 1, -3.9, m, -3.6, m, , , -1000, 1000, 1, , , Random
+# 0.878 0.878 0.878, Concrete (Curb), 1, 10, 1, -4.2, m, -3.9, m, 3, , -1000, 1000, 1, , , Random
+# 1 1 1, Grass (Light), 1, 10, 0.25, -12, m, -4.1, m, , , -1000, 1000, 1, , , Foliage
+# 1 1 1, US Crosswalk, 1, 2, 0.8, -3.6, m, 0, m, , , 8, 10, 1, , 0.005, Off
+# 1 1 1, US Crosswalk, 1, 2, 1.6, -3.6, m, 3.6, m, 3, , -10, -8, 1, , 0.005, Off
+# 0.753 0.753 0.753, Stucco (Smooth), 0.35, 3, 8, -3.6, m, -0.125, m, 3, , -11.65, -11.2, 1, , 0.005, Road
+# 1 1 1, Yellow Line, 1, 10, 1, -0.125, m, -0.025, m, , , -100, -11.2, 1, , 0.005, Road
+# 1 1 1, Yellow Line, 1, 10, 1, 0.025, m, 0.125, m, , , -100, -11.2, 1, , 0.005, Road
+# 1 1 1, Yellow Line, 1, 10, 1, -0.05, m, 0.05, m, , , -1000, -100, 1, 4, 0.005, Road
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (No Lines)
+SPECULAR(1) 1
+SCALE(1) 10
+LTILES(1) 1
+LIN(1) -3.6
+LINUNITS(1) m
+LOUT(1) 0.05
+LOUTUNITS(1) m
+S_START(1) -1000
+S_STOP(1) 1000
+SINT(1) 1
+AUTODETAIL(1) Road
+COLOR(2) 0.878 0.878 0.878
+MATERIAL(2) Concrete (Curb)
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 1
+LIN(2) -3.9
+LINUNITS(2) m
+LOUT(2) -3.6
+LOUTUNITS(2) m
+S_START(2) -1000
+S_STOP(2) 1000
+SINT(2) 1
+AUTODETAIL(2) Random
+COLOR(3) 0.878 0.878 0.878
+MATERIAL(3) Concrete (Curb)
+SPECULAR(3) 1
+SCALE(3) 10
+LTILES(3) 1
+LIN(3) -4.2
+LINUNITS(3) m
+LOUT(3) -3.9
+LOUTUNITS(3) m
+LDIV(3) 3
+S_START(3) -1000
+S_STOP(3) 1000
+SINT(3) 1
+AUTODETAIL(3) Random
+COLOR(4) 1 1 1
+MATERIAL(4) Grass (Light)
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) 0.25
+LIN(4) -12
+LINUNITS(4) m
+LOUT(4) -4.1
+LOUTUNITS(4) m
+S_START(4) -1000
+S_STOP(4) 1000
+SINT(4) 1
+AUTODETAIL(4) Foliage
+COLOR(5) 1 1 1
+MATERIAL(5) US Crosswalk
+SPECULAR(5) 1
+SCALE(5) 2
+LTILES(5) 0.8
+LIN(5) -3.6
+LINUNITS(5) m
+LOUT(5) 0
+LOUTUNITS(5) m
+S_START(5) 8
+S_STOP(5) 10
+SINT(5) 1
+DZ(5) 0.005
+AUTODETAIL(5) Off
+COLOR(6) 1 1 1
+MATERIAL(6) US Crosswalk
+SPECULAR(6) 1
+SCALE(6) 2
+LTILES(6) 1.6
+LIN(6) -3.6
+LINUNITS(6) m
+LOUT(6) 3.6
+LOUTUNITS(6) m
+LDIV(6) 3
+S_START(6) -10
+S_STOP(6) -8
+SINT(6) 1
+DZ(6) 0.005
+AUTODETAIL(6) Off
+COLOR(7) 0.753 0.753 0.753
+MATERIAL(7) Stucco (Smooth)
+SPECULAR(7) 0.35
+SCALE(7) 3
+LTILES(7) 8
+LIN(7) -3.6
+LINUNITS(7) m
+LOUT(7) -0.125
+LOUTUNITS(7) m
+LDIV(7) 3
+S_START(7) -11.65
+S_STOP(7) -11.2
+SINT(7) 1
+DZ(7) 0.005
+AUTODETAIL(7) Road
+COLOR(8) 1 1 1
+MATERIAL(8) Yellow Line
+SPECULAR(8) 1
+SCALE(8) 10
+LTILES(8) 1
+LIN(8) -0.125
+LINUNITS(8) m
+LOUT(8) -0.025
+LOUTUNITS(8) m
+S_START(8) -100
+S_STOP(8) -11.2
+SINT(8) 1
+DZ(8) 0.005
+AUTODETAIL(8) Road
+COLOR(9) 1 1 1
+MATERIAL(9) Yellow Line
+SPECULAR(9) 1
+SCALE(9) 10
+LTILES(9) 1
+LIN(9) 0.025
+LINUNITS(9) m
+LOUT(9) 0.125
+LOUTUNITS(9) m
+S_START(9) -100
+S_STOP(9) -11.2
+SINT(9) 1
+DZ(9) 0.005
+AUTODETAIL(9) Road
+COLOR(10) 1 1 1
+MATERIAL(10) Yellow Line
+SPECULAR(10) 1
+SCALE(10) 10
+LTILES(10) 1
+LIN(10) -0.05
+LINUNITS(10) m
+LOUT(10) 0.05
+LOUTUNITS(10) m
+S_START(10) -1000
+S_STOP(10) -100
+SINT(10) 1
+IPRINT(10) 4
+DZ(10) 0.005
+AUTODETAIL(10) Road
+MTL_FILE Animator\Road_Materials\road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Intersections } Right Turn w/ Curb, Crosswalk @ 10m
+#Library : Road: Animator Surface Shapes
+#DataSet : Right Turn w/ Curb, Crosswalk @ 10m
+#Category: Intersections
+#FileID  : RdShape_769bac52-a4f7-4bd4-af7c-b5231fd66f5e
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

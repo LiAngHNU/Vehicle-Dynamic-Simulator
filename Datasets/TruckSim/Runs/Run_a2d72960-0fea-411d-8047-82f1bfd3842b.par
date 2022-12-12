@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Preview Speed Control: Figure 8`Driver Model
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_a2d72960-0fea-411d-8047-82f1bfd3842b
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_e1c31f95-b0c9-423f-af09-82016e848b91.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 1 El, 25 m` Vehicle Reference` , Animator camera`Camera_e1c31f95-b0c9-423f-af09-82016e848b91
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_9e67d413-6c86-46ce-9b3a-cf088f1d807a.par
+#BlueLink2 Vehicle: Loaded Combination`2A Conventional Van w/ Payload` Conventional Vans` , Math Model`VehLoad_9e67d413-6c86-46ce-9b3a-cf088f1d807a
+
+PARSFILE Procedures\Proc_64d150a3-0628-454b-a06c-6ec70b42fb9b.par
+#BlueLink28 Procedures`Figure 8 with Aggressive Driving` Driver Controls` , Procedure`Proc_64d150a3-0628-454b-a06c-6ec70b42fb9b
+
+PARSFILE Generic\Group\GenGrp_6a9e56b7-5200-4f87-a50a-a4543703f7b8.par
+#BlueLink9 Generic Data Group`4 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_6a9e56b7-5200-4f87-a50a-a4543703f7b8
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Preview Speed Control: Figure 8 <Driver Model>
+CATEGORY Driver Model 
+DATASET_TITLE Preview Speed Control: Figure 8
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates the TruckSim Closed-loop Speed Control using a Path Preview on a Figure 8 road.
+#
+#A speed target can be calculated along a path while staying within given targets of lateral and longitudinal acceleration.
+#
+#The target speed is calculated over a specified preview distance, and passed to the TruckSim closed-loop speed controller to modulate throttle and brakes.
+#
+#This example uses the option Target speed from path preview, set on the Procedure screen, to calculate a target speed profile subject to targets of 0.4 G longitudinal and 0.5 G lateral acceleration as the truck drives on a Figure 8 road.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Driver Model } Preview Speed Control: Figure 8
+#Library : TruckSim Run Control
+#DataSet : Preview Speed Control: Figure 8
+#Category: Driver Model
+#FileID  : Run_a2d72960-0fea-411d-8047-82f1bfd3842b
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

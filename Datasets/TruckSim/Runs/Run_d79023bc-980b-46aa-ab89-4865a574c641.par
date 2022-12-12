@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Trailer Reversing into Loading Dock`Extended Models
+#VEHICLECODE S_SS + SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_d79023bc-980b-46aa-ab89-4865a574c641
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_11889618-f473-4866-be04-5cf968fea505.par
+#BlueLink0 Animator: Camera Setup`350 Azm, 6 El, 52 m` Vehicle Reference` , Animator camera`Camera_11889618-f473-4866-be04-5cf968fea505
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_0ecb9eb4-f5e9-48cb-9d3a-474fc758e07b.par
+#BlueLink2 Vehicle: Loaded Combination`3A Day+2A Shipping Container Trl` Day-Cab Tractor-Trailers` , Math Model`VehLoad_0ecb9eb4-f5e9-48cb-9d3a-474fc758e07b
+
+PARSFILE Procedures\Proc_4deaaa31-93d1-4b04-a5ca-c8b642dab03b.par
+#BlueLink28 Procedures`Trailer Reversing into Loading Dock` Driving` , Procedure`Proc_4deaaa31-93d1-4b04-a5ca-c8b642dab03b
+
+*TSTOP 60
+*TSTART 0
+*SSTART 163
+PARSFILE Plot\Setup\Plot_658b05a2-13e0-452f-8383-4ad65ca274c9.par
+#BlueLink15 Plot: Setup`Spin Rates in Powertrain` Powertrain` , Plot`Plot_658b05a2-13e0-452f-8383-4ad65ca274c9
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_210bf516-a418-4707-bed2-da7b93f14f00.png
+WRITE_SENSOR_DETECT
+Title Trailer Reversing into Loading Dock <Extended Models>
+CATEGORY Extended Models 
+DATASET_TITLE Trailer Reversing into Loading Dock
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#NOTE: For TruckSim 2020.0, this example now includes the effects of the brake system transport delay parameter, math model keyword TLAG_BK. This is a pure time delay between the master cylinder and the brake actuator.
+#
+#This example demonstrates how to use Events to simulate a 3A tractor towing a 2A trailer backing into a loading dock.
+#
+#In this test, the vehicle is travelling on a road parallel to the loading dock building. The truck passes the building, slows to a stop, and backs up while turning, placing the trailer in front of the loading dock door.
+#
+#After a short period of time, the vehicle drives out of the loading dock back onto the road and heads in the direction from which it originated.
+#
+#To see how this was done, click on the Procedures blue link "Trailer Reversing into Loading Dock".
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Extended Models } Trailer Reversing into Loading Dock
+#Library : TruckSim Run Control
+#DataSet : Trailer Reversing into Loading Dock
+#Category: Extended Models
+#FileID  : Run_d79023bc-980b-46aa-ab89-4865a574c641
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

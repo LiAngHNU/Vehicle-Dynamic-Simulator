@@ -1,0 +1,172 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Handling Course`Self-Contained Scenes
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_5595e2f4-f070-41c1-86ba-eaac93b88d08.png
+#RingCtrl0 1
+#CheckBox0 1    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Handling Course
+PARSFILE Roads\Center_XY\PathXY_a3313409-e843-4fc1-b1d9-5cf400059820.par
+#BlueLink0 Path: X-Y Coordinates`Handling Course` Handling Course` , Reference Path`PathXY_a3313409-e843-4fc1-b1d9-5cf400059820
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Handling Course
+PARSFILE Roads\Center_Z\RdRefZ_73e23a2d-f9bc-4437-8ac6-68064c5aad36.par
+#BlueLink1 Road: Reference Line Elevation`Handling Course` Handling Course` , Path Elevation`RdRefZ_73e23a2d-f9bc-4437-8ac6-68064c5aad36
+
+PARSFILE Roads\dZ_Map\RdMapZ_1d94193c-cbe0-4ef9-807b-865eadf78afa.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Handling Course Camber` Handling Course` , Miscellaneous`RdMapZ_1d94193c-cbe0-4ef9-807b-865eadf78afa
+
+PARSFILE Roads\Friction\RdMu_ec730a7b-6605-468c-9810-842dc2bc5209.par
+#BlueLink3 Road: Friction Map, S-L Grid`1.0 Asphalt, 1.1 Concrete, 0.75 Grass` Road Handling Course` , Friction`RdMu_ec730a7b-6605-468c-9810-842dc2bc5209
+
+PARSFILE Roads\Shapes\RdShape_fd732d47-09f3-4d86-961b-2da5134afc87.par
+#BlueLink4 Road: Animator Surface Shapes`No Machine-Generated Shapes` ` , Road shape definitions`RdShape_fd732d47-09f3-4d86-961b-2da5134afc87
+
+PARSFILE Roads\dZ_Map\RdMapZ_9334e93f-d95d-4a56-b74d-10b7ae6f400f.par
+#BlueLink10 Road: Off-Center Elevation Map, S-L Grid`Handling Course Curbing` Handling Course` , Miscellaneous`RdMapZ_9334e93f-d95d-4a56-b74d-10b7ae6f400f
+
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+PARSFILE Roads\RollingResistance\RdRr_e50e6f84-f1ce-4bde-b26b-7ac1a4a15091.par
+#BlueLink11 Road: Rolling Resistance Map, S-L Grid`Handling Course Rolling Resistance` Handling Course` , Miscellaneous`RdRr_e50e6f84-f1ce-4bde-b26b-7ac1a4a15091
+
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+add_reference_frame road_stuff_7_Handling_Course:_Road
+reference_frame_ghosts off
+PARSFILE Animator\STL\Shape_a21b46c8-62b2-41c2-b2c2-f16a3a9eae8c.par
+#BlueLink7 Animator: Shape File Link`Handling Course: Road` Self-Contained Scenes` , 3D Shapes`Shape_a21b46c8-62b2-41c2-b2c2-f16a3a9eae8c
+
+add_reference_frame road_stuff_8_Handling_Course_Cones
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_536c4903-6cc1-418c-a704-16e3fbe1b280.par
+#BlueLink8 Road: Animator Repeated Object`Handling Course Cones` Cones` , 3D Shapes`AniRep_536c4903-6cc1-418c-a704-16e3fbe1b280
+
+add_reference_frame road_stuff_9_Handling_Course:_Details
+reference_frame_ghosts off
+PARSFILE Animator\STL\Shape_a286cb57-4b02-42d8-815c-2d4e23026790.par
+#BlueLink9 Animator: Shape File Link`Handling Course: Details` Self-Contained Scenes` , 3D Shapes`Shape_a286cb57-4b02-42d8-815c-2d4e23026790
+
+add_reference_frame road_stuff_12_Handling_Course:_Trees
+reference_frame_ghosts off
+PARSFILE Animator\STL\Shape_78ca3e64-fbf2-48fb-9097-31476670474b.par
+#BlueLink12 Animator: Shape File Link`Handling Course: Trees` Self-Contained Scenes` , 3D Shapes`Shape_78ca3e64-fbf2-48fb-9097-31476670474b
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_5595e2f4-f070-41c1-86ba-eaac93b88d08.ani
+
+add_reference_frame road_stuff_1_3_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 98.3850806063
+set_offset_var_x 2.91846549815
+set_offset_var_y 0.430185002202
+set_offset_var_z 0
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_2_3_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw -81.6149193937
+set_offset_var_x -7.24175167676
+set_offset_var_y -1.06744210716
+set_offset_var_z 0
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_3_3_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 91.9570577461
+set_offset_var_x 200.76162455
+set_offset_var_y 5.02713199721
+set_offset_var_z 1.13544043161
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_4_3_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 91.9570577461
+set_offset_var_x 201.261332901
+set_offset_var_y 5.04420722712
+set_offset_var_z 1.13544043161
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_5_3_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 91.9570577461
+set_offset_var_x 201.761041253
+set_offset_var_y 5.06128245703
+set_offset_var_z 1.13544043161
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_6_3_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 91.9570577461
+set_offset_var_x 202.260749604
+set_offset_var_y 5.07835768693
+set_offset_var_z 1.13544043161
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_7_3_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 91.9589992621
+set_offset_var_x 201.803020256
+set_offset_var_y -25.4350554531
+set_offset_var_z 0.879106831549
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_8_3_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 91.9589992621
+set_offset_var_x 202.302728028
+set_offset_var_y -25.4179632902
+set_offset_var_z 0.879106831549
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_9_3_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 91.9589992621
+set_offset_var_x 202.802435801
+set_offset_var_y -25.4008711272
+set_offset_var_z 0.879106831549
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_10_3_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 91.9615242342
+set_offset_var_x 202.845603123
+set_offset_var_y -55.8971971273
+set_offset_var_z 0.616275380861
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_11_3_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 91.9615242342
+set_offset_var_x 203.345310142
+set_offset_var_y -55.8800829427
+set_offset_var_z 0.616275380861
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+add_reference_frame road_stuff_12_3_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 91.9646326624
+set_offset_var_x 203.889683354
+set_offset_var_y -86.359282387
+set_offset_var_z 0.359530791167
+parsfile Animator\STL\Shape_32190d8a-f4db-40d7-9575-ea8b67af8941.par
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Self-Contained Scenes } Handling Course
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Handling Course
+#Category: Self-Contained Scenes
+#FileID  : Road_5595e2f4-f070-41c1-86ba-eaac93b88d08
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

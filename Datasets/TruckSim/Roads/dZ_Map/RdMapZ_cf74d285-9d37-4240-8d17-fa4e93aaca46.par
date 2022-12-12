@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, S-L Grid`Leg for Roundabout,  D = 36 m`Roundabout, D = 36 m
+#CheckBox0 0    
+
+SET_IROAD_DZ_FOR_ID 1001
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: Leg for Roundabout,  D = 36 m
+set_description ROAD_DZ_ID Leg for Roundabout,  D = 36 m
+#RingCtrl0 CARPET
+#RingCtrl3 2
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 4, 6 ! columns x rows
+ROAD_DZ_CARPET 2D_LINEAR
+0, -3, -2.1, 2.1, 3
+30, -0.2, -0.2, 0, 0
+45, -0.2, -0.2, 0, 0
+55, 0, 0, 0, 0
+95, 0, 0, 0, 0
+105, -0.2, -0.2, 0, 0
+120, -0.2, -0.2, 0, 0
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#All four legs of the roundabout have the same convention for station, and the same elevation information.
+#
+#On the entry and exist the elevation drops from 0 at L = 2.1 m to -0.2 at L = -2.1.
+#
+#Wthin the range of 55 < s < 95, the elevation is zero laterally, to allow a perfect transition to the circle of the roundabout.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Roundabout, D = 36 m } Leg for Roundabout,  D = 36 m
+#Library : Road: Off-Center Elevation Map, S-L Grid
+#DataSet : Leg for Roundabout,  D = 36 m
+#Category: Roundabout, D = 36 m
+#FileID  : RdMapZ_cf74d285-9d37-4240-8d17-fa4e93aaca46
+#Product : TruckSim 2020.1
+#VehCode dZ via S-L Grid
+
+END

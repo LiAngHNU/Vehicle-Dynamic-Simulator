@@ -1,0 +1,95 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Steer Controller Parameter Optimization`Extended Models
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_31c72456-735a-4256-b836-b9ecc812037d
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_c40f19aa-92ca-4469-8121-69574d61ada2.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 10 El, 42 m` Vehicle Reference` , Animator camera`Camera_c40f19aa-92ca-4469-8121-69574d61ada2
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.4 1
+SET_RUN_COLOR 0 0.4 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_9e67d413-6c86-46ce-9b3a-cf088f1d807a.par
+#BlueLink2 Vehicle: Loaded Combination`2A Conventional Van w/ Payload` Conventional Vans` , Math Model`VehLoad_9e67d413-6c86-46ce-9b3a-cf088f1d807a
+
+PARSFILE Procedures\Proc_18413135-ef8a-421b-af83-485c2b7f8245.par
+#BlueLink28 Procedures`Extended Driver Model (Steer Ctrl Opt)` Steer Controller Parameter Optimization` , Procedure`Proc_18413135-ef8a-421b-af83-485c2b7f8245
+
+PARSFILE Generic\VS_commands\GenVS_6c8e8b7c-34bf-4707-8b1c-960de67e9a1a.par
+#BlueLink9 Generic VS Commands`Steer Controller, Parameter Optimization` Embedded Python` , Miscellaneous`GenVS_6c8e8b7c-34bf-4707-8b1c-960de67e9a1a
+
+PARSFILE Generic\VS_commands\GenVS_be3dd4b6-3b44-48dd-a002-d1a1266ee455.par
+#BlueLink10 Generic VS Commands`Parameter Setting Options` Custom Steering Controls` , Miscellaneous`GenVS_be3dd4b6-3b44-48dd-a002-d1a1266ee455
+
+PARSFILE Events\Events_9ad1d4fa-b21a-4e19-ac80-3f6d8529472b.par
+#BlueLink11 Events`Reset to S = 0 based on Iteration` Steer Controller Parameter Optimization` , Miscellaneous`Events_9ad1d4fa-b21a-4e19-ac80-3f6d8529472b
+
+
+SPECIAL_PARSFILE Runs\Run_e6a98331-8689-4419-a102-93d0b68143fa.par
+#BlueLink23 TruckSim Run Control`Simple Steer Control with VS Commands` Extended Models` , Overlay run or ERD file`Run_e6a98331-8689-4419-a102-93d0b68143fa
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Steer Controller Parameter Optimization <Extended Models>
+CATEGORY Extended Models 
+DATASET_TITLE Steer Controller Parameter Optimization
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#Embedded Python Commands may be used to search for an optimal parameter of a model.
+#
+#In this case, the L_FORWARD parameter is examined, using the total difference of vehicle path from desired path as an error metric.  By examining the metric over various runs, a more optimal L_FORWARD value can be found.
+#
+#Setting the variable PrintVals to 1  ("Parameter Setting Options") enables a pop-up output at the end of the simulation.  The optimal value can be viewed in the variable BESTVAL in the Echo file (final conditions).  The error value is in the variable BESTVALERROR.
+#
+#This example makes use of the steering controller described in the Tech Memo available from the Help menu > Technical Memos > Example: Extending a Model with Embedded Python
+#
+#For comparison, this simulation is overlaid with another example, "Steer Controller with VS Commands." That example has the same Conventional Van Loaded but uses a steer controller written in VS Commands.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Extended Models } Steer Controller Parameter Optimization
+#Library : TruckSim Run Control
+#DataSet : Steer Controller Parameter Optimization
+#Category: Extended Models
+#FileID  : Run_31c72456-735a-4256-b836-b9ecc812037d
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

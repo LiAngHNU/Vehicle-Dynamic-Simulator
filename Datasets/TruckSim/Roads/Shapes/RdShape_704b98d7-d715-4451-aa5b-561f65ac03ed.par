@@ -1,0 +1,202 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Sine Sweep Ride Test`Ride Roads and Suspension Testing
+NLANES 13
+#MiscYellow0
+# 1 1 1, Grass (Light), 1, 10, 20, -100, m, 100, m, , , -100, 250, 260, , -0.3, Foliage
+# 1 1 1, Road (One Lane), 1, 10, 1, -1.5, m, 1.5, m, , , -100, 0, 1, , 0, Road
+# 0.502 0.502 0.502, Cement (Pitted), 1, 5, 1, -1.5, m, 1.5, m, , , 0, 80, 0.5, , 0, Off
+# 0.502 0.502 0.502, Cement (Pitted), 1, 5, 1, -1.5, m, 1.5, m, , , 80, 100, 0.2, , 0, Off
+# 0.502 0.502 0.502, Cement (Pitted), 1, 5, 1, -1.5, m, 1.5, m, , , 100, 210, 0.1, , 0, Off
+# 1 1 1, Road (One Lane), 1, 10, 1, -1.5, m, 1.5, m, , , 210, 250, 10, , 0, Road
+# 1 1 1, Road Transition (Light), 1, 10, -1, -2.5, m, -1.5, m, , , -100, 250, 0.5, , 0, Foliage
+# 1 1 1, Road Transition (Light), 1, 10, 1, 1.5, m, 2.5, m, , , -100, 250, 0.5, , 0, Foliage
+# 0.937 0.937 0.937, Snow, 1, 5, 0.05, 1.4, m, 1.45, m, , , 0, 210, 0.5, , 0.02, Off
+# 0.937 0.937 0.937, Snow, 1, 5, 0.05, -1.4, m, -1.45, m, , , 0, 210, 0.5, , 0.02, Off
+# 1 1 1, Grass (Light), 1, 10, 20, -100, m, 100, m, , , -100, 250, 10, , -0.1, Foliage
+# 0.918 0.918 0, Snow, 1, 10, 0.1, -1.4, m, 1.4, m, , , 0, 210, 0.125, 50, 0.02, Off
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Grass (Light)
+SPECULAR(1) 1
+SCALE(1) 10
+LTILES(1) 20
+LIN(1) -100
+LINUNITS(1) m
+LOUT(1) 100
+LOUTUNITS(1) m
+S_START(1) -100
+S_STOP(1) 250
+SINT(1) 260
+DZ(1) -0.3
+AUTODETAIL(1) Foliage
+COLOR(2) 1 1 1
+MATERIAL(2) Road (One Lane)
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 1
+LIN(2) -1.5
+LINUNITS(2) m
+LOUT(2) 1.5
+LOUTUNITS(2) m
+S_START(2) -100
+S_STOP(2) 0
+SINT(2) 1
+DZ(2) 0
+AUTODETAIL(2) Road
+COLOR(3) 0.502 0.502 0.502
+MATERIAL(3) Cement (Pitted)
+SPECULAR(3) 1
+SCALE(3) 5
+LTILES(3) 1
+LIN(3) -1.5
+LINUNITS(3) m
+LOUT(3) 1.5
+LOUTUNITS(3) m
+S_START(3) 0
+S_STOP(3) 80
+SINT(3) 0.5
+DZ(3) 0
+AUTODETAIL(3) Off
+COLOR(4) 0.502 0.502 0.502
+MATERIAL(4) Cement (Pitted)
+SPECULAR(4) 1
+SCALE(4) 5
+LTILES(4) 1
+LIN(4) -1.5
+LINUNITS(4) m
+LOUT(4) 1.5
+LOUTUNITS(4) m
+S_START(4) 80
+S_STOP(4) 100
+SINT(4) 0.2
+DZ(4) 0
+AUTODETAIL(4) Off
+COLOR(5) 0.502 0.502 0.502
+MATERIAL(5) Cement (Pitted)
+SPECULAR(5) 1
+SCALE(5) 5
+LTILES(5) 1
+LIN(5) -1.5
+LINUNITS(5) m
+LOUT(5) 1.5
+LOUTUNITS(5) m
+S_START(5) 100
+S_STOP(5) 210
+SINT(5) 0.1
+DZ(5) 0
+AUTODETAIL(5) Off
+COLOR(6) 1 1 1
+MATERIAL(6) Road (One Lane)
+SPECULAR(6) 1
+SCALE(6) 10
+LTILES(6) 1
+LIN(6) -1.5
+LINUNITS(6) m
+LOUT(6) 1.5
+LOUTUNITS(6) m
+S_START(6) 210
+S_STOP(6) 250
+SINT(6) 10
+DZ(6) 0
+AUTODETAIL(6) Road
+COLOR(7) 1 1 1
+MATERIAL(7) Road Transition (Light)
+SPECULAR(7) 1
+SCALE(7) 10
+LTILES(7) -1
+LIN(7) -2.5
+LINUNITS(7) m
+LOUT(7) -1.5
+LOUTUNITS(7) m
+S_START(7) -100
+S_STOP(7) 250
+SINT(7) 0.5
+DZ(7) 0
+AUTODETAIL(7) Foliage
+COLOR(8) 1 1 1
+MATERIAL(8) Road Transition (Light)
+SPECULAR(8) 1
+SCALE(8) 10
+LTILES(8) 1
+LIN(8) 1.5
+LINUNITS(8) m
+LOUT(8) 2.5
+LOUTUNITS(8) m
+S_START(8) -100
+S_STOP(8) 250
+SINT(8) 0.5
+DZ(8) 0
+AUTODETAIL(8) Foliage
+COLOR(9) 0.937 0.937 0.937
+MATERIAL(9) Snow
+SPECULAR(9) 1
+SCALE(9) 5
+LTILES(9) 0.05
+LIN(9) 1.4
+LINUNITS(9) m
+LOUT(9) 1.45
+LOUTUNITS(9) m
+S_START(9) 0
+S_STOP(9) 210
+SINT(9) 0.5
+DZ(9) 0.02
+AUTODETAIL(9) Off
+COLOR(10) 0.937 0.937 0.937
+MATERIAL(10) Snow
+SPECULAR(10) 1
+SCALE(10) 5
+LTILES(10) 0.05
+LIN(10) -1.4
+LINUNITS(10) m
+LOUT(10) -1.45
+LOUTUNITS(10) m
+S_START(10) 0
+S_STOP(10) 210
+SINT(10) 0.5
+DZ(10) 0.02
+AUTODETAIL(10) Off
+COLOR(11) 1 1 1
+MATERIAL(11) Grass (Light)
+SPECULAR(11) 1
+SCALE(11) 10
+LTILES(11) 20
+LIN(11) -100
+LINUNITS(11) m
+LOUT(11) 100
+LOUTUNITS(11) m
+S_START(11) -100
+S_STOP(11) 250
+SINT(11) 10
+DZ(11) -0.1
+AUTODETAIL(11) Foliage
+COLOR(12) 0.918 0.918 0
+MATERIAL(12) Snow
+SPECULAR(12) 1
+SCALE(12) 10
+LTILES(12) 0.1
+LIN(12) -1.4
+LINUNITS(12) m
+LOUT(12) 1.4
+LOUTUNITS(12) m
+S_START(12) 0
+S_STOP(12) 210
+SINT(12) 0.125
+IPRINT(12) 50
+DZ(12) 0.02
+AUTODETAIL(12) Off
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Ride Roads and Suspension Testing } Sine Sweep Ride Test
+#Library : Road: Animator Surface Shapes
+#DataSet : Sine Sweep Ride Test
+#Category: Ride Roads and Suspension Testing
+#FileID  : RdShape_704b98d7-d715-4451-aa5b-561f65ac03ed
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

@@ -1,0 +1,94 @@
+PARSFILE
+#FullDataName TruckSim Run Control`TCS: Low Mu Full Thrt. Accel.`Engine Torque Control
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_c912a1f0-2abd-4ae6-b78c-f79546456335
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_56f16ca2-363f-403d-bf59-a1b271d695e1.par
+#BlueLink12 Models: Simulink`TCS Controller` ` , Models`Simlink_56f16ca2-363f-403d-bf59-a1b271d695e1
+
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.6 0.2
+SET_RUN_COLOR 0 0.6 0.2
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_9e80118f-ce1c-4f40-8d35-27feac9424e2.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Conv. Van (7-spd. MT)` 2A Conventional Van` , Math Model`Lead2a_9e80118f-ce1c-4f40-8d35-27feac9424e2
+
+PARSFILE Procedures\Proc_daa33603-e798-4e81-a3eb-bf5f36d453d4.par
+#BlueLink28 Procedures`Full Throttle Accel. (MT), Low Mu` Acceleration and Braking` , Procedure`Proc_daa33603-e798-4e81-a3eb-bf5f36d453d4
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+
+SPECIAL_PARSFILE Runs\Run_5fb66a23-695b-461f-b6f7-9867b2575139.par
+#BlueLink23 TruckSim Run Control`No Control: Low Mu Full Thrt. Accel.` Engine Torque Control` , Overlay run or ERD file`Run_5fb66a23-695b-461f-b6f7-9867b2575139
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title TCS: Low Mu Full Thrt. Accel. <Engine Torque Control>
+CATEGORY Engine Torque Control 
+DATASET_TITLE TCS: Low Mu Full Thrt. Accel.
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#Starting with TruckSim 2017, two new import variables and one new output variable were added to support engine torque management.
+#
+#The truck is equipped with a Traction Control System (TCS), modelled in Simulink, which controls excessive wheel spin via a combination of modulated brake pressures and engine torque management.
+#
+#A full throttle acceleration test is performed using the TruckSim Closed-Loop Shifting schedule.
+#
+#This test combines clutch engagement / disengagement, throttle opening / closing, and gear change time, represented by three tables on a single screen.
+#
+#The environment is a flat road whose Mu is transitioned from 1.0 to 0.3 at a road station of 8 m.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Engine Torque Control } TCS: Low Mu Full Thrt. Accel.
+#Library : TruckSim Run Control
+#DataSet : TCS: Low Mu Full Thrt. Accel.
+#Category: Engine Torque Control
+#FileID  : Run_c912a1f0-2abd-4ae6-b78c-f79546456335
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Parking Torque Test: Ramp Speed`Steering Tests
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_b87b6cd4-f29a-4459-b650-e737010a475d
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_e1c31f95-b0c9-423f-af09-82016e848b91.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 1 El, 25 m` Vehicle Reference` , Animator camera`Camera_e1c31f95-b0c9-423f-af09-82016e848b91
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_0e8f42e3-6607-4e9f-8f23-092fbd4f093c.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Conv. Van (7-spd. AT, Park Tq.)` 2A Conventional Van` , Math Model`Lead2a_0e8f42e3-6607-4e9f-8f23-092fbd4f093c
+
+PARSFILE Procedures\Proc_b2afc113-f409-474b-8433-6c367da60689.par
+#BlueLink28 Procedures`Sine Wave 0.2 Hz - Ramp to 120 km/h` Steering Tests` , Procedure`Proc_b2afc113-f409-474b-8433-6c367da60689
+
+PARSFILE Animator\Groups\Group_4a9c5f1c-004d-4a20-b2a7-122950d5996a.par
+#BlueLink9 Animator: Group`Steer Torque Text` HUD` , Miscellaneous`Group_4a9c5f1c-004d-4a20-b2a7-122950d5996a
+
+*SSTOP 200
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Parking Torque Test: Ramp Speed <Steering Tests>
+CATEGORY Steering Tests 
+DATASET_TITLE Parking Torque Test: Ramp Speed
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates the 2-axle Conventional Van with a 7-speed automatic transmission and Parking Torque performing a Sine Wave steering input of 0.2 Hz while ramping to 120 km/h. The vehicle does not have a payload.
+#
+#Parking torque is the steer torque felt in a parking lot maneuver or at very low vehicle speed. It is vehicle speed dependent and always resists the steering movement - the torque always acts in the opposite direction to the steering direction.
+#
+#In a real vehicle, the parking torque is caused by the tire's scrub friction as well as any friction in the steering system itself. Typically the parking torque decreases as the vehicle speed is increased and the wheels transition to rolling.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Steering Tests } Parking Torque Test: Ramp Speed
+#Library : TruckSim Run Control
+#DataSet : Parking Torque Test: Ramp Speed
+#Category: Steering Tests
+#FileID  : Run_b87b6cd4-f29a-4459-b650-e737010a475d
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

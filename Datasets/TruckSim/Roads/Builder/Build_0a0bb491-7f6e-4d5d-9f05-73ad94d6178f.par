@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Path/Road: Segment Builder (Simple 3D)`Straight Path (East-West)`Straight Paths
+#RingCtrl0 3
+#RingCtrl1 1
+
+SET_IPATH_FOR_ID 0
+#CheckBox0 0    
+OPT_PATH_LOOP 0
+#CheckBox3 0    
+OPT_PATH_START 0
+
+PATH_ID_DM = PATH_ID
+set_description path_id Straight Path (East-West)
+
+#MiscYellow0
+# Ahead 200 m 0 1/m 2 200.0 200.000 5 0.0 Rel 5 Grade 0 50 0.8 0.8
+#ENDMYellow
+
+SPATH_START 0
+NSEGMENTS 1
+
+IPATHSEG 1
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 200
+
+LOG_ENTRY Used Dataset: Path/Road: Segment Builder (Simple 3D); { Straight Paths } Straight Path (East-West)
+#Library : Path/Road: Segment Builder (Simple 3D)
+#DataSet : Straight Path (East-West)
+#Category: Straight Paths
+#FileID  : Build_0a0bb491-7f6e-4d5d-9f05-73ad94d6178f
+#Product : TruckSim 2020.1
+#VehCode Path/Road Segment Builder
+
+END

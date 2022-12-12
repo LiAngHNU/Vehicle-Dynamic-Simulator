@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`200m x 200m Road Surface`Flat Test Pads
+NLANES 1
+#MiscYellow0
+# 0.753 0.753 0.753, Road (No Lines), 1, 20, 20, -200, m, 200, m, , , -200, 200, 5, , 0, Road
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 0.753 0.753 0.753
+MATERIAL(1) Road (No Lines)
+SPECULAR(1) 1
+SCALE(1) 20
+LTILES(1) 20
+LIN(1) -200
+LINUNITS(1) m
+LOUT(1) 200
+LOUTUNITS(1) m
+S_START(1) -200
+S_STOP(1) 200
+SINT(1) 5
+DZ(1) 0
+AUTODETAIL(1) Road
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Flat Test Pads } 200m x 200m Road Surface
+#Library : Road: Animator Surface Shapes
+#DataSet : 200m x 200m Road Surface
+#Category: Flat Test Pads
+#FileID  : RdShape_0b3f1182-4134-4d70-a1d1-bfdac502953f
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

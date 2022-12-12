@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Opt_Engine_Running: MT`Powertrain
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_accbe695-0582-4428-8564-59e8cd735fcd
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fba691be-6c65-4c71-b964-e852577b19ed.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 35 m` Vehicle Reference` , Animator camera`Camera_fba691be-6c65-4c71-b964-e852577b19ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_46c7d67e-b803-4bec-933d-a691b18e898b.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`LCF Van (7-spd. MT)` 2A LCF Van` , Math Model`Lead2a_46c7d67e-b803-4bec-933d-a691b18e898b
+
+PARSFILE Procedures\Proc_2b1fb954-566b-46d9-9468-8ed37a7fc314.par
+#BlueLink28 Procedures`Opt_Engine_Running: MT` Event Triggered Tests` , Procedure`Proc_2b1fb954-566b-46d9-9468-8ed37a7fc314
+
+PARSFILE Animator\HUD\HUD_5ba74dcc-90d0-47c8-a130-8c2198e269f3.par
+#BlueLink9 Animator: HUD`Throttle, Brakes, Speedo w/ Gear, Tach` HUD Groups` , Miscellaneous`HUD_5ba74dcc-90d0-47c8-a130-8c2198e269f3
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink10 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+*TSTOP 1
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Lead_2a\Lead2a_46c7d67e-b803-4bec-933d-a691b18e898b.png
+WRITE_SENSOR_DETECT
+Title Opt_Engine_Running: MT <Powertrain>
+CATEGORY Powertrain 
+DATASET_TITLE Opt_Engine_Running: MT
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#2A truck with a manual transmission in a test demonstrating the powertrain control parameter Opt_Engine_Running.
+#
+#The use of Opt_Engine_Running in a test with a vehicle equipped with a manual transmission needs to consider the transmission clutch engagement / disengagement.
+#
+#Opt_Engine_Running is used to turn the engine on and off, such as what might be used as part of an auto Start / Stop functionality.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Powertrain } Opt_Engine_Running: MT
+#Library : TruckSim Run Control
+#DataSet : Opt_Engine_Running: MT
+#Category: Powertrain
+#FileID  : Run_accbe695-0582-4428-8564-59e8cd735fcd
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

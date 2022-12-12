@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Path: X-Y Coordinates`Parking Lot: Exterior Ring Road`Parking Lot
+#RingCtrl0 1
+SET_IPATH_FOR_ID 0
+DEFINE_XY_TABLES 1
+ITAB_XY = NTAB_XY
+XY_TABLE_ID = ITAB_XY
+SET_DESCRIPTION PATH_ID Parking Lot: Exterior Ring Road
+SET_DESCRIPTION XY_TABLE_ID Parking Lot: Exterior Ring Road
+IPATHSEG = 1
+PATH_ID_DM = PATH_ID
+SEGMENT_TYPE = 1
+XY_SEGMENT_ID = XY_TABLE_ID
+
+#CheckBox0 1    
+OPT_PATH_LOOP 1
+#CheckBox1 0    
+#CheckBox4 0    
+
+#RadioCtrl0 0    
+
+#DiagramOne0
+SEGMENT_XY_TABLE
+0.0000, -6.0000, 0.0000
+41.0000, -6.0000, 41.0000
+42.9134, -5.6194, 42.9509
+44.5355, -4.5355, 44.9018
+45.6194, -2.9134, 46.8527
+46.0000, -1.0000, 48.8036
+46.0000, 37.4000, 87.2036
+45.6194, 39.3134, 89.1545
+44.5355, 40.9355, 91.1054
+42.9134, 42.0194, 93.0563
+41.0000, 42.4000, 95.0072
+-61.0000, 42.4000, 197.0072
+-62.9134, 42.0194, 198.9581
+-64.5355, 40.9355, 200.9090
+-65.6194, 39.3134, 202.8599
+-66.0000, 37.4000, 204.8108
+-66.0000, -1.0000, 243.2108
+-65.6194, -2.9134, 245.1617
+-64.5355, -4.5355, 247.1126
+-62.9134, -5.6194, 249.0635
+-61.0000, -6.0000, 251.0144
+0.0000, -6.0000, 312.0144
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Path: X-Y Coordinates; { Parking Lot } Parking Lot: Exterior Ring Road
+#Library : Path: X-Y Coordinates
+#DataSet : Parking Lot: Exterior Ring Road
+#Category: Parking Lot
+#FileID  : PathXY_37103963-481e-4e3d-b99c-886800d461ee
+#Product : TruckSim 2020.1
+#VehCode X-Y Coordinates of Path
+
+END

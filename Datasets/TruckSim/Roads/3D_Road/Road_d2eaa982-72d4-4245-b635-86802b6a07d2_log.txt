@@ -1,0 +1,31 @@
+Run made by VS Road Calculator at 11:11 on May 17, 2022.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_d2eaa982-72d4-4245-b635-86802b6a07d2.par"
+Include PARSFILE "Roads\BuilderSegment\RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c.par"
+ Straight Path East <Straight>
+Used Dataset: Path: Segment Builder; { Straight } Straight Path East
+Include PARSFILE "Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } Constant: 0.85
+Include PARSFILE "Roads\Shapes\RdShape_989de7d0-43d5-45e6-b4f9-e488c9aff219.par"
+Used Dataset: Road: Animator Surface Shapes; { Flat Test Pads } 1 km x 2 km Checkerboard
+Include PARSFILE "Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par"
+Include PARSFILE "Animator\Frames\Frame_7bb47609-7102-4b34-a50f-a8c8a02234db.par"
+Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Skybox (Vehicle X-Y-Z)
+Include PARSFILE "Animator\STL\Shape_f49e5d15-b002-46b6-b28e-df6b8d8a40b6.par"
+Used Dataset: Animator: Shape File Link; { Environment: Sky Boxes } Partly Cloudy Sky
+Include PARSFILE "Animator\STL\Shape_79cf4b25-5748-487a-8e5c-a602d7f86a42.par"
+Used Dataset: Animator: Shape File Link; { Environment: Land Bowls } Light Grass
+Used Dataset: Animator: Group; { Environment Spheres } Partly Cloudy Sky with Light Grass
+Include PARSFILE "Roads\3D_Road\Road_d2eaa982-72d4-4245-b635-86802b6a07d2.ani"
+Used Dataset: Road: 3D Surface (All Properties); { Flat Test Pads } 1 km x 2 km Handling Surface
+
+Time to read input = 0.0006528
+
+Run stopped at t = 17.92. Stop time reached.
+
+Run started: VS output file = Roads\3D_Road\Road_d2eaa982-72d4-4245-b635-86802b6a07d2.vsb
+
+Computational time ratio: RTIME = inf (real time)/(simulation time)
+

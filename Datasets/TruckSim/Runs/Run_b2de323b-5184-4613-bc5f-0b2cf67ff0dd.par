@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName TruckSim Run Control`On-Center Steer Test`Steering Tests
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_b2de323b-5184-4613-bc5f-0b2cf67ff0dd
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_c40f19aa-92ca-4469-8121-69574d61ada2.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 10 El, 42 m` Vehicle Reference` , Animator camera`Camera_c40f19aa-92ca-4469-8121-69574d61ada2
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+*RUN_COLOR 0 0.8 0.004
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_401fc56a-f7f4-4aed-b57c-4ed2658a6280.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`LCF Van (Power Steer)` 2A LCF Van` , Math Model`Lead2a_401fc56a-f7f4-4aed-b57c-4ed2658a6280
+
+PARSFILE Procedures\Proc_11bc434a-c205-420f-a524-f144d67f1535.par
+#BlueLink28 Procedures`On Center Test - Closed Loop Steer` Steering Tests` , Procedure`Proc_11bc434a-c205-420f-a524-f144d67f1535
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+*TSTOP 1
+PARSFILE Plot\Setup\Plot_296429a4-bdb3-47e0-9ce3-f3494e791642.par
+#BlueLink15 Plot: Setup`Boost Torque vs. Time` Steering` , Plot`Plot_296429a4-bdb3-47e0-9ce3-f3494e791642
+
+#BlueLink23 TruckSim Run Control`Baseline` * * Quick Start Guide Example` , Overlay run or ERD file`Run_f02bf0b3-4066-447e-bb5e-40a929b281c7
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Lead_2a\Lead2a_401fc56a-f7f4-4aed-b57c-4ed2658a6280.png
+WRITE_SENSOR_DETECT
+Title On-Center Steer Test <Steering Tests>
+CATEGORY Steering Tests 
+DATASET_TITLE On-Center Steer Test
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#A vehicle equipped with Column Assist power steering performs an On-Center test.
+#
+#The Closed Loop Steering Controller applies a steering wheel angle to follow a target path.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Steering Tests } On-Center Steer Test
+#Library : TruckSim Run Control
+#DataSet : On-Center Steer Test
+#Category: Steering Tests
+#FileID  : Run_b2de323b-5184-4613-bc5f-0b2cf67ff0dd
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

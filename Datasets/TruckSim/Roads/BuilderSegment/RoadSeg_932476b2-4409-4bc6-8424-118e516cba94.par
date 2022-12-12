@@ -1,0 +1,62 @@
+PARSFILE
+#FullDataName Path: Segment Builder`152.4-m (500-ft) Radius`Circles
+#RingCtrl0 1
+SET_IPATH_FOR_ID 0
+#CheckBox0 0    
+OPT_PATH_START 0
+#CheckBox1 1    
+OPT_PATH_LOOP 1
+
+SPATH_START 0
+PATH_ID_DM = PATH_ID
+set_description path_id 152.4-m (500-ft) Radius
+
+NSEGMENTS 1
+*TABLEROWS 1
+
+! Table Columns:
+!   NOTE: Label columns are not written to parsfile.
+!
+! 0: (Ring) Specify the type of segment. Circular arcs can be specified using radius or curvature (inverse radius). The table option provides a link to a dataset from the X-Y Coordinates for Segment library. The clothoid option will automatically generate an X-Y table with a specified length that maintains continuity with adjacent segments (the preceding and following rows in the table).
+! 1: (BlueLink) Link to a dataset from the X-Y Coordinates for Segment library.
+! 2: (Text) Length of straight segment in meters.
+! 3: (Label) Specify the length of a straight segment with meters.
+! 4: (Text) Segment radius: use a positive radius for a left turn, negative for a right turn.
+! 5: (Label) Specify radius with meters. Use a positive number for a left turn, negative number for a right turn.
+! 6: (Text) Length of segment arc, specified with arc length (m) or central angle (deg).
+! 7: (Ring) Specify arc size with central angle (deg) or arc length (m).
+! 8: (Text) Segment curvature (inverse of radius, 1/m): use a positive curvature for a left turn, negative for a right turn
+! 9: (Label) Specify segment curvature with 1/meter (inverse of radius). Use a positive number for a left turn, negative for a right turn.
+! 10: (Text) Length of segment arc, specified with arc length (m) or central angle (deg).
+! 11: (Ring) Specify arc size with central angle (deg) or arc length (m).
+! 12: (Text) Length of clothoid segment in meters. This will automatically generate an X-Y table that has this overall length and maintains continuity with the adjacent segments (the preceding and following rows in the table).
+! 13: (Label) Specify the length of a clothoid segment with meters.
+#MIXTABLE0
+#NUMROWS 1
+#radius, , 50, 152.4, 360, deg, 0.01, 90, deg, 400
+#ENDTABLE
+
+! Segment 1, radius
+IPATHSEG 1
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 152.400000
+SEGMENT_ARC 360.000000
+
+Title 152.4-m (500-ft) Radius <Circles>
+
+#EMBEDDED_NOTES
+#Parameters for the road builder must be specified with numerical values using the units shown.
+#
+#Radius is 152.4 meters (500 feet).
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Path: Segment Builder; { Circles } 152.4-m (500-ft) Radius
+#Library : Path: Segment Builder
+#DataSet : 152.4-m (500-ft) Radius
+#Category: Circles
+#FileID  : RoadSeg_932476b2-4409-4bc6-8424-118e516cba94
+#Product : TruckSim 2020.1
+#VehCode Path Segment Builder
+
+END

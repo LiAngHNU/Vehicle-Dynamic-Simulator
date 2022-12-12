@@ -1,0 +1,74 @@
+PARSFILE
+#FullDataName TruckSim Run Control`100 km/h, 0.5 mu, DLC`Handling and Stability Tests
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_2f66a867-189f-4908-85f7-61c4dab81c19
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_293071ae-9194-4088-8862-92255ece0a0f.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 48 m` Vehicle Reference` , Animator camera`Camera_293071ae-9194-4088-8862-92255ece0a0f
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_cc71b65b-8257-41e6-b7a1-2d1ed36a3974.par
+#BlueLink2 Vehicle: Loaded Combination`2A Tour Bus (S_S), Two Payloads` Tour Buses` , Math Model`VehLoad_cc71b65b-8257-41e6-b7a1-2d1ed36a3974
+
+PARSFILE Procedures\Proc_a3dccc17-66b9-4c38-b9ab-c5d03e028fab.par
+#BlueLink28 Procedures`DLC @ 100 km/h Low Mu` Handling Tests` , Procedure`Proc_a3dccc17-66b9-4c38-b9ab-c5d03e028fab
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_5cb9979d-3686-4654-8ce0-3c30f81bd36c.png
+WRITE_SENSOR_DETECT
+Title 100 km/h, 0.5 mu, DLC <Handling and Stability Tests>
+CATEGORY Handling and Stability Tests 
+DATASET_TITLE 100 km/h, 0.5 mu, DLC
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#A 2-axle Tour Bus, not equipped with an electronic stability control system, attempting to perform a double lane change on a low mu surface at 100 km/h.
+#
+#Due to the absence of yaw control intervention, the vehicle has trouble maintaining the double lane change target path.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Handling and Stability Tests } 100 km/h, 0.5 mu, DLC
+#Library : TruckSim Run Control
+#DataSet : 100 km/h, 0.5 mu, DLC
+#Category: Handling and Stability Tests
+#FileID  : Run_2f66a867-189f-4908-85f7-61c4dab81c19
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

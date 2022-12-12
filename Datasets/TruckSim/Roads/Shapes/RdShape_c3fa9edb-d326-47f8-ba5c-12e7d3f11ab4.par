@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Two Lanes`Lane-Keeping Assist Roads
+NLANES 4
+OPTTHRESHOLD 1
+#MiscYellow0
+# 1 1 1, Road (One Lane), 1, 40, 1, 0, m, -4, m, , , -100, 1200, 5, , , Road
+# 1 1 1, Road Transition (Light), 1, 30, -0.969, -4, m, -7.1, m, , , -100, 1200, 5, , , Foliage
+# 1 1 1, Road (One Lane), 1, 40, 1, 4, m, 0, m, , , -100, 1200, 5, , , Road
+# 1 1 1, Road Transition (Light), 1, 30, 1, 7.1, m, 4, m, , , -100, 1200, 5, , , Foliage
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (One Lane)
+SPECULAR(1) 1
+SCALE(1) 40
+LTILES(1) 1
+LIN(1) 0
+LINUNITS(1) m
+LOUT(1) -4
+LOUTUNITS(1) m
+S_START(1) -100
+S_STOP(1) 1200
+SINT(1) 5
+AUTODETAIL(1) Road
+COLOR(2) 1 1 1
+MATERIAL(2) Road Transition (Light)
+SPECULAR(2) 1
+SCALE(2) 30
+LTILES(2) -0.969
+LIN(2) -4
+LINUNITS(2) m
+LOUT(2) -7.1
+LOUTUNITS(2) m
+S_START(2) -100
+S_STOP(2) 1200
+SINT(2) 5
+AUTODETAIL(2) Foliage
+COLOR(3) 1 1 1
+MATERIAL(3) Road (One Lane)
+SPECULAR(3) 1
+SCALE(3) 40
+LTILES(3) 1
+LIN(3) 4
+LINUNITS(3) m
+LOUT(3) 0
+LOUTUNITS(3) m
+S_START(3) -100
+S_STOP(3) 1200
+SINT(3) 5
+AUTODETAIL(3) Road
+COLOR(4) 1 1 1
+MATERIAL(4) Road Transition (Light)
+SPECULAR(4) 1
+SCALE(4) 30
+LTILES(4) 1
+LIN(4) 7.1
+LINUNITS(4) m
+LOUT(4) 4
+LOUTUNITS(4) m
+S_START(4) -100
+S_STOP(4) 1200
+SINT(4) 5
+AUTODETAIL(4) Foliage
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Lane-Keeping Assist Roads } Two Lanes
+#Library : Road: Animator Surface Shapes
+#DataSet : Two Lanes
+#Category: Lane-Keeping Assist Roads
+#FileID  : RdShape_c3fa9edb-d326-47f8-ba5c-12e7d3f11ab4
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`1 km x 2 km Checkerboard`Flat Test Pads
+NLANES 1
+OPTTHRESHOLD 1
+#MiscYellow0
+# 0.753 0.735 0.735, Checkerboard, 1, 10, 100, -500, m, 500, m, , , -500, 1500, 10, , , Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 0.753 0.735 0.735
+MATERIAL(1) Checkerboard
+SPECULAR(1) 1
+SCALE(1) 10
+LTILES(1) 100
+LIN(1) -500
+LINUNITS(1) m
+LOUT(1) 500
+LOUTUNITS(1) m
+S_START(1) -500
+S_STOP(1) 1500
+SINT(1) 10
+AUTODETAIL(1) Random
+MTL_FILE Animator/Road_Materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Flat Test Pads } 1 km x 2 km Checkerboard
+#Library : Road: Animator Surface Shapes
+#DataSet : 1 km x 2 km Checkerboard
+#Category: Flat Test Pads
+#FileID  : RdShape_989de7d0-43d5-45e6-b4f9-e488c9aff219
+#Product : TruckSim 2020.1
+#VehCode Road Shapes
+
+END

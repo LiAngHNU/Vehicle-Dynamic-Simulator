@@ -1,0 +1,54 @@
+Run made by VS Road Calculator at 19:38 on May 11, 2022.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_c75a67cf-f4ad-42f1-9292-3148b8f7a4c5.par"
+Include PARSFILE "Roads\BuilderSegment\RoadSeg_c3a93136-a7c4-4046-8a3c-81302449da68.par"
+ City and Off-road 3D <Looped Roads for Environments>
+Used Dataset: Path: Segment Builder; { Looped Roads for Environments } City and Off-road 3D
+Include PARSFILE "Roads\Center_Z\RdRefZ_1ba12618-8b8a-48bb-8c91-29cf80c16e76.par"
+Used Dataset: Road: Reference Line Elevation; { Hills and Valleys } Offroad Baja S v Z
+Include PARSFILE "Roads\dZ_Map\RdMapZ_1c9d4f4e-6f30-433e-803a-f21578c79093.par"
+Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Off-road Terrain } Small Hills for DS Loop, S 175 to 860
+Include PARSFILE "Roads\Friction\RdMu_ea7d6f58-71c6-42d0-aa52-92b3387a35cb.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } Constant: 0.9
+Include PARSFILE "Roads\Shapes\RdShape_fd732d47-09f3-4d86-961b-2da5134afc87.par"
+Used Dataset: Road: Animator Surface Shapes; No Machine-Generated Shapes
+Include PARSFILE "Roads\dZ_Map\RdMapZ_93a6c7d5-b18c-4308-acfb-e572aa0510b5.par"
+Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Off-road Terrain } Offroad Baja Banks
+Include PARSFILE "Animator\Groups\Group_c9b144d3-0a79-47db-8b4a-942ac4ebcb6f.par"
+Include PARSFILE "Animator\Frames\Frame_7abbf31f-6fb6-44cf-9b93-4db47dc8ad7c.par"
+Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Skybox (Vehicle Reference)
+Include PARSFILE "Animator\STL\Shape_57a8b02c-455b-4ab3-a48a-99073cbc2105.par"
+Used Dataset: Animator: Shape File Link; { Environment: Sky Boxes } Overcast Sky
+Include PARSFILE "Animator\STL\Shape_1556c851-b2ce-4f0e-99f5-9ec118b24b68.par"
+Used Dataset: Animator: Shape File Link; { Environment: Land Bowls } Desert
+Used Dataset: Animator: Group; { Environment Spheres } Overcast Sky with Desert
+Include PARSFILE "Animator\Groups\Group_5cecd255-aa2a-4506-a748-39172998a43f.par"
+Include PARSFILE "Animator\STL\Shape_c5fbe48f-62cc-45e6-b4e3-273b4de5a68b.par"
+Used Dataset: Animator: Shape File Link; { Self-Contained Scenes } Baja Course: Roads and Terrain
+Include PARSFILE "Animator\STL\Shape_dd1696a4-a48f-4312-8e39-404904250c1b.par"
+Used Dataset: Animator: Shape File Link; { Self-Contained Scenes } Baja Course: Trees
+Include PARSFILE "Animator\STL\Shape_70f5b817-c2d1-4d71-941a-57f7b09715ae.par"
+Used Dataset: Animator: Shape File Link; { Self-Contained Scenes } Baja Course: Bulidings and Walls
+Include PARSFILE "Animator\STL\Shape_dd1696a4-a48f-4312-8e39-404904250c1b.par"
+Used Dataset: Animator: Shape File Link; { Self-Contained Scenes } Baja Course: Trees
+Include PARSFILE "Animator\STL\Shape_72337bd6-7a09-407b-9e21-c6bcc2664107.par"
+Used Dataset: Animator: Shape File Link; { Self-Contained Scenes } Baja Course: Details
+Include PARSFILE "Animator\STL\Shape_df861eed-7d9c-4dec-aa9b-82b7989058aa.par"
+Used Dataset: Animator: Shape File Link; { Self-Contained Scenes } Baja Course: Barrels
+Used Dataset: Animator: Group; { Roads and Environment } Environment City and Off-road
+Include PARSFILE "Roads\3D_Road\Road_c75a67cf-f4ad-42f1-9292-3148b8f7a4c5.ani"
+Used Dataset: Road: 3D Surface (All Properties); { * * * Vehicle Dynamic Simulator } Border Town
+
+Time to read input = 0.0025397
+Function ROAD_ZS_TABLE(1) extrapolated (out of range HIGH) for X = 1314.72 m at T = 14.52
+Function ROAD_DZ_CARPET(1) extrapolated (out of range LOW) for X = 0 m at T = 14.52
+Function ROAD_DZ_CARPET(2) extrapolated (out of range LOW) for X = 0 m at T = 14.52
+
+Run stopped at t = 14.52. Stop time reached.
+
+Run started: VS output file = Roads\3D_Road\Road_c75a67cf-f4ad-42f1-9292-3148b8f7a4c5.vsb
+
+Computational time ratio: RTIME = inf (real time)/(simulation time)
+

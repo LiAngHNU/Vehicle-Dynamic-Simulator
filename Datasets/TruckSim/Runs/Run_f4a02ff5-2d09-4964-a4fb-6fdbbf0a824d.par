@@ -1,0 +1,97 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Roundabout, Show Boundaries`Road Networks: Intersections and Roundabouts
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_f4a02ff5-2d09-4964-a4fb-6fdbbf0a824d
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_8a9ef992-08ef-4295-8e37-2e0cc1c76352.par
+#BlueLink0 Animator: Camera Setup`280 Azm, 15 El, 50 m` Vehicle Reference` , Animator camera`Camera_8a9ef992-08ef-4295-8e37-2e0cc1c76352
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 4
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_9e80118f-ce1c-4f40-8d35-27feac9424e2.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Conv. Van (7-spd. MT)` 2A Conventional Van` , Math Model`Lead2a_9e80118f-ce1c-4f40-8d35-27feac9424e2
+
+PARSFILE Procedures\Proc_767958d4-5d6a-4dc8-b2e7-1a11b8d05113.par
+#BlueLink28 Procedures`Roundabout: D = 36m, Show Boundaries` Road Networks` , Procedure`Proc_767958d4-5d6a-4dc8-b2e7-1a11b8d05113
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+PARSFILE Roads\BuilderSegment\RoadSeg_c72116c2-3fad-4c32-93c7-0895d6f5156f.par
+#BlueLink10 Path: Segment Builder`South Entrance, 3d Exit, 1021` Roundabout, D = 36 m` , Miscellaneous`RoadSeg_c72116c2-3fad-4c32-93c7-0895d6f5156f
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55.par
+#BlueLink11 Multiple Moving Objects`1 Driver Preview Point, Set by DM` Points of Interest` , Miscellaneous`TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55
+
+PARSFILE Plot\Setup\Plot_246bcb1b-ad8e-4311-a1b3-faf171d44be4.par
+#BlueLink15 Plot: Setup`Road ID for Tires (Axle 1, Single Tires)` Tracking` , Plot`Plot_246bcb1b-ad8e-4311-a1b3-faf171d44be4
+
+PARSFILE Plot\Setup\Plot_3ccc6f14-4965-48a4-bffb-f352c7a91346.par
+#BlueLink16 Plot: Setup`Road ID for Tires (Axle 2)` Tracking` , Plot`Plot_3ccc6f14-4965-48a4-bffb-f352c7a91346
+
+PARSFILE Plot\Setup\Plot_31182207-c673-474a-88a1-79d61c51ff07.par
+#BlueLink17 Plot: Setup`Road Station for Tires (Axle 1)` Tracking` , Plot`Plot_31182207-c673-474a-88a1-79d61c51ff07
+
+PARSFILE Plot\Setup\Plot_4e65f385-7eaf-465b-a8f4-c5854337acdf.par
+#BlueLink18 Plot: Setup`Road Station for Tires (Axle 2)` Tracking` , Plot`Plot_4e65f385-7eaf-465b-a8f4-c5854337acdf
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+WRITE_SENSOR_DETECT
+Title Roundabout, Show Boundaries <Road Networks: Intersections and Roundabouts>
+CATEGORY Road Networks: Intersections and Roundabouts 
+DATASET_TITLE Roundabout, Show Boundaries
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example uses a version of the roundabout with alternative graphics that show the boundaries of the five connected roads.
+#
+#The colored regions are shown on top of the pavement graphics, and represent the boundaries for each road segement.
+#
+#When viewing the video, it may be helpful to render with the wireframe view to see the overlap of the boundaries. To do so, press Ctrl+W several times in VS Visualizer to cycle through the rendering modes.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Road Networks: Intersections and Roundabouts } Roundabout, Show Boundaries
+#Library : TruckSim Run Control
+#DataSet : Roundabout, Show Boundaries
+#Category: Road Networks: Intersections and Roundabouts
+#FileID  : Run_f4a02ff5-2d09-4964-a4fb-6fdbbf0a824d
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

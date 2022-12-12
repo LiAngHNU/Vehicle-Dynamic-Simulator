@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Four Small Bumps, 5% grade`Ride Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_6099315c-17b0-474e-a4f9-64ace3e62fb5.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Four Small Bumps, 5% grade
+PARSFILE Roads\Builder\Build_0a0bb491-7f6e-4d5d-9f05-73ad94d6178f.par
+#BlueLink0 Path/Road: Segment Builder (Simple 3D)`Straight Path (East-West)` Straight Paths` , Reference Path`Build_0a0bb491-7f6e-4d5d-9f05-73ad94d6178f
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight Path (East-West)
+PARSFILE Roads\Center_Z\RdRefZ_2f22c14a-668d-43cc-80a2-6a1502e26712.par
+#BlueLink1 Road: Reference Line Elevation`Uniform Grade: 5%` Uniform Grades` , Path Elevation`RdRefZ_2f22c14a-668d-43cc-80a2-6a1502e26712
+
+PARSFILE Roads\dZ_Map\RdMapZ_78582304-c272-467e-890e-48b436b1a8c9.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Small Bumps Smoothed` Bumps` , Miscellaneous`RdMapZ_78582304-c272-467e-890e-48b436b1a8c9
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_37f99924-b92b-4833-8c85-632f85931223.par
+#BlueLink4 Road: Animator Surface Shapes`200 m Wide 400 m Long w/ Bumps` Ride Roads and Suspension Testing` , Road shape definitions`RdShape_37f99924-b92b-4833-8c85-632f85931223
+
+RR_SURF_CONSTANT 1.0
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_265e38de-4bbf-46ee-bbc0-868db110b76d.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 3 El, 44 m` Road Reference` , Camera`Camera_265e38de-4bbf-46ee-bbc0-868db110b76d
+
+parsfile Roads\3D_Road\Road_6099315c-17b0-474e-a4f9-64ace3e62fb5.ani
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Ride Roads } Four Small Bumps, 5% grade
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Four Small Bumps, 5% grade
+#Category: Ride Roads
+#FileID  : Road_6099315c-17b0-474e-a4f9-64ace3e62fb5
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

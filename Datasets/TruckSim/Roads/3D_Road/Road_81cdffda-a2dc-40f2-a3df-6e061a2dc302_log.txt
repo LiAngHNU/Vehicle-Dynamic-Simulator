@@ -1,0 +1,30 @@
+Run made by VS Road Calculator at 17:28 on May 19, 2022.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_81cdffda-a2dc-40f2-a3df-6e061a2dc302.par"
+Include PARSFILE "Roads\ExScene\SceneImp_fe1e1702-1256-431a-9dd0-d15cd19c61e5.par"
+Used Dataset: Scene: External Import; { Atlas } Jackson Ave Near I-94
+Include PARSFILE "Roads\dZ_Map_V_Wdth\VarWidZ_86fd20e8-fcc2-4685-ac56-6630c6e5b1c5.par"
+Used Dataset: Road: Off-Center Elevation Map, Variable Width; { Highway Intersection Boundaries } Jackson Boundary
+Include PARSFILE "Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } Constant: 0.85
+Include PARSFILE "Roads\Shapes\RdShape_4e4dbadd-8c81-4e0b-b3b6-8616a799fa1f.par"
+Used Dataset: Road: Animator Surface Shapes; { Highway Intersection } Jackson Ave (Scenic)
+Include PARSFILE "Roads\AniGroup\AniRep_7ad1bba1-e4fa-4640-9d54-de177e4d1d2b.par"
+Used Dataset: Road: Animator Repeated Object; { Highway Intersection } Trees along Jackson
+Include PARSFILE "Roads\3D_Road\Road_81cdffda-a2dc-40f2-a3df-6e061a2dc302.ani"
+Include PARSFILE "Animator\STL\Shape_10f310b3-4ffa-4298-acb0-89220910c7b2.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Mixed Forest, Small Scale
+Include PARSFILE "Animator\STL\Shape_10f310b3-4ffa-4298-acb0-89220910c7b2.par"
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Mixed Forest, Small Scale
+Used Dataset: Road: 3D Surface (All Properties); { Atlas and ADAS RP Map Downloads } Jackson Ave, Near I-94 (Scenic)
+
+Time to read input = 0.0010543
+
+Run stopped at t = 10.12. Stop time reached.
+
+Run started: VS output file = Roads\3D_Road\Road_81cdffda-a2dc-40f2-a3df-6e061a2dc302.vsb
+
+Computational time ratio: RTIME = inf (real time)/(simulation time)
+

@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Road: Boundaries`Circle Test`Road Boundary Stop Conditions
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+#RingCtrl3 1
+#RingCtrl4 3
+#RingCtrl6 1
+#RingCtrl7 3
+*ROAD_ID_1 road_id
+*LMAX_1 2
+*LMIN_1 -2
+
+
+IROAD = GET_IROAD(road_id)
+ROAD_SMAX_NEW_ID = 0
+ROAD_SMIN_NEW_ID = 0
+
+ISIDE = 1
+ROAD_L_BOUNDARY_CONSTANT 2
+ROAD_NEW_ID_CONSTANT = -1
+
+ISIDE = 2
+ROAD_L_BOUNDARY_CONSTANT -2
+ROAD_NEW_ID_CONSTANT = -1
+
+#EMBEDDED_NOTES
+#This is set for simulations where the driver follows the reference line for the current road (ROAD_ID for current IROAD).
+#
+#The simulation will stop when any tire is +/- 2 m from the path.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Boundaries; { Road Boundary Stop Conditions } Circle Test
+#Library : Road: Boundaries
+#DataSet : Circle Test
+#Category: Road Boundary Stop Conditions
+#FileID  : RdBnd_0568183c-f578-4a1d-8480-fc1d91ca5579
+#Product : TruckSim 2020.1
+#VehCode Road Boundaries
+
+END

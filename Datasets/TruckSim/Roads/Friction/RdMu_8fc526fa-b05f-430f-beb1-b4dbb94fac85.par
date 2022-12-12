@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Road: Friction Map, S-L Grid`Constant: 0.00001`Constant Mu
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+MU_ROAD_COMBINE ADD
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+MU_ROAD_CONSTANT 0.00001
+MU_ROAD_L_CONSTANT 0
+*SCALAR 0.00001
+*SCALAR2 0
+
+
+#EMBEDDED_NOTES
+#Road Coefficient of Friction, set to a constant value of 0.00001.
+#
+#This dataset is useful for situations where the road coefficient of friction is in the denominator.  Using this dataset instead of a true zero will prevent division by zero errors.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } Constant: 0.00001
+#Library : Road: Friction Map, S-L Grid
+#DataSet : Constant: 0.00001
+#Category: Constant Mu
+#FileID  : RdMu_8fc526fa-b05f-430f-beb1-b4dbb94fac85
+#Product : TruckSim 2020.1
+#VehCode Mu via S-L Grid
+
+END

@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Open Loop Thrt., Shift, Clutch`Powertrain
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_dc4389ac-24ab-4bf7-a52d-8ba3d24af1c6
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_245b5580-eac8-4494-a96f-0533fd4ce892.par
+#BlueLink0 Animator: Camera Setup`150 Azm, 4.5 El, 100 m` Vehicle Reference` , Animator camera`Camera_245b5580-eac8-4494-a96f-0533fd4ce892
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.4 1
+SET_RUN_COLOR 0 0.4 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_3f23baec-524e-4a49-8fdd-c74ffb84a441.par
+#BlueLink2 Vehicle: Loaded Combination`2A LCF, Payload` LCF Vans` , Math Model`VehLoad_3f23baec-524e-4a49-8fdd-c74ffb84a441
+
+PARSFILE Procedures\Proc_09c57c54-1209-4432-af91-61c4124a94cf.par
+#BlueLink28 Procedures`Open-loop Throttle, Shifting and Clutch` Acceleration and Braking` , Procedure`Proc_09c57c54-1209-4432-af91-61c4124a94cf
+
+PARSFILE Animator\HUD\HUD_647507c0-a511-41d5-8437-e3b1fc5eb87f.par
+#BlueLink9 Animator: HUD`Throttle, Brakes, G-G, Speedo, Gear, Tach` HUD Groups` , Miscellaneous`HUD_647507c0-a511-41d5-8437-e3b1fc5eb87f
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink10 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+
+SPECIAL_PARSFILE Runs\Run_49fbadfb-9d2a-4612-82b4-d8b466aa5d6a.par
+#BlueLink23 TruckSim Run Control`Open Loop Shift, Closed-loop Clutch` Powertrain` , Overlay run or ERD file`Run_49fbadfb-9d2a-4612-82b4-d8b466aa5d6a
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_9dc8d573-d8fc-4f9d-92f0-02b27f88cf1a.png
+WRITE_SENSOR_DETECT
+Title Open Loop Thrt., Shift, Clutch <Powertrain>
+CATEGORY Powertrain 
+DATASET_TITLE Open Loop Thrt., Shift, Clutch
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates the 2-axle LCF (Lower Control Front) Van with a cargo load performing a 1/2 Throttle acceleration test on a flat, 0.85-mu surface.
+#
+#The vehicle has a rear-wheel drive powertrain with a 7-speed manual transmission and an open rear differential.
+#
+#The Procedure for this example specifies open loop shifting for the throttle, shifting, and clutch control.
+#
+#This example is overlaid with the simulation "Open Loop Shift, Closed-loop Clutch". The overlaid example uses the same LCF Van as this simulation, except the Procedure specifies an open-loop shifting schedule combined with a closed-loop clutch control.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Powertrain } Open Loop Thrt., Shift, Clutch
+#Library : TruckSim Run Control
+#DataSet : Open Loop Thrt., Shift, Clutch
+#Category: Powertrain
+#FileID  : Run_dc4389ac-24ab-4bf7-a52d-8ba3d24af1c6
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

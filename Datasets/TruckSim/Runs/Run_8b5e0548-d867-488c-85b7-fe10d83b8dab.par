@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Friction Ellipse - Alpha = 0 deg`Tire Tester: Internal Table Look-up Tire
+#VEHICLECODE Tire
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_8b5e0548-d867-488c-85b7-fe10d83b8dab
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 1
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Tires\Tire\Tire_dfb36669-9d9d-419a-8602-4fda8e10174a.par
+#BlueLink2 Tire`Internal Tire` Camber Extensions` , Math Model`Tire_dfb36669-9d9d-419a-8602-4fda8e10174a
+
+PARSFILE Tire_Tester\TestTire_379509f2-5ab0-4664-ab1b-1e6c47daa529.par
+#BlueLink28 Tire Tester`Sweep Kappa: Fz = 4000 N` Sweep Kappa +/- 1.0` , Procedure`TestTire_379509f2-5ab0-4664-ab1b-1e6c47daa529
+
+
+*IMAGE_TYPE DEFAULT
+PARSFILE IO_Channels\W_Channels\Write_73f85ec3-df3e-41b9-8300-c4b1c96e0f2d.par
+#BlueLink13 I/O Channels: Write`All Outputs with Tire for Excel` Tire Tester` , Output Variables`Write_73f85ec3-df3e-41b9-8300-c4b1c96e0f2d
+
+WRITE_SENSOR_DETECT
+Title Friction Ellipse - Alpha = 0 deg <Tire Tester: Internal Table Look-up Tire>
+CATEGORY Tire Tester: Internal Table Look-up Tire 
+DATASET_TITLE Friction Ellipse - Alpha = 0 deg
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#The Tire Tester makes direct use of the TruckSim tire models to simulate a steady state tire test.
+#
+#With the Tire Tester, you can examine the output of the tire equations under any conditions of slip angle, slip ratio, inclination, vertical load, and road coefficient of friction.
+#
+#This example sweeps the slip ratio from -1 to 1 while holding the slip angle at a constant 0 degrees.
+#
+#The Tire Tester produces outputs for 6 tire forces and moments: Fx, Fy, Fz, Mx, My, and Mz, and 3 kinematic variables: slip angle (alpha), slip ratio (kappa), and inclination angle (gamma).
+#
+#Plotting Fx vs Fy shows the well known "friction ellipse" for the selected tire.
+#
+#There is no animator camera linked because we are not interested in the animation for these simulations.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Tire Tester: Internal Table Look-up Tire } Friction Ellipse - Alpha = 0 deg
+#Library : TruckSim Run Control
+#DataSet : Friction Ellipse - Alpha = 0 deg
+#Category: Tire Tester: Internal Table Look-up Tire
+#FileID  : Run_8b5e0548-d867-488c-85b7-fe10d83b8dab
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

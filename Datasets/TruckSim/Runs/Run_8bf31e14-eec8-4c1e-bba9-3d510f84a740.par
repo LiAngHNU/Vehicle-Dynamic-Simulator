@@ -1,0 +1,132 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Flat Road w/ Accel. Field, Variable Grade`* TS 2020.1 - Acceleration Field Imports
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_8bf31e14-eec8-4c1e-bba9-3d510f84a740
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_fa668846-ecab-4a6b-858c-7be5cd0236cf.par
+#BlueLink0 Animator: Camera Setup`80 Azm, 2 El, 48 m` Vehicle Reference` , Animator camera`Camera_fa668846-ecab-4a6b-858c-7be5cd0236cf
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 -1
+#RingCtrl3 0
+#RingCtrl6 8
+#RingCtrl7 -1
+*RUN_COLOR 0.996 1 1
+SET_RUN_COLOR 0.996 1 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_9dcbf1c7-4623-418e-9593-cc98464f7ef3.par
+#BlueLink2 Vehicle: Loaded Combination`2A LCF Van, Motion Sensor at SM CG` LCF Vans` , Math Model`VehLoad_9dcbf1c7-4623-418e-9593-cc98464f7ef3
+
+PARSFILE Procedures\Proc_a72b0ad9-0a93-4470-a302-a0aa9d6deee1.par
+#BlueLink28 Procedures`Flat Road w/ No Sky` Acceleration Field Imports` , Procedure`Proc_a72b0ad9-0a93-4470-a302-a0aa9d6deee1
+
+PARSFILE Generic\VS_commands\GenVS_2c7d7ded-6f47-4184-a7f7-4a9f0cf32d76.par
+#BlueLink9 Generic VS Commands`Acceleration Field (replicate 10% grade)` Acceleration Field Imports` , Miscellaneous`GenVS_2c7d7ded-6f47-4184-a7f7-4a9f0cf32d76
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink10 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+PARSFILE Events\Events_5c2fdc29-3275-43ee-922b-b82e204d142c.par
+#BlueLink11 Events`Set New Grade` Variable Grade Hill Climb` , Miscellaneous`Events_5c2fdc29-3275-43ee-922b-b82e204d142c
+
+OPT_STOP -1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+TSTOP -1
+*TSTOP 1
+*TSTART 0
+*SSTART 0
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink15 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987.par
+#BlueLink16 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987
+
+PARSFILE Plot\Setup\Plot_fbf77b13-4413-4d64-af51-8a1491a4fd05.par
+#BlueLink17 Plot: Setup`Longitudinal Forces (Axle 2, Dual Tires)` Tire Forces` , Plot`Plot_fbf77b13-4413-4d64-af51-8a1491a4fd05
+
+PARSFILE Plot\Setup\Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9.par
+#BlueLink18 Plot: Setup`Vertical Forces (Axle 2, Dual Tires)` Tire Forces` , Plot`Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9
+
+PARSFILE Plot\Setup\Plot_78c0376a-d667-416e-94d7-8a1b17abd1e8.par
+#BlueLink19 Plot: Setup`Sensor Long. Accel. (5 Sensors)` Position, Accel. and Rate Sensors` , Plot`Plot_78c0376a-d667-416e-94d7-8a1b17abd1e8
+
+PARSFILE Plot\Setup\Plot_099137b0-f251-4464-acad-6c33a2dda79f.par
+#BlueLink20 Plot: Setup`Sensor Vertical Acceleration (5 Sensors)` Position, Accel. and Rate Sensors` , Plot`Plot_099137b0-f251-4464-acad-6c33a2dda79f
+
+PARSFILE Plot\Setup\Plot_200e4e98-1b4d-4cb8-ae2a-8e55d23ef83b.par
+#BlueLink21 Plot: Setup`Pitch_G (Pitch of Gravity)` User-Defined Variables` , Plot`Plot_200e4e98-1b4d-4cb8-ae2a-8e55d23ef83b
+
+PARSFILE Plot\Setup\Plot_bef9ebd4-83a4-481f-96e5-448335ac6238.par
+#BlueLink22 Plot: Setup`Road Grade (Used to Adjust Gravity)` User-Defined Variables` , Plot`Plot_bef9ebd4-83a4-481f-96e5-448335ac6238
+
+#BlueLink23 TruckSim Run Control`Baseline: Road w/ 10% grade` * TS 2020.1 - Acceleration Field Imports` , Overlay run or ERD file`Run_34922198-4ecb-4f5b-8403-edf61a5e23e9
+
+
+*IMAGE_TYPE PASS_THROUGH
+WRITE_SENSOR_DETECT
+Title Flat Road w/ Accel. Field, Variable Grade <* TS 2020.1 - Acceleration Field Imports>
+CATEGORY * TS 2020.1 - Acceleration Field Imports 
+DATASET_TITLE Flat Road w/ Accel. Field, Variable Grade
+#MiscYellow0
+GRADE_RD = 8
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This example demonstrates two of the three available import variables to adjust the Acceleration Field applied to the vehicle:
+#Imp_Ax_Field
+#Imp_Az_Field
+#
+#VS Commands are used to replicate the effect of a vehicle driving up a grade.
+#
+#A corresponding Tech Memo is available from Help -> Technical Memos -> Gravity and Acceleration Fields.
+#
+#In this version, the grade is changed during the simulation using Events.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { * TS 2020.1 - Acceleration Field Imports } Flat Road w/ Accel. Field, Variable Grade
+#Library : TruckSim Run Control
+#DataSet : Flat Road w/ Accel. Field, Variable Grade
+#Category: * TS 2020.1 - Acceleration Field Imports
+#FileID  : Run_8bf31e14-eec8-4c1e-bba9-3d510f84a740
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

@@ -1,0 +1,134 @@
+PARSFILE
+#FullDataName TruckSim Run Control`Live Video: ISO Steady-State Circle`Simulink and LabVIEW
+#VEHICLECODE S_SS
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_f1d0aff6-eeba-4bb9-b3b6-a501d7767cbc
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_2d36ba26-0781-4a76-9714-2d944b912a28.par
+#BlueLink12 Models: Simulink`Live Video S-Function only` Live Video` , Models`Simlink_2d36ba26-0781-4a76-9714-2d944b912a28
+
+PARSFILE Animator\Cameras\Camera_e1c31f95-b0c9-423f-af09-82016e848b91.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 1 El, 25 m` Vehicle Reference` , Animator camera`Camera_e1c31f95-b0c9-423f-af09-82016e848b91
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+
+#RingCtrl6 5
+#RingCtrl7 -1
+*RUN_COLOR 0.878 0.878 0.878
+OPT_BUFFER_WRITE 1
+AUTOSIZE OFF
+BLOCKING_RT_READ ON
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 1
+LIVE_SERVER_MAX_CONNECTIONS 1
+PARSFILE Vehicles\Lead_3a\Lead3a_9e25d126-51f7-4fcd-902a-89d256db0b7a.par
+#BlueLink2 Vehicle: Lead Unit with 3 Axles`3A Sleeper (18 Spd)` 3A Tractors` , Math Model`Lead3a_9e25d126-51f7-4fcd-902a-89d256db0b7a
+
+PARSFILE Procedures\Proc_8780e5a5-95c0-484a-b0c0-eb712ff235c5.par
+#BlueLink28 Procedures`ISO Steady-State Circle Series` Handling Tests` , Procedure`Proc_8780e5a5-95c0-484a-b0c0-eb712ff235c5
+
+PARSFILE Roads\3D_Road\Road_73c49e66-c853-4ccd-8208-e4bf270d1324.par
+#BlueLink9 Road: 3D Surface (All Properties)`100-m Radius Circle, Mu = 0.9` Circular Roads` , Miscellaneous`Road_73c49e66-c853-4ccd-8208-e4bf270d1324
+
+PARSFILE Generic\Group\GenGrp_aa29b4a0-5439-4fbb-ad2f-bb4211f7d41f.par
+#BlueLink10 Generic Data Group`3 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_aa29b4a0-5439-4fbb-ad2f-bb4211f7d41f
+
+PARSFILE Animator\HUD\HUD_647507c0-a511-41d5-8437-e3b1fc5eb87f.par
+#BlueLink11 Animator: HUD`Throttle, Brakes, G-G, Speedo, Gear, Tach` HUD Groups` , Miscellaneous`HUD_647507c0-a511-41d5-8437-e3b1fc5eb87f
+
+*TSTOP 33
+*TSTART 0
+*SSTART 0
+PARSFILE Plot\Setup\Plot_0667fa7e-7620-402a-95a9-b10223b0c08f.par
+#BlueLink15 Plot: Setup`Longitudinal Speed vs. Time Stamp` Vehicle Motion` , Plot`Plot_0667fa7e-7620-402a-95a9-b10223b0c08f
+
+PARSFILE Plot\Setup\Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd.par
+#BlueLink16 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd
+
+PARSFILE Plot\Setup\Plot_536a6a4d-647d-4eb4-b11f-664addaec88a.par
+#BlueLink17 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_536a6a4d-647d-4eb4-b11f-664addaec88a
+
+PARSFILE Plot\Setup\Plot_8aa6411f-4f0f-45db-b32c-d612009087f2.par
+#BlueLink18 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8aa6411f-4f0f-45db-b32c-d612009087f2
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink19 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_8ba88f47-4990-40ca-bf2d-9bbebeda47ea.png
+WRITE_SENSOR_DETECT
+Title Live Video: ISO Steady-State Circle <Simulink and LabVIEW>
+CATEGORY Simulink and LabVIEW 
+DATASET_TITLE Live Video: ISO Steady-State Circle
+#MiscYellow0
+WRITE_ALL 1
+OPT_WRITE WRITE_ALL
+IPRINT 50
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#Introduced in TruckSim 2017 (Matlab 2014b or newer)
+#
+#This example illustrates how to add Live Video when running with Simulink. This example was copied from a lengthy run, {Handling and Stability Tests} > ISO Steady-State Circle, R=100, Full-Run
+#
+#To view the live video:
+#
+#(1) Click "Send to Simulink". VS Visualizer will launch, with vehicle animation assets at the vehicle sprung mass origin.
+#
+#(2) Click the "Play" button in Simulink to finish loading the animation assets and run the simulation. Once the run starts, the video will update at the simulation speed.
+#
+#If you do not see the button "Start Live Video" on the Run Control screen, check Tools -> License Settings and make sure the "TruckSim Extra Live Animator" license option is checked.
+#
+#
+#To use Live Video for another run:
+#
+#(1) Select "Models: Simulink" and link to a Simulink model. For this example, the dataset name is Live Video: Base Model. Go to this dataset for notes on enabling live animation.
+#
+#(2) When the link is made to a Simulink model, three controls will appear on the Run Control screen involving the live video operation.
+#
+#The number of live cameras should be set to 1 (rather than 0).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { Simulink and LabVIEW } Live Video: ISO Steady-State Circle
+#Library : TruckSim Run Control
+#DataSet : Live Video: ISO Steady-State Circle
+#Category: Simulink and LabVIEW
+#FileID  : Run_f1d0aff6-eeba-4bb9-b3b6-a501d7767cbc
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

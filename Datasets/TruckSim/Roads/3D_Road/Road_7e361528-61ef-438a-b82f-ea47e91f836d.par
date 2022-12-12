@@ -1,0 +1,128 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Props, Environment`Parking Lot
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_7e361528-61ef-438a-b82f-ea47e91f836d.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Props, Environment
+PARSFILE Roads\Center_XY\PathXY_b731e8cf-c781-4948-a5e9-abb1be977155.par
+#BlueLink0 Path: X-Y Coordinates`Parking Lot: Lot Definition Path` Parking Lot` , Reference Path`PathXY_b731e8cf-c781-4948-a5e9-abb1be977155
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Parking Lot: Lot Definition Path
+PARSFILE Roads\dZ_Map\RdMapZ_af2e18e1-fd14-4e1f-aaaa-bf627c257953.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Parking Lot: Major Geometry` Parking Lot` , Miscellaneous`RdMapZ_af2e18e1-fd14-4e1f-aaaa-bf627c257953
+
+PARSFILE Roads\Friction\RdMu_e7dab9d2-e6aa-4758-bc79-19823b5c238c.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.75` Constant Mu` , Friction`RdMu_e7dab9d2-e6aa-4758-bc79-19823b5c238c
+
+PARSFILE Roads\Shapes\RdShape_192dace8-6b1d-40fc-a208-b95255daa98d.par
+#BlueLink4 Road: Animator Surface Shapes`East Lawn` Parking Lot` , Road shape definitions`RdShape_192dace8-6b1d-40fc-a208-b95255daa98d
+
+RR_SURF_CONSTANT 0
+add_reference_frame road_stuff_6_Parking_Lot:_Border_Trees
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_11aa44ed-508d-42c0-a77f-d6c5bf8863d3.par
+#BlueLink6 Road: Animator Repeated Object`Parking Lot: Border Trees` Parking Lot` , 3D Shapes`AniRep_11aa44ed-508d-42c0-a77f-d6c5bf8863d3
+
+add_reference_frame road_stuff_7_Parking_Lot:_Lamp_Posts
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_ef8cb344-4e90-48ae-a448-23a75f114430.par
+#BlueLink7 Road: Animator Repeated Object`Parking Lot: Lamp Posts` Parking Lot` , 3D Shapes`AniRep_ef8cb344-4e90-48ae-a448-23a75f114430
+
+add_reference_frame road_stuff_8_Parking_Lot:_Building
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_4955bd2d-94b9-4862-8d8f-93d320b4abb6.par
+#BlueLink8 Road: Animator Repeated Object`Parking Lot: Building` Parking Lot` , 3D Shapes`AniRep_4955bd2d-94b9-4862-8d8f-93d320b4abb6
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_72ebbb07-0ed9-4606-a758-d7c406d515f8.par
+#BlueLink5 Animator: Camera Setup`Parking Lot Top` ADAS and Euro NCAP: Camera Views` , Camera`Camera_72ebbb07-0ed9-4606-a758-d7c406d515f8
+
+parsfile Roads\3D_Road\Road_7e361528-61ef-438a-b82f-ea47e91f836d.ani
+
+add_reference_frame road_stuff_1_1_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -3.2
+set_offset_var_y 3.1
+set_offset_var_z 0.2
+parsfile Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par
+
+add_reference_frame road_stuff_2_1_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -3.2
+set_offset_var_y 33.3
+set_offset_var_z 0.2
+parsfile Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par
+
+add_reference_frame road_stuff_3_1_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -56.6
+set_offset_var_y 3.1
+set_offset_var_z 0.2
+parsfile Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par
+
+add_reference_frame road_stuff_4_1_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -56.6
+set_offset_var_y 33.3
+set_offset_var_z 0.2
+parsfile Animator\STL\Shape_c5c952fb-420b-471d-8deb-6902ad2bff0a.par
+
+add_reference_frame road_stuff_1_2_Lamp_Post:_Double_Type_C
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -17.7
+set_offset_var_y 12.2
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_9b318b5a-99e5-4fe2-8fb5-ec1360c7fb0b.par
+
+add_reference_frame road_stuff_2_2_Lamp_Post:_Double_Type_C
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -42.1
+set_offset_var_y 12.2
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_9b318b5a-99e5-4fe2-8fb5-ec1360c7fb0b.par
+
+add_reference_frame road_stuff_3_2_Lamp_Post:_Double_Type_C
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -17.7
+set_offset_var_y 24.2
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_9b318b5a-99e5-4fe2-8fb5-ec1360c7fb0b.par
+
+add_reference_frame road_stuff_4_2_Lamp_Post:_Double_Type_C
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -42.1
+set_offset_var_y 24.2
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_9b318b5a-99e5-4fe2-8fb5-ec1360c7fb0b.par
+
+add_reference_frame road_stuff_1_3_Downtown:_3_Stories
+reference_frame_ghosts off
+set_offset_var_yaw 90
+set_offset_var_x 20
+set_offset_var_y 18.2
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b0cfccaa-8730-4ee9-b46c-a41161e70b47.par
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Parking Lot } Props, Environment
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Props, Environment
+#Category: Parking Lot
+#FileID  : Road_7e361528-61ef-438a-b82f-ea47e91f836d
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

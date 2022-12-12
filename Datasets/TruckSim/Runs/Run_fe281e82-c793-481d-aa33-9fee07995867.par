@@ -1,0 +1,95 @@
+PARSFILE
+#FullDataName TruckSim Run Control`City, Traffic Lights, Pedestrian`VS Visualizer Examples
+#VEHICLECODE I_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_fe281e82-c793-481d-aa33-9fee07995867
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_12afd0d3-c9b8-47b4-9b7e-1cd0582e975b.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m` Vehicle Reference` , Animator camera`Camera_12afd0d3-c9b8-47b4-9b7e-1cd0582e975b
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 on
+RT_WINDOW_CLOSE on
+#RingCtrl5 1
+LIVE_SERVER_MAX_CONNECTIONS 1
+PARSFILE Vehicles\Loaded\VehLoad_faaa7c4f-c18d-4521-a00a-ecbdc3076f4f.par
+#BlueLink2 Vehicle: Loaded Combination`2A Tour Bus (I_S), Two Payloads` Tour Buses` , Math Model`VehLoad_faaa7c4f-c18d-4521-a00a-ecbdc3076f4f
+
+PARSFILE Procedures\Proc_800ba4a6-9f08-4692-bc61-2ad6c5834856.par
+#BlueLink28 Procedures`Stopping at City Intersection` Animation Asset-based Scenarios` , Procedure`Proc_800ba4a6-9f08-4692-bc61-2ad6c5834856
+
+PARSFILE Generic\Links\GenLink_1feefb7e-8482-4b17-a5be-a6f4d0476a0d.par
+#BlueLink9 Generic Group of Links`Animated Pedestrian (Walking Only)` ADAS: Moving Objects, incl. Pedestrians` , Miscellaneous`GenLink_1feefb7e-8482-4b17-a5be-a6f4d0476a0d
+
+PARSFILE Generic\Group\GenGrp_d721139a-706a-49ad-abe0-2f8008aa3b89.par
+#BlueLink10 Generic Data Group`Traffic Lights for 4-way in City` Traffic Lights` , Miscellaneous`GenGrp_d721139a-706a-49ad-abe0-2f8008aa3b89
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_5cb9979d-3686-4654-8ce0-3c30f81bd36c.png
+WRITE_SENSOR_DETECT
+Title City, Traffic Lights, Pedestrian <VS Visualizer Examples>
+CATEGORY VS Visualizer Examples 
+DATASET_TITLE City, Traffic Lights, Pedestrian
+#MiscYellow0
+PATH_ID_DM = 1000
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#NOTE: For TruckSim 2020.0, this example now includes the effects of the brake system transport delay parameter, math model keyword TLAG_BK. This is a pure time delay between the master cylinder and the brake actuator.
+#
+#This shows an animated pedestrian.
+#
+#The city scene is imported from the Scene Builder. It includes multiple paths, including one with a lane change and left turn.
+#
+#It also has four traffic lights for all directions at the intersection.
+#
+#This can be run without a sensor license. Rather than use ADAS controllers, the target speed is set to manage the intersection, with timing to match the pedestrian.
+#
+#An additional 3D Road dataset is used to provide elevation data for the sidewalks for the walking pedestrian.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { VS Visualizer Examples } City, Traffic Lights, Pedestrian
+#Library : TruckSim Run Control
+#DataSet : City, Traffic Lights, Pedestrian
+#Category: VS Visualizer Examples
+#FileID  : Run_fe281e82-c793-481d-aa33-9fee07995867
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

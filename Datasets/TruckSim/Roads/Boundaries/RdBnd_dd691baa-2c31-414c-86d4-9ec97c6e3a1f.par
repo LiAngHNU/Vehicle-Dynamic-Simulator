@@ -1,0 +1,102 @@
+PARSFILE
+#FullDataName Road: Boundaries`Roundabout, South & East Entrances`Roundabout D = 36 m
+#RingCtrl0 3
+#RingCtrl1 0
+#RingCtrl2 0
+#RingCtrl3 1
+#RingCtrl4 3
+#RingCtrl6 1
+#RingCtrl7 2
+#RingCtrl8 1
+#RingCtrl9 0
+#RingCtrl10 0
+#RingCtrl11 2
+#RingCtrl12 2
+#RingCtrl13 2
+#RingCtrl14 3
+#RingCtrl17 0
+#RingCtrl18 0
+#RingCtrl19 2
+#RingCtrl20 2
+#RingCtrl21 2
+#RingCtrl22 3
+*ROAD_ID_1 1000
+*LMAX_1 12
+*LMIN_1 -5
+*LMIN_NEW_S_1 75
+*ROAD_ID_2 1001
+*SMAX_2 66
+*SMAX_NEW_ID_2 1000
+*SMAX_NEW_S_2 10
+*ROAD_ID_3 1002
+
+
+IROAD = GET_IROAD(1000)
+ROAD_SMAX_NEW_ID = 0
+ROAD_SMIN_NEW_ID = 0
+
+ISIDE = 1
+ROAD_L_BOUNDARY_CONSTANT 12
+ROAD_NEW_ID_CONSTANT = -1
+
+ISIDE = 2
+ROAD_L_BOUNDARY_CONSTANT -5
+PARSFILE Roads\Boundaries_ID\RdBdID_7a20d930-d9d4-41fa-b500-49db6aae9187.par
+#BlueLink4 Road Boundary: New Road ID`Circle in Roundabout` Roundabout  D = 36 m` , Road ID vs station`RdBdID_7a20d930-d9d4-41fa-b500-49db6aae9187
+
+ROAD_NEW_S_CONSTANT 75
+
+IROAD = GET_IROAD(1001)
+ROAD_SMAX_NEW_ID = 0
+ROAD_SMIN_NEW_ID = 0
+
+ISIDE = 1
+PARSFILE Roads\Boundaries_L\RdBdL_611be0eb-3b8d-4f6f-90ca-26e59be93489.par
+#BlueLink6 Road Boundary: Lateral Edge`Roundabout: All Legs` Intersections and Roundabouts` , Lmax vs. station`RdBdL_611be0eb-3b8d-4f6f-90ca-26e59be93489
+
+PARSFILE Roads\Boundaries_ID\RdBdID_b23edc7a-f0f8-4d9a-883a-e35ea9c54a19.par
+#BlueLink7 Road Boundary: New Road ID`Roundabout: South Entrance` Roundabout  D = 36 m` , Road ID vs Old S`RdBdID_b23edc7a-f0f8-4d9a-883a-e35ea9c54a19
+
+PARSFILE Roads\Boundaries_S\RdBdS_6b18e71a-51c3-4503-98c6-121f80645175.par
+#BlueLink8 Road Boundary: New Station`Roundabout: South Entrance` Roundabout D = 36 m` , New S vs old S`RdBdS_6b18e71a-51c3-4503-98c6-121f80645175
+
+
+ISIDE = 2
+ROAD_NEW_ID_CONSTANT = 0
+
+IROAD = GET_IROAD(1002)
+ROAD_SMAX_NEW_ID = 0
+ROAD_SMIN_NEW_ID = 0
+
+ISIDE = 1
+PARSFILE Roads\Boundaries_L\RdBdL_611be0eb-3b8d-4f6f-90ca-26e59be93489.par
+#BlueLink12 Road Boundary: Lateral Edge`Roundabout: All Legs` Intersections and Roundabouts` , Lmax vs. station`RdBdL_611be0eb-3b8d-4f6f-90ca-26e59be93489
+
+PARSFILE Roads\Boundaries_ID\RdBdID_0c9fbfbb-4f36-4187-b463-a575cb605cbf.par
+#BlueLink13 Road Boundary: New Road ID`Roundabout: East Entrance` Roundabout  D = 36 m` , Road ID vs Old S`RdBdID_0c9fbfbb-4f36-4187-b463-a575cb605cbf
+
+PARSFILE Roads\Boundaries_S\RdBdS_edd9df22-0c58-4450-ab8c-e2325cc03da5.par
+#BlueLink14 Road Boundary: New Station`Roundabout: East Entrance` Roundabout D = 36 m` , New S vs old S`RdBdS_edd9df22-0c58-4450-ab8c-e2325cc03da5
+
+
+ISIDE = 2
+ROAD_NEW_ID_CONSTANT = 0
+
+#EMBEDDED_NOTES
+#The roads are numbered 1000 (circle)
+#1001 (SE), 1002 (NE), 1003 (NW), 1004 (SW).
+#
+#Station for the 4 leg paths increase when approaching the circle. The right-turn always starts at S = 50 m and ends at S = 99.5 m.
+#
+#Station for the circle is 0 at the South point, and increases to 100.5 going counter-clockwise.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Boundaries; { Roundabout D = 36 m } Roundabout, South & East Entrances
+#Library : Road: Boundaries
+#DataSet : Roundabout, South & East Entrances
+#Category: Roundabout D = 36 m
+#FileID  : RdBnd_dd691baa-2c31-414c-86d4-9ec97c6e3a1f
+#Product : TruckSim 2020.1
+#VehCode Road Boundaries
+
+END

@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Road: Friction Map, S-L Grid`Road Course, 1.0 Surface, 0.75 Grass`Road Handling Course
+#CheckBox0 0    
+
+#RingCtrl0 2D_STEP
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Friction coefficient Mu (-)
+
+#DiagramTwo0
+*3D_DATA 4, 2 ! columns x rows
+MU_ROAD_CARPET 2D_STEP
+0, -5, -4, 4, 5
+0, 0.75, 1, 1, 0.75
+1, 0.75, 1, 1, 0.75
+ENDTABLE
+
+MU_ROAD_L_CONSTANT 1
+*SCALAR 0.85
+*SCALAR2 1
+
+
+LOG_ENTRY Used Dataset: Road: Friction Map, S-L Grid; { Road Handling Course } Road Course, 1.0 Surface, 0.75 Grass
+#Library : Road: Friction Map, S-L Grid
+#DataSet : Road Course, 1.0 Surface, 0.75 Grass
+#Category: Road Handling Course
+#FileID  : RdMu_53ba8241-ce81-4256-a821-f3a1975c2fa5
+#Product : TruckSim 2020.1
+#VehCode Mu via S-L Grid
+
+END

@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`999: Grass and Intersection, 3-Way`Intersection, 3D Roads with Curbs
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_1e453605-8514-4779-884d-548b91e5151b.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 999
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 999: Grass and Intersection, 3-Way
+PARSFILE Roads\BuilderSegment\RoadSeg_08ba0f79-cc4a-4553-ae31-1adf1e0c58b9.par
+#BlueLink0 Path: Segment Builder`1013: Straight Path South` Straight` , Reference Path`RoadSeg_08ba0f79-cc4a-4553-ae31-1adf1e0c58b9
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: 1013: Straight Path South
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_92297166-66d2-4602-80fa-c146a38f639a.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant Mu` , Friction`RdMu_92297166-66d2-4602-80fa-c146a38f639a
+
+PARSFILE Roads\Shapes\RdShape_116f87fd-fa88-442f-9e58-6c9ee5c37a86.par
+#BlueLink4 Road: Animator Surface Shapes`Big Grass, Pavement Intersection, 3-Way` Intersections` , Road shape definitions`RdShape_116f87fd-fa88-442f-9e58-6c9ee5c37a86
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_1e453605-8514-4779-884d-548b91e5151b.ani
+
+#EMBEDDED_NOTES
+#This exists to show plain asphalt in the intersection and grass everywhere else.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Intersection, 3D Roads with Curbs } 999: Grass and Intersection, 3-Way
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 999: Grass and Intersection, 3-Way
+#Category: Intersection, 3D Roads with Curbs
+#FileID  : Road_1e453605-8514-4779-884d-548b91e5151b
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END
