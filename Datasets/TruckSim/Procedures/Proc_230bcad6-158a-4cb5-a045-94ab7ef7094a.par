@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName Procedures`Transient Response Test`Handling Tests
+#CheckBox3 0    
+
+#RingCtrl0 4
+#RingCtrl1 -1
+#RingCtrl2 0
+OPT_STOP -1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+TSTOP -1
+*SPEED 70
+*TSTOP 12
+*TSTART 0
+*SSTART 0
+*SSTOP 300
+
+PARSFILE Events\Events_f4539d2c-8084-4778-b426-e0d23c81a973.par
+#BlueLink6 Events`A. Accelerate to Speed at 100% Throttle` Transient Response Times` , Miscellaneous`Events_f4539d2c-8084-4778-b426-e0d23c81a973
+
+#MiscYellow1
+speed_mph = 60;
+ay_test = 0.4;
+level_i = 0.5
+level_f = 0.9;
+time_out = 40;
+time_settle = 3;
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd.par
+#BlueLink9 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink10 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_833f3e25-4cf4-4bb0-9a6a-ff07efcd5306.par
+#BlueLink11 Plot: Setup`Event Elapsed Time` Event Control` , Plot`Plot_833f3e25-4cf4-4bb0-9a6a-ff07efcd5306
+
+PARSFILE Plot\Setup\Plot_8aa6411f-4f0f-45db-b32c-d612009087f2.par
+#BlueLink12 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8aa6411f-4f0f-45db-b32c-d612009087f2
+
+PARSFILE Plot\Setup\Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5.par
+#BlueLink13 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5
+
+PARSFILE Plot\Setup\Plot_38af2fee-b452-4e50-bfca-9012303b5e16.par
+#BlueLink14 Plot: Setup`Yaw Rate of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_38af2fee-b452-4e50-bfca-9012303b5e16
+
+PARSFILE Plot\Setup\Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1.par
+#BlueLink15 Plot: Setup`Yaw Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1
+
+
+#EMBEDDED_NOTES
+#This test is conducted on a large vehicle dynamics test area.
+#
+#The Events linked here contain the actual procedure and driver controls.
+#
+#VS Commands are used to define variables and to capture the values of parameters at various times.
+#
+#Variables are defined to hold the values of response times for lateral acceleration, roll angle, and yaw rate. At the end of the run, they are written into the Echo file with final conditions and can be found in the VS Commands section near the end of the file.
+#
+#To view this file, return to the Run Control screen and in the lower-right corner, use the drop-down menu to select "Echo file with final conditions." Then, click the "View" button.
+#
+#The response time variables are:
+#rt_ay:      lateral acceleration
+#rt_roll:     roll angle
+#rt_avz:   yaw rate
+#
+#This procedure is completely portable, meaning it can be used with any vehicle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Handling Tests } Transient Response Test
+#Library : Procedures
+#DataSet : Transient Response Test
+#Category: Handling Tests
+#FileID  : Proc_230bcad6-158a-4cb5-a045-94ab7ef7094a
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

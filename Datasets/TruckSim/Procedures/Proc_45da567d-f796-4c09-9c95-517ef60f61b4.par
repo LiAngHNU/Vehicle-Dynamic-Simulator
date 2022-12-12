@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Procedures`Path created in UE4`ADAS and Active Safety
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+OPT_STOP 1
+*SPEED 25
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Path created in UE4
+SPEED_TARGET_CONSTANT 25
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.6s Single Preview` Constant Position: No Offset` , Steering`StrDM_e2398fab-b956-498b-8858-93e89178bdf3
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Roads\3D_Road\Road_0a5e3de3-9b6f-4865-b589-42d62ee73717.par
+#BlueLink0 Road: 3D Surface (All Properties)`Road for UE4` ` , Miscellaneous`Road_0a5e3de3-9b6f-4865-b589-42d62ee73717
+
+PARSFILE Control\Speed_t\SpdTime_20e3abc6-4da3-48f4-8aa1-3b8bf15f6a09.par
+#BlueLink1 Control: Speed (Closed Loop) Using Target Speed`Variable speed: 20 to 25 km/h` Traffic Vehicles and Sensor Targets` , Miscellaneous`SpdTime_20e3abc6-4da3-48f4-8aa1-3b8bf15f6a09
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink9 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8.par
+#BlueLink10 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8
+
+
+LOG_ENTRY Used Dataset: Procedures; { ADAS and Active Safety } Path created in UE4
+#Library : Procedures
+#DataSet : Path created in UE4
+#Category: ADAS and Active Safety
+#FileID  : Proc_45da567d-f796-4c09-9c95-517ef60f61b4
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

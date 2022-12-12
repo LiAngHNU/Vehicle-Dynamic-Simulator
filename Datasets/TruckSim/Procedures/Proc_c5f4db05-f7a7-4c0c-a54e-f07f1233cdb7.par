@@ -1,0 +1,62 @@
+PARSFILE
+#FullDataName Procedures`6-Lane Highway w/ Wall Objects`ADAS and Active Safety
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 10
+TSTART_WRITE = 0;
+TSTOP 60
+SSTOP 1000
+OPT_DIRECTION 0
+*TSTOP 60
+*TSTART 0
+*SSTART 10
+*SSTOP 1000
+
+PARSFILE Control\Driver\StrDM_d6ef0cdf-9013-413f-9faf-2dea378db470.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.75s Single Preview` Constant Position: No Offset` , Steering`StrDM_d6ef0cdf-9013-413f-9faf-2dea378db470
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_path\SpdPath_b525f579-b67b-4db2-8cca-9d4215c6901d.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.2/0.2 G Max Ax/Ay, 100 km/h` Highway Driving` , Speed vs. station`SpdPath_b525f579-b67b-4db2-8cca-9d4215c6901d
+
+#MiscYellow0
+Ltarg_constant -7.25
+#ENDMYellow
+
+PARSFILE Animator\Groups\Group_37921fcd-597c-46f7-81a9-68afa2a5af4e.par
+#BlueLink0 Animator: Group`6-Lane Hwy w/ Walls and Access Roads` Roads and Environment` , Miscellaneous`Group_37921fcd-597c-46f7-81a9-68afa2a5af4e
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_24542809-1912-4246-a238-bc8fac0a5356.par
+#BlueLink1 Multiple Moving Objects`2 Vehicles, Vx * 0.95` Traffic Vehicles (Forward)` , Miscellaneous`TMotion_24542809-1912-4246-a238-bc8fac0a5356
+
+PARSFILE Sensors_Traffic\Targets\Target_d62fe873-69e7-4a4a-97c2-3ce847078cfe.par
+#BlueLink2 Single Moving Object (Custom)`Single Vehicle on Right Access Road` 6-Lane Highway` , Miscellaneous`Target_d62fe873-69e7-4a4a-97c2-3ce847078cfe
+
+PARSFILE Plot\Setup\Plot_59ad09f6-7ef8-441f-bddc-a96147e219d9.par
+#BlueLink8 Plot: Setup`Bearing Angles: Sensor 1 - Objects 1 to 5` ADAS Sensor Detections` , Plot`Plot_59ad09f6-7ef8-441f-bddc-a96147e219d9
+
+PARSFILE Plot\Setup\Plot_0717a74c-14b4-4b2b-aa92-47e10db4fb19.par
+#BlueLink9 Plot: Setup`Distance: Sensor 1 - Objects 1 to 5` ADAS Sensor Detections` , Plot`Plot_0717a74c-14b4-4b2b-aa92-47e10db4fb19
+
+PARSFILE Plot\Setup\Plot_a4f38192-babe-45f7-b368-cc855c50862c.par
+#BlueLink10 Plot: Setup`Magnitude: Sensor 1, Objects 1-5` ADAS Sensor Detections` , Plot`Plot_a4f38192-babe-45f7-b368-cc855c50862c
+
+
+LOG_ENTRY Used Dataset: Procedures; { ADAS and Active Safety } 6-Lane Highway w/ Wall Objects
+#Library : Procedures
+#DataSet : 6-Lane Highway w/ Wall Objects
+#Category: ADAS and Active Safety
+#FileID  : Proc_c5f4db05-f7a7-4c0c-a54e-f07f1233cdb7
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

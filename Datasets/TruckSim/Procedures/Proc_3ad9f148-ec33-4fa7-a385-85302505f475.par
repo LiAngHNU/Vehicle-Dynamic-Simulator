@@ -1,0 +1,110 @@
+PARSFILE
+#FullDataName Procedures`Find Out Where to Slow Down`Restoring to a Previous State
+#CheckBox3 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 75
+TSTART_WRITE = 0;
+TSTOP 60
+SSTOP 800
+OPT_DIRECTION 0
+*SPEED 70
+*TSTOP 60
+*TSTART 0
+*SSTART 75
+*SSTOP 800
+
+#MiscYellow0
+define_parameter restores 0
+define_parameter restore_interval 0.1
+define_parameter restore_point 0
+define_parameter restore_limit 150
+define_parameter lat_err = 0.35
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_d0257a3c-777f-4024-b1e2-562f5ca2da94.par
+#BlueLink0 Road: 3D Surface (All Properties)`90 deg. turns: 200 m Right, 100 m Left` Scenic Roads` , Miscellaneous`Road_d0257a3c-777f-4024-b1e2-562f5ca2da94
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink1 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+#MiscYellow1
+! The Events are linked here because they
+! need the new parameters and road information 
+! linked previously.
+#ENDMYellow
+
+PARSFILE Events\Events_3a4973a9-4a2e-4932-bd56-2a70b4491ea7.par
+#BlueLink7 Events`000: Approach Turn` Restoring to a Previous State` , Miscellaneous`Events_3a4973a9-4a2e-4932-bd56-2a70b4491ea7
+
+PARSFILE Plot\Setup\Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717.par
+#BlueLink8 Plot: Setup`Vertical Forces (Axle 1, Single Tires)` Tire Forces` , Plot`Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717
+
+PARSFILE Plot\Setup\Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9.par
+#BlueLink9 Plot: Setup`Vertical Forces (Axle 2, Dual Tires)` Tire Forces` , Plot`Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9
+
+PARSFILE Plot\Setup\Plot_8aa6411f-4f0f-45db-b32c-d612009087f2.par
+#BlueLink10 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8aa6411f-4f0f-45db-b32c-d612009087f2
+
+PARSFILE Plot\Setup\Plot_8a3eca40-045d-4c4c-9209-a2ea1fd2a0de.par
+#BlueLink11 Plot: Setup`Yaw Angle of Sprung Masses vs. t_stamp` Restoring to a Previous State` , Plot`Plot_8a3eca40-045d-4c4c-9209-a2ea1fd2a0de
+
+PARSFILE Plot\Setup\Plot_2be4447a-647e-4191-a0cb-38aecb22d39e.par
+#BlueLink12 Plot: Setup`Pitch Angle of Sprung Masses vs. t_stamp` Restoring to a Previous State` , Plot`Plot_2be4447a-647e-4191-a0cb-38aecb22d39e
+
+PARSFILE Plot\Setup\Plot_397b554e-007f-4bdc-b17a-d712a46df6d0.par
+#BlueLink13 Plot: Setup`Roll Angle of Sprung Masses vs. t_stamp` Restoring to a Previous State` , Plot`Plot_397b554e-007f-4bdc-b17a-d712a46df6d0
+
+PARSFILE Plot\Setup\Plot_4b4aa6f6-89ab-4f9b-8085-094a1a78cae2.par
+#BlueLink14 Plot: Setup`Wheel Steer Angle (Axle 1) vs. t_stamp` Restoring to a Previous State` , Plot`Plot_4b4aa6f6-89ab-4f9b-8085-094a1a78cae2
+
+PARSFILE Plot\Setup\Plot_b06ed09a-e1b6-43c7-be8e-d4fb9b3f9269.par
+#BlueLink20 Plot: Setup`Vx -- Longitudinal Speed vs. t_stamp` Restoring to a Previous State` , Plot`Plot_b06ed09a-e1b6-43c7-be8e-d4fb9b3f9269
+
+PARSFILE Plot\Setup\Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8.par
+#BlueLink21 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8
+
+PARSFILE Plot\Setup\Plot_e3c09538-fe0c-4153-a0e6-b2fcb68ad6e8.par
+#BlueLink22 Plot: Setup`Lateral Tracking vs. t_stamp` Restoring to a Previous State` , Plot`Plot_e3c09538-fe0c-4153-a0e6-b2fcb68ad6e8
+
+PARSFILE Plot\Setup\Plot_f59f62f9-d8e6-48fa-9068-26737a52f357.par
+#BlueLink23 Plot: Setup`Steering Wheel Angle vs. t_stamp` Restoring to a Previous State` , Plot`Plot_f59f62f9-d8e6-48fa-9068-26737a52f357
+
+PARSFILE Plot\Setup\Plot_ad9b1d19-5de6-4f3d-a810-862db75fbd87.par
+#BlueLink24 Plot: Setup`Throttle: Control Input vs. t_stamp` Restoring to a Previous State` , Plot`Plot_ad9b1d19-5de6-4f3d-a810-862db75fbd87
+
+PARSFILE Plot\Setup\Plot_07e57ac2-aa2a-48d8-9487-4f365101a969.par
+#BlueLink25 Plot: Setup`Master Cyl. Pressure vs. t_stamp` Restoring to a Previous State` , Plot`Plot_07e57ac2-aa2a-48d8-9487-4f365101a969
+
+PARSFILE Plot\Setup\Plot_b0f5559b-110d-4274-ae21-471857960d12.par
+#BlueLink26 Plot: Setup`Station vs. t_stamp` Restoring to a Previous State` , Plot`Plot_b0f5559b-110d-4274-ae21-471857960d12
+
+
+#EMBEDDED_NOTES
+#Several user parameters are created here to provide some control options.
+#
+#The parameter "restores" counts the number of times the simulation has been stepped back in time.
+#
+#The parameter "restore_interval" is the length of time in seconds between successive saves of the data. When the run is restored it returns to one of these points. (This isn't a user setting, it's just defined here and given an intial value.)
+#
+#The parameter "restore_point" is the clock time calculated to restore. The run is restored to the last saved point before the time given.
+#
+#The parameter "restore_limit" is used to end the run if success is not achieved after a specified number of attempts.
+#
+#The parameter "lat_err" is the lateral distance the truck is allowed to deviate from the target path.
+#
+#The Events controlling the run refer to these parameters, so the Events must be linked after they have been defined or an error will occur.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Restoring to a Previous State } Find Out Where to Slow Down
+#Library : Procedures
+#DataSet : Find Out Where to Slow Down
+#Category: Restoring to a Previous State
+#FileID  : Proc_3ad9f148-ec33-4fa7-a385-85302505f475
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

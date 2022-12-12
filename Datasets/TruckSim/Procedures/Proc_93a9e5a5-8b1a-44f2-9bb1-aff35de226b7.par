@@ -1,0 +1,99 @@
+PARSFILE
+#FullDataName Procedures`Chassis Twist Road Sine Wave Course`Ride Tests
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART -10
+TSTART_WRITE = 0;
+TSTOP 50
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 5
+*TSTOP 50
+*TSTART 0
+*SSTART -10
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Chassis Twist Road Sine Wave Course
+SPEED_TARGET_CONSTANT 5
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_9b35f18a-5c59-4a9a-8de1-61f2a3df1a3d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`Variable Speed Preview` Constant Position: No Offset` , Steering`StrDM_9b35f18a-5c59-4a9a-8de1-61f2a3df1a3d
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Roads\3D_Road\Road_6441e6fb-0799-4ec0-bbcf-57542147d823.par
+#BlueLink0 Road: 3D Surface (All Properties)`Chassis Twist Road Sine Wave` Ride Roads` , Miscellaneous`Road_6441e6fb-0799-4ec0-bbcf-57542147d823
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink8 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_5573c6e9-939f-46da-a8b5-d3cf143fc34a.par
+#BlueLink9 Plot: Setup`Ground Elevation` Ground` , Plot`Plot_5573c6e9-939f-46da-a8b5-d3cf143fc34a
+
+PARSFILE Plot\Setup\Plot_b8614b7c-dc02-4f0e-b723-a961bf595f50.par
+#BlueLink10 Plot: Setup`Torques in Powertrain` Powertrain` , Plot`Plot_b8614b7c-dc02-4f0e-b723-a961bf595f50
+
+PARSFILE Plot\Setup\Plot_637b8350-a6b4-4316-b81b-12f50955df56.par
+#BlueLink11 Plot: Setup`Steer Torque vs. Steer Angle` Steering` , Plot`Plot_637b8350-a6b4-4316-b81b-12f50955df56
+
+PARSFILE Plot\Setup\Plot_c3bc997f-caac-4c8e-8974-69ef71d2b82c.par
+#BlueLink12 Plot: Setup`Steer Torque` Steering` , Plot`Plot_c3bc997f-caac-4c8e-8974-69ef71d2b82c
+
+PARSFILE Plot\Setup\Plot_611d5c3a-96d6-4ce1-9480-2884389661ab.par
+#BlueLink13 Plot: Setup`Damping Force` Suspension Forces and Moments` , Plot`Plot_611d5c3a-96d6-4ce1-9480-2884389661ab
+
+PARSFILE Plot\Setup\Plot_b84ef2b2-7fc4-41f2-a3f5-1419f3625a41.par
+#BlueLink14 Plot: Setup`Spring: Force vs. Time` Suspension Forces and Moments` , Plot`Plot_b84ef2b2-7fc4-41f2-a3f5-1419f3625a41
+
+PARSFILE Plot\Setup\Plot_f411665c-58c7-4e39-86ea-1845d059059f.par
+#BlueLink15 Plot: Setup`Spring: Force vs. Compression` Suspension Forces and Moments` , Plot`Plot_f411665c-58c7-4e39-86ea-1845d059059f
+
+PARSFILE Plot\Setup\Plot_be65b077-1eb0-49dd-8583-46a333e25b8c.par
+#BlueLink16 Plot: Setup`Jounce (Axle 1)` Suspension` , Plot`Plot_be65b077-1eb0-49dd-8583-46a333e25b8c
+
+PARSFILE Plot\Setup\Plot_b8071209-f44f-4785-87de-01c6e7ef70a8.par
+#BlueLink17 Plot: Setup`Jounce (Axle 2)` Suspension` , Plot`Plot_b8071209-f44f-4785-87de-01c6e7ef70a8
+
+PARSFILE Plot\Setup\Plot_ced187ed-f7d6-4409-bb2a-7c39a1ca701b.par
+#BlueLink18 Plot: Setup`Z Coordinate: Sprung Mass Origin` Tracking` , Plot`Plot_ced187ed-f7d6-4409-bb2a-7c39a1ca701b
+
+PARSFILE Plot\Setup\Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987.par
+#BlueLink19 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987
+
+PARSFILE Plot\Setup\Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5.par
+#BlueLink20 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5
+
+PARSFILE Plot\Setup\Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1.par
+#BlueLink21 Plot: Setup`Yaw Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1
+
+
+#EMBEDDED_NOTES
+#Controls and road set for a Chassis Twist Road Sine Wave Course.  This test is typically run at a very low speed.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Ride Tests } Chassis Twist Road Sine Wave Course
+#Library : Procedures
+#DataSet : Chassis Twist Road Sine Wave Course
+#Category: Ride Tests
+#FileID  : Proc_93a9e5a5-8b1a-44f2-9bb1-aff35de226b7
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

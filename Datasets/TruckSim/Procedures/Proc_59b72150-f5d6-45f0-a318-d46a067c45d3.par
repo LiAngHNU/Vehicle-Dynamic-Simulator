@@ -1,0 +1,109 @@
+PARSFILE
+#FullDataName Procedures`Roundabout Network (Flat)`Road Networks
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 250
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 30
+*TSTOP 250
+*TSTART 0
+*SSTART 0
+*SSTOP 210
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Roundabout Network (Flat)
+SPEED_TARGET_CONSTANT 30
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_40481a6a-19ed-4b76-93cf-009167125143.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`1.8m Right, 0.6s Single Preview` Constant Position: Non-Zero Offset` , Steering`StrDM_40481a6a-19ed-4b76-93cf-009167125143
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink0 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+PARSFILE Generic\Links\GenLink_37b9b2f0-6093-49dd-ac74-a7fd1dd8d98b.par
+#BlueLink1 Generic Group of Links`Roundabout Network (7 Roads)` Roads and Paths` , Miscellaneous`GenLink_37b9b2f0-6093-49dd-ac74-a7fd1dd8d98b
+
+PARSFILE Generic\VS_commands\GenVS_e636474f-83f0-4497-9777-f1b8b046f994.par
+#BlueLink2 Generic VS Commands`Roundabouts: Waypoints & Distances` Miscellaneous Custom Controls` , Miscellaneous`GenVS_e636474f-83f0-4497-9777-f1b8b046f994
+
+#BlueLink3 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink4 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#MiscYellow1
+path_id_dm = 1001
+#ENDMYellow
+
+PARSFILE Events\Events_8025e947-b087-4235-a9c1-b59f3006d115.par
+#BlueLink7 Events`A. Drive for 5 Seconds on Current Path` Road Network Driving` , Miscellaneous`Events_8025e947-b087-4235-a9c1-b59f3006d115
+
+PARSFILE Plot\Setup\Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9.par
+#BlueLink8 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink9 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f.par
+#BlueLink10 Plot: Setup`Road Wheel Steer (Axle 1)` Steering` , Plot`Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f
+
+PARSFILE Plot\Setup\Plot_60033996-0231-49e9-9009-99c91c6106ea.par
+#BlueLink11 Plot: Setup`Slip Angles (Axles 1 - 4)` Tire Kinematics` , Plot`Plot_60033996-0231-49e9-9009-99c91c6106ea
+
+PARSFILE Plot\Setup\Plot_8aa6411f-4f0f-45db-b32c-d612009087f2.par
+#BlueLink12 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8aa6411f-4f0f-45db-b32c-d612009087f2
+
+PARSFILE Plot\Setup\Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5.par
+#BlueLink13 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5
+
+PARSFILE Plot\Setup\Plot_38af2fee-b452-4e50-bfca-9012303b5e16.par
+#BlueLink14 Plot: Setup`Yaw Rate of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_38af2fee-b452-4e50-bfca-9012303b5e16
+
+PARSFILE Plot\Setup\Plot_a146934a-339c-4983-9664-0f9749a0dfd6.par
+#BlueLink15 Plot: Setup`Vertical Forces (per Wheel)` Tire Forces` , Plot`Plot_a146934a-339c-4983-9664-0f9749a0dfd6
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink16 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_12272e89-6436-45e6-9bae-719a7741062d.par
+#BlueLink17 Plot: Setup`Random Numbers` Road Network Driving` , Plot`Plot_12272e89-6436-45e6-9bae-719a7741062d
+
+
+#EMBEDDED_NOTES
+#This Procedure dataset links to a group of paths that construct a roundabout, access roads, and a surrounding loop.
+#
+#The dataset Drive Around - Define Variables and Eq's creates waypoints with their coordinates at each intersection, tracks the vehicle's distance to each waypoint,  and generates a stream of random numbers to be used in Event-switching.
+#
+#The Events sequence controls random switching between roads at each intersection as it is encountered.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Road Networks } Roundabout Network (Flat)
+#Library : Procedures
+#DataSet : Roundabout Network (Flat)
+#Category: Road Networks
+#FileID  : Proc_59b72150-f5d6-45f0-a318-d46a067c45d3
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

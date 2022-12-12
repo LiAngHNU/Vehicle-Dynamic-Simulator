@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName Procedures`3-Way Intersection, Speed Sign`Road Networks
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART -120
+TSTART_WRITE = 0;
+TSTOP 50
+SSTOP 260
+OPT_DIRECTION 0
+*SPEED 70
+*TSTOP 50
+*TSTART 0
+*SSTART -120
+*SSTOP 260
+
+PARSFILE Control\Driver\StrDM_1771277b-21ad-444d-9868-a465a1392636.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`1.8m Right, Variable Speed Preview` Constant Position: Non-Zero Offset` , Steering`StrDM_1771277b-21ad-444d-9868-a465a1392636
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_path\SpdPath_15d13c88-577c-486c-a5cf-c0652c815e86.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.15/0.2 G Max Ax/Ay, SPEED_LIMIT_ID` Intersections` , Speed vs. station`SpdPath_15d13c88-577c-486c-a5cf-c0652c815e86
+
+#MiscYellow0
+! speed limit is initially 45mi/h
+SET_ISPEED_FOR_ID SPEED_LIMIT_ID
+SPEED_TARGET_CONSTANT 45;mi/h
+#ENDMYellow
+
+PARSFILE Generic\Links\GenLink_69d515e3-02d3-4f69-92ae-f45d5a97966e.par
+#BlueLink0 Generic Group of Links`3-Way Intersection, Curbs` Roads and Paths` , Miscellaneous`GenLink_69d515e3-02d3-4f69-92ae-f45d5a97966e
+
+PARSFILE Roads\BuilderSegment\RoadSeg_b7d765ed-18ff-43ff-8d3f-22bfaa9390bd.par
+#BlueLink1 Path: Segment Builder`2002: West Entrance, Right Turn, Wide` Crossing with Curbs` , Miscellaneous`RoadSeg_b7d765ed-18ff-43ff-8d3f-22bfaa9390bd
+
+PARSFILE Sensors_Traffic\Targets\Target_75025dc5-ae86-48e4-8e8b-8b2d2c20fa83.par
+#BlueLink3 Single Moving Object (Custom)`Speed Limit 55 mi/h` Traffic Signs and Lights` , Miscellaneous`Target_75025dc5-ae86-48e4-8e8b-8b2d2c20fa83
+
+#MiscYellow1
+path_id_dm = 2002 ! Path with wide turn
+current_road_id = 1002
+#ENDMYellow
+
+PARSFILE Animator\HUD\HUD_57a6c842-a5ec-4e02-972c-e5f3c3958fdd.par
+#BlueLink34 Animator: HUD`Throttle and Speed` HUD Groups` , Miscellaneous`HUD_57a6c842-a5ec-4e02-972c-e5f3c3958fdd
+
+PARSFILE Generic\VS_commands\GenVS_6e790403-fd3d-4ff5-b250-347ef7b5775f.par
+#BlueLink8 Generic VS Commands`Velocity and Position` Plot Groups` , Plot`GenVS_6e790403-fd3d-4ff5-b250-347ef7b5775f
+
+PARSFILE Generic\VS_commands\GenVS_15d12b66-6ebc-47ba-9159-7082dd3daecc.par
+#BlueLink9 Generic VS Commands`Driver Controls` Plot Groups` , Plot`GenVS_15d12b66-6ebc-47ba-9159-7082dd3daecc
+
+PARSFILE Generic\VS_commands\GenVS_8f7411b8-c46e-45ca-8259-b31bc7af7dd3.par
+#BlueLink10 Generic VS Commands`Acceleration` Plot Groups` , Plot`GenVS_8f7411b8-c46e-45ca-8259-b31bc7af7dd3
+
+PARSFILE Plot\Setup\Plot_26dc2eb1-dd9b-4776-8f9f-09208d63924a.par
+#BlueLink19 Plot: Setup`Event Count` Event Control` , Plot`Plot_26dc2eb1-dd9b-4776-8f9f-09208d63924a
+
+
+#EMBEDDED_NOTES
+#3-way intersection, with the ego vehicle going west into the intersection. Speed is in mi/h, current speed limit is 45 mi/h.
+#
+#This requires that a VS Command be used first to define a parameter SPEED_LIMIT.
+#
+#There is also a speed limit sign for 55 mi/h.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Road Networks } 3-Way Intersection, Speed Sign
+#Library : Procedures
+#DataSet : 3-Way Intersection, Speed Sign
+#Category: Road Networks
+#FileID  : Proc_f5696e49-f0ae-4d9f-b188-e7fc0eac1760
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

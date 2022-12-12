@@ -1,0 +1,115 @@
+PARSFILE
+#FullDataName Procedures`Brake Fade Test Initialization`Acceleration and Braking
+#CheckBox3 0    
+
+#RingCtrl0 0
+#RingCtrl1 -1
+#RingCtrl2 0
+OPT_STOP -1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+TSTOP -1
+*SPEED 0
+*TSTOP 12
+*TSTART 0
+*SSTART 0
+*SSTOP 300
+
+OPT_SC 0
+SV_VXS 0
+PARSFILE Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.6s Single Preview` Constant Position: No Offset` , Steering`StrDM_e2398fab-b956-498b-8858-93e89178bdf3
+
+PARSFILE Control\Brake_pedal\FbkCon_af2fa584-d9cd-4fd4-98f5-b70494bad37e.par
+#BlueLink28 Control: Braking Pedal Force (Open Loop)`Constant: 0 N` Constant` , Braking`FbkCon_af2fa584-d9cd-4fd4-98f5-b70494bad37e
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink29 Control: Throttle (Open Loop)`Constant: 0` Constant` , Throttle`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+! Define a variable for counting test cycles
+define_variable bk_cycle 0;
+define_output bkcycle = bk_cycle;
+#ENDMYellow
+
+PARSFILE Animator\Groups\Group_ece56f15-33f2-41ee-b47c-88977af8655f.par
+#BlueLink0 Animator: Group`Temperature Dependent Brakes` Brake System` , Miscellaneous`Group_ece56f15-33f2-41ee-b47c-88977af8655f
+
+PARSFILE Roads\3D_Road\Road_62989a83-93d0-44f4-b562-546882fa0e80.par
+#BlueLink1 Road: 3D Surface (All Properties)`1200 m, Two Lanes, Mu = 0.85` Straight` , Miscellaneous`Road_62989a83-93d0-44f4-b562-546882fa0e80
+
+PARSFILE Generic\VS_commands\GenVS_18871ad6-9652-45d8-bfa8-595ad3eafa73.par
+#BlueLink4 Generic VS Commands`Brake Testing w/ Pedal Force, 2 Axles` Plot Groups` , Miscellaneous`GenVS_18871ad6-9652-45d8-bfa8-595ad3eafa73
+
+PARSFILE Events\Events_81c14c66-2ca1-4033-878b-2742b0136a9b.par
+#BlueLink7 Events`A. Begin Brake Fade Test` Brake Fade Test` , Miscellaneous`Events_81c14c66-2ca1-4033-878b-2742b0136a9b
+
+PARSFILE Plot\Setup\Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd.par
+#BlueLink8 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink9 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_085bec2f-da38-4258-9eb1-5e240115296d.par
+#BlueLink10 Plot: Setup`Wheel Speeds` Braking` , Plot`Plot_085bec2f-da38-4258-9eb1-5e240115296d
+
+PARSFILE Plot\Setup\Plot_aeb01166-5cff-44c0-bf80-ba2ecefa95ae.par
+#BlueLink11 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Station` Vehicle Motion` , Plot`Plot_aeb01166-5cff-44c0-bf80-ba2ecefa95ae
+
+PARSFILE Plot\Setup\Plot_6ab65115-f524-4f04-aecb-33140a974c8d.par
+#BlueLink12 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_6ab65115-f524-4f04-aecb-33140a974c8d
+
+PARSFILE Plot\Setup\Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a.par
+#BlueLink13 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a
+
+PARSFILE Plot\Setup\Plot_26dc2eb1-dd9b-4776-8f9f-09208d63924a.par
+#BlueLink16 Plot: Setup`Event Count` Event Control` , Plot`Plot_26dc2eb1-dd9b-4776-8f9f-09208d63924a
+
+PARSFILE Plot\Setup\Plot_0a91ecd1-6768-4c3f-afc2-b6911293a3f6.par
+#BlueLink17 Plot: Setup`Brake Test Cycle` Braking` , Plot`Plot_0a91ecd1-6768-4c3f-afc2-b6911293a3f6
+
+PARSFILE Plot\Setup\Plot_3b8df711-b3be-4359-a668-e3c470aec216.par
+#BlueLink21 Plot: Setup`Slip Ratios, Lagged (Axle 1)` Tire Kinematics` , Plot`Plot_3b8df711-b3be-4359-a668-e3c470aec216
+
+PARSFILE Plot\Setup\Plot_d9d546bb-6a4c-43cc-bd96-f64e62ce4844.par
+#BlueLink22 Plot: Setup`Slip Ratios, Lagged (Axle 2)` Tire Kinematics` , Plot`Plot_d9d546bb-6a4c-43cc-bd96-f64e62ce4844
+
+PARSFILE Plot\Setup\Plot_bcb6a070-1044-44ad-9834-71471d262085.par
+#BlueLink23 Plot: Setup`Longitudinal Forces (Axle 1, Single Tires)` Tire Forces` , Plot`Plot_bcb6a070-1044-44ad-9834-71471d262085
+
+PARSFILE Plot\Setup\Plot_fbf77b13-4413-4d64-af51-8a1491a4fd05.par
+#BlueLink24 Plot: Setup`Longitudinal Forces (Axle 2, Dual Tires)` Tire Forces` , Plot`Plot_fbf77b13-4413-4d64-af51-8a1491a4fd05
+
+PARSFILE Plot\Setup\Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717.par
+#BlueLink25 Plot: Setup`Vertical Forces (Axle 1, Single Tires)` Tire Forces` , Plot`Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717
+
+PARSFILE Plot\Setup\Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9.par
+#BlueLink26 Plot: Setup`Vertical Forces (Axle 2, Dual Tires)` Tire Forces` , Plot`Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9
+
+
+#EMBEDDED_NOTES
+#This Procedure is part of the Brake Fade Test simulation.
+#
+#The test starts with the vehicle at a vehicle speed of 0 km/h, no brakes applied, and the transmission in gear.
+#
+#Using Events, the vehicle is repositioned to the start of the road (Station = 0 m) and begins the braking event. This happens for 8 cycles (set on Event A), after which the simulation ends.
+#
+#Open-Loop Brake Pedal Force is the control type and is designed to work with a vehicle that specifies pedal force as the input for the brake system.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Acceleration and Braking } Brake Fade Test Initialization
+#Library : Procedures
+#DataSet : Brake Fade Test Initialization
+#Category: Acceleration and Braking
+#FileID  : Proc_51bcb1b6-f91a-498e-8753-c49b61a0c531
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

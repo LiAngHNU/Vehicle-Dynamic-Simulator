@@ -1,0 +1,100 @@
+PARSFILE
+#FullDataName Procedures`ISO Steady-State Circle Series`Handling Tests
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 400
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 10
+*TSTOP 400
+*TSTART 0
+*SSTART 0
+*SSTOP 210
+
+OPT_SC 2
+PARSFILE Control\Driver\StrDM_c8185665-19e2-4803-accd-afcd483a82da.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.5s Preview for Understeer Tests` Constant Position: No Offset` , Steering`StrDM_c8185665-19e2-4803-accd-afcd483a82da
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_t\SpdTime_a4764116-bff3-4342-9252-1e2611441323.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`Constant: 3 km/h (Ackermann Test)` Constant` , Speed vs. time`SpdTime_a4764116-bff3-4342-9252-1e2611441323
+
+PARSFILE Generic\VS_commands\GenVS_5cdc6194-e7c9-45c4-88e4-2ce9b304ca41.par
+#BlueLink0 Generic VS Commands`Setup for Steady-State Circle Series` Setup Events` , Miscellaneous`GenVS_5cdc6194-e7c9-45c4-88e4-2ce9b304ca41
+
+PARSFILE Events\Events_c8854a32-44be-437d-bb82-3f05b6af96df.par
+#BlueLink3 Events`A. Start Steady-State Circle Series` ISO Steady-State Circle Series` , Miscellaneous`Events_c8854a32-44be-437d-bb82-3f05b6af96df
+
+PARSFILE Generic\VS_commands\GenVS_0df15527-05d5-4381-a78c-948b316a6805.par
+#BlueLink4 Generic VS Commands`Tire Forces and Moments` Plot Groups` , Miscellaneous`GenVS_0df15527-05d5-4381-a78c-948b316a6805
+
+PARSFILE Plot\Setup\Plot_f87ba43c-af68-4ed2-87f2-a1e2bb2b8f69.par
+#BlueLink8 Plot: Setup`Steering Wheel Angle vs. Lat Accel` Steering` , Plot`Plot_f87ba43c-af68-4ed2-87f2-a1e2bb2b8f69
+
+PARSFILE Plot\Setup\Plot_f4209eea-2253-4630-83ba-899082900440.par
+#BlueLink9 Plot: Setup`Steering Wheel Angle vs. Sideslip Angle` Steering` , Plot`Plot_f4209eea-2253-4630-83ba-899082900440
+
+PARSFILE Plot\Setup\Plot_7061b900-4f6a-4a36-8099-27c4f3c3df24.par
+#BlueLink10 Plot: Setup`Road Wheel Steer (Axle 1) vs. Lat Accel` Steering` , Plot`Plot_7061b900-4f6a-4a36-8099-27c4f3c3df24
+
+PARSFILE Plot\Setup\Plot_6c56dc2f-7305-48e8-96d3-4081fbab1e39.par
+#BlueLink11 Plot: Setup`Roll vs. Lateral Accel.` Vehicle Motion` , Plot`Plot_6c56dc2f-7305-48e8-96d3-4081fbab1e39
+
+PARSFILE Plot\Setup\Plot_8aa6411f-4f0f-45db-b32c-d612009087f2.par
+#BlueLink12 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8aa6411f-4f0f-45db-b32c-d612009087f2
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink13 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink14 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_0667fa7e-7620-402a-95a9-b10223b0c08f.par
+#BlueLink15 Plot: Setup`Longitudinal Speed vs. Time Stamp` Vehicle Motion` , Plot`Plot_0667fa7e-7620-402a-95a9-b10223b0c08f
+
+PARSFILE Plot\Setup\Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd.par
+#BlueLink16 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd
+
+PARSFILE Plot\Setup\Plot_536a6a4d-647d-4eb4-b11f-664addaec88a.par
+#BlueLink17 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_536a6a4d-647d-4eb4-b11f-664addaec88a
+
+PARSFILE Plot\Setup\Plot_31f418d3-adbb-4a29-8056-a466be0a945d.par
+#BlueLink19 Plot: Setup`Lateral Tracking` Tracking` , Plot`Plot_31f418d3-adbb-4a29-8056-a466be0a945d
+
+PARSFILE Plot\Setup\Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8.par
+#BlueLink20 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8
+
+
+#EMBEDDED_NOTES
+#This example procedure applies an understeer test as described in ISO 4138 and ISO 14792. It requires that a link be made to a circular track from the Run Control screen. The road dataset must define a parameter R and set the value to match the track (e.g., R = 100 m for a 100-m radius circle).
+#
+#When the run starts, the vehicle is driven at 3 km/h on the track long enough to reach steady state. The steering at this point is used to define the Ackermann steering wheel angle.
+#
+#Next, the target speed is increased and the vehicle will run long enough to reach steady state at the new speed. This process will be repeated to cover ever-increasing speeds, up to friction limits of the tires on the road.
+#
+#Writing to the output ERD/BIN file is limited to specific times when the vehice is thought to be in steady-state equilibrium.
+#
+#Go to the Events screen "A. Start..." to follow the sequence of tests.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Handling Tests } ISO Steady-State Circle Series
+#Library : Procedures
+#DataSet : ISO Steady-State Circle Series
+#Category: Handling Tests
+#FileID  : Proc_8780e5a5-95c0-484a-b0c0-eb712ff235c5
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName Procedures`PBS C2(A): Gradeability, Maintain Motion`PBS (Performance Based Standards)
+#CheckBox3 0    
+
+#RingCtrl0 0
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 30
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 10
+*TSTOP 30
+*TSTART 0
+*SSTART 0
+*SSTOP 300
+
+OPT_SC 0
+SV_VXS 10
+PARSFILE Control\Driver\StrDM_a737139e-1613-4e8f-ba4a-ba3367485e5f.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`1s Preview, 30 km/h Limit` Constant Position: No Offset` , Steering`StrDM_a737139e-1613-4e8f-ba4a-ba3367485e5f
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_mt\GearOL_cd4864dc-13d3-4aee-9214-835703699b6f.par
+#BlueLink30 Control: Shifting (Open Loop)`Constant: 1st Gear` Constant` , Shifting Control`GearOL_cd4864dc-13d3-4aee-9214-835703699b6f
+
+PARSFILE Control\Throttle\Throttle_982ba2f0-9bd1-4d14-bc94-1299f205eacf.par
+#BlueLink29 Control: Throttle (Open Loop)`Constant: 1.0 (Full Throttle)` Constant` , Throttle`Throttle_982ba2f0-9bd1-4d14-bc94-1299f205eacf
+
+PARSFILE Events\Events_6c1fe2b6-0bfa-4f7a-9b0d-c674c1c2c47c.par
+#BlueLink4 Events`Stop if Speed Goes Past -10 km/h` PBS  C2A: Maintain Motion` , Miscellaneous`Events_6c1fe2b6-0bfa-4f7a-9b0d-c674c1c2c47c
+
+PARSFILE Plot\Setup\Plot_6ab65115-f524-4f04-aecb-33140a974c8d.par
+#BlueLink8 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_6ab65115-f524-4f04-aecb-33140a974c8d
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink9 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd.par
+#BlueLink11 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd
+
+PARSFILE Plot\Setup\Plot_3f53ad8f-9c1d-4fd2-a4f4-f5f1fb1b1662.par
+#BlueLink12 Plot: Setup`My_Dr (Wheel Drive Torques, Lead Unit)` Powertrain` , Plot`Plot_3f53ad8f-9c1d-4fd2-a4f4-f5f1fb1b1662
+
+PARSFILE Plot\Setup\Plot_b8614b7c-dc02-4f0e-b723-a961bf595f50.par
+#BlueLink13 Plot: Setup`Torques in Powertrain` Powertrain` , Plot`Plot_b8614b7c-dc02-4f0e-b723-a961bf595f50
+
+PARSFILE Plot\Setup\Plot_536a6a4d-647d-4eb4-b11f-664addaec88a.par
+#BlueLink14 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_536a6a4d-647d-4eb4-b11f-664addaec88a
+
+PARSFILE Plot\Setup\Plot_658b05a2-13e0-452f-8383-4ad65ca274c9.par
+#BlueLink15 Plot: Setup`Spin Rates in Powertrain` Powertrain` , Plot`Plot_658b05a2-13e0-452f-8383-4ad65ca274c9
+
+PARSFILE Plot\Setup\Plot_92c3bffb-a766-4f7d-9f5e-73059542ee31.par
+#BlueLink16 Plot: Setup`Engine RPM` Powertrain` , Plot`Plot_92c3bffb-a766-4f7d-9f5e-73059542ee31
+
+PARSFILE Plot\Setup\Plot_0aff382f-c589-4818-8024-b7e9c0e473fd.par
+#BlueLink17 Plot: Setup`Engine Torque` Powertrain` , Plot`Plot_0aff382f-c589-4818-8024-b7e9c0e473fd
+
+
+#EMBEDDED_NOTES
+#PBS C2(A) requires that a vehicle climbing a grade can continue to maintain speed to continue forward motion.
+#
+#NTC PBS Appendix C specifies four road grades (8%, 12%, 15%, 20%), with friction (Mu) not to exceed 0.8.
+#
+#This dataset does not include the road surface. The appropriate road should be linked to the Run Control screen used to simulate a vehicle of interest.
+#
+#This dataset defines a 10 km/h initial speed and puts the vehicle in first gear at full throttle. These settings may not be appropriate for every vehicle, so change the gear and/or throttle setting accordingly.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { PBS (Performance Based Standards) } PBS C2(A): Gradeability, Maintain Motion
+#Library : Procedures
+#DataSet : PBS C2(A): Gradeability, Maintain Motion
+#Category: PBS (Performance Based Standards)
+#FileID  : Proc_0207966d-afc4-4a6a-a722-6fa5c841922d
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

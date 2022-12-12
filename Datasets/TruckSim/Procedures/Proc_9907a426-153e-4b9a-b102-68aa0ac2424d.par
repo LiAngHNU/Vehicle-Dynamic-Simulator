@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Procedures`Japanese Signs, Scenery`Animation Asset-based Scenarios
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART -100
+TSTART_WRITE = 0;
+TSTOP 90
+SSTOP 320
+OPT_DIRECTION 0
+*SPEED 10
+*TSTOP 90
+*TSTART 0
+*SSTART -100
+*SSTOP 320
+
+PARSFILE Control\Driver\StrDM_15216f08-f4ed-45aa-b8d5-10121b807268.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`Japanese Signs, Curves, Hills` ` , Steering`StrDM_15216f08-f4ed-45aa-b8d5-10121b807268
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_path\SpdPath_4da501f6-cfe8-45eb-9aa2-a2954dae3fe0.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.15/0.1 G Max Ax/Ay, Japan Env.` Rural and Mountain Roads` , Speed vs. station`SpdPath_4da501f6-cfe8-45eb-9aa2-a2954dae3fe0
+
+PARSFILE Generic\Links\GenLink_ec900309-70bf-411d-a3db-865c0fed2a79.par
+#BlueLink0 Generic Group of Links`Japanese Sign, Hills, Scenery` Japanese Environment` , Miscellaneous`GenLink_ec900309-70bf-411d-a3db-865c0fed2a79
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink4 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Plot\Setup\Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9.par
+#BlueLink8 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9
+
+PARSFILE Plot\Setup\Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a.par
+#BlueLink9 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a
+
+PARSFILE Plot\Setup\Plot_8aa6411f-4f0f-45db-b32c-d612009087f2.par
+#BlueLink10 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8aa6411f-4f0f-45db-b32c-d612009087f2
+
+PARSFILE Generic\VS_commands\GenVS_15d12b66-6ebc-47ba-9159-7082dd3daecc.par
+#BlueLink18 Generic VS Commands`Driver Controls` Plot Groups` , Plot`GenVS_15d12b66-6ebc-47ba-9159-7082dd3daecc
+
+PARSFILE Generic\VS_commands\GenVS_6e790403-fd3d-4ff5-b250-347ef7b5775f.par
+#BlueLink19 Generic VS Commands`Velocity and Position` Plot Groups` , Plot`GenVS_6e790403-fd3d-4ff5-b250-347ef7b5775f
+
+
+LOG_ENTRY Used Dataset: Procedures; { Animation Asset-based Scenarios } Japanese Signs, Scenery
+#Library : Procedures
+#DataSet : Japanese Signs, Scenery
+#Category: Animation Asset-based Scenarios
+#FileID  : Proc_9907a426-153e-4b9a-b102-68aa0ac2424d
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

@@ -1,0 +1,64 @@
+PARSFILE
+#FullDataName Procedures`City 3-Way Intersection`ADAS and Active Safety
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 50
+TSTART_WRITE = 0;
+TSTOP 35
+SSTOP 275
+OPT_DIRECTION 0
+*SPEED 70
+*TSTOP 35
+*TSTART 0
+*SSTART 50
+*SSTOP 275
+
+PARSFILE Control\Driver\StrDM_01180b0a-a8e3-4408-aa58-4eb5a10b7526.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.4m Left, Urban, Variable Preview` Constant Position: Non-Zero Offset` , Steering`StrDM_01180b0a-a8e3-4408-aa58-4eb5a10b7526
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_path\SpdPath_15d13c88-577c-486c-a5cf-c0652c815e86.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.15/0.2 G Max Ax/Ay, SPEED_LIMIT_ID` Intersections` , Speed vs. station`SpdPath_15d13c88-577c-486c-a5cf-c0652c815e86
+
+PARSFILE Roads\3D_Road\Road_2eaa92b1-ead4-4a8a-a1c8-05377394acd9.par
+#BlueLink0 Road: 3D Surface (All Properties)`3-Way Intersection` VS Scene Builder` , Miscellaneous`Road_2eaa92b1-ead4-4a8a-a1c8-05377394acd9
+
+#MiscYellow1
+path_id_dm = 1 
+current_road_id = path_id_dm
+#ENDMYellow
+
+PARSFILE Generic\VS_commands\GenVS_6e790403-fd3d-4ff5-b250-347ef7b5775f.par
+#BlueLink8 Generic VS Commands`Velocity and Position` Plot Groups` , Plot`GenVS_6e790403-fd3d-4ff5-b250-347ef7b5775f
+
+PARSFILE Generic\VS_commands\GenVS_2d67b053-a507-4198-8b63-fda8e4039347.par
+#BlueLink9 Generic VS Commands`Pedestrian Velocity and Station` Plot Groups` , Plot`GenVS_2d67b053-a507-4198-8b63-fda8e4039347
+
+PARSFILE Generic\VS_commands\GenVS_15d12b66-6ebc-47ba-9159-7082dd3daecc.par
+#BlueLink10 Generic VS Commands`Driver Controls` Plot Groups` , Plot`GenVS_15d12b66-6ebc-47ba-9159-7082dd3daecc
+
+PARSFILE Plot\Setup\Plot_26dc2eb1-dd9b-4776-8f9f-09208d63924a.par
+#BlueLink19 Plot: Setup`Event Count` Event Control` , Plot`Plot_26dc2eb1-dd9b-4776-8f9f-09208d63924a
+
+
+#EMBEDDED_NOTES
+#3-way intersection, with the ego vehicle going west into the intersection.
+#
+#There is also a speed limit sign for 55 mi/h
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { ADAS and Active Safety } City 3-Way Intersection
+#Library : Procedures
+#DataSet : City 3-Way Intersection
+#Category: ADAS and Active Safety
+#FileID  : Proc_93314484-1da8-421f-af46-f45bb43137fc
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

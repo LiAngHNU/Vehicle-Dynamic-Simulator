@@ -1,0 +1,92 @@
+PARSFILE
+#FullDataName Procedures`Reversing at Intersection`Steer Control
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART -50
+TSTART_WRITE = 0;
+TSTOP 60
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 70
+*TSTOP 60
+*TSTART 0
+*SSTART -50
+
+PARSFILE Control\Driver\StrDM_c743fbf4-cb73-4307-9b47-cccb3119e227.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`1.65m Right, 0.75s Single Preview` Constant Position: Non-Zero Offset` , Steering`StrDM_c743fbf4-cb73-4307-9b47-cccb3119e227
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_path\SpdPath_002cdaef-396f-4f97-9630-d7a7908e35af.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.2/0.2 G Max Ax/Ay, 80 km/h` Intersections` , Speed vs. station`SpdPath_002cdaef-396f-4f97-9630-d7a7908e35af
+
+PARSFILE Generic\Links\GenLink_69d515e3-02d3-4f69-92ae-f45d5a97966e.par
+#BlueLink0 Generic Group of Links`3-Way Intersection, Curbs` Roads and Paths` , Miscellaneous`GenLink_69d515e3-02d3-4f69-92ae-f45d5a97966e
+
+PARSFILE Roads\BuilderSegment\RoadSeg_9f6b1a96-f95c-46fa-a153-72e80946d95f.par
+#BlueLink1 Path: Segment Builder`1014: Head South, Turn East` Crossing with Curbs` , Miscellaneous`RoadSeg_9f6b1a96-f95c-46fa-a153-72e80946d95f
+
+PARSFILE Events\Events_7f14c5c3-5253-4d81-b421-7d9f08e43e80.par
+#BlueLink2 Events`Stop, Reverse, Turn Around` Steering control` , Miscellaneous`Events_7f14c5c3-5253-4d81-b421-7d9f08e43e80
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink9 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f.par
+#BlueLink10 Plot: Setup`Road Wheel Steer (Axle 1)` Steering` , Plot`Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f
+
+PARSFILE Plot\Setup\Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5.par
+#BlueLink13 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5
+
+PARSFILE Plot\Setup\Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987.par
+#BlueLink14 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987
+
+PARSFILE Plot\Setup\Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1.par
+#BlueLink15 Plot: Setup`Yaw Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1
+
+PARSFILE Plot\Setup\Plot_2af2b120-28db-4d3d-9833-c4cf228e2d17.par
+#BlueLink18 Plot: Setup`Longitudinal Accel. of CG's vs. Station` Vehicle Motion` , Plot`Plot_2af2b120-28db-4d3d-9833-c4cf228e2d17
+
+PARSFILE Plot\Setup\Plot_5f29dcb4-6d51-4352-9406-f1101b8d8720.par
+#BlueLink19 Plot: Setup`Lateral Accel. of CG's vs. Station` Vehicle Motion` , Plot`Plot_5f29dcb4-6d51-4352-9406-f1101b8d8720
+
+PARSFILE Plot\Setup\Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a.par
+#BlueLink20 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a
+
+PARSFILE Plot\Setup\Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8.par
+#BlueLink21 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8
+
+PARSFILE Plot\Setup\Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806.par
+#BlueLink22 Plot: Setup`Brake Control: Master Cyl. Pressure` Braking` , Plot`Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806
+
+PARSFILE Plot\Setup\Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717.par
+#BlueLink24 Plot: Setup`Vertical Forces (Axle 1, Single Tires)` Tire Forces` , Plot`Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717
+
+PARSFILE Plot\Setup\Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9.par
+#BlueLink25 Plot: Setup`Vertical Forces (Axle 2, Dual Tires)` Tire Forces` , Plot`Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9
+
+
+#EMBEDDED_NOTES
+#A 3-way intersection is set up in this example, to illustrate the closed loop driver operation in reverse.
+#
+#The reversing is controlled in the Events
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Steer Control } Reversing at Intersection
+#Library : Procedures
+#DataSet : Reversing at Intersection
+#Category: Steer Control
+#FileID  : Proc_f47ddb4d-3274-4188-b959-d66a546260a3
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

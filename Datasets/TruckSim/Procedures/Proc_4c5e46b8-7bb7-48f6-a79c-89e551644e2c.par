@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName Procedures`Off-Road Driving`Driving
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART -40
+TSTART_WRITE = 0;
+TSTOP 45
+SSTOP 40
+OPT_DIRECTION 0
+*SPEED 18
+*TSTOP 45
+*TSTART 0
+*SSTART -40
+*SSTOP 40
+
+OPT_SC 2
+PARSFILE Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.6s Single Preview` Constant Position: No Offset` , Steering`StrDM_e2398fab-b956-498b-8858-93e89178bdf3
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_t\SpdTime_00305f6c-d6d6-4071-be01-c7f905d69738.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`Constant: 18 km/h` Constant` , Speed vs. time`SpdTime_00305f6c-d6d6-4071-be01-c7f905d69738
+
+#MiscYellow0
+iside 1
+z_profile_gain 2.5
+iside 2
+z_profile_gain 2.5
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_25895b86-ca01-4545-bc34-da92ffb98b6f.par
+#BlueLink0 Road: 3D Surface (All Properties)`Hilly Off-Road` Off-Road` , Miscellaneous`Road_25895b86-ca01-4545-bc34-da92ffb98b6f
+
+PARSFILE Roads\Profiles\Profile_59ccf9bb-2473-4a7d-8475-1ede2b00fbc5.par
+#BlueLink1 Surface: Roughness Profiles`Example Road Roughness` ` , Miscellaneous`Profile_59ccf9bb-2473-4a7d-8475-1ede2b00fbc5
+
+PARSFILE Plot\Setup\Plot_5573c6e9-939f-46da-a8b5-d3cf143fc34a.par
+#BlueLink8 Plot: Setup`Ground Elevation` Ground` , Plot`Plot_5573c6e9-939f-46da-a8b5-d3cf143fc34a
+
+PARSFILE Plot\Setup\Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5.par
+#BlueLink9 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5
+
+PARSFILE Plot\Setup\Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987.par
+#BlueLink10 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink11 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_aeb01166-5cff-44c0-bf80-ba2ecefa95ae.par
+#BlueLink12 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Station` Vehicle Motion` , Plot`Plot_aeb01166-5cff-44c0-bf80-ba2ecefa95ae
+
+
+#EMBEDDED_NOTES
+#This example demonstrates the ability to create roads with spline interpolated tables and add roughness to them.
+#
+#See the road data set "Grassy Field" for more information on the spline interpolation.
+#
+#Measured road profiles are linked in the parsfile "Example Road Roughness". There is one profile for each wheel track. The roughness information is automatically fed to each wheel, in addition to any geometry described in the road data, and delayed for wheels on rear axles by an amount determined by the vehicle speed and the axle location.
+#
+#Here, a very rough road is simulated, so the measured data is amplified by a factor of 2.5. the keyword iside is set to 1 to indicate "Left side", the the keyword z_profile_gain is given a value of 2.5. "Z_profile" is the root keyword for the roughness table, and each table can be multiplied by the value "keyword_gain", in this case "z_profile_gain".
+#
+#The gain keyword is repeated after setting iside to 2 for the right side.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driving } Off-Road Driving
+#Library : Procedures
+#DataSet : Off-Road Driving
+#Category: Driving
+#FileID  : Proc_4c5e46b8-7bb7-48f6-a79c-89e551644e2c
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

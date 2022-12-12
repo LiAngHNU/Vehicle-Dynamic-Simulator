@@ -1,0 +1,126 @@
+PARSFILE
+#FullDataName Procedures`Vehicle Dynamic Simulator, Test Dataset`* * * Vehicle Dynamic Simulator
+#CheckBox0 1    
+OPT_INIT_CONFIG 1
+#CheckBox1 1    
+OPT_INIT_PATH 1
+#CheckBox2 1    
+OPT_INIT_SPEED 1
+#CheckBox3 1    
+
+#RingCtrl0 6
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 10
+TSTART_WRITE = 0;
+TSTOP 1000
+SSTOP 2230
+OPT_DIRECTION 0
+*SPEED 18
+*TSTOP 1000
+*TSTART 0
+*SSTART 10
+*SSTOP 2230
+
+PARSFILE Control\Driver\StrDM_7a515f43-1969-4ae7-a9fc-51d276413849.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`Default Preview Controller` * * * Vehicle Dynamic Simulator` , Steering`StrDM_7a515f43-1969-4ae7-a9fc-51d276413849
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_path\SpdPath_fe9003d4-5482-4814-bcf9-8d415fac8413.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.2/0.1 G Max Ax/Ay, Urban Driving` * * * Vehicle Dynamic Simulator` , Speed vs. station`SpdPath_fe9003d4-5482-4814-bcf9-8d415fac8413
+
+PARSFILE Roads\3D_Road\Road_32a98638-a7a3-4bd8-8bcf-e84845057ef0.par
+#BlueLink0 Road: 3D Surface (All Properties)`Road Course` * * * Vehicle Dynamic Simulator` , Miscellaneous`Road_32a98638-a7a3-4bd8-8bcf-e84845057ef0
+
+PARSFILE Roads\Profiles\Profile_59ccf9bb-2473-4a7d-8475-1ede2b00fbc5.par
+#BlueLink2 Surface: Roughness Profiles`Example Road Roughness` ` , Miscellaneous`Profile_59ccf9bb-2473-4a7d-8475-1ede2b00fbc5
+
+PARSFILE Animator\HUD\HUD_5ba74dcc-90d0-47c8-a130-8c2198e269f3.par
+#BlueLink4 Animator: HUD`Throttle, Brakes, Speedo w/ Gear, Tach` HUD Groups` , Miscellaneous`HUD_5ba74dcc-90d0-47c8-a130-8c2198e269f3
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_937bb2a2-2151-48cf-bf53-231367bbea14.par
+#BlueLink6 Multiple Moving Objects`Multi Vehicles` * * * CiDi Target Vehicles` , Miscellaneous`TMotion_937bb2a2-2151-48cf-bf53-231367bbea14
+
+PARSFILE Plot\Setup\Plot_dd74277f-c542-48b2-81db-c719358bd98f.par
+#BlueLink7 Plot: Setup`Vehicle Gear` * * * Vehicle Dynamic Simulator` , Miscellaneous`Plot_dd74277f-c542-48b2-81db-c719358bd98f
+
+PARSFILE Plot\Setup\Plot_a7094586-c37d-41ab-b166-d023e36eaf75.par
+#BlueLink34 Plot: Setup`Brake Pressures` * * * Vehicle Dynamic Simulator` , Miscellaneous`Plot_a7094586-c37d-41ab-b166-d023e36eaf75
+
+PARSFILE Plot\Setup\Plot_651b928c-6645-434c-80b3-1544598c3f77.par
+#BlueLink9 Plot: Setup`Vehicle Trajectory` * * * Vehicle Dynamic Simulator` , Plot`Plot_651b928c-6645-434c-80b3-1544598c3f77
+
+PARSFILE Plot\Setup\Plot_9946d1be-45a3-4d99-977b-762ef4b9904c.par
+#BlueLink10 Plot: Setup`Vehicle Tracking Error (Rear)` * * * Vehicle Dynamic Simulator` , Plot`Plot_9946d1be-45a3-4d99-977b-762ef4b9904c
+
+PARSFILE Plot\Setup\Plot_f11064a5-a1ce-461e-bf02-8b0ce483b39f.par
+#BlueLink11 Plot: Setup`Vehicle Position` * * * Vehicle Dynamic Simulator` , Plot`Plot_f11064a5-a1ce-461e-bf02-8b0ce483b39f
+
+PARSFILE Plot\Setup\Plot_b9005fa4-efa0-4d8b-85a8-292c1ba51ebc.par
+#BlueLink12 Plot: Setup`Vehicle Attitude` * * * Vehicle Dynamic Simulator` , Plot`Plot_b9005fa4-efa0-4d8b-85a8-292c1ba51ebc
+
+PARSFILE Plot\Setup\Plot_2e87542d-3925-43a2-a7ca-de3b30176de4.par
+#BlueLink13 Plot: Setup`Vehicle Velocity` * * * Vehicle Dynamic Simulator` , Plot`Plot_2e87542d-3925-43a2-a7ca-de3b30176de4
+
+PARSFILE Plot\Setup\Plot_6bea8d0b-6b7e-4dd5-9a2b-ade8d754568e.par
+#BlueLink14 Plot: Setup`Vehicle Angular Velocity` * * * Vehicle Dynamic Simulator` , Plot`Plot_6bea8d0b-6b7e-4dd5-9a2b-ade8d754568e
+
+PARSFILE Plot\Setup\Plot_ce673858-4862-4f77-b085-b579999fd6ab.par
+#BlueLink15 Plot: Setup`Vehicle Acceleration` * * * Vehicle Dynamic Simulator` , Plot`Plot_ce673858-4862-4f77-b085-b579999fd6ab
+
+PARSFILE Plot\Setup\Plot_fc206dd8-8bf0-486d-9c00-217ea0631b15.par
+#BlueLink16 Plot: Setup`Vehicle Angular Acceleration` * * * Vehicle Dynamic Simulator` , Plot`Plot_fc206dd8-8bf0-486d-9c00-217ea0631b15
+
+PARSFILE Plot\Setup\Plot_d662d431-9501-4990-a498-834ae110d0d4.par
+#BlueLink17 Plot: Setup`Steer Wheel Motion` * * * Vehicle Dynamic Simulator` , Plot`Plot_d662d431-9501-4990-a498-834ae110d0d4
+
+PARSFILE Plot\Setup\Plot_731b59a1-0b5e-4364-a3e3-57d3edbba81b.par
+#BlueLink18 Plot: Setup`Wheel Kappa (3-Axle)` * * * Vehicle Dynamic Simulator` , Plot`Plot_731b59a1-0b5e-4364-a3e3-57d3edbba81b
+
+PARSFILE Plot\Setup\Plot_21a4efbc-26f4-4100-8c79-78ea1a19d211.par
+#BlueLink19 Plot: Setup`Wheel Alpha (3-Axle)` * * * Vehicle Dynamic Simulator` , Plot`Plot_21a4efbc-26f4-4100-8c79-78ea1a19d211
+
+PARSFILE Plot\Setup\Plot_bff31c45-8593-469f-a11a-21ce25ddf479.par
+#BlueLink20 Plot: Setup`Wheel Delta (3-Axle)` * * * Vehicle Dynamic Simulator` , Plot`Plot_bff31c45-8593-469f-a11a-21ce25ddf479
+
+PARSFILE Plot\Setup\Plot_768a75c6-e684-45b8-8479-bc0bbd8f1b76.par
+#BlueLink21 Plot: Setup`Axle Fx (3-Axle)` * * * Vehicle Dynamic Simulator` , Plot`Plot_768a75c6-e684-45b8-8479-bc0bbd8f1b76
+
+PARSFILE Plot\Setup\Plot_6e65e2b2-ff46-468c-a56d-46a900dd9585.par
+#BlueLink22 Plot: Setup`Axle Fy (3-Axle)` * * * Vehicle Dynamic Simulator` , Plot`Plot_6e65e2b2-ff46-468c-a56d-46a900dd9585
+
+PARSFILE Plot\Setup\Plot_8643115d-cfe2-4a9e-927d-5775c9ba39d2.par
+#BlueLink23 Plot: Setup`Axle Fz (3-Axle)` * * * Vehicle Dynamic Simulator` , Plot`Plot_8643115d-cfe2-4a9e-927d-5775c9ba39d2
+
+PARSFILE Plot\Setup\Plot_aebed0da-abd0-4c6a-923e-74841988ae55.par
+#BlueLink24 Plot: Setup`Wheel Fx` * * * Vehicle Dynamic Simulator` , Plot`Plot_aebed0da-abd0-4c6a-923e-74841988ae55
+
+PARSFILE Plot\Setup\Plot_aad69c7f-c285-41c5-a0bf-13a5cd7b431f.par
+#BlueLink25 Plot: Setup`Wheel Fy` * * * Vehicle Dynamic Simulator` , Plot`Plot_aad69c7f-c285-41c5-a0bf-13a5cd7b431f
+
+PARSFILE Plot\Setup\Plot_0ed35f18-8d0f-4c3b-b0a4-e97c8caefc3a.par
+#BlueLink26 Plot: Setup`Wheel Fz` * * * Vehicle Dynamic Simulator` , Plot`Plot_0ed35f18-8d0f-4c3b-b0a4-e97c8caefc3a
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates a common Double Lane Change handling test.
+#
+#This example is used in the TruckSim Quick Start Guide. Since the test duration is short (12 s or 300 m, whichever comes first) and the dynamic motions are easily visible in the animator, it is a test commonly used to evaluate different vehicle data.
+#
+#To see how the driver path was set up, click on the blue link "Double Lane Change" for more information.
+#
+#The driver controls specify a closed-loop speed control with a constant target speed of 70 kph, no brake pressure, and automatic gear selection using all available gears.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { * * * Vehicle Dynamic Simulator } Vehicle Dynamic Simulator, Test Dataset
+#Library : Procedures
+#DataSet : Vehicle Dynamic Simulator, Test Dataset
+#Category: * * * Vehicle Dynamic Simulator
+#FileID  : Proc_2eb0a1c9-d079-4792-a2d3-0022ba3069e0
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

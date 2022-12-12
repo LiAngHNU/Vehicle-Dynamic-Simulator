@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Procedures`Stopping at City Intersection`Animation Asset-based Scenarios
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 35
+SSTOP 300
+OPT_DIRECTION 0
+*TSTOP 35
+*TSTART 0
+*SSTART 0
+*SSTOP 300
+
+OPT_SC 2
+PARSFILE Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.6s Single Preview` Constant Position: No Offset` , Steering`StrDM_e2398fab-b956-498b-8858-93e89178bdf3
+
+PARSFILE Control\Braking\PbkCon_c7f97e3f-7b83-4fa9-a908-169ef9409824.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Stop while pedestrian crosses` Step` , Braking`PbkCon_c7f97e3f-7b83-4fa9-a908-169ef9409824
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_t\SpdTime_f68e4202-abaa-46a0-83c4-5967ed9b078a.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`City Intersection, Stop for Pedestrian` Speed vs. Station` , Speed vs. time`SpdTime_f68e4202-abaa-46a0-83c4-5967ed9b078a
+
+PARSFILE Roads\3D_Road\Road_d86cad40-422c-4b29-9281-308519eeeae7.par
+#BlueLink0 Road: 3D Surface (All Properties)`City Intersection` VS Scene Builder` , Miscellaneous`Road_d86cad40-422c-4b29-9281-308519eeeae7
+
+PARSFILE Plot\Setup\Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806.par
+#BlueLink8 Plot: Setup`Brake Control: Master Cyl. Pressure` Braking` , Plot`Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806
+
+PARSFILE Plot\Setup\Plot_6e732c3d-91dd-4177-a6c2-c73bd24db34d.par
+#BlueLink9 Plot: Setup`Speed Limit, Target, and Actual` Speed Controller` , Plot`Plot_6e732c3d-91dd-4177-a6c2-c73bd24db34d
+
+
+LOG_ENTRY Used Dataset: Procedures; { Animation Asset-based Scenarios } Stopping at City Intersection
+#Library : Procedures
+#DataSet : Stopping at City Intersection
+#Category: Animation Asset-based Scenarios
+#FileID  : Proc_800ba4a6-9f08-4692-bc61-2ad6c5834856
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Procedures`Pedestrian Scenario`Mcity
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 10
+TSTART_WRITE = 0;
+TSTOP 11
+SSTOP 100
+OPT_DIRECTION 0
+*SPEED 30
+*TSTOP 11
+*TSTART 0
+*SSTART 10
+*SSTOP 100
+
+OPT_SC 2
+PARSFILE Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.6s Single Preview` Constant Position: No Offset` , Steering`StrDM_e2398fab-b956-498b-8858-93e89178bdf3
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_t\SpdTime_fa5bab7c-1207-4595-8907-d5a59db77525.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`Constant: 15 km/h` Constant` , Speed vs. time`SpdTime_fa5bab7c-1207-4595-8907-d5a59db77525
+
+PARSFILE Roads\3D_Road\Road_1d1d1c8f-03e2-473e-86c1-63255c448ff3.par
+#BlueLink0 Road: 3D Surface (All Properties)`Mcity Scene` VS Scene Builder` , Miscellaneous`Road_1d1d1c8f-03e2-473e-86c1-63255c448ff3
+
+PARSFILE Roads\Center_XY\PathXY_fba85211-68fd-4307-8756-da2183404519.par
+#BlueLink1 Path: X-Y Coordinates`Mcity: East to West on Main St.` Mcity` , Miscellaneous`PathXY_fba85211-68fd-4307-8756-da2183404519
+
+PARSFILE Animator\HUD\HUD_bb95272c-4b83-4a10-8334-f8f6097af704.par
+#BlueLink2 Animator: HUD`FCW Alert (small)` Alerts` , Miscellaneous`HUD_bb95272c-4b83-4a10-8334-f8f6097af704
+
+PARSFILE Generic\VS_commands\GenVS_716942df-a0a4-4cb9-adcd-c99c10e94370.par
+#BlueLink4 Generic VS Commands`Pedestrian Detection` Plot Groups` , Miscellaneous`GenVS_716942df-a0a4-4cb9-adcd-c99c10e94370
+
+
+#EMBEDDED_NOTES
+#Procedure for Mcity Baseline examples, with a constant target speed setting of 30 km/h.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Mcity } Pedestrian Scenario
+#Library : Procedures
+#DataSet : Pedestrian Scenario
+#Category: Mcity
+#FileID  : Proc_60c4c254-13d5-43d7-8f3f-d5f38f4b0dbb
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

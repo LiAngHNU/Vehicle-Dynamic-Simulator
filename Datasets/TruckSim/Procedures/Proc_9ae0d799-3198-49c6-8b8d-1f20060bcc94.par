@@ -1,0 +1,68 @@
+PARSFILE
+#FullDataName Procedures`Drift into Curb`Driving
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 125
+TSTART_WRITE = 0;
+TSTOP 10
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*TSTOP 10
+*TSTART 0
+*SSTART 125
+
+OPT_SC 2
+PARSFILE Control\Driver\StrDM_ab8b0baf-558d-4e90-a7a4-c3fe63731e3a.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`Driver Error: Drifts to the Left` Accident Avoidance` , Steering`StrDM_ab8b0baf-558d-4e90-a7a4-c3fe63731e3a
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_t\SpdTime_00305f6c-d6d6-4071-be01-c7f905d69738.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`Constant: 18 km/h` Constant` , Speed vs. time`SpdTime_00305f6c-d6d6-4071-be01-c7f905d69738
+
+PARSFILE Roads\3D_Road\Road_dce13c87-2741-46a7-9d75-8446f4942635.par
+#BlueLink0 Road: 3D Surface (All Properties)`Road w/ Median` Variable Width Roads` , Miscellaneous`Road_dce13c87-2741-46a7-9d75-8446f4942635
+
+PARSFILE Plot\Setup\Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a.par
+#BlueLink8 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a
+
+PARSFILE Plot\Setup\Plot_28346536-17a7-43d1-9d01-abb1238a43f7.par
+#BlueLink9 Plot: Setup`Ground Elevation vs. Station` Ground` , Plot`Plot_28346536-17a7-43d1-9d01-abb1238a43f7
+
+PARSFILE Plot\Setup\Plot_085bec2f-da38-4258-9eb1-5e240115296d.par
+#BlueLink10 Plot: Setup`Wheel Speeds` Braking` , Plot`Plot_085bec2f-da38-4258-9eb1-5e240115296d
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink11 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_53f88dbf-97f8-4d38-9c7c-b0e8aa421f9c.par
+#BlueLink12 Plot: Setup`Lateral Forces (Right Side)` Tire Forces` , Plot`Plot_53f88dbf-97f8-4d38-9c7c-b0e8aa421f9c
+
+PARSFILE Plot\Setup\Plot_7e80eb63-ada6-4a18-8a55-627fd56217a0.par
+#BlueLink13 Plot: Setup`Vertical Forces (Left Side)` Tire Forces` , Plot`Plot_7e80eb63-ada6-4a18-8a55-627fd56217a0
+
+PARSFILE Plot\Setup\Plot_5df15729-ab2b-4846-8166-382edeb3147c.par
+#BlueLink14 Plot: Setup`Vertical Forces (Right Side)` Tire Forces` , Plot`Plot_5df15729-ab2b-4846-8166-382edeb3147c
+
+PARSFILE Plot\Setup\Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9.par
+#BlueLink15 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink16 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+
+LOG_ENTRY Used Dataset: Procedures; { Driving } Drift into Curb
+#Library : Procedures
+#DataSet : Drift into Curb
+#Category: Driving
+#FileID  : Proc_9ae0d799-3198-49c6-8b8d-1f20060bcc94
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

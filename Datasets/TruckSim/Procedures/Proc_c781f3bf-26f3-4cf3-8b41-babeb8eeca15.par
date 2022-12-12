@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName Procedures`3-Way Intersection (Straight Trucks)`Road Networks
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART -175
+TSTART_WRITE = 0;
+TSTOP 45
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 70
+*TSTOP 45
+*TSTART 0
+*SSTART -175
+
+OPT_SC 2
+PARSFILE Control\Driver\StrDM_6bb70651-34b3-4cb3-9ec1-b0679abf4f0a.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`2m Right, 0.75s Single Preview` Constant Position: Non-Zero Offset` , Steering`StrDM_6bb70651-34b3-4cb3-9ec1-b0679abf4f0a
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_t\SpdTime_02194b8a-27d6-4c77-985d-f66b15cb3698.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`Crossing, Right Turn (Hyd. Brakes)` Speed vs. Station` , Speed vs. time`SpdTime_02194b8a-27d6-4c77-985d-f66b15cb3698
+
+PARSFILE Generic\Links\GenLink_69d515e3-02d3-4f69-92ae-f45d5a97966e.par
+#BlueLink0 Generic Group of Links`3-Way Intersection, Curbs` Roads and Paths` , Miscellaneous`GenLink_69d515e3-02d3-4f69-92ae-f45d5a97966e
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink9 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f.par
+#BlueLink10 Plot: Setup`Road Wheel Steer (Axle 1)` Steering` , Plot`Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f
+
+PARSFILE Plot\Setup\Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5.par
+#BlueLink13 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5
+
+PARSFILE Plot\Setup\Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987.par
+#BlueLink14 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987
+
+PARSFILE Plot\Setup\Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1.par
+#BlueLink15 Plot: Setup`Yaw Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1
+
+PARSFILE Plot\Setup\Plot_2af2b120-28db-4d3d-9833-c4cf228e2d17.par
+#BlueLink18 Plot: Setup`Longitudinal Accel. of CG's vs. Station` Vehicle Motion` , Plot`Plot_2af2b120-28db-4d3d-9833-c4cf228e2d17
+
+PARSFILE Plot\Setup\Plot_5f29dcb4-6d51-4352-9406-f1101b8d8720.par
+#BlueLink19 Plot: Setup`Lateral Accel. of CG's vs. Station` Vehicle Motion` , Plot`Plot_5f29dcb4-6d51-4352-9406-f1101b8d8720
+
+PARSFILE Plot\Setup\Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a.par
+#BlueLink20 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a
+
+PARSFILE Plot\Setup\Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8.par
+#BlueLink21 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8
+
+PARSFILE Plot\Setup\Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717.par
+#BlueLink24 Plot: Setup`Vertical Forces (Axle 1, Single Tires)` Tire Forces` , Plot`Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717
+
+PARSFILE Plot\Setup\Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9.par
+#BlueLink25 Plot: Setup`Vertical Forces (Axle 2, Dual Tires)` Tire Forces` , Plot`Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9
+
+
+LOG_ENTRY Used Dataset: Procedures; { Road Networks } 3-Way Intersection (Straight Trucks)
+#Library : Procedures
+#DataSet : 3-Way Intersection (Straight Trucks)
+#Category: Road Networks
+#FileID  : Proc_c781f3bf-26f3-4cf3-8b41-babeb8eeca15
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

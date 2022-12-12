@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Procedures`Blind Spot Detection, Reversing`ADAS and Active Safety
+#CheckBox3 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 1
+TSTART_WRITE = 0;
+TSTOP 15
+SSTOP 500
+OPT_DIRECTION 0
+*TSTOP 15
+*TSTART 0
+*SSTART 1
+*SSTOP 500
+
+PARSFILE Generic\Links\GenLink_d20bf616-4a64-4f1b-a072-ff4d0f1895fa.par
+#BlueLink0 Generic Group of Links`Blind Detection Parking Lot` Roads and Paths` , Miscellaneous`GenLink_d20bf616-4a64-4f1b-a072-ff4d0f1895fa
+
+PARSFILE Generic\Group\GenGrp_7024ee70-877a-4556-a1f2-55953370cbf5.par
+#BlueLink1 Generic Data Group`Parking Lot Vehicles` ADAS: Traffic Scenarios` , Miscellaneous`GenGrp_7024ee70-877a-4556-a1f2-55953370cbf5
+
+PARSFILE Events\Events_78312b27-d4da-473a-a687-ac0750876310.par
+#BlueLink4 Events`1. Sit in Parking Space for 2 s` Blind Spot Reversing` , Miscellaneous`Events_78312b27-d4da-473a-a687-ac0750876310
+
+#MiscYellow1
+PATH_ID_DM = 1
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#Note: This Procedure has been updated for TruckSim 2018 such that the ADAS Sensors are linked on the Vehicle: Loaded Combination screen.
+#
+#This test Procedure defines a scenario in which a vehicle slowly backs out from between two parked vehicles, with blind spot sensors that detect a crossing vehicle.
+#
+#Each sensor dataset includes a link to VS Commands and VS Visualizer HUD information to show a blind spot alert and set a braking command when an approaching moving vehicle is detected.
+#
+#Events are used to brake the ego vehicle when a command is non-zero.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { ADAS and Active Safety } Blind Spot Detection, Reversing
+#Library : Procedures
+#DataSet : Blind Spot Detection, Reversing
+#Category: ADAS and Active Safety
+#FileID  : Proc_f3b2f7ee-655e-4dd9-a16f-883a7f9e6c91
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

@@ -1,0 +1,98 @@
+PARSFILE
+#FullDataName Procedures`PBS: Low-Spd 12.5m Left Turn, New DM`PBS (Performance Based Standards)
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART -10
+TSTART_WRITE = 0;
+TSTOP 100
+SSTOP 100
+OPT_DIRECTION 0
+*TSTOP 100
+*TSTART 0
+*SSTART -10
+*SSTOP 100
+
+OPT_SC 2
+PARSFILE Control\Driver\StrDM_01501828-7720-464f-b8e9-680499ea3025.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.58s Single Preview, Low speed 4km/h` Constant Position: No Offset` , Steering`StrDM_01501828-7720-464f-b8e9-680499ea3025
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_t\SpdTime_3c0e50e1-3f91-4319-a134-5939d6306995.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`Constant: 5 km/h (PBS)` Constant` , Speed vs. time`SpdTime_3c0e50e1-3f91-4319-a134-5939d6306995
+
+PARSFILE Roads\3D_Road\Road_3eb0268b-8183-49d8-8948-be107489f627.par
+#BlueLink0 Road: 3D Surface (All Properties)`1 km Square, Mu = 1.0` Flat Test Pads` , Miscellaneous`Road_3eb0268b-8183-49d8-8948-be107489f627
+
+PARSFILE Roads\BuilderSegment\RoadSeg_2d4c0798-0bcd-4d54-9501-2261ef71e2c1.par
+#BlueLink1 Path: Segment Builder`12.5 m Radius Turn, Left` 90-deg Turns (Offtracking)` , Miscellaneous`RoadSeg_2d4c0798-0bcd-4d54-9501-2261ef71e2c1
+
+PARSFILE Generic\VS_commands\GenVS_da5f04aa-aa89-4042-b8df-468b3a369cfe.par
+#BlueLink2 Generic VS Commands`Control R1 Tire Sidewall Point, New DM` PBS Tests` , Miscellaneous`GenVS_da5f04aa-aa89-4042-b8df-468b3a369cfe
+
+#MiscYellow1
+L_TIRE_REF = 0.2; ! location of tire ref. point
+#ENDMYellow
+
+#BlueLink7 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink8 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_aeb01166-5cff-44c0-bf80-ba2ecefa95ae.par
+#BlueLink9 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Station` Vehicle Motion` , Plot`Plot_aeb01166-5cff-44c0-bf80-ba2ecefa95ae
+
+PARSFILE Plot\Setup\Plot_594977b2-6177-4d0b-bbd9-a14b81161866.par
+#BlueLink10 Plot: Setup`C7: Swept Path to Left` PBS (Performance Based Standards)` , Plot`Plot_594977b2-6177-4d0b-bbd9-a14b81161866
+
+PARSFILE Plot\Setup\Plot_b6965f71-2d2a-40c1-bf20-b299c8a0d136.par
+#BlueLink11 Plot: Setup`C8(A): Frontal Swing` PBS (Performance Based Standards)` , Plot`Plot_b6965f71-2d2a-40c1-bf20-b299c8a0d136
+
+PARSFILE Plot\Setup\Plot_4b6430c6-cd93-408a-8e7e-2dcec3d5972d.par
+#BlueLink12 Plot: Setup`C8(B,C): Maxima of Trls, Left Turn` PBS (Performance Based Standards)` , Plot`Plot_4b6430c6-cd93-408a-8e7e-2dcec3d5972d
+
+PARSFILE Plot\Setup\Plot_c2f8572e-c4e9-4ec1-acf5-939097f8f0bb.par
+#BlueLink13 Plot: Setup`C9: Tail Swing, Left Turn` PBS (Performance Based Standards)` , Plot`Plot_c2f8572e-c4e9-4ec1-acf5-939097f8f0bb
+
+PARSFILE Plot\Setup\Plot_546c088e-24cb-4b6b-abfd-04215754223f.par
+#BlueLink14 Plot: Setup`C10: Friction Demand (Axle 1)` PBS (Performance Based Standards)` , Plot`Plot_546c088e-24cb-4b6b-abfd-04215754223f
+
+PARSFILE Plot\Setup\Plot_d216ce1a-daa3-48de-ab04-2ccd98c0fdd8.par
+#BlueLink15 Plot: Setup`Lateral Tracking Target` PBS (Performance Based Standards)` , Plot`Plot_d216ce1a-daa3-48de-ab04-2ccd98c0fdd8
+
+PARSFILE Plot\Setup\Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8.par
+#BlueLink16 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8
+
+PARSFILE Plot\Setup\Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f.par
+#BlueLink17 Plot: Setup`Road Wheel Steer (Axle 1)` Steering` , Plot`Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f
+
+
+#EMBEDDED_NOTES
+#This procedure is used for PBS C7, C8, C9, and C10. The vehicle is driven at a low speed (5 km/h or less) through a 90-deg turn with a 12.5-m radius, where the radius applies to the outer edge of the outer front tire.
+#
+#In this implementation, the center of the turn is at global X-Y coordinates (0, 0). The vehicle is initially oriented with a Yaw angle of 90-deg (parallel with the global Y axis). At the end of the turn, the vehicle is travelling parallel with the X axis.
+#
+#The lateral tracking tolerance LatTol can be set in mm. PBS requires 50 mm or less.
+#
+#NOTE on Steer Tire Friction Demand plots: A plot for the Steer Tire Friction Demand for a single steer axle is defined on the Procedures screen. If your vehicle has two front steer axles, please select the plot:
+#
+#C10: Friction Demand (Axles 1 and 2) from the plot Category "PBS (Performance Based Standards)".
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { PBS (Performance Based Standards) } PBS: Low-Spd 12.5m Left Turn, New DM
+#Library : Procedures
+#DataSet : PBS: Low-Spd 12.5m Left Turn, New DM
+#Category: PBS (Performance Based Standards)
+#FileID  : Proc_dc9da3d9-b86a-42ed-9392-b32b639e55d8
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

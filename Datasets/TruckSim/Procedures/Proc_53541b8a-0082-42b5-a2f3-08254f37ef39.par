@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName Procedures`Open Loop Steer Torque: Ramp to Left`Driver Controls
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 10
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 5
+*TSTOP 10
+*TSTART 0
+*SSTART 0
+*SSTOP 300
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Open Loop Steer Torque: Ramp to Left
+SPEED_TARGET_CONSTANT 5
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\SteerTorque\StrTrq_2d18cf0a-f318-4bca-a79e-2452d8cc524e.par
+#BlueLink27 Control: Steering Torque (Open Loop)`Ramp torque: 5 N-m/sec` ` , Steering`StrTrq_2d18cf0a-f318-4bca-a79e-2452d8cc524e
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Roads\3D_Road\Road_1d628bf6-d343-4b53-aab3-6c447711f700.par
+#BlueLink0 Road: 3D Surface (All Properties)`1 km Square, Mu = 0.85` Flat Test Pads` , Miscellaneous`Road_1d628bf6-d343-4b53-aab3-6c447711f700
+
+#BlueLink3 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink8 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_c3bc997f-caac-4c8e-8974-69ef71d2b82c.par
+#BlueLink9 Plot: Setup`Steer Torque` Steering` , Plot`Plot_c3bc997f-caac-4c8e-8974-69ef71d2b82c
+
+PARSFILE Plot\Setup\Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f.par
+#BlueLink10 Plot: Setup`Road Wheel Steer (Axle 1)` Steering` , Plot`Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f
+
+PARSFILE Plot\Setup\Plot_a050e5fc-44ba-40bb-8a76-467c76eb2f63.par
+#BlueLink11 Plot: Setup`Kingpin Torque Vs Road Wheel Angle` Steering` , Plot`Plot_a050e5fc-44ba-40bb-8a76-467c76eb2f63
+
+PARSFILE Plot\Setup\Plot_fb40649e-5709-463b-80ff-4ef7702ceb39.par
+#BlueLink12 Plot: Setup`Steering Wheel Angular Rate` Steering` , Plot`Plot_fb40649e-5709-463b-80ff-4ef7702ceb39
+
+
+#EMBEDDED_NOTES
+#With the vehicle driving slowly, Open Loop steer torque is ramped to encounter the steering stops in a left turn.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driver Controls } Open Loop Steer Torque: Ramp to Left
+#Library : Procedures
+#DataSet : Open Loop Steer Torque: Ramp to Left
+#Category: Driver Controls
+#FileID  : Proc_53541b8a-0082-42b5-a2f3-08254f37ef39
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

@@ -1,0 +1,104 @@
+PARSFILE
+#FullDataName Procedures`Step Steer and Lift Axle 3`Lift Axles
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 20
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*TSTOP 20
+*TSTART 0
+*SSTART 0
+
+OPT_SC 2
+PARSFILE Control\Steer\StrSW_7ad540b8-b96a-4db1-8476-d9723433719d.par
+#BlueLink27 Control: Steering (Open Loop)`Ramp: 0-970-0 deg.` Ramp` , Steering`StrSW_7ad540b8-b96a-4db1-8476-d9723433719d
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_mt\GearOL_79073c18-09a0-4768-ad4c-89abce408b2a.par
+#BlueLink30 Control: Shifting (Open Loop)`Constant: 4th Gear` Constant` , Shifting Control`GearOL_79073c18-09a0-4768-ad4c-89abce408b2a
+
+PARSFILE Control\Speed_t\SpdTime_fa5bab7c-1207-4595-8907-d5a59db77525.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`Constant: 15 km/h` Constant` , Speed vs. time`SpdTime_fa5bab7c-1207-4595-8907-d5a59db77525
+
+PARSFILE Generic\VS_commands\GenVS_62dc7c14-f257-47b5-8d9a-96b17a10ea1a.par
+#BlueLink0 Generic VS Commands`Define Lift Axle Variables & Parameters` Lift Axle` , Miscellaneous`GenVS_62dc7c14-f257-47b5-8d9a-96b17a10ea1a
+
+PARSFILE Generic\VS_commands\GenVS_20a5f1a5-0c19-4984-891f-22edfff02e0f.par
+#BlueLink1 Generic VS Commands`Lift Axle 3` Lift Axle` , Miscellaneous`GenVS_20a5f1a5-0c19-4984-891f-22edfff02e0f
+
+PARSFILE Events\Events_5a7a6e0f-8cb8-42ce-bba6-924ae6ecb3e4.par
+#BlueLink2 Events`A. Initialize Axle 3` Lift Axle 3` , Miscellaneous`Events_5a7a6e0f-8cb8-42ce-bba6-924ae6ecb3e4
+
+PARSFILE Generic\Group\GenGrp_aa29b4a0-5439-4fbb-ad2f-bb4211f7d41f.par
+#BlueLink3 Generic Data Group`3 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_aa29b4a0-5439-4fbb-ad2f-bb4211f7d41f
+
+PARSFILE Roads\3D_Road\Road_1d628bf6-d343-4b53-aab3-6c447711f700.par
+#BlueLink5 Road: 3D Surface (All Properties)`1 km Square, Mu = 0.85` Flat Test Pads` , Miscellaneous`Road_1d628bf6-d343-4b53-aab3-6c447711f700
+
+PARSFILE Plot\Setup\Plot_a8f3095b-0106-492e-b22e-5f661b6ffd49.par
+#BlueLink8 Plot: Setup`Lift Force` Lift Axles` , Plot`Plot_a8f3095b-0106-492e-b22e-5f661b6ffd49
+
+PARSFILE Plot\Setup\Plot_51780582-aed9-41fc-a99a-8484aaa79537.par
+#BlueLink9 Plot: Setup`Fs (Axle 3)` Lift Axles` , Plot`Plot_51780582-aed9-41fc-a99a-8484aaa79537
+
+PARSFILE Plot\Setup\Plot_26dc2eb1-dd9b-4776-8f9f-09208d63924a.par
+#BlueLink10 Plot: Setup`Event Count` Event Control` , Plot`Plot_26dc2eb1-dd9b-4776-8f9f-09208d63924a
+
+PARSFILE Plot\Setup\Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717.par
+#BlueLink11 Plot: Setup`Vertical Forces (Axle 1, Single Tires)` Tire Forces` , Plot`Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717
+
+PARSFILE Plot\Setup\Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9.par
+#BlueLink12 Plot: Setup`Vertical Forces (Axle 2, Dual Tires)` Tire Forces` , Plot`Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9
+
+PARSFILE Plot\Setup\Plot_e644cbac-048b-4565-bf97-13fd3a72dadf.par
+#BlueLink13 Plot: Setup`Vertical Forces (Axle 3, Dual Tires)` Tire Forces` , Plot`Plot_e644cbac-048b-4565-bf97-13fd3a72dadf
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink14 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink15 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987.par
+#BlueLink16 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987
+
+PARSFILE Plot\Setup\Plot_0f94e30b-1c51-4cf8-b8ec-17717ecc3d14.par
+#BlueLink17 Plot: Setup`AVy -- Wheel Spin (Axle 2)` Powertrain` , Plot`Plot_0f94e30b-1c51-4cf8-b8ec-17717ecc3d14
+
+PARSFILE Plot\Setup\Plot_708e5c6a-d6b9-47af-89e0-5b76e3d13d53.par
+#BlueLink18 Plot: Setup`AVy -- Wheel Spin (Axle 3)` Powertrain` , Plot`Plot_708e5c6a-d6b9-47af-89e0-5b76e3d13d53
+
+PARSFILE Plot\Setup\Plot_e7b41872-2b40-4556-aa0d-7e348d4a1a61.par
+#BlueLink19 Plot: Setup`My_Dr -- Wheel Drive Torque (Axle 2)` Powertrain` , Plot`Plot_e7b41872-2b40-4556-aa0d-7e348d4a1a61
+
+
+#EMBEDDED_NOTES
+#This procedure will lift axle #3 during a step steer maneuver at contant speed. The driver controls are set here as usual.
+#
+#The setup is nearly identical to the one used to lift axle #2.
+#
+#To lift the axle, the model is extended with VS Commands which interact with events that are triggered as the run proceeds.
+#
+#A VS Command dataset is used to define variables involved in lifting the axle. These include forces, suspension and spring compressions, and trigger times.
+#
+#A sequence of events is also used to allow the axle lifting to be modeled with extremely simple equations.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Lift Axles } Step Steer and Lift Axle 3
+#Library : Procedures
+#DataSet : Step Steer and Lift Axle 3
+#Category: Lift Axles
+#FileID  : Proc_9aa71add-1163-4c55-8105-bd703b690ea6
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

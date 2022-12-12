@@ -1,0 +1,111 @@
+PARSFILE
+#FullDataName Procedures`ISO 14791 Lane Change, Ay_Target`Stability Tests
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 1
+OPT_STOP 1
+TSTART -4
+SSTART -150
+TSTART_WRITE = 0;
+TSTOP 50
+SSTOP 200
+OPT_DIRECTION 0
+*TSTOP 50
+*TSTART -4
+*SSTART -150
+*SSTOP 200
+
+OPT_SC 2
+PARSFILE Control\Driver\StrDM_9c9fcf5c-a8d9-460f-8f56-9f9bcc8186d6.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`ISO 14791 Lane Change (V = 88, F = 0.40)` Lane Changes` , Steering`StrDM_9c9fcf5c-a8d9-460f-8f56-9f9bcc8186d6
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_t\SpdTime_4c07e85d-b362-4870-8a14-3bd0b25d07a1.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`Constant: 88 km/h` Constant` , Speed vs. time`SpdTime_4c07e85d-b362-4870-8a14-3bd0b25d07a1
+
+#MiscYellow0
+TSTART_WRITE -4 ! don't write until T >= -4
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_1d628bf6-d343-4b53-aab3-6c447711f700.par
+#BlueLink0 Road: 3D Surface (All Properties)`1 km Square, Mu = 0.85` Flat Test Pads` , Miscellaneous`Road_1d628bf6-d343-4b53-aab3-6c447711f700
+
+PARSFILE Generic\VS_commands\GenVS_c100699a-4241-4ba8-8fe4-a19c0647bc54.par
+#BlueLink2 Generic VS Commands`PBS: Lat Tracking Error of Driver Model` PBS Tests` , Miscellaneous`GenVS_c100699a-4241-4ba8-8fe4-a19c0647bc54
+
+PARSFILE Generic\VS_commands\GenVS_5b708433-1870-4629-b665-174830fc450d.par
+#BlueLink4 Generic VS Commands`Plots: Tire Vertical Forces, 5 Axles` Plot Groups` , Miscellaneous`GenVS_5b708433-1870-4629-b665-174830fc450d
+
+#MiscYellow1
+DEFINE_PARAMETER AY_TARGET = 0.15; g ; ...
+  Target Ay used to scale lateral offset target
+LTARG_GAIN AY_TARGET
+#ENDMYellow
+
+PARSFILE Calculator\Symbolic\Calc_942d25e8-46df-4e3a-9741-f3d44147d1aa.par
+#BlueLink34 Calculator: Symbolic`ISO 14791 Lane Change` Steering` , Miscellaneous`Calc_942d25e8-46df-4e3a-9741-f3d44147d1aa
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink9 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f.par
+#BlueLink10 Plot: Setup`Road Wheel Steer (Axle 1)` Steering` , Plot`Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f
+
+PARSFILE Plot\Setup\Plot_8aa6411f-4f0f-45db-b32c-d612009087f2.par
+#BlueLink11 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8aa6411f-4f0f-45db-b32c-d612009087f2
+
+PARSFILE Plot\Setup\Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5.par
+#BlueLink14 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5
+
+PARSFILE Plot\Setup\Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987.par
+#BlueLink15 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987
+
+PARSFILE Plot\Setup\Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1.par
+#BlueLink16 Plot: Setup`Yaw Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1
+
+PARSFILE Plot\Setup\Plot_38af2fee-b452-4e50-bfca-9012303b5e16.par
+#BlueLink17 Plot: Setup`Yaw Rate of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_38af2fee-b452-4e50-bfca-9012303b5e16
+
+PARSFILE Plot\Setup\Plot_81c8c42b-9ac3-40b7-97e4-dc8955b88f41.par
+#BlueLink18 Plot: Setup`Trajectories of Axle Centers (11A)` PBS (Performance Based Standards)` , Plot`Plot_81c8c42b-9ac3-40b7-97e4-dc8955b88f41
+
+PARSFILE Plot\Setup\Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9.par
+#BlueLink19 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9
+
+PARSFILE Plot\Setup\Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a.par
+#BlueLink20 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a
+
+PARSFILE Plot\Setup\Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8.par
+#BlueLink21 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8
+
+
+#EMBEDDED_NOTES
+#This procedure sets up the ISO 14791 lane change maneuver. It is nearly identical to the one used for the PBS tests, with the exception of some plot layouts.
+#
+#Speed is 88 km/h and a single lane change is defined as a target for the TruckSim closed-loop steer controller. The lane change is scaled for the target speed (88 km/h), a frequency of 0.4 Hz, and a lateral acceleration of 1 m/s2 (the intention is to scale the waveform to match a target acceleration level).
+#
+#The lane change amplitude is scaled to match a new parameter AY_TARGET, which is specified with units of g's. (The specification in C12 is 0.15 g's.)
+#
+#PBS C12 specifies that the driver tracking error be less than 30 mm. A new output variable is defined with a VS Command and plotted.
+#
+#A calculator dataset is linked from this dataset. The Calculator Parsfile will not be used by the math model, but is linked so it can be easily found.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Stability Tests } ISO 14791 Lane Change, Ay_Target
+#Library : Procedures
+#DataSet : ISO 14791 Lane Change, Ay_Target
+#Category: Stability Tests
+#FileID  : Proc_6b0c2d02-baf9-4f50-b629-90ed28faf0d9
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

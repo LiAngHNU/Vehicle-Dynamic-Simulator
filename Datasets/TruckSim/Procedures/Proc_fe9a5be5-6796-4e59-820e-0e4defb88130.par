@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName Procedures`3-Way Intersection, Signals`Road Networks
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART -125
+TSTART_WRITE = 0;
+TSTOP 22
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*TSTOP 22
+*TSTART 0
+*SSTART -125
+
+PARSFILE Control\Driver\StrDM_a262ba15-ecad-408d-b250-f9d161df439b.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`90 deg corner @ S=0, Variable Preview` ` , Steering`StrDM_a262ba15-ecad-408d-b250-f9d161df439b
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_path\SpdPath_15d13c88-577c-486c-a5cf-c0652c815e86.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.15/0.2 G Max Ax/Ay, SPEED_LIMIT_ID` Intersections` , Speed vs. station`SpdPath_15d13c88-577c-486c-a5cf-c0652c815e86
+
+#MiscYellow0
+define_parameter Sidewalk = 2025; -; Road ID for Sidewalk
+#ENDMYellow
+
+PARSFILE Generic\Links\GenLink_69d515e3-02d3-4f69-92ae-f45d5a97966e.par
+#BlueLink0 Generic Group of Links`3-Way Intersection, Curbs` Roads and Paths` , Miscellaneous`GenLink_69d515e3-02d3-4f69-92ae-f45d5a97966e
+
+PARSFILE Roads\3D_Road\Road_8652d4eb-cbd6-4e9a-860d-4a2713f12b1b.par
+#BlueLink1 Road: 3D Surface (All Properties)`Sidewalk for Pedestrians` Intersection, 3D Roads with Curbs` , Miscellaneous`Road_8652d4eb-cbd6-4e9a-860d-4a2713f12b1b
+
+PARSFILE Sensors_Traffic\Targets\Target_13e9be58-d9fc-4245-817a-5416e2ec3ddd.par
+#BlueLink4 Single Moving Object (Custom)`Bus Stop` Scene Props` , Miscellaneous`Target_13e9be58-d9fc-4245-817a-5416e2ec3ddd
+
+PARSFILE Sensors_Traffic\Targets\Target_0207513a-047d-4973-b52b-0dbedd1ba3d3.par
+#BlueLink5 Single Moving Object (Custom)`Potted Plant` Scene Props` , Miscellaneous`Target_0207513a-047d-4973-b52b-0dbedd1ba3d3
+
+#MiscYellow1
+ ! start fraction of signal cycle, 0 - 1
+R_SIG_START = 0.12
+#ENDMYellow
+
+PARSFILE Generic\Group\GenGrp_3c264a17-54b6-4731-86be-dd743e5bd32b.par
+#BlueLink7 Generic Data Group`Traffic Lights for 3-way` Traffic Lights` , Miscellaneous`GenGrp_3c264a17-54b6-4731-86be-dd743e5bd32b
+
+PARSFILE Plot\Setup\Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5.par
+#BlueLink8 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5
+
+PARSFILE Generic\VS_commands\GenVS_6e790403-fd3d-4ff5-b250-347ef7b5775f.par
+#BlueLink18 Generic VS Commands`Velocity and Position` Plot Groups` , Plot`GenVS_6e790403-fd3d-4ff5-b250-347ef7b5775f
+
+PARSFILE Generic\VS_commands\GenVS_8f7411b8-c46e-45ca-8259-b31bc7af7dd3.par
+#BlueLink19 Generic VS Commands`Acceleration` Plot Groups` , Plot`GenVS_8f7411b8-c46e-45ca-8259-b31bc7af7dd3
+
+PARSFILE Generic\VS_commands\GenVS_15d12b66-6ebc-47ba-9159-7082dd3daecc.par
+#BlueLink20 Generic VS Commands`Driver Controls` Plot Groups` , Plot`GenVS_15d12b66-6ebc-47ba-9159-7082dd3daecc
+
+
+#EMBEDDED_NOTES
+#This procedure contains the basic set up used in an example where the ego vehicle detects and responds to a traffic signal and then extends it by:
+#-Including scene props
+#-Extending the road surface to contain a sidewalk
+#-Relocating the objects and control code for the traffic signals into the procedure
+#
+#The traffic lights are timed such that the total cycle is 30 seconds long:
+#Green: 10 seconds
+#Yellow: 3 seconds
+#Red: 17 seconds
+#The initial timing of the light is then adjusted using the parameter R_SIG_START to indicate where the light is at in the cycle when T=0.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Road Networks } 3-Way Intersection, Signals
+#Library : Procedures
+#DataSet : 3-Way Intersection, Signals
+#Category: Road Networks
+#FileID  : Proc_fe9a5be5-6796-4e59-820e-0e4defb88130
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

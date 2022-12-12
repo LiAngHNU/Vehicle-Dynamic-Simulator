@@ -1,0 +1,106 @@
+PARSFILE
+#FullDataName Procedures`0-60-0kmh, Event control, MT`Acceleration and Braking
+#CheckBox3 0    
+
+#RingCtrl0 0
+#RingCtrl1 -1
+#RingCtrl2 0
+OPT_STOP -1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+TSTOP -1
+*SPEED 0
+*TSTOP 80
+*TSTART 0
+*SSTART 0
+*SSTOP 1200
+
+OPT_SC 0
+SV_VXS 0
+PARSFILE Control\Driver\StrDM_9b35f18a-5c59-4a9a-8de1-61f2a3df1a3d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`Variable Speed Preview` Constant Position: No Offset` , Steering`StrDM_9b35f18a-5c59-4a9a-8de1-61f2a3df1a3d
+
+PARSFILE Control\Braking\PbkCon_2541c6e5-6d6c-48d8-9a2d-b0518f7baf1a.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 1.5 MPa` Constant` , Braking`PbkCon_2541c6e5-6d6c-48d8-9a2d-b0518f7baf1a
+
+PARSFILE Control\Gear_mt\GearOL_b732302a-f9da-44f3-b13d-20c763a90262.par
+#BlueLink30 Control: Shifting (Open Loop)`Neutral (No Clutch)` Constant` , Shifting Control`GearOL_b732302a-f9da-44f3-b13d-20c763a90262
+
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink29 Control: Throttle (Open Loop)`Constant: 0` Constant` , Throttle`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+PARSFILE Roads\3D_Road\Road_2e34e7d3-881b-407b-bafc-33e033c41e78.par
+#BlueLink0 Road: 3D Surface (All Properties)`1200 m, One Lane, Mu = 0.85 (No Trees)` Straight` , Miscellaneous`Road_2e34e7d3-881b-407b-bafc-33e033c41e78
+
+PARSFILE Events\Events_8d30c96f-4cee-4514-a90e-829b016c4725.par
+#BlueLink1 Events`A. Idle` Accel. then Brake: 0 - 60 - 0 km/h, MT` , Miscellaneous`Events_8d30c96f-4cee-4514-a90e-829b016c4725
+
+PARSFILE Plot\Setup\Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd.par
+#BlueLink8 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd
+
+PARSFILE Plot\Setup\Plot_27ad32d4-9ff0-4701-9d4d-99a04a7ff85b.par
+#BlueLink9 Plot: Setup`Clutch: Control Input` Controls: Driver` , Plot`Plot_27ad32d4-9ff0-4701-9d4d-99a04a7ff85b
+
+PARSFILE Plot\Setup\Plot_536a6a4d-647d-4eb4-b11f-664addaec88a.par
+#BlueLink10 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_536a6a4d-647d-4eb4-b11f-664addaec88a
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink12 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_92c3bffb-a766-4f7d-9f5e-73059542ee31.par
+#BlueLink13 Plot: Setup`Engine RPM` Powertrain` , Plot`Plot_92c3bffb-a766-4f7d-9f5e-73059542ee31
+
+PARSFILE Plot\Setup\Plot_0aff382f-c589-4818-8024-b7e9c0e473fd.par
+#BlueLink14 Plot: Setup`Engine Torque` Powertrain` , Plot`Plot_0aff382f-c589-4818-8024-b7e9c0e473fd
+
+PARSFILE Plot\Setup\Plot_aa77d7a2-fb18-4996-b944-5979008881bb.par
+#BlueLink16 Plot: Setup`Wheel Speeds (Axle 1)` Braking` , Plot`Plot_aa77d7a2-fb18-4996-b944-5979008881bb
+
+PARSFILE Plot\Setup\Plot_1c0dec72-d188-4bc9-8a1d-140ce331bc21.par
+#BlueLink17 Plot: Setup`Wheel Speeds (Axle 2)` Braking` , Plot`Plot_1c0dec72-d188-4bc9-8a1d-140ce331bc21
+
+PARSFILE Plot\Setup\Plot_0d877c71-32cd-4d2d-bce7-f7df3e59148c.par
+#BlueLink18 Plot: Setup`Vx -- Wheel Speeds (All)` Braking` , Plot`Plot_0d877c71-32cd-4d2d-bce7-f7df3e59148c
+
+PARSFILE Plot\Setup\Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806.par
+#BlueLink20 Plot: Setup`Brake Control: Master Cyl. Pressure` Braking` , Plot`Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806
+
+PARSFILE Plot\Setup\Plot_d521d9f1-e118-423c-ad9b-621567dc97ab.par
+#BlueLink21 Plot: Setup`Wheel Cylinder Pressures (Axle 1)` Braking` , Plot`Plot_d521d9f1-e118-423c-ad9b-621567dc97ab
+
+PARSFILE Plot\Setup\Plot_b5e7c87f-1521-41d2-9fa4-a880f7e64c51.par
+#BlueLink22 Plot: Setup`Wheel Cylinder Pressures (Axle 2)` Braking` , Plot`Plot_b5e7c87f-1521-41d2-9fa4-a880f7e64c51
+
+PARSFILE Plot\Setup\Plot_e7b41872-2b40-4556-aa0d-7e348d4a1a61.par
+#BlueLink23 Plot: Setup`My_Dr -- Wheel Drive Torque (Axle 2)` Powertrain` , Plot`Plot_e7b41872-2b40-4556-aa0d-7e348d4a1a61
+
+PARSFILE Plot\Setup\Plot_2dd86413-3798-4048-b033-f592b39de27f.par
+#BlueLink24 Plot: Setup`My_Dr -- Wheel Drive Torque (Axle 3)` Powertrain` , Plot`Plot_2dd86413-3798-4048-b033-f592b39de27f
+
+PARSFILE Plot\Setup\Plot_26dc2eb1-dd9b-4776-8f9f-09208d63924a.par
+#BlueLink25 Plot: Setup`Event Count` Event Control` , Plot`Plot_26dc2eb1-dd9b-4776-8f9f-09208d63924a
+
+PARSFILE Plot\Setup\Plot_833f3e25-4cf4-4bb0-9a6a-ff07efcd5306.par
+#BlueLink26 Plot: Setup`Event Elapsed Time` Event Control` , Plot`Plot_833f3e25-4cf4-4bb0-9a6a-ff07efcd5306
+
+
+#EMBEDDED_NOTES
+#Procedure for an acceleration and braking test on a straight, flat road.
+#
+#Events are used to control the test details.
+#
+#The Events linked to this Procedure are set up to account for heavier vehicles with manual transmissions, such that the throttle, shifting, and clutch actuation take place over longer periods of time.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Acceleration and Braking } 0-60-0kmh, Event control, MT
+#Library : Procedures
+#DataSet : 0-60-0kmh, Event control, MT
+#Category: Acceleration and Braking
+#FileID  : Proc_5d3d5ca1-ce46-474b-a08f-4be0b015c6fb
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

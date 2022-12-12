@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName Procedures`DLC w/ Path Preview Speed Control`Driver Controls
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 20
+SSTOP 300
+OPT_DIRECTION 0
+*SPEED 50
+*TSTOP 20
+*TSTART 0
+*SSTART 0
+*SSTOP 300
+
+PARSFILE Control\Driver\StrDM_a20c224e-d1a6-444a-b806-f534ac8456d3.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`Double Lane Change (Quick Start)` Vehicle Dynamics Tests` , Steering`StrDM_a20c224e-d1a6-444a-b806-f534ac8456d3
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_path\SpdPath_b525f579-b67b-4db2-8cca-9d4215c6901d.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.2/0.2 G Max Ax/Ay, 100 km/h` Highway Driving` , Speed vs. station`SpdPath_b525f579-b67b-4db2-8cca-9d4215c6901d
+
+PARSFILE Roads\3D_Road\Road_744e2383-c1fd-46f8-b6d4-e3ae9a3b8ba3.par
+#BlueLink0 Road: 3D Surface (All Properties)`Double Lane Change` Flat Test Pads` , Miscellaneous`Road_744e2383-c1fd-46f8-b6d4-e3ae9a3b8ba3
+
+PARSFILE Plot\Setup\Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9.par
+#BlueLink8 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9
+
+PARSFILE Plot\Setup\Plot_f3a092b2-bb19-4758-b72a-a5ec9414f452.par
+#BlueLink9 Plot: Setup`Steering Wheel Angle vs. Station` Steering` , Plot`Plot_f3a092b2-bb19-4758-b72a-a5ec9414f452
+
+PARSFILE Plot\Setup\Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f.par
+#BlueLink10 Plot: Setup`Road Wheel Steer (Axle 1)` Steering` , Plot`Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f
+
+PARSFILE Plot\Setup\Plot_60033996-0231-49e9-9009-99c91c6106ea.par
+#BlueLink11 Plot: Setup`Slip Angles (Axles 1 - 4)` Tire Kinematics` , Plot`Plot_60033996-0231-49e9-9009-99c91c6106ea
+
+PARSFILE Plot\Setup\Plot_8aa6411f-4f0f-45db-b32c-d612009087f2.par
+#BlueLink12 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8aa6411f-4f0f-45db-b32c-d612009087f2
+
+PARSFILE Plot\Setup\Plot_6ab65115-f524-4f04-aecb-33140a974c8d.par
+#BlueLink13 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_6ab65115-f524-4f04-aecb-33140a974c8d
+
+PARSFILE Plot\Setup\Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5.par
+#BlueLink14 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5
+
+PARSFILE Plot\Setup\Plot_38af2fee-b452-4e50-bfca-9012303b5e16.par
+#BlueLink15 Plot: Setup`Yaw Rate of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_38af2fee-b452-4e50-bfca-9012303b5e16
+
+PARSFILE Plot\Setup\Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717.par
+#BlueLink16 Plot: Setup`Vertical Forces (Axle 1, Single Tires)` Tire Forces` , Plot`Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717
+
+PARSFILE Plot\Setup\Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9.par
+#BlueLink17 Plot: Setup`Vertical Forces (Axle 2, Dual Tires)` Tire Forces` , Plot`Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink18 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806.par
+#BlueLink19 Plot: Setup`Brake Control: Master Cyl. Pressure` Braking` , Plot`Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806
+
+
+#EMBEDDED_NOTES
+#The "Target speed from path preview" calculates a speed target over a specifed preview distance, to maintain the lateral and longitudinal acceleration with specified limits.
+#
+#Control over throttle, brakes, and steering is still accomplished through the TruckSim closed loop speed controller and closed loop path follower steering controller.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driver Controls } DLC w/ Path Preview Speed Control
+#Library : Procedures
+#DataSet : DLC w/ Path Preview Speed Control
+#Category: Driver Controls
+#FileID  : Proc_f5034a68-2468-4d21-ad69-c03e0f999e28
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

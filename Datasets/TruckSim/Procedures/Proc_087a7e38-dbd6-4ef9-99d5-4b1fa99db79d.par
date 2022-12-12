@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Procedures`Multiple Vehicles (Controls + Setup)`Multi-Vehicle
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 25
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*TSTOP 25
+*TSTART 0
+*SSTART 0
+
+PARSFILE Control\Driver\StrDM_d6ef0cdf-9013-413f-9faf-2dea378db470.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.75s Single Preview` Constant Position: No Offset` , Steering`StrDM_d6ef0cdf-9013-413f-9faf-2dea378db470
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_path\SpdPath_15d13c88-577c-486c-a5cf-c0652c815e86.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.15/0.2 G Max Ax/Ay, SPEED_LIMIT_ID` Intersections` , Speed vs. station`SpdPath_15d13c88-577c-486c-a5cf-c0652c815e86
+
+#MiscYellow0
+SPEED_TARGET_CONSTANT 25;mi/h
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_d86cad40-422c-4b29-9281-308519eeeae7.par
+#BlueLink0 Road: 3D Surface (All Properties)`City Intersection` VS Scene Builder` , Miscellaneous`Road_d86cad40-422c-4b29-9281-308519eeeae7
+
+PARSFILE Roads\BuilderSegment\RoadSeg_2ba2b3d8-b547-4d13-9aa8-77992451bc9e.par
+#BlueLink1 Path: Segment Builder`Straight North, ID = 9998` Straight` , Miscellaneous`RoadSeg_2ba2b3d8-b547-4d13-9aa8-77992451bc9e
+
+PARSFILE Generic\Group\GenGrp_5f7ca4b7-7beb-4179-b6e3-d24f7b131265.par
+#BlueLink2 Generic Data Group`City: Signs, Pedestrians, Buildings` ADAS: Traffic Scenarios` , Miscellaneous`GenGrp_5f7ca4b7-7beb-4179-b6e3-d24f7b131265
+
+#MiscYellow1
+SSTART 80 ! override settings for vehicle 1
+path_id_dm 1000
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Procedures; { Multi-Vehicle } Multiple Vehicles (Controls + Setup)
+#Library : Procedures
+#DataSet : Multiple Vehicles (Controls + Setup)
+#Category: Multi-Vehicle
+#FileID  : Proc_087a7e38-dbd6-4ef9-99d5-4b1fa99db79d
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

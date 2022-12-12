@@ -1,0 +1,100 @@
+PARSFILE
+#FullDataName Procedures`Opt_Engine_Running: AT`Event Triggered Tests
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 60
+SSTOP 1200
+OPT_DIRECTION 0
+*SPEED 30
+*TSTOP 60
+*TSTART 0
+*SSTART 0
+*SSTOP 1200
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Opt_Engine_Running: AT
+SPEED_TARGET_CONSTANT 30
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.6s Single Preview` Constant Position: No Offset` , Steering`StrDM_e2398fab-b956-498b-8858-93e89178bdf3
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Roads\3D_Road\Road_2e34e7d3-881b-407b-bafc-33e033c41e78.par
+#BlueLink0 Road: 3D Surface (All Properties)`1200 m, One Lane, Mu = 0.85 (No Trees)` Straight` , Miscellaneous`Road_2e34e7d3-881b-407b-bafc-33e033c41e78
+
+#MiscYellow1
+define_parameter Throt_Ref = 0; 
+! Throttle to be saved just before engine is turned off
+define_output ThrotRef = Throt_Ref; ! New output variable for plotting
+#ENDMYellow
+
+PARSFILE Events\Events_3f20d672-84f5-4e46-a480-e0843bebb44c.par
+#BlueLink7 Events`A. Wait 2.5 sec.` Opt_Engine_Running: Auto. Transmission` , Miscellaneous`Events_3f20d672-84f5-4e46-a480-e0843bebb44c
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806.par
+#BlueLink9 Plot: Setup`Brake Control: Master Cyl. Pressure` Braking` , Plot`Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806
+
+PARSFILE Plot\Setup\Plot_91ab6bcb-fca9-47d0-b273-653967e414cb.par
+#BlueLink11 Plot: Setup`Opt_Engine_Running` Powertrain` , Plot`Plot_91ab6bcb-fca9-47d0-b273-653967e414cb
+
+PARSFILE Plot\Setup\Plot_53787166-e912-49ab-92dd-4f3790212b1a.par
+#BlueLink12 Plot: Setup`Throt_Ref` Controls: Driver` , Plot`Plot_53787166-e912-49ab-92dd-4f3790212b1a
+
+PARSFILE Plot\Setup\Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd.par
+#BlueLink13 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd
+
+PARSFILE Plot\Setup\Plot_92c3bffb-a766-4f7d-9f5e-73059542ee31.par
+#BlueLink14 Plot: Setup`Engine RPM` Powertrain` , Plot`Plot_92c3bffb-a766-4f7d-9f5e-73059542ee31
+
+PARSFILE Plot\Setup\Plot_0aff382f-c589-4818-8024-b7e9c0e473fd.par
+#BlueLink15 Plot: Setup`Engine Torque` Powertrain` , Plot`Plot_0aff382f-c589-4818-8024-b7e9c0e473fd
+
+PARSFILE Plot\Setup\Plot_536a6a4d-647d-4eb4-b11f-664addaec88a.par
+#BlueLink16 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_536a6a4d-647d-4eb4-b11f-664addaec88a
+
+PARSFILE Plot\Setup\Plot_e7b41872-2b40-4556-aa0d-7e348d4a1a61.par
+#BlueLink17 Plot: Setup`My_Dr -- Wheel Drive Torque (Axle 2)` Powertrain` , Plot`Plot_e7b41872-2b40-4556-aa0d-7e348d4a1a61
+
+PARSFILE Plot\Setup\Plot_26dc2eb1-dd9b-4776-8f9f-09208d63924a.par
+#BlueLink18 Plot: Setup`Event Count` Event Control` , Plot`Plot_26dc2eb1-dd9b-4776-8f9f-09208d63924a
+
+PARSFILE Plot\Setup\Plot_833f3e25-4cf4-4bb0-9a6a-ff07efcd5306.par
+#BlueLink19 Plot: Setup`Event Elapsed Time` Event Control` , Plot`Plot_833f3e25-4cf4-4bb0-9a6a-ff07efcd5306
+
+
+#EMBEDDED_NOTES
+#Procedure and Events to demonstrate the use of the powertrain control parameter Opt_Engine_Running for a vehicle equipped with an Automatic Transmission.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Event Triggered Tests } Opt_Engine_Running: AT
+#Library : Procedures
+#DataSet : Opt_Engine_Running: AT
+#Category: Event Triggered Tests
+#FileID  : Proc_d2c2fcc0-e4a2-49b2-a2aa-fd79da1b4fe1
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

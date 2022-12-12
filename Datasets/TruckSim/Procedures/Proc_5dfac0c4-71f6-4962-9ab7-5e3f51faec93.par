@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName Procedures`Accel. then Brake (HEV)`Acceleration and Braking
+#CheckBox3 0    
+
+#RingCtrl0 0
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 30
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 0
+*TSTOP 30
+*TSTART 0
+*SSTART 0
+
+OPT_SC 0
+SV_VXS 0
+PARSFILE Control\Driver\StrDM_d6ef0cdf-9013-413f-9faf-2dea378db470.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.75s Single Preview` Constant Position: No Offset` , Steering`StrDM_d6ef0cdf-9013-413f-9faf-2dea378db470
+
+PARSFILE Control\Braking\PbkCon_bc072696-9f98-403e-8585-3fb4d0a3edd3.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Step: 1.5 MPa at 20 sec.` Step` , Braking`PbkCon_bc072696-9f98-403e-8585-3fb4d0a3edd3
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Throttle\Throttle_5c752adf-188e-47b0-86d2-8c49dcb5f081.par
+#BlueLink29 Control: Throttle (Open Loop)`Ramp to 0.65 in 15 sec., then Zero` Throttle Apply and Release` , Throttle`Throttle_5c752adf-188e-47b0-86d2-8c49dcb5f081
+
+PARSFILE Roads\3D_Road\Road_cd208c12-717f-4de2-ac1a-ef13b779076c.par
+#BlueLink0 Road: 3D Surface (All Properties)`1200 m, One Lane, Mu = 0.9` Straight` , Miscellaneous`Road_cd208c12-717f-4de2-ac1a-ef13b779076c
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806.par
+#BlueLink9 Plot: Setup`Brake Control: Master Cyl. Pressure` Braking` , Plot`Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806
+
+PARSFILE Plot\Setup\Plot_096991e2-726a-4c37-b0ec-6bfbcc66e0c9.par
+#BlueLink10 Plot: Setup`Torques in Hybrid Powertrain` Powertrain (Hybrid)` , Plot`Plot_096991e2-726a-4c37-b0ec-6bfbcc66e0c9
+
+PARSFILE Plot\Setup\Plot_77579fdf-3ebb-43be-9ef8-4418316c886a.par
+#BlueLink11 Plot: Setup`Spin Rates in Hybrid Powertrain` Powertrain (Hybrid)` , Plot`Plot_77579fdf-3ebb-43be-9ef8-4418316c886a
+
+PARSFILE Plot\Setup\Plot_07737336-620f-4fa5-baca-5458abaf7d80.par
+#BlueLink12 Plot: Setup`Powers in Hybrid Powertrain` Powertrain (Hybrid)` , Plot`Plot_07737336-620f-4fa5-baca-5458abaf7d80
+
+PARSFILE Plot\Setup\Plot_f04a944d-07f4-45a4-b417-57ea1d7f7463.par
+#BlueLink13 Plot: Setup`Hybrid powertrain mode` Powertrain (Hybrid)` , Plot`Plot_f04a944d-07f4-45a4-b417-57ea1d7f7463
+
+PARSFILE Plot\Setup\Plot_4445b244-c3e7-43a0-a5f5-85a967aa04e4.par
+#BlueLink14 Plot: Setup`Battery current` Powertrain (Hybrid)` , Plot`Plot_4445b244-c3e7-43a0-a5f5-85a967aa04e4
+
+PARSFILE Plot\Setup\Plot_b837ff0c-b61c-4741-af66-a50fa6d378da.par
+#BlueLink15 Plot: Setup`Battery voltage` Powertrain (Hybrid)` , Plot`Plot_b837ff0c-b61c-4741-af66-a50fa6d378da
+
+PARSFILE Plot\Setup\Plot_d6487ae9-6a55-4d34-ad8b-ceb6cf721e3f.par
+#BlueLink16 Plot: Setup`Battery remaining level` Powertrain (Hybrid)` , Plot`Plot_d6487ae9-6a55-4d34-ad8b-ceb6cf721e3f
+
+PARSFILE Plot\Setup\Plot_49162719-e05b-4946-b09a-e5f7b94d12ef.par
+#BlueLink17 Plot: Setup`Battery efficiency` Powertrain (Hybrid)` , Plot`Plot_49162719-e05b-4946-b09a-e5f7b94d12ef
+
+PARSFILE Plot\Setup\Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd.par
+#BlueLink18 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd
+
+PARSFILE Plot\Setup\Plot_99e48c5c-b21e-4b39-b8ec-6aa8f61b800b.par
+#BlueLink19 Plot: Setup`Fuel Consumed (gallon)` Powertrain (Hybrid)` , Plot`Plot_99e48c5c-b21e-4b39-b8ec-6aa8f61b800b
+
+PARSFILE Plot\Setup\Plot_033b13aa-a635-4ea4-a1b3-cebbfea1b76b.par
+#BlueLink20 Plot: Setup`Miles per gallon` Powertrain (Hybrid)` , Plot`Plot_033b13aa-a635-4ea4-a1b3-cebbfea1b76b
+
+
+#EMBEDDED_NOTES
+#Procedure for an acceleration and braking test on a straight, flat road using open-loop throttle and brake controls.
+#
+#The steering control is set to be open-loop angle vs. time, with a constant value of 0 degrees.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Acceleration and Braking } Accel. then Brake (HEV)
+#Library : Procedures
+#DataSet : Accel. then Brake (HEV)
+#Category: Acceleration and Braking
+#FileID  : Proc_5dfac0c4-71f6-4962-9ab7-5e3f51faec93
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

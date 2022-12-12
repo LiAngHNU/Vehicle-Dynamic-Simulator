@@ -1,0 +1,96 @@
+PARSFILE
+#FullDataName Procedures`PBS C3: Acceleration Capability`PBS (Performance Based Standards)
+#CheckBox3 0    
+
+#RingCtrl0 0
+#RingCtrl1 1
+OPT_STOP 1
+TSTART -5
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 29
+SSTOP 110
+OPT_DIRECTION 0
+*SPEED 0
+*TSTOP 29
+*TSTART -5
+*SSTART 0
+*SSTOP 110
+
+OPT_SC 0
+SV_VXS 0
+PARSFILE Control\Driver\StrDM_a737139e-1613-4e8f-ba4a-ba3367485e5f.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`1s Preview, 30 km/h Limit` Constant Position: No Offset` , Steering`StrDM_a737139e-1613-4e8f-ba4a-ba3367485e5f
+
+PARSFILE Control\Braking\PbkCon_23a66c97-9f41-408f-936f-da3b3e745d1f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 3 MPa` Constant` , Braking`PbkCon_23a66c97-9f41-408f-936f-da3b3e745d1f
+
+PARSFILE Control\Gear_mt\GearOL_50b447c5-c4f2-460e-9b7c-e28c38fc7164.par
+#BlueLink30 Control: Shifting (Open Loop)`Neutral w/ Clutch Disengaged` Constant` , Shifting Control`GearOL_50b447c5-c4f2-460e-9b7c-e28c38fc7164
+
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink29 Control: Throttle (Open Loop)`Constant: 0` Constant` , Throttle`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+TSTART_WRITE 0
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_785d0811-2951-4dcc-b9bb-5c807572493e.par
+#BlueLink0 Road: 3D Surface (All Properties)`PBS: 0% Grade` PBS Tests` , Miscellaneous`Road_785d0811-2951-4dcc-b9bb-5c807572493e
+
+PARSFILE Generic\Links\GenLink_6489ba5c-7dd8-488d-bccd-3e15cdbc4a26.par
+#BlueLink1 Generic Group of Links`PBS: C3 Target Distances` PBS: C3 Target Distances` , Miscellaneous`GenLink_6489ba5c-7dd8-488d-bccd-3e15cdbc4a26
+
+PARSFILE Events\Events_410ef534-76e6-4a7f-9879-0dd363f8e040.par
+#BlueLink7 Events`A. PBS C3: Wait to Accelerate` PBS  C3: Acceleration` , Miscellaneous`Events_410ef534-76e6-4a7f-9879-0dd363f8e040
+
+PARSFILE Plot\Setup\Plot_6ab65115-f524-4f04-aecb-33140a974c8d.par
+#BlueLink8 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_6ab65115-f524-4f04-aecb-33140a974c8d
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink9 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd.par
+#BlueLink13 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd
+
+PARSFILE Plot\Setup\Plot_3f53ad8f-9c1d-4fd2-a4f4-f5f1fb1b1662.par
+#BlueLink14 Plot: Setup`My_Dr (Wheel Drive Torques, Lead Unit)` Powertrain` , Plot`Plot_3f53ad8f-9c1d-4fd2-a4f4-f5f1fb1b1662
+
+PARSFILE Plot\Setup\Plot_b8614b7c-dc02-4f0e-b723-a961bf595f50.par
+#BlueLink15 Plot: Setup`Torques in Powertrain` Powertrain` , Plot`Plot_b8614b7c-dc02-4f0e-b723-a961bf595f50
+
+PARSFILE Plot\Setup\Plot_536a6a4d-647d-4eb4-b11f-664addaec88a.par
+#BlueLink16 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_536a6a4d-647d-4eb4-b11f-664addaec88a
+
+PARSFILE Plot\Setup\Plot_658b05a2-13e0-452f-8383-4ad65ca274c9.par
+#BlueLink17 Plot: Setup`Spin Rates in Powertrain` Powertrain` , Plot`Plot_658b05a2-13e0-452f-8383-4ad65ca274c9
+
+PARSFILE Plot\Setup\Plot_92c3bffb-a766-4f7d-9f5e-73059542ee31.par
+#BlueLink18 Plot: Setup`Engine RPM` Powertrain` , Plot`Plot_92c3bffb-a766-4f7d-9f5e-73059542ee31
+
+PARSFILE Plot\Setup\Plot_0aff382f-c589-4818-8024-b7e9c0e473fd.par
+#BlueLink19 Plot: Setup`Engine Torque` Powertrain` , Plot`Plot_0aff382f-c589-4818-8024-b7e9c0e473fd
+
+PARSFILE Plot\Setup\Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a.par
+#BlueLink26 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a
+
+
+#EMBEDDED_NOTES
+#PBS C3 is an acceleration test. Starting from zero speed, the distance vs. time from the test is compared to reference distance vs. time plots that are functions of the PBS vehicle class (levels 1 - 4).
+#
+#The vehicle is stationary until it's time to write to file at T = 0 seconds. The throttle is then engaged and the clock is started for comparison with the target distances.
+#
+#The run ends when the vehicle has travelled 110 m, or when the clock hits 29 seconds (the PBS tables cover 29 seconds).
+#
+#New output variables are defined with VS Commands for the targets and the distance travelled by the vehicle during the test.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { PBS (Performance Based Standards) } PBS C3: Acceleration Capability
+#Library : Procedures
+#DataSet : PBS C3: Acceleration Capability
+#Category: PBS (Performance Based Standards)
+#FileID  : Proc_f4caf01f-6e00-41e7-9e5a-cc89837ea77e
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

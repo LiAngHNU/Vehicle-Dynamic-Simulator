@@ -1,0 +1,109 @@
+PARSFILE
+#FullDataName Procedures`Straight Driving, Constant Speed`Driving
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 30
+SSTOP 1200
+OPT_DIRECTION 0
+*SPEED 50
+*TSTOP 30
+*TSTART 0
+*SSTART 0
+*SSTOP 1200
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Straight Driving, Constant Speed
+SPEED_TARGET_CONSTANT 50
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.6s Single Preview` Constant Position: No Offset` , Steering`StrDM_e2398fab-b956-498b-8858-93e89178bdf3
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Roads\3D_Road\Road_2e34e7d3-881b-407b-bafc-33e033c41e78.par
+#BlueLink0 Road: 3D Surface (All Properties)`1200 m, One Lane, Mu = 0.85 (No Trees)` Straight` , Miscellaneous`Road_2e34e7d3-881b-407b-bafc-33e033c41e78
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink8 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_c3bc997f-caac-4c8e-8974-69ef71d2b82c.par
+#BlueLink9 Plot: Setup`Steer Torque` Steering` , Plot`Plot_c3bc997f-caac-4c8e-8974-69ef71d2b82c
+
+PARSFILE Plot\Setup\Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f.par
+#BlueLink10 Plot: Setup`Road Wheel Steer (Axle 1)` Steering` , Plot`Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f
+
+PARSFILE Plot\Setup\Plot_31f418d3-adbb-4a29-8056-a466be0a945d.par
+#BlueLink11 Plot: Setup`Lateral Tracking` Tracking` , Plot`Plot_31f418d3-adbb-4a29-8056-a466be0a945d
+
+PARSFILE Plot\Setup\Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8.par
+#BlueLink12 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8
+
+PARSFILE Plot\Setup\Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1.par
+#BlueLink13 Plot: Setup`Yaw Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1
+
+PARSFILE Plot\Setup\Plot_38af2fee-b452-4e50-bfca-9012303b5e16.par
+#BlueLink14 Plot: Setup`Yaw Rate of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_38af2fee-b452-4e50-bfca-9012303b5e16
+
+PARSFILE Plot\Setup\Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987.par
+#BlueLink15 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987
+
+PARSFILE Plot\Setup\Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5.par
+#BlueLink16 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink17 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_8aa6411f-4f0f-45db-b32c-d612009087f2.par
+#BlueLink18 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8aa6411f-4f0f-45db-b32c-d612009087f2
+
+PARSFILE Plot\Setup\Plot_3be558fc-e426-4615-8a49-35b8460f781c.par
+#BlueLink19 Plot: Setup`Vertical Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_3be558fc-e426-4615-8a49-35b8460f781c
+
+PARSFILE Plot\Setup\Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717.par
+#BlueLink20 Plot: Setup`Vertical Forces (Axle 1, Single Tires)` Tire Forces` , Plot`Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717
+
+PARSFILE Plot\Setup\Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9.par
+#BlueLink21 Plot: Setup`Vertical Forces (Axle 2, Dual Tires)` Tire Forces` , Plot`Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9
+
+PARSFILE Plot\Setup\Plot_971e5ba8-d5f8-488c-b59e-06db73b8299e.par
+#BlueLink22 Plot: Setup`Ground Elev. (Axle 1) vs. Station` Ground` , Plot`Plot_971e5ba8-d5f8-488c-b59e-06db73b8299e
+
+PARSFILE Plot\Setup\Plot_cb252bb4-24e2-4baf-bcd9-63ff916eb903.par
+#BlueLink23 Plot: Setup`Ground Elev. (Axle 2) vs. Station` Ground` , Plot`Plot_cb252bb4-24e2-4baf-bcd9-63ff916eb903
+
+
+#EMBEDDED_NOTES
+#This is a simple test procedure, set to have the vehicle travel at a constant speed along a flat, level road with no lateral distance from the target path (LTarg).
+#
+#Tests like this are very useful for investigating new vehicle configurations.
+#
+#Other driver control options include Open-Loop Throttle and Open-Loop Steering.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driving } Straight Driving, Constant Speed
+#Library : Procedures
+#DataSet : Straight Driving, Constant Speed
+#Category: Driving
+#FileID  : Proc_06bad3af-f1f7-4777-8c60-a4f93f4f150a
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

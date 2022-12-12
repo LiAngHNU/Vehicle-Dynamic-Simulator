@@ -1,0 +1,109 @@
+PARSFILE
+#FullDataName Procedures`100-0kmh Braking Distance, M/C`Acceleration and Braking
+#CheckBox3 0    
+
+#RingCtrl0 0
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 12
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 102
+*TSTOP 12
+*TSTART 0
+*SSTART 0
+
+OPT_SC 0
+SV_VXS 102
+PARSFILE Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.6s Single Preview` Constant Position: No Offset` , Steering`StrDM_e2398fab-b956-498b-8858-93e89178bdf3
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_mt\GearOL_50b447c5-c4f2-460e-9b7c-e28c38fc7164.par
+#BlueLink30 Control: Shifting (Open Loop)`Neutral w/ Clutch Disengaged` Constant` , Shifting Control`GearOL_50b447c5-c4f2-460e-9b7c-e28c38fc7164
+
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink29 Control: Throttle (Open Loop)`Constant: 0` Constant` , Throttle`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+PARSFILE Roads\3D_Road\Road_1a73d505-d0a5-4089-9bde-0c48232a5052.par
+#BlueLink0 Road: 3D Surface (All Properties)`Brake Distance Test Road` Braking and Traction Control Test Roads` , Miscellaneous`Road_1a73d505-d0a5-4089-9bde-0c48232a5052
+
+PARSFILE Events\Events_b8343cac-e89e-4715-be70-a3c0652bfd04.par
+#BlueLink7 Events`A. Start at 100 km/h` Braking Distance, M/C, Air` , Miscellaneous`Events_b8343cac-e89e-4715-be70-a3c0652bfd04
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1.par
+#BlueLink9 Plot: Setup`Yaw Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1
+
+PARSFILE Plot\Setup\Plot_38af2fee-b452-4e50-bfca-9012303b5e16.par
+#BlueLink10 Plot: Setup`Yaw Rate of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_38af2fee-b452-4e50-bfca-9012303b5e16
+
+PARSFILE Plot\Setup\Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5.par
+#BlueLink11 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5
+
+PARSFILE Plot\Setup\Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987.par
+#BlueLink12 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987
+
+PARSFILE Plot\Setup\Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8.par
+#BlueLink13 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8
+
+PARSFILE Plot\Setup\Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a.par
+#BlueLink14 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a
+
+PARSFILE Plot\Setup\Plot_2af2b120-28db-4d3d-9833-c4cf228e2d17.par
+#BlueLink15 Plot: Setup`Longitudinal Accel. of CG's vs. Station` Vehicle Motion` , Plot`Plot_2af2b120-28db-4d3d-9833-c4cf228e2d17
+
+PARSFILE Plot\Setup\Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806.par
+#BlueLink17 Plot: Setup`Brake Control: Master Cyl. Pressure` Braking` , Plot`Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806
+
+PARSFILE Plot\Setup\Plot_11e9c896-a52a-422e-ae87-450721c8be32.par
+#BlueLink18 Plot: Setup`Wheel Cylinder Pressures (Axle 1, 2, 3)` Braking` , Plot`Plot_11e9c896-a52a-422e-ae87-450721c8be32
+
+PARSFILE Plot\Setup\Plot_b2e0efd0-bbe9-4116-b970-8419ac92bcc1.par
+#BlueLink19 Plot: Setup`Wheel Cylinder Pressures (Axle 4, 5, 6)` Braking` , Plot`Plot_b2e0efd0-bbe9-4116-b970-8419ac92bcc1
+
+PARSFILE Plot\Setup\Plot_3b8df711-b3be-4359-a668-e3c470aec216.par
+#BlueLink20 Plot: Setup`Slip Ratios, Lagged (Axle 1)` Tire Kinematics` , Plot`Plot_3b8df711-b3be-4359-a668-e3c470aec216
+
+PARSFILE Plot\Setup\Plot_e7ca69a3-3b57-4fe0-8a7f-30c100997058.par
+#BlueLink21 Plot: Setup`Slip Ratios, Lagged (Axles 2 - 3)` Tire Kinematics` , Plot`Plot_e7ca69a3-3b57-4fe0-8a7f-30c100997058
+
+PARSFILE Plot\Setup\Plot_e5618e67-77b9-4208-8d8f-4fb35af5649f.par
+#BlueLink22 Plot: Setup`Slip Ratios, Lagged (Axles 4 - 6)` Tire Kinematics` , Plot`Plot_e5618e67-77b9-4208-8d8f-4fb35af5649f
+
+PARSFILE Plot\Setup\Plot_085bec2f-da38-4258-9eb1-5e240115296d.par
+#BlueLink25 Plot: Setup`Wheel Speeds` Braking` , Plot`Plot_085bec2f-da38-4258-9eb1-5e240115296d
+
+PARSFILE Plot\Setup\Plot_2aec5772-ab89-4c03-8c1d-9ee34f34c946.par
+#BlueLink26 Plot: Setup`ABS Apply Command` Braking` , Plot`Plot_2aec5772-ab89-4c03-8c1d-9ee34f34c946
+
+
+#EMBEDDED_NOTES
+#Procedure for a brake distance test using Events.
+#
+#Initial driver controls for a 100 km/h to 0 km/h braking test. The Master Cylinder Pressure control data in this test are suited for air brakes.
+#
+#The truck is travelling at 102 km/h at the start of the run and coasts down to 100  km/h.
+#
+#Using Events, the vehicle's position is reset to the start of the road (Station = 0 m) and simultaneously begins braking.
+#
+#Stopping distance is obtained by plotting Station vs. Time.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Acceleration and Braking } 100-0kmh Braking Distance, M/C
+#Library : Procedures
+#DataSet : 100-0kmh Braking Distance, M/C
+#Category: Acceleration and Braking
+#FileID  : Proc_7e8815c7-500c-4e04-80db-de68f76f10bd
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

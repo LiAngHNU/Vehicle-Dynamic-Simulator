@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName Procedures`100-0kmh Braking Distance, Pedal Force`Acceleration and Braking
+#CheckBox3 0    
+
+#RingCtrl0 0
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 12
+SSTOP 300
+OPT_DIRECTION 0
+*SPEED 102
+*TSTOP 12
+*TSTART 0
+*SSTART 0
+*SSTOP 300
+
+OPT_SC 0
+SV_VXS 102
+PARSFILE Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.6s Single Preview` Constant Position: No Offset` , Steering`StrDM_e2398fab-b956-498b-8858-93e89178bdf3
+
+PARSFILE Control\Brake_pedal\FbkCon_af2fa584-d9cd-4fd4-98f5-b70494bad37e.par
+#BlueLink28 Control: Braking Pedal Force (Open Loop)`Constant: 0 N` Constant` , Braking`FbkCon_af2fa584-d9cd-4fd4-98f5-b70494bad37e
+
+PARSFILE Control\Gear_at\GearCL_ef540ed9-53bb-40ba-b058-cb0f7fa4bfa6.par
+#BlueLink30 Control: Shifting (Closed Loop)`Neutral` ` , Shifting Control`GearCL_ef540ed9-53bb-40ba-b058-cb0f7fa4bfa6
+
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink29 Control: Throttle (Open Loop)`Constant: 0` Constant` , Throttle`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+PARSFILE Roads\3D_Road\Road_1a73d505-d0a5-4089-9bde-0c48232a5052.par
+#BlueLink0 Road: 3D Surface (All Properties)`Brake Distance Test Road` Braking and Traction Control Test Roads` , Miscellaneous`Road_1a73d505-d0a5-4089-9bde-0c48232a5052
+
+PARSFILE Generic\VS_commands\GenVS_18871ad6-9652-45d8-bfa8-595ad3eafa73.par
+#BlueLink4 Generic VS Commands`Brake Testing w/ Pedal Force, 2 Axles` Plot Groups` , Miscellaneous`GenVS_18871ad6-9652-45d8-bfa8-595ad3eafa73
+
+PARSFILE Events\Events_0ec31afb-3c7e-4da9-b1eb-a810a5ea92a2.par
+#BlueLink7 Events`A. Start at 100 km/h` Braking Distance, Pedal Force` , Miscellaneous`Events_0ec31afb-3c7e-4da9-b1eb-a810a5ea92a2
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_6ab65115-f524-4f04-aecb-33140a974c8d.par
+#BlueLink9 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_6ab65115-f524-4f04-aecb-33140a974c8d
+
+PARSFILE Plot\Setup\Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a.par
+#BlueLink10 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a
+
+PARSFILE Plot\Setup\Plot_bcb6a070-1044-44ad-9834-71471d262085.par
+#BlueLink11 Plot: Setup`Longitudinal Forces (Axle 1, Single Tires)` Tire Forces` , Plot`Plot_bcb6a070-1044-44ad-9834-71471d262085
+
+PARSFILE Plot\Setup\Plot_fbf77b13-4413-4d64-af51-8a1491a4fd05.par
+#BlueLink12 Plot: Setup`Longitudinal Forces (Axle 2, Dual Tires)` Tire Forces` , Plot`Plot_fbf77b13-4413-4d64-af51-8a1491a4fd05
+
+PARSFILE Plot\Setup\Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717.par
+#BlueLink13 Plot: Setup`Vertical Forces (Axle 1, Single Tires)` Tire Forces` , Plot`Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717
+
+PARSFILE Plot\Setup\Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9.par
+#BlueLink14 Plot: Setup`Vertical Forces (Axle 2, Dual Tires)` Tire Forces` , Plot`Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9
+
+
+#EMBEDDED_NOTES
+#Procedure for a brake distance test using Events.
+#
+#The vehicle is initialized is driving at 102 km/h at the start of the run and coasts down to 100 km/h. Using Events, the vehicle repositions to the start of the road (0 m) and simultaneously begins braking. When the vehicle stops, you can use the plot of Station vs. Time to measure the stopping distance.
+#
+#This Procedure uses the Open-Loop Brake Pedal Force control and is designed to work with a vehicle that uses pedal force as the input for the brake system.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Acceleration and Braking } 100-0kmh Braking Distance, Pedal Force
+#Library : Procedures
+#DataSet : 100-0kmh Braking Distance, Pedal Force
+#Category: Acceleration and Braking
+#FileID  : Proc_f943f6fd-43d7-4e16-b1df-d0a9a3bb84aa
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

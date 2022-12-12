@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName Procedures`0-65-0kmh on Circle (MT)`Acceleration and Braking
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 35
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*TSTOP 35
+*TSTART 0
+*SSTART 0
+
+OPT_SC 2
+PARSFILE Control\Driver\StrDM_d6ef0cdf-9013-413f-9faf-2dea378db470.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.75s Single Preview` Constant Position: No Offset` , Steering`StrDM_d6ef0cdf-9013-413f-9faf-2dea378db470
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_a72f43f8-add3-4ad1-a1d9-8a8c5e0ef73b.par
+#BlueLink30 Control: Shifting (Closed Loop)`Mode_Trans 7, Clutch Act 1s, Gear 0.25s` Closed-Loop Shifting` , Shifting Control`GearCL_a72f43f8-add3-4ad1-a1d9-8a8c5e0ef73b
+
+PARSFILE Control\Speed_t\SpdTime_c262c160-c57c-4930-a18b-5ce610e3194a.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`Ramp: 0-65-0 km/h` Speed vs. Time` , Speed vs. time`SpdTime_c262c160-c57c-4930-a18b-5ce610e3194a
+
+PARSFILE Roads\3D_Road\Road_f31c1297-f62d-4e01-9de7-f9b5a81bb316.par
+#BlueLink0 Road: 3D Surface (All Properties)`152.4-m Radius Circle, Mu = 0.85` Circular Roads` , Miscellaneous`Road_f31c1297-f62d-4e01-9de7-f9b5a81bb316
+
+PARSFILE Roads\Friction\RdMu_ba77e65b-ac24-44a0-ab4d-f600ab858c9e.par
+#BlueLink1 Road: Friction Map, S-L Grid`Constant: 1.0` Constant Mu` , Miscellaneous`RdMu_ba77e65b-ac24-44a0-ab4d-f600ab858c9e
+
+PARSFILE Plot\Setup\Plot_ef9d2ef6-caae-4560-9396-a1b93c87f25f.par
+#BlueLink8 Plot: Setup`Longitudinal Forces (Right Side)` Tire Forces` , Plot`Plot_ef9d2ef6-caae-4560-9396-a1b93c87f25f
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink9 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_6ab65115-f524-4f04-aecb-33140a974c8d.par
+#BlueLink10 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_6ab65115-f524-4f04-aecb-33140a974c8d
+
+PARSFILE Plot\Setup\Plot_8aa6411f-4f0f-45db-b32c-d612009087f2.par
+#BlueLink11 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8aa6411f-4f0f-45db-b32c-d612009087f2
+
+PARSFILE Plot\Setup\Plot_658b05a2-13e0-452f-8383-4ad65ca274c9.par
+#BlueLink12 Plot: Setup`Spin Rates in Powertrain` Powertrain` , Plot`Plot_658b05a2-13e0-452f-8383-4ad65ca274c9
+
+PARSFILE Plot\Setup\Plot_b8614b7c-dc02-4f0e-b723-a961bf595f50.par
+#BlueLink13 Plot: Setup`Torques in Powertrain` Powertrain` , Plot`Plot_b8614b7c-dc02-4f0e-b723-a961bf595f50
+
+PARSFILE Plot\Setup\Plot_e7b41872-2b40-4556-aa0d-7e348d4a1a61.par
+#BlueLink14 Plot: Setup`My_Dr -- Wheel Drive Torque (Axle 2)` Powertrain` , Plot`Plot_e7b41872-2b40-4556-aa0d-7e348d4a1a61
+
+PARSFILE Plot\Setup\Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd.par
+#BlueLink15 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd
+
+PARSFILE Plot\Setup\Plot_27ad32d4-9ff0-4701-9d4d-99a04a7ff85b.par
+#BlueLink16 Plot: Setup`Clutch: Control Input` Controls: Driver` , Plot`Plot_27ad32d4-9ff0-4701-9d4d-99a04a7ff85b
+
+PARSFILE Plot\Setup\Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806.par
+#BlueLink17 Plot: Setup`Brake Control: Master Cyl. Pressure` Braking` , Plot`Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806
+
+PARSFILE Plot\Setup\Plot_536a6a4d-647d-4eb4-b11f-664addaec88a.par
+#BlueLink18 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_536a6a4d-647d-4eb4-b11f-664addaec88a
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink19 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+
+#EMBEDDED_NOTES
+#Procedure for an acceleration and braking test on a constant radius circle.
+#
+#In this example, both the acceleration and braking settings are made on the "Control: Speed (Closed Loop) Using Target Speed" screen.
+#
+#Clutch and throttle are modulated automatically and gear shift is restricted to a maximum of 7 forward gears.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Acceleration and Braking } 0-65-0kmh on Circle (MT)
+#Library : Procedures
+#DataSet : 0-65-0kmh on Circle (MT)
+#Category: Acceleration and Braking
+#FileID  : Proc_8c5df680-101d-40e0-95c8-de17634341b5
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

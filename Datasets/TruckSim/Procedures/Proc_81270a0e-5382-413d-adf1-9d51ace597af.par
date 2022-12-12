@@ -1,0 +1,93 @@
+PARSFILE
+#FullDataName Procedures`Left / Right Bumps`Ride Tests
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 100
+TSTART_WRITE = 0;
+TSTOP 14
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 8
+*TSTOP 14
+*TSTART 0
+*SSTART 100
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Left / Right Bumps
+SPEED_TARGET_CONSTANT 8
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_d6ef0cdf-9013-413f-9faf-2dea378db470.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.75s Single Preview` Constant Position: No Offset` , Steering`StrDM_d6ef0cdf-9013-413f-9faf-2dea378db470
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Roads\3D_Road\Road_0e97a4a1-c55c-4268-aa87-c0716f580871.par
+#BlueLink0 Road: 3D Surface (All Properties)`Example Bumps (Left/Right)` Ride Roads` , Miscellaneous`Road_0e97a4a1-c55c-4268-aa87-c0716f580871
+
+PARSFILE Plot\Setup\Plot_f411665c-58c7-4e39-86ea-1845d059059f.par
+#BlueLink8 Plot: Setup`Spring: Force vs. Compression` Suspension Forces and Moments` , Plot`Plot_f411665c-58c7-4e39-86ea-1845d059059f
+
+PARSFILE Plot\Setup\Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987.par
+#BlueLink9 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987
+
+PARSFILE Plot\Setup\Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5.par
+#BlueLink10 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5
+
+PARSFILE Plot\Setup\Plot_9bdf8244-04f6-44b1-a86e-e83fec8f2866.par
+#BlueLink11 Plot: Setup`Jounce Stop Compression` Suspension Motion` , Plot`Plot_9bdf8244-04f6-44b1-a86e-e83fec8f2866
+
+PARSFILE Plot\Setup\Plot_663191a1-39ab-4aad-85b1-61ca6ac180a2.par
+#BlueLink12 Plot: Setup`Jounce Stop Force` Suspension Forces and Moments` , Plot`Plot_663191a1-39ab-4aad-85b1-61ca6ac180a2
+
+PARSFILE Plot\Setup\Plot_6097e802-cd34-47da-8271-c277e950105f.par
+#BlueLink13 Plot: Setup`Rebound Stop Compression` Suspension Motion` , Plot`Plot_6097e802-cd34-47da-8271-c277e950105f
+
+PARSFILE Plot\Setup\Plot_a8ee8c0e-c960-4d6e-8654-db4ce7278055.par
+#BlueLink14 Plot: Setup`Rebound Stop Force` Suspension Forces and Moments` , Plot`Plot_a8ee8c0e-c960-4d6e-8654-db4ce7278055
+
+PARSFILE Plot\Setup\Plot_7b1dfeac-eb68-4575-9cbf-7407cb887fa8.par
+#BlueLink15 Plot: Setup`Spring Compression` Suspension Motion` , Plot`Plot_7b1dfeac-eb68-4575-9cbf-7407cb887fa8
+
+PARSFILE Plot\Setup\Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717.par
+#BlueLink16 Plot: Setup`Vertical Forces (Axle 1, Single Tires)` Tire Forces` , Plot`Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717
+
+PARSFILE Plot\Setup\Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9.par
+#BlueLink17 Plot: Setup`Vertical Forces (Axle 2, Dual Tires)` Tire Forces` , Plot`Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9
+
+PARSFILE Plot\Setup\Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f.par
+#BlueLink18 Plot: Setup`Road Wheel Steer (Axle 1)` Steering` , Plot`Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f
+
+PARSFILE Plot\Setup\Plot_5edfd079-0738-41de-afb8-2bd975c4daad.par
+#BlueLink19 Plot: Setup`Kingpin Torque (Axle 1)` Steering` , Plot`Plot_5edfd079-0738-41de-afb8-2bd975c4daad
+
+
+#EMBEDDED_NOTES
+#Sample Left/Right bump road.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Ride Tests } Left / Right Bumps
+#Library : Procedures
+#DataSet : Left / Right Bumps
+#Category: Ride Tests
+#FileID  : Proc_81270a0e-5382-413d-adf1-9d51ace597af
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

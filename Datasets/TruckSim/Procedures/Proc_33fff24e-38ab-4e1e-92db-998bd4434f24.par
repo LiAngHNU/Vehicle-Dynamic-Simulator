@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName Procedures`No Steer, Speed Series`Driver Controls
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART -480
+TSTART_WRITE = 0;
+TSTOP 300
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 50
+*TSTOP 300
+*TSTART 0
+*SSTART -480
+*SSTOP 300
+
+OPT_SC 2
+PARSFILE Control\Steer\StrSW_9419b1df-a776-4d94-97e4-93750a8c097b.par
+#BlueLink27 Control: Steering (Open Loop)`Constant: 0 deg.` Constant` , Steering`StrSW_9419b1df-a776-4d94-97e4-93750a8c097b
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_t\SpdTime_b883ca77-2e1c-4f2d-96b8-7283d4e197d5.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`Constant: 0 km/h` Constant` , Speed vs. time`SpdTime_b883ca77-2e1c-4f2d-96b8-7283d4e197d5
+
+#MiscYellow0
+! Speed ctrl gains nec. to achieve steady state
+SPEED_KP 0.1
+SPEED_KI 0.02
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_1d628bf6-d343-4b53-aab3-6c447711f700.par
+#BlueLink0 Road: 3D Surface (All Properties)`1 km Square, Mu = 0.85` Flat Test Pads` , Miscellaneous`Road_1d628bf6-d343-4b53-aab3-6c447711f700
+
+PARSFILE Roads\Friction\RdMu_ba77e65b-ac24-44a0-ab4d-f600ab858c9e.par
+#BlueLink2 Road: Friction Map, S-L Grid`Constant: 1.0` Constant Mu` , Miscellaneous`RdMu_ba77e65b-ac24-44a0-ab4d-f600ab858c9e
+
+PARSFILE Events\Events_961e7cba-229e-455f-b1d0-2b4e429a850f.par
+#BlueLink3 Events`A. Start Steady-State Straight` Steady-State Speed Series` , Miscellaneous`Events_961e7cba-229e-455f-b1d0-2b4e429a850f
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink8 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_c3bc997f-caac-4c8e-8974-69ef71d2b82c.par
+#BlueLink9 Plot: Setup`Steer Torque` Steering` , Plot`Plot_c3bc997f-caac-4c8e-8974-69ef71d2b82c
+
+PARSFILE Plot\Setup\Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a.par
+#BlueLink10 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a
+
+PARSFILE Plot\Setup\Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f.par
+#BlueLink11 Plot: Setup`Road Wheel Steer (Axle 1)` Steering` , Plot`Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink12 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_6ab65115-f524-4f04-aecb-33140a974c8d.par
+#BlueLink13 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_6ab65115-f524-4f04-aecb-33140a974c8d
+
+PARSFILE Plot\Setup\Plot_8aa6411f-4f0f-45db-b32c-d612009087f2.par
+#BlueLink14 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8aa6411f-4f0f-45db-b32c-d612009087f2
+
+PARSFILE Plot\Setup\Plot_38af2fee-b452-4e50-bfca-9012303b5e16.par
+#BlueLink15 Plot: Setup`Yaw Rate of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_38af2fee-b452-4e50-bfca-9012303b5e16
+
+PARSFILE Plot\Setup\Plot_536a6a4d-647d-4eb4-b11f-664addaec88a.par
+#BlueLink16 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_536a6a4d-647d-4eb4-b11f-664addaec88a
+
+
+#EMBEDDED_NOTES
+#This procedure creates linear matrices of the vehicle model during the simulation run (in steady state). A series of runs with various vehicle speed (from 0 to 120 km/h) is performed by Event.
+#
+#The generated matrices can be loaded with MATLAB and analyzed with a frequency-domain bode plot and root locus
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driver Controls } No Steer, Speed Series
+#Library : Procedures
+#DataSet : No Steer, Speed Series
+#Category: Driver Controls
+#FileID  : Proc_33fff24e-38ab-4e1e-92db-998bd4434f24
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

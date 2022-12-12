@@ -1,0 +1,109 @@
+PARSFILE
+#FullDataName Procedures`Brake in a Turn`Acceleration and Braking
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART -3.6
+SSTART -70
+TSTART_WRITE = 0;
+TSTOP 9
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 70
+*TSTOP 9
+*TSTART -3.6
+*SSTART -70
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Brake in a Turn
+SPEED_TARGET_CONSTANT 70
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.6s Single Preview` Constant Position: No Offset` , Steering`StrDM_e2398fab-b956-498b-8858-93e89178bdf3
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+#MiscYellow0
+tstart_write 0
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_f31c1297-f62d-4e01-9de7-f9b5a81bb316.par
+#BlueLink0 Road: 3D Surface (All Properties)`152.4-m Radius Circle, Mu = 0.85` Circular Roads` , Miscellaneous`Road_f31c1297-f62d-4e01-9de7-f9b5a81bb316
+
+PARSFILE Events\Events_84be5d9d-4b7f-41bb-9449-aba1ac59a7c1.par
+#BlueLink1 Events`A. 15 MPa Step Braking at 2 sec., 70 km/h` Braking in a Turn` , Miscellaneous`Events_84be5d9d-4b7f-41bb-9449-aba1ac59a7c1
+
+PARSFILE Plot\Setup\Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987.par
+#BlueLink8 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987
+
+PARSFILE Plot\Setup\Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5.par
+#BlueLink9 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5
+
+PARSFILE Plot\Setup\Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806.par
+#BlueLink10 Plot: Setup`Brake Control: Master Cyl. Pressure` Braking` , Plot`Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806
+
+PARSFILE Plot\Setup\Plot_6147777e-2183-47fe-a60a-68d65df3310f.par
+#BlueLink11 Plot: Setup`Brake Torque` Braking` , Plot`Plot_6147777e-2183-47fe-a60a-68d65df3310f
+
+PARSFILE Plot\Setup\Plot_9089d5a4-1ff4-47f5-ab79-525cb417cbcb.par
+#BlueLink12 Plot: Setup`Wheel Cylinder Pressures` Braking` , Plot`Plot_9089d5a4-1ff4-47f5-ab79-525cb417cbcb
+
+PARSFILE Plot\Setup\Plot_085bec2f-da38-4258-9eb1-5e240115296d.par
+#BlueLink13 Plot: Setup`Wheel Speeds` Braking` , Plot`Plot_085bec2f-da38-4258-9eb1-5e240115296d
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink14 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1.par
+#BlueLink15 Plot: Setup`Yaw Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1
+
+PARSFILE Plot\Setup\Plot_15fbaba8-9867-4fa9-a94f-057ce0c21f24.par
+#BlueLink16 Plot: Setup`Locked Brake Status (Axle 1)` Braking` , Plot`Plot_15fbaba8-9867-4fa9-a94f-057ce0c21f24
+
+PARSFILE Plot\Setup\Plot_5f6d6436-90da-4cf0-a536-ac934b24b443.par
+#BlueLink17 Plot: Setup`Locked Brake Status (Axle 2)` Braking` , Plot`Plot_5f6d6436-90da-4cf0-a536-ac934b24b443
+
+PARSFILE Plot\Setup\Plot_3b8df711-b3be-4359-a668-e3c470aec216.par
+#BlueLink18 Plot: Setup`Slip Ratios, Lagged (Axle 1)` Tire Kinematics` , Plot`Plot_3b8df711-b3be-4359-a668-e3c470aec216
+
+PARSFILE Plot\Setup\Plot_d9d546bb-6a4c-43cc-bd96-f64e62ce4844.par
+#BlueLink19 Plot: Setup`Slip Ratios, Lagged (Axle 2)` Tire Kinematics` , Plot`Plot_d9d546bb-6a4c-43cc-bd96-f64e62ce4844
+
+
+#EMBEDDED_NOTES
+#Procedure for an Event-driven test in which the brakes are applied while the vehicle is driving on a constant radius circle.
+#
+#The TruckSim initialization process is an approximation based on statics. It makes several assumptions and ignores several effects, because many aspects of the vehicle's initial configuration are statically indeterminate. For a more complete initialization, the model is allowed to settle dynamically.
+#
+#The run is started at negative time to allow the vehicle to come to dynamic equilibrium on the circle road. By setting the start time at -3.6 seconds and the start station at -70 m, the vehicle will reach zero station when the clock reaches zero time. (The vehicle is traveling 70 km/h, which means it will travel 70 m in 3.6 seconds.)
+#
+#The math model doesn't write any of the output data during the negative time initialization period, because the parameter tstart_write is set to 0 seconds.
+#
+#tstart_write normally has a value of either 0 or tstart (the start time), as set on the Preferences screen, but by entering it directly you can give it any value.
+#
+#The brake control is not specified here; it is set in the linked Event dataset.
+#
+#The shifting control used in this procedure is for a 7-speed transmission. If the vehicle has a different number of gears, this link should be changed.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Acceleration and Braking } Brake in a Turn
+#Library : Procedures
+#DataSet : Brake in a Turn
+#Category: Acceleration and Braking
+#FileID  : Proc_175e5068-f465-4eaa-b6c0-f0bfa062082a
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

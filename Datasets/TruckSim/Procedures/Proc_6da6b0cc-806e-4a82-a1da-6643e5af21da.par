@@ -1,0 +1,129 @@
+PARSFILE
+#FullDataName Procedures`PBS C5: Tracking on Straight Path`PBS (Performance Based Standards)
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART -100
+TSTART_WRITE = 0;
+TSTOP 50
+SSTOP 1000
+OPT_DIRECTION 0
+*SPEED 100
+*TSTOP 50
+*TSTART 0
+*SSTART -100
+*SSTOP 1000
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: PBS C5: Tracking on Straight Path
+SPEED_TARGET_CONSTANT 100
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.6s Single Preview` Constant Position: No Offset` , Steering`StrDM_e2398fab-b956-498b-8858-93e89178bdf3
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+#MiscYellow0
+opt_write 0
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_2e63b1e8-5f4b-4c7d-ac89-ea3370ff18c7.par
+#BlueLink0 Road: 3D Surface (All Properties)`PBS C5: 3% Cross-slope with Variation` PBS Tests` , Miscellaneous`Road_2e63b1e8-5f4b-4c7d-ac89-ea3370ff18c7
+
+PARSFILE Roads\Profiles\Profile_db48373c-b5d6-4545-83dc-e5a0ef5a068c.par
+#BlueLink2 Surface: Roughness Profiles`NTC Profiles` Road Roughness: NTC Profiles` , Miscellaneous`Profile_db48373c-b5d6-4545-83dc-e5a0ef5a068c
+
+PARSFILE Generic\VS_commands\GenVS_5af9134f-eb97-4485-9527-bf855f66b533.par
+#BlueLink4 Generic VS Commands`Tire Vertical Forces (Axles 1 - 5)` Plot Groups` , Miscellaneous`GenVS_5af9134f-eb97-4485-9527-bf855f66b533
+
+PARSFILE Events\Events_5decb4ea-a533-4107-a217-e0b0720abda5.par
+#BlueLink7 Events`A. PBS C5: Wait Until Station Reaches 0` PBS  C5: Tracking on Straight Path` , Miscellaneous`Events_5decb4ea-a533-4107-a217-e0b0720abda5
+
+PARSFILE Plot\Setup\Plot_ec71d590-dfe2-42f2-acb6-0456b009c0dc.par
+#BlueLink8 Plot: Setup`CTC: Y vs. X (Unit 1, 3 Axles)` Tire Tracking` , Plot`Plot_ec71d590-dfe2-42f2-acb6-0456b009c0dc
+
+PARSFILE Plot\Setup\Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8.par
+#BlueLink9 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink10 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9.par
+#BlueLink11 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9
+
+PARSFILE Plot\Setup\Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a.par
+#BlueLink12 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a
+
+PARSFILE Plot\Setup\Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5.par
+#BlueLink13 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5
+
+PARSFILE Plot\Setup\Plot_69442d89-c056-4ea1-81dc-14728182414e.par
+#BlueLink14 Plot: Setup`Y vs. X Coord for Left Side Points` PBS (Performance Based Standards)` , Plot`Plot_69442d89-c056-4ea1-81dc-14728182414e
+
+PARSFILE Plot\Setup\Plot_473afa48-a897-45a9-a349-2cb02aa0b8a4.par
+#BlueLink15 Plot: Setup`Y vs. X Coord for Right Side Points` PBS (Performance Based Standards)` , Plot`Plot_473afa48-a897-45a9-a349-2cb02aa0b8a4
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink18 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_811b0750-5160-4ae1-aa82-2aabb3ab9af2.par
+#BlueLink19 Plot: Setup`Throttle: Closed Loop Speed Control` Controls: Driver` , Plot`Plot_811b0750-5160-4ae1-aa82-2aabb3ab9af2
+
+PARSFILE Plot\Setup\Plot_536a6a4d-647d-4eb4-b11f-664addaec88a.par
+#BlueLink20 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_536a6a4d-647d-4eb4-b11f-664addaec88a
+
+PARSFILE Plot\Setup\Plot_658b05a2-13e0-452f-8383-4ad65ca274c9.par
+#BlueLink21 Plot: Setup`Spin Rates in Powertrain` Powertrain` , Plot`Plot_658b05a2-13e0-452f-8383-4ad65ca274c9
+
+PARSFILE Plot\Setup\Plot_b8614b7c-dc02-4f0e-b723-a961bf595f50.par
+#BlueLink22 Plot: Setup`Torques in Powertrain` Powertrain` , Plot`Plot_b8614b7c-dc02-4f0e-b723-a961bf595f50
+
+PARSFILE Plot\Setup\Plot_92c3bffb-a766-4f7d-9f5e-73059542ee31.par
+#BlueLink23 Plot: Setup`Engine RPM` Powertrain` , Plot`Plot_92c3bffb-a766-4f7d-9f5e-73059542ee31
+
+PARSFILE Plot\Setup\Plot_0aff382f-c589-4818-8024-b7e9c0e473fd.par
+#BlueLink24 Plot: Setup`Engine Torque` Powertrain` , Plot`Plot_0aff382f-c589-4818-8024-b7e9c0e473fd
+
+PARSFILE Plot\Setup\Plot_e7b41872-2b40-4556-aa0d-7e348d4a1a61.par
+#BlueLink25 Plot: Setup`My_Dr -- Wheel Drive Torque (Axle 2)` Powertrain` , Plot`Plot_e7b41872-2b40-4556-aa0d-7e348d4a1a61
+
+PARSFILE Plot\Setup\Plot_2dd86413-3798-4048-b033-f592b39de27f.par
+#BlueLink26 Plot: Setup`My_Dr -- Wheel Drive Torque (Axle 3)` Powertrain` , Plot`Plot_2dd86413-3798-4048-b033-f592b39de27f
+
+
+#EMBEDDED_NOTES
+#This procedure has the vehicle follow a straight target path at 100 km/h on a rough road with 3% cross slope and a 1% standard deviation in slope. The road roughness comes from the profile downloaded from NTC and processed so it can be looped continuously to cover more than 1000 m. Cross slope comes from the basic road geometry.
+#
+#The vehicle is initially positioned at -100 m station, but recording to the ERD file for plotting and animation does not start until the vehicle reaches station = 0 meters.
+#
+#TruckSim 9.0.2 and TruckSim 2016 support up to 99 Reference Points, and seperately, up to 99 Motion Sensors, for the vehicle combination being simulated. The trajectories of these Reference Points and/or Motion Sensors (whichever are chosen by the engineer) are used to show the swept paths. The coordinates of these points must be set following the TruckSim PBS convention, and the datasets must be linked to the simulated vehicle. Please see the Vehicle: Loaded Combination screen for more information.
+#
+#NOTE on Road Roughness Profiles: The Road Roughness Profiles in TruckSim get passed to the Math Model, however there are no animator shapes associated with them. This means that with certain data, the vehicle may appear to float above and/or sink below the animated road surface.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { PBS (Performance Based Standards) } PBS C5: Tracking on Straight Path
+#Library : Procedures
+#DataSet : PBS C5: Tracking on Straight Path
+#Category: PBS (Performance Based Standards)
+#FileID  : Proc_6da6b0cc-806e-4a82-a1da-6643e5af21da
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

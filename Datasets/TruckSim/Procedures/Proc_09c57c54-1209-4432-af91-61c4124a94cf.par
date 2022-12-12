@@ -1,0 +1,68 @@
+PARSFILE
+#FullDataName Procedures`Open-loop Throttle, Shifting and Clutch`Acceleration and Braking
+#CheckBox3 0    
+
+#RingCtrl0 0
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 25
+SSTOP 200
+OPT_DIRECTION 0
+*SPEED 0
+*TSTOP 25
+*TSTART 0
+*SSTART 0
+*SSTOP 200
+
+OPT_SC 0
+SV_VXS 0
+PARSFILE Control\Driver\StrDM_9b35f18a-5c59-4a9a-8de1-61f2a3df1a3d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`Variable Speed Preview` Constant Position: No Offset` , Steering`StrDM_9b35f18a-5c59-4a9a-8de1-61f2a3df1a3d
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_mt\GearOL_a541245a-d7ee-4491-b0b5-4e058e5a6b7e.par
+#BlueLink30 Control: Shifting (Open Loop)`7 Spd: Shift @ 5s (OL Clutch)` Open-Loop Gearshift Control` , Shifting Control`GearOL_a541245a-d7ee-4491-b0b5-4e058e5a6b7e
+
+PARSFILE Control\Throttle\Throttle_be5e9030-32c0-4dcb-aea6-6e9e9b5534ca.par
+#BlueLink29 Control: Throttle (Open Loop)`Ramp to 0.5, Shifts every 5 sec.` Throttle Apply and Release` , Throttle`Throttle_be5e9030-32c0-4dcb-aea6-6e9e9b5534ca
+
+PARSFILE Roads\3D_Road\Road_2e34e7d3-881b-407b-bafc-33e033c41e78.par
+#BlueLink0 Road: 3D Surface (All Properties)`1200 m, One Lane, Mu = 0.85 (No Trees)` Straight` , Miscellaneous`Road_2e34e7d3-881b-407b-bafc-33e033c41e78
+
+PARSFILE Plot\Setup\Plot_085bec2f-da38-4258-9eb1-5e240115296d.par
+#BlueLink8 Plot: Setup`Wheel Speeds` Braking` , Plot`Plot_085bec2f-da38-4258-9eb1-5e240115296d
+
+PARSFILE Plot\Setup\Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd.par
+#BlueLink9 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd
+
+PARSFILE Plot\Setup\Plot_5fce4da0-0324-481f-a86b-bdc773b0f9f2.par
+#BlueLink10 Plot: Setup`Clutch Control Input` Powertrain` , Plot`Plot_5fce4da0-0324-481f-a86b-bdc773b0f9f2
+
+PARSFILE Plot\Setup\Plot_536a6a4d-647d-4eb4-b11f-664addaec88a.par
+#BlueLink11 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_536a6a4d-647d-4eb4-b11f-664addaec88a
+
+PARSFILE Plot\Setup\Plot_658b05a2-13e0-452f-8383-4ad65ca274c9.par
+#BlueLink12 Plot: Setup`Spin Rates in Powertrain` Powertrain` , Plot`Plot_658b05a2-13e0-452f-8383-4ad65ca274c9
+
+PARSFILE Plot\Setup\Plot_b8614b7c-dc02-4f0e-b723-a961bf595f50.par
+#BlueLink13 Plot: Setup`Torques in Powertrain` Powertrain` , Plot`Plot_b8614b7c-dc02-4f0e-b723-a961bf595f50
+
+
+#EMBEDDED_NOTES
+#Procedure for an acceleration test on a straight, flat road using open-loop controls for the throttle, transmission shifting, and clutch actuation.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Acceleration and Braking } Open-loop Throttle, Shifting and Clutch
+#Library : Procedures
+#DataSet : Open-loop Throttle, Shifting and Clutch
+#Category: Acceleration and Braking
+#FileID  : Proc_09c57c54-1209-4432-af91-61c4124a94cf
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

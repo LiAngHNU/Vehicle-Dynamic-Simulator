@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Procedures`Offset Backing`Driving
+#CheckBox3 0    
+
+#RingCtrl0 4
+#RingCtrl1 -1
+#RingCtrl2 0
+OPT_STOP -1
+TSTART 0
+SSTART 27
+TSTART_WRITE = 0;
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+TSTOP -1
+*SPEED 10
+*TSTOP 10
+*TSTART 0
+*SSTART 27
+*SSTOP 100
+
+PARSFILE Control\Driver\StrDM_a1acd985-eb57-418f-b6b0-c2cce507013d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`1.8m Left, 0.6s Single Preview` Constant Position: Non-Zero Offset` , Steering`StrDM_a1acd985-eb57-418f-b6b0-c2cce507013d
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55.par
+#BlueLink0 Multiple Moving Objects`1 Driver Preview Point, Set by DM` Points of Interest` , Miscellaneous`TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55
+
+PARSFILE Output\Sensors\MoSen_18562cab-0304-4eb9-9286-f65055610723.par
+#BlueLink1 Positions, Velocities, and Accelerations`Trailer Hitch Position` Sprung Mass and Suspended Cab` , Miscellaneous`MoSen_18562cab-0304-4eb9-9286-f65055610723
+
+PARSFILE Generic\VS_commands\GenVS_ae75e24b-0c6f-43f1-b9cb-3b930f87bad0.par
+#BlueLink2 Generic VS Commands`Trailer Backing: I-PD Setup` Custom Steering Controls` , Miscellaneous`GenVS_ae75e24b-0c6f-43f1-b9cb-3b930f87bad0
+
+PARSFILE Roads\3D_Road\Road_e4cc7c23-1b4d-4fbf-8cf5-7d5f1d3a3ed2.par
+#BlueLink3 Road: 3D Surface (All Properties)`Offset Backing Test Pad` Flat Test Pads` , Miscellaneous`Road_e4cc7c23-1b4d-4fbf-8cf5-7d5f1d3a3ed2
+
+PARSFILE Events\Events_8a67e9ce-cd05-440a-9c0f-94da809bc909.par
+#BlueLink4 Events`A. Pull Forward & Stop` Offset Backing` , Miscellaneous`Events_8a67e9ce-cd05-440a-9c0f-94da809bc909
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink9 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+
+#EMBEDDED_NOTES
+#This procedure directs the vehicle to pull forward from one parking spot and reverse into another spot which is to the right of the original.
+#
+#An I-PD controller is used to steer the wheels while the truck is reversing.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driving } Offset Backing
+#Library : Procedures
+#DataSet : Offset Backing
+#Category: Driving
+#FileID  : Proc_7391a70e-b18c-4197-bd25-439b78bf4a78
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

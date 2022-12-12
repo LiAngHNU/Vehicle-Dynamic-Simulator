@@ -1,0 +1,70 @@
+PARSFILE
+#FullDataName Procedures`Highway Intersection`Driving
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 500
+TSTART_WRITE = 0;
+TSTOP 120
+SSTOP 2000
+OPT_DIRECTION 0
+*SPEED 120
+*TSTOP 120
+*TSTART 0
+*SSTART 500
+*SSTOP 2000
+
+PARSFILE Control\Driver\StrDM_d6ef0cdf-9013-413f-9faf-2dea378db470.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.75s Single Preview` Constant Position: No Offset` , Steering`StrDM_d6ef0cdf-9013-413f-9faf-2dea378db470
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_path\SpdPath_8bc5c81d-ca7b-4868-a7e7-85fe7e2942f0.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.2/0.2 G Max Ax/Ay, 120 kmh` Intersections` , Speed vs. station`SpdPath_8bc5c81d-ca7b-4868-a7e7-85fe7e2942f0
+
+PARSFILE Control\Driver\StrDM_1594a655-3f36-4224-a771-17b3f7818433.par
+#BlueLink0 Control: Steering by the Closed-loop Driver Model`Exit, Right Lane: LTARG ID 2001` Atlas Highway Intersection` , Miscellaneous`StrDM_1594a655-3f36-4224-a771-17b3f7818433
+
+PARSFILE Control\Driver\StrDM_5336008e-f3d3-4bb8-b209-d24c4a8d3429.par
+#BlueLink1 Control: Steering by the Closed-loop Driver Model`Exit, Left Lane: LTARG ID 2002` Atlas Highway Intersection` , Miscellaneous`StrDM_5336008e-f3d3-4bb8-b209-d24c4a8d3429
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55.par
+#BlueLink2 Multiple Moving Objects`1 Driver Preview Point, Set by DM` Points of Interest` , Miscellaneous`TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55
+
+PARSFILE Generic\VS_commands\GenVS_6e790403-fd3d-4ff5-b250-347ef7b5775f.par
+#BlueLink8 Generic VS Commands`Velocity and Position` Plot Groups` , Plot`GenVS_6e790403-fd3d-4ff5-b250-347ef7b5775f
+
+PARSFILE Generic\VS_commands\GenVS_6180edf2-d208-4f16-890d-cde544aa0a9a.par
+#BlueLink9 Generic VS Commands`Tire Contact and Road ID` Plot Groups` , Plot`GenVS_6180edf2-d208-4f16-890d-cde544aa0a9a
+
+PARSFILE Generic\VS_commands\GenVS_15d12b66-6ebc-47ba-9159-7082dd3daecc.par
+#BlueLink10 Generic VS Commands`Driver Controls` Plot Groups` , Plot`GenVS_15d12b66-6ebc-47ba-9159-7082dd3daecc
+
+PARSFILE Plot\Setup\Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9.par
+#BlueLink18 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9
+
+
+#EMBEDDED_NOTES
+#There are three path follower datasets to ensure proper lane keeping for the vehicle as it either stays on I-94 or exits the highway onto Jackson Rd:
+#
+#Staying on I-94: No Offset, LTARG_ID = 1
+#Exit Right onto Jackson: LTARG_ID = 2001
+#Exit Left onto Jackson: LTARG_ID = 2002
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driving } Highway Intersection
+#Library : Procedures
+#DataSet : Highway Intersection
+#Category: Driving
+#FileID  : Proc_c19198f5-4977-46d3-8453-994f9d25cc85
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

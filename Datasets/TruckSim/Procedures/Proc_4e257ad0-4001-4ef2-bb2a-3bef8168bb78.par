@@ -1,0 +1,101 @@
+PARSFILE
+#FullDataName Procedures`Hill Hold w/ Parking Brake, AT`Brake System, Event-driven Tests
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART -20
+TSTART_WRITE = 0;
+TSTOP 80
+SSTOP 300
+OPT_DIRECTION 0
+*SPEED 15
+*TSTOP 80
+*TSTART 0
+*SSTART -20
+*SSTOP 300
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Hill Hold w/ Parking Brake, AT
+SPEED_TARGET_CONSTANT 15
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_d6ef0cdf-9013-413f-9faf-2dea378db470.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.75s Single Preview` Constant Position: No Offset` , Steering`StrDM_d6ef0cdf-9013-413f-9faf-2dea378db470
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Roads\3D_Road\Road_ae0a4f63-b6e4-448d-ab4d-90c35cd3b1b7.par
+#BlueLink0 Road: 3D Surface (All Properties)`1200m, 10% Grade, Waypoints` Hills` , Miscellaneous`Road_ae0a4f63-b6e4-448d-ab4d-90c35cd3b1b7
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink1 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+PARSFILE Generic\VS_commands\GenVS_64fe26ba-779a-4541-b1d4-3dcce6eba579.par
+#BlueLink2 Generic VS Commands`Waypoints and Distances` Hill Hold with Parking Brake` , Miscellaneous`GenVS_64fe26ba-779a-4541-b1d4-3dcce6eba579
+
+PARSFILE Generic\VS_commands\GenVS_dce245b9-bbf9-4c75-805e-bf4b0b3f0e21.par
+#BlueLink3 Generic VS Commands`Roll-Back Check` Hill Hold with Parking Brake` , Miscellaneous`GenVS_dce245b9-bbf9-4c75-805e-bf4b0b3f0e21
+
+PARSFILE Generic\VS_commands\GenVS_5808bccf-b23e-4017-9bff-cb209d0f2bd5.par
+#BlueLink6 Generic VS Commands`Throttle Reference` Hill Hold with Parking Brake` , Miscellaneous`GenVS_5808bccf-b23e-4017-9bff-cb209d0f2bd5
+
+PARSFILE Events\Events_f2a4727f-414e-4f80-9a1b-6dc801d4d278.par
+#BlueLink7 Events`A. Drive onto Hill` Hill Hold with Parking Brake: Auto. Trans.` , Miscellaneous`Events_f2a4727f-414e-4f80-9a1b-6dc801d4d278
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd.par
+#BlueLink9 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd
+
+PARSFILE Plot\Setup\Plot_92c3bffb-a766-4f7d-9f5e-73059542ee31.par
+#BlueLink10 Plot: Setup`Engine RPM` Powertrain` , Plot`Plot_92c3bffb-a766-4f7d-9f5e-73059542ee31
+
+PARSFILE Plot\Setup\Plot_0aff382f-c589-4818-8024-b7e9c0e473fd.par
+#BlueLink11 Plot: Setup`Engine Torque` Powertrain` , Plot`Plot_0aff382f-c589-4818-8024-b7e9c0e473fd
+
+PARSFILE Plot\Setup\Plot_e7b41872-2b40-4556-aa0d-7e348d4a1a61.par
+#BlueLink12 Plot: Setup`My_Dr -- Wheel Drive Torque (Axle 2)` Powertrain` , Plot`Plot_e7b41872-2b40-4556-aa0d-7e348d4a1a61
+
+PARSFILE Plot\Setup\Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806.par
+#BlueLink13 Plot: Setup`Brake Control: Master Cyl. Pressure` Braking` , Plot`Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806
+
+PARSFILE Plot\Setup\Plot_d521d9f1-e118-423c-ad9b-621567dc97ab.par
+#BlueLink14 Plot: Setup`Wheel Cylinder Pressures (Axle 1)` Braking` , Plot`Plot_d521d9f1-e118-423c-ad9b-621567dc97ab
+
+PARSFILE Plot\Setup\Plot_b5e7c87f-1521-41d2-9fa4-a880f7e64c51.par
+#BlueLink15 Plot: Setup`Wheel Cylinder Pressures (Axle 2)` Braking` , Plot`Plot_b5e7c87f-1521-41d2-9fa4-a880f7e64c51
+
+PARSFILE Plot\Setup\Plot_6147777e-2183-47fe-a60a-68d65df3310f.par
+#BlueLink16 Plot: Setup`Brake Torque` Braking` , Plot`Plot_6147777e-2183-47fe-a60a-68d65df3310f
+
+PARSFILE Plot\Setup\Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a.par
+#BlueLink18 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a
+
+PARSFILE Plot\Setup\Plot_6b9ae401-4add-4ffd-92bf-1333f56e8447.par
+#BlueLink19 Plot: Setup`Z Coord: Wheel Centers, SM Mass Orgin` Tracking` , Plot`Plot_6b9ae401-4add-4ffd-92bf-1333f56e8447
+
+
+LOG_ENTRY Used Dataset: Procedures; { Brake System, Event-driven Tests } Hill Hold w/ Parking Brake, AT
+#Library : Procedures
+#DataSet : Hill Hold w/ Parking Brake, AT
+#Category: Brake System, Event-driven Tests
+#FileID  : Proc_4e257ad0-4001-4ef2-bb2a-3bef8168bb78
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

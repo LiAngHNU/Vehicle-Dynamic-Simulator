@@ -1,0 +1,117 @@
+PARSFILE
+#FullDataName Procedures`Crosswind Test`Stability Tests
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 8
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 80
+*TSTOP 8
+*TSTART 0
+*SSTART 0
+*SSTOP 210
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Crosswind Test
+SPEED_TARGET_CONSTANT 80
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.6s Single Preview` Constant Position: No Offset` , Steering`StrDM_e2398fab-b956-498b-8858-93e89178bdf3
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Roads\3D_Road\Road_880696de-6885-420f-8234-39da6683a732.par
+#BlueLink0 Road: 3D Surface (All Properties)`Crosswind Facility` Stability Testing` , Miscellaneous`Road_880696de-6885-420f-8234-39da6683a732
+
+PARSFILE Generic\Group\GenGrp_d86ed65a-477c-45c5-867c-261b39bf87a3.par
+#BlueLink1 Generic Data Group`100 km/h Wind: From Right then Left` Wind and Environment` , Miscellaneous`GenGrp_d86ed65a-477c-45c5-867c-261b39bf87a3
+
+PARSFILE Animator\Groups\Group_12ab7a99-2ab9-4ba7-88d6-c159df2277b8.par
+#BlueLink2 Animator: Group`Crosswind: Fan Speed Arrows` Test Facilities` , Miscellaneous`Group_12ab7a99-2ab9-4ba7-88d6-c159df2277b8
+
+PARSFILE Animator\Groups\Group_a30c3559-6064-4877-aaf6-374c7e11090b.par
+#BlueLink3 Animator: Group`Aero Force and Moment Arrows` Aerodynamics: Force and Moments` , Miscellaneous`Group_a30c3559-6064-4877-aaf6-374c7e11090b
+
+#BlueLink4 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink5 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink6 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink7 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Plot\Setup\Plot_b5d96882-42a4-46e6-b782-67d5b876327f.par
+#BlueLink8 Plot: Setup`Aerodynamic Slip Angle` Aerodynamics and Wind` , Plot`Plot_b5d96882-42a4-46e6-b782-67d5b876327f
+
+PARSFILE Plot\Setup\Plot_13322ead-b18a-4513-be71-5c39921f8216.par
+#BlueLink9 Plot: Setup`Aerodynamic Forces` Aerodynamics and Wind` , Plot`Plot_13322ead-b18a-4513-be71-5c39921f8216
+
+PARSFILE Plot\Setup\Plot_d682b82b-6026-4a0d-bf0b-e2e9cfe52493.par
+#BlueLink10 Plot: Setup`Aerodynamic Moments` Aerodynamics and Wind` , Plot`Plot_d682b82b-6026-4a0d-bf0b-e2e9cfe52493
+
+PARSFILE Plot\Setup\Plot_d68a51eb-1a49-49c2-9934-88e71d7eb639.par
+#BlueLink11 Plot: Setup`Wind Speed` Aerodynamics and Wind` , Plot`Plot_d68a51eb-1a49-49c2-9934-88e71d7eb639
+
+PARSFILE Plot\Setup\Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1.par
+#BlueLink12 Plot: Setup`Yaw Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1
+
+PARSFILE Plot\Setup\Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9.par
+#BlueLink13 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink14 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_8aa6411f-4f0f-45db-b32c-d612009087f2.par
+#BlueLink15 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8aa6411f-4f0f-45db-b32c-d612009087f2
+
+PARSFILE Plot\Setup\Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5.par
+#BlueLink16 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink17 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717.par
+#BlueLink18 Plot: Setup`Vertical Forces (Axle 1, Single Tires)` Tire Forces` , Plot`Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717
+
+PARSFILE Plot\Setup\Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9.par
+#BlueLink19 Plot: Setup`Vertical Forces (Axle 2, Dual Tires)` Tire Forces` , Plot`Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates how TruckSim can be used to set up a crosswind test using user-defined tables to specify wind speed vs. station.
+#
+#The crosswind fans produce 100 km/h wind first from the right side, then the left side.
+#
+#For more information on how this was done, click on the blue links "Fan Speed" and "100 km/h Right and Left Test."
+#
+#The driver controls specify a closed-loop speed control with a constant target speed of 80 kph, no brake pressure, and automatic gear selection using all available gears. The closed-loop driver path follower is used to keep the vehicle following a target path with no lateral offset.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Stability Tests } Crosswind Test
+#Library : Procedures
+#DataSet : Crosswind Test
+#Category: Stability Tests
+#FileID  : Proc_48641ea9-fccd-47da-955c-ba738a288d92
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

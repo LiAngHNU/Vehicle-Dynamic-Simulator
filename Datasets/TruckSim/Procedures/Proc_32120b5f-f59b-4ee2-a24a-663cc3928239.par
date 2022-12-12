@@ -1,0 +1,101 @@
+PARSFILE
+#FullDataName Procedures`500 ft Circle (10% Bank) - Ramp Speed`Handling Tests
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 80
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*TSTOP 80
+*TSTART 0
+*SSTART 0
+
+OPT_SC 2
+PARSFILE Control\Driver\StrDM_9b35f18a-5c59-4a9a-8de1-61f2a3df1a3d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`Variable Speed Preview` Constant Position: No Offset` , Steering`StrDM_9b35f18a-5c59-4a9a-8de1-61f2a3df1a3d
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_t\SpdTime_edf8884c-95fe-430c-b441-6b3c0a829db8.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`Ramp: 0-50 km/h in 15 sec.` Speed vs. Time` , Speed vs. time`SpdTime_edf8884c-95fe-430c-b441-6b3c0a829db8
+
+PARSFILE Roads\3D_Road\Road_32be5d4e-bec4-4246-8f74-9b69d4e52c89.par
+#BlueLink0 Road: 3D Surface (All Properties)`152.4-m R. Circle, 10% Bank, Mu = 0.85` Circular Roads` , Miscellaneous`Road_32be5d4e-bec4-4246-8f74-9b69d4e52c89
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806.par
+#BlueLink9 Plot: Setup`Brake Control: Master Cyl. Pressure` Braking` , Plot`Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806
+
+PARSFILE Plot\Setup\Plot_536a6a4d-647d-4eb4-b11f-664addaec88a.par
+#BlueLink10 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_536a6a4d-647d-4eb4-b11f-664addaec88a
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink11 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_6ab65115-f524-4f04-aecb-33140a974c8d.par
+#BlueLink13 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_6ab65115-f524-4f04-aecb-33140a974c8d
+
+PARSFILE Plot\Setup\Plot_8aa6411f-4f0f-45db-b32c-d612009087f2.par
+#BlueLink14 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8aa6411f-4f0f-45db-b32c-d612009087f2
+
+PARSFILE Plot\Setup\Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5.par
+#BlueLink15 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5
+
+PARSFILE Plot\Setup\Plot_4663aad5-4131-4de6-af6d-ef0989c5b0a8.par
+#BlueLink16 Plot: Setup`Auxiliary Roll Moment` Suspension Forces and Moments` , Plot`Plot_4663aad5-4131-4de6-af6d-ef0989c5b0a8
+
+PARSFILE Plot\Setup\Plot_41f2a7c1-b1a8-4e38-a6ea-4946d34bbe3a.par
+#BlueLink17 Plot: Setup`Steer vs. Roll (Axle 2)` Suspension Motion` , Plot`Plot_41f2a7c1-b1a8-4e38-a6ea-4946d34bbe3a
+
+PARSFILE Plot\Setup\Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9.par
+#BlueLink18 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9
+
+PARSFILE Plot\Setup\Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8.par
+#BlueLink19 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8
+
+PARSFILE Plot\Setup\Plot_4293eee0-0f12-4863-a6d5-235d2b68edd8.par
+#BlueLink21 Plot: Setup`Slip Angles, Lagged (Axle 1 - 4)` Tire Kinematics` , Plot`Plot_4293eee0-0f12-4863-a6d5-235d2b68edd8
+
+PARSFILE Plot\Setup\Plot_01860022-278d-417b-b918-3f487da6f2b6.par
+#BlueLink22 Plot: Setup`Slip Ratios, Lagged (Axles 1 - 4)` Tire Kinematics` , Plot`Plot_01860022-278d-417b-b918-3f487da6f2b6
+
+PARSFILE Plot\Setup\Plot_5ae679b9-fced-4d01-abdd-237feba4b5fb.par
+#BlueLink23 Plot: Setup`Lateral Forces (Axle 1, Single Tires)` Tire Forces` , Plot`Plot_5ae679b9-fced-4d01-abdd-237feba4b5fb
+
+PARSFILE Plot\Setup\Plot_186526a3-d5fe-4990-bd51-ba12e73ea45f.par
+#BlueLink24 Plot: Setup`Lateral Forces (Axle 2, Dual Tires)` Tire Forces` , Plot`Plot_186526a3-d5fe-4990-bd51-ba12e73ea45f
+
+PARSFILE Plot\Setup\Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717.par
+#BlueLink25 Plot: Setup`Vertical Forces (Axle 1, Single Tires)` Tire Forces` , Plot`Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717
+
+PARSFILE Plot\Setup\Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9.par
+#BlueLink26 Plot: Setup`Vertical Forces (Axle 2, Dual Tires)` Tire Forces` , Plot`Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9
+
+
+#EMBEDDED_NOTES
+#Target Speed is ramped from 0 to 50 km/h in 15 seconds.
+#
+#Road is a 500-ft radius circle with a constant 10% bank.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Handling Tests } 500 ft Circle (10% Bank) - Ramp Speed
+#Library : Procedures
+#DataSet : 500 ft Circle (10% Bank) - Ramp Speed
+#Category: Handling Tests
+#FileID  : Proc_32120b5f-f59b-4ee2-a24a-663cc3928239
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

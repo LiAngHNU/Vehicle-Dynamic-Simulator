@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Procedures`Highway Scene`VS Scene Builder
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 25
+TSTART_WRITE = 0;
+TSTOP 50
+SSTOP 2000
+OPT_DIRECTION 0
+*SPEED 70
+*TSTOP 50
+*TSTART 0
+*SSTART 25
+*SSTOP 2000
+
+PARSFILE Control\Driver\StrDM_a737139e-1613-4e8f-ba4a-ba3367485e5f.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`1s Preview, 30 km/h Limit` Constant Position: No Offset` , Steering`StrDM_a737139e-1613-4e8f-ba4a-ba3367485e5f
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_path\SpdPath_b525f579-b67b-4db2-8cca-9d4215c6901d.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.2/0.2 G Max Ax/Ay, 100 km/h` Highway Driving` , Speed vs. station`SpdPath_b525f579-b67b-4db2-8cca-9d4215c6901d
+
+PARSFILE Roads\3D_Road\Road_41050c93-f451-4fe8-a4cb-396b76ab18f2.par
+#BlueLink0 Road: 3D Surface (All Properties)`Highway Scene` VS Scene Builder` , Miscellaneous`Road_41050c93-f451-4fe8-a4cb-396b76ab18f2
+
+PARSFILE Generic\VS_commands\GenVS_6e790403-fd3d-4ff5-b250-347ef7b5775f.par
+#BlueLink4 Generic VS Commands`Velocity and Position` Plot Groups` , Miscellaneous`GenVS_6e790403-fd3d-4ff5-b250-347ef7b5775f
+
+
+#EMBEDDED_NOTES
+#Procedure for Highway scene from VS Scene Builder.
+#
+#The built-in closed loop speed and steer controllers are set. Gear selection is automatic, and there is no open-loop braking.
+#
+#A link is made to a group of plot settings with variables of interest for this type of scenario.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { VS Scene Builder } Highway Scene
+#Library : Procedures
+#DataSet : Highway Scene
+#Category: VS Scene Builder
+#FileID  : Proc_f5176b3e-da62-43ca-a606-443cbbd77e8e
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

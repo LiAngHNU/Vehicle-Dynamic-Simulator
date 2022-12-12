@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName Procedures`Full Throttle Accel. (MT), 1% Grade`Acceleration and Braking
+#CheckBox3 0    
+
+#RingCtrl0 0
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 100
+SSTOP 2000
+OPT_DIRECTION 0
+*SPEED 0
+*TSTOP 100
+*TSTART 0
+*SSTART 0
+*SSTOP 2000
+
+OPT_SC 0
+SV_VXS 0
+PARSFILE Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.6s Single Preview` Constant Position: No Offset` , Steering`StrDM_e2398fab-b956-498b-8858-93e89178bdf3
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Throttle\Throttle_f32061d5-291f-436a-b26e-b73c738e4ade.par
+#BlueLink29 Control: Throttle (Open Loop)`Ramp: Full Throttle in 2 sec.` Ramp` , Throttle`Throttle_f32061d5-291f-436a-b26e-b73c738e4ade
+
+PARSFILE Roads\3D_Road\Road_dd42708a-2304-451c-a688-8719dee0420c.par
+#BlueLink0 Road: 3D Surface (All Properties)`2000 m, One Lane, 1% Grade, Mu = 0.85` Straight` , Miscellaneous`Road_dd42708a-2304-451c-a688-8719dee0420c
+
+PARSFILE Generic\VS_commands\GenVS_f286e702-1e80-48fd-b74e-b790a31d7351.par
+#BlueLink4 Generic VS Commands`Powertrain and Driver Controls` Plot Groups` , Miscellaneous`GenVS_f286e702-1e80-48fd-b74e-b790a31d7351
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink8 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_c3bc997f-caac-4c8e-8974-69ef71d2b82c.par
+#BlueLink9 Plot: Setup`Steer Torque` Steering` , Plot`Plot_c3bc997f-caac-4c8e-8974-69ef71d2b82c
+
+PARSFILE Plot\Setup\Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f.par
+#BlueLink10 Plot: Setup`Road Wheel Steer (Axle 1)` Steering` , Plot`Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink11 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_6ab65115-f524-4f04-aecb-33140a974c8d.par
+#BlueLink12 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_6ab65115-f524-4f04-aecb-33140a974c8d
+
+PARSFILE Plot\Setup\Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987.par
+#BlueLink13 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987
+
+PARSFILE Plot\Setup\Plot_31f418d3-adbb-4a29-8056-a466be0a945d.par
+#BlueLink15 Plot: Setup`Lateral Tracking` Tracking` , Plot`Plot_31f418d3-adbb-4a29-8056-a466be0a945d
+
+PARSFILE Plot\Setup\Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a.par
+#BlueLink16 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a
+
+PARSFILE Plot\Setup\Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8.par
+#BlueLink17 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8
+
+PARSFILE Plot\Setup\Plot_d9d546bb-6a4c-43cc-bd96-f64e62ce4844.par
+#BlueLink18 Plot: Setup`Slip Ratios, Lagged (Axle 2)` Tire Kinematics` , Plot`Plot_d9d546bb-6a4c-43cc-bd96-f64e62ce4844
+
+PARSFILE Plot\Setup\Plot_bcb6a070-1044-44ad-9834-71471d262085.par
+#BlueLink19 Plot: Setup`Longitudinal Forces (Axle 1, Single Tires)` Tire Forces` , Plot`Plot_bcb6a070-1044-44ad-9834-71471d262085
+
+PARSFILE Plot\Setup\Plot_fbf77b13-4413-4d64-af51-8a1491a4fd05.par
+#BlueLink20 Plot: Setup`Longitudinal Forces (Axle 2, Dual Tires)` Tire Forces` , Plot`Plot_fbf77b13-4413-4d64-af51-8a1491a4fd05
+
+PARSFILE Plot\Setup\Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717.par
+#BlueLink21 Plot: Setup`Vertical Forces (Axle 1, Single Tires)` Tire Forces` , Plot`Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717
+
+PARSFILE Plot\Setup\Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9.par
+#BlueLink22 Plot: Setup`Vertical Forces (Axle 2, Dual Tires)` Tire Forces` , Plot`Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9
+
+
+LOG_ENTRY Used Dataset: Procedures; { Acceleration and Braking } Full Throttle Accel. (MT), 1% Grade
+#Library : Procedures
+#DataSet : Full Throttle Accel. (MT), 1% Grade
+#Category: Acceleration and Braking
+#FileID  : Proc_53c0f6f2-1839-4971-b403-260998ec8b0a
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

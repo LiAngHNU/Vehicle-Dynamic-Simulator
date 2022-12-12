@@ -1,0 +1,109 @@
+PARSFILE
+#FullDataName Procedures`Steering Torque Pulse Test`Driver Controls
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 7
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 80
+*TSTOP 7
+*TSTART 0
+*SSTART 0
+*SSTOP 300
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Steering Torque Pulse Test
+SPEED_TARGET_CONSTANT 80
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\SteerTorque\StrTrq_9b31ead7-7a13-46aa-80f1-81bdb6a2b21c.par
+#BlueLink27 Control: Steering Torque (Open Loop)`2.5 N-m Pulse from 1.0 - 1.5 seconds` ` , Steering`StrTrq_9b31ead7-7a13-46aa-80f1-81bdb6a2b21c
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Roads\3D_Road\Road_1d628bf6-d343-4b53-aab3-6c447711f700.par
+#BlueLink0 Road: 3D Surface (All Properties)`1 km Square, Mu = 0.85` Flat Test Pads` , Miscellaneous`Road_1d628bf6-d343-4b53-aab3-6c447711f700
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink1 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+#BlueLink3 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink8 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink9 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_ef39a2c7-73b1-4a60-b806-3c2f6bbb3539.par
+#BlueLink10 Plot: Setup`Roll Angle of Sprung Masses vs. Station` Vehicle Motion` , Plot`Plot_ef39a2c7-73b1-4a60-b806-3c2f6bbb3539
+
+PARSFILE Plot\Setup\Plot_033c55dc-d64e-4e15-89b2-56afa03c4255.par
+#BlueLink12 Plot: Setup`Vehicle Sideslip Angle vs. Station` Vehicle Motion` , Plot`Plot_033c55dc-d64e-4e15-89b2-56afa03c4255
+
+PARSFILE Plot\Setup\Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1.par
+#BlueLink13 Plot: Setup`Yaw Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1
+
+PARSFILE Plot\Setup\Plot_38af2fee-b452-4e50-bfca-9012303b5e16.par
+#BlueLink14 Plot: Setup`Yaw Rate of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_38af2fee-b452-4e50-bfca-9012303b5e16
+
+PARSFILE Plot\Setup\Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8.par
+#BlueLink15 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8
+
+PARSFILE Plot\Setup\Plot_085bec2f-da38-4258-9eb1-5e240115296d.par
+#BlueLink16 Plot: Setup`Wheel Speeds` Braking` , Plot`Plot_085bec2f-da38-4258-9eb1-5e240115296d
+
+PARSFILE Plot\Setup\Plot_2af2b120-28db-4d3d-9833-c4cf228e2d17.par
+#BlueLink17 Plot: Setup`Longitudinal Accel. of CG's vs. Station` Vehicle Motion` , Plot`Plot_2af2b120-28db-4d3d-9833-c4cf228e2d17
+
+PARSFILE Plot\Setup\Plot_8aa6411f-4f0f-45db-b32c-d612009087f2.par
+#BlueLink19 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8aa6411f-4f0f-45db-b32c-d612009087f2
+
+PARSFILE Plot\Setup\Plot_a5758d72-5a36-4995-989a-3cf5e58f03cb.par
+#BlueLink20 Plot: Setup`Vertical Axle Forces` Tire Forces` , Plot`Plot_a5758d72-5a36-4995-989a-3cf5e58f03cb
+
+PARSFILE Plot\Setup\Plot_4794326c-b040-4eaa-b40d-65b5e576ed7e.par
+#BlueLink21 Plot: Setup`Road Wheel Steer Angles` Steering` , Plot`Plot_4794326c-b040-4eaa-b40d-65b5e576ed7e
+
+PARSFILE Plot\Setup\Plot_e6e86472-449d-4578-95bb-8b13f78312b1.par
+#BlueLink22 Plot: Setup`Kingpin Torque` Steering` , Plot`Plot_e6e86472-449d-4578-95bb-8b13f78312b1
+
+PARSFILE Plot\Setup\Plot_637b8350-a6b4-4316-b81b-12f50955df56.par
+#BlueLink23 Plot: Setup`Steer Torque vs. Steer Angle` Steering` , Plot`Plot_637b8350-a6b4-4316-b81b-12f50955df56
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates the use of open-loop steering torque control in a constant speed steering torque pulse test.
+#
+#Click on the open-loop steering torque control dataset "2.5 N-m Pulse from 1.0 - 1.5 seconds" for more information on how the steering control was set up.
+#
+#The driver controls specify a closed-loop speed control with a constant target speed of 80 kph, no brake pressure, and automatic gear selection using all available gears.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driver Controls } Steering Torque Pulse Test
+#Library : Procedures
+#DataSet : Steering Torque Pulse Test
+#Category: Driver Controls
+#FileID  : Proc_b4c94100-107f-4b09-ab76-9163ea5ff2fb
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

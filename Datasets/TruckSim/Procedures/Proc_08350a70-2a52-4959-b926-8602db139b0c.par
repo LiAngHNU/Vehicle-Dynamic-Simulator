@@ -1,0 +1,122 @@
+PARSFILE
+#FullDataName Procedures`56.33 km/h, 180 deg. Step Steer Test`Stability Tests
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 -1
+#RingCtrl2 0
+OPT_STOP -1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+TSTOP -1
+*SPEED 56.33
+*TSTOP 15
+*TSTART 0
+*SSTART 0
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: 56.33 km/h, 180 deg. Step Steer Test
+SPEED_TARGET_CONSTANT 56.33
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Steer\StrSW_9d4ba4ef-03fd-4419-acee-d82ae2860d75.par
+#BlueLink27 Control: Steering (Open Loop)`Ramp: 0 to 180 deg. at 5 sec.` Ramp` , Steering`StrSW_9d4ba4ef-03fd-4419-acee-d82ae2860d75
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_mt\GearOL_9ef2d086-519f-45e0-86fb-232d3f4a48a2.par
+#BlueLink30 Control: Shifting (Open Loop)`Constant: 16th Gear` Constant` , Shifting Control`GearOL_9ef2d086-519f-45e0-86fb-232d3f4a48a2
+
+PARSFILE Roads\3D_Road\Road_1d628bf6-d343-4b53-aab3-6c447711f700.par
+#BlueLink0 Road: 3D Surface (All Properties)`1 km Square, Mu = 0.85` Flat Test Pads` , Miscellaneous`Road_1d628bf6-d343-4b53-aab3-6c447711f700
+
+PARSFILE Roads\Friction\RdMu_ba77e65b-ac24-44a0-ab4d-f600ab858c9e.par
+#BlueLink1 Road: Friction Map, S-L Grid`Constant: 1.0` Constant Mu` , Miscellaneous`RdMu_ba77e65b-ac24-44a0-ab4d-f600ab858c9e
+
+PARSFILE Generic\Group\GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa.par
+#BlueLink2 Generic Data Group`5 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_48ee9e99-6d66-4ac6-ba87-2981947238fa
+
+PARSFILE Events\Events_c8c5a753-9ce2-49e0-a42a-9ee06841209c.par
+#BlueLink7 Events`A. Check Trailer Roll Angle` Step Steer Test with Trailer` , Miscellaneous`Events_c8c5a753-9ce2-49e0-a42a-9ee06841209c
+
+PARSFILE Plot\Setup\Plot_4794326c-b040-4eaa-b40d-65b5e576ed7e.par
+#BlueLink8 Plot: Setup`Road Wheel Steer Angles` Steering` , Plot`Plot_4794326c-b040-4eaa-b40d-65b5e576ed7e
+
+PARSFILE Plot\Setup\Plot_d8e23465-0fa8-4913-aa4e-c04c0b2b146d.par
+#BlueLink9 Plot: Setup`Height Sensors Tracking, Unit 2` Position, Accel. and Rate Sensors` , Plot`Plot_d8e23465-0fa8-4913-aa4e-c04c0b2b146d
+
+PARSFILE Plot\Setup\Plot_536a6a4d-647d-4eb4-b11f-664addaec88a.par
+#BlueLink10 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_536a6a4d-647d-4eb4-b11f-664addaec88a
+
+PARSFILE Plot\Setup\Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd.par
+#BlueLink11 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd
+
+PARSFILE Plot\Setup\Plot_8aa6411f-4f0f-45db-b32c-d612009087f2.par
+#BlueLink12 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8aa6411f-4f0f-45db-b32c-d612009087f2
+
+PARSFILE Plot\Setup\Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987.par
+#BlueLink13 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987
+
+PARSFILE Plot\Setup\Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5.par
+#BlueLink14 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5
+
+PARSFILE Plot\Setup\Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1.par
+#BlueLink15 Plot: Setup`Yaw Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1
+
+PARSFILE Plot\Setup\Plot_0616a266-66af-4221-a68a-ad24f1a280e3.par
+#BlueLink16 Plot: Setup`Vehicle Sideslip Angle vs. Time` Vehicle Motion` , Plot`Plot_0616a266-66af-4221-a68a-ad24f1a280e3
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink17 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_4663aad5-4131-4de6-af6d-ef0989c5b0a8.par
+#BlueLink18 Plot: Setup`Auxiliary Roll Moment` Suspension Forces and Moments` , Plot`Plot_4663aad5-4131-4de6-af6d-ef0989c5b0a8
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink19 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717.par
+#BlueLink20 Plot: Setup`Vertical Forces (Axle 1, Single Tires)` Tire Forces` , Plot`Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717
+
+PARSFILE Plot\Setup\Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9.par
+#BlueLink21 Plot: Setup`Vertical Forces (Axle 2, Dual Tires)` Tire Forces` , Plot`Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9
+
+PARSFILE Plot\Setup\Plot_e644cbac-048b-4565-bf97-13fd3a72dadf.par
+#BlueLink22 Plot: Setup`Vertical Forces (Axle 3, Dual Tires)` Tire Forces` , Plot`Plot_e644cbac-048b-4565-bf97-13fd3a72dadf
+
+PARSFILE Plot\Setup\Plot_55d7f02d-4375-4c8e-afc6-2e3e65132985.par
+#BlueLink23 Plot: Setup`Vertical Forces (Axle 4, Dual Tires)` Tire Forces` , Plot`Plot_55d7f02d-4375-4c8e-afc6-2e3e65132985
+
+PARSFILE Plot\Setup\Plot_7ebca63b-53ca-4de5-9a87-a0494e363d4f.par
+#BlueLink24 Plot: Setup`Vertical Forces (Axle 5, Dual Tires)` Tire Forces` , Plot`Plot_7ebca63b-53ca-4de5-9a87-a0494e363d4f
+
+PARSFILE Plot\Setup\Plot_6bc9246c-f0c4-451d-b0d3-79b21d3be464.par
+#BlueLink25 Plot: Setup`Aligning Moments (Axle 1)` Tire Moments` , Plot`Plot_6bc9246c-f0c4-451d-b0d3-79b21d3be464
+
+
+#EMBEDDED_NOTES
+#This test is used to simulate a tractor trailer rollover-type test.
+#
+#Target Speed is 56.33 km/h (35 mph).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Stability Tests } 56.33 km/h, 180 deg. Step Steer Test
+#Library : Procedures
+#DataSet : 56.33 km/h, 180 deg. Step Steer Test
+#Category: Stability Tests
+#FileID  : Proc_08350a70-2a52-4959-b926-8602db139b0c
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

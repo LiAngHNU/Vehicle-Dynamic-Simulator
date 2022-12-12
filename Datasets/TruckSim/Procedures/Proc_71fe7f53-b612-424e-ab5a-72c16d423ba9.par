@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName Procedures`Looped Road w/ Banking`Driving
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART -3.6
+SSTART -50
+TSTART_WRITE = 0;
+TSTOP 60
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 50
+*TSTOP 60
+*TSTART -3.6
+*SSTART -50
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Looped Road w/ Banking
+SPEED_TARGET_CONSTANT 50
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_c743fbf4-cb73-4307-9b47-cccb3119e227.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`1.65m Right, 0.75s Single Preview` Constant Position: Non-Zero Offset` , Steering`StrDM_c743fbf4-cb73-4307-9b47-cccb3119e227
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+#MiscYellow0
+tstart_write 0
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_32c6b5d6-4597-4095-bd25-d037bf3262eb.par
+#BlueLink0 Road: 3D Surface (All Properties)`Looped Road with Banking` Road Segment Builder` , Miscellaneous`Road_32c6b5d6-4597-4095-bd25-d037bf3262eb
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5.par
+#BlueLink9 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5
+
+PARSFILE Plot\Setup\Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987.par
+#BlueLink10 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987
+
+PARSFILE Plot\Setup\Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1.par
+#BlueLink11 Plot: Setup`Yaw Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink12 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_b8614b7c-dc02-4f0e-b723-a961bf595f50.par
+#BlueLink13 Plot: Setup`Torques in Powertrain` Powertrain` , Plot`Plot_b8614b7c-dc02-4f0e-b723-a961bf595f50
+
+PARSFILE Plot\Setup\Plot_70cf053b-5063-4093-9e6b-3254ae359ad8.par
+#BlueLink14 Plot: Setup`My_Dr -- Wheel Drive Torque (Axle 1)` Powertrain` , Plot`Plot_70cf053b-5063-4093-9e6b-3254ae359ad8
+
+PARSFILE Plot\Setup\Plot_e7b41872-2b40-4556-aa0d-7e348d4a1a61.par
+#BlueLink15 Plot: Setup`My_Dr -- Wheel Drive Torque (Axle 2)` Powertrain` , Plot`Plot_e7b41872-2b40-4556-aa0d-7e348d4a1a61
+
+PARSFILE Plot\Setup\Plot_2dd86413-3798-4048-b033-f592b39de27f.par
+#BlueLink16 Plot: Setup`My_Dr -- Wheel Drive Torque (Axle 3)` Powertrain` , Plot`Plot_2dd86413-3798-4048-b033-f592b39de27f
+
+PARSFILE Plot\Setup\Plot_536a6a4d-647d-4eb4-b11f-664addaec88a.par
+#BlueLink17 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_536a6a4d-647d-4eb4-b11f-664addaec88a
+
+
+#EMBEDDED_NOTES
+#This example has a vehicle driving on a looped road built with the TruckSim Road Segment Builder.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driving } Looped Road w/ Banking
+#Library : Procedures
+#DataSet : Looped Road w/ Banking
+#Category: Driving
+#FileID  : Proc_71fe7f53-b612-424e-ab5a-72c16d423ba9
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

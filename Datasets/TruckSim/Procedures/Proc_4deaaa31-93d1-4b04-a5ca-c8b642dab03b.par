@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName Procedures`Trailer Reversing into Loading Dock`Driving
+#CheckBox3 0    
+
+#RingCtrl0 0
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 162.5
+TSTART_WRITE = 0;
+TSTOP 70
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 50
+*TSTOP 70
+*TSTART 0
+*SSTART 162.5
+
+OPT_SC 0
+SV_VXS 50
+PARSFILE Control\Driver\StrDM_c743fbf4-cb73-4307-9b47-cccb3119e227.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`1.65m Right, 0.75s Single Preview` Constant Position: Non-Zero Offset` , Steering`StrDM_c743fbf4-cb73-4307-9b47-cccb3119e227
+
+PARSFILE Control\Braking\PbkCon_6beb4ef8-74e7-45df-bd48-77dc0327858f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0.5 MPa` Constant` , Braking`PbkCon_6beb4ef8-74e7-45df-bd48-77dc0327858f
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink29 Control: Throttle (Open Loop)`Constant: 0` Constant` , Throttle`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+PARSFILE Roads\3D_Road\Road_a7c456ab-63f4-417e-8ab5-aaed34db5efe.par
+#BlueLink0 Road: 3D Surface (All Properties)`Loading Dock` Test Facilities` , Miscellaneous`Road_a7c456ab-63f4-417e-8ab5-aaed34db5efe
+
+PARSFILE Events\Events_cfd86ca2-b5fc-4103-aed3-d1fb581b27cb.par
+#BlueLink1 Events`A. Come to Stop` Trailer Reversing into Loading Dock` , Miscellaneous`Events_cfd86ca2-b5fc-4103-aed3-d1fb581b27cb
+
+PARSFILE Generic\Links\GenLink_5c8ae9a2-37ce-485d-9425-4f74463439ac.par
+#BlueLink4 Generic Group of Links`Warehouse Environment` Environments` , Miscellaneous`GenLink_5c8ae9a2-37ce-485d-9425-4f74463439ac
+
+PARSFILE Plot\Setup\Plot_26dc2eb1-dd9b-4776-8f9f-09208d63924a.par
+#BlueLink8 Plot: Setup`Event Count` Event Control` , Plot`Plot_26dc2eb1-dd9b-4776-8f9f-09208d63924a
+
+PARSFILE Plot\Setup\Plot_833f3e25-4cf4-4bb0-9a6a-ff07efcd5306.par
+#BlueLink9 Plot: Setup`Event Elapsed Time` Event Control` , Plot`Plot_833f3e25-4cf4-4bb0-9a6a-ff07efcd5306
+
+PARSFILE Plot\Setup\Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9.par
+#BlueLink10 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9
+
+PARSFILE Plot\Setup\Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8.par
+#BlueLink11 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink12 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_9089d5a4-1ff4-47f5-ab79-525cb417cbcb.par
+#BlueLink13 Plot: Setup`Wheel Cylinder Pressures` Braking` , Plot`Plot_9089d5a4-1ff4-47f5-ab79-525cb417cbcb
+
+PARSFILE Plot\Setup\Plot_6daa361a-9613-477b-b0ba-ecec097e5c0e.par
+#BlueLink14 Plot: Setup`Hitch: Articulation Angle` Hitch` , Plot`Plot_6daa361a-9613-477b-b0ba-ecec097e5c0e
+
+PARSFILE Plot\Setup\Plot_712a1199-3ac8-43d0-80b3-7a3572dc3bb8.par
+#BlueLink15 Plot: Setup`Hitch Forces` Hitch` , Plot`Plot_712a1199-3ac8-43d0-80b3-7a3572dc3bb8
+
+PARSFILE Plot\Setup\Plot_536a6a4d-647d-4eb4-b11f-664addaec88a.par
+#BlueLink16 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_536a6a4d-647d-4eb4-b11f-664addaec88a
+
+
+#EMBEDDED_NOTES
+#This procedure shows how it is possible to study trailer reversing in TruckSim.  Events are used to trigger different driver controls that guide the vehicle from forward to reverse.
+#
+#This procedure is tuned for the 3A Day Cab Tractor w/ 2A  Shipping Container Trailer vehicle.  Tuning will need to be performed for other vehicles.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driving } Trailer Reversing into Loading Dock
+#Library : Procedures
+#DataSet : Trailer Reversing into Loading Dock
+#Category: Driving
+#FileID  : Proc_4deaaa31-93d1-4b04-a5ca-c8b642dab03b
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

@@ -1,0 +1,111 @@
+PARSFILE
+#FullDataName Procedures`AEB Single Test: CCRb`AEB: Automated Emergency Braking
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+SSTART 0
+TSTOP 15
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*TSTOP 15
+*SSTART 0
+
+OPT_SC 2
+PARSFILE Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.6s Single Preview` Constant Position: No Offset` , Steering`StrDM_e2398fab-b956-498b-8858-93e89178bdf3
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_t\SpdTime_5f8a666c-673a-4a2d-a5b8-73b65019ff10.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`Constant: 50 km/h` Constant` , Speed vs. time`SpdTime_5f8a666c-673a-4a2d-a5b8-73b65019ff10
+
+PARSFILE Roads\3D_Road\Road_cd208c12-717f-4de2-ac1a-ef13b779076c.par
+#BlueLink0 Road: 3D Surface (All Properties)`1200 m, One Lane, Mu = 0.9` Straight` , Miscellaneous`Road_cd208c12-717f-4de2-ac1a-ef13b779076c
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_658f9b9a-3f46-47a7-b352-2dc5c0a320e4.par
+#BlueLink3 Multiple Moving Objects`Euro Vehicle Target (EVT) for AEB` Euro NCAP` , Miscellaneous`TMotion_658f9b9a-3f46-47a7-b352-2dc5c0a320e4
+
+#BlueLink4 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Generic\VS_commands\GenVS_7b03aa98-b2b6-47a0-a032-1b878005b4bb.par
+#BlueLink6 Generic VS Commands`Euro NCAP: Single CCrb Test` ADAS Support` , Miscellaneous`GenVS_7b03aa98-b2b6-47a0-a032-1b878005b4bb
+
+PARSFILE Events\Events_4a8589c7-bd97-4435-8088-f2f82732af45.par
+#BlueLink7 Events`CCRb A. Wait for AEB to Intervene` Euro NCAP AEB Testing: CCRb` , Miscellaneous`Events_4a8589c7-bd97-4435-8088-f2f82732af45
+
+PARSFILE Plot\Setup\Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9.par
+#BlueLink8 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink9 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_8aa6411f-4f0f-45db-b32c-d612009087f2.par
+#BlueLink10 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8aa6411f-4f0f-45db-b32c-d612009087f2
+
+PARSFILE Plot\Setup\Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5.par
+#BlueLink11 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5
+
+PARSFILE Plot\Setup\Plot_4794326c-b040-4eaa-b40d-65b5e576ed7e.par
+#BlueLink12 Plot: Setup`Road Wheel Steer Angles` Steering` , Plot`Plot_4794326c-b040-4eaa-b40d-65b5e576ed7e
+
+PARSFILE Plot\Setup\Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8.par
+#BlueLink13 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8
+
+PARSFILE Plot\Setup\Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1.par
+#BlueLink14 Plot: Setup`Yaw Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1
+
+PARSFILE Plot\Setup\Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987.par
+#BlueLink15 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink16 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717.par
+#BlueLink17 Plot: Setup`Vertical Forces (Axle 1, Single Tires)` Tire Forces` , Plot`Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717
+
+PARSFILE Plot\Setup\Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9.par
+#BlueLink18 Plot: Setup`Vertical Forces (Axle 2, Dual Tires)` Tire Forces` , Plot`Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9
+
+PARSFILE Plot\Setup\Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806.par
+#BlueLink19 Plot: Setup`Brake Control: Master Cyl. Pressure` Braking` , Plot`Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806
+
+PARSFILE Plot\Setup\Plot_d521d9f1-e118-423c-ad9b-621567dc97ab.par
+#BlueLink20 Plot: Setup`Wheel Cylinder Pressures (Axle 1)` Braking` , Plot`Plot_d521d9f1-e118-423c-ad9b-621567dc97ab
+
+PARSFILE Plot\Setup\Plot_b5e7c87f-1521-41d2-9fa4-a880f7e64c51.par
+#BlueLink21 Plot: Setup`Wheel Cylinder Pressures (Axle 2)` Braking` , Plot`Plot_b5e7c87f-1521-41d2-9fa4-a880f7e64c51
+
+
+#EMBEDDED_NOTES
+#This dataset was updated in version 2018. Sensors were moved to the vehicle: loaded combination screen.
+#
+#AEB : Autonomous Emergency Braking
+#EVT : Euro Vehicle Target
+#VUT : Vehicle Under Test
+#FCW : Forward Collision Warning
+#CCRb : Car-to-Car Rear, Braking EVT
+#
+#This procedure is based on a test scenario published by Euro NCAP for AEB systems.
+#
+#Here, a target is moving at 50 km/h and decelerates. The VUT is trailing with a distance that is specified with a parameter Start_Distance.
+#
+#The first Generic Group defines the target vehicle, towing vehicle, AEB Sensor, and VS Commands for the FCW HUD and the AEB control.
+#
+#The other blue links are specifiec to the CCRb test.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { AEB: Automated Emergency Braking } AEB Single Test: CCRb
+#Library : Procedures
+#DataSet : AEB Single Test: CCRb
+#Category: AEB: Automated Emergency Braking
+#FileID  : Proc_96e5d50f-f3b2-412d-bebd-033129c53d94
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

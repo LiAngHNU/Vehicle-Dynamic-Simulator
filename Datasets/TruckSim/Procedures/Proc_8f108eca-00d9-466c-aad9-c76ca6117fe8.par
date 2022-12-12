@@ -1,0 +1,69 @@
+PARSFILE
+#FullDataName Procedures`Deer Crossing`Animation Asset-based Scenarios
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 850
+TSTART_WRITE = 0;
+TSTOP 15
+SSTOP 3000
+OPT_DIRECTION 0
+*SPEED 120
+*TSTOP 15
+*TSTART 0
+*SSTART 850
+*SSTOP 3000
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Deer Crossing
+SPEED_TARGET_CONSTANT 120
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_03ab54a2-70ea-4065-a739-9e771283faf6.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.5s Preview, No Path Line` Constant Position: No Offset` , Steering`StrDM_03ab54a2-70ea-4065-a739-9e771283faf6
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Roads\3D_Road\Road_41050c93-f451-4fe8-a4cb-396b76ab18f2.par
+#BlueLink0 Road: 3D Surface (All Properties)`Highway Scene` VS Scene Builder` , Miscellaneous`Road_41050c93-f451-4fe8-a4cb-396b76ab18f2
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink4 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Generic\VS_commands\GenVS_6e790403-fd3d-4ff5-b250-347ef7b5775f.par
+#BlueLink8 Generic VS Commands`Velocity and Position` Plot Groups` , Plot`GenVS_6e790403-fd3d-4ff5-b250-347ef7b5775f
+
+PARSFILE Generic\VS_commands\GenVS_8f7411b8-c46e-45ca-8259-b31bc7af7dd3.par
+#BlueLink9 Generic VS Commands`Acceleration` Plot Groups` , Plot`GenVS_8f7411b8-c46e-45ca-8259-b31bc7af7dd3
+
+PARSFILE Generic\VS_commands\GenVS_15d12b66-6ebc-47ba-9159-7082dd3daecc.par
+#BlueLink10 Generic VS Commands`Driver Controls` Plot Groups` , Plot`GenVS_15d12b66-6ebc-47ba-9159-7082dd3daecc
+
+PARSFILE Generic\VS_commands\GenVS_b624fdcd-4723-4981-a72c-fd8ca9b2059b.par
+#BlueLink11 Generic VS Commands`Sensor and Target Properties` Plot Groups` , Plot`GenVS_b624fdcd-4723-4981-a72c-fd8ca9b2059b
+
+
+LOG_ENTRY Used Dataset: Procedures; { Animation Asset-based Scenarios } Deer Crossing
+#Library : Procedures
+#DataSet : Deer Crossing
+#Category: Animation Asset-based Scenarios
+#FileID  : Proc_8f108eca-00d9-466c-aad9-c76ca6117fe8
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

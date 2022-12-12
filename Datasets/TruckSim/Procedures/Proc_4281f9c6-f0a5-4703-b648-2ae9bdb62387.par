@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName Procedures`Single Point Steer Control - 0 km/h`Driver Controls
+#CheckBox0 1    
+OPT_INIT_CONFIG 1
+#CheckBox1 0    
+OPT_INIT_PATH 0
+#CheckBox2 1    
+OPT_INIT_SPEED 1
+#CheckBox3 1    
+
+#RingCtrl0 0
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 10
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 0
+*TSTOP 10
+*TSTART 0
+*SSTART 0
+
+OPT_SC 0
+SV_VXS 0
+PARSFILE Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.6s Single Preview` Constant Position: No Offset` , Steering`StrDM_e2398fab-b956-498b-8858-93e89178bdf3
+
+PARSFILE Control\Braking\PbkCon_23a66c97-9f41-408f-936f-da3b3e745d1f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 3 MPa` Constant` , Braking`PbkCon_23a66c97-9f41-408f-936f-da3b3e745d1f
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink29 Control: Throttle (Open Loop)`Constant: 0` Constant` , Throttle`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+INSTALL_DM_OUTPUTS
+yaw -45
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_1d628bf6-d343-4b53-aab3-6c447711f700.par
+#BlueLink0 Road: 3D Surface (All Properties)`1 km Square, Mu = 0.85` Flat Test Pads` , Miscellaneous`Road_1d628bf6-d343-4b53-aab3-6c447711f700
+
+PARSFILE Generic\VS_commands\GenVS_a4da4bac-5090-4bba-9218-04f58c477405.par
+#BlueLink1 Generic VS Commands`Import Target Point Coordinates` Custom Steering Controls` , Miscellaneous`GenVS_a4da4bac-5090-4bba-9218-04f58c477405
+
+PARSFILE Generic\Group\GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991.par
+#BlueLink3 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_16b19ebb-94ae-4dce-a67c-47b8e4af7991
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink8 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f.par
+#BlueLink9 Plot: Setup`Road Wheel Steer (Axle 1)` Steering` , Plot`Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink10 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806.par
+#BlueLink11 Plot: Setup`Brake Control: Master Cyl. Pressure` Braking` , Plot`Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806
+
+PARSFILE Plot\Setup\Plot_536a6a4d-647d-4eb4-b11f-664addaec88a.par
+#BlueLink12 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_536a6a4d-647d-4eb4-b11f-664addaec88a
+
+
+#EMBEDDED_NOTES
+#A Driver Path Follower dataset is linked to enable the SIngle Point Steering Controller.
+#
+#The INSTALL_DM_OUTPUTS command creates the output and import variables for the target point, so the imports can be set and the outputs can be written to file or used in calculations.
+#
+#The initial yaw angle is set just for illustration purposes.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driver Controls } Single Point Steer Control - 0 km/h
+#Library : Procedures
+#DataSet : Single Point Steer Control - 0 km/h
+#Category: Driver Controls
+#FileID  : Proc_4281f9c6-f0a5-4703-b648-2ae9bdb62387
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

@@ -1,0 +1,89 @@
+PARSFILE
+#FullDataName Procedures`Figure 8 with Aggressive Driving`Driver Controls
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 45
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 50
+*TSTOP 45
+*TSTART 0
+*SSTART 0
+*SSTOP 1050
+
+PARSFILE Control\Driver\StrDM_00424c36-b264-42ef-8475-a7cb3f9ad3a2.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`1.65m Right, 0.6s Single Preview` Constant Position: Non-Zero Offset` , Steering`StrDM_00424c36-b264-42ef-8475-a7cb3f9ad3a2
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_path\SpdPath_3b30d871-b4b5-44de-a289-e0bb2ef9d694.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`Aggressive Driving (Air Brakes)` Aggressive Driving` , Speed vs. station`SpdPath_3b30d871-b4b5-44de-a289-e0bb2ef9d694
+
+PARSFILE Roads\3D_Road\Road_bab5cf34-a537-4b55-9c02-5054df2331f2.par
+#BlueLink0 Road: 3D Surface (All Properties)`Figure 8` Road Segment Builder` , Miscellaneous`Road_bab5cf34-a537-4b55-9c02-5054df2331f2
+
+PARSFILE Plot\Setup\Plot_5573c6e9-939f-46da-a8b5-d3cf143fc34a.par
+#BlueLink8 Plot: Setup`Ground Elevation` Ground` , Plot`Plot_5573c6e9-939f-46da-a8b5-d3cf143fc34a
+
+PARSFILE Plot\Setup\Plot_28346536-17a7-43d1-9d01-abb1238a43f7.par
+#BlueLink9 Plot: Setup`Ground Elevation vs. Station` Ground` , Plot`Plot_28346536-17a7-43d1-9d01-abb1238a43f7
+
+PARSFILE Plot\Setup\Plot_085bec2f-da38-4258-9eb1-5e240115296d.par
+#BlueLink10 Plot: Setup`Wheel Speeds` Braking` , Plot`Plot_085bec2f-da38-4258-9eb1-5e240115296d
+
+PARSFILE Plot\Setup\Plot_aeb01166-5cff-44c0-bf80-ba2ecefa95ae.par
+#BlueLink11 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Station` Vehicle Motion` , Plot`Plot_aeb01166-5cff-44c0-bf80-ba2ecefa95ae
+
+PARSFILE Plot\Setup\Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd.par
+#BlueLink12 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7a1bb389-765b-4184-b9d9-28a9507cdddd
+
+PARSFILE Plot\Setup\Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806.par
+#BlueLink13 Plot: Setup`Brake Control: Master Cyl. Pressure` Braking` , Plot`Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806
+
+PARSFILE Plot\Setup\Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9.par
+#BlueLink14 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink15 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_7e80eb63-ada6-4a18-8a55-627fd56217a0.par
+#BlueLink16 Plot: Setup`Vertical Forces (Left Side)` Tire Forces` , Plot`Plot_7e80eb63-ada6-4a18-8a55-627fd56217a0
+
+PARSFILE Plot\Setup\Plot_5df15729-ab2b-4846-8166-382edeb3147c.par
+#BlueLink17 Plot: Setup`Vertical Forces (Right Side)` Tire Forces` , Plot`Plot_5df15729-ab2b-4846-8166-382edeb3147c
+
+PARSFILE Plot\Setup\Plot_6ab65115-f524-4f04-aecb-33140a974c8d.par
+#BlueLink18 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_6ab65115-f524-4f04-aecb-33140a974c8d
+
+PARSFILE Plot\Setup\Plot_8aa6411f-4f0f-45db-b32c-d612009087f2.par
+#BlueLink19 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8aa6411f-4f0f-45db-b32c-d612009087f2
+
+
+#EMBEDDED_NOTES
+#The "Target speed from path preview" calculates a speed target over a specifed preview distance, to maintain the lateral and longitudinal acceleration with specified limits.
+#
+#Control over throttle, brakes, and steering is still accomplished through the TruckSim closed loop speed controller and closed loop path follower steering controller.
+#
+#When the speed target is calculated from a preview of the target path, preview times for the path follower are typically much shorter than for cases that don't preview the path to obtain a speed target (0.1 - 0.15 sec with preview speed control versus 0.5 - 1.5 sec. without). The target speed is very tightly tied to the exact path geometry, so the path follower must also be tied tightly to it, and "look ahead" distances are short.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driver Controls } Figure 8 with Aggressive Driving
+#Library : Procedures
+#DataSet : Figure 8 with Aggressive Driving
+#Category: Driver Controls
+#FileID  : Proc_64d150a3-0628-454b-a06c-6ec70b42fb9b
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

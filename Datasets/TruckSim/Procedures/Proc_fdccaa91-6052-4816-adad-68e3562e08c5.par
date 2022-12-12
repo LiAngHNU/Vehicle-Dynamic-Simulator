@@ -1,0 +1,98 @@
+PARSFILE
+#FullDataName Procedures`DLC @ 50 km/h`Handling Tests
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 15
+SSTOP 1200
+OPT_DIRECTION 0
+*SPEED 50
+*TSTOP 15
+*TSTART 0
+*SSTART 0
+*SSTOP 1200
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: DLC @ 50 km/h
+SPEED_TARGET_CONSTANT 50
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_a20c224e-d1a6-444a-b806-f534ac8456d3.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`Double Lane Change (Quick Start)` Vehicle Dynamics Tests` , Steering`StrDM_a20c224e-d1a6-444a-b806-f534ac8456d3
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Roads\3D_Road\Road_744e2383-c1fd-46f8-b6d4-e3ae9a3b8ba3.par
+#BlueLink0 Road: 3D Surface (All Properties)`Double Lane Change` Flat Test Pads` , Miscellaneous`Road_744e2383-c1fd-46f8-b6d4-e3ae9a3b8ba3
+
+PARSFILE Plot\Setup\Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9.par
+#BlueLink8 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink9 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f.par
+#BlueLink10 Plot: Setup`Road Wheel Steer (Axle 1)` Steering` , Plot`Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f
+
+PARSFILE Plot\Setup\Plot_8aa6411f-4f0f-45db-b32c-d612009087f2.par
+#BlueLink11 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8aa6411f-4f0f-45db-b32c-d612009087f2
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink12 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5.par
+#BlueLink14 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_4af2f9b1-0431-4d0f-825a-d6b3145172e5
+
+PARSFILE Plot\Setup\Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987.par
+#BlueLink15 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987
+
+PARSFILE Plot\Setup\Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1.par
+#BlueLink16 Plot: Setup`Yaw Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_8719fd9d-c863-4b08-a8ab-f9af0bfaafa1
+
+PARSFILE Plot\Setup\Plot_38af2fee-b452-4e50-bfca-9012303b5e16.par
+#BlueLink17 Plot: Setup`Yaw Rate of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_38af2fee-b452-4e50-bfca-9012303b5e16
+
+PARSFILE Plot\Setup\Plot_4293eee0-0f12-4863-a6d5-235d2b68edd8.par
+#BlueLink18 Plot: Setup`Slip Angles, Lagged (Axle 1 - 4)` Tire Kinematics` , Plot`Plot_4293eee0-0f12-4863-a6d5-235d2b68edd8
+
+PARSFILE Plot\Setup\Plot_a5758d72-5a36-4995-989a-3cf5e58f03cb.par
+#BlueLink19 Plot: Setup`Vertical Axle Forces` Tire Forces` , Plot`Plot_a5758d72-5a36-4995-989a-3cf5e58f03cb
+
+PARSFILE Plot\Setup\Plot_04ef7d47-6fad-4303-ae64-135680b8dead.par
+#BlueLink21 Plot: Setup`Jounce (Axle 1)` Suspension Motion` , Plot`Plot_04ef7d47-6fad-4303-ae64-135680b8dead
+
+PARSFILE Plot\Setup\Plot_b8071209-f44f-4785-87de-01c6e7ef70a8.par
+#BlueLink22 Plot: Setup`Jounce (Axle 2)` Suspension` , Plot`Plot_b8071209-f44f-4785-87de-01c6e7ef70a8
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates a common Double Lane Change handling test.
+#
+#The driver controls specify a closed-loop speed control with a constant target speed of 50 kph, no brake pressure, and automatic gear selection using all available gears.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Handling Tests } DLC @ 50 km/h
+#Library : Procedures
+#DataSet : DLC @ 50 km/h
+#Category: Handling Tests
+#FileID  : Proc_fdccaa91-6052-4816-adad-68e3562e08c5
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

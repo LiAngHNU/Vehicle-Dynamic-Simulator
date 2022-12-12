@@ -1,0 +1,111 @@
+PARSFILE
+#FullDataName Procedures`Medium Bump, 0.6 m incr. elev.`Ride Tests
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 5
+TSTART_WRITE = 0;
+TSTOP 15
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 10
+*TSTOP 15
+*TSTART 0
+*SSTART 5
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Medium Bump, 0.6 m incr. elev.
+SPEED_TARGET_CONSTANT 10
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_9b35f18a-5c59-4a9a-8de1-61f2a3df1a3d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`Variable Speed Preview` Constant Position: No Offset` , Steering`StrDM_9b35f18a-5c59-4a9a-8de1-61f2a3df1a3d
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_mt\GearOL_79073c18-09a0-4768-ad4c-89abce408b2a.par
+#BlueLink30 Control: Shifting (Open Loop)`Constant: 4th Gear` Constant` , Shifting Control`GearOL_79073c18-09a0-4768-ad4c-89abce408b2a
+
+PARSFILE Roads\3D_Road\Road_fb5a185a-311c-4bb0-9323-98931af270f1.par
+#BlueLink0 Road: 3D Surface (All Properties)`Medium Bump, 0.6 m incr. elev.` Ride Roads` , Miscellaneous`Road_fb5a185a-311c-4bb0-9323-98931af270f1
+
+PARSFILE Plot\Setup\Plot_7b1dfeac-eb68-4575-9cbf-7407cb887fa8.par
+#BlueLink8 Plot: Setup`Spring Compression` Suspension Motion` , Plot`Plot_7b1dfeac-eb68-4575-9cbf-7407cb887fa8
+
+PARSFILE Plot\Setup\Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987.par
+#BlueLink9 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_97ca903d-d92e-44e1-a2d5-f87d6e03d987
+
+PARSFILE Plot\Setup\Plot_96fe6c12-4843-47e0-9c9b-19d342cf64e6.par
+#BlueLink10 Plot: Setup`Vertical Accel. of Sprung Mass CG's` Vehicle Motion` , Plot`Plot_96fe6c12-4843-47e0-9c9b-19d342cf64e6
+
+PARSFILE Plot\Setup\Plot_9bdf8244-04f6-44b1-a86e-e83fec8f2866.par
+#BlueLink11 Plot: Setup`Jounce Stop Compression` Suspension Motion` , Plot`Plot_9bdf8244-04f6-44b1-a86e-e83fec8f2866
+
+PARSFILE Plot\Setup\Plot_663191a1-39ab-4aad-85b1-61ca6ac180a2.par
+#BlueLink12 Plot: Setup`Jounce Stop Force` Suspension Forces and Moments` , Plot`Plot_663191a1-39ab-4aad-85b1-61ca6ac180a2
+
+PARSFILE Plot\Setup\Plot_6097e802-cd34-47da-8271-c277e950105f.par
+#BlueLink13 Plot: Setup`Rebound Stop Compression` Suspension Motion` , Plot`Plot_6097e802-cd34-47da-8271-c277e950105f
+
+PARSFILE Plot\Setup\Plot_a8ee8c0e-c960-4d6e-8654-db4ce7278055.par
+#BlueLink14 Plot: Setup`Rebound Stop Force` Suspension Forces and Moments` , Plot`Plot_a8ee8c0e-c960-4d6e-8654-db4ce7278055
+
+PARSFILE Plot\Setup\Plot_7b1dfeac-eb68-4575-9cbf-7407cb887fa8.par
+#BlueLink15 Plot: Setup`Spring Compression` Suspension Motion` , Plot`Plot_7b1dfeac-eb68-4575-9cbf-7407cb887fa8
+
+PARSFILE Plot\Setup\Plot_8e936747-d75c-405c-9958-1f7b5da395fa.par
+#BlueLink16 Plot: Setup`Fs vs. Wheel Jounce (Axle 1)` Suspension` , Plot`Plot_8e936747-d75c-405c-9958-1f7b5da395fa
+
+PARSFILE Plot\Setup\Plot_6cc75c27-10b7-4045-a79c-4afd3b935e69.par
+#BlueLink17 Plot: Setup`Fs vs. Wheel Jounce (Axle 2)` Suspension` , Plot`Plot_6cc75c27-10b7-4045-a79c-4afd3b935e69
+
+PARSFILE Plot\Setup\Plot_b6b30f42-f0b5-4dbf-8a8a-131350784a56.par
+#BlueLink18 Plot: Setup`Fs vs. Wheel Jounce (Axle 3)` Suspension` , Plot`Plot_b6b30f42-f0b5-4dbf-8a8a-131350784a56
+
+PARSFILE Plot\Setup\Plot_70cf053b-5063-4093-9e6b-3254ae359ad8.par
+#BlueLink19 Plot: Setup`My_Dr -- Wheel Drive Torque (Axle 1)` Powertrain` , Plot`Plot_70cf053b-5063-4093-9e6b-3254ae359ad8
+
+PARSFILE Plot\Setup\Plot_e7b41872-2b40-4556-aa0d-7e348d4a1a61.par
+#BlueLink20 Plot: Setup`My_Dr -- Wheel Drive Torque (Axle 2)` Powertrain` , Plot`Plot_e7b41872-2b40-4556-aa0d-7e348d4a1a61
+
+PARSFILE Plot\Setup\Plot_2dd86413-3798-4048-b033-f592b39de27f.par
+#BlueLink21 Plot: Setup`My_Dr -- Wheel Drive Torque (Axle 3)` Powertrain` , Plot`Plot_2dd86413-3798-4048-b033-f592b39de27f
+
+PARSFILE Plot\Setup\Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717.par
+#BlueLink22 Plot: Setup`Vertical Forces (Axle 1, Single Tires)` Tire Forces` , Plot`Plot_59c7c5bd-0790-4903-a5de-c1a78cd5f717
+
+PARSFILE Plot\Setup\Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9.par
+#BlueLink23 Plot: Setup`Vertical Forces (Axle 2, Dual Tires)` Tire Forces` , Plot`Plot_bcebbe5a-fa0c-40bd-baab-f518f8b398a9
+
+PARSFILE Plot\Setup\Plot_e644cbac-048b-4565-bf97-13fd3a72dadf.par
+#BlueLink24 Plot: Setup`Vertical Forces (Axle 3, Dual Tires)` Tire Forces` , Plot`Plot_e644cbac-048b-4565-bf97-13fd3a72dadf
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink25 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+
+#EMBEDDED_NOTES
+#This procedure can be used for evaluating suspension jounce and rebound stops.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Ride Tests } Medium Bump, 0.6 m incr. elev.
+#Library : Procedures
+#DataSet : Medium Bump, 0.6 m incr. elev.
+#Category: Ride Tests
+#FileID  : Proc_527a916a-72c5-4399-811f-5b206e828523
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

@@ -1,0 +1,102 @@
+PARSFILE
+#FullDataName Procedures`River Crossing`Driving
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 15
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 10
+*TSTOP 15
+*TSTART 0
+*SSTART 0
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: River Crossing
+SPEED_TARGET_CONSTANT 10
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Steer\StrSW_9419b1df-a776-4d94-97e4-93750a8c097b.par
+#BlueLink27 Control: Steering (Open Loop)`Constant: 0 deg.` Constant` , Steering`StrSW_9419b1df-a776-4d94-97e4-93750a8c097b
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+#MiscYellow0
+! Manual vehicle position initialization
+opt_init_path 0     ! Sets manual road position
+sv_xo 215            ! Define initial X coordinate
+sv_yo -138      ! Define initial Y coordinate
+sv_zo 0.9             ! Define initial Z coordinate
+sv_yaw 25           ! Define initial yaw angle
+#ENDMYellow
+
+PARSFILE Animator\Groups\Group_b6cd19a3-6088-4495-9efd-24a9f86c3f77.par
+#BlueLink0 Animator: Group`River Crossing` Roads` , Miscellaneous`Group_b6cd19a3-6088-4495-9efd-24a9f86c3f77
+
+PARSFILE Plot\Setup\Plot_be65b077-1eb0-49dd-8583-46a333e25b8c.par
+#BlueLink8 Plot: Setup`Jounce (Axle 1)` Suspension` , Plot`Plot_be65b077-1eb0-49dd-8583-46a333e25b8c
+
+PARSFILE Plot\Setup\Plot_b8071209-f44f-4785-87de-01c6e7ef70a8.par
+#BlueLink9 Plot: Setup`Jounce (Axle 2)` Suspension` , Plot`Plot_b8071209-f44f-4785-87de-01c6e7ef70a8
+
+PARSFILE Plot\Setup\Plot_b84ef2b2-7fc4-41f2-a3f5-1419f3625a41.par
+#BlueLink10 Plot: Setup`Spring: Force vs. Time` Suspension Forces and Moments` , Plot`Plot_b84ef2b2-7fc4-41f2-a3f5-1419f3625a41
+
+PARSFILE Plot\Setup\Plot_05a8d2a5-83e6-4906-9a28-0f20d6429586.par
+#BlueLink11 Plot: Setup`Steer vs. Roll (Axle 1)` Suspension Motion` , Plot`Plot_05a8d2a5-83e6-4906-9a28-0f20d6429586
+
+PARSFILE Plot\Setup\Plot_41f2a7c1-b1a8-4e38-a6ea-4946d34bbe3a.par
+#BlueLink12 Plot: Setup`Steer vs. Roll (Axle 2)` Suspension Motion` , Plot`Plot_41f2a7c1-b1a8-4e38-a6ea-4946d34bbe3a
+
+PARSFILE Plot\Setup\Plot_663191a1-39ab-4aad-85b1-61ca6ac180a2.par
+#BlueLink13 Plot: Setup`Jounce Stop Force` Suspension Forces and Moments` , Plot`Plot_663191a1-39ab-4aad-85b1-61ca6ac180a2
+
+PARSFILE Plot\Setup\Plot_a8ee8c0e-c960-4d6e-8654-db4ce7278055.par
+#BlueLink14 Plot: Setup`Rebound Stop Force` Suspension Forces and Moments` , Plot`Plot_a8ee8c0e-c960-4d6e-8654-db4ce7278055
+
+PARSFILE Plot\Setup\Plot_7b1dfeac-eb68-4575-9cbf-7407cb887fa8.par
+#BlueLink15 Plot: Setup`Spring Compression` Suspension Motion` , Plot`Plot_7b1dfeac-eb68-4575-9cbf-7407cb887fa8
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink16 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+
+#EMBEDDED_NOTES
+#The vehicle is initialized manually using variables from the "Echo file with final conditions".
+#
+#The River Crossing dataset is actually linked to two roads that are put together to create one road.
+#
+#Setting the keyword opt_init_path to zero causes TruckSim to bypass the setting of the inital location and yaw angle of the vehicle.
+#
+#Giving values to the state variables sv_xo, sv_yo, sz_zo, and sv_yaw forces the initial location of the vehicle to a desired location.
+#
+#This method is often used to initialize vehicle position when open-loop steer control is used. The standard process would place the vehicle at x = the starting road station, y = 0, and yaw = 0.
+#
+#When using the closed loop steering (driver) model, the starting position is based on the road, the path target, and the start station.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driving } River Crossing
+#Library : Procedures
+#DataSet : River Crossing
+#Category: Driving
+#FileID  : Proc_c3a5e64a-169b-4805-9775-f4b05308747f
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName Procedures`City Environment: Truck 1`Multi-Vehicle
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 25
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 35
+*TSTOP 25
+*TSTART 0
+*SSTART 0
+*SSTOP 1200
+
+PARSFILE Control\Driver\StrDM_d6ef0cdf-9013-413f-9faf-2dea378db470.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.75s Single Preview` Constant Position: No Offset` , Steering`StrDM_d6ef0cdf-9013-413f-9faf-2dea378db470
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_path\SpdPath_15d13c88-577c-486c-a5cf-c0652c815e86.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.15/0.2 G Max Ax/Ay, SPEED_LIMIT_ID` Intersections` , Speed vs. station`SpdPath_15d13c88-577c-486c-a5cf-c0652c815e86
+
+#MiscYellow0
+SPEED_TARGET_CONSTANT 25;mi/h
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_d86cad40-422c-4b29-9281-308519eeeae7.par
+#BlueLink0 Road: 3D Surface (All Properties)`City Intersection` VS Scene Builder` , Miscellaneous`Road_d86cad40-422c-4b29-9281-308519eeeae7
+
+PARSFILE Generic\Group\GenGrp_05b3ce62-3333-4b2d-9865-40e9306d3ba1.par
+#BlueLink1 Generic Data Group`City Intersection` ADAS: Building Occlusion` , Miscellaneous`GenGrp_05b3ce62-3333-4b2d-9865-40e9306d3ba1
+
+PARSFILE Roads\BuilderSegment\RoadSeg_2ba2b3d8-b547-4d13-9aa8-77992451bc9e.par
+#BlueLink2 Path: Segment Builder`Straight North, ID = 9998` Straight` , Miscellaneous`RoadSeg_2ba2b3d8-b547-4d13-9aa8-77992451bc9e
+
+PARSFILE Generic\VS_commands\GenVS_afeb2dde-c329-4239-8a24-2cfaea9720a6.par
+#BlueLink4 Generic VS Commands`Setup for Object Detection` Setup Events` , Miscellaneous`GenVS_afeb2dde-c329-4239-8a24-2cfaea9720a6
+
+PARSFILE Generic\Group\GenGrp_5f7ca4b7-7beb-4179-b6e3-d24f7b131265.par
+#BlueLink5 Generic Data Group`City: Signs, Pedestrians, Buildings` ADAS: Traffic Scenarios` , Miscellaneous`GenGrp_5f7ca4b7-7beb-4179-b6e3-d24f7b131265
+
+PARSFILE Plot\Setup\Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a.par
+#BlueLink8 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a
+
+PARSFILE Plot\Setup\Plot_0e10c337-af50-4df8-a51b-b88b243d688d.par
+#BlueLink9 Plot: Setup`Distance: DisS1_1` ADAS Sensor Detections` , Plot`Plot_0e10c337-af50-4df8-a51b-b88b243d688d
+
+PARSFILE Plot\Setup\Plot_6ab65115-f524-4f04-aecb-33140a974c8d.par
+#BlueLink10 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_6ab65115-f524-4f04-aecb-33140a974c8d
+
+PARSFILE Plot\Setup\Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806.par
+#BlueLink11 Plot: Setup`Brake Control: Master Cyl. Pressure` Braking` , Plot`Plot_835c367e-fb74-416d-b1b3-d6cf1ddd9806
+
+PARSFILE Plot\Setup\Plot_6ba498c6-fadb-4802-a1c0-7a9a8cd0da1d.par
+#BlueLink12 Plot: Setup`Magnitude: MagS1_1` ADAS Sensor Detections` , Plot`Plot_6ba498c6-fadb-4802-a1c0-7a9a8cd0da1d
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink13 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_84e520fd-931c-4bcb-9372-c54cca1401a1.par
+#BlueLink14 Plot: Setup`Speed: SpdS1_1` ADAS Sensor Detections` , Plot`Plot_84e520fd-931c-4bcb-9372-c54cca1401a1
+
+PARSFILE Plot\Setup\Plot_dc91aca7-d9b4-4b37-b1d9-e733768bfc16.par
+#BlueLink15 Plot: Setup`Sensor Target ID Number: ID_S1_1` ADAS Sensor Detections` , Plot`Plot_dc91aca7-d9b4-4b37-b1d9-e733768bfc16
+
+
+#EMBEDDED_NOTES
+#Truck 1's Procedure is different from the Procedure dataset used for the three other vehicle datasets in this Multiple Vehicle example.
+#
+#The actual VS Scene Builder asset is included here and not in the other procedures. This is because the visulaization of this City Intersection .vsscene file is intensive and we do not want each of the Runs to draw these shapes.
+#
+#Additionally, invisible sensor shapes are placed around the building perimeters to occlude the sensors of each vehicle from detecting through buildings.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Multi-Vehicle } City Environment: Truck 1
+#Library : Procedures
+#DataSet : City Environment: Truck 1
+#Category: Multi-Vehicle
+#FileID  : Proc_09103a6f-3bc0-48cb-bf14-fd981c1377c5
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Procedures`Control w/ path preview`Multi-Vehicle
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 3
+*SPEED 15
+
+PARSFILE Control\Driver\StrDM_d6ef0cdf-9013-413f-9faf-2dea378db470.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.75s Single Preview` Constant Position: No Offset` , Steering`StrDM_d6ef0cdf-9013-413f-9faf-2dea378db470
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_path\SpdPath_2ec3932b-1706-4e17-8fb3-76cc1799af37.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.2/0.2 G Max Ax/Ay, Entry/Exit` Intersections` , Speed vs. station`SpdPath_2ec3932b-1706-4e17-8fb3-76cc1799af37
+
+
+#EMBEDDED_NOTES
+#Generic controls for multiple vehicle example. Does not specify and road or path data.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Multi-Vehicle } Control w/ path preview
+#Library : Procedures
+#DataSet : Control w/ path preview
+#Category: Multi-Vehicle
+#FileID  : Proc_b1dbf624-9d33-49c9-aef1-1297e9719f19
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

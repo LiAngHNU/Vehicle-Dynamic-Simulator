@@ -1,0 +1,63 @@
+PARSFILE
+#FullDataName Procedures`Rural Intersection Scene w/ Path Preview`VS Scene Builder
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART -180
+TSTART_WRITE = 0;
+TSTOP 70
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 70
+*TSTOP 70
+*TSTART 0
+*SSTART -180
+*SSTOP 1000
+
+PARSFILE Control\Driver\StrDM_d6ef0cdf-9013-413f-9faf-2dea378db470.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.75s Single Preview` Constant Position: No Offset` , Steering`StrDM_d6ef0cdf-9013-413f-9faf-2dea378db470
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_path\SpdPath_002cdaef-396f-4f97-9630-d7a7908e35af.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.2/0.2 G Max Ax/Ay, 80 km/h` Intersections` , Speed vs. station`SpdPath_002cdaef-396f-4f97-9630-d7a7908e35af
+
+PARSFILE Roads\3D_Road\Road_0c237f0f-6f8a-45ff-b373-2ba58acd8473.par
+#BlueLink0 Road: 3D Surface (All Properties)`Rural Intersection Scene` VS Scene Builder` , Miscellaneous`Road_0c237f0f-6f8a-45ff-b373-2ba58acd8473
+
+PARSFILE Generic\VS_commands\GenVS_6e790403-fd3d-4ff5-b250-347ef7b5775f.par
+#BlueLink8 Generic VS Commands`Velocity and Position` Plot Groups` , Plot`GenVS_6e790403-fd3d-4ff5-b250-347ef7b5775f
+
+PARSFILE Plot\Setup\Plot_2af2b120-28db-4d3d-9833-c4cf228e2d17.par
+#BlueLink18 Plot: Setup`Longitudinal Accel. of CG's vs. Station` Vehicle Motion` , Plot`Plot_2af2b120-28db-4d3d-9833-c4cf228e2d17
+
+PARSFILE Plot\Setup\Plot_6ab65115-f524-4f04-aecb-33140a974c8d.par
+#BlueLink19 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_6ab65115-f524-4f04-aecb-33140a974c8d
+
+
+#EMBEDDED_NOTES
+#Procedure for the Rural intersection from VS Scene Builder.
+#
+#This procedure simply has the vehicle drive through an intersection using the path preview speed controller option.
+#
+#Links are made to groups of plot settings with variables of interest for this type of scenario.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { VS Scene Builder } Rural Intersection Scene w/ Path Preview
+#Library : Procedures
+#DataSet : Rural Intersection Scene w/ Path Preview
+#Category: VS Scene Builder
+#FileID  : Proc_b0d5bcce-b2ab-4b0f-a260-a9bf88691391
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

@@ -1,0 +1,106 @@
+PARSFILE
+#FullDataName Procedures`DLC @ 40 km/h`Handling Tests
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+OPT_STOP 1
+TSTART -3
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 15
+SSTOP 1200
+OPT_DIRECTION 0
+*SPEED 40
+*TSTOP 15
+*TSTART -3
+*SSTART 0
+*SSTOP 1200
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: DLC @ 40 km/h
+SPEED_TARGET_CONSTANT 40
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_a20c224e-d1a6-444a-b806-f534ac8456d3.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`Double Lane Change (Quick Start)` Vehicle Dynamics Tests` , Steering`StrDM_a20c224e-d1a6-444a-b806-f534ac8456d3
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+#MiscYellow0
+TSTART_WRITE 0 ! don't write until T >= 0
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_50b62a53-1ded-4ee1-97f9-5f8108c70fa4.par
+#BlueLink0 Road: 3D Surface (All Properties)`DLC, No Trees` Flat Test Pads` , Miscellaneous`Road_50b62a53-1ded-4ee1-97f9-5f8108c70fa4
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+PARSFILE Plot\Setup\Plot_28c94c84-5587-4acc-a373-81fb9df7b26a.par
+#BlueLink9 Plot: Setup`Steering Wheel Angle vs. Time` Steering` , Plot`Plot_28c94c84-5587-4acc-a373-81fb9df7b26a
+
+PARSFILE Plot\Setup\Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f.par
+#BlueLink10 Plot: Setup`Road Wheel Steer (Axle 1)` Steering` , Plot`Plot_4e45b6a3-62dc-497a-9e23-0fba5868659f
+
+PARSFILE Plot\Setup\Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9.par
+#BlueLink11 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_b1c88f03-e9ae-4a16-8dcf-7e0bdd9f61a9
+
+PARSFILE Plot\Setup\Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a.par
+#BlueLink12 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_6a38a39c-97c1-4891-b7bb-cbfcf0d77e3a
+
+PARSFILE Plot\Setup\Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8.par
+#BlueLink13 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_1a980109-7e71-476e-a1d4-9576ff31b3d8
+
+PARSFILE Plot\Setup\Plot_6daa361a-9613-477b-b0ba-ecec097e5c0e.par
+#BlueLink14 Plot: Setup`Hitch: Articulation Angle` Hitch` , Plot`Plot_6daa361a-9613-477b-b0ba-ecec097e5c0e
+
+PARSFILE Plot\Setup\Plot_712a1199-3ac8-43d0-80b3-7a3572dc3bb8.par
+#BlueLink15 Plot: Setup`Hitch Forces` Hitch` , Plot`Plot_712a1199-3ac8-43d0-80b3-7a3572dc3bb8
+
+PARSFILE Plot\Setup\Plot_ae1e2c83-8feb-442b-b3a9-3ca8bb0e3211.par
+#BlueLink16 Plot: Setup`Hitch Moments` Hitch` , Plot`Plot_ae1e2c83-8feb-442b-b3a9-3ca8bb0e3211
+
+PARSFILE Generic\VS_commands\GenVS_300136a1-5b6a-4155-ab00-02411d1c4ef4.par
+#BlueLink18 Generic VS Commands`Jounce for 8 axles` Plot Groups` , Plot`GenVS_300136a1-5b6a-4155-ab00-02411d1c4ef4
+
+PARSFILE Generic\VS_commands\GenVS_06d4bca7-b382-4f55-ad89-ce5584cdf02d.par
+#BlueLink19 Generic VS Commands`Spring Forces for 8 axles` Plot Groups` , Plot`GenVS_06d4bca7-b382-4f55-ad89-ce5584cdf02d
+
+PARSFILE Generic\VS_commands\GenVS_2ddfb3c4-16b9-4314-bbf3-9fa33d05c534.par
+#BlueLink20 Generic VS Commands`Vehicle Motion for 3 Vehicle Units` Plot Groups` , Plot`GenVS_2ddfb3c4-16b9-4314-bbf3-9fa33d05c534
+
+PARSFILE Generic\VS_commands\GenVS_0fedbb7b-81d4-479d-8139-92a0432b80e0.par
+#BlueLink21 Generic VS Commands`Vertical Tire Forces for 8 axles` Plot Groups` , Plot`GenVS_0fedbb7b-81d4-479d-8139-92a0432b80e0
+
+
+#EMBEDDED_NOTES
+#Double lane change test at 40 km/h
+#
+#This Procedure also includes Plot Groups for vehicles with up to 8 axles, e.g., S_SSS + SS + SS
+#
+#The Start Time TSTART is set to -3 seconds and TSTART_WRITE is set to 0. This allows the vehicle to initialize during the first three seconds of the simulation, but the simulation results don't start being recorded until T = 0 seconds.
+#
+#This method is useful if a vehicle configuration requires a few seconds to settle to equilibrium, but the end-user is only interested in the data once the vehicle has settled.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Handling Tests } DLC @ 40 km/h
+#Library : Procedures
+#DataSet : DLC @ 40 km/h
+#Category: Handling Tests
+#FileID  : Proc_30233691-a30e-4202-a127-627684b518c0
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

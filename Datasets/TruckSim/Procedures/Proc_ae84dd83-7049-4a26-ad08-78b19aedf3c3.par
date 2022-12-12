@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Procedures`Multiple Vehicles (Controls Only)`Multi-Vehicle
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 3
+
+PARSFILE Control\Driver\StrDM_d6ef0cdf-9013-413f-9faf-2dea378db470.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.75s Single Preview` Constant Position: No Offset` , Steering`StrDM_d6ef0cdf-9013-413f-9faf-2dea378db470
+
+PARSFILE Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par
+#BlueLink30 Control: Shifting (Closed Loop)`NGEARS, Clutch Act 0.5s, Gear 0.1s` Closed-Loop Shifting` , Shifting Control`GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f
+
+PARSFILE Control\Speed_path\SpdPath_15d13c88-577c-486c-a5cf-c0652c815e86.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.15/0.2 G Max Ax/Ay, SPEED_LIMIT_ID` Intersections` , Speed vs. station`SpdPath_15d13c88-577c-486c-a5cf-c0652c815e86
+
+#MiscYellow0
+SPEED_TARGET_CONSTANT 25;mi/h
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Procedures; { Multi-Vehicle } Multiple Vehicles (Controls Only)
+#Library : Procedures
+#DataSet : Multiple Vehicles (Controls Only)
+#Category: Multi-Vehicle
+#FileID  : Proc_ae84dd83-7049-4a26-ad08-78b19aedf3c3
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END
