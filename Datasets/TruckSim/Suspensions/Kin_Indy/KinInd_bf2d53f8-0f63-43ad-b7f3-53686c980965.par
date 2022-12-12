@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName Suspension: Independent System Kinematics`Pickup, Full Size - Front (HD)`Pickup Trucks
+iside 1
+#RingCtrl0 1
+OPT_JNC_DESIGN 1
+#RingCtrl1 2
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 2
+#RingCtrl5 2
+#CheckBox1 0    
+#CheckBox2 0    
+
+R_US_STR 0.702703
+L_TRACK 1750
+Y_CL_SUSP 0
+H_WC 400
+M_US 148
+*IW_L 0.1
+*IW_R 1.1
+*JNC_DESIGN_L 0
+*TOE_L 0
+*CAMBER_L 0
+*IWXXZZ_L 0
+*M_US_IND_L 22
+*M_US_STR_L 52
+
+PARSFILE Suspensions\Dive\Dive_81825f55-0c7c-41ee-97cb-e7fa3c4676bf.par
+#BlueLink0 Suspension: Dive Angle (Caster Change)`Front SLA - Dive Angle` SLA` , Left wheel dive (caster change)`Dive_81825f55-0c7c-41ee-97cb-e7fa3c4676bf
+
+PARSFILE Suspensions\Longitudinal\SusX_70556d85-e04b-4467-a6c5-e8e6a60a2dab.par
+#BlueLink1 Suspension: Longitudinal Movement`Front SLA - Longitudinal Movement` SLA` , Left wheel X`SusX_70556d85-e04b-4467-a6c5-e8e6a60a2dab
+
+PARSFILE Suspensions\Camber\Camber_1f791aeb-5ce4-45d3-a169-3527167dadbb.par
+#BlueLink2 Suspension: Camber Angle`Front SLA - Camber Change` SLA` , Left wheel camber`Camber_1f791aeb-5ce4-45d3-a169-3527167dadbb
+
+PARSFILE Suspensions\Lateral\LatJnc_2ef6edf9-7a6c-4b85-b78d-89a476f0395b.par
+#BlueLink3 Suspension: Lateral Movement Due to Jounce`Front SLA - Lateral Movement` SLA` , Left wheel lateral (-Y)`LatJnc_2ef6edf9-7a6c-4b85-b78d-89a476f0395b
+
+PARSFILE Suspensions\Toe\Toe_f5ed42e5-e814-4552-9dd6-c9557839a735.par
+#BlueLink4 Suspension: Toe Angle`Front SLA - Toe Change` SLA` , Left wheel toe`Toe_f5ed42e5-e814-4552-9dd6-c9557839a735
+
+M_US_IND 22
+M_US_STR 52
+IW 0.1
+IW_XXZZ 0
+JNC_DESIGN 0
+A_TOE 0
+A_CAMBER 0
+
+iside 2
+PARSFILE Suspensions\Dive\Dive_81825f55-0c7c-41ee-97cb-e7fa3c4676bf.par
+#BlueLink0 Suspension: Dive Angle (Caster Change)`Front SLA - Dive Angle` SLA` , Left wheel dive (caster change)`Dive_81825f55-0c7c-41ee-97cb-e7fa3c4676bf
+
+PARSFILE Suspensions\Longitudinal\SusX_70556d85-e04b-4467-a6c5-e8e6a60a2dab.par
+#BlueLink1 Suspension: Longitudinal Movement`Front SLA - Longitudinal Movement` SLA` , Left wheel X`SusX_70556d85-e04b-4467-a6c5-e8e6a60a2dab
+
+PARSFILE Suspensions\Camber\Camber_1f791aeb-5ce4-45d3-a169-3527167dadbb.par
+#BlueLink2 Suspension: Camber Angle`Front SLA - Camber Change` SLA` , Left wheel camber`Camber_1f791aeb-5ce4-45d3-a169-3527167dadbb
+
+PARSFILE Suspensions\Lateral\LatJnc_2ef6edf9-7a6c-4b85-b78d-89a476f0395b.par
+#BlueLink3 Suspension: Lateral Movement Due to Jounce`Front SLA - Lateral Movement` SLA` , Left wheel lateral (-Y)`LatJnc_2ef6edf9-7a6c-4b85-b78d-89a476f0395b
+
+PARSFILE Suspensions\Toe\Toe_f5ed42e5-e814-4552-9dd6-c9557839a735.par
+#BlueLink4 Suspension: Toe Angle`Front SLA - Toe Change` SLA` , Left wheel toe`Toe_f5ed42e5-e814-4552-9dd6-c9557839a735
+
+M_US_IND 22
+M_US_STR 52
+IW 0.1
+IW_XXZZ 0
+JNC_DESIGN 0
+A_TOE 0
+A_CAMBER 0
+H_WC 400
+
+LOG_ENTRY Used Dataset: Suspension: Independent System Kinematics; { Pickup Trucks } Pickup, Full Size - Front (HD)
+#Library : Suspension: Independent System Kinematics
+#DataSet : Pickup, Full Size - Front (HD)
+#Category: Pickup Trucks
+#FileID  : KinInd_bf2d53f8-0f63-43ad-b7f3-53686c980965
+#Product : TruckSim 2020.1
+#VehCode Independent
+
+END

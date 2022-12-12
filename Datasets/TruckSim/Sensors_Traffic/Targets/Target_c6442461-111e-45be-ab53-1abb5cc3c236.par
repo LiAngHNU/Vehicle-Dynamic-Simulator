@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Animated Deer (Running)`Deer (Crossing)
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Animated Deer (Running)
+OPT_SPEED_OBJ 0
+PATH_ID_OBJ 1
+ROAD_ID_OBJ 1
+#CheckBox0 1    
+#CheckBox1 0    
+OPT_RECYCLE_OBJ 0
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+
+#RingCtrl0 1
+#RingCtrl1 1
+H_OBJ .87
+*S_INIT 1300
+*L_INIT -67.7
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE 2.1
+LENGTH_OBJ 2.1
+WIDTH_OBJ .6
+LX_FRONT_OBJ .95
+*REFLECT 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+*SPEED 10
+EQ_INIT HeadO_<<o>> 90/DR
+*START gt(station, 1070)
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_673698b2-1ee8-4b2a-9f8e-d2e7f2a33c94.par
+#BlueLink0 Animator: Shape File Link`Deer: Running (45 km/h)` Environment: Animals (Animated)` , 3D Shape for Video`Shape_673698b2-1ee8-4b2a-9f8e-d2e7f2a33c94
+
+EQ_INIT S_Obj_<<o>> 1300
+EQ_INIT LatO_<<o>> -67.7
+DEFINE_VARIABLE V_CMD_OBJ_<<o>>;KM/H; Speed command
+DEFINE_VARIABLE HeadV_O_<<o>> 90/DR;-; Heading vector for ODEs
+DEFINE_VARIABLE COND_START_OBJ_<<o>>;-; Boolean to start motion
+EQ_FULL_STEP COND_START_OBJ_<<o>> = gt(station, 1070) ;
+DEFINE_VARIABLE COND_STOP_OBJ_<<o>>; - ; Boolean to stop motion
+EQ_FULL_STEP COND_STOP_OBJ_<<o>> = 0 ;
+EQ_OUT V_CMD_OBJ_<<o>> = IF(COND_START_OBJ_<<o>> & ~COND_STOP_OBJ_<<o>>, 10, 0);
+EQ_DIFFERENTIAL LatO_<<o>> = V_CMD_OBJ_<<o>>
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Deer (Crossing) } Animated Deer (Running)
+#Library : Single Moving Object (Custom)
+#DataSet : Animated Deer (Running)
+#Category: Deer (Crossing)
+#FileID  : Target_c6442461-111e-45be-ab53-1abb5cc3c236
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Steering: Parking Torque`2D Linear: 0.01 N-m/N at Zero km/h`Linear
+#CheckBox0 0    
+
+#RingCtrl0 CARPET
+*3D_XLabel Vertical load (N)
+*3D_YLabel Vehicle speed (km/h)
+*3D_ZLabel Parking torque at kingpin (N-m)
+
+#DiagramTwo0
+*3D_DATA 2, 3 ! columns x rows
+MZ_PARKING_STEER_CARPET 2D_LINEAR
+0, 1000, 20000
+0, 200, 300
+5, 0, 0
+6, 0, 0
+ENDTABLE
+
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+A_MZ_BETA 1
+
+
+LOG_ENTRY Used Dataset: Steering: Parking Torque; { Linear } 2D Linear: 0.01 N-m/N at Zero km/h
+#Library : Steering: Parking Torque
+#DataSet : 2D Linear: 0.01 N-m/N at Zero km/h
+#Category: Linear
+#FileID  : TqPark_92bb05e2-9669-4a39-9756-cc91392cde2d
+#Product : TruckSim 2020.1
+#VehCode Parking Torque
+
+END

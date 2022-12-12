@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Suspension: Spring`250 N/mm, 2000 N Friction`Linear w/ Friction and Hysteresis
+#RingCtrl0 COEFFICIENT
+FS_COMP_COEFFICIENT 250
+FS_EXT_COEFFICIENT 250
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+SPRING_COMP_BETA 2
+SPRING_EXT_BETA 2
+*SCALAR 250
+*OFFSET 2000
+
+FS_COMP_OFFSET 2000
+FS_EXT_OFFSET -2000
+
+LOG_ENTRY Used Dataset: Suspension: Spring; { Linear w/ Friction and Hysteresis } 250 N/mm, 2000 N Friction
+#Library : Suspension: Spring
+#DataSet : 250 N/mm, 2000 N Friction
+#Category: Linear w/ Friction and Hysteresis
+#FileID  : Spring_297e4570-41c6-4036-8dd7-5be7bbff8481
+#Product : TruckSim 2020.1
+#VehCode Spring Alone
+
+END

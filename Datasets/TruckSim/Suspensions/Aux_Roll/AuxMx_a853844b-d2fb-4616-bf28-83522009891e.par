@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Suspension: Auxiliary Roll Moment`Non-linear: 344 N-m/deg`Non-Linear
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+MX_AUX_COMBINE ADD
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+MX_AUX_TABLE SPLINE
+-10, -4490.6
+-9, -3826.9
+-8, -3245.1
+-7, -2727.2
+-6, -2259.3
+-5, -1830.4
+-4, -1431.5
+-3, -1055.1
+-2, -694.76
+-1, -344.84
+0, 0
+1, 344.84
+2, 694.76
+3, 1055.1
+4, 1431.5
+5, 1830.4
+6, 2259.3
+7, 2727.2
+8, 3245.1
+9, 3826.9
+10, 4490.6
+ENDTABLE
+MX_AUX_FSTATIC_CONSTANT 0
+*SCALAR 510
+*SCALAR2 0
+
+
+LOG_ENTRY Used Dataset: Suspension: Auxiliary Roll Moment; { Non-Linear } Non-linear: 344 N-m/deg
+#Library : Suspension: Auxiliary Roll Moment
+#DataSet : Non-linear: 344 N-m/deg
+#Category: Non-Linear
+#FileID  : AuxMx_a853844b-d2fb-4616-bf28-83522009891e
+#Product : TruckSim 2020.1
+#VehCode Aux. Roll Moment
+
+END

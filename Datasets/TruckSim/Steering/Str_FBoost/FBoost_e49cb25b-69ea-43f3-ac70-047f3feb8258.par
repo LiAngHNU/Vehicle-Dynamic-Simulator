@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Steering: Power Assist Force`2000 N Maximum`
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+F_BOOST_R_COMBINE ADD
+#DiagramOne0
+F_BOOST_R_TABLE LINEAR
+-2, -562.98
+-1.5, -80.424
+-0.75, -2.0106
+0, 0
+0.75, 2.0106
+1.5, 80.424
+2, 562.98
+ENDTABLE
+F_BOOST_R_V_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR2 0
+TC_BOOST 0.02
+F_BOOST_MAX 2000
+
+
+LOG_ENTRY Used Dataset: Steering: Power Assist Force; 2000 N Maximum
+#Library : Steering: Power Assist Force
+#DataSet : 2000 N Maximum
+#Category: 
+#FileID  : FBoost_e49cb25b-69ea-43f3-ac70-047f3feb8258
+#Product : TruckSim 2020.1
+#VehCode Power Assist Force
+
+END

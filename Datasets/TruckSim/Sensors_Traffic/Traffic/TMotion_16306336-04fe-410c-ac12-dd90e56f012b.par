@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName Multiple Moving Objects`Bicyclist, Symbolic, Will Lean in Turn`Bicyclists
+#RingCtrl0 1
+DEFINE_MOVING_OBJECTS 1
+#RingCtrl1 3
+#RingCtrl2 2
+#RingCtrl3 3
+#RingCtrl4 1
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox25 1    
+#CheckBox26 0    
+#CheckBox38 1    
+#CheckBox39 0    
+
+DZ_OBJECT 0
+#MiscYellow0
+#OPT_ROAD_ROLL = 0
+#EQ_DIFFERENTIAL RollO_<<o>> = ...
+#(-atan(path_curv_id(S_Obj_<<o>>,<<ltarg>>,<<path>>,1)*(V_Obj_<<o>>)^2/g) - RollO_<<o>>)/2
+#TypeO_<<o>> = PEDESTRIAN
+#ENDMYellow
+
+*L <<ltarg>>
+*PATH_ID <<path>>
+*ROAD_ID <<road>>
+*HEADING <<heading>>
+*V <<speed>>
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Bicyclist, Symbolic, Will Lean in Turn
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+OPT_ROAD_ROLL = 0
+EQ_DIFFERENTIAL RollO_<<o>> = ...
+(-atan(path_curv_id(S_Obj_<<o>>,<<ltarg>>,<<path>>,1)*(V_Obj_<<o>>)^2/g) - RollO_<<o>>)/2
+TypeO_<<o>> = PEDESTRIAN
+EQ_INIT HEADO_<<o>> = <<heading>>
+#RingCtrl4 1
+PATH_ID_OBJ <<path>>
+ROAD_ID_OBJ <<road>>
+OPT_RECYCLE_OBJ 0
+*SINIT_1 <<sstart>>
+EQ_INIT S_OBJ_<<o>> = <<sstart>>
+EQ_INIT V_OBJ_<<o>> = <<speed>>
+EQ_OUT V_OBJ_<<o>> = <<speed>>
+EQ_INIT LATO_<<o>> = <<ltarg>>
+*H_TARGET_1 -1
+H_OBJ -1
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_7708dd96-9e58-480b-a3bf-1e7ee6d5ed96.par
+#BlueLink0 Animator: Shape File Link`Asian Female: Cycling (5 km/h)` Environment: Pedestrians (Animated)` , 3D Shape for Video`Shape_7708dd96-9e58-480b-a3bf-1e7ee6d5ed96
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_1 0.8
+LENGTH_OBJ 0.8
+*WIDTH_1 0.6
+WIDTH_OBJ 0.6
+*LX_FRONT_1 0.4
+LX_FRONT_OBJ 0.4
+*REFLECT_1 2
+MATERIAL_TYPE_OBJ 2
+
+#EMBEDDED_NOTES
+#Bicylcist following path through turn. The speed is constant, and the roll is set to be in equilibirum: with Ay = curv*v^2, the roll angle is atan(Ay/g). Because the curvature change is abrupt, the roll is low-pass filtered with a time constant of 2s.
+#
+#This dataset is reusable, but requires symbols <<path>>, <<road>>, <<ltarg>>, <<sstart>>.  <<speed>>, and <<heading>>
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Multiple Moving Objects; { Bicyclists } Bicyclist, Symbolic, Will Lean in Turn
+#Library : Multiple Moving Objects
+#DataSet : Bicyclist, Symbolic, Will Lean in Turn
+#Category: Bicyclists
+#FileID  : TMotion_16306336-04fe-410c-ac12-dd90e56f012b
+#Product : TruckSim 2020.1
+#VehCode Multiple Objects
+
+END

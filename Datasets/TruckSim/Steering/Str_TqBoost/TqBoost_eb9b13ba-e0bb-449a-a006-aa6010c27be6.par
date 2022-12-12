@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Steering: Power Assist Torque`25 N-m Maximum`Column Assist Torque
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+M_BOOST_G_COMBINE ADD
+#DiagramOne0
+M_BOOST_G_TABLE LINEAR
+-2, -5.6
+-1.5, -0.8
+-0.75, -0.02
+0, 0
+0.75, 0.02
+1.5, 0.8
+2, 5.6
+ENDTABLE
+M_BOOST_G_V_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR2 0
+TC_BOOST 0.02
+M_BOOST_MAX 25
+
+
+LOG_ENTRY Used Dataset: Steering: Power Assist Torque; { Column Assist Torque } 25 N-m Maximum
+#Library : Steering: Power Assist Torque
+#DataSet : 25 N-m Maximum
+#Category: Column Assist Torque
+#FileID  : TqBoost_eb9b13ba-e0bb-449a-a006-aa6010c27be6
+#Product : TruckSim 2020.1
+#VehCode Power Assist Torque
+
+END

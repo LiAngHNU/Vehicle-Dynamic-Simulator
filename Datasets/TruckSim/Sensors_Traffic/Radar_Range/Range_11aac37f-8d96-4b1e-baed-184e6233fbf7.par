@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Sensor Range and Bearing Sensitivity`50-m Range`Limit from Range
+#CheckBox0 1    
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#MiscYellow0
+RANGE_LIMIT_SENSOR = 50
+#ENDMYellow
+
+SENSOR_ANTENNA_RANGE_CONSTANT 1
+SENSOR_ANTENNA_BEARING_CONSTANT 1
+*SCALAR 1
+*SCALAR2 1
+
+
+#EMBEDDED_NOTES
+#The parameter RANGE_LIMIT_SENSOR limits the polar distance in order to speed up calculations.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Sensor Range and Bearing Sensitivity; { Limit from Range } 50-m Range
+#Library : Sensor Range and Bearing Sensitivity
+#DataSet : 50-m Range
+#Category: Limit from Range
+#FileID  : Range_11aac37f-8d96-4b1e-baed-184e6233fbf7
+#Product : TruckSim 2020.1
+#VehCode Range & Bearing Sensitivity
+
+END

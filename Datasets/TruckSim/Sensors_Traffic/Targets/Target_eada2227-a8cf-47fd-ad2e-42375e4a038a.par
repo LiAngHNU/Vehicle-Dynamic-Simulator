@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Overhead Traffic Signal, Generic`Traffic Signs and Lights
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Overhead Traffic Signal, Generic
+OPT_SPEED_OBJ 0
+
+OPT_ROAD_OBJ 0 ! Legacy pre-9
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+#CheckBox3 0    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 1    
+
+#RingCtrl0 5
+#RingCtrl1 2
+H_OBJ 5.5
+*S_INIT <<x>>
+*L_INIT <<y>>
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 2
+DZ_OBJECT 0
+*SIZE 0.01
+LENGTH_OBJ 0.01
+VIS_ANGLE_OBJ 40
+*REFLECT 1
+MATERIAL_TYPE_OBJ 1
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\Groups\Group_c3f18e68-c82f-4f9c-bad9-c7fed6784263.par
+#BlueLink0 Animator: Group`Overhead Traffic Signal` Signs` , 3D Shape for Video`Group_c3f18e68-c82f-4f9c-bad9-c7fed6784263
+
+EQ_INIT X_Obj_<<o>> <<x>>
+EQ_INIT Y_Obj_<<o>> <<y>>
+#MiscYellow1
+YawO_<<o>> = <<psi>>
+define_output Tcycle<<o>> = fmod(t + <<rstart>>*t_sig_period,t_sig_period);s;Modular time for signal
+eq_out TypeO_<<o>> = 110 + gt(Tcycle<<o>>,t_sig_period/2 - 5) + gt(Tcycle<<o>>, t_sig_period/2 -2)
+MsgObj_<<o>> = <<dist>>
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#Generic traffic signal with location info obtained with symbols. The linked animator group has a pole, two signal structures, and two sets of lights for the three colors.
+#
+#Symbols also set the distance to the stopping line <<dist>> and the part of the period in the cycle where the timing starts <<rstart>>.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Traffic Signs and Lights } Overhead Traffic Signal, Generic
+#Library : Single Moving Object (Custom)
+#DataSet : Overhead Traffic Signal, Generic
+#Category: Traffic Signs and Lights
+#FileID  : Target_eada2227-a8cf-47fd-ad2e-42375e4a038a
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

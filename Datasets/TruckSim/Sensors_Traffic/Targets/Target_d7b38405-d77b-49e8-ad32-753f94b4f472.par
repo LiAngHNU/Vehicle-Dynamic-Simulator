@@ -1,0 +1,67 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Building`Irregularly Shaped Objects
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Building
+OPT_SPEED_OBJ 0
+OPT_POLY_COORD 1
+
+OPT_ROAD_OBJ 0 ! Legacy pre-9
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+#CheckBox3 1    
+#CheckBox6 1    
+#CheckBox7 1    
+#CheckBox8 1    
+
+#RingCtrl0 5
+#RingCtrl1 3
+#RingCtrl2 1
+H_OBJ 1.5
+*COLOR 0.2 0.6 0
+*S_INIT 22
+*L_INIT -22
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 3
+DZ_OBJECT 0
+*REFLECT 3
+MATERIAL_TYPE_OBJ 3
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 3
+add_obj Sensors_Traffic\Poly\PolyShape_1af21791-5177-4014-ba1f-071c1f664569.obj
+set_transparency 0.5
+SET_OFFSET_Z 0.5
+SET_COLOR 0.2 0.6 0
+SET_RUN_COLOR 0.2 0.6 0
+PARSFILE Sensors_Traffic\Poly\poly_1af21791-5177-4014-ba1f-071c1f664569.par
+#BlueLink1 Polygonal Shape Coordinates`Building, Type 9, Three Stories` ` , Polygonal Coordinates`poly_1af21791-5177-4014-ba1f-071c1f664569
+
+POLY_SHAPE_ID_OBJ = IPOLYGON
+EQ_INIT X_Obj_<<o>> 22
+EQ_INIT Y_Obj_<<o>> -22
+#MiscYellow1
+YawO_<<o>> = pi
+TypeO_<<o>> = 0 ! No type for this object
+MsgObj_<<o>> = 0 ! No message for this object
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#This building is located on the southeast corner of the Three-Way Intersection.  The ground floor has a diagonal face on the northwestern corner.  A polygonal bounding box defined in XY coordinates is used to capture this unique geometry, allowing items to be detected which would have been otherwise occluded by the standard rectangular bounding box.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Irregularly Shaped Objects } Building
+#Library : Single Moving Object (Custom)
+#DataSet : Building
+#Category: Irregularly Shaped Objects
+#FileID  : Target_d7b38405-d77b-49e8-ad32-753f94b4f472
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName Suspension: Independent System Kinematics`Pusher Axle`Lift Axles
+iside 1
+#RingCtrl0 1
+OPT_JNC_DESIGN 1
+#RingCtrl1 2
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 2
+#RingCtrl5 2
+#CheckBox1 0    
+#CheckBox2 0    
+
+R_US_STR 0.264706
+L_TRACK 1863
+Y_CL_SUSP 0
+H_WC 528
+M_US 68
+*IW_L 10
+*IW_R 10
+*JNC_DESIGN_L 0
+*TOE_L 0
+*CAMBER_L 0
+*IWXXZZ_L 0
+*IWXXZZ_R 0
+*M_US_IND_L 25
+*M_US_STR_L 9
+
+PARSFILE Suspensions\Dive\Dive_90b1394a-7e5d-49af-b48d-73a166365cd1.par
+#BlueLink0 Suspension: Dive Angle (Caster Change)`Constant: Zero Dive Angle (deg)` Constant` , Left wheel dive (caster change)`Dive_90b1394a-7e5d-49af-b48d-73a166365cd1
+
+PARSFILE Suspensions\Longitudinal\SusX_c81dc724-875f-4015-80b5-7b0fdaa089ed.par
+#BlueLink1 Suspension: Longitudinal Movement`Zero Forward X Movement` Constant` , Left wheel X`SusX_c81dc724-875f-4015-80b5-7b0fdaa089ed
+
+PARSFILE Suspensions\Camber\Camber_1c11b21b-4646-4b80-a78e-23e18fd042b5.par
+#BlueLink2 Suspension: Camber Angle`Constant: Zero Camber Angle (deg)` Constant` , Left wheel camber`Camber_1c11b21b-4646-4b80-a78e-23e18fd042b5
+
+PARSFILE Suspensions\Lateral\LatJnc_28e47ad5-6b51-4b93-b27b-8918d80ac87f.par
+#BlueLink3 Suspension: Lateral Movement Due to Jounce`Constant: Zero Lateral Movement (mm)` Constant` , Left wheel lateral (-Y)`LatJnc_28e47ad5-6b51-4b93-b27b-8918d80ac87f
+
+PARSFILE Suspensions\Toe\Toe_0ba9878a-093d-452a-9598-88f9888ea64f.par
+#BlueLink4 Suspension: Toe Angle`Constant: Zero Toe Angle (deg)` Constant` , Left wheel toe`Toe_0ba9878a-093d-452a-9598-88f9888ea64f
+
+M_US_IND 25
+M_US_STR 9
+IW 10
+IW_XXZZ 0
+JNC_DESIGN 0
+A_TOE 0
+A_CAMBER 0
+
+iside 2
+PARSFILE Suspensions\Dive\Dive_90b1394a-7e5d-49af-b48d-73a166365cd1.par
+#BlueLink0 Suspension: Dive Angle (Caster Change)`Constant: Zero Dive Angle (deg)` Constant` , Left wheel dive (caster change)`Dive_90b1394a-7e5d-49af-b48d-73a166365cd1
+
+PARSFILE Suspensions\Longitudinal\SusX_c81dc724-875f-4015-80b5-7b0fdaa089ed.par
+#BlueLink1 Suspension: Longitudinal Movement`Zero Forward X Movement` Constant` , Left wheel X`SusX_c81dc724-875f-4015-80b5-7b0fdaa089ed
+
+PARSFILE Suspensions\Camber\Camber_1c11b21b-4646-4b80-a78e-23e18fd042b5.par
+#BlueLink2 Suspension: Camber Angle`Constant: Zero Camber Angle (deg)` Constant` , Left wheel camber`Camber_1c11b21b-4646-4b80-a78e-23e18fd042b5
+
+PARSFILE Suspensions\Lateral\LatJnc_28e47ad5-6b51-4b93-b27b-8918d80ac87f.par
+#BlueLink3 Suspension: Lateral Movement Due to Jounce`Constant: Zero Lateral Movement (mm)` Constant` , Left wheel lateral (-Y)`LatJnc_28e47ad5-6b51-4b93-b27b-8918d80ac87f
+
+PARSFILE Suspensions\Toe\Toe_0ba9878a-093d-452a-9598-88f9888ea64f.par
+#BlueLink4 Suspension: Toe Angle`Constant: Zero Toe Angle (deg)` Constant` , Left wheel toe`Toe_0ba9878a-093d-452a-9598-88f9888ea64f
+
+M_US_IND 25
+M_US_STR 9
+IW 10
+IW_XXZZ 0
+JNC_DESIGN 0
+A_TOE 0
+A_CAMBER 0
+H_WC 528
+
+LOG_ENTRY Used Dataset: Suspension: Independent System Kinematics; { Lift Axles } Pusher Axle
+#Library : Suspension: Independent System Kinematics
+#DataSet : Pusher Axle
+#Category: Lift Axles
+#FileID  : KinInd_7be64b33-33c6-468b-b963-cce3a944ad58
+#Product : TruckSim 2020.1
+#VehCode Independent
+
+END

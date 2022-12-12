@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName Suspension: Independent System Kinematics`Large Euro Van Ind. Kinematics - Front`Large European Van
+iside 1
+#RingCtrl0 1
+OPT_JNC_DESIGN 1
+#RingCtrl1 2
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 2
+#RingCtrl5 2
+#CheckBox1 0    
+#CheckBox2 0    
+
+R_US_STR 0.210526
+L_TRACK 1550
+Y_CL_SUSP 0
+H_WC 355
+M_US 38
+*IW_L 0.9
+*IW_R 0.9
+*JNC_DESIGN_L 0
+*TOE_L 0
+*CAMBER_L 0
+*IWXXZZ_L 0
+*IWXXZZ_R 0
+*M_US_IND_L 15
+*M_US_STR_L 4
+
+PARSFILE Suspensions\Dive\Dive_14ade440-e891-4739-b6b7-24bf2f9ffc12.par
+#BlueLink0 Suspension: Dive Angle (Caster Change)`Large European Van - Front` Utility Vehicles` , Left wheel dive (caster change)`Dive_14ade440-e891-4739-b6b7-24bf2f9ffc12
+
+PARSFILE Suspensions\Longitudinal\SusX_e0f45e61-3dfc-4700-8e4f-53e686d6e2a0.par
+#BlueLink1 Suspension: Longitudinal Movement`Large European Van - Front` Utility Vehicles` , Left wheel X`SusX_e0f45e61-3dfc-4700-8e4f-53e686d6e2a0
+
+PARSFILE Suspensions\Camber\Camber_efbb2e72-ca5d-4340-b46b-48f61c458254.par
+#BlueLink2 Suspension: Camber Angle`Large European Van - Front` Utility Vehicles` , Left wheel camber`Camber_efbb2e72-ca5d-4340-b46b-48f61c458254
+
+PARSFILE Suspensions\Lateral\LatJnc_f36208fa-62e1-4568-a56d-30ad7f7d339f.par
+#BlueLink3 Suspension: Lateral Movement Due to Jounce`Large European Van - Front` Utility Vehicles` , Left wheel lateral (-Y)`LatJnc_f36208fa-62e1-4568-a56d-30ad7f7d339f
+
+PARSFILE Suspensions\Toe\Toe_c4bf7d4f-28cc-4748-8109-6a8cbb5cc8d2.par
+#BlueLink4 Suspension: Toe Angle`Large European Van - Front` Utility Vehicles` , Left wheel toe`Toe_c4bf7d4f-28cc-4748-8109-6a8cbb5cc8d2
+
+M_US_IND 15
+M_US_STR 4
+IW 0.9
+IW_XXZZ 0
+JNC_DESIGN 0
+A_TOE 0
+A_CAMBER 0
+
+iside 2
+PARSFILE Suspensions\Dive\Dive_14ade440-e891-4739-b6b7-24bf2f9ffc12.par
+#BlueLink0 Suspension: Dive Angle (Caster Change)`Large European Van - Front` Utility Vehicles` , Left wheel dive (caster change)`Dive_14ade440-e891-4739-b6b7-24bf2f9ffc12
+
+PARSFILE Suspensions\Longitudinal\SusX_e0f45e61-3dfc-4700-8e4f-53e686d6e2a0.par
+#BlueLink1 Suspension: Longitudinal Movement`Large European Van - Front` Utility Vehicles` , Left wheel X`SusX_e0f45e61-3dfc-4700-8e4f-53e686d6e2a0
+
+PARSFILE Suspensions\Camber\Camber_efbb2e72-ca5d-4340-b46b-48f61c458254.par
+#BlueLink2 Suspension: Camber Angle`Large European Van - Front` Utility Vehicles` , Left wheel camber`Camber_efbb2e72-ca5d-4340-b46b-48f61c458254
+
+PARSFILE Suspensions\Lateral\LatJnc_f36208fa-62e1-4568-a56d-30ad7f7d339f.par
+#BlueLink3 Suspension: Lateral Movement Due to Jounce`Large European Van - Front` Utility Vehicles` , Left wheel lateral (-Y)`LatJnc_f36208fa-62e1-4568-a56d-30ad7f7d339f
+
+PARSFILE Suspensions\Toe\Toe_c4bf7d4f-28cc-4748-8109-6a8cbb5cc8d2.par
+#BlueLink4 Suspension: Toe Angle`Large European Van - Front` Utility Vehicles` , Left wheel toe`Toe_c4bf7d4f-28cc-4748-8109-6a8cbb5cc8d2
+
+M_US_IND 15
+M_US_STR 4
+IW 0.9
+IW_XXZZ 0
+JNC_DESIGN 0
+A_TOE 0
+A_CAMBER 0
+H_WC 355
+
+LOG_ENTRY Used Dataset: Suspension: Independent System Kinematics; { Large European Van } Large Euro Van Ind. Kinematics - Front
+#Library : Suspension: Independent System Kinematics
+#DataSet : Large Euro Van Ind. Kinematics - Front
+#Category: Large European Van
+#FileID  : KinInd_20ba66a1-0a3e-4938-b623-16a60f3c85c1
+#Product : TruckSim 2020.1
+#VehCode Independent
+
+END

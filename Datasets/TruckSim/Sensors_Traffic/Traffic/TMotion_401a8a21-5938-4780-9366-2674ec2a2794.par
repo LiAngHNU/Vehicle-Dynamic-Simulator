@@ -1,0 +1,335 @@
+PARSFILE
+#FullDataName Multiple Moving Objects`Cars along I-94 South (Right Lane)`Highway Intersection
+#RingCtrl0 10
+DEFINE_MOVING_OBJECTS 10
+#RingCtrl1 3
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 -1
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox3 1    
+#CheckBox5 1    
+#CheckBox7 1    
+#CheckBox9 1    
+#CheckBox11 1    
+#CheckBox13 1    
+#CheckBox15 1    
+#CheckBox17 1    
+#CheckBox19 1    
+#CheckBox38 0    
+#CheckBox39 0    
+
+DZ_OBJECT 0
+*L 17
+*LEAD 1600
+*TRAIL 200
+*HIDE 10
+*PATH_ID 1094
+*ROAD_ID 1094
+*V 32
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Cars along I-94 South (Right Lane), Object #1
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ -1
+
+EQ_INIT HEADO_<<o>> = PI
+#RingCtrl4 -1
+PATH_ID_OBJ 1094
+ROAD_ID_OBJ 1094
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 1600
+S_TRAIL_OBJ 200
+S_HIDE_OBJ 10
+*SINIT_1 1270
+EQ_INIT S_OBJ_<<o>> = 1270
+EQ_INIT V_OBJ_<<o>> = 32
+EQ_OUT V_OBJ_<<o>> = 32
+EQ_INIT LATO_<<o>> = 17
+*COLOR_1 0 0 0
+SET_RUN_COLOR 0 0 0
+H_OBJ = 0 ! Default for blank field
+PARSFILE Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`B-Class, Sports Car` B-Class` , 3D Shape for Video`AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Cars along I-94 South (Right Lane), Object #2
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ -1
+
+EQ_INIT HEADO_<<o>> = PI
+#RingCtrl4 -1
+PATH_ID_OBJ 1094
+ROAD_ID_OBJ 1094
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 1600
+S_TRAIL_OBJ 200
+S_HIDE_OBJ 10
+*SINIT_2 1240
+EQ_INIT S_OBJ_<<o>> = 1240
+EQ_INIT V_OBJ_<<o>> = 32
+EQ_OUT V_OBJ_<<o>> = 32
+EQ_INIT LATO_<<o>> = 17
+*COLOR_2 0 0.8 0
+SET_RUN_COLOR 0 0.8 0
+H_OBJ = 0 ! Default for blank field
+PARSFILE Animator\Vehicles\AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3.par
+#BlueLink1 Animator: Vehicles and Sensor Targets`D-Class, Sedan` D-Class` , Traffic Vehicle Ani File`AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Cars along I-94 South (Right Lane), Object #3
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ -1
+
+EQ_INIT HEADO_<<o>> = PI
+#RingCtrl4 -1
+PATH_ID_OBJ 1094
+ROAD_ID_OBJ 1094
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 1600
+S_TRAIL_OBJ 200
+S_HIDE_OBJ 10
+*SINIT_3 1200
+EQ_INIT S_OBJ_<<o>> = 1200
+EQ_INIT V_OBJ_<<o>> = 32
+EQ_OUT V_OBJ_<<o>> = 32
+EQ_INIT LATO_<<o>> = 17
+*COLOR_3 1 1 1
+SET_RUN_COLOR 1 1 1
+H_OBJ = 0 ! Default for blank field
+PARSFILE Animator\Vehicles\AniVeh_339055ba-da70-41ce-ae0c-6ee903dfe65f.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`C-Class, Hatchback` C-Class` , Traffic Vehicle Ani File`AniVeh_339055ba-da70-41ce-ae0c-6ee903dfe65f
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Cars along I-94 South (Right Lane), Object #4
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ -1
+
+EQ_INIT HEADO_<<o>> = PI
+#RingCtrl4 -1
+PATH_ID_OBJ 1094
+ROAD_ID_OBJ 1094
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 1600
+S_TRAIL_OBJ 200
+S_HIDE_OBJ 10
+*SINIT_4 1150
+EQ_INIT S_OBJ_<<o>> = 1150
+EQ_INIT V_OBJ_<<o>> = 32
+EQ_OUT V_OBJ_<<o>> = 32
+EQ_INIT LATO_<<o>> = 17
+*COLOR_4 0.4 0 0
+SET_RUN_COLOR 0.4 0 0
+H_OBJ = 0 ! Default for blank field
+PARSFILE Animator\Vehicles\AniVeh_8f7dac3f-b802-4072-9832-f4b98d0cc372.par
+#BlueLink3 Animator: Vehicles and Sensor Targets`2A Delivery Truck` 2A Utility Trucks and Vans` , Traffic Vehicle Ani File`AniVeh_8f7dac3f-b802-4072-9832-f4b98d0cc372
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Cars along I-94 South (Right Lane), Object #5
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ -1
+
+EQ_INIT HEADO_<<o>> = PI
+#RingCtrl4 -1
+PATH_ID_OBJ 1094
+ROAD_ID_OBJ 1094
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 1600
+S_TRAIL_OBJ 200
+S_HIDE_OBJ 10
+*SINIT_5 1070
+EQ_INIT S_OBJ_<<o>> = 1070
+EQ_INIT V_OBJ_<<o>> = 32
+EQ_OUT V_OBJ_<<o>> = 32
+EQ_INIT LATO_<<o>> = 17
+*COLOR_5 0 0.2 1
+SET_RUN_COLOR 0 0.2 1
+H_OBJ = 0 ! Default for blank field
+PARSFILE Animator\Vehicles\AniVeh_98b56c21-ece5-4ea1-97db-5890b3e24c03.par
+#BlueLink4 Animator: Vehicles and Sensor Targets`3A Day Cab w/ 0 @ Hitch` 3A Lead Units` , Traffic Vehicle Ani File`AniVeh_98b56c21-ece5-4ea1-97db-5890b3e24c03
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Cars along I-94 South (Right Lane), Object #6
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ -1
+
+EQ_INIT HEADO_<<o>> = PI
+#RingCtrl4 -1
+PATH_ID_OBJ 1094
+ROAD_ID_OBJ 1094
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 1600
+S_TRAIL_OBJ 200
+S_HIDE_OBJ 10
+*SINIT_6 1070
+EQ_INIT S_OBJ_<<o>> = 1070
+EQ_INIT V_OBJ_<<o>> = 32
+EQ_OUT V_OBJ_<<o>> = 32
+EQ_INIT LATO_<<o>> = 17
+*COLOR_6 0 0.2 1
+SET_RUN_COLOR 0 0.2 1
+H_OBJ = 0 ! Default for blank field
+PARSFILE Animator\Vehicles\AniVeh_a67e98aa-5ada-4abd-b75c-5938064f0d6f.par
+#BlueLink5 Animator: Vehicles and Sensor Targets`2A Conventional Box Trailer` Trailers: 2-axle` , Traffic Vehicle Ani File`AniVeh_a67e98aa-5ada-4abd-b75c-5938064f0d6f
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Cars along I-94 South (Right Lane), Object #7
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ -1
+
+EQ_INIT HEADO_<<o>> = PI
+#RingCtrl4 -1
+PATH_ID_OBJ 1094
+ROAD_ID_OBJ 1094
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 1600
+S_TRAIL_OBJ 200
+S_HIDE_OBJ 10
+*SINIT_7 1000
+EQ_INIT S_OBJ_<<o>> = 1000
+EQ_INIT V_OBJ_<<o>> = 32
+EQ_OUT V_OBJ_<<o>> = 32
+EQ_INIT LATO_<<o>> = 17
+*COLOR_7 0.69 0.69 0.69
+SET_RUN_COLOR 0.69 0.69 0.69
+H_OBJ = 0 ! Default for blank field
+PARSFILE Animator\Vehicles\AniVeh_64b08965-9455-4528-ba1c-f527125d89cb.par
+#BlueLink6 Animator: Vehicles and Sensor Targets`4A Dump Truck w/ Lift Axle` 4A Lead Units` , Traffic Vehicle Ani File`AniVeh_64b08965-9455-4528-ba1c-f527125d89cb
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Cars along I-94 South (Right Lane), Object #8
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ -1
+
+EQ_INIT HEADO_<<o>> = PI
+#RingCtrl4 -1
+PATH_ID_OBJ 1094
+ROAD_ID_OBJ 1094
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 1600
+S_TRAIL_OBJ 200
+S_HIDE_OBJ 10
+*SINIT_8 840
+EQ_INIT S_OBJ_<<o>> = 840
+EQ_INIT V_OBJ_<<o>> = 32
+EQ_OUT V_OBJ_<<o>> = 32
+EQ_INIT LATO_<<o>> = 17
+*COLOR_8 0 0.4 0
+SET_RUN_COLOR 0 0.4 0
+H_OBJ = 0 ! Default for blank field
+PARSFILE Animator\Vehicles\AniVeh_339055ba-da70-41ce-ae0c-6ee903dfe65f.par
+#BlueLink7 Animator: Vehicles and Sensor Targets`C-Class, Hatchback` C-Class` , Traffic Vehicle Ani File`AniVeh_339055ba-da70-41ce-ae0c-6ee903dfe65f
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Cars along I-94 South (Right Lane), Object #9
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ -1
+
+EQ_INIT HEADO_<<o>> = PI
+#RingCtrl4 -1
+PATH_ID_OBJ 1094
+ROAD_ID_OBJ 1094
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 1600
+S_TRAIL_OBJ 200
+S_HIDE_OBJ 10
+*SINIT_9 780
+EQ_INIT S_OBJ_<<o>> = 780
+EQ_INIT V_OBJ_<<o>> = 32
+EQ_OUT V_OBJ_<<o>> = 32
+EQ_INIT LATO_<<o>> = 17
+*COLOR_9 1 1 0
+SET_RUN_COLOR 1 1 0
+H_OBJ = 0 ! Default for blank field
+PARSFILE Animator\Vehicles\AniVeh_ecb4bc00-731a-4eec-9e10-b0fa5a9a76b7.par
+#BlueLink8 Animator: Vehicles and Sensor Targets`F-Class, Sedan` F-Class` , Traffic Vehicle Ani File`AniVeh_ecb4bc00-731a-4eec-9e10-b0fa5a9a76b7
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Cars along I-94 South (Right Lane), Object #10
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ -1
+
+EQ_INIT HEADO_<<o>> = PI
+#RingCtrl4 -1
+PATH_ID_OBJ 1094
+ROAD_ID_OBJ 1094
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 1600
+S_TRAIL_OBJ 200
+S_HIDE_OBJ 10
+*SINIT_10 520
+EQ_INIT S_OBJ_<<o>> = 520
+EQ_INIT V_OBJ_<<o>> = 32
+EQ_OUT V_OBJ_<<o>> = 32
+EQ_INIT LATO_<<o>> = 17
+*COLOR_10 0.6 0 0
+SET_RUN_COLOR 0.6 0 0
+H_OBJ = 0 ! Default for blank field
+PARSFILE Animator\Vehicles\AniVeh_f01aa450-9844-4815-965e-4b474a18f90a.par
+#BlueLink9 Animator: Vehicles and Sensor Targets`Touring Bike with Rider and Passenger` Motorcycles` , Traffic Vehicle Ani File`AniVeh_f01aa450-9844-4815-965e-4b474a18f90a
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+#EMBEDDED_NOTES
+#Cars driving in the right lane along I-94 south with constant speed.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Multiple Moving Objects; { Highway Intersection } Cars along I-94 South (Right Lane)
+#Library : Multiple Moving Objects
+#DataSet : Cars along I-94 South (Right Lane)
+#Category: Highway Intersection
+#FileID  : TMotion_401a8a21-5938-4780-9366-2674ec2a2794
+#Product : TruckSim 2020.1
+#VehCode Multiple Objects
+
+END

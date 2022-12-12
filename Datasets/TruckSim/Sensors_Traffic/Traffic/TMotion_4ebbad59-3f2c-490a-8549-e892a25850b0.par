@@ -1,0 +1,98 @@
+PARSFILE
+#FullDataName Multiple Moving Objects`2 Vehicles, Relative L`Traffic Vehicles (Forward)
+#RingCtrl0 2
+DEFINE_MOVING_OBJECTS 2
+#RingCtrl1 3
+#RingCtrl2 2
+#RingCtrl3 0
+#RingCtrl4 1
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox3 1    
+#CheckBox38 0    
+#CheckBox39 0    
+
+DZ_OBJECT 0
+#MiscYellow0
+#SYMBOL_PUSH_WEAK <<i>> -12 ! Only the first time
+#SYMBOL_ADD <<i>> 8
+#ENDMYellow
+
+*L <<i>>
+*PATH_ID PATH_ID_DM
+*ROAD_ID CURRENT_ROAD_ID
+*V Vx
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 2 Vehicles, Relative L, Object #1
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+SYMBOL_PUSH_WEAK <<i>> -12 ! Only the first time
+SYMBOL_ADD <<i>> 8
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 0
+*SINIT_1 0
+EQ_INIT S_OBJ_<<o>> = 0
+EQ_INIT V_OBJ_<<o>> = Vx
+EQ_OUT V_OBJ_<<o>> = Vx
+EQ_INIT LATO_<<o>> = <<i>>
+*COLOR_1 0 0 0
+SET_RUN_COLOR 0 0 0
+*H_TARGET_1 -1.6
+H_OBJ -1.6
+PARSFILE Animator\Vehicles\AniVeh_9dc8d573-d8fc-4f9d-92f0-02b27f88cf1a.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`2A LCF Van` 2A Lead Units` , 3D Shape for Video`AniVeh_9dc8d573-d8fc-4f9d-92f0-02b27f88cf1a
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 2 Vehicles, Relative L, Object #2
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+SYMBOL_PUSH_WEAK <<i>> -12 ! Only the first time
+SYMBOL_ADD <<i>> 8
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 0
+*SINIT_2 0
+EQ_INIT S_OBJ_<<o>> = 0
+EQ_INIT V_OBJ_<<o>> = Vx
+EQ_OUT V_OBJ_<<o>> = Vx
+EQ_INIT LATO_<<o>> = <<i>>
+*COLOR_2 0 0 0
+SET_RUN_COLOR 0 0 0
+*H_TARGET_2 -1.5
+H_OBJ -1.5
+PARSFILE Animator\Vehicles\AniVeh_9dc8d573-d8fc-4f9d-92f0-02b27f88cf1a.par
+#BlueLink1 Animator: Vehicles and Sensor Targets`2A LCF Van` 2A Lead Units` , Traffic Vehicle Ani File`AniVeh_9dc8d573-d8fc-4f9d-92f0-02b27f88cf1a
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+#EMBEDDED_NOTES
+#Use the current path and road.
+#
+#This calculates L using an interval of 6 m.
+#
+#The Symbol Stack variable <<i>> is introduced here to count from 1 to the number of objects.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Multiple Moving Objects; { Traffic Vehicles (Forward) } 2 Vehicles, Relative L
+#Library : Multiple Moving Objects
+#DataSet : 2 Vehicles, Relative L
+#Category: Traffic Vehicles (Forward)
+#FileID  : TMotion_4ebbad59-3f2c-490a-8549-e892a25850b0
+#Product : TruckSim 2020.1
+#VehCode Multiple Objects
+
+END

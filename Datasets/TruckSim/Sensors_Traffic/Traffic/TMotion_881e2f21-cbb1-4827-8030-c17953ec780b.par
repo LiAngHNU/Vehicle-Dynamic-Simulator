@@ -1,0 +1,178 @@
+PARSFILE
+#FullDataName Multiple Moving Objects`Traffc Vehicles Going Forward`Traffic Vehicles (Forward)
+#RingCtrl0 4
+DEFINE_MOVING_OBJECTS 4
+#RingCtrl1 3
+#RingCtrl2 0
+#RingCtrl3 1
+#RingCtrl4 1
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox25 1    
+#CheckBox26 0    
+#CheckBox27 0    
+#CheckBox28 0    
+#CheckBox29 0    
+#CheckBox38 1    
+#CheckBox39 0    
+
+DZ_OBJECT 0
+*L -lane_ctr
+*V VX_START
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Traffc Vehicles Going Forward, Object #1
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+OPT_RECYCLE_OBJ 0
+*SINIT_1 880
+EQ_INIT S_OBJ_<<o>> = 880
+EQ_INIT V_OBJ_<<o>> = VX_START
+EQ_OUT V_OBJ_<<o>> = VX_START
+EQ_IN LATO_<<o>> = -lane_ctr
+*COLOR_1 1 1 0
+SET_RUN_COLOR 1 1 0
+*H_TARGET_1 2
+H_OBJ 2
+PARSFILE Animator\Vehicles\AniVeh_ecc34757-a9b0-47e8-892b-519a94a6c023.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`2A School Bus` 2A Lead Units` , 3D Shape for Video`AniVeh_ecc34757-a9b0-47e8-892b-519a94a6c023
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_1 7.45
+LENGTH_OBJ 7.45
+*WIDTH_1 2.5
+WIDTH_OBJ 2.5
+*LX_FRONT_1 0.5
+LX_FRONT_OBJ 0.5
+*REFLECT_1 1
+MATERIAL_TYPE_OBJ 1
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Traffc Vehicles Going Forward, Object #2
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+OPT_RECYCLE_OBJ 0
+*SINIT_2 980
+EQ_INIT S_OBJ_<<o>> = 980
+EQ_INIT V_OBJ_<<o>> = VX_START
+EQ_OUT V_OBJ_<<o>> = VX_START
+EQ_IN LATO_<<o>> = -lane_ctr
+*COLOR_2 1 0.6 0
+SET_RUN_COLOR 1 0.6 0
+*H_TARGET_2 2
+H_OBJ 2
+PARSFILE Animator\Vehicles\AniVeh_64b08965-9455-4528-ba1c-f527125d89cb.par
+#BlueLink1 Animator: Vehicles and Sensor Targets`4A Dump Truck w/ Lift Axle` 4A Lead Units` , Traffic Vehicle Ani File`AniVeh_64b08965-9455-4528-ba1c-f527125d89cb
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_2 6.77
+LENGTH_OBJ 6.77
+*WIDTH_2 2.5
+WIDTH_OBJ 2.5
+*LX_FRONT_2 0.5
+LX_FRONT_OBJ 0.5
+*REFLECT_2 1
+MATERIAL_TYPE_OBJ 1
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Traffc Vehicles Going Forward, Object #3
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+OPT_RECYCLE_OBJ 0
+*SINIT_3 930
+EQ_INIT S_OBJ_<<o>> = 930
+EQ_INIT V_OBJ_<<o>> = VX_START
+EQ_OUT V_OBJ_<<o>> = VX_START
+EQ_IN LATO_<<o>> = -lane_ctr
+*COLOR_3 0 0.4 0
+SET_RUN_COLOR 0 0.4 0
+*H_TARGET_3 2
+H_OBJ 2
+PARSFILE Animator\Vehicles\AniVeh_15c2a297-0b0c-402b-880e-9a4068d5ad4c.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`3A Refuse Hauler` 3A Lead Units` , Traffic Vehicle Ani File`AniVeh_15c2a297-0b0c-402b-880e-9a4068d5ad4c
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_3 6.77
+LENGTH_OBJ 6.77
+*WIDTH_3 2.5
+WIDTH_OBJ 2.5
+*LX_FRONT_3 0.5
+LX_FRONT_OBJ 0.5
+*REFLECT_3 1
+MATERIAL_TYPE_OBJ 1
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Traffc Vehicles Going Forward, Object #4
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+OPT_RECYCLE_OBJ 0
+*SINIT_4 1040
+EQ_INIT S_OBJ_<<o>> = 1040
+EQ_INIT V_OBJ_<<o>> = VX_START
+EQ_OUT V_OBJ_<<o>> = VX_START
+EQ_IN LATO_<<o>> = -lane_ctr
+*COLOR_4 1 0 0
+SET_RUN_COLOR 1 0 0
+*H_TARGET_4 2
+H_OBJ 2
+PARSFILE Animator\Vehicles\AniVeh_210bf516-a418-4707-bed2-da7b93f14f00.par
+#BlueLink3 Animator: Vehicles and Sensor Targets`3A Day Cab` 3A Lead Units` , Traffic Vehicle Ani File`AniVeh_210bf516-a418-4707-bed2-da7b93f14f00
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_4 5.27
+LENGTH_OBJ 5.27
+*WIDTH_4 2.5
+WIDTH_OBJ 2.5
+*LX_FRONT_4 0.5
+LX_FRONT_OBJ 0.5
+*REFLECT_4 1
+MATERIAL_TYPE_OBJ 1
+
+#EMBEDDED_NOTES
+#This dataset defines 4 vehicle traveling forward at the speed VX_START.
+#
+#VX_START is defined elsewhere, and is probably based on the speed of  vehicle with the sensors.
+#
+#School bus shape is updated in 2017 version.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Multiple Moving Objects; { Traffic Vehicles (Forward) } Traffc Vehicles Going Forward
+#Library : Multiple Moving Objects
+#DataSet : Traffc Vehicles Going Forward
+#Category: Traffic Vehicles (Forward)
+#FileID  : TMotion_881e2f21-cbb1-4827-8030-c17953ec780b
+#Product : TruckSim 2020.1
+#VehCode Multiple Objects
+
+END

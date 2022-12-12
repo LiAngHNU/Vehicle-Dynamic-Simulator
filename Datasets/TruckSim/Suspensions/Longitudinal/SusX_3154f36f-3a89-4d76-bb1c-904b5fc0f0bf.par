@@ -1,0 +1,64 @@
+PARSFILE
+#FullDataName Suspension: Longitudinal Movement`Front Strut -  Longitudinal Movement`Strut
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_X_COMBINE ADD
+*SCALAR2 0
+
+#DiagramOne0
+SUSP_X_TABLE SPLINE
+-70, -0.779336
+-60, -0.596671
+-50, -0.438583
+-40, -0.304523
+-30, -0.194019
+-20, -0.106665
+-10, -0.042102
+0, 0
+10, 0.019968
+20, 0.018152
+30, -0.005034
+40, -0.049059
+50, -0.113201
+60, -0.196434
+70, -0.297272
+ENDTABLE
+SUSP_X_JNC_OTHER_SIDE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+SUSP_X_AXLE_TABLE SPLINE
+-70, -0.779336
+-60, -0.596671
+-50, -0.438583
+-40, -0.304523
+-30, -0.194019
+-20, -0.106665
+-10, -0.042102
+0, 0
+10, 0.019968
+20, 0.018152
+30, -0.005034
+40, -0.049059
+50, -0.113201
+60, -0.196434
+70, -0.297272
+ENDTABLE
+
+#EMBEDDED_NOTES
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Suspension: Longitudinal Movement; { Strut } Front Strut -  Longitudinal Movement
+#Library : Suspension: Longitudinal Movement
+#DataSet : Front Strut -  Longitudinal Movement
+#Category: Strut
+#FileID  : SusX_3154f36f-3a89-4d76-bb1c-904b5fc0f0bf
+#Product : TruckSim 2020.1
+#VehCode Longitudinal Movement
+
+END

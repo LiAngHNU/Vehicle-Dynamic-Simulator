@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Suspension: Lateral Movement Due to Roll and Jounce`Rear Hotchkiss - Lateral Movement`Hotchkiss
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_Y_AXLE_ROLL_COMBINE ADD
+
+! Note: if *TABLE_KEYWORD is not set to "SUSP_Y_AXLE_ROLL" then Y values read from the table will be reversed.
+*SCALAR2 0
+*TABLE_KEYWORD SUSP_Y_AXLE_ROLL
+
+#DiagramOne0
+SUSP_Y_AXLE_ROLL_TABLE SPLINE
+-10.053, 16.793
+-8.3636, 14.014
+-6.6819, 11.23
+-5.0063, 8.4357
+-3.335, 5.6313
+-1.6668, 2.8181
+0, 0
+1.6668, -2.8181
+3.335, -5.6313
+5.0063, -8.4357
+6.6819, -11.23
+8.3636, -14.014
+10.053, -16.793
+ENDTABLE
+SUSP_LAT_AXLE_JOUNCE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+#EMBEDDED_NOTES
+#Generic Hotchkiss Rear Axle Lateral Movement vs. Roll
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Suspension: Lateral Movement Due to Roll and Jounce; { Hotchkiss } Rear Hotchkiss - Lateral Movement
+#Library : Suspension: Lateral Movement Due to Roll and Jounce
+#DataSet : Rear Hotchkiss - Lateral Movement
+#Category: Hotchkiss
+#FileID  : LatRoll_bbc7d917-0e36-42e3-8a44-f150bc27e362
+#Product : TruckSim 2020.1
+#VehCode Lateral Movement
+
+END

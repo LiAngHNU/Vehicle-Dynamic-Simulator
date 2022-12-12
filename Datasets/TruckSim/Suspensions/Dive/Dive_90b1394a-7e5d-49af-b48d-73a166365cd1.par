@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Suspension: Dive Angle (Caster Change)`Constant: Zero Dive Angle (deg)`Constant
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_DIVE_COMBINE ADD
+*SCALAR 0
+*SCALAR2 0
+
+SUSP_DIVE_CONSTANT 0
+SUSP_DIVE_JNC_OTHER_SIDE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+SUSP_DIVE_AXLE_CONSTANT 0
+
+LOG_ENTRY Used Dataset: Suspension: Dive Angle (Caster Change); { Constant } Constant: Zero Dive Angle (deg)
+#Library : Suspension: Dive Angle (Caster Change)
+#DataSet : Constant: Zero Dive Angle (deg)
+#Category: Constant
+#FileID  : Dive_90b1394a-7e5d-49af-b48d-73a166365cd1
+#Product : TruckSim 2020.1
+#VehCode Dive
+
+END

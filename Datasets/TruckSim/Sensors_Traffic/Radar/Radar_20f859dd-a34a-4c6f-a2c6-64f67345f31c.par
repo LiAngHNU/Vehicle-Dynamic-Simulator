@@ -1,0 +1,67 @@
+PARSFILE
+#FullDataName ADAS Sensors for Range and Tracking`160 deg Sensor (Yellow)`160 deg Sensor
+DEFINE_SENSORS 1
+ISENSOR = NSENSOR
+NSENSORS_INCREMENT
+symbol_add <<s>> 1
+SET_DESCRIPTION SENSOR_NAME 160 deg Sensor (Yellow)
+#CheckBox0 1    
+#CheckBox1 1    
+OPT_BLOCK_SENSOR 1
+#CheckBox2 1    
+OPT_SORT_OUTPUTS_SENSOR 1
+#CheckBox3 1    
+#CheckBox5 0    
+OPT_EXPORT_SENSOR 0
+#CheckBox6 1    
+
+#RingCtrl0 0
+#RingCtrl1 1
+SENSOR_DETECT_TRANSLUCENCY 1
+#RingCtrl2 IUNIT
+IUNIT_SENSOR IUNIT
+#RingCtrl3 1
+TYPE_SENSOR 1
+PARSFILE Sensors_Traffic\Radar_Range\Range_11aac37f-8d96-4b1e-baed-184e6233fbf7.par
+#BlueLink0 Sensor Range and Bearing Sensitivity`50-m Range` Limit from Range` , Range & Bearing Sensitivity`Range_11aac37f-8d96-4b1e-baed-184e6233fbf7
+
+PARSFILE Sensors_Traffic\Radar_Elevation\SenElev_4fdaa102-cfee-4a8f-aeaf-c650b6f76306.par
+#BlueLink1 Sensor Elevation Sensitivity`Unity Gain` ` , Elevation Sensitivity`SenElev_4fdaa102-cfee-4a8f-aeaf-c650b6f76306
+
+X_SENSOR -500
+Y_SENSOR 0
+Z_SENSOR 2350
+YAW_AIM_SENSOR 0
+PITCH_AIM_SENSOR 0
+ROLL_AIM_SENSOR 0
+SENSOR_DETECT_COLOR 1 1 0
+*SET_TRANSPARENCY 0.15
+*SET_COLOR_FIELD 1 0 0
+BEARING_MIN_SENSOR -80
+BEARING_MAX_SENSOR 80
+
+SPECIAL_PARSFILE Animator\STL\Shape_67b13483-d0c2-48d7-bef0-4c603104a0d7.par
+#BlueLink3 Animator: Shape File Link`Cube: Sensor Vector` Geometric Shapes` , Shape for vector`Shape_67b13483-d0c2-48d7-bef0-4c603104a0d7
+
+SENSOR_DETECT_OBJ Animator\STL\Shape_67b13483-d0c2-48d7-bef0-4c603104a0d7.par
+#MiscYellow0
+N_MIN_DETECTIONS 4
+ani_global_interpolation off
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#The sensor looks forward and is located in front of the vehicle origin. It has a wide field of view of 160 deg, and a range of 50 m.
+#
+#Used for the City Environement Examples.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: ADAS Sensors for Range and Tracking; { 160 deg Sensor } 160 deg Sensor (Yellow)
+#Library : ADAS Sensors for Range and Tracking
+#DataSet : 160 deg Sensor (Yellow)
+#Category: 160 deg Sensor
+#FileID  : Radar_20f859dd-a34a-4c6f-a2c6-64f67345f31c
+#Product : TruckSim 2020.1
+#VehCode ADAS Sensor
+
+END

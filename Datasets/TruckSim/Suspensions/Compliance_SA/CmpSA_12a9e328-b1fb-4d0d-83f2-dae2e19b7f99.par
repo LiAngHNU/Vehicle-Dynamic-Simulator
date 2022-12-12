@@ -1,0 +1,107 @@
+PARSFILE
+#FullDataName Suspension: Solid Axle Compliance, Springs, and Dampers`10t Leaf: +150 mm, -150 mm, No ARB`Leaf Springs
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 0
+*OPT_SPR 0
+#RingCtrl1 1
+#RingCtrl3 1
+#RingCtrl5 2
+#RingCtrl7 1
+#RingCtrl9 1
+#RingCtrl11 1
+#RingCtrl13 1
+*KSPRING_L 900
+*FRICTION_L 5000
+*BETA_C_L 2
+*BETA_E_L 2
+*L_SPG_ADJ_L 0
+*FS_OFFSET_L 0
+*FS_OFFSET_R 0
+*R_SPRING_L 1
+*R_DAMPER_L 1
+*R_JOUNCE_L 1
+*R_REBOUND_L 1
+*CT_FX_L 0
+*CS_FY_L 0
+*CS_MZ_L 0
+*CC_FX_L 0
+*CI_FY_L 0
+*CI_MZ_L 0
+C_LONG_AXLE_COEFFICIENT 0
+C_LAT_AXLE_COEFFICIENT 0
+DAUX 0
+L_SPRINGS 1000
+L_DAMPERS 1000
+L_JNC_STOPS 1000
+L_REB_STOPS 1000
+
+iside 1
+OPT_EXT_SP 0
+FS_COMP_COEFFICIENT 900
+FS_EXT_COEFFICIENT 900
+FS_COMP_OFFSET 5000
+FS_EXT_OFFSET -5000
+SPRING_COMP_BETA 2
+SPRING_EXT_BETA 2
+CMP_SPR_SEAT_COEFFICIENT 1
+L_SPG_ADJ 0
+FS_OFFSET 0
+CMP_OFFSET 0
+PARSFILE Suspensions\Shocks\Shock_f4f5af32-f047-4091-aa49-61d419f6a9db.par
+#BlueLink1 Suspension: Shock Absorber`Linear: 50 kN-s/m` Linear` , Left damper`Shock_f4f5af32-f047-4091-aa49-61d419f6a9db
+
+CMP_DAMP_COEFFICIENT 1
+PARSFILE Suspensions\Jounce_Rebound\JncReb_f76114cf-9f09-4402-86f7-35ffe6f2a847.par
+#BlueLink5 Suspension: Jounce and Rebound Stops`+150 mm / -150 mm` Jounce Range: 100 mm to 150 mm` , Jounce / rebound stop force`JncReb_f76114cf-9f09-4402-86f7-35ffe6f2a847
+
+CMP_JSTOP_COEFFICIENT 1
+CMP_RSTOP_COEFFICIENT 1
+CT_FX_COEFFICIENT 0
+CS_FY_COEFFICIENT 0
+CS_MZ_COEFFICIENT 0
+CC_FX_COEFFICIENT 0
+CI_FY_COEFFICIENT 0
+CI_MZ_COEFFICIENT 0
+
+iside 2
+OPT_EXT_SP 0
+FS_COMP_COEFFICIENT 900
+FS_EXT_COEFFICIENT 900
+FS_COMP_OFFSET 5000
+FS_EXT_OFFSET -5000
+SPRING_COMP_BETA 2
+SPRING_EXT_BETA 2
+CMP_SPR_SEAT_COEFFICIENT 1
+L_SPG_ADJ 0
+FS_OFFSET 0
+CMP_OFFSET 0
+PARSFILE Suspensions\Shocks\Shock_f4f5af32-f047-4091-aa49-61d419f6a9db.par
+#BlueLink1 Suspension: Shock Absorber`Linear: 50 kN-s/m` Linear` , Left damper`Shock_f4f5af32-f047-4091-aa49-61d419f6a9db
+
+CMP_DAMP_COEFFICIENT 1
+PARSFILE Suspensions\Jounce_Rebound\JncReb_f76114cf-9f09-4402-86f7-35ffe6f2a847.par
+#BlueLink5 Suspension: Jounce and Rebound Stops`+150 mm / -150 mm` Jounce Range: 100 mm to 150 mm` , Jounce / rebound stop force`JncReb_f76114cf-9f09-4402-86f7-35ffe6f2a847
+
+CMP_JSTOP_COEFFICIENT 1
+CMP_RSTOP_COEFFICIENT 1
+CT_FX_COEFFICIENT 0
+CS_FY_COEFFICIENT 0
+CS_MZ_COEFFICIENT 0
+CC_FX_COEFFICIENT 0
+CI_FY_COEFFICIENT 0
+CI_MZ_COEFFICIENT 0
+PARSFILE Suspensions\Aux_Roll\AuxMx_bd0b30ef-2d97-4546-9a02-e935ce6166a5.par
+#BlueLink2 Suspension: Auxiliary Roll Moment`Constant: Zero` Constant` , Roll Moment`AuxMx_bd0b30ef-2d97-4546-9a02-e935ce6166a5
+
+
+LOG_ENTRY Used Dataset: Suspension: Solid Axle Compliance, Springs, and Dampers; { Leaf Springs } 10t Leaf: +150 mm, -150 mm, No ARB
+#Library : Suspension: Solid Axle Compliance, Springs, and Dampers
+#DataSet : 10t Leaf: +150 mm, -150 mm, No ARB
+#Category: Leaf Springs
+#FileID  : CmpSA_12a9e328-b1fb-4d0d-83f2-dae2e19b7f99
+#Product : TruckSim 2020.1
+#VehCode Solid Axle
+
+END

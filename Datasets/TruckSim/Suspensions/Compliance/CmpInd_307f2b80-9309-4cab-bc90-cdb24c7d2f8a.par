@@ -1,0 +1,108 @@
+PARSFILE
+#FullDataName Suspension: Independent Compliance, Springs, and Dampers`Pickup, Full Size - Front (HD)`Pickup Trucks
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 0
+*OPT_SPR 0
+#RingCtrl1 1
+#RingCtrl3 1
+#RingCtrl5 2
+#RingCtrl7 1
+#RingCtrl9 1
+#RingCtrl11 1
+#RingCtrl13 1
+*KSPRING_L 200
+*FRICTION_L 20
+*BETA_C_L 2
+*BETA_E_L 2
+*L_SPG_ADJ_L 0
+*R_SPRING_L 0.5
+*R_DAMPER_L 0.5
+*R_JOUNCE_L 0.5
+*R_REBOUND_L 0.5
+*CT_FX_L 0.43e-6
+*CS_FY_L -0.15e-6
+*CS_MZ_L 0.19e-4
+*CC_FX_L 0
+*CI_FY_L 0
+*CI_MZ_L 0
+*C_LONG_L 5.0e-5
+*C_LAT_L 4.1e-5
+DAUX 0
+*CD_MY_L 0
+
+iside 1
+OPT_EXT_SP 0
+FS_COMP_COEFFICIENT 200
+FS_EXT_COEFFICIENT 200
+FS_COMP_OFFSET 20
+FS_EXT_OFFSET -20
+SPRING_COMP_BETA 2
+SPRING_EXT_BETA 2
+CMP_SPR_SEAT_COEFFICIENT 0.5
+L_SPG_ADJ 0
+FS_OFFSET 0
+CMP_OFFSET 0
+PARSFILE Suspensions\Shocks\Shock_755f1c6e-e251-45e7-9c32-7b4d0d40f01b.par
+#BlueLink1 Suspension: Shock Absorber`Linear: 20 kN-s/m` Linear` , Left damper`Shock_755f1c6e-e251-45e7-9c32-7b4d0d40f01b
+
+CMP_DAMP_COEFFICIENT 0.5
+PARSFILE Suspensions\Jounce_Rebound\JncReb_10b2cb47-6802-4472-99a9-8496670e6ba1.par
+#BlueLink5 Suspension: Jounce and Rebound Stops`+150 mm / -110 mm` Jounce Range: 100 mm to 150 mm` , Jounce / rebound stop force`JncReb_10b2cb47-6802-4472-99a9-8496670e6ba1
+
+CMP_JSTOP_COEFFICIENT 0.5
+CMP_RSTOP_COEFFICIENT 0.5
+CT_FX_COEFFICIENT 0.43e-6
+CS_FY_COEFFICIENT -0.15e-6
+CS_MZ_COEFFICIENT 0.19e-4
+CC_FX_COEFFICIENT 0
+CI_FY_COEFFICIENT 0
+CI_MZ_COEFFICIENT 0
+C_LONG_COEFFICIENT 5.0e-5
+C_LAT_COEFFICIENT 4.1e-5
+CD_MY_COEFFICIENT 0
+
+iside 2
+OPT_EXT_SP 0
+FS_COMP_COEFFICIENT 200
+FS_EXT_COEFFICIENT 200
+FS_COMP_OFFSET 20
+FS_EXT_OFFSET -20
+SPRING_COMP_BETA 2
+SPRING_EXT_BETA 2
+CMP_SPR_SEAT_COEFFICIENT 0.5
+L_SPG_ADJ 0
+FS_OFFSET 0
+CMP_OFFSET 0
+PARSFILE Suspensions\Shocks\Shock_755f1c6e-e251-45e7-9c32-7b4d0d40f01b.par
+#BlueLink1 Suspension: Shock Absorber`Linear: 20 kN-s/m` Linear` , Left damper`Shock_755f1c6e-e251-45e7-9c32-7b4d0d40f01b
+
+CMP_DAMP_COEFFICIENT 0.5
+PARSFILE Suspensions\Jounce_Rebound\JncReb_10b2cb47-6802-4472-99a9-8496670e6ba1.par
+#BlueLink5 Suspension: Jounce and Rebound Stops`+150 mm / -110 mm` Jounce Range: 100 mm to 150 mm` , Jounce / rebound stop force`JncReb_10b2cb47-6802-4472-99a9-8496670e6ba1
+
+CMP_JSTOP_COEFFICIENT 0.5
+CMP_RSTOP_COEFFICIENT 0.5
+CT_FX_COEFFICIENT 0.43e-6
+CS_FY_COEFFICIENT -0.15e-6
+CS_MZ_COEFFICIENT 0.19e-4
+CC_FX_COEFFICIENT 0
+CI_FY_COEFFICIENT 0
+CI_MZ_COEFFICIENT 0
+C_LONG_COEFFICIENT 5.0e-5
+C_LAT_COEFFICIENT 4.1e-5
+CD_MY_COEFFICIENT 0
+PARSFILE Suspensions\Aux_Roll\AuxMx_e0ec281d-6f61-4b0b-be72-77bd09aad914.par
+#BlueLink2 Suspension: Auxiliary Roll Moment`Linear: 510 N-m/deg` Linear` , Roll Moment`AuxMx_e0ec281d-6f61-4b0b-be72-77bd09aad914
+
+
+LOG_ENTRY Used Dataset: Suspension: Independent Compliance, Springs, and Dampers; { Pickup Trucks } Pickup, Full Size - Front (HD)
+#Library : Suspension: Independent Compliance, Springs, and Dampers
+#DataSet : Pickup, Full Size - Front (HD)
+#Category: Pickup Trucks
+#FileID  : CmpInd_307f2b80-9309-4cab-bc90-cdb24c7d2f8a
+#Product : TruckSim 2020.1
+#VehCode Springs and Dampers
+
+END

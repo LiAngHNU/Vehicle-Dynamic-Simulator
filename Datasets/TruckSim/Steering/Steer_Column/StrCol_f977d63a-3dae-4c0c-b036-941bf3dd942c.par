@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Steering Column and Assist`Pickup, Full Size: Power, Rack & Pinion`2A Pickup Trucks and Utility Vehicles
+I_COL 0.02
+I_GEAR_IN 0.000495
+D_COL 0.005
+HYS_COL 0.05
+BETA_COL 0.1
+*K_TBAR 2
+*KIN_STOP_A_L -45
+*KIN_STOP_A_R 45
+*KIN_STOP_STIFF_L 0
+*KIN_STOP_STIFF_R 0
+
+#RingCtrl0 1
+#RingCtrl1 1
+
+OPT_M_SW_CALC 1
+
+OPT_POWER 1
+M_TBAR_COEFFICIENT 2
+PARSFILE Steering\Str_FBoost\FBoost_e49cb25b-69ea-43f3-ac70-047f3feb8258.par
+#BlueLink2 Steering: Power Assist Force`2000 N Maximum` ` , Rack Assist Force`FBoost_e49cb25b-69ea-43f3-ac70-047f3feb8258
+
+A_STR_STOP_L -45
+K_STR_STOP_L 0
+A_STR_STOP_R 45
+K_STR_STOP_R 0
+
+
+#EMBEDDED_NOTES
+#The properties here are representative of the global steering system parameters for a rack and pinion type power steering system that would be used on a Full Size pickup truck.
+#
+#If the run doesn't use steer torque control, the steering stops should be disabled by setting their stiffness to zero.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Steering Column and Assist; { 2A Pickup Trucks and Utility Vehicles } Pickup, Full Size: Power, Rack & Pinion
+#Library : Steering Column and Assist
+#DataSet : Pickup, Full Size: Power, Rack & Pinion
+#Category: 2A Pickup Trucks and Utility Vehicles
+#FileID  : StrCol_f977d63a-3dae-4c0c-b036-941bf3dd942c
+#Product : TruckSim 2020.1
+#VehCode Column and Assist
+
+END

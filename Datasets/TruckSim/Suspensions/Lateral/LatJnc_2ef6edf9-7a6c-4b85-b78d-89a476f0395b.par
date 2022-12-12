@@ -1,0 +1,66 @@
+PARSFILE
+#FullDataName Suspension: Lateral Movement Due to Jounce`Front SLA - Lateral Movement`SLA
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_LAT_COMBINE ADD
+#DiagramOne0
+SUSP_LAT_TABLE SPLINE
+-70, 4.74662
+-60, 3.12302
+-50, 1.82181
+-40, 0.837522
+-30, 0.165882
+-20, -0.196302
+-10, -0.251197
+0, 0
+10, 0.557037
+20, 1.42059
+30, 2.59226
+40, 4.07461
+50, 5.87116
+60, 7.98647
+70, 10.4262
+ENDTABLE
+SUSP_LAT_JNC_OTHER_SIDE_CONSTANT 0
+SUSP_Y_AXLE_ROLL_COMBINE ADD ! in case this is for a solid axle
+#DiagramOne0
+SUSP_LAT_AXLE_JOUNCE_TABLE SPLINE
+-70, 4.74662
+-60, 3.12302
+-50, 1.82181
+-40, 0.837522
+-30, 0.165882
+-20, -0.196302
+-10, -0.251197
+0, 0
+10, 0.557037
+20, 1.42059
+30, 2.59226
+40, 4.07461
+50, 5.87116
+60, 7.98647
+70, 10.4262
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR2 0
+
+
+#EMBEDDED_NOTES
+#SLA Lateral movement vs. Jounce
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Suspension: Lateral Movement Due to Jounce; { SLA } Front SLA - Lateral Movement
+#Library : Suspension: Lateral Movement Due to Jounce
+#DataSet : Front SLA - Lateral Movement
+#Category: SLA
+#FileID  : LatJnc_2ef6edf9-7a6c-4b85-b78d-89a476f0395b
+#Product : TruckSim 2020.1
+#VehCode Lateral Movement
+
+END

@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Animated Deer (Walking)`Deer (Crossing)
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Animated Deer (Walking)
+OPT_SPEED_OBJ 0
+PATH_ID_OBJ 1
+ROAD_ID_OBJ 1
+#CheckBox0 0    
+#CheckBox1 0    
+OPT_RECYCLE_OBJ 0
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+
+#RingCtrl0 3
+#RingCtrl1 1
+H_OBJ .85
+*S_INIT 1300
+*L_INIT 8
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE 1.9
+LENGTH_OBJ 1.9
+WIDTH_OBJ .6
+LX_FRONT_OBJ 1.1
+*REFLECT 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+*SPEED .4444
+*HEADING_VEL 5.495
+EQ_INIT HeadO_<<o>> 5.495
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_39de8afe-a7b8-403b-a732-37e00369fc8f.par
+#BlueLink0 Animator: Shape File Link`Deer: Walking (1.6 km/h)` Environment: Animals (Animated)` , 3D Shape for Video`Shape_39de8afe-a7b8-403b-a732-37e00369fc8f
+
+EQ_INIT S_Obj_<<o>> 1300
+EQ_INIT LatO_<<o>> 8
+DEFINE_VARIABLE V_CMD_OBJ_<<o>>;KM/H; Speed command
+DEFINE_VARIABLE HeadV_O_<<o>> 5.495;-; Heading vector for ODEs
+EQ_INIT V_CMD_OBJ_<<o>> = .4444;
+EQ_DIFFERENTIAL LatO_<<o>> = sin(HeadV_O_<<o>>)*V_CMD_OBJ_<<o>>
+EQ_DIFFERENTIAL S_Obj_<<o>> = cos(HeadV_O_<<o>>)*V_CMD_OBJ_<<o>>
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Deer (Crossing) } Animated Deer (Walking)
+#Library : Single Moving Object (Custom)
+#DataSet : Animated Deer (Walking)
+#Category: Deer (Crossing)
+#FileID  : Target_8bed7d72-cc44-438e-b8d6-396028babb93
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

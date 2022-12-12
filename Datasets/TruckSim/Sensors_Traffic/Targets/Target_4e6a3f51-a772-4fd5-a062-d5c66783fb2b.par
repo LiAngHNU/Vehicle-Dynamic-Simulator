@@ -1,0 +1,63 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Dump Truck`Sensor Targets
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Dump Truck
+OPT_SPEED_OBJ 0
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+#CheckBox0 1    
+#CheckBox1 0    
+OPT_RECYCLE_OBJ 0
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+
+#RingCtrl0 3
+#RingCtrl1 1
+H_OBJ 2.5
+*COLOR 0.8 0 0
+*S_INIT 195
+*L_INIT 20
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE 6.5
+LENGTH_OBJ 6.5
+WIDTH_OBJ 2.5
+LX_FRONT_OBJ 0.5
+*REFLECT 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+*SPEED 15
+*HEADING_VEL -120/DR
+EQ_INIT HeadO_<<o>> -120/DR
+*START gt(station,110)
+SET_RUN_COLOR 0.8 0 0
+PARSFILE Animator\Vehicles\AniVeh_64b08965-9455-4528-ba1c-f527125d89cb.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`4A Dump Truck w/ Lift Axle` 4A Lead Units` , 3D Shape for Video`AniVeh_64b08965-9455-4528-ba1c-f527125d89cb
+
+EQ_INIT S_Obj_<<o>> 195
+EQ_INIT LatO_<<o>> 20
+DEFINE_VARIABLE V_CMD_OBJ_<<o>>;KM/H; Speed command
+DEFINE_VARIABLE HeadV_O_<<o>> -120/DR;-; Heading vector for ODEs
+DEFINE_VARIABLE COND_START_OBJ_<<o>>;-; Boolean to start motion
+EQ_FULL_STEP COND_START_OBJ_<<o>> = gt(station,110) ;
+DEFINE_VARIABLE COND_STOP_OBJ_<<o>>; - ; Boolean to stop motion
+EQ_FULL_STEP COND_STOP_OBJ_<<o>> = 0 ;
+EQ_OUT V_CMD_OBJ_<<o>> = IF(COND_START_OBJ_<<o>> & ~COND_STOP_OBJ_<<o>>, 15, 0);
+EQ_DIFFERENTIAL LatO_<<o>> = sin(HeadV_O_<<o>>)*V_CMD_OBJ_<<o>>
+EQ_DIFFERENTIAL S_Obj_<<o>> = cos(HeadV_O_<<o>>)*V_CMD_OBJ_<<o>>
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Sensor Targets } Dump Truck
+#Library : Single Moving Object (Custom)
+#DataSet : Dump Truck
+#Category: Sensor Targets
+#FileID  : Target_4e6a3f51-a772-4fd5-a062-d5c66783fb2b
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

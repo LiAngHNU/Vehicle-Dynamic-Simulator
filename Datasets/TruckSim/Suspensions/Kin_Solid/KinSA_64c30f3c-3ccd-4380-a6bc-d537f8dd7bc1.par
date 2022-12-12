@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName Suspension: Solid Axle System Kinematics`5.5t Steer, Single Wheel - Kinematics`Steer Axle
+OPT_NL_AXLE 1
+iside 1
+#RingCtrl0 1
+OPT_JNC_DESIGN 1
+#RingCtrl1 2
+#RingCtrl2 2
+#RingCtrl3 3
+#RingCtrl4 2
+#RingCtrl5 1
+#CheckBox0 1
+#CheckBox1 1    
+#CheckBox2 0    
+PARSFILE Suspensions\Dive\Dive_90b1394a-7e5d-49af-b48d-73a166365cd1.par
+#BlueLink0 Suspension: Dive Angle (Caster Change)`Constant: Zero Dive Angle (deg)` Constant` , Axle dive`Dive_90b1394a-7e5d-49af-b48d-73a166365cd1
+
+PARSFILE Suspensions\Longitudinal\SusX_c81dc724-875f-4015-80b5-7b0fdaa089ed.par
+#BlueLink1 Suspension: Longitudinal Movement`Zero Forward X Movement` Constant` , Axle X movement`SusX_c81dc724-875f-4015-80b5-7b0fdaa089ed
+
+PARSFILE Suspensions\Lateral_Roll\LatRoll_47be6450-e52d-4dbc-9ef0-fe26dd189e53.par
+#BlueLink4 Suspension: Lateral Movement Due to Roll and Jounce`Roll Center: 53 mm Below Axle` Front` , Axle Y movement - roll`LatRoll_47be6450-e52d-4dbc-9ef0-fe26dd189e53
+
+SUSP_AXLE_ROLL_STEER_COEFFICIENT 0
+PARSFILE Animator\STL\Shape_1837ffab-a67b-4a8c-a656-b9ce84374b3a.par
+#BlueLink2 Animator: Shape File Link`Solid Axles: Heavy Duty (Steered)` Common Vehicle Assets` , Animator 3D Shape`Shape_1837ffab-a67b-4a8c-a656-b9ce84374b3a
+
+*IW_R 10
+Y_CL_SUSP 0
+*TOE_L 0
+*TOE_R 0
+*CAMBER_L 0
+*CAMBER_R 0
+H_CG_AXLE 510
+*JNC_DESIGN_L 0
+*JNC_DESIGN_R 0
+R_US_STR 0.198895
+L_TRACK 2030
+M_US 362
+IA 80
+*IW_L 10
+*IWXXZZ_L 0
+*IWXXZZ_R 0
+M_US_AXLE 290
+*M_US_STR_1 36
+*M_US_STR_2 36
+H_WC 510
+Y_LENGTH 2030
+IW 10
+A_TOE 0
+A_CAMBER 0
+JNC_DESIGN 0
+IW_XXZZ 0
+M_US_STR 36
+
+iside 2
+M_US_STR 36
+IW 10
+A_TOE 0
+A_CAMBER 0
+JNC_DESIGN 0
+IW_XXZZ 0
+H_WC 510
+
+#EMBEDDED_NOTES
+#Typical 5.5 tonne (12,000 lb) GAWR steer axle
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Suspension: Solid Axle System Kinematics; { Steer Axle } 5.5t Steer, Single Wheel - Kinematics
+#Library : Suspension: Solid Axle System Kinematics
+#DataSet : 5.5t Steer, Single Wheel - Kinematics
+#Category: Steer Axle
+#FileID  : KinSA_64c30f3c-3ccd-4380-a6bc-d537f8dd7bc1
+#Product : TruckSim 2020.1
+#VehCode Solid Axle
+
+END

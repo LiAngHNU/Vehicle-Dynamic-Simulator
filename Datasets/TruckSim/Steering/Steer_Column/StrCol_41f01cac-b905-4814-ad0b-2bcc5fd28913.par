@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Steering Column and Assist`2A Euro: Steer Col & Assist Tq`2A Pickup Trucks and Utility Vehicles
+I_COL 0.02
+I_GEAR_IN 0.0005
+D_COL 0.01
+HYS_COL 0.1
+BETA_COL 0.5
+*K_TBAR 2
+*KIN_STOP_A_L -45
+*KIN_STOP_A_R 45
+*KIN_STOP_STIFF_L 0
+*KIN_STOP_STIFF_R 0
+
+#RingCtrl0 1
+#RingCtrl1 2
+
+OPT_M_SW_CALC 1
+
+OPT_POWER 1
+M_TBAR_COEFFICIENT 2
+PARSFILE Steering\Str_TqBoost\TqBoost_6780024e-5170-4f0b-9f9c-be0d7afc5f09.par
+#BlueLink4 Steering: Power Assist Torque`Speed Sensitive, 300 N-m Maximum` Gear Assist Torque` , Gear Assist Torque`TqBoost_6780024e-5170-4f0b-9f9c-be0d7afc5f09
+
+A_STR_STOP_L -45
+K_STR_STOP_L 0
+A_STR_STOP_R 45
+K_STR_STOP_R 0
+
+
+#EMBEDDED_NOTES
+#If the run doesn't use steer torque control, the steering stops should be disabled by setting their stiffness to zero.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Steering Column and Assist; { 2A Pickup Trucks and Utility Vehicles } 2A Euro: Steer Col & Assist Tq
+#Library : Steering Column and Assist
+#DataSet : 2A Euro: Steer Col & Assist Tq
+#Category: 2A Pickup Trucks and Utility Vehicles
+#FileID  : StrCol_41f01cac-b905-4814-ad0b-2bcc5fd28913
+#Product : TruckSim 2020.1
+#VehCode Column and Assist
+
+END

@@ -1,0 +1,131 @@
+PARSFILE
+#FullDataName Multiple Moving Objects`Tractor-Semitrailer: S_SS + SS`Traffic Vehicles (Forward)
+#RingCtrl0 2
+DEFINE_MOVING_OBJECTS 2
+#RingCtrl1 2
+#RingCtrl2 4
+#RingCtrl4 1
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox25 0    
+#CheckBox26 1    
+#CheckBox27 1    
+#CheckBox38 1    
+#CheckBox39 1    
+
+DZ_OBJECT 0
+*L 0
+*PATH_ID path_id_dm
+*ROAD_ID current_road_id
+*V N_SPEED_TARGET
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Tractor-Semitrailer: S_SS + SS, Object #1
+OPT_SPEED_OBJ 2
+OPT_DIR_OBJ 1
+
+*L_WB_1 0
+L_WB_OBJ 0
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ path_id_dm
+ROAD_ID_OBJ current_road_id
+OPT_RECYCLE_OBJ 0
+*SINIT_1 -130
+EQ_INIT S_OBJ_<<o>> = -130
+SPEED_ID_OBJ = N_SPEED_TARGET
+EQ_INIT YawO_<<o>> = PATH_YAW_ID(S_OBJ_<<o>>, path_id_dm, 0, 1) + HEADO_<<o>>
+*COLOR_1 1 0 0
+SET_RUN_COLOR 1 0 0
+*H_TARGET_1 -3.1
+H_OBJ -3.1
+PARSFILE Animator\Vehicles\AniVeh_98b56c21-ece5-4ea1-97db-5890b3e24c03.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`3A Day Cab w/ 0 @ Hitch` 3A Lead Units` , 3D Shape for Video`AniVeh_98b56c21-ece5-4ea1-97db-5890b3e24c03
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_1 3
+LENGTH_OBJ 3
+*WIDTH_1 2.5
+WIDTH_OBJ 2.5
+*LX_FRONT_1 4.6
+LX_FRONT_OBJ 4.6
+*REFLECT_1 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 3
+Y_LENGTH 2.5
+Z_LENGTH 3.1
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cubes\cube_1m_wide.obj
+set_transparency 0.5
+SET_OFFSET_X 1.03333
+SET_OFFSET_Z 0.5
+SET_COLOR 1 0 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Tractor-Semitrailer: S_SS + SS, Object #2
+OPT_SPEED_OBJ 2
+OPT_DIR_OBJ 1
+
+*L_WB_2 11.3
+L_WB_OBJ 11.3
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ path_id_dm
+ROAD_ID_OBJ current_road_id
+OPT_RECYCLE_OBJ 0
+*SINIT_2 -130
+EQ_INIT S_OBJ_<<o>> = -130
+SPEED_ID_OBJ = N_SPEED_TARGET
+EQ_INIT YawO_<<o>> = PATH_YAW_ID(S_OBJ_<<o>>, path_id_dm, 0, 1) + HEADO_<<o>>
+*COLOR_2 0 0.4 1
+SET_RUN_COLOR 0 0.4 1
+*H_TARGET_2 -3.5
+H_OBJ -3.5
+PARSFILE Animator\Vehicles\AniVeh_a67e98aa-5ada-4abd-b75c-5938064f0d6f.par
+#BlueLink1 Animator: Vehicles and Sensor Targets`2A Conventional Box Trailer` Trailers: 2-axle` , Traffic Vehicle Ani File`AniVeh_a67e98aa-5ada-4abd-b75c-5938064f0d6f
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_2 13.8
+LENGTH_OBJ 13.8
+*WIDTH_2 2.5
+WIDTH_OBJ 2.5
+*LX_FRONT_2 1
+LX_FRONT_OBJ 1
+*REFLECT_2 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 13.8
+Y_LENGTH 2.5
+Z_LENGTH 3.5
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cubes\cube_1m_wide.obj
+set_transparency 0.5
+SET_OFFSET_X -0.427536
+SET_OFFSET_Z 0.5
+SET_COLOR 0 0.4 1
+
+LOG_ENTRY Used Dataset: Multiple Moving Objects; { Traffic Vehicles (Forward) } Tractor-Semitrailer: S_SS + SS
+#Library : Multiple Moving Objects
+#DataSet : Tractor-Semitrailer: S_SS + SS
+#Category: Traffic Vehicles (Forward)
+#FileID  : TMotion_f62e84e8-3bba-47b6-a887-6bb98e508e27
+#Product : TruckSim 2020.1
+#VehCode Multiple Objects
+
+END

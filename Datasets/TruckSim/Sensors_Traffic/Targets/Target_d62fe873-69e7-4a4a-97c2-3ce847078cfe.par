@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Single Vehicle on Right Access Road`6-Lane Highway
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Single Vehicle on Right Access Road
+OPT_SPEED_OBJ 0
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ right_access_rd
+#CheckBox0 0    
+#CheckBox1 0    
+OPT_RECYCLE_OBJ 0
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox5 0    
+#CheckBox6 1    
+#CheckBox7 1    
+#CheckBox8 1    
+
+#RingCtrl0 3
+#RingCtrl1 1
+H_OBJ -3.51
+*COLOR 1 0.4 0
+*S_INIT 10
+*L_INIT -18.802
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE 8.59
+LENGTH_OBJ 8.59
+WIDTH_OBJ 2.62
+LX_FRONT_OBJ 1.04
+*REFLECT 0
+MATERIAL_TYPE_OBJ 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 8.59
+Y_LENGTH 2.62
+Z_LENGTH 3.51
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cubes\cube_1m_wide.obj
+set_transparency 0.5
+SET_OFFSET_X -0.378929
+SET_OFFSET_Z 0.5
+SET_COLOR 1 0.4 0
+*SPEED Vx
+*HEADING_VEL 0
+EQ_INIT HeadO_<<o>> 0
+SET_RUN_COLOR 1 0.4 0
+PARSFILE Animator\Vehicles\AniVeh_5e99b800-fddc-4e1b-a23d-d8a55608d47a.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`3A Dump Truck` 3A Lead Units` , 3D Shape for Video`AniVeh_5e99b800-fddc-4e1b-a23d-d8a55608d47a
+
+EQ_INIT S_Obj_<<o>> 10
+EQ_INIT LatO_<<o>> -18.802
+DEFINE_VARIABLE V_CMD_OBJ_<<o>>;KM/H; Speed command
+DEFINE_VARIABLE HeadV_O_<<o>> 0;-; Heading vector for ODEs
+EQ_OUT V_CMD_OBJ_<<o>> = Vx;
+EQ_DIFFERENTIAL LatO_<<o>> = sin(HeadV_O_<<o>>)*V_CMD_OBJ_<<o>>
+EQ_DIFFERENTIAL S_Obj_<<o>> = cos(HeadV_O_<<o>>)*V_CMD_OBJ_<<o>>
+#MiscYellow1
+define_parameter wheelbase_<<o>> = 5.135; m; Wheelbase for Moving Object <<o>>
+EQ_OUT PitchO<<o>> = asin((-1 * (ROAD_Z_ID(S_OBJ_<<o>>,LatO_<<o>>,right_access_rd,<<o>>) - ROAD_Z_ID(S_OBJ_<<o>>-wheelbase_<<o>>,LatO_<<o>>,right_access_rd, <<o>>))) / wheelbase_<<o>>)
+TypeO_<<o>> = TRAFFIC
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#The pitch angle for this object is calculated using an additional parameter for the wheelbase to prevent the rear wheels of the vehicle from leaving the ground when the road pitch changes abruptly.
+#
+#The symbol TRAFFIC is defined in the VS Command dataset "Define Target Messages"
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { 6-Lane Highway } Single Vehicle on Right Access Road
+#Library : Single Moving Object (Custom)
+#DataSet : Single Vehicle on Right Access Road
+#Category: 6-Lane Highway
+#FileID  : Target_d62fe873-69e7-4a4a-97c2-3ce847078cfe
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

@@ -1,0 +1,127 @@
+PARSFILE
+#FullDataName Suspension: Solid Axle Compliance, Springs, and Dampers`Utility Flatbed Trailer`Trailers
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 0
+*OPT_SPR 0
+#RingCtrl1 1
+#RingCtrl3 1
+#RingCtrl5 2
+#RingCtrl7 1
+#RingCtrl9 1
+#RingCtrl11 1
+#RingCtrl13 1
+*KSPRING_L 250
+*FRICTION_L 10
+*BETA_C_L 2
+*BETA_E_L 2
+*KSPRING_R 700
+*FRICTION_R 5000
+*BETA_C_R 2
+*BETA_E_R 2
+*L_SPG_ADJ_L 0
+*L_SPG_ADJ_R 0
+*FS_OFFSET_L 0
+*FS_OFFSET_R 0
+*R_SPRING_L 1
+*R_SPRING_R 1
+*R_DAMPER_L 1
+*R_DAMPER_R 1
+*R_JOUNCE_L 1
+*R_JOUNCE_R 1
+*R_REBOUND_L 1
+*R_REBOUND_R 1
+*CT_FX_L 0
+*CT_FX_R 0
+*CS_FY_L 0
+*CS_FY_R 0
+*CS_MZ_L 0
+*CS_MZ_R 0
+*CC_FX_L 0
+*CC_FX_R 0
+*CI_FY_L 0
+*CI_FY_R 0
+*CI_MZ_L 0
+*CI_MZ_R 0
+C_LONG_AXLE_COEFFICIENT 1e-3
+C_LAT_AXLE_COEFFICIENT 1e-5
+DAUX 0
+L_SPRINGS 1000
+L_DAMPERS 1000
+L_JNC_STOPS 1000
+L_REB_STOPS 1000
+
+iside 1
+OPT_EXT_SP 0
+FS_COMP_COEFFICIENT 250
+FS_EXT_COEFFICIENT 250
+FS_COMP_OFFSET 10
+FS_EXT_OFFSET -10
+SPRING_COMP_BETA 2
+SPRING_EXT_BETA 2
+CMP_SPR_SEAT_COEFFICIENT 1
+L_SPG_ADJ 0
+FS_OFFSET 0
+CMP_OFFSET 0
+PARSFILE Suspensions\Shocks\Shock_07e7f07b-e58b-46a9-917e-a324dfc56cd4.par
+#BlueLink1 Suspension: Shock Absorber`Linear: 10 kN-s/m` Linear` , Left damper`Shock_07e7f07b-e58b-46a9-917e-a324dfc56cd4
+
+CMP_DAMP_COEFFICIENT 1
+PARSFILE Suspensions\Jounce_Rebound\JncReb_ab2af12d-bf53-4556-88f9-70fef5720548.par
+#BlueLink5 Suspension: Jounce and Rebound Stops`+100 mm / -100 mm` Jounce Range: 100 mm to 150 mm` , Jounce / rebound stop force`JncReb_ab2af12d-bf53-4556-88f9-70fef5720548
+
+CMP_JSTOP_COEFFICIENT 1
+CMP_RSTOP_COEFFICIENT 1
+CT_FX_COEFFICIENT 0
+CS_FY_COEFFICIENT 0
+CS_MZ_COEFFICIENT 0
+CC_FX_COEFFICIENT 0
+CI_FY_COEFFICIENT 0
+CI_MZ_COEFFICIENT 0
+
+iside 2
+OPT_EXT_SP 0
+FS_COMP_COEFFICIENT 250
+FS_EXT_COEFFICIENT 250
+FS_COMP_OFFSET 10
+FS_EXT_OFFSET -10
+SPRING_COMP_BETA 2
+SPRING_EXT_BETA 2
+CMP_SPR_SEAT_COEFFICIENT 1
+L_SPG_ADJ 0
+FS_OFFSET 0
+CMP_OFFSET 0
+PARSFILE Suspensions\Shocks\Shock_07e7f07b-e58b-46a9-917e-a324dfc56cd4.par
+#BlueLink1 Suspension: Shock Absorber`Linear: 10 kN-s/m` Linear` , Left damper`Shock_07e7f07b-e58b-46a9-917e-a324dfc56cd4
+
+CMP_DAMP_COEFFICIENT 1
+PARSFILE Suspensions\Jounce_Rebound\JncReb_ab2af12d-bf53-4556-88f9-70fef5720548.par
+#BlueLink5 Suspension: Jounce and Rebound Stops`+100 mm / -100 mm` Jounce Range: 100 mm to 150 mm` , Jounce / rebound stop force`JncReb_ab2af12d-bf53-4556-88f9-70fef5720548
+
+CMP_JSTOP_COEFFICIENT 1
+CMP_RSTOP_COEFFICIENT 1
+CT_FX_COEFFICIENT 0
+CS_FY_COEFFICIENT 0
+CS_MZ_COEFFICIENT 0
+CC_FX_COEFFICIENT 0
+CI_FY_COEFFICIENT 0
+CI_MZ_COEFFICIENT 0
+PARSFILE Suspensions\Aux_Roll\AuxMx_30ecdcc4-345e-4ff4-ac0b-d765fc82b680.par
+#BlueLink2 Suspension: Auxiliary Roll Moment`Linear: 150 N-m/deg` Linear` , Roll Moment`AuxMx_30ecdcc4-345e-4ff4-ac0b-d765fc82b680
+
+
+#EMBEDDED_NOTES
+#Spring data was chosen for the 3-axle flatbed utility trailer based on a sprung mass value of 1527 kg (3366.5 lb).
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Suspension: Solid Axle Compliance, Springs, and Dampers; { Trailers } Utility Flatbed Trailer
+#Library : Suspension: Solid Axle Compliance, Springs, and Dampers
+#DataSet : Utility Flatbed Trailer
+#Category: Trailers
+#FileID  : CmpSA_284126ab-c534-4885-8d5b-13b868639736
+#Product : TruckSim 2020.1
+#VehCode Solid Axle
+
+END

@@ -1,0 +1,124 @@
+PARSFILE
+#FullDataName Multiple Moving Objects`3 Vehicles, Black, PATH_ID and ROAD_ID`Traffic Vehicles (Low Speed, Reusable)
+#RingCtrl0 3
+DEFINE_MOVING_OBJECTS 3
+#RingCtrl1 2
+#RingCtrl2 0
+#RingCtrl4 1
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox3 1    
+#CheckBox5 1    
+#CheckBox38 0    
+#CheckBox39 1    
+
+DZ_OBJECT 0
+*L <<L>>
+*PATH_ID PATH_ID
+*ROAD_ID ROAD_ID
+*V <<ISPEED>>
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 3 Vehicles, Black, PATH_ID and ROAD_ID, Object #1
+OPT_SPEED_OBJ 2
+OPT_DIR_OBJ 1
+
+*L_WB_1 3
+L_WB_OBJ 3
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID
+ROAD_ID_OBJ ROAD_ID
+OPT_RECYCLE_OBJ 0
+*SINIT_1 <<START>> -120
+EQ_INIT S_OBJ_<<o>> = <<START>> -120
+SPEED_ID_OBJ = <<ISPEED>>
+EQ_IN LATO_<<o>> = <<L>>
+EQ_INIT YawO_<<o>> = PATH_YAW_ID(S_OBJ_<<o>>, PATH_ID, 0, 1) + HEADO_<<o>>
+*COLOR_1 0 0 0
+SET_RUN_COLOR 0 0 0
+H_OBJ = 0 ! Default for blank field
+PARSFILE Animator\Vehicles\AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`D-Class, Sedan` D-Class` , 3D Shape for Video`AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 3 Vehicles, Black, PATH_ID and ROAD_ID, Object #2
+OPT_SPEED_OBJ 2
+OPT_DIR_OBJ 1
+
+*L_WB_2 6.5
+L_WB_OBJ 6.5
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID
+ROAD_ID_OBJ ROAD_ID
+OPT_RECYCLE_OBJ 0
+*SINIT_2 <<START>> -70
+EQ_INIT S_OBJ_<<o>> = <<START>> -70
+SPEED_ID_OBJ = <<ISPEED>>
+EQ_IN LATO_<<o>> = <<L>>
+EQ_INIT YawO_<<o>> = PATH_YAW_ID(S_OBJ_<<o>>, PATH_ID, 0, 1) + HEADO_<<o>>
+*COLOR_2 0 0 0
+SET_RUN_COLOR 0 0 0
+H_OBJ = 0 ! Default for blank field
+PARSFILE Animator\Vehicles\AniVeh_37675ca0-b0bd-4786-924e-7c2fe233677a.par
+#BlueLink1 Animator: Vehicles and Sensor Targets`3A Conventional Van` 3A Lead Units` , Traffic Vehicle Ani File`AniVeh_37675ca0-b0bd-4786-924e-7c2fe233677a
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 3 Vehicles, Black, PATH_ID and ROAD_ID, Object #3
+OPT_SPEED_OBJ 2
+OPT_DIR_OBJ 1
+
+*L_WB_3 4.3
+L_WB_OBJ 4.3
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID
+ROAD_ID_OBJ ROAD_ID
+OPT_RECYCLE_OBJ 0
+*SINIT_3 <<START>> -20
+EQ_INIT S_OBJ_<<o>> = <<START>> -20
+SPEED_ID_OBJ = <<ISPEED>>
+EQ_IN LATO_<<o>> = <<L>>
+EQ_INIT YawO_<<o>> = PATH_YAW_ID(S_OBJ_<<o>>, PATH_ID, 0, 1) + HEADO_<<o>>
+*COLOR_3 0 0 0
+SET_RUN_COLOR 0 0 0
+H_OBJ = 0 ! Default for blank field
+PARSFILE Animator\Vehicles\AniVeh_8f7dac3f-b802-4072-9832-f4b98d0cc372.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`2A Delivery Truck` 2A Utility Trucks and Vans` , Traffic Vehicle Ani File`AniVeh_8f7dac3f-b802-4072-9832-f4b98d0cc372
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+#EMBEDDED_NOTES
+#This dataset is intended for reuse.
+#
+#Use the commands SET_IPATH_FOR_ID and SET_IROAD_ID to set the path and road of interest before loading this dataset.
+#
+#Set Symbol Stack variables <<ISPEED>> (speed _target dataset), <<START>> (reference station values), and  <<L>> (lateral location).
+#
+#2018.1: changed name, removed non-OSG version.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Multiple Moving Objects; { Traffic Vehicles (Low Speed, Reusable) } 3 Vehicles, Black, PATH_ID and ROAD_ID
+#Library : Multiple Moving Objects
+#DataSet : 3 Vehicles, Black, PATH_ID and ROAD_ID
+#Category: Traffic Vehicles (Low Speed, Reusable)
+#FileID  : TMotion_b2ea491b-4e6c-41ba-bd52-ffc2ab437780
+#Product : TruckSim 2020.1
+#VehCode Multiple Objects
+
+END

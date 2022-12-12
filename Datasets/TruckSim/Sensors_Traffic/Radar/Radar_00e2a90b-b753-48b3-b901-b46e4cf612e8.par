@@ -1,0 +1,72 @@
+PARSFILE
+#FullDataName ADAS Sensors for Range and Tracking`FCW`Forward Facing Sensors: FCW and ACC
+DEFINE_SENSORS 1
+ISENSOR = NSENSOR
+NSENSORS_INCREMENT
+symbol_add <<s>> 1
+SET_DESCRIPTION SENSOR_NAME FCW
+#CheckBox0 1    
+#CheckBox1 1    
+OPT_BLOCK_SENSOR 1
+#CheckBox2 1    
+OPT_SORT_OUTPUTS_SENSOR 1
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 0    
+OPT_EXPORT_SENSOR 0
+#CheckBox6 0    
+
+#RingCtrl0 0
+#RingCtrl1 1
+SENSOR_DETECT_TRANSLUCENCY 1
+#RingCtrl2 1
+IUNIT_SENSOR 1
+#RingCtrl3 1
+TYPE_SENSOR 1
+PARSFILE Sensors_Traffic\Radar_Range\Range_11aac37f-8d96-4b1e-baed-184e6233fbf7.par
+#BlueLink0 Sensor Range and Bearing Sensitivity`50-m Range` Limit from Range` , Range & Bearing Sensitivity`Range_11aac37f-8d96-4b1e-baed-184e6233fbf7
+
+PARSFILE Sensors_Traffic\Radar_Elevation\SenElev_4fdaa102-cfee-4a8f-aeaf-c650b6f76306.par
+#BlueLink1 Sensor Elevation Sensitivity`Unity Gain` ` , Elevation Sensitivity`SenElev_4fdaa102-cfee-4a8f-aeaf-c650b6f76306
+
+WRITE_SENSOR_FIELD
+PARSFILE Animator\STL\Shape_129c03aa-522e-462e-937b-37de40417680.par
+#BlueLink2 Animator: Shape File Link`Sensor Fields: 20 deg FOV` Common Vehicle Assets` , Shape for Detection Field`Shape_129c03aa-522e-462e-937b-37de40417680
+
+SET_COLOR 1 0 0
+SET_TRANSPARENCY 0.15
+X_LENGTH 50
+Y_LENGTH 17.4
+Z_LENGTH 2
+X_SENSOR 750
+Y_SENSOR 0
+Z_SENSOR H_CG_SU
+YAW_AIM_SENSOR 0
+PITCH_AIM_SENSOR 0
+ROLL_AIM_SENSOR 0
+SENSOR_DETECT_COLOR 1 0 0
+*SET_TRANSPARENCY 0.15
+*SET_COLOR_FIELD 1 0 0
+BEARING_MIN_SENSOR -10
+BEARING_MAX_SENSOR 10
+
+SPECIAL_PARSFILE Animator\STL\Shape_b36dd57e-10bb-49f0-bfe5-2b6025d6d0d9.par
+#BlueLink3 Animator: Shape File Link`Square` Geometric Shapes` , Shape for vector`Shape_b36dd57e-10bb-49f0-bfe5-2b6025d6d0d9
+
+SENSOR_DETECT_OBJ Animator\STL\Shape_b36dd57e-10bb-49f0-bfe5-2b6025d6d0d9.par
+#BlueLink12 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+
+#EMBEDDED_NOTES
+#The sensor looks forward, is located near the front bumper, has a field of view of 20 deg, and a range of 50 meters.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: ADAS Sensors for Range and Tracking; { Forward Facing Sensors: FCW and ACC } FCW
+#Library : ADAS Sensors for Range and Tracking
+#DataSet : FCW
+#Category: Forward Facing Sensors: FCW and ACC
+#FileID  : Radar_00e2a90b-b753-48b3-b901-b46e4cf612e8
+#Product : TruckSim 2020.1
+#VehCode ADAS Sensor
+
+END

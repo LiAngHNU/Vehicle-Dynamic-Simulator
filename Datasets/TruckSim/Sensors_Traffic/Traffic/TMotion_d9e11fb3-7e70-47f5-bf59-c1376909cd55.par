@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Multiple Moving Objects`1 Driver Preview Point, Set by DM`Points of Interest
+#RingCtrl0 1
+DEFINE_MOVING_OBJECTS 1
+#RingCtrl1 5
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox38 0    
+
+DZ_OBJECT 0
+#MiscYellow0
+# INSTALL_DM_OUTPUTS ! Need outputs from the driver model
+#EQ_INIT ROAD_ID_OBJ(<<o>>) = CURRENT_ROAD_ID ! now
+#EQ_OUT X_Obj_<<o>> = x_dm_1 ! Calculate every time step
+#EQ_OUT Y_Obj_<<o>> = y_dm_1
+#ENDMYellow
+
+*PATH_ID 0
+*ROAD_ID 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 1 Driver Preview Point, Set by DM
+OPT_SPEED_OBJ 0
+ INSTALL_DM_OUTPUTS ! Need outputs from the driver model
+EQ_INIT ROAD_ID_OBJ(<<o>>) = CURRENT_ROAD_ID ! now
+EQ_OUT X_Obj_<<o>> = x_dm_1 ! Calculate every time step
+EQ_OUT Y_Obj_<<o>> = y_dm_1
+#RingCtrl4 1
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+OPT_RECYCLE_OBJ 0
+H_OBJ = 0 ! Default for blank field
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_80c3cdd9-b801-4961-8215-85e40cb0cb37.par
+#BlueLink0 Animator: Shape File Link`Sphere 0.2 m (Green)` Geometric Shapes` , 3D Shape for Video`Shape_80c3cdd9-b801-4961-8215-85e40cb0cb37
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+#EMBEDDED_NOTES
+#This dataset shows 1 sphere on the path being previewed by the Driver Model (both steering and speed). It is set up to work with most datasets, including those with complicated road networks.
+#
+#It uses Symbol Stack variables to specify output variable names used in VS Commands EQ_INIT and EQ_OUT.
+#
+#The Path ID and Road ID are both set to zero. When this dataset is read, the current road is often not known, so setting the ID to zero prevents an error.
+#
+#However, during initialization, the Road ID is set to CURRENT_ROAD_ID.  Output X and Y coordinates are always calculated from the DM points, using equations added with EQ_OUT.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Multiple Moving Objects; { Points of Interest } 1 Driver Preview Point, Set by DM
+#Library : Multiple Moving Objects
+#DataSet : 1 Driver Preview Point, Set by DM
+#Category: Points of Interest
+#FileID  : TMotion_d9e11fb3-7e70-47f5-bf59-c1376909cd55
+#Product : TruckSim 2020.1
+#VehCode Multiple Objects
+
+END

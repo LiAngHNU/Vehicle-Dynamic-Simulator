@@ -1,0 +1,151 @@
+PARSFILE
+#FullDataName Multiple Moving Objects`3 Vehicles in Caravan`Traffic Vehicles (Forward)
+#RingCtrl0 3
+DEFINE_MOVING_OBJECTS 3
+#RingCtrl1 6
+#RingCtrl2 0
+#RingCtrl3 1
+#RingCtrl4 1
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox3 1    
+#CheckBox5 1    
+#CheckBox38 0    
+#CheckBox39 1    
+
+DZ_OBJECT 0
+#MiscYellow0
+#symbol_push_or_set <<i>> <<o>>
+#symbol_add <<i>> -1
+#define_output go_obj_<<o>> = or(...
+#  gt( v_obj_<<i>>, 0.1), gt(abs( v_obj_<<o>>), 0.0001))
+#eq_out verr_o_<<o>> = 5*go_obj_<<o>>* ...
+#  (S_Obj_<<o>> - S_Obj_<<i>> +6 + v_obj_<<o>>)
+#ENDMYellow
+
+*L LatO_<<i>>
+*LEAD 100
+*TRAIL 50
+*HIDE 10
+*PATH_ID PATH_ID_OBJ(<<i>>)
+*ROAD_ID ROAD_ID_OBJ(<<i>>)
+*V v_obj_<<i>>
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 3 Vehicles in Caravan, Object #1
+OPT_SPEED_OBJ 2
+OPT_ACCEL_OBJ 1
+OPT_DIR_OBJ 1
+symbol_push_or_set <<i>> <<o>>
+symbol_add <<i>> -1
+define_output go_obj_<<o>> = or(...
+  gt( v_obj_<<i>>, 0.1), gt(abs( v_obj_<<o>>), 0.0001))
+eq_out verr_o_<<o>> = 5*go_obj_<<o>>* ...
+  (S_Obj_<<o>> - S_Obj_<<i>> +6 + v_obj_<<o>>)
+*L_WB_1 3
+L_WB_OBJ 3
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_OBJ(<<i>>)
+ROAD_ID_OBJ ROAD_ID_OBJ(<<i>>)
+OPT_RECYCLE_OBJ 0
+*SINIT_1 s_obj_<<i>>  -( 6 + v_obj_<<i>>)
+EQ_INIT S_OBJ_<<o>> = s_obj_<<i>>  -( 6 + v_obj_<<i>>)
+EQ_INIT V_OBJ_<<o>> = v_obj_<<i>>
+EQ_IN LATO_<<o>> = LatO_<<i>>
+EQ_INIT YawO_<<o>> = PATH_YAW_ID(S_OBJ_<<o>>, PATH_ID_OBJ(<<i>>), 0, 1) + HEADO_<<o>>
+*COLOR_1 1 0 0
+SET_RUN_COLOR 1 0 0
+*H_TARGET_1 0.7
+H_OBJ 0.7
+PARSFILE Animator\Vehicles\AniVeh_339055ba-da70-41ce-ae0c-6ee903dfe65f.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`C-Class, Hatchback` C-Class` , 3D Shape for Video`AniVeh_339055ba-da70-41ce-ae0c-6ee903dfe65f
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 3 Vehicles in Caravan, Object #2
+OPT_SPEED_OBJ 2
+OPT_ACCEL_OBJ 1
+OPT_DIR_OBJ 1
+symbol_push_or_set <<i>> <<o>>
+symbol_add <<i>> -1
+define_output go_obj_<<o>> = or(...
+  gt( v_obj_<<i>>, 0.1), gt(abs( v_obj_<<o>>), 0.0001))
+eq_out verr_o_<<o>> = 5*go_obj_<<o>>* ...
+  (S_Obj_<<o>> - S_Obj_<<i>> +6 + v_obj_<<o>>)
+*L_WB_2 4
+L_WB_OBJ 4
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_OBJ(<<i>>)
+ROAD_ID_OBJ ROAD_ID_OBJ(<<i>>)
+OPT_RECYCLE_OBJ 0
+*SINIT_2 s_obj_<<i>>  -( 6 + v_obj_<<i>>)
+EQ_INIT S_OBJ_<<o>> = s_obj_<<i>>  -( 6 + v_obj_<<i>>)
+EQ_INIT V_OBJ_<<o>> = v_obj_<<i>>
+EQ_IN LATO_<<o>> = LatO_<<i>>
+EQ_INIT YawO_<<o>> = PATH_YAW_ID(S_OBJ_<<o>>, PATH_ID_OBJ(<<i>>), 0, 1) + HEADO_<<o>>
+*COLOR_2 0.4 0.4 1
+SET_RUN_COLOR 0.4 0.4 1
+H_OBJ = 0 ! Default for blank field
+PARSFILE Animator\Vehicles\AniVeh_185d62e8-e27d-4be3-87c4-3eeed284ad17.par
+#BlueLink1 Animator: Vehicles and Sensor Targets`D-Class, SUV` D-Class` , Traffic Vehicle Ani File`AniVeh_185d62e8-e27d-4be3-87c4-3eeed284ad17
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 3 Vehicles in Caravan, Object #3
+OPT_SPEED_OBJ 2
+OPT_ACCEL_OBJ 1
+OPT_DIR_OBJ 1
+symbol_push_or_set <<i>> <<o>>
+symbol_add <<i>> -1
+define_output go_obj_<<o>> = or(...
+  gt( v_obj_<<i>>, 0.1), gt(abs( v_obj_<<o>>), 0.0001))
+eq_out verr_o_<<o>> = 5*go_obj_<<o>>* ...
+  (S_Obj_<<o>> - S_Obj_<<i>> +6 + v_obj_<<o>>)
+*L_WB_3 3
+L_WB_OBJ 3
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_OBJ(<<i>>)
+ROAD_ID_OBJ ROAD_ID_OBJ(<<i>>)
+OPT_RECYCLE_OBJ 0
+*SINIT_3 s_obj_<<i>>  -( 6 + v_obj_<<i>>)
+EQ_INIT S_OBJ_<<o>> = s_obj_<<i>>  -( 6 + v_obj_<<i>>)
+EQ_INIT V_OBJ_<<o>> = v_obj_<<i>>
+EQ_IN LATO_<<o>> = LatO_<<i>>
+EQ_INIT YawO_<<o>> = PATH_YAW_ID(S_OBJ_<<o>>, PATH_ID_OBJ(<<i>>), 0, 1) + HEADO_<<o>>
+*COLOR_3 0 0 0
+SET_RUN_COLOR 0 0 0
+H_OBJ = 0 ! Default for blank field
+PARSFILE Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`B-Class, Sports Car` B-Class` , Traffic Vehicle Ani File`AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+#EMBEDDED_NOTES
+#After 2019.0: fixed initial S to use speed of preceding vehicle; changed gain in accel equation from 2 to 5, to avoid slight rebound when traffic vehicle comes to a stop. Set verr_o instead of accel to make use of built-in accel calculations.
+#
+#This dataset adds three traffic vehicles that follow another traffic vehicle. All of the fields make reference to object <<i>>, which is the one in front of the current object <<o>>.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Multiple Moving Objects; { Traffic Vehicles (Forward) } 3 Vehicles in Caravan
+#Library : Multiple Moving Objects
+#DataSet : 3 Vehicles in Caravan
+#Category: Traffic Vehicles (Forward)
+#FileID  : TMotion_311eb624-0be3-4019-adc8-006adb1c9493
+#Product : TruckSim 2020.1
+#VehCode Multiple Objects
+
+END

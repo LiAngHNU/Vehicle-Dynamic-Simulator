@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Suspension: Toe Angle`Large European Van - Rear`Utility Vehicles
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+TOE_COMBINE ADD
+#DiagramOne0
+TOE_TABLE SPLINE
+-70, 0.292407
+-60, 0.237822
+-50, 0.187561
+-40, 0.141604
+-30, 0.099916
+-20, 0.062452
+-10, 0.029164
+0, 0
+10, -0.025093
+20, -0.046165
+30, -0.063264
+40, -0.076429
+50, -0.085696
+60, -0.091086
+70, -0.09261
+ENDTABLE
+SUSP_TOE_JNC_OTHER_SIDE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR2 0
+
+
+LOG_ENTRY Used Dataset: Suspension: Toe Angle; { Utility Vehicles } Large European Van - Rear
+#Library : Suspension: Toe Angle
+#DataSet : Large European Van - Rear
+#Category: Utility Vehicles
+#FileID  : Toe_32f6561f-c284-4500-8ff3-3e5cd0f25739
+#Product : TruckSim 2020.1
+#VehCode Toe
+
+END

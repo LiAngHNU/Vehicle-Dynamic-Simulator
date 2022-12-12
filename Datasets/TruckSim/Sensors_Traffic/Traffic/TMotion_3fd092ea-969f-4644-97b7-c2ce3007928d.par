@@ -1,0 +1,400 @@
+PARSFILE
+#FullDataName Multiple Moving Objects`Detected Path Visual`Path Detections
+#RingCtrl0 12
+DEFINE_MOVING_OBJECTS 12
+#RingCtrl1 5
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox3 0    
+#CheckBox5 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox11 0    
+#CheckBox13 0    
+#CheckBox15 0    
+#CheckBox17 0    
+#CheckBox19 0    
+#CheckBox21 0    
+#CheckBox23 0    
+#CheckBox38 0    
+
+DZ_OBJECT 0
+#MiscYellow0
+#symbol_push_weak <<i>> 0 ! Only the first time
+#symbol_add <<i>> 1 ! increment for each object
+#eq_init road_id_obj(<<o>>) = current_road_id
+#
+#define_variable x_pd<<detector>>_<<i>>
+#eq_out x_pd<<detector>>_<<i>> = (<<i>>-1)*l_pvw_pd(<<detector>>)/11
+#
+#define_variable y_pd<<detector>>_<<i>>
+#eq_out y_pd<<detector>>_<<i>> = curvratepd_<<detector>>/6*x_pd<<detector>>_<<i>>^3+curvpd_<<detector>>/2*x_pd<<detector>>_<<i>>^2+yoffsetpd_<<detector>>
+#
+#eq_out x_obj_<<o>> = x_pd<<detector>>_<<i>>*cos(yaw)-y_pd<<detector>>_<<i>>*sin(yaw)+x_detector_<<detector>>
+#eq_out y_obj_<<o>> = x_pd<<detector>>_<<i>>*sin(yaw)+y_pd<<detector>>_<<i>>*cos(yaw)+y_detector_<<detector>>
+#ENDMYellow
+
+*PATH_ID 0
+*ROAD_ID 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Detected Path Visual, Object #1
+OPT_SPEED_OBJ 0
+symbol_push_weak <<i>> 0 ! Only the first time
+symbol_add <<i>> 1 ! increment for each object
+eq_init road_id_obj(<<o>>) = current_road_id
+
+define_variable x_pd<<detector>>_<<i>>
+eq_out x_pd<<detector>>_<<i>> = (<<i>>-1)*l_pvw_pd(<<detector>>)/11
+
+define_variable y_pd<<detector>>_<<i>>
+eq_out y_pd<<detector>>_<<i>> = curvratepd_<<detector>>/6*x_pd<<detector>>_<<i>>^3+curvpd_<<detector>>/2*x_pd<<detector>>_<<i>>^2+yoffsetpd_<<detector>>
+
+eq_out x_obj_<<o>> = x_pd<<detector>>_<<i>>*cos(yaw)-y_pd<<detector>>_<<i>>*sin(yaw)+x_detector_<<detector>>
+eq_out y_obj_<<o>> = x_pd<<detector>>_<<i>>*sin(yaw)+y_pd<<detector>>_<<i>>*cos(yaw)+y_detector_<<detector>>
+#RingCtrl4 1
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+OPT_RECYCLE_OBJ 0
+H_OBJ = 0 ! Default for blank field
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_6a810587-86ad-474b-944b-bb2b4869f951.par
+#BlueLink0 Animator: Shape File Link`Sphere 0.2 m (Red)` Geometric Shapes` , 3D Shape for Video`Shape_6a810587-86ad-474b-944b-bb2b4869f951
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Detected Path Visual, Object #2
+OPT_SPEED_OBJ 0
+symbol_push_weak <<i>> 0 ! Only the first time
+symbol_add <<i>> 1 ! increment for each object
+eq_init road_id_obj(<<o>>) = current_road_id
+
+define_variable x_pd<<detector>>_<<i>>
+eq_out x_pd<<detector>>_<<i>> = (<<i>>-1)*l_pvw_pd(<<detector>>)/11
+
+define_variable y_pd<<detector>>_<<i>>
+eq_out y_pd<<detector>>_<<i>> = curvratepd_<<detector>>/6*x_pd<<detector>>_<<i>>^3+curvpd_<<detector>>/2*x_pd<<detector>>_<<i>>^2+yoffsetpd_<<detector>>
+
+eq_out x_obj_<<o>> = x_pd<<detector>>_<<i>>*cos(yaw)-y_pd<<detector>>_<<i>>*sin(yaw)+x_detector_<<detector>>
+eq_out y_obj_<<o>> = x_pd<<detector>>_<<i>>*sin(yaw)+y_pd<<detector>>_<<i>>*cos(yaw)+y_detector_<<detector>>
+#RingCtrl4 1
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+OPT_RECYCLE_OBJ 0
+H_OBJ = 0 ! Default for blank field
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_6a810587-86ad-474b-944b-bb2b4869f951.par
+#BlueLink1 Animator: Shape File Link`Sphere 0.2 m (Red)` Geometric Shapes` , Traffic Vehicle Ani File`Shape_6a810587-86ad-474b-944b-bb2b4869f951
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Detected Path Visual, Object #3
+OPT_SPEED_OBJ 0
+symbol_push_weak <<i>> 0 ! Only the first time
+symbol_add <<i>> 1 ! increment for each object
+eq_init road_id_obj(<<o>>) = current_road_id
+
+define_variable x_pd<<detector>>_<<i>>
+eq_out x_pd<<detector>>_<<i>> = (<<i>>-1)*l_pvw_pd(<<detector>>)/11
+
+define_variable y_pd<<detector>>_<<i>>
+eq_out y_pd<<detector>>_<<i>> = curvratepd_<<detector>>/6*x_pd<<detector>>_<<i>>^3+curvpd_<<detector>>/2*x_pd<<detector>>_<<i>>^2+yoffsetpd_<<detector>>
+
+eq_out x_obj_<<o>> = x_pd<<detector>>_<<i>>*cos(yaw)-y_pd<<detector>>_<<i>>*sin(yaw)+x_detector_<<detector>>
+eq_out y_obj_<<o>> = x_pd<<detector>>_<<i>>*sin(yaw)+y_pd<<detector>>_<<i>>*cos(yaw)+y_detector_<<detector>>
+#RingCtrl4 1
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+OPT_RECYCLE_OBJ 0
+H_OBJ = 0 ! Default for blank field
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_6a810587-86ad-474b-944b-bb2b4869f951.par
+#BlueLink2 Animator: Shape File Link`Sphere 0.2 m (Red)` Geometric Shapes` , Traffic Vehicle Ani File`Shape_6a810587-86ad-474b-944b-bb2b4869f951
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Detected Path Visual, Object #4
+OPT_SPEED_OBJ 0
+symbol_push_weak <<i>> 0 ! Only the first time
+symbol_add <<i>> 1 ! increment for each object
+eq_init road_id_obj(<<o>>) = current_road_id
+
+define_variable x_pd<<detector>>_<<i>>
+eq_out x_pd<<detector>>_<<i>> = (<<i>>-1)*l_pvw_pd(<<detector>>)/11
+
+define_variable y_pd<<detector>>_<<i>>
+eq_out y_pd<<detector>>_<<i>> = curvratepd_<<detector>>/6*x_pd<<detector>>_<<i>>^3+curvpd_<<detector>>/2*x_pd<<detector>>_<<i>>^2+yoffsetpd_<<detector>>
+
+eq_out x_obj_<<o>> = x_pd<<detector>>_<<i>>*cos(yaw)-y_pd<<detector>>_<<i>>*sin(yaw)+x_detector_<<detector>>
+eq_out y_obj_<<o>> = x_pd<<detector>>_<<i>>*sin(yaw)+y_pd<<detector>>_<<i>>*cos(yaw)+y_detector_<<detector>>
+#RingCtrl4 1
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+OPT_RECYCLE_OBJ 0
+H_OBJ = 0 ! Default for blank field
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_6a810587-86ad-474b-944b-bb2b4869f951.par
+#BlueLink3 Animator: Shape File Link`Sphere 0.2 m (Red)` Geometric Shapes` , Traffic Vehicle Ani File`Shape_6a810587-86ad-474b-944b-bb2b4869f951
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Detected Path Visual, Object #5
+OPT_SPEED_OBJ 0
+symbol_push_weak <<i>> 0 ! Only the first time
+symbol_add <<i>> 1 ! increment for each object
+eq_init road_id_obj(<<o>>) = current_road_id
+
+define_variable x_pd<<detector>>_<<i>>
+eq_out x_pd<<detector>>_<<i>> = (<<i>>-1)*l_pvw_pd(<<detector>>)/11
+
+define_variable y_pd<<detector>>_<<i>>
+eq_out y_pd<<detector>>_<<i>> = curvratepd_<<detector>>/6*x_pd<<detector>>_<<i>>^3+curvpd_<<detector>>/2*x_pd<<detector>>_<<i>>^2+yoffsetpd_<<detector>>
+
+eq_out x_obj_<<o>> = x_pd<<detector>>_<<i>>*cos(yaw)-y_pd<<detector>>_<<i>>*sin(yaw)+x_detector_<<detector>>
+eq_out y_obj_<<o>> = x_pd<<detector>>_<<i>>*sin(yaw)+y_pd<<detector>>_<<i>>*cos(yaw)+y_detector_<<detector>>
+#RingCtrl4 1
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+OPT_RECYCLE_OBJ 0
+H_OBJ = 0 ! Default for blank field
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_6a810587-86ad-474b-944b-bb2b4869f951.par
+#BlueLink4 Animator: Shape File Link`Sphere 0.2 m (Red)` Geometric Shapes` , Traffic Vehicle Ani File`Shape_6a810587-86ad-474b-944b-bb2b4869f951
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Detected Path Visual, Object #6
+OPT_SPEED_OBJ 0
+symbol_push_weak <<i>> 0 ! Only the first time
+symbol_add <<i>> 1 ! increment for each object
+eq_init road_id_obj(<<o>>) = current_road_id
+
+define_variable x_pd<<detector>>_<<i>>
+eq_out x_pd<<detector>>_<<i>> = (<<i>>-1)*l_pvw_pd(<<detector>>)/11
+
+define_variable y_pd<<detector>>_<<i>>
+eq_out y_pd<<detector>>_<<i>> = curvratepd_<<detector>>/6*x_pd<<detector>>_<<i>>^3+curvpd_<<detector>>/2*x_pd<<detector>>_<<i>>^2+yoffsetpd_<<detector>>
+
+eq_out x_obj_<<o>> = x_pd<<detector>>_<<i>>*cos(yaw)-y_pd<<detector>>_<<i>>*sin(yaw)+x_detector_<<detector>>
+eq_out y_obj_<<o>> = x_pd<<detector>>_<<i>>*sin(yaw)+y_pd<<detector>>_<<i>>*cos(yaw)+y_detector_<<detector>>
+#RingCtrl4 1
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+OPT_RECYCLE_OBJ 0
+H_OBJ = 0 ! Default for blank field
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_6a810587-86ad-474b-944b-bb2b4869f951.par
+#BlueLink5 Animator: Shape File Link`Sphere 0.2 m (Red)` Geometric Shapes` , Traffic Vehicle Ani File`Shape_6a810587-86ad-474b-944b-bb2b4869f951
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Detected Path Visual, Object #7
+OPT_SPEED_OBJ 0
+symbol_push_weak <<i>> 0 ! Only the first time
+symbol_add <<i>> 1 ! increment for each object
+eq_init road_id_obj(<<o>>) = current_road_id
+
+define_variable x_pd<<detector>>_<<i>>
+eq_out x_pd<<detector>>_<<i>> = (<<i>>-1)*l_pvw_pd(<<detector>>)/11
+
+define_variable y_pd<<detector>>_<<i>>
+eq_out y_pd<<detector>>_<<i>> = curvratepd_<<detector>>/6*x_pd<<detector>>_<<i>>^3+curvpd_<<detector>>/2*x_pd<<detector>>_<<i>>^2+yoffsetpd_<<detector>>
+
+eq_out x_obj_<<o>> = x_pd<<detector>>_<<i>>*cos(yaw)-y_pd<<detector>>_<<i>>*sin(yaw)+x_detector_<<detector>>
+eq_out y_obj_<<o>> = x_pd<<detector>>_<<i>>*sin(yaw)+y_pd<<detector>>_<<i>>*cos(yaw)+y_detector_<<detector>>
+#RingCtrl4 1
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+OPT_RECYCLE_OBJ 0
+H_OBJ = 0 ! Default for blank field
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_6a810587-86ad-474b-944b-bb2b4869f951.par
+#BlueLink6 Animator: Shape File Link`Sphere 0.2 m (Red)` Geometric Shapes` , Traffic Vehicle Ani File`Shape_6a810587-86ad-474b-944b-bb2b4869f951
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Detected Path Visual, Object #8
+OPT_SPEED_OBJ 0
+symbol_push_weak <<i>> 0 ! Only the first time
+symbol_add <<i>> 1 ! increment for each object
+eq_init road_id_obj(<<o>>) = current_road_id
+
+define_variable x_pd<<detector>>_<<i>>
+eq_out x_pd<<detector>>_<<i>> = (<<i>>-1)*l_pvw_pd(<<detector>>)/11
+
+define_variable y_pd<<detector>>_<<i>>
+eq_out y_pd<<detector>>_<<i>> = curvratepd_<<detector>>/6*x_pd<<detector>>_<<i>>^3+curvpd_<<detector>>/2*x_pd<<detector>>_<<i>>^2+yoffsetpd_<<detector>>
+
+eq_out x_obj_<<o>> = x_pd<<detector>>_<<i>>*cos(yaw)-y_pd<<detector>>_<<i>>*sin(yaw)+x_detector_<<detector>>
+eq_out y_obj_<<o>> = x_pd<<detector>>_<<i>>*sin(yaw)+y_pd<<detector>>_<<i>>*cos(yaw)+y_detector_<<detector>>
+#RingCtrl4 1
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+OPT_RECYCLE_OBJ 0
+H_OBJ = 0 ! Default for blank field
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_6a810587-86ad-474b-944b-bb2b4869f951.par
+#BlueLink7 Animator: Shape File Link`Sphere 0.2 m (Red)` Geometric Shapes` , Traffic Vehicle Ani File`Shape_6a810587-86ad-474b-944b-bb2b4869f951
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Detected Path Visual, Object #9
+OPT_SPEED_OBJ 0
+symbol_push_weak <<i>> 0 ! Only the first time
+symbol_add <<i>> 1 ! increment for each object
+eq_init road_id_obj(<<o>>) = current_road_id
+
+define_variable x_pd<<detector>>_<<i>>
+eq_out x_pd<<detector>>_<<i>> = (<<i>>-1)*l_pvw_pd(<<detector>>)/11
+
+define_variable y_pd<<detector>>_<<i>>
+eq_out y_pd<<detector>>_<<i>> = curvratepd_<<detector>>/6*x_pd<<detector>>_<<i>>^3+curvpd_<<detector>>/2*x_pd<<detector>>_<<i>>^2+yoffsetpd_<<detector>>
+
+eq_out x_obj_<<o>> = x_pd<<detector>>_<<i>>*cos(yaw)-y_pd<<detector>>_<<i>>*sin(yaw)+x_detector_<<detector>>
+eq_out y_obj_<<o>> = x_pd<<detector>>_<<i>>*sin(yaw)+y_pd<<detector>>_<<i>>*cos(yaw)+y_detector_<<detector>>
+#RingCtrl4 1
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+OPT_RECYCLE_OBJ 0
+H_OBJ = 0 ! Default for blank field
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_6a810587-86ad-474b-944b-bb2b4869f951.par
+#BlueLink8 Animator: Shape File Link`Sphere 0.2 m (Red)` Geometric Shapes` , Traffic Vehicle Ani File`Shape_6a810587-86ad-474b-944b-bb2b4869f951
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Detected Path Visual, Object #10
+OPT_SPEED_OBJ 0
+symbol_push_weak <<i>> 0 ! Only the first time
+symbol_add <<i>> 1 ! increment for each object
+eq_init road_id_obj(<<o>>) = current_road_id
+
+define_variable x_pd<<detector>>_<<i>>
+eq_out x_pd<<detector>>_<<i>> = (<<i>>-1)*l_pvw_pd(<<detector>>)/11
+
+define_variable y_pd<<detector>>_<<i>>
+eq_out y_pd<<detector>>_<<i>> = curvratepd_<<detector>>/6*x_pd<<detector>>_<<i>>^3+curvpd_<<detector>>/2*x_pd<<detector>>_<<i>>^2+yoffsetpd_<<detector>>
+
+eq_out x_obj_<<o>> = x_pd<<detector>>_<<i>>*cos(yaw)-y_pd<<detector>>_<<i>>*sin(yaw)+x_detector_<<detector>>
+eq_out y_obj_<<o>> = x_pd<<detector>>_<<i>>*sin(yaw)+y_pd<<detector>>_<<i>>*cos(yaw)+y_detector_<<detector>>
+#RingCtrl4 1
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+OPT_RECYCLE_OBJ 0
+H_OBJ = 0 ! Default for blank field
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_6a810587-86ad-474b-944b-bb2b4869f951.par
+#BlueLink9 Animator: Shape File Link`Sphere 0.2 m (Red)` Geometric Shapes` , Traffic Vehicle Ani File`Shape_6a810587-86ad-474b-944b-bb2b4869f951
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Detected Path Visual, Object #11
+OPT_SPEED_OBJ 0
+symbol_push_weak <<i>> 0 ! Only the first time
+symbol_add <<i>> 1 ! increment for each object
+eq_init road_id_obj(<<o>>) = current_road_id
+
+define_variable x_pd<<detector>>_<<i>>
+eq_out x_pd<<detector>>_<<i>> = (<<i>>-1)*l_pvw_pd(<<detector>>)/11
+
+define_variable y_pd<<detector>>_<<i>>
+eq_out y_pd<<detector>>_<<i>> = curvratepd_<<detector>>/6*x_pd<<detector>>_<<i>>^3+curvpd_<<detector>>/2*x_pd<<detector>>_<<i>>^2+yoffsetpd_<<detector>>
+
+eq_out x_obj_<<o>> = x_pd<<detector>>_<<i>>*cos(yaw)-y_pd<<detector>>_<<i>>*sin(yaw)+x_detector_<<detector>>
+eq_out y_obj_<<o>> = x_pd<<detector>>_<<i>>*sin(yaw)+y_pd<<detector>>_<<i>>*cos(yaw)+y_detector_<<detector>>
+#RingCtrl4 1
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+OPT_RECYCLE_OBJ 0
+H_OBJ = 0 ! Default for blank field
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_6a810587-86ad-474b-944b-bb2b4869f951.par
+#BlueLink10 Animator: Shape File Link`Sphere 0.2 m (Red)` Geometric Shapes` , Traffic Vehicle Ani File`Shape_6a810587-86ad-474b-944b-bb2b4869f951
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Detected Path Visual, Object #12
+OPT_SPEED_OBJ 0
+symbol_push_weak <<i>> 0 ! Only the first time
+symbol_add <<i>> 1 ! increment for each object
+eq_init road_id_obj(<<o>>) = current_road_id
+
+define_variable x_pd<<detector>>_<<i>>
+eq_out x_pd<<detector>>_<<i>> = (<<i>>-1)*l_pvw_pd(<<detector>>)/11
+
+define_variable y_pd<<detector>>_<<i>>
+eq_out y_pd<<detector>>_<<i>> = curvratepd_<<detector>>/6*x_pd<<detector>>_<<i>>^3+curvpd_<<detector>>/2*x_pd<<detector>>_<<i>>^2+yoffsetpd_<<detector>>
+
+eq_out x_obj_<<o>> = x_pd<<detector>>_<<i>>*cos(yaw)-y_pd<<detector>>_<<i>>*sin(yaw)+x_detector_<<detector>>
+eq_out y_obj_<<o>> = x_pd<<detector>>_<<i>>*sin(yaw)+y_pd<<detector>>_<<i>>*cos(yaw)+y_detector_<<detector>>
+#RingCtrl4 1
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+OPT_RECYCLE_OBJ 0
+H_OBJ = 0 ! Default for blank field
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_6a810587-86ad-474b-944b-bb2b4869f951.par
+#BlueLink11 Animator: Shape File Link`Sphere 0.2 m (Red)` Geometric Shapes` , Traffic Vehicle Ani File`Shape_6a810587-86ad-474b-944b-bb2b4869f951
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+#EMBEDDED_NOTES
+#The instantaneous preview path detected by the path detector is visualized with 12 moving dots which track the road surface. The symbol stack variable "detector", which is written when using the Path Detectors screen, is extensively used.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Multiple Moving Objects; { Path Detections } Detected Path Visual
+#Library : Multiple Moving Objects
+#DataSet : Detected Path Visual
+#Category: Path Detections
+#FileID  : TMotion_3fd092ea-969f-4644-97b7-c2ce3007928d
+#Product : TruckSim 2020.1
+#VehCode Multiple Objects
+
+END

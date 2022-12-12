@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName ADAS Sensors for Range and Tracking`Front-Facing: 2A Euro Van Bumper`Forward Facing Sensors: FCW and ACC
+DEFINE_SENSORS 1
+ISENSOR = NSENSOR
+NSENSORS_INCREMENT
+symbol_add <<s>> 1
+SET_DESCRIPTION SENSOR_NAME Front-Facing: 2A Euro Van Bumper
+#CheckBox0 1    
+#CheckBox1 1    
+OPT_BLOCK_SENSOR 1
+#CheckBox2 1    
+OPT_SORT_OUTPUTS_SENSOR 1
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 0    
+OPT_EXPORT_SENSOR 0
+#CheckBox6 0    
+
+#RingCtrl0 2
+#RingCtrl1 1
+SENSOR_DETECT_TRANSLUCENCY 1
+#RingCtrl2 1
+IUNIT_SENSOR 1
+#RingCtrl3 2
+TYPE_SENSOR 2
+PARSFILE Sensors_Traffic\Radar_Range\Range_43746168-6d02-4d96-a763-b507bb65dfcf.par
+#BlueLink0 Sensor Range and Bearing Sensitivity`4-m Range` Limit from Range` , Range & Bearing Sensitivity`Range_43746168-6d02-4d96-a763-b507bb65dfcf
+
+PARSFILE Sensors_Traffic\Radar_Elevation\SenElev_4fdaa102-cfee-4a8f-aeaf-c650b6f76306.par
+#BlueLink1 Sensor Elevation Sensitivity`Unity Gain` ` , Elevation Sensitivity`SenElev_4fdaa102-cfee-4a8f-aeaf-c650b6f76306
+
+WRITE_SENSOR_FIELD
+PARSFILE Animator\STL\Shape_129c03aa-522e-462e-937b-37de40417680.par
+#BlueLink2 Animator: Shape File Link`Sensor Fields: 20 deg FOV` Common Vehicle Assets` , Shape for Detection Field`Shape_129c03aa-522e-462e-937b-37de40417680
+
+SET_COLOR 1 0 0
+SET_TRANSPARENCY 0.15
+X_LENGTH 50
+Y_LENGTH 1.7
+Z_LENGTH 2
+X_SENSOR 900
+Y_SENSOR 0
+Z_SENSOR 500
+YAW_AIM_SENSOR 0
+PITCH_AIM_SENSOR 0
+ROLL_AIM_SENSOR 0
+SENSOR_DETECT_COLOR 1 0 0
+*SET_TRANSPARENCY 0.15
+*SET_COLOR_FIELD 1 0 0
+BEARING_MIN_SENSOR -1
+BEARING_MAX_SENSOR 1
+
+SPECIAL_PARSFILE Animator\STL\Shape_19c69103-4ea6-4971-9563-7b5515e7cd50.par
+#BlueLink3 Animator: Shape File Link`Square for Sensor Beam` Geometric Shapes` , Shape for vector`Shape_19c69103-4ea6-4971-9563-7b5515e7cd50
+
+SENSOR_DETECT_OBJ Animator\STL\Shape_19c69103-4ea6-4971-9563-7b5515e7cd50.par
+PARSFILE Plot\Setup\Plot_0e10c337-af50-4df8-a51b-b88b243d688d.par
+#BlueLink4 Plot: Setup`Distance: DisS1_1` ADAS Sensor Detections` , Plot`Plot_0e10c337-af50-4df8-a51b-b88b243d688d
+
+PARSFILE Plot\Setup\Plot_6ba498c6-fadb-4802-a1c0-7a9a8cd0da1d.par
+#BlueLink5 Plot: Setup`Magnitude: MagS1_1` ADAS Sensor Detections` , Plot`Plot_6ba498c6-fadb-4802-a1c0-7a9a8cd0da1d
+
+
+#EMBEDDED_NOTES
+#The sensor is aimed forward and is located near the center of the front bumper of the 2A Euro Van.
+#
+#It has a narrow field of view of 2 deg, and a range of 4 m.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: ADAS Sensors for Range and Tracking; { Forward Facing Sensors: FCW and ACC } Front-Facing: 2A Euro Van Bumper
+#Library : ADAS Sensors for Range and Tracking
+#DataSet : Front-Facing: 2A Euro Van Bumper
+#Category: Forward Facing Sensors: FCW and ACC
+#FileID  : Radar_fef28105-3de3-4364-9a49-18dcd67d8dfd
+#Product : TruckSim 2020.1
+#VehCode ADAS Sensor
+
+END

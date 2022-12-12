@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName ADAS Sensors for Range and Tracking`Lane Detection`Forward Facing Sensors: FCW and ACC
+DEFINE_SENSORS 1
+ISENSOR = NSENSOR
+NSENSORS_INCREMENT
+symbol_add <<s>> 1
+SET_DESCRIPTION SENSOR_NAME Lane Detection
+#CheckBox0 1    
+#CheckBox1 1    
+OPT_BLOCK_SENSOR 1
+#CheckBox2 1    
+OPT_SORT_OUTPUTS_SENSOR 1
+#CheckBox3 1    
+#CheckBox5 0    
+OPT_EXPORT_SENSOR 0
+#CheckBox6 1    
+
+#RingCtrl0 0
+#RingCtrl1 1
+SENSOR_DETECT_TRANSLUCENCY 1
+#RingCtrl2 1
+IUNIT_SENSOR 1
+#RingCtrl3 1
+TYPE_SENSOR 1
+PARSFILE Sensors_Traffic\Radar_Range\Range_1fdd4c47-54ff-4aaa-81f4-3051fcf8c299.par
+#BlueLink0 Sensor Range and Bearing Sensitivity`25.1 m X Limit` Sensor Range w/ Equations` , Range & Bearing Sensitivity`Range_1fdd4c47-54ff-4aaa-81f4-3051fcf8c299
+
+PARSFILE Sensors_Traffic\Radar_Elevation\SenElev_75121f3d-d175-480a-9291-7f787fff5d65.par
+#BlueLink1 Sensor Elevation Sensitivity`Only Down` ` , Elevation Sensitivity`SenElev_75121f3d-d175-480a-9291-7f787fff5d65
+
+X_SENSOR 800
+Y_SENSOR 0
+Z_SENSOR 1050
+YAW_AIM_SENSOR 0
+PITCH_AIM_SENSOR 0
+ROLL_AIM_SENSOR 0
+SENSOR_DETECT_COLOR 0 0.8 0
+*SET_TRANSPARENCY 0.15
+*SET_COLOR_FIELD 1 0 0
+BEARING_MIN_SENSOR -60
+BEARING_MAX_SENSOR 60
+
+SPECIAL_PARSFILE Animator\STL\Shape_67b13483-d0c2-48d7-bef0-4c603104a0d7.par
+#BlueLink3 Animator: Shape File Link`Cube: Sensor Vector` Geometric Shapes` , Shape for vector`Shape_67b13483-d0c2-48d7-bef0-4c603104a0d7
+
+SENSOR_DETECT_OBJ Animator\STL\Shape_67b13483-d0c2-48d7-bef0-4c603104a0d7.par
+#MiscYellow0
+ani_global_interpolation off
+#ENDMYellow
+
+PARSFILE Generic\VS_commands\GenVS_e402204a-5d94-49c3-92dc-6dd65bfbd3f5.par
+#BlueLink12 Generic VS Commands`Lane Departure Warning` ADAS Support` , Miscellaneous`GenVS_e402204a-5d94-49c3-92dc-6dd65bfbd3f5
+
+
+#EMBEDDED_NOTES
+#ADAS Range and Detection Sensor set up for use with the Dually Pickup Truck. The X and Z coordinates correspond to a sensor located in the center of the grill at the Mechanical Simulation logo.
+#
+#This sensor is for use in lane detection scenarios with a range limited to 25.1-m forward. Due to the downward-facing elevation sensitivity, traffic vehicles to either side of the ego vehicle are not likely to be detected.
+#
+#The Lane Departure Warning VS Commands and animator HUD gauges are linked using a Generic VS Commands dataset.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: ADAS Sensors for Range and Tracking; { Forward Facing Sensors: FCW and ACC } Lane Detection
+#Library : ADAS Sensors for Range and Tracking
+#DataSet : Lane Detection
+#Category: Forward Facing Sensors: FCW and ACC
+#FileID  : Radar_d855fa3d-5771-48e7-9560-7273239aaf4d
+#Product : TruckSim 2020.1
+#VehCode ADAS Sensor
+
+END

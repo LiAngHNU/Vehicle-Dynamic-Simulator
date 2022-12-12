@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Sensor Range and Bearing Sensitivity`Blind Spot, Right Side, Reverse`Blind Spot Detection
+#CheckBox0 1    
+
+#RingCtrl0 EQUATION
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#MiscYellow0
+RANGE_LIMIT_SENSOR = 51
+#ENDMYellow
+
+SENSOR_ANTENNA_RANGE_EQUATION AND(LT(X*COS(XCOL), 50), GT(X*SIN(XCOL), -7))
+*EQUATION AND(LT(X*COS(XCOL), 50), GT(X*SIN(XCOL), -7))
+
+
+#EMBEDDED_NOTES
+#The sensor detection area is a box reaching 50 m to the side (x) and 7 m back. On the right side, this is Y = -7.
+#
+#The box is implemented as a function of range and bearing angle.
+#
+#The parameter RANGE_LIMIT_SENSOR limits the polar distance in order to speed up calculations.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Sensor Range and Bearing Sensitivity; { Blind Spot Detection } Blind Spot, Right Side, Reverse
+#Library : Sensor Range and Bearing Sensitivity
+#DataSet : Blind Spot, Right Side, Reverse
+#Category: Blind Spot Detection
+#FileID  : Range_67165923-2394-4875-890d-9b51e092ec45
+#Product : TruckSim 2020.1
+#VehCode Range & Bearing Sensitivity
+
+END

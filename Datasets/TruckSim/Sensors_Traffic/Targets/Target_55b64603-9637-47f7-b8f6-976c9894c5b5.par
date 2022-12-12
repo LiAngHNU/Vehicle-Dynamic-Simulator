@@ -1,0 +1,77 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Bus with Custom Detection Boundary`Irregularly Shaped Objects
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Bus with Custom Detection Boundary
+OPT_SPEED_OBJ 0
+OPT_POLY_COORD 1
+PATH_ID_OBJ <<Bus_Path>>
+ROAD_ID_OBJ <<Bus_Road>>
+#CheckBox1 0    
+OPT_RECYCLE_OBJ 0
+#CheckBox3 1    
+#CheckBox6 1    
+#CheckBox7 1    
+#CheckBox8 1    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 1
+#MiscYellow0
+L_WB_OBJ = 4.47  !Wheelbase of Vehicle for Heading calculation
+OPT_SPEED_OBJ 2
+OPT_ACCEL_OBJ 1
+SPEED_ID_OBJ = SLOW_TRAFFIC
+#ENDMYellow
+
+H_OBJ -3.3
+*COLOR 0.2 0 1
+*S_INIT <<sstart>>
+*L_INIT -1.8
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 3
+DZ_OBJECT 0
+*REFLECT 3
+MATERIAL_TYPE_OBJ 3
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 3.3
+add_obj Sensors_Traffic\Poly\PolyShape_ce627f5b-6c53-423d-9caa-7ce6a9519d10.obj
+set_transparency 0.5
+SET_OFFSET_Z 0.5
+SET_COLOR 0.2 0 1
+SET_RUN_COLOR 0.2 0 1
+PARSFILE Sensors_Traffic\Poly\poly_ce627f5b-6c53-423d-9caa-7ce6a9519d10.par
+#BlueLink1 Polygonal Shape Coordinates`2 Axle Tour Bus` ` , Polygonal Coordinates`poly_ce627f5b-6c53-423d-9caa-7ce6a9519d10
+
+POLY_SHAPE_ID_OBJ = IPOLYGON
+EQ_INIT S_Obj_<<o>> <<sstart>>
+EQ_INIT LatO_<<o>> -1.8
+#MiscYellow1
+!Set Up initial conditions for Object ODEs
+EQ_INIT V_OBJ_<<o>> = SPEED_TARGET(S_OBJ_<<o>>,T,SLOW_TRAFFIC)
+EQ_INIT HeadO_<<o>> = 0
+EQ_INIT YawO_<<o>> = PATH_YAW_ID(S_OBJ_<<o>>, <<Bus_Path>>, 0, 1) + HEADO_<<o>>
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#This dataset establishes a single moving object with a polygonal bounding box.
+#
+#The VS Commands used on this screen configure the object so that it uses acceleration control, allowing the vehicle to switch between velocity profiles while maintaining a realistic (e.g. continuous) velocity profile.  For details on how to use acceleration control and how it functions, please see the documentation.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Irregularly Shaped Objects } Bus with Custom Detection Boundary
+#Library : Single Moving Object (Custom)
+#DataSet : Bus with Custom Detection Boundary
+#Category: Irregularly Shaped Objects
+#FileID  : Target_55b64603-9637-47f7-b8f6-976c9894c5b5
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

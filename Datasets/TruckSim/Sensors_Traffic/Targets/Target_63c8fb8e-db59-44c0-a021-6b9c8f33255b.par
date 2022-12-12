@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Man Crossing from S=-8.5, L=-8`Pedestrians Crossing
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Man Crossing from S=-8.5, L=-8
+OPT_SPEED_OBJ 0
+PATH_ID_OBJ 1002
+ROAD_ID_OBJ 1002
+#CheckBox0 1    
+#CheckBox1 0    
+OPT_RECYCLE_OBJ 0
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 1    
+
+#RingCtrl0 1
+#RingCtrl1 0
+H_OBJ -1
+*COLOR 1 1 1
+*S_INIT -8.5
+*L_INIT -8
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 0
+DZ_OBJECT 0
+*SIZE .4
+DIAMETER_OBJ .4
+*REFLECT 2
+MATERIAL_TYPE_OBJ 2
+*SPEED 5.5/3.6
+EQ_INIT HeadO_<<o>> 90/DR
+*START gt(station,-13)
+*STOP gt(LatO_<<o>>,9)
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\Groups\Group_de464f2c-2c8c-41ed-a7d2-ced6ef653a26.par
+#BlueLink0 Animator: Group`Animated Pedestrian (Asian Male)` Pedestrians` , 3D Shape for Video`Group_de464f2c-2c8c-41ed-a7d2-ced6ef653a26
+
+EQ_INIT S_Obj_<<o>> -8.5
+EQ_INIT LatO_<<o>> -8
+DEFINE_VARIABLE V_CMD_OBJ_<<o>>;KM/H; Speed command
+DEFINE_VARIABLE HeadV_O_<<o>> 90/DR;-; Heading vector for ODEs
+DEFINE_VARIABLE COND_START_OBJ_<<o>>;-; Boolean to start motion
+EQ_FULL_STEP COND_START_OBJ_<<o>> = gt(station,-13) ;
+DEFINE_VARIABLE COND_STOP_OBJ_<<o>>; - ; Boolean to stop motion
+EQ_FULL_STEP COND_STOP_OBJ_<<o>> = gt(LatO_<<o>>,9) ;
+EQ_OUT V_CMD_OBJ_<<o>> = IF(COND_START_OBJ_<<o>> & ~COND_STOP_OBJ_<<o>>, 5.5/3.6, 0);
+EQ_DIFFERENTIAL LatO_<<o>> = V_CMD_OBJ_<<o>>
+#MiscYellow1
+TypeO_<<o>> = PEDESTRIAN
+opt_road_pitch = 0
+opt_road_roll = 0
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#Pedestrian waits until car is close, then starts walking. Located on E. entrance to 3-way intersection.
+#
+#The symbol PEDESTRIAN is defined in the VS Command dataset "Define Target Messages"
+#
+#The Z coordinate comes from the road surface, however roll and pitch stay at zero with the settings of opt_road_pitch and opt_road_roll.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Pedestrians Crossing } Man Crossing from S=-8.5, L=-8
+#Library : Single Moving Object (Custom)
+#DataSet : Man Crossing from S=-8.5, L=-8
+#Category: Pedestrians Crossing
+#FileID  : Target_63c8fb8e-db59-44c0-a021-6b9c8f33255b
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

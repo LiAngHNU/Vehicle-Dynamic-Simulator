@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Stop Sign, City (155, 337)`Traffic Signs and Lights
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Stop Sign, City (155, 337)
+OPT_SPEED_OBJ 0
+
+OPT_ROAD_OBJ 0 ! Legacy pre-9
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+#CheckBox3 0    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 1    
+
+#RingCtrl0 5
+#RingCtrl1 2
+H_OBJ 1.8
+*S_INIT 155.6
+*L_INIT 337.4
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 2
+DZ_OBJECT 0
+*SIZE 0.01
+LENGTH_OBJ 0.01
+*REFLECT 1
+MATERIAL_TYPE_OBJ 1
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_ce8d8b13-8fcc-4146-a8f8-ab93e2d55b9b.par
+#BlueLink0 Animator: Shape File Link`US: Stop Sign (24 in x 24 in)` Environment: Road Signs` , 3D Shape for Video`Shape_ce8d8b13-8fcc-4146-a8f8-ab93e2d55b9b
+
+EQ_INIT X_Obj_<<o>> 155.6
+EQ_INIT Y_Obj_<<o>> 337.4
+#MiscYellow1
+YawO_<<o>> = -90/DR
+TypeO_<<o>> = STOP_SIGN ! defined in VS Command dataset "Define Target Messages"
+MsgObj_<<o>> = 3
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Traffic Signs and Lights } Stop Sign, City (155, 337)
+#Library : Single Moving Object (Custom)
+#DataSet : Stop Sign, City (155, 337)
+#Category: Traffic Signs and Lights
+#FileID  : Target_20588358-c8cc-4816-be9b-d58bca6a7fac
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Support Pillar`Irregularly Shaped Objects
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Support Pillar
+OPT_SPEED_OBJ 0
+
+OPT_ROAD_OBJ 0 ! Legacy pre-9
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+#CheckBox3 1    
+#CheckBox6 1    
+#CheckBox7 1    
+#CheckBox8 1    
+
+#RingCtrl0 5
+#RingCtrl1 0
+H_OBJ 1.5
+*COLOR 0.2 0.6 0
+*S_INIT 8.212
+*L_INIT -8.275
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 0
+DZ_OBJECT 0
+*SIZE 0.65
+DIAMETER_OBJ 0.65
+*REFLECT 3
+MATERIAL_TYPE_OBJ 3
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 0.65
+Y_LENGTH 0.65
+Z_LENGTH 3
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cylinders\cylinder_Zaxis_1m_diameter_1m_long.obj
+set_transparency 0.5
+SET_OFFSET_Z 0.5
+SET_COLOR 0.2 0.6 0
+SET_RUN_COLOR 0.2 0.6 0
+EQ_INIT X_Obj_<<o>> 8.212
+EQ_INIT Y_Obj_<<o>> -8.275
+#MiscYellow1
+TypeO_<<o>> = 0 ! No type for this object
+MsgObj_<<o>> = 0 ! No message for this object
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Irregularly Shaped Objects } Support Pillar
+#Library : Single Moving Object (Custom)
+#DataSet : Support Pillar
+#Category: Irregularly Shaped Objects
+#FileID  : Target_3c98251d-4fce-4f10-ac66-ecd22d40d1ce
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

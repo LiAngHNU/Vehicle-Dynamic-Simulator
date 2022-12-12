@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName Suspension: Longitudinal Movement`Longitudinal Movement, Rear`Tri-Link Strut
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_X_COMBINE ADD
+*SCALAR2 0
+
+#DiagramOne0
+SUSP_X_TABLE SPLINE
+-150, 34.0109
+-135, 29.0492
+-120, 24.4735
+-105, 20.2638
+-90, 16.4039
+-75, 12.8801
+-60, 9.68167
+-45, 6.79994
+-30, 4.22844
+-15, 1.96266
+0, 0
+15, -1.66025
+30, -3.01692
+45, -4.06686
+60, -4.8048
+75, -5.22318
+90, -5.31173
+105, -5.05706
+120, -4.44179
+135, -3.4432
+150, -2.03055
+ENDTABLE
+SUSP_X_JNC_OTHER_SIDE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+SUSP_X_AXLE_TABLE SPLINE
+-150, 34.0109
+-135, 29.0492
+-120, 24.4735
+-105, 20.2638
+-90, 16.4039
+-75, 12.8801
+-60, 9.68167
+-45, 6.79994
+-30, 4.22844
+-15, 1.96266
+0, 0
+15, -1.66025
+30, -3.01692
+45, -4.06686
+60, -4.8048
+75, -5.22318
+90, -5.31173
+105, -5.05706
+120, -4.44179
+135, -3.4432
+150, -2.03055
+ENDTABLE
+
+#EMBEDDED_NOTES
+#Rear Tri-Link Strut Suspension Longitudinal movement vs. Jounce.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Suspension: Longitudinal Movement; { Tri-Link Strut } Longitudinal Movement, Rear
+#Library : Suspension: Longitudinal Movement
+#DataSet : Longitudinal Movement, Rear
+#Category: Tri-Link Strut
+#FileID  : SusX_65297bba-23af-4a07-93ef-ecdc9f50c23e
+#Product : TruckSim 2020.1
+#VehCode Longitudinal Movement
+
+END

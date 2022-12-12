@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Bus Stop`Scene Props
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Bus Stop
+OPT_SPEED_OBJ 0
+
+OPT_ROAD_OBJ 0 ! Legacy pre-9
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+#CheckBox3 1    
+#CheckBox6 1    
+#CheckBox7 1    
+#CheckBox8 1    
+
+#RingCtrl0 5
+#RingCtrl1 1
+H_OBJ -3.75
+*COLOR 0.6 0.2 0.6
+*S_INIT 15.5
+*L_INIT 8.5
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE 6.55
+LENGTH_OBJ 6.55
+WIDTH_OBJ 2.6
+LX_FRONT_OBJ 3.275
+*REFLECT 3
+MATERIAL_TYPE_OBJ 3
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 6.55
+Y_LENGTH 2.6
+Z_LENGTH 3.75
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cubes\cube_1m_wide.obj
+set_transparency 0.5
+SET_OFFSET_X 0
+SET_OFFSET_Z 0.5
+SET_COLOR 0.6 0.2 0.6
+SET_RUN_COLOR 0.6 0.2 0.6
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_faa38307-24fd-4981-b224-f998a5c30bdf.par
+#BlueLink0 Animator: Shape File Link`Bus Stop` Environment: Props (1 of 2)` , 3D Shape for Video`Shape_faa38307-24fd-4981-b224-f998a5c30bdf
+
+EQ_INIT X_Obj_<<o>> 15.5
+EQ_INIT Y_Obj_<<o>> 8.5
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Scene Props } Bus Stop
+#Library : Single Moving Object (Custom)
+#DataSet : Bus Stop
+#Category: Scene Props
+#FileID  : Target_13e9be58-d9fc-4245-817a-5416e2ec3ddd
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

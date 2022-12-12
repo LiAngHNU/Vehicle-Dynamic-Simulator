@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Suspension: Lateral Movement Due to Jounce`Constant: Zero Lateral Movement (mm)`Constant
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_LAT_COMBINE ADD
+SUSP_LAT_CONSTANT 0
+SUSP_LAT_JNC_OTHER_SIDE_CONSTANT 0
+SUSP_Y_AXLE_ROLL_COMBINE ADD ! in case this is for a solid axle
+SUSP_LAT_AXLE_JOUNCE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR 0
+*SCALAR2 0
+
+
+LOG_ENTRY Used Dataset: Suspension: Lateral Movement Due to Jounce; { Constant } Constant: Zero Lateral Movement (mm)
+#Library : Suspension: Lateral Movement Due to Jounce
+#DataSet : Constant: Zero Lateral Movement (mm)
+#Category: Constant
+#FileID  : LatJnc_28e47ad5-6b51-4b93-b27b-8918d80ac87f
+#Product : TruckSim 2020.1
+#VehCode Lateral Movement
+
+END

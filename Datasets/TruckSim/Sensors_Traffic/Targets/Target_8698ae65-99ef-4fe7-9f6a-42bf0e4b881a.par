@@ -1,0 +1,61 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`City Envt: Truck 1 Detect`Multi-Vehicle
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME City Envt: Truck 1 Detect
+OPT_SPEED_OBJ 0
+
+OPT_ROAD_OBJ 0 ! Legacy pre-9
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+#CheckBox3 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+
+#RingCtrl0 5
+#RingCtrl1 1
+H_OBJ 2
+*COLOR 0.2 1 0
+*S_INIT 0
+*L_INIT 0
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE 7.5
+LENGTH_OBJ 7.5
+WIDTH_OBJ 3
+LX_FRONT_OBJ 1.2
+*REFLECT 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+EQ_INIT X_Obj_<<o>> 0
+EQ_INIT Y_Obj_<<o>> 0
+#MiscYellow1
+TypeO_<<o>> = VEHICLE
+eq_init2 X_Obj_<<o>> IMP_Car1_X
+eq_in X_Obj_<<o>> IMP_Car1_X
+eq_init2 Y_Obj_<<o>> IMP_Car1_Y
+eq_in Y_Obj_<<o>> IMP_Car1_Y
+eq_init2 Z_Obj_<<o>> IMP_Car1_Z
+eq_in Z_Obj_<<o>> IMP_Car1_Z
+
+eq_init2 RollO_<<o>> IMP_Car1_Roll*pi/180
+eq_in RollO_<<o>> IMP_Car1_Roll*pi/180
+eq_init2 PitchO<<o>> IMP_Car1_Pitch*pi/180
+eq_in PitchO<<o>> IMP_Car1_Pitch*pi/180
+eq_init2 YawO_<<o>> IMP_Car1_Yaw*pi/180
+eq_in YawO_<<o>> IMP_Car1_Yaw*pi/180
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Multi-Vehicle } City Envt: Truck 1 Detect
+#Library : Single Moving Object (Custom)
+#DataSet : City Envt: Truck 1 Detect
+#Category: Multi-Vehicle
+#FileID  : Target_8698ae65-99ef-4fe7-9f6a-42bf0e4b881a
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

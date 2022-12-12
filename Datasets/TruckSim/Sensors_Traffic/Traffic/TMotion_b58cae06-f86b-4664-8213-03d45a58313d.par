@@ -1,0 +1,63 @@
+PARSFILE
+#FullDataName Multiple Moving Objects`Animated Pedestrian (Walking)`Pedestrians
+#RingCtrl0 1
+DEFINE_MOVING_OBJECTS 1
+#RingCtrl1 3
+#RingCtrl2 2
+#RingCtrl3 1
+#RingCtrl4 1
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox38 0    
+#CheckBox39 0    
+
+DZ_OBJECT 0
+#MiscYellow0
+#define_parameter ped_walk = 125; m; ...
+#     The pedestrian begins walking once the ego vehicle reaches this station
+#OPT_ROAD_PITCH(1) = 0
+#OPT_ROAD_ROLL(1) = 0
+#ENDMYellow
+
+*L 11.9
+*PATH_ID 1002
+*ROAD_ID 1
+*V if_gt_0_then(Station - ped_walk, 1.4, 0)
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Animated Pedestrian (Walking)
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+define_parameter ped_walk = 125; m; ...
+     The pedestrian begins walking once the ego vehicle reaches this station
+OPT_ROAD_PITCH(1) = 0
+OPT_ROAD_ROLL(1) = 0
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ 1002
+ROAD_ID_OBJ 1
+OPT_RECYCLE_OBJ 0
+*SINIT_1 131
+EQ_INIT S_OBJ_<<o>> = 131
+EQ_INIT V_OBJ_<<o>> = if_gt_0_then(Station - ped_walk, 1.4, 0)
+EQ_OUT V_OBJ_<<o>> = if_gt_0_then(Station - ped_walk, 1.4, 0)
+EQ_INIT LATO_<<o>> = 11.9
+H_OBJ = 0 ! Default for blank field
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_13d0b758-58a1-4679-ab5b-aaffb4451a56.par
+#BlueLink0 Animator: Shape File Link`Asian Male: Walking (5 km/h)` Environment: Pedestrians (Animated)` , 3D Shape for Video`Shape_13d0b758-58a1-4679-ab5b-aaffb4451a56
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+LOG_ENTRY Used Dataset: Multiple Moving Objects; { Pedestrians } Animated Pedestrian (Walking)
+#Library : Multiple Moving Objects
+#DataSet : Animated Pedestrian (Walking)
+#Category: Pedestrians
+#FileID  : TMotion_b58cae06-f86b-4664-8213-03d45a58313d
+#Product : TruckSim 2020.1
+#VehCode Multiple Objects
+
+END

@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Woman Crossing from S=42.8, L=-7.5`Pedestrians Crossing
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Woman Crossing from S=42.8, L=-7.5
+OPT_SPEED_OBJ 0
+PATH_ID_OBJ 1002
+ROAD_ID_OBJ CURRENT_ROAD_ID
+#CheckBox0 1    
+#CheckBox1 0    
+OPT_RECYCLE_OBJ 0
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox8 0    
+
+#RingCtrl0 1
+H_OBJ 0
+*COLOR 1 1 1
+*S_INIT 42.8
+*L_INIT -7.5
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+*SPEED 1.5
+EQ_INIT HeadO_<<o>> 90/DR
+*START gt(station, 15.5)
+*STOP gt(LatO_<<o>>,10.5)
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\Groups\Group_e93722fd-973d-4245-94b5-33b21567ca19.par
+#BlueLink0 Animator: Group`Animated Pedestrian (Asian Female)` Pedestrians` , 3D Shape for Video`Group_e93722fd-973d-4245-94b5-33b21567ca19
+
+EQ_INIT S_Obj_<<o>> 42.8
+EQ_INIT LatO_<<o>> -7.5
+DEFINE_VARIABLE V_CMD_OBJ_<<o>>;KM/H; Speed command
+DEFINE_VARIABLE HeadV_O_<<o>> 90/DR;-; Heading vector for ODEs
+DEFINE_VARIABLE COND_START_OBJ_<<o>>;-; Boolean to start motion
+EQ_FULL_STEP COND_START_OBJ_<<o>> = gt(station, 15.5) ;
+DEFINE_VARIABLE COND_STOP_OBJ_<<o>>; - ; Boolean to stop motion
+EQ_FULL_STEP COND_STOP_OBJ_<<o>> = gt(LatO_<<o>>,10.5) ;
+EQ_OUT V_CMD_OBJ_<<o>> = IF(COND_START_OBJ_<<o>> & ~COND_STOP_OBJ_<<o>>, 1.5, 0);
+EQ_DIFFERENTIAL LatO_<<o>> = V_CMD_OBJ_<<o>>
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Pedestrians Crossing } Woman Crossing from S=42.8, L=-7.5
+#Library : Single Moving Object (Custom)
+#DataSet : Woman Crossing from S=42.8, L=-7.5
+#Category: Pedestrians Crossing
+#FileID  : Target_170ed067-ceb7-47ba-aecb-0e93240712b3
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

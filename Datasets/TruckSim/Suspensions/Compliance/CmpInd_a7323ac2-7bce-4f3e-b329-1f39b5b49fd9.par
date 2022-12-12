@@ -1,0 +1,102 @@
+PARSFILE
+#FullDataName Suspension: Independent Compliance, Springs, and Dampers`Large European Van - Rear`Large European Van
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 0
+*OPT_SPR 0
+#RingCtrl1 2
+#RingCtrl3 1
+#RingCtrl5 2
+#RingCtrl7 1
+#RingCtrl9 1
+#RingCtrl11 1
+#RingCtrl13 1
+*KSPRING_L 198
+*FRICTION_L 20
+*BETA_C_L 2
+*BETA_E_L 2
+*L_SPG_ADJ_L 0
+*R_SPRING_L 1
+*R_DAMPER_L 1
+*R_JOUNCE_L 1
+*R_REBOUND_L 1
+*CT_FX_L 0
+*CS_FY_L -0.56e-5
+*CS_MZ_L 0.95e-3
+*CC_FX_L 0
+*CI_FY_L 0
+*CI_MZ_L 0
+*C_LONG_L 7e-5
+*C_LAT_L 3.8e-5
+DAUX 0
+*CD_MY_L 0
+
+iside 1
+OPT_EXT_SP 0
+PARSFILE Suspensions\Springs\Spring_ae070fd4-a042-46cc-9824-5ef14c7ecfb9.par
+#BlueLink0 Suspension: Spring`Light Duty Utility Vehicle` Utility Vehicles` , Spring force`Spring_ae070fd4-a042-46cc-9824-5ef14c7ecfb9
+
+CMP_SPR_SEAT_COEFFICIENT 1
+L_SPG_ADJ 0
+FS_OFFSET 0
+CMP_OFFSET 0
+PARSFILE Suspensions\Shocks\Shock_6e04c449-9ac9-4bac-ab8f-295097a48f25.par
+#BlueLink1 Suspension: Shock Absorber`Large Euro Van` Non-linear` , Left damper`Shock_6e04c449-9ac9-4bac-ab8f-295097a48f25
+
+CMP_DAMP_COEFFICIENT 1
+PARSFILE Suspensions\Jounce_Rebound\JncReb_e5afd226-f948-41f8-a5b5-d234cc9aca35.par
+#BlueLink5 Suspension: Jounce and Rebound Stops`+100 mm / -60 mm` Jounce Range: 100 mm to 150 mm` , Jounce / rebound stop force`JncReb_e5afd226-f948-41f8-a5b5-d234cc9aca35
+
+CMP_JSTOP_COEFFICIENT 1
+CMP_RSTOP_COEFFICIENT 1
+CT_FX_COEFFICIENT 0
+CS_FY_COEFFICIENT -0.56e-5
+CS_MZ_COEFFICIENT 0.95e-3
+CC_FX_COEFFICIENT 0
+CI_FY_COEFFICIENT 0
+CI_MZ_COEFFICIENT 0
+C_LONG_COEFFICIENT 7e-5
+C_LAT_COEFFICIENT 3.8e-5
+CD_MY_COEFFICIENT 0
+
+iside 2
+OPT_EXT_SP 0
+PARSFILE Suspensions\Springs\Spring_ae070fd4-a042-46cc-9824-5ef14c7ecfb9.par
+#BlueLink0 Suspension: Spring`Light Duty Utility Vehicle` Utility Vehicles` , Spring force`Spring_ae070fd4-a042-46cc-9824-5ef14c7ecfb9
+
+CMP_SPR_SEAT_COEFFICIENT 1
+L_SPG_ADJ 0
+FS_OFFSET 0
+CMP_OFFSET 0
+PARSFILE Suspensions\Shocks\Shock_6e04c449-9ac9-4bac-ab8f-295097a48f25.par
+#BlueLink1 Suspension: Shock Absorber`Large Euro Van` Non-linear` , Left damper`Shock_6e04c449-9ac9-4bac-ab8f-295097a48f25
+
+CMP_DAMP_COEFFICIENT 1
+PARSFILE Suspensions\Jounce_Rebound\JncReb_e5afd226-f948-41f8-a5b5-d234cc9aca35.par
+#BlueLink5 Suspension: Jounce and Rebound Stops`+100 mm / -60 mm` Jounce Range: 100 mm to 150 mm` , Jounce / rebound stop force`JncReb_e5afd226-f948-41f8-a5b5-d234cc9aca35
+
+CMP_JSTOP_COEFFICIENT 1
+CMP_RSTOP_COEFFICIENT 1
+CT_FX_COEFFICIENT 0
+CS_FY_COEFFICIENT -0.56e-5
+CS_MZ_COEFFICIENT 0.95e-3
+CC_FX_COEFFICIENT 0
+CI_FY_COEFFICIENT 0
+CI_MZ_COEFFICIENT 0
+C_LONG_COEFFICIENT 7e-5
+C_LAT_COEFFICIENT 3.8e-5
+CD_MY_COEFFICIENT 0
+PARSFILE Suspensions\Aux_Roll\AuxMx_e0ec281d-6f61-4b0b-be72-77bd09aad914.par
+#BlueLink2 Suspension: Auxiliary Roll Moment`Linear: 510 N-m/deg` Linear` , Roll Moment`AuxMx_e0ec281d-6f61-4b0b-be72-77bd09aad914
+
+
+LOG_ENTRY Used Dataset: Suspension: Independent Compliance, Springs, and Dampers; { Large European Van } Large European Van - Rear
+#Library : Suspension: Independent Compliance, Springs, and Dampers
+#DataSet : Large European Van - Rear
+#Category: Large European Van
+#FileID  : CmpInd_a7323ac2-7bce-4f3e-b329-1f39b5b49fd9
+#Product : TruckSim 2020.1
+#VehCode Springs and Dampers
+
+END

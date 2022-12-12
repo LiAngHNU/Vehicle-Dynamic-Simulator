@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName Suspension: Independent System Kinematics`Compact Utility Truck - Drive Axle`Compact Utility Truck
+iside 1
+#RingCtrl0 1
+OPT_JNC_DESIGN 1
+#RingCtrl1 2
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 2
+#RingCtrl5 2
+#CheckBox1 0    
+#CheckBox2 0    
+
+R_US_STR 0.703704
+L_TRACK 1260
+Y_CL_SUSP 0
+H_WC 263
+M_US 54
+*IW_L 0.9
+*IW_R 0.9
+*JNC_DESIGN_L 0
+*TOE_L 0
+*CAMBER_L 0.2
+*IWXXZZ_L 0
+*IWXXZZ_R 0
+*M_US_IND_L 8
+*M_US_STR_L 19
+
+PARSFILE Suspensions\Dive\Dive_3dbb773c-c54a-42a0-87c0-8f745a977d54.par
+#BlueLink0 Suspension: Dive Angle (Caster Change)`Compact Utility: Rear Dive Change` Utility Vehicles` , Left wheel dive (caster change)`Dive_3dbb773c-c54a-42a0-87c0-8f745a977d54
+
+PARSFILE Suspensions\Longitudinal\SusX_32740677-319b-4a9b-ab03-721a710d842c.par
+#BlueLink1 Suspension: Longitudinal Movement`Compact Utility: Long. Movement` Utility Vehicles` , Left wheel X`SusX_32740677-319b-4a9b-ab03-721a710d842c
+
+PARSFILE Suspensions\Camber\Camber_9f224cf0-6492-4317-b935-ef8ea184849a.par
+#BlueLink2 Suspension: Camber Angle`Compact Utility: Camber Change` Utility Vehicles` , Left wheel camber`Camber_9f224cf0-6492-4317-b935-ef8ea184849a
+
+PARSFILE Suspensions\Lateral\LatJnc_4d8117e5-84c6-4dcd-b220-95d2e6e559d4.par
+#BlueLink3 Suspension: Lateral Movement Due to Jounce`Compact Utility: Lateral Movement` Utility Vehicles` , Left wheel lateral (-Y)`LatJnc_4d8117e5-84c6-4dcd-b220-95d2e6e559d4
+
+PARSFILE Suspensions\Toe\Toe_d1eb6ca9-95f3-4462-8feb-a6a75c5b0549.par
+#BlueLink4 Suspension: Toe Angle`Compact Utility: Toe Change` Utility Vehicles` , Left wheel toe`Toe_d1eb6ca9-95f3-4462-8feb-a6a75c5b0549
+
+M_US_IND 8
+M_US_STR 19
+IW 0.9
+IW_XXZZ 0
+JNC_DESIGN 0
+A_TOE 0
+A_CAMBER 0.2
+
+iside 2
+PARSFILE Suspensions\Dive\Dive_3dbb773c-c54a-42a0-87c0-8f745a977d54.par
+#BlueLink0 Suspension: Dive Angle (Caster Change)`Compact Utility: Rear Dive Change` Utility Vehicles` , Left wheel dive (caster change)`Dive_3dbb773c-c54a-42a0-87c0-8f745a977d54
+
+PARSFILE Suspensions\Longitudinal\SusX_32740677-319b-4a9b-ab03-721a710d842c.par
+#BlueLink1 Suspension: Longitudinal Movement`Compact Utility: Long. Movement` Utility Vehicles` , Left wheel X`SusX_32740677-319b-4a9b-ab03-721a710d842c
+
+PARSFILE Suspensions\Camber\Camber_9f224cf0-6492-4317-b935-ef8ea184849a.par
+#BlueLink2 Suspension: Camber Angle`Compact Utility: Camber Change` Utility Vehicles` , Left wheel camber`Camber_9f224cf0-6492-4317-b935-ef8ea184849a
+
+PARSFILE Suspensions\Lateral\LatJnc_4d8117e5-84c6-4dcd-b220-95d2e6e559d4.par
+#BlueLink3 Suspension: Lateral Movement Due to Jounce`Compact Utility: Lateral Movement` Utility Vehicles` , Left wheel lateral (-Y)`LatJnc_4d8117e5-84c6-4dcd-b220-95d2e6e559d4
+
+PARSFILE Suspensions\Toe\Toe_d1eb6ca9-95f3-4462-8feb-a6a75c5b0549.par
+#BlueLink4 Suspension: Toe Angle`Compact Utility: Toe Change` Utility Vehicles` , Left wheel toe`Toe_d1eb6ca9-95f3-4462-8feb-a6a75c5b0549
+
+M_US_IND 8
+M_US_STR 19
+IW 0.9
+IW_XXZZ 0
+JNC_DESIGN 0
+A_TOE 0
+A_CAMBER 0.2
+H_WC 263
+
+LOG_ENTRY Used Dataset: Suspension: Independent System Kinematics; { Compact Utility Truck } Compact Utility Truck - Drive Axle
+#Library : Suspension: Independent System Kinematics
+#DataSet : Compact Utility Truck - Drive Axle
+#Category: Compact Utility Truck
+#FileID  : KinInd_3975acf2-5f13-41c6-9410-e239666e26ee
+#Product : TruckSim 2020.1
+#VehCode Independent
+
+END

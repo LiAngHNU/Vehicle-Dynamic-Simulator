@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Suspension: Camber Angle`Constant: Zero Camber Angle (deg)`Constant
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+CAMBER_COMBINE ADD
+CAMBER_CONSTANT 0
+SUSP_CAMBER_JNC_OTHER_SIDE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR 0
+*SCALAR2 0
+
+
+LOG_ENTRY Used Dataset: Suspension: Camber Angle; { Constant } Constant: Zero Camber Angle (deg)
+#Library : Suspension: Camber Angle
+#DataSet : Constant: Zero Camber Angle (deg)
+#Category: Constant
+#FileID  : Camber_1c11b21b-4646-4b80-a78e-23e18fd042b5
+#Product : TruckSim 2020.1
+#VehCode Camber
+
+END

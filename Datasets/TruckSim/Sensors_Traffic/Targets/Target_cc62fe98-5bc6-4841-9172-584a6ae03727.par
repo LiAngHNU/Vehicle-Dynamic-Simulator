@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Right Wall: Detection (Segment 1)`6-Lane Highway
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Right Wall: Detection (Segment 1)
+OPT_SPEED_OBJ 0
+OPT_POLY_COORD 0
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ right_wall
+#CheckBox1 0    
+OPT_RECYCLE_OBJ 0
+#CheckBox3 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 1    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 0
+H_OBJ -9.5
+*S_INIT 0
+*L_INIT 0
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 3
+DZ_OBJECT 0
+*REFLECT 1
+MATERIAL_TYPE_OBJ 1
+PARSFILE Sensors_Traffic\Poly\poly_c3d730a2-6fd6-4a9a-806d-5b1fbb4ee0d4.par
+#BlueLink1 Polygonal Shape Coordinates`Right Wall: First Segment` 6-Lane Highway` , Polygonal Coordinates`poly_c3d730a2-6fd6-4a9a-806d-5b1fbb4ee0d4
+
+POLY_SHAPE_ID_OBJ = IPOLYGON
+EQ_INIT S_Obj_<<o>> 0
+EQ_INIT LatO_<<o>> 0
+#MiscYellow1
+TypeO_<<o>> = WALL
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { 6-Lane Highway } Right Wall: Detection (Segment 1)
+#Library : Single Moving Object (Custom)
+#DataSet : Right Wall: Detection (Segment 1)
+#Category: 6-Lane Highway
+#FileID  : Target_cc62fe98-5bc6-4841-9172-584a6ae03727
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

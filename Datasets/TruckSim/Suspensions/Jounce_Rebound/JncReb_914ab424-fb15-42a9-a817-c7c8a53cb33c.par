@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Suspension: Jounce and Rebound Stops`+250 mm / -250 mm`Jounce Range: 200 mm to 250 mm
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR
+#RingCtrl1 LINEAR
+#DiagramOne0
+F_JNC_STOP_TABLE LINEAR
+200, 0
+250, 0
+251, 7000
+ENDTABLE
+#DiagramOne1
+F_REB_STOP_TABLE LINEAR
+-251, -7000
+-250, 0
+-200, 0
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+
+LOG_ENTRY Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 200 mm to 250 mm } +250 mm / -250 mm
+#Library : Suspension: Jounce and Rebound Stops
+#DataSet : +250 mm / -250 mm
+#Category: Jounce Range: 200 mm to 250 mm
+#FileID  : JncReb_914ab424-fb15-42a9-a817-c7c8a53cb33c
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

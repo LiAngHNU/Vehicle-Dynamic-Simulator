@@ -1,0 +1,61 @@
+PARSFILE
+#FullDataName Suspension: Dive Angle (Caster Change)`Large European Van - Rear`Utility Vehicles
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_DIVE_COMBINE ADD
+*SCALAR 0
+*SCALAR2 0
+
+#DiagramOne0
+SUSP_DIVE_TABLE SPLINE
+-70, -2.07166
+-60, -1.77237
+-50, -1.47431
+-40, -1.17742
+-30, -0.881618
+-20, -0.586832
+-10, -0.292987
+0, 0
+10, 0.292218
+20, 0.583766
+30, 0.874758
+40, 1.16532
+50, 1.45561
+60, 1.7458
+70, 2.03611
+ENDTABLE
+SUSP_DIVE_JNC_OTHER_SIDE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+SUSP_DIVE_AXLE_TABLE SPLINE
+-70, -2.07166
+-60, -1.77237
+-50, -1.47431
+-40, -1.17742
+-30, -0.881618
+-20, -0.586832
+-10, -0.292987
+0, 0
+10, 0.292218
+20, 0.583766
+30, 0.874758
+40, 1.16532
+50, 1.45561
+60, 1.7458
+70, 2.03611
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Suspension: Dive Angle (Caster Change); { Utility Vehicles } Large European Van - Rear
+#Library : Suspension: Dive Angle (Caster Change)
+#DataSet : Large European Van - Rear
+#Category: Utility Vehicles
+#FileID  : Dive_3d2e9a70-80cb-4226-8cc4-23927b20a3a8
+#Product : TruckSim 2020.1
+#VehCode Dive
+
+END

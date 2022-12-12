@@ -1,0 +1,74 @@
+PARSFILE
+#FullDataName ADAS Sensors for Range and Tracking`Signs`Forward Facing Sensors: FCW and ACC
+DEFINE_SENSORS 1
+ISENSOR = NSENSOR
+NSENSORS_INCREMENT
+symbol_add <<s>> 1
+SET_DESCRIPTION SENSOR_NAME Signs
+#CheckBox0 1    
+#CheckBox1 1    
+OPT_BLOCK_SENSOR 1
+#CheckBox2 1    
+OPT_SORT_OUTPUTS_SENSOR 1
+#CheckBox3 1    
+#CheckBox5 0    
+OPT_EXPORT_SENSOR 0
+#CheckBox6 1    
+
+#RingCtrl0 1
+#RingCtrl1 1
+SENSOR_DETECT_TRANSLUCENCY 1
+#RingCtrl2 1
+IUNIT_SENSOR 1
+#RingCtrl3 1
+TYPE_SENSOR 1
+PARSFILE Sensors_Traffic\Radar_Range\Range_9f4371c4-aac5-489e-8cef-feaede630277.par
+#BlueLink0 Sensor Range and Bearing Sensitivity`100-m Range` Limit from Range` , Range & Bearing Sensitivity`Range_9f4371c4-aac5-489e-8cef-feaede630277
+
+PARSFILE Sensors_Traffic\Radar_Elevation\SenElev_fc37c5bf-8ff6-4a23-a68d-2a4dfb5ab48e.par
+#BlueLink1 Sensor Elevation Sensitivity`Limit to -40deg (Up)` ` , Elevation Sensitivity`SenElev_fc37c5bf-8ff6-4a23-a68d-2a4dfb5ab48e
+
+X_SENSOR -1250
+Y_SENSOR 0
+Z_SENSOR 1450
+YAW_AIM_SENSOR 0
+PITCH_AIM_SENSOR 0
+ROLL_AIM_SENSOR 0
+SENSOR_DETECT_COLOR 0 0.2 1
+*SET_TRANSPARENCY 0.15
+*SET_COLOR_FIELD 1 0 0
+BEARING_MIN_SENSOR -45
+BEARING_MAX_SENSOR 2
+
+SPECIAL_PARSFILE Animator\STL\Shape_67b13483-d0c2-48d7-bef0-4c603104a0d7.par
+#BlueLink3 Animator: Shape File Link`Cube: Sensor Vector` Geometric Shapes` , Shape for vector`Shape_67b13483-d0c2-48d7-bef0-4c603104a0d7
+
+SENSOR_DETECT_OBJ Animator\STL\Shape_67b13483-d0c2-48d7-bef0-4c603104a0d7.par
+#MiscYellow0
+ani_global_interpolation off
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_6df5d376-4900-4c6a-9701-4833722153eb.par
+#BlueLink4 Plot: Setup`ID and Message of Closest Object` ADAS Sensor Target Properties` , Plot`Plot_6df5d376-4900-4c6a-9701-4833722153eb
+
+PARSFILE Generic\VS_commands\GenVS_390e4090-68bf-4277-87c2-0abef4604ed5.par
+#BlueLink12 Generic VS Commands`Setup for Sign Detection` Setup Events` , Miscellaneous`GenVS_390e4090-68bf-4277-87c2-0abef4604ed5
+
+
+#EMBEDDED_NOTES
+#ADAS Range and Detection Sensor located in the passenger compartment and facing forward.
+#
+#The sensor's range is set using the math model keyword RANGE_LIMIT_SENSOR and has a field of view (FOV) of 16 degrees.
+#
+#The equation that modifies the internal target speed uses detection variables such as SpdS<<s>>_1 and MagS<<s>>_1, where <<s>> is the number of the ACC Sensor. These detection variables are created when there is at least one sensor and at least one moving object.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: ADAS Sensors for Range and Tracking; { Forward Facing Sensors: FCW and ACC } Signs
+#Library : ADAS Sensors for Range and Tracking
+#DataSet : Signs
+#Category: Forward Facing Sensors: FCW and ACC
+#FileID  : Radar_2adeb104-4020-4329-9122-6ca745db6951
+#Product : TruckSim 2020.1
+#VehCode ADAS Sensor
+
+END

@@ -1,0 +1,70 @@
+PARSFILE
+#FullDataName Steering System`Midsize: Power, Rack & Pinion`Pickup Trucks
+#RingCtrl0 0
+OPT_CS 0
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 0
+*L_KPO_L 80
+*L_KPO_R 80
+*A_KPI_L 11.88
+*A_KPI_R 11.88
+*A_CASTER_L 1.85
+*A_CASTER_R 1.85
+*X_KPO_L 10
+*X_KPO_R 10
+*CF 32.6
+*D_RACK 3
+*H_RACK 400
+*B_RACK 0.1
+PARSFILE Steering\Rear_Steer\RearStr_63e8999d-8333-4c1b-ba2a-69276dcc7d8d.par
+#BlueLink2 Steering System: Steer Gain vs. Speed`Constant: One (Always Steered)` Constant` , Speed Effect`RearStr_63e8999d-8333-4c1b-ba2a-69276dcc7d8d
+
+OPT_STEER_DEF 1
+
+iside 1
+PARSFILE Steering\KinematicsRack\TsRkKin_7f04fcae-30bc-434f-9741-a30f7dd4a7cd.par
+#BlueLink9 Steering System: Kinematics for One Wheel, Rack & Pinion`Pickup, Midsize, Left` ` , Left Wheel Kinematics`TsRkKin_7f04fcae-30bc-434f-9741-a30f7dd4a7cd
+
+PARSFILE Steering\Str_Park_Trq\TqPark_3a892d0f-d612-4a4c-9ba9-25a227c5047f.par
+#BlueLink3 Steering: Parking Torque`Pickup, Midsize - Left` Pickup Trucks` , Left Side`TqPark_3a892d0f-d612-4a4c-9ba9-25a227c5047f
+
+L_KPO 80
+A_KPI 11.88
+A_CASTER 1.85
+X_KPO 10
+
+iside 2
+PARSFILE Steering\KinematicsRack\TsRkKin_fa8ea6e7-0227-443b-9e95-a3e571091fce.par
+#BlueLink10 Steering System: Kinematics for One Wheel, Rack & Pinion`Pickup, Midsize, Right` ` , Right Wheel Kinematics`TsRkKin_fa8ea6e7-0227-443b-9e95-a3e571091fce
+
+PARSFILE Steering\Str_Park_Trq\TqPark_0364d092-f35e-420c-984e-cb97629d60b1.par
+#BlueLink4 Steering: Parking Torque`Pickup, Midsize - Right` Pickup Trucks` , Right Side`TqPark_0364d092-f35e-420c-984e-cb97629d60b1
+
+L_KPO 80
+A_KPI 11.88
+A_CASTER 1.85
+X_KPO 10
+OPT_RACK 1
+OPT_STEER_EXT 0
+RACK_TRAVEL_COEFFICIENT 32.6/360
+D_RACK 3
+HYS_RACK 400
+BETA_RACK 0.1
+PARSFILE Steering\Compliance\StrCmp_e22de026-6640-4e25-8b53-83db9ee60217.par
+#BlueLink8 Steering System: Compliance`Constant: 0.002 deg/N-m` Constant` , Compliance`StrCmp_e22de026-6640-4e25-8b53-83db9ee60217
+
+
+#EMBEDDED_NOTES
+#Rack-assist hydraulic power steering using a rack-and-pinion, constructed for the midsize pickup with 3261 mm wheelbase.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Steering System; { Pickup Trucks } Midsize: Power, Rack & Pinion
+#Library : Steering System
+#DataSet : Midsize: Power, Rack & Pinion
+#Category: Pickup Trucks
+#FileID  : StrSys_7a7c6cf4-f225-4f3e-adcc-d47e1ec362ca
+#Product : TruckSim 2020.1
+#VehCode Steering System
+
+END

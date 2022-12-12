@@ -1,0 +1,420 @@
+PARSFILE
+#FullDataName Multiple Moving Objects`Multi Vehicles`* * * CiDi Target Vehicles
+#RingCtrl0 8
+DEFINE_MOVING_OBJECTS 8
+#RingCtrl1 3
+#RingCtrl2 2
+#RingCtrl3 0
+#RingCtrl4 1
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 1    
+#CheckBox10 1    
+#CheckBox11 1    
+#CheckBox12 1    
+#CheckBox13 1    
+#CheckBox14 1    
+#CheckBox15 1    
+#CheckBox16 1    
+#CheckBox25 0    
+#CheckBox26 1    
+#CheckBox27 1    
+#CheckBox28 1    
+#CheckBox29 1    
+#CheckBox30 1    
+#CheckBox31 1    
+#CheckBox32 1    
+#CheckBox33 1    
+#CheckBox38 1    
+#CheckBox39 0    
+
+DZ_OBJECT 0
+*L -3.5
+*PATH_ID PATH_ID_DM
+*ROAD_ID CURRENT_ROAD_ID
+*V 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Multi Vehicles, Object #1
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 0
+*SINIT_1 100
+EQ_INIT S_OBJ_<<o>> = 100
+EQ_INIT V_OBJ_<<o>> = 0
+EQ_OUT V_OBJ_<<o>> = 0
+EQ_INIT LATO_<<o>> = -3.5
+*COLOR_1 0.69 0.69 0.69
+SET_RUN_COLOR 0.69 0.69 0.69
+*H_TARGET_1 0.8
+H_OBJ 0.8
+PARSFILE Animator\Vehicles\AniVeh_ecb4bc00-731a-4eec-9e10-b0fa5a9a76b7.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`F-Class, Sedan` F-Class` , 3D Shape for Video`AniVeh_ecb4bc00-731a-4eec-9e10-b0fa5a9a76b7
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_1 5.5
+LENGTH_OBJ 5.5
+*WIDTH_1 2
+WIDTH_OBJ 2
+*LX_FRONT_1 1
+LX_FRONT_OBJ 1
+MATERIAL_TYPE_OBJ 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 5.5
+Y_LENGTH 2
+Z_LENGTH 1.6
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cubes\cube_1m_wide.obj
+set_transparency 0.5
+SET_OFFSET_X -0.318182
+SET_OFFSET_Z 0.5
+SET_COLOR 0.69 0.69 0.69
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Multi Vehicles, Object #2
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 0
+*SINIT_2 350
+EQ_INIT S_OBJ_<<o>> = 350
+EQ_INIT V_OBJ_<<o>> = 0
+EQ_OUT V_OBJ_<<o>> = 0
+EQ_INIT LATO_<<o>> = -3.5
+*COLOR_2 0 0 0.8
+SET_RUN_COLOR 0 0 0.8
+*H_TARGET_2 0.8
+H_OBJ 0.8
+PARSFILE Animator\Vehicles\AniVeh_fb8dc6d1-e5e6-4164-8263-c08dac91c7c5.par
+#BlueLink1 Animator: Vehicles and Sensor Targets`A-Class, Subcompact` A-Class` , Traffic Vehicle Ani File`AniVeh_fb8dc6d1-e5e6-4164-8263-c08dac91c7c5
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_2 4
+LENGTH_OBJ 4
+*WIDTH_2 2
+WIDTH_OBJ 2
+*LX_FRONT_2 1
+LX_FRONT_OBJ 1
+MATERIAL_TYPE_OBJ 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 4
+Y_LENGTH 2
+Z_LENGTH 1.6
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cubes\cube_1m_wide.obj
+set_transparency 0.5
+SET_OFFSET_X -0.25
+SET_OFFSET_Z 0.5
+SET_COLOR 0 0 0.8
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Multi Vehicles, Object #3
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 0
+*SINIT_3 650
+EQ_INIT S_OBJ_<<o>> = 650
+EQ_INIT V_OBJ_<<o>> = 0
+EQ_OUT V_OBJ_<<o>> = 0
+EQ_INIT LATO_<<o>> = -3.5
+*COLOR_3 0.6 0 0
+SET_RUN_COLOR 0.6 0 0
+*H_TARGET_3 1
+H_OBJ 1
+PARSFILE Animator\Vehicles\AniVeh_0ac64a8a-7624-410f-bbbc-96104073c435.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`E-Class, SUV` E-Class` , Traffic Vehicle Ani File`AniVeh_0ac64a8a-7624-410f-bbbc-96104073c435
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_3 5.5
+LENGTH_OBJ 5.5
+*WIDTH_3 2
+WIDTH_OBJ 2
+*LX_FRONT_3 1
+LX_FRONT_OBJ 1
+MATERIAL_TYPE_OBJ 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 5.5
+Y_LENGTH 2
+Z_LENGTH 2
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cubes\cube_1m_wide.obj
+set_transparency 0.5
+SET_OFFSET_X -0.318182
+SET_OFFSET_Z 0.5
+SET_COLOR 0.6 0 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Multi Vehicles, Object #4
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 0
+*SINIT_4 980
+EQ_INIT S_OBJ_<<o>> = 980
+EQ_INIT V_OBJ_<<o>> = 0
+EQ_OUT V_OBJ_<<o>> = 0
+EQ_INIT LATO_<<o>> = -3.5
+*COLOR_4 0 0 0
+SET_RUN_COLOR 0 0 0
+*H_TARGET_4 0.75
+H_OBJ 0.75
+PARSFILE Animator\Vehicles\AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3.par
+#BlueLink3 Animator: Vehicles and Sensor Targets`D-Class, Sedan` D-Class` , Traffic Vehicle Ani File`AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_4 5
+LENGTH_OBJ 5
+*WIDTH_4 2
+WIDTH_OBJ 2
+*LX_FRONT_4 1
+LX_FRONT_OBJ 1
+MATERIAL_TYPE_OBJ 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 5
+Y_LENGTH 2
+Z_LENGTH 1.5
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cubes\cube_1m_wide.obj
+set_transparency 0.5
+SET_OFFSET_X -0.3
+SET_OFFSET_Z 0.5
+SET_COLOR 0 0 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Multi Vehicles, Object #5
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 0
+*SINIT_5 1250
+EQ_INIT S_OBJ_<<o>> = 1250
+EQ_INIT V_OBJ_<<o>> = 0
+EQ_OUT V_OBJ_<<o>> = 0
+EQ_INIT LATO_<<o>> = -3.5
+*COLOR_5 1 1 0
+SET_RUN_COLOR 1 1 0
+*H_TARGET_5 0.75
+H_OBJ 0.75
+PARSFILE Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.par
+#BlueLink4 Animator: Vehicles and Sensor Targets`B-Class, Sports Car` B-Class` , Traffic Vehicle Ani File`AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_5 4.5
+LENGTH_OBJ 4.5
+*WIDTH_5 2
+WIDTH_OBJ 2
+*LX_FRONT_5 1
+LX_FRONT_OBJ 1
+MATERIAL_TYPE_OBJ 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 4.5
+Y_LENGTH 2
+Z_LENGTH 1.5
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cubes\cube_1m_wide.obj
+set_transparency 0.5
+SET_OFFSET_X -0.277778
+SET_OFFSET_Z 0.5
+SET_COLOR 1 1 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Multi Vehicles, Object #6
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 0
+*SINIT_6 1420
+EQ_INIT S_OBJ_<<o>> = 1420
+EQ_INIT V_OBJ_<<o>> = 0
+EQ_OUT V_OBJ_<<o>> = 0
+EQ_INIT LATO_<<o>> = -3.5
+*COLOR_6 0 0.6 0
+SET_RUN_COLOR 0 0.6 0
+*H_TARGET_6 2
+H_OBJ 2
+PARSFILE Animator\Vehicles\AniVeh_9490ba51-301a-40a6-8eb6-db37cea19aa0.par
+#BlueLink5 Animator: Vehicles and Sensor Targets`3A Cab Over` 3A Lead Units` , Traffic Vehicle Ani File`AniVeh_9490ba51-301a-40a6-8eb6-db37cea19aa0
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_6 7.5
+LENGTH_OBJ 7.5
+*WIDTH_6 2.75
+WIDTH_OBJ 2.75
+*LX_FRONT_6 1.75
+LX_FRONT_OBJ 1.75
+MATERIAL_TYPE_OBJ 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 7.5
+Y_LENGTH 2.75
+Z_LENGTH 4
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cubes\cube_1m_wide.obj
+set_transparency 0.5
+SET_OFFSET_X -0.266667
+SET_OFFSET_Z 0.5
+SET_COLOR 0 0.6 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Multi Vehicles, Object #7
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 0
+*SINIT_7 1440
+EQ_INIT S_OBJ_<<o>> = 1440
+EQ_INIT V_OBJ_<<o>> = 0
+EQ_OUT V_OBJ_<<o>> = 0
+EQ_INIT LATO_<<o>> = -3.5
+*COLOR_7 0 0.6 0
+SET_RUN_COLOR 0 0.6 0
+*H_TARGET_7 2
+H_OBJ 2
+PARSFILE Animator\Vehicles\AniVeh_9490ba51-301a-40a6-8eb6-db37cea19aa0.par
+#BlueLink6 Animator: Vehicles and Sensor Targets`3A Cab Over` 3A Lead Units` , Traffic Vehicle Ani File`AniVeh_9490ba51-301a-40a6-8eb6-db37cea19aa0
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_7 7.5
+LENGTH_OBJ 7.5
+*WIDTH_7 2.75
+WIDTH_OBJ 2.75
+*LX_FRONT_7 1.75
+LX_FRONT_OBJ 1.75
+MATERIAL_TYPE_OBJ 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 7.5
+Y_LENGTH 2.75
+Z_LENGTH 4
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cubes\cube_1m_wide.obj
+set_transparency 0.5
+SET_OFFSET_X -0.266667
+SET_OFFSET_Z 0.5
+SET_COLOR 0 0.6 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Multi Vehicles, Object #8
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 0
+*SINIT_8 1460
+EQ_INIT S_OBJ_<<o>> = 1460
+EQ_INIT V_OBJ_<<o>> = 0
+EQ_OUT V_OBJ_<<o>> = 0
+EQ_INIT LATO_<<o>> = -3.5
+*COLOR_8 0 0.6 0
+SET_RUN_COLOR 0 0.6 0
+*H_TARGET_8 2
+H_OBJ 2
+PARSFILE Animator\Vehicles\AniVeh_9490ba51-301a-40a6-8eb6-db37cea19aa0.par
+#BlueLink7 Animator: Vehicles and Sensor Targets`3A Cab Over` 3A Lead Units` , Traffic Vehicle Ani File`AniVeh_9490ba51-301a-40a6-8eb6-db37cea19aa0
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_8 7.5
+LENGTH_OBJ 7.5
+*WIDTH_8 2.75
+WIDTH_OBJ 2.75
+*LX_FRONT_8 1.75
+LX_FRONT_OBJ 1.75
+MATERIAL_TYPE_OBJ 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 7.5
+Y_LENGTH 2.75
+Z_LENGTH 4
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cubes\cube_1m_wide.obj
+set_transparency 0.5
+SET_OFFSET_X -0.266667
+SET_OFFSET_Z 0.5
+SET_COLOR 0 0.6 0
+
+LOG_ENTRY Used Dataset: Multiple Moving Objects; { * * * CiDi Target Vehicles } Multi Vehicles
+#Library : Multiple Moving Objects
+#DataSet : Multi Vehicles
+#Category: * * * CiDi Target Vehicles
+#FileID  : TMotion_937bb2a2-2151-48cf-bf53-231367bbea14
+#Product : TruckSim 2020.1
+#VehCode Multiple Objects
+
+END

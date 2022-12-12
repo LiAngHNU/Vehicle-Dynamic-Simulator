@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Steering Column and Assist`Pickup, Full Size: Power, Recirc. Ball`2A Pickup Trucks and Utility Vehicles
+I_COL 0.02
+I_GEAR_IN 0.000564
+D_COL 0.01
+HYS_COL 0.25
+BETA_COL 0.1
+*K_TBAR 2
+*KIN_STOP_A_L -45
+*KIN_STOP_A_R 45
+*KIN_STOP_STIFF_L 0
+*KIN_STOP_STIFF_R 0
+
+#RingCtrl0 1
+#RingCtrl1 2
+
+OPT_M_SW_CALC 1
+
+OPT_POWER 1
+M_TBAR_COEFFICIENT 2
+PARSFILE Steering\Str_TqBoost\TqBoost_51a0e084-6906-4aa0-a1d4-624eccefd73a.par
+#BlueLink4 Steering: Power Assist Torque`400 N-m Maximum` Gear Assist Torque` , Gear Assist Torque`TqBoost_51a0e084-6906-4aa0-a1d4-624eccefd73a
+
+A_STR_STOP_L -45
+K_STR_STOP_L 0
+A_STR_STOP_R 45
+K_STR_STOP_R 0
+
+
+#EMBEDDED_NOTES
+#The properties here are representative of the global steering system parameters for a recirculating ball type power steering system that would be used on a Full Size pickup truck.
+#
+#If the run doesn't use steer torque control, the steering stops should be disabled by setting their stiffness to zero.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Steering Column and Assist; { 2A Pickup Trucks and Utility Vehicles } Pickup, Full Size: Power, Recirc. Ball
+#Library : Steering Column and Assist
+#DataSet : Pickup, Full Size: Power, Recirc. Ball
+#Category: 2A Pickup Trucks and Utility Vehicles
+#FileID  : StrCol_3d18be40-b07f-4fc6-bdaf-f267a446003d
+#Product : TruckSim 2020.1
+#VehCode Column and Assist
+
+END

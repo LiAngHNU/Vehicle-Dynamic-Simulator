@@ -1,0 +1,61 @@
+PARSFILE
+#FullDataName Suspension: Lateral Movement Due to Jounce`Compact Utility: Lateral Movement`Utility Vehicles
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_LAT_COMBINE ADD
+#DiagramOne0
+SUSP_LAT_TABLE SPLINE
+-70, 4.74662
+-60, 3.12302
+-50, 1.82181
+-40, 0.837522
+-30, 0.165882
+-20, -0.196302
+-10, -0.251197
+0, 0
+10, 0.557037
+20, 1.42059
+30, 2.59226
+40, 4.07461
+50, 5.87116
+60, 7.98647
+70, 10.4262
+ENDTABLE
+SUSP_LAT_JNC_OTHER_SIDE_CONSTANT 0
+SUSP_Y_AXLE_ROLL_COMBINE ADD ! in case this is for a solid axle
+#DiagramOne0
+SUSP_LAT_AXLE_JOUNCE_TABLE SPLINE
+-70, 4.74662
+-60, 3.12302
+-50, 1.82181
+-40, 0.837522
+-30, 0.165882
+-20, -0.196302
+-10, -0.251197
+0, 0
+10, 0.557037
+20, 1.42059
+30, 2.59226
+40, 4.07461
+50, 5.87116
+60, 7.98647
+70, 10.4262
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR2 0
+
+
+LOG_ENTRY Used Dataset: Suspension: Lateral Movement Due to Jounce; { Utility Vehicles } Compact Utility: Lateral Movement
+#Library : Suspension: Lateral Movement Due to Jounce
+#DataSet : Compact Utility: Lateral Movement
+#Category: Utility Vehicles
+#FileID  : LatJnc_4d8117e5-84c6-4dcd-b220-95d2e6e559d4
+#Product : TruckSim 2020.1
+#VehCode Lateral Movement
+
+END

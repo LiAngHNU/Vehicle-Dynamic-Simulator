@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Suspension: Longitudinal Movement`Zero Forward X Movement`Constant
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_X_COMBINE ADD
+*SCALAR 0
+*SCALAR2 0
+
+SUSP_X_CONSTANT 0
+SUSP_X_JNC_OTHER_SIDE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+SUSP_X_AXLE_CONSTANT 0
+
+LOG_ENTRY Used Dataset: Suspension: Longitudinal Movement; { Constant } Zero Forward X Movement
+#Library : Suspension: Longitudinal Movement
+#DataSet : Zero Forward X Movement
+#Category: Constant
+#FileID  : SusX_c81dc724-875f-4015-80b5-7b0fdaa089ed
+#Product : TruckSim 2020.1
+#VehCode Longitudinal Movement
+
+END

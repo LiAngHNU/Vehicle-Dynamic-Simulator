@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Steering: Power Assist Torque`400 N-m Maximum`Gear Assist Torque
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+M_BOOST_G_COMBINE ADD
+#DiagramOne0
+M_BOOST_G_TABLE LINEAR
+-2, -56
+-1.5, -8
+-0.75, -0.2
+0, 0
+0.75, 0.2
+1.5, 8
+2, 56
+ENDTABLE
+M_BOOST_G_V_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR2 0
+TC_BOOST 0.02
+M_BOOST_MAX 400
+
+
+LOG_ENTRY Used Dataset: Steering: Power Assist Torque; { Gear Assist Torque } 400 N-m Maximum
+#Library : Steering: Power Assist Torque
+#DataSet : 400 N-m Maximum
+#Category: Gear Assist Torque
+#FileID  : TqBoost_51a0e084-6906-4aa0-a1d4-624eccefd73a
+#Product : TruckSim 2020.1
+#VehCode Power Assist Torque
+
+END

@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Steering Column and Assist`2A LCFR: Steering Col. (Column Assist)`
+I_COL 0.02
+I_GEAR_IN 0.0005
+D_COL 0.002
+HYS_COL 0.2
+BETA_COL 0.1
+*K_TBAR 2
+*KIN_STOP_A_L -40
+*KIN_STOP_A_R 40
+*KIN_STOP_STIFF_L 1500
+*KIN_STOP_STIFF_R 1500
+
+#RingCtrl0 1
+#RingCtrl1 3
+
+OPT_M_SW_CALC 1
+
+OPT_POWER 2
+PARSFILE Steering\Str_TqBoost\TqBoost_3c7b4c2c-a212-4f67-bab0-424cfcf9f69c.par
+#BlueLink3 Steering: Power Assist Torque`100 N-m Max` Column Assist Torque` , Column Assist Torque`TqBoost_3c7b4c2c-a212-4f67-bab0-424cfcf9f69c
+
+A_STR_STOP_L -40
+K_STR_STOP_L 1500
+A_STR_STOP_R 40
+K_STR_STOP_R 1500
+
+
+#EMBEDDED_NOTES
+#Use of the "Control  by Torque" option with closed loop steering control ("Driver Model") requires Power Steering to be selected, to provide the needed additional steering model degree of freedom.
+#
+#When steering control is by torque input, steering stop properties should be specified here to prevent excessive steer angles.
+#
+#Proper calculation of the Intermediate Shaft torque effects requires linking to a Steering Wheel Torque: Column and Assist dataset and selecting "Calculate Torque from Kingpin Moments"
+#
+#The intermediate shaft properties are set on the axle steering screen.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Steering Column and Assist; 2A LCFR: Steering Col. (Column Assist)
+#Library : Steering Column and Assist
+#DataSet : 2A LCFR: Steering Col. (Column Assist)
+#Category: 
+#FileID  : StrCol_8b118659-2372-4593-9715-3fbede340902
+#Product : TruckSim 2020.1
+#VehCode Column and Assist
+
+END

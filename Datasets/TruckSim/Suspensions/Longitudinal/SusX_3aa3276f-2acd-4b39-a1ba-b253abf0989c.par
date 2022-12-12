@@ -1,0 +1,61 @@
+PARSFILE
+#FullDataName Suspension: Longitudinal Movement`Rear SLA - Longitudinal Movement`SLA
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_X_COMBINE ADD
+*SCALAR 0
+*SCALAR2 0
+
+#DiagramOne0
+SUSP_X_TABLE SPLINE
+-70, 0.729904
+-60, 0.634454
+-50, 0.536096
+-40, 0.434813
+-30, 0.330589
+-20, 0.2234
+-10, 0.113217
+0, 0
+10, -0.116308
+20, -0.235783
+30, -0.358522
+40, -0.484654
+50, -0.61434
+60, -0.747787
+70, -0.885253
+ENDTABLE
+SUSP_X_JNC_OTHER_SIDE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+SUSP_X_AXLE_TABLE SPLINE
+-70, 0.729904
+-60, 0.634454
+-50, 0.536096
+-40, 0.434813
+-30, 0.330589
+-20, 0.2234
+-10, 0.113217
+0, 0
+10, -0.116308
+20, -0.235783
+30, -0.358522
+40, -0.484654
+50, -0.61434
+60, -0.747787
+70, -0.885253
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Suspension: Longitudinal Movement; { SLA } Rear SLA - Longitudinal Movement
+#Library : Suspension: Longitudinal Movement
+#DataSet : Rear SLA - Longitudinal Movement
+#Category: SLA
+#FileID  : SusX_3aa3276f-2acd-4b39-a1ba-b253abf0989c
+#Product : TruckSim 2020.1
+#VehCode Longitudinal Movement
+
+END

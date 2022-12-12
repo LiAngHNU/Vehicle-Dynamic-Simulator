@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName ADAS Sensors for Range and Tracking`ACC: X = -975, Z =1750, HUD`Forward Facing Sensors: FCW and ACC
+DEFINE_SENSORS 1
+ISENSOR = NSENSOR
+NSENSORS_INCREMENT
+symbol_add <<s>> 1
+SET_DESCRIPTION SENSOR_NAME ACC: X = -975, Z =1750, HUD
+#CheckBox0 1    
+#CheckBox1 1    
+OPT_BLOCK_SENSOR 1
+#CheckBox2 1    
+OPT_SORT_OUTPUTS_SENSOR 1
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 0    
+OPT_EXPORT_SENSOR 0
+#CheckBox6 1    
+
+#RingCtrl0 0
+#RingCtrl1 1
+SENSOR_DETECT_TRANSLUCENCY 1
+#RingCtrl2 1
+IUNIT_SENSOR 1
+#RingCtrl3 1
+TYPE_SENSOR 1
+PARSFILE Sensors_Traffic\Radar_Range\Range_11aac37f-8d96-4b1e-baed-184e6233fbf7.par
+#BlueLink0 Sensor Range and Bearing Sensitivity`50-m Range` Limit from Range` , Range & Bearing Sensitivity`Range_11aac37f-8d96-4b1e-baed-184e6233fbf7
+
+PARSFILE Sensors_Traffic\Radar_Elevation\SenElev_4fdaa102-cfee-4a8f-aeaf-c650b6f76306.par
+#BlueLink1 Sensor Elevation Sensitivity`Unity Gain` ` , Elevation Sensitivity`SenElev_4fdaa102-cfee-4a8f-aeaf-c650b6f76306
+
+WRITE_SENSOR_FIELD
+PARSFILE Animator\STL\Shape_129c03aa-522e-462e-937b-37de40417680.par
+#BlueLink2 Animator: Shape File Link`Sensor Fields: 20 deg FOV` Common Vehicle Assets` , Shape for Detection Field`Shape_129c03aa-522e-462e-937b-37de40417680
+
+SET_COLOR 1 0 0
+SET_TRANSPARENCY 0.15
+X_LENGTH 50
+Y_LENGTH 1.7
+Z_LENGTH 2
+X_SENSOR -975
+Y_SENSOR 0
+Z_SENSOR 1750
+YAW_AIM_SENSOR 0
+PITCH_AIM_SENSOR 0
+ROLL_AIM_SENSOR 0
+SENSOR_DETECT_COLOR 1 0 0
+*SET_TRANSPARENCY 0.15
+*SET_COLOR_FIELD 1 0 0
+BEARING_MIN_SENSOR -1
+BEARING_MAX_SENSOR 1
+
+SPECIAL_PARSFILE Animator\STL\Shape_b36dd57e-10bb-49f0-bfe5-2b6025d6d0d9.par
+#BlueLink3 Animator: Shape File Link`Square` Geometric Shapes` , Shape for vector`Shape_b36dd57e-10bb-49f0-bfe5-2b6025d6d0d9
+
+SENSOR_DETECT_OBJ Animator\STL\Shape_b36dd57e-10bb-49f0-bfe5-2b6025d6d0d9.par
+#MiscYellow0
+define_parameter time_gap = 2.0; s ; ACC time gap
+#ENDMYellow
+
+PARSFILE Generic\VS_commands\GenVS_a4fa9b56-2424-48af-961c-c52a32bc1ddb.par
+#BlueLink12 Generic VS Commands`ACC Equations w/ HUD` ADAS Support` , Miscellaneous`GenVS_a4fa9b56-2424-48af-961c-c52a32bc1ddb
+
+
+#EMBEDDED_NOTES
+#ADAS Range and Detection Sensor set up for use with the Dually Pickup Truck. The X and Z coordinates correspond to a sensor located in front of the rearview mirror.
+#
+#The sensor has a narrow field of view of 2 deg, and a range of 50 m.
+#
+#The equation that modifies the internal target speed uses detection variables such as SpdS<<s>>_1 and MagS<<s>>_1, where <<s>> is the number of the ACC Sensor. These detection variables are created when there is at least one sensor and at least one moving object.
+#
+#This datset includes a link to the ACC Equations w/ HUD dataset.  The ACC time gap that is defined in the yellow custom settings field can be modified.  The number of bars displayed in the ACC HUD indicates following distance and is dependent on the time gap.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: ADAS Sensors for Range and Tracking; { Forward Facing Sensors: FCW and ACC } ACC: X = -975, Z =1750, HUD
+#Library : ADAS Sensors for Range and Tracking
+#DataSet : ACC: X = -975, Z =1750, HUD
+#Category: Forward Facing Sensors: FCW and ACC
+#FileID  : Radar_2218cc76-cf8f-43c8-9f9c-f7b112b507e6
+#Product : TruckSim 2020.1
+#VehCode ADAS Sensor
+
+END

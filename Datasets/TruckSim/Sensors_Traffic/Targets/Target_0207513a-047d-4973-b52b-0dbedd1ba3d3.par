@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Potted Plant`Scene Props
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Potted Plant
+OPT_SPEED_OBJ 0
+
+OPT_ROAD_OBJ 0 ! Legacy pre-9
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+#CheckBox3 1    
+#CheckBox6 1    
+#CheckBox7 1    
+#CheckBox8 1    
+
+#RingCtrl0 5
+#RingCtrl1 0
+H_OBJ -2.2
+*COLOR 1 0 1
+*S_INIT 10.1
+*L_INIT -10.1
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 0
+DZ_OBJECT 0
+*SIZE 1.3
+DIAMETER_OBJ 1.3
+*REFLECT 3
+MATERIAL_TYPE_OBJ 3
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 1.3
+Y_LENGTH 1.3
+Z_LENGTH 2.2
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cylinders\cylinder_Zaxis_1m_diameter_1m_long.obj
+set_transparency 0.5
+SET_OFFSET_Z 0.5
+SET_COLOR 1 0 1
+SET_RUN_COLOR 1 0 1
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_88a56281-73ea-490c-8ce2-f0fb45783c4f.par
+#BlueLink0 Animator: Shape Assembly`Potted Plant` Trees and Shrubs` , 3D Shape for Video`ShpGrp_88a56281-73ea-490c-8ce2-f0fb45783c4f
+
+EQ_INIT X_Obj_<<o>> 10.1
+EQ_INIT Y_Obj_<<o>> -10.1
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Scene Props } Potted Plant
+#Library : Single Moving Object (Custom)
+#DataSet : Potted Plant
+#Category: Scene Props
+#FileID  : Target_0207513a-047d-4973-b52b-0dbedd1ba3d3
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

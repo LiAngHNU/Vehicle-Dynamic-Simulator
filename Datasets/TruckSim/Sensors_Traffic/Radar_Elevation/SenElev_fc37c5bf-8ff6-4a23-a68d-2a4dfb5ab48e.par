@@ -1,0 +1,21 @@
+PARSFILE
+#FullDataName Sensor Elevation Sensitivity`Limit to -40deg (Up)`
+#CheckBox0 0    
+
+#RingCtrl0 EQUATION
+#RadioCtrl0 0    
+
+SENSOR_ANTENNA_ELEVATION_EQUATION AND(GT(X, -40/DR), LT(X,0))
+*SCALAR 1
+*EQUATION AND(GT(X, -40/DR), LT(X,0))
+
+
+LOG_ENTRY Used Dataset: Sensor Elevation Sensitivity; Limit to -40deg (Up)
+#Library : Sensor Elevation Sensitivity
+#DataSet : Limit to -40deg (Up)
+#Category: 
+#FileID  : SenElev_fc37c5bf-8ff6-4a23-a68d-2a4dfb5ab48e
+#Product : TruckSim 2020.1
+#VehCode Sensor Elevation Sensitivity
+
+END

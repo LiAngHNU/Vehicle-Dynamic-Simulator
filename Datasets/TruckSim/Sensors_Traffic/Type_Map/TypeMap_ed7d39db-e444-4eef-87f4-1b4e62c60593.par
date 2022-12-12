@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Sensor Reflectiveness Map`Wall Detection Sensor Map`
+#RingCtrl0 2D_STEP
+#RadioCtrl0 0    
+
+
+*3D_XLabel Sensor type
+*3D_YLabel Material type
+*3D_ZLabel Reflectiveness
+
+#DiagramTwo0
+*3D_DATA 2, 2 ! columns x rows
+SENSOR_MAP_CARPET 2D_STEP
+0, 1, 2
+0, 1, 1
+1, 1, 0
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Sensor Reflectiveness Map; Wall Detection Sensor Map
+#Library : Sensor Reflectiveness Map
+#DataSet : Wall Detection Sensor Map
+#Category: 
+#FileID  : TypeMap_ed7d39db-e444-4eef-87f4-1b4e62c60593
+#Product : TruckSim 2020.1
+#VehCode Reflectiveness Map
+
+END

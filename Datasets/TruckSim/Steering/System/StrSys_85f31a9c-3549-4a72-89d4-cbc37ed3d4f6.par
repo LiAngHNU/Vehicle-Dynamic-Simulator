@@ -1,0 +1,67 @@
+PARSFILE
+#FullDataName Steering System`Short (4 m) Wheelbase (No Comp.)`Medium - Heavy Duty Steering
+#RingCtrl0 1
+OPT_CS 1
+#RingCtrl1 1
+#RingCtrl4 0
+CS_MZ_ROD 0
+CS_MZ_SHAFT 0
+C_WRAP 0
+R_WRAP_STR 0
+R_BMP_STR 0
+*D_GR 0
+*H_GR 0
+*B_GR 2
+*L_KPO_L 100
+*L_KPO_R 100
+*A_KPI_L 7.2
+*A_KPI_R 7.2
+*A_CASTER_L 5.2
+*A_CASTER_R 5.2
+*X_KPO_L 0
+*X_KPO_R 0
+*RSW 25
+PARSFILE Steering\Rear_Steer\RearStr_63e8999d-8333-4c1b-ba2a-69276dcc7d8d.par
+#BlueLink2 Steering System: Steer Gain vs. Speed`Constant: One (Always Steered)` Constant` , Speed Effect`RearStr_63e8999d-8333-4c1b-ba2a-69276dcc7d8d
+
+OPT_STEER_DEF 1
+
+iside 1
+PARSFILE Steering\Kinematics\StrKin_f6ee201a-3d20-4562-84ee-b7cb0da40757.par
+#BlueLink0 Steering System: Kinematics for One Wheel`Left Wheel, 4 m Wheelbase` 4 m Wheelbase` , Left Wheel Kinematics`StrKin_f6ee201a-3d20-4562-84ee-b7cb0da40757
+
+PARSFILE Steering\Str_Park_Trq\TqPark_4a727e8f-14fb-4da4-a61a-5283760d87d8.par
+#BlueLink3 Steering: Parking Torque`Constant: Zero` Constant` , Left Side`TqPark_4a727e8f-14fb-4da4-a61a-5283760d87d8
+
+L_KPO 100
+A_KPI 7.2
+A_CASTER 5.2
+X_KPO 0
+
+iside 2
+PARSFILE Steering\Kinematics\StrKin_657348f9-b896-4e70-9b92-84546dd5ab86.par
+#BlueLink1 Steering System: Kinematics for One Wheel`Right Wheel, 4 m Wheelbase` 4 m Wheelbase` , Right Wheel Kinematics`StrKin_657348f9-b896-4e70-9b92-84546dd5ab86
+
+PARSFILE Steering\Str_Park_Trq\TqPark_4a727e8f-14fb-4da4-a61a-5283760d87d8.par
+#BlueLink4 Steering: Parking Torque`Constant: Zero` Constant` , Right Side`TqPark_4a727e8f-14fb-4da4-a61a-5283760d87d8
+
+L_KPO 100
+A_KPI 7.2
+A_CASTER 5.2
+X_KPO 0
+OPT_RACK 0
+OPT_STEER_EXT 0
+GEAR_ROT_COEFFICIENT 1/25
+D_GEAR 0
+HYS_GEAR 0
+BETA_GEAR 2
+
+LOG_ENTRY Used Dataset: Steering System; { Medium - Heavy Duty Steering } Short (4 m) Wheelbase (No Comp.)
+#Library : Steering System
+#DataSet : Short (4 m) Wheelbase (No Comp.)
+#Category: Medium - Heavy Duty Steering
+#FileID  : StrSys_85f31a9c-3549-4a72-89d4-cbc37ed3d4f6
+#Product : TruckSim 2020.1
+#VehCode Steering System
+
+END

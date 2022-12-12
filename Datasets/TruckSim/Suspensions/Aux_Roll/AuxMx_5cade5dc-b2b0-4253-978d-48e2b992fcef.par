@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Suspension: Auxiliary Roll Moment`Constant: 510 N-m`Constant
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+MX_AUX_COMBINE ADD
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+MX_AUX_CONSTANT 510
+MX_AUX_FSTATIC_CONSTANT 0
+*SCALAR 510
+*SCALAR2 0
+
+
+LOG_ENTRY Used Dataset: Suspension: Auxiliary Roll Moment; { Constant } Constant: 510 N-m
+#Library : Suspension: Auxiliary Roll Moment
+#DataSet : Constant: 510 N-m
+#Category: Constant
+#FileID  : AuxMx_5cade5dc-b2b0-4253-978d-48e2b992fcef
+#Product : TruckSim 2020.1
+#VehCode Aux. Roll Moment
+
+END

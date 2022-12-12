@@ -1,0 +1,66 @@
+PARSFILE
+#FullDataName Steering System`Compact: Power, Recirc. Ball`Pickup Trucks
+#RingCtrl0 0
+OPT_CS 0
+#RingCtrl1 1
+#RingCtrl2 0
+#RingCtrl4 0
+*L_KPO_L 39.5
+*L_KPO_R 39.5
+*A_KPI_L 8.0
+*A_KPI_R 8.0
+*A_CASTER_L 3.5
+*A_CASTER_R 3.5
+*X_KPO_L -1.0
+*X_KPO_R -1.0
+*RSW 22.5
+*D_GR 4
+*H_GR 0.1
+*B_GR 0.5
+PARSFILE Steering\Rear_Steer\RearStr_63e8999d-8333-4c1b-ba2a-69276dcc7d8d.par
+#BlueLink2 Steering System: Steer Gain vs. Speed`Constant: One (Always Steered)` Constant` , Speed Effect`RearStr_63e8999d-8333-4c1b-ba2a-69276dcc7d8d
+
+OPT_STEER_DEF 1
+
+iside 1
+PARSFILE Steering\Kinematics\StrKin_1eb24d25-c865-4afc-bb1d-f789493f31fb.par
+#BlueLink0 Steering System: Kinematics for One Wheel`Compact Pickup, Left Front Wheel` Pickup, Compact` , Left Wheel Kinematics`StrKin_1eb24d25-c865-4afc-bb1d-f789493f31fb
+
+PARSFILE Steering\Str_Park_Trq\TqPark_4a727e8f-14fb-4da4-a61a-5283760d87d8.par
+#BlueLink3 Steering: Parking Torque`Constant: Zero` Constant` , Left Side`TqPark_4a727e8f-14fb-4da4-a61a-5283760d87d8
+
+L_KPO 39.5
+A_KPI 8.0
+A_CASTER 3.5
+X_KPO -1.0
+
+iside 2
+PARSFILE Steering\Kinematics\StrKin_b25234cd-10b1-46ff-abf2-94a3882195d1.par
+#BlueLink1 Steering System: Kinematics for One Wheel`Compact Pickup, Right Front Wheel` Pickup, Compact` , Right Wheel Kinematics`StrKin_b25234cd-10b1-46ff-abf2-94a3882195d1
+
+PARSFILE Steering\Str_Park_Trq\TqPark_4a727e8f-14fb-4da4-a61a-5283760d87d8.par
+#BlueLink4 Steering: Parking Torque`Constant: Zero` Constant` , Right Side`TqPark_4a727e8f-14fb-4da4-a61a-5283760d87d8
+
+L_KPO 39.5
+A_KPI 8.0
+A_CASTER 3.5
+X_KPO -1.0
+OPT_RACK 0
+OPT_STEER_EXT 0
+GEAR_ROT_COEFFICIENT 1/22.5
+D_GEAR 4
+HYS_GEAR 0.1
+BETA_GEAR 0.5
+PARSFILE Steering\Compliance\StrCmp_e22de026-6640-4e25-8b53-83db9ee60217.par
+#BlueLink8 Steering System: Compliance`Constant: 0.002 deg/N-m` Constant` , Compliance`StrCmp_e22de026-6640-4e25-8b53-83db9ee60217
+
+
+LOG_ENTRY Used Dataset: Steering System; { Pickup Trucks } Compact: Power, Recirc. Ball
+#Library : Steering System
+#DataSet : Compact: Power, Recirc. Ball
+#Category: Pickup Trucks
+#FileID  : StrSys_0efcd8ae-af22-470c-8fcf-d9eea4e1cb93
+#Product : TruckSim 2020.1
+#VehCode Steering System
+
+END

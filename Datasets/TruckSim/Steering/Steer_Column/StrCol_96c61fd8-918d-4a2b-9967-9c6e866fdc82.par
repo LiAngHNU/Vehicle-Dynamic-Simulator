@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Steering Column and Assist`Pickup, Full Size: Power Column Assist`2A Pickup Trucks and Utility Vehicles
+I_COL 0.02
+I_GEAR_IN 0.000495
+D_COL 0.01
+HYS_COL 0.025
+BETA_COL 0.1
+*K_TBAR 2
+*KIN_STOP_A_L -45
+*KIN_STOP_A_R 45
+*KIN_STOP_STIFF_L 0
+*KIN_STOP_STIFF_R 0
+
+#RingCtrl0 1
+#RingCtrl1 3
+
+OPT_M_SW_CALC 1
+
+OPT_POWER 2
+PARSFILE Steering\Str_TqBoost\TqBoost_eb9b13ba-e0bb-449a-a006-aa6010c27be6.par
+#BlueLink3 Steering: Power Assist Torque`25 N-m Maximum` Column Assist Torque` , Column Assist Torque`TqBoost_eb9b13ba-e0bb-449a-a006-aa6010c27be6
+
+A_STR_STOP_L -45
+K_STR_STOP_L 0
+A_STR_STOP_R 45
+K_STR_STOP_R 0
+
+
+#EMBEDDED_NOTES
+# The properties here are representative of the global steering system parameters for a power steering system mounted on the steering column of a Full Size pickup truck.
+#
+#If the run doesn't use steer torque control, the steering stops should be disabled by setting their stiffness to zero.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Steering Column and Assist; { 2A Pickup Trucks and Utility Vehicles } Pickup, Full Size: Power Column Assist
+#Library : Steering Column and Assist
+#DataSet : Pickup, Full Size: Power Column Assist
+#Category: 2A Pickup Trucks and Utility Vehicles
+#FileID  : StrCol_96c61fd8-918d-4a2b-9967-9c6e866fdc82
+#Product : TruckSim 2020.1
+#VehCode Column and Assist
+
+END

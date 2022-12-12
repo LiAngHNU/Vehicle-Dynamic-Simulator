@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Suspension: Spring`Air Spring, 2000 N Friction`Air Spring
+#RingCtrl0 CARPET
+*3D_XLabel Static load (N)
+*3D_YLabel Spring compression (mm)
+*3D_ZLabel Spring force during loading (N)
+
+#DiagramTwo0
+*3D_DATA 3, 3 ! columns x rows
+FS_COMP_CARPET 2D_LINEAR
+0, 10000, 50000, 100000
+-100, 6000, 30000, 60000
+0, 10000, 50000, 100000
+100, 16000, 70000, 140000
+ENDTABLE
+
+*3D_XLabel Static load (N)
+*3D_YLabel Spring compression (mm)
+*3D_ZLabel Spring force during unloading (N)
+
+#DiagramTwo1
+*3D_DATA 3, 3 ! columns x rows
+FS_EXT_CARPET 2D_LINEAR
+0, 10000, 50000, 100000
+-100, 4000, 28000, 58000
+0, 8000, 48000, 98000
+100, 14000, 68000, 138000
+ENDTABLE
+
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+SPRING_COMP_BETA 2
+SPRING_EXT_BETA 2
+
+
+LOG_ENTRY Used Dataset: Suspension: Spring; { Air Spring } Air Spring, 2000 N Friction
+#Library : Suspension: Spring
+#DataSet : Air Spring, 2000 N Friction
+#Category: Air Spring
+#FileID  : Spring_f7658129-2483-4551-b88d-a392f814099d
+#Product : TruckSim 2020.1
+#VehCode Spring Alone
+
+END

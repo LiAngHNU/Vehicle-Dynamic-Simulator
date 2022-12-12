@@ -1,0 +1,20 @@
+PARSFILE
+#FullDataName Sensor Elevation Sensitivity`Only Down`
+#CheckBox0 0    
+
+#RingCtrl0 EQUATION
+#RadioCtrl0 0    
+
+SENSOR_ANTENNA_ELEVATION_EQUATION GT(X, 1/DR)
+*EQUATION GT(X, 1/DR)
+
+
+LOG_ENTRY Used Dataset: Sensor Elevation Sensitivity; Only Down
+#Library : Sensor Elevation Sensitivity
+#DataSet : Only Down
+#Category: 
+#FileID  : SenElev_75121f3d-d175-480a-9291-7f787fff5d65
+#Product : TruckSim 2020.1
+#VehCode Sensor Elevation Sensitivity
+
+END

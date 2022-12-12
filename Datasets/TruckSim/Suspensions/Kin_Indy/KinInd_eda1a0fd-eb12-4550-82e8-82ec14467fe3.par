@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName Suspension: Independent System Kinematics`Rental Trailer`Trailers
+iside 1
+#RingCtrl0 1
+OPT_JNC_DESIGN 1
+#RingCtrl1 2
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 2
+#RingCtrl5 2
+#CheckBox1 0    
+#CheckBox2 0    
+
+R_US_STR 0.75
+L_TRACK 1810
+Y_CL_SUSP 0
+H_WC 296
+M_US 112
+*IW_L 1.1
+*IW_R 1.1
+*JNC_DESIGN_L 0
+*TOE_L 0
+*CAMBER_L 0.2
+*IWXXZZ_L 0
+*IWXXZZ_R 0
+*M_US_IND_L 14
+*M_US_STR_L 42
+
+PARSFILE Suspensions\Dive\Dive_dd800473-47a6-4345-aa0d-14c54d9da801.par
+#BlueLink0 Suspension: Dive Angle (Caster Change)`Compact Utility: Front Dive Change` Utility Vehicles` , Left wheel dive (caster change)`Dive_dd800473-47a6-4345-aa0d-14c54d9da801
+
+PARSFILE Suspensions\Longitudinal\SusX_32740677-319b-4a9b-ab03-721a710d842c.par
+#BlueLink1 Suspension: Longitudinal Movement`Compact Utility: Long. Movement` Utility Vehicles` , Left wheel X`SusX_32740677-319b-4a9b-ab03-721a710d842c
+
+PARSFILE Suspensions\Camber\Camber_9f224cf0-6492-4317-b935-ef8ea184849a.par
+#BlueLink2 Suspension: Camber Angle`Compact Utility: Camber Change` Utility Vehicles` , Left wheel camber`Camber_9f224cf0-6492-4317-b935-ef8ea184849a
+
+PARSFILE Suspensions\Lateral\LatJnc_4d8117e5-84c6-4dcd-b220-95d2e6e559d4.par
+#BlueLink3 Suspension: Lateral Movement Due to Jounce`Compact Utility: Lateral Movement` Utility Vehicles` , Left wheel lateral (-Y)`LatJnc_4d8117e5-84c6-4dcd-b220-95d2e6e559d4
+
+PARSFILE Suspensions\Toe\Toe_d1eb6ca9-95f3-4462-8feb-a6a75c5b0549.par
+#BlueLink4 Suspension: Toe Angle`Compact Utility: Toe Change` Utility Vehicles` , Left wheel toe`Toe_d1eb6ca9-95f3-4462-8feb-a6a75c5b0549
+
+M_US_IND 14
+M_US_STR 42
+IW 1.1
+IW_XXZZ 0
+JNC_DESIGN 0
+A_TOE 0
+A_CAMBER 0.2
+
+iside 2
+PARSFILE Suspensions\Dive\Dive_dd800473-47a6-4345-aa0d-14c54d9da801.par
+#BlueLink0 Suspension: Dive Angle (Caster Change)`Compact Utility: Front Dive Change` Utility Vehicles` , Left wheel dive (caster change)`Dive_dd800473-47a6-4345-aa0d-14c54d9da801
+
+PARSFILE Suspensions\Longitudinal\SusX_32740677-319b-4a9b-ab03-721a710d842c.par
+#BlueLink1 Suspension: Longitudinal Movement`Compact Utility: Long. Movement` Utility Vehicles` , Left wheel X`SusX_32740677-319b-4a9b-ab03-721a710d842c
+
+PARSFILE Suspensions\Camber\Camber_9f224cf0-6492-4317-b935-ef8ea184849a.par
+#BlueLink2 Suspension: Camber Angle`Compact Utility: Camber Change` Utility Vehicles` , Left wheel camber`Camber_9f224cf0-6492-4317-b935-ef8ea184849a
+
+PARSFILE Suspensions\Lateral\LatJnc_4d8117e5-84c6-4dcd-b220-95d2e6e559d4.par
+#BlueLink3 Suspension: Lateral Movement Due to Jounce`Compact Utility: Lateral Movement` Utility Vehicles` , Left wheel lateral (-Y)`LatJnc_4d8117e5-84c6-4dcd-b220-95d2e6e559d4
+
+PARSFILE Suspensions\Toe\Toe_d1eb6ca9-95f3-4462-8feb-a6a75c5b0549.par
+#BlueLink4 Suspension: Toe Angle`Compact Utility: Toe Change` Utility Vehicles` , Left wheel toe`Toe_d1eb6ca9-95f3-4462-8feb-a6a75c5b0549
+
+M_US_IND 14
+M_US_STR 42
+IW 1.1
+IW_XXZZ 0
+JNC_DESIGN 0
+A_TOE 0
+A_CAMBER 0.2
+H_WC 296
+
+LOG_ENTRY Used Dataset: Suspension: Independent System Kinematics; { Trailers } Rental Trailer
+#Library : Suspension: Independent System Kinematics
+#DataSet : Rental Trailer
+#Category: Trailers
+#FileID  : KinInd_eda1a0fd-eb12-4550-82e8-82ec14467fe3
+#Product : TruckSim 2020.1
+#VehCode Independent
+
+END

@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Speed Limit 55 mi/h`Traffic Signs and Lights
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Speed Limit 55 mi/h
+OPT_SPEED_OBJ 0
+
+OPT_ROAD_OBJ 0 ! Legacy pre-9
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+#CheckBox3 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+
+#RingCtrl0 5
+#RingCtrl1 2
+H_OBJ 2.5
+*S_INIT 6
+*L_INIT 100
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 2
+DZ_OBJECT 0
+*SIZE 0.01
+LENGTH_OBJ 0.01
+VIS_ANGLE_OBJ 140
+*REFLECT 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_b990e5a7-4b00-4082-aa25-fe2bb597ceed.par
+#BlueLink0 Animator: Shape File Link`US: Speed Limit: 55 mph (24 in x 30 in)` Environment: Road Signs` , 3D Shape for Video`Shape_b990e5a7-4b00-4082-aa25-fe2bb597ceed
+
+EQ_INIT X_Obj_<<o>> 6
+EQ_INIT Y_Obj_<<o>> 100
+#MiscYellow1
+TypeO_<<o>> = SPEED_SIGN
+MsgObj_<<o>> = 24.587  !  this is 55 mi/h converted to m/s
+YawO_<<o>> = -pi/2 ! facing south
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#Located on N. exit from 3-way intersection.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Traffic Signs and Lights } Speed Limit 55 mi/h
+#Library : Single Moving Object (Custom)
+#DataSet : Speed Limit 55 mi/h
+#Category: Traffic Signs and Lights
+#FileID  : Target_75025dc5-ae86-48e4-8e8b-8b2d2c20fa83
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

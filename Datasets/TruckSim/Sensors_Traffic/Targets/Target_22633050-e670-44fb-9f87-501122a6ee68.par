@@ -1,0 +1,66 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Woman Crossing Behind Building`Pedestrians Crossing
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Woman Crossing Behind Building
+OPT_SPEED_OBJ 0
+PATH_ID_OBJ ped_cross_ID
+ROAD_ID_OBJ 1002
+#CheckBox0 1    
+#CheckBox1 0    
+OPT_RECYCLE_OBJ 0
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 1    
+
+#RingCtrl0 3
+#RingCtrl1 0
+H_OBJ -1
+*S_INIT 0
+*L_INIT 0
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 0
+DZ_OBJECT 0
+*SIZE 0.4
+DIAMETER_OBJ 0.4
+*REFLECT 2
+MATERIAL_TYPE_OBJ 2
+*SPEED 5.5/3.6
+*HEADING_VEL 0
+EQ_INIT HeadO_<<o>> 0
+*START 1
+*STOP gt(S_OBJ_<<o>>,27.783)
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\Groups\Group_e93722fd-973d-4245-94b5-33b21567ca19.par
+#BlueLink0 Animator: Group`Animated Pedestrian (Asian Female)` Pedestrians` , 3D Shape for Video`Group_e93722fd-973d-4245-94b5-33b21567ca19
+
+EQ_INIT S_Obj_<<o>> 0
+EQ_INIT LatO_<<o>> 0
+DEFINE_VARIABLE V_CMD_OBJ_<<o>>;KM/H; Speed command
+DEFINE_VARIABLE HeadV_O_<<o>> 0;-; Heading vector for ODEs
+DEFINE_VARIABLE COND_START_OBJ_<<o>>;-; Boolean to start motion
+EQ_FULL_STEP COND_START_OBJ_<<o>> = 1 ;
+DEFINE_VARIABLE COND_STOP_OBJ_<<o>>; - ; Boolean to stop motion
+EQ_FULL_STEP COND_STOP_OBJ_<<o>> = gt(S_OBJ_<<o>>,27.783) ;
+EQ_OUT V_CMD_OBJ_<<o>> = IF(COND_START_OBJ_<<o>> & ~COND_STOP_OBJ_<<o>>, 5.5/3.6, 0);
+EQ_DIFFERENTIAL LatO_<<o>> = sin(HeadV_O_<<o>>)*V_CMD_OBJ_<<o>>
+EQ_DIFFERENTIAL S_Obj_<<o>> = cos(HeadV_O_<<o>>)*V_CMD_OBJ_<<o>>
+#MiscYellow1
+TypeO_<<o>> = PEDESTRIAN
+opt_road_pitch = 0
+opt_road_roll = 0
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Pedestrians Crossing } Woman Crossing Behind Building
+#Library : Single Moving Object (Custom)
+#DataSet : Woman Crossing Behind Building
+#Category: Pedestrians Crossing
+#FileID  : Target_22633050-e670-44fb-9f87-501122a6ee68
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

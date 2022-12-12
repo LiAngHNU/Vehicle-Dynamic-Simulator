@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Suspension: Camber Angle`Large European Van - Rear`Utility Vehicles
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+CAMBER_COMBINE ADD
+#DiagramOne0
+CAMBER_TABLE SPLINE
+-70, 1.08171
+-60, 0.996827
+-50, 0.88789
+-40, 0.755642
+-30, 0.600569
+-20, 0.422934
+-10, 0.222791
+0, 0
+10, -0.245764
+20, -0.515012
+30, -0.808436
+40, -1.12692
+50, -1.47156
+60, -1.84365
+70, -2.24474
+ENDTABLE
+SUSP_CAMBER_JNC_OTHER_SIDE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR2 0
+
+
+LOG_ENTRY Used Dataset: Suspension: Camber Angle; { Utility Vehicles } Large European Van - Rear
+#Library : Suspension: Camber Angle
+#DataSet : Large European Van - Rear
+#Category: Utility Vehicles
+#FileID  : Camber_2bb6d34b-786a-4895-b1f5-d14d9edde21a
+#Product : TruckSim 2020.1
+#VehCode Camber
+
+END

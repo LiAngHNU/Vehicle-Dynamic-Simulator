@@ -1,0 +1,70 @@
+PARSFILE
+#FullDataName Steering System`Wind Turbine Trailer Steer System`Wind Turbine Trailer
+#RingCtrl0 0
+OPT_CS 0
+#RingCtrl1 1
+#RingCtrl2 0
+#RingCtrl4 0
+*L_KPO_L 300
+*L_KPO_R 300
+*A_KPI_L 4
+*A_KPI_R 4
+*A_CASTER_L 4
+*A_CASTER_R 4
+*X_KPO_L 0
+*X_KPO_R 0
+*RSW 1
+*D_GR 0
+*H_GR 0
+*B_GR 2
+PARSFILE Steering\Rear_Steer\RearStr_14cf7fdc-7d71-4176-abf5-bbdc579a0987.par
+#BlueLink2 Steering System: Steer Gain vs. Speed`Constant: Zero (Never Steered)` Constant` , Speed Effect`RearStr_14cf7fdc-7d71-4176-abf5-bbdc579a0987
+
+OPT_STEER_DEF 1
+
+iside 1
+PARSFILE Steering\Kinematics\StrKin_3b5edf9d-a8cf-425e-a246-7308af2219e0.par
+#BlueLink0 Steering System: Kinematics for One Wheel`Linear` ` , Left Wheel Kinematics`StrKin_3b5edf9d-a8cf-425e-a246-7308af2219e0
+
+PARSFILE Steering\Str_Park_Trq\TqPark_4a727e8f-14fb-4da4-a61a-5283760d87d8.par
+#BlueLink3 Steering: Parking Torque`Constant: Zero` Constant` , Left Side`TqPark_4a727e8f-14fb-4da4-a61a-5283760d87d8
+
+L_KPO 300
+A_KPI 4
+A_CASTER 4
+X_KPO 0
+
+iside 2
+PARSFILE Steering\Kinematics\StrKin_3b5edf9d-a8cf-425e-a246-7308af2219e0.par
+#BlueLink1 Steering System: Kinematics for One Wheel`Linear` ` , Right Wheel Kinematics`StrKin_3b5edf9d-a8cf-425e-a246-7308af2219e0
+
+PARSFILE Steering\Str_Park_Trq\TqPark_4a727e8f-14fb-4da4-a61a-5283760d87d8.par
+#BlueLink4 Steering: Parking Torque`Constant: Zero` Constant` , Right Side`TqPark_4a727e8f-14fb-4da4-a61a-5283760d87d8
+
+L_KPO 300
+A_KPI 4
+A_CASTER 4
+X_KPO 0
+OPT_RACK 0
+OPT_STEER_EXT 0
+GEAR_ROT_COEFFICIENT 1/1
+D_GEAR 0
+HYS_GEAR 0
+BETA_GEAR 2
+
+#EMBEDDED_NOTES
+#
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Steering System; { Wind Turbine Trailer } Wind Turbine Trailer Steer System
+#Library : Steering System
+#DataSet : Wind Turbine Trailer Steer System
+#Category: Wind Turbine Trailer
+#FileID  : StrSys_38143ff2-c40e-4659-b012-7cae870d07d8
+#Product : TruckSim 2020.1
+#VehCode Steering System
+
+END

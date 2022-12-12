@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Sensor Reflectiveness Map`2 Sensor Types, 2 Material Types`
+#RingCtrl0 2D_STEP
+#RadioCtrl0 0    
+
+
+*3D_XLabel Sensor type
+*3D_YLabel Material type
+*3D_ZLabel Reflectiveness
+
+#DiagramTwo0
+*3D_DATA 2, 3 ! columns x rows
+SENSOR_MAP_CARPET 2D_STEP
+0, 1, 2
+1, 1, 1
+2, 1, 0
+3, 1, 0
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#This map shows that sensor type detects objects with material types 1, 2, and higher. Sensor type 2 detects only objects with material type 1.
+#
+#This is used for an example with cars (type 1), trees (type 2), and lane marker paint (type 3).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Sensor Reflectiveness Map; 2 Sensor Types, 2 Material Types
+#Library : Sensor Reflectiveness Map
+#DataSet : 2 Sensor Types, 2 Material Types
+#Category: 
+#FileID  : TypeMap_e2f7e559-12a6-4d46-b853-026f27768405
+#Product : TruckSim 2020.1
+#VehCode Reflectiveness Map
+
+END

@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Steering: Parking Torque`Pickup, Midsize - Left`Pickup Trucks
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RingCtrl1 CONSTANT
+#RingCtrl2 MULTIPLY
+MZ_PARKING_STEER_COMBINE MULTIPLY
+#DiagramOne0
+MZ_PARKING_STEER_TABLE LINEAR_FLAT
+0, 160
+0.1, 144.4
+0.2, 129.6
+0.3, 115.6
+0.4, 102.4
+0.5, 90
+0.6, 78.4
+0.7, 67.6
+0.8, 57.6
+0.9, 48.4
+1, 40
+1.1, 32.4
+1.2, 25.6
+1.3, 19.6
+1.4, 14.4
+1.5, 10
+1.6, 6.4
+1.7, 3.6
+1.8, 1.6
+1.9, 0.4
+2, 0
+ENDTABLE
+MZ_PARKING_STEER_FZ_CONSTANT 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR2 1
+A_MZ_BETA 5
+
+
+LOG_ENTRY Used Dataset: Steering: Parking Torque; { Pickup Trucks } Pickup, Midsize - Left
+#Library : Steering: Parking Torque
+#DataSet : Pickup, Midsize - Left
+#Category: Pickup Trucks
+#FileID  : TqPark_3a892d0f-d612-4a4c-9ba9-25a227c5047f
+#Product : TruckSim 2020.1
+#VehCode Parking Torque
+
+END

@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`City Environment: Building`ADAS: Building Occlusion
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME City Environment: Building
+OPT_SPEED_OBJ 0
+OPT_POLY_COORD 1
+
+OPT_ROAD_OBJ 0 ! Legacy pre-9
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+#CheckBox3 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+
+#RingCtrl0 5
+#RingCtrl1 3
+#RingCtrl2 1
+H_OBJ -1
+*S_INIT 150
+*L_INIT 150
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 3
+DZ_OBJECT 0
+*REFLECT 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+PARSFILE Sensors_Traffic\Poly\poly_bfcbd4b3-6390-42c4-b300-2b8f3e4cab82.par
+#BlueLink1 Polygonal Shape Coordinates`City Intersection: Building` Building Occlusion` , Polygonal Coordinates`poly_bfcbd4b3-6390-42c4-b300-2b8f3e4cab82
+
+POLY_SHAPE_ID_OBJ = IPOLYGON
+EQ_INIT X_Obj_<<o>> 150
+EQ_INIT Y_Obj_<<o>> 150
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { ADAS: Building Occlusion } City Environment: Building
+#Library : Single Moving Object (Custom)
+#DataSet : City Environment: Building
+#Category: ADAS: Building Occlusion
+#FileID  : Target_8c657b1c-ae69-4d4f-86db-75413023afc6
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

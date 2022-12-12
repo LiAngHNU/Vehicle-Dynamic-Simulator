@@ -1,0 +1,66 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Deer (Idle) #4 (RND)`Deer (Stationary)
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Deer (Idle) #4 (RND)
+OPT_SPEED_OBJ 0
+PATH_ID_OBJ 1
+ROAD_ID_OBJ 1
+#CheckBox0 0    
+#CheckBox1 0    
+OPT_RECYCLE_OBJ 0
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+
+#RingCtrl0 3
+#RingCtrl1 1
+#MiscYellow0
+define_variable SRXX
+define_variable USE_RAND = 1
+define_variable rand1 = rand(1.0)
+define_variable rand2 = rand(1.0)
+define_variable rand3 = rand(1.0)
+#ENDMYellow
+
+H_OBJ .85
+*S_INIT 525+rand1*5
+*L_INIT -5+rand2*6
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE 1.75
+LENGTH_OBJ 1.75
+WIDTH_OBJ .6
+LX_FRONT_OBJ 1.05
+*REFLECT 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+*SPEED 0
+*HEADING_VEL rand3*2*PI
+EQ_INIT HeadO_<<o>> rand3*2*PI
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_4688946c-fc0e-4772-a0da-97a0a8a20c5b.par
+#BlueLink0 Animator: Shape File Link`Deer: Idle` Environment: Animals (Animated)` , 3D Shape for Video`Shape_4688946c-fc0e-4772-a0da-97a0a8a20c5b
+
+EQ_INIT S_Obj_<<o>> 525+rand1*5
+EQ_INIT LatO_<<o>> -5+rand2*6
+DEFINE_VARIABLE V_CMD_OBJ_<<o>>;KM/H; Speed command
+DEFINE_VARIABLE HeadV_O_<<o>> rand3*2*PI;-; Heading vector for ODEs
+EQ_OUT V_CMD_OBJ_<<o>> = 0;
+EQ_DIFFERENTIAL LatO_<<o>> = sin(HeadV_O_<<o>>)*V_CMD_OBJ_<<o>>
+EQ_DIFFERENTIAL S_Obj_<<o>> = cos(HeadV_O_<<o>>)*V_CMD_OBJ_<<o>>
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Deer (Stationary) } Deer (Idle) #4 (RND)
+#Library : Single Moving Object (Custom)
+#DataSet : Deer (Idle) #4 (RND)
+#Category: Deer (Stationary)
+#FileID  : Target_56bd0cf0-ab7e-4a48-bc3b-8edda203ae0c
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Overhead Traffic Signal facing East`Traffic Signs and Lights
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Overhead Traffic Signal facing East
+OPT_SPEED_OBJ 0
+
+OPT_ROAD_OBJ 0 ! Legacy pre-9
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+#CheckBox3 0    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 1    
+
+#RingCtrl0 5
+#RingCtrl1 2
+H_OBJ 5.5
+*S_INIT -6
+*L_INIT 2
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 2
+DZ_OBJECT 0
+*SIZE 0.01
+LENGTH_OBJ 0.01
+VIS_ANGLE_OBJ 40
+*REFLECT 1
+MATERIAL_TYPE_OBJ 1
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\Groups\Group_c3f18e68-c82f-4f9c-bad9-c7fed6784263.par
+#BlueLink0 Animator: Group`Overhead Traffic Signal` Signs` , 3D Shape for Video`Group_c3f18e68-c82f-4f9c-bad9-c7fed6784263
+
+EQ_INIT X_Obj_<<o>> -6
+EQ_INIT Y_Obj_<<o>> 2
+#MiscYellow1
+YawO_<<o>> = 0 ! facing east
+define_output Tcycle<<o>> = fmod(t + r_sig_start*t_sig_period,t_sig_period);s;Modular time for signal
+eq_out TypeO_<<o>> = 110 + gt(Tcycle<<o>>,t_sig_period/2 - 5) + gt(Tcycle<<o>>, t_sig_period/2 -2)
+MsgObj_<<o>> = 23
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#Located on E. entrance to 3-way intersection.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Traffic Signs and Lights } Overhead Traffic Signal facing East
+#Library : Single Moving Object (Custom)
+#DataSet : Overhead Traffic Signal facing East
+#Category: Traffic Signs and Lights
+#FileID  : Target_52c625d3-0064-45b3-92f4-a585d3510410
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

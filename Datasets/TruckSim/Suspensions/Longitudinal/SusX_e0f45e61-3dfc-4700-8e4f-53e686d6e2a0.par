@@ -1,0 +1,66 @@
+PARSFILE
+#FullDataName Suspension: Longitudinal Movement`Large European Van - Front`Utility Vehicles
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_X_COMBINE ADD
+*SCALAR 0
+*SCALAR2 0
+
+#DiagramOne0
+SUSP_X_TABLE SPLINE
+-70, -0.729904
+-60, -0.634454
+-50, -0.536096
+-40, -0.434813
+-30, -0.330589
+-20, -0.2234
+-10, -0.113217
+0, 0
+10, 0.116308
+20, 0.235783
+30, 0.358522
+40, 0.484654
+50, 0.61434
+60, 0.747787
+70, 0.885253
+ENDTABLE
+SUSP_X_JNC_OTHER_SIDE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+SUSP_X_AXLE_TABLE SPLINE
+-70, -0.729904
+-60, -0.634454
+-50, -0.536096
+-40, -0.434813
+-30, -0.330589
+-20, -0.2234
+-10, -0.113217
+0, 0
+10, 0.116308
+20, 0.235783
+30, 0.358522
+40, 0.484654
+50, 0.61434
+60, 0.747787
+70, 0.885253
+ENDTABLE
+
+#EMBEDDED_NOTES
+#SLA Longitudinal Movement vs. Jounce
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Suspension: Longitudinal Movement; { Utility Vehicles } Large European Van - Front
+#Library : Suspension: Longitudinal Movement
+#DataSet : Large European Van - Front
+#Category: Utility Vehicles
+#FileID  : SusX_e0f45e61-3dfc-4700-8e4f-53e686d6e2a0
+#Product : TruckSim 2020.1
+#VehCode Longitudinal Movement
+
+END

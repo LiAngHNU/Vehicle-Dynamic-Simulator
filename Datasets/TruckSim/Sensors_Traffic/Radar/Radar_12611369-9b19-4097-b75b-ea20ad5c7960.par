@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName ADAS Sensors for Range and Tracking`ACC: X = -975, Z =1750`Forward Facing Sensors: FCW and ACC
+DEFINE_SENSORS 1
+ISENSOR = NSENSOR
+NSENSORS_INCREMENT
+symbol_add <<s>> 1
+SET_DESCRIPTION SENSOR_NAME ACC: X = -975, Z =1750
+#CheckBox0 1    
+#CheckBox1 1    
+OPT_BLOCK_SENSOR 1
+#CheckBox2 1    
+OPT_SORT_OUTPUTS_SENSOR 1
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 0    
+OPT_EXPORT_SENSOR 0
+#CheckBox6 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+SENSOR_DETECT_TRANSLUCENCY 1
+#RingCtrl2 1
+IUNIT_SENSOR 1
+#RingCtrl3 2
+TYPE_SENSOR 2
+PARSFILE Sensors_Traffic\Radar_Range\Range_9f4371c4-aac5-489e-8cef-feaede630277.par
+#BlueLink0 Sensor Range and Bearing Sensitivity`100-m Range` Limit from Range` , Range & Bearing Sensitivity`Range_9f4371c4-aac5-489e-8cef-feaede630277
+
+PARSFILE Sensors_Traffic\Radar_Elevation\SenElev_4fdaa102-cfee-4a8f-aeaf-c650b6f76306.par
+#BlueLink1 Sensor Elevation Sensitivity`Unity Gain` ` , Elevation Sensitivity`SenElev_4fdaa102-cfee-4a8f-aeaf-c650b6f76306
+
+WRITE_SENSOR_FIELD
+PARSFILE Animator\STL\Shape_129c03aa-522e-462e-937b-37de40417680.par
+#BlueLink2 Animator: Shape File Link`Sensor Fields: 20 deg FOV` Common Vehicle Assets` , Shape for Detection Field`Shape_129c03aa-522e-462e-937b-37de40417680
+
+SET_COLOR 1 0 0.2
+SET_TRANSPARENCY 0.3
+X_LENGTH 90
+Y_LENGTH 31.3
+Z_LENGTH 6
+X_SENSOR -975
+Y_SENSOR 0
+Z_SENSOR 1750
+YAW_AIM_SENSOR 0
+PITCH_AIM_SENSOR 0
+ROLL_AIM_SENSOR 0
+SENSOR_DETECT_COLOR 1 0 0.2
+*SET_TRANSPARENCY 0.3
+*SET_COLOR_FIELD 1 0 0.2
+BEARING_MIN_SENSOR -10
+BEARING_MAX_SENSOR 10
+
+SPECIAL_PARSFILE Animator\STL\Shape_19c69103-4ea6-4971-9563-7b5515e7cd50.par
+#BlueLink3 Animator: Shape File Link`Square for Sensor Beam` Geometric Shapes` , Shape for vector`Shape_19c69103-4ea6-4971-9563-7b5515e7cd50
+
+SENSOR_DETECT_OBJ Animator\STL\Shape_19c69103-4ea6-4971-9563-7b5515e7cd50.par
+PARSFILE Plot\Setup\Plot_ac9220cd-55d1-4767-b5c3-e524e22e9d3b.par
+#BlueLink4 Plot: Setup`Bearing Angle: S1 (2 Objects)` ADAS Sensor Detections` , Plot`Plot_ac9220cd-55d1-4767-b5c3-e524e22e9d3b
+
+PARSFILE Plot\Setup\Plot_2d2786e5-c3c2-4125-8bc1-eab0f4b9bed3.par
+#BlueLink5 Plot: Setup`Distance: S1 (2 Objects)` ADAS Sensor Detections` , Plot`Plot_2d2786e5-c3c2-4125-8bc1-eab0f4b9bed3
+
+PARSFILE Plot\Setup\Plot_df6f52bb-d224-4e5f-a104-3a20bfe50a3c.par
+#BlueLink6 Plot: Setup`Magnitude: S1 (2 Objects)` ADAS Sensor Detections` , Plot`Plot_df6f52bb-d224-4e5f-a104-3a20bfe50a3c
+
+PARSFILE Plot\Setup\Plot_78426217-c05a-4a2c-bd10-bf18840fc8da.par
+#BlueLink7 Plot: Setup`Visibility: VisO_1` ADAS Sensor Target Properties` , Plot`Plot_78426217-c05a-4a2c-bd10-bf18840fc8da
+
+
+#EMBEDDED_NOTES
+#ADAS Range and Detection Sensor set up for use with Dually Pickup Truck. The X and Z coordinates correspond to a sensor located in front of the rearview mirror.
+#
+#The sensor's range is 100 meters and has a field of view (FOV) of 20 degrees.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: ADAS Sensors for Range and Tracking; { Forward Facing Sensors: FCW and ACC } ACC: X = -975, Z =1750
+#Library : ADAS Sensors for Range and Tracking
+#DataSet : ACC: X = -975, Z =1750
+#Category: Forward Facing Sensors: FCW and ACC
+#FileID  : Radar_12611369-9b19-4097-b75b-ea20ad5c7960
+#Product : TruckSim 2020.1
+#VehCode ADAS Sensor
+
+END

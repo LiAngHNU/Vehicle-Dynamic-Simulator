@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Suspension: Auxiliary Roll Moment`Linear: 300 N-m/deg`Linear
+#CheckBox0 0    
+
+#RingCtrl0 COEFFICIENT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+MX_AUX_COMBINE ADD
+#RadioCtrl0 1    
+#RadioCtrl1 0    
+
+MX_AUX_COEFFICIENT 300
+MX_AUX_FSTATIC_CONSTANT 0
+*SCALAR 300
+*SCALAR2 0
+
+
+LOG_ENTRY Used Dataset: Suspension: Auxiliary Roll Moment; { Linear } Linear: 300 N-m/deg
+#Library : Suspension: Auxiliary Roll Moment
+#DataSet : Linear: 300 N-m/deg
+#Category: Linear
+#FileID  : AuxMx_2b17f3a0-b036-4482-8e83-bdb59577f641
+#Product : TruckSim 2020.1
+#VehCode Aux. Roll Moment
+
+END

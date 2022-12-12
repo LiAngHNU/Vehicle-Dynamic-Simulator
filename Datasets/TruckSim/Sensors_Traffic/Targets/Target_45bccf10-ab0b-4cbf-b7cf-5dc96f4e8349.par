@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`City Intersection, Stop Sign`Multi-Vehicle
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME City Intersection, Stop Sign
+OPT_SPEED_OBJ 0
+
+OPT_ROAD_OBJ 0 ! Legacy pre-9
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+#CheckBox3 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+
+#RingCtrl0 5
+#RingCtrl1 2
+H_OBJ 1.8
+*S_INIT <<x>>
+*L_INIT <<y>>
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 2
+DZ_OBJECT 0
+*SIZE .01
+LENGTH_OBJ .01
+VIS_ANGLE_OBJ 100
+*REFLECT 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_ce8d8b13-8fcc-4146-a8f8-ab93e2d55b9b.par
+#BlueLink0 Animator: Shape File Link`US: Stop Sign (24 in x 24 in)` Environment: Road Signs` , 3D Shape for Video`Shape_ce8d8b13-8fcc-4146-a8f8-ab93e2d55b9b
+
+EQ_INIT X_Obj_<<o>> <<x>>
+EQ_INIT Y_Obj_<<o>> <<y>>
+#MiscYellow1
+TypeO_<<o>> = STOP_SIGN ! defined in VS Command dataset "Define Target Messages"
+MsgObj_<<o>> = 3
+eq_in YawO_<<o>> = <<yaw>>
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Multi-Vehicle } City Intersection, Stop Sign
+#Library : Single Moving Object (Custom)
+#DataSet : City Intersection, Stop Sign
+#Category: Multi-Vehicle
+#FileID  : Target_45bccf10-ab0b-4cbf-b7cf-5dc96f4e8349
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

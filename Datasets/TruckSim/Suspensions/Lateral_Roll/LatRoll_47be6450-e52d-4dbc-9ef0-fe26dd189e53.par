@@ -1,0 +1,71 @@
+PARSFILE
+#FullDataName Suspension: Lateral Movement Due to Roll and Jounce`Roll Center: 53 mm Below Axle`Front
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_Y_AXLE_ROLL_COMBINE ADD
+
+! Note: if *TABLE_KEYWORD is not set to "SUSP_Y_AXLE_ROLL" then Y values read from the table will be reversed.
+*SCALAR2 0
+*TABLE_KEYWORD SUSP_Y_AXLE_ROLL
+
+#DiagramOne0
+SUSP_Y_AXLE_ROLL_TABLE SPLINE
+-10, -9.2034
+-9.5, -8.7475
+-9, -8.291
+-8.5, -7.8339
+-8, -7.3762
+-7.5, -6.9179
+-7, -6.4591
+-6.5, -5.9998
+-6, -5.54
+-5.5, -5.0798
+-5, -4.6193
+-4.5, -4.1583
+-4, -3.6971
+-3.5, -3.2356
+-3, -2.7738
+-2.5, -2.3118
+-2, -1.8497
+-1.5, -1.3874
+-1, -0.92498
+-0.5, -0.46251
+0, 4.2323e-19
+0.5, 0.46251
+1, 0.92498
+1.5, 1.3874
+2, 1.8497
+2.5, 2.3118
+3, 2.7738
+3.5, 3.2356
+4, 3.6971
+4.5, 4.1583
+5, 4.6193
+5.5, 5.0798
+6, 5.54
+6.5, 5.9998
+7, 6.4591
+7.5, 6.9179
+8, 7.3762
+8.5, 7.8339
+9, 8.291
+9.5, 8.7475
+10, 9.2034
+ENDTABLE
+SUSP_LAT_AXLE_JOUNCE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+LOG_ENTRY Used Dataset: Suspension: Lateral Movement Due to Roll and Jounce; { Front } Roll Center: 53 mm Below Axle
+#Library : Suspension: Lateral Movement Due to Roll and Jounce
+#DataSet : Roll Center: 53 mm Below Axle
+#Category: Front
+#FileID  : LatRoll_47be6450-e52d-4dbc-9ef0-fe26dd189e53
+#Product : TruckSim 2020.1
+#VehCode Lateral Movement
+
+END

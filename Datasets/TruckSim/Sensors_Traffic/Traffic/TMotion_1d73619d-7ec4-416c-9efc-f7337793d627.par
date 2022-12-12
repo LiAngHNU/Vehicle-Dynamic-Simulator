@@ -1,0 +1,113 @@
+PARSFILE
+#FullDataName Multiple Moving Objects`Cars Turning Left onto Jackson`Highway Intersection
+#RingCtrl0 2
+DEFINE_MOVING_OBJECTS 2
+#RingCtrl1 2
+#RingCtrl2 1
+#RingCtrl4 1
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox25 0    
+#CheckBox26 0    
+#CheckBox27 0    
+#CheckBox38 1    
+#CheckBox39 1    
+
+DZ_OBJECT 0
+*L 2002
+*PATH_ID 2002
+*ROAD_ID 1094
+*V N_SPEED_TARGET
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Cars Turning Left onto Jackson, Object #1
+OPT_SPEED_OBJ 2
+OPT_DIR_OBJ 1
+
+*L_WB_1 3.2
+L_WB_OBJ 3.2
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ 2002
+ROAD_ID_OBJ 1094
+OPT_RECYCLE_OBJ 0
+*SINIT_1 420
+EQ_INIT S_OBJ_<<o>> = 420
+SPEED_ID_OBJ = N_SPEED_TARGET
+LTARG_ID_OBJ = 2002
+EQ_INIT YawO_<<o>> = PATH_YAW_ID(S_OBJ_<<o>>, 2002, LTARG_ID_OBJ, 1) + HEADO_<<o>>
+*COLOR_1 1 0 0
+SET_RUN_COLOR 1 0 0
+*H_TARGET_1 -1.6
+H_OBJ -1.6
+PARSFILE Animator\Vehicles\AniVeh_ecb4bc00-731a-4eec-9e10-b0fa5a9a76b7.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`F-Class, Sedan` F-Class` , 3D Shape for Video`AniVeh_ecb4bc00-731a-4eec-9e10-b0fa5a9a76b7
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_1 4.75
+LENGTH_OBJ 4.75
+*WIDTH_1 2.2
+WIDTH_OBJ 2.2
+*LX_FRONT_1 .5
+LX_FRONT_OBJ .5
+*REFLECT_1 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Cars Turning Left onto Jackson, Object #2
+OPT_SPEED_OBJ 2
+OPT_DIR_OBJ 1
+
+*L_WB_2 3
+L_WB_OBJ 3
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ 2002
+ROAD_ID_OBJ 1094
+OPT_RECYCLE_OBJ 0
+*SINIT_2 600
+EQ_INIT S_OBJ_<<o>> = 600
+SPEED_ID_OBJ = N_SPEED_TARGET
+LTARG_ID_OBJ = 2002
+EQ_INIT YawO_<<o>> = PATH_YAW_ID(S_OBJ_<<o>>, 2002, LTARG_ID_OBJ, 1) + HEADO_<<o>>
+*COLOR_2 0.6 0 0
+SET_RUN_COLOR 0.6 0 0
+*H_TARGET_2 -1.9
+H_OBJ -1.9
+PARSFILE Animator\Vehicles\AniVeh_0ac64a8a-7624-410f-bbbc-96104073c435.par
+#BlueLink1 Animator: Vehicles and Sensor Targets`E-Class, SUV` E-Class` , Traffic Vehicle Ani File`AniVeh_0ac64a8a-7624-410f-bbbc-96104073c435
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_2 4.75
+LENGTH_OBJ 4.75
+*WIDTH_2 2
+WIDTH_OBJ 2
+*LX_FRONT_2 .75
+LX_FRONT_OBJ .75
+*REFLECT_2 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+
+#EMBEDDED_NOTES
+#Cars exiting off I-94 and turning left onto Jackson.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Multiple Moving Objects; { Highway Intersection } Cars Turning Left onto Jackson
+#Library : Multiple Moving Objects
+#DataSet : Cars Turning Left onto Jackson
+#Category: Highway Intersection
+#FileID  : TMotion_1d73619d-7ec4-416c-9efc-f7337793d627
+#Product : TruckSim 2020.1
+#VehCode Multiple Objects
+
+END

@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName ADAS Sensors for Range and Tracking`Sensor with Wall Detection`Wall Detection
+DEFINE_SENSORS 1
+ISENSOR = NSENSOR
+NSENSORS_INCREMENT
+symbol_add <<s>> 1
+SET_DESCRIPTION SENSOR_NAME Sensor with Wall Detection
+#CheckBox0 1    
+#CheckBox1 1    
+OPT_BLOCK_SENSOR 1
+#CheckBox2 0    
+OPT_SORT_OUTPUTS_SENSOR 0
+#CheckBox3 1    
+#CheckBox5 0    
+OPT_EXPORT_SENSOR 0
+#CheckBox6 1    
+
+#RingCtrl0 0
+#RingCtrl1 1
+SENSOR_DETECT_TRANSLUCENCY 1
+#RingCtrl2 1
+IUNIT_SENSOR 1
+#RingCtrl3 1
+TYPE_SENSOR 1
+PARSFILE Sensors_Traffic\Radar_Range\Range_11aac37f-8d96-4b1e-baed-184e6233fbf7.par
+#BlueLink0 Sensor Range and Bearing Sensitivity`50-m Range` Limit from Range` , Range & Bearing Sensitivity`Range_11aac37f-8d96-4b1e-baed-184e6233fbf7
+
+PARSFILE Sensors_Traffic\Radar_Elevation\SenElev_4fdaa102-cfee-4a8f-aeaf-c650b6f76306.par
+#BlueLink1 Sensor Elevation Sensitivity`Unity Gain` ` , Elevation Sensitivity`SenElev_4fdaa102-cfee-4a8f-aeaf-c650b6f76306
+
+X_SENSOR -925
+Y_SENSOR -1200
+Z_SENSOR 1375
+YAW_AIM_SENSOR -90
+PITCH_AIM_SENSOR 0
+ROLL_AIM_SENSOR 0
+SENSOR_DETECT_COLOR 0 0.2 1
+*SET_TRANSPARENCY 0.3
+*SET_COLOR_FIELD 1 0 0.2
+BEARING_MIN_SENSOR -90
+BEARING_MAX_SENSOR 90
+
+SPECIAL_PARSFILE Animator\STL\Shape_67b13483-d0c2-48d7-bef0-4c603104a0d7.par
+#BlueLink3 Animator: Shape File Link`Cube: Sensor Vector` Geometric Shapes` , Shape for vector`Shape_67b13483-d0c2-48d7-bef0-4c603104a0d7
+
+SENSOR_DETECT_OBJ Animator\STL\Shape_67b13483-d0c2-48d7-bef0-4c603104a0d7.par
+#MiscYellow0
+ani_global_interpolation off
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: ADAS Sensors for Range and Tracking; { Wall Detection } Sensor with Wall Detection
+#Library : ADAS Sensors for Range and Tracking
+#DataSet : Sensor with Wall Detection
+#Category: Wall Detection
+#FileID  : Radar_b416da4f-a927-49da-bfd8-d394717e0e05
+#Product : TruckSim 2020.1
+#VehCode ADAS Sensor
+
+END

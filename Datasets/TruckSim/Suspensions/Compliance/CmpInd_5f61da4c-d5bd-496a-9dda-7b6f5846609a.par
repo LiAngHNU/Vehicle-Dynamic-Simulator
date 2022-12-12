@@ -1,0 +1,110 @@
+PARSFILE
+#FullDataName Suspension: Independent Compliance, Springs, and Dampers`Trailer Axle`Trailer Axles
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 0
+*OPT_SPR 0
+#RingCtrl1 1
+#RingCtrl3 1
+#RingCtrl5 2
+#RingCtrl7 1
+#RingCtrl9 1
+#RingCtrl11 1
+#RingCtrl13 1
+*KSPRING_L 200
+*FRICTION_L 2000
+*BETA_C_L 2
+*BETA_E_L 2
+*L_SPG_ADJ_L 0
+*FS_OFFSET_L 0
+*FS_OFFSET_R 0
+*R_SPRING_L 1
+*R_DAMPER_L 1
+*R_JOUNCE_L 1
+*R_REBOUND_L 1
+*CT_FX_L 0
+*CS_FY_L 0
+*CS_MZ_L 0
+*CC_FX_L 0
+*CI_FY_L 0
+*CI_MZ_L 0
+*C_LONG_L 0
+*C_LAT_L 0
+DAUX 0
+*CD_MY_L 0
+
+iside 1
+OPT_EXT_SP 0
+FS_COMP_COEFFICIENT 200
+FS_EXT_COEFFICIENT 200
+FS_COMP_OFFSET 2000
+FS_EXT_OFFSET -2000
+SPRING_COMP_BETA 2
+SPRING_EXT_BETA 2
+CMP_SPR_SEAT_COEFFICIENT 1
+L_SPG_ADJ 0
+FS_OFFSET 0
+CMP_OFFSET 0
+PARSFILE Suspensions\Shocks\Shock_b88cba2b-899a-4b8d-91d4-b6be13e8dafa.par
+#BlueLink1 Suspension: Shock Absorber`Compact Utility Truck` Non-linear` , Left damper`Shock_b88cba2b-899a-4b8d-91d4-b6be13e8dafa
+
+CMP_DAMP_COEFFICIENT 1
+PARSFILE Suspensions\Jounce_Rebound\JncReb_f859ef67-1768-4583-bffd-3bc95bace10c.par
+#BlueLink5 Suspension: Jounce and Rebound Stops`+60 mm / -60 mm` Jounce Range: 50 mm to 99 mm` , Jounce / rebound stop force`JncReb_f859ef67-1768-4583-bffd-3bc95bace10c
+
+CMP_JSTOP_COEFFICIENT 1
+CMP_RSTOP_COEFFICIENT 1
+CT_FX_COEFFICIENT 0
+CS_FY_COEFFICIENT 0
+CS_MZ_COEFFICIENT 0
+CC_FX_COEFFICIENT 0
+CI_FY_COEFFICIENT 0
+CI_MZ_COEFFICIENT 0
+C_LONG_COEFFICIENT 0
+C_LAT_COEFFICIENT 0
+CD_MY_COEFFICIENT 0
+
+iside 2
+OPT_EXT_SP 0
+FS_COMP_COEFFICIENT 200
+FS_EXT_COEFFICIENT 200
+FS_COMP_OFFSET 2000
+FS_EXT_OFFSET -2000
+SPRING_COMP_BETA 2
+SPRING_EXT_BETA 2
+CMP_SPR_SEAT_COEFFICIENT 1
+L_SPG_ADJ 0
+FS_OFFSET 0
+CMP_OFFSET 0
+PARSFILE Suspensions\Shocks\Shock_b88cba2b-899a-4b8d-91d4-b6be13e8dafa.par
+#BlueLink1 Suspension: Shock Absorber`Compact Utility Truck` Non-linear` , Left damper`Shock_b88cba2b-899a-4b8d-91d4-b6be13e8dafa
+
+CMP_DAMP_COEFFICIENT 1
+PARSFILE Suspensions\Jounce_Rebound\JncReb_f859ef67-1768-4583-bffd-3bc95bace10c.par
+#BlueLink5 Suspension: Jounce and Rebound Stops`+60 mm / -60 mm` Jounce Range: 50 mm to 99 mm` , Jounce / rebound stop force`JncReb_f859ef67-1768-4583-bffd-3bc95bace10c
+
+CMP_JSTOP_COEFFICIENT 1
+CMP_RSTOP_COEFFICIENT 1
+CT_FX_COEFFICIENT 0
+CS_FY_COEFFICIENT 0
+CS_MZ_COEFFICIENT 0
+CC_FX_COEFFICIENT 0
+CI_FY_COEFFICIENT 0
+CI_MZ_COEFFICIENT 0
+C_LONG_COEFFICIENT 0
+C_LAT_COEFFICIENT 0
+CD_MY_COEFFICIENT 0
+PARSFILE Suspensions\Aux_Roll\AuxMx_bd0b30ef-2d97-4546-9a02-e935ce6166a5.par
+#BlueLink2 Suspension: Auxiliary Roll Moment`Constant: Zero` Constant` , Roll Moment`AuxMx_bd0b30ef-2d97-4546-9a02-e935ce6166a5
+
+
+LOG_ENTRY Used Dataset: Suspension: Independent Compliance, Springs, and Dampers; { Trailer Axles } Trailer Axle
+#Library : Suspension: Independent Compliance, Springs, and Dampers
+#DataSet : Trailer Axle
+#Category: Trailer Axles
+#FileID  : CmpInd_5f61da4c-d5bd-496a-9dda-7b6f5846609a
+#Product : TruckSim 2020.1
+#VehCode Springs and Dampers
+
+END

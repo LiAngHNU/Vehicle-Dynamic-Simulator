@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName Suspension: Longitudinal Movement`Rear Hotchkiss - Longitudinal Movement`Hotchkiss Rear Axle
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_X_COMBINE ADD
+*SCALAR 0
+*SCALAR2 0
+
+#DiagramOne0
+SUSP_X_TABLE SPLINE
+-150, 5.1612
+-135, 2.79277
+-120, 0.841255
+-105, -0.695023
+-90, -1.8184
+-75, -2.53133
+-60, -2.83607
+-45, -2.73441
+-30, -2.22759
+-15, -1.3162
+0, 0
+15, 1.72199
+30, 3.85147
+45, 6.39054
+60, 9.34103
+75, 12.703
+90, 16.4714
+105, 20.6284
+120, 25.1262
+135, 29.8517
+150, 34.583
+ENDTABLE
+SUSP_X_JNC_OTHER_SIDE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+SUSP_X_AXLE_TABLE SPLINE
+-150, 5.1612
+-135, 2.79277
+-120, 0.841255
+-105, -0.695023
+-90, -1.8184
+-75, -2.53133
+-60, -2.83607
+-45, -2.73441
+-30, -2.22759
+-15, -1.3162
+0, 0
+15, 1.72199
+30, 3.85147
+45, 6.39054
+60, 9.34103
+75, 12.703
+90, 16.4714
+105, 20.6284
+120, 25.1262
+135, 29.8517
+150, 34.583
+ENDTABLE
+
+#EMBEDDED_NOTES
+#Hotchkiss Rear Axle Longitudinal movement vs. Jounce.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Suspension: Longitudinal Movement; { Hotchkiss Rear Axle } Rear Hotchkiss - Longitudinal Movement
+#Library : Suspension: Longitudinal Movement
+#DataSet : Rear Hotchkiss - Longitudinal Movement
+#Category: Hotchkiss Rear Axle
+#FileID  : SusX_fad79311-5ff9-4378-a1bf-a91a1e9bcba0
+#Product : TruckSim 2020.1
+#VehCode Longitudinal Movement
+
+END

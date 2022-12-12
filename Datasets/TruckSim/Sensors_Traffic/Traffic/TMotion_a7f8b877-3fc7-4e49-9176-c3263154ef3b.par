@@ -1,0 +1,201 @@
+PARSFILE
+#FullDataName Multiple Moving Objects`5 Lane Edge Markers Based On [[Edge]]`Points of Interest
+#RingCtrl0 5
+DEFINE_MOVING_OBJECTS 5
+#RingCtrl1 4
+#RingCtrl2 0
+#RingCtrl3 0
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 0    
+#CheckBox9 1    
+#CheckBox10 0    
+#CheckBox25 0    
+#CheckBox26 0    
+#CheckBox27 0    
+#CheckBox28 0    
+#CheckBox29 0    
+#CheckBox30 0    
+#CheckBox38 1    
+
+DZ_OBJECT 0
+#MiscYellow0
+#SYMBOL_PUSH_WEAK <<i>> 0 ! Only the first time
+#SYMBOL_ADD <<i>> 1
+#ENDMYellow
+
+*L <<edge>>
+*PATH_ID PATH_ID_DM
+*ROAD_ID CURRENT_ROAD_ID
+*V Station + X_SENSOR + 5 * <<i>>
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 5 Lane Edge Markers Based On [[Edge]], Object #1
+OPT_SPEED_OBJ 0
+SYMBOL_PUSH_WEAK <<i>> 0 ! Only the first time
+SYMBOL_ADD <<i>> 1
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 0
+EQ_IN S_OBJ_<<o>> = Station + X_SENSOR + 5 * <<i>>
+EQ_IN LATO_<<o>> = <<edge>>
+*COLOR_1 0.8 0 0.8
+SET_RUN_COLOR 0.8 0 0.8
+*H_TARGET_1 0.001
+H_OBJ 0.001
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_80c3cdd9-b801-4961-8215-85e40cb0cb37.par
+#BlueLink0 Animator: Shape File Link`Sphere 0.2 m (Green)` Geometric Shapes` , 3D Shape for Video`Shape_80c3cdd9-b801-4961-8215-85e40cb0cb37
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 0
+DZ_OBJECT 0
+*SIZE_1 0.001
+DIAMETER_OBJ 0.001
+*REFLECT_1 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 5 Lane Edge Markers Based On [[Edge]], Object #2
+OPT_SPEED_OBJ 0
+SYMBOL_PUSH_WEAK <<i>> 0 ! Only the first time
+SYMBOL_ADD <<i>> 1
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 0
+EQ_IN S_OBJ_<<o>> = Station + X_SENSOR + 5 * <<i>>
+EQ_IN LATO_<<o>> = <<edge>>
+*COLOR_2 0.8 0 0.8
+SET_RUN_COLOR 0.8 0 0.8
+*H_TARGET_2 0.001
+H_OBJ 0.001
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_80c3cdd9-b801-4961-8215-85e40cb0cb37.par
+#BlueLink1 Animator: Shape File Link`Sphere 0.2 m (Green)` Geometric Shapes` , Traffic Vehicle Ani File`Shape_80c3cdd9-b801-4961-8215-85e40cb0cb37
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 0
+DZ_OBJECT 0
+*SIZE_2 0.001
+DIAMETER_OBJ 0.001
+*REFLECT_2 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 5 Lane Edge Markers Based On [[Edge]], Object #3
+OPT_SPEED_OBJ 0
+SYMBOL_PUSH_WEAK <<i>> 0 ! Only the first time
+SYMBOL_ADD <<i>> 1
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 0
+EQ_IN S_OBJ_<<o>> = Station + X_SENSOR + 5 * <<i>>
+EQ_IN LATO_<<o>> = <<edge>>
+*COLOR_3 0.8 0 0.8
+SET_RUN_COLOR 0.8 0 0.8
+*H_TARGET_3 0.001
+H_OBJ 0.001
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_80c3cdd9-b801-4961-8215-85e40cb0cb37.par
+#BlueLink2 Animator: Shape File Link`Sphere 0.2 m (Green)` Geometric Shapes` , Traffic Vehicle Ani File`Shape_80c3cdd9-b801-4961-8215-85e40cb0cb37
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 0
+DZ_OBJECT 0
+*SIZE_3 0.001
+DIAMETER_OBJ 0.001
+*REFLECT_3 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 5 Lane Edge Markers Based On [[Edge]], Object #4
+OPT_SPEED_OBJ 0
+SYMBOL_PUSH_WEAK <<i>> 0 ! Only the first time
+SYMBOL_ADD <<i>> 1
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 0
+EQ_IN S_OBJ_<<o>> = Station + X_SENSOR + 5 * <<i>>
+EQ_IN LATO_<<o>> = <<edge>>
+*COLOR_4 0.8 0 0.8
+SET_RUN_COLOR 0.8 0 0.8
+*H_TARGET_4 0.001
+H_OBJ 0.001
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_80c3cdd9-b801-4961-8215-85e40cb0cb37.par
+#BlueLink3 Animator: Shape File Link`Sphere 0.2 m (Green)` Geometric Shapes` , Traffic Vehicle Ani File`Shape_80c3cdd9-b801-4961-8215-85e40cb0cb37
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 0
+DZ_OBJECT 0
+*SIZE_4 0.001
+DIAMETER_OBJ 0.001
+*REFLECT_4 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 5 Lane Edge Markers Based On [[Edge]], Object #5
+OPT_SPEED_OBJ 0
+SYMBOL_PUSH_WEAK <<i>> 0 ! Only the first time
+SYMBOL_ADD <<i>> 1
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 0
+EQ_IN S_OBJ_<<o>> = Station + X_SENSOR + 5 * <<i>>
+EQ_IN LATO_<<o>> = <<edge>>
+*COLOR_5 0.8 0 0.8
+SET_RUN_COLOR 0.8 0 0.8
+*H_TARGET_5 0.001
+H_OBJ 0.001
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_80c3cdd9-b801-4961-8215-85e40cb0cb37.par
+#BlueLink4 Animator: Shape File Link`Sphere 0.2 m (Green)` Geometric Shapes` , Traffic Vehicle Ani File`Shape_80c3cdd9-b801-4961-8215-85e40cb0cb37
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 0
+DZ_OBJECT 0
+*SIZE_5 0.001
+DIAMETER_OBJ 0.001
+*REFLECT_5 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+
+#EMBEDDED_NOTES
+#This makes 5 points that follow the current path of the driver model (PATH_ID_DM) on the current road (CURRENT_ROAD_ID) with the lateral coordinate defined by a Symbol Stack variable <<edge>>.
+#
+#This dataset must be read after the sensor dataset, because is uses a sensor parameter X_SENSOR.
+#
+#The dataset can be loaded multiple times, so long as the Symbol Stack variable <<edge>> is given a new unique value before linking to this dataset.
+#
+#Replaced in 2018.1 to use shape file links for video.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Multiple Moving Objects; { Points of Interest } 5 Lane Edge Markers Based On [[Edge]]
+#Library : Multiple Moving Objects
+#DataSet : 5 Lane Edge Markers Based On [[Edge]]
+#Category: Points of Interest
+#FileID  : TMotion_a7f8b877-3fc7-4e49-9176-c3263154ef3b
+#Product : TruckSim 2020.1
+#VehCode Multiple Objects
+
+END

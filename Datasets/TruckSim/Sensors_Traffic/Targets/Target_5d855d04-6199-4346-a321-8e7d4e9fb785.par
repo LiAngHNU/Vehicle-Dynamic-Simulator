@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`IUNIT_OBJ for Bus`Multi-Vehicle
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME IUNIT_OBJ for Bus
+OPT_SPEED_OBJ 0
+
+IUNIT_OBJ IUNIT
+#CheckBox3 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+
+#RingCtrl0 6
+#RingCtrl1 1
+H_OBJ HT_SM
+*S_INIT 0
+*L_INIT 0
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE 12.
+LENGTH_OBJ 12.
+WIDTH_OBJ WID_SM
+LX_FRONT_OBJ LX_F_SM
+*REFLECT 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+#MiscYellow1
+TypeO_<<o>> = VEHICLE ! type of target
+MsgObj_<<o>> = 6 ! boundary, limit for reaching target
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#Add an object that is attached to the current vehicle unit IUNIT. Only valid for simulations with multiple vehicles in one instance of the solver.
+#
+#This is for a 12m bus. The 12m length is not the value specified on the sprung mass screen, so it must be set here.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Multi-Vehicle } IUNIT_OBJ for Bus
+#Library : Single Moving Object (Custom)
+#DataSet : IUNIT_OBJ for Bus
+#Category: Multi-Vehicle
+#FileID  : Target_5d855d04-6199-4346-a321-8e7d4e9fb785
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

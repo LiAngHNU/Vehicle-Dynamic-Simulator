@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName ADAS Sensors for Range and Tracking`Right Blind-Spot, -Vx`Blind-Spot Sensors
+DEFINE_SENSORS 1
+ISENSOR = NSENSOR
+NSENSORS_INCREMENT
+symbol_add <<s>> 1
+SET_DESCRIPTION SENSOR_NAME Right Blind-Spot, -Vx
+#CheckBox0 1    
+#CheckBox1 1    
+OPT_BLOCK_SENSOR 1
+#CheckBox2 0    
+OPT_SORT_OUTPUTS_SENSOR 0
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 0    
+OPT_EXPORT_SENSOR 0
+#CheckBox6 1    
+
+#RingCtrl0 0
+#RingCtrl1 1
+SENSOR_DETECT_TRANSLUCENCY 1
+#RingCtrl2 1
+IUNIT_SENSOR 1
+#RingCtrl3 1
+TYPE_SENSOR 1
+PARSFILE Sensors_Traffic\Radar_Range\Range_67165923-2394-4875-890d-9b51e092ec45.par
+#BlueLink0 Sensor Range and Bearing Sensitivity`Blind Spot, Right Side, Reverse` Blind Spot Detection` , Range & Bearing Sensitivity`Range_67165923-2394-4875-890d-9b51e092ec45
+
+PARSFILE Sensors_Traffic\Radar_Elevation\SenElev_4fdaa102-cfee-4a8f-aeaf-c650b6f76306.par
+#BlueLink1 Sensor Elevation Sensitivity`Unity Gain` ` , Elevation Sensitivity`SenElev_4fdaa102-cfee-4a8f-aeaf-c650b6f76306
+
+WRITE_SENSOR_FIELD
+PARSFILE Animator\STL\Shape_f16705dd-b439-4bac-9f8f-acaeec8487d0.par
+#BlueLink2 Animator: Shape File Link`Cube: Right Blind-Spot Sensor` Geometric Shapes` , Shape for Detection Field`Shape_f16705dd-b439-4bac-9f8f-acaeec8487d0
+
+SET_COLOR 1 0.6 0
+SET_TRANSPARENCY 0.2
+X_LENGTH 50
+Y_LENGTH 7
+Z_LENGTH 2
+X_SENSOR -5050
+Y_SENSOR -900
+Z_SENSOR 500
+YAW_AIM_SENSOR -90
+PITCH_AIM_SENSOR 0
+ROLL_AIM_SENSOR 0
+SENSOR_DETECT_COLOR 1 0.6 0
+*SET_TRANSPARENCY 0.2
+*SET_COLOR_FIELD 1 0.6 0
+BEARING_MIN_SENSOR -90
+BEARING_MAX_SENSOR 2
+
+SPECIAL_PARSFILE Animator\STL\Shape_67b13483-d0c2-48d7-bef0-4c603104a0d7.par
+#BlueLink3 Animator: Shape File Link`Cube: Sensor Vector` Geometric Shapes` , Shape for vector`Shape_67b13483-d0c2-48d7-bef0-4c603104a0d7
+
+SENSOR_DETECT_OBJ Animator\STL\Shape_67b13483-d0c2-48d7-bef0-4c603104a0d7.par
+#MiscYellow0
+! String variables used for HUD and plots
+SYMBOL_PUSH <<side>> Right
+SYMBOL_PUSH <<LR>> _R
+ani_global_interpolation off
+#ENDMYellow
+
+PARSFILE Generic\VS_commands\GenVS_165920c4-852a-4dd5-b568-e05e5b19a059.par
+#BlueLink12 Generic VS Commands`Blind Spot Detection, Backing Up` ADAS Support` , Miscellaneous`GenVS_165920c4-852a-4dd5-b568-e05e5b19a059
+
+
+#EMBEDDED_NOTES
+#ADAS Range and Detection Sensor, set up to be at the right-rear corner of the rear bumper on the Dually Pickup Truck with a Crew Cab and 6.5-foot bed.
+#
+#The sensor detection area is a box reaching 7 m back and 50 m to the side.
+#
+#To keep this simple, the sensor will use target ID. That way the moving vehicle is always target #1.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: ADAS Sensors for Range and Tracking; { Blind-Spot Sensors } Right Blind-Spot, -Vx
+#Library : ADAS Sensors for Range and Tracking
+#DataSet : Right Blind-Spot, -Vx
+#Category: Blind-Spot Sensors
+#FileID  : Radar_b2a61e79-078e-4baf-a60d-2ced26db1617
+#Product : TruckSim 2020.1
+#VehCode ADAS Sensor
+
+END

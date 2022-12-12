@@ -1,0 +1,70 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Woman Crossing in CIty: S=158, L=-4.52`Pedestrians Crossing
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Woman Crossing in CIty: S=158, L=-4.52
+OPT_SPEED_OBJ 0
+PATH_ID_OBJ 3
+ROAD_ID_OBJ 1
+#CheckBox0 1    
+#CheckBox1 0    
+OPT_RECYCLE_OBJ 0
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 1    
+
+#RingCtrl0 3
+#RingCtrl1 0
+#MiscYellow0
+OPT_ROAD_PITCH(1) = 0
+OPT_ROAD_ROLL(1) = 0
+#ENDMYellow
+
+H_OBJ -1
+*COLOR 1 1 1
+*S_INIT 158
+*L_INIT -4.52
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 0
+DZ_OBJECT 0
+*SIZE .4
+DIAMETER_OBJ .4
+*REFLECT 2
+MATERIAL_TYPE_OBJ 2
+*SPEED 4/3.6
+*HEADING_VEL PI
+EQ_INIT HeadO_<<o>> PI
+*START gt(station,132)
+*STOP lt(S_OBJ_<<o>>,141.5)
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\Groups\Group_e93722fd-973d-4245-94b5-33b21567ca19.par
+#BlueLink0 Animator: Group`Animated Pedestrian (Asian Female)` Pedestrians` , 3D Shape for Video`Group_e93722fd-973d-4245-94b5-33b21567ca19
+
+EQ_INIT S_Obj_<<o>> 158
+EQ_INIT LatO_<<o>> -4.52
+DEFINE_VARIABLE V_CMD_OBJ_<<o>>;KM/H; Speed command
+DEFINE_VARIABLE HeadV_O_<<o>> PI;-; Heading vector for ODEs
+DEFINE_VARIABLE COND_START_OBJ_<<o>>;-; Boolean to start motion
+EQ_FULL_STEP COND_START_OBJ_<<o>> = gt(station,132) ;
+DEFINE_VARIABLE COND_STOP_OBJ_<<o>>; - ; Boolean to stop motion
+EQ_FULL_STEP COND_STOP_OBJ_<<o>> = lt(S_OBJ_<<o>>,141.5) ;
+EQ_OUT V_CMD_OBJ_<<o>> = IF(COND_START_OBJ_<<o>> & ~COND_STOP_OBJ_<<o>>, 4/3.6, 0);
+EQ_DIFFERENTIAL LatO_<<o>> = sin(HeadV_O_<<o>>)*V_CMD_OBJ_<<o>>
+EQ_DIFFERENTIAL S_Obj_<<o>> = cos(HeadV_O_<<o>>)*V_CMD_OBJ_<<o>>
+#MiscYellow1
+TypeO_<<o>> = PEDESTRIAN
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Pedestrians Crossing } Woman Crossing in CIty: S=158, L=-4.52
+#Library : Single Moving Object (Custom)
+#DataSet : Woman Crossing in CIty: S=158, L=-4.52
+#Category: Pedestrians Crossing
+#FileID  : Target_dca9b11a-06b3-4c77-9de2-11790a5fc028
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

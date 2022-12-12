@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName ADAS Sensors for Range and Tracking`Pedestrian`Forward Facing Sensors: FCW and ACC
+DEFINE_SENSORS 1
+ISENSOR = NSENSOR
+NSENSORS_INCREMENT
+symbol_add <<s>> 1
+SET_DESCRIPTION SENSOR_NAME Pedestrian
+#CheckBox0 1    
+#CheckBox1 1    
+OPT_BLOCK_SENSOR 1
+#CheckBox2 1    
+OPT_SORT_OUTPUTS_SENSOR 1
+#CheckBox3 1    
+#CheckBox5 0    
+OPT_EXPORT_SENSOR 0
+#CheckBox6 1    
+
+#RingCtrl0 2
+#RingCtrl1 1
+SENSOR_DETECT_TRANSLUCENCY 1
+#RingCtrl2 1
+IUNIT_SENSOR 1
+#RingCtrl3 2
+TYPE_SENSOR 2
+PARSFILE Sensors_Traffic\Radar_Range\Range_d163c454-c625-4dd2-b8c9-147a8df13cf9.par
+#BlueLink0 Sensor Range and Bearing Sensitivity`Pedestrian Detection` Sensor Range w/ Equations` , Range & Bearing Sensitivity`Range_d163c454-c625-4dd2-b8c9-147a8df13cf9
+
+PARSFILE Sensors_Traffic\Radar_Elevation\SenElev_4fdaa102-cfee-4a8f-aeaf-c650b6f76306.par
+#BlueLink1 Sensor Elevation Sensitivity`Unity Gain` ` , Elevation Sensitivity`SenElev_4fdaa102-cfee-4a8f-aeaf-c650b6f76306
+
+X_SENSOR -1250
+Y_SENSOR 0
+Z_SENSOR 1450
+YAW_AIM_SENSOR 0
+PITCH_AIM_SENSOR 0
+ROLL_AIM_SENSOR 0
+SENSOR_DETECT_COLOR 0 0.8 0.6
+*SET_TRANSPARENCY 0.15
+*SET_COLOR_FIELD 1 0 0
+BEARING_MIN_SENSOR -60
+BEARING_MAX_SENSOR 60
+
+SPECIAL_PARSFILE Animator\STL\Shape_67b13483-d0c2-48d7-bef0-4c603104a0d7.par
+#BlueLink3 Animator: Shape File Link`Cube: Sensor Vector` Geometric Shapes` , Shape for vector`Shape_67b13483-d0c2-48d7-bef0-4c603104a0d7
+
+SENSOR_DETECT_OBJ Animator\STL\Shape_67b13483-d0c2-48d7-bef0-4c603104a0d7.par
+#MiscYellow0
+define_output TypeO =  TypS<<s>>_1; - ; ...
+  Type of closest object
+define_output Y_Obj = Y_S<<s>>_1;m;...
+  Y coord of closest object
+ani_global_interpolation off
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_6df5d376-4900-4c6a-9701-4833722153eb.par
+#BlueLink4 Plot: Setup`ID and Message of Closest Object` ADAS Sensor Target Properties` , Plot`Plot_6df5d376-4900-4c6a-9701-4833722153eb
+
+PARSFILE Plot\Setup\Plot_9c0cf4e0-c82b-40d0-9578-bd57eaa2e3f9.par
+#BlueLink5 Plot: Setup`Sensor Y for Closest Pedestrian` ADAS Sensor Target Properties` , Plot`Plot_9c0cf4e0-c82b-40d0-9578-bd57eaa2e3f9
+
+
+#EMBEDDED_NOTES
+#ADAS Range and Detection Sensor located in the passenger compartment and facing forward.
+#
+#The sensor's range is set using the math model keyword RANGE_LIMIT_SENSOR and has a field of view (FOV) of 16 degrees.
+#
+#The equation that modifies the internal target speed uses detection variables such as SpdS<<s>>_1 and MagS<<s>>_1, where <<s>> is the number of the ACC Sensor. These detection variables are created when there is at least one sensor and at least one moving object.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: ADAS Sensors for Range and Tracking; { Forward Facing Sensors: FCW and ACC } Pedestrian
+#Library : ADAS Sensors for Range and Tracking
+#DataSet : Pedestrian
+#Category: Forward Facing Sensors: FCW and ACC
+#FileID  : Radar_a32454ff-0ab6-4c61-98f3-e5cbcaa097d3
+#Product : TruckSim 2020.1
+#VehCode ADAS Sensor
+
+END

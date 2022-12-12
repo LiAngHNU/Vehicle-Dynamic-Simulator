@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Mcity: Main St Crossing, ADAS Target`Mcity Traffic and Sensor Targets
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Mcity: Main St Crossing, ADAS Target
+OPT_SPEED_OBJ 0
+PATH_ID_OBJ 1
+ROAD_ID_OBJ CURRENT_ROAD_ID
+#CheckBox0 1    
+#CheckBox1 0    
+OPT_RECYCLE_OBJ 0
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+
+#RingCtrl0 2
+#RingCtrl1 1
+H_OBJ 0.9
+*COLOR 0.8 0.6 0
+*S_INIT 72.9
+*L_INIT 35
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE 3.75
+LENGTH_OBJ 3.75
+WIDTH_OBJ 2
+LX_FRONT_OBJ 1
+*REFLECT 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 3.75
+Y_LENGTH 2
+Z_LENGTH 1.8
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cubes\cube_1m_wide.obj
+set_transparency 0.5
+SET_OFFSET_X -0.233333
+SET_OFFSET_Z 0.5
+SET_COLOR 0.8 0.6 0
+*SPEED 5.10
+EQ_INIT HeadO_<<o>> -90/DR
+*START gt(t,0.01)
+*STOP gt(LatO_<<o>>,114)
+SET_RUN_COLOR 0.8 0.6 0
+PARSFILE Animator\Vehicles\AniVeh_1d7d0caf-7609-48e8-af6d-bbc086475760.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`2A Compact Utility Truck` 2A Utility Trucks and Vans` , 3D Shape for Video`AniVeh_1d7d0caf-7609-48e8-af6d-bbc086475760
+
+EQ_INIT S_Obj_<<o>> 72.9
+EQ_INIT LatO_<<o>> 35
+DEFINE_VARIABLE V_CMD_OBJ_<<o>>;KM/H; Speed command
+DEFINE_VARIABLE HeadV_O_<<o>> -90/DR;-; Heading vector for ODEs
+DEFINE_VARIABLE COND_START_OBJ_<<o>>;-; Boolean to start motion
+EQ_FULL_STEP COND_START_OBJ_<<o>> = gt(t,0.01) ;
+DEFINE_VARIABLE COND_STOP_OBJ_<<o>>; - ; Boolean to stop motion
+EQ_FULL_STEP COND_STOP_OBJ_<<o>> = gt(LatO_<<o>>,114) ;
+EQ_OUT V_CMD_OBJ_<<o>> = IF(COND_START_OBJ_<<o>> & ~COND_STOP_OBJ_<<o>>, 5.10, 0);
+EQ_DIFFERENTIAL LatO_<<o>> = -V_CMD_OBJ_<<o>>
+
+#EMBEDDED_NOTES
+#When this Moving Object is used with the Mcity example, the 2A Compact Utility truck is travelling in the right lane of the crossing road.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Mcity Traffic and Sensor Targets } Mcity: Main St Crossing, ADAS Target
+#Library : Single Moving Object (Custom)
+#DataSet : Mcity: Main St Crossing, ADAS Target
+#Category: Mcity Traffic and Sensor Targets
+#FileID  : Target_56af340d-2b51-4e1c-a665-4fc55f8ea826
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

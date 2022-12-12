@@ -1,0 +1,250 @@
+PARSFILE
+#FullDataName Multiple Moving Objects`4 Vehicles, Vx_Ref`Traffic Vehicles (Forward)
+#RingCtrl0 4
+DEFINE_MOVING_OBJECTS 4
+#RingCtrl1 3
+#RingCtrl2 1
+#RingCtrl3 0
+#RingCtrl4 1
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox25 1    
+#CheckBox26 1    
+#CheckBox27 1    
+#CheckBox28 1    
+#CheckBox29 1    
+#CheckBox38 1    
+#CheckBox39 0    
+
+DZ_OBJECT 0
+*L ILTARG
+*LEAD 600
+*TRAIL 0
+*HIDE 20
+*PATH_ID PATH_ID
+*ROAD_ID CURRENT_ROAD_ID
+*V Vx_Ref
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 4 Vehicles, Vx_Ref, Object #1
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 600
+S_TRAIL_OBJ 0
+S_HIDE_OBJ 20
+*SINIT_1 10
+EQ_INIT S_OBJ_<<o>> = 10
+EQ_INIT V_OBJ_<<o>> = Vx_Ref
+EQ_OUT V_OBJ_<<o>> = Vx_Ref
+LTARG_ID_OBJ = ILTARG
+*COLOR_1 0.6 0.4 0
+SET_RUN_COLOR 0.6 0.4 0
+*H_TARGET_1 -1.55
+H_OBJ -1.55
+PARSFILE Animator\Vehicles\AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`D-Class, Sedan` D-Class` , 3D Shape for Video`AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_1 5
+LENGTH_OBJ 5
+*WIDTH_1 1.85
+WIDTH_OBJ 1.85
+*LX_FRONT_1 1
+LX_FRONT_OBJ 1
+*REFLECT_1 1
+MATERIAL_TYPE_OBJ 1
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 5
+Y_LENGTH 1.85
+Z_LENGTH 1.55
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cubes\cube_1m_wide.obj
+set_transparency 0.5
+SET_OFFSET_X -0.3
+SET_OFFSET_Z 0.5
+SET_COLOR 0.6 0.4 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 4 Vehicles, Vx_Ref, Object #2
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 600
+S_TRAIL_OBJ 0
+S_HIDE_OBJ 20
+*SINIT_2 250
+EQ_INIT S_OBJ_<<o>> = 250
+EQ_INIT V_OBJ_<<o>> = Vx_Ref
+EQ_OUT V_OBJ_<<o>> = Vx_Ref
+LTARG_ID_OBJ = ILTARG
+*COLOR_2 0.6 0.8 1
+SET_RUN_COLOR 0.6 0.8 1
+*H_TARGET_2 -1.9
+H_OBJ -1.9
+PARSFILE Animator\Vehicles\AniVeh_0ac64a8a-7624-410f-bbbc-96104073c435.par
+#BlueLink1 Animator: Vehicles and Sensor Targets`E-Class, SUV` E-Class` , Traffic Vehicle Ani File`AniVeh_0ac64a8a-7624-410f-bbbc-96104073c435
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_2 4.75
+LENGTH_OBJ 4.75
+*WIDTH_2 2
+WIDTH_OBJ 2
+*LX_FRONT_2 0.75
+LX_FRONT_OBJ 0.75
+*REFLECT_2 1
+MATERIAL_TYPE_OBJ 1
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 4.75
+Y_LENGTH 2
+Z_LENGTH 1.9
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cubes\cube_1m_wide.obj
+set_transparency 0.5
+SET_OFFSET_X -0.342105
+SET_OFFSET_Z 0.5
+SET_COLOR 0.6 0.8 1
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 4 Vehicles, Vx_Ref, Object #3
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 600
+S_TRAIL_OBJ 0
+S_HIDE_OBJ 20
+*SINIT_3 400
+EQ_INIT S_OBJ_<<o>> = 400
+EQ_INIT V_OBJ_<<o>> = Vx_Ref
+EQ_OUT V_OBJ_<<o>> = Vx_Ref
+LTARG_ID_OBJ = ILTARG
+*COLOR_3 1 0.4 0.6
+SET_RUN_COLOR 1 0.4 0.6
+*H_TARGET_3 -1.5
+H_OBJ -1.5
+PARSFILE Animator\Vehicles\AniVeh_ecb4bc00-731a-4eec-9e10-b0fa5a9a76b7.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`F-Class, Sedan` F-Class` , Traffic Vehicle Ani File`AniVeh_ecb4bc00-731a-4eec-9e10-b0fa5a9a76b7
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_3 5.1
+LENGTH_OBJ 5.1
+*WIDTH_3 1.9
+WIDTH_OBJ 1.9
+*LX_FRONT_3 0.8
+LX_FRONT_OBJ 0.8
+*REFLECT_3 1
+MATERIAL_TYPE_OBJ 1
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 5.1
+Y_LENGTH 1.9
+Z_LENGTH 1.5
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cubes\cube_1m_wide.obj
+set_transparency 0.5
+SET_OFFSET_X -0.343137
+SET_OFFSET_Z 0.5
+SET_COLOR 1 0.4 0.6
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 4 Vehicles, Vx_Ref, Object #4
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 600
+S_TRAIL_OBJ 0
+S_HIDE_OBJ 20
+*SINIT_4 700
+EQ_INIT S_OBJ_<<o>> = 700
+EQ_INIT V_OBJ_<<o>> = Vx_Ref
+EQ_OUT V_OBJ_<<o>> = Vx_Ref
+LTARG_ID_OBJ = ILTARG
+*COLOR_4 1 1 1
+SET_RUN_COLOR 1 1 1
+*H_TARGET_4 -1.4
+H_OBJ -1.4
+PARSFILE Animator\Vehicles\AniVeh_fb8dc6d1-e5e6-4164-8263-c08dac91c7c5.par
+#BlueLink3 Animator: Vehicles and Sensor Targets`A-Class, Subcompact` A-Class` , Traffic Vehicle Ani File`AniVeh_fb8dc6d1-e5e6-4164-8263-c08dac91c7c5
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_4 3.3
+LENGTH_OBJ 3.3
+*WIDTH_4 1.7
+WIDTH_OBJ 1.7
+*LX_FRONT_4 0.5
+LX_FRONT_OBJ 0.5
+*REFLECT_4 1
+MATERIAL_TYPE_OBJ 1
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 3.3
+Y_LENGTH 1.7
+Z_LENGTH 1.4
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cubes\cube_1m_wide.obj
+set_transparency 0.5
+SET_OFFSET_X -0.348485
+SET_OFFSET_Z 0.5
+SET_COLOR 1 1 1
+
+#EMBEDDED_NOTES
+#These vehicles go at a specified speed on path IPATH.
+#
+#Used for path in rural intersection that has length = 600m.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Multiple Moving Objects; { Traffic Vehicles (Forward) } 4 Vehicles, Vx_Ref
+#Library : Multiple Moving Objects
+#DataSet : 4 Vehicles, Vx_Ref
+#Category: Traffic Vehicles (Forward)
+#FileID  : TMotion_8327b6b1-de24-4106-a393-514cc415e76b
+#Product : TruckSim 2020.1
+#VehCode Multiple Objects
+
+END

@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Sensor Range and Bearing Sensitivity`Pedestrian Detection`Sensor Range w/ Equations
+#CheckBox0 1    
+
+#RingCtrl0 EQUATION
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#MiscYellow0
+RANGE_LIMIT_SENSOR = 31
+#ENDMYellow
+
+SENSOR_ANTENNA_RANGE_EQUATION AND(LT(X*COS(XCOL), 30), LT(X*ABS(SIN(XCOL)), 2.5))
+*EQUATION AND(LT(X*COS(XCOL), 30), LT(X*ABS(SIN(XCOL)), 2.5))
+
+
+#EMBEDDED_NOTES
+#The sensor detection area is a box reaching 50 m to the front and +-2.5m each side.
+#
+#The box is implemented as a function of range and bearing angle.
+#
+#The parameter RANGE_LIMIT_SENSOR limits the polar distance in order to speed up calculations.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Sensor Range and Bearing Sensitivity; { Sensor Range w/ Equations } Pedestrian Detection
+#Library : Sensor Range and Bearing Sensitivity
+#DataSet : Pedestrian Detection
+#Category: Sensor Range w/ Equations
+#FileID  : Range_d163c454-c625-4dd2-b8c9-147a8df13cf9
+#Product : TruckSim 2020.1
+#VehCode Range & Bearing Sensitivity
+
+END

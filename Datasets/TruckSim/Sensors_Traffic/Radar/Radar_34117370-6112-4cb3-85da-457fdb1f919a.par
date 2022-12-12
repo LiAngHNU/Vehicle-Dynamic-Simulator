@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName ADAS Sensors for Range and Tracking`Right Front Facing, Export to Simulink`Forward Facing Sensors: FCW and ACC
+DEFINE_SENSORS 1
+ISENSOR = NSENSOR
+NSENSORS_INCREMENT
+symbol_add <<s>> 1
+SET_DESCRIPTION SENSOR_NAME Right Front Facing, Export to Simulink
+#CheckBox0 1    
+#CheckBox1 1    
+OPT_BLOCK_SENSOR 1
+#CheckBox2 1    
+OPT_SORT_OUTPUTS_SENSOR 1
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 1    
+OPT_EXPORT_SENSOR 1
+#CheckBox6 1    
+
+#RingCtrl0 0
+#RingCtrl1 1
+SENSOR_DETECT_TRANSLUCENCY 1
+#RingCtrl2 1
+IUNIT_SENSOR 1
+#RingCtrl3 1
+TYPE_SENSOR 1
+PARSFILE Sensors_Traffic\Radar_Range\Range_9f4371c4-aac5-489e-8cef-feaede630277.par
+#BlueLink0 Sensor Range and Bearing Sensitivity`100-m Range` Limit from Range` , Range & Bearing Sensitivity`Range_9f4371c4-aac5-489e-8cef-feaede630277
+
+PARSFILE Sensors_Traffic\Radar_Elevation\SenElev_4fdaa102-cfee-4a8f-aeaf-c650b6f76306.par
+#BlueLink1 Sensor Elevation Sensitivity`Unity Gain` ` , Elevation Sensitivity`SenElev_4fdaa102-cfee-4a8f-aeaf-c650b6f76306
+
+WRITE_SENSOR_FIELD
+PARSFILE Animator\STL\Shape_129c03aa-522e-462e-937b-37de40417680.par
+#BlueLink2 Animator: Shape File Link`Sensor Fields: 20 deg FOV` Common Vehicle Assets` , Shape for Detection Field`Shape_129c03aa-522e-462e-937b-37de40417680
+
+SET_COLOR 0 0.2 1
+SET_TRANSPARENCY 0.2
+X_LENGTH 90
+Y_LENGTH 39.0
+Z_LENGTH 6
+X_SENSOR 500
+Y_SENSOR -500
+Z_SENSOR 550
+YAW_AIM_SENSOR -12
+PITCH_AIM_SENSOR 0
+ROLL_AIM_SENSOR 0
+SENSOR_DETECT_COLOR 0 0.2 1
+*SET_TRANSPARENCY 0.2
+*SET_COLOR_FIELD 0 0.2 1
+BEARING_MIN_SENSOR -12
+BEARING_MAX_SENSOR 13
+
+SPECIAL_PARSFILE Animator\STL\Shape_b36dd57e-10bb-49f0-bfe5-2b6025d6d0d9.par
+#BlueLink3 Animator: Shape File Link`Square` Geometric Shapes` , Shape for vector`Shape_b36dd57e-10bb-49f0-bfe5-2b6025d6d0d9
+
+SENSOR_DETECT_OBJ Animator\STL\Shape_b36dd57e-10bb-49f0-bfe5-2b6025d6d0d9.par
+#MiscYellow0
+ani_global_interpolation off
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#ADAS Range and Detection Sensor set up via a checkbox to automatically export the original set of sensor target detection variables.
+#
+#Note: This example requires that the Simulink model use the TruckSim S-Function 1. The TruckSim S-Function 2 is more versatile, but does not support the automatic export option.
+#
+#For more information, click the Help icon in the upper right corner of the screen, or right-click on the checkbox "Automatically export sensor variables to Simulink (legacy)"
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: ADAS Sensors for Range and Tracking; { Forward Facing Sensors: FCW and ACC } Right Front Facing, Export to Simulink
+#Library : ADAS Sensors for Range and Tracking
+#DataSet : Right Front Facing, Export to Simulink
+#Category: Forward Facing Sensors: FCW and ACC
+#FileID  : Radar_34117370-6112-4cb3-85da-457fdb1f919a
+#Product : TruckSim 2020.1
+#VehCode ADAS Sensor
+
+END

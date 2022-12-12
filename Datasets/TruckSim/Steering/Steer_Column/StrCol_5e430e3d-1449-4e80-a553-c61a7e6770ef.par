@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Steering Column and Assist`2A LCFR: Steering Col. (No Assist)`
+I_COL 0.02
+I_GEAR_IN 0.0005
+D_COL 0.01
+HYS_COL 0.1
+BETA_COL 0.5
+*K_TBAR 2
+*KIN_STOP_A_L -40
+*KIN_STOP_A_R 40
+*KIN_STOP_STIFF_L 1100
+*KIN_STOP_STIFF_R 1100
+
+#RingCtrl0 1
+#RingCtrl1 0
+
+OPT_M_SW_CALC 1
+
+OPT_POWER 0
+A_STR_STOP_L -40
+K_STR_STOP_L 1100
+A_STR_STOP_R 40
+K_STR_STOP_R 1100
+
+
+#EMBEDDED_NOTES
+#Steering stop properties are specified here. There is a separate stop for each side. The left side information indicates a stop at the left suspension is contacted at -40 deg of wheel steer (steer to the right), when a stiffness of 1100 N-m deg resists further steer. A stop at the right wheel is contacted at 40 deg of steer (steer to the left).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Steering Column and Assist; 2A LCFR: Steering Col. (No Assist)
+#Library : Steering Column and Assist
+#DataSet : 2A LCFR: Steering Col. (No Assist)
+#Category: 
+#FileID  : StrCol_5e430e3d-1449-4e80-a553-c61a7e6770ef
+#Product : TruckSim 2020.1
+#VehCode Column and Assist
+
+END

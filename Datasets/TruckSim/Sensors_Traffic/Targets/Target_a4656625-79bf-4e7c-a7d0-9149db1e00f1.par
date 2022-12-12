@@ -1,0 +1,66 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Woman: City Environment`Pedestrians Crossing
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Woman: City Environment
+OPT_SPEED_OBJ 0
+PATH_ID_OBJ 9998
+ROAD_ID_OBJ 1
+#CheckBox0 0    
+#CheckBox1 0    
+OPT_RECYCLE_OBJ 0
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+
+#RingCtrl0 3
+#RingCtrl1 0
+H_OBJ .85
+*S_INIT 142
+*L_INIT -141
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 0
+DZ_OBJECT 0
+*SIZE .4
+DIAMETER_OBJ .4
+*REFLECT 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+*SPEED 1.25
+*HEADING_VEL 0
+EQ_INIT HeadO_<<o>> 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_17be3e20-9740-4a7b-bb69-5dcf884acf3c.par
+#BlueLink0 Animator: Shape File Link`Asian Female: Walking (5 km/h)` Environment: Pedestrians (Animated)` , 3D Shape for Video`Shape_17be3e20-9740-4a7b-bb69-5dcf884acf3c
+
+EQ_INIT S_Obj_<<o>> 142
+EQ_INIT LatO_<<o>> -141
+DEFINE_VARIABLE V_CMD_OBJ_<<o>>;KM/H; Speed command
+DEFINE_VARIABLE HeadV_O_<<o>> 0;-; Heading vector for ODEs
+EQ_OUT V_CMD_OBJ_<<o>> = 1.25;
+EQ_DIFFERENTIAL LatO_<<o>> = sin(HeadV_O_<<o>>)*V_CMD_OBJ_<<o>>
+EQ_DIFFERENTIAL S_Obj_<<o>> = cos(HeadV_O_<<o>>)*V_CMD_OBJ_<<o>>
+#MiscYellow1
+TypeO_<<o>> = PEDESTRIAN
+opt_road_pitch = 0
+opt_road_roll = 0
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#The symbol PEDESTRIAN is defined in the VS Command dataset "Define Target Messages"
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Pedestrians Crossing } Woman: City Environment
+#Library : Single Moving Object (Custom)
+#DataSet : Woman: City Environment
+#Category: Pedestrians Crossing
+#FileID  : Target_a4656625-79bf-4e7c-a7d0-9149db1e00f1
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END

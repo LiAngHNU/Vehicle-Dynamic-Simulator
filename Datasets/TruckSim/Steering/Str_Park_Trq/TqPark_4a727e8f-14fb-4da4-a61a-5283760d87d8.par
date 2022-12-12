@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Steering: Parking Torque`Constant: Zero`Constant
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+MZ_PARKING_STEER_COMBINE ADD
+MZ_PARKING_STEER_CONSTANT 0
+MZ_PARKING_STEER_FZ_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR 0
+*SCALAR2 0
+A_MZ_BETA 0.1
+
+
+LOG_ENTRY Used Dataset: Steering: Parking Torque; { Constant } Constant: Zero
+#Library : Steering: Parking Torque
+#DataSet : Constant: Zero
+#Category: Constant
+#FileID  : TqPark_4a727e8f-14fb-4da4-a61a-5283760d87d8
+#Product : TruckSim 2020.1
+#VehCode Parking Torque
+
+END

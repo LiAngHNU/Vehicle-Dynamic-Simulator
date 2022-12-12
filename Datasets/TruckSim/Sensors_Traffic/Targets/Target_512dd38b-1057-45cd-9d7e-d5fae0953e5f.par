@@ -1,0 +1,59 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`2A Day Cab - S: 145 m, Head: 70 deg`Sensor Targets
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 2A Day Cab - S: 145 m, Head: 70 deg
+OPT_SPEED_OBJ 0
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+#CheckBox0 0    
+#CheckBox1 0    
+OPT_RECYCLE_OBJ 0
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+
+#RingCtrl0 3
+#RingCtrl1 1
+H_OBJ 1
+*COLOR 0.2 0.6 0.4
+*S_INIT 145
+*L_INIT -20
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE 4.7
+LENGTH_OBJ 4.7
+WIDTH_OBJ 2.2
+LX_FRONT_OBJ 0.5
+*REFLECT 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+*SPEED 10
+*HEADING_VEL 70/DR
+EQ_INIT HeadO_<<o>> 70/DR
+SET_RUN_COLOR 0.2 0.6 0.4
+PARSFILE Animator\Vehicles\AniVeh_135ced7b-75b6-4a58-a554-9ed8958443d3.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`2A Day Cab` 2A Lead Units` , 3D Shape for Video`AniVeh_135ced7b-75b6-4a58-a554-9ed8958443d3
+
+EQ_INIT S_Obj_<<o>> 145
+EQ_INIT LatO_<<o>> -20
+DEFINE_VARIABLE V_CMD_OBJ_<<o>>;KM/H; Speed command
+DEFINE_VARIABLE HeadV_O_<<o>> 70/DR;-; Heading vector for ODEs
+EQ_OUT V_CMD_OBJ_<<o>> = 10;
+EQ_DIFFERENTIAL LatO_<<o>> = sin(HeadV_O_<<o>>)*V_CMD_OBJ_<<o>>
+EQ_DIFFERENTIAL S_Obj_<<o>> = cos(HeadV_O_<<o>>)*V_CMD_OBJ_<<o>>
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Sensor Targets } 2A Day Cab - S: 145 m, Head: 70 deg
+#Library : Single Moving Object (Custom)
+#DataSet : 2A Day Cab - S: 145 m, Head: 70 deg
+#Category: Sensor Targets
+#FileID  : Target_512dd38b-1057-45cd-9d7e-d5fae0953e5f
+#Product : TruckSim 2020.1
+#VehCode Moving Object (Custom)
+
+END
