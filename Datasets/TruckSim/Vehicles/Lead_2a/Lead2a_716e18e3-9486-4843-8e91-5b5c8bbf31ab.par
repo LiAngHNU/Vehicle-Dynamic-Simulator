@@ -1,0 +1,104 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit with 2 Axles`Pickup, Reg. Cab DRW (Ext. PT)`Pickup Trucks w/ Options
+#VehCode I_S
+IUNIT_INCREMENT
+IVEHICLE = IVEHICLE + 1
+symbol_add  <<unit>> 1
+symbol_add  <<vehicle>> 1
+NAXLES 2
+
+IOBJECT_SAVE
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 3
+OPT_PT 3
+#RingCtrl1 3
+#RingCtrl2 4
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_2a\Tire2a_36d224a5-5934-42b6-984b-7685587c07fd.par
+#BlueLink8 Tires: Vehicle Unit with 2 Axles`265/75 R16 (Dual Rear Tires)` TS 2A Trailer and Light Truck Tires` , Tires`Tire2a_36d224a5-5934-42b6-984b-7685587c07fd
+
+symbol_push  <<axle>> <<axle_temp>>
+*LX_AXLE_1 0
+*LX_AXLE_2 3390
+
+iaxle 1
+symbol_add  <<axle>> 1
+LX_AXLE 0
+PARSFILE Suspensions\Kin_Indy\KinInd_bf2d53f8-0f63-43ad-b7f3-53686c980965.par
+#BlueLink21 Suspension: Independent System Kinematics`Pickup, Full Size - Front (HD)` Pickup Trucks` , Kinematics`KinInd_bf2d53f8-0f63-43ad-b7f3-53686c980965
+
+PARSFILE Suspensions\Compliance\CmpInd_307f2b80-9309-4cab-bc90-cdb24c7d2f8a.par
+#BlueLink23 Suspension: Independent Compliance, Springs, and Dampers`Pickup, Full Size - Front (HD)` Pickup Trucks` , Suspension compliance`CmpInd_307f2b80-9309-4cab-bc90-cdb24c7d2f8a
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_187e68d9-ad11-42d8-ab77-ad13eb87f381.par
+#BlueLink11 Brakes: Two-Wheel System`Pickup, Full Size w/ ABS - Front` Pickup Trucks and SUVs` , Brakes`Brk2W_187e68d9-ad11-42d8-ab77-ad13eb87f381
+
+PARSFILE Steering\System\StrSys_3df2c03b-a121-4031-aee3-e457a7d16fa3.par
+#BlueLink13 Steering System`Full Size: Power, Recirc. Ball, Front` Pickup Trucks` , Steering`StrSys_3df2c03b-a121-4031-aee3-e457a7d16fa3
+
+
+iaxle 2
+symbol_add  <<axle>> 1
+LX_AXLE 3390
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_fe159a45-7b34-4d72-b834-37a26ff6b690.par
+#BlueLink16 Suspension: Solid Axle System Kinematics`Pickup, Full Size - Rear (HD DRW)` Pickup Trucks` , Kinematics`KinSA_fe159a45-7b34-4d72-b834-37a26ff6b690
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_f6e36608-197b-4cbc-93be-3927155d5a5e.par
+#BlueLink18 Suspension: Solid Axle Compliance, Springs, and Dampers`Pickup, Full Size - Rear (HD DRW)` Pickup Trucks` , Suspension compliance`CmpSA_f6e36608-197b-4cbc-93be-3927155d5a5e
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_8335fd63-98df-4a37-853c-a74afc0ea87a.par
+#BlueLink12 Brakes: Two-Wheel System`Pickup, Full Size w/ ABS - Rear` Pickup Trucks and SUVs` , Brakes`Brk2W_8335fd63-98df-4a37-853c-a74afc0ea87a
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_91601b40-521c-4f97-8acf-66025a144689.par
+#BlueLink1 Vehicle: Lead Unit Sprung Mass`Pickup, Reg. Cab 8 ft Bed DRW` 2 Axle Pickup Trucks` , Sprung Mass`SprMass_91601b40-521c-4f97-8acf-66025a144689
+
+PARSFILE Aerodynamics\Aero_Main\Aero_b2fc818b-2ec7-4d9b-b486-fc66db328774.par
+#BlueLink2 Aerodynamics: Basic`Pickup, Full Size Aero` Pickup Trucks` , Aerodynamics`Aero_b2fc818b-2ec7-4d9b-b486-fc66db328774
+
+PARSFILE Powertrain\4wd\4WD_0785eb03-f2a6-4c65-88a4-33970710729a.par
+#BlueLink5 Powertrain: 4-Wheel Drive`150 kW, 7 Spd. AT (Ext. Powertrain)` External Components` , Powertrain or dolly`4WD_0785eb03-f2a6-4c65-88a4-33970710729a
+
+x_length 3390.000000
+PARSFILE Animator\Vehicles\AniVeh_2a7c5c10-25ca-44b3-8034-dbf1de646707.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`Pickup, Dually: Regular Cab, 8 ft. Bed` Pickup Trucks` , Animator Shape(s)`AniVeh_2a7c5c10-25ca-44b3-8034-dbf1de646707
+
+PARSFILE Steering\Steer_Column\StrCol_3d18be40-b07f-4fc6-bdaf-f267a446003d.par
+#BlueLink6 Steering Column and Assist`Pickup, Full Size: Power, Recirc. Ball` 2A Pickup Trucks and Utility Vehicles` , Steering wheel torque`StrCol_3d18be40-b07f-4fc6-bdaf-f267a446003d
+
+symbol_push  <<hitch_x>> -3.390000
+symbol_push  <<hitch_y>> 0.000000
+symbol_push  <<hitch_z>> 1.100000
+PARSFILE Hitches\Joint\Hitch_b3644bc1-2713-4996-8b86-48e8fcccef09.par
+#BlueLink7 Hitch: Joint Assembly`5th Wheel for Pickup` 5th Wheel Hitches` , Hitch`Hitch_b3644bc1-2713-4996-8b86-48e8fcccef09
+
+LX_H 3390
+Y_H 0
+H_H 1100
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_2a7c5c10-25ca-44b3-8034-dbf1de646707.png
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#This is a diesel, 4WD full-size pickup with regular cab, long (8 ft) bed, and dual rear wheels (DRW).
+#
+#This versions uses an external powertrain.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 2 Axles; { Pickup Trucks w/ Options } Pickup, Reg. Cab DRW (Ext. PT)
+#Library : Vehicle: Lead Unit with 2 Axles
+#DataSet : Pickup, Reg. Cab DRW (Ext. PT)
+#Category: Pickup Trucks w/ Options
+#FileID  : Lead2a_716e18e3-9486-4843-8e91-5b5c8bbf31ab
+#Product : TruckSim 2020.1
+#VehCode I_S
+
+END

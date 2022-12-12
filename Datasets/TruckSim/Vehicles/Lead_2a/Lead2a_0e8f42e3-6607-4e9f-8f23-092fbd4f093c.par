@@ -1,0 +1,103 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit with 2 Axles`Conv. Van (7-spd. AT, Park Tq.)`2A Conventional Van
+#VehCode S_S
+IUNIT_INCREMENT
+IVEHICLE = IVEHICLE + 1
+symbol_add  <<unit>> 1
+symbol_add  <<vehicle>> 1
+NAXLES 2
+
+IOBJECT_SAVE
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 2
+OPT_PT 2
+#RingCtrl1 1
+#RingCtrl2 4
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_2a\Tire2a_1e7626ca-509e-49b8-983f-bec25b5573d1.par
+#BlueLink8 Tires: Vehicle Unit with 2 Axles`3000 kg Steer, 3000kg Drive (510 mm)` TS 2A Steer / Drive Tires: Internal Table Model` , Tires`Tire2a_1e7626ca-509e-49b8-983f-bec25b5573d1
+
+symbol_push  <<axle>> <<axle_temp>>
+*LX_AXLE_1 0
+*LX_AXLE_2 5000
+
+iaxle 1
+symbol_add  <<axle>> 1
+LX_AXLE 0
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_64c30f3c-3ccd-4380-a6bc-d537f8dd7bc1.par
+#BlueLink15 Suspension: Solid Axle System Kinematics`5.5t Steer, Single Wheel - Kinematics` Steer Axle` , Kinematics`KinSA_64c30f3c-3ccd-4380-a6bc-d537f8dd7bc1
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_de50d1ae-a9e2-40b2-bada-e6716d623681.par
+#BlueLink17 Suspension: Solid Axle Compliance, Springs, and Dampers`5.5t Leaf: +150 mm, -150 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_de50d1ae-a9e2-40b2-bada-e6716d623681
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_53f5261c-b48c-4b15-81d8-cbaffe9ac730.par
+#BlueLink11 Brakes: Two-Wheel System`10 kN-m Capacity, Hydraulic (2 ch. ABS)` Hydraulic Brakes` , Brakes`Brk2W_53f5261c-b48c-4b15-81d8-cbaffe9ac730
+
+PARSFILE Steering\System\StrSys_230e1525-7494-43ad-9ca6-77c71a38b048.par
+#BlueLink13 Steering System`Medium (5 m) Wheelbase (Park Tq.)` Medium - Heavy Duty Steering` , Steering`StrSys_230e1525-7494-43ad-9ca6-77c71a38b048
+
+
+iaxle 2
+symbol_add  <<axle>> 1
+LX_AXLE 5000
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_372fbdd1-d21e-4703-8f83-8a3f1b2b6572.par
+#BlueLink16 Suspension: Solid Axle System Kinematics`8.5t Drive, Dual Wheels` Drive Axle` , Kinematics`KinSA_372fbdd1-d21e-4703-8f83-8a3f1b2b6572
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_f30bb345-43ea-49d3-8c3e-c0faf5618fb5.par
+#BlueLink18 Suspension: Solid Axle Compliance, Springs, and Dampers`8.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_f30bb345-43ea-49d3-8c3e-c0faf5618fb5
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_53f5261c-b48c-4b15-81d8-cbaffe9ac730.par
+#BlueLink12 Brakes: Two-Wheel System`10 kN-m Capacity, Hydraulic (2 ch. ABS)` Hydraulic Brakes` , Brakes`Brk2W_53f5261c-b48c-4b15-81d8-cbaffe9ac730
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_c6251eff-0339-4134-af67-22d04574cc3f.par
+#BlueLink1 Vehicle: Lead Unit Sprung Mass`Conventional Van` 2 Axle Trucks` , Sprung Mass`SprMass_c6251eff-0339-4134-af67-22d04574cc3f
+
+PARSFILE Aerodynamics\Aero_Main\Aero_ad19711c-1936-499a-b1de-fc8dcd7243ec.par
+#BlueLink2 Aerodynamics: Basic`Conv. Cab w/ Fairings, 5 m Ref.` Conventional Cab` , Aerodynamics`Aero_ad19711c-1936-499a-b1de-fc8dcd7243ec
+
+PARSFILE Powertrain\Rwd\RWD_2c8c3833-6047-48c8-8fd0-bc55ae7ee358.par
+#BlueLink4 Powertrain: Rear-Wheel Drive`175 kW, 7 Speed AT (2A Conv. Van)` 175 kW Powertrains` , Powertrain or dolly`RWD_2c8c3833-6047-48c8-8fd0-bc55ae7ee358
+
+x_length 5000.000000
+PARSFILE Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`2A Conventional Truck` 2A Lead Units` , Animator Shape(s)`AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80
+
+PARSFILE Steering\Str_Wheel_Tq\TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6.par
+#BlueLink6 Steering Wheel Torque`Linear: 1/25 (Typical)` ` , Steering wheel torque`TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#2A Conventional Van with:
+#Rear-wheel drive
+#175 kW engine
+#Torque Converter (automatic transmission)
+#7-speed transmission
+#
+#Speed sensitive parking torque datasets have been added to the Steering System dataset. These are used to represent the torque that the tires generate due to scuffing and rolling at very low speeds.
+#
+#Brakes are set up to use 4-channel ABS (2 channel per axle). This allows the ABS to modulate each wheel based on their individual slip conditions.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 2 Axles; { 2A Conventional Van } Conv. Van (7-spd. AT, Park Tq.)
+#Library : Vehicle: Lead Unit with 2 Axles
+#DataSet : Conv. Van (7-spd. AT, Park Tq.)
+#Category: 2A Conventional Van
+#FileID  : Lead2a_0e8f42e3-6607-4e9f-8f23-092fbd4f093c
+#Product : TruckSim 2020.1
+#VehCode S_S
+
+END

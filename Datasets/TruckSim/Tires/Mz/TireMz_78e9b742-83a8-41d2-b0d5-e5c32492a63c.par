@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Tire: Aligning Moment`Mz; Widebase Symmetric`SAE Widebase Single Tire
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. slip angle [Alpha] (deg)
+*3D_ZLabel Aligning moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 7, 10 ! columns x rows
+MZ_TIRE_CARPET 2D_FROM_ZERO
+0, 12623, 25242, 37866, 50485, 63108, 75727, 100970
+1, 56.85, 133.35, 230.35, 336.65, 449.1, 576.6, 856.9
+2, 99.45, 235.85, 405.05, 595.95, 817.65, 1069.5, 1602.7
+4, 140.45, 348.65, 587.45, 902.2, 1256.7, 1678.8, 2628.25
+6, 159.7, 378.55, 633.4, 932.55, 1313.75, 1731.8, 2758.95
+8, 142.05, 345.65, 557.05, 795.4, 1128.45, 1595.75, 2482.6
+10, 113.55, 291.95, 477.65, 672.45, 910.95, 1250.55, 2183.9
+12, 81.35, 210.65, 377.05, 496.85, 691.1, 1069.85, 1695.3
+14, 61.55, 146.9, 265.05, 377, 564.75, 711.55, 999.95
+20, 0, 0, 0, 0, 0, 0, 0
+21, 0, 0, 0, 0, 0, 0, 0
+ENDTABLE
+
+
+
+#EMBEDDED_NOTES
+#This data comes from the SAE Cooperative Research program conducted in the 1990s.
+#
+#It is a direct copy of the Mz data measured for a 425/65R22.5 widebase tire after removing asymmetries (i.e., adjusting for zero offset and averaging tests results for the left and right directions).
+#
+#Data for the 20 deg slip angle was extrapolated using the rule of thumb that aligning moments generallly drop to zero at about this value.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire: Aligning Moment; { SAE Widebase Single Tire } Mz; Widebase Symmetric
+#Library : Tire: Aligning Moment
+#DataSet : Mz; Widebase Symmetric
+#Category: SAE Widebase Single Tire
+#FileID  : TireMz_78e9b742-83a8-41d2-b0d5-e5c32492a63c
+#Product : TruckSim 2020.1
+#VehCode Tire: Mz
+
+END

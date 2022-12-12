@@ -1,0 +1,164 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit with 5 Axles`5A Tractor (II_III)`5-Axle Lead Units
+#VehCode II_III
+IUNIT_INCREMENT
+IVEHICLE = IVEHICLE + 1
+symbol_add  <<unit>> 1
+symbol_add  <<vehicle>> 1
+NAXLES 5
+ITANDEM 1
+IOBJECT_SAVE
+#CheckBox0 1    
+#CheckBox1 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 4
+OPT_PT 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 5
+#RingCtrl4 5
+#RingCtrl5 5
+*LX_AXLE_1 0
+*LX_AXLE_2 1100
+*LX_AXLE_3 4900
+*LX_AXLE_4 6000
+*LX_AXLE_5 7100
+*RLOAD_1 0.5
+*RTRANSFER_1 0
+*RLOAD_2 2/3
+*RTRANSFER_2 0
+*RLOAD_3 2/3
+*RTRANSFER_3 0
+R_TAND_TRAIL_STATIC 0.5
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group\Tires_da127941-0838-4e41-ac87-493320ad36c8.par
+#BlueLink2 Tires for Any Vehicle Unit`5 Axle Tractor, Duals on Axles 3 - 5` TS 5A Steer / Drive Tires` , Tires`Tires_da127941-0838-4e41-ac87-493320ad36c8
+
+symbol_push  <<axle>> <<axle_temp>>
+
+R_TANDEM 0.5
+CFZ_MY_TAND 0
+ITANDEM 2
+R_TANDEM 2/3
+CFZ_MY_TAND 0
+ITANDEM 3
+R_TANDEM 2/3
+CFZ_MY_TAND 0
+
+iaxle 1
+symbol_add  <<axle>> 1
+LX_AXLE 0
+PARSFILE Suspensions\Kin_Indy\KinInd_88c680fb-47eb-41a4-aca2-d2735eab75d3.par
+#BlueLink15 Suspension: Independent System Kinematics`Steer Axle` Generic Commercial Vehicle` , Kinematics`KinInd_88c680fb-47eb-41a4-aca2-d2735eab75d3
+
+PARSFILE Suspensions\Compliance\CmpInd_db300eff-096c-49c7-aeaf-50496ed2c192.par
+#BlueLink17 Suspension: Independent Compliance, Springs, and Dampers`Generic Commercial Vehicle - Steer Axle` Steer Axles` , Suspension compliance`CmpInd_db300eff-096c-49c7-aeaf-50496ed2c192
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363.par
+#BlueLink18 Brakes: Two-Wheel System`7.5 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363
+
+PARSFILE Steering\System\StrSys_1eaeefe1-0f7e-4f29-858c-ae1ea65ad0b6.par
+#BlueLink19 Steering System`Tandem Steer - First Axle` Tandem Steering` , Steering`StrSys_1eaeefe1-0f7e-4f29-858c-ae1ea65ad0b6
+
+
+iaxle 2
+symbol_add  <<axle>> 1
+LX_AXLE 1100
+PARSFILE Suspensions\Kin_Indy\KinInd_88c680fb-47eb-41a4-aca2-d2735eab75d3.par
+#BlueLink24 Suspension: Independent System Kinematics`Steer Axle` Generic Commercial Vehicle` , Kinematics`KinInd_88c680fb-47eb-41a4-aca2-d2735eab75d3
+
+PARSFILE Suspensions\Compliance\CmpInd_db300eff-096c-49c7-aeaf-50496ed2c192.par
+#BlueLink26 Suspension: Independent Compliance, Springs, and Dampers`Generic Commercial Vehicle - Steer Axle` Steer Axles` , Suspension compliance`CmpInd_db300eff-096c-49c7-aeaf-50496ed2c192
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363.par
+#BlueLink27 Brakes: Two-Wheel System`7.5 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363
+
+PARSFILE Steering\System\StrSys_7ab590b7-94b7-4e57-9ab3-22acef204e34.par
+#BlueLink28 Steering System`Tandem Steer - Second Axle` Tandem Steering` , Steering`StrSys_7ab590b7-94b7-4e57-9ab3-22acef204e34
+
+
+iaxle 3
+symbol_add  <<axle>> 1
+LX_AXLE 4900
+PARSFILE Suspensions\Kin_Indy\KinInd_511d3e0a-01f0-449e-b4e8-d87c44361582.par
+#BlueLink33 Suspension: Independent System Kinematics`Drive Axle` Generic Commercial Vehicle` , Kinematics`KinInd_511d3e0a-01f0-449e-b4e8-d87c44361582
+
+PARSFILE Suspensions\Compliance\CmpInd_1f186592-0364-4010-9341-bde90ad8e708.par
+#BlueLink35 Suspension: Independent Compliance, Springs, and Dampers`Generic Commercial Vehicle - Drive Axle` Drive Axles` , Suspension compliance`CmpInd_1f186592-0364-4010-9341-bde90ad8e708
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink36 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+iaxle 4
+symbol_add  <<axle>> 1
+LX_AXLE 6000
+PARSFILE Suspensions\Kin_Indy\KinInd_511d3e0a-01f0-449e-b4e8-d87c44361582.par
+#BlueLink42 Suspension: Independent System Kinematics`Drive Axle` Generic Commercial Vehicle` , Kinematics`KinInd_511d3e0a-01f0-449e-b4e8-d87c44361582
+
+PARSFILE Suspensions\Compliance\CmpInd_1f186592-0364-4010-9341-bde90ad8e708.par
+#BlueLink44 Suspension: Independent Compliance, Springs, and Dampers`Generic Commercial Vehicle - Drive Axle` Drive Axles` , Suspension compliance`CmpInd_1f186592-0364-4010-9341-bde90ad8e708
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink45 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+iaxle 5
+symbol_add  <<axle>> 1
+LX_AXLE 7100
+PARSFILE Suspensions\Kin_Indy\KinInd_511d3e0a-01f0-449e-b4e8-d87c44361582.par
+#BlueLink51 Suspension: Independent System Kinematics`Drive Axle` Generic Commercial Vehicle` , Kinematics`KinInd_511d3e0a-01f0-449e-b4e8-d87c44361582
+
+PARSFILE Suspensions\Compliance\CmpInd_1f186592-0364-4010-9341-bde90ad8e708.par
+#BlueLink53 Suspension: Independent Compliance, Springs, and Dampers`Generic Commercial Vehicle - Drive Axle` Drive Axles` , Suspension compliance`CmpInd_1f186592-0364-4010-9341-bde90ad8e708
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink54 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 7100.000000
+PARSFILE Powertrain\6wd\6WD_e1c6b196-6aa7-4ce2-a84f-5c9093b85613.par
+#BlueLink9 Powertrain: 6-Wheel Drive`330 kW, 7 Spd. AT, Tridem Drive` 330 kW Powertrains` , Powertrain`6WD_e1c6b196-6aa7-4ce2-a84f-5c9093b85613
+
+PARSFILE Vehicles\Sprung_Mass\SprMass_8b9ebc49-2c5f-4c26-9c2f-8bbada2533a2.par
+#BlueLink0 Vehicle: Lead Unit Sprung Mass`5A Sleeper Cab` Tractors` , Sprung Mass`SprMass_8b9ebc49-2c5f-4c26-9c2f-8bbada2533a2
+
+PARSFILE Aerodynamics\Aero_Main\Aero_2a4a7111-e5fb-4116-845a-5ab1e31e8c99.par
+#BlueLink1 Aerodynamics: Basic`Conv. Cab w/ Fairings, 6.0 m Ref.` Conventional Cab` , Aerodynamics`Aero_2a4a7111-e5fb-4116-845a-5ab1e31e8c99
+
+PARSFILE Steering\Str_Wheel_Tq\TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6.par
+#BlueLink3 Steering Wheel Torque`Linear: 1/25 (Typical)` ` , Steering wheel torque`TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6
+
+PARSFILE Animator\Vehicles\AniVeh_17309053-6f2d-4a5c-b89b-a3b5817a81e7.par
+#BlueLink4 Animator: Vehicles and Sensor Targets`5A Sleeper` 5A Lead Units` , Animator Shape(s)`AniVeh_17309053-6f2d-4a5c-b89b-a3b5817a81e7
+
+symbol_push  <<hitch_x>> -6.000000
+symbol_push  <<hitch_y>> 0.000000
+symbol_push  <<hitch_z>> 1.100000
+PARSFILE Hitches\Joint\Hitch_fc25dbf0-73ba-4b1c-82af-5e2cf0a07b55.par
+#BlueLink5 Hitch: Joint Assembly`5th Wheel` 5th Wheel Hitches` , Hitch`Hitch_fc25dbf0-73ba-4b1c-82af-5e2cf0a07b55
+
+LX_H 6000
+Y_H 0
+H_H 1100
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#Five-axle Sleeper Cab tractor (II_III) with a 10x6 powertrain and a 7-speed automatic transmission.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 5 Axles; { 5-Axle Lead Units } 5A Tractor (II_III)
+#Library : Vehicle: Lead Unit with 5 Axles
+#DataSet : 5A Tractor (II_III)
+#Category: 5-Axle Lead Units
+#FileID  : Lead45_322be951-7d3a-4175-803d-163313d251e8
+#Product : TruckSim 2020.1
+#VehCode II_III
+
+END

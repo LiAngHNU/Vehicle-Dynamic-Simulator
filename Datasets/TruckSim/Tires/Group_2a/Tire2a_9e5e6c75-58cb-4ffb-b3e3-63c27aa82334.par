@@ -1,0 +1,87 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 2 Axles`510 mm Radius, MF-Tyre: Symmetric`TS 2A Lead Unit Tires: MF-Tyre / MF-Swift
+
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox5 1    
+
+*LDUAL_2 310
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\External\TireExt_88bd73fa-a47d-47c9-a5a8-08f59fdade37.par
+#BlueLink1 Tire (External)`510 mm Radius (MF-Tyre, Symmetric)` * MF-Tyre / MF-Swift` , Tires`TireExt_88bd73fa-a47d-47c9-a5a8-08f59fdade37
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\External\TireExt_88bd73fa-a47d-47c9-a5a8-08f59fdade37.par
+#BlueLink999 Tire (External)`510 mm Radius (MF-Tyre, Symmetric)` * MF-Tyre / MF-Swift` , Tires`TireExt_88bd73fa-a47d-47c9-a5a8-08f59fdade37
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 310
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\External\TireExt_88bd73fa-a47d-47c9-a5a8-08f59fdade37.par
+#BlueLink5 Tire (External)`510 mm Radius (MF-Tyre, Symmetric)` * MF-Tyre / MF-Swift` , Tires`TireExt_88bd73fa-a47d-47c9-a5a8-08f59fdade37
+
+itire 2
+symbol_push  <<tire>> R<<axle>>o
+STORE_WHEEL_OFFSET 0.155000
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+PARSFILE Tires\External\TireExt_88bd73fa-a47d-47c9-a5a8-08f59fdade37.par
+#BlueLink999 Tire (External)`510 mm Radius (MF-Tyre, Symmetric)` * MF-Tyre / MF-Swift` , Tires`TireExt_88bd73fa-a47d-47c9-a5a8-08f59fdade37
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\External\TireExt_88bd73fa-a47d-47c9-a5a8-08f59fdade37.par
+#BlueLink999 Tire (External)`510 mm Radius (MF-Tyre, Symmetric)` * MF-Tyre / MF-Swift` , Tires`TireExt_88bd73fa-a47d-47c9-a5a8-08f59fdade37
+
+itire 2
+symbol_push  <<tire>> L<<axle>>o
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\External\TireExt_88bd73fa-a47d-47c9-a5a8-08f59fdade37.par
+#BlueLink999 Tire (External)`510 mm Radius (MF-Tyre, Symmetric)` * MF-Tyre / MF-Swift` , Tires`TireExt_88bd73fa-a47d-47c9-a5a8-08f59fdade37
+
+
+#EMBEDDED_NOTES
+#This tire data selects the model option "TNO MF-Tyre v6.2", which adopts the MF-Tyre model and bypasses the TruckSim internal tire model.
+#
+#In this example, Tire side is selected as Symmetric. Therefore, all tire characteristics are treated as symmetric.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 2 Axles; { TS 2A Lead Unit Tires: MF-Tyre / MF-Swift } 510 mm Radius, MF-Tyre: Symmetric
+#Library : Tires: Vehicle Unit with 2 Axles
+#DataSet : 510 mm Radius, MF-Tyre: Symmetric
+#Category: TS 2A Lead Unit Tires: MF-Tyre / MF-Swift
+#FileID  : Tire2a_9e5e6c75-58cb-4ffb-b3e3-63c27aa82334
+#Product : TruckSim 2020.1
+#VehCode 2a Tire Group
+
+END

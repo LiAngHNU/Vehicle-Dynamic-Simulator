@@ -1,0 +1,104 @@
+PARSFILE
+#FullDataName Vehicle: Dolly with 3 Axles`3A Dolly`
+IUNIT_INCREMENT
+symbol_add  <<unit>> 1
+NAXLES 3
+
+#CheckBox0 0    
+
+*LX_AXLE_2 2800
+*LX_AXLE_3 3900
+*LX_H 2800
+*Y_H 0
+*H_H 1100
+*R_TANDEM_1 2/3
+*CFZ_MY_TAND_1 0
+*R_TANDEM_2 2/3
+*CFZ_MY_TAND_2 0
+*LX_AXLE_1 1700
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_3a\Tire3a_8c137480-cab2-4392-a668-b64d18e4bea6.par
+#BlueLink12 Tires: Vehicle Unit with 3 Axles`3A Dolly: 3000 kg Tridem, Duals` 3A Trailer and Dolly Tires` , Tires`Tire3a_8c137480-cab2-4392-a668-b64d18e4bea6
+
+symbol_push  <<axle>> <<axle_temp>>
+
+iaxle 1
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 1700
+PARSFILE Suspensions\Kin_Solid\KinSA_10dfacbc-8445-4a5e-adc7-aef054ae33a9.par
+#BlueLink13 Suspension: Solid Axle System Kinematics`10t Trailer, Dual Wheels` Trailer Axle` , Kinematics`KinSA_10dfacbc-8445-4a5e-adc7-aef054ae33a9
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_948c3fe1-af34-4b64-bfd1-53033453e83b.par
+#BlueLink16 Suspension: Solid Axle Compliance, Springs, and Dampers`10t Leaf: +150 mm, -150 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_948c3fe1-af34-4b64-bfd1-53033453e83b
+
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink4 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+iaxle 2
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 2800
+PARSFILE Suspensions\Kin_Solid\KinSA_10dfacbc-8445-4a5e-adc7-aef054ae33a9.par
+#BlueLink14 Suspension: Solid Axle System Kinematics`10t Trailer, Dual Wheels` Trailer Axle` , Kinematics`KinSA_10dfacbc-8445-4a5e-adc7-aef054ae33a9
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_948c3fe1-af34-4b64-bfd1-53033453e83b.par
+#BlueLink17 Suspension: Solid Axle Compliance, Springs, and Dampers`10t Leaf: +150 mm, -150 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_948c3fe1-af34-4b64-bfd1-53033453e83b
+
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink7 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+iaxle 3
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 3900
+PARSFILE Suspensions\Kin_Solid\KinSA_10dfacbc-8445-4a5e-adc7-aef054ae33a9.par
+#BlueLink15 Suspension: Solid Axle System Kinematics`10t Trailer, Dual Wheels` Trailer Axle` , Kinematics`KinSA_10dfacbc-8445-4a5e-adc7-aef054ae33a9
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_948c3fe1-af34-4b64-bfd1-53033453e83b.par
+#BlueLink18 Suspension: Solid Axle Compliance, Springs, and Dampers`10t Leaf: +150 mm, -150 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_948c3fe1-af34-4b64-bfd1-53033453e83b
+
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink10 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+ITANDEM 1
+R_TANDEM 2/3
+CFZ_MY_TAND 0
+ITANDEM 2
+R_TANDEM 2/3
+CFZ_MY_TAND 0
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 3900
+PARSFILE Vehicles\Trl_Sprung_Mass\TrlSprM_978f3f31-5a0f-4821-95f9-37b6f0e343b0.par
+#BlueLink1 Vehicle: Trailer Sprung Mass`3A Dolly` Dollies` , Sprung Mass`TrlSprM_978f3f31-5a0f-4821-95f9-37b6f0e343b0
+
+PARSFILE Animator\STL_Groups\ShpGrp_32b5cf02-8b29-4bb0-8f8a-de2e2fa8c086.par
+#BlueLink0 Animator: Shape Assembly`3-Axle Dolly` Dollies` , Animator Shape(s)`ShpGrp_32b5cf02-8b29-4bb0-8f8a-de2e2fa8c086
+
+symbol_push  <<hitch_x>> -2.800000
+symbol_push  <<hitch_y>> 0.000000
+symbol_push  <<hitch_z>> 1.100000
+PARSFILE Hitches\Joint\Hitch_fc25dbf0-73ba-4b1c-82af-5e2cf0a07b55.par
+#BlueLink2 Hitch: Joint Assembly`5th Wheel` 5th Wheel Hitches` , Hitch`Hitch_fc25dbf0-73ba-4b1c-82af-5e2cf0a07b55
+
+LX_H(<<unit>>) 2800
+Y_H(<<unit>>) 0
+H_H(<<unit>>) 1100
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\STL_Groups\ShpGrp_32b5cf02-8b29-4bb0-8f8a-de2e2fa8c086.png
+
+LOG_ENTRY Used Dataset: Vehicle: Dolly with 3 Axles; 3A Dolly
+#Library : Vehicle: Dolly with 3 Axles
+#DataSet : 3A Dolly
+#Category: 
+#FileID  : Dly3a_d8600915-e694-4a56-a9b5-7a516292cb94
+#Product : TruckSim 2020.1
+#VehCode dSSS
+
+END

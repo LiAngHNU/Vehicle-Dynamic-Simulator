@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`2A LCF Van, Motion Sensor at SM CG`LCF Vans
+#VehCode S_S
+#CheckBox0 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_2a\Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80.par
+#BlueLink0 Vehicle: Lead Unit with 2 Axles`LCF Van` 2A LCF Van` , Vehicle Type`Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Output\Sensors\MoSen_7920084e-f063-47d3-8baf-bbb408c64e44.par
+#BlueLink1 Positions, Velocities, and Accelerations`Motion Sensor at Sprung Mass CG` Sprung Mass and Suspended Cab` , Miscellaneous`MoSen_7920084e-f063-47d3-8baf-bbb408c64e44
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Lead_2a\Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80.png
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { LCF Vans } 2A LCF Van, Motion Sensor at SM CG
+#Library : Vehicle: Loaded Combination
+#DataSet : 2A LCF Van, Motion Sensor at SM CG
+#Category: LCF Vans
+#FileID  : VehLoad_9dcbf1c7-4623-418e-9593-cc98464f7ef3
+#Product : TruckSim 2020.1
+#VehCode S_S
+
+END

@@ -1,0 +1,66 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 2 Axles`3000 kg Steer, 3000kg SuperSingle Wide`TS 2A Steer / Drive Tires: Internal Table Model
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+*LDUAL_2 310
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_490d570d-4081-4ecc-8d20-bf58e3bed347.par
+#BlueLink1 Tire`510 mm Radius (Steer)` 3000 kg Rating` , Tires`Tire_490d570d-4081-4ecc-8d20-bf58e3bed347
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_490d570d-4081-4ecc-8d20-bf58e3bed347.par
+#BlueLink999 Tire`510 mm Radius (Steer)` 3000 kg Rating` , Tires`Tire_490d570d-4081-4ecc-8d20-bf58e3bed347
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_676dda44-89e7-4a6f-b550-6a958cfd5a10.par
+#BlueLink5 Tire`510 mm Rad. (S. Sgl. Drive 525 mm Wid)` 3000 kg Rating` , Tires`Tire_676dda44-89e7-4a6f-b550-6a958cfd5a10
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_676dda44-89e7-4a6f-b550-6a958cfd5a10.par
+#BlueLink999 Tire`510 mm Rad. (S. Sgl. Drive 525 mm Wid)` 3000 kg Rating` , Tires`Tire_676dda44-89e7-4a6f-b550-6a958cfd5a10
+
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 2 Axles; { TS 2A Steer / Drive Tires: Internal Table Model } 3000 kg Steer, 3000kg SuperSingle Wide
+#Library : Tires: Vehicle Unit with 2 Axles
+#DataSet : 3000 kg Steer, 3000kg SuperSingle Wide
+#Category: TS 2A Steer / Drive Tires: Internal Table Model
+#FileID  : Tire2a_3ebab7ac-c63c-46b8-8cb6-570f9553053f
+#Product : TruckSim 2020.1
+#VehCode 2a Tire Group
+
+END

@@ -1,0 +1,65 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 2 Axles`420 kg, 263 mm (Single)`TS 2A Lead Unit Tires: Pacejka 5.2
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_eac7b85d-59a4-4014-a054-0ff5dac7e0b4.par
+#BlueLink1 Tire`Pacejka 5.2, 175/70 R13` Pacejka 5.2` , Tires`Tire_eac7b85d-59a4-4014-a054-0ff5dac7e0b4
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_eac7b85d-59a4-4014-a054-0ff5dac7e0b4.par
+#BlueLink999 Tire`Pacejka 5.2, 175/70 R13` Pacejka 5.2` , Tires`Tire_eac7b85d-59a4-4014-a054-0ff5dac7e0b4
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_eac7b85d-59a4-4014-a054-0ff5dac7e0b4.par
+#BlueLink5 Tire`Pacejka 5.2, 175/70 R13` Pacejka 5.2` , Tires`Tire_eac7b85d-59a4-4014-a054-0ff5dac7e0b4
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_eac7b85d-59a4-4014-a054-0ff5dac7e0b4.par
+#BlueLink999 Tire`Pacejka 5.2, 175/70 R13` Pacejka 5.2` , Tires`Tire_eac7b85d-59a4-4014-a054-0ff5dac7e0b4
+
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 2 Axles; { TS 2A Lead Unit Tires: Pacejka 5.2 } 420 kg, 263 mm (Single)
+#Library : Tires: Vehicle Unit with 2 Axles
+#DataSet : 420 kg, 263 mm (Single)
+#Category: TS 2A Lead Unit Tires: Pacejka 5.2
+#FileID  : Tire2a_1cf88a1b-6d81-41ef-954c-e471b47349a4
+#Product : TruckSim 2020.1
+#VehCode 2a Tire Group
+
+END

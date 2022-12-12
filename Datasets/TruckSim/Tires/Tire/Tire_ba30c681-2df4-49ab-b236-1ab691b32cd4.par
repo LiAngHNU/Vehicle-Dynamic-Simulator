@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName Tire`255/75 R16`Touring Tires
+FZ_REF 11500
+X_LENGTH 394
+Z_LENGTH 394
+Y_LENGTH 255
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\ShpGrp_aaa5c3bc-f27e-476f-a5f9-98fbc8f83047.par
+#BlueLink4 Animator: Shape Assembly`Small SUV w/ Stripe` Tires` , Animator`ShpGrp_aaa5c3bc-f27e-476f-a5f9-98fbc8f83047
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 255
+RRE 379
+R0 394
+FZ_TIRE_COEFFICIENT 470
+FZ_MAX 100000
+M_TIRE 28
+IT 1.7
+IT_XXZZ 0
+PARSFILE Generic\tables\GenTab_b39bbe4a-1fec-4454-92d0-578179ec80e0.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_b39bbe4a-1fec-4454-92d0-578179ec80e0
+
+PARSFILE Generic\tables\GenTab_d3424660-e756-4006-a08c-f39a49c14aae.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_d3424660-e756-4006-a08c-f39a49c14aae
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.0042
+RR_V 0.000032
+L_CONTACT_X_CONSTANT 80
+L_CONTACT_Y_CONSTANT 255
+RR_FX 1
+OPT_TIRE_COMB 1
+R_TIRE_COMB 1.5
+PARSFILE Tires\Mz\TireMz_cf36fa4a-599f-4f01-b1af-e285892c77dc.par
+#BlueLink0 Tire: Aligning Moment`255/75 R16` Touring Tires` , Aligning Moment`TireMz_cf36fa4a-599f-4f01-b1af-e285892c77dc
+
+PARSFILE Tires\Fy\TireFy_b6059069-1150-41f6-b04d-cec9c1554035.par
+#BlueLink1 Tire: Lateral Force`255/75 R16` Touring Tires` , Lateral Force`TireFy_b6059069-1150-41f6-b04d-cec9c1554035
+
+PARSFILE Tires\Fx\TireFx_5cf1ba93-8847-42e3-8f63-c861d56addc3.par
+#BlueLink2 Tire: Longitudinal Force`255/75 R16` Touring Tires` , Longitudinal Force`TireFx_5cf1ba93-8847-42e3-8f63-c861d56addc3
+
+PARSFILE Tires\Camber_Thrust\CamStiff_031f59fa-bb13-4db3-8288-f36679d72411.par
+#BlueLink3 Tire: Camber Thrust Coefficient`255/75 R16` Touring Tires` , Camber Thrust`CamStiff_031f59fa-bb13-4db3-8288-f36679d72411
+
+
+
+#EMBEDDED_NOTES
+#Tire & Rim Association Load Rating: 1150 kg
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { Touring Tires } 255/75 R16
+#Library : Tire
+#DataSet : 255/75 R16
+#Category: Touring Tires
+#FileID  : Tire_ba30c681-2df4-49ab-b236-1ab691b32cd4
+#Product : TruckSim 2020.1
+#VehCode Tire
+
+END

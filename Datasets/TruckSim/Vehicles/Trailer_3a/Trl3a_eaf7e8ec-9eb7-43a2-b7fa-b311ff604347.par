@@ -1,0 +1,103 @@
+PARSFILE
+#FullDataName Vehicle: Trailer with 3 Axles`3A Trailer`* * * CiDi Trailers
+#VehCode SSS
+IUNIT_INCREMENT
+symbol_add  <<unit>> 1
+NAXLES 3
+
+IOBJECT_SAVE
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 0
+*LX_AXLE_1 6700
+*LX_AXLE_2 7900
+*LX_AXLE_3 9100
+*R_TANDEM_1 2/3
+*CFZ_MY_TAND_1 0
+*R_TANDEM_2 2/3
+*CFZ_MY_TAND_2 0
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_3a\Tire3a_9faa0195-9128-444c-8350-950c3b1f826b.par
+#BlueLink14 Tires: Vehicle Unit with 3 Axles`3000 kg Tridem, Duals` 3A Trailer and Dolly Tires` , Tires`Tire3a_9faa0195-9128-444c-8350-950c3b1f826b
+
+symbol_push  <<axle>> <<axle_temp>>
+
+iaxle 1
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 6700
+PARSFILE Suspensions\Kin_Solid\KinSA_47edd369-19f2-4fb4-9a62-152af4e7b369.par
+#BlueLink17 Suspension: Solid Axle System Kinematics`18t Trailer, Dual Wheels` Trailer Axle` , Kinematics`KinSA_47edd369-19f2-4fb4-9a62-152af4e7b369
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_fb97cc4b-adb0-46ca-9180-cb094d2f2cb0.par
+#BlueLink20 Suspension: Solid Axle Compliance, Springs, and Dampers`10t Air: +60 mm, -60 mm Travel` Air Springs` , Suspension compliance`CmpSA_fb97cc4b-adb0-46ca-9180-cb094d2f2cb0
+
+PARSFILE Brakes\2W_System\Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363.par
+#BlueLink5 Brakes: Two-Wheel System`7.5 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363
+
+
+iaxle 2
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 7900
+PARSFILE Suspensions\Kin_Solid\KinSA_47edd369-19f2-4fb4-9a62-152af4e7b369.par
+#BlueLink18 Suspension: Solid Axle System Kinematics`18t Trailer, Dual Wheels` Trailer Axle` , Kinematics`KinSA_47edd369-19f2-4fb4-9a62-152af4e7b369
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_fb97cc4b-adb0-46ca-9180-cb094d2f2cb0.par
+#BlueLink21 Suspension: Solid Axle Compliance, Springs, and Dampers`10t Air: +60 mm, -60 mm Travel` Air Springs` , Suspension compliance`CmpSA_fb97cc4b-adb0-46ca-9180-cb094d2f2cb0
+
+PARSFILE Brakes\2W_System\Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363.par
+#BlueLink8 Brakes: Two-Wheel System`7.5 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363
+
+
+iaxle 3
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 9100
+PARSFILE Suspensions\Kin_Solid\KinSA_47edd369-19f2-4fb4-9a62-152af4e7b369.par
+#BlueLink19 Suspension: Solid Axle System Kinematics`18t Trailer, Dual Wheels` Trailer Axle` , Kinematics`KinSA_47edd369-19f2-4fb4-9a62-152af4e7b369
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_fb97cc4b-adb0-46ca-9180-cb094d2f2cb0.par
+#BlueLink22 Suspension: Solid Axle Compliance, Springs, and Dampers`10t Air: +60 mm, -60 mm Travel` Air Springs` , Suspension compliance`CmpSA_fb97cc4b-adb0-46ca-9180-cb094d2f2cb0
+
+PARSFILE Brakes\2W_System\Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363.par
+#BlueLink11 Brakes: Two-Wheel System`7.5 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363
+
+
+ITANDEM 1
+R_TANDEM 2/3
+CFZ_MY_TAND 0
+ITANDEM 2
+R_TANDEM 2/3
+CFZ_MY_TAND 0
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 9100.000000
+PARSFILE Vehicles\Trl_Sprung_Mass\TrlSprM_2851989f-8caa-4dfd-9d85-c238186d415c.par
+#BlueLink1 Vehicle: Trailer Sprung Mass`3A Trailer` * * * CiDi Trailers` , Sprung Mass`TrlSprM_2851989f-8caa-4dfd-9d85-c238186d415c
+
+PARSFILE Animator\Vehicles\AniVeh_c94de64d-e311-479c-bf1b-04fe3821179b.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`CiDi General Frame (3A Trailer)` * * * CiDi Truck Frames` , Animator Shape(s)`AniVeh_c94de64d-e311-479c-bf1b-04fe3821179b
+
+PARSFILE Aerodynamics\Aero_Main\Aero_2dcf0dd6-b552-482c-b346-939b627511c9.par
+#BlueLink2 Aerodynamics: Basic`No Aerodynamics` ` , Aerodynamics`Aero_2dcf0dd6-b552-482c-b346-939b627511c9
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_c94de64d-e311-479c-bf1b-04fe3821179b.png
+IOBJECT_RESTORE
+
+LOG_ENTRY Used Dataset: Vehicle: Trailer with 3 Axles; { * * * CiDi Trailers } 3A Trailer
+#Library : Vehicle: Trailer with 3 Axles
+#DataSet : 3A Trailer
+#Category: * * * CiDi Trailers
+#FileID  : Trl3a_eaf7e8ec-9eb7-43a2-b7fa-b311ff604347
+#Product : TruckSim 2020.1
+#VehCode SSS
+
+END

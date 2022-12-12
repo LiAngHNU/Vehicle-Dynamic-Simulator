@@ -1,0 +1,101 @@
+PARSFILE
+#FullDataName Vehicle: Dolly with 1 Axle`1A Dolly 10T`
+IUNIT_INCREMENT
+symbol_add  <<unit>> 1
+NAXLES 1
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 1    
+
+*LDUAL 310
+*LX_H 1860
+*Y_H 0
+*H_H 1100
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 310
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink7 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+itire 2
+symbol_push  <<tire>> R<<axle>>o
+STORE_WHEEL_OFFSET 0.155000
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink999 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink999 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+itire 2
+symbol_push  <<tire>> L<<axle>>o
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink999 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+
+iaxle 1
+OPT_STEER_EXT 1
+LX_AXLE 1860
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_10dfacbc-8445-4a5e-adc7-aef054ae33a9.par
+#BlueLink10 Suspension: Solid Axle System Kinematics`10t Trailer, Dual Wheels` Trailer Axle` , Kinematics (solid axle)`KinSA_10dfacbc-8445-4a5e-adc7-aef054ae33a9
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_d8f28765-f3fd-49e1-b71a-afd06c78a2cf.par
+#BlueLink11 Suspension: Solid Axle Compliance, Springs, and Dampers`10t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_d8f28765-f3fd-49e1-b71a-afd06c78a2cf
+
+PARSFILE Brakes\2W_System\Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363.par
+#BlueLink4 Brakes: Two-Wheel System`7.5 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 1860
+PARSFILE Vehicles\Trl_Sprung_Mass\TrlSprM_db4fe431-0d81-4af9-bec4-cc5221976dad.par
+#BlueLink1 Vehicle: Trailer Sprung Mass`1A Dolly` Dollies` , Sprung mass`TrlSprM_db4fe431-0d81-4af9-bec4-cc5221976dad
+
+PARSFILE Animator\STL_Groups\ShpGrp_e0465a13-94fe-434a-81e0-57e6e0a02cb7.par
+#BlueLink0 Animator: Shape Assembly`1-Axle Dolly` Dollies` , Animator Shape(s)`ShpGrp_e0465a13-94fe-434a-81e0-57e6e0a02cb7
+
+symbol_push  <<hitch_x>> -1.860000
+symbol_push  <<hitch_y>> 0.000000
+symbol_push  <<hitch_z>> 1.100000
+PARSFILE Hitches\Joint\Hitch_fc25dbf0-73ba-4b1c-82af-5e2cf0a07b55.par
+#BlueLink2 Hitch: Joint Assembly`5th Wheel` 5th Wheel Hitches` , Hitch`Hitch_fc25dbf0-73ba-4b1c-82af-5e2cf0a07b55
+
+LX_H(<<unit>>) 1860
+Y_H(<<unit>>) 0
+H_H(<<unit>>) 1100
+*IMAGE_FIT_MODE 1
+*IMAGE_TYPE PASTED_3X1
+*IMAGE_PASTED Vehicles\Dolly_1a\Dly1a_522628e2-5127-4132-bf96-2f0ea0eeb936.png
+
+#EMBEDDED_NOTES
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Dolly with 1 Axle; 1A Dolly 10T
+#Library : Vehicle: Dolly with 1 Axle
+#DataSet : 1A Dolly 10T
+#Category: 
+#FileID  : Dly1a_522628e2-5127-4132-bf96-2f0ea0eeb936
+#Product : TruckSim 2020.1
+#VehCode dS
+
+END

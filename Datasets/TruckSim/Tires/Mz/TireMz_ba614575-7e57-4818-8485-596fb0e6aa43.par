@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Tire: Aligning Moment`Mz: Drive Tire Symmetric`SAE Drive Tire
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. slip angle [Alpha] (deg)
+*3D_ZLabel Aligning moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 6, 10 ! columns x rows
+MZ_TIRE_CARPET 2D_FROM_ZERO
+0, 13736, 20604, 27468, 34336, 41204, 54936
+1, 32.25, 86.35, 115.4, 169.45, 226.6, 274.2
+2, 50.85, 148.25, 194.1, 299.8, 400.15, 502.05
+4, 80.85, 174.85, 313, 471.55, 635.4, 811.9
+6, 87.7, 182.8, 352.65, 516.4, 709.9, 915.65
+8, 103.05, 171.15, 359.35, 529.45, 693.75, 871.8
+10, 80.65, 153.1, 307.75, 424.1, 586.65, 752.95
+12.5, 77.8, 98.5, 205.25, 319, 432.4, 549.75
+14, 41.4, 81.05, 191.55, 262.5, 359.85, 482.85
+20, 0, 0, 0, 0, 0, 0
+21, 0, 0, 0, 0, 0, 0
+ENDTABLE
+
+
+
+#EMBEDDED_NOTES
+#This data comes from the SAE Cooperative Research program conducted in the 1990s.
+#
+#It is a direct copy of the Mz data measured for a 295/75|275/80R22.5 drive tire after removing asymmetries (i.e., adjusting for zero offset and averaging tests results for the left and right directions).
+#
+#Data for the 20 deg slip angle was extrapolated using the rule of thumb that aligning moments generallly drop to zero at about this value.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire: Aligning Moment; { SAE Drive Tire } Mz: Drive Tire Symmetric
+#Library : Tire: Aligning Moment
+#DataSet : Mz: Drive Tire Symmetric
+#Category: SAE Drive Tire
+#FileID  : TireMz_ba614575-7e57-4818-8485-596fb0e6aa43
+#Product : TruckSim 2020.1
+#VehCode Tire: Mz
+
+END

@@ -1,0 +1,65 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 2 Axles`3000 kg Tandem (510 mm), No Duals`TS 2A Trailer Tires
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink1 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink999 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink5 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink999 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 2 Axles; { TS 2A Trailer Tires } 3000 kg Tandem (510 mm), No Duals
+#Library : Tires: Vehicle Unit with 2 Axles
+#DataSet : 3000 kg Tandem (510 mm), No Duals
+#Category: TS 2A Trailer Tires
+#FileID  : Tire2a_581539cd-7353-4476-b90e-93697dc64d7e
+#Product : TruckSim 2020.1
+#VehCode 2a Tire Group
+
+END

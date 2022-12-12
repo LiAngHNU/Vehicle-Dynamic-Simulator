@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`2A LCF, Motion Sensors, Trace Lines`LCF Vans
+#VehCode S_S
+#CheckBox0 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_2a\Lead2a_fb179ca3-cb19-41b7-9642-9f02ca88d5e4.par
+#BlueLink0 Vehicle: Lead Unit with 2 Axles`LCF Van (Not Animated)` 2A LCF Van` , Vehicle Type`Lead2a_fb179ca3-cb19-41b7-9642-9f02ca88d5e4
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Output\Sensors\MoSen_fecf4050-70e6-488f-ab3e-786660e52a8f.par
+#BlueLink1 Positions, Velocities, and Accelerations`SM Origin, SM CG, LF Corner, LF WC` Animated Trace Lines` , Miscellaneous`MoSen_fecf4050-70e6-488f-ab3e-786660e52a8f
+
+PARSFILE Generic\Links\GenLink_8d2256cc-6c6b-4667-8540-41487eb99038.par
+#BlueLink2 Generic Group of Links`Trace Lines: SM CG, LF Corner, LF WC` Animated Trace Lines` , Miscellaneous`GenLink_8d2256cc-6c6b-4667-8540-41487eb99038
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Lead_2a\Lead2a_fb179ca3-cb19-41b7-9642-9f02ca88d5e4.png
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { LCF Vans } 2A LCF, Motion Sensors, Trace Lines
+#Library : Vehicle: Loaded Combination
+#DataSet : 2A LCF, Motion Sensors, Trace Lines
+#Category: LCF Vans
+#FileID  : VehLoad_6c0706e2-659f-4977-830c-b14e4a9e394f
+#Product : TruckSim 2020.1
+#VehCode S_S
+
+END

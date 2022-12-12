@@ -1,0 +1,97 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 2 Axles`510 mm Radius, Simple TYDEX/STI`TS 2A Lead Unit Tires: User Tire Model
+
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox5 1    
+
+*LDUAL_2 310
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\External\TireExt_721ef24f-f6c9-432f-9453-461f438d9b67.par
+#BlueLink1 Tire (External)`510 mm Radius (Simple TYDEX/STI 2018)` * User Tire Model` , Tires`TireExt_721ef24f-f6c9-432f-9453-461f438d9b67
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\External\TireExt_721ef24f-f6c9-432f-9453-461f438d9b67.par
+#BlueLink999 Tire (External)`510 mm Radius (Simple TYDEX/STI 2018)` * User Tire Model` , Tires`TireExt_721ef24f-f6c9-432f-9453-461f438d9b67
+
+#BlueLink2 Tire (External)`510 mm Radius (MF-Tyre, Asymmetric)` * MF-Tyre / MF-Swift` , Inner Left Tire`TireExt_bc5f68c0-f34c-4f2f-9716-883e5cf6fa30
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 310
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\External\TireExt_721ef24f-f6c9-432f-9453-461f438d9b67.par
+#BlueLink5 Tire (External)`510 mm Radius (Simple TYDEX/STI 2018)` * User Tire Model` , Tires`TireExt_721ef24f-f6c9-432f-9453-461f438d9b67
+
+itire 2
+symbol_push  <<tire>> R<<axle>>o
+STORE_WHEEL_OFFSET 0.155000
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+PARSFILE Tires\External\TireExt_721ef24f-f6c9-432f-9453-461f438d9b67.par
+#BlueLink999 Tire (External)`510 mm Radius (Simple TYDEX/STI 2018)` * User Tire Model` , Tires`TireExt_721ef24f-f6c9-432f-9453-461f438d9b67
+
+#BlueLink4 Tire (External)`510 mm Radius (MF-Tyre, Asymmetric)` * MF-Tyre / MF-Swift` , Outer Right Tire`TireExt_bc5f68c0-f34c-4f2f-9716-883e5cf6fa30
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\External\TireExt_721ef24f-f6c9-432f-9453-461f438d9b67.par
+#BlueLink999 Tire (External)`510 mm Radius (Simple TYDEX/STI 2018)` * User Tire Model` , Tires`TireExt_721ef24f-f6c9-432f-9453-461f438d9b67
+
+#BlueLink6 Tire (External)`510 mm Radius (MF-Tyre, Asymmetric)` * MF-Tyre / MF-Swift` , Inner Left Tire`TireExt_bc5f68c0-f34c-4f2f-9716-883e5cf6fa30
+
+itire 2
+symbol_push  <<tire>> L<<axle>>o
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\External\TireExt_721ef24f-f6c9-432f-9453-461f438d9b67.par
+#BlueLink999 Tire (External)`510 mm Radius (Simple TYDEX/STI 2018)` * User Tire Model` , Tires`TireExt_721ef24f-f6c9-432f-9453-461f438d9b67
+
+#BlueLink7 Tire (External)`510 mm Radius (MF-Tyre, Asymmetric)` * MF-Tyre / MF-Swift` , Outer Left Tire`TireExt_bc5f68c0-f34c-4f2f-9716-883e5cf6fa30
+
+
+#EMBEDDED_NOTES
+#This tire data selects the model option "3rd-Party Tire model STI", which adopts an external tire model and bypass the TruckSim internal tire model.
+#
+#Updated for version 2018: Low speed stability is improved, longitudinal and lateral tire slips are treated as dynamic for the simple STI tire model.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 2 Axles; { TS 2A Lead Unit Tires: User Tire Model } 510 mm Radius, Simple TYDEX/STI
+#Library : Tires: Vehicle Unit with 2 Axles
+#DataSet : 510 mm Radius, Simple TYDEX/STI
+#Category: TS 2A Lead Unit Tires: User Tire Model
+#FileID  : Tire2a_a8156d94-d96b-4a70-9bfe-8ca9fdd8025a
+#Product : TruckSim 2020.1
+#VehCode 2a Tire Group
+
+END

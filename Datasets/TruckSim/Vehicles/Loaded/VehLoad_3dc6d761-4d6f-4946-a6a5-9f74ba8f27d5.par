@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`3A Conv. Van (I_SS) w/ Payload`Conventional Vans
+#VehCode I_SS
+#CheckBox0 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_3a\Lead3a_990a1ec5-2784-4b3e-80b4-3284ac0a9ecd.par
+#BlueLink0 Vehicle: Lead Unit with 3 Axles`3A Conv Van (I_SS)` 3A Conventional Van` , Vehicle Type`Lead3a_990a1ec5-2784-4b3e-80b4-3284ac0a9ecd
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Custom\Custom_3fde20bc-7784-49d8-b91f-45b5aa3edddf.par
+#BlueLink1 Payload: Custom`Small Crate: 5000 kg, X = 5230 mm` Payloads: Small Crates` , Miscellaneous`Custom_3fde20bc-7784-49d8-b91f-45b5aa3edddf
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_954205fa-e7b5-4c32-be37-65abc905e7f2.png
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { Conventional Vans } 3A Conv. Van (I_SS) w/ Payload
+#Library : Vehicle: Loaded Combination
+#DataSet : 3A Conv. Van (I_SS) w/ Payload
+#Category: Conventional Vans
+#FileID  : VehLoad_3dc6d761-4d6f-4946-a6a5-9f74ba8f27d5
+#Product : TruckSim 2020.1
+#VehCode I_SS
+
+END

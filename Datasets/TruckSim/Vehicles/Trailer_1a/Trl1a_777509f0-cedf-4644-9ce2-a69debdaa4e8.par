@@ -1,0 +1,93 @@
+PARSFILE
+#FullDataName Vehicle: Trailer with 1 Axle`1A Van Trailer (ABS) UE4 Lead Vehicle`Van / Container Trailers
+#VehCode S
+IUNIT_INCREMENT
+symbol_add  <<unit>> 1
+NAXLES 1
+
+IOBJECT_SAVE
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+*LDUAL_1 310
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 310
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink9 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+itire 2
+symbol_push  <<tire>> R<<axle>>o
+STORE_WHEEL_OFFSET 0.155000
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink999 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink999 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+itire 2
+symbol_push  <<tire>> L<<axle>>o
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink999 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+
+iaxle 1
+OPT_STEER_EXT 1
+LX_AXLE 10000
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_fdc0b85f-e1a6-40c0-93ba-35d44647acdc.par
+#BlueLink14 Suspension: Solid Axle System Kinematics`15.5t Trailer, Dual Wheels - Kinematics` Trailer Axle` , Kinematics (solid axle)`KinSA_fdc0b85f-e1a6-40c0-93ba-35d44647acdc
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c.par
+#BlueLink15 Suspension: Solid Axle Compliance, Springs, and Dampers`15.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c
+
+PARSFILE Brakes\2W_System\Brk2W_e350a033-787f-4f49-b387-f33910546a6c.par
+#BlueLink5 Brakes: Two-Wheel System`7.5 kN-m Capacity, ABS, Pedal Force` Air Brakes` , Brakes`Brk2W_e350a033-787f-4f49-b387-f33910546a6c
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 10000
+PARSFILE Vehicles\Trl_Sprung_Mass\TrlSprM_1fcce3d5-04b9-44a7-bca1-7111921a122c.par
+#BlueLink1 Vehicle: Trailer Sprung Mass`1A Trailer (Typical)` 1A Trailer` , Sprung mass`TrlSprM_1fcce3d5-04b9-44a7-bca1-7111921a122c
+
+PARSFILE Animator\Vehicles\AniVeh_321e160b-cb35-4c41-8df6-8a8e9ea0a474.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`1A Conventional Box Trailer` Trailers: 1-axle` , Animator Shape(s)`AniVeh_321e160b-cb35-4c41-8df6-8a8e9ea0a474
+
+PARSFILE Aerodynamics\Aero_Main\Aero_2dcf0dd6-b552-482c-b346-939b627511c9.par
+#BlueLink2 Aerodynamics: Basic`No Aerodynamics` ` , Aerodynamics`Aero_2dcf0dd6-b552-482c-b346-939b627511c9
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_321e160b-cb35-4c41-8df6-8a8e9ea0a474.png
+IOBJECT_RESTORE
+
+LOG_ENTRY Used Dataset: Vehicle: Trailer with 1 Axle; { Van / Container Trailers } 1A Van Trailer (ABS) UE4 Lead Vehicle
+#Library : Vehicle: Trailer with 1 Axle
+#DataSet : 1A Van Trailer (ABS) UE4 Lead Vehicle
+#Category: Van / Container Trailers
+#FileID  : Trl1a_777509f0-cedf-4644-9ce2-a69debdaa4e8
+#Product : TruckSim 2020.1
+#VehCode S
+
+END

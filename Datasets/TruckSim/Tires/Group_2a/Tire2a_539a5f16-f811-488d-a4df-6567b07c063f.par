@@ -1,0 +1,65 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 2 Axles`HD Utility Vehicle Tires (565 mm)`TS 2A Steer / Drive Tires: Internal Table Model
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_75120ff9-e3c2-459a-bb39-b69743f8d392.par
+#BlueLink1 Tire`HD Utility Veh. Tire (565 mm)` 2000 kg Rating` , Tires`Tire_75120ff9-e3c2-459a-bb39-b69743f8d392
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_75120ff9-e3c2-459a-bb39-b69743f8d392.par
+#BlueLink999 Tire`HD Utility Veh. Tire (565 mm)` 2000 kg Rating` , Tires`Tire_75120ff9-e3c2-459a-bb39-b69743f8d392
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_75120ff9-e3c2-459a-bb39-b69743f8d392.par
+#BlueLink5 Tire`HD Utility Veh. Tire (565 mm)` 2000 kg Rating` , Tires`Tire_75120ff9-e3c2-459a-bb39-b69743f8d392
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_75120ff9-e3c2-459a-bb39-b69743f8d392.par
+#BlueLink999 Tire`HD Utility Veh. Tire (565 mm)` 2000 kg Rating` , Tires`Tire_75120ff9-e3c2-459a-bb39-b69743f8d392
+
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 2 Axles; { TS 2A Steer / Drive Tires: Internal Table Model } HD Utility Vehicle Tires (565 mm)
+#Library : Tires: Vehicle Unit with 2 Axles
+#DataSet : HD Utility Vehicle Tires (565 mm)
+#Category: TS 2A Steer / Drive Tires: Internal Table Model
+#FileID  : Tire2a_539a5f16-f811-488d-a4df-6567b07c063f
+#Product : TruckSim 2020.1
+#VehCode 2a Tire Group
+
+END

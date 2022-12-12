@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`3A Tour Bus (S_SS), Two Payloads`Tour Buses
+#VehCode S_SS
+#CheckBox0 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_3a\Lead3a_39b75173-f499-4d6a-ad38-31cf3e4eb847.par
+#BlueLink0 Vehicle: Lead Unit with 3 Axles`3A Tour Bus` 3A Tour Bus` , Vehicle Type`Lead3a_39b75173-f499-4d6a-ad38-31cf3e4eb847
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Box\Box_cf8374bb-29bb-4748-8952-7d70d9e9ed06.par
+#BlueLink1 Payload: Box Shape`Tour Bus (Left Passengers)` Buses` , Miscellaneous`Box_cf8374bb-29bb-4748-8952-7d70d9e9ed06
+
+PARSFILE Payloads\Box\Box_da2e3358-8939-480c-b6a2-8991d604fad0.par
+#BlueLink2 Payload: Box Shape`Tour Bus (Right Passengers)` Buses` , Miscellaneous`Box_da2e3358-8939-480c-b6a2-8991d604fad0
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_cca5b92d-3920-4afe-a207-0cfc6e721644.png
+
+#EMBEDDED_NOTES
+#Example of a three axle tour bus.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { Tour Buses } 3A Tour Bus (S_SS), Two Payloads
+#Library : Vehicle: Loaded Combination
+#DataSet : 3A Tour Bus (S_SS), Two Payloads
+#Category: Tour Buses
+#FileID  : VehLoad_b8e28542-e7d9-4105-bc67-a8d6c3d35654
+#Product : TruckSim 2020.1
+#VehCode S_SS
+
+END

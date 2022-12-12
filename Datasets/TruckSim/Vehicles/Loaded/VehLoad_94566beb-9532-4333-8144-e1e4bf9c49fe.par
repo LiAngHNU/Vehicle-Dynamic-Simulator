@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`3A Dump Truck, Loaded, Locked TC`Dump Trucks
+#VehCode S_SS
+#CheckBox0 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_3a\Lead3a_40ebf79d-db1b-43ec-8e56-085564a1f22e.par
+#BlueLink0 Vehicle: Lead Unit with 3 Axles`3A Dump Truck (Locked T-Case)` 3A Dump Truck` , Vehicle Type`Lead3a_40ebf79d-db1b-43ec-8e56-085564a1f22e
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Custom\Custom_3c603e52-ce48-4ea1-90b9-6dde8949fde6.par
+#BlueLink1 Payload: Custom`Dirt for Dump Truck` Payloads: Dump Trucks and Trailers` , Miscellaneous`Custom_3c603e52-ce48-4ea1-90b9-6dde8949fde6
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_5e99b800-fddc-4e1b-a23d-d8a55608d47a.png
+
+#EMBEDDED_NOTES
+#Three axle dump truck with Locked Transfer Case and payload
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { Dump Trucks } 3A Dump Truck, Loaded, Locked TC
+#Library : Vehicle: Loaded Combination
+#DataSet : 3A Dump Truck, Loaded, Locked TC
+#Category: Dump Trucks
+#FileID  : VehLoad_94566beb-9532-4333-8144-e1e4bf9c49fe
+#Product : TruckSim 2020.1
+#VehCode S_SS
+
+END

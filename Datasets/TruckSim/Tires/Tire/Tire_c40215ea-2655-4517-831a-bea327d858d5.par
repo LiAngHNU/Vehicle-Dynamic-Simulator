@@ -1,0 +1,71 @@
+PARSFILE
+#FullDataName Tire`265/75 R16`Trailer and Light Truck Tires
+FZ_REF 11500
+X_LENGTH 402
+Z_LENGTH 402
+Y_LENGTH 265
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\ShpGrp_0a9dd363-3a4b-45ad-98c2-cb8b2f2f8145.par
+#BlueLink4 Animator: Shape Assembly`Highway Steer Tire` Tires` , Animator`ShpGrp_0a9dd363-3a4b-45ad-98c2-cb8b2f2f8145
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 265
+RRE 393
+R0 402
+FZ_TIRE_COEFFICIENT 502
+FZ_MAX 100000
+M_TIRE 31
+IT 1.8
+IT_XXZZ 0
+PARSFILE Generic\tables\GenTab_b39bbe4a-1fec-4454-92d0-578179ec80e0.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_b39bbe4a-1fec-4454-92d0-578179ec80e0
+
+PARSFILE Generic\tables\GenTab_d3424660-e756-4006-a08c-f39a49c14aae.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_d3424660-e756-4006-a08c-f39a49c14aae
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.0044
+RR_V 0.000028
+L_CONTACT_X_CONSTANT 85
+L_CONTACT_Y_CONSTANT 265
+RR_FX 1
+OPT_TIRE_COMB 0
+PARSFILE Tires\Mz\TireMz_73aa9f08-9db8-4f28-a24c-38ed9294259b.par
+#BlueLink0 Tire: Aligning Moment`265/75 R16` Trailer and Light Truck Tires` , Aligning Moment`TireMz_73aa9f08-9db8-4f28-a24c-38ed9294259b
+
+PARSFILE Tires\Fy\TireFy_e3c7f9b8-f23b-4346-bca3-172666aada08.par
+#BlueLink1 Tire: Lateral Force`265/75 R16` Trailer and Light Truck Tires` , Lateral Force`TireFy_e3c7f9b8-f23b-4346-bca3-172666aada08
+
+PARSFILE Tires\Fx\TireFx_f9baf123-7179-4ee1-b52a-1580d924bcd9.par
+#BlueLink2 Tire: Longitudinal Force`265/75 R16` Trailer and Light Truck Tires` , Longitudinal Force`TireFx_f9baf123-7179-4ee1-b52a-1580d924bcd9
+
+PARSFILE Tires\Camber_Thrust\CamStiff_2779031a-0e03-423f-af33-2c677eead968.par
+#BlueLink3 Tire: Camber Thrust Coefficient`265/75 R16` Touring Tires` , Camber Thrust`CamStiff_2779031a-0e03-423f-af33-2c677eead968
+
+
+
+LOG_ENTRY Used Dataset: Tire; { Trailer and Light Truck Tires } 265/75 R16
+#Library : Tire
+#DataSet : 265/75 R16
+#Category: Trailer and Light Truck Tires
+#FileID  : Tire_c40215ea-2655-4517-831a-bea327d858d5
+#Product : TruckSim 2020.1
+#VehCode Tire
+
+END

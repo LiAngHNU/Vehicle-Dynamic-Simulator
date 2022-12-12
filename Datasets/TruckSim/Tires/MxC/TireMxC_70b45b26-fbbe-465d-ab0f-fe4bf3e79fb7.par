@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Tire: Overturning Moment vs. Inclination`MF-Tyre / MF-Swift Mx vs. Gamma`MF-Tyre / MF-Swift
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. inclination angle (deg)
+*3D_ZLabel Overturning moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 5, 12 ! columns x rows
+MXG_TIRE_CARPET 2D_FROM_ZERO
+0, 2000, 8000, 20000, 40000, 60000
+0.5, -0.0608083, -0.584181, -0.731546, -0.721475, -0.690825
+1, -0.121644, -1.16846, -1.46309, -1.44294, -1.3818
+1.5, -0.182535, -1.75293, -2.19464, -2.16437, -2.07309
+2, -0.243507, -2.33768, -2.9262, -2.88576, -2.76483
+2.5, -0.30459, -2.92281, -3.65776, -3.6071, -3.45719
+3, -0.365811, -3.50842, -4.38933, -4.32837, -4.15032
+3.5, -0.427197, -4.0946, -5.12092, -5.04956, -4.84437
+4, -0.488776, -4.68144, -5.85251, -5.77065, -5.53949
+4.5, -0.550577, -5.26904, -6.58411, -6.49163, -6.23585
+5, -0.612628, -5.85749, -7.31573, -7.21249, -6.93361
+5.5, -0.612628, -5.85749, -7.31573, -7.21249, -6.93361
+6, -0.612628, -5.85749, -7.31573, -7.21249, -6.93361
+ENDTABLE
+
+CRO_MX 1
+
+
+LOG_ENTRY Used Dataset: Tire: Overturning Moment vs. Inclination; { MF-Tyre / MF-Swift } MF-Tyre / MF-Swift Mx vs. Gamma
+#Library : Tire: Overturning Moment vs. Inclination
+#DataSet : MF-Tyre / MF-Swift Mx vs. Gamma
+#Category: MF-Tyre / MF-Swift
+#FileID  : TireMxC_70b45b26-fbbe-465d-ab0f-fe4bf3e79fb7
+#Product : TruckSim 2020.1
+#VehCode Tire: Mx
+
+END

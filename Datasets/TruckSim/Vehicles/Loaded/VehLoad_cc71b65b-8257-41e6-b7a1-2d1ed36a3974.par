@@ -1,0 +1,53 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`2A Tour Bus (S_S), Two Payloads`Tour Buses
+#VehCode S_S
+#CheckBox0 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_2a\Lead2a_359a9ec0-18bc-47f9-865e-0a2dd895199d.par
+#BlueLink0 Vehicle: Lead Unit with 2 Axles`Tour Bus (S_S)` 2A Tour Bus` , Vehicle Type`Lead2a_359a9ec0-18bc-47f9-865e-0a2dd895199d
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Box\Box_cf8374bb-29bb-4748-8952-7d70d9e9ed06.par
+#BlueLink1 Payload: Box Shape`Tour Bus (Left Passengers)` Buses` , Miscellaneous`Box_cf8374bb-29bb-4748-8952-7d70d9e9ed06
+
+PARSFILE Payloads\Box\Box_da2e3358-8939-480c-b6a2-8991d604fad0.par
+#BlueLink2 Payload: Box Shape`Tour Bus (Right Passengers)` Buses` , Miscellaneous`Box_da2e3358-8939-480c-b6a2-8991d604fad0
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_5cb9979d-3686-4654-8ce0-3c30f81bd36c.png
+
+#EMBEDDED_NOTES
+#Two-axle Tour Bus (S_S) with a 4x2 powertrain and 7-speed automatic transmission. Both axles are solid axles.
+#
+#Two payloads are used to represent left and right side passengers, respectively.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { Tour Buses } 2A Tour Bus (S_S), Two Payloads
+#Library : Vehicle: Loaded Combination
+#DataSet : 2A Tour Bus (S_S), Two Payloads
+#Category: Tour Buses
+#FileID  : VehLoad_cc71b65b-8257-41e6-b7a1-2d1ed36a3974
+#Product : TruckSim 2020.1
+#VehCode S_S
+
+END

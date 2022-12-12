@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`2A CiDi Liuqi H5`* * * Vehicle Dynamic Simulator
+#VehCode F_S_S
+#CheckBox0 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_2a\Lead2a_1c003d93-e26a-41ba-82e6-5258fe5203f6.par
+#BlueLink0 Vehicle: Lead Unit with 2 Axles`2A CiDi Liuqi H5` * * * CiDi Trucks` , Vehicle Type`Lead2a_1c003d93-e26a-41ba-82e6-5258fe5203f6
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Sensors_Traffic\Radar\Radar_880a7db9-3eb9-4c2c-a738-538c9de5a16f.par
+#BlueLink1 ADAS Sensors for Range and Tracking`Wide Sensor` * * * CiDi Sensors` , Miscellaneous`Radar_880a7db9-3eb9-4c2c-a738-538c9de5a16f
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Loaded\VehLoad_de024eb4-0749-4e93-a332-0f8576d383c5.png
+
+#EMBEDDED_NOTES
+#Three axle sleeper tractor with a lowboy trailer.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { * * * Vehicle Dynamic Simulator } 2A CiDi Liuqi H5
+#Library : Vehicle: Loaded Combination
+#DataSet : 2A CiDi Liuqi H5
+#Category: * * * Vehicle Dynamic Simulator
+#FileID  : VehLoad_de024eb4-0749-4e93-a332-0f8576d383c5
+#Product : TruckSim 2020.1
+#VehCode F_S_S
+
+END

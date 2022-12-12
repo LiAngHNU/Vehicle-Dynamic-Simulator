@@ -1,0 +1,95 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit with 2 Axles`School Bus (Lockup TC)`School Bus
+#VehCode S_S
+IUNIT_INCREMENT
+IVEHICLE = IVEHICLE + 1
+symbol_add  <<unit>> 1
+symbol_add  <<vehicle>> 1
+NAXLES 2
+
+IOBJECT_SAVE
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 2
+OPT_PT 2
+#RingCtrl1 1
+#RingCtrl2 4
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_2a\Tire2a_1e7626ca-509e-49b8-983f-bec25b5573d1.par
+#BlueLink8 Tires: Vehicle Unit with 2 Axles`3000 kg Steer, 3000kg Drive (510 mm)` TS 2A Steer / Drive Tires: Internal Table Model` , Tires`Tire2a_1e7626ca-509e-49b8-983f-bec25b5573d1
+
+symbol_push  <<axle>> <<axle_temp>>
+*LX_AXLE_1 0
+*LX_AXLE_2 6450
+
+iaxle 1
+symbol_add  <<axle>> 1
+LX_AXLE 0
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_0d766f3f-721d-4473-aa19-ea22f646c09a.par
+#BlueLink15 Suspension: Solid Axle System Kinematics`3t Steer, Single Wheel` Steer Axle` , Kinematics`KinSA_0d766f3f-721d-4473-aa19-ea22f646c09a
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_6bafd81c-f551-4feb-bb31-3684b7fe89e8.par
+#BlueLink17 Suspension: Solid Axle Compliance, Springs, and Dampers`3t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_6bafd81c-f551-4feb-bb31-3684b7fe89e8
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_b80a513c-6cf0-46f3-ad96-9beeff25f2ec.par
+#BlueLink11 Brakes: Two-Wheel System`6 kN-m Capacity, Hydraulic (2 ch. ABS)` Hydraulic Brakes` , Brakes`Brk2W_b80a513c-6cf0-46f3-ad96-9beeff25f2ec
+
+PARSFILE Steering\System\StrSys_ea97afb5-5373-4e56-92fd-474d9920f375.par
+#BlueLink13 Steering System`Long (6 m) Wheelbase` Medium - Heavy Duty Steering` , Steering`StrSys_ea97afb5-5373-4e56-92fd-474d9920f375
+
+
+iaxle 2
+symbol_add  <<axle>> 1
+LX_AXLE 6450
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_372fbdd1-d21e-4703-8f83-8a3f1b2b6572.par
+#BlueLink16 Suspension: Solid Axle System Kinematics`8.5t Drive, Dual Wheels` Drive Axle` , Kinematics`KinSA_372fbdd1-d21e-4703-8f83-8a3f1b2b6572
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_ff5425ec-9f5d-48d9-92ad-b10156a96e0f.par
+#BlueLink18 Suspension: Solid Axle Compliance, Springs, and Dampers`8.5t Air: +100 mm, -60 mm Travel` Air Springs` , Suspension compliance`CmpSA_ff5425ec-9f5d-48d9-92ad-b10156a96e0f
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_53f5261c-b48c-4b15-81d8-cbaffe9ac730.par
+#BlueLink12 Brakes: Two-Wheel System`10 kN-m Capacity, Hydraulic (2 ch. ABS)` Hydraulic Brakes` , Brakes`Brk2W_53f5261c-b48c-4b15-81d8-cbaffe9ac730
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_e1f1451f-0759-413f-871f-8b286d1ac989.par
+#BlueLink1 Vehicle: Lead Unit Sprung Mass`School Bus` 2 Axle Trucks` , Sprung Mass`SprMass_e1f1451f-0759-413f-871f-8b286d1ac989
+
+PARSFILE Aerodynamics\Aero_Main\Aero_cb640fec-35bd-4983-a36a-5b4262922a7b.par
+#BlueLink2 Aerodynamics: Basic`Conv. Cab w/o Fairings, 6.5 m Ref.` Conventional Cab` , Aerodynamics`Aero_cb640fec-35bd-4983-a36a-5b4262922a7b
+
+PARSFILE Powertrain\Rwd\RWD_1bf8dcd0-d16e-4e24-9950-42b9f93741b7.par
+#BlueLink4 Powertrain: Rear-Wheel Drive`225 kW, 7 Speed AT w/ Lockup TC` 200 kW - 250 kW Powertrains` , Powertrain or dolly`RWD_1bf8dcd0-d16e-4e24-9950-42b9f93741b7
+
+x_length 6450.000000
+PARSFILE Animator\Vehicles\AniVeh_ecc34757-a9b0-47e8-892b-519a94a6c023.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`2A School Bus` 2A Lead Units` , Animator Shape(s)`AniVeh_ecc34757-a9b0-47e8-892b-519a94a6c023
+
+PARSFILE Steering\Str_Wheel_Tq\TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6.par
+#BlueLink6 Steering Wheel Torque`Linear: 1/25 (Typical)` ` , Steering wheel torque`TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_ecc34757-a9b0-47e8-892b-519a94a6c023.png
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#Example US style school bus with an automatic transmission and lock-up torque converter.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 2 Axles; { School Bus } School Bus (Lockup TC)
+#Library : Vehicle: Lead Unit with 2 Axles
+#DataSet : School Bus (Lockup TC)
+#Category: School Bus
+#FileID  : Lead2a_c66aa4cd-d5ab-415c-a298-440de4e9d9c5
+#Product : TruckSim 2020.1
+#VehCode S_S
+
+END

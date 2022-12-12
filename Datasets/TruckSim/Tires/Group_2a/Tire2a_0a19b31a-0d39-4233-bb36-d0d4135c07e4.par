@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 2 Axles`4750 kg Tandem SAE Widebase, Sym`TS 2A Trailer Tires
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+*LDUAL_1 310
+*LDUAL_2 310
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_a3f0e562-9e8a-479a-a969-766881ca25fc.par
+#BlueLink1 Tire`Widebase, Symmetric` SAE Widebase, 4750 kg` , Tires`Tire_a3f0e562-9e8a-479a-a969-766881ca25fc
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_a3f0e562-9e8a-479a-a969-766881ca25fc.par
+#BlueLink999 Tire`Widebase, Symmetric` SAE Widebase, 4750 kg` , Tires`Tire_a3f0e562-9e8a-479a-a969-766881ca25fc
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_a3f0e562-9e8a-479a-a969-766881ca25fc.par
+#BlueLink5 Tire`Widebase, Symmetric` SAE Widebase, 4750 kg` , Tires`Tire_a3f0e562-9e8a-479a-a969-766881ca25fc
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_a3f0e562-9e8a-479a-a969-766881ca25fc.par
+#BlueLink999 Tire`Widebase, Symmetric` SAE Widebase, 4750 kg` , Tires`Tire_a3f0e562-9e8a-479a-a969-766881ca25fc
+
+
+#EMBEDDED_NOTES
+#The tire data comes from the SAE Cooperative Research program conducted in the 1990s.
+#
+#These tires have symmetric datasets.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 2 Axles; { TS 2A Trailer Tires } 4750 kg Tandem SAE Widebase, Sym
+#Library : Tires: Vehicle Unit with 2 Axles
+#DataSet : 4750 kg Tandem SAE Widebase, Sym
+#Category: TS 2A Trailer Tires
+#FileID  : Tire2a_0a19b31a-0d39-4233-bb36-d0d4135c07e4
+#Product : TruckSim 2020.1
+#VehCode 2a Tire Group
+
+END

@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName Tire`Drive Tire, Symmetric`SAE Drive Tire 2800 kg
+FZ_REF 27468
+X_LENGTH 519
+Z_LENGTH 519
+Y_LENGTH 295
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 3
+#RingCtrl8 3
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\ShpGrp_7b39437e-1cc8-49e7-9584-37dcc1cf5cba.par
+#BlueLink4 Animator: Shape Assembly`Highway Drive Tire` Tires` , Animator`ShpGrp_7b39437e-1cc8-49e7-9584-37dcc1cf5cba
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 295
+RRE 507
+R0 519
+FZ_TIRE_COEFFICIENT 985
+FZ_MAX 1000000
+M_TIRE 91
+IT 4.5
+IT_XXZZ 0
+PARSFILE Generic\tables\GenTab_b39bbe4a-1fec-4454-92d0-578179ec80e0.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_b39bbe4a-1fec-4454-92d0-578179ec80e0
+
+PARSFILE Generic\tables\GenTab_d3424660-e756-4006-a08c-f39a49c14aae.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_d3424660-e756-4006-a08c-f39a49c14aae
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.0041
+RR_V 0.0000256
+L_CONTACT_X_CONSTANT 0
+L_CONTACT_Y_CONSTANT 0
+RR_FX 1
+OPT_TIRE_COMB 0
+PARSFILE Tires\Mz\TireMz_ba614575-7e57-4818-8485-596fb0e6aa43.par
+#BlueLink0 Tire: Aligning Moment`Mz: Drive Tire Symmetric` SAE Drive Tire` , Aligning Moment`TireMz_ba614575-7e57-4818-8485-596fb0e6aa43
+
+PARSFILE Tires\Fy\TireFy_97aa7f3c-7063-4c16-8664-d468aa6af3be.par
+#BlueLink1 Tire: Lateral Force`Fy: Drive Tire Symmetric` SAE Drive Tire` , Lateral Force`TireFy_97aa7f3c-7063-4c16-8664-d468aa6af3be
+
+PARSFILE Tires\Fx\TireFx_285cee85-6b91-460e-a079-258db69d6d12.par
+#BlueLink2 Tire: Longitudinal Force`Fx; Drive Tire Symmetric` SAE Drive Tire` , Longitudinal Force`TireFx_285cee85-6b91-460e-a079-258db69d6d12
+
+PARSFILE Tires\Camber_Thrust\CamStiff_5caa5ece-4775-4ed6-aede-93fa40f66ad8.par
+#BlueLink3 Tire: Camber Thrust Coefficient`Linear Coefficient: -0.01` ` , Camber Thrust`CamStiff_5caa5ece-4775-4ed6-aede-93fa40f66ad8
+
+
+
+#EMBEDDED_NOTES
+#This data comes from the SAE Cooperative Research program conducted in the 1990s.
+#
+#The Drive Tire is of the size 295/75|275/80R22.5. The lateral and longitudinal force properties on dry concrete were measured by UMTRI.
+#
+#Longitudinal force properties were measured only in the braking direction and are incorporated into the Fx vs. Slip table.
+#
+#Lateral force and aligning moment properties were measured at both positive and negative slip angles. Symmetric data were created by correcting for zero offset and averaging tests results for the left and right directions.
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { SAE Drive Tire 2800 kg } Drive Tire, Symmetric
+#Library : Tire
+#DataSet : Drive Tire, Symmetric
+#Category: SAE Drive Tire 2800 kg
+#FileID  : Tire_c3b1db4a-1e3b-418e-8466-343603059430
+#Product : TruckSim 2020.1
+#VehCode Tire
+
+END

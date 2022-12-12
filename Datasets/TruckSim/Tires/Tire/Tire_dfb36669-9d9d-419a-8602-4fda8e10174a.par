@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName Tire`Internal Tire`Camber Extensions
+FZ_REF 5000
+X_LENGTH 301
+Z_LENGTH 301
+Y_LENGTH 205
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+
+#RingCtrl0 6
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 6
+
+PARSFILE Animator\STL_Groups\ShpGrp_769e4b20-445f-4fc8-afcf-70de0b5593e1.par
+#BlueLink4 Animator: Shape Assembly`Big Car` Tires` , Animator`ShpGrp_769e4b20-445f-4fc8-afcf-70de0b5593e1
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 205
+RRE 296
+R0 301
+FZ_TIRE_COEFFICIENT 230
+FZ_MAX 100000
+M_TIRE 19
+IT 0.9
+IT_XXZZ 0
+PARSFILE Generic\tables\GenTab_b39bbe4a-1fec-4454-92d0-578179ec80e0.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_b39bbe4a-1fec-4454-92d0-578179ec80e0
+
+PARSFILE Generic\tables\GenTab_d3424660-e756-4006-a08c-f39a49c14aae.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_d3424660-e756-4006-a08c-f39a49c14aae
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.004
+RR_V 0.000025
+L_CONTACT_X_CONSTANT 85
+L_CONTACT_Y_CONSTANT 205
+RR_FX 1
+OPT_TIRE_COMB 0
+PARSFILE Tires\Mz\TireMz_2c7deefd-4f6f-40dd-81aa-d4092438a9df.par
+#BlueLink0 Tire: Aligning Moment`Example Mz vs. Alpha` Extended with Camber Details` , Aligning Moment`TireMz_2c7deefd-4f6f-40dd-81aa-d4092438a9df
+
+PARSFILE Tires\Fy\TireFy_670f6e46-37fb-46f2-bfc9-c12c640414cc.par
+#BlueLink1 Tire: Lateral Force`Example Fy vs. Alpha` Extended with Camber Details` , Lateral Force`TireFy_670f6e46-37fb-46f2-bfc9-c12c640414cc
+
+PARSFILE Tires\Fx\TireFx_bbeee974-4dbd-4dfb-88c8-abd1684efb14.par
+#BlueLink2 Tire: Longitudinal Force`Example Fx vs. Kappa` Extended with Camber Details` , Longitudinal Force`TireFx_bbeee974-4dbd-4dfb-88c8-abd1684efb14
+
+PARSFILE Tires\FyC\TireFyC_a2b4fc95-dfb6-4fab-8343-b7d23887d53a.par
+#BlueLink6 Tire: Lateral Force vs. Inclination`Example Fy vs. Gamma` Extended with Camber Details` , Lateral Force vs Gamma`TireFyC_a2b4fc95-dfb6-4fab-8343-b7d23887d53a
+
+PARSFILE Tires\MzC\TireMzC_233ccfa8-b88d-4c1f-897f-13004be8b3d1.par
+#BlueLink7 Tire: Aligning Moment vs. Inclination`Example Mz vs. Gamma` Extended with Camber Details` , Aligning Moment vs Gamma`TireMzC_233ccfa8-b88d-4c1f-897f-13004be8b3d1
+
+PARSFILE Tires\Mx\TireMx_8ed3d831-0b69-4bd7-9ebd-a1baf7faf65f.par
+#BlueLink8 Tire: Overturning Moment`Example Mx vs. Alpha` Extended with Camber Details` , Overturning moment`TireMx_8ed3d831-0b69-4bd7-9ebd-a1baf7faf65f
+
+PARSFILE Tires\MxC\TireMxC_76d1cc17-b868-411d-bf13-a2358706c561.par
+#BlueLink9 Tire: Overturning Moment vs. Inclination`Example Mx vs. Gamma` Extended with Camber Details` , Overturning Moment vs Gamma`TireMxC_76d1cc17-b868-411d-bf13-a2358706c561
+
+
+
+#EMBEDDED_NOTES
+#Example of a tire using the TruckSim Internal Tire Model with Camber Extensions.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { Camber Extensions } Internal Tire
+#Library : Tire
+#DataSet : Internal Tire
+#Category: Camber Extensions
+#FileID  : Tire_dfb36669-9d9d-419a-8602-4fda8e10174a
+#Product : TruckSim 2020.1
+#VehCode Tire
+
+END

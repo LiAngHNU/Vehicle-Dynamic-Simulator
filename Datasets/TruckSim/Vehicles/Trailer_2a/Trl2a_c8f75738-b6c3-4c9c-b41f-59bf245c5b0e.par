@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName Vehicle: Trailer with 2 Axles`2A Gooseneck Trailer`Flatbed Trailers
+#VehCode SS
+IUNIT_INCREMENT
+symbol_add  <<unit>> 1
+NAXLES 2
+
+IOBJECT_SAVE
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+#RingCtrl2 0
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_2a\Tire2a_cb657811-6249-4c04-ad65-f991c48a18b7.par
+#BlueLink11 Tires: Vehicle Unit with 2 Axles`Gooseneck Trailer (350 mm)` TS 2A Trailer Tires` , Tires`Tire2a_cb657811-6249-4c04-ad65-f991c48a18b7
+
+symbol_push  <<axle>> <<axle_temp>>
+*LX_AXLE_2 6710
+R_TANDEM 0.45
+CFZ_MY_TAND 0
+*LX_AXLE_1 5895
+R_TAND_TRAIL_STATIC 0.5
+R_TAND_TRAIL_STATIC 0.5
+
+iaxle 1
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 5895
+PARSFILE Suspensions\Kin_Solid\KinSA_c59eefbd-92c1-4bcc-9fd2-b463474d982c.par
+#BlueLink14 Suspension: Solid Axle System Kinematics`Gooseneck Trailer, Single Wheel` Trailer Axle` , Kinematics`KinSA_c59eefbd-92c1-4bcc-9fd2-b463474d982c
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_f30bb345-43ea-49d3-8c3e-c0faf5618fb5.par
+#BlueLink16 Suspension: Solid Axle Compliance, Springs, and Dampers`8.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_f30bb345-43ea-49d3-8c3e-c0faf5618fb5
+
+PARSFILE Brakes\2W_System\Brk2W_bf774de8-9984-4cb6-8113-abd74765a2ea.par
+#BlueLink5 Brakes: Two-Wheel System`7.5 kN-m Capacity, Hydraulic (No ABS)` Hydraulic Brakes` , Brakes`Brk2W_bf774de8-9984-4cb6-8113-abd74765a2ea
+
+
+iaxle 2
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 6710
+PARSFILE Suspensions\Kin_Solid\KinSA_c59eefbd-92c1-4bcc-9fd2-b463474d982c.par
+#BlueLink15 Suspension: Solid Axle System Kinematics`Gooseneck Trailer, Single Wheel` Trailer Axle` , Kinematics`KinSA_c59eefbd-92c1-4bcc-9fd2-b463474d982c
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_f30bb345-43ea-49d3-8c3e-c0faf5618fb5.par
+#BlueLink17 Suspension: Solid Axle Compliance, Springs, and Dampers`8.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_f30bb345-43ea-49d3-8c3e-c0faf5618fb5
+
+PARSFILE Brakes\2W_System\Brk2W_f3287af0-7014-484a-a147-94075e00a013.par
+#BlueLink8 Brakes: Two-Wheel System`7.5 kN-m Capacity, Air (No ABS)` Air Brakes` , Brakes`Brk2W_f3287af0-7014-484a-a147-94075e00a013
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 6710
+PARSFILE Vehicles\Trl_Sprung_Mass\TrlSprM_90203a2c-346d-4dc4-9393-099eaef06f38.par
+#BlueLink1 Vehicle: Trailer Sprung Mass`Gooseneck Trailer` 2A Trailer` , Sprung Mass`TrlSprM_90203a2c-346d-4dc4-9393-099eaef06f38
+
+PARSFILE Animator\Vehicles\AniVeh_27840585-2951-464f-b353-96d04c392c48.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`2A Gooseneck Trailer` Trailers: 2-axle` , Animator Shape(s)`AniVeh_27840585-2951-464f-b353-96d04c392c48
+
+PARSFILE Aerodynamics\Aero_Main\Aero_2dcf0dd6-b552-482c-b346-939b627511c9.par
+#BlueLink2 Aerodynamics: Basic`No Aerodynamics` ` , Aerodynamics`Aero_2dcf0dd6-b552-482c-b346-939b627511c9
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_27840585-2951-464f-b353-96d04c392c48.png
+IOBJECT_RESTORE
+
+LOG_ENTRY Used Dataset: Vehicle: Trailer with 2 Axles; { Flatbed Trailers } 2A Gooseneck Trailer
+#Library : Vehicle: Trailer with 2 Axles
+#DataSet : 2A Gooseneck Trailer
+#Category: Flatbed Trailers
+#FileID  : Trl2a_c8f75738-b6c3-4c9c-b41f-59bf245c5b0e
+#Product : TruckSim 2020.1
+#VehCode SS
+
+END

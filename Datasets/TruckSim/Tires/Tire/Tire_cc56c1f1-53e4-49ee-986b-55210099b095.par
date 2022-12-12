@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName Tire`510 mm Radius (Trailer)`3000 kg Rating
+FZ_REF 30000
+X_LENGTH 520
+Z_LENGTH 520
+Y_LENGTH 265
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 3
+#RingCtrl8 3
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\ShpGrp_aa693b07-cfbb-4f60-81d1-3886d28d4610.par
+#BlueLink4 Animator: Shape Assembly`Highway Trailer Tire` Tires` , Animator`ShpGrp_aa693b07-cfbb-4f60-81d1-3886d28d4610
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 265
+RRE 510
+R0 520
+FZ_TIRE_COEFFICIENT 980
+FZ_MAX 1000000
+M_TIRE 91
+IT 4.8
+IT_XXZZ 0
+PARSFILE Generic\tables\GenTab_b39bbe4a-1fec-4454-92d0-578179ec80e0.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_b39bbe4a-1fec-4454-92d0-578179ec80e0
+
+PARSFILE Generic\tables\GenTab_d3424660-e756-4006-a08c-f39a49c14aae.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_d3424660-e756-4006-a08c-f39a49c14aae
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.0041
+RR_V 0.0000256
+L_CONTACT_X_CONSTANT 0
+L_CONTACT_Y_CONSTANT 0
+RR_FX 1
+OPT_TIRE_COMB 0
+PARSFILE Tires\Mz\TireMz_4b6c3820-0c67-4247-b770-53d2a0661282.par
+#BlueLink0 Tire: Aligning Moment`Mz: 3000 kg Load Rating` Example Mz Data` , Aligning Moment`TireMz_4b6c3820-0c67-4247-b770-53d2a0661282
+
+PARSFILE Tires\Fy\TireFy_b8272e0f-2e5f-4858-a7d6-acdddd5b2c55.par
+#BlueLink1 Tire: Lateral Force`Fy: 3000 kg Load Rating` Example Fy Data` , Lateral Force`TireFy_b8272e0f-2e5f-4858-a7d6-acdddd5b2c55
+
+PARSFILE Tires\Fx\TireFx_12dc98ca-0592-4e7b-8c8f-4751ecbba2d8.par
+#BlueLink2 Tire: Longitudinal Force`Fx: 3000 kg Load Rating` Example Fx Data` , Longitudinal Force`TireFx_12dc98ca-0592-4e7b-8c8f-4751ecbba2d8
+
+PARSFILE Tires\Camber_Thrust\CamStiff_5caa5ece-4775-4ed6-aede-93fa40f66ad8.par
+#BlueLink3 Tire: Camber Thrust Coefficient`Linear Coefficient: -0.01` ` , Camber Thrust`CamStiff_5caa5ece-4775-4ed6-aede-93fa40f66ad8
+
+
+
+#EMBEDDED_NOTES
+#This data is typical for a radial tire with a nominal load rating of 3000 kg, such as a 305/75R22.5, 11.00R22 or a 12R24.5.
+#
+#The tire is suitable for use on a steer axle up to 5.5t (12,000 lb), or for use in a dual-tire configuration on a drive or trailer axles up to 10t (20,000 lb).
+#
+#Radius on other tires of equivalent load rating may vary from 510 to 570 mm.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+#Library : Tire
+#DataSet : 510 mm Radius (Trailer)
+#Category: 3000 kg Rating
+#FileID  : Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+#Product : TruckSim 2020.1
+#VehCode Tire
+
+END

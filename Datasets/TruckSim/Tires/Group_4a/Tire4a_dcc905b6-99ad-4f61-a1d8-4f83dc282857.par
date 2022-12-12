@@ -1,0 +1,179 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 4 Axles`3000 kg Trailer Tires, Duals`TS 4A Trailer Tires
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 1    
+#CheckBox10 1    
+#CheckBox11 1    
+
+*LDUAL_1 310
+*LDUAL_2 310
+*LDUAL_3 310
+*LDUAL_4 310
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 310
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink1 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+itire 2
+symbol_push  <<tire>> R<<axle>>o
+STORE_WHEEL_OFFSET 0.155000
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink999 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink999 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+itire 2
+symbol_push  <<tire>> L<<axle>>o
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink999 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 310
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink5 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+itire 2
+symbol_push  <<tire>> R<<axle>>o
+STORE_WHEEL_OFFSET 0.155000
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink999 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink999 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+itire 2
+symbol_push  <<tire>> L<<axle>>o
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink999 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+symbol_add  <<axle>> 1
+
+iaxle 3
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 310
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink9 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+itire 2
+symbol_push  <<tire>> R<<axle>>o
+STORE_WHEEL_OFFSET 0.155000
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink999 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink999 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+itire 2
+symbol_push  <<tire>> L<<axle>>o
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink999 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+symbol_add  <<axle>> 1
+
+iaxle 4
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 310
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink13 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+itire 2
+symbol_push  <<tire>> R<<axle>>o
+STORE_WHEEL_OFFSET 0.155000
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink999 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink999 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+itire 2
+symbol_push  <<tire>> L<<axle>>o
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_cc56c1f1-53e4-49ee-986b-55210099b095.par
+#BlueLink999 Tire`510 mm Radius (Trailer)` 3000 kg Rating` , Tires`Tire_cc56c1f1-53e4-49ee-986b-55210099b095
+
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 4 Axles; { TS 4A Trailer Tires } 3000 kg Trailer Tires, Duals
+#Library : Tires: Vehicle Unit with 4 Axles
+#DataSet : 3000 kg Trailer Tires, Duals
+#Category: TS 4A Trailer Tires
+#FileID  : Tire4a_dcc905b6-99ad-4f61-a1d8-4f83dc282857
+#Product : TruckSim 2020.1
+#VehCode 4a Tire Group
+
+END

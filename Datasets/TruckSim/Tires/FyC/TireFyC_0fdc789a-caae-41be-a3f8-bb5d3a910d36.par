@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Tire: Lateral Force vs. Inclination`MF-Tyre / MF-Swift Fy vs. Gamma`MF-Tyre / MF-Swift
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. inclination angle (deg)
+*3D_ZLabel Lateral force (N)
+
+#DiagramTwo0
+*3D_DATA 5, 12 ! columns x rows
+FYG_TIRE_CARPET 2D_FROM_ZERO
+0, 2000, 8000, 20000, 40000, 60000
+0.5, 1.74538, 6.98151, 17.4538, 34.9075, 52.3593
+1, 3.49115, 13.9646, 34.9115, 69.8229, 104.718
+1.5, 5.23771, 20.9508, 52.377, 104.754, 157.077
+2, 6.98545, 27.9418, 69.8544, 139.709, 209.435
+2.5, 8.73477, 34.939, 87.3475, 174.695, 261.792
+3, 10.4861, 41.9442, 104.86, 209.72, 314.148
+3.5, 12.2397, 48.9588, 122.397, 244.793, 366.503
+4, 13.9962, 55.9846, 139.961, 279.921, 418.856
+4.5, 15.7558, 63.0229, 157.557, 315.112, 471.208
+5, 17.5189, 70.0756, 175.188, 350.374, 523.557
+5.5, 17.5189, 70.0756, 175.188, 350.374, 523.557
+6, 17.5189, 70.0756, 175.188, 350.374, 523.557
+ENDTABLE
+
+CRO_FY 1
+
+
+LOG_ENTRY Used Dataset: Tire: Lateral Force vs. Inclination; { MF-Tyre / MF-Swift } MF-Tyre / MF-Swift Fy vs. Gamma
+#Library : Tire: Lateral Force vs. Inclination
+#DataSet : MF-Tyre / MF-Swift Fy vs. Gamma
+#Category: MF-Tyre / MF-Swift
+#FileID  : TireFyC_0fdc789a-caae-41be-a3f8-bb5d3a910d36
+#Product : TruckSim 2020.1
+#VehCode Tire: Fy
+
+END

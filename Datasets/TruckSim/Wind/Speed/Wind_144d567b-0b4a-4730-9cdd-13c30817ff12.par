@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Wind Speed`Constant: 1 km/h`
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+WIND_SPEED_COMBINE ADD
+WIND_SPEED_CONSTANT 1
+WIND_SPEED_S_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR 1
+*SCALAR2 0
+D_AIR 1.206
+
+
+LOG_ENTRY Used Dataset: Wind Speed; Constant: 1 km/h
+#Library : Wind Speed
+#DataSet : Constant: 1 km/h
+#Category: 
+#FileID  : Wind_144d567b-0b4a-4730-9cdd-13c30817ff12
+#Product : TruckSim 2020.1
+#VehCode Wind Speed
+
+END

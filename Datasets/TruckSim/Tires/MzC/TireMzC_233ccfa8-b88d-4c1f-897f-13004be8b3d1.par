@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Tire: Aligning Moment vs. Inclination`Example Mz vs. Gamma`Extended with Camber Details
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. inclination angle (deg)
+*3D_ZLabel Aligning moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 5, 12 ! columns x rows
+MZG_TIRE_CARPET 2D_FROM_ZERO
+0, 2362.81, 4725.61, 7088.42, 9451.23, 11814
+0.5, -1.8, -3.03, -3.27, -3.19, -3.5
+1, -3.56, -6.04, -6.51, -6.37, -6.99
+1.5, -5.28, -8.97, -9.72, -9.54, -10.44
+2, -6.92, -11.81, -12.86, -12.67, -13.84
+2.5, -8.45, -14.51, -15.92, -15.78, -17.18
+3, -9.85, -17.04, -18.88, -18.84, -20.43
+3.5, -11.09, -19.38, -21.71, -21.85, -23.59
+4, -12.14, -21.48, -24.39, -24.8, -26.63
+4.5, -12.99, -23.32, -26.91, -27.68, -29.53
+5, -13.59, -24.85, -29.24, -30.48, -32.29
+5.5, -13.94, -26.06, -31.36, -33.2, -34.88
+6, -13.99, -26.89, -33.26, -35.82, -37.29
+ENDTABLE
+
+CRO_MZ 100
+
+
+LOG_ENTRY Used Dataset: Tire: Aligning Moment vs. Inclination; { Extended with Camber Details } Example Mz vs. Gamma
+#Library : Tire: Aligning Moment vs. Inclination
+#DataSet : Example Mz vs. Gamma
+#Category: Extended with Camber Details
+#FileID  : TireMzC_233ccfa8-b88d-4c1f-897f-13004be8b3d1
+#Product : TruckSim 2020.1
+#VehCode Tire: Mz
+
+END

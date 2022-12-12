@@ -1,0 +1,92 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit with 2 Axles`LCF Van (Not Animated)`2A LCF Van
+#VehCode S_S
+IUNIT_INCREMENT
+IVEHICLE = IVEHICLE + 1
+symbol_add  <<unit>> 1
+symbol_add  <<vehicle>> 1
+NAXLES 2
+
+IOBJECT_SAVE
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 2
+OPT_PT 2
+#RingCtrl1 1
+#RingCtrl2 4
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_2a\Tire2a_1e7626ca-509e-49b8-983f-bec25b5573d1.par
+#BlueLink8 Tires: Vehicle Unit with 2 Axles`3000 kg Steer, 3000kg Drive (510 mm)` TS 2A Steer / Drive Tires: Internal Table Model` , Tires`Tire2a_1e7626ca-509e-49b8-983f-bec25b5573d1
+
+symbol_push  <<axle>> <<axle_temp>>
+*LX_AXLE_1 0
+*LX_AXLE_2 5000
+
+iaxle 1
+symbol_add  <<axle>> 1
+LX_AXLE 0
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_64c30f3c-3ccd-4380-a6bc-d537f8dd7bc1.par
+#BlueLink15 Suspension: Solid Axle System Kinematics`5.5t Steer, Single Wheel - Kinematics` Steer Axle` , Kinematics`KinSA_64c30f3c-3ccd-4380-a6bc-d537f8dd7bc1
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_de50d1ae-a9e2-40b2-bada-e6716d623681.par
+#BlueLink17 Suspension: Solid Axle Compliance, Springs, and Dampers`5.5t Leaf: +150 mm, -150 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_de50d1ae-a9e2-40b2-bada-e6716d623681
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_53f5261c-b48c-4b15-81d8-cbaffe9ac730.par
+#BlueLink11 Brakes: Two-Wheel System`10 kN-m Capacity, Hydraulic (2 ch. ABS)` Hydraulic Brakes` , Brakes`Brk2W_53f5261c-b48c-4b15-81d8-cbaffe9ac730
+
+PARSFILE Steering\System\StrSys_34a3a8d4-49e4-4c37-a6f1-c2f6bfe55fbc.par
+#BlueLink13 Steering System`Medium (5 m) Wheelbase` Medium - Heavy Duty Steering` , Steering`StrSys_34a3a8d4-49e4-4c37-a6f1-c2f6bfe55fbc
+
+
+iaxle 2
+symbol_add  <<axle>> 1
+LX_AXLE 5000
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_372fbdd1-d21e-4703-8f83-8a3f1b2b6572.par
+#BlueLink16 Suspension: Solid Axle System Kinematics`8.5t Drive, Dual Wheels` Drive Axle` , Kinematics`KinSA_372fbdd1-d21e-4703-8f83-8a3f1b2b6572
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_f30bb345-43ea-49d3-8c3e-c0faf5618fb5.par
+#BlueLink18 Suspension: Solid Axle Compliance, Springs, and Dampers`8.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_f30bb345-43ea-49d3-8c3e-c0faf5618fb5
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_53f5261c-b48c-4b15-81d8-cbaffe9ac730.par
+#BlueLink12 Brakes: Two-Wheel System`10 kN-m Capacity, Hydraulic (2 ch. ABS)` Hydraulic Brakes` , Brakes`Brk2W_53f5261c-b48c-4b15-81d8-cbaffe9ac730
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_63198152-490c-4c81-ba3b-6df608bb7208.par
+#BlueLink1 Vehicle: Lead Unit Sprung Mass`LCF Van` 2 Axle Trucks` , Sprung Mass`SprMass_63198152-490c-4c81-ba3b-6df608bb7208
+
+PARSFILE Aerodynamics\Aero_Main\Aero_0b0d1a28-b3a2-4283-bb54-9d8ade8c2340.par
+#BlueLink2 Aerodynamics: Basic`Cab-Forward Truck, 5 m Ref.` Cab-Over and Cab-Forward Tractors` , Aerodynamics`Aero_0b0d1a28-b3a2-4283-bb54-9d8ade8c2340
+
+PARSFILE Powertrain\Rwd\RWD_5e4cf711-35ee-4c6b-ab5b-65ba4e63b58c.par
+#BlueLink4 Powertrain: Rear-Wheel Drive`175 kW, 7 Speed MT` 175 kW Powertrains` , Powertrain or dolly`RWD_5e4cf711-35ee-4c6b-ab5b-65ba4e63b58c
+
+x_length 5000.000000
+PARSFILE Steering\Str_Wheel_Tq\TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6.par
+#BlueLink6 Steering Wheel Torque`Linear: 1/25 (Typical)` ` , Steering wheel torque`TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Lead_2a\Lead2a_fb179ca3-cb19-41b7-9642-9f02ca88d5e4.png
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#Two axle LCF (Low Cab Forward) van (S_S) with a 4x2 powertrain and a 7-speed manual transmission.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 2 Axles; { 2A LCF Van } LCF Van (Not Animated)
+#Library : Vehicle: Lead Unit with 2 Axles
+#DataSet : LCF Van (Not Animated)
+#Category: 2A LCF Van
+#FileID  : Lead2a_fb179ca3-cb19-41b7-9642-9f02ca88d5e4
+#Product : TruckSim 2020.1
+#VehCode S_S
+
+END

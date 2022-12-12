@@ -1,0 +1,72 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`3A Cab Over w/ 3A Euro Trailer`Cab-Over Tractor-Trailers
+#VehCode S_SS + SSS
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_3a\Lead3a_4c296b2c-83e4-4175-8233-083d2b68ebfa.par
+#BlueLink0 Vehicle: Lead Unit with 3 Axles`3A Cab-Over` 3A Tractors` , Vehicle Type`Lead3a_4c296b2c-83e4-4175-8233-083d2b68ebfa
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Vehicles\Trailer_3a\Trl3a_a333d6a4-0ba7-42eb-8e8f-2b062d427bcc.par
+#BlueLink8 Vehicle: Trailer with 3 Axles`3A European Trailer` Van / Container Trailers` , Trailer Type`Trl3a_a333d6a4-0ba7-42eb-8e8f-2b062d427bcc
+
+ADD_REFERENCE_FRAME TrailerPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo_2
+WRT_Xo_2
+ANI_Xo_2
+SET_Y_NAME Yo_2
+WRT_Yo_2
+ANI_Yo_2
+SET_Z_NAME Zo_2
+WRT_Zo_2
+ANI_Zo_2
+SET_YAW_NAME Yaw_2
+WRT_Yaw_2
+ANI_Yaw_2
+SET_PITCH_NAME Pitch_2
+WRT_Pitch_2
+ANI_Pitch_2
+SET_ROLL_NAME Roll_E_2
+WRT_Roll_E_2
+ANI_Roll_E_2
+PARSFILE Payloads\Box\Box_6a6ae59e-fb22-48eb-93b3-95c58ccbb7ff.par
+#BlueLink9 Payload: Box Shape`Trailer (18,340 kg)` Trailers` , Miscellaneous`Box_6a6ae59e-fb22-48eb-93b3-95c58ccbb7ff
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_9490ba51-301a-40a6-8eb6-db37cea19aa0.png
+
+#EMBEDDED_NOTES
+#Three axle european style tractor and three axle trailer.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { Cab-Over Tractor-Trailers } 3A Cab Over w/ 3A Euro Trailer
+#Library : Vehicle: Loaded Combination
+#DataSet : 3A Cab Over w/ 3A Euro Trailer
+#Category: Cab-Over Tractor-Trailers
+#FileID  : VehLoad_a5f5e39e-1099-49e4-9a86-51e0aba9c43f
+#Product : TruckSim 2020.1
+#VehCode S_SS + SSS
+
+END

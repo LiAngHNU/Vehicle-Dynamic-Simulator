@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName Vehicle: Dolly with 2 Axles`2A Dolly, Short (No ABS)`
+IUNIT_INCREMENT
+symbol_add  <<unit>> 1
+NAXLES 2
+
+#CheckBox0 1    
+
+*LX_AXLE_2 2740
+*LX_H 2000
+*Y_H 0
+*H_H 1100
+R_TANDEM 0.5
+CFZ_MY_TAND 0
+*LX_AXLE_1 1500
+R_TAND_TRAIL_STATIC 0.5
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_2a\Tire2a_495bbb51-78b4-41b1-b832-c820c236847b.par
+#BlueLink9 Tires: Vehicle Unit with 2 Axles`3000 kg Tandem (510 mm), Duals` TS 2A Trailer Tires` , Tires`Tire2a_495bbb51-78b4-41b1-b832-c820c236847b
+
+symbol_push  <<axle>> <<axle_temp>>
+
+iaxle 1
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 1500
+PARSFILE Suspensions\Kin_Solid\KinSA_fdc0b85f-e1a6-40c0-93ba-35d44647acdc.par
+#BlueLink10 Suspension: Solid Axle System Kinematics`15.5t Trailer, Dual Wheels - Kinematics` Trailer Axle` , Kinematics`KinSA_fdc0b85f-e1a6-40c0-93ba-35d44647acdc
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c.par
+#BlueLink12 Suspension: Solid Axle Compliance, Springs, and Dampers`15.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c
+
+PARSFILE Brakes\2W_System\Brk2W_b6f14525-7233-4fd7-b700-de03bd681ce2.par
+#BlueLink4 Brakes: Two-Wheel System`10 kN-m Capacity, Air (No ABS)` Air Brakes` , Brakes`Brk2W_b6f14525-7233-4fd7-b700-de03bd681ce2
+
+
+iaxle 2
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 2740
+PARSFILE Suspensions\Kin_Solid\KinSA_fdc0b85f-e1a6-40c0-93ba-35d44647acdc.par
+#BlueLink11 Suspension: Solid Axle System Kinematics`15.5t Trailer, Dual Wheels - Kinematics` Trailer Axle` , Kinematics`KinSA_fdc0b85f-e1a6-40c0-93ba-35d44647acdc
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c.par
+#BlueLink13 Suspension: Solid Axle Compliance, Springs, and Dampers`15.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c
+
+PARSFILE Brakes\2W_System\Brk2W_b6f14525-7233-4fd7-b700-de03bd681ce2.par
+#BlueLink7 Brakes: Two-Wheel System`10 kN-m Capacity, Air (No ABS)` Air Brakes` , Brakes`Brk2W_b6f14525-7233-4fd7-b700-de03bd681ce2
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+NAXLES 2
+ITANDEM 1
+x_length 2740
+PARSFILE Vehicles\Trl_Sprung_Mass\TrlSprM_7f25113a-4a43-44f3-9d0a-757bdfd16679.par
+#BlueLink1 Vehicle: Trailer Sprung Mass`2A Dolly, Short` Dollies` , Sprung Mass`TrlSprM_7f25113a-4a43-44f3-9d0a-757bdfd16679
+
+PARSFILE Animator\STL_Groups\ShpGrp_152edeaf-e274-4712-9cdb-0ed9519f2ee0.par
+#BlueLink0 Animator: Shape Assembly`2-Axle Dolly` Dollies` , Animator Shape(s)`ShpGrp_152edeaf-e274-4712-9cdb-0ed9519f2ee0
+
+symbol_push  <<hitch_x>> -2.000000
+symbol_push  <<hitch_y>> 0.000000
+symbol_push  <<hitch_z>> 1.100000
+PARSFILE Hitches\Joint\Hitch_fc25dbf0-73ba-4b1c-82af-5e2cf0a07b55.par
+#BlueLink2 Hitch: Joint Assembly`5th Wheel` 5th Wheel Hitches` , Hitch`Hitch_fc25dbf0-73ba-4b1c-82af-5e2cf0a07b55
+
+LX_H(<<unit>>) 2000
+Y_H(<<unit>>) 0
+H_H(<<unit>>) 1100
+R_TAND_TRAIL_STATIC 0.5
+*IMAGE_FILE Vehicles\Dolly_2a\Dly2a_7233963d-4807-4645-bd64-6ecc56c23039.png
+*IMAGE_TYPE PASTED_3X1
+*IMAGE_PASTED Vehicles\Dolly_2a\Dly2a_7233963d-4807-4645-bd64-6ecc56c23039.png
+
+LOG_ENTRY Used Dataset: Vehicle: Dolly with 2 Axles; 2A Dolly, Short (No ABS)
+#Library : Vehicle: Dolly with 2 Axles
+#DataSet : 2A Dolly, Short (No ABS)
+#Category: 
+#FileID  : Dly2a_7233963d-4807-4645-bd64-6ecc56c23039
+#Product : TruckSim 2020.1
+#VehCode dSS
+
+END

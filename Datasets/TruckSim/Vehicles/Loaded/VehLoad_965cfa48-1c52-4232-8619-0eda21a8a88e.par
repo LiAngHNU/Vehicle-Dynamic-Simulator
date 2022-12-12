@@ -1,0 +1,68 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`DRW Pickup (Ext. PT) w/ Trailer`Pickup Trucks
+#VehCode I_S + SS
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_2a\Lead2a_716e18e3-9486-4843-8e91-5b5c8bbf31ab.par
+#BlueLink0 Vehicle: Lead Unit with 2 Axles`Pickup, Reg. Cab DRW (Ext. PT)` Pickup Trucks w/ Options` , Vehicle Type`Lead2a_716e18e3-9486-4843-8e91-5b5c8bbf31ab
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Vehicles\Trailer_2a\Trl2a_c8f75738-b6c3-4c9c-b41f-59bf245c5b0e.par
+#BlueLink8 Vehicle: Trailer with 2 Axles`2A Gooseneck Trailer` Flatbed Trailers` , Trailer Type`Trl2a_c8f75738-b6c3-4c9c-b41f-59bf245c5b0e
+
+ADD_REFERENCE_FRAME TrailerPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo_2
+WRT_Xo_2
+ANI_Xo_2
+SET_Y_NAME Yo_2
+WRT_Yo_2
+ANI_Yo_2
+SET_Z_NAME Zo_2
+WRT_Zo_2
+ANI_Zo_2
+SET_YAW_NAME Yaw_2
+WRT_Yaw_2
+ANI_Yaw_2
+SET_PITCH_NAME Pitch_2
+WRT_Pitch_2
+ANI_Pitch_2
+SET_ROLL_NAME Roll_E_2
+WRT_Roll_E_2
+ANI_Roll_E_2
+PARSFILE Payloads\Custom\Custom_5b361441-eeec-44c6-a732-2d9bc9341659.par
+#BlueLink9 Payload: Custom`Tractor` Payloads: Agricultural Tractor` , Miscellaneous`Custom_5b361441-eeec-44c6-a732-2d9bc9341659
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_2a7c5c10-25ca-44b3-8034-dbf1de646707.png
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { Pickup Trucks } DRW Pickup (Ext. PT) w/ Trailer
+#Library : Vehicle: Loaded Combination
+#DataSet : DRW Pickup (Ext. PT) w/ Trailer
+#Category: Pickup Trucks
+#FileID  : VehLoad_965cfa48-1c52-4232-8619-0eda21a8a88e
+#Product : TruckSim 2020.1
+#VehCode I_S + SS
+
+END

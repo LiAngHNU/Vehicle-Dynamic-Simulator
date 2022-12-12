@@ -1,0 +1,102 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit with 2 Axles`Euro Van (I_S, No Duals)`Large European Van
+#VehCode I_S
+IUNIT_INCREMENT
+IVEHICLE = IVEHICLE + 1
+symbol_add  <<unit>> 1
+symbol_add  <<vehicle>> 1
+NAXLES 2
+
+IOBJECT_SAVE
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 2
+OPT_PT 2
+#RingCtrl1 3
+#RingCtrl2 4
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_2a\Tire2a_e8da4d07-f1ab-4e91-9ae2-2ac494995c46.par
+#BlueLink8 Tires: Vehicle Unit with 2 Axles`265/75 R16 (Single Rear Tires)` TS 2A Trailer and Light Truck Tires` , Tires`Tire2a_e8da4d07-f1ab-4e91-9ae2-2ac494995c46
+
+symbol_push  <<axle>> <<axle_temp>>
+*LX_AXLE_1 0
+*LX_AXLE_2 3100
+
+iaxle 1
+symbol_add  <<axle>> 1
+LX_AXLE 0
+PARSFILE Suspensions\Kin_Indy\KinInd_20ba66a1-0a3e-4938-b623-16a60f3c85c1.par
+#BlueLink21 Suspension: Independent System Kinematics`Large Euro Van Ind. Kinematics - Front` Large European Van` , Kinematics`KinInd_20ba66a1-0a3e-4938-b623-16a60f3c85c1
+
+PARSFILE Suspensions\Compliance\CmpInd_9feec3b2-9629-41c5-a51d-f6833e0a485c.par
+#BlueLink23 Suspension: Independent Compliance, Springs, and Dampers`Large Euro. Van Ind. Compliance - Front` Large European Van` , Suspension compliance`CmpInd_9feec3b2-9629-41c5-a51d-f6833e0a485c
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_b0a433b1-0c02-4269-a3b6-8c8e42fc5877.par
+#BlueLink11 Brakes: Two-Wheel System`Large Euro Van Brakes - Front (2 ch. ABS)` Large European Van` , Brakes`Brk2W_b0a433b1-0c02-4269-a3b6-8c8e42fc5877
+
+PARSFILE Steering\System\StrSys_05b4ed64-cc7b-46cf-896f-b2aa075a582f.par
+#BlueLink13 Steering System`2A Euro: Power, Recirc. Ball` Utility Vehicles` , Steering`StrSys_05b4ed64-cc7b-46cf-896f-b2aa075a582f
+
+
+iaxle 2
+symbol_add  <<axle>> 1
+LX_AXLE 3100
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_6f6ba237-3913-467e-8262-565fe09095e2.par
+#BlueLink16 Suspension: Solid Axle System Kinematics`Large Euro Van Solid Axle Kinem. - Rear` Large European Van` , Kinematics`KinSA_6f6ba237-3913-467e-8262-565fe09095e2
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_1ef9c992-ee43-4b68-8a10-2bfd71403af2.par
+#BlueLink18 Suspension: Solid Axle Compliance, Springs, and Dampers`Large Euro Van Solid Axle Comp. - Rear` Large European Van` , Suspension compliance`CmpSA_1ef9c992-ee43-4b68-8a10-2bfd71403af2
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_03cd49ec-9822-45c6-b989-416078824f37.par
+#BlueLink12 Brakes: Two-Wheel System`Large Euro Van Brakes - Rear (2 ch. ABS)` Large European Van` , Brakes`Brk2W_03cd49ec-9822-45c6-b989-416078824f37
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_dfc22a6a-31d7-4dc7-82da-c5ded035e154.par
+#BlueLink1 Vehicle: Lead Unit Sprung Mass`Large European Van` 2 Axle Trucks` , Sprung Mass`SprMass_dfc22a6a-31d7-4dc7-82da-c5ded035e154
+
+PARSFILE Aerodynamics\Aero_Main\Aero_8deb8be8-29e6-4479-9cb0-c4dbd522aeeb.par
+#BlueLink2 Aerodynamics: Basic`Large Euro Van Aerodynamics` Large European Van` , Aerodynamics`Aero_8deb8be8-29e6-4479-9cb0-c4dbd522aeeb
+
+PARSFILE Powertrain\Rwd\RWD_81c20b6e-80c3-446a-9e7b-295394c50e8c.par
+#BlueLink4 Powertrain: Rear-Wheel Drive`270 kW, 6-Spd AT, 4.1 Ratio, Open Diff` 270 kW - 300 kW Powertrains` , Powertrain or dolly`RWD_81c20b6e-80c3-446a-9e7b-295394c50e8c
+
+x_length 3100.000000
+PARSFILE Animator\Vehicles\AniVeh_5f73a032-7e74-4486-971f-5e3abfd4d475.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`2A Large European Van with Single Tires` 2A Utility Trucks and Vans` , Animator Shape(s)`AniVeh_5f73a032-7e74-4486-971f-5e3abfd4d475
+
+PARSFILE Steering\Steer_Column\StrCol_41f01cac-b905-4814-ad0b-2bcc5fd28913.par
+#BlueLink6 Steering Column and Assist`2A Euro: Steer Col & Assist Tq` 2A Pickup Trucks and Utility Vehicles` , Steering wheel torque`StrCol_41f01cac-b905-4814-ad0b-2bcc5fd28913
+
+symbol_push  <<hitch_x>> -4.150000
+symbol_push  <<hitch_y>> 0.000000
+symbol_push  <<hitch_z>> 0.355000
+PARSFILE Hitches\Joint\Hitch_f3df368e-2b61-4939-8f40-95f979c57785.par
+#BlueLink7 Hitch: Joint Assembly`Ball Hitch` Ball Hitches` , Hitch`Hitch_f3df368e-2b61-4939-8f40-95f979c57785
+
+LX_H 4150
+Y_H 0
+H_H 355
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Lead_2a\Lead2a_39375b25-3633-4ec1-ad5c-52a861987549.png
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#Generic Large European Van with an SLA front and a Hotchkiss Solid Axle rear suspension.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 2 Axles; { Large European Van } Euro Van (I_S, No Duals)
+#Library : Vehicle: Lead Unit with 2 Axles
+#DataSet : Euro Van (I_S, No Duals)
+#Category: Large European Van
+#FileID  : Lead2a_39375b25-3633-4ec1-ad5c-52a861987549
+#Product : TruckSim 2020.1
+#VehCode I_S
+
+END

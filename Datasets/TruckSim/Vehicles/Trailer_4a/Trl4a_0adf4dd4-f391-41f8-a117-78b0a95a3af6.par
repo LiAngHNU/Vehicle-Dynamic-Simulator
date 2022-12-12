@@ -1,0 +1,131 @@
+PARSFILE
+#FullDataName Vehicle: Trailer with 4 Axles`4A Short Telescopic Trailer`Telescopic Trailers
+#VehCode SSS_S
+IUNIT_INCREMENT
+symbol_add  <<unit>> 1
+NAXLES 4
+
+IOBJECT_SAVE
+#CheckBox0 0    
+
+#RingCtrl0 0
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 1
+#RingCtrl4 1
+*LX_AXLE_1 20958
+*LX_AXLE_2 22809
+*LX_AXLE_3 24660
+*LX_AXLE_4 26511
+*RLOAD_1 2/3
+*RTRANSFER_1 0
+*RLOAD_2 2/3
+*RTRANSFER_2 0
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_4a\Tire4a_dcc905b6-99ad-4f61-a1d8-4f83dc282857.par
+#BlueLink4 Tires: Vehicle Unit with 4 Axles`3000 kg Trailer Tires, Duals` TS 4A Trailer Tires` , Tires`Tire4a_dcc905b6-99ad-4f61-a1d8-4f83dc282857
+
+symbol_push  <<axle>> <<axle_temp>>
+
+
+iaxle 1
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+LX_AXLE 20958
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_47edd369-19f2-4fb4-9a62-152af4e7b369.par
+#BlueLink12 Suspension: Solid Axle System Kinematics`18t Trailer, Dual Wheels` Trailer Axle` , Kinematics`KinSA_47edd369-19f2-4fb4-9a62-152af4e7b369
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_948c3fe1-af34-4b64-bfd1-53033453e83b.par
+#BlueLink24 Suspension: Solid Axle Compliance, Springs, and Dampers`10t Leaf: +150 mm, -150 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_948c3fe1-af34-4b64-bfd1-53033453e83b
+
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink32 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+PARSFILE Generic\Group\GenGrp_e1e08034-596b-4073-b70d-dc3c4bf65318.par
+#BlueLink36 Generic Data Group`Telescopic Trailer Rear Steering System` Very Large Vehicles` , Misc (Axle 1)`GenGrp_e1e08034-596b-4073-b70d-dc3c4bf65318
+
+
+iaxle 2
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+LX_AXLE 22809
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_47edd369-19f2-4fb4-9a62-152af4e7b369.par
+#BlueLink13 Suspension: Solid Axle System Kinematics`18t Trailer, Dual Wheels` Trailer Axle` , Kinematics`KinSA_47edd369-19f2-4fb4-9a62-152af4e7b369
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_870721cb-8477-426d-bcab-a185debcac7d.par
+#BlueLink25 Suspension: Solid Axle Compliance, Springs, and Dampers`250 N/mm No jounce and rebound stops` Very Large Vehicles` , Suspension compliance`CmpSA_870721cb-8477-426d-bcab-a185debcac7d
+
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink33 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+PARSFILE Generic\Group\GenGrp_e1e08034-596b-4073-b70d-dc3c4bf65318.par
+#BlueLink37 Generic Data Group`Telescopic Trailer Rear Steering System` Very Large Vehicles` , Misc (Axle 2)`GenGrp_e1e08034-596b-4073-b70d-dc3c4bf65318
+
+
+iaxle 3
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+LX_AXLE 24660
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_47edd369-19f2-4fb4-9a62-152af4e7b369.par
+#BlueLink14 Suspension: Solid Axle System Kinematics`18t Trailer, Dual Wheels` Trailer Axle` , Kinematics`KinSA_47edd369-19f2-4fb4-9a62-152af4e7b369
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_870721cb-8477-426d-bcab-a185debcac7d.par
+#BlueLink26 Suspension: Solid Axle Compliance, Springs, and Dampers`250 N/mm No jounce and rebound stops` Very Large Vehicles` , Suspension compliance`CmpSA_870721cb-8477-426d-bcab-a185debcac7d
+
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink34 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+PARSFILE Generic\Group\GenGrp_e1e08034-596b-4073-b70d-dc3c4bf65318.par
+#BlueLink38 Generic Data Group`Telescopic Trailer Rear Steering System` Very Large Vehicles` , Misc (Axle 3)`GenGrp_e1e08034-596b-4073-b70d-dc3c4bf65318
+
+
+iaxle 4
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+LX_AXLE 26511
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_47edd369-19f2-4fb4-9a62-152af4e7b369.par
+#BlueLink15 Suspension: Solid Axle System Kinematics`18t Trailer, Dual Wheels` Trailer Axle` , Kinematics`KinSA_47edd369-19f2-4fb4-9a62-152af4e7b369
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_870721cb-8477-426d-bcab-a185debcac7d.par
+#BlueLink27 Suspension: Solid Axle Compliance, Springs, and Dampers`250 N/mm No jounce and rebound stops` Very Large Vehicles` , Suspension compliance`CmpSA_870721cb-8477-426d-bcab-a185debcac7d
+
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink35 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+PARSFILE Generic\Group\GenGrp_e1e08034-596b-4073-b70d-dc3c4bf65318.par
+#BlueLink39 Generic Data Group`Telescopic Trailer Rear Steering System` Very Large Vehicles` , Misc (Axle 4)`GenGrp_e1e08034-596b-4073-b70d-dc3c4bf65318
+
+ITANDEM 1
+R_TANDEM 2/3
+CFZ_MY_TAND 0
+ITANDEM 2
+R_TANDEM 2/3
+CFZ_MY_TAND 0
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 26511.000000
+PARSFILE Vehicles\Trl_Sprung_Mass\TrlSprM_d144f599-1094-4a7a-bd5c-364d3b69d588.par
+#BlueLink0 Vehicle: Trailer Sprung Mass`Short Telescopic Trailer` 4A Trailer` , Sprung Mass`TrlSprM_d144f599-1094-4a7a-bd5c-364d3b69d588
+
+PARSFILE Animator\Vehicles\AniVeh_7c01a8ec-37da-4d8c-a455-a0ddfa47cf49.par
+#BlueLink1 Animator: Vehicles and Sensor Targets`4A Short Telescope Heavy Hauler` Trailers: 4-axle` , Animator Shape(s)`AniVeh_7c01a8ec-37da-4d8c-a455-a0ddfa47cf49
+
+PARSFILE Aerodynamics\Aero_Main\Aero_2dcf0dd6-b552-482c-b346-939b627511c9.par
+#BlueLink2 Aerodynamics: Basic`No Aerodynamics` ` , Aerodynamics`Aero_2dcf0dd6-b552-482c-b346-939b627511c9
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_7c01a8ec-37da-4d8c-a455-a0ddfa47cf49.png
+IOBJECT_RESTORE
+
+LOG_ENTRY Used Dataset: Vehicle: Trailer with 4 Axles; { Telescopic Trailers } 4A Short Telescopic Trailer
+#Library : Vehicle: Trailer with 4 Axles
+#DataSet : 4A Short Telescopic Trailer
+#Category: Telescopic Trailers
+#FileID  : Trl4a_0adf4dd4-f391-41f8-a117-78b0a95a3af6
+#Product : TruckSim 2020.1
+#VehCode SSS_S
+
+END

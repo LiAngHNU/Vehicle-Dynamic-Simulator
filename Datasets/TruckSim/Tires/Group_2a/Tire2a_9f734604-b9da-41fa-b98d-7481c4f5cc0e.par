@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 2 Axles`544 mm Radius, FTire`TS 2A Steer / Drive Tires: FTire
+
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox5 1    
+
+*LDUAL_2 400
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\External\TireExt_3cdfeb8b-8510-41c3-927d-b630afa88d83.par
+#BlueLink1 Tire (External)`380/65 R22.5, FTire (Steer)` * COSIN FTire` , Tires`TireExt_3cdfeb8b-8510-41c3-927d-b630afa88d83
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\External\TireExt_3cdfeb8b-8510-41c3-927d-b630afa88d83.par
+#BlueLink999 Tire (External)`380/65 R22.5, FTire (Steer)` * COSIN FTire` , Tires`TireExt_3cdfeb8b-8510-41c3-927d-b630afa88d83
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 400
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.200000
+PARSFILE Tires\External\TireExt_0475da4a-0d8f-4415-bdf3-c2f46abc4c5a.par
+#BlueLink5 Tire (External)`380/65 R22.5, FTire (Drive)` * COSIN FTire` , Tires`TireExt_0475da4a-0d8f-4415-bdf3-c2f46abc4c5a
+
+itire 2
+symbol_push  <<tire>> R<<axle>>o
+STORE_WHEEL_OFFSET 0.200000
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+PARSFILE Tires\External\TireExt_0475da4a-0d8f-4415-bdf3-c2f46abc4c5a.par
+#BlueLink999 Tire (External)`380/65 R22.5, FTire (Drive)` * COSIN FTire` , Tires`TireExt_0475da4a-0d8f-4415-bdf3-c2f46abc4c5a
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.200000
+PARSFILE Tires\External\TireExt_0475da4a-0d8f-4415-bdf3-c2f46abc4c5a.par
+#BlueLink999 Tire (External)`380/65 R22.5, FTire (Drive)` * COSIN FTire` , Tires`TireExt_0475da4a-0d8f-4415-bdf3-c2f46abc4c5a
+
+itire 2
+symbol_push  <<tire>> L<<axle>>o
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+STORE_WHEEL_OFFSET 0.200000
+PARSFILE Tires\External\TireExt_0475da4a-0d8f-4415-bdf3-c2f46abc4c5a.par
+#BlueLink999 Tire (External)`380/65 R22.5, FTire (Drive)` * COSIN FTire` , Tires`TireExt_0475da4a-0d8f-4415-bdf3-c2f46abc4c5a
+
+
+#EMBEDDED_NOTES
+#This tire data selects the model option "COSIN Tire Interface (FTire)", which adopts FTire model and bypasses the TruckSim internal tire model.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 2 Axles; { TS 2A Steer / Drive Tires: FTire } 544 mm Radius, FTire
+#Library : Tires: Vehicle Unit with 2 Axles
+#DataSet : 544 mm Radius, FTire
+#Category: TS 2A Steer / Drive Tires: FTire
+#FileID  : Tire2a_9f734604-b9da-41fa-b98d-7481c4f5cc0e
+#Product : TruckSim 2020.1
+#VehCode 2a Tire Group
+
+END

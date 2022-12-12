@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 2 Axles`510 mm Radius, Camber Ext.: Asymmetric`TS 2A Steer / Drive Tires: Camber Extensions
+
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox5 1    
+
+*LDUAL_2 310
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_fddc4f16-2dc2-41c5-aec2-4b75cee6ae79.par
+#BlueLink1 Tire`510 mm Radius (Asymmetric)` Camber Extensions` , Tires`Tire_fddc4f16-2dc2-41c5-aec2-4b75cee6ae79
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_fddc4f16-2dc2-41c5-aec2-4b75cee6ae79.par
+#BlueLink999 Tire`510 mm Radius (Asymmetric)` Camber Extensions` , Tires`Tire_fddc4f16-2dc2-41c5-aec2-4b75cee6ae79
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 310
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_fddc4f16-2dc2-41c5-aec2-4b75cee6ae79.par
+#BlueLink5 Tire`510 mm Radius (Asymmetric)` Camber Extensions` , Tires`Tire_fddc4f16-2dc2-41c5-aec2-4b75cee6ae79
+
+itire 2
+symbol_push  <<tire>> R<<axle>>o
+STORE_WHEEL_OFFSET 0.155000
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+PARSFILE Tires\Tire\Tire_fddc4f16-2dc2-41c5-aec2-4b75cee6ae79.par
+#BlueLink999 Tire`510 mm Radius (Asymmetric)` Camber Extensions` , Tires`Tire_fddc4f16-2dc2-41c5-aec2-4b75cee6ae79
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_fddc4f16-2dc2-41c5-aec2-4b75cee6ae79.par
+#BlueLink999 Tire`510 mm Radius (Asymmetric)` Camber Extensions` , Tires`Tire_fddc4f16-2dc2-41c5-aec2-4b75cee6ae79
+
+itire 2
+symbol_push  <<tire>> L<<axle>>o
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_fddc4f16-2dc2-41c5-aec2-4b75cee6ae79.par
+#BlueLink999 Tire`510 mm Radius (Asymmetric)` Camber Extensions` , Tires`Tire_fddc4f16-2dc2-41c5-aec2-4b75cee6ae79
+
+
+#EMBEDDED_NOTES
+#This tire data selects the model option "Internal with Camber Extensions".  However, the data source is "510 mm Radius (MF-Tyre, Symmetric), category: * MF-Tyre / MF-Swift, whose tire characteristics are measured by TruckSim's tire tester function.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 2 Axles; { TS 2A Steer / Drive Tires: Camber Extensions } 510 mm Radius, Camber Ext.: Asymmetric
+#Library : Tires: Vehicle Unit with 2 Axles
+#DataSet : 510 mm Radius, Camber Ext.: Asymmetric
+#Category: TS 2A Steer / Drive Tires: Camber Extensions
+#FileID  : Tire2a_42b99426-042e-4d21-a153-087f5b078776
+#Product : TruckSim 2020.1
+#VehCode 2a Tire Group
+
+END

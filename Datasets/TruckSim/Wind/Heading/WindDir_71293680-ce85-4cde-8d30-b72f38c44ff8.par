@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Wind Heading`Constant: 1 deg`
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+WIND_HEADING_COMBINE ADD
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+WIND_HEADING_CONSTANT 1
+WIND_HEADING_S_CONSTANT 0
+*SCALAR 1
+*SCALAR2 0
+
+
+LOG_ENTRY Used Dataset: Wind Heading; Constant: 1 deg
+#Library : Wind Heading
+#DataSet : Constant: 1 deg
+#Category: 
+#FileID  : WindDir_71293680-ce85-4cde-8d30-b72f38c44ff8
+#Product : TruckSim 2020.1
+#VehCode Wind Heading
+
+END

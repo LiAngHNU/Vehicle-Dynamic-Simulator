@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit Sprung Mass`LCF Van (Frame Flex & Susp. Cab)`2 Axle Trucks
+#VehCode Flexible
+H_CG_SU 1175
+LX_CG_SU 1250
+M_SU 4455
+IXX_SU 2283.9
+IYY_SU 35402.8
+IZZ_SU 34802.6
+IXZ_SU 1626
+*RX 0.716
+*RY 2.819
+*RZ 2.795
+Y_CG_SU 0
+IXY_SU 0
+IYZ_SU 0
+L_FRAME 5000
+W_FRAME 1000
+X_NODE 3000
+K_FRAME 1000
+C_FRAME 100
+X_ENG 0
+X_LENGTH 5000
+H_NODE 519
+
+LEN_SM 5000
+#CheckBox0 0    
+#CheckBox1 1    
+
+PARSFILE Vehicles\Susp_Cab\Cab_f8fb5a5a-a6fd-4efd-b463-570582c90881.par
+#BlueLink0 Vehicle: Suspended Cab`Forward Control Cab` ` , Suspended Cab`Cab_f8fb5a5a-a6fd-4efd-b463-570582c90881
+
+
+#EMBEDDED_NOTES
+#The TruckSim Extended Dynamics models, available under an optional license,  add torsioanl flexibility of the chassis and a suspended cab to the models. To use the optional models, check the "Frame Torsional Flexibility and Suspended Cab" box at the upper right of this screen and add parameters for the frame, and link to a Suspended Cab data set.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit Sprung Mass; { 2 Axle Trucks } LCF Van (Frame Flex & Susp. Cab)
+#Library : Vehicle: Lead Unit Sprung Mass
+#DataSet : LCF Van (Frame Flex & Susp. Cab)
+#Category: 2 Axle Trucks
+#FileID  : SprMass_73650a56-f025-4a02-af77-299fd284b7ba
+#Product : TruckSim 2020.1
+#VehCode Flexible
+
+END

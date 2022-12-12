@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`2A Conv, Payload (Str Torque)`Conventional Vans
+#VehCode S_S
+#CheckBox0 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_2a\Lead2a_61b2b7b2-f115-497f-b5ef-25a98a5d1d49.par
+#BlueLink0 Vehicle: Lead Unit with 2 Axles`Conv. Van (7-spd. MT, Str Torque)` 2A Conventional Van` , Vehicle Type`Lead2a_61b2b7b2-f115-497f-b5ef-25a98a5d1d49
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Box\Box_6503f2cf-1550-4bf2-97be-52903be4ca5e.par
+#BlueLink1 Payload: Box Shape`Conventional/LCF Van Payload (6789 kg)` Box Trucks` , Miscellaneous`Box_6503f2cf-1550-4bf2-97be-52903be4ca5e
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { Conventional Vans } 2A Conv, Payload (Str Torque)
+#Library : Vehicle: Loaded Combination
+#DataSet : 2A Conv, Payload (Str Torque)
+#Category: Conventional Vans
+#FileID  : VehLoad_3885cd67-73c9-4f13-bf37-ad39f903c99e
+#Product : TruckSim 2020.1
+#VehCode S_S
+
+END

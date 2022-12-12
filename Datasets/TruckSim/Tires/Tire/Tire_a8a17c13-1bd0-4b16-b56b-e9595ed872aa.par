@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName Tire`Steer Tire, Symmetric`SAE Steer Tire 2800 kg
+FZ_REF 27468
+X_LENGTH 519
+Z_LENGTH 519
+Y_LENGTH 295
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 3
+#RingCtrl8 3
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\ShpGrp_0a9dd363-3a4b-45ad-98c2-cb8b2f2f8145.par
+#BlueLink4 Animator: Shape Assembly`Highway Steer Tire` Tires` , Animator`ShpGrp_0a9dd363-3a4b-45ad-98c2-cb8b2f2f8145
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 295
+RRE 507
+R0 519
+FZ_TIRE_COEFFICIENT 985
+FZ_MAX 1000000
+M_TIRE 91
+IT 4.5
+IT_XXZZ 0
+PARSFILE Generic\tables\GenTab_b39bbe4a-1fec-4454-92d0-578179ec80e0.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_b39bbe4a-1fec-4454-92d0-578179ec80e0
+
+PARSFILE Generic\tables\GenTab_d3424660-e756-4006-a08c-f39a49c14aae.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_d3424660-e756-4006-a08c-f39a49c14aae
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.0041
+RR_V 0.0000256
+L_CONTACT_X_CONSTANT 0
+L_CONTACT_Y_CONSTANT 0
+RR_FX 1
+OPT_TIRE_COMB 0
+PARSFILE Tires\Mz\TireMz_4dac54ed-ac91-4c30-81d4-6b70bc09a204.par
+#BlueLink0 Tire: Aligning Moment`Mz; Steer Tire Symmetric` SAE Steer Tire` , Aligning Moment`TireMz_4dac54ed-ac91-4c30-81d4-6b70bc09a204
+
+PARSFILE Tires\Fy\TireFy_22489820-cb11-4fa5-9440-f738b86de39b.par
+#BlueLink1 Tire: Lateral Force`Fy; Steer Tire Symmetric` SAE Steer Tire` , Lateral Force`TireFy_22489820-cb11-4fa5-9440-f738b86de39b
+
+PARSFILE Tires\Fx\TireFx_c142024a-a63a-4dda-9509-f1d2b2ce4e24.par
+#BlueLink2 Tire: Longitudinal Force`Fx; Steer Tire Symmetric` SAE Steer Tire` , Longitudinal Force`TireFx_c142024a-a63a-4dda-9509-f1d2b2ce4e24
+
+PARSFILE Tires\Camber_Thrust\CamStiff_5caa5ece-4775-4ed6-aede-93fa40f66ad8.par
+#BlueLink3 Tire: Camber Thrust Coefficient`Linear Coefficient: -0.01` ` , Camber Thrust`CamStiff_5caa5ece-4775-4ed6-aede-93fa40f66ad8
+
+
+
+#EMBEDDED_NOTES
+#This data comes from the SAE Cooperative Research program conducted in the 1990s.
+#
+#The Steer Tire is of the size 295/75|275/80R22.5. The lateral and longitudinal force properties on dry concrete were measured by UMTRI.
+#
+#Longitudinal force properties were measured only in the braking direction and are incorporated into the Fx vs. Slip table.
+#
+#Lateral force and aligning moment properties were measured at both positive and negative slip angles. Symmetric data were created by correcting for zero offset and averaging tests results for the left and right directions.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { SAE Steer Tire 2800 kg } Steer Tire, Symmetric
+#Library : Tire
+#DataSet : Steer Tire, Symmetric
+#Category: SAE Steer Tire 2800 kg
+#FileID  : Tire_a8a17c13-1bd0-4b16-b56b-e9595ed872aa
+#Product : TruckSim 2020.1
+#VehCode Tire
+
+END

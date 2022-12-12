@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName Vehicle: Trailer with 2 Axles`2A Dump Bed (No ABS)`PBS Van / Container Trailers
+#VehCode SS
+IUNIT_INCREMENT
+symbol_add  <<unit>> 1
+NAXLES 2
+
+IOBJECT_SAVE
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+#RingCtrl2 0
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_2a\Tire2a_42db78cf-76e3-4c1f-b0a7-fdb82c1b3a42.par
+#BlueLink11 Tires: Vehicle Unit with 2 Axles`3000kg Tandem (510 mm)` TS 2A Trailer Tires` , Tires`Tire2a_42db78cf-76e3-4c1f-b0a7-fdb82c1b3a42
+
+symbol_push  <<axle>> <<axle_temp>>
+*LX_AXLE_2 5770
+R_TANDEM 0.5
+CFZ_MY_TAND 0
+*LX_AXLE_1 4500
+R_TAND_TRAIL_STATIC 0.5
+R_TAND_TRAIL_STATIC 0.5
+
+iaxle 1
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 4500
+PARSFILE Suspensions\Kin_Solid\KinSA_fdc0b85f-e1a6-40c0-93ba-35d44647acdc.par
+#BlueLink14 Suspension: Solid Axle System Kinematics`15.5t Trailer, Dual Wheels - Kinematics` Trailer Axle` , Kinematics`KinSA_fdc0b85f-e1a6-40c0-93ba-35d44647acdc
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c.par
+#BlueLink16 Suspension: Solid Axle Compliance, Springs, and Dampers`15.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c
+
+PARSFILE Brakes\2W_System\Brk2W_b6f14525-7233-4fd7-b700-de03bd681ce2.par
+#BlueLink5 Brakes: Two-Wheel System`10 kN-m Capacity, Air (No ABS)` Air Brakes` , Brakes`Brk2W_b6f14525-7233-4fd7-b700-de03bd681ce2
+
+
+iaxle 2
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 5770
+PARSFILE Suspensions\Kin_Solid\KinSA_fdc0b85f-e1a6-40c0-93ba-35d44647acdc.par
+#BlueLink15 Suspension: Solid Axle System Kinematics`15.5t Trailer, Dual Wheels - Kinematics` Trailer Axle` , Kinematics`KinSA_fdc0b85f-e1a6-40c0-93ba-35d44647acdc
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c.par
+#BlueLink17 Suspension: Solid Axle Compliance, Springs, and Dampers`15.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c
+
+PARSFILE Brakes\2W_System\Brk2W_b6f14525-7233-4fd7-b700-de03bd681ce2.par
+#BlueLink8 Brakes: Two-Wheel System`10 kN-m Capacity, Air (No ABS)` Air Brakes` , Brakes`Brk2W_b6f14525-7233-4fd7-b700-de03bd681ce2
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 5770
+PARSFILE Vehicles\Trl_Sprung_Mass\TrlSprM_21242f5a-f669-4682-beac-d7418eb7c8d6.par
+#BlueLink1 Vehicle: Trailer Sprung Mass`2A Dump Bed Trailer` 2A Trailer` , Sprung Mass`TrlSprM_21242f5a-f669-4682-beac-d7418eb7c8d6
+
+PARSFILE Animator\Vehicles\AniVeh_fc1c6b21-8d30-4369-a9d5-d0d15d5b6eac.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`2A Dump Bed` Trailers: 2-axle` , Animator Shape(s)`AniVeh_fc1c6b21-8d30-4369-a9d5-d0d15d5b6eac
+
+PARSFILE Aerodynamics\Aero_Main\Aero_2dcf0dd6-b552-482c-b346-939b627511c9.par
+#BlueLink2 Aerodynamics: Basic`No Aerodynamics` ` , Aerodynamics`Aero_2dcf0dd6-b552-482c-b346-939b627511c9
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_fc1c6b21-8d30-4369-a9d5-d0d15d5b6eac.png
+IOBJECT_RESTORE
+
+LOG_ENTRY Used Dataset: Vehicle: Trailer with 2 Axles; { PBS Van / Container Trailers } 2A Dump Bed (No ABS)
+#Library : Vehicle: Trailer with 2 Axles
+#DataSet : 2A Dump Bed (No ABS)
+#Category: PBS Van / Container Trailers
+#FileID  : Trl2a_4483f37b-cf78-44bf-8638-5a9f0f1a3798
+#Product : TruckSim 2020.1
+#VehCode SS
+
+END

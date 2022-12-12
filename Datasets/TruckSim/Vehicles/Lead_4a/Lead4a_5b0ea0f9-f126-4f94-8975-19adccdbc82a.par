@@ -1,0 +1,147 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit with 4 Axles`4A Sleeper Cab (S_SSS)`4A Sleeper Cabs
+#VehCode S_SSS
+IUNIT_INCREMENT
+IVEHICLE = IVEHICLE + 1
+symbol_add  <<unit>> 1
+symbol_add  <<vehicle>> 1
+NAXLES 4
+
+IOBJECT_SAVE
+#CheckBox0 1    
+#CheckBox1 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 4
+OPT_PT 4
+#RingCtrl1 1
+#RingCtrl2 4
+#RingCtrl3 4
+#RingCtrl4 4
+#RingCtrl5 1
+*LX_AXLE_1 0
+*LX_AXLE_2 4500
+*LX_AXLE_3 5770
+*LX_AXLE_4 7040
+*RLOAD_1 0.45
+*RTRANSFER_1 0
+*RLOAD_2 0.45
+*RTRANSFER_2 0
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_4a\Tire4a_4b6b9403-ee05-4048-b26b-dc368436c63a.par
+#BlueLink7 Tires: Vehicle Unit with 4 Axles`3000 kg Steer, 3000 kg Drive/Tandem` TS 4A Steer / Drive Tires` , Tires`Tire4a_4b6b9403-ee05-4048-b26b-dc368436c63a
+
+symbol_push  <<axle>> <<axle_temp>>
+
+ITANDEM 1
+R_TANDEM 0.45
+CFZ_MY_TAND 0
+ITANDEM 2
+R_TANDEM 0.45
+CFZ_MY_TAND 0
+
+iaxle 1
+symbol_add  <<axle>> 1
+LX_AXLE 0
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_64c30f3c-3ccd-4380-a6bc-d537f8dd7bc1.par
+#BlueLink20 Suspension: Solid Axle System Kinematics`5.5t Steer, Single Wheel - Kinematics` Steer Axle` , Kinematics`KinSA_64c30f3c-3ccd-4380-a6bc-d537f8dd7bc1
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_e6e7568c-2525-480b-87bc-b0b15886513c.par
+#BlueLink24 Suspension: Solid Axle Compliance, Springs, and Dampers`5.5t Leaf: +150 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_e6e7568c-2525-480b-87bc-b0b15886513c
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363.par
+#BlueLink12 Brakes: Two-Wheel System`7.5 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363
+
+PARSFILE Steering\System\StrSys_34a3a8d4-49e4-4c37-a6f1-c2f6bfe55fbc.par
+#BlueLink16 Steering System`Medium (5 m) Wheelbase` Medium - Heavy Duty Steering` , Steering`StrSys_34a3a8d4-49e4-4c37-a6f1-c2f6bfe55fbc
+
+
+iaxle 2
+symbol_add  <<axle>> 1
+LX_AXLE 4500
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_762a39b9-e822-459c-b12f-a408734ae6b3.par
+#BlueLink21 Suspension: Solid Axle System Kinematics`15.5t Drive, Dual Wheels - Kinematics` Drive Axle` , Kinematics`KinSA_762a39b9-e822-459c-b12f-a408734ae6b3
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c.par
+#BlueLink25 Suspension: Solid Axle Compliance, Springs, and Dampers`15.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink13 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+iaxle 3
+symbol_add  <<axle>> 1
+LX_AXLE 5770
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_762a39b9-e822-459c-b12f-a408734ae6b3.par
+#BlueLink22 Suspension: Solid Axle System Kinematics`15.5t Drive, Dual Wheels - Kinematics` Drive Axle` , Kinematics`KinSA_762a39b9-e822-459c-b12f-a408734ae6b3
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c.par
+#BlueLink26 Suspension: Solid Axle Compliance, Springs, and Dampers`15.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink14 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+iaxle 4
+symbol_add  <<axle>> 1
+LX_AXLE 7040
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_762a39b9-e822-459c-b12f-a408734ae6b3.par
+#BlueLink23 Suspension: Solid Axle System Kinematics`15.5t Drive, Dual Wheels - Kinematics` Drive Axle` , Kinematics`KinSA_762a39b9-e822-459c-b12f-a408734ae6b3
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c.par
+#BlueLink27 Suspension: Solid Axle Compliance, Springs, and Dampers`15.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink15 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 7040.000000
+PARSFILE Vehicles\Sprung_Mass\SprMass_a014c5a2-a644-4950-97ef-777b6b3a7ba5.par
+#BlueLink1 Vehicle: Lead Unit Sprung Mass`4A Sleeper Cab` 4 Axle Trucks` , Sprung Mass`SprMass_a014c5a2-a644-4950-97ef-777b6b3a7ba5
+
+PARSFILE Aerodynamics\Aero_Main\Aero_ad19711c-1936-499a-b1de-fc8dcd7243ec.par
+#BlueLink2 Aerodynamics: Basic`Conv. Cab w/ Fairings, 5 m Ref.` Conventional Cab` , Aerodynamics`Aero_ad19711c-1936-499a-b1de-fc8dcd7243ec
+
+PARSFILE Steering\Str_Wheel_Tq\TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6.par
+#BlueLink6 Steering Wheel Torque`Linear: 1/25 (Typical)` ` , Steering wheel torque`TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6
+
+PARSFILE Powertrain\6wd\6WD_e863acf2-14b1-4310-ba96-f47e8f76a2bb.par
+#BlueLink41 Powertrain: 6-Wheel Drive`330 kW, 18 Spd. MT` 330 kW Powertrains` , Powertrain or dolly`6WD_e863acf2-14b1-4310-ba96-f47e8f76a2bb
+
+PARSFILE Animator\Vehicles\AniVeh_79dd38bb-ad38-4925-a7c0-279912b85968.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`4A Sleeper Cab` 4A Lead Units` , Animator Shape(s)`AniVeh_79dd38bb-ad38-4925-a7c0-279912b85968
+
+symbol_push  <<hitch_x>> -5.770000
+symbol_push  <<hitch_y>> 0.000000
+symbol_push  <<hitch_z>> 1.100000
+PARSFILE Hitches\Joint\Hitch_fc25dbf0-73ba-4b1c-82af-5e2cf0a07b55.par
+#BlueLink40 Hitch: Joint Assembly`5th Wheel` 5th Wheel Hitches` , Hitch`Hitch_fc25dbf0-73ba-4b1c-82af-5e2cf0a07b55
+
+LX_H 5770
+Y_H 0
+H_H 1100
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_79dd38bb-ad38-4925-a7c0-279912b85968.png
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#Four-axle Sleeper Cab tractor (S_SSS) with an 8x6 powertrain and an 18-speed manual transmission.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 4 Axles; { 4A Sleeper Cabs } 4A Sleeper Cab (S_SSS)
+#Library : Vehicle: Lead Unit with 4 Axles
+#DataSet : 4A Sleeper Cab (S_SSS)
+#Category: 4A Sleeper Cabs
+#FileID  : Lead4a_5b0ea0f9-f126-4f94-8975-19adccdbc82a
+#Product : TruckSim 2020.1
+#VehCode S_SSS
+
+END

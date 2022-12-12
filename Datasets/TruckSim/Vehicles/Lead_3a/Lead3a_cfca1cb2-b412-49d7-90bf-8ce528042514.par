@@ -1,0 +1,127 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit with 3 Axles`3A Sleeper (LSD, TBR 3.0)`3A Tractors
+#VehCode S_SS
+IUNIT_INCREMENT
+IVEHICLE = IVEHICLE + 1
+symbol_add  <<unit>> 1
+symbol_add  <<vehicle>> 1
+NAXLES 3
+ITANDEM 1
+
+IOBJECT_SAVE
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 3
+OPT_PT 3
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 4
+#RingCtrl4 4
+*LX_AXLE_1 0
+*LX_AXLE_2 5000
+*LX_AXLE_3 6270
+R_TANDEM 0.45
+CFZ_MY_TAND 0
+R_TAND_TRAIL_STATIC 0.5
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_3a\Tire3a_05dfe3a4-b2a0-4a94-ab3b-47d1acf0ebd7.par
+#BlueLink8 Tires: Vehicle Unit with 3 Axles`3000 kg Steer, 3000 kg Drive / Tandem` 3A Steer / Drive Tires` , Tires`Tire3a_05dfe3a4-b2a0-4a94-ab3b-47d1acf0ebd7
+
+symbol_push  <<axle>> <<axle_temp>>
+
+iaxle 1
+symbol_add  <<axle>> 1
+LX_AXLE 0
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_64c30f3c-3ccd-4380-a6bc-d537f8dd7bc1.par
+#BlueLink18 Suspension: Solid Axle System Kinematics`5.5t Steer, Single Wheel - Kinematics` Steer Axle` , Kinematics`KinSA_64c30f3c-3ccd-4380-a6bc-d537f8dd7bc1
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_e6e7568c-2525-480b-87bc-b0b15886513c.par
+#BlueLink21 Suspension: Solid Axle Compliance, Springs, and Dampers`5.5t Leaf: +150 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_e6e7568c-2525-480b-87bc-b0b15886513c
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363.par
+#BlueLink12 Brakes: Two-Wheel System`7.5 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363
+
+PARSFILE Steering\System\StrSys_34a3a8d4-49e4-4c37-a6f1-c2f6bfe55fbc.par
+#BlueLink15 Steering System`Medium (5 m) Wheelbase` Medium - Heavy Duty Steering` , Steering`StrSys_34a3a8d4-49e4-4c37-a6f1-c2f6bfe55fbc
+
+
+iaxle 2
+symbol_add  <<axle>> 1
+LX_AXLE 5000
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_762a39b9-e822-459c-b12f-a408734ae6b3.par
+#BlueLink19 Suspension: Solid Axle System Kinematics`15.5t Drive, Dual Wheels - Kinematics` Drive Axle` , Kinematics`KinSA_762a39b9-e822-459c-b12f-a408734ae6b3
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c.par
+#BlueLink22 Suspension: Solid Axle Compliance, Springs, and Dampers`15.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink13 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+iaxle 3
+symbol_add  <<axle>> 1
+LX_AXLE 6270
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_762a39b9-e822-459c-b12f-a408734ae6b3.par
+#BlueLink20 Suspension: Solid Axle System Kinematics`15.5t Drive, Dual Wheels - Kinematics` Drive Axle` , Kinematics`KinSA_762a39b9-e822-459c-b12f-a408734ae6b3
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c.par
+#BlueLink23 Suspension: Solid Axle Compliance, Springs, and Dampers`15.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink14 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 6270.000000
+PARSFILE Vehicles\Sprung_Mass\SprMass_93a3d6a8-a1c8-46b2-89f2-686f1bc13ca2.par
+#BlueLink1 Vehicle: Lead Unit Sprung Mass`3A Sleeper Cab` Tractors` , Sprung Mass`SprMass_93a3d6a8-a1c8-46b2-89f2-686f1bc13ca2
+
+PARSFILE Aerodynamics\Aero_Main\Aero_ad19711c-1936-499a-b1de-fc8dcd7243ec.par
+#BlueLink2 Aerodynamics: Basic`Conv. Cab w/ Fairings, 5 m Ref.` Conventional Cab` , Aerodynamics`Aero_ad19711c-1936-499a-b1de-fc8dcd7243ec
+
+PARSFILE Steering\Str_Wheel_Tq\TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6.par
+#BlueLink6 Steering Wheel Torque`Linear: 1/25 (Typical)` ` , Steering wheel torque`TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6
+
+PARSFILE Powertrain\4wd\4WD_3d8b6f24-47ed-42e7-8462-707a56c27aeb.par
+#BlueLink5 Powertrain: 4-Wheel Drive`300 kW, 10 Spd. MT, 4WD (LSD, TBR 3.0)` 300 kW Powertrains` , Powertrain or dolly`4WD_3d8b6f24-47ed-42e7-8462-707a56c27aeb
+
+PARSFILE Animator\Vehicles\AniVeh_8ba88f47-4990-40ca-bf2d-9bbebeda47ea.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`3A Sleeper` 3A Lead Units` , Animator Shape(s)`AniVeh_8ba88f47-4990-40ca-bf2d-9bbebeda47ea
+
+symbol_push  <<hitch_x>> -5.635000
+symbol_push  <<hitch_y>> 0.000000
+symbol_push  <<hitch_z>> 1.100000
+PARSFILE Hitches\Joint\Hitch_fc25dbf0-73ba-4b1c-82af-5e2cf0a07b55.par
+#BlueLink7 Hitch: Joint Assembly`5th Wheel` 5th Wheel Hitches` , Hitch`Hitch_fc25dbf0-73ba-4b1c-82af-5e2cf0a07b55
+
+LX_H 5635
+Y_H 0
+H_H 1100
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_8ba88f47-4990-40ca-bf2d-9bbebeda47ea.png
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#Three-axle Sleeper Cab tractor (S_SS) with a 6x4 powertrain, 10-speed manual transmission, and Limited Slip Differentials.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 3 Axles; { 3A Tractors } 3A Sleeper (LSD, TBR 3.0)
+#Library : Vehicle: Lead Unit with 3 Axles
+#DataSet : 3A Sleeper (LSD, TBR 3.0)
+#Category: 3A Tractors
+#FileID  : Lead3a_cfca1cb2-b412-49d7-90bf-8ce528042514
+#Product : TruckSim 2020.1
+#VehCode S_SS
+
+END

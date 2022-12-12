@@ -1,0 +1,92 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 3 Axles`HD Utility Vehicle`3A Steer / Drive Tires
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+
+*LDUAL_2 310
+*LDUAL_3 310
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_29293d9a-e4c0-4d8e-8212-fd06a3debd23.par
+#BlueLink1 Tire`Heavy Truck Off-road Tire (585 mm)` 2000 kg Rating` , Tires`Tire_29293d9a-e4c0-4d8e-8212-fd06a3debd23
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_29293d9a-e4c0-4d8e-8212-fd06a3debd23.par
+#BlueLink999 Tire`Heavy Truck Off-road Tire (585 mm)` 2000 kg Rating` , Tires`Tire_29293d9a-e4c0-4d8e-8212-fd06a3debd23
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_29293d9a-e4c0-4d8e-8212-fd06a3debd23.par
+#BlueLink5 Tire`Heavy Truck Off-road Tire (585 mm)` 2000 kg Rating` , Tires`Tire_29293d9a-e4c0-4d8e-8212-fd06a3debd23
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_29293d9a-e4c0-4d8e-8212-fd06a3debd23.par
+#BlueLink999 Tire`Heavy Truck Off-road Tire (585 mm)` 2000 kg Rating` , Tires`Tire_29293d9a-e4c0-4d8e-8212-fd06a3debd23
+
+symbol_add  <<axle>> 1
+
+iaxle 3
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_29293d9a-e4c0-4d8e-8212-fd06a3debd23.par
+#BlueLink9 Tire`Heavy Truck Off-road Tire (585 mm)` 2000 kg Rating` , Tires`Tire_29293d9a-e4c0-4d8e-8212-fd06a3debd23
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_29293d9a-e4c0-4d8e-8212-fd06a3debd23.par
+#BlueLink999 Tire`Heavy Truck Off-road Tire (585 mm)` 2000 kg Rating` , Tires`Tire_29293d9a-e4c0-4d8e-8212-fd06a3debd23
+
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 3 Axles; { 3A Steer / Drive Tires } HD Utility Vehicle
+#Library : Tires: Vehicle Unit with 3 Axles
+#DataSet : HD Utility Vehicle
+#Category: 3A Steer / Drive Tires
+#FileID  : Tire3a_6062987f-a957-476c-b354-57f30564f39e
+#Product : TruckSim 2020.1
+#VehCode 3a Tire Group
+
+END

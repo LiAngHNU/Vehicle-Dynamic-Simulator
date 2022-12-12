@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Tire: Aligning Moment`Mz; Drive Tire Asymmetric`SAE Drive Tire
+#CheckBox0 0    
+
+#RingCtrl0 2D_SPLINE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Slip angle [Alpha] (deg)
+*3D_ZLabel Aligning moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 7, 21 ! columns x rows
+MZ_TIRE_CARPET 2D_SPLINE
+0, 6868, 13736, 20604, 27468, 34336, 41204, 54936
+-21, 0, 0, 0, 0, 0, 0, 0
+-20, 0, 0, 0, 0, 0, 0, 0
+-14, -66, -75.7, -235.2, -313.2, -422.1, -548, -901.1
+-12.5, -102.5, -93.1, -248.9, -369.7, -494.7, -614.9, -1076.9
+-10, -105.3, -147.8, -351.4, -474.8, -648.9, -818.1, -1341.4
+-8, -127.7, -165.8, -403.1, -580.2, -756, -937, -1585.2
+-6, -112.4, -177.5, -396.3, -567.1, -772.1, -980.8, -1526.4
+-4, -100.7, -175.3, -352.5, -516.2, -686.3, -881.4, -1300.8
+-2, -71.2, -168.5, -229.4, -341, -453.5, -579.6, -838.8
+-1, -52.6, -112.4, -150.9, -220.5, -292.9, -357, -520.4
+0, -16.4, -44.7, -32, -37.8, -58.6, -80.3, -132.5
+1, 11.9, 60.3, 79.9, 118.4, 160.3, 191.4, 279.4
+2, 30.5, 128, 158.8, 258.6, 346.8, 424.5, 633.4
+4, 61, 174.4, 273.5, 426.9, 584.5, 742.4, 1124.7
+6, 63, 188.1, 309, 465.7, 647.7, 850.5, 1306.5
+8, 78.4, 176.5, 315.6, 478.7, 631.5, 806.6, 1365.4
+10, 56, 158.4, 264.1, 373.4, 524.4, 687.8, 1121.7
+12.5, 53.1, 103.9, 161.6, 268.3, 370.1, 484.6, 857.1
+14, 16.8, 86.4, 147.9, 211.8, 297.6, 417.7, 681.3
+20, 0, 0, 0, 0, 0, 0, 0
+21, 0, 0, 0, 0, 0, 0, 0
+ENDTABLE
+
+
+
+#EMBEDDED_NOTES
+#This data comes from the SAE Cooperative Research program conducted in the 1990s.
+#
+#It is a direct copy of the Mz data measured for a 295/75|275/80R22.5 drive tire .
+#
+#Data for the 20 deg slip angle was extrapolated using the rule of thumb that aligning moments generallly drop to zero at about this value.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire: Aligning Moment; { SAE Drive Tire } Mz; Drive Tire Asymmetric
+#Library : Tire: Aligning Moment
+#DataSet : Mz; Drive Tire Asymmetric
+#Category: SAE Drive Tire
+#FileID  : TireMz_373f25fa-8ebc-4f48-82a6-6a54ea233813
+#Product : TruckSim 2020.1
+#VehCode Tire: Mz
+
+END

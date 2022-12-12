@@ -1,0 +1,96 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit with 2 Axles`2A CiDi Pickup`* * * CiDi Trucks
+#VehCode I_S
+IUNIT_INCREMENT
+IVEHICLE = IVEHICLE + 1
+symbol_add  <<unit>> 1
+symbol_add  <<vehicle>> 1
+NAXLES 2
+
+IOBJECT_SAVE
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 2
+OPT_PT 2
+#RingCtrl1 3
+#RingCtrl2 1
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_2a\Tire2a_f794b98c-d136-45d9-9bd9-02eedaf78a0b.par
+#BlueLink8 Tires: Vehicle Unit with 2 Axles`3000 kg Steer, 3000kg Drive (490 mm)` TS 2A Steer / Drive Tires: Internal Table Model` , Tires`Tire2a_f794b98c-d136-45d9-9bd9-02eedaf78a0b
+
+symbol_push  <<axle>> <<axle_temp>>
+*LX_AXLE_1 0
+*LX_AXLE_2 4260
+
+iaxle 1
+symbol_add  <<axle>> 1
+LX_AXLE 0
+PARSFILE Suspensions\Kin_Indy\KinInd_bf2d53f8-0f63-43ad-b7f3-53686c980965.par
+#BlueLink21 Suspension: Independent System Kinematics`Pickup, Full Size - Front (HD)` Pickup Trucks` , Kinematics`KinInd_bf2d53f8-0f63-43ad-b7f3-53686c980965
+
+PARSFILE Suspensions\Compliance\CmpInd_307f2b80-9309-4cab-bc90-cdb24c7d2f8a.par
+#BlueLink23 Suspension: Independent Compliance, Springs, and Dampers`Pickup, Full Size - Front (HD)` Pickup Trucks` , Suspension compliance`CmpInd_307f2b80-9309-4cab-bc90-cdb24c7d2f8a
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_187e68d9-ad11-42d8-ab77-ad13eb87f381.par
+#BlueLink11 Brakes: Two-Wheel System`Pickup, Full Size w/ ABS - Front` Pickup Trucks and SUVs` , Brakes`Brk2W_187e68d9-ad11-42d8-ab77-ad13eb87f381
+
+PARSFILE Steering\System\StrSys_3df2c03b-a121-4031-aee3-e457a7d16fa3.par
+#BlueLink13 Steering System`Full Size: Power, Recirc. Ball, Front` Pickup Trucks` , Steering`StrSys_3df2c03b-a121-4031-aee3-e457a7d16fa3
+
+
+iaxle 2
+symbol_add  <<axle>> 1
+LX_AXLE 4260
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_eb72c5b9-17fa-4371-ab59-61427de96521.par
+#BlueLink16 Suspension: Solid Axle System Kinematics`Pickup, Full Size (HD SFA)` Pickup Trucks` , Kinematics`KinSA_eb72c5b9-17fa-4371-ab59-61427de96521
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_f6e36608-197b-4cbc-93be-3927155d5a5e.par
+#BlueLink18 Suspension: Solid Axle Compliance, Springs, and Dampers`Pickup, Full Size - Rear (HD DRW)` Pickup Trucks` , Suspension compliance`CmpSA_f6e36608-197b-4cbc-93be-3927155d5a5e
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_8335fd63-98df-4a37-853c-a74afc0ea87a.par
+#BlueLink12 Brakes: Two-Wheel System`Pickup, Full Size w/ ABS - Rear` Pickup Trucks and SUVs` , Brakes`Brk2W_8335fd63-98df-4a37-853c-a74afc0ea87a
+
+PARSFILE Steering\System\StrSys_1a53debb-1ae5-4726-a17b-694a42e09723.par
+#BlueLink14 Steering System`Full Size: Power, Rack & Pinion, Front` Pickup Trucks` , Steering`StrSys_1a53debb-1ae5-4726-a17b-694a42e09723
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_e90aee64-1a88-42e3-9de7-e149063e9ec5.par
+#BlueLink1 Vehicle: Lead Unit Sprung Mass`Pickup, Crew Cab 8 ft Bed DRW` 2 Axle Pickup Trucks` , Sprung Mass`SprMass_e90aee64-1a88-42e3-9de7-e149063e9ec5
+
+PARSFILE Aerodynamics\Aero_Main\Aero_b2fc818b-2ec7-4d9b-b486-fc66db328774.par
+#BlueLink2 Aerodynamics: Basic`Pickup, Full Size Aero` Pickup Trucks` , Aerodynamics`Aero_b2fc818b-2ec7-4d9b-b486-fc66db328774
+
+PARSFILE Powertrain\Rwd\RWD_2ce28f08-90d0-4f4e-bcae-2026641da93c.par
+#BlueLink4 Powertrain: Rear-Wheel Drive`40 kW, Electric (Hi-Power), 3.905 Ratio` Electric: 40 kW (Motor)` , Powertrain or dolly`RWD_2ce28f08-90d0-4f4e-bcae-2026641da93c
+
+x_length 4260.000000
+PARSFILE Animator\Vehicles\AniVeh_fda0c11a-fd69-4031-855c-46987b2d1a26.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`2A CiDi Pickup` * * * CiDi Trucks` , Animator Shape(s)`AniVeh_fda0c11a-fd69-4031-855c-46987b2d1a26
+
+PARSFILE Steering\Steer_Column\StrCol_3d18be40-b07f-4fc6-bdaf-f267a446003d.par
+#BlueLink6 Steering Column and Assist`Pickup, Full Size: Power, Recirc. Ball` 2A Pickup Trucks and Utility Vehicles` , Steering wheel torque`StrCol_3d18be40-b07f-4fc6-bdaf-f267a446003d
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_fda0c11a-fd69-4031-855c-46987b2d1a26.png
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#This is a diesel, 2WD full-size pickup with crew cab, long (8 ft) bed, and dual rear wheels (DRW).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 2 Axles; { * * * CiDi Trucks } 2A CiDi Pickup
+#Library : Vehicle: Lead Unit with 2 Axles
+#DataSet : 2A CiDi Pickup
+#Category: * * * CiDi Trucks
+#FileID  : Lead2a_27648b15-a7d6-4653-8cee-208852bd2064
+#Product : TruckSim 2020.1
+#VehCode I_S
+
+END

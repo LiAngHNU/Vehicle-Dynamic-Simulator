@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Tire: Aligning Moment`Normalized 1D (25-pt spline)`Normalized Tires
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 COEFFICIENT
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+MZ_TIRE_TABLE SPLINE
+-45, 0
+-30, 0.0018038
+-20, 0.006941
+-16, 0.014608
+-14, 0.020484
+-12, 0.024871
+-10, 0.021751
+-8, 0.0052057
+-6, -0.024092
+-4, -0.054019
+-3, -0.061803
+-2, -0.058619
+0, 0
+2, 0.058619
+3, 0.061803
+4, 0.054019
+6, 0.024092
+8, -0.0052057
+10, -0.021751
+12, -0.024871
+14, -0.020484
+16, -0.014608
+20, -0.006941
+30, -0.0018038
+45, 0
+ENDTABLE
+MZ_TIRE_FZ_COEFFICIENT 1
+*SCALAR2 1
+
+
+#EMBEDDED_NOTES
+#This normalized data was made by taking the table for the Fx - 3000 kg Load Rated Tire and dividing by the load rating of 29430 N.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire: Aligning Moment; { Normalized Tires } Normalized 1D (25-pt spline)
+#Library : Tire: Aligning Moment
+#DataSet : Normalized 1D (25-pt spline)
+#Category: Normalized Tires
+#FileID  : TireMz_2705060c-a240-4c5c-b6fc-77c2c4322667
+#Product : TruckSim 2020.1
+#VehCode Tire: Mz
+
+END

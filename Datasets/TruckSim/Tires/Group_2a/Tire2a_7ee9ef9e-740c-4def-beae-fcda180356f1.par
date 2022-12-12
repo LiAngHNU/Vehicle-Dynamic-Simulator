@@ -1,0 +1,65 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 2 Axles`235/80 R16 (Trailer)`Trailer and Light Truck Tires
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_52035ef8-a0bd-4b2d-871c-233b0c973ee4.par
+#BlueLink1 Tire`235/80 R16 (Trailer)` Trailer and Light Truck Tires` , Tires`Tire_52035ef8-a0bd-4b2d-871c-233b0c973ee4
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_52035ef8-a0bd-4b2d-871c-233b0c973ee4.par
+#BlueLink999 Tire`235/80 R16 (Trailer)` Trailer and Light Truck Tires` , Tires`Tire_52035ef8-a0bd-4b2d-871c-233b0c973ee4
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_52035ef8-a0bd-4b2d-871c-233b0c973ee4.par
+#BlueLink5 Tire`235/80 R16 (Trailer)` Trailer and Light Truck Tires` , Tires`Tire_52035ef8-a0bd-4b2d-871c-233b0c973ee4
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_52035ef8-a0bd-4b2d-871c-233b0c973ee4.par
+#BlueLink999 Tire`235/80 R16 (Trailer)` Trailer and Light Truck Tires` , Tires`Tire_52035ef8-a0bd-4b2d-871c-233b0c973ee4
+
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 2 Axles; { Trailer and Light Truck Tires } 235/80 R16 (Trailer)
+#Library : Tires: Vehicle Unit with 2 Axles
+#DataSet : 235/80 R16 (Trailer)
+#Category: Trailer and Light Truck Tires
+#FileID  : Tire2a_7ee9ef9e-740c-4def-beae-fcda180356f1
+#Product : TruckSim 2020.1
+#VehCode 2a Tire Group
+
+END

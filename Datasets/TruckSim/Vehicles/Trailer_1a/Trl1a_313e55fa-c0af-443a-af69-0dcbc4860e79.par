@@ -1,0 +1,77 @@
+PARSFILE
+#FullDataName Vehicle: Trailer with 1 Axle`1A, Large Rental Trailer`Rental / Utility Trailers
+#VehCode S
+IUNIT_INCREMENT
+symbol_add  <<unit>> 1
+NAXLES 1
+
+IOBJECT_SAVE
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_b558d4ae-da3f-4c87-a90b-1eaade38e00f.par
+#BlueLink9 Tire`390 mm Radius (Trailer)` 2000 kg Rating` , Tires`Tire_b558d4ae-da3f-4c87-a90b-1eaade38e00f
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_b558d4ae-da3f-4c87-a90b-1eaade38e00f.par
+#BlueLink999 Tire`390 mm Radius (Trailer)` 2000 kg Rating` , Tires`Tire_b558d4ae-da3f-4c87-a90b-1eaade38e00f
+
+
+iaxle 1
+OPT_STEER_EXT 1
+LX_AXLE 3000
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_5361d70d-d387-4b97-95f7-d8b3bc1d6209.par
+#BlueLink14 Suspension: Solid Axle System Kinematics`Lg. Rental Trailer, Single Wheel` Trailer Axle` , Kinematics (solid axle)`KinSA_5361d70d-d387-4b97-95f7-d8b3bc1d6209
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_6bafd81c-f551-4feb-bb31-3684b7fe89e8.par
+#BlueLink15 Suspension: Solid Axle Compliance, Springs, and Dampers`3t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_6bafd81c-f551-4feb-bb31-3684b7fe89e8
+
+PARSFILE Brakes\2W_System\Brk2W_3e8ff819-53fb-4b33-a411-80e62b21bcd3.par
+#BlueLink5 Brakes: Two-Wheel System`No Brakes` ` , Brakes`Brk2W_3e8ff819-53fb-4b33-a411-80e62b21bcd3
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 3000
+PARSFILE Vehicles\Trl_Sprung_Mass\TrlSprM_030ff3ea-8f64-46aa-bbea-61ec647674c1.par
+#BlueLink1 Vehicle: Trailer Sprung Mass`1A Trailer (Large Rental)` 1A Trailer` , Sprung mass`TrlSprM_030ff3ea-8f64-46aa-bbea-61ec647674c1
+
+PARSFILE Animator\Vehicles\AniVeh_aebfa3a7-59f2-4531-90e5-515d7de79fcb.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`1A Large Rental Trailer` Trailers: 1-axle` , Animator Shape(s)`AniVeh_aebfa3a7-59f2-4531-90e5-515d7de79fcb
+
+PARSFILE Aerodynamics\Aero_Main\Aero_2dcf0dd6-b552-482c-b346-939b627511c9.par
+#BlueLink2 Aerodynamics: Basic`No Aerodynamics` ` , Aerodynamics`Aero_2dcf0dd6-b552-482c-b346-939b627511c9
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_aebfa3a7-59f2-4531-90e5-515d7de79fcb.png
+IOBJECT_RESTORE
+
+LOG_ENTRY Used Dataset: Vehicle: Trailer with 1 Axle; { Rental / Utility Trailers } 1A, Large Rental Trailer
+#Library : Vehicle: Trailer with 1 Axle
+#DataSet : 1A, Large Rental Trailer
+#Category: Rental / Utility Trailers
+#FileID  : Trl1a_313e55fa-c0af-443a-af69-0dcbc4860e79
+#Product : TruckSim 2020.1
+#VehCode S
+
+END

@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Tire: Lateral Force`Fy: 2000 kg Load Rating`Example Fy Data
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. slip angle [Alpha] (deg)
+*3D_ZLabel Abs. lateral tire force Fy (N)
+
+#DiagramTwo0
+*3D_DATA 5, 20 ! columns x rows
+FY_TIRE_CARPET 2D_FROM_ZERO
+0, 4905, 9810, 19620, 29430, 39240
+1, 835.9, 1612, 2985.2, 4119.6, 5074.9
+2, 1625.6, 3135.1, 5805.8, 8012, 9869.9
+4, 2926.4, 5643.8, 10451.4, 14423, 17767.5
+6, 3764, 7259.2, 13442.9, 18551.3, 22853
+8, 4199.2, 8098.5, 14997.3, 20696.3, 25495.4
+10, 4369.1, 8426.2, 15604, 21533.5, 26526.8
+12, 4391.2, 8468.7, 15682.8, 21642.3, 26660.8
+15, 4300.8, 8294.4, 15360, 21196.9, 26112.1
+20, 4068.8, 7847, 14531.4, 20053.4, 24703.4
+25, 3856.4, 7437.3, 13772.8, 19006.5, 23413.7
+30, 3685.6, 7108, 13162.9, 18164.8, 22376.9
+35, 3550.6, 6847.6, 12680.7, 17499.4, 21557.2
+40, 3442.9, 6639.9, 12296.1, 16968.6, 20903.3
+45, 3355.7, 6471.7, 11984.6, 16538.7, 20373.7
+50, 3283.9, 6333.2, 11728.2, 16185, 19938
+60, 3173.3, 6119.9, 11333.1, 15639.7, 19266.3
+70, 3092.3, 5963.7, 11043.9, 15240.6, 18774.6
+80, 3030.6, 5844.7, 10823.6, 14936.6, 18400.1
+89, 2986.5, 5759.7, 10666.1, 14719.2, 18132.4
+90, 2986.5, 5759.7, 10666.1, 14719.2, 18132.4
+ENDTABLE
+
+MU_REF_Y 0.8
+
+
+LOG_ENTRY Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 2000 kg Load Rating
+#Library : Tire: Lateral Force
+#DataSet : Fy: 2000 kg Load Rating
+#Category: Example Fy Data
+#FileID  : TireFy_0c489aa9-7ede-4283-98f3-536301dc1dbe
+#Product : TruckSim 2020.1
+#VehCode Tire: Fy
+
+END

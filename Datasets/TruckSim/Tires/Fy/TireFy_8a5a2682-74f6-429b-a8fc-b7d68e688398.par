@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Tire: Lateral Force`Normalized 1D (17-pt spline)`Normalized Tires
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 COEFFICIENT
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+FY_TIRE_TABLE SPLINE
+-90, -0.67955
+-20, -0.9258
+-15, -0.9786
+-12, -0.99916
+-10, -0.99414
+-8, -0.95549
+-6, -0.85645
+-2, -0.36989
+0, 0
+2, 0.36989
+6, 0.85645
+8, 0.95549
+10, 0.99414
+12, 0.99916
+15, 0.9786
+20, 0.9258
+90, 0.67955
+ENDTABLE
+FY_TIRE_FZ_COEFFICIENT 1
+*SCALAR2 1
+MU_REF_Y 1.0
+
+
+#EMBEDDED_NOTES
+#This normalized data was made by taking the table for the Fx - 3000 kg Load Rated Tire and dividing by the load rating of 29430 N.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire: Lateral Force; { Normalized Tires } Normalized 1D (17-pt spline)
+#Library : Tire: Lateral Force
+#DataSet : Normalized 1D (17-pt spline)
+#Category: Normalized Tires
+#FileID  : TireFy_8a5a2682-74f6-429b-a8fc-b7d68e688398
+#Product : TruckSim 2020.1
+#VehCode Tire: Fy
+
+END

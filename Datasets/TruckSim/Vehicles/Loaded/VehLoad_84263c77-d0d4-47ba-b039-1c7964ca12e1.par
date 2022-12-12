@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`Delivery Truck (S_S) w/ Payload`Misc. Utility Trucks
+#VehCode S_S
+#CheckBox0 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_2a\Lead2a_76bc2d02-02f6-4bd8-9e71-455e07cc12e0.par
+#BlueLink0 Vehicle: Lead Unit with 2 Axles`Delivery Truck` Utility Vehicles` , Vehicle Type`Lead2a_76bc2d02-02f6-4bd8-9e71-455e07cc12e0
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Box\Box_acd8e867-8e9e-47b3-bf48-73cb78d7fc24.par
+#BlueLink1 Payload: Box Shape`Delivery Truck Payload (6789 kg)` Box Trucks` , Miscellaneous`Box_acd8e867-8e9e-47b3-bf48-73cb78d7fc24
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_8f7dac3f-b802-4072-9832-f4b98d0cc372.png
+
+#EMBEDDED_NOTES
+#Two-axle Delivery Truck (S_S) with a 4x2 powertrain and a 7-speed automatic transmission.
+#
+#A single payload is linked to this vehicle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { Misc. Utility Trucks } Delivery Truck (S_S) w/ Payload
+#Library : Vehicle: Loaded Combination
+#DataSet : Delivery Truck (S_S) w/ Payload
+#Category: Misc. Utility Trucks
+#FileID  : VehLoad_84263c77-d0d4-47ba-b039-1c7964ca12e1
+#Product : TruckSim 2020.1
+#VehCode S_S
+
+END

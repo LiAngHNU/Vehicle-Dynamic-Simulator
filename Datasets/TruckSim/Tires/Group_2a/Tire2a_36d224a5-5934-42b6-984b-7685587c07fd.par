@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 2 Axles`265/75 R16 (Dual Rear Tires)`TS 2A Trailer and Light Truck Tires
+
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox5 1    
+
+*LDUAL_2 290
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_c40215ea-2655-4517-831a-bea327d858d5.par
+#BlueLink1 Tire`265/75 R16` Trailer and Light Truck Tires` , Tires`Tire_c40215ea-2655-4517-831a-bea327d858d5
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_c40215ea-2655-4517-831a-bea327d858d5.par
+#BlueLink999 Tire`265/75 R16` Trailer and Light Truck Tires` , Tires`Tire_c40215ea-2655-4517-831a-bea327d858d5
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 290
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.145000
+PARSFILE Tires\Tire\Tire_c40215ea-2655-4517-831a-bea327d858d5.par
+#BlueLink5 Tire`265/75 R16` Trailer and Light Truck Tires` , Tires`Tire_c40215ea-2655-4517-831a-bea327d858d5
+
+itire 2
+symbol_push  <<tire>> R<<axle>>o
+STORE_WHEEL_OFFSET 0.145000
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+PARSFILE Tires\Tire\Tire_c40215ea-2655-4517-831a-bea327d858d5.par
+#BlueLink999 Tire`265/75 R16` Trailer and Light Truck Tires` , Tires`Tire_c40215ea-2655-4517-831a-bea327d858d5
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.145000
+PARSFILE Tires\Tire\Tire_c40215ea-2655-4517-831a-bea327d858d5.par
+#BlueLink999 Tire`265/75 R16` Trailer and Light Truck Tires` , Tires`Tire_c40215ea-2655-4517-831a-bea327d858d5
+
+itire 2
+symbol_push  <<tire>> L<<axle>>o
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+STORE_WHEEL_OFFSET 0.145000
+PARSFILE Tires\Tire\Tire_c40215ea-2655-4517-831a-bea327d858d5.par
+#BlueLink999 Tire`265/75 R16` Trailer and Light Truck Tires` , Tires`Tire_c40215ea-2655-4517-831a-bea327d858d5
+
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 2 Axles; { TS 2A Trailer and Light Truck Tires } 265/75 R16 (Dual Rear Tires)
+#Library : Tires: Vehicle Unit with 2 Axles
+#DataSet : 265/75 R16 (Dual Rear Tires)
+#Category: TS 2A Trailer and Light Truck Tires
+#FileID  : Tire2a_36d224a5-5934-42b6-984b-7685587c07fd
+#Product : TruckSim 2020.1
+#VehCode 2a Tire Group
+
+END

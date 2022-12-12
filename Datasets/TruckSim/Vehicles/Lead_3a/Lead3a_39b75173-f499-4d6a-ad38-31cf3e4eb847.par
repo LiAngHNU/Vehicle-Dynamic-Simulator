@@ -1,0 +1,116 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit with 3 Axles`3A Tour Bus`3A Tour Bus
+#VehCode S_SS
+IUNIT_INCREMENT
+IVEHICLE = IVEHICLE + 1
+symbol_add  <<unit>> 1
+symbol_add  <<vehicle>> 1
+NAXLES 3
+ITANDEM 1
+
+IOBJECT_SAVE
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 1
+OPT_PT 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 4
+#RingCtrl4 4
+*LX_AXLE_1 0
+*LX_AXLE_2 5790
+*LX_AXLE_3 6970
+R_TANDEM 0
+CFZ_MY_TAND 0
+R_TAND_TRAIL_STATIC 0.5
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_3a\Tire3a_a86a2657-b16c-4574-a389-56228acdbabd.par
+#BlueLink8 Tires: Vehicle Unit with 3 Axles`Single / Dual / Single` 3A Steer / Drive Tires` , Tires`Tire3a_a86a2657-b16c-4574-a389-56228acdbabd
+
+symbol_push  <<axle>> <<axle_temp>>
+
+iaxle 1
+symbol_add  <<axle>> 1
+LX_AXLE 0
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_64c30f3c-3ccd-4380-a6bc-d537f8dd7bc1.par
+#BlueLink18 Suspension: Solid Axle System Kinematics`5.5t Steer, Single Wheel - Kinematics` Steer Axle` , Kinematics`KinSA_64c30f3c-3ccd-4380-a6bc-d537f8dd7bc1
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_d15f1e92-bfb7-4016-8619-3ae8b4bf61d7.par
+#BlueLink21 Suspension: Solid Axle Compliance, Springs, and Dampers`6t Air: +150 mm, -60 mm Travel` Air Springs` , Suspension compliance`CmpSA_d15f1e92-bfb7-4016-8619-3ae8b4bf61d7
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363.par
+#BlueLink12 Brakes: Two-Wheel System`7.5 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363
+
+PARSFILE Steering\System\StrSys_ea97afb5-5373-4e56-92fd-474d9920f375.par
+#BlueLink15 Steering System`Long (6 m) Wheelbase` Medium - Heavy Duty Steering` , Steering`StrSys_ea97afb5-5373-4e56-92fd-474d9920f375
+
+
+iaxle 2
+symbol_add  <<axle>> 1
+LX_AXLE 5790
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_3cd316f8-04ed-4017-9e5e-daa391626de1.par
+#BlueLink19 Suspension: Solid Axle System Kinematics`10t Forward Drive, Dual Wheels` Drive Axle` , Kinematics`KinSA_3cd316f8-04ed-4017-9e5e-daa391626de1
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_fb97cc4b-adb0-46ca-9180-cb094d2f2cb0.par
+#BlueLink22 Suspension: Solid Axle Compliance, Springs, and Dampers`10t Air: +60 mm, -60 mm Travel` Air Springs` , Suspension compliance`CmpSA_fb97cc4b-adb0-46ca-9180-cb094d2f2cb0
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink13 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+iaxle 3
+symbol_add  <<axle>> 1
+LX_AXLE 6970
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_4ce2bcf3-2cf5-42a2-b1f5-6e04ea9a4272.par
+#BlueLink20 Suspension: Solid Axle System Kinematics`6t, Tag Axle, Single Wheel` Lift Axle` , Kinematics`KinSA_4ce2bcf3-2cf5-42a2-b1f5-6e04ea9a4272
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_d15f1e92-bfb7-4016-8619-3ae8b4bf61d7.par
+#BlueLink23 Suspension: Solid Axle Compliance, Springs, and Dampers`6t Air: +150 mm, -60 mm Travel` Air Springs` , Suspension compliance`CmpSA_d15f1e92-bfb7-4016-8619-3ae8b4bf61d7
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363.par
+#BlueLink14 Brakes: Two-Wheel System`7.5 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 6970.000000
+PARSFILE Vehicles\Sprung_Mass\SprMass_982fc486-2721-4668-b3b0-f6c506fa7c50.par
+#BlueLink1 Vehicle: Lead Unit Sprung Mass`3A Tour Bus` 3 Axle Trucks` , Sprung Mass`SprMass_982fc486-2721-4668-b3b0-f6c506fa7c50
+
+PARSFILE Aerodynamics\Aero_Main\Aero_71cecaf1-a17c-4d6e-b4ba-b32f1ea6d168.par
+#BlueLink2 Aerodynamics: Basic`Cab-Forward Truck, 7 m Ref.` Cab-Over and Cab-Forward Tractors` , Aerodynamics`Aero_71cecaf1-a17c-4d6e-b4ba-b32f1ea6d168
+
+PARSFILE Steering\Str_Wheel_Tq\TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6.par
+#BlueLink6 Steering Wheel Torque`Linear: 1/25 (Typical)` ` , Steering wheel torque`TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6
+
+PARSFILE Powertrain\Fwd\FWD_b3a776a5-2f11-44e9-9c87-84616d946bf8.par
+#BlueLink3 Powertrain: Front-Wheel Drive`175 kW, 7 Speed AT` 175 kW Powertrains` , Powertrain or dolly`FWD_b3a776a5-2f11-44e9-9c87-84616d946bf8
+
+PARSFILE Animator\Vehicles\AniVeh_cca5b92d-3920-4afe-a207-0cfc6e721644.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`3A Tour Bus` 3A Lead Units` , Animator Shape(s)`AniVeh_cca5b92d-3920-4afe-a207-0cfc6e721644
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_cca5b92d-3920-4afe-a207-0cfc6e721644.png
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#Three-axle tour bus (S_SS) with a 6x2 powertrain driving axle 2 and a 7-speed automatic transmission.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 3 Axles; { 3A Tour Bus } 3A Tour Bus
+#Library : Vehicle: Lead Unit with 3 Axles
+#DataSet : 3A Tour Bus
+#Category: 3A Tour Bus
+#FileID  : Lead3a_39b75173-f499-4d6a-ad38-31cf3e4eb847
+#Product : TruckSim 2020.1
+#VehCode S_SS
+
+END

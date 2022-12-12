@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Tire`Pacejka 5.2, 175/70 R13`Pacejka 5.2
+FZ_REF 4100
+Y_LENGTH 181
+#CheckBox2 0    
+#CheckBox6 0    
+
+#RingCtrl0 7
+#RingCtrl7 3
+#RingCtrl8 3
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 7
+
+PARSFILE Animator\STL\Shape_b7629e6e-a8d6-49d2-a5f7-1d7f9129088f.par
+#BlueLink4 Animator: Shape File Link`Light Duty Utility Truck Tire` Common Vehicle Assets: Tires` , Animator`Shape_b7629e6e-a8d6-49d2-a5f7-1d7f9129088f
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 181
+FZ_TIRE_COEFFICIENT 220
+FZ_MAX 1000000
+M_TIRE 13
+IT 0.6
+IT_XXZZ 0
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+L_CONTACT_X_CONSTANT 0
+L_CONTACT_Y_CONSTANT 0
+PARSFILE Tires\Pacejka52\Pac52_0fe6057b-962d-405d-aab3-f27dec8f6187.par
+!!!!!!!!!!!!!!!!!!!!!!!!!!!! DEPRECATED !!!!!!!!!!!!!!!!!!!!!!!!!!!
+! NOTE: BLUELINK Tire: Pacejka 5.2 Parameters (Deprecated) IS DEPRECATED
+!            LIBRARY MAY BE REMOVED IN FUTURE RELEASES
+!!!!!!!!!!!!!!!!!!!!!!!!!!!! DEPRECATED !!!!!!!!!!!!!!!!!!!!!!!!!!!
+#BlueLink11 Tire: Pacejka 5.2 Parameters (Deprecated)`175/70 R13` ` , Pacejka 5.2 parameters`Pac52_0fe6057b-962d-405d-aab3-f27dec8f6187
+
+
+
+#EMBEDDED_NOTES
+#Example of Pacejka 5.2 tire data.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { Pacejka 5.2 } Pacejka 5.2, 175/70 R13
+#Library : Tire
+#DataSet : Pacejka 5.2, 175/70 R13
+#Category: Pacejka 5.2
+#FileID  : Tire_eac7b85d-59a4-4014-a054-0ff5dac7e0b4
+#Product : TruckSim 2020.1
+#VehCode Tire
+
+END

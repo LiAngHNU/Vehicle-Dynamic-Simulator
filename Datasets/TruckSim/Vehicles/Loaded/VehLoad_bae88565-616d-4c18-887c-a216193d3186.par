@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`2A LCF, 2 Channel ABS, Loaded`LCF Vans
+#VehCode S_S
+#CheckBox0 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_2a\Lead2a_df3cbe13-f352-4139-9656-982efa11676d.par
+#BlueLink0 Vehicle: Lead Unit with 2 Axles`LCF Van (ABS & ESC)` 2A LCF Van` , Vehicle Type`Lead2a_df3cbe13-f352-4139-9656-982efa11676d
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Box\Box_6503f2cf-1550-4bf2-97be-52903be4ca5e.par
+#BlueLink1 Payload: Box Shape`Conventional/LCF Van Payload (6789 kg)` Box Trucks` , Miscellaneous`Box_6503f2cf-1550-4bf2-97be-52903be4ca5e
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Loaded\VehLoad_bae88565-616d-4c18-887c-a216193d3186.png
+
+#EMBEDDED_NOTES
+#Two axle LCF (Low Cab Forward) van (S_S) with a 4x2 powertrain and a 7-speed manual transmission.
+#
+#A single payload is used with this vehicle.
+#
+#This vehicle is equipped with 2 channel ABS at each axle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { LCF Vans } 2A LCF, 2 Channel ABS, Loaded
+#Library : Vehicle: Loaded Combination
+#DataSet : 2A LCF, 2 Channel ABS, Loaded
+#Category: LCF Vans
+#FileID  : VehLoad_bae88565-616d-4c18-887c-a216193d3186
+#Product : TruckSim 2020.1
+#VehCode S_S
+
+END

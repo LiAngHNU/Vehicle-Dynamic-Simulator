@@ -1,0 +1,103 @@
+PARSFILE
+#FullDataName Vehicle: Trailer with 3 Axles`3A Gooseneck Trailer`Flatbed Trailers
+#VehCode SSS
+IUNIT_INCREMENT
+symbol_add  <<unit>> 1
+NAXLES 3
+
+IOBJECT_SAVE
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 0
+*LX_AXLE_1 5487.5
+*LX_AXLE_2 6302.5
+*LX_AXLE_3 7117.5
+*R_TANDEM_1 0.45
+*CFZ_MY_TAND_1 0
+*R_TANDEM_2 0.45
+*CFZ_MY_TAND_2 0
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_3a\Tire3a_557592f4-268d-4e46-9ed4-89684c2b4081.par
+#BlueLink14 Tires: Vehicle Unit with 3 Axles`Gooseneck Trailer (350mm)` 3A Trailer and Dolly Tires` , Tires`Tire3a_557592f4-268d-4e46-9ed4-89684c2b4081
+
+symbol_push  <<axle>> <<axle_temp>>
+
+iaxle 1
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 5487.5
+PARSFILE Suspensions\Kin_Solid\KinSA_c59eefbd-92c1-4bcc-9fd2-b463474d982c.par
+#BlueLink17 Suspension: Solid Axle System Kinematics`Gooseneck Trailer, Single Wheel` Trailer Axle` , Kinematics`KinSA_c59eefbd-92c1-4bcc-9fd2-b463474d982c
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_f30bb345-43ea-49d3-8c3e-c0faf5618fb5.par
+#BlueLink20 Suspension: Solid Axle Compliance, Springs, and Dampers`8.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_f30bb345-43ea-49d3-8c3e-c0faf5618fb5
+
+PARSFILE Brakes\2W_System\Brk2W_bf774de8-9984-4cb6-8113-abd74765a2ea.par
+#BlueLink5 Brakes: Two-Wheel System`7.5 kN-m Capacity, Hydraulic (No ABS)` Hydraulic Brakes` , Brakes`Brk2W_bf774de8-9984-4cb6-8113-abd74765a2ea
+
+
+iaxle 2
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 6302.5
+PARSFILE Suspensions\Kin_Solid\KinSA_c59eefbd-92c1-4bcc-9fd2-b463474d982c.par
+#BlueLink18 Suspension: Solid Axle System Kinematics`Gooseneck Trailer, Single Wheel` Trailer Axle` , Kinematics`KinSA_c59eefbd-92c1-4bcc-9fd2-b463474d982c
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_f30bb345-43ea-49d3-8c3e-c0faf5618fb5.par
+#BlueLink21 Suspension: Solid Axle Compliance, Springs, and Dampers`8.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_f30bb345-43ea-49d3-8c3e-c0faf5618fb5
+
+PARSFILE Brakes\2W_System\Brk2W_bf774de8-9984-4cb6-8113-abd74765a2ea.par
+#BlueLink8 Brakes: Two-Wheel System`7.5 kN-m Capacity, Hydraulic (No ABS)` Hydraulic Brakes` , Brakes`Brk2W_bf774de8-9984-4cb6-8113-abd74765a2ea
+
+
+iaxle 3
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 7117.5
+PARSFILE Suspensions\Kin_Solid\KinSA_c59eefbd-92c1-4bcc-9fd2-b463474d982c.par
+#BlueLink19 Suspension: Solid Axle System Kinematics`Gooseneck Trailer, Single Wheel` Trailer Axle` , Kinematics`KinSA_c59eefbd-92c1-4bcc-9fd2-b463474d982c
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_f30bb345-43ea-49d3-8c3e-c0faf5618fb5.par
+#BlueLink22 Suspension: Solid Axle Compliance, Springs, and Dampers`8.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_f30bb345-43ea-49d3-8c3e-c0faf5618fb5
+
+PARSFILE Brakes\2W_System\Brk2W_bf774de8-9984-4cb6-8113-abd74765a2ea.par
+#BlueLink11 Brakes: Two-Wheel System`7.5 kN-m Capacity, Hydraulic (No ABS)` Hydraulic Brakes` , Brakes`Brk2W_bf774de8-9984-4cb6-8113-abd74765a2ea
+
+
+ITANDEM 1
+R_TANDEM 0.45
+CFZ_MY_TAND 0
+ITANDEM 2
+R_TANDEM 0.45
+CFZ_MY_TAND 0
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 7117.500000
+PARSFILE Vehicles\Trl_Sprung_Mass\TrlSprM_90203a2c-346d-4dc4-9393-099eaef06f38.par
+#BlueLink1 Vehicle: Trailer Sprung Mass`Gooseneck Trailer` 2A Trailer` , Sprung Mass`TrlSprM_90203a2c-346d-4dc4-9393-099eaef06f38
+
+PARSFILE Animator\Vehicles\AniVeh_8cd66e3f-7c09-4b22-85d5-58efb91b4fbf.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`3A Gooseneck Trailer` Trailers: 3-axle` , Animator Shape(s)`AniVeh_8cd66e3f-7c09-4b22-85d5-58efb91b4fbf
+
+PARSFILE Aerodynamics\Aero_Main\Aero_2dcf0dd6-b552-482c-b346-939b627511c9.par
+#BlueLink2 Aerodynamics: Basic`No Aerodynamics` ` , Aerodynamics`Aero_2dcf0dd6-b552-482c-b346-939b627511c9
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_8cd66e3f-7c09-4b22-85d5-58efb91b4fbf.png
+IOBJECT_RESTORE
+
+LOG_ENTRY Used Dataset: Vehicle: Trailer with 3 Axles; { Flatbed Trailers } 3A Gooseneck Trailer
+#Library : Vehicle: Trailer with 3 Axles
+#DataSet : 3A Gooseneck Trailer
+#Category: Flatbed Trailers
+#FileID  : Trl3a_66d83fad-a2f7-4fed-aa1a-03739381f5f0
+#Product : TruckSim 2020.1
+#VehCode SSS
+
+END

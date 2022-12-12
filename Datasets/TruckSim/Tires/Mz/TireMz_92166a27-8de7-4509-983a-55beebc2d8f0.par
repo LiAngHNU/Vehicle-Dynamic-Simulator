@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Tire: Aligning Moment`Mz: 3000 kg Load Rated Tire`Example Mz Data
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. slip angle [Alpha] (deg)
+*3D_ZLabel Aligning moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 5, 20 ! columns x rows
+MZ_TIRE_CARPET 2D_FROM_ZERO
+0, 4905, 9810, 19620, 29430, 39240
+1, 34.99, 85.89, 231.94, 431.45, 687.86
+2, 63.79, 156.52, 421.63, 784.76, 1252.92
+4, 99.48, 243.88, 652.97, 1217.04, 1949.83
+6, 108.2, 264.95, 703.46, 1313.71, 2114.84
+8, 98.69, 241.21, 632.63, 1184.84, 1920.83
+10, 79.76, 194.4, 499.89, 940.64, 1542.25
+12, 57.12, 138.52, 343.28, 651.79, 1091.45
+15, 22.1, 52.14, 102.43, 207.03, 395.26
+20, 0, 0, 0, 0, 0
+25, 0, 0, 0, 0, 0
+30, 0, 0, 0, 0, 0
+35, 0, 0, 0, 0, 0
+40, 0, 0, 0, 0, 0
+45, 0, 0, 0, 0, 0
+50, 0, 0, 0, 0, 0
+60, 0, 0, 0, 0, 0
+70, 0, 0, 0, 0, 0
+80, 0, 0, 0, 0, 0
+89, 0, 0, 0, 0, 0
+90, 0, 0, 0, 0, 0
+ENDTABLE
+
+
+
+#EMBEDDED_NOTES
+#New for TruckSim 2016
+#
+#This Aligning Moment data replaces the previously shipping Aligning Moment data.
+#
+#The Mz values correspond to a pneumatic trail (deg) obtained from the averaged results of the SAE Truck Tire Tests.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rated Tire
+#Library : Tire: Aligning Moment
+#DataSet : Mz: 3000 kg Load Rated Tire
+#Category: Example Mz Data
+#FileID  : TireMz_92166a27-8de7-4509-983a-55beebc2d8f0
+#Product : TruckSim 2020.1
+#VehCode Tire: Mz
+
+END

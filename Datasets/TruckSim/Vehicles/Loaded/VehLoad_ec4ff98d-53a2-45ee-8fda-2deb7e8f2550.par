@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`3A Conv. Truck w/ Mid. Lift Axle`Conventional Vans
+#VehCode S_SS
+#CheckBox0 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_3a\Lead3a_35f7f709-5985-4438-8f2e-39827258f6b5.par
+#BlueLink0 Vehicle: Lead Unit with 3 Axles`Conv Van (Mid Lift Axle)` 3A Conventional Van` , Vehicle Type`Lead3a_35f7f709-5985-4438-8f2e-39827258f6b5
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Box\Box_6503f2cf-1550-4bf2-97be-52903be4ca5e.par
+#BlueLink1 Payload: Box Shape`Conventional/LCF Van Payload (6789 kg)` Box Trucks` , Miscellaneous`Box_6503f2cf-1550-4bf2-97be-52903be4ca5e
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_c2a8544e-c310-4e45-a92d-e030eba0c4ea.png
+
+#EMBEDDED_NOTES
+#Three axle conventional truck with a middle lift axle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { Conventional Vans } 3A Conv. Truck w/ Mid. Lift Axle
+#Library : Vehicle: Loaded Combination
+#DataSet : 3A Conv. Truck w/ Mid. Lift Axle
+#Category: Conventional Vans
+#FileID  : VehLoad_ec4ff98d-53a2-45ee-8fda-2deb7e8f2550
+#Product : TruckSim 2020.1
+#VehCode S_SS
+
+END

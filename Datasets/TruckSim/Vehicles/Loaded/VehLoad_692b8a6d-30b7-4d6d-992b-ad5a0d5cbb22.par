@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`HD Utility Vehicle w/ Crate`Misc. Utility Trucks
+#VehCode S_S
+#CheckBox0 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_2a\Lead2a_094669b2-a10f-4634-8900-0370a94fd0b6.par
+#BlueLink0 Vehicle: Lead Unit with 2 Axles`HD Utility Vehicle` Utility Vehicles` , Vehicle Type`Lead2a_094669b2-a10f-4634-8900-0370a94fd0b6
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Custom\Custom_695e5c72-57de-4bc4-9bfc-9076cb09f3fc.par
+#BlueLink1 Payload: Custom`Crate for HD Utility Vehicle` Payloads: Crates` , Miscellaneous`Custom_695e5c72-57de-4bc4-9bfc-9076cb09f3fc
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_5c4405e9-20a8-45d0-96ad-d55e667f5096.png
+
+#EMBEDDED_NOTES
+#European heavy duty off road utility vehicle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { Misc. Utility Trucks } HD Utility Vehicle w/ Crate
+#Library : Vehicle: Loaded Combination
+#DataSet : HD Utility Vehicle w/ Crate
+#Category: Misc. Utility Trucks
+#FileID  : VehLoad_692b8a6d-30b7-4d6d-992b-ad5a0d5cbb22
+#Product : TruckSim 2020.1
+#VehCode S_S
+
+END

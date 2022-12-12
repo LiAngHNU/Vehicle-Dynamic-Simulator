@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Tire: Aligning Moment`Example Mz vs. Alpha`Extended with Camber Details
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. slip angle [Alpha] (deg)
+*3D_ZLabel Aligning moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 5, 20 ! columns x rows
+MZ_TIRE_CARPET 2D_FROM_ZERO
+0, 2362.81, 4725.61, 7088.42, 9451.23, 11814
+0.5, 6.07, 23.33, 46.58, 70.65, 90.4
+1, 11.38, 43.87, 88.11, 134.68, 174.17
+1.5, 15.15, 58.81, 119.52, 185.47, 244.71
+2, 16.83, 66.14, 137.13, 218.05, 296.81
+2.5, 16.74, 66.96, 142.69, 234.14, 330.91
+3, 15.4, 63.18, 139.33, 237.12, 348.88
+3.5, 13.34, 56.69, 130.17, 230.37, 352.58
+4, 11.09, 49.38, 118.34, 217.25, 343.87
+4.5, 9.08, 42.8, 106.46, 200.8, 324.87
+5, 7.36, 37.13, 95.17, 182.55, 298.69
+5.5, 5.88, 32.23, 84.58, 163.72, 268.71
+6, 4.6, 27.93, 74.84, 145.48, 238.31
+6.5, 3.46, 24.07, 66.07, 129.04, 210.86
+7, 2.42, 20.49, 58.41, 115.59, 189.73
+7.5, 1.45, 17.1, 51.94, 105.89, 177.08
+8, 0.61, 14.04, 46.52, 98.91, 170.16
+8.5, -0.02, 11.5, 41.97, 93.21, 165.01
+9, -0.36, 9.68, 38.12, 87.33, 157.67
+9.5, -0.34, 8.78, 34.78, 79.82, 144.18
+10, 0.13, 9, 31.77, 69.22, 120.57
+ENDTABLE
+
+
+
+LOG_ENTRY Used Dataset: Tire: Aligning Moment; { Extended with Camber Details } Example Mz vs. Alpha
+#Library : Tire: Aligning Moment
+#DataSet : Example Mz vs. Alpha
+#Category: Extended with Camber Details
+#FileID  : TireMz_2c7deefd-4f6f-40dd-81aa-d4092438a9df
+#Product : TruckSim 2020.1
+#VehCode Tire: Mz
+
+END

@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`3A Tractor+2A Trailer, SAE Asym Tires`Sleeper-Cab Tractor-Trailers
+#VehCode S_SS + SS
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_3a\Lead3a_629e66d9-b994-4d50-9a36-a67601ab5da0.par
+#BlueLink0 Vehicle: Lead Unit with 3 Axles`3A Sleeper (SAE Asym Tires)` 3A Tractors` , Vehicle Type`Lead3a_629e66d9-b994-4d50-9a36-a67601ab5da0
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Vehicles\Trailer_2a\Trl2a_144bd2b1-9efb-4aaf-a238-c79c9db8edd3.par
+#BlueLink8 Vehicle: Trailer with 2 Axles`15.5t Trailer, SAE Asym Tires` Van / Container Trailers` , Trailer Type`Trl2a_144bd2b1-9efb-4aaf-a238-c79c9db8edd3
+
+ADD_REFERENCE_FRAME TrailerPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo_2
+WRT_Xo_2
+ANI_Xo_2
+SET_Y_NAME Yo_2
+WRT_Yo_2
+ANI_Yo_2
+SET_Z_NAME Zo_2
+WRT_Zo_2
+ANI_Zo_2
+SET_YAW_NAME Yaw_2
+WRT_Yaw_2
+ANI_Yaw_2
+SET_PITCH_NAME Pitch_2
+WRT_Pitch_2
+ANI_Pitch_2
+SET_ROLL_NAME Roll_E_2
+WRT_Roll_E_2
+ANI_Roll_E_2
+PARSFILE Payloads\Box\Box_6a6ae59e-fb22-48eb-93b3-95c58ccbb7ff.par
+#BlueLink9 Payload: Box Shape`Trailer (18,340 kg)` Trailers` , Miscellaneous`Box_6a6ae59e-fb22-48eb-93b3-95c58ccbb7ff
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_8ba88f47-4990-40ca-bf2d-9bbebeda47ea.png
+
+#EMBEDDED_NOTES
+#Three axle sleeper tractor with a two axle box trailer.
+#
+#The tire data comes from the SAE Cooperative Research program conducted in the 1990s.
+#
+#These tires have asymmetric datasets.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { Sleeper-Cab Tractor-Trailers } 3A Tractor+2A Trailer, SAE Asym Tires
+#Library : Vehicle: Loaded Combination
+#DataSet : 3A Tractor+2A Trailer, SAE Asym Tires
+#Category: Sleeper-Cab Tractor-Trailers
+#FileID  : VehLoad_1a8d38d6-cf33-4cba-b039-2807c2e1357e
+#Product : TruckSim 2020.1
+#VehCode S_SS + SS
+
+END

@@ -1,0 +1,65 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 2 Axles`3000 kg Tandem (522 mm), Super Singles`TS 2A Trailer Tires
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_2c34c122-cbb6-4bed-a045-e0d80d127882.par
+#BlueLink1 Tire`522 mm Rad., S. Single (Trl.)` 3500 kg Rating` , Tires`Tire_2c34c122-cbb6-4bed-a045-e0d80d127882
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_2c34c122-cbb6-4bed-a045-e0d80d127882.par
+#BlueLink999 Tire`522 mm Rad., S. Single (Trl.)` 3500 kg Rating` , Tires`Tire_2c34c122-cbb6-4bed-a045-e0d80d127882
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_2c34c122-cbb6-4bed-a045-e0d80d127882.par
+#BlueLink5 Tire`522 mm Rad., S. Single (Trl.)` 3500 kg Rating` , Tires`Tire_2c34c122-cbb6-4bed-a045-e0d80d127882
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_2c34c122-cbb6-4bed-a045-e0d80d127882.par
+#BlueLink999 Tire`522 mm Rad., S. Single (Trl.)` 3500 kg Rating` , Tires`Tire_2c34c122-cbb6-4bed-a045-e0d80d127882
+
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 2 Axles; { TS 2A Trailer Tires } 3000 kg Tandem (522 mm), Super Singles
+#Library : Tires: Vehicle Unit with 2 Axles
+#DataSet : 3000 kg Tandem (522 mm), Super Singles
+#Category: TS 2A Trailer Tires
+#FileID  : Tire2a_76281ea9-4230-41e3-be7b-0d60911d44ef
+#Product : TruckSim 2020.1
+#VehCode 2a Tire Group
+
+END

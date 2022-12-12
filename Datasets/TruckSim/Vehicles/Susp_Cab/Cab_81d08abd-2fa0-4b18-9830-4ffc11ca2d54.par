@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Vehicle: Suspended Cab`Cab Over Tractor`
+opt_susp_cab 1
+
+M_CAB 1000
+IXX_CAB 100
+IYY_CAB 100
+FS_CAB_MT_COEFFICIENT(1) 100
+FD_CAB_MT_COEFFICIENT(1) 10
+FS_CAB_MT_COEFFICIENT(2) 100
+FD_CAB_MT_COEFFICIENT(2) 10
+LX_CG_CAB -500
+Y_CG_CAB 0
+H_CG_CAB 1800
+LX_MOUNTS_F -1400
+LY_MOUNTS_F 1000
+H_MOUNTS_F 750
+LX_MOUNTS_R 0
+LY_MOUNTS_R 1600
+H_MOUNTS_R 1000
+LX_CAB_PITCH -700
+H_CAB_PITCH 875
+H_CAB_ROLL 800
+PARSFILE Animator\Groups\Group_554d05c5-7039-45c8-ba6f-9489b2ccda00.par
+#BlueLink0 Animator: Group`Cab Over Tractor` Suspended Cab` , Animator Shape(s)`Group_554d05c5-7039-45c8-ba6f-9489b2ccda00
+
+X_LENGTH 4000
+Y_LENGTH 2500
+Z_LENGTH 3200
+PARSFILE Output\Sensors\MoSen_5d96aaf4-dc63-416c-adba-9bf5fc6ea23f.par
+#BlueLink1 Positions, Velocities, and Accelerations`Cab Sensor at Origin` Sprung Mass and Suspended Cab` , Miscellaneous`MoSen_5d96aaf4-dc63-416c-adba-9bf5fc6ea23f
+
+PARSFILE Output\Points\RefPt_d706b97b-b06b-4ce0-a432-6c67c9484b8a.par
+#BlueLink2 Custom Forces and Reference Points`Cab RP at Cab CG and Mounts` ` , Miscellaneous`RefPt_d706b97b-b06b-4ce0-a432-6c67c9484b8a
+
+PARSFILE Animator\Groups\Group_4b2e73ea-7021-48ff-ba0a-e52121942987.par
+#BlueLink3 Animator: Group`Cab Mount Spring Force Arrows` Suspended Cab` , Miscellaneous`Group_4b2e73ea-7021-48ff-ba0a-e52121942987
+
+set_reference_frame sprung mass body 1
+
+
+#EMBEDDED_NOTES
+#In 2018 version, Cab Mount Spring Force Arrows animation group was moved from Cab Over Tractor and was placed after Custom Forces.
+#
+#TruckSim reduces the sprung mass and inertia shown on the Vehicle: Lead Unit Sprung Mass screen by the amounts entered here.
+#
+#The cab body is then assigned the mass and inertias specified on this screen.
+#
+#This means the mass properties for the whole vehicle can be measured with the cab in place, and the same lead unit sprung mass data can be used with an unsuspended (rigidly mounted) cab.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Suspended Cab; Cab Over Tractor
+#Library : Vehicle: Suspended Cab
+#DataSet : Cab Over Tractor
+#Category: 
+#FileID  : Cab_81d08abd-2fa0-4b18-9830-4ffc11ca2d54
+#Product : TruckSim 2020.1
+#VehCode Suspended Cab
+
+END

@@ -1,0 +1,128 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 3 Axles`2800 kg SAE Asymmetric`3A Steer / Drive Tires
+
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox7 1    
+#CheckBox8 1    
+
+*LDUAL_2 310
+*LDUAL_3 310
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_fd95560d-a976-43f0-946f-138c337a0b03.par
+#BlueLink1 Tire`Steer Tire, Asymmetric` SAE Steer Tire 2800 kg` , Tires`Tire_fd95560d-a976-43f0-946f-138c337a0b03
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_fd95560d-a976-43f0-946f-138c337a0b03.par
+#BlueLink999 Tire`Steer Tire, Asymmetric` SAE Steer Tire 2800 kg` , Tires`Tire_fd95560d-a976-43f0-946f-138c337a0b03
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 310
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_9ce7ee4a-efda-47d0-a26c-cc51e7a8391e.par
+#BlueLink5 Tire`Drive Tire, Asymmetric` SAE Drive Tire 2800 kg` , Tires`Tire_9ce7ee4a-efda-47d0-a26c-cc51e7a8391e
+
+itire 2
+symbol_push  <<tire>> R<<axle>>o
+STORE_WHEEL_OFFSET 0.155000
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+PARSFILE Tires\Tire\Tire_9ce7ee4a-efda-47d0-a26c-cc51e7a8391e.par
+#BlueLink999 Tire`Drive Tire, Asymmetric` SAE Drive Tire 2800 kg` , Tires`Tire_9ce7ee4a-efda-47d0-a26c-cc51e7a8391e
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_9ce7ee4a-efda-47d0-a26c-cc51e7a8391e.par
+#BlueLink999 Tire`Drive Tire, Asymmetric` SAE Drive Tire 2800 kg` , Tires`Tire_9ce7ee4a-efda-47d0-a26c-cc51e7a8391e
+
+itire 2
+symbol_push  <<tire>> L<<axle>>o
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_9ce7ee4a-efda-47d0-a26c-cc51e7a8391e.par
+#BlueLink999 Tire`Drive Tire, Asymmetric` SAE Drive Tire 2800 kg` , Tires`Tire_9ce7ee4a-efda-47d0-a26c-cc51e7a8391e
+
+symbol_add  <<axle>> 1
+
+iaxle 3
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 310
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_9ce7ee4a-efda-47d0-a26c-cc51e7a8391e.par
+#BlueLink9 Tire`Drive Tire, Asymmetric` SAE Drive Tire 2800 kg` , Tires`Tire_9ce7ee4a-efda-47d0-a26c-cc51e7a8391e
+
+itire 2
+symbol_push  <<tire>> R<<axle>>o
+STORE_WHEEL_OFFSET 0.155000
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+PARSFILE Tires\Tire\Tire_9ce7ee4a-efda-47d0-a26c-cc51e7a8391e.par
+#BlueLink999 Tire`Drive Tire, Asymmetric` SAE Drive Tire 2800 kg` , Tires`Tire_9ce7ee4a-efda-47d0-a26c-cc51e7a8391e
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_9ce7ee4a-efda-47d0-a26c-cc51e7a8391e.par
+#BlueLink999 Tire`Drive Tire, Asymmetric` SAE Drive Tire 2800 kg` , Tires`Tire_9ce7ee4a-efda-47d0-a26c-cc51e7a8391e
+
+itire 2
+symbol_push  <<tire>> L<<axle>>o
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_9ce7ee4a-efda-47d0-a26c-cc51e7a8391e.par
+#BlueLink999 Tire`Drive Tire, Asymmetric` SAE Drive Tire 2800 kg` , Tires`Tire_9ce7ee4a-efda-47d0-a26c-cc51e7a8391e
+
+
+#EMBEDDED_NOTES
+#The tire data comes from the SAE Cooperative Research program conducted in the 1990s.
+#
+#These tires have asymmetric datasets.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 3 Axles; { 3A Steer / Drive Tires } 2800 kg SAE Asymmetric
+#Library : Tires: Vehicle Unit with 3 Axles
+#DataSet : 2800 kg SAE Asymmetric
+#Category: 3A Steer / Drive Tires
+#FileID  : Tire3a_f365771c-5ad8-47e0-bee2-d699f3ffc1b2
+#Product : TruckSim 2020.1
+#VehCode 3a Tire Group
+
+END

@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Tire: Lateral Force`Fy; Widebase Symmetric`SAE Widebase Single Tire
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. slip angle [Alpha] (deg)
+*3D_ZLabel Abs. lateral tire force Fy (N)
+
+#DiagramTwo0
+*3D_DATA 7, 9 ! columns x rows
+FY_TIRE_CARPET 2D_FROM_ZERO
+0, 12623, 25242, 37866, 50485, 63108, 75727, 100970
+1, 1714.5, 3408.5, 5121.5, 6296.5, 7421, 8334.5, 9382.5
+2, 3231, 6274.5, 9372.5, 11813.5, 14089, 15971.5, 18309.5
+4, 5828, 11156, 16418, 21110, 25394.5, 29135.5, 34594
+6, 7552.5, 14566.5, 21328, 27387.5, 33049, 37939.5, 46628.5
+8, 8591.5, 16773.5, 24203.5, 30144, 36997, 43127, 53199.5
+10, 9151.5, 18223.5, 26049.5, 32411, 39348.5, 46073, 57561.5
+12.5, 9685, 19073.5, 27378, 33775, 41384, 48698, 60718.5
+14, 9795, 19575.5, 28385, 36229, 44121, 51439.5, 63630.5
+90, 6857, 13703, 19870, 25360, 30885, 36008, 44541
+ENDTABLE
+
+MU_REF_Y 0.8
+
+
+#EMBEDDED_NOTES
+#This data comes from the SAE Cooperative Research program conducted in the 1990s.
+#
+#It is a direct copy of the Fy data measured for a 425/65R22.5 widebase tire after removing asymmetries (i.e., adjusting for zero offset and averaging tests results for the left and right directions).
+#
+#Data for the 90 deg slip angle was extrapolated using the rule of thumb that slide coefficients are approximately 70% of the peak values.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire: Lateral Force; { SAE Widebase Single Tire } Fy; Widebase Symmetric
+#Library : Tire: Lateral Force
+#DataSet : Fy; Widebase Symmetric
+#Category: SAE Widebase Single Tire
+#FileID  : TireFy_c1f61370-00c3-48fc-868e-60902ca8ffc2
+#Product : TruckSim 2020.1
+#VehCode Tire: Fy
+
+END

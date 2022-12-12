@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`School Bus, Payload`School Buses
+#VehCode S_S
+#CheckBox0 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_2a\Lead2a_b6d7206c-0a43-4d99-b629-97c81f32db83.par
+#BlueLink0 Vehicle: Lead Unit with 2 Axles`School Bus` School Bus` , Vehicle Type`Lead2a_b6d7206c-0a43-4d99-b629-97c81f32db83
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Box\Box_58dbe2df-6ea9-4464-ba70-43879bf2083e.par
+#BlueLink1 Payload: Box Shape`Activity Bus` Buses` , Miscellaneous`Box_58dbe2df-6ea9-4464-ba70-43879bf2083e
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_ecc34757-a9b0-47e8-892b-519a94a6c023.png
+
+#EMBEDDED_NOTES
+#Example US style school bus with an automatic transmission.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { School Buses } School Bus, Payload
+#Library : Vehicle: Loaded Combination
+#DataSet : School Bus, Payload
+#Category: School Buses
+#FileID  : VehLoad_9b7d5828-f592-45c2-894a-7645c61a77f9
+#Product : TruckSim 2020.1
+#VehCode S_S
+
+END

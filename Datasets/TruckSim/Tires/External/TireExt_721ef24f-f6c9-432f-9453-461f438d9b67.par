@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Tire (External)`510 mm Radius (Simple TYDEX/STI 2018)`* User Tire Model
+FZ_REF 30000
+Y_LENGTH 265
+#CheckBox3 1    
+
+#RingCtrl0 11
+#RingCtrl5 0
+OPT_TIRE_MODEL 10
+
+X_LENGTH 510
+Z_LENGTH 510
+PARSFILE Animator\STL_Groups\ShpGrp_31500c10-5228-4bc2-ac80-d4eb8cc45f60.par
+#BlueLink0 Animator: Shape Assembly`Single w/ Stripe` Tires` , Animator`ShpGrp_31500c10-5228-4bc2-ac80-d4eb8cc45f60
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 265
+*SET_RADIUS 510
+KY_TIRE 4480
+IT 4.8
+M_TIRE 91
+
+#External API information
+EXTERNAL_TIRE_MODULE_DLL Extensions\User_Tire\vsStiWrapper_2018\vsStiWrapper.dll
+INSTALL_EXTERNAL_TIRE_API
+*3RD_PARTY_DLL Extensions\User_Tire\simple_sti_2018\simple_sti.dll
+*EXT_MODULE_DLL Extensions\User_Tire\vsStiWrapper_2018\vsStiWrapper.dll
+
+#User Tire Model setting data
+USER_STI_DLL Extensions\User_Tire\simple_sti_2018\simple_sti.dll
+PARSFILE Generic\tables\GenTab_8b38ea92-db5e-43d5-8d0c-2ab78d118024.par
+#BlueLink1 Generic Table`User STI parameters (TYPARR array)` VS STI` , External`GenTab_8b38ea92-db5e-43d5-8d0c-2ab78d118024
+
+USER_STI_INIT
+
+#EMBEDDED_NOTES
+#This tire data selects the model option "3rd-Party Tire model STI", which adopts an external tire model and bypass the TruckSim internal tire model.  In this option, the external tire model calculates all tire forces and moments, and also searches a tire/ground contact point.
+#
+#The external tire model is based on the TYDEX/STI format and provided by a separate DLL file whose location is specified in the path field of "Tire program file (DLL)." The model involves simple linear calculations.
+#
+#The other DLL file specified in the path field of "VS STI module (DLL)" is the wrapper program based on VS STI format which interfaces between VS vehicle solver and the TYDEX/STI tire model.
+#
+#All tire properties are set in a TYPARR array, which is set in a generic table (root keyword: STI_TYPARR), and the data is linked from a miscellaneous link under custom settings.
+#
+#Updated for version 2018: Low speed stability is improved, longitudinal and lateral tire slips are treated as dynamic for the simple STI tire model.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire (External); { * User Tire Model } 510 mm Radius (Simple TYDEX/STI 2018)
+#Library : Tire (External)
+#DataSet : 510 mm Radius (Simple TYDEX/STI 2018)
+#Category: * User Tire Model
+#FileID  : TireExt_721ef24f-f6c9-432f-9453-461f438d9b67
+#Product : TruckSim 2020.1
+#VehCode Tire (External)
+
+END

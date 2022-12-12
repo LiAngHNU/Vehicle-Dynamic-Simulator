@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 3 Axles`3000 kg Steer, 3000kg D/T S. Single`3A Steer / Drive Tires
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_490d570d-4081-4ecc-8d20-bf58e3bed347.par
+#BlueLink1 Tire`510 mm Radius (Steer)` 3000 kg Rating` , Tires`Tire_490d570d-4081-4ecc-8d20-bf58e3bed347
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_490d570d-4081-4ecc-8d20-bf58e3bed347.par
+#BlueLink999 Tire`510 mm Radius (Steer)` 3000 kg Rating` , Tires`Tire_490d570d-4081-4ecc-8d20-bf58e3bed347
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_e46ff178-5919-4a2d-a52c-a6d181038aba.par
+#BlueLink5 Tire`510 mm Rad. (S. Sgl. Drive)` 3000 kg Rating` , Tires`Tire_e46ff178-5919-4a2d-a52c-a6d181038aba
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_e46ff178-5919-4a2d-a52c-a6d181038aba.par
+#BlueLink999 Tire`510 mm Rad. (S. Sgl. Drive)` 3000 kg Rating` , Tires`Tire_e46ff178-5919-4a2d-a52c-a6d181038aba
+
+symbol_add  <<axle>> 1
+
+iaxle 3
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_e46ff178-5919-4a2d-a52c-a6d181038aba.par
+#BlueLink9 Tire`510 mm Rad. (S. Sgl. Drive)` 3000 kg Rating` , Tires`Tire_e46ff178-5919-4a2d-a52c-a6d181038aba
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_e46ff178-5919-4a2d-a52c-a6d181038aba.par
+#BlueLink999 Tire`510 mm Rad. (S. Sgl. Drive)` 3000 kg Rating` , Tires`Tire_e46ff178-5919-4a2d-a52c-a6d181038aba
+
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 3 Axles; { 3A Steer / Drive Tires } 3000 kg Steer, 3000kg D/T S. Single
+#Library : Tires: Vehicle Unit with 3 Axles
+#DataSet : 3000 kg Steer, 3000kg D/T S. Single
+#Category: 3A Steer / Drive Tires
+#FileID  : Tire3a_9ebef847-e5d2-43fa-adb0-7ac0917cda81
+#Product : TruckSim 2020.1
+#VehCode 3a Tire Group
+
+END

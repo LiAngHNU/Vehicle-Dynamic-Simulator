@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName Vehicle: Trailer with 2 Axles`2A Flatbed (Short), Super Singles`Flatbed Trailers
+#VehCode SS
+IUNIT_INCREMENT
+symbol_add  <<unit>> 1
+NAXLES 2
+
+IOBJECT_SAVE
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+#RingCtrl2 0
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_2a\Tire2a_76281ea9-4230-41e3-be7b-0d60911d44ef.par
+#BlueLink11 Tires: Vehicle Unit with 2 Axles`3000 kg Tandem (522 mm), Super Singles` TS 2A Trailer Tires` , Tires`Tire2a_76281ea9-4230-41e3-be7b-0d60911d44ef
+
+symbol_push  <<axle>> <<axle_temp>>
+*LX_AXLE_2 8440
+R_TANDEM 0
+CFZ_MY_TAND 0
+*LX_AXLE_1 6000
+R_TAND_TRAIL_STATIC 0.5
+R_TAND_TRAIL_STATIC 0.5
+
+iaxle 1
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 6000
+PARSFILE Suspensions\Kin_Solid\KinSA_fdc0b85f-e1a6-40c0-93ba-35d44647acdc.par
+#BlueLink14 Suspension: Solid Axle System Kinematics`15.5t Trailer, Dual Wheels - Kinematics` Trailer Axle` , Kinematics`KinSA_fdc0b85f-e1a6-40c0-93ba-35d44647acdc
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c.par
+#BlueLink16 Suspension: Solid Axle Compliance, Springs, and Dampers`15.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c
+
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink5 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+iaxle 2
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 8440
+PARSFILE Suspensions\Kin_Solid\KinSA_fdc0b85f-e1a6-40c0-93ba-35d44647acdc.par
+#BlueLink15 Suspension: Solid Axle System Kinematics`15.5t Trailer, Dual Wheels - Kinematics` Trailer Axle` , Kinematics`KinSA_fdc0b85f-e1a6-40c0-93ba-35d44647acdc
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c.par
+#BlueLink17 Suspension: Solid Axle Compliance, Springs, and Dampers`15.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c
+
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink8 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 8440
+PARSFILE Vehicles\Trl_Sprung_Mass\TrlSprM_35286b99-96f0-4b1a-8063-7959a60fa752.par
+#BlueLink1 Vehicle: Trailer Sprung Mass`2A Flatbed Trailer` 2A Trailer` , Sprung Mass`TrlSprM_35286b99-96f0-4b1a-8063-7959a60fa752
+
+PARSFILE Animator\Vehicles\AniVeh_0f95ac6c-b908-4aaa-8324-6f916b7af318.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`2A Flatbed` Trailers: 2-axle` , Animator Shape(s)`AniVeh_0f95ac6c-b908-4aaa-8324-6f916b7af318
+
+PARSFILE Aerodynamics\Aero_Main\Aero_2dcf0dd6-b552-482c-b346-939b627511c9.par
+#BlueLink2 Aerodynamics: Basic`No Aerodynamics` ` , Aerodynamics`Aero_2dcf0dd6-b552-482c-b346-939b627511c9
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_0f95ac6c-b908-4aaa-8324-6f916b7af318.png
+IOBJECT_RESTORE
+
+LOG_ENTRY Used Dataset: Vehicle: Trailer with 2 Axles; { Flatbed Trailers } 2A Flatbed (Short), Super Singles
+#Library : Vehicle: Trailer with 2 Axles
+#DataSet : 2A Flatbed (Short), Super Singles
+#Category: Flatbed Trailers
+#FileID  : Trl2a_38be686e-44c0-4c3c-b80a-e564e9919d1d
+#Product : TruckSim 2020.1
+#VehCode SS
+
+END

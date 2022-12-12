@@ -1,0 +1,59 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`2A Conv, Payload, Outriggers`Conventional Vans
+#VehCode S_S
+#CheckBox0 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_2a\Lead2a_9e80118f-ce1c-4f40-8d35-27feac9424e2.par
+#BlueLink0 Vehicle: Lead Unit with 2 Axles`Conv. Van (7-spd. MT)` 2A Conventional Van` , Vehicle Type`Lead2a_9e80118f-ce1c-4f40-8d35-27feac9424e2
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Box\Box_6503f2cf-1550-4bf2-97be-52903be4ca5e.par
+#BlueLink1 Payload: Box Shape`Conventional/LCF Van Payload (6789 kg)` Box Trucks` , Miscellaneous`Box_6503f2cf-1550-4bf2-97be-52903be4ca5e
+
+PARSFILE Payloads\Box\Box_df440e11-e9f4-47d6-b676-18c33e300c14.par
+#BlueLink2 Payload: Box Shape`Front Outrigger` Outriggers` , Miscellaneous`Box_df440e11-e9f4-47d6-b676-18c33e300c14
+
+PARSFILE Payloads\Box\Box_810f366d-e44b-4718-9f07-a4c4ed5576ac.par
+#BlueLink3 Payload: Box Shape`Rear Outrigger` Outriggers` , Miscellaneous`Box_810f366d-e44b-4718-9f07-a4c4ed5576ac
+
+PARSFILE Output\Points\RefPt_df43fc41-6648-4cf0-8a03-db960593ffd0.par
+#BlueLink6 Custom Forces and Reference Points`Outrigger Points` Outrigger Points` , Miscellaneous`RefPt_df43fc41-6648-4cf0-8a03-db960593ffd0
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6f9c8392-bd5f-48c8-a1f6-6d0718604c80.png
+
+#EMBEDDED_NOTES
+#This combines the basic 2-axle loaded truck and its payload.
+#
+#Anto-rollover outriggers used in limit handling tests have been added to this vehicle.  See the link for Outrigger Points for more information.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { Conventional Vans } 2A Conv, Payload, Outriggers
+#Library : Vehicle: Loaded Combination
+#DataSet : 2A Conv, Payload, Outriggers
+#Category: Conventional Vans
+#FileID  : VehLoad_2c0f13ee-a2ef-43e4-b84f-a2938ef210a5
+#Product : TruckSim 2020.1
+#VehCode S_S
+
+END

@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`2A Euro Van (Front-Facing Sensor)`European Vans
+#VehCode I_I
+#CheckBox0 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_2a\Lead2a_3c9ed40f-05d3-45f1-9f35-12f22269769c.par
+#BlueLink0 Vehicle: Lead Unit with 2 Axles`Euro Van (I_I)` Large European Van` , Vehicle Type`Lead2a_3c9ed40f-05d3-45f1-9f35-12f22269769c
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Generic\Links\GenLink_972720ef-960c-4659-bf4b-cff228f3e208.par
+#BlueLink1 Generic Group of Links`Front-Facing Sensor w/ Ani. location` ADAS: Sensor Groups` , Miscellaneous`GenLink_972720ef-960c-4659-bf4b-cff228f3e208
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Lead_2a\Lead2a_3c9ed40f-05d3-45f1-9f35-12f22269769c.png
+
+#EMBEDDED_NOTES
+#2A Euro Van with a single forward-facing ADAS Sensor.
+#
+#The ADAS Sensor is located at the front of the vehicle, corresponding to the location of the center of the front bumper.
+#
+#To aid in the placement of the ADAS Sensor, a small sphere is placed at the ADAS Sensor's location, made visible using an Animator Reference Frame.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { European Vans } 2A Euro Van (Front-Facing Sensor)
+#Library : Vehicle: Loaded Combination
+#DataSet : 2A Euro Van (Front-Facing Sensor)
+#Category: European Vans
+#FileID  : VehLoad_8027ca69-7234-414c-bda7-614189647a86
+#Product : TruckSim 2020.1
+#VehCode I_I
+
+END

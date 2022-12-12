@@ -1,0 +1,97 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit with 2 Axles`Tour Bus (S_S)`2A Tour Bus
+#VehCode S_S
+IUNIT_INCREMENT
+IVEHICLE = IVEHICLE + 1
+symbol_add  <<unit>> 1
+symbol_add  <<vehicle>> 1
+NAXLES 2
+
+IOBJECT_SAVE
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 2
+OPT_PT 2
+#RingCtrl1 1
+#RingCtrl2 4
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_2a\Tire2a_1e7626ca-509e-49b8-983f-bec25b5573d1.par
+#BlueLink8 Tires: Vehicle Unit with 2 Axles`3000 kg Steer, 3000kg Drive (510 mm)` TS 2A Steer / Drive Tires: Internal Table Model` , Tires`Tire2a_1e7626ca-509e-49b8-983f-bec25b5573d1
+
+symbol_push  <<axle>> <<axle_temp>>
+*LX_AXLE_1 0
+*LX_AXLE_2 4490
+
+iaxle 1
+symbol_add  <<axle>> 1
+LX_AXLE 0
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_64c30f3c-3ccd-4380-a6bc-d537f8dd7bc1.par
+#BlueLink15 Suspension: Solid Axle System Kinematics`5.5t Steer, Single Wheel - Kinematics` Steer Axle` , Kinematics`KinSA_64c30f3c-3ccd-4380-a6bc-d537f8dd7bc1
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_de50d1ae-a9e2-40b2-bada-e6716d623681.par
+#BlueLink17 Suspension: Solid Axle Compliance, Springs, and Dampers`5.5t Leaf: +150 mm, -150 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_de50d1ae-a9e2-40b2-bada-e6716d623681
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363.par
+#BlueLink11 Brakes: Two-Wheel System`7.5 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363
+
+PARSFILE Steering\System\StrSys_34a3a8d4-49e4-4c37-a6f1-c2f6bfe55fbc.par
+#BlueLink13 Steering System`Medium (5 m) Wheelbase` Medium - Heavy Duty Steering` , Steering`StrSys_34a3a8d4-49e4-4c37-a6f1-c2f6bfe55fbc
+
+
+iaxle 2
+symbol_add  <<axle>> 1
+LX_AXLE 4490
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_876d5118-8f65-420c-b029-86ce931336bc.par
+#BlueLink16 Suspension: Solid Axle System Kinematics`10t Drive, Dual Wheels` Drive Axle` , Kinematics`KinSA_876d5118-8f65-420c-b029-86ce931336bc
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_fb97cc4b-adb0-46ca-9180-cb094d2f2cb0.par
+#BlueLink18 Suspension: Solid Axle Compliance, Springs, and Dampers`10t Air: +60 mm, -60 mm Travel` Air Springs` , Suspension compliance`CmpSA_fb97cc4b-adb0-46ca-9180-cb094d2f2cb0
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink12 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_1aa75774-a405-4613-9632-c11f86718d83.par
+#BlueLink1 Vehicle: Lead Unit Sprung Mass`Tour Bus` 2 Axle Trucks` , Sprung Mass`SprMass_1aa75774-a405-4613-9632-c11f86718d83
+
+PARSFILE Aerodynamics\Aero_Main\Aero_bb365a7d-ac8f-4859-a0d1-2c0fd54a3108.par
+#BlueLink2 Aerodynamics: Basic`Tour Bus, 4.5 m Ref.` Buses` , Aerodynamics`Aero_bb365a7d-ac8f-4859-a0d1-2c0fd54a3108
+
+PARSFILE Powertrain\Rwd\RWD_cdba35cb-9610-4495-81fa-32e0c32aada7.par
+#BlueLink4 Powertrain: Rear-Wheel Drive`175 kW, 7 Speed AT (2A Tour Bus)` 175 kW Powertrains` , Powertrain or dolly`RWD_cdba35cb-9610-4495-81fa-32e0c32aada7
+
+x_length 4490.000000
+PARSFILE Animator\Vehicles\AniVeh_5cb9979d-3686-4654-8ce0-3c30f81bd36c.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`2A Tour Bus` 2A Lead Units` , Animator Shape(s)`AniVeh_5cb9979d-3686-4654-8ce0-3c30f81bd36c
+
+PARSFILE Steering\Str_Wheel_Tq\TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6.par
+#BlueLink6 Steering Wheel Torque`Linear: 1/25 (Typical)` ` , Steering wheel torque`TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_5cb9979d-3686-4654-8ce0-3c30f81bd36c.png
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#Two-axle Tour Bus (S_S) with a 4x2 powertrain and 7-speed automatic transmission.
+#
+#Both axles are solid axles.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 2 Axles; { 2A Tour Bus } Tour Bus (S_S)
+#Library : Vehicle: Lead Unit with 2 Axles
+#DataSet : Tour Bus (S_S)
+#Category: 2A Tour Bus
+#FileID  : Lead2a_359a9ec0-18bc-47f9-865e-0a2dd895199d
+#Product : TruckSim 2020.1
+#VehCode S_S
+
+END

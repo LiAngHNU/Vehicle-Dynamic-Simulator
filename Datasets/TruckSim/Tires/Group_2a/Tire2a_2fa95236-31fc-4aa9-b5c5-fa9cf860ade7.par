@@ -1,0 +1,65 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 2 Axles`215/70 R15`TS 2A Touring Tires
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_16f976c1-9e76-4758-809a-2c12e39e7676.par
+#BlueLink1 Tire`215/70 R15` Touring Tires` , Tires`Tire_16f976c1-9e76-4758-809a-2c12e39e7676
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_16f976c1-9e76-4758-809a-2c12e39e7676.par
+#BlueLink999 Tire`215/70 R15` Touring Tires` , Tires`Tire_16f976c1-9e76-4758-809a-2c12e39e7676
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_16f976c1-9e76-4758-809a-2c12e39e7676.par
+#BlueLink5 Tire`215/70 R15` Touring Tires` , Tires`Tire_16f976c1-9e76-4758-809a-2c12e39e7676
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_16f976c1-9e76-4758-809a-2c12e39e7676.par
+#BlueLink999 Tire`215/70 R15` Touring Tires` , Tires`Tire_16f976c1-9e76-4758-809a-2c12e39e7676
+
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 2 Axles; { TS 2A Touring Tires } 215/70 R15
+#Library : Tires: Vehicle Unit with 2 Axles
+#DataSet : 215/70 R15
+#Category: TS 2A Touring Tires
+#FileID  : Tire2a_2fa95236-31fc-4aa9-b5c5-fa9cf860ade7
+#Product : TruckSim 2020.1
+#VehCode 2a Tire Group
+
+END

@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`2A LCF, Payload`LCF Vans
+#VehCode S_S
+#CheckBox0 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_2a\Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80.par
+#BlueLink0 Vehicle: Lead Unit with 2 Axles`LCF Van` 2A LCF Van` , Vehicle Type`Lead2a_8f1d85c4-0556-41fb-aee3-8b2506ee8f80
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Box\Box_6503f2cf-1550-4bf2-97be-52903be4ca5e.par
+#BlueLink1 Payload: Box Shape`Conventional/LCF Van Payload (6789 kg)` Box Trucks` , Miscellaneous`Box_6503f2cf-1550-4bf2-97be-52903be4ca5e
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Loaded\VehLoad_3f23baec-524e-4a49-8fdd-c74ffb84a441.png
+
+#EMBEDDED_NOTES
+#Two axle LCF (Low Cab Forward) van (S_S) with a 4x2 powertrain and a 7-speed manual transmission.
+#
+#A single payload is used with this vehicle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { LCF Vans } 2A LCF, Payload
+#Library : Vehicle: Loaded Combination
+#DataSet : 2A LCF, Payload
+#Category: LCF Vans
+#FileID  : VehLoad_3f23baec-524e-4a49-8fdd-c74ffb84a441
+#Product : TruckSim 2020.1
+#VehCode S_S
+
+END

@@ -1,0 +1,53 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`DRW Pickup w/ AEB Sensor`Pickup Trucks
+#VehCode I_S
+#CheckBox0 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_2a\Lead2a_b12d039f-c0ae-4c93-a7ad-c2ddf96fa5ca.par
+#BlueLink0 Vehicle: Lead Unit with 2 Axles`Pickup, Crew Cab DRW` Pickup Trucks` , Vehicle Type`Lead2a_b12d039f-c0ae-4c93-a7ad-c2ddf96fa5ca
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Sensors_Traffic\Radar\Radar_00e2a90b-b753-48b3-b901-b46e4cf612e8.par
+#BlueLink2 ADAS Sensors for Range and Tracking`FCW` Forward Facing Sensors: FCW and ACC` , Miscellaneous`Radar_00e2a90b-b753-48b3-b901-b46e4cf612e8
+
+PARSFILE Generic\VS_commands\GenVS_3430ca85-08f9-4ec9-a695-8f1fc5164794.par
+#BlueLink4 Generic VS Commands`Euro NCAP: FCW` ADAS Support` , Miscellaneous`GenVS_3430ca85-08f9-4ec9-a695-8f1fc5164794
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ee189bc-4102-46cf-a6ee-046ab79da53b.png
+
+#EMBEDDED_NOTES
+#Two-axle Dually Pickup Truck with a forward collision warning (FCW) sensor and VS Commands.
+#
+#An ADAS Sensors license is required to run a simulation with these sensors.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { Pickup Trucks } DRW Pickup w/ AEB Sensor
+#Library : Vehicle: Loaded Combination
+#DataSet : DRW Pickup w/ AEB Sensor
+#Category: Pickup Trucks
+#FileID  : VehLoad_27e6464d-d461-494b-a160-42df59864abe
+#Product : TruckSim 2020.1
+#VehCode I_S
+
+END

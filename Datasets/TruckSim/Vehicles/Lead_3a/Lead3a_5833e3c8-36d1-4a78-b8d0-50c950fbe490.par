@@ -1,0 +1,127 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit with 3 Axles`3A Conv Van (S_SS)`3A Conventional Van
+#VehCode S_SS
+IUNIT_INCREMENT
+IVEHICLE = IVEHICLE + 1
+symbol_add  <<unit>> 1
+symbol_add  <<vehicle>> 1
+NAXLES 3
+ITANDEM 1
+
+IOBJECT_SAVE
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 3
+OPT_PT 3
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 4
+#RingCtrl4 4
+*LX_AXLE_1 0
+*LX_AXLE_2 5230
+*LX_AXLE_3 6500
+R_TANDEM 0.45
+CFZ_MY_TAND 0
+R_TAND_TRAIL_STATIC 0.5
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_3a\Tire3a_05dfe3a4-b2a0-4a94-ab3b-47d1acf0ebd7.par
+#BlueLink8 Tires: Vehicle Unit with 3 Axles`3000 kg Steer, 3000 kg Drive / Tandem` 3A Steer / Drive Tires` , Tires`Tire3a_05dfe3a4-b2a0-4a94-ab3b-47d1acf0ebd7
+
+symbol_push  <<axle>> <<axle_temp>>
+
+iaxle 1
+symbol_add  <<axle>> 1
+LX_AXLE 0
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_64c30f3c-3ccd-4380-a6bc-d537f8dd7bc1.par
+#BlueLink18 Suspension: Solid Axle System Kinematics`5.5t Steer, Single Wheel - Kinematics` Steer Axle` , Kinematics`KinSA_64c30f3c-3ccd-4380-a6bc-d537f8dd7bc1
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_e6e7568c-2525-480b-87bc-b0b15886513c.par
+#BlueLink21 Suspension: Solid Axle Compliance, Springs, and Dampers`5.5t Leaf: +150 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_e6e7568c-2525-480b-87bc-b0b15886513c
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363.par
+#BlueLink12 Brakes: Two-Wheel System`7.5 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363
+
+PARSFILE Steering\System\StrSys_ea97afb5-5373-4e56-92fd-474d9920f375.par
+#BlueLink15 Steering System`Long (6 m) Wheelbase` Medium - Heavy Duty Steering` , Steering`StrSys_ea97afb5-5373-4e56-92fd-474d9920f375
+
+
+iaxle 2
+symbol_add  <<axle>> 1
+LX_AXLE 5230
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_876d5118-8f65-420c-b029-86ce931336bc.par
+#BlueLink19 Suspension: Solid Axle System Kinematics`10t Drive, Dual Wheels` Drive Axle` , Kinematics`KinSA_876d5118-8f65-420c-b029-86ce931336bc
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_fb97cc4b-adb0-46ca-9180-cb094d2f2cb0.par
+#BlueLink22 Suspension: Solid Axle Compliance, Springs, and Dampers`10t Air: +60 mm, -60 mm Travel` Air Springs` , Suspension compliance`CmpSA_fb97cc4b-adb0-46ca-9180-cb094d2f2cb0
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink13 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+iaxle 3
+symbol_add  <<axle>> 1
+LX_AXLE 6500
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_876d5118-8f65-420c-b029-86ce931336bc.par
+#BlueLink20 Suspension: Solid Axle System Kinematics`10t Drive, Dual Wheels` Drive Axle` , Kinematics`KinSA_876d5118-8f65-420c-b029-86ce931336bc
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_fb97cc4b-adb0-46ca-9180-cb094d2f2cb0.par
+#BlueLink23 Suspension: Solid Axle Compliance, Springs, and Dampers`10t Air: +60 mm, -60 mm Travel` Air Springs` , Suspension compliance`CmpSA_fb97cc4b-adb0-46ca-9180-cb094d2f2cb0
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink14 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 6500.000000
+PARSFILE Vehicles\Sprung_Mass\SprMass_c6251eff-0339-4134-af67-22d04574cc3f.par
+#BlueLink1 Vehicle: Lead Unit Sprung Mass`Conventional Van` 2 Axle Trucks` , Sprung Mass`SprMass_c6251eff-0339-4134-af67-22d04574cc3f
+
+PARSFILE Aerodynamics\Aero_Main\Aero_ad19711c-1936-499a-b1de-fc8dcd7243ec.par
+#BlueLink2 Aerodynamics: Basic`Conv. Cab w/ Fairings, 5 m Ref.` Conventional Cab` , Aerodynamics`Aero_ad19711c-1936-499a-b1de-fc8dcd7243ec
+
+PARSFILE Steering\Str_Wheel_Tq\TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6.par
+#BlueLink6 Steering Wheel Torque`Linear: 1/25 (Typical)` ` , Steering wheel torque`TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6
+
+PARSFILE Powertrain\4wd\4WD_75ac9589-fd55-435e-85b8-cc964b47d05b.par
+#BlueLink5 Powertrain: 4-Wheel Drive`225 kW, 5 Spd. AT, 4.4 Ratio` 200 kW - 270 kW Powertrains` , Powertrain or dolly`4WD_75ac9589-fd55-435e-85b8-cc964b47d05b
+
+PARSFILE Animator\Vehicles\AniVeh_37675ca0-b0bd-4786-924e-7c2fe233677a.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`3A Conventional Van` 3A Lead Units` , Animator Shape(s)`AniVeh_37675ca0-b0bd-4786-924e-7c2fe233677a
+
+symbol_push  <<hitch_x>> -8.060000
+symbol_push  <<hitch_y>> 0.000000
+symbol_push  <<hitch_z>> 0.900000
+PARSFILE Hitches\Joint\Hitch_e0ab8aa7-40de-44fd-9edd-a7f8ac789024.par
+#BlueLink7 Hitch: Joint Assembly`Pintle Hitch` Pintle Hitches` , Hitch`Hitch_e0ab8aa7-40de-44fd-9edd-a7f8ac789024
+
+LX_H 8060
+Y_H 0
+H_H 900
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_37675ca0-b0bd-4786-924e-7c2fe233677a.png
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#Three-axle Conventional Van (S_SS) with a 6x4 powertrain and a 5-speed automatic transmission.
+#
+#A pintle hitch is linked to this truck, making it ideal for towing small trailers and dollies.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 3 Axles; { 3A Conventional Van } 3A Conv Van (S_SS)
+#Library : Vehicle: Lead Unit with 3 Axles
+#DataSet : 3A Conv Van (S_SS)
+#Category: 3A Conventional Van
+#FileID  : Lead3a_5833e3c8-36d1-4a78-b8d0-50c950fbe490
+#Product : TruckSim 2020.1
+#VehCode S_SS
+
+END

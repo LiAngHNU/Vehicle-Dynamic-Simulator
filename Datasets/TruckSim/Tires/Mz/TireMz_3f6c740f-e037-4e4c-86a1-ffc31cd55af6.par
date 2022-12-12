@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Tire: Aligning Moment`Mz; Steer Tire Asymmetric`SAE Steer Tire
+#CheckBox0 0    
+
+#RingCtrl0 2D_SPLINE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Slip angle [Alpha] (deg)
+*3D_ZLabel Aligning moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 7, 21 ! columns x rows
+MZ_TIRE_CARPET 2D_SPLINE
+0, 6868, 13736, 20604, 27468, 34336, 41204, 54936
+-21, 0, 0, 0, 0, 0, 0, 0
+-20, 0, 0, 0, 0, 0, 0, 0
+-15, -15, -90.4, -140.3, -170.8, -300, -363.1, -565.1
+-12.5, -52.9, -116.5, -214.5, -259.1, -405.5, -412.8, -704.6
+-10, -43.7, -144.7, -251.8, -389.8, -567, -592.5, -1084.7
+-8, -62, -163.5, -319, -473.6, -673.3, -722.7, -1263.5
+-6, -83.8, -155.2, -303.8, -469.1, -618.9, -738.9, -1263.4
+-4, -65.1, -163.8, -291, -453.4, -637.5, -847, -1282.1
+-2, -75.1, -152.5, -256.5, -373.9, -544.4, -645.4, -883.5
+-1, -32, -119.3, -182.9, -254.9, -346.3, -413.5, -602.3
+0, -21, -53.4, -69.6, -94.8, -145.9, -158.9, -213.3
+1, -10, 12.5, 43.8, 65.4, 54.5, 95.9, 175.7
+2, 10.6, 78.4, 150.4, 224.7, 260.9, 405.4, 498.3
+4, 41.9, 122.8, 247.7, 395.5, 517.5, 726.4, 1041.1
+6, 56, 139.1, 261.9, 439.4, 618.5, 810, 1259.6
+8, 43.3, 112.8, 221.3, 332.4, 493.5, 563.2, 1025
+10, 24.9, 93.8, 154, 248.7, 387.2, 432.9, 846.2
+12.5, 34.2, 65.6, 116.7, 118, 225.7, 253.4, 466
+15, -3.7, 39.7, 42.6, 29.8, 120.3, 203.5, 326.5
+20, 0, 0, 0, 0, 0, 0, 0
+21, 0, 0, 0, 0, 0, 0, 0
+ENDTABLE
+
+
+
+#EMBEDDED_NOTES
+#This data comes from the SAE Cooperative Research program conducted in the 1990s.
+#
+#It is a direct copy of the Mz data measured for a 295/75|275/80R22.5 steer tire .
+#
+#Data for the 20 deg slip angle was extrapolated using the rule of thumb that aligning moments generallly drop to zero at about this value.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire: Aligning Moment; { SAE Steer Tire } Mz; Steer Tire Asymmetric
+#Library : Tire: Aligning Moment
+#DataSet : Mz; Steer Tire Asymmetric
+#Category: SAE Steer Tire
+#FileID  : TireMz_3f6c740f-e037-4e4c-86a1-ffc31cd55af6
+#Product : TruckSim 2020.1
+#VehCode Tire: Mz
+
+END

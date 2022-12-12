@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 2 Axles`Normalized 1D Tables, R=510mm`TS 2A Steer / Drive Tires: Internal Table Model
+
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox5 1    
+
+*LDUAL_2 310
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_45d5d4ab-886f-48b5-a041-3212a360ad18.par
+#BlueLink1 Tire`Normalized 1D, 510 mm Radius (Steer)` Normalized Tires` , Tires`Tire_45d5d4ab-886f-48b5-a041-3212a360ad18
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_45d5d4ab-886f-48b5-a041-3212a360ad18.par
+#BlueLink999 Tire`Normalized 1D, 510 mm Radius (Steer)` Normalized Tires` , Tires`Tire_45d5d4ab-886f-48b5-a041-3212a360ad18
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 310
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_4339d062-cee8-4596-bc87-b6637f6f892a.par
+#BlueLink5 Tire`Normalized 1D, 510 mm Radius (Drive)` Normalized Tires` , Tires`Tire_4339d062-cee8-4596-bc87-b6637f6f892a
+
+itire 2
+symbol_push  <<tire>> R<<axle>>o
+STORE_WHEEL_OFFSET 0.155000
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+PARSFILE Tires\Tire\Tire_4339d062-cee8-4596-bc87-b6637f6f892a.par
+#BlueLink999 Tire`Normalized 1D, 510 mm Radius (Drive)` Normalized Tires` , Tires`Tire_4339d062-cee8-4596-bc87-b6637f6f892a
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_4339d062-cee8-4596-bc87-b6637f6f892a.par
+#BlueLink999 Tire`Normalized 1D, 510 mm Radius (Drive)` Normalized Tires` , Tires`Tire_4339d062-cee8-4596-bc87-b6637f6f892a
+
+itire 2
+symbol_push  <<tire>> L<<axle>>o
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_4339d062-cee8-4596-bc87-b6637f6f892a.par
+#BlueLink999 Tire`Normalized 1D, 510 mm Radius (Drive)` Normalized Tires` , Tires`Tire_4339d062-cee8-4596-bc87-b6637f6f892a
+
+
+#EMBEDDED_NOTES
+#This example uses normalized 1D tire tables. They have linear load sensitivity and can be used for any sized vehicle that is operating within normal load ranges, where the linear sensitivity is reasonable.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 2 Axles; { TS 2A Steer / Drive Tires: Internal Table Model } Normalized 1D Tables, R=510mm
+#Library : Tires: Vehicle Unit with 2 Axles
+#DataSet : Normalized 1D Tables, R=510mm
+#Category: TS 2A Steer / Drive Tires: Internal Table Model
+#FileID  : Tire2a_196fce0b-0865-492f-88fb-fdb21a888d2b
+#Product : TruckSim 2020.1
+#VehCode 2a Tire Group
+
+END

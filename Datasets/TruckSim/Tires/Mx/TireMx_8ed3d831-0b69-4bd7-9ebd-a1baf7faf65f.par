@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Tire: Overturning Moment`Example Mx vs. Alpha`Extended with Camber Details
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. slip angle [alpha] (deg)
+*3D_ZLabel Overturning moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 5, 20 ! columns x rows
+MX_TIRE_CARPET 2D_FROM_ZERO
+0, 2362.81, 4725.61, 7088.42, 9451.23, 11814
+0.5, 5.16, 8.57, 3.7, -7.32, -19.24
+1, 10, 16.47, 6.74, -15.1, -38.99
+1.5, 14.2, 23.02, 8.5, -23.78, -59.78
+2, 17.52, 27.72, 8.49, -33.65, -81.9
+2.5, 20.01, 30.73, 6.97, -44.35, -104.82
+3, 21.81, 32.4, 4.4, -55.36, -127.79
+3.5, 23.04, 33.05, 1.2, -66.16, -150.04
+4, 23.83, 33.04, -2.18, -76.23, -170.83
+4.5, 24.31, 32.65, -5.38, -85.17, -189.57
+5, 24.55, 32, -8.36, -93.05, -206.33
+5.5, 24.59, 31.16, -11.15, -100.04, -221.34
+6, 24.51, 30.2, -13.79, -106.34, -234.86
+6.5, 24.36, 29.19, -16.32, -112.12, -247.12
+7, 24.19, 28.2, -18.78, -117.59, -258.34
+7.5, 24.06, 27.3, -21.17, -122.86, -268.73
+8, 23.94, 26.48, -23.48, -127.88, -278.2
+8.5, 23.79, 25.74, -25.64, -132.53, -286.63
+9, 23.59, 25.08, -27.59, -136.7, -293.91
+9.5, 23.29, 24.47, -29.29, -140.29, -299.91
+10, 22.86, 23.91, -30.68, -143.17, -304.5
+ENDTABLE
+
+
+
+LOG_ENTRY Used Dataset: Tire: Overturning Moment; { Extended with Camber Details } Example Mx vs. Alpha
+#Library : Tire: Overturning Moment
+#DataSet : Example Mx vs. Alpha
+#Category: Extended with Camber Details
+#FileID  : TireMx_8ed3d831-0b69-4bd7-9ebd-a1baf7faf65f
+#Product : TruckSim 2020.1
+#VehCode Tire: Mx
+
+END

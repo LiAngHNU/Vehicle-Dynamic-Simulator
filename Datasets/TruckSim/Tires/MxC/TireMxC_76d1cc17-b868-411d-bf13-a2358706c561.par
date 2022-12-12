@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Tire: Overturning Moment vs. Inclination`Example Mx vs. Gamma`Extended with Camber Details
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. inclination angle (deg)
+*3D_ZLabel Overturning moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 5, 12 ! columns x rows
+MXG_TIRE_CARPET 2D_FROM_ZERO
+0, 2362.81, 4725.61, 7088.42, 9451.23, 11814
+0.5, -9.37, -15.58, -19.49, -21.68, -22.76
+1, -18.71, -31.11, -38.94, -43.35, -45.5
+1.5, -27.98, -46.56, -58.33, -64.99, -68.24
+2, -37.15, -61.89, -77.63, -86.58, -90.94
+2.5, -46.19, -77.04, -96.8, -108.11, -113.61
+3, -55.06, -91.97, -115.81, -129.56, -136.24
+3.5, -63.73, -106.66, -134.63, -150.92, -158.83
+4, -72.17, -121.04, -153.22, -172.18, -181.35
+4.5, -80.34, -135.08, -171.57, -193.31, -203.8
+5, -88.21, -148.73, -189.62, -214.3, -226.18
+5.5, -95.75, -161.96, -207.36, -235.14, -248.48
+6, -102.92, -174.72, -224.75, -255.8, -270.68
+ENDTABLE
+
+CRO_MX 0
+
+
+LOG_ENTRY Used Dataset: Tire: Overturning Moment vs. Inclination; { Extended with Camber Details } Example Mx vs. Gamma
+#Library : Tire: Overturning Moment vs. Inclination
+#DataSet : Example Mx vs. Gamma
+#Category: Extended with Camber Details
+#FileID  : TireMxC_76d1cc17-b868-411d-bf13-a2358706c561
+#Product : TruckSim 2020.1
+#VehCode Tire: Mx
+
+END

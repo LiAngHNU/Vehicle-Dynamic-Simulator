@@ -1,0 +1,109 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit with 2 Axles`2A CiDi Foton Auman Exp`* * * CiDi Trucks
+#VehCode F_S_S
+IUNIT_INCREMENT
+IVEHICLE = IVEHICLE + 1
+symbol_add  <<unit>> 1
+symbol_add  <<vehicle>> 1
+NAXLES 2
+
+IOBJECT_SAVE
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 3
+OPT_PT 3
+#RingCtrl1 1
+#RingCtrl2 1
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_2a\Tire2a_3ebab7ac-c63c-46b8-8cb6-570f9553053f.par
+#BlueLink8 Tires: Vehicle Unit with 2 Axles`3000 kg Steer, 3000kg SuperSingle Wide` TS 2A Steer / Drive Tires: Internal Table Model` , Tires`Tire2a_3ebab7ac-c63c-46b8-8cb6-570f9553053f
+
+symbol_push  <<axle>> <<axle_temp>>
+*LX_AXLE_1 0
+*LX_AXLE_2 3975
+R_REAR_DRIVE_SC 1
+
+iaxle 1
+symbol_add  <<axle>> 1
+LX_AXLE 0
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_64c30f3c-3ccd-4380-a6bc-d537f8dd7bc1.par
+#BlueLink15 Suspension: Solid Axle System Kinematics`5.5t Steer, Single Wheel - Kinematics` Steer Axle` , Kinematics`KinSA_64c30f3c-3ccd-4380-a6bc-d537f8dd7bc1
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_f62bed0b-a13e-4400-8748-cc0cd32fc5ff.par
+#BlueLink17 Suspension: Solid Axle Compliance, Springs, and Dampers`6t Air: +250 mm, -250 mm Travel` Air Springs` , Suspension compliance`CmpSA_f62bed0b-a13e-4400-8748-cc0cd32fc5ff
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_b80a513c-6cf0-46f3-ad96-9beeff25f2ec.par
+#BlueLink11 Brakes: Two-Wheel System`6 kN-m Capacity, Hydraulic (2 ch. ABS)` Hydraulic Brakes` , Brakes`Brk2W_b80a513c-6cf0-46f3-ad96-9beeff25f2ec
+
+PARSFILE Steering\System\StrSys_f055b7fa-5320-4253-a0c9-99a8ad7d1f42.par
+#BlueLink13 Steering System`Short (4 m) Wheelbase` Medium - Heavy Duty Steering` , Steering`StrSys_f055b7fa-5320-4253-a0c9-99a8ad7d1f42
+
+
+iaxle 2
+symbol_add  <<axle>> 1
+LX_AXLE 3975
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_372fbdd1-d21e-4703-8f83-8a3f1b2b6572.par
+#BlueLink16 Suspension: Solid Axle System Kinematics`8.5t Drive, Dual Wheels` Drive Axle` , Kinematics`KinSA_372fbdd1-d21e-4703-8f83-8a3f1b2b6572
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_f62bed0b-a13e-4400-8748-cc0cd32fc5ff.par
+#BlueLink18 Suspension: Solid Axle Compliance, Springs, and Dampers`6t Air: +250 mm, -250 mm Travel` Air Springs` , Suspension compliance`CmpSA_f62bed0b-a13e-4400-8748-cc0cd32fc5ff
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_b80a513c-6cf0-46f3-ad96-9beeff25f2ec.par
+#BlueLink12 Brakes: Two-Wheel System`6 kN-m Capacity, Hydraulic (2 ch. ABS)` Hydraulic Brakes` , Brakes`Brk2W_b80a513c-6cf0-46f3-ad96-9beeff25f2ec
+
+PARSFILE Steering\System\StrSys_db0facd8-e01a-4761-96d6-31a1b7aa3dfd.par
+#BlueLink14 Steering System`Short (4 m) Wheelbase Rear` Medium - Heavy Duty Steering` , Steering`StrSys_db0facd8-e01a-4761-96d6-31a1b7aa3dfd
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_2ce9de06-f6fb-4018-9b0f-a99cd2838fd9.par
+#BlueLink1 Vehicle: Lead Unit Sprung Mass`3A Cab-Over 6x4 (Frame Flex, Susp)` 3 Axle Trucks` , Sprung Mass`SprMass_2ce9de06-f6fb-4018-9b0f-a99cd2838fd9
+
+PARSFILE Aerodynamics\Aero_Main\Aero_88dd56dd-ef73-4549-9b47-1283376c29c6.par
+#BlueLink2 Aerodynamics: Basic`Cab-Over-Eng. w/o Fairings, 5 m Ref.` Cab-Over and Cab-Forward Tractors` , Aerodynamics`Aero_88dd56dd-ef73-4549-9b47-1283376c29c6
+
+PARSFILE Powertrain\4wd\4WD_52311347-7233-466d-bf6e-183d6a2e86d5.par
+#BlueLink5 Powertrain: 4-Wheel Drive`330 kW, 7 Spd. AT w/ Engine Sound (LSD)` 330 kW Powertrains` , Powertrain or dolly`4WD_52311347-7233-466d-bf6e-183d6a2e86d5
+
+x_length 3975.000000
+PARSFILE Animator\Vehicles\AniVeh_49fed41d-067e-47df-b596-186e2a1c908b.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`CiDi General Frame (2A Tractor)` * * * CiDi Truck Frames` , Animator Shape(s)`AniVeh_49fed41d-067e-47df-b596-186e2a1c908b
+
+PARSFILE Steering\Str_Wheel_Tq\TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6.par
+#BlueLink6 Steering Wheel Torque`Linear: 1/25 (Typical)` ` , Steering wheel torque`TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6
+
+symbol_push  <<hitch_x>> -3.500000
+symbol_push  <<hitch_y>> 0.000000
+symbol_push  <<hitch_z>> 1.100000
+PARSFILE Hitches\Joint\Hitch_fc25dbf0-73ba-4b1c-82af-5e2cf0a07b55.par
+#BlueLink7 Hitch: Joint Assembly`5th Wheel` 5th Wheel Hitches` , Hitch`Hitch_fc25dbf0-73ba-4b1c-82af-5e2cf0a07b55
+
+LX_H 3500
+H_H 1100
+*IMAGE_FIT_MODE 1
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_49fed41d-067e-47df-b596-186e2a1c908b.png
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#Two axle LCF (Low Cab Forward) van (S_S) with a 4x2 powertrain and a 7-speed manual transmission.
+#
+#This truck uses Frame Torsional Flexibility and a Suspended Cab.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 2 Axles; { * * * CiDi Trucks } 2A CiDi Foton Auman Exp
+#Library : Vehicle: Lead Unit with 2 Axles
+#DataSet : 2A CiDi Foton Auman Exp
+#Category: * * * CiDi Trucks
+#FileID  : Lead2a_1b2fcc3e-72cc-4451-a793-fe139906ceb5
+#Product : TruckSim 2020.1
+#VehCode F_S_S
+
+END

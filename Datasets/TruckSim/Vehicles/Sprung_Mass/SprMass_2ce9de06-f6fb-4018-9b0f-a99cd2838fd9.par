@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit Sprung Mass`3A Cab-Over 6x4 (Frame Flex, Susp)`3 Axle Trucks
+#VehCode Flexible
+H_CG_SU 1175
+LX_CG_SU 1220
+M_SU 7600
+IXX_SU 3896.2
+IYY_SU 60395.4
+IZZ_SU 59371.4
+IXZ_SU 1626
+*RX 0.716
+*RY 2.819
+*RZ 2.795
+Y_CG_SU 0
+IXY_SU 0
+IYZ_SU 0
+L_FRAME 3900
+W_FRAME 1000
+X_NODE 2340
+K_FRAME 1500
+C_FRAME 100
+X_ENG 0
+X_LENGTH 4770
+H_NODE 519
+
+LEN_SM 4770
+#CheckBox0 1    
+#CheckBox1 1    
+
+PARSFILE Vehicles\Susp_Cab\Cab_662b41ea-c6d1-4c82-83bd-c984825a6ed4.par
+#BlueLink0 Vehicle: Suspended Cab`Cab Over (High Definition)` ` , Suspended Cab`Cab_662b41ea-c6d1-4c82-83bd-c984825a6ed4
+
+
+#EMBEDDED_NOTES
+#The height, width, and length (for animator) fields are not used here, because the cab for the truck is unscaled.  Setting values here will modify only the vehicle frame.  To change the dimensions of the Cab, modify the dataset linked as the Unscaled Cab assembly in the Animator: Vehicles and Sensor Targets library associated with this vehicle.
+#
+#When the length field in this library is left blank, the vehicle's wheelbase (in the Vehicle: Lead Unit dataset) is used instead.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit Sprung Mass; { 3 Axle Trucks } 3A Cab-Over 6x4 (Frame Flex, Susp)
+#Library : Vehicle: Lead Unit Sprung Mass
+#DataSet : 3A Cab-Over 6x4 (Frame Flex, Susp)
+#Category: 3 Axle Trucks
+#FileID  : SprMass_2ce9de06-f6fb-4018-9b0f-a99cd2838fd9
+#Product : TruckSim 2020.1
+#VehCode Flexible
+
+END

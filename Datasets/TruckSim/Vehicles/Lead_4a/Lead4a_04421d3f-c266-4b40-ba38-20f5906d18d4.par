@@ -1,0 +1,143 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit with 4 Axles`4A LCF Van (SS_SS), Tandem F&R, 8x4`4A Vans
+#VehCode SS_SS
+IUNIT_INCREMENT
+IVEHICLE = IVEHICLE + 1
+symbol_add  <<unit>> 1
+symbol_add  <<vehicle>> 1
+NAXLES 4
+
+IOBJECT_SAVE
+#CheckBox0 0    
+#CheckBox1 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 3
+OPT_PT 3
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 4
+#RingCtrl4 4
+#RingCtrl5 0
+*LX_AXLE_1 0
+*LX_AXLE_2 1805
+*LX_AXLE_3 6000
+*LX_AXLE_4 7805
+*RLOAD_1 0.45
+*RTRANSFER_1 0
+*RLOAD_2 0.45
+*RTRANSFER_2 0
+*R_TAND_REAR_STATIC_1 0.5
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_4a\Tire4a_5999c4a3-5065-43f8-9478-d9b51fac42ec.par
+#BlueLink7 Tires: Vehicle Unit with 4 Axles`3000kg Steer/Tdm, 3000kg D/T` TS 4A Steer / Drive Tires` , Tires`Tire4a_5999c4a3-5065-43f8-9478-d9b51fac42ec
+
+symbol_push  <<axle>> <<axle_temp>>
+
+ITANDEM 1
+R_TANDEM 0.45
+CFZ_MY_TAND 0
+R_TAND_TRAIL_STATIC 0.5
+ITANDEM 2
+R_TANDEM 0.45
+CFZ_MY_TAND 0
+
+iaxle 1
+symbol_add  <<axle>> 1
+LX_AXLE 0
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_f6263333-c7ca-49a7-9619-71bf87a41f95.par
+#BlueLink20 Suspension: Solid Axle System Kinematics`4t Steer, Single Wheel` Steer Axle` , Kinematics`KinSA_f6263333-c7ca-49a7-9619-71bf87a41f95
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_c9d83497-368f-4757-bd78-737a1d495101.par
+#BlueLink24 Suspension: Solid Axle Compliance, Springs, and Dampers`4t Leaf: +60 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_c9d83497-368f-4757-bd78-737a1d495101
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363.par
+#BlueLink12 Brakes: Two-Wheel System`7.5 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363
+
+PARSFILE Steering\System\StrSys_34a3a8d4-49e4-4c37-a6f1-c2f6bfe55fbc.par
+#BlueLink16 Steering System`Medium (5 m) Wheelbase` Medium - Heavy Duty Steering` , Steering`StrSys_34a3a8d4-49e4-4c37-a6f1-c2f6bfe55fbc
+
+
+iaxle 2
+symbol_add  <<axle>> 1
+LX_AXLE 1805
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_f6263333-c7ca-49a7-9619-71bf87a41f95.par
+#BlueLink21 Suspension: Solid Axle System Kinematics`4t Steer, Single Wheel` Steer Axle` , Kinematics`KinSA_f6263333-c7ca-49a7-9619-71bf87a41f95
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_c9d83497-368f-4757-bd78-737a1d495101.par
+#BlueLink25 Suspension: Solid Axle Compliance, Springs, and Dampers`4t Leaf: +60 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_c9d83497-368f-4757-bd78-737a1d495101
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363.par
+#BlueLink13 Brakes: Two-Wheel System`7.5 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363
+
+PARSFILE Steering\System\StrSys_7b4a2c41-65c6-4a61-afdb-ed442f85a4d7.par
+#BlueLink17 Steering System`Short (4 m) Wheelbase (Axle 2)` Medium - Heavy Duty Steering` , Steering`StrSys_7b4a2c41-65c6-4a61-afdb-ed442f85a4d7
+
+
+iaxle 3
+symbol_add  <<axle>> 1
+LX_AXLE 6000
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_762a39b9-e822-459c-b12f-a408734ae6b3.par
+#BlueLink22 Suspension: Solid Axle System Kinematics`15.5t Drive, Dual Wheels - Kinematics` Drive Axle` , Kinematics`KinSA_762a39b9-e822-459c-b12f-a408734ae6b3
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c.par
+#BlueLink26 Suspension: Solid Axle Compliance, Springs, and Dampers`15.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink14 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+iaxle 4
+symbol_add  <<axle>> 1
+LX_AXLE 7805
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_762a39b9-e822-459c-b12f-a408734ae6b3.par
+#BlueLink23 Suspension: Solid Axle System Kinematics`15.5t Drive, Dual Wheels - Kinematics` Drive Axle` , Kinematics`KinSA_762a39b9-e822-459c-b12f-a408734ae6b3
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c.par
+#BlueLink27 Suspension: Solid Axle Compliance, Springs, and Dampers`15.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink15 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 7805.000000
+PARSFILE Vehicles\Sprung_Mass\SprMass_6478602f-f2c6-4d24-9e45-d32945c6523a.par
+#BlueLink1 Vehicle: Lead Unit Sprung Mass`4A LCF Van` 4 Axle Trucks` , Sprung Mass`SprMass_6478602f-f2c6-4d24-9e45-d32945c6523a
+
+PARSFILE Aerodynamics\Aero_Main\Aero_71cecaf1-a17c-4d6e-b4ba-b32f1ea6d168.par
+#BlueLink2 Aerodynamics: Basic`Cab-Forward Truck, 7 m Ref.` Cab-Over and Cab-Forward Tractors` , Aerodynamics`Aero_71cecaf1-a17c-4d6e-b4ba-b32f1ea6d168
+
+PARSFILE Steering\Str_Wheel_Tq\TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6.par
+#BlueLink6 Steering Wheel Torque`Linear: 1/25 (Typical)` ` , Steering wheel torque`TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6
+
+PARSFILE Powertrain\4wd\4WD_75ac9589-fd55-435e-85b8-cc964b47d05b.par
+#BlueLink5 Powertrain: 4-Wheel Drive`225 kW, 5 Spd. AT, 4.4 Ratio` 200 kW - 270 kW Powertrains` , Powertrain or dolly`4WD_75ac9589-fd55-435e-85b8-cc964b47d05b
+
+PARSFILE Animator\Vehicles\AniVeh_0f7413b1-43cc-4124-b823-ff29ebb8e86c.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`4A LCF Van, Long Wheelbase` 4A Lead Units` , Animator Shape(s)`AniVeh_0f7413b1-43cc-4124-b823-ff29ebb8e86c
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_0f7413b1-43cc-4124-b823-ff29ebb8e86c.png
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#Four-axle LCF (Low Cab Forward) van (SS_SS) with an 8x4 powertrain, and a 5-speed automatic transmision.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 4 Axles; { 4A Vans } 4A LCF Van (SS_SS), Tandem F&R, 8x4
+#Library : Vehicle: Lead Unit with 4 Axles
+#DataSet : 4A LCF Van (SS_SS), Tandem F&R, 8x4
+#Category: 4A Vans
+#FileID  : Lead4a_04421d3f-c266-4b40-ba38-20f5906d18d4
+#Product : TruckSim 2020.1
+#VehCode SS_SS
+
+END

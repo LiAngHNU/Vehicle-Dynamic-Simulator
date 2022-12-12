@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`4A LCF, Tandem F & R, 8x4`LCF Vans
+#VehCode SS_SS
+#CheckBox0 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_4a\Lead4a_04421d3f-c266-4b40-ba38-20f5906d18d4.par
+#BlueLink0 Vehicle: Lead Unit with 4 Axles`4A LCF Van (SS_SS), Tandem F&R, 8x4` 4A Vans` , Vehicle Type`Lead4a_04421d3f-c266-4b40-ba38-20f5906d18d4
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Box\Box_6503f2cf-1550-4bf2-97be-52903be4ca5e.par
+#BlueLink1 Payload: Box Shape`Conventional/LCF Van Payload (6789 kg)` Box Trucks` , Miscellaneous`Box_6503f2cf-1550-4bf2-97be-52903be4ca5e
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_0f7413b1-43cc-4124-b823-ff29ebb8e86c.png
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { LCF Vans } 4A LCF, Tandem F & R, 8x4
+#Library : Vehicle: Loaded Combination
+#DataSet : 4A LCF, Tandem F & R, 8x4
+#Category: LCF Vans
+#FileID  : VehLoad_e5f950a9-b010-4e6a-92b2-730387b8c749
+#Product : TruckSim 2020.1
+#VehCode SS_SS
+
+END

@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Tire: Lateral Force`Fy; Drive Tire Asymmetric`SAE Drive Tire
+#CheckBox0 0    
+
+#RingCtrl0 2D_SPLINE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Slip angle [Alpha] (deg)
+*3D_ZLabel Lateral tire force Fy (N)
+
+#DiagramTwo0
+*3D_DATA 7, 19 ! columns x rows
+FY_TIRE_CARPET 2D_SPLINE
+0, 6868, 13736, 20604, 27468, 34336, 41204, 54936
+-90, 4945, 8439, 11533, 14317, 16774, 19053, 22917
+-14, 7064, 12055, 16476, 20453, 23963, 27219, 32739
+-12.5, 6739, 12032, 16547, 20497, 24256, 27401, 32743
+-10, 6459, 11187, 15871, 19568, 23398, 25453, 30506
+-8, 5796, 10200, 14644, 18046, 21258, 23874, 27881
+-6, 4617, 8576, 12179, 15071, 17993, 19946, 22641
+-4, 3643, 6539, 9390, 11650, 13549, 14781, 16894
+-2, 2193, 3897, 5431, 6761, 7927, 8616, 9733
+-1, 1339, 2295, 3394, 4043, 4795, 5124, 6076
+0, 222, 423, 454, 463, 645, 1023, 1503
+1, -725, -1334, -2100, -2602, -3016, -2887, -3198
+2, -1477, -2905, -4279, -5538, -6383, -6579, -7242
+4, -2713, -5609, -8016, -10222, -11939, -12855, -14154
+6, -3527, -7357, -10542, -13371, -15885, -17450, -19741
+8, -4706, -8981, -13007, -16343, -19150, -21378, -24981
+10, -5369, -9973, -14234, -17869, -21289, -22962, -27606
+12.5, -5649, -10818, -14910, -18794, -22152, -24910, -29848
+14, -5974, -10840, -14839, -18749, -21854, -24728, -29839
+90, -4182, -7588, -10387, -13124, -15298, -17310, -20887
+ENDTABLE
+
+MU_REF_Y 1.0
+
+
+#EMBEDDED_NOTES
+#This data comes from the SAE Cooperative Research program conducted in the 1990s.
+#
+#It is a direct copy of the Fy data measured for a 295/75|275/80R22.5 drive tire over the slip range of -14 to +14 degrees.
+#
+#Data for the 90 deg slip angle was extrapolated using the rule of thumb that slide coefficients are approximately 70% of the peak values.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire: Lateral Force; { SAE Drive Tire } Fy; Drive Tire Asymmetric
+#Library : Tire: Lateral Force
+#DataSet : Fy; Drive Tire Asymmetric
+#Category: SAE Drive Tire
+#FileID  : TireFy_c4824060-8efb-41f4-bef1-bf1e51416a52
+#Product : TruckSim 2020.1
+#VehCode Tire: Fy
+
+END

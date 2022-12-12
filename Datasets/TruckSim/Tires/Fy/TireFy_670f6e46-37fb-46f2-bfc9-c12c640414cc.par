@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Tire: Lateral Force`Example Fy vs. Alpha`Extended with Camber Details
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. slip angle [Alpha] (deg)
+*3D_ZLabel Abs. lateral tire force Fy (N)
+
+#DiagramTwo0
+*3D_DATA 5, 20 ! columns x rows
+FY_TIRE_CARPET 2D_FROM_ZERO
+0, 2362.81, 4725.61, 7088.42, 9451.23, 11814
+0.5, 408.06, 828.84, 1082.56, 1161.57, 1119.83
+1, 793.69, 1611.87, 2115.59, 2288.15, 2228.22
+1.5, 1134.49, 2303.27, 3049.53, 3344.75, 3313.73
+2, 1413.39, 2868.11, 3845.49, 4301.69, 4362.83
+2.5, 1634.76, 3314.89, 4507.1, 5150.55, 5353.58
+3, 1808.34, 3663, 5048.62, 5888.26, 6261.95
+3.5, 1943.84, 3931.81, 5484.32, 6511.71, 7063.92
+4, 2051.01, 4140.7, 5828.47, 7017.81, 7735.44
+4.5, 2138.28, 4306.72, 6094.99, 7407.44, 8261.09
+5, 2208.93, 4437.59, 6296.46, 7697.34, 8659.86
+5.5, 2264.97, 4538.68, 6445.12, 7908.23, 8959.33
+6, 2308.38, 4615.4, 6553.2, 8060.82, 9187.11
+6.5, 2341.16, 4673.11, 6632.94, 8175.82, 9370.77
+7, 2365.32, 4717.21, 6696.57, 8273.95, 9537.91
+7.5, 2382.57, 4752.46, 6754.2, 8371.39, 9709.06
+8, 2393.61, 4781.1, 6807.37, 8466.25, 9876.5
+8.5, 2398.88, 4804.76, 6855.53, 8552.11, 10025.4
+9, 2398.81, 4825.06, 6898.09, 8622.56, 10141.1
+9.5, 2393.81, 4843.63, 6934.49, 8671.16, 10208.7
+10, 2384.34, 4862.09, 6964.15, 8691.51, 10213.4
+ENDTABLE
+
+MU_REF_Y 0.87
+
+
+LOG_ENTRY Used Dataset: Tire: Lateral Force; { Extended with Camber Details } Example Fy vs. Alpha
+#Library : Tire: Lateral Force
+#DataSet : Example Fy vs. Alpha
+#Category: Extended with Camber Details
+#FileID  : TireFy_670f6e46-37fb-46f2-bfc9-c12c640414cc
+#Product : TruckSim 2020.1
+#VehCode Tire: Fy
+
+END

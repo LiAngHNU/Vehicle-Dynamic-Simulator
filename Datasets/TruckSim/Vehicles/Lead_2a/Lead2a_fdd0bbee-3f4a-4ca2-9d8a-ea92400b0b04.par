@@ -1,0 +1,104 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit with 2 Axles`Pickup, Comp (Hybrid, 100% Regen Brk)`Pickup Trucks w/ Options
+#VehCode I_S
+IUNIT_INCREMENT
+IVEHICLE = IVEHICLE + 1
+symbol_add  <<unit>> 1
+symbol_add  <<vehicle>> 1
+NAXLES 2
+
+IOBJECT_SAVE
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 2
+OPT_PT 2
+#RingCtrl1 3
+#RingCtrl2 4
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_2a\Tire2a_2fa95236-31fc-4aa9-b5c5-fa9cf860ade7.par
+#BlueLink8 Tires: Vehicle Unit with 2 Axles`215/70 R15` TS 2A Touring Tires` , Tires`Tire2a_2fa95236-31fc-4aa9-b5c5-fa9cf860ade7
+
+symbol_push  <<axle>> <<axle_temp>>
+*LX_AXLE_1 0
+*LX_AXLE_2 2780
+
+iaxle 1
+symbol_add  <<axle>> 1
+LX_AXLE 0
+PARSFILE Suspensions\Kin_Indy\KinInd_79bef8c5-741f-4a6a-bf7f-bb199b146159.par
+#BlueLink21 Suspension: Independent System Kinematics`Pickup, Compact - Front` Pickup Trucks` , Kinematics`KinInd_79bef8c5-741f-4a6a-bf7f-bb199b146159
+
+PARSFILE Suspensions\Compliance\CmpInd_f85405f0-8895-4015-bf3a-dc2a13b83e17.par
+#BlueLink23 Suspension: Independent Compliance, Springs, and Dampers`Pickup, Compact - Front` Pickup Trucks` , Suspension compliance`CmpInd_f85405f0-8895-4015-bf3a-dc2a13b83e17
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_74fb227f-49c3-4e30-afb8-fbcb9ea61e5b.par
+#BlueLink11 Brakes: Two-Wheel System`Pickup, Compact w/ ABS - Front` Pickup Trucks and SUVs` , Brakes`Brk2W_74fb227f-49c3-4e30-afb8-fbcb9ea61e5b
+
+PARSFILE Steering\System\StrSys_0efcd8ae-af22-470c-8fcf-d9eea4e1cb93.par
+#BlueLink13 Steering System`Compact: Power, Recirc. Ball` Pickup Trucks` , Steering`StrSys_0efcd8ae-af22-470c-8fcf-d9eea4e1cb93
+
+
+iaxle 2
+symbol_add  <<axle>> 1
+LX_AXLE 2780
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_9137c5b2-21cb-4d3b-8db5-4a8929e1d72d.par
+#BlueLink16 Suspension: Solid Axle System Kinematics`Pickup, Compact - Rear` Pickup Trucks` , Kinematics`KinSA_9137c5b2-21cb-4d3b-8db5-4a8929e1d72d
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_e119dba0-6d87-44be-919c-2dbffa997c72.par
+#BlueLink18 Suspension: Solid Axle Compliance, Springs, and Dampers`Pickup, Compact - Rear` Pickup Trucks` , Suspension compliance`CmpSA_e119dba0-6d87-44be-919c-2dbffa997c72
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_3e8ff819-53fb-4b33-a411-80e62b21bcd3.par
+#BlueLink12 Brakes: Two-Wheel System`No Brakes` ` , Brakes`Brk2W_3e8ff819-53fb-4b33-a411-80e62b21bcd3
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_f3045c2e-c5b7-422d-97f2-e3fc823fc17b.par
+#BlueLink1 Vehicle: Lead Unit Sprung Mass`Pickup, Compact` 2 Axle Pickup Trucks` , Sprung Mass`SprMass_f3045c2e-c5b7-422d-97f2-e3fc823fc17b
+
+PARSFILE Aerodynamics\Aero_Main\Aero_00f35450-1cc5-452d-9136-2a91bb42e9b1.par
+#BlueLink2 Aerodynamics: Basic`Pickup, Compact Aero` Pickup Trucks` , Aerodynamics`Aero_00f35450-1cc5-452d-9136-2a91bb42e9b1
+
+PARSFILE Powertrain\Rwd\RWD_09ce7b4e-e92e-4f16-898a-3f65d0841f79.par
+#BlueLink4 Powertrain: Rear-Wheel Drive`43/40 kW, Hybrid (Hi-Power), 3.905 Ratio` Hybrid: 43/40 kW (Engine + Motor)` , Powertrain or dolly`RWD_09ce7b4e-e92e-4f16-898a-3f65d0841f79
+
+x_length 2780.000000
+PARSFILE Animator\Vehicles\AniVeh_575f5833-e1cd-4937-b837-7da268cbc849.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`Pickup, Compact: Regular Cab` Pickup Trucks` , Animator Shape(s)`AniVeh_575f5833-e1cd-4937-b837-7da268cbc849
+
+PARSFILE Steering\Steer_Column\StrCol_e0919d9c-caa4-4334-bf86-48e4f1695495.par
+#BlueLink6 Steering Column and Assist`Pickup, Compact: Steer Col & Assist Tq` 2A Pickup Trucks and Utility Vehicles` , Steering wheel torque`StrCol_e0919d9c-caa4-4334-bf86-48e4f1695495
+
+symbol_push  <<hitch_x>> -4.065000
+symbol_push  <<hitch_y>> 0.000000
+symbol_push  <<hitch_z>> 0.330000
+PARSFILE Hitches\Joint\Hitch_f3df368e-2b61-4939-8f40-95f979c57785.par
+#BlueLink7 Hitch: Joint Assembly`Ball Hitch` Ball Hitches` , Hitch`Hitch_f3df368e-2b61-4939-8f40-95f979c57785
+
+LX_H 4065
+Y_H 0
+H_H 330
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Lead_2a\Lead2a_fdd0bbee-3f4a-4ca2-9d8a-ea92400b0b04.png
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#Generic compact pickup truck with an SLA front and a Hotchkiss Solid Axle rear suspension.
+#
+#Compact pickup trucks include the Chevrolet Colorado, Nissan Frontier, and Toyota Tacoma.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 2 Axles; { Pickup Trucks w/ Options } Pickup, Comp (Hybrid, 100% Regen Brk)
+#Library : Vehicle: Lead Unit with 2 Axles
+#DataSet : Pickup, Comp (Hybrid, 100% Regen Brk)
+#Category: Pickup Trucks w/ Options
+#FileID  : Lead2a_fdd0bbee-3f4a-4ca2-9d8a-ea92400b0b04
+#Product : TruckSim 2020.1
+#VehCode I_S
+
+END

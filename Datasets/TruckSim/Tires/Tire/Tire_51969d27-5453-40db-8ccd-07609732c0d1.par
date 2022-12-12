@@ -1,0 +1,67 @@
+PARSFILE
+#FullDataName Tire`550 mm Radius`3000 kg Rating
+FZ_REF 30000
+X_LENGTH 560
+Z_LENGTH 560
+Y_LENGTH 350
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 1
+#RingCtrl6 1
+#RingCtrl7 3
+#RingCtrl8 3
+#RingCtrl9 1
+OPT_TIRE_LAG_KAPPA 1
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\ShpGrp_1efb83f8-9f83-41ef-8f0a-cc0bfc96dabf.par
+#BlueLink4 Animator: Shape Assembly`HD Utility Vehicle Tire` Tires` , Animator`ShpGrp_1efb83f8-9f83-41ef-8f0a-cc0bfc96dabf
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 350
+RRE 550
+R0 560
+FZ_TIRE_COEFFICIENT 400
+FZ_MAX 1000000
+M_TIRE 132
+IT 5.9
+IT_XXZZ 0
+L_RELAX_X_CONSTANT 300
+L_RELAX_Y_CONSTANT 600
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.0041
+RR_V 0.0000256
+L_CONTACT_X_CONSTANT 0
+L_CONTACT_Y_CONSTANT 0
+RR_FX 1
+OPT_TIRE_COMB 0
+PARSFILE Tires\Mz\TireMz_4b6c3820-0c67-4247-b770-53d2a0661282.par
+#BlueLink0 Tire: Aligning Moment`Mz: 3000 kg Load Rating` Example Mz Data` , Aligning Moment`TireMz_4b6c3820-0c67-4247-b770-53d2a0661282
+
+PARSFILE Tires\Fy\TireFy_b8272e0f-2e5f-4858-a7d6-acdddd5b2c55.par
+#BlueLink1 Tire: Lateral Force`Fy: 3000 kg Load Rating` Example Fy Data` , Lateral Force`TireFy_b8272e0f-2e5f-4858-a7d6-acdddd5b2c55
+
+PARSFILE Tires\Fx\TireFx_12dc98ca-0592-4e7b-8c8f-4751ecbba2d8.par
+#BlueLink2 Tire: Longitudinal Force`Fx: 3000 kg Load Rating` Example Fx Data` , Longitudinal Force`TireFx_12dc98ca-0592-4e7b-8c8f-4751ecbba2d8
+
+PARSFILE Tires\Camber_Thrust\CamStiff_5caa5ece-4775-4ed6-aede-93fa40f66ad8.par
+#BlueLink3 Tire: Camber Thrust Coefficient`Linear Coefficient: -0.01` ` , Camber Thrust`CamStiff_5caa5ece-4775-4ed6-aede-93fa40f66ad8
+
+
+
+LOG_ENTRY Used Dataset: Tire; { 3000 kg Rating } 550 mm Radius
+#Library : Tire
+#DataSet : 550 mm Radius
+#Category: 3000 kg Rating
+#FileID  : Tire_51969d27-5453-40db-8ccd-07609732c0d1
+#Product : TruckSim 2020.1
+#VehCode Tire
+
+END

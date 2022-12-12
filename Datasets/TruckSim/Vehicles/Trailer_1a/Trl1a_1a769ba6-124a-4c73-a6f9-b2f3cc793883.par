@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName Vehicle: Trailer with 1 Axle`Utility Trailer (i)`Rental / Utility Trailers
+#VehCode I
+IUNIT_INCREMENT
+symbol_add  <<unit>> 1
+NAXLES 1
+
+IOBJECT_SAVE
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox4 0    
+
+#RingCtrl0 3
+#RingCtrl1 0
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_eac7b85d-59a4-4014-a054-0ff5dac7e0b4.par
+#BlueLink9 Tire`Pacejka 5.2, 175/70 R13` Pacejka 5.2` , Tires`Tire_eac7b85d-59a4-4014-a054-0ff5dac7e0b4
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_eac7b85d-59a4-4014-a054-0ff5dac7e0b4.par
+#BlueLink999 Tire`Pacejka 5.2, 175/70 R13` Pacejka 5.2` , Tires`Tire_eac7b85d-59a4-4014-a054-0ff5dac7e0b4
+
+
+iaxle 1
+OPT_STEER_EXT 1
+LX_AXLE 2600
+PARSFILE Suspensions\Kin_Indy\KinInd_eda1a0fd-eb12-4550-82e8-82ec14467fe3.par
+#BlueLink17 Suspension: Independent System Kinematics`Rental Trailer` Trailers` , Kinematics`KinInd_eda1a0fd-eb12-4550-82e8-82ec14467fe3
+
+PARSFILE Suspensions\Compliance\CmpInd_5f61da4c-d5bd-496a-9dda-7b6f5846609a.par
+#BlueLink18 Suspension: Independent Compliance, Springs, and Dampers`Trailer Axle` Trailer Axles` , Suspension compliance`CmpInd_5f61da4c-d5bd-496a-9dda-7b6f5846609a
+
+PARSFILE Brakes\2W_System\Brk2W_3e8ff819-53fb-4b33-a411-80e62b21bcd3.par
+#BlueLink5 Brakes: Two-Wheel System`No Brakes` ` , Brakes`Brk2W_3e8ff819-53fb-4b33-a411-80e62b21bcd3
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 2600
+PARSFILE Vehicles\Trl_Sprung_Mass\TrlSprM_a10fdeb0-5ac8-49b6-8ed0-a777334a49ab.par
+#BlueLink1 Vehicle: Trailer Sprung Mass`1A Trailer (Small Rental)` 1A Trailer` , Sprung mass`TrlSprM_a10fdeb0-5ac8-49b6-8ed0-a777334a49ab
+
+PARSFILE Animator\Vehicles\AniVeh_9499663a-5125-4197-b4ca-29c104a8fed7.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`1A Small Rental Trailer` Trailers: 1-axle` , Animator Shape(s)`AniVeh_9499663a-5125-4197-b4ca-29c104a8fed7
+
+PARSFILE Aerodynamics\Aero_Main\Aero_2dcf0dd6-b552-482c-b346-939b627511c9.par
+#BlueLink2 Aerodynamics: Basic`No Aerodynamics` ` , Aerodynamics`Aero_2dcf0dd6-b552-482c-b346-939b627511c9
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_9499663a-5125-4197-b4ca-29c104a8fed7.png
+IOBJECT_RESTORE
+
+LOG_ENTRY Used Dataset: Vehicle: Trailer with 1 Axle; { Rental / Utility Trailers } Utility Trailer (i)
+#Library : Vehicle: Trailer with 1 Axle
+#DataSet : Utility Trailer (i)
+#Category: Rental / Utility Trailers
+#FileID  : Trl1a_1a769ba6-124a-4c73-a6f9-b2f3cc793883
+#Product : TruckSim 2020.1
+#VehCode I
+
+END

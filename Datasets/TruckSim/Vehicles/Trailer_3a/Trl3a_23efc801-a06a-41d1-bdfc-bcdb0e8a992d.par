@@ -1,0 +1,103 @@
+PARSFILE
+#FullDataName Vehicle: Trailer with 3 Axles`3A Heavy Hauler: Load Trailer`Heavy Hauler Trailers
+#VehCode SSS
+IUNIT_INCREMENT
+symbol_add  <<unit>> 1
+NAXLES 3
+
+IOBJECT_SAVE
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 0
+*LX_AXLE_1 11430
+*LX_AXLE_2 12930
+*LX_AXLE_3 14430
+*R_TANDEM_1 0.45
+*CFZ_MY_TAND_1 0
+*R_TANDEM_2 0.45
+*CFZ_MY_TAND_2 0
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_3a\Tire3a_9faa0195-9128-444c-8350-950c3b1f826b.par
+#BlueLink14 Tires: Vehicle Unit with 3 Axles`3000 kg Tridem, Duals` 3A Trailer and Dolly Tires` , Tires`Tire3a_9faa0195-9128-444c-8350-950c3b1f826b
+
+symbol_push  <<axle>> <<axle_temp>>
+
+iaxle 1
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 11430
+PARSFILE Suspensions\Kin_Solid\KinSA_47edd369-19f2-4fb4-9a62-152af4e7b369.par
+#BlueLink17 Suspension: Solid Axle System Kinematics`18t Trailer, Dual Wheels` Trailer Axle` , Kinematics`KinSA_47edd369-19f2-4fb4-9a62-152af4e7b369
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_b2468e94-f60b-4871-8b89-c86bbdde7c38.par
+#BlueLink20 Suspension: Solid Axle Compliance, Springs, and Dampers`18t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_b2468e94-f60b-4871-8b89-c86bbdde7c38
+
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink5 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+iaxle 2
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 12930
+PARSFILE Suspensions\Kin_Solid\KinSA_47edd369-19f2-4fb4-9a62-152af4e7b369.par
+#BlueLink18 Suspension: Solid Axle System Kinematics`18t Trailer, Dual Wheels` Trailer Axle` , Kinematics`KinSA_47edd369-19f2-4fb4-9a62-152af4e7b369
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_b2468e94-f60b-4871-8b89-c86bbdde7c38.par
+#BlueLink21 Suspension: Solid Axle Compliance, Springs, and Dampers`18t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_b2468e94-f60b-4871-8b89-c86bbdde7c38
+
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink8 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+iaxle 3
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 14430
+PARSFILE Suspensions\Kin_Solid\KinSA_47edd369-19f2-4fb4-9a62-152af4e7b369.par
+#BlueLink19 Suspension: Solid Axle System Kinematics`18t Trailer, Dual Wheels` Trailer Axle` , Kinematics`KinSA_47edd369-19f2-4fb4-9a62-152af4e7b369
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_b2468e94-f60b-4871-8b89-c86bbdde7c38.par
+#BlueLink22 Suspension: Solid Axle Compliance, Springs, and Dampers`18t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_b2468e94-f60b-4871-8b89-c86bbdde7c38
+
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink11 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+ITANDEM 1
+R_TANDEM 0.45
+CFZ_MY_TAND 0
+ITANDEM 2
+R_TANDEM 0.45
+CFZ_MY_TAND 0
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 14430.000000
+PARSFILE Vehicles\Trl_Sprung_Mass\TrlSprM_85096285-33ff-4f87-91df-5d4ca3a4852b.par
+#BlueLink1 Vehicle: Trailer Sprung Mass`3A Heavy Hauler: Load Trailer` 3A Trailer` , Sprung Mass`TrlSprM_85096285-33ff-4f87-91df-5d4ca3a4852b
+
+PARSFILE Animator\Vehicles\AniVeh_6c1b124d-d322-4e4a-9ace-6d63e389e858.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`3A Heavy Hauler: Load Trailer` Trailers: 3-axle` , Animator Shape(s)`AniVeh_6c1b124d-d322-4e4a-9ace-6d63e389e858
+
+PARSFILE Aerodynamics\Aero_Main\Aero_2dcf0dd6-b552-482c-b346-939b627511c9.par
+#BlueLink2 Aerodynamics: Basic`No Aerodynamics` ` , Aerodynamics`Aero_2dcf0dd6-b552-482c-b346-939b627511c9
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6c1b124d-d322-4e4a-9ace-6d63e389e858.png
+IOBJECT_RESTORE
+
+LOG_ENTRY Used Dataset: Vehicle: Trailer with 3 Axles; { Heavy Hauler Trailers } 3A Heavy Hauler: Load Trailer
+#Library : Vehicle: Trailer with 3 Axles
+#DataSet : 3A Heavy Hauler: Load Trailer
+#Category: Heavy Hauler Trailers
+#FileID  : Trl3a_23efc801-a06a-41d1-bdfc-bcdb0e8a992d
+#Product : TruckSim 2020.1
+#VehCode SSS
+
+END

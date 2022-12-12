@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Tire: Longitudinal Force`Normalized 1D (17-pt spline)`Normalized Tires
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 COEFFICIENT
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+FX_TIRE_TABLE SPLINE
+-1, -0.69291
+-0.5, -0.85523
+-0.2, -0.99919
+-0.175, -0.99889
+-0.15, -0.98846
+-0.125, -0.96085
+-0.075, -0.79844
+-0.05, -0.61839
+0, 0
+0.05, 0.61839
+0.075, 0.79844
+0.125, 0.96085
+0.15, 0.98846
+0.175, 0.99889
+0.2, 0.99919
+0.5, 0.85523
+1, 0.69291
+ENDTABLE
+FX_TIRE_FZ_COEFFICIENT 1
+*SCALAR2 1
+MU_REF_X 1.0
+
+
+#EMBEDDED_NOTES
+#This normalized data was made by taking the table for the Fx - 3000 kg Load Rated Tire and dividing by the load rating of 29430 N.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire: Longitudinal Force; { Normalized Tires } Normalized 1D (17-pt spline)
+#Library : Tire: Longitudinal Force
+#DataSet : Normalized 1D (17-pt spline)
+#Category: Normalized Tires
+#FileID  : TireFx_9ce583de-783f-40f9-882a-948b330a048c
+#Product : TruckSim 2020.1
+#VehCode Tire: Fx
+
+END

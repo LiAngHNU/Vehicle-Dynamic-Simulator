@@ -1,0 +1,122 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 3 Axles`3500kg Steer, 3500kg D/T, Narrow`3A Steer / Drive Tires
+
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox7 1    
+#CheckBox8 1    
+
+*LDUAL_2 350
+*LDUAL_3 350
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_549c365f-005a-442c-8076-8683d62b2108.par
+#BlueLink1 Tire`528 mm Radius (Steer)` 3500 kg Rating` , Tires`Tire_549c365f-005a-442c-8076-8683d62b2108
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_549c365f-005a-442c-8076-8683d62b2108.par
+#BlueLink999 Tire`528 mm Radius (Steer)` 3500 kg Rating` , Tires`Tire_549c365f-005a-442c-8076-8683d62b2108
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 350
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.175000
+PARSFILE Tires\Tire\Tire_2be17cb3-d341-4c62-a8ec-dac292a691ed.par
+#BlueLink5 Tire`528 mm Radius (Drive)` 3500 kg Rating` , Tires`Tire_2be17cb3-d341-4c62-a8ec-dac292a691ed
+
+itire 2
+symbol_push  <<tire>> R<<axle>>o
+STORE_WHEEL_OFFSET 0.175000
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+PARSFILE Tires\Tire\Tire_2be17cb3-d341-4c62-a8ec-dac292a691ed.par
+#BlueLink999 Tire`528 mm Radius (Drive)` 3500 kg Rating` , Tires`Tire_2be17cb3-d341-4c62-a8ec-dac292a691ed
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.175000
+PARSFILE Tires\Tire\Tire_2be17cb3-d341-4c62-a8ec-dac292a691ed.par
+#BlueLink999 Tire`528 mm Radius (Drive)` 3500 kg Rating` , Tires`Tire_2be17cb3-d341-4c62-a8ec-dac292a691ed
+
+itire 2
+symbol_push  <<tire>> L<<axle>>o
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+STORE_WHEEL_OFFSET 0.175000
+PARSFILE Tires\Tire\Tire_2be17cb3-d341-4c62-a8ec-dac292a691ed.par
+#BlueLink999 Tire`528 mm Radius (Drive)` 3500 kg Rating` , Tires`Tire_2be17cb3-d341-4c62-a8ec-dac292a691ed
+
+symbol_add  <<axle>> 1
+
+iaxle 3
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 350
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.175000
+PARSFILE Tires\Tire\Tire_2be17cb3-d341-4c62-a8ec-dac292a691ed.par
+#BlueLink9 Tire`528 mm Radius (Drive)` 3500 kg Rating` , Tires`Tire_2be17cb3-d341-4c62-a8ec-dac292a691ed
+
+itire 2
+symbol_push  <<tire>> R<<axle>>o
+STORE_WHEEL_OFFSET 0.175000
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+PARSFILE Tires\Tire\Tire_2be17cb3-d341-4c62-a8ec-dac292a691ed.par
+#BlueLink999 Tire`528 mm Radius (Drive)` 3500 kg Rating` , Tires`Tire_2be17cb3-d341-4c62-a8ec-dac292a691ed
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.175000
+PARSFILE Tires\Tire\Tire_2be17cb3-d341-4c62-a8ec-dac292a691ed.par
+#BlueLink999 Tire`528 mm Radius (Drive)` 3500 kg Rating` , Tires`Tire_2be17cb3-d341-4c62-a8ec-dac292a691ed
+
+itire 2
+symbol_push  <<tire>> L<<axle>>o
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+STORE_WHEEL_OFFSET 0.175000
+PARSFILE Tires\Tire\Tire_2be17cb3-d341-4c62-a8ec-dac292a691ed.par
+#BlueLink999 Tire`528 mm Radius (Drive)` 3500 kg Rating` , Tires`Tire_2be17cb3-d341-4c62-a8ec-dac292a691ed
+
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 3 Axles; { 3A Steer / Drive Tires } 3500kg Steer, 3500kg D/T, Narrow
+#Library : Tires: Vehicle Unit with 3 Axles
+#DataSet : 3500kg Steer, 3500kg D/T, Narrow
+#Category: 3A Steer / Drive Tires
+#FileID  : Tire3a_22b5c487-6bfe-444f-b229-04c20c61dc7f
+#Product : TruckSim 2020.1
+#VehCode 3a Tire Group
+
+END

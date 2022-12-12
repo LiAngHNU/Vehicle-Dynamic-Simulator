@@ -1,0 +1,98 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit with 2 Axles`2A CiDi Liuqi H5`* * * CiDi Trucks
+#VehCode F_S_S
+IUNIT_INCREMENT
+IVEHICLE = IVEHICLE + 1
+symbol_add  <<unit>> 1
+symbol_add  <<vehicle>> 1
+NAXLES 2
+
+IOBJECT_SAVE
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 3
+OPT_PT 3
+#RingCtrl1 1
+#RingCtrl2 4
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_2a\Tire2a_1e7626ca-509e-49b8-983f-bec25b5573d1.par
+#BlueLink8 Tires: Vehicle Unit with 2 Axles`3000 kg Steer, 3000kg Drive (510 mm)` TS 2A Steer / Drive Tires: Internal Table Model` , Tires`Tire2a_1e7626ca-509e-49b8-983f-bec25b5573d1
+
+symbol_push  <<axle>> <<axle_temp>>
+*LX_AXLE_1 0
+*LX_AXLE_2 7100
+R_REAR_DRIVE_SC 1
+
+iaxle 1
+symbol_add  <<axle>> 1
+LX_AXLE 0
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_64c30f3c-3ccd-4380-a6bc-d537f8dd7bc1.par
+#BlueLink15 Suspension: Solid Axle System Kinematics`5.5t Steer, Single Wheel - Kinematics` Steer Axle` , Kinematics`KinSA_64c30f3c-3ccd-4380-a6bc-d537f8dd7bc1
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_f62bed0b-a13e-4400-8748-cc0cd32fc5ff.par
+#BlueLink17 Suspension: Solid Axle Compliance, Springs, and Dampers`6t Air: +250 mm, -250 mm Travel` Air Springs` , Suspension compliance`CmpSA_f62bed0b-a13e-4400-8748-cc0cd32fc5ff
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_b80a513c-6cf0-46f3-ad96-9beeff25f2ec.par
+#BlueLink11 Brakes: Two-Wheel System`6 kN-m Capacity, Hydraulic (2 ch. ABS)` Hydraulic Brakes` , Brakes`Brk2W_b80a513c-6cf0-46f3-ad96-9beeff25f2ec
+
+PARSFILE Steering\System\StrSys_f055b7fa-5320-4253-a0c9-99a8ad7d1f42.par
+#BlueLink13 Steering System`Short (4 m) Wheelbase` Medium - Heavy Duty Steering` , Steering`StrSys_f055b7fa-5320-4253-a0c9-99a8ad7d1f42
+
+
+iaxle 2
+symbol_add  <<axle>> 1
+LX_AXLE 7100
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_372fbdd1-d21e-4703-8f83-8a3f1b2b6572.par
+#BlueLink16 Suspension: Solid Axle System Kinematics`8.5t Drive, Dual Wheels` Drive Axle` , Kinematics`KinSA_372fbdd1-d21e-4703-8f83-8a3f1b2b6572
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_f62bed0b-a13e-4400-8748-cc0cd32fc5ff.par
+#BlueLink18 Suspension: Solid Axle Compliance, Springs, and Dampers`6t Air: +250 mm, -250 mm Travel` Air Springs` , Suspension compliance`CmpSA_f62bed0b-a13e-4400-8748-cc0cd32fc5ff
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_53f5261c-b48c-4b15-81d8-cbaffe9ac730.par
+#BlueLink12 Brakes: Two-Wheel System`10 kN-m Capacity, Hydraulic (2 ch. ABS)` Hydraulic Brakes` , Brakes`Brk2W_53f5261c-b48c-4b15-81d8-cbaffe9ac730
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_f9c88f46-08b5-4b3e-88fb-4910eb0bba67.par
+#BlueLink1 Vehicle: Lead Unit Sprung Mass`2A CiDi Liuqi H5` * * * CiDi Trucks` , Sprung Mass`SprMass_f9c88f46-08b5-4b3e-88fb-4910eb0bba67
+
+PARSFILE Aerodynamics\Aero_Main\Aero_71cecaf1-a17c-4d6e-b4ba-b32f1ea6d168.par
+#BlueLink2 Aerodynamics: Basic`Cab-Forward Truck, 7 m Ref.` Cab-Over and Cab-Forward Tractors` , Aerodynamics`Aero_71cecaf1-a17c-4d6e-b4ba-b32f1ea6d168
+
+PARSFILE Powertrain\4wd\4WD_3d8b6f24-47ed-42e7-8462-707a56c27aeb.par
+#BlueLink5 Powertrain: 4-Wheel Drive`300 kW, 10 Spd. MT, 4WD (LSD, TBR 3.0)` 300 kW Powertrains` , Powertrain or dolly`4WD_3d8b6f24-47ed-42e7-8462-707a56c27aeb
+
+x_length 7100.000000
+PARSFILE Animator\Vehicles\AniVeh_31fc0047-d34e-45e4-bb66-f5846b35d2b2.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`CiDi General Frame (Long)` * * * CiDi Truck Frames` , Animator Shape(s)`AniVeh_31fc0047-d34e-45e4-bb66-f5846b35d2b2
+
+PARSFILE Steering\Str_Wheel_Tq\TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6.par
+#BlueLink6 Steering Wheel Torque`Linear: 1/25 (Typical)` ` , Steering wheel torque`TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6
+
+*IMAGE_FIT_MODE 1
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Lead_2a\Lead2a_1c003d93-e26a-41ba-82e6-5258fe5203f6.png
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#Two axle LCF (Low Cab Forward) van (S_S) with a 4x2 powertrain and a 7-speed manual transmission.
+#
+#This truck uses Frame Torsional Flexibility and a Suspended Cab.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 2 Axles; { * * * CiDi Trucks } 2A CiDi Liuqi H5
+#Library : Vehicle: Lead Unit with 2 Axles
+#DataSet : 2A CiDi Liuqi H5
+#Category: * * * CiDi Trucks
+#FileID  : Lead2a_1c003d93-e26a-41ba-82e6-5258fe5203f6
+#Product : TruckSim 2020.1
+#VehCode F_S_S
+
+END

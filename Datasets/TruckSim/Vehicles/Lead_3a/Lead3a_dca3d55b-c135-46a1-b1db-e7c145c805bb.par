@@ -1,0 +1,126 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit with 3 Axles`3A Dump Truck`PBS Dump Truck
+#VehCode S_SS
+IUNIT_INCREMENT
+IVEHICLE = IVEHICLE + 1
+symbol_add  <<unit>> 1
+symbol_add  <<vehicle>> 1
+NAXLES 3
+ITANDEM 1
+
+IOBJECT_SAVE
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 3
+OPT_PT 3
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 4
+#RingCtrl4 4
+*LX_AXLE_1 0
+*LX_AXLE_2 4500
+*LX_AXLE_3 5770
+R_TANDEM 0.5
+CFZ_MY_TAND 0
+R_TAND_TRAIL_STATIC 0.5
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_3a\Tire3a_22b5c487-6bfe-444f-b229-04c20c61dc7f.par
+#BlueLink8 Tires: Vehicle Unit with 3 Axles`3500kg Steer, 3500kg D/T, Narrow` 3A Steer / Drive Tires` , Tires`Tire3a_22b5c487-6bfe-444f-b229-04c20c61dc7f
+
+symbol_push  <<axle>> <<axle_temp>>
+
+iaxle 1
+symbol_add  <<axle>> 1
+LX_AXLE 0
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_1441d26b-1be8-4a2f-9bc9-06aa0343275a.par
+#BlueLink18 Suspension: Solid Axle System Kinematics`7t Steer, Single Wheel - Kinematics` Steer Axle` , Kinematics`KinSA_1441d26b-1be8-4a2f-9bc9-06aa0343275a
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_19792c4d-0fca-43b5-8456-dba9ee7def2f.par
+#BlueLink21 Suspension: Solid Axle Compliance, Springs, and Dampers`7t Leaf: +150 mm, -150 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_19792c4d-0fca-43b5-8456-dba9ee7def2f
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363.par
+#BlueLink12 Brakes: Two-Wheel System`7.5 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363
+
+PARSFILE Steering\System\StrSys_ea97afb5-5373-4e56-92fd-474d9920f375.par
+#BlueLink15 Steering System`Long (6 m) Wheelbase` Medium - Heavy Duty Steering` , Steering`StrSys_ea97afb5-5373-4e56-92fd-474d9920f375
+
+
+iaxle 2
+symbol_add  <<axle>> 1
+LX_AXLE 4500
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_03b5a13b-10b3-4c1c-8c66-4029b4d797cd.par
+#BlueLink19 Suspension: Solid Axle System Kinematics`18t Drive, Dual Wheels - Kinematics` Drive Axle` , Kinematics`KinSA_03b5a13b-10b3-4c1c-8c66-4029b4d797cd
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_b2468e94-f60b-4871-8b89-c86bbdde7c38.par
+#BlueLink22 Suspension: Solid Axle Compliance, Springs, and Dampers`18t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_b2468e94-f60b-4871-8b89-c86bbdde7c38
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink13 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+iaxle 3
+symbol_add  <<axle>> 1
+LX_AXLE 5770
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_03b5a13b-10b3-4c1c-8c66-4029b4d797cd.par
+#BlueLink20 Suspension: Solid Axle System Kinematics`18t Drive, Dual Wheels - Kinematics` Drive Axle` , Kinematics`KinSA_03b5a13b-10b3-4c1c-8c66-4029b4d797cd
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_b2468e94-f60b-4871-8b89-c86bbdde7c38.par
+#BlueLink23 Suspension: Solid Axle Compliance, Springs, and Dampers`18t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_b2468e94-f60b-4871-8b89-c86bbdde7c38
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink14 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 5770.000000
+PARSFILE Vehicles\Sprung_Mass\SprMass_93a3d6a8-a1c8-46b2-89f2-686f1bc13ca2.par
+#BlueLink1 Vehicle: Lead Unit Sprung Mass`3A Sleeper Cab` Tractors` , Sprung Mass`SprMass_93a3d6a8-a1c8-46b2-89f2-686f1bc13ca2
+
+PARSFILE Aerodynamics\Aero_Main\Aero_ad19711c-1936-499a-b1de-fc8dcd7243ec.par
+#BlueLink2 Aerodynamics: Basic`Conv. Cab w/ Fairings, 5 m Ref.` Conventional Cab` , Aerodynamics`Aero_ad19711c-1936-499a-b1de-fc8dcd7243ec
+
+PARSFILE Steering\Str_Wheel_Tq\TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6.par
+#BlueLink6 Steering Wheel Torque`Linear: 1/25 (Typical)` ` , Steering wheel torque`TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6
+
+PARSFILE Powertrain\4wd\4WD_aed556de-6deb-4a66-9bd5-da7b1c840ecf.par
+#BlueLink5 Powertrain: 4-Wheel Drive`330 kW, 18 Spd. MT, 4WD` 330 kW Powertrains` , Powertrain or dolly`4WD_aed556de-6deb-4a66-9bd5-da7b1c840ecf
+
+PARSFILE Animator\Vehicles\AniVeh_5e99b800-fddc-4e1b-a23d-d8a55608d47a.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`3A Dump Truck` 3A Lead Units` , Animator Shape(s)`AniVeh_5e99b800-fddc-4e1b-a23d-d8a55608d47a
+
+symbol_push  <<hitch_x>> -7.400000
+symbol_push  <<hitch_y>> 0.000000
+symbol_push  <<hitch_z>> 0.850000
+PARSFILE Hitches\Joint\Hitch_e0ab8aa7-40de-44fd-9edd-a7f8ac789024.par
+#BlueLink7 Hitch: Joint Assembly`Pintle Hitch` Pintle Hitches` , Hitch`Hitch_e0ab8aa7-40de-44fd-9edd-a7f8ac789024
+
+LX_H 7400
+Y_H 0
+H_H 850
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_5e99b800-fddc-4e1b-a23d-d8a55608d47a.png
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#Three-axle dump truck (S_SS) with a 6x4 powertrain and an 18-speed manual transmission.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 3 Axles; { PBS Dump Truck } 3A Dump Truck
+#Library : Vehicle: Lead Unit with 3 Axles
+#DataSet : 3A Dump Truck
+#Category: PBS Dump Truck
+#FileID  : Lead3a_dca3d55b-c135-46a1-b1db-e7c145c805bb
+#Product : TruckSim 2020.1
+#VehCode S_SS
+
+END

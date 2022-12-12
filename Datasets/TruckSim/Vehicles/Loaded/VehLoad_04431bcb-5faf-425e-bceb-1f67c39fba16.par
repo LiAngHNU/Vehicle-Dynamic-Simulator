@@ -1,0 +1,53 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`DRW Pickup w/ Hybrid AWD`Pickup Trucks
+#VehCode I_S
+#CheckBox0 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_2a\Lead2a_99b95494-77c8-47bf-9aae-a1df508d7746.par
+#BlueLink0 Vehicle: Lead Unit with 2 Axles`Pickup, Crew Cab DRW (2WD)` Pickup Trucks w/ Options` , Vehicle Type`Lead2a_99b95494-77c8-47bf-9aae-a1df508d7746
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Box\Box_85583e12-be54-431d-834c-f72c226d35f9.par
+#BlueLink1 Payload: Box Shape`Hybrid Battery` ` , Miscellaneous`Box_85583e12-be54-431d-834c-f72c226d35f9
+
+PARSFILE Generic\VS_commands\GenVS_15ca772f-c2f9-405f-9d33-b3a7b1194238.par
+#BlueLink7 Generic VS Commands`Front In-Wheel Motors` Vehicle Model Extensions, Powertrain` , Miscellaneous`GenVS_15ca772f-c2f9-405f-9d33-b3a7b1194238
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ee189bc-4102-46cf-a6ee-046ab79da53b.png
+
+#EMBEDDED_NOTES
+#Pikcup Truck with a single payload representing the batteries of a hybrid-electric vehicle.
+#
+#A Generic VS Commands dataset is used to represent the effects of rear in-wheel motors.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { Pickup Trucks } DRW Pickup w/ Hybrid AWD
+#Library : Vehicle: Loaded Combination
+#DataSet : DRW Pickup w/ Hybrid AWD
+#Category: Pickup Trucks
+#FileID  : VehLoad_04431bcb-5faf-425e-bceb-1f67c39fba16
+#Product : TruckSim 2020.1
+#VehCode I_S
+
+END

@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Tire: Lateral Force`Fy: Drive Tire Symmetric`SAE Drive Tire
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. slip angle [Alpha] (deg)
+*3D_ZLabel Abs. lateral tire force Fy (N)
+
+#DiagramTwo0
+*3D_DATA 7, 9 ! columns x rows
+FY_TIRE_CARPET 2D_FROM_ZERO
+0, 6868, 13736, 20604, 27468, 34336, 41204, 54936
+1, 1032, 1814.5, 2747, 3322.5, 3905.5, 4005.5, 4637
+2, 1835, 3401, 4855, 6149.5, 7155, 7597.5, 8487.5
+4, 3178, 6074, 8703, 10936, 12744, 13818, 15524
+6, 4072, 7966.5, 11360.5, 14221, 16939, 18698, 21191
+8, 5251, 9590.5, 13825.5, 17194.5, 20204, 22626, 26431
+10, 5914, 10580, 15052.5, 18718.5, 22343.5, 24207.5, 29056
+12.5, 6194, 11425, 15728.5, 19645.5, 23204, 26155.5, 31295.5
+14, 6519, 11447.5, 15657.5, 19601, 22908.5, 25973.5, 31289
+90, 4563.3, 8013.25, 10960.25, 13720.7, 16035.95, 18181.45, 21902
+ENDTABLE
+
+MU_REF_Y 0.8
+
+
+#EMBEDDED_NOTES
+#This data comes from the SAE Cooperative Research program conducted in the 1990s.
+#
+#It is a direct copy of the Fy data measured for a 295/75|275/80R22.5 drive tire after removing asymmetries (i.e., adjusting for zero offset and averaging tests results for the left and right directions).
+#
+#Data for the 90 deg slip angle was extrapolated using the rule of thumb that slide coefficients are approximately 70% of the peak values.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire: Lateral Force; { SAE Drive Tire } Fy: Drive Tire Symmetric
+#Library : Tire: Lateral Force
+#DataSet : Fy: Drive Tire Symmetric
+#Category: SAE Drive Tire
+#FileID  : TireFy_97aa7f3c-7063-4c16-8664-d468aa6af3be
+#Product : TruckSim 2020.1
+#VehCode Tire: Fy
+
+END

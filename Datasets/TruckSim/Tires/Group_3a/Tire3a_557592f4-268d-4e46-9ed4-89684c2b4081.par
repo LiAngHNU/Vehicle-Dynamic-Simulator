@@ -1,0 +1,93 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 3 Axles`Gooseneck Trailer (350mm)`3A Trailer and Dolly Tires
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+
+*LDUAL_1 310
+*LDUAL_2 310
+*LDUAL_3 310
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_cde306e5-2a08-432e-af45-8d11344c5b50.par
+#BlueLink1 Tire`350 mm Radius (Trailer)` 2000 kg Rating` , Tires`Tire_cde306e5-2a08-432e-af45-8d11344c5b50
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_cde306e5-2a08-432e-af45-8d11344c5b50.par
+#BlueLink999 Tire`350 mm Radius (Trailer)` 2000 kg Rating` , Tires`Tire_cde306e5-2a08-432e-af45-8d11344c5b50
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_cde306e5-2a08-432e-af45-8d11344c5b50.par
+#BlueLink5 Tire`350 mm Radius (Trailer)` 2000 kg Rating` , Tires`Tire_cde306e5-2a08-432e-af45-8d11344c5b50
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_cde306e5-2a08-432e-af45-8d11344c5b50.par
+#BlueLink999 Tire`350 mm Radius (Trailer)` 2000 kg Rating` , Tires`Tire_cde306e5-2a08-432e-af45-8d11344c5b50
+
+symbol_add  <<axle>> 1
+
+iaxle 3
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_cde306e5-2a08-432e-af45-8d11344c5b50.par
+#BlueLink9 Tire`350 mm Radius (Trailer)` 2000 kg Rating` , Tires`Tire_cde306e5-2a08-432e-af45-8d11344c5b50
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_cde306e5-2a08-432e-af45-8d11344c5b50.par
+#BlueLink999 Tire`350 mm Radius (Trailer)` 2000 kg Rating` , Tires`Tire_cde306e5-2a08-432e-af45-8d11344c5b50
+
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 3 Axles; { 3A Trailer and Dolly Tires } Gooseneck Trailer (350mm)
+#Library : Tires: Vehicle Unit with 3 Axles
+#DataSet : Gooseneck Trailer (350mm)
+#Category: 3A Trailer and Dolly Tires
+#FileID  : Tire3a_557592f4-268d-4e46-9ed4-89684c2b4081
+#Product : TruckSim 2020.1
+#VehCode 3a Tire Group
+
+END

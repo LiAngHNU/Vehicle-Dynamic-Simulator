@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`3A Conv. Truck w/ Rear Lift Axle`Conventional Vans
+#VehCode S_SS
+#CheckBox0 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_3a\Lead3a_77f7a020-a752-4698-af81-cad621d6b8fc.par
+#BlueLink0 Vehicle: Lead Unit with 3 Axles`Conv Van (Rear Lift Axle)` 3A Conventional Van` , Vehicle Type`Lead3a_77f7a020-a752-4698-af81-cad621d6b8fc
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Box\Box_6503f2cf-1550-4bf2-97be-52903be4ca5e.par
+#BlueLink1 Payload: Box Shape`Conventional/LCF Van Payload (6789 kg)` Box Trucks` , Miscellaneous`Box_6503f2cf-1550-4bf2-97be-52903be4ca5e
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_c2a8544e-c310-4e45-a92d-e030eba0c4ea.png
+
+#EMBEDDED_NOTES
+#Three axle conventional truck with a rear lift axle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { Conventional Vans } 3A Conv. Truck w/ Rear Lift Axle
+#Library : Vehicle: Loaded Combination
+#DataSet : 3A Conv. Truck w/ Rear Lift Axle
+#Category: Conventional Vans
+#FileID  : VehLoad_a2329db7-c004-496f-a59e-01a0e7ac15f4
+#Product : TruckSim 2020.1
+#VehCode S_SS
+
+END

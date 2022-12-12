@@ -1,0 +1,53 @@
+PARSFILE
+#FullDataName Tire: Camber Thrust Coefficient`265/75 R16`Touring Tires
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RadioCtrl0 0    
+
+#DiagramOne0
+KGAMMA_TABLE SPLINE
+0, 0
+784.532, -5.3499
+1569.064, -11.1711
+2353.596, -17.1934
+3138.128, -23.3524
+3922.66, -29.616
+4707.192, -35.965
+5491.724, -42.3862
+6276.256, -48.8703
+7060.788, -55.4101
+7845.32, -62
+8629.852, -68.6354
+9414.384, -75.3126
+10198.916, -82.0284
+10983.448, -88.7802
+11767.98, -95.5655
+12552.512, -102.3825
+13337.044, -109.2292
+14121.576, -116.1042
+14906.108, -123.006
+15690.64, -129.9333
+ENDTABLE
+*SCALAR -0.01
+
+
+#EMBEDDED_NOTES
+#265/75 R16
+#
+#Camber Thrust Coefficient vs. Vertical Load
+#
+#This Camber Thrust vs. Vertical Load dataset is being introduced with the release of TruckSim 2017.1.
+#
+#The corresponding vehicle is the Large European Van with independent front and rear suspensions (I_I).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire: Camber Thrust Coefficient; { Touring Tires } 265/75 R16
+#Library : Tire: Camber Thrust Coefficient
+#DataSet : 265/75 R16
+#Category: Touring Tires
+#FileID  : CamStiff_2779031a-0e03-423f-af33-2c677eead968
+#Product : TruckSim 2020.1
+#VehCode Camber Thrust
+
+END

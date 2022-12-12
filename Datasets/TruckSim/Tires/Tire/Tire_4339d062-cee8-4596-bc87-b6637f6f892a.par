@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName Tire`Normalized 1D, 510 mm Radius (Drive)`Normalized Tires
+FZ_REF 30000
+X_LENGTH 520
+Z_LENGTH 520
+Y_LENGTH 265
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 3
+#RingCtrl8 3
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\ShpGrp_7b39437e-1cc8-49e7-9584-37dcc1cf5cba.par
+#BlueLink4 Animator: Shape Assembly`Highway Drive Tire` Tires` , Animator`ShpGrp_7b39437e-1cc8-49e7-9584-37dcc1cf5cba
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 265
+RRE 510
+R0 520
+FZ_TIRE_COEFFICIENT 980
+FZ_MAX 1000000
+M_TIRE 91
+IT 4.8
+IT_XXZZ 0
+PARSFILE Generic\tables\GenTab_b39bbe4a-1fec-4454-92d0-578179ec80e0.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_b39bbe4a-1fec-4454-92d0-578179ec80e0
+
+PARSFILE Generic\tables\GenTab_d3424660-e756-4006-a08c-f39a49c14aae.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_d3424660-e756-4006-a08c-f39a49c14aae
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.0041
+RR_V 0.0000256
+L_CONTACT_X_CONSTANT 0
+L_CONTACT_Y_CONSTANT 0
+RR_FX 1
+OPT_TIRE_COMB 0
+PARSFILE Tires\Mz\TireMz_2705060c-a240-4c5c-b6fc-77c2c4322667.par
+#BlueLink0 Tire: Aligning Moment`Normalized 1D (25-pt spline)` Normalized Tires` , Aligning Moment`TireMz_2705060c-a240-4c5c-b6fc-77c2c4322667
+
+PARSFILE Tires\Fy\TireFy_8a5a2682-74f6-429b-a8fc-b7d68e688398.par
+#BlueLink1 Tire: Lateral Force`Normalized 1D (17-pt spline)` Normalized Tires` , Lateral Force`TireFy_8a5a2682-74f6-429b-a8fc-b7d68e688398
+
+PARSFILE Tires\Fx\TireFx_9ce583de-783f-40f9-882a-948b330a048c.par
+#BlueLink2 Tire: Longitudinal Force`Normalized 1D (17-pt spline)` Normalized Tires` , Longitudinal Force`TireFx_9ce583de-783f-40f9-882a-948b330a048c
+
+PARSFILE Tires\Camber_Thrust\CamStiff_5caa5ece-4775-4ed6-aede-93fa40f66ad8.par
+#BlueLink3 Tire: Camber Thrust Coefficient`Linear Coefficient: -0.01` ` , Camber Thrust`CamStiff_5caa5ece-4775-4ed6-aede-93fa40f66ad8
+
+
+
+#EMBEDDED_NOTES
+#This tire produces Fx, Fy, and Mz in direct proportion to load. As such, it can be used for any size with reasonable behavior for loads that are within it's design range. However, the normal loss of performance at high load conditions is not provided.
+#
+#This other settings are the same as the 3000 kg Rating, 510 mm Radius tire.
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { Normalized Tires } Normalized 1D, 510 mm Radius (Drive)
+#Library : Tire
+#DataSet : Normalized 1D, 510 mm Radius (Drive)
+#Category: Normalized Tires
+#FileID  : Tire_4339d062-cee8-4596-bc87-b6637f6f892a
+#Product : TruckSim 2020.1
+#VehCode Tire
+
+END

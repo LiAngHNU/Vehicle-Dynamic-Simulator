@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName Tire`510 mm Radius (Symmetric)`Camber Extensions
+FZ_REF 30000
+X_LENGTH 510
+Z_LENGTH 510
+Y_LENGTH 265
+#CheckBox2 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+
+#RingCtrl0 6
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 3
+#RingCtrl8 3
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 6
+
+PARSFILE Animator\STL_Groups\ShpGrp_31500c10-5228-4bc2-ac80-d4eb8cc45f60.par
+#BlueLink4 Animator: Shape Assembly`Single w/ Stripe` Tires` , Animator`ShpGrp_31500c10-5228-4bc2-ac80-d4eb8cc45f60
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 265
+RRE 510
+R0 510
+FZ_TIRE_COEFFICIENT 980
+FZ_MAX 1000000
+M_TIRE 91
+IT 4.8
+IT_XXZZ 0
+PARSFILE Generic\tables\GenTab_b39bbe4a-1fec-4454-92d0-578179ec80e0.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_b39bbe4a-1fec-4454-92d0-578179ec80e0
+
+PARSFILE Generic\tables\GenTab_d3424660-e756-4006-a08c-f39a49c14aae.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_d3424660-e756-4006-a08c-f39a49c14aae
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.013
+RR_V 0
+L_CONTACT_X_CONSTANT 0
+L_CONTACT_Y_CONSTANT 0
+RR_FX 0
+OPT_TIRE_COMB 0
+PARSFILE Tires\Mz\TireMz_535e8fbc-694e-42c8-854f-42d660a88547.par
+#BlueLink0 Tire: Aligning Moment`MF-Tyre / MF-Swift Mz vs. Alpha` MF-Tyre / MF-Swift Example` , Aligning Moment`TireMz_535e8fbc-694e-42c8-854f-42d660a88547
+
+PARSFILE Tires\Fy\TireFy_9083a49a-9ba7-46d8-8561-c93dec20e9dd.par
+#BlueLink1 Tire: Lateral Force`MF-Tyre / MF-Swift Fy vs. Gamma` MF-Tyre / MF-Swift Example` , Lateral Force`TireFy_9083a49a-9ba7-46d8-8561-c93dec20e9dd
+
+PARSFILE Tires\Fx\TireFx_3edd2d2d-1b33-433a-9f29-8c899cd59f49.par
+#BlueLink2 Tire: Longitudinal Force`MF-Tyre / MF-Swift Fx vs. Kappa` MF-Tyre / MF-Swift` , Longitudinal Force`TireFx_3edd2d2d-1b33-433a-9f29-8c899cd59f49
+
+PARSFILE Tires\FyC\TireFyC_0fdc789a-caae-41be-a3f8-bb5d3a910d36.par
+#BlueLink6 Tire: Lateral Force vs. Inclination`MF-Tyre / MF-Swift Fy vs. Gamma` MF-Tyre / MF-Swift` , Lateral Force vs Gamma`TireFyC_0fdc789a-caae-41be-a3f8-bb5d3a910d36
+
+PARSFILE Tires\MzC\TireMzC_3bdb9803-5c66-4e51-904b-0867709581bc.par
+#BlueLink7 Tire: Aligning Moment vs. Inclination`MF-Tyre / MF-Swift Mz vs. Gamma` MF-Tyre / MF-Swift Example` , Aligning Moment vs Gamma`TireMzC_3bdb9803-5c66-4e51-904b-0867709581bc
+
+PARSFILE Tires\Mx\TireMx_80673220-a119-4d22-96be-709968a6bcc6.par
+#BlueLink8 Tire: Overturning Moment`MF-Tyre / MF-Swift Mx vs. Alpha` MF-Tyre / MF-Swift` , Overturning moment`TireMx_80673220-a119-4d22-96be-709968a6bcc6
+
+PARSFILE Tires\MxC\TireMxC_70b45b26-fbbe-465d-ab0f-fe4bf3e79fb7.par
+#BlueLink9 Tire: Overturning Moment vs. Inclination`MF-Tyre / MF-Swift Mx vs. Gamma` MF-Tyre / MF-Swift` , Overturning Moment vs Gamma`TireMxC_70b45b26-fbbe-465d-ab0f-fe4bf3e79fb7
+
+
+
+#EMBEDDED_NOTES
+#This tire data selects the model option "Internal with Camber Extensions".  However, the data source is "510 mm Radius (MF-Tyre, Symmetric), category: * MF-Tyre / MF-Swift, whose tire characteristics are measured by TruckSim's tire tester function.
+#
+#Therefore, this dataset and the other dataset are based on the same tire characteristics. But they are just different tire models: This dataset adopts TruckSim internal tire model while the other dataset adopts TNO Delft-Tyre.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { Camber Extensions } 510 mm Radius (Symmetric)
+#Library : Tire
+#DataSet : 510 mm Radius (Symmetric)
+#Category: Camber Extensions
+#FileID  : Tire_699621e6-f6e3-465a-a53a-203c6d2e661e
+#Product : TruckSim 2020.1
+#VehCode Tire
+
+END

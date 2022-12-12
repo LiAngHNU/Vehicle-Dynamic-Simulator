@@ -1,0 +1,89 @@
+PARSFILE
+#FullDataName Tire`425 mm Radius (Steer)`2000 kg Rating
+FZ_REF 20000
+X_LENGTH 435
+Z_LENGTH 435
+Y_LENGTH 265
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 2
+#RingCtrl8 2
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL\Shape_3d166103-de4d-4f90-8acb-9c04a55d8600.par
+#BlueLink4 Animator: Shape File Link`Highway: Steer` Common Vehicle Assets: Tires` , Animator`Shape_3d166103-de4d-4f90-8acb-9c04a55d8600
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 265
+RRE 425
+R0 435
+FZ_TIRE_COEFFICIENT 750
+FZ_MAX 1000000
+M_TIRE 74
+IT 3.8
+IT_XXZZ 0
+PARSFILE Generic\tables\GenTab_b39bbe4a-1fec-4454-92d0-578179ec80e0.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_b39bbe4a-1fec-4454-92d0-578179ec80e0
+
+PARSFILE Generic\tables\GenTab_d3424660-e756-4006-a08c-f39a49c14aae.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_d3424660-e756-4006-a08c-f39a49c14aae
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.0041
+RR_V 0.0000256
+PARSFILE Generic\tables\GenTab_5b659f56-9e62-47f4-93bc-86d4097f7195.par
+#BlueLink16 Generic Table`Length vs. Compression` Tire Contact Patch Dimensions` , Contact patch length`GenTab_5b659f56-9e62-47f4-93bc-86d4097f7195
+
+PARSFILE Generic\tables\GenTab_2013fa82-03bb-4593-a0b4-411d54a7367e.par
+#BlueLink17 Generic Table`Width vs. Compression` Tire Contact Patch Dimensions` , Contact patch width`GenTab_2013fa82-03bb-4593-a0b4-411d54a7367e
+
+RR_FX 1
+OPT_TIRE_COMB 0
+PARSFILE Tires\Mz\TireMz_093cd10f-cea9-4fcd-ba8f-9bd47a1906a7.par
+#BlueLink0 Tire: Aligning Moment`Mz: 2000 kg Load Rated Tire` Example Mz Data` , Aligning Moment`TireMz_093cd10f-cea9-4fcd-ba8f-9bd47a1906a7
+
+PARSFILE Tires\Fy\TireFy_0c489aa9-7ede-4283-98f3-536301dc1dbe.par
+#BlueLink1 Tire: Lateral Force`Fy: 2000 kg Load Rating` Example Fy Data` , Lateral Force`TireFy_0c489aa9-7ede-4283-98f3-536301dc1dbe
+
+PARSFILE Tires\Fx\TireFx_c27c65dc-7dc8-4539-9b84-87ca17564581.par
+#BlueLink2 Tire: Longitudinal Force`Fx: 2000 kg Load Rating` Example Fx Data` , Longitudinal Force`TireFx_c27c65dc-7dc8-4539-9b84-87ca17564581
+
+PARSFILE Tires\Camber_Thrust\CamStiff_5caa5ece-4775-4ed6-aede-93fa40f66ad8.par
+#BlueLink3 Tire: Camber Thrust Coefficient`Linear Coefficient: -0.01` ` , Camber Thrust`CamStiff_5caa5ece-4775-4ed6-aede-93fa40f66ad8
+
+
+
+#EMBEDDED_NOTES
+#These tires have contact patch sizes that are variable with length. Click on the links to the bottom right of this screen to see the tables.
+#
+#This data is typical for a radial tire with a nominal load rating of 2000 kg, such as a 295/60R22.5 (463 mm), 265/70R19.5 (433), 305/70R19.5 (462), 10R22.5 (510).
+#
+#The tire is suitable for use on a steer axle up to 4t (8,800 lb), or for use in a dual-tire configuration on drive or trailer axles up to 8t (17,600 lb).
+#
+#Radius on other tires of equivalent load rating may vary from 350 to 510 mm.
+#
+#The Mz values correspond to a pneumatic trail (deg) obtained from the averaged results of the SAE Truck Tire Tests.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { 2000 kg Rating } 425 mm Radius (Steer)
+#Library : Tire
+#DataSet : 425 mm Radius (Steer)
+#Category: 2000 kg Rating
+#FileID  : Tire_4dea65ca-267b-46fd-8a82-8ccfad563186
+#Product : TruckSim 2020.1
+#VehCode Tire
+
+END

@@ -1,0 +1,103 @@
+PARSFILE
+#FullDataName Vehicle: Trailer with 3 Axles`3A Utility Flatbed Trailer`Flatbed Trailers
+#VehCode SSS
+IUNIT_INCREMENT
+symbol_add  <<unit>> 1
+NAXLES 3
+
+IOBJECT_SAVE
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 0
+*LX_AXLE_1 3585
+*LX_AXLE_2 4395
+*LX_AXLE_3 5205
+*R_TANDEM_1 2/3
+*CFZ_MY_TAND_1 -0.5
+*R_TANDEM_2 2/3
+*CFZ_MY_TAND_2 -0.5
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_3a\Tire3a_32534ed0-fb60-436e-81ad-7ecaa5f368c1.par
+#BlueLink14 Tires: Vehicle Unit with 3 Axles`235/80 R16 (Trailer)` Trailer and Light Truck Tires` , Tires`Tire3a_32534ed0-fb60-436e-81ad-7ecaa5f368c1
+
+symbol_push  <<axle>> <<axle_temp>>
+
+iaxle 1
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 3585
+PARSFILE Suspensions\Kin_Solid\KinSA_55acd5a3-6b34-45a8-b52e-941d4d3c0db2.par
+#BlueLink17 Suspension: Solid Axle System Kinematics`Utility Flatbed Trailer` Trailer Axle` , Kinematics`KinSA_55acd5a3-6b34-45a8-b52e-941d4d3c0db2
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_284126ab-c534-4885-8d5b-13b868639736.par
+#BlueLink20 Suspension: Solid Axle Compliance, Springs, and Dampers`Utility Flatbed Trailer` Trailers` , Suspension compliance`CmpSA_284126ab-c534-4885-8d5b-13b868639736
+
+PARSFILE Brakes\2W_System\Brk2W_02a8ae89-2990-46dd-84c1-c6c62d529bf3.par
+#BlueLink5 Brakes: Two-Wheel System`Trailer: 20 Nm / MPa (2 ch. ABS)` Trailer Brakes` , Brakes`Brk2W_02a8ae89-2990-46dd-84c1-c6c62d529bf3
+
+
+iaxle 2
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 4395
+PARSFILE Suspensions\Kin_Solid\KinSA_55acd5a3-6b34-45a8-b52e-941d4d3c0db2.par
+#BlueLink18 Suspension: Solid Axle System Kinematics`Utility Flatbed Trailer` Trailer Axle` , Kinematics`KinSA_55acd5a3-6b34-45a8-b52e-941d4d3c0db2
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_284126ab-c534-4885-8d5b-13b868639736.par
+#BlueLink21 Suspension: Solid Axle Compliance, Springs, and Dampers`Utility Flatbed Trailer` Trailers` , Suspension compliance`CmpSA_284126ab-c534-4885-8d5b-13b868639736
+
+PARSFILE Brakes\2W_System\Brk2W_02a8ae89-2990-46dd-84c1-c6c62d529bf3.par
+#BlueLink8 Brakes: Two-Wheel System`Trailer: 20 Nm / MPa (2 ch. ABS)` Trailer Brakes` , Brakes`Brk2W_02a8ae89-2990-46dd-84c1-c6c62d529bf3
+
+
+iaxle 3
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 5205
+PARSFILE Suspensions\Kin_Solid\KinSA_55acd5a3-6b34-45a8-b52e-941d4d3c0db2.par
+#BlueLink19 Suspension: Solid Axle System Kinematics`Utility Flatbed Trailer` Trailer Axle` , Kinematics`KinSA_55acd5a3-6b34-45a8-b52e-941d4d3c0db2
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_284126ab-c534-4885-8d5b-13b868639736.par
+#BlueLink22 Suspension: Solid Axle Compliance, Springs, and Dampers`Utility Flatbed Trailer` Trailers` , Suspension compliance`CmpSA_284126ab-c534-4885-8d5b-13b868639736
+
+PARSFILE Brakes\2W_System\Brk2W_02a8ae89-2990-46dd-84c1-c6c62d529bf3.par
+#BlueLink11 Brakes: Two-Wheel System`Trailer: 20 Nm / MPa (2 ch. ABS)` Trailer Brakes` , Brakes`Brk2W_02a8ae89-2990-46dd-84c1-c6c62d529bf3
+
+
+ITANDEM 1
+R_TANDEM 2/3
+CFZ_MY_TAND -0.5
+ITANDEM 2
+R_TANDEM 2/3
+CFZ_MY_TAND -0.5
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 5205.000000
+PARSFILE Vehicles\Trl_Sprung_Mass\TrlSprM_c91453d4-4d68-4430-a7d2-0978b6849ee6.par
+#BlueLink1 Vehicle: Trailer Sprung Mass`3A Utility Flatbed Trailer` 3A Trailer` , Sprung Mass`TrlSprM_c91453d4-4d68-4430-a7d2-0978b6849ee6
+
+PARSFILE Animator\Vehicles\AniVeh_168c3021-1cd3-46d2-a74e-026bc0297b79.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`3A Utility Flatbed Trailer` Trailers: 3-axle` , Animator Shape(s)`AniVeh_168c3021-1cd3-46d2-a74e-026bc0297b79
+
+PARSFILE Aerodynamics\Aero_Main\Aero_2dcf0dd6-b552-482c-b346-939b627511c9.par
+#BlueLink2 Aerodynamics: Basic`No Aerodynamics` ` , Aerodynamics`Aero_2dcf0dd6-b552-482c-b346-939b627511c9
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_168c3021-1cd3-46d2-a74e-026bc0297b79.png
+IOBJECT_RESTORE
+
+LOG_ENTRY Used Dataset: Vehicle: Trailer with 3 Axles; { Flatbed Trailers } 3A Utility Flatbed Trailer
+#Library : Vehicle: Trailer with 3 Axles
+#DataSet : 3A Utility Flatbed Trailer
+#Category: Flatbed Trailers
+#FileID  : Trl3a_0eba0fa4-b68c-4f7a-8885-132fece1c965
+#Product : TruckSim 2020.1
+#VehCode SSS
+
+END

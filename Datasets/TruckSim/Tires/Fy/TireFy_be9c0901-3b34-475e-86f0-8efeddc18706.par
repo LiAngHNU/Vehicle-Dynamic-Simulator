@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Tire: Lateral Force`Fy; Widebase Asymmetric`SAE Widebase Single Tire
+#CheckBox0 0    
+
+#RingCtrl0 2D_SPLINE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Slip angle [Alpha] (deg)
+*3D_ZLabel Lateral tire force Fy (N)
+
+#DiagramTwo0
+*3D_DATA 7, 19 ! columns x rows
+FY_TIRE_CARPET 2D_SPLINE
+0, 12623, 25242, 37866, 50485, 63108, 75727, 100970
+-90, 6689, 13762, 20259, 26250, 32271, 37784, 47264
+-14, 9556, 19660, 28941, 37500, 46102, 53977, 67520
+-12.5, 9446, 19158, 27934, 35046, 43365, 51235, 64608
+-10, 8913, 18308, 26605, 33682, 41330, 48610, 61451
+-8, 8353, 16858, 24759, 31415, 38978, 45664, 57089
+-6, 7769, 15223, 22194, 28905, 34972, 40551, 50709
+-4, 5813, 11577, 17171, 22366, 27449, 31980, 39150
+-2, 3116, 6507, 10031, 13345, 16033, 18664, 22491
+-1, 1419, 3470, 5564, 7454, 9460, 10854, 13380
+0, -125, 131, 783, 1498, 1866, 2573, 3673
+1, -2010, -3347, -4679, -5139, -5382, -5815, -5385
+2, -3346, -6042, -8714, -10282, -12145, -13279, -14128
+4, -5843, -10735, -15665, -19854, -23340, -26291, -30038
+6, -7336, -13910, -20462, -25870, -31126, -35328, -42548
+8, -8830, -16689, -23648, -28873, -35016, -40590, -49310
+10, -9390, -18139, -25494, -31140, -37367, -43536, -53672
+12.5, -9924, -18989, -26822, -32504, -39403, -46161, -56829
+14, -10034, -19491, -27829, -34958, -42140, -48902, -59741
+90, -7024, -13644, -19480, -24471, -29498, -34231, -41819
+ENDTABLE
+
+MU_REF_Y 0.8
+
+
+#EMBEDDED_NOTES
+#This data comes from the SAE Cooperative Research program conducted in the 1990s.
+#
+#It is a direct copy of the Fy data measured for a 425/65R22.5 widebase tire over the slip range of -14 to +14 degrees..
+#
+#Data for the 90 deg slip angle was extrapolated using the rule of thumb that slide coefficients are approximately 70% of the peak values.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire: Lateral Force; { SAE Widebase Single Tire } Fy; Widebase Asymmetric
+#Library : Tire: Lateral Force
+#DataSet : Fy; Widebase Asymmetric
+#Category: SAE Widebase Single Tire
+#FileID  : TireFy_be9c0901-3b34-475e-86f0-8efeddc18706
+#Product : TruckSim 2020.1
+#VehCode Tire: Fy
+
+END

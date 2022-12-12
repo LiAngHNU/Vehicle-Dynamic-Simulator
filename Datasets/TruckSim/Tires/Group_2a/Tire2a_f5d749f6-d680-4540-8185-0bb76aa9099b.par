@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 2 Axles`265/75 R16, Front and Rear`TS 2A Trailer and Light Truck Tires
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+*LDUAL_2 310
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_c40215ea-2655-4517-831a-bea327d858d5.par
+#BlueLink1 Tire`265/75 R16` Trailer and Light Truck Tires` , Tires`Tire_c40215ea-2655-4517-831a-bea327d858d5
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_c40215ea-2655-4517-831a-bea327d858d5.par
+#BlueLink999 Tire`265/75 R16` Trailer and Light Truck Tires` , Tires`Tire_c40215ea-2655-4517-831a-bea327d858d5
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_c40215ea-2655-4517-831a-bea327d858d5.par
+#BlueLink5 Tire`265/75 R16` Trailer and Light Truck Tires` , Tires`Tire_c40215ea-2655-4517-831a-bea327d858d5
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_c40215ea-2655-4517-831a-bea327d858d5.par
+#BlueLink999 Tire`265/75 R16` Trailer and Light Truck Tires` , Tires`Tire_c40215ea-2655-4517-831a-bea327d858d5
+
+
+#EMBEDDED_NOTES
+#Tires: Vehicle Unit with 2 Axles
+#
+#265/75 R16
+#
+#The corresponding vehicle is the Large European Van with independent front and rear suspensions (I_I).
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 2 Axles; { TS 2A Trailer and Light Truck Tires } 265/75 R16, Front and Rear
+#Library : Tires: Vehicle Unit with 2 Axles
+#DataSet : 265/75 R16, Front and Rear
+#Category: TS 2A Trailer and Light Truck Tires
+#FileID  : Tire2a_f5d749f6-d680-4540-8185-0bb76aa9099b
+#Product : TruckSim 2020.1
+#VehCode 2a Tire Group
+
+END

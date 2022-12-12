@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Tire (External)`380/65 R22.5, FTire (Steer)`* COSIN FTire
+FZ_REF 30000
+Y_LENGTH 360
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 10
+OPT_TIRE_MODEL 9
+
+X_LENGTH 544.347
+Z_LENGTH 544.347
+PARSFILE Animator\STL_Groups\ShpGrp_0a9dd363-3a4b-45ad-98c2-cb8b2f2f8145.par
+#BlueLink0 Animator: Shape Assembly`Highway Steer Tire` Tires` , Animator`ShpGrp_0a9dd363-3a4b-45ad-98c2-cb8b2f2f8145
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 360
+*SET_RADIUS 544.347
+KY_TIRE 1000
+OPT_TIRE_INERTIA_EXTERNAL 0
+
+#External API information
+EXTERNAL_TIRE_MODULE_DLL Extensions\External_Tire_API\win32\FTireWrapper.dll
+INSTALL_EXTERNAL_TIRE_API
+
+#COSIN Tire Interface (FTire) setting data
+FTIRE_DATA Extensions\FTire\truck.tir
+FTIRE_CTI_DLL C:\Program Files (x86)\cosin\2019-4\lib\win32\cti.dll
+FTIRE_INIT
+
+#EMBEDDED_NOTES
+#This tire data selects the model option "COSIN Tire Interface (FTire)", which adopts FTire model and bypass the TruckSim internal tire model.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire (External); { * COSIN FTire } 380/65 R22.5, FTire (Steer)
+#Library : Tire (External)
+#DataSet : 380/65 R22.5, FTire (Steer)
+#Category: * COSIN FTire
+#FileID  : TireExt_3cdfeb8b-8510-41c3-927d-b630afa88d83
+#Product : TruckSim 2020.1
+#VehCode Tire (External)
+
+END

@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Tire (External)`510 mm Radius (MF-Tyre, Static)`* MF-Tyre / MF-Swift
+FZ_REF 30000
+Y_LENGTH 265
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 8
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 0
+#RingCtrl4 4
+OPT_TIRE_MODEL 8
+
+X_LENGTH 510
+Z_LENGTH 510
+PARSFILE Animator\STL_Groups\ShpGrp_31500c10-5228-4bc2-ac80-d4eb8cc45f60.par
+#BlueLink0 Animator: Shape Assembly`Single w/ Stripe` Tires` , Animator`ShpGrp_31500c10-5228-4bc2-ac80-d4eb8cc45f60
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 265
+*SET_RADIUS 510
+KY_TIRE 4480
+OPT_TIRE_INERTIA_EXTERNAL 0
+
+#External API information
+EXTERNAL_TIRE_MODULE_DLL Extensions\External_Tire_API\win32\DelftTyreWrapper.dll
+INSTALL_EXTERNAL_TIRE_API
+
+#Siemens MF-Tyre/MF-Swift setting data
+DELFT_TYRE_DATA Extensions\TNO_DelftTyre\TS_truck_R510mm.tir
+DELFT_TYRE_DLL Extensions\TNO_DelftTyre\win32\TNO_DelftTyre.dll
+DELFT_TYRE_SW 1104
+DELFT_TYRE_INIT
+
+*DELFT_TYRE_DATA Extensions\TNO_DelftTyre\TS_truck_R510mm.tir
+
+#EMBEDDED_NOTES
+#This tire data selects the model option "TNO MF-Tyre v6.2", which adopts the MF-Tyre model and bypasses the TruckSim internal tire model. In this option, MF-Tyre calculates all tire forces and moments, and also searches a tire/ground contact point or an effective contact plane.
+#
+#Users are allowed to select several types of options in each of categories: Tire side, Contact method, Dynamics and Slip forces.
+#
+#In this example, Tire side is selected as Left. The selected tire property file is based on the data of left side tire. Therefore, all characteristics are based on the property data. Dynamics is selected as Steady state (< 1Hz). Therefore, the tire dynamics is removed and treated as static.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire (External); { * MF-Tyre / MF-Swift } 510 mm Radius (MF-Tyre, Static)
+#Library : Tire (External)
+#DataSet : 510 mm Radius (MF-Tyre, Static)
+#Category: * MF-Tyre / MF-Swift
+#FileID  : TireExt_23d606e5-ccc7-4c91-b0ca-67ebf7e838d4
+#Product : TruckSim 2020.1
+#VehCode Tire (External)
+
+END

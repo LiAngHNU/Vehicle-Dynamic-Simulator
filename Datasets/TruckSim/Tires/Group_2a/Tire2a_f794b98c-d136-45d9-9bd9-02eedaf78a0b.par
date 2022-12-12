@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 2 Axles`3000 kg Steer, 3000kg Drive (490 mm)`TS 2A Steer / Drive Tires: Internal Table Model
+
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox5 1    
+
+*LDUAL_2 310
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_c779202f-5f7c-4187-8fd1-11ae1e26ecc5.par
+#BlueLink1 Tire`490 mm Radius (Steer)` 3000 kg Rating` , Tires`Tire_c779202f-5f7c-4187-8fd1-11ae1e26ecc5
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_c779202f-5f7c-4187-8fd1-11ae1e26ecc5.par
+#BlueLink999 Tire`490 mm Radius (Steer)` 3000 kg Rating` , Tires`Tire_c779202f-5f7c-4187-8fd1-11ae1e26ecc5
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 310
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_e649e4a7-01b0-4fd8-906d-34f8b1c5fd8b.par
+#BlueLink5 Tire`490 mm Radius (Drive)` 3000 kg Rating` , Tires`Tire_e649e4a7-01b0-4fd8-906d-34f8b1c5fd8b
+
+itire 2
+symbol_push  <<tire>> R<<axle>>o
+STORE_WHEEL_OFFSET 0.155000
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+PARSFILE Tires\Tire\Tire_e649e4a7-01b0-4fd8-906d-34f8b1c5fd8b.par
+#BlueLink999 Tire`490 mm Radius (Drive)` 3000 kg Rating` , Tires`Tire_e649e4a7-01b0-4fd8-906d-34f8b1c5fd8b
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_e649e4a7-01b0-4fd8-906d-34f8b1c5fd8b.par
+#BlueLink999 Tire`490 mm Radius (Drive)` 3000 kg Rating` , Tires`Tire_e649e4a7-01b0-4fd8-906d-34f8b1c5fd8b
+
+itire 2
+symbol_push  <<tire>> L<<axle>>o
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\Tire\Tire_e649e4a7-01b0-4fd8-906d-34f8b1c5fd8b.par
+#BlueLink999 Tire`490 mm Radius (Drive)` 3000 kg Rating` , Tires`Tire_e649e4a7-01b0-4fd8-906d-34f8b1c5fd8b
+
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 2 Axles; { TS 2A Steer / Drive Tires: Internal Table Model } 3000 kg Steer, 3000kg Drive (490 mm)
+#Library : Tires: Vehicle Unit with 2 Axles
+#DataSet : 3000 kg Steer, 3000kg Drive (490 mm)
+#Category: TS 2A Steer / Drive Tires: Internal Table Model
+#FileID  : Tire2a_f794b98c-d136-45d9-9bd9-02eedaf78a0b
+#Product : TruckSim 2020.1
+#VehCode 2a Tire Group
+
+END

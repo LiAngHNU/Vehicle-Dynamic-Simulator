@@ -1,0 +1,64 @@
+PARSFILE
+#FullDataName Tire Tester`Sweep Alpha: Fz = 4000 N`Sweep Alpha +/- 10 deg
+*FZ_LOWER 1000
+*FZ_UPPER 10000
+*FZ_STEP 10
+*ALPHA_LOWER -10
+*ALPHA_UPPER 10
+*ALPHA_STEP 0.01
+*KAPPA_LOWER -1
+*KAPPA_UPPER 1
+*KAPPA_STEP 0.01
+*FZ_TEST 4000
+*ALPHA_TEST -9
+*KAPPA_TEST 0
+*GAMMA_TEST 0
+MUX_TEST -1
+MUY_TEST -1
+SPEED_TEST 10
+RR_SURF 1
+
+iunit 1
+#RingCtrl0 1
+OPT_TEST_MODE 1
+ALPHA_LOWER -10
+ALPHA_UPPER 10
+ALPHA_STEP 0.01
+FZ_TEST 4000
+KAPPA_TEST 0
+GAMMA_TEST 0
+
+PARSFILE Generic\VS_commands\GenVS_2bfe1811-7442-437c-9bd7-ec1d8d3e60fa.par
+#BlueLink0 Generic VS Commands`Derived Outputs vs. Alpha` Tire Tester` , Miscellaneous`GenVS_2bfe1811-7442-437c-9bd7-ec1d8d3e60fa
+
+PARSFILE Plot\Setup\Plot_4e08f0be-3f8c-428a-ba11-8fedbdc9074b.par
+#BlueLink1 Plot: Setup`Fy vs. Alpha` Tire Tester` , Plot`Plot_4e08f0be-3f8c-428a-ba11-8fedbdc9074b
+
+PARSFILE Plot\Setup\Plot_a6650d6f-7cc0-483c-8c21-710b3a03af87.par
+#BlueLink2 Plot: Setup`Mx vs. Alpha` Tire Tester` , Plot`Plot_a6650d6f-7cc0-483c-8c21-710b3a03af87
+
+PARSFILE Plot\Setup\Plot_9d6889b7-f433-4266-84d6-27ca8ed3251e.par
+#BlueLink3 Plot: Setup`Mz vs. Alpha` Tire Tester` , Plot`Plot_9d6889b7-f433-4266-84d6-27ca8ed3251e
+
+
+#EMBEDDED_NOTES
+#The tire tester makes direct use of the tire models to simulate a steady state tire performance test.
+#
+#This tire test varies Alpha in increments of 0.01 deg.
+#
+#A negative slip angle is chosen because negative slip is associated with positive lateral force.
+#
+#Coefficents of friction are set to -1. When a negative coefficent of friction is passed to the tire model, scaling for friction is bypassed, and the table data is used directly, interpolated for load and slip.
+#
+#The speed parameter is not used by the tire models (except for the MF-Tyre / MF-Swift model) in a steady state test.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire Tester; { Sweep Alpha +/- 10 deg } Sweep Alpha: Fz = 4000 N
+#Library : Tire Tester
+#DataSet : Sweep Alpha: Fz = 4000 N
+#Category: Sweep Alpha +/- 10 deg
+#FileID  : TestTire_64b84188-fb72-4077-bc2e-a6e68507d601
+#Product : TruckSim 2020.1
+#VehCode Tire Tester
+
+END

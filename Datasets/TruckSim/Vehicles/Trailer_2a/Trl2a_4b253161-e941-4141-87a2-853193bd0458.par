@@ -1,0 +1,89 @@
+PARSFILE
+#FullDataName Vehicle: Trailer with 2 Axles`2A Ballast Trailer`Flatbed Trailers
+#VehCode SS
+IUNIT_INCREMENT
+symbol_add  <<unit>> 1
+NAXLES 2
+
+IOBJECT_SAVE
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+#RingCtrl2 0
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_2a\Tire2a_581539cd-7353-4476-b90e-93697dc64d7e.par
+#BlueLink11 Tires: Vehicle Unit with 2 Axles`3000 kg Tandem (510 mm), No Duals` TS 2A Trailer Tires` , Tires`Tire2a_581539cd-7353-4476-b90e-93697dc64d7e
+
+symbol_push  <<axle>> <<axle_temp>>
+*LX_AXLE_2 4800
+R_TANDEM 0.5
+CFZ_MY_TAND 0
+*LX_AXLE_1 3700
+R_TAND_TRAIL_STATIC 0.5
+R_TAND_TRAIL_STATIC 0.5
+
+iaxle 1
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 3700
+PARSFILE Suspensions\Kin_Solid\KinSA_a3c1ca77-70f5-499d-b0f7-42bf75ebf5c7.par
+#BlueLink14 Suspension: Solid Axle System Kinematics`15.5t Trailer (2A Ballast Trailer)` Trailer Axle` , Kinematics`KinSA_a3c1ca77-70f5-499d-b0f7-42bf75ebf5c7
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c.par
+#BlueLink16 Suspension: Solid Axle Compliance, Springs, and Dampers`15.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c
+
+PARSFILE Brakes\2W_System\Brk2W_5c4c9b61-fdab-4303-94c7-e64197561fab.par
+#BlueLink5 Brakes: Two-Wheel System`10 kN-m Capacity, Air` Air Brakes` , Brakes`Brk2W_5c4c9b61-fdab-4303-94c7-e64197561fab
+
+
+iaxle 2
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 4800
+PARSFILE Suspensions\Kin_Solid\KinSA_a3c1ca77-70f5-499d-b0f7-42bf75ebf5c7.par
+#BlueLink15 Suspension: Solid Axle System Kinematics`15.5t Trailer (2A Ballast Trailer)` Trailer Axle` , Kinematics`KinSA_a3c1ca77-70f5-499d-b0f7-42bf75ebf5c7
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c.par
+#BlueLink17 Suspension: Solid Axle Compliance, Springs, and Dampers`15.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_29ff82d8-14db-4ac4-bf4c-8f84fb82969c
+
+PARSFILE Brakes\2W_System\Brk2W_5c4c9b61-fdab-4303-94c7-e64197561fab.par
+#BlueLink8 Brakes: Two-Wheel System`10 kN-m Capacity, Air` Air Brakes` , Brakes`Brk2W_5c4c9b61-fdab-4303-94c7-e64197561fab
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 4800
+PARSFILE Vehicles\Trl_Sprung_Mass\TrlSprM_b5816800-6a82-4c26-a7b5-57908264242c.par
+#BlueLink1 Vehicle: Trailer Sprung Mass`2A Ballast Trailer` 2A Trailer` , Sprung Mass`TrlSprM_b5816800-6a82-4c26-a7b5-57908264242c
+
+PARSFILE Animator\Vehicles\AniVeh_42cb9f66-375f-45be-be1f-25a9aa85205f.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`2A Ballast Trailer` Trailers: 2-axle` , Animator Shape(s)`AniVeh_42cb9f66-375f-45be-be1f-25a9aa85205f
+
+PARSFILE Aerodynamics\Aero_Main\Aero_2dcf0dd6-b552-482c-b346-939b627511c9.par
+#BlueLink2 Aerodynamics: Basic`No Aerodynamics` ` , Aerodynamics`Aero_2dcf0dd6-b552-482c-b346-939b627511c9
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_42cb9f66-375f-45be-be1f-25a9aa85205f.png
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#This flatbed trailer with two axles is ballasted for brake testing of medium duty trucks. The hitch height is also appropriate for these larger vehicles.
+#
+#For flatbeds more appropriate for general use with light duty vehicles, see
+#
+#- 2A Utility Flatbed Trailer, or
+#- 2A Utility Flatbed Trailer (HD).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Trailer with 2 Axles; { Flatbed Trailers } 2A Ballast Trailer
+#Library : Vehicle: Trailer with 2 Axles
+#DataSet : 2A Ballast Trailer
+#Category: Flatbed Trailers
+#FileID  : Trl2a_4b253161-e941-4141-87a2-853193bd0458
+#Product : TruckSim 2020.1
+#VehCode SS
+
+END

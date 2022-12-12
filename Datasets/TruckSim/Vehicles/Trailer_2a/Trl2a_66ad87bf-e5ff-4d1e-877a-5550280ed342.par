@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName Vehicle: Trailer with 2 Axles`2A Utility Flatbed Trailer`Flatbed Trailers
+#VehCode SS
+IUNIT_INCREMENT
+symbol_add  <<unit>> 1
+NAXLES 2
+
+IOBJECT_SAVE
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+#RingCtrl2 0
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_2a\Tire2a_7ee9ef9e-740c-4def-beae-fcda180356f1.par
+#BlueLink11 Tires: Vehicle Unit with 2 Axles`235/80 R16 (Trailer)` Trailer and Light Truck Tires` , Tires`Tire2a_7ee9ef9e-740c-4def-beae-fcda180356f1
+
+symbol_push  <<axle>> <<axle_temp>>
+*LX_AXLE_2 4800
+R_TANDEM 0.5
+CFZ_MY_TAND 0
+*LX_AXLE_1 3990
+R_TAND_TRAIL_STATIC 0.5
+R_TAND_TRAIL_STATIC 0.5
+
+iaxle 1
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 3990
+PARSFILE Suspensions\Kin_Solid\KinSA_55acd5a3-6b34-45a8-b52e-941d4d3c0db2.par
+#BlueLink14 Suspension: Solid Axle System Kinematics`Utility Flatbed Trailer` Trailer Axle` , Kinematics`KinSA_55acd5a3-6b34-45a8-b52e-941d4d3c0db2
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_284126ab-c534-4885-8d5b-13b868639736.par
+#BlueLink16 Suspension: Solid Axle Compliance, Springs, and Dampers`Utility Flatbed Trailer` Trailers` , Suspension compliance`CmpSA_284126ab-c534-4885-8d5b-13b868639736
+
+PARSFILE Brakes\2W_System\Brk2W_02a8ae89-2990-46dd-84c1-c6c62d529bf3.par
+#BlueLink5 Brakes: Two-Wheel System`Trailer: 20 Nm / MPa (2 ch. ABS)` Trailer Brakes` , Brakes`Brk2W_02a8ae89-2990-46dd-84c1-c6c62d529bf3
+
+
+iaxle 2
+OPT_STEER_EXT 1
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+LX_AXLE 4800
+PARSFILE Suspensions\Kin_Solid\KinSA_55acd5a3-6b34-45a8-b52e-941d4d3c0db2.par
+#BlueLink15 Suspension: Solid Axle System Kinematics`Utility Flatbed Trailer` Trailer Axle` , Kinematics`KinSA_55acd5a3-6b34-45a8-b52e-941d4d3c0db2
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_284126ab-c534-4885-8d5b-13b868639736.par
+#BlueLink17 Suspension: Solid Axle Compliance, Springs, and Dampers`Utility Flatbed Trailer` Trailers` , Suspension compliance`CmpSA_284126ab-c534-4885-8d5b-13b868639736
+
+PARSFILE Brakes\2W_System\Brk2W_02a8ae89-2990-46dd-84c1-c6c62d529bf3.par
+#BlueLink8 Brakes: Two-Wheel System`Trailer: 20 Nm / MPa (2 ch. ABS)` Trailer Brakes` , Brakes`Brk2W_02a8ae89-2990-46dd-84c1-c6c62d529bf3
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 4800
+PARSFILE Vehicles\Trl_Sprung_Mass\TrlSprM_34b806fe-813d-4307-92d9-234c69340247.par
+#BlueLink1 Vehicle: Trailer Sprung Mass`2A Utility Flatbed Trailer` 2A Trailer` , Sprung Mass`TrlSprM_34b806fe-813d-4307-92d9-234c69340247
+
+PARSFILE Animator\Vehicles\AniVeh_d782fc79-d9dd-4b14-941d-d46d8fb99cd2.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`2A Utility Flatbed Trailer` Trailers: 2-axle` , Animator Shape(s)`AniVeh_d782fc79-d9dd-4b14-941d-d46d8fb99cd2
+
+PARSFILE Aerodynamics\Aero_Main\Aero_2dcf0dd6-b552-482c-b346-939b627511c9.par
+#BlueLink2 Aerodynamics: Basic`No Aerodynamics` ` , Aerodynamics`Aero_2dcf0dd6-b552-482c-b346-939b627511c9
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_d782fc79-d9dd-4b14-941d-d46d8fb99cd2.png
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#This light-duty flatbed trailer is equipped with a ball hitch.
+#
+#Hitch height is appropriate for pickups, pickup-based vans, and other similarly-sized vehicles.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Trailer with 2 Axles; { Flatbed Trailers } 2A Utility Flatbed Trailer
+#Library : Vehicle: Trailer with 2 Axles
+#DataSet : 2A Utility Flatbed Trailer
+#Category: Flatbed Trailers
+#FileID  : Trl2a_66ad87bf-e5ff-4d1e-877a-5550280ed342
+#Product : TruckSim 2020.1
+#VehCode SS
+
+END

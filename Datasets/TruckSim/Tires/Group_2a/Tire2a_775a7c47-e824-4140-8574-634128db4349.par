@@ -1,0 +1,65 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 2 Axles`255/75 R16`TS 2A Touring Tires
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_ba30c681-2df4-49ab-b236-1ab691b32cd4.par
+#BlueLink1 Tire`255/75 R16` Touring Tires` , Tires`Tire_ba30c681-2df4-49ab-b236-1ab691b32cd4
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_ba30c681-2df4-49ab-b236-1ab691b32cd4.par
+#BlueLink999 Tire`255/75 R16` Touring Tires` , Tires`Tire_ba30c681-2df4-49ab-b236-1ab691b32cd4
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_ba30c681-2df4-49ab-b236-1ab691b32cd4.par
+#BlueLink5 Tire`255/75 R16` Touring Tires` , Tires`Tire_ba30c681-2df4-49ab-b236-1ab691b32cd4
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_ba30c681-2df4-49ab-b236-1ab691b32cd4.par
+#BlueLink999 Tire`255/75 R16` Touring Tires` , Tires`Tire_ba30c681-2df4-49ab-b236-1ab691b32cd4
+
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 2 Axles; { TS 2A Touring Tires } 255/75 R16
+#Library : Tires: Vehicle Unit with 2 Axles
+#DataSet : 255/75 R16
+#Category: TS 2A Touring Tires
+#FileID  : Tire2a_775a7c47-e824-4140-8574-634128db4349
+#Product : TruckSim 2020.1
+#VehCode 2a Tire Group
+
+END

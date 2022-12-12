@@ -1,0 +1,120 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit with 3 Axles`3A Cab-Over 6x6 (Frame Flex, Susp)`* * * Vehicle Dynamic Simulator
+#VehCode F_I_II
+IUNIT_INCREMENT
+IVEHICLE = IVEHICLE + 1
+symbol_add  <<unit>> 1
+symbol_add  <<vehicle>> 1
+NAXLES 3
+ITANDEM 1
+
+IOBJECT_SAVE
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 4
+OPT_PT 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 5
+#RingCtrl4 5
+*LX_AXLE_1 0
+*LX_AXLE_2 3500
+*LX_AXLE_3 4770
+R_TANDEM 0.45
+CFZ_MY_TAND 0
+R_TAND_TRAIL_STATIC 0.5
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_3a\Tire3a_6062987f-a957-476c-b354-57f30564f39e.par
+#BlueLink8 Tires: Vehicle Unit with 3 Axles`HD Utility Vehicle` 3A Steer / Drive Tires` , Tires`Tire3a_6062987f-a957-476c-b354-57f30564f39e
+
+symbol_push  <<axle>> <<axle_temp>>
+
+iaxle 1
+symbol_add  <<axle>> 1
+LX_AXLE 0
+PARSFILE Suspensions\Kin_Indy\KinInd_6b37cc8c-bc3b-43c4-aa33-a67529fd78df.par
+#BlueLink27 Suspension: Independent System Kinematics`Tour Bus - Steer Axle` Tour Bus and Motor Home` , Kinematics`KinInd_6b37cc8c-bc3b-43c4-aa33-a67529fd78df
+
+PARSFILE Suspensions\Compliance\CmpInd_c6b9a02d-d06b-420a-92aa-f95804dea422.par
+#BlueLink30 Suspension: Independent Compliance, Springs, and Dampers`Tour Bus - Steer Axle` Steer Axles` , Suspension compliance`CmpInd_c6b9a02d-d06b-420a-92aa-f95804dea422
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363.par
+#BlueLink12 Brakes: Two-Wheel System`7.5 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_42eb5e36-2168-45bb-af03-57b1f18c5363
+
+PARSFILE Steering\System\StrSys_34a3a8d4-49e4-4c37-a6f1-c2f6bfe55fbc.par
+#BlueLink15 Steering System`Medium (5 m) Wheelbase` Medium - Heavy Duty Steering` , Steering`StrSys_34a3a8d4-49e4-4c37-a6f1-c2f6bfe55fbc
+
+
+iaxle 2
+symbol_add  <<axle>> 1
+LX_AXLE 3500
+PARSFILE Suspensions\Kin_Indy\KinInd_6b37cc8c-bc3b-43c4-aa33-a67529fd78df.par
+#BlueLink28 Suspension: Independent System Kinematics`Tour Bus - Steer Axle` Tour Bus and Motor Home` , Kinematics`KinInd_6b37cc8c-bc3b-43c4-aa33-a67529fd78df
+
+PARSFILE Suspensions\Compliance\CmpInd_c6b9a02d-d06b-420a-92aa-f95804dea422.par
+#BlueLink31 Suspension: Independent Compliance, Springs, and Dampers`Tour Bus - Steer Axle` Steer Axles` , Suspension compliance`CmpInd_c6b9a02d-d06b-420a-92aa-f95804dea422
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink13 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+iaxle 3
+symbol_add  <<axle>> 1
+LX_AXLE 4770
+PARSFILE Suspensions\Kin_Indy\KinInd_6b37cc8c-bc3b-43c4-aa33-a67529fd78df.par
+#BlueLink29 Suspension: Independent System Kinematics`Tour Bus - Steer Axle` Tour Bus and Motor Home` , Kinematics`KinInd_6b37cc8c-bc3b-43c4-aa33-a67529fd78df
+
+PARSFILE Suspensions\Compliance\CmpInd_c6b9a02d-d06b-420a-92aa-f95804dea422.par
+#BlueLink32 Suspension: Independent Compliance, Springs, and Dampers`Tour Bus - Steer Axle` Steer Axles` , Suspension compliance`CmpInd_c6b9a02d-d06b-420a-92aa-f95804dea422
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
+#BlueLink14 Brakes: Two-Wheel System`10 kN-m Capacity, Air (2 ch. ABS)` Air Brakes` , Brakes`Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+x_length 4770.000000
+PARSFILE Vehicles\Sprung_Mass\SprMass_f8de7033-f40a-4ee9-85f8-2369ca8d1d82.par
+#BlueLink1 Vehicle: Lead Unit Sprung Mass`3A Cab-Over (Frame Flex, Susp)` 3 Axle Trucks` , Sprung Mass`SprMass_f8de7033-f40a-4ee9-85f8-2369ca8d1d82
+
+PARSFILE Aerodynamics\Aero_Main\Aero_ad19711c-1936-499a-b1de-fc8dcd7243ec.par
+#BlueLink2 Aerodynamics: Basic`Conv. Cab w/ Fairings, 5 m Ref.` Conventional Cab` , Aerodynamics`Aero_ad19711c-1936-499a-b1de-fc8dcd7243ec
+
+PARSFILE Steering\Str_Wheel_Tq\TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6.par
+#BlueLink6 Steering Wheel Torque`Linear: 1/25 (Typical)` ` , Steering wheel torque`TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6
+
+PARSFILE Powertrain\6wd\6WD_e1c6b196-6aa7-4ce2-a84f-5c9093b85613.par
+#BlueLink33 Powertrain: 6-Wheel Drive`330 kW, 7 Spd. AT, Tridem Drive` 330 kW Powertrains` , Powertrain or dolly`6WD_e1c6b196-6aa7-4ce2-a84f-5c9093b85613
+
+symbol_push  <<hitch_x>> -4.135000
+symbol_push  <<hitch_y>> 0.000000
+symbol_push  <<hitch_z>> 1.100000
+PARSFILE Hitches\Joint\Hitch_fc25dbf0-73ba-4b1c-82af-5e2cf0a07b55.par
+#BlueLink7 Hitch: Joint Assembly`5th Wheel` 5th Wheel Hitches` , Hitch`Hitch_fc25dbf0-73ba-4b1c-82af-5e2cf0a07b55
+
+LX_H 4135
+Y_H 0
+H_H 1100
+*IMAGE_TYPE PASS_THROUGH
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#Three-axle Cab-Over tractor (S_SS) with a 6x4 powertrain and an 18-speed manual transmission.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 3 Axles; { * * * Vehicle Dynamic Simulator } 3A Cab-Over 6x6 (Frame Flex, Susp)
+#Library : Vehicle: Lead Unit with 3 Axles
+#DataSet : 3A Cab-Over 6x6 (Frame Flex, Susp)
+#Category: * * * Vehicle Dynamic Simulator
+#FileID  : Lead3a_b10e2ce9-254b-463e-900d-f942c327a76a
+#Product : TruckSim 2020.1
+#VehCode F_I_II
+
+END

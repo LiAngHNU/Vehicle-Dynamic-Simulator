@@ -1,0 +1,107 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit with 2 Axles`Compact Utility Truck (I_I)`Utility Vehicles
+#VehCode I_I
+IUNIT_INCREMENT
+IVEHICLE = IVEHICLE + 1
+symbol_add  <<unit>> 1
+symbol_add  <<vehicle>> 1
+NAXLES 2
+
+IOBJECT_SAVE
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 2
+OPT_PT 2
+#RingCtrl1 3
+#RingCtrl2 5
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_2a\Tire2a_1cf88a1b-6d81-41ef-954c-e471b47349a4.par
+#BlueLink8 Tires: Vehicle Unit with 2 Axles`420 kg, 263 mm (Single)` TS 2A Lead Unit Tires: Pacejka 5.2` , Tires`Tire2a_1cf88a1b-6d81-41ef-954c-e471b47349a4
+
+symbol_push  <<axle>> <<axle_temp>>
+*LX_AXLE_1 0
+*LX_AXLE_2 1923
+R_REAR_DRIVE_SC 1
+
+iaxle 1
+symbol_add  <<axle>> 1
+LX_AXLE 0
+PARSFILE Suspensions\Kin_Indy\KinInd_b123acd3-d151-43c7-a073-d17e85d7537c.par
+#BlueLink21 Suspension: Independent System Kinematics`Compact Utility Truck - Steer Axle` Compact Utility Truck` , Kinematics`KinInd_b123acd3-d151-43c7-a073-d17e85d7537c
+
+PARSFILE Suspensions\Compliance\CmpInd_1ee92d78-cf11-4b75-9152-1413ff67d1d7.par
+#BlueLink23 Suspension: Independent Compliance, Springs, and Dampers`Compact Utility Truck - Steer Axle` Steer Axles` , Suspension compliance`CmpInd_1ee92d78-cf11-4b75-9152-1413ff67d1d7
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_daff073a-b271-438f-a378-f322c7c37e4e.par
+#BlueLink11 Brakes: Two-Wheel System`2 kN-m Capacity, Hydraulic (No ABS)` Hydraulic Brakes` , Brakes`Brk2W_daff073a-b271-438f-a378-f322c7c37e4e
+
+PARSFILE Steering\System\StrSys_f03972a2-e652-4440-8e26-0404888126de.par
+#BlueLink13 Steering System`Compact Utility Truck` Utility Vehicles` , Steering`StrSys_f03972a2-e652-4440-8e26-0404888126de
+
+
+iaxle 2
+symbol_add  <<axle>> 1
+LX_AXLE 1923
+PARSFILE Suspensions\Kin_Indy\KinInd_3975acf2-5f13-41c6-9410-e239666e26ee.par
+#BlueLink22 Suspension: Independent System Kinematics`Compact Utility Truck - Drive Axle` Compact Utility Truck` , Kinematics`KinInd_3975acf2-5f13-41c6-9410-e239666e26ee
+
+PARSFILE Suspensions\Compliance\CmpInd_69c2bb93-abe6-49ad-aa3c-3b2cfba679be.par
+#BlueLink24 Suspension: Independent Compliance, Springs, and Dampers`Compact Utility Truck - Drive Axle` Drive Axles` , Suspension compliance`CmpInd_69c2bb93-abe6-49ad-aa3c-3b2cfba679be
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_daff073a-b271-438f-a378-f322c7c37e4e.par
+#BlueLink12 Brakes: Two-Wheel System`2 kN-m Capacity, Hydraulic (No ABS)` Hydraulic Brakes` , Brakes`Brk2W_daff073a-b271-438f-a378-f322c7c37e4e
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_5060eaca-b290-4143-962c-2780f3b0939c.par
+#BlueLink1 Vehicle: Lead Unit Sprung Mass`Compact Utility Truck` 2 Axle Trucks` , Sprung Mass`SprMass_5060eaca-b290-4143-962c-2780f3b0939c
+
+PARSFILE Aerodynamics\Aero_Main\Aero_2dcf0dd6-b552-482c-b346-939b627511c9.par
+#BlueLink2 Aerodynamics: Basic`No Aerodynamics` ` , Aerodynamics`Aero_2dcf0dd6-b552-482c-b346-939b627511c9
+
+PARSFILE Powertrain\Rwd\RWD_33a569dd-8426-4c96-ad44-bf0eeb4d4af8.par
+#BlueLink4 Powertrain: Rear-Wheel Drive`32 kW, 5 Speed MT` 32 kW Powertrains` , Powertrain or dolly`RWD_33a569dd-8426-4c96-ad44-bf0eeb4d4af8
+
+x_length 1923.000000
+PARSFILE Animator\Vehicles\AniVeh_1d7d0caf-7609-48e8-af6d-bbc086475760.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`2A Compact Utility Truck` 2A Utility Trucks and Vans` , Animator Shape(s)`AniVeh_1d7d0caf-7609-48e8-af6d-bbc086475760
+
+PARSFILE Steering\Str_Wheel_Tq\TqSW_dd692404-db70-403c-8e3f-05c637cd27c1.par
+#BlueLink6 Steering Wheel Torque`Linear: 1/20` ` , Steering wheel torque`TqSW_dd692404-db70-403c-8e3f-05c637cd27c1
+
+symbol_push  <<hitch_x>> -2.750000
+symbol_push  <<hitch_y>> 0.000000
+symbol_push  <<hitch_z>> 0.550000
+PARSFILE Hitches\Joint\Hitch_f3df368e-2b61-4939-8f40-95f979c57785.par
+#BlueLink7 Hitch: Joint Assembly`Ball Hitch` Ball Hitches` , Hitch`Hitch_f3df368e-2b61-4939-8f40-95f979c57785
+
+LX_H 2750
+Y_H 0
+H_H 550
+*IMAGE_FIT_MODE 1
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_1d7d0caf-7609-48e8-af6d-bbc086475760.png
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#Two-axle utility truck (I_I) with 32 kW powertrain and PAC52 tire model.
+#
+#Independent suspensions are used both axle positions.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 2 Axles; { Utility Vehicles } Compact Utility Truck (I_I)
+#Library : Vehicle: Lead Unit with 2 Axles
+#DataSet : Compact Utility Truck (I_I)
+#Category: Utility Vehicles
+#FileID  : Lead2a_6bce466e-51db-4635-9012-3917a5cc4de6
+#Product : TruckSim 2020.1
+#VehCode I_I
+
+END

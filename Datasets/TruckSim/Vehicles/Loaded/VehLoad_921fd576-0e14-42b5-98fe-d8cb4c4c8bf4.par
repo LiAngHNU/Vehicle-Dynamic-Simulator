@@ -1,0 +1,72 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`3A CiDi Foton Auman (Trailer)`* * * Vehicle Dynamic Simulator
+#VehCode F_S_SS + SSS
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_3a\Lead3a_54ca410c-d0a5-4cbd-a399-ab4b465dee7d.par
+#BlueLink0 Vehicle: Lead Unit with 3 Axles`3A CiDi Foton Auman` * * * CiDi Trucks` , Vehicle Type`Lead3a_54ca410c-d0a5-4cbd-a399-ab4b465dee7d
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Sensors_Traffic\Radar\Radar_00e2a90b-b753-48b3-b901-b46e4cf612e8.par
+#BlueLink1 ADAS Sensors for Range and Tracking`FCW` Forward Facing Sensors: FCW and ACC` , Miscellaneous`Radar_00e2a90b-b753-48b3-b901-b46e4cf612e8
+
+PARSFILE Vehicles\Trailer_3a\Trl3a_eaf7e8ec-9eb7-43a2-b7fa-b311ff604347.par
+#BlueLink8 Vehicle: Trailer with 3 Axles`3A Trailer` * * * CiDi Trailers` , Trailer Type`Trl3a_eaf7e8ec-9eb7-43a2-b7fa-b311ff604347
+
+ADD_REFERENCE_FRAME TrailerPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo_2
+WRT_Xo_2
+ANI_Xo_2
+SET_Y_NAME Yo_2
+WRT_Yo_2
+ANI_Yo_2
+SET_Z_NAME Zo_2
+WRT_Zo_2
+ANI_Zo_2
+SET_YAW_NAME Yaw_2
+WRT_Yaw_2
+ANI_Yaw_2
+SET_PITCH_NAME Pitch_2
+WRT_Pitch_2
+ANI_Pitch_2
+SET_ROLL_NAME Roll_E_2
+WRT_Roll_E_2
+ANI_Roll_E_2
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Loaded\VehLoad_921fd576-0e14-42b5-98fe-d8cb4c4c8bf4.png
+
+#EMBEDDED_NOTES
+#Three axle sleeper tractor with a lowboy trailer.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { * * * Vehicle Dynamic Simulator } 3A CiDi Foton Auman (Trailer)
+#Library : Vehicle: Loaded Combination
+#DataSet : 3A CiDi Foton Auman (Trailer)
+#Category: * * * Vehicle Dynamic Simulator
+#FileID  : VehLoad_921fd576-0e14-42b5-98fe-d8cb4c4c8bf4
+#Product : TruckSim 2020.1
+#VehCode F_S_SS + SSS
+
+END

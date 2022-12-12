@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 2 Axles`510 mm Radius, MF-Swift: Rigid Ring`TS 2A Lead Unit Tires: MF-Tyre / MF-Swift
+
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox5 1    
+
+*LDUAL_2 310
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\External\TireExt_0617e0a7-9fa7-4d1c-b4c4-dc08d749bdb2.par
+#BlueLink1 Tire (External)`510 mm Radius (MF-Swift, Rigid Ring)` * MF-Tyre / MF-Swift` , Tires`TireExt_0617e0a7-9fa7-4d1c-b4c4-dc08d749bdb2
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\External\TireExt_0617e0a7-9fa7-4d1c-b4c4-dc08d749bdb2.par
+#BlueLink999 Tire (External)`510 mm Radius (MF-Swift, Rigid Ring)` * MF-Tyre / MF-Swift` , Tires`TireExt_0617e0a7-9fa7-4d1c-b4c4-dc08d749bdb2
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 310
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\External\TireExt_0617e0a7-9fa7-4d1c-b4c4-dc08d749bdb2.par
+#BlueLink5 Tire (External)`510 mm Radius (MF-Swift, Rigid Ring)` * MF-Tyre / MF-Swift` , Tires`TireExt_0617e0a7-9fa7-4d1c-b4c4-dc08d749bdb2
+
+itire 2
+symbol_push  <<tire>> R<<axle>>o
+STORE_WHEEL_OFFSET 0.155000
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+PARSFILE Tires\External\TireExt_0617e0a7-9fa7-4d1c-b4c4-dc08d749bdb2.par
+#BlueLink999 Tire (External)`510 mm Radius (MF-Swift, Rigid Ring)` * MF-Tyre / MF-Swift` , Tires`TireExt_0617e0a7-9fa7-4d1c-b4c4-dc08d749bdb2
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\External\TireExt_0617e0a7-9fa7-4d1c-b4c4-dc08d749bdb2.par
+#BlueLink999 Tire (External)`510 mm Radius (MF-Swift, Rigid Ring)` * MF-Tyre / MF-Swift` , Tires`TireExt_0617e0a7-9fa7-4d1c-b4c4-dc08d749bdb2
+
+itire 2
+symbol_push  <<tire>> L<<axle>>o
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+STORE_WHEEL_OFFSET 0.155000
+PARSFILE Tires\External\TireExt_0617e0a7-9fa7-4d1c-b4c4-dc08d749bdb2.par
+#BlueLink999 Tire (External)`510 mm Radius (MF-Swift, Rigid Ring)` * MF-Tyre / MF-Swift` , Tires`TireExt_0617e0a7-9fa7-4d1c-b4c4-dc08d749bdb2
+
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 2 Axles; { TS 2A Lead Unit Tires: MF-Tyre / MF-Swift } 510 mm Radius, MF-Swift: Rigid Ring
+#Library : Tires: Vehicle Unit with 2 Axles
+#DataSet : 510 mm Radius, MF-Swift: Rigid Ring
+#Category: TS 2A Lead Unit Tires: MF-Tyre / MF-Swift
+#FileID  : Tire2a_35e5dbc9-ea1c-4f84-a737-3be0f1321c16
+#Product : TruckSim 2020.1
+#VehCode 2a Tire Group
+
+END

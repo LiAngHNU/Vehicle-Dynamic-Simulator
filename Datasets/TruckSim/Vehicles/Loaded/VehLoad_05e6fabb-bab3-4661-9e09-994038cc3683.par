@@ -1,0 +1,102 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`S_S + S + dS + S, 18 Payloads`Day-Cab Tractor-Trailers
+#VehCode S_S + S + dS + S
+#CheckBox0 1    
+#CheckBox1 1    
+
+PARSFILE Vehicles\Lead_2a\Lead2a_29ff09fb-fec6-4c6e-b33f-681f8d197af9.par
+#BlueLink0 Vehicle: Lead Unit with 2 Axles`2A Day Cab` 2A Tractors` , Vehicle Type`Lead2a_29ff09fb-fec6-4c6e-b33f-681f8d197af9
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Vehicles\Trailer_1a\Trl1a_b2f5bacf-a6c9-4ed6-b4da-f735e4b40087.par
+#BlueLink8 Vehicle: Trailer with 1 Axle`1A Van Trl, Pintle (Transparent)` Van / Container Trailers` , Trailer Type`Trl1a_b2f5bacf-a6c9-4ed6-b4da-f735e4b40087
+
+ADD_REFERENCE_FRAME TrailerPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo_2
+WRT_Xo_2
+ANI_Xo_2
+SET_Y_NAME Yo_2
+WRT_Yo_2
+ANI_Yo_2
+SET_Z_NAME Zo_2
+WRT_Zo_2
+ANI_Zo_2
+SET_YAW_NAME Yaw_2
+WRT_Yaw_2
+ANI_Yaw_2
+SET_PITCH_NAME Pitch_2
+WRT_Pitch_2
+ANI_Pitch_2
+SET_ROLL_NAME Roll_E_2
+WRT_Roll_E_2
+ANI_Roll_E_2
+PARSFILE Generic\Group\GenGrp_c7795f5e-8827-472a-a4da-8a476d116775.par
+#BlueLink9 Generic Data Group`1A Van Trailer: 9 Payloads` Multiple Payloads` , Miscellaneous`GenGrp_c7795f5e-8827-472a-a4da-8a476d116775
+
+PARSFILE Vehicles\Trailer_1a\Trl1a_6c2f1b19-3409-45f9-a170-e7873e169144.par
+#BlueLink16 Vehicle: Trailer with 1 Axle`1A Van Trl, Dolly (Transparent)` Van / Container Trailers` , Trailer Type`Trl1a_6c2f1b19-3409-45f9-a170-e7873e169144
+
+ADD_REFERENCE_FRAME TrailerPayloadsMore
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo_4
+WRT_Xo_4
+ANI_Xo_4
+SET_Y_NAME Yo_4
+WRT_Yo_4
+ANI_Yo_4
+SET_Z_NAME Zo_4
+WRT_Zo_4
+ANI_Zo_4
+SET_YAW_NAME Yaw_4
+WRT_Yaw_4
+ANI_Yaw_4
+SET_PITCH_NAME Pitch_4
+WRT_Pitch_4
+ANI_Pitch_4
+SET_ROLL_NAME Roll_E_4
+WRT_Roll_E_4
+ANI_Roll_E_4
+PARSFILE Generic\Group\GenGrp_c7795f5e-8827-472a-a4da-8a476d116775.par
+#BlueLink17 Generic Data Group`1A Van Trailer: 9 Payloads` Multiple Payloads` , Miscellaneous`GenGrp_c7795f5e-8827-472a-a4da-8a476d116775
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_135ced7b-75b6-4a58-a554-9ed8958443d3.png
+
+#EMBEDDED_NOTES
+#S_S + S + dS + S
+#
+#2A Tractor + 1A Trailer + 1A Dolly + 1A Trailer with a total of 18 payloads (9 per trailer), linked on Generic Data Group screens from the Vehicle: Loaded Combination screen.
+#
+#The trailer animation shapes have been set to be transparent to more clearly demonstrate the placement of the 18 payloads (9 per trailer).
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { Day-Cab Tractor-Trailers } S_S + S + dS + S, 18 Payloads
+#Library : Vehicle: Loaded Combination
+#DataSet : S_S + S + dS + S, 18 Payloads
+#Category: Day-Cab Tractor-Trailers
+#FileID  : VehLoad_05e6fabb-bab3-4661-9e09-994038cc3683
+#Product : TruckSim 2020.1
+#VehCode S_S + S + dS + S
+
+END

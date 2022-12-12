@@ -1,0 +1,103 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit with 2 Axles`2A Day Cab (No ABS)`2A Tractors
+#VehCode S_S
+IUNIT_INCREMENT
+IVEHICLE = IVEHICLE + 1
+symbol_add  <<unit>> 1
+symbol_add  <<vehicle>> 1
+NAXLES 2
+
+IOBJECT_SAVE
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 2
+OPT_PT 2
+#RingCtrl1 1
+#RingCtrl2 4
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_2a\Tire2a_1e7626ca-509e-49b8-983f-bec25b5573d1.par
+#BlueLink8 Tires: Vehicle Unit with 2 Axles`3000 kg Steer, 3000kg Drive (510 mm)` TS 2A Steer / Drive Tires: Internal Table Model` , Tires`Tire2a_1e7626ca-509e-49b8-983f-bec25b5573d1
+
+symbol_push  <<axle>> <<axle_temp>>
+*LX_AXLE_1 0
+*LX_AXLE_2 3500
+
+iaxle 1
+symbol_add  <<axle>> 1
+LX_AXLE 0
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_64c30f3c-3ccd-4380-a6bc-d537f8dd7bc1.par
+#BlueLink15 Suspension: Solid Axle System Kinematics`5.5t Steer, Single Wheel - Kinematics` Steer Axle` , Kinematics`KinSA_64c30f3c-3ccd-4380-a6bc-d537f8dd7bc1
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_de50d1ae-a9e2-40b2-bada-e6716d623681.par
+#BlueLink17 Suspension: Solid Axle Compliance, Springs, and Dampers`5.5t Leaf: +150 mm, -150 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_de50d1ae-a9e2-40b2-bada-e6716d623681
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_f3287af0-7014-484a-a147-94075e00a013.par
+#BlueLink11 Brakes: Two-Wheel System`7.5 kN-m Capacity, Air (No ABS)` Air Brakes` , Brakes`Brk2W_f3287af0-7014-484a-a147-94075e00a013
+
+PARSFILE Steering\System\StrSys_f055b7fa-5320-4253-a0c9-99a8ad7d1f42.par
+#BlueLink13 Steering System`Short (4 m) Wheelbase` Medium - Heavy Duty Steering` , Steering`StrSys_f055b7fa-5320-4253-a0c9-99a8ad7d1f42
+
+
+iaxle 2
+symbol_add  <<axle>> 1
+LX_AXLE 3500
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_372fbdd1-d21e-4703-8f83-8a3f1b2b6572.par
+#BlueLink16 Suspension: Solid Axle System Kinematics`8.5t Drive, Dual Wheels` Drive Axle` , Kinematics`KinSA_372fbdd1-d21e-4703-8f83-8a3f1b2b6572
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_f30bb345-43ea-49d3-8c3e-c0faf5618fb5.par
+#BlueLink18 Suspension: Solid Axle Compliance, Springs, and Dampers`8.5t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_f30bb345-43ea-49d3-8c3e-c0faf5618fb5
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_b6f14525-7233-4fd7-b700-de03bd681ce2.par
+#BlueLink12 Brakes: Two-Wheel System`10 kN-m Capacity, Air (No ABS)` Air Brakes` , Brakes`Brk2W_b6f14525-7233-4fd7-b700-de03bd681ce2
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_455496a4-4676-47bb-baaa-897cb82f0632.par
+#BlueLink1 Vehicle: Lead Unit Sprung Mass`2A Day Cab` Tractors` , Sprung Mass`SprMass_455496a4-4676-47bb-baaa-897cb82f0632
+
+PARSFILE Aerodynamics\Aero_Main\Aero_1c24bf56-5f45-4398-9587-f8c239ab8747.par
+#BlueLink2 Aerodynamics: Basic`Conv. Cab w/ Fairings, 4.8 m Ref.` Conventional Cab` , Aerodynamics`Aero_1c24bf56-5f45-4398-9587-f8c239ab8747
+
+PARSFILE Powertrain\Rwd\RWD_1eadbc9a-d1a6-4cd2-a7ef-38ec761bf5e2.par
+#BlueLink4 Powertrain: Rear-Wheel Drive`225 kW, 7 Speed MT` 200 kW - 250 kW Powertrains` , Powertrain or dolly`RWD_1eadbc9a-d1a6-4cd2-a7ef-38ec761bf5e2
+
+x_length 3500.000000
+PARSFILE Animator\Vehicles\AniVeh_135ced7b-75b6-4a58-a554-9ed8958443d3.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`2A Day Cab` 2A Lead Units` , Animator Shape(s)`AniVeh_135ced7b-75b6-4a58-a554-9ed8958443d3
+
+PARSFILE Steering\Str_Wheel_Tq\TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6.par
+#BlueLink6 Steering Wheel Torque`Linear: 1/25 (Typical)` ` , Steering wheel torque`TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6
+
+symbol_push  <<hitch_x>> -2.900000
+symbol_push  <<hitch_y>> 0.000000
+symbol_push  <<hitch_z>> 1.100000
+PARSFILE Hitches\Joint\Hitch_fc25dbf0-73ba-4b1c-82af-5e2cf0a07b55.par
+#BlueLink7 Hitch: Joint Assembly`5th Wheel` 5th Wheel Hitches` , Hitch`Hitch_fc25dbf0-73ba-4b1c-82af-5e2cf0a07b55
+
+LX_H 2900
+Y_H 0
+H_H 1100
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_135ced7b-75b6-4a58-a554-9ed8958443d3.png
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#Two axle day cab style truck w/o ABS brakes.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 2 Axles; { 2A Tractors } 2A Day Cab (No ABS)
+#Library : Vehicle: Lead Unit with 2 Axles
+#DataSet : 2A Day Cab (No ABS)
+#Category: 2A Tractors
+#FileID  : Lead2a_8a44ade5-28e8-4409-8222-5766096bbe02
+#Product : TruckSim 2020.1
+#VehCode S_S
+
+END

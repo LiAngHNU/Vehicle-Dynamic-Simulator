@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Tire: Aligning Moment`Mz; Widebase Asymmetric`SAE Widebase Single Tire
+#CheckBox0 0    
+
+#RingCtrl0 2D_SPLINE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Slip angle [Alpha] (deg)
+*3D_ZLabel Aligning moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 7, 21 ! columns x rows
+MZ_TIRE_CARPET 2D_SPLINE
+0, 12623, 25242, 37866, 50485, 63108, 75727, 100970
+-21, 0, 0, 0, 0, 0, 0, 0
+-20, 0, 0, 0, 0, 0, 0, 0
+-14, -68, -166.7, -312, -465.3, -701.7, -897.4, -1318.9
+-12.5, -87.8, -230.5, -424, -585.1, -827.1, -1255.7, -2014.2
+-10, -120, -311.8, -524.6, -760.7, -1047, -1436.4, -2502.8
+-8, -148.5, -365.5, -604, -883.7, -1264.5, -1781.6, -2801.5
+-6, -171.2, -395, -647.2, -943.1, -1334, -1750.3, -2777.8
+-4, -141.6, -363.3, -607.5, -939.3, -1311.1, -1769.4, -2793.6
+-2, -100.5, -249.7, -440.9, -666.3, -922.8, -1221.1, -1881.7
+-1, -63.2, -151.8, -273.4, -418.2, -582.7, -754.6, -1169.5
+0, -6.7, -22.6, -54.8, -101.7, -140.9, -201.5, -331.5
+1, 50.5, 114.9, 187.3, 255.1, 315.5, 398.6, 544.3
+2, 98.4, 222, 369.2, 525.6, 712.5, 917.9, 1323.7
+4, 139.3, 334, 567.4, 865.1, 1202.3, 1588.2, 2462.9
+6, 148.2, 362.1, 619.6, 922, 1293.5, 1713.3, 2740.1
+8, 135.6, 325.8, 510.1, 707.1, 992.4, 1409.9, 2163.7
+10, 107.1, 272.1, 430.7, 584.2, 774.9, 1064.7, 1865
+12.5, 74.9, 190.8, 330.1, 408.6, 555.1, 884, 1376.4
+14, 55.1, 127.1, 218.1, 288.7, 427.8, 525.7, 681
+20, 0, 0, 0, 0, 0, 0, 0
+21, 0, 0, 0, 0, 0, 0, 0
+ENDTABLE
+
+
+
+#EMBEDDED_NOTES
+#This data comes from the SAE Cooperative Research program conducted in the 1990s.
+#
+#It is a direct copy of the Mz data measured for a 425/65R22.5 widebase tire .
+#
+#Data for the 20 deg slip angle was extrapolated using the rule of thumb that aligning moments generallly drop to zero at about this value.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire: Aligning Moment; { SAE Widebase Single Tire } Mz; Widebase Asymmetric
+#Library : Tire: Aligning Moment
+#DataSet : Mz; Widebase Asymmetric
+#Category: SAE Widebase Single Tire
+#FileID  : TireMz_ee537abf-d523-40a3-9588-742895134d28
+#Product : TruckSim 2020.1
+#VehCode Tire: Mz
+
+END

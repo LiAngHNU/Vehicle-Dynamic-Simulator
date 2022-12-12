@@ -1,0 +1,59 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Combination`DRW Pickup, ADAS Sens. (2) (Lane Chng)`Pickup Trucks
+#VehCode I_S
+#CheckBox0 0    
+#CheckBox2 0    
+
+PARSFILE Vehicles\Lead_2a\Lead2a_b12d039f-c0ae-4c93-a7ad-c2ddf96fa5ca.par
+#BlueLink0 Vehicle: Lead Unit with 2 Axles`Pickup, Crew Cab DRW` Pickup Trucks` , Vehicle Type`Lead2a_b12d039f-c0ae-4c93-a7ad-c2ddf96fa5ca
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Sensors_Traffic\Radar\Radar_12611369-9b19-4097-b75b-ea20ad5c7960.par
+#BlueLink2 ADAS Sensors for Range and Tracking`ACC: X = -975, Z =1750` Forward Facing Sensors: FCW and ACC` , Miscellaneous`Radar_12611369-9b19-4097-b75b-ea20ad5c7960
+
+PARSFILE Sensors_Traffic\Radar\Radar_876e482e-922e-4ced-85bd-b4d0dd7a58c9.par
+#BlueLink3 ADAS Sensors for Range and Tracking`Rear Facing` Rear Facing Sensors` , Miscellaneous`Radar_876e482e-922e-4ced-85bd-b4d0dd7a58c9
+
+PARSFILE Sensors_Traffic\Type_Map\TypeMap_e2f7e559-12a6-4d46-b853-026f27768405.par
+#BlueLink4 Sensor Reflectiveness Map`2 Sensor Types, 2 Material Types` ` , Miscellaneous`TypeMap_e2f7e559-12a6-4d46-b853-026f27768405
+
+PARSFILE Generic\VS_commands\GenVS_a7b57426-35a2-490a-a48e-7ef73d17470e.par
+#BlueLink5 Generic VS Commands`VS Commands: Lane Change Commands` VS Commands for Sensors and Traffic` , Miscellaneous`GenVS_a7b57426-35a2-490a-a48e-7ef73d17470e
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ee189bc-4102-46cf-a6ee-046ab79da53b.png
+
+#EMBEDDED_NOTES
+#ADAS Range and Detection Sensor set up for use with Dually Pickup Truck. The X and Z coordinates correspond to a sensor located in front of the rear view mirror.
+#
+#The sensor's range is 100 meters and has a field of view (FOV) of 20 degrees.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Combination; { Pickup Trucks } DRW Pickup, ADAS Sens. (2) (Lane Chng)
+#Library : Vehicle: Loaded Combination
+#DataSet : DRW Pickup, ADAS Sens. (2) (Lane Chng)
+#Category: Pickup Trucks
+#FileID  : VehLoad_36fd48d5-6684-4257-b591-c11f3887c2b2
+#Product : TruckSim 2020.1
+#VehCode I_S
+
+END

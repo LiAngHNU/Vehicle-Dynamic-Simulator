@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Tire: Longitudinal Force`Example Fx vs. Kappa`Extended with Camber Details
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. slip ratio [Kappa] (-)
+*3D_ZLabel Abs. longitudinal tire force Fx (N)
+
+#DiagramTwo0
+*3D_DATA 3, 13 ! columns x rows
+FX_TIRE_CARPET 2D_FROM_ZERO
+0, 2200, 4100, 5800
+0.007, 291.848, 486.576, 682.922
+0.01, 460.963, 768.624, 1078.63
+0.02, 951.606, 1578.29, 2197.57
+0.05, 2022.79, 3249.34, 4346.21
+0.1, 2548.28, 3983.74, 5169.37
+0.15, 2607.24, 4042.28, 5199.63
+0.2, 2574.91, 3979.2, 5101.28
+0.25, 2522.43, 3892, 4981.48
+0.3, 2466.9, 3803.03, 4863.32
+0.35, 2413.15, 3718.2, 4752.32
+0.4, 2362.55, 3638.97, 4649.46
+0.45, 2315.34, 3565.41, 4554.39
+0.5, 2315.34, 3565.41, 4554.39
+ENDTABLE
+
+MU_REF_X 0.89
+
+
+LOG_ENTRY Used Dataset: Tire: Longitudinal Force; { Extended with Camber Details } Example Fx vs. Kappa
+#Library : Tire: Longitudinal Force
+#DataSet : Example Fx vs. Kappa
+#Category: Extended with Camber Details
+#FileID  : TireFx_bbeee974-4dbd-4dfb-88c8-abd1684efb14
+#Product : TruckSim 2020.1
+#VehCode Tire: Fx
+
+END

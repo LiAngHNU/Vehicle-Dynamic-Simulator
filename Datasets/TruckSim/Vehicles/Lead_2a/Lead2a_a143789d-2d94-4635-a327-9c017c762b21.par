@@ -1,0 +1,103 @@
+PARSFILE
+#FullDataName Vehicle: Lead Unit with 2 Axles`Euro Van`Large European Van
+#VehCode S_S
+IUNIT_INCREMENT
+IVEHICLE = IVEHICLE + 1
+symbol_add  <<unit>> 1
+symbol_add  <<vehicle>> 1
+NAXLES 2
+
+IOBJECT_SAVE
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 2
+OPT_PT 2
+#RingCtrl1 1
+#RingCtrl2 4
+symbol_push  <<axle_temp>> <<axle>>
+PARSFILE Tires\Group_2a\Tire2a_a7df2c45-dbb7-4bca-8cfc-08d7e31a205c.par
+#BlueLink8 Tires: Vehicle Unit with 2 Axles`2000 kg Steer, 2000kg Drive (390 mm)` TS 2A Steer / Drive Tires: Internal Table Model` , Tires`Tire2a_a7df2c45-dbb7-4bca-8cfc-08d7e31a205c
+
+symbol_push  <<axle>> <<axle_temp>>
+*LX_AXLE_1 0
+*LX_AXLE_2 3100
+
+iaxle 1
+symbol_add  <<axle>> 1
+LX_AXLE 0
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_e1beb7ea-b984-421e-b0ff-94f4aafe200a.par
+#BlueLink15 Suspension: Solid Axle System Kinematics`3t Steer, Single Wheel (Euro Van)` Large European Van` , Kinematics`KinSA_e1beb7ea-b984-421e-b0ff-94f4aafe200a
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_6bafd81c-f551-4feb-bb31-3684b7fe89e8.par
+#BlueLink17 Suspension: Solid Axle Compliance, Springs, and Dampers`3t Leaf: +100 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_6bafd81c-f551-4feb-bb31-3684b7fe89e8
+
+OPT_STEER_EXT 0
+PARSFILE Brakes\2W_System\Brk2W_b80a513c-6cf0-46f3-ad96-9beeff25f2ec.par
+#BlueLink11 Brakes: Two-Wheel System`6 kN-m Capacity, Hydraulic (2 ch. ABS)` Hydraulic Brakes` , Brakes`Brk2W_b80a513c-6cf0-46f3-ad96-9beeff25f2ec
+
+PARSFILE Steering\System\StrSys_f055b7fa-5320-4253-a0c9-99a8ad7d1f42.par
+#BlueLink13 Steering System`Short (4 m) Wheelbase` Medium - Heavy Duty Steering` , Steering`StrSys_f055b7fa-5320-4253-a0c9-99a8ad7d1f42
+
+
+iaxle 2
+symbol_add  <<axle>> 1
+LX_AXLE 3100
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_2c1ea602-ddad-4493-99e0-6b05dca2d38a.par
+#BlueLink16 Suspension: Solid Axle System Kinematics`Large Euro Van - Rear (Dual Wheels)` Large European Van` , Kinematics`KinSA_2c1ea602-ddad-4493-99e0-6b05dca2d38a
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_e6e7568c-2525-480b-87bc-b0b15886513c.par
+#BlueLink18 Suspension: Solid Axle Compliance, Springs, and Dampers`5.5t Leaf: +150 mm, -60 mm Travel` Leaf Springs` , Suspension compliance`CmpSA_e6e7568c-2525-480b-87bc-b0b15886513c
+
+OPT_STEER_EXT 1
+PARSFILE Brakes\2W_System\Brk2W_68b07606-0378-4808-9f41-4b586a776c52.par
+#BlueLink12 Brakes: Two-Wheel System`7.5 kN-m Capacity, Hydraulic (2 ch. ABS)` Hydraulic Brakes` , Brakes`Brk2W_68b07606-0378-4808-9f41-4b586a776c52
+
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_dfc22a6a-31d7-4dc7-82da-c5ded035e154.par
+#BlueLink1 Vehicle: Lead Unit Sprung Mass`Large European Van` 2 Axle Trucks` , Sprung Mass`SprMass_dfc22a6a-31d7-4dc7-82da-c5ded035e154
+
+PARSFILE Aerodynamics\Aero_Main\Aero_8deb8be8-29e6-4479-9cb0-c4dbd522aeeb.par
+#BlueLink2 Aerodynamics: Basic`Large Euro Van Aerodynamics` Large European Van` , Aerodynamics`Aero_8deb8be8-29e6-4479-9cb0-c4dbd522aeeb
+
+PARSFILE Powertrain\Rwd\RWD_d755252d-e774-4d95-a915-564d27973efb.par
+#BlueLink4 Powertrain: Rear-Wheel Drive`150 kW, 5 Speed AT` 150 kW Powertrains` , Powertrain or dolly`RWD_d755252d-e774-4d95-a915-564d27973efb
+
+x_length 3100.000000
+PARSFILE Animator\Vehicles\AniVeh_f747720e-6e19-4110-bf60-110dcdd78765.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`2A Large European Van` 2A Utility Trucks and Vans` , Animator Shape(s)`AniVeh_f747720e-6e19-4110-bf60-110dcdd78765
+
+PARSFILE Steering\Str_Wheel_Tq\TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6.par
+#BlueLink6 Steering Wheel Torque`Linear: 1/25 (Typical)` ` , Steering wheel torque`TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6
+
+symbol_push  <<hitch_x>> -4.100000
+symbol_push  <<hitch_y>> 0.000000
+symbol_push  <<hitch_z>> 0.500000
+PARSFILE Hitches\Joint\Hitch_f3df368e-2b61-4939-8f40-95f979c57785.par
+#BlueLink7 Hitch: Joint Assembly`Ball Hitch` Ball Hitches` , Hitch`Hitch_f3df368e-2b61-4939-8f40-95f979c57785
+
+LX_H 4100
+Y_H 0
+H_H 500
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_f747720e-6e19-4110-bf60-110dcdd78765.png
+IOBJECT_RESTORE
+
+#EMBEDDED_NOTES
+#European style heavy duty van.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 2 Axles; { Large European Van } Euro Van
+#Library : Vehicle: Lead Unit with 2 Axles
+#DataSet : Euro Van
+#Category: Large European Van
+#FileID  : Lead2a_a143789d-2d94-4635-a327-9c017c762b21
+#Product : TruckSim 2020.1
+#VehCode S_S
+
+END
