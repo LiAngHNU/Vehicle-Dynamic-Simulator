@@ -29,7 +29,7 @@ Vector_Umin = [-0.60];    Vector_Dmin = [-0.20];
 % Set Ref Line
 load('Scenarios\2004_mcity_line_04.mat');
 % Set Vehicle
-load('Models\Vehicles\CiDi\Shanqi_E9\Shanqi_E9_Calib.mat');
+load('Configs\Liuqi_H5\Liuqi_H5_Calib.mat');
 % Set Start Position
 StartID = 1;
 disp('Loading Time:');
@@ -56,7 +56,7 @@ Matrix_Rd = zeros(nU*Tp,nU*Tp);         % Delta Weights
 %% Update States %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Update Vehicle Parameters
-Ms = Vehicle_Calib.Mass;    Iz = Vehicle_Calib.Inertia;
+Ms = Vehicle_Calib.Ms;      Iz = Vehicle_Calib.Iz;
 Lf = Vehicle_Calib.Lf;      Lr = Vehicle_Calib.Lr;
 Cf = Vehicle_Calib.Cyf;     Cr = Vehicle_Calib.Cyr;
 % Update States X(k)
@@ -64,7 +64,7 @@ x1 = +0.00;     % Linear Coordinate along X-axis
 x2 = +0.00;     % Linear Coordinate along Y-axis
 x3 = +0.00;     % Angular Coordinate around Z-axis
 x4 = +0.00;     % Linear Velocity along X-axis
-Vx = +3.00;
+Vx = +15.00;
 for i = 1:1:nS
     Matrix_Xp(1,i) = x1;
     Matrix_Xp(2,i) = x2;

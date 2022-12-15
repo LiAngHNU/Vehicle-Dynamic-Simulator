@@ -11,192 +11,229 @@ close all; clear; clc;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 tic;
 % Set Steps
-Ts = 0.03;
-Tp = 60;
+Ts = 0.05;
+Tl = 0.20;
+Tp = 40;
 % Set Dimensions
-nX = 7;
+nX = 6;
 nU = 2;
-nV = 1;
-nS = 500;
+nS = 10;
+nL = 1001;
 % Set Weights
-Qe =    1;
-Qp =   10;
-Qt = 1000;
-Qs = -100;
+Qe =     0;         ey_max = 4;
+Qh =   100;
+Qt =     0;
+Qs =  -100;
+Ru1 =    0;
+Ru2 =   10;
+Rd1 =    0;
+Rd2 = 1000;
 % Set Constraints
-Vector_Umax = [+10000;+0.60];    Vector_Dmax = [+10000;+0.20];
-Vector_Umin = [-10000;-0.60];    Vector_Dmin = [-10000;-0.20];
+u1_max = +7500; u1_min = -7500; du1_max = +1000; du1_min = -1000;
+u2_max = +0.60; u2_min = -0.60; du2_max = +0.20; du2_min = -0.20;
+% Set MPPI Parameters
+lam = 50;
+eta =  0;
+omg = zeros(nS,1);
 % Set Ref Line
 load('Scenarios\2004_mcity_line_04.mat');
 % Set Vehicle
-load('Models\Vehicles\CiDi\Shanqi_E9\Shanqi_E9_Calib.mat');
+load('Configs\Foton_Auman\Foton_Auman_Calib.mat');
+% Set Tyre
+load('Configs\Foton_Auman\Foton_Auman_Pacejka_Tyre.mat');
 % Set Start Position
-StartID = 1;
-disp('Loading Time:');
-disp(toc);
+StartID =    1;
+disp('Loading Time:'); disp(toc);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Initialize Vectors & Matrices %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 tic;
-% Initialize Vectors
-Vector_Sta = zeros(Tp,1);
-Vector_Kpa = zeros(Tp,1);
-Vector_Uop = zeros(Tp+1,nU);
-% Initialize Matrices
-Matrix_Xp = zeros(nX*(Tp+1),nS);        % Predicted States
-Matrix_Up = zeros(nU*(Tp+1),nS);        % Predicted Inputs
-Matrix_Dp = zeros(nU*(Tp+1),nS);        % Predicted Deltas
-Matrix_Jp = zeros(1,        nS);        % Predicted Costs
-Matrix_Qp = zeros(nX*(Tp-1),nX*(Tp-1)); % Progress Weights
-Matrix_Qt = zeros(   nX,    nX);        % Terminal Weights
-Matrix_Ru = zeros(nU*Tp,nU*Tp);         % Input Weights
-Matrix_Rd = zeros(nU*Tp,nU*Tp);         % Delta Weights
-Matrix_Lateral_Error = zeros(Tp+1,nS);
-Matrix_Heading_Error = zeros(Tp+1,nS);
+% Initialize State Matrices
+Mat_x1_Pre = zeros(Tp+1,nS);
+Mat_x2_Pre = zeros(Tp+1,nS);
+Mat_x3_Pre = zeros(Tp+1,nS);
+Mat_x4_Pre = zeros(Tp+1,nS);
+Mat_x5_Pre = zeros(Tp+1,nS);
+Mat_x6_Pre = zeros(Tp+1,nS);
+% Initialize Input Matrices
+Mat_u1_Pre = zeros(Tp+1,nS);
+Mat_u2_Pre = zeros(Tp+1,nS);
+% Initialize Delta Matrices
+Mat_d1_Pre = zeros(Tp+1,nS);
+Mat_d2_Pre = zeros(Tp+1,nS);
+% Initialize Cost Vector
+Vec_E_Lat_Tmp = zeros(nL,1);
+Mat_E_Lat_Pre = zeros(Tp+1,nS);
+Mat_E_Hea_Pre = zeros(Tp+1,nS);
+Mat_Sc_Pre = zeros(Tp+1,nS);
+Vec_Je = zeros(1,nS);
+Vec_Jh = zeros(1,nS);
+Vec_Js = zeros(1,nS);
+Vec_Ju = zeros(1,nS);
+Vec_Jd = zeros(1,nS);
+Vec_Jp = zeros(1,nS);
+for i = 1:1:nS
+    Mat_Sc_Pre(1,i) = RefLineInfo.S(StartID);
+end
+disp('Initialization Time:'); disp(toc);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Update States %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Update Vehicle Parameters
-Ms = Vehicle_Calib.Mass;    Iz = Vehicle_Calib.Inertia;
-Lf = Vehicle_Calib.Lf;      Lr = Vehicle_Calib.Lr;
-Cf = Vehicle_Calib.Cyf;     Cr = Vehicle_Calib.Cyr;
-Re = 0.51;
-% Update States X(k)
-x1 = RefLineInfo.X(StartID);    % Linear Coordinate along X-axis
-x2 = RefLineInfo.Y(StartID);    % Linear Coordinate along Y-axis
-x3 = RefLineInfo.Tht(StartID);  % Angular Coordinate around Z-axis
-x4 = +5.00;                     % Linear Velocity along X-axis
-x5 = +0.00;                     % Linear Velocity along Y-axis
-x6 = +0.00;                     % Angular Velocity around Z-axis
-x7 = RefLineInfo.S(StartID);    % Linear Coordinate along S-axis
+tic;
+% Update Vehicle Paramters
+Ms = Vehicle_Calib.Ms;      Iz = Vehicle_Calib.Iz;
+Lf = Vehicle_Calib.Lf;      Lr = Vehicle_Calib.Lr;              Re = 0.51;
+Byf = Tyre_Calib.Lat_Front_Coeffs(1);
+Cyf = Tyre_Calib.Lat_Front_Coeffs(2);
+Dyf = Tyre_Calib.Lat_Front_Coeffs(3);
+Byr = Tyre_Calib.Lat_Rear_Coeffs(1);
+Cyr = Tyre_Calib.Lat_Rear_Coeffs(2);
+Dyr = Tyre_Calib.Lat_Rear_Coeffs(3);
+% Update States
+x1 = RefLineInfo.X(StartID);    x4 = +10.00;
+x2 = RefLineInfo.Y(StartID);    x5 = +0.00;
+x3 = RefLineInfo.Tht(StartID);  x6 = +0.00;
+u1 = 0;
+u2 = 0;
 for i = 1:1:nS
-    Matrix_Xp(1,i) = x1;
-    Matrix_Xp(2,i) = x2;
-    Matrix_Xp(3,i) = x3;
-    Matrix_Xp(4,i) = x4;
-    Matrix_Xp(5,i) = x5;
-    Matrix_Xp(6,i) = x6;
-    Matrix_Xp(7,i) = x7;
+    Mat_x1_Pre(1,i) = x1;
+    Mat_x2_Pre(1,i) = x2;
+    Mat_x3_Pre(1,i) = x3;
+    Mat_x4_Pre(1,i) = x4;
+    Mat_x5_Pre(1,i) = x5;
+    Mat_x6_Pre(1,i) = x6;
 end
 % Update Inputs
-u1 = +0.00;     % u1(k-1)
-u2 = -0.20;
 for i = 1:1:nS
-    Matrix_Up(1,i) = u1;
-    Matrix_Up(2,i) = u2;
+    Mat_u1_Pre(1,i) = u1; 
+    Mat_u2_Pre(1,i) = u2;
 end
-disp('Initialization Time:');
-disp(toc);
+% Update Inputs Exp & Var
+u1_var = +1.00*du1_max;
+u2_var = +0.66*du2_max;
+% Update Local Reference Line
+Sc = RefLineInfo.S(StartID);
+Local_S = Sc:0.25:Sc+50;
+Local_X = interp1(RefLineInfo.S,RefLineInfo.X,Local_S,'linear');
+Local_Y = interp1(RefLineInfo.S,RefLineInfo.Y,Local_S,'linear');
+Local_Tht = interp1(RefLineInfo.S,RefLineInfo.Tht,Local_S,'linear');
+Local_Kpa = interp1(RefLineInfo.S,RefLineInfo.Kpa,Local_S,'linear');
+disp('Update Time:'); disp(toc);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Generate Random Input Sequences %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-tic;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                                      
 for i = 1:1:nS
     for j = 2:1:Tp+1
-        for k = 1:1:nU
-            Matrix_Up(nU*(j-1)+k,i) = ...
-                Matrix_Up(nU*(j-2)+k,i) + normrnd(0,0.33*Vector_Dmax(k));
-            % Saturation Check
-            if Matrix_Up(nU*(j-1)+k,i) > Vector_Umax(k)
-                Matrix_Up(nU*(j-1)+k,i) = Vector_Umax(k);
-            end
-            if Matrix_Up(nU*(j-1)+k,i) < Vector_Umin(k)
-                Matrix_Up(nU*(j-1)+k,i) = Vector_Umin(k);
-            end
+        Mat_u1_Pre(j,i) = Mat_u1_Pre(j-1,i) + normrnd(0,u1_var);
+        Mat_u2_Pre(j,i) = Mat_u2_Pre(j-1,i) + normrnd(0,u2_var);
+        if Mat_u1_Pre(j,i) > u1_max
+            Mat_u1_Pre(j,i) = u1_max;
         end
+        if Mat_u1_Pre(j,i) < u1_min
+            Mat_u1_Pre(j,i) = u1_min;
+        end
+        if Mat_u2_Pre(j,i) > u2_max
+            Mat_u2_Pre(j,i) = u2_max;
+        end
+        if Mat_u2_Pre(j,i) < u2_min
+            Mat_u2_Pre(j,i) = u2_min;
+        end
+        Mat_d1_Pre(j,i) = Mat_u1_Pre(j,i) - Mat_u1_Pre(j-1,i);
+        Mat_d2_Pre(j,i) = Mat_u2_Pre(j,i) - Mat_u2_Pre(j-1,i);
     end
 end
-disp('Input Sequences Generation Time:');
-disp(toc);
+disp('Input Sequences Generation Time:'); disp(toc);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Calculate State Sequences %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-tic;
 for i = 1:1:nS
     for j = 2:1:Tp+1
-        x1_last = Matrix_Xp(nX*(j-2)+1,i);
-        x2_last = Matrix_Xp(nX*(j-2)+2,i);
-        x3_last = Matrix_Xp(nX*(j-2)+3,i);
-        x4_last = Matrix_Xp(nX*(j-2)+4,i);
-        x5_last = Matrix_Xp(nX*(j-2)+5,i);
-        x6_last = Matrix_Xp(nX*(j-2)+6,i);
-        x7_last = Matrix_Xp(nX*(j-2)+7,i);
-        u1_last = Matrix_Up(nU*(j-2)+1,i);
-        u2_last = Matrix_Up(nU*(j-2)+2,i);
-        alpha_f = (x5_last + Lf*x6_last)/x4_last - u2_last;
-        alpha_r = (x5_last - Lr*x6_last)/x4_last;
-        x1_ref = interp1(RefLineInfo.S,RefLineInfo.X,x7_last,'linear','extrap');
-        x2_ref = interp1(RefLineInfo.S,RefLineInfo.Y,x7_last,'linear','extrap');
-        x3_ref = interp1(RefLineInfo.S,RefLineInfo.Tht,x7_last,'linear','extrap');
-        kr_ref = interp1(RefLineInfo.S,RefLineInfo.Kpa,x7_last,'linear','extrap');
-        lateral_error = sqrt((x1_last-x1_ref)^2 + (x2_last-x2_ref)^2);
-        heading_error = x3_last - x3_ref;
-        x1_dot = x4_last*cos(x3_last) - x5_last*sin(x3_last);
-        x2_dot = x4_last*sin(x3_last) + x5_last*cos(x3_last);
-        x3_dot = x6_last;
-        x4_dot = (1/Ms)*(u1_last/Re - Cf*alpha_f*sin(u2_last) + Ms*x5_last*x6_last);
-        x5_dot = (1/Ms)*(Cf*alpha_f*cos(u2_last) + Cr*alpha_r - Ms*x4_last*x6_last);
-        x6_dot = (1/Iz)*(Cf*Lf*alpha_f*cos(u2_last) - Cr*Lr*alpha_r);
-        x7_dot = (x4*cos(heading_error) - x5*sin(heading_error))/(1 - kr_ref*lateral_error);
-        Matrix_Xp(nX*(j-1)+1,i) = x1_last + x1_dot*Ts;
-        Matrix_Xp(nX*(j-1)+2,i) = x2_last + x2_dot*Ts;
-        Matrix_Xp(nX*(j-1)+3,i) = x3_last + x3_dot*Ts;
-        Matrix_Xp(nX*(j-1)+4,i) = x4_last + x4_dot*Ts;
-        Matrix_Xp(nX*(j-1)+5,i) = x5_last + x5_dot*Ts;
-        Matrix_Xp(nX*(j-1)+6,i) = x6_last + x6_dot*Ts;
-        Matrix_Xp(nX*(j-1)+7,i) = x7_last + x7_dot*Ts;
-        Matrix_Lateral_Error(j,i) = lateral_error;
-        Matrix_Heading_Error(j,i) = heading_error;
+        % Calculate Slip Angle
+        alphaF = (Mat_x5_Pre(j-1,i)+Lf*Mat_x6_Pre(j-1,i))/Mat_x4_Pre(j-1,i) - Mat_u2_Pre(j-1,i);
+        alphaR = (Mat_x5_Pre(j-1,i)-Lr*Mat_x6_Pre(j-1,i))/Mat_x4_Pre(j-1,i);
+        % Calculate Tyre Force
+        Fxr = 4*Mat_u1_Pre(j-1,i)/Re;
+        Fyf = Dyf*sin(Cyf*atan(Byf*alphaF));
+        Fyr = Dyr*sin(Cyr*atan(Byr*alphaR));
+        % Calculate State Derivatives
+        x1_dot = Mat_x4_Pre(j-1,i)*cos(Mat_x3_Pre(j-1,i)) - Mat_x5_Pre(j-1,i)*sin(Mat_x3_Pre(j-1,i));
+        x2_dot = Mat_x4_Pre(j-1,i)*sin(Mat_x3_Pre(j-1,i)) + Mat_x5_Pre(j-1,i)*cos(Mat_x3_Pre(j-1,i));
+        x3_dot = Mat_x6_Pre(j-1,i);
+        x4_dot = (Fxr - Fyf*sin(Mat_u2_Pre(j-1,i)) + Ms*Mat_x5_Pre(j-1,i)*Mat_x6_Pre(j-1,i))/Ms;
+        x5_dot = (Fyr + Fyf*cos(Mat_u2_Pre(j-1,i)) - Ms*Mat_x4_Pre(j-1,i)*Mat_x6_Pre(j-1,i))/Ms;
+        x6_dot = (Fyf*Lf*cos(Mat_u2_Pre(j-1,i)) - Fyr*Lr)/Iz;
+        % Calculate State Sequences
+        Mat_x1_Pre(j,i) = Mat_x1_Pre(j-1,i) + x1_dot*Ts;
+        Mat_x2_Pre(j,i) = Mat_x2_Pre(j-1,i) + x2_dot*Ts;
+        Mat_x3_Pre(j,i) = Mat_x3_Pre(j-1,i) + x3_dot*Ts;
+        Mat_x4_Pre(j,i) = Mat_x4_Pre(j-1,i) + x4_dot*Ts;
+        Mat_x5_Pre(j,i) = Mat_x5_Pre(j-1,i) + x5_dot*Ts;
+        Mat_x6_Pre(j,i) = Mat_x6_Pre(j-1,i) + x6_dot*Ts;
     end
 end
-disp('State Prediction Time:');
-disp(toc);
+disp('State Prediction Time:'); disp(toc);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Calculate Cost %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-tic;
+% Calculate Station & Error
 for i = 1:1:nS
-    for j = 2:1:Tp
-        Matrix_Jp(1,i) = Matrix_Lateral_Error(j-1,i)+...
-            Matrix_Lateral_Error(j,i)*Qe*Matrix_Lateral_Error(j,i)+...
-            Matrix_Heading_Error(j,i)*Qp*Matrix_Heading_Error(j,i);
+    for j = 2:1:Tp+1
+        Vec_E_Lat_Tmp = (Mat_x1_Pre(j,i) - Local_X).^2 + (Mat_x2_Pre(j,i) - Local_Y).^2;
+        ID = find(Vec_E_Lat_Tmp == min(Vec_E_Lat_Tmp));
+        Mat_E_Lat_Pre(j,i) = Vec_E_Lat_Tmp(ID(1));
+        Mat_E_Hea_Pre(j,i) = Mat_x3_Pre(j,i) - Local_Tht(ID(1));
+        Mat_Sc_Pre(j,i) = Local_S(ID(1));
     end
-    Matrix_Jp(1,i) = Matrix_Jp(1,i) + Matrix_Lateral_Error(Tp+1,i)*Qt*Matrix_Lateral_Error(Tp+1,i);
 end
-minCostID = find(Matrix_Jp==min(Matrix_Jp));
-disp('Cost Calculation Time:')
-disp(toc);
-% U_opt = zeros(nU,Tp);
-% rho = min(Matrix_Jp);
-% eta = exp(-1/Lambda*(Matrix_Jp-rho));
-% phi = eta/sum(eta);
-% for i = 1:1:nS
-%     U_opt = U_opt + phi(i)*Matrix_Up(i,1);
-% end
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Post Process %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Vector_S = zeros(length(RefLineInfo.Id),1);
-for i = 1:1:length(RefLineInfo.Id)
-    Vector_S(i) = sqrt((306.337 - RefLineInfo.X(i))^2+(-364.978 - RefLineInfo.Y(i))^2);
+% Calculate Lateral Error Cost
+for i = 1:1:nS
+    for j = 2:1:Tp+1
+        if Mat_E_Lat_Pre(j,i) < ey_max
+            Vec_Je(1,i) = Vec_Je(1,i) + 0;
+        else
+            Vec_Je(1,i) = Vec_Je(1,i) + 1e3 + Mat_E_Lat_Pre(j,i)^2;
+        end
+    end
 end
-minDistanceID = find(Vector_S==min(Vector_S));
-minDistance = sqrt((306.337 - RefLineInfo.X(minDistanceID))^2+(-364.978 - RefLineInfo.Y(minDistanceID))^2);
+% Calculate Heading Error Cost
+for i = 1:1:nS
+    Vec_Jh(1,i) = Qh*Mat_E_Hea_Pre(Tp+1,i)^2;
+end
+% Calculate Driving Mileage Cost
+for i = 1:1:nS
+    Vec_Js(1,i) = Qs*(Mat_Sc_Pre(Tp+1,i)-Mat_Sc_Pre(1,i));
+end
+% Calculate Sequential Trajectory Consistency Cost
+%
+%
+% Calculate Inputs Cost
+for i = 1:1:nS
+    for j = 2:1:Tp+1
+        Vec_Ju(1,i) = Vec_Ju(1,i) + Ru1*Mat_u1_Pre(j,i)^2 + Ru2*Mat_u2_Pre(j,i)^2;
+    end
+end
+% Calculate Deltas Cost
+for i = 1:1:nS
+    for j = 2:1:Tp+1
+        Vec_Jd(1,i) = Vec_Jd(1,i) + Rd1*Mat_d1_Pre(j,i)^2 + Rd2*Mat_d2_Pre(j,i)^2;
+    end
+end
+% Calculate Total Cost
+Vec_Jp = Vec_Je + Vec_Jh + Vec_Js + Vec_Ju + Vec_Jd;
+% Find MinCost Trajectory
+minIdex = find(Vec_Jp == min(Vec_Jp));
+minCost = Vec_Jp(minIdex);
+for i = 1:1:nS
+    omg(i) = exp(-(Vec_Jp(i)-minCost)/lam);
+end
+omg = omg/sum(omg);
+Vec_u1_Opt = Mat_u1_Pre*omg;
+Vec_u2_Opt = Mat_u2_Pre*omg;
+disp('Cost Calculation Time:'); disp(toc);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Visualize Results %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Matrix_x1_Predict = zeros(Tp+1,nS);
-Matrix_x2_Predict = zeros(Tp+1,nS);
-Matrix_x3_Predict = zeros(Tp+1,nS);
-Matrix_x4_Predict = zeros(Tp+1,nS);
-Matrix_x5_Predict = zeros(Tp+1,nS);
-Matrix_x6_Predict = zeros(Tp+1,nS);
-Matrix_x7_Predict = zeros(Tp+1,nS);
-Matrix_u1_Predict = zeros(Tp+1,nS);
-Matrix_u2_Predict = zeros(Tp+1,nS);
-Matrix_d1_Predict = zeros(Tp+1,nS);
-Matrix_d2_Predict = zeros(Tp+1,nS);
-subplot(2,4,1);hold on; title('Coordinates');
+subplot(2,4,1);hold on; title('Coordinates'); axis equal;
 plot(RefLineInfo.X,RefLineInfo.Y,'r--');
 plot(RefLineInfo.Xl,RefLineInfo.Yl,'k');
 plot(RefLineInfo.Xr,RefLineInfo.Yr,'k');
@@ -208,39 +245,24 @@ subplot(2,4,6); hold on; title('Vy');
 subplot(2,4,7); hold on; title('Steer Angle');
 subplot(2,4,8); hold on; title('Lateral Error');
 for i = 1:1:nS
-    for j = 1:1:Tp+1
-        Matrix_x1_Predict(j,i) = Matrix_Xp(nX*(j-1)+1,i);
-        Matrix_x2_Predict(j,i) = Matrix_Xp(nX*(j-1)+2,i);
-        Matrix_x3_Predict(j,i) = Matrix_Xp(nX*(j-1)+3,i);
-        Matrix_x4_Predict(j,i) = Matrix_Xp(nX*(j-1)+4,i);
-        Matrix_x5_Predict(j,i) = Matrix_Xp(nX*(j-1)+5,i);
-        Matrix_x6_Predict(j,i) = Matrix_Xp(nX*(j-1)+6,i);
-        Matrix_x7_Predict(j,i) = Matrix_Xp(nX*(j-1)+7,i);
-        Matrix_u1_Predict(j,i) = Matrix_Up(nU*(j-1)+1,i);
-        Matrix_u2_Predict(j,i) = Matrix_Up(nU*(j-1)+2,i);
-    end
-    for j = 2:1:Tp+1
-        Matrix_d1_Predict(j,i) = Matrix_Up(nU*(j-1)+1,i) - Matrix_Up(nU*(j-1),i);
-        Matrix_d2_Predict(j,i) = Matrix_Up(nU*(j-1)+2,i) - Matrix_Up(nU*(j-1),i);
-    end
-    if i == minCostID
-        subplot(2,4,1); plot(Matrix_x1_Predict(:,i),Matrix_x2_Predict(:,i),'g-','LineWidth',2);
-        subplot(2,4,2); plot(Matrix_x4_Predict(:,i),'g-','LineWidth',2);
-        subplot(2,4,3); plot(Matrix_u1_Predict(:,i),'g-','LineWidth',2);
-        subplot(2,4,4); plot(Matrix_x7_Predict(:,i),'g-','LineWidth',2);
-        subplot(2,4,5); plot(Matrix_x6_Predict(:,i),'g-','LineWidth',2);
-        subplot(2,4,6); plot(Matrix_x5_Predict(:,i),'g-','LineWidth',2);
-        subplot(2,4,7); plot(Matrix_u2_Predict(:,i),'g-','LineWidth',2);
-        subplot(2,4,8); plot(Matrix_Lateral_Error(:,i),'g-','LineWidth',2);
+    if i == minIdex
+        subplot(2,4,1); plot(Mat_x1_Pre(:,i),Mat_x2_Pre(:,i),'g-','LineWidth',2);
+        subplot(2,4,2); plot(Mat_x4_Pre(:,i),'g-','LineWidth',2);
+        subplot(2,4,3); plot(Mat_u1_Pre(:,i),'g-','LineWidth',2);
+        subplot(2,4,4); plot(Mat_Sc_Pre(:,i),'g-','LineWidth',2);
+        subplot(2,4,5); plot(Mat_x6_Pre(:,i),'g-','LineWidth',2);
+        subplot(2,4,6); plot(Mat_x5_Pre(:,i),'g-','LineWidth',2);
+        subplot(2,4,7); plot(Mat_u2_Pre(:,i),'g-','LineWidth',2);
+        subplot(2,4,8); plot(sqrt(Mat_E_Lat_Pre(:,i)),'g-','LineWidth',2);
     else
-        subplot(2,4,1); plot(Matrix_x1_Predict(:,i),Matrix_x2_Predict(:,i),'k:');
-        subplot(2,4,2); plot(Matrix_x4_Predict(:,i),'k:');
-        subplot(2,4,3); plot(Matrix_u1_Predict(:,i),'k:');
-        subplot(2,4,4); plot(Matrix_x7_Predict(:,i),'k:');
-        subplot(2,4,5); plot(Matrix_x6_Predict(:,i),'k:');
-        subplot(2,4,6); plot(Matrix_x5_Predict(:,i),'k:');
-        subplot(2,4,7); plot(Matrix_u2_Predict(:,i),'k:');
-        subplot(2,4,8); plot(Matrix_Lateral_Error(:,i),'k:');
+        subplot(2,4,1); plot(Mat_x1_Pre(:,i),Mat_x2_Pre(:,i),'k:');
+        subplot(2,4,2); plot(Mat_x4_Pre(:,i),'k:');
+        subplot(2,4,3); plot(Mat_u1_Pre(:,i),'k:');
+        subplot(2,4,4); plot(Mat_Sc_Pre(:,i),'k:');
+        subplot(2,4,5); plot(Mat_x6_Pre(:,i),'k:');
+        subplot(2,4,6); plot(Mat_x5_Pre(:,i),'k:');
+        subplot(2,4,7); plot(Mat_u2_Pre(:,i),'k:');
+        subplot(2,4,8); plot(sqrt(Mat_E_Lat_Pre(:,i)),'k:');
     end
     pause(0.02);
 end
