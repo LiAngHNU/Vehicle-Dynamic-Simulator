@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Path Preview`FSAE Target Speed, Autocross`Mech. Sim. FSAE & Baja: Target Speed from Path Preview
+INSTALL_SPEED_CONTROLLER
+SPEED_AX_THROTTLE_CONSTANT 0.85
+SPEED_AX_BRAKE_CONSTANT 1.1
+SPEED_AY_LEFT_CONSTANT 0.85
+SPEED_AY_RIGHT_CONSTANT 0.85
+#RingCtrl0 2
+OPT_SC_SKILL 2
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 1
+SET_ISPEED_FOR_ID 0
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Path Preview: FSAE Target Speed, Autocross
+SPEED_TARGET_CONSTANT 85
+SPEED_ID_SC = SPEED_TARGET_ID
+OPT_SC 4
+#CheckBox0 1    
+OPT_SC_ENGINE_BRAKING 1
+#CheckBox1 0    
+#CheckBox2 1    
+OPT_SC_3D 1
+#CheckBox3 0    
+OPT_SC_2018 0
+
+SPEED_KP 0.14
+SPEED_KI 0.16
+SPEED_KP3 2
+BK_PERF_SC 0.1
+FPD_PERF_SC 0.1
+SPEED_PREVIEW_STEP 0.2
+SPEED_CURV_LENGTH 10
+SPEED_PREVIEW_START 2
+SPEED_PREVIEW 275
+PBK_CON_MAX_SC 10
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Path Preview; { Mech. Sim. FSAE & Baja: Target Speed from Path Preview } FSAE Target Speed, Autocross
+#Library : Control: Speed (Closed Loop) Using Path Preview
+#DataSet : FSAE Target Speed, Autocross
+#Category: Mech. Sim. FSAE & Baja: Target Speed from Path Preview
+#FileID  : SpdPath_22ef013b-ad42-46d5-bd11-ce1ab8fec8e0
+#Product : CarSim 2020.0
+#VehCode Speed Using Path Preview
+
+END

@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName CarSim Run Control`Baja SAE: Chassis Twist Road`* * Baja SAE Examples
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_aa82f3f6-335e-441b-aa26-169726b866a5
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 3
+PARSFILE Animator\Cameras\Camera_8d5e5054-3ff3-4116-9f8c-ae7201bc4aa6.par
+#BlueLink0 Animator: Camera Setup`15 deg. Azimuth, 7 deg. El., Veh. Ref.` Vehicle Reference` , Animator camera`Camera_8d5e5054-3ff3-4116-9f8c-ae7201bc4aa6
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 1    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_505a6006-6cdd-4c61-aeec-49bd09ce1452.par
+#BlueLink2 Vehicle: Assembly`Mech. Sim. Baja Vehicle Assembly` Mechanical Simulation FSAE & Baja` , Math Model`Vehicle_505a6006-6cdd-4c61-aeec-49bd09ce1452
+
+PARSFILE Procedures\Proc_2ec81161-7fa4-4d78-a939-0eb02b65d75f.par
+#BlueLink28 Procedures`Chassis Twist Road, Target Speed = 6 km/h` Mech. Sim. Baja SAE: Procedures` , Procedure`Proc_2ec81161-7fa4-4d78-a939-0eb02b65d75f
+
+PARSFILE Generic\Group\GenGrp_93c85863-f22e-4cd2-b8c7-402c8d5c9781.par
+#BlueLink9 Generic Data Group`VS Visualizer HUD Gauges (FSAE / Baja)` HUD Gauges` , Miscellaneous`GenGrp_93c85863-f22e-4cd2-b8c7-402c8d5c9781
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_505a6006-6cdd-4c61-aeec-49bd09ce1452.png
+
+OPT_ALL_WRITE 1
+WRITE_SENSOR_DETECT
+Title Baja SAE: Chassis Twist Road <* * Baja SAE Examples>
+CATEGORY * * Baja SAE Examples 
+DATASET_TITLE Baja SAE: Chassis Twist Road
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#A generic Baja SAE vehicle driving on a chassis twist road.
+#
+#These roads are useful for evaluating the combined effects of suspension articulation and steering.
+#
+#Target Speed vs. Time/Station is used to control both the acceleration and braking of the vehicle.
+#
+#More details are available on the Procedure dataset:
+#Chassis Twist Road, Target Speed = 6 km/h
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * * Baja SAE Examples } Baja SAE: Chassis Twist Road
+#Library : CarSim Run Control
+#DataSet : Baja SAE: Chassis Twist Road
+#Category: * * Baja SAE Examples
+#FileID  : Run_aa82f3f6-335e-441b-aa26-169726b866a5
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Events`Stop Condition: Record 2 Laps`Stop Conditions
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >=
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 SV_N_START_CROSS
+*VALUE1 3
+MAKE_EVENT SV_N_START_CROSS >= 3 ; Events\Events_b5af09b5-d8ad-4e81-ae24-eebce691780e.par
+#BlueLink0 Events`End Events` Stop Conditions` , Events`Events_b5af09b5-d8ad-4e81-ae24-eebce691780e
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#One pending Event is defined using the state variable SV_N_START_CROSS.
+#
+#The variable starts with a value of zero and is incremented each time the vehicle crosses the starting point of the looped driver path.
+#
+#The first time the vehicle crosses the Station = 0 m position, the lap counter increments from 0 to 1.
+#
+#The second time the vehicle crosses the Station = 0 m position, the lap counter increments from 1 to 2.
+#
+#The third time the vehicle crosses the Statin = 0 m position, the run ends.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Stop Conditions } Stop Condition: Record 2 Laps
+#Library : Events
+#DataSet : Stop Condition: Record 2 Laps
+#Category: Stop Conditions
+#FileID  : Events_c6d09ad3-76b3-4bd5-8371-ef1678cc6a80
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

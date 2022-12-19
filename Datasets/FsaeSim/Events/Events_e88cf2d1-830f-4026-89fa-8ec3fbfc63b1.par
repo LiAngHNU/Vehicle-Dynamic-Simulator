@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Events`1: Approach Turn`FSAE: Restoring to a Previous State
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 2
+*NAME1 station
+*VALUE1 200
+OPT_SC 2
+PARSFILE Control\Speed_t\SpdTime_857fa909-8c2a-4b51-9020-b61d4a040089.par
+#BlueLink16 Control: Speed (Closed Loop) Using Target Speed`1 km/h` Target Speed vs. Time` , Speed link`SpdTime_857fa909-8c2a-4b51-9020-b61d4a040089
+
+SPEED_ID_SC = SPEED_TARGET_ID
+#MiscYellow0
+SPEED_TARGET_GAIN(1) 130
+start_save_timer (restore_interval)
+#ENDMYellow
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink10 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting Modes` , Miscellaneous`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Driver\StrDM_e36692e9-5077-440a-8922-71e0c2c9e0ed.par
+#BlueLink11 Control: Steering by the Closed-loop Driver Model`2.5 m to the Right, 1.0 sec. Preview` Constant Position` , Miscellaneous`StrDM_e36692e9-5077-440a-8922-71e0c2c9e0ed
+
+MAKE_EVENT station > 200 ; Events\Events_2af735d7-1e66-4c64-8e01-df6cac7b3b49.par
+#BlueLink0 Events`2: Monitor Path Following` FSAE: Restoring to a Previous State` , Events`Events_2af735d7-1e66-4c64-8e01-df6cac7b3b49
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The speed controller is given a constant speed target. It is easily set and modified by using a speed of 1 with a gain applied to it. In this way, the speed target can be changed by just modifying the gain.
+#
+#The "start_save_timer" saves all information about the vehicle state at time intervals of "restore_interval" seconds.
+#
+#The first curve begins at 200 m, so monitoring of the vehicle position begins there.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { FSAE: Restoring to a Previous State } 1: Approach Turn
+#Library : Events
+#DataSet : 1: Approach Turn
+#Category: FSAE: Restoring to a Previous State
+#FileID  : Events_e88cf2d1-830f-4026-89fa-8ec3fbfc63b1
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

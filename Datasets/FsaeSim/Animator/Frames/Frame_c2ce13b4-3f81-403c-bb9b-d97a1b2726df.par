@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`K & C Table`K & C Machine
+ADD_REFERENCE_FRAME Frame_c2ce13b4-3f81-403c-bb9b-d97a1b2726df
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_KC
+SET_Y_NAME Y_KC
+SET_Z_NAME Z_KC
+SET_ROLL_NAME ROLL_KC
+SET_PITCH_NAME PITCH_KC
+SET_YAW_NAME YAW_KC
+
+PARSFILE Animator\STL\Shape_5ecb59c2-f7d9-4141-adaa-320f4a82bfe1.par
+#BlueLink0 Animator: Shape File Link`K & C Machine Table` K & C Machine` , Animator Data`Shape_5ecb59c2-f7d9-4141-adaa-320f4a82bfe1
+
+WRT_X_KC
+ANI_X_KC
+WRT_Y_KC
+ANI_Y_KC
+WRT_Z_KC
+ANI_Z_KC
+WRT_ROLL_KC
+ANI_ROLL_KC
+WRT_PITCH_KC
+ANI_PITCH_KC
+WRT_YAW_KC
+ANI_YAW_KC
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { K & C Machine } K & C Table
+#Library : Animator: Reference Frame
+#DataSet : K & C Table
+#Category: K & C Machine
+#FileID  : Frame_c2ce13b4-3f81-403c-bb9b-d97a1b2726df
+#Product : CarSim 2020.0
+#VehCode Reference Frame
+
+END

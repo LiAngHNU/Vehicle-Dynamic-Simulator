@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Plot: Setup`Brake Control: Master Cyl. Pressure`Braking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Pbk_Con, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Brake Control: Master Cyl. Pressure
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#The input to the basic brake model is a control signal representing master cylinder output pressure.
+#
+#Its source may be the internal closed loop speed controller or direct open loop specification of pressure, or an import variable from any of the external sources.
+#
+#The speed controller can be configured either to modulate the brake, or to become disabled when open-loop braking is supplied.
+#
+#Signals from open-loop and closed-loop sources are added.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Braking } Brake Control: Master Cyl. Pressure
+#Library : Plot: Setup
+#DataSet : Brake Control: Master Cyl. Pressure
+#Category: Braking
+#FileID  : Plot_dafae624-d48a-4548-93eb-fa73d080e21a
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

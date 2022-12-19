@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Rack Position`Steering
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS y_rack1, time
+
+#ENDMYellow
+
+YAXISLABEL Steering rack position
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Rack Position
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Rack Position
+#Library : Plot: Setup
+#DataSet : Rack Position
+#Category: Steering
+#FileID  : Plot_e53f9f05-472a-4a7d-985a-ba7919cba54f
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

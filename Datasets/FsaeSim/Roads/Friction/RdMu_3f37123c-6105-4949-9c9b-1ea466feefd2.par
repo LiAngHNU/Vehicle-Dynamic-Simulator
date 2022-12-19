@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Road: Friction Map, S-L Grid`Autocross Course #1 Mu Table`Variable Mu
+#CheckBox0 0    
+
+#RingCtrl0 CARPET
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Friction coefficient Mu (-)
+
+#DiagramTwo0
+*3D_DATA 5, 6 ! columns x rows
+MU_ROAD_CARPET 2D_LINEAR
+0, -2, -1, 0, 1, 2
+0, 1, 1, 1, 1, 1
+575, 1, 1, 1, 1, 1
+600, 1, 1, 0.7, 0.5, 0.4
+800, 1, 1, 0.7, 0.5, 0.4
+825, 1, 1, 1, 1, 1
+1225, 1, 1, 1, 1, 1
+ENDTABLE
+
+*SCALAR 1
+
+
+LOG_ENTRY Used Dataset: Road: Friction Map, S-L Grid; { Variable Mu } Autocross Course #1 Mu Table
+#Library : Road: Friction Map, S-L Grid
+#DataSet : Autocross Course #1 Mu Table
+#Category: Variable Mu
+#FileID  : RdMu_3f37123c-6105-4949-9c9b-1ea466feefd2
+#Product : CarSim 2020.0
+#VehCode Mu via S-L Grid
+
+END

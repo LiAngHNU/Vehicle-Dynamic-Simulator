@@ -1,0 +1,104 @@
+PARSFILE
+#FullDataName Procedures`Off-Road Hill-Climb w/ Ramp to Full Throttle`Mech. Sim. Baja SAE: Procedures
+#CheckBox3 0    
+
+#RingCtrl0 0
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 0
+TSTART_WRITE = TSTART;
+TSTOP 30
+SSTOP 250
+OPT_DIRECTION 0
+*SPEED 0
+*TSTOP 30
+*TSTART 0
+*SSTART 0
+*SSTOP 250
+
+OPT_SC 0
+SV_VXS 0
+PARSFILE Control\Driver\StrDM_5e1b87df-4a9a-4a60-ac80-544adfa4667d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`No Offset, 1 sec. Preview` Constant Position` , Steering`StrDM_5e1b87df-4a9a-4a60-ac80-544adfa4667d
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting Modes` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Throttle\Throttle_a707549f-09ea-4f2d-86ee-5ccb52597176.par
+#BlueLink29 Control: Throttle (Open Loop)`Ramp to Full Throttle in 0.1 seconds` Ramp` , Throttle`Throttle_a707549f-09ea-4f2d-86ee-5ccb52597176
+
+PARSFILE Roads\3D_Road\Road_75bc1fc7-d10b-4673-83b5-5c9fe36bb25f.par
+#BlueLink0 Road: 3D Surface (All Properties)`Off-Road Hill, Slope 10.7 deg. (10 m - 15 m)` Mech. Sim. Baja Roads` , Miscellaneous`Road_75bc1fc7-d10b-4673-83b5-5c9fe36bb25f
+
+PARSFILE Generic\VS_commands\GenVS_770bb6c1-3d46-4935-b13a-8681564d6de9.par
+#BlueLink5 Generic VS Commands`Plots: Suspension` Mech. Sim. FSAE & Baja: Plot Groups` , Miscellaneous`GenVS_770bb6c1-3d46-4935-b13a-8681564d6de9
+
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+PARSFILE Plot\Setup\Plot_076736e1-2cdd-49d5-8a36-d55940b011f0.par
+#BlueLink9 Plot: Setup`Steering: Handwheel Angle` Steering` , Plot`Plot_076736e1-2cdd-49d5-8a36-d55940b011f0
+
+PARSFILE Plot\Setup\Plot_7251a722-18c9-43db-a324-bd380d275618.par
+#BlueLink12 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7251a722-18c9-43db-a324-bd380d275618
+
+PARSFILE Plot\Setup\Plot_92c3bffb-a766-4f7d-9f5e-73059542ee31.par
+#BlueLink13 Plot: Setup`Engine RPM` Powertrain` , Plot`Plot_92c3bffb-a766-4f7d-9f5e-73059542ee31
+
+PARSFILE Plot\Setup\Plot_0aff382f-c589-4818-8024-b7e9c0e473fd.par
+#BlueLink14 Plot: Setup`Engine Torque` Powertrain` , Plot`Plot_0aff382f-c589-4818-8024-b7e9c0e473fd
+
+PARSFILE Plot\Setup\Plot_9aab2c4b-b147-4817-b3fc-a3c1941cf112.par
+#BlueLink16 Plot: Setup`Wheel Speeds (Axle 1)` Braking` , Plot`Plot_9aab2c4b-b147-4817-b3fc-a3c1941cf112
+
+PARSFILE Plot\Setup\Plot_58c7b077-c7de-42c6-ae4f-9ec42800ba1d.par
+#BlueLink17 Plot: Setup`Wheel Speeds (Axle 2)` Braking` , Plot`Plot_58c7b077-c7de-42c6-ae4f-9ec42800ba1d
+
+PARSFILE Plot\Setup\Plot_81ef4d85-adec-4c7d-8f3c-552dd6871b4d.par
+#BlueLink19 Plot: Setup`Forward Wheel Speed vs. Z Ground (Left Front)` Tracking` , Plot`Plot_81ef4d85-adec-4c7d-8f3c-552dd6871b4d
+
+PARSFILE Plot\Setup\Plot_963fa020-badb-416b-85eb-979360e30af1.par
+#BlueLink20 Plot: Setup`Ground Elevation (Axle 1)` Ground` , Plot`Plot_963fa020-badb-416b-85eb-979360e30af1
+
+PARSFILE Plot\Setup\Plot_71899ca4-243a-4e57-acb8-ac872e3294aa.par
+#BlueLink21 Plot: Setup`Ground Elevation (Axle 2)` Ground` , Plot`Plot_71899ca4-243a-4e57-acb8-ac872e3294aa
+
+PARSFILE Plot\Setup\Plot_91f67bd7-6bdd-459b-be9a-f36a4c9295e4.par
+#BlueLink22 Plot: Setup`Zo vs. Station` Tracking` , Plot`Plot_91f67bd7-6bdd-459b-be9a-f36a4c9295e4
+
+PARSFILE Plot\Setup\Plot_de12eea2-c7e6-47ac-a8f6-4f491244b283.par
+#BlueLink25 Plot: Setup`Vertical Forces (Axle 1)` Tire Forces and Moments` , Plot`Plot_de12eea2-c7e6-47ac-a8f6-4f491244b283
+
+PARSFILE Plot\Setup\Plot_4fae6e50-2618-44f6-8ed7-08b8ed3fe10e.par
+#BlueLink26 Plot: Setup`Vertical Forces (Axle 2)` Tire Forces and Moments` , Plot`Plot_4fae6e50-2618-44f6-8ed7-08b8ed3fe10e
+
+
+#EMBEDDED_NOTES
+#Procedure for an Off-Road Hill Climb
+#
+#Roads such as these are useful for evaluating suspension articulation combined with effects due steering, as well as tire and powertrain performance.
+#
+#Driver controls:
+# * Initial vehicle speed of 0 kph with a ramp to full throttle in 0.1 seconds
+# * No brake pressure
+# * Automatic gear selection using all available gears.
+#
+#For details on how the off-road hill was built, click on the 3D Road dataset:
+#Off-Road Hill, Slope 10.7 deg. (10 m - 15 m), Flat After 105.847 m
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Mech. Sim. Baja SAE: Procedures } Off-Road Hill-Climb w/ Ramp to Full Throttle
+#Library : Procedures
+#DataSet : Off-Road Hill-Climb w/ Ramp to Full Throttle
+#Category: Mech. Sim. Baja SAE: Procedures
+#FileID  : Proc_a09b545f-7da7-49e8-bc32-b714319f9f0c
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

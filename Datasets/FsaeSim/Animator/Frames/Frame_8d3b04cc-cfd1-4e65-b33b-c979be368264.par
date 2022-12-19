@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Camera Tracking X-Y-Z`Cameras
+ADD_REFERENCE_FRAME Frame_8d3b04cc-cfd1-4e65-b33b-c979be368264
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xo
+SET_Y_NAME Yo
+SET_Z_NAME Zo
+
+WRT_Xo
+ANI_Xo
+WRT_Yo
+ANI_Yo
+WRT_Zo
+ANI_Zo
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Cameras } Camera Tracking X-Y-Z
+#Library : Animator: Reference Frame
+#DataSet : Camera Tracking X-Y-Z
+#Category: Cameras
+#FileID  : Frame_8d3b04cc-cfd1-4e65-b33b-c979be368264
+#Product : CarSim 2020.0
+#VehCode Reference Frame
+
+END

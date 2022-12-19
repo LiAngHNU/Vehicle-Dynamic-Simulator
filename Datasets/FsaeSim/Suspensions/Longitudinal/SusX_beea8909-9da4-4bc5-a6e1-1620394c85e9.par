@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Suspension: Longitudinal Movement`Baja SAE Forward X Movement (Rear)`Mech. Sim. Baja SAE: Forward X Movement
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_X_COMBINE ADD
+*SCALAR2 0
+
+#DiagramOne0
+SUSP_X_TABLE SPLINE
+-219.9999, 2.493231
+-176, 1.773729
+-131.9999, 1.198511
+-88.00003, 0.727705
+-44.00006, 0.334708
+-9.2e-05, 5e-06
+43.999901, -0.292599
+87.999817, -0.558871
+131.99977, -0.817089
+175.99975, -1.092348
+219.99969, -1.424077
+ENDTABLE
+SUSP_X_JNC_OTHER_SIDE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+SUSP_X_AXLE_TABLE SPLINE
+-219.9999, 2.493231
+-176, 1.773729
+-131.9999, 1.198511
+-88.00003, 0.727705
+-44.00006, 0.334708
+-9.2e-05, 5e-06
+43.999901, -0.292599
+87.999817, -0.558871
+131.99977, -0.817089
+175.99975, -1.092348
+219.99969, -1.424077
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Suspension: Longitudinal Movement; { Mech. Sim. Baja SAE: Forward X Movement } Baja SAE Forward X Movement (Rear)
+#Library : Suspension: Longitudinal Movement
+#DataSet : Baja SAE Forward X Movement (Rear)
+#Category: Mech. Sim. Baja SAE: Forward X Movement
+#FileID  : SusX_beea8909-9da4-4bc5-a6e1-1620394c85e9
+#Product : CarSim 2020.0
+#VehCode Longitudinal Movement
+
+END

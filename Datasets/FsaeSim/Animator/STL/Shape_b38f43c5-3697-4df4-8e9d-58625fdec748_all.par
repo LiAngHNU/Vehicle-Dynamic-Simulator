@@ -1,0 +1,52 @@
+PARSFILE
+
+! EXPANDED_PARSFILE for Math models and animator
+
+! This is an expansion of the Parsfile: "Animator\STL\Shape_b38f43c5-3697-4df4-8e9d-58625fdec748.par"
+! It contains the contents of that file plus the contents of any files linked
+! with the "PARSFILE" keyword.
+
+! File created: 11:30 on September 22, 2022 by CarSim 2020.0
+
+PRODUCT_NAME CarSim
+
+ENTER_PARSFILE Animator\STL\Shape_b38f43c5-3697-4df4-8e9d-58625fdec748.par
+#FullDataName Animator: Shape File Link`FSAE: Details`Mech. Sim. FSAE: Shape Files
+add_obj Animator\3D_Shape_Files_User\SAE\Formula SAE\Details.obj
+SET_COLOR 0 0 0
+set_lighting on
+set_fogging on
+SET_SPECULAR 0.2 0.2 0.2
+vsv_enable_shadows_recursive
+ENTER_PARSFILE Animator\Cameras\Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60.par
+#FullDataName Animator: Camera Setup`Shape Preview (Side)`Shape Preview
+SET_CAMERA_REFERENCE_FRAME Frame_02b47476-96e6-474b-919e-07d03b43f1ec
+ENTER_PARSFILE Animator\Frames\Frame_02b47476-96e6-474b-919e-07d03b43f1ec.par
+#FullDataName Animator: Reference Frame`Yaw for Shape Preview #3`Shape Preview: Generic
+ADD_REFERENCE_FRAME Frame_02b47476-96e6-474b-919e-07d03b43f1ec
+SET_EULER_ANGLES yaw_pitch_roll
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Shape Preview: Generic } Yaw for Shape Preview #3
+EXIT_PARSFILE Animator\Frames\Frame_02b47476-96e6-474b-919e-07d03b43f1ec.par
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_02b47476-96e6-474b-919e-07d03b43f1ec
+SET_LOOKPOINT_X 0
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 0
+SET_AZIMUTH 0
+SET_ELEVATION 0
+SET_DISTANCE 35
+SET_CAMERAMAN_NAME External camera
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 21.1
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Shape Preview } Shape Preview (Side)
+EXIT_PARSFILE Animator\Cameras\Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60.par
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } FSAE: Details
+EXIT_PARSFILE Animator\STL\Shape_b38f43c5-3697-4df4-8e9d-58625fdec748.par
+
+
+
+END

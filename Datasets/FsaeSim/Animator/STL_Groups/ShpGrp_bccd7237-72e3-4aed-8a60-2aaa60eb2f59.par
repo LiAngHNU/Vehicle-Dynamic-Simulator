@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Animator: Shape Assembly`FSAE Vehicle Shapes`Mech. Sim. FSAE & Baja: Shape Assembly
+*COLOR .36 .117 .117
+*OFFSET_X 0
+*OFFSET_Y 0
+*OFFSET_Z 0.25
+*X_REF_LENGTH 1750
+*Y_REF_LENGTH 1500
+*Z_REF_LENGTH 900
+*IMAGE_FIT_MODE 1
+#CheckBox0 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 1    
+
+#RingCtrl1 2
+#RingCtrl2 2
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL_Groups\ShpGrp_bccd7237-72e3-4aed-8a60-2aaa60eb2f59.png
+PARSFILE Animator\STL\Shape_26b74a0f-ffb4-4cdd-a53a-9f0ff5134c42.par
+#BlueLink0 Animator: Shape File Link`FSAE: Body` Mech. Sim. FSAE: Shape Files` , Shape File`Shape_26b74a0f-ffb4-4cdd-a53a-9f0ff5134c42
+
+set_offset_x 0
+set_offset_y 0
+set_offset_z 0.25
+PARSFILE Animator\STL\Shape_b38f43c5-3697-4df4-8e9d-58625fdec748.par
+#BlueLink1 Animator: Shape File Link`FSAE: Details` Mech. Sim. FSAE: Shape Files` , Shape File`Shape_b38f43c5-3697-4df4-8e9d-58625fdec748
+
+set_offset_x 0
+set_offset_y 0
+set_offset_z 0.25
+PARSFILE Animator\STL\Shape_23ba345b-c0ea-44d9-abc0-7c377748e96f.par
+#BlueLink2 Animator: Shape File Link`FSAE: Driver` Mech. Sim. FSAE: Shape Files` , Shape File`Shape_23ba345b-c0ea-44d9-abc0-7c377748e96f
+
+set_offset_x 0
+set_offset_y 0
+set_offset_z 0.25
+x_ref_length 1750
+y_ref_length 1500
+z_ref_length 900
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60.par
+#BlueLink17 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Video Camera`Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60
+
+
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { Mech. Sim. FSAE & Baja: Shape Assembly } FSAE Vehicle Shapes
+#Library : Animator: Shape Assembly
+#DataSet : FSAE Vehicle Shapes
+#Category: Mech. Sim. FSAE & Baja: Shape Assembly
+#FileID  : ShpGrp_bccd7237-72e3-4aed-8a60-2aaa60eb2f59
+#Product : CarSim 2020.0
+#VehCode Shape Assembly
+
+END

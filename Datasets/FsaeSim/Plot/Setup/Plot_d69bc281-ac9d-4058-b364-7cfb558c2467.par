@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Vehicle Velocity`* * * HUR Visualization
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Vx, Station
+PLOTCHANNELS Vy, Station
+PLOTCHANNELS Vz, Station
+PLOTCHANNELS VxTarget, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vehicle Velocity
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * HUR Visualization } Vehicle Velocity
+#Library : Plot: Setup
+#DataSet : Vehicle Velocity
+#Category: * * * HUR Visualization
+#FileID  : Plot_d69bc281-ac9d-4058-b364-7cfb558c2467
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

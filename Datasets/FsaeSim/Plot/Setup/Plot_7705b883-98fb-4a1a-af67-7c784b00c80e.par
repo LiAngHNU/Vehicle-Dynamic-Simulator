@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Transmission Output Speed (AV_Trans)`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS AV_Trans, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Transmission Output Speed (AV_Trans)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } Transmission Output Speed (AV_Trans)
+#Library : Plot: Setup
+#DataSet : Transmission Output Speed (AV_Trans)
+#Category: Powertrain
+#FileID  : Plot_7705b883-98fb-4a1a-af67-7c784b00c80e
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

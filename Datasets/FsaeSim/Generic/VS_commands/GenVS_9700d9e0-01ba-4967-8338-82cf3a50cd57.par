@@ -1,0 +1,53 @@
+PARSFILE
+#FullDataName Generic VS Commands`Brake Indicator Light`HUD Gauges
+#VehCode VS Commands
+
+#MiscYellow0
+ADD_OBJECT hud_text Brake Header
+  prefix Brake
+  location 125 94 100 18
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  color 1 1 1 1
+  align 10
+  outline_color .3 .3 .3 0.5
+  font VeraMono.ttf
+END_OBJECT hud_text Brake Header
+
+ADD_OBJECT hud_image Brake Fill BG
+  location 100 10 100 100
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  image_file Resources\Animator\2D_HUD_Icons\Indicator_Lamp\LIGHT_OFF.dds
+END_OBJECT hud_image Brake Fill BG
+
+ANI_Bk_Stat
+WRT_Bk_Stat
+ADD_OBJECT hud_image Brake Fill BG
+  location 100 10 100 100
+  red 1
+  green 0
+  blue 0
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  opacity Bk_Stat * 0.65
+  image_file Resources\Animator\2D_HUD_Icons\Indicator_Lamp\LIGHT_ON.dds
+END_OBJECT hud_image Brake Fill BG
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { HUD Gauges } Brake Indicator Light
+#Library : Generic VS Commands
+#DataSet : Brake Indicator Light
+#Category: HUD Gauges
+#FileID  : GenVS_9700d9e0-01ba-4967-8338-82cf3a50cd57
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

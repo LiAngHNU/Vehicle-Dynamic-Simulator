@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Events`A. Wait 2 seconds`FSAE Acceleration and Braking (Electric)
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T
+*VALUE1 2
+MAKE_EVENT T > 2 ; Events\Events_32a7dfdf-c403-4ca2-8ed2-42fa965e76c3.par
+#BlueLink0 Events`B. Ramp throttle` FSAE Acceleration and Braking (Electric)` , Events`Events_32a7dfdf-c403-4ca2-8ed2-42fa965e76c3
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { FSAE Acceleration and Braking (Electric) } A. Wait 2 seconds
+#Library : Events
+#DataSet : A. Wait 2 seconds
+#Category: FSAE Acceleration and Braking (Electric)
+#FileID  : Events_235eef5f-16c2-47e3-bddf-5341d0fbec69
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

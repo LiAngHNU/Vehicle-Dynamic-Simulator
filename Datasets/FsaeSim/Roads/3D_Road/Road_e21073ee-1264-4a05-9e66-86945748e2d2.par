@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`1200 m, One Lane, Mu = 0.85, No Trees`Straight
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_e21073ee-1264-4a05-9e66-86945748e2d2.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 1200 m, One Lane, Mu = 0.85, No Trees
+PARSFILE Roads\BuilderSegment\RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c.par
+#BlueLink0 Path: Segment Builder`Straight Path East, ID = 1001` Straight` , Reference Path`RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight Path East, ID = 1001
+PARSFILE Roads\Center_Z\RdRefZ_598f8ea7-d2f1-4e0b-a828-7b8c7dfb136e.par
+#BlueLink1 Road: Reference Line Elevation`Flat` ` , Path Elevation`RdRefZ_598f8ea7-d2f1-4e0b-a828-7b8c7dfb136e
+
+PARSFILE Roads\dZ_Map\RdMapZ_daeb5d83-fffb-4248-89b6-089cb34929b0.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Flat` ` , Miscellaneous`RdMapZ_daeb5d83-fffb-4248-89b6-089cb34929b0
+
+PARSFILE Roads\Friction\RdMu_25e73395-9471-44b9-9c60-27bd9cc24921.par
+#BlueLink3 Road: Friction Map, S-L Grid`0.85` Constant Mu` , Friction`RdMu_25e73395-9471-44b9-9c60-27bd9cc24921
+
+PARSFILE Roads\Shapes\RdShape_8e6b6769-1ac6-4496-945d-5408acbbfa7e.par
+#BlueLink4 Road: Animator Surface Shapes`1200 m Road + 200 m Light Grass (One Lane)` Straight Roads` , Road shape definitions`RdShape_8e6b6769-1ac6-4496-945d-5408acbbfa7e
+
+PARSFILE Roads\dZ_Map\RdMapZ_daeb5d83-fffb-4248-89b6-089cb34929b0.par
+#BlueLink10 Road: Off-Center Elevation Map, S-L Grid`Flat` ` , Miscellaneous`RdMapZ_daeb5d83-fffb-4248-89b6-089cb34929b0
+
+RR_SURF 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_0243ae01-7f22-400b-ac09-6ac909099257.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_0243ae01-7f22-400b-ac09-6ac909099257
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`Rear View , Road Ref. (Frt. Facing)` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_e21073ee-1264-4a05-9e66-86945748e2d2.ani
+
+#EMBEDDED_NOTES
+#Straight, Flat Road
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Straight } 1200 m, One Lane, Mu = 0.85, No Trees
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 1200 m, One Lane, Mu = 0.85, No Trees
+#Category: Straight
+#FileID  : Road_e21073ee-1264-4a05-9e66-86945748e2d2
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

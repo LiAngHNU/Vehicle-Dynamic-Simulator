@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Powertrain: Rear-Wheel Drive`Mech. Sim. FSAE: RWD Powertrain (Electric)`Mech. Sim. FSAE & Baja: Powertrains
+
+OPT_PT 2
+R_REAR_DRIVE_SC 1
+
+OPT_ENGINE_PITCH_REACTION(2) 0
+
+INSTALL_ENGINE
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl4 1
+#RingCtrl5 2
+OPT_HEV 2
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+#CheckBox0 0    
+
+OPT_ENGINE_INTERNAL 0
+OPT_PWR_CPL_INTERNAL 0
+OPT_TRANS_INTERNAL 0
+OPT_SHIFT_INTERNAL 0
+OPT_TR_GEAR_INTERNAL 0
+OPT_DIFF_INTERNAL(2) 1
+
+PARSFILE Powertrain\HEV\HEV_6565cfc8-d0dc-4392-9e8c-492dd6389a3f.par
+#BlueLink10 Powertrain: Hybrid/Electric System`Electric Powertrain Assembly` Mech. Sim. FSAE & Baja: Electric` , Hybrid system`HEV_6565cfc8-d0dc-4392-9e8c-492dd6389a3f
+
+PARSFILE Powertrain\HEV_PMC\PMC_7a8ac084-e6fc-4879-8fb5-93bd28bb3964.par
+#BlueLink11 Powertrain: Hybrid/Electric Power Management Control`Electric Power Management: Full Load 78kW` Mech. Sim. FSAE & Baja: HEV / EV` , Hybrid power management control`PMC_7a8ac084-e6fc-4879-8fb5-93bd28bb3964
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_5df3a20f-354f-449f-a272-9e3003414ef0.par
+#BlueLink5 Powertrain: Rear Differential`Mech. Sim. FSAE: Diff., 4.0, TBR = 1.75 / 1.85` Mech. Sim. FSAE & Baja: Rear Differentials` , Differential`DiffR_5df3a20f-354f-449f-a272-9e3003414ef0
+
+
+LOG_ENTRY Used Dataset: Powertrain: Rear-Wheel Drive; { Mech. Sim. FSAE & Baja: Powertrains } Mech. Sim. FSAE: RWD Powertrain (Electric)
+#Library : Powertrain: Rear-Wheel Drive
+#DataSet : Mech. Sim. FSAE: RWD Powertrain (Electric)
+#Category: Mech. Sim. FSAE & Baja: Powertrains
+#FileID  : RWD_10a86ed8-387a-451c-90d3-15288e5a3b45
+#Product : CarSim 2020.0
+#VehCode RWD
+
+END

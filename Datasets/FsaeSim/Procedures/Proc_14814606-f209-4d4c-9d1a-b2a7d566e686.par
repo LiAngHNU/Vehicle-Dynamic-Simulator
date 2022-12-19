@@ -1,0 +1,114 @@
+PARSFILE
+#FullDataName Procedures`Figure 8 Skidpad, Path Segment Builder`Mech. Sim. FSAE: Procedures
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART -10
+TSTART_WRITE = TSTART;
+TSTOP 30
+SSTOP 245
+OPT_DIRECTION 0
+*TSTOP 30
+*TSTART 0
+*SSTART -10
+*SSTOP 245
+
+PARSFILE Control\Driver\StrDM_5e1b87df-4a9a-4a60-ac80-544adfa4667d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`No Offset, 1 sec. Preview` Constant Position` , Steering`StrDM_5e1b87df-4a9a-4a60-ac80-544adfa4667d
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_3d656f9b-b010-469b-b86b-d4e11ee52bef.par
+#BlueLink30 Control: Shifting (Closed Loop)`Closed-Loop Shift and Clutch (All Gears, Fast)` Automatic Clutch Control` , Shifting Control`GearCL_3d656f9b-b010-469b-b86b-d4e11ee52bef
+
+PARSFILE Control\Speed_path\SpdPath_0e959b7b-718f-406b-b2b1-9a3a255e0f56.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`FSAE Target Speed, Skid Pad` Mech. Sim. FSAE & Baja: Target Speed from Path Preview` , Speed vs. station`SpdPath_0e959b7b-718f-406b-b2b1-9a3a255e0f56
+
+PARSFILE Roads\3D_Road\Road_d1d12321-af2f-4450-ac6a-516e32e75361.par
+#BlueLink0 Road: 3D Surface (All Properties)`FSAE Figure 8, Path Segment Builder` Mech. Sim. FSAE Roads` , Miscellaneous`Road_d1d12321-af2f-4450-ac6a-516e32e75361
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink1 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+PARSFILE Plot\Setup\Plot_811b0750-5160-4ae1-aa82-2aabb3ab9af2.par
+#BlueLink9 Plot: Setup`Throttle: Closed Loop Speed Control` Controls: Driver` , Plot`Plot_811b0750-5160-4ae1-aa82-2aabb3ab9af2
+
+PARSFILE Plot\Setup\Plot_dafae624-d48a-4548-93eb-fa73d080e21a.par
+#BlueLink10 Plot: Setup`Brake Control: Master Cyl. Pressure` Braking` , Plot`Plot_dafae624-d48a-4548-93eb-fa73d080e21a
+
+PARSFILE Plot\Setup\Plot_bb603a0f-832f-4898-a9d8-b54b1ed8d883.par
+#BlueLink11 Plot: Setup`Trans. Control: Gear From Closed-loop` Controls: Driver` , Plot`Plot_bb603a0f-832f-4898-a9d8-b54b1ed8d883
+
+PARSFILE Plot\Setup\Plot_076736e1-2cdd-49d5-8a36-d55940b011f0.par
+#BlueLink12 Plot: Setup`Steering: Handwheel Angle` Steering` , Plot`Plot_076736e1-2cdd-49d5-8a36-d55940b011f0
+
+PARSFILE Plot\Setup\Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab.par
+#BlueLink13 Plot: Setup`Steer Torque` Steering` , Plot`Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab
+
+PARSFILE Plot\Setup\Plot_75a85771-5520-4b6b-a008-65bc09c24a90.par
+#BlueLink14 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_75a85771-5520-4b6b-a008-65bc09c24a90
+
+PARSFILE Plot\Setup\Plot_62d40774-ed58-4044-8614-8feb9ce47098.par
+#BlueLink15 Plot: Setup`Yaw Angle of Sprung Mass vs. Time` Vehicle Motion` , Plot`Plot_62d40774-ed58-4044-8614-8feb9ce47098
+
+PARSFILE Plot\Setup\Plot_310b0189-b08d-49fc-a484-ee359eb89744.par
+#BlueLink16 Plot: Setup`Yaw Rate of Sprung Mass vs. Time` Vehicle Motion` , Plot`Plot_310b0189-b08d-49fc-a484-ee359eb89744
+
+PARSFILE Plot\Setup\Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c.par
+#BlueLink17 Plot: Setup`Pitch Angle of Sprung Mass vs. Time` Vehicle Motion` , Plot`Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c
+
+PARSFILE Plot\Setup\Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979.par
+#BlueLink18 Plot: Setup`Roll Angle of Sprung Mass vs. Time` Vehicle Motion` , Plot`Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979
+
+PARSFILE Plot\Setup\Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f.par
+#BlueLink19 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f
+
+PARSFILE Plot\Setup\Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f.par
+#BlueLink20 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f
+
+PARSFILE Plot\Setup\Plot_b462b74e-eb99-42e0-a648-ae9a9c6e27b4.par
+#BlueLink21 Plot: Setup`Longitudinal Forces (Axle 1)` Tire Forces and Moments` , Plot`Plot_b462b74e-eb99-42e0-a648-ae9a9c6e27b4
+
+PARSFILE Plot\Setup\Plot_82c39b1b-fc03-4605-920c-8795e3853640.par
+#BlueLink22 Plot: Setup`Longitudinal Forces (Axle 2)` Tire Forces and Moments` , Plot`Plot_82c39b1b-fc03-4605-920c-8795e3853640
+
+PARSFILE Plot\Setup\Plot_0ae17b35-10e1-48bb-b226-c3ed72aa451b.par
+#BlueLink23 Plot: Setup`Lateral Forces (Axle 1)` Tire Forces and Moments` , Plot`Plot_0ae17b35-10e1-48bb-b226-c3ed72aa451b
+
+PARSFILE Plot\Setup\Plot_e1053788-c2c6-4b38-8282-7030bcf7df08.par
+#BlueLink24 Plot: Setup`Lateral Forces (Axle 2)` Tire Forces and Moments` , Plot`Plot_e1053788-c2c6-4b38-8282-7030bcf7df08
+
+PARSFILE Plot\Setup\Plot_de12eea2-c7e6-47ac-a8f6-4f491244b283.par
+#BlueLink25 Plot: Setup`Vertical Forces (Axle 1)` Tire Forces and Moments` , Plot`Plot_de12eea2-c7e6-47ac-a8f6-4f491244b283
+
+PARSFILE Plot\Setup\Plot_4fae6e50-2618-44f6-8ed7-08b8ed3fe10e.par
+#BlueLink26 Plot: Setup`Vertical Forces (Axle 2)` Tire Forces and Moments` , Plot`Plot_4fae6e50-2618-44f6-8ed7-08b8ed3fe10e
+
+
+#EMBEDDED_NOTES
+#Procedure for a Figure 8 Skidpad test.
+#
+#The road dataset containing the Figure 8 path, linked on this Procedure screen, is built using the Path: Segment Builder, introduced in CarSim version 2016.0.
+#
+#Speed and braking control are set up in a single dataset:
+#FSAE Target Speed, Skid Pad
+#
+#The Target Speed from Path Preview screen has options that allow the end-user to select from different Skill and Aggressiveness levels, as well as longitudinal and lateral acceleration targets.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Mech. Sim. FSAE: Procedures } Figure 8 Skidpad, Path Segment Builder
+#Library : Procedures
+#DataSet : Figure 8 Skidpad, Path Segment Builder
+#Category: Mech. Sim. FSAE: Procedures
+#FileID  : Proc_14814606-f209-4d4c-9d1a-b2a7d566e686
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

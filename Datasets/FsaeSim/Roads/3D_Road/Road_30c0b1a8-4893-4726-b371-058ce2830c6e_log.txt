@@ -1,0 +1,26 @@
+Run made by VS Road Calculator at 19:37 on May 05, 2022.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_30c0b1a8-4893-4726-b371-058ce2830c6e.par"
+Include PARSFILE "Roads\BuilderSegment\RoadSeg_f3aec731-3bc9-4a51-b5d6-6c1b078fe04f.par"
+ 200-m Radius Right, 100-m Radius Left <Mech. Sim. FSAE & Baja: Path Segment Builder>
+Used Dataset: Path: Segment Builder; { Mech. Sim. FSAE & Baja: Path Segment Builder } 200-m Radius Right, 100-m Radius Left
+Include PARSFILE "Roads\Center_Z\RdRefZ_598f8ea7-d2f1-4e0b-a828-7b8c7dfb136e.par"
+Used Dataset: Road: Reference Line Elevation; Flat
+Include PARSFILE "Roads\dZ_Map\RdMapZ_daeb5d83-fffb-4248-89b6-089cb34929b0.par"
+Used Dataset: Road: Off-Center Elevation Map, S-L Grid; Flat
+Include PARSFILE "Roads\Friction\RdMu_25e73395-9471-44b9-9c60-27bd9cc24921.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } 0.85
+Include PARSFILE "Roads\Shapes\RdShape_e9c85764-cb6d-4546-a60b-d29e4c886352.par"
+Used Dataset: Road: Animator Surface Shapes; { Scenic Road Shapes } 200 m radius Right followed by 100 m radius Left
+Include PARSFILE "Roads\Boundaries\RdBnd_adc3e6c7-da5f-4a20-b175-48c332421507.par"
+Used Dataset: Road: Boundaries; { Road Boundary Stop Conditions } Stop at L = +- 5 m
+ 90 deg turns: 200 m Right, 100 m Left <Mech. Sim. FSAE Roads>
+Used Dataset: Road: 3D Surface (All Properties); { Mech. Sim. FSAE Roads } 90 deg turns: 200 m Right, 100 m Left
+
+Time to read input = 0.001
+
+Run stopped at t = 14.44. Stop time reached.
+
+Run started: VS output file = Roads\3D_Road\Road_30c0b1a8-4893-4726-b371-058ce2830c6e.vsb

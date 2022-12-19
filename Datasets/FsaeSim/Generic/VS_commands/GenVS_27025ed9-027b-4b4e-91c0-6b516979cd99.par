@@ -1,0 +1,104 @@
+PARSFILE
+#FullDataName Generic VS Commands`VsV HUD Text (HEV / EV)`HUD Gauges
+#VehCode VS Commands
+
+#MiscYellow0
+ADD_ENTITY hud_image Text_BG_Outer
+  size_mode absolute
+  place_mode absolute
+  location 5 5 370 130
+  red 0
+  green 0
+  blue 0
+  opacity .5
+!  image_file Animator\Hud\Text_Box.tga
+END_ENTITY hud_image Text_BG_Outer
+!
+!
+MiscYellow0
+ADD_ENTITY hud_image Text_BG_Inner
+  size_mode absolute
+  place_mode absolute
+  location 10 10 360 120
+  red 0
+  green 0
+  blue 0
+  opacity .25
+!  image_file Animator\Hud\Text_Box.tga
+END_ENTITY hud_image Text_BG_Inner
+!
+!
+!Add EV_Spin Rate Display
+ANI_AV_Trans
+WRT_AV_Trans
+ADD_ENTITY hud_text Text Output - AV_Trans
+  size_mode absolute
+  place_mode absolute
+  location 20 25 300 20
+  prefix Motor (RPM)
+  min_width_prefix 20
+  value AV_Trans
+  precision 0
+  color 1 1 1 1
+  outline_color 0 0 0 1
+END_ENTITY hud_text Text Output - AV_Trans
+!
+!
+!Add Battery Current Display
+ANI_A_Bttry
+WRT_A_Bttry
+ADD_ENTITY hud_text Text Output - A_Bttry
+  size_mode absolute
+  place_mode absolute
+  location 20 50 300 20
+  prefix Battery Current (A)
+  min_width_prefix 20
+  value A_Bttry
+  precision 3
+  color 1 1 1 1
+  outline_color 0 0 0 1
+END_ENTITY hud_text Text Output - A_Bttry
+!
+!
+!Add Battery Discharge Display
+ANI_CapBtrDs
+WRT_CapBtrDs
+ADD_ENTITY hud_text Text Output - CapBtrDs
+  size_mode absolute
+  place_mode absolute
+  location 20 75 300 20
+  prefix Battery Discharge (a-h)
+  min_width_prefix 20
+  value CapBtrDs
+  precision 2
+  color 1 1 1 1
+  outline_color 0 0 0 1
+END_ENTITY hud_text Text Output - CapBtrDs
+!
+!
+!Add Battery Voltage Display
+ANI_VocBttry
+WRT_VocBttry
+ADD_ENTITY hud_text Text Output - VocBttry
+  size_mode absolute
+  place_mode absolute
+  location 20 100 300 20
+  prefix Battery Voltage (V)
+  min_width_prefix 20
+  value VocBttry
+  precision 2
+  color 1 1 1 1
+  outline_color 0 0 0 1
+END_ENTITY hud_text Text Output - VocBttry
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { HUD Gauges } VsV HUD Text (HEV / EV)
+#Library : Generic VS Commands
+#DataSet : VsV HUD Text (HEV / EV)
+#Category: HUD Gauges
+#FileID  : GenVS_27025ed9-027b-4b4e-91c0-6b516979cd99
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

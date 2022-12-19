@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Yaw Rate of Sprung Masses vs. t_stamp`Vehicle Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS AVz, t_stamp
+PLOTCHANNELS AVz_2, t_stamp
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Yaw Rate of Sprung Masses vs. t_stamp
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Yaw Rate of Sprung Masses vs. t_stamp
+#Library : Plot: Setup
+#DataSet : Yaw Rate of Sprung Masses vs. t_stamp
+#Category: Vehicle Motion
+#FileID  : Plot_71233543-068c-4732-b700-343f7a69676e
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

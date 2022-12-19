@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`FSAE: Details`Mech. Sim. FSAE: Shape Files
+#MiscYellow3
+add_obj Animator\3D_Shape_Files_User\SAE\Formula SAE\Details.obj
+#ENDMYellow
+
+SET_COLOR 0 0 0
+*SPECULAR 0.2
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 0.2 0.2 0.2
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Video Camera`Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_b38f43c5-3697-4df4-8e9d-58625fdec748.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } FSAE: Details
+#Library : Animator: Shape File Link
+#DataSet : FSAE: Details
+#Category: Mech. Sim. FSAE: Shape Files
+#FileID  : Shape_b38f43c5-3697-4df4-8e9d-58625fdec748
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

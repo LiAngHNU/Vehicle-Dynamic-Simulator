@@ -1,0 +1,97 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`HUR 4WD & 4WS Electric`* * * HUR
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 2
+OPT_PT 2
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 1
+PARSFILE Steering\System2\StrSys2_d8914940-aa45-424a-aaa8-cca0031621f6.par
+#BlueLink7 Steering`4 Wheel Steeing` * * * HUR Steering System` , Steering System`StrSys2_d8914940-aa45-424a-aaa8-cca0031621f6
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_15bd5bef-0be5-4aec-bd98-d778f75c23dc.par
+#BlueLink19 Suspension: Independent System Kinematics`Front Kinematic: Standard` * * * HUR Suspension Kinematics` , Kinematics`KinInd_15bd5bef-0be5-4aec-bd98-d778f75c23dc
+
+PARSFILE Suspensions\Compliance\CmpInd_51264e99-381c-47de-be0e-44e218ab739f.par
+#BlueLink16 Suspension: Independent Compliance, Springs, and Dampers`Front Compliance: Standard` * * * HUR Suspenstion Compliances` , Compliance`CmpInd_51264e99-381c-47de-be0e-44e218ab739f
+
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_eb4320d5-ebb1-47f0-8da9-c874b06fa6ec.par
+#BlueLink999 Tire`Hoosier 265` * * * HUR Tires` , Tire`Tire_eb4320d5-ebb1-47f0-8da9-c874b06fa6ec
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_eb4320d5-ebb1-47f0-8da9-c874b06fa6ec.par
+#BlueLink10 Tire`Hoosier 265` * * * HUR Tires` , Tire`Tire_eb4320d5-ebb1-47f0-8da9-c874b06fa6ec
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_e5a2a733-f330-47b3-872b-e6df3c9ca28b.par
+#BlueLink20 Suspension: Independent System Kinematics`Rear Kinematic: Standard` * * * HUR Suspension Kinematics` , Kinematics`KinInd_e5a2a733-f330-47b3-872b-e6df3c9ca28b
+
+PARSFILE Suspensions\Compliance\CmpInd_17f02892-216d-46b8-a26e-5a1225fc1d61.par
+#BlueLink17 Suspension: Independent Compliance, Springs, and Dampers`Rear Compliance: Standard` * * * HUR Suspenstion Compliances` , Compliance`CmpInd_17f02892-216d-46b8-a26e-5a1225fc1d61
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_dc73d337-6505-4f3b-a00f-eec350ce76f2.par
+#BlueLink999 Tire`Hoosier 285` * * * HUR Tires` , Rear Tire`Tire_dc73d337-6505-4f3b-a00f-eec350ce76f2
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_dc73d337-6505-4f3b-a00f-eec350ce76f2.par
+#BlueLink14 Tire`Hoosier 285` * * * HUR Tires` , Rear Tire`Tire_dc73d337-6505-4f3b-a00f-eec350ce76f2
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_585d55c6-8895-4667-9a8f-30967e00f36d.par
+#BlueLink0 Vehicle: Sprung Mass`Mech. Sim. FSAE Sprung Mass` Mech. Sim. FSAE & Baja` , Sprung Mass`SprMass_585d55c6-8895-4667-9a8f-30967e00f36d
+
+PARSFILE Aerodynamics\Aero_Ext\Aero2_12c997ce-298b-46f7-aa82-e6b9b9007a81.par
+#BlueLink1 Aerodynamics: Pitch, Bounce, Yaw`Mech. Sim. FSAE: Example Aerodynamics` Mech. Sim. FSAE Aerodynamics` , Aerodynamics`Aero2_12c997ce-298b-46f7-aa82-e6b9b9007a81
+
+PARSFILE Powertrain\Rwd\RWD_10a86ed8-387a-451c-90d3-15288e5a3b45.par
+#BlueLink4 Powertrain: Rear-Wheel Drive`Mech. Sim. FSAE: RWD Powertrain (Electric)` Mech. Sim. FSAE & Baja: Powertrains` , Powertrain`RWD_10a86ed8-387a-451c-90d3-15288e5a3b45
+
+PARSFILE Brakes\4W_System\Brk4W_07ad2782-f486-4f37-bdb4-ba47fb53de59.par
+#BlueLink6 Brakes: Four-Wheel System`Mech. Sim. FSAE: Brakes w/o ABS` Mech. Sim. FSAE & Baja: Brakes` , Brake System`Brk4W_07ad2782-f486-4f37-bdb4-ba47fb53de59
+
+PARSFILE Animator\Vehicles\AniVeh_bb42a17c-8976-438f-ab94-9290dab6f67b.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`FSAE Racecar` Mech. Sim. FSAE & Baja: Vehicles & Targets` , Vehicle 3D Shape`AniVeh_bb42a17c-8976-438f-ab94-9290dab6f67b
+
+*IMAGE_FIT_MODE 1
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Assembly\Vehicle_a8b77f01-da0b-42a4-8b10-ea532095e9c2.png
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { * * * HUR } HUR 4WD & 4WS Electric
+#Library : Vehicle: Assembly
+#DataSet : HUR 4WD & 4WS Electric
+#Category: * * * HUR
+#FileID  : Vehicle_a8b77f01-da0b-42a4-8b10-ea532095e9c2
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

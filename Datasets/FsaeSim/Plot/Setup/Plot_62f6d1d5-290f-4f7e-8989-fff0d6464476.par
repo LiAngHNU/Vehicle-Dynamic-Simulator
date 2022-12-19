@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Vehicle Angular Velocity`* * * HUR Visualization
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS AVx, Station
+PLOTCHANNELS AVy, Station
+PLOTCHANNELS AVz, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vehicle Angular Velocity
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * HUR Visualization } Vehicle Angular Velocity
+#Library : Plot: Setup
+#DataSet : Vehicle Angular Velocity
+#Category: * * * HUR Visualization
+#FileID  : Plot_62f6d1d5-290f-4f7e-8989-fff0d6464476
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

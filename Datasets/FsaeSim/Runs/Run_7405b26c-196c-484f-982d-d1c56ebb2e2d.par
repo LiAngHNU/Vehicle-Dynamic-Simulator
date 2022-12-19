@@ -1,0 +1,89 @@
+PARSFILE
+#FullDataName CarSim Run Control`FSAE: Autocross (2 Laps), Path Segment Builder, Front In-Wheel Motors`* * FSAE Examples: Hybrid
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_7405b26c-196c-484f-982d-d1c56ebb2e2d
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 3
+PARSFILE Animator\Cameras\Camera_ba3fe239-88d8-4ffa-a4a9-7c163f3c38ed.par
+#BlueLink0 Animator: Camera Setup`180 deg. Azimuth, 10 deg. El., Veh. Ref. (No Yaw)` Vehicle Reference` , Animator camera`Camera_ba3fe239-88d8-4ffa-a4a9-7c163f3c38ed
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 1    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 0.6 0.2
+SET_RUN_COLOR 1 0.6 0.2
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_5c83ba61-a2a5-436b-8691-d8258e485074.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`Mechanical Simulation FSAE` FSAE` , Math Model`VehLoad_5c83ba61-a2a5-436b-8691-d8258e485074
+
+PARSFILE Procedures\Proc_688d08e4-5cee-42dd-83aa-fadde63092f9.par
+#BlueLink28 Procedures`Autocross (2 Laps), Path Segment Builder` Mech. Sim. FSAE: Procedures` , Procedure`Proc_688d08e4-5cee-42dd-83aa-fadde63092f9
+
+PARSFILE Generic\VS_commands\GenVS_ebda47c7-064a-41ac-b2ce-d1e4caa48e32.par
+#BlueLink9 Generic VS Commands`Front In-Wheel Motors (1 kW)` Powertrain` , Miscellaneous`GenVS_ebda47c7-064a-41ac-b2ce-d1e4caa48e32
+
+PARSFILE Generic\VS_commands\GenVS_d942349c-ace8-4abf-a1c4-d8f86978dab6.par
+#BlueLink10 Generic VS Commands`VsV HUD Text: Lap Cntr, Engine RPM, Trans. Gear Ratio` HUD Gauges` , Miscellaneous`GenVS_d942349c-ace8-4abf-a1c4-d8f86978dab6
+
+PARSFILE Generic\Group\GenGrp_93c85863-f22e-4cd2-b8c7-402c8d5c9781.par
+#BlueLink11 Generic Data Group`VS Visualizer HUD Gauges (FSAE / Baja)` HUD Gauges` , Miscellaneous`GenGrp_93c85863-f22e-4cd2-b8c7-402c8d5c9781
+
+
+SPECIAL_PARSFILE Runs\Run_8699662e-9492-42f7-b2b7-aefb57a54ea8.par
+#BlueLink23 CarSim Run Control`FSAE: Autocross (2 Laps), Path Segment Builder` * * FSAE Examples` , Overlay run or ERD file`Run_8699662e-9492-42f7-b2b7-aefb57a54ea8
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_4d135579-d50c-4bb7-8572-23ffbe185deb.png
+
+OPT_ALL_WRITE 1
+WRITE_SENSOR_DETECT
+Title FSAE: Autocross (2 Laps), Path Segment Builder, Front In-Wheel Motors <* * FSAE Examples: Hybrid>
+CATEGORY * * FSAE Examples: Hybrid 
+DATASET_TITLE FSAE: Autocross (2 Laps), Path Segment Builder, Front In-Wheel Motors
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#A generic Formula SAE vehicle driving an autocross course. The path is looped and the vehicle performs two complete laps.
+#
+#VS Commands have been used to represent the effects of front in-wheel motors.
+#
+#Since CarSim supports multiple paths and one is always assigned to the road, separate paths can be used to represent various target paths for the Closed Loop Driver Model.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * * FSAE Examples: Hybrid } FSAE: Autocross (2 Laps), Path Segment Builder, Front In-Wheel Motors
+#Library : CarSim Run Control
+#DataSet : FSAE: Autocross (2 Laps), Path Segment Builder, Front In-Wheel Motors
+#Category: * * FSAE Examples: Hybrid
+#FileID  : Run_7405b26c-196c-484f-982d-d1c56ebb2e2d
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

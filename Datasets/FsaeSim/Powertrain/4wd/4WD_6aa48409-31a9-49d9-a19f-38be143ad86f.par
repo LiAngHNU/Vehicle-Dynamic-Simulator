@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Powertrain: 4-Wheel Drive`4 Wheel Independent Drive`* * * HUR Powertrain
+INSTALL_ENGINE
+
+OPT_PT 3
+R_REAR_DRIVE_SC 0.5
+
+OPT_ENGINE_PITCH_REACTION(1) 0
+OPT_ENGINE_PITCH_REACTION(2) 0
+
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 1
+#RingCtrl7 2
+OPT_HEV 2
+
+#CheckBox0 0    
+#CheckBox1 0    
+
+OPT_ENGINE_INTERNAL 0
+OPT_PWR_CPL_INTERNAL 0
+OPT_TRANS_INTERNAL 0
+OPT_SHIFT_INTERNAL 0
+OPT_TR_GEAR_INTERNAL 0
+OPT_DIFF_INTERNAL(1) 1
+OPT_DIFF_INTERNAL(2) 1
+OPT_DIFF_INTERNAL(3) 1
+
+PARSFILE Powertrain\HEV\HEV_6565cfc8-d0dc-4392-9e8c-492dd6389a3f.par
+#BlueLink11 Powertrain: Hybrid/Electric System`Electric Powertrain Assembly` Mech. Sim. FSAE & Baja: Electric` , Hybrid system`HEV_6565cfc8-d0dc-4392-9e8c-492dd6389a3f
+
+PARSFILE Powertrain\HEV_PMC\PMC_d42c23a9-5e7c-482d-8999-bf5c3f876502.par
+#BlueLink12 Powertrain: Hybrid/Electric Power Management Control`Hybrid Power Management: Full Load 160 kW` Mech. Sim. FSAE & Baja: HEV / EV` , Hybrid power management control`PMC_d42c23a9-5e7c-482d-8999-bf5c3f876502
+
+
+IDIFF 3
+
+IDIFF 1
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_5df3a20f-354f-449f-a272-9e3003414ef0.par
+#BlueLink5 Powertrain: Rear Differential`Mech. Sim. FSAE: Diff., 4.0, TBR = 1.75 / 1.85` Mech. Sim. FSAE & Baja: Rear Differentials` , Differential rear`DiffR_5df3a20f-354f-449f-a272-9e3003414ef0
+
+
+LOG_ENTRY Used Dataset: Powertrain: 4-Wheel Drive; { * * * HUR Powertrain } 4 Wheel Independent Drive
+#Library : Powertrain: 4-Wheel Drive
+#DataSet : 4 Wheel Independent Drive
+#Category: * * * HUR Powertrain
+#FileID  : 4WD_6aa48409-31a9-49d9-a19f-38be143ad86f
+#Product : CarSim 2020.0
+#VehCode 4WD
+
+END

@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Animator: Sound Modifier`Frequency with RPM`Gas Engine Sound Modifiers
+
+
+#RingCtrl0 FREQUENCY
+ADD_SOUND_MODIFIER FREQUENCY
+SOUNDMOD_OPERATION mult
+
+SOUNDMOD_INPUT_NAME av_eng
+SOUNDMOD_INPUT_MIN 0.0
+SOUNDMOD_INPUT_LOW 3500.0
+SOUNDMOD_INPUT_HIGH 7000.0
+SOUNDMOD_INPUT_MAX 70000.0
+SOUNDMOD_OUTPUT_MIN 0.0
+SOUNDMOD_OUTPUT_LOW 1.0
+SOUNDMOD_OUTPUT_HIGH 2.0
+SOUNDMOD_OUTPUT_MAX 20.0
+
+WRT_av_eng
+ANI_av_eng
+
+#EMBEDDED_NOTES
+#This modifier is based on a recording of a 4 cyl engine at 3500 RPM
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Sound Modifier; { Gas Engine Sound Modifiers } Frequency with RPM
+#Library : Animator: Sound Modifier
+#DataSet : Frequency with RPM
+#Category: Gas Engine Sound Modifiers
+#FileID  : SndMod_83ec05bc-29ab-428d-a5ae-1e1a7ffa16f2
+#Product : CarSim 2020.0
+#VehCode Sound Modifier
+
+END

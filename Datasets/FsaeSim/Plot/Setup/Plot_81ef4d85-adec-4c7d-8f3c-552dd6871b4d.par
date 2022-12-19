@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Forward Wheel Speed vs. Z Ground (Left Front)`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Vx_L1, Zgnd_L1
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Forward Wheel Speed vs. Z Ground (Left Front)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Forward Wheel Speed vs. Z Ground (Left Front)
+#Library : Plot: Setup
+#DataSet : Forward Wheel Speed vs. Z Ground (Left Front)
+#Category: Tracking
+#FileID  : Plot_81ef4d85-adec-4c7d-8f3c-552dd6871b4d
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

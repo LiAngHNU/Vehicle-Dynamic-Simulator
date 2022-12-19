@@ -1,0 +1,24 @@
+Run made by VS Road Calculator at 09:45 on October 13, 2022.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_80b20051-5638-458e-8975-47c9237dbfc5.par"
+Include PARSFILE "Roads\BuilderSegment\RoadSeg_b97b34dd-f2db-407a-ab69-dd960c85d2af.par"
+ Autocross Course #1 <* * * HUR Tracks>
+Used Dataset: Path: Segment Builder; { * * * HUR Tracks } Autocross Course #1
+Include PARSFILE "Roads\Center_Z\RdRefZ_598f8ea7-d2f1-4e0b-a828-7b8c7dfb136e.par"
+Used Dataset: Road: Reference Line Elevation; Flat
+Include PARSFILE "Roads\dZ_Map\RdMapZ_daeb5d83-fffb-4248-89b6-089cb34929b0.par"
+Used Dataset: Road: Off-Center Elevation Map, S-L Grid; Flat
+Include PARSFILE "Roads\Friction\RdMu_3f37123c-6105-4949-9c9b-1ea466feefd2.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Variable Mu } Mu Table
+Include PARSFILE "Roads\Shapes\RdShape_59165a8f-9ba9-45fd-a225-f6ad4506228e.par"
+Used Dataset: Road: Animator Surface Shapes; { * * * HUR Road Shapes } Autocross Course #1
+ Autocross Course #1 <* * * HUR Tracks>
+Used Dataset: Road: 3D Surface (All Properties); { * * * HUR Tracks } Autocross Course #1
+
+Time to read input = 0.001
+
+Run stopped at t = 14.04. Stop time reached.
+
+Run started: VS output file = Roads\3D_Road\Road_80b20051-5638-458e-8975-47c9237dbfc5.vsb

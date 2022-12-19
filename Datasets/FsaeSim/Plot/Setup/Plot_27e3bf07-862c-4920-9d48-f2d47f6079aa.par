@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Vehicle Acceleration`* * * HUR Visualization
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Ax, Station
+PLOTCHANNELS Ay, Station
+PLOTCHANNELS Az, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vehicle Acceleration
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * HUR Visualization } Vehicle Acceleration
+#Library : Plot: Setup
+#DataSet : Vehicle Acceleration
+#Category: * * * HUR Visualization
+#FileID  : Plot_27e3bf07-862c-4920-9d48-f2d47f6079aa
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

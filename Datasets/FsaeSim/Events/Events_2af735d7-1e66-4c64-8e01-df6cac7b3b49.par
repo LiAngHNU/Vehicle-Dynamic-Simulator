@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Events`2: Monitor Path Following`FSAE: Restoring to a Previous State
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl1 <
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 lat_veh
+*NAME2 lat_veh
+*VALUE1 lat_targ + lat_err
+*VALUE2 lat_targ - lat_err
+#MiscYellow0
+! increment the restore counter
+restores = restores + 1
+#ENDMYellow
+
+MAKE_EVENT lat_veh > lat_targ + lat_err ; Events\Events_cbfeff56-384d-4621-8165-b55580451c47.par
+#BlueLink0 Events`3: Restore State, Reduce Target Speed` FSAE: Restoring to a Previous State` , Events`Events_cbfeff56-384d-4621-8165-b55580451c47
+
+MAKE_EVENT lat_veh < lat_targ - lat_err ; Events\Events_cbfeff56-384d-4621-8165-b55580451c47.par
+#BlueLink1 Events`3: Restore State, Reduce Target Speed` FSAE: Restoring to a Previous State` , Events`Events_cbfeff56-384d-4621-8165-b55580451c47
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This Event will be invoked once when the vehicle reaches station = 200 m and again upon each restore.
+#
+#The restore counter "restores" counts the number of restores each time the run returns to this screen on restoring the run, the counter is incremented.
+#
+#It is used to end the simulation if success is not achieved after the linked Events occur when the vehicle deviates from the target by more than 0.48 m.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { FSAE: Restoring to a Previous State } 2: Monitor Path Following
+#Library : Events
+#DataSet : 2: Monitor Path Following
+#Category: FSAE: Restoring to a Previous State
+#FileID  : Events_2af735d7-1e66-4c64-8e01-df6cac7b3b49
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

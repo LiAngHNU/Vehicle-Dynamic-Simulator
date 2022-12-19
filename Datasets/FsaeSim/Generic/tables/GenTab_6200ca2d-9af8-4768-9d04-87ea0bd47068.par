@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName Generic Table`Lx Variable, Scaled to Tire`Tire Relaxation Length
+#RingCtrl0 SPLINE_FLAT
+#RingCtrl1 MULTIPLY
+#RingCtrl2 LINEAR
+#CheckBox0 1    
+
+L_RELAX_X_COMBINE MULTIPLY
+#MiscYellow0
+SET_UNITS L_RELAX_X_TABLE m
+L_RELAX_X_GAIN = RRE/5
+FZ_SCALE_L_RELAX_X = FZ_REF
+#ENDMYellow
+
+#DiagramOne0
+L_RELAX_X_TABLE SPLINE_FLAT
+-0.1, 0.13526
+-0.095, 0.13793
+-0.09, 0.1431
+-0.085, 0.14862
+-0.08, 0.1552
+-0.075, 0.16251
+-0.07, 0.17087
+-0.065, 0.18085
+-0.06, 0.1926
+-0.055, 0.20631
+-0.05, 0.22324
+-0.045, 0.24389
+-0.04, 0.26989
+-0.035, 0.30301
+-0.03, 0.34575
+-0.025, 0.40397
+-0.02, 0.48251
+-0.015, 0.59275
+-0.01, 0.7393
+-0.005, 0.90707
+0, 1
+0.005, 0.90707
+0.01, 0.7393
+0.015, 0.59275
+0.02, 0.48251
+0.025, 0.40397
+0.03, 0.34575
+0.035, 0.30301
+0.04, 0.26989
+0.045, 0.24389
+0.05, 0.22324
+0.055, 0.20631
+0.06, 0.1926
+0.065, 0.18085
+0.07, 0.17087
+0.075, 0.16251
+0.08, 0.1552
+0.085, 0.14862
+0.09, 0.1431
+0.095, 0.13793
+0.1, 0.13526
+ENDTABLE
+#DiagramOne1
+L_RELAX_X_FZ_TABLE LINEAR
+0, 0.2
+1, 1
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD L_RELAX_X
+*X_LABEL Lagged Slip Ratio (-)
+*Y_LABEL Relaxation Length
+*X_LABEL_2 Vertical Load (Fz)
+*KEYWORD_2 L_RELAX_X_FZ
+
+
+#EMBEDDED_NOTES
+#Normalized dataset. The function gain is scaled to the tire radius and the reference Fz.
+#
+#This dataset requires that the tire reference Fz (FZ_REF) have a reasonable value; otherwise the relaxation length will be huge.
+#
+#The units for relaxation length were changed to meters, to simplify the automatic scaling.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+#Library : Generic Table
+#DataSet : Lx Variable, Scaled to Tire
+#Category: Tire Relaxation Length
+#FileID  : GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068
+#Product : CarSim 2020.0
+#VehCode table
+
+END

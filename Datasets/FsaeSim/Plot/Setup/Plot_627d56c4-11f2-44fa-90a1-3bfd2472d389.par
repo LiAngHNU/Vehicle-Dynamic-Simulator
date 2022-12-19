@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Station vs. t_stamp`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Station, t_stamp
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Station vs. t_stamp
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Station vs. t_stamp
+#Library : Plot: Setup
+#DataSet : Station vs. t_stamp
+#Category: Tracking
+#FileID  : Plot_627d56c4-11f2-44fa-90a1-3bfd2472d389
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,115 @@
+PARSFILE
+#FullDataName Steering`4 Wheel Steeing`* * * HUR Steering System
+I_COL 0.05
+I_GEAR_IN 0.000101
+D_COL 0.002
+HYS_COL 0.2
+BETA_COL 0.1
+*L1_LKPO 80
+*L2_LKPO 80
+*R1_LKPO 80
+*R2_LKPO 80
+*L1_AKPI 8
+*L2_AKPI 8
+*R1_AKPI 8
+*R2_AKPI 8
+*L1_ACAST 4
+*L2_ACAST 4
+*R1_ACAST 4
+*R2_ACAST 4
+*L1_XKPO 0
+*L2_XKPO 0
+*R1_XKPO 0
+*R2_XKPO 0
+*CF_F 80
+*CF_R 80
+*D_RACK_F 4.5
+*D_RACK_R 4.5
+*K_TBAR 2
+*H_RACK_F 10
+*H_RACK_R 10
+*B_RACK_F 0.1
+*B_RACK_R 0.1
+
+#RingCtrl0 1
+#RingCtrl1 1
+#RingCtrl2 2
+#RingCtrl3 0
+#RingCtrl4 0
+#RingCtrl5 0
+#RingCtrl6 0
+#RingCtrl7 1
+
+OPT_STEER_DEF 1
+
+OPT_M_SW_CALC 1
+iside 1
+iaxle 1
+L_KPO 80
+A_KPI 8
+A_CASTER 4
+X_KPO 0
+
+iside 2
+L_KPO 80
+A_KPI 8
+A_CASTER 4
+X_KPO 0
+
+iaxle 2
+L_KPO 80
+A_KPI 8
+A_CASTER 4
+X_KPO 0
+
+iside 1
+L_KPO 80
+A_KPI 8
+A_CASTER 4
+X_KPO 0
+
+iaxle 2
+OPT_RACK 1
+OPT_STEER_EXT 0
+RACK_TRAVEL_COEFFICIENT 80/360
+D_RACK 4.5
+HYS_RACK 10
+BETA_RACK 0.1
+PARSFILE Steering\KinematicsRack2\RkKin2_b9b4b5f5-871e-46e6-bd92-94be68e2228c.par
+#BlueLink11 Steering System: Kinematics for 2 Wheels (Rack & Pinion)`FSAE Steering Kinematics` Mech. Sim. FSAE & Baja: Steering Kinematics` , Rack to rear wheels`RkKin2_b9b4b5f5-871e-46e6-bd92-94be68e2228c
+
+PARSFILE Steering\Str_Park_Trq2\TqPark2_cfb23522-d8a1-4c8c-95fc-19a873fad376.par
+#BlueLink16 Steering: Parking Torque for 2 Wheels`Zero` ` , Rear Wheels`TqPark2_cfb23522-d8a1-4c8c-95fc-19a873fad376
+
+PARSFILE Steering\Compliance\StrCmp_a7bc424a-7c9f-47ad-92ae-b0bef02656d0.par
+#BlueLink14 Steering System: Compliance`Constant: 0.001 deg/N-m` Constant` , Rear Compliance`StrCmp_a7bc424a-7c9f-47ad-92ae-b0bef02656d0
+
+
+iaxle 1
+
+OPT_POWER 0
+OPT_RACK 1
+OPT_STEER_EXT 0
+RACK_TRAVEL_COEFFICIENT 80/360
+D_RACK 4.5
+HYS_RACK 10
+BETA_RACK 0.1
+PARSFILE Steering\KinematicsRack2\RkKin2_b9b4b5f5-871e-46e6-bd92-94be68e2228c.par
+#BlueLink10 Steering System: Kinematics for 2 Wheels (Rack & Pinion)`FSAE Steering Kinematics` Mech. Sim. FSAE & Baja: Steering Kinematics` , Rack to front wheels`RkKin2_b9b4b5f5-871e-46e6-bd92-94be68e2228c
+
+PARSFILE Steering\Compliance\StrCmp_a7bc424a-7c9f-47ad-92ae-b0bef02656d0.par
+#BlueLink13 Steering System: Compliance`Constant: 0.001 deg/N-m` Constant` , Front Compliance`StrCmp_a7bc424a-7c9f-47ad-92ae-b0bef02656d0
+
+PARSFILE Steering\Str_Park_Trq2\TqPark2_cfb23522-d8a1-4c8c-95fc-19a873fad376.par
+#BlueLink15 Steering: Parking Torque for 2 Wheels`Zero` ` , Front Wheels`TqPark2_cfb23522-d8a1-4c8c-95fc-19a873fad376
+
+
+LOG_ENTRY Used Dataset: Steering; { * * * HUR Steering System } 4 Wheel Steeing
+#Library : Steering
+#DataSet : 4 Wheel Steeing
+#Category: * * * HUR Steering System
+#FileID  : StrSys2_d8914940-aa45-424a-aaa8-cca0031621f6
+#Product : CarSim 2020.0
+#VehCode 4-Wheel Steer
+
+END

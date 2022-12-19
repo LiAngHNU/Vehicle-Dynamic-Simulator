@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`R2 Wheel Pad`K & C Machine
+ADD_REFERENCE_FRAME Frame_201e52da-9469-4bd9-8d08-efc226ff4dec
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME xctc_R2
+SET_Y_NAME yctc_R2
+SET_Z_NAME Zgnd_R2
+
+PARSFILE Animator\STL\Shape_38334a40-dbbf-424e-98c1-e001466ddd2f.par
+#BlueLink0 Animator: Shape File Link`K & C Machine Wheel Pad` K & C Machine` , Animator Data`Shape_38334a40-dbbf-424e-98c1-e001466ddd2f
+
+WRT_xctc_R2
+ANI_xctc_R2
+WRT_yctc_R2
+ANI_yctc_R2
+WRT_Zgnd_R2
+ANI_Zgnd_R2
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { K & C Machine } R2 Wheel Pad
+#Library : Animator: Reference Frame
+#DataSet : R2 Wheel Pad
+#Category: K & C Machine
+#FileID  : Frame_201e52da-9469-4bd9-8d08-efc226ff4dec
+#Product : CarSim 2020.0
+#VehCode Reference Frame
+
+END

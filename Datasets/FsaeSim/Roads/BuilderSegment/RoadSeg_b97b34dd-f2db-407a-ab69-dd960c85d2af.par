@@ -1,0 +1,345 @@
+PARSFILE
+#FullDataName Path: Segment Builder`Autocross Course #1`* * * HUR Tracks
+#RingCtrl0 1
+SET_IPATH_FOR_ID 0
+#CheckBox0 1    
+OPT_PATH_START 1
+#CheckBox1 1    
+OPT_PATH_LOOP 1
+
+SPATH_START 0
+X_PATH_START 0
+Y_PATH_START 0
+HEADING_START 0
+PATH_ID_DM = PATH_ID
+set_description path_id Autocross Course #1
+
+NSEGMENTS 44
+*TABLEROWS 44
+
+! Table Columns:
+!   NOTE: Label columns are not written to parsfile.
+!
+! 0: (Ring) Specify the type of segment. Circular arcs can be specified using radius or curvature (inverse radius). The table option provides a link to a dataset from the X-Y Coordinates for Segment library. The clothoid option will automatically generate an X-Y table with a specified length that maintains continuity with adjacent segments (the preceding and following rows in the table).
+! 1: (BlueLink) Link to a dataset from the X-Y Coordinates for Segment library.
+! 2: (Text) Length of straight segment in meters.
+! 3: (Label) Specify the length of a straight segment with meters.
+! 4: (Text) Segment radius: use a positive radius for a left turn, negative for a right turn.
+! 5: (Label) Specify radius with meters. Use a positive number for a left turn, negative number for a right turn.
+! 6: (Text) Length of segment arc, specified with arc length (m) or central angle (deg).
+! 7: (Ring) Specify arc size with central angle (deg) or arc length (m).
+! 8: (Text) Segment curvature (inverse of radius, 1/m): use a positive curvature for a left turn, negative for a right turn
+! 9: (Label) Specify segment curvature with 1/meter (inverse of radius). Use a positive number for a left turn, negative for a right turn.
+! 10: (Text) Length of segment arc, specified with arc length (m) or central angle (deg).
+! 11: (Ring) Specify arc size with central angle (deg) or arc length (m).
+! 12: (Text) Length of clothoid segment in meters. This will automatically generate an X-Y table that has this overall length and maintains continuity with the adjacent segments (the preceding and following rows in the table).
+! 13: (Label) Specify the length of a clothoid segment with meters.
+#MIXTABLE0
+#NUMROWS 44
+#straight, , 10, 100, 360, deg, 0.01, 90, deg, 400
+#radius, , 50, 10, 120, deg, 0.01, 90, deg, 400
+#radius, , 50, 100, 10, deg, 0.01, 90, deg, 400
+#straight, , 20, 10, 360, deg, 0.01, 90, deg, 400
+#radius, , 50, -20, 180, deg, 0.01, 90, deg, 400
+#straight, , 40, 100, 90, deg, 0.01, 90, deg, 400
+#radius, , 50, 5, 150, deg, 0.01, 90, deg, 400
+#straight, , 60, 100, 90, deg, 0.01, 90, deg, 400
+#radius, , 50, -5, 90, deg, 0.01, 90, deg, 400
+#straight, , 15, 100, 90, deg, 0.01, 90, deg, 400
+#radius, , 50, -100, 20, deg, 0.01, 90, deg, 400
+#straight, , 30, 100, 90, deg, 0.01, 90, deg, 400
+#radius, , 50, 5, 90, deg, 0.01, 90, deg, 400
+#radius, , 50, 10, 5, deg, 0.01, 90, deg, 400
+#radius, , 50, 10, 80, deg, 0.01, 90, deg, 400
+#straight, , 5, 100, 90, deg, 0.01, 90, deg, 400
+#radius, , 50, -5, 100, deg, 0.01, 90, deg, 400
+#straight, , 30, 100, 15, deg, 0.01, 90, deg, 400
+#radius, , 50, -100, 15, deg, 0.01, 90, deg, 400
+#straight, , 50, 100, 90, deg, 0.01, 90, deg, 400
+#radius, , 50, -20, 160, deg, 0.01, 90, deg, 400
+#radius, , 50, 20, 90, deg, 0.01, 90, deg, 400
+#straight, , 50, 100, 90, deg, 0.01, 90, deg, 400
+#radius, , 50, 25, 15, deg, 0.01, 90, deg, 400
+#radius, , 50, -50, 180, deg, 0.01, 90, deg, 400
+#radius, , 50, 25, 20, deg, 0.01, 90, deg, 400
+#straight, , 20, 100, 90, deg, 0.01, 90, deg, 400
+#radius, , 50, 25, 45, deg, 0.01, 90, deg, 400
+#radius, , 50, 10, 50, deg, 0.01, 90, deg, 400
+#radius, , 50, -10, 100, deg, 0.01, 90, deg, 400
+#straight, , 30, 100, 90, deg, 0.01, 90, deg, 400
+#radius, , 50, 50, 65, deg, 0.01, 90, deg, 400
+#radius, , 50, -70, 110, deg, 0.01, 90, deg, 400
+#radius, , 50, 5, 75, deg, 0.01, 90, deg, 400
+#radius, , 50, -5, 150, deg, 0.01, 90, deg, 400
+#radius, , 50, 5, 150, deg, 0.01, 90, deg, 400
+#radius, , 25, -5, 150, deg, 0.01, 90, deg, 400
+#radius, , 50, 5, 150, deg, 0.01, 90, deg, 400
+#radius, , 50, -5, 150, deg, 0.01, 90, deg, 50
+#radius, , 20, 5, 150, deg, 0.01, 90, deg, 52.5
+#radius, , 3.0, -5, 75, deg, 0.01, 90, deg, 400
+#straight, , 10, 100, 90, deg, 0.01, 90, deg, 400
+#radius, , 50, -15.30, 145, deg, 0.01, 90, deg, 400
+#straight, , 14, 100, 90, deg, 0.01, 90, deg, 400
+#ENDTABLE
+
+! Segment 1, straight
+IPATHSEG 1
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 10
+
+! Segment 2, radius
+IPATHSEG 2
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 10.000000
+SEGMENT_ARC 120.000000
+
+! Segment 3, radius
+IPATHSEG 3
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 100.000000
+SEGMENT_ARC 10.000000
+
+! Segment 4, straight
+IPATHSEG 4
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 20
+
+! Segment 5, radius
+IPATHSEG 5
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -20.000000
+SEGMENT_ARC 180.000000
+
+! Segment 6, straight
+IPATHSEG 6
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 40
+
+! Segment 7, radius
+IPATHSEG 7
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 5.000000
+SEGMENT_ARC 150.000000
+
+! Segment 8, straight
+IPATHSEG 8
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 60
+
+! Segment 9, radius
+IPATHSEG 9
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -5.000000
+SEGMENT_ARC 90.000000
+
+! Segment 10, straight
+IPATHSEG 10
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 15
+
+! Segment 11, radius
+IPATHSEG 11
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -100.000000
+SEGMENT_ARC 20.000000
+
+! Segment 12, straight
+IPATHSEG 12
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 30
+
+! Segment 13, radius
+IPATHSEG 13
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 5.000000
+SEGMENT_ARC 90.000000
+
+! Segment 14, radius
+IPATHSEG 14
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 10.000000
+SEGMENT_ARC 5.000000
+
+! Segment 15, radius
+IPATHSEG 15
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 10.000000
+SEGMENT_ARC 80.000000
+
+! Segment 16, straight
+IPATHSEG 16
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 5
+
+! Segment 17, radius
+IPATHSEG 17
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -5.000000
+SEGMENT_ARC 100.000000
+
+! Segment 18, straight
+IPATHSEG 18
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 30
+
+! Segment 19, radius
+IPATHSEG 19
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -100.000000
+SEGMENT_ARC 15.000000
+
+! Segment 20, straight
+IPATHSEG 20
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 50
+
+! Segment 21, radius
+IPATHSEG 21
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -20.000000
+SEGMENT_ARC 160.000000
+
+! Segment 22, radius
+IPATHSEG 22
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 20.000000
+SEGMENT_ARC 90.000000
+
+! Segment 23, straight
+IPATHSEG 23
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 50
+
+! Segment 24, radius
+IPATHSEG 24
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 25.000000
+SEGMENT_ARC 15.000000
+
+! Segment 25, radius
+IPATHSEG 25
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -50.000000
+SEGMENT_ARC 180.000000
+
+! Segment 26, radius
+IPATHSEG 26
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 25.000000
+SEGMENT_ARC 20.000000
+
+! Segment 27, straight
+IPATHSEG 27
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 20
+
+! Segment 28, radius
+IPATHSEG 28
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 25.000000
+SEGMENT_ARC 45.000000
+
+! Segment 29, radius
+IPATHSEG 29
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 10.000000
+SEGMENT_ARC 50.000000
+
+! Segment 30, radius
+IPATHSEG 30
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -10.000000
+SEGMENT_ARC 100.000000
+
+! Segment 31, straight
+IPATHSEG 31
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 30
+
+! Segment 32, radius
+IPATHSEG 32
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 50.000000
+SEGMENT_ARC 65.000000
+
+! Segment 33, radius
+IPATHSEG 33
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -70.000000
+SEGMENT_ARC 110.000000
+
+! Segment 34, radius
+IPATHSEG 34
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 5.000000
+SEGMENT_ARC 75.000000
+
+! Segment 35, radius
+IPATHSEG 35
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -5.000000
+SEGMENT_ARC 150.000000
+
+! Segment 36, radius
+IPATHSEG 36
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 5.000000
+SEGMENT_ARC 150.000000
+
+! Segment 37, radius
+IPATHSEG 37
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -5.000000
+SEGMENT_ARC 150.000000
+
+! Segment 38, radius
+IPATHSEG 38
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 5.000000
+SEGMENT_ARC 150.000000
+
+! Segment 39, radius
+IPATHSEG 39
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -5.000000
+SEGMENT_ARC 150.000000
+
+! Segment 40, radius
+IPATHSEG 40
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 5.000000
+SEGMENT_ARC 150.000000
+
+! Segment 41, radius
+IPATHSEG 41
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -5.000000
+SEGMENT_ARC 75.000000
+
+! Segment 42, straight
+IPATHSEG 42
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 10
+
+! Segment 43, radius
+IPATHSEG 43
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -15.300000
+SEGMENT_ARC 145.000000
+
+! Segment 44, straight
+IPATHSEG 44
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 14
+
+Title Autocross Course #1 <* * * HUR Tracks>
+
+LOG_ENTRY Used Dataset: Path: Segment Builder; { * * * HUR Tracks } Autocross Course #1
+#Library : Path: Segment Builder
+#DataSet : Autocross Course #1
+#Category: * * * HUR Tracks
+#FileID  : RoadSeg_b97b34dd-f2db-407a-ab69-dd960c85d2af
+#Product : CarSim 2020.0
+#VehCode Path Segment Builder
+
+END

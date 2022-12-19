@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Plot: Setup`Wheel Sideslip Angles`* * * HUR Visualization
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Alpha_L1, Station
+PLOTCHANNELS Alpha_R1, Station
+PLOTCHANNELS Alpha_L2, Station
+PLOTCHANNELS Alpha_R2, Station
+PLOTCHANNELS AlphL_L1, Station
+PLOTCHANNELS AlphL_R1, Station
+PLOTCHANNELS AlphL_L2, Station
+PLOTCHANNELS AlphL_R2, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Wheel Sideslip Angles
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * HUR Visualization } Wheel Sideslip Angles
+#Library : Plot: Setup
+#DataSet : Wheel Sideslip Angles
+#Category: * * * HUR Visualization
+#FileID  : Plot_4ecf942d-d271-4bae-acff-b31591c8aa17
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

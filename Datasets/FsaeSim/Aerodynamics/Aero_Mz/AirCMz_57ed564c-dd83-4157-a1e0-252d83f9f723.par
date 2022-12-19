@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip`Yaw Moment Coefficent = 0.05 at 90 deg`
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RadioCtrl0 0    
+
+#DiagramOne0
+MZ_AERO_SHAPING_TABLE SPLINE
+-180, 0
+-90, 0.05
+0, 0
+90, -0.05
+180, 0
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#The aerodynamic moments relate the location of the aerodynamic center of pressure to the location of the aerodynamic reference point.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip; Yaw Moment Coefficent = 0.05 at 90 deg
+#Library : Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip
+#DataSet : Yaw Moment Coefficent = 0.05 at 90 deg
+#Category: 
+#FileID  : AirCMz_57ed564c-dd83-4157-a1e0-252d83f9f723
+#Product : CarSim 2020.0
+#VehCode Mz vs. Aero Slip
+
+END

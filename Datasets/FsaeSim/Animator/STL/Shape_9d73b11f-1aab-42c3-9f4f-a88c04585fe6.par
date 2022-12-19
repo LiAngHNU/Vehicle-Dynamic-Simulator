@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Baja SAE: Details`Mech. Sim. Baja: Shape Files
+#MiscYellow3
+add_obj Animator\3D_Shape_Files_User\SAE\Mini Baja\Details.obj
+#ENDMYellow
+
+SET_COLOR 0.125 0.125 0.125
+*SPECULAR .2
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR .2 .2 .2
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_f2e9fdc6-8eb7-4c80-a895-b3a3c8b4ed69.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side) Static` Shape Preview` , Video Camera`Camera_f2e9fdc6-8eb7-4c80-a895-b3a3c8b4ed69
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_9d73b11f-1aab-42c3-9f4f-a88c04585fe6.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Mech. Sim. Baja: Shape Files } Baja SAE: Details
+#Library : Animator: Shape File Link
+#DataSet : Baja SAE: Details
+#Category: Mech. Sim. Baja: Shape Files
+#FileID  : Shape_9d73b11f-1aab-42c3-9f4f-a88c04585fe6
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

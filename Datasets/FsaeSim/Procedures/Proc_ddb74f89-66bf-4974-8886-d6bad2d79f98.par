@@ -1,0 +1,122 @@
+PARSFILE
+#FullDataName Procedures`Procedure: Calibration`* * * HUR Procedures
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 0
+TSTART_WRITE = TSTART;
+TSTOP 300
+SSTOP 450
+OPT_DIRECTION 0
+*SPEED 5
+*TSTOP 300
+*TSTART 0
+*SSTART 0
+*SSTOP 450
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Procedure: Calibration
+SPEED_TARGET_CONSTANT 5
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_5e1b87df-4a9a-4a60-ac80-544adfa4667d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`No Offset, 1 sec. Preview` Constant Position` , Steering`StrDM_5e1b87df-4a9a-4a60-ac80-544adfa4667d
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting Modes` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Roads\3D_Road\Road_3727fa88-ad33-4df0-acd8-11a0df768316.par
+#BlueLink0 Road: 3D Surface (All Properties)`Figure 8` * * * HUR Tracks` , Miscellaneous`Road_3727fa88-ad33-4df0-acd8-11a0df768316
+
+PARSFILE Roads\Profiles\Profile_1584ff82-2965-4b1e-a1a9-3c39e952e8b5.par
+#BlueLink2 Surface: Roughness Profiles`Flat Roughness File` * * * HUR Road Roughness File` , Miscellaneous`Profile_1584ff82-2965-4b1e-a1a9-3c39e952e8b5
+
+PARSFILE Generic\Group\GenGrp_69a30361-a0a0-4761-b0e4-d1c94cdf374a.par
+#BlueLink4 Generic Data Group`HUR Head-Up Displays` * * * HUR Head-Up Displays` , Miscellaneous`GenGrp_69a30361-a0a0-4761-b0e4-d1c94cdf374a
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_99337835-9900-4c81-b0b2-bdf7f622527b.par
+#BlueLink5 Multiple Moving Objects`Traffic Cones: Left` * * * HUR Obstacles` , Miscellaneous`TMotion_99337835-9900-4c81-b0b2-bdf7f622527b
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_34052b41-744b-4b76-843a-0e4e0f59c586.par
+#BlueLink6 Multiple Moving Objects`Traffic Cones: Right` * * * HUR Obstacles` , Miscellaneous`TMotion_34052b41-744b-4b76-843a-0e4e0f59c586
+
+PARSFILE Plot\Setup\Plot_72d8e5a7-7101-45e7-b634-bdb5e27bcccc.par
+#BlueLink8 Plot: Setup`Vheicle Trajectory` * * * HUR Visualization` , Plot`Plot_72d8e5a7-7101-45e7-b634-bdb5e27bcccc
+
+PARSFILE Plot\Setup\Plot_fa50af84-0389-4254-9888-206c012f5941.par
+#BlueLink9 Plot: Setup`Vehicle Tracking Error` * * * HUR Visualization` , Plot`Plot_fa50af84-0389-4254-9888-206c012f5941
+
+PARSFILE Plot\Setup\Plot_b859f446-d783-413d-8587-6d3c67c4f0aa.par
+#BlueLink10 Plot: Setup`Vehicle Position` * * * HUR Visualization` , Plot`Plot_b859f446-d783-413d-8587-6d3c67c4f0aa
+
+PARSFILE Plot\Setup\Plot_d581a987-251f-4ccb-bfd6-ab99eb826966.par
+#BlueLink11 Plot: Setup`Vehicle Altitude` * * * HUR Visualization` , Plot`Plot_d581a987-251f-4ccb-bfd6-ab99eb826966
+
+PARSFILE Plot\Setup\Plot_d69bc281-ac9d-4058-b364-7cfb558c2467.par
+#BlueLink12 Plot: Setup`Vehicle Velocity` * * * HUR Visualization` , Plot`Plot_d69bc281-ac9d-4058-b364-7cfb558c2467
+
+PARSFILE Plot\Setup\Plot_62f6d1d5-290f-4f7e-8989-fff0d6464476.par
+#BlueLink13 Plot: Setup`Vehicle Angular Velocity` * * * HUR Visualization` , Plot`Plot_62f6d1d5-290f-4f7e-8989-fff0d6464476
+
+PARSFILE Plot\Setup\Plot_27e3bf07-862c-4920-9d48-f2d47f6079aa.par
+#BlueLink14 Plot: Setup`Vehicle Acceleration` * * * HUR Visualization` , Plot`Plot_27e3bf07-862c-4920-9d48-f2d47f6079aa
+
+PARSFILE Plot\Setup\Plot_9e1801da-b484-409d-90a6-c58834dfeb70.par
+#BlueLink15 Plot: Setup`Vehicle Angular Acceleration` * * * HUR Visualization` , Plot`Plot_9e1801da-b484-409d-90a6-c58834dfeb70
+
+PARSFILE Plot\Setup\Plot_63b2cdfe-0c25-4abb-8f10-c8d9699b1d0f.par
+#BlueLink19 Plot: Setup`Wheel Slip Ratio` * * * HUR Visualization` , Plot`Plot_63b2cdfe-0c25-4abb-8f10-c8d9699b1d0f
+
+PARSFILE Plot\Setup\Plot_4ecf942d-d271-4bae-acff-b31591c8aa17.par
+#BlueLink20 Plot: Setup`Wheel Sideslip Angle` * * * HUR Visualization` , Plot`Plot_4ecf942d-d271-4bae-acff-b31591c8aa17
+
+PARSFILE Plot\Setup\Plot_697f3606-93d0-49ef-bf4d-9350a3bb8a93.par
+#BlueLink21 Plot: Setup`Wheel Steer Angle` * * * HUR Visualization` , Plot`Plot_697f3606-93d0-49ef-bf4d-9350a3bb8a93
+
+PARSFILE Plot\Setup\Plot_4bef23fd-8b2f-44c4-9290-ab7372faa87e.par
+#BlueLink22 Plot: Setup`Tyre & Axle Vertical Forces` * * * HUR Visualization` , Plot`Plot_4bef23fd-8b2f-44c4-9290-ab7372faa87e
+
+PARSFILE Plot\Setup\Plot_e38da197-2f7b-4807-9640-7338f090e762.par
+#BlueLink23 Plot: Setup`Tyre & Axle Longitudinal Forces` * * * HUR Visualization` , Plot`Plot_e38da197-2f7b-4807-9640-7338f090e762
+
+PARSFILE Plot\Setup\Plot_6a5f3cbe-c61a-4168-a7c5-fbc992c50946.par
+#BlueLink24 Plot: Setup`Tyre & Axle Lateral Forces` * * * HUR Visualization` , Plot`Plot_6a5f3cbe-c61a-4168-a7c5-fbc992c50946
+
+
+#EMBEDDED_NOTES
+#Procedure for an Autocross course and an EV powertrain.
+#
+#Speed and braking control are set up in a single dataset:
+#FSAE Target Speed, Autocross
+#
+#The Target Speed from Path Preview screen has options that allow the end-user to select from different Skill and Aggressiveness levels, as well as longitudinal and lateral acceleration targets.
+#
+#Simulations such as these are very useful for studying and evaluating many aspects of the vehicle performance:
+#
+# * Aerodynamics
+# * Brakes
+# * Powertrain
+# * Steering
+# * Suspension
+# * Tire Forces
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { * * * HUR Procedures } Procedure: Calibration
+#Library : Procedures
+#DataSet : Procedure: Calibration
+#Category: * * * HUR Procedures
+#FileID  : Proc_ddb74f89-66bf-4974-8886-d6bad2d79f98
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

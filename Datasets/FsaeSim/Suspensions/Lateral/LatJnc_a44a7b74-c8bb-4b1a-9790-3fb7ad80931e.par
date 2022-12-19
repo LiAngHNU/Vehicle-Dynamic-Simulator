@@ -1,0 +1,133 @@
+PARSFILE
+#FullDataName Suspension: Lateral Movement Due to Jounce`Baja SAE Lateral Y Movement (Front)`Mech. Sim. Baja SAE: Lateral Movement
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_LAT_COMBINE ADD
+#DiagramOne0
+SUSP_LAT_TABLE LINEAR
+-220, 105.86
+-211.2, 93.21
+-202.4, 83.34
+-193.6, 74.78
+-184.8, 67.1
+-176, 60.13
+-167.2, 53.75
+-158.4, 47.89
+-149.6, 42.48
+-140.8, 37.5
+-132, 32.9
+-123.2, 28.66
+-114.4, 24.77
+-105.6, 21.2
+-96.8, 17.94
+-88, 14.98
+-79.2, 12.3
+-70.4, 9.9
+-61.6, 7.77
+-52.8, 5.91
+-44, 4.3
+-35.2, 2.95
+-26.4, 1.84
+-17.6, 0.99
+-8.8, 0.37
+0, 0
+8.8, -0.13
+17.6, -0.02
+26.4, 0.33
+35.2, 0.92
+44, 1.75
+52.8, 2.82
+61.6, 4.15
+70.4, 5.72
+79.2, 7.54
+88, 9.63
+96.8, 11.97
+105.6, 14.59
+114.4, 17.48
+123.2, 20.65
+132, 24.13
+140.8, 27.9
+149.6, 32
+158.4, 36.43
+167.2, 41.22
+176, 46.38
+184.8, 51.94
+193.6, 57.92
+202.4, 64.37
+211.2, 71.34
+220, 78.87
+ENDTABLE
+SUSP_LAT_JNC_OTHER_SIDE_CONSTANT 0
+SUSP_Y_AXLE_ROLL_COMBINE ADD ! in case this is for a solid axle
+#DiagramOne0
+SUSP_LAT_AXLE_JOUNCE_TABLE LINEAR
+-220, 105.86
+-211.2, 93.21
+-202.4, 83.34
+-193.6, 74.78
+-184.8, 67.1
+-176, 60.13
+-167.2, 53.75
+-158.4, 47.89
+-149.6, 42.48
+-140.8, 37.5
+-132, 32.9
+-123.2, 28.66
+-114.4, 24.77
+-105.6, 21.2
+-96.8, 17.94
+-88, 14.98
+-79.2, 12.3
+-70.4, 9.9
+-61.6, 7.77
+-52.8, 5.91
+-44, 4.3
+-35.2, 2.95
+-26.4, 1.84
+-17.6, 0.99
+-8.8, 0.37
+0, 0
+8.8, -0.13
+17.6, -0.02
+26.4, 0.33
+35.2, 0.92
+44, 1.75
+52.8, 2.82
+61.6, 4.15
+70.4, 5.72
+79.2, 7.54
+88, 9.63
+96.8, 11.97
+105.6, 14.59
+114.4, 17.48
+123.2, 20.65
+132, 24.13
+140.8, 27.9
+149.6, 32
+158.4, 36.43
+167.2, 41.22
+176, 46.38
+184.8, 51.94
+193.6, 57.92
+202.4, 64.37
+211.2, 71.34
+220, 78.87
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR2 0
+
+
+LOG_ENTRY Used Dataset: Suspension: Lateral Movement Due to Jounce; { Mech. Sim. Baja SAE: Lateral Movement } Baja SAE Lateral Y Movement (Front)
+#Library : Suspension: Lateral Movement Due to Jounce
+#DataSet : Baja SAE Lateral Y Movement (Front)
+#Category: Mech. Sim. Baja SAE: Lateral Movement
+#FileID  : LatJnc_a44a7b74-c8bb-4b1a-9790-3fb7ad80931e
+#Product : CarSim 2020.0
+#VehCode Lateral Movement
+
+END

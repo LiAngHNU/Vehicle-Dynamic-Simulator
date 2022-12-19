@@ -1,0 +1,102 @@
+PARSFILE
+#FullDataName Procedures`Low Speed - Success`Mech. Sim. FSAE: Restoring to a Previous State
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 75
+TSTART_WRITE = TSTART;
+TSTOP 40
+SSTOP 800
+OPT_DIRECTION 0
+*TSTOP 40
+*TSTART 0
+*SSTART 75
+*SSTOP 800
+
+OPT_SC 2
+PARSFILE Control\Driver\StrDM_e36692e9-5077-440a-8922-71e0c2c9e0ed.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`2.5 m to the Right, 1.0 sec. Preview` Constant Position` , Steering`StrDM_e36692e9-5077-440a-8922-71e0c2c9e0ed
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting Modes` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_t\SpdTime_857fa909-8c2a-4b51-9020-b61d4a040089.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`1 km/h` Target Speed vs. Time` , Speed vs. time`SpdTime_857fa909-8c2a-4b51-9020-b61d4a040089
+
+#MiscYellow0
+SPEED_TARGET_GAIN(1) 100
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_30c0b1a8-4893-4726-b371-058ce2830c6e.par
+#BlueLink0 Road: 3D Surface (All Properties)`90 deg turns: 200 m Right, 100 m Left` Mech. Sim. FSAE Roads` , Miscellaneous`Road_30c0b1a8-4893-4726-b371-058ce2830c6e
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink1 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Plot\Setup\Plot_f6add0c2-32e8-46c1-a387-39f9eeb322a9.par
+#BlueLink8 Plot: Setup`Longitudinal Speed vs. t_stamp` Vehicle Motion` , Plot`Plot_f6add0c2-32e8-46c1-a387-39f9eeb322a9
+
+PARSFILE Plot\Setup\Plot_bc05b93e-6d03-4604-b0d8-6aca156e0b63.par
+#BlueLink9 Plot: Setup`Throttle: Control Input vs. t_stamp` Controls: Driver` , Plot`Plot_bc05b93e-6d03-4604-b0d8-6aca156e0b63
+
+PARSFILE Plot\Setup\Plot_0bef770b-b9dd-48a8-a742-eb6653330c3f.par
+#BlueLink10 Plot: Setup`Master Cyl. Pressure vs. t_stamp` Braking` , Plot`Plot_0bef770b-b9dd-48a8-a742-eb6653330c3f
+
+PARSFILE Plot\Setup\Plot_acf4db96-8240-4ec1-830f-8fa43a24ecb6.par
+#BlueLink11 Plot: Setup`Steering Wheel Angle vs. t_stamp` Steering` , Plot`Plot_acf4db96-8240-4ec1-830f-8fa43a24ecb6
+
+PARSFILE Plot\Setup\Plot_359131bd-5c22-408e-8bca-c1e327403f96.par
+#BlueLink12 Plot: Setup`Road Wheel Steer Angle (Axle 1) vs. t_stamp` Steering` , Plot`Plot_359131bd-5c22-408e-8bca-c1e327403f96
+
+PARSFILE Plot\Setup\Plot_2b97bc82-7a2e-4298-8481-ba95b7ec0a15.par
+#BlueLink13 Plot: Setup`Lateral Accel. of CG's vs. t_stamp` Vehicle Motion` , Plot`Plot_2b97bc82-7a2e-4298-8481-ba95b7ec0a15
+
+PARSFILE Plot\Setup\Plot_762ede4b-d3f8-4659-838a-3601dad5286f.par
+#BlueLink14 Plot: Setup`Yaw Angle of Sprung Masses vs. t_stamp` Vehicle Motion` , Plot`Plot_762ede4b-d3f8-4659-838a-3601dad5286f
+
+PARSFILE Plot\Setup\Plot_71233543-068c-4732-b700-343f7a69676e.par
+#BlueLink15 Plot: Setup`Yaw Rate of Sprung Masses vs. t_stamp` Vehicle Motion` , Plot`Plot_71233543-068c-4732-b700-343f7a69676e
+
+PARSFILE Plot\Setup\Plot_22185e19-88f4-48da-88d1-eaaff26ea72f.par
+#BlueLink16 Plot: Setup`Pitch Angle of Sprung Masses vs. t_stamp` Vehicle Motion` , Plot`Plot_22185e19-88f4-48da-88d1-eaaff26ea72f
+
+PARSFILE Plot\Setup\Plot_f4ff56d1-4aac-415d-aad1-b4adf41e50d8.par
+#BlueLink17 Plot: Setup`Roll Angle of Sprung Masses vs. t_stamp` Vehicle Motion` , Plot`Plot_f4ff56d1-4aac-415d-aad1-b4adf41e50d8
+
+PARSFILE Plot\Setup\Plot_d8433799-af56-4074-a812-cec9b72c2f10.par
+#BlueLink18 Plot: Setup`Vertical Forces (Axle 1) vs. t_stamp` Tire Forces and Moments` , Plot`Plot_d8433799-af56-4074-a812-cec9b72c2f10
+
+PARSFILE Plot\Setup\Plot_00b07bb5-49f5-4621-a307-bda402c7ecc9.par
+#BlueLink19 Plot: Setup`Vertical Forces (Axle 2) vs. t_stamp` Tire Forces and Moments` , Plot`Plot_00b07bb5-49f5-4621-a307-bda402c7ecc9
+
+PARSFILE Plot\Setup\Plot_18119482-6f76-4052-94b7-23e00986ffc5.par
+#BlueLink24 Plot: Setup`Lateral Tracking vs. t_stamp` Tracking` , Plot`Plot_18119482-6f76-4052-94b7-23e00986ffc5
+
+PARSFILE Plot\Setup\Plot_627d56c4-11f2-44fa-90a1-3bfd2472d389.par
+#BlueLink25 Plot: Setup`Station vs. t_stamp` Tracking` , Plot`Plot_627d56c4-11f2-44fa-90a1-3bfd2472d389
+
+PARSFILE Plot\Setup\Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f.par
+#BlueLink26 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f
+
+
+#EMBEDDED_NOTES
+#Test Procedure for successive S-Turns: 200 m radius to the right, followed by a 100 m radius turn to the left.
+#
+#Target Speed vs. Time/Station is set to a constant 1 km/h, with the Speed_Target_Gain(1) set to 100
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Mech. Sim. FSAE: Restoring to a Previous State } Low Speed - Success
+#Library : Procedures
+#DataSet : Low Speed - Success
+#Category: Mech. Sim. FSAE: Restoring to a Previous State
+#FileID  : Proc_3b58a3cc-6fb2-46a7-b9df-84ec728a1a12
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

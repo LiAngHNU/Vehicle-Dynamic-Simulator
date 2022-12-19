@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName Powertrain: Torque Converter`Torque Converter for 7.5 kW Engine`Mech. Sim. Baja: Torque Converters
+#RingCtrl0 LINEAR
+#RingCtrl1 LINEAR_FLAT
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+ITC_INPUT_SHAFT 0
+ITC_OUTPUT_SHAFT 0
+
+#DiagramOne0
+INV_CAP_TC_TABLE LINEAR
+0, 0.002407457
+0.1, 0.00238362
+0.2, 0.002360251
+0.3, 0.002337323
+0.4, 0.002314619
+0.5, 0.002290577
+0.6, 0.002257453
+0.7, 0.002186404
+0.8, 0.001989776
+0.9, 0.001438558
+0.95, 0.000882213
+0.99, 0.00020946
+1.01, -0.00020946
+1.05, -0.000882213
+1.1, -0.001438558
+1.2, -0.001989776
+1.3, -0.002186404
+1.4, -0.002257453
+1.5, -0.002290577
+1.6, -0.002314619
+1.7, -0.002337323
+1.8, -0.002360251
+1.9, -0.002407457
+2, -0.002407457
+ENDTABLE
+#DiagramOne1
+RM_TC_TABLE LINEAR_FLAT
+0, 1.864
+0.102, 1.78
+0.202, 1.701
+0.306, 1.608
+0.353, 1.56
+0.4, 1.519
+0.452, 1.464
+0.502, 1.412
+0.551, 1.356
+0.6, 1.309
+0.65, 1.259
+0.7, 1.203
+0.75, 1.151
+0.801, 1.098
+0.82, 1.074
+0.84, 1.048
+0.849, 1.041
+0.861, 1.027
+0.87, 1.014
+0.881, 1
+0.89, 1
+0.9, 1
+0.91, 1
+0.921, 1
+0.928, 1
+0.94, 1
+0.951, 1
+0.99, 1
+1, 1
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Powertrain: Torque Converter; { Mech. Sim. Baja: Torque Converters } Torque Converter for 7.5 kW Engine
+#Library : Powertrain: Torque Converter
+#DataSet : Torque Converter for 7.5 kW Engine
+#Category: Mech. Sim. Baja: Torque Converters
+#FileID  : TC_0c00ad14-3c9e-48ed-97d2-43a17fd7aa18
+#Product : CarSim 2020.0
+#VehCode Torque Converter
+
+END

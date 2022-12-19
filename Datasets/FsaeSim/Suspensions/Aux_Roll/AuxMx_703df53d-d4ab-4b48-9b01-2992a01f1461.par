@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Suspension: Auxiliary Roll Moment`FSAE Auxiliary Roll Moment`Mech. Sim. FSAE & Baja: Auxiliary Roll Moment
+#CheckBox0 0    
+
+#RingCtrl0 CARPET
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Axle load (N)
+*3D_YLabel Roll relative to axle (deg)
+*3D_ZLabel Auxiliary roll moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 2, 2 ! columns x rows
+MX_AUX_CARPET 2D_LINEAR
+0, 0, 1000
+0, 0, 0
+1, 195, 200
+ENDTABLE
+
+*SCALAR 205
+
+
+LOG_ENTRY Used Dataset: Suspension: Auxiliary Roll Moment; { Mech. Sim. FSAE & Baja: Auxiliary Roll Moment } FSAE Auxiliary Roll Moment
+#Library : Suspension: Auxiliary Roll Moment
+#DataSet : FSAE Auxiliary Roll Moment
+#Category: Mech. Sim. FSAE & Baja: Auxiliary Roll Moment
+#FileID  : AuxMx_703df53d-d4ab-4b48-9b01-2992a01f1461
+#Product : CarSim 2020.0
+#VehCode Aux. Roll Moment
+
+END

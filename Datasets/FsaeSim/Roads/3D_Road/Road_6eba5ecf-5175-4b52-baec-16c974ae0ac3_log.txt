@@ -1,0 +1,24 @@
+Run made by VS Road Calculator at 19:37 on May 05, 2022.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_6eba5ecf-5175-4b52-baec-16c974ae0ac3.par"
+Include PARSFILE "Roads\BuilderSegment\RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c.par"
+ Straight Path East, ID = 1001 <Straight>
+Used Dataset: Path: Segment Builder; { Straight } Straight Path East, ID = 1001
+Include PARSFILE "Roads\Center_Z\RdRefZ_598f8ea7-d2f1-4e0b-a828-7b8c7dfb136e.par"
+Used Dataset: Road: Reference Line Elevation; Flat
+Include PARSFILE "Roads\dZ_Map\RdMapZ_daeb5d83-fffb-4248-89b6-089cb34929b0.par"
+Used Dataset: Road: Off-Center Elevation Map, S-L Grid; Flat
+Include PARSFILE "Roads\Friction\RdMu_2daee1fe-b82e-4236-9431-5ef415c04cc5.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } 0.0
+Include PARSFILE "Roads\Shapes\RdShape_5a0d0496-c52b-465a-9469-50c21390f2b1.par"
+Used Dataset: Road: Animator Surface Shapes; No Machine-Generated Shapes
+Include PARSFILE "Roads\dZ_Map\RdMapZ_daeb5d83-fffb-4248-89b6-089cb34929b0.par"
+Used Dataset: Road: Off-Center Elevation Map, S-L Grid; Flat
+ FSAE K & C Test Rig <Mech. Sim. FSAE Roads>
+Used Dataset: Road: 3D Surface (All Properties); { Mech. Sim. FSAE Roads } FSAE K & C Test Rig
+
+Time to read input = 0.001
+
+Run started: VS output file = Roads\3D_Road\Road_6eba5ecf-5175-4b52-baec-16c974ae0ac3.vsb

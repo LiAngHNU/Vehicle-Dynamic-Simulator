@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Road: Boundaries`Stop at L = +- 5 m`Road Boundary Stop Conditions
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+#RingCtrl3 1
+#RingCtrl4 3
+#RingCtrl6 1
+#RingCtrl7 3
+*ROAD_ID_1 road_id
+*LMAX_1 5
+*LMIN_1 -5
+
+
+IROAD = GET_IROAD(road_id)
+ROAD_SMAX_NEW_ID = 0
+ROAD_SMIN_NEW_ID = 0
+
+ISIDE = 1
+ROAD_L_BOUNDARY_CONSTANT 5
+ROAD_NEW_ID_CONSTANT = -1
+
+ISIDE = 2
+ROAD_L_BOUNDARY_CONSTANT -5
+ROAD_NEW_ID_CONSTANT = -1
+
+LOG_ENTRY Used Dataset: Road: Boundaries; { Road Boundary Stop Conditions } Stop at L = +- 5 m
+#Library : Road: Boundaries
+#DataSet : Stop at L = +- 5 m
+#Category: Road Boundary Stop Conditions
+#FileID  : RdBnd_adc3e6c7-da5f-4a20-b175-48c332421507
+#Product : CarSim 2020.0
+#VehCode Road Boundaries
+
+END

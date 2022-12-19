@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Battery voltage`Powertrain (Hybrid and EV)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS VoltOC, Time, Battery VOC (ext. model)
+PLOTCHANNELS VocBttry, Time
+
+#ENDMYellow
+
+YAXISLABEL Battery pack open-circuit voltage (V)
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Battery voltage
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain (Hybrid and EV) } Battery voltage
+#Library : Plot: Setup
+#DataSet : Battery voltage
+#Category: Powertrain (Hybrid and EV)
+#FileID  : Plot_b837ff0c-b61c-4741-af66-a50fa6d378da
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

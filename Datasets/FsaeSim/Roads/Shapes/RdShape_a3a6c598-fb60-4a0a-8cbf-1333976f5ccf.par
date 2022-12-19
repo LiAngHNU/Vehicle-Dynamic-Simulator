@@ -1,0 +1,296 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Ride Chassis Twist Sine Wave`Ride Roads
+NLANES 18
+#MiscYellow0
+# 1 1 1, Grass (Light), 0.1, 30, 6, -100, m, -4, m, , , -100, 250, 260, , -0.1, Foliage
+# 1 1 1, Road (One Lane), 0.2, 10, 1, -4, m, 4, m, , , -100, -5, 5, , 0, Road
+# 1 1 1, Road (No Centerline), 0.3, 10, 1, -4, m, 4, m, 79, , -5, 45, 0.5, , 0, Random
+# 1 1 1, Road (One Lane), 0.2, 10, 1, -4, m, 4, m, , , 45, 250, 5, , 0, Road
+# 1 1 1, Road Transition (Light), 0.1, 30, 1, 4, m, 6, m, , , -100, -5, 5, , 0, Foliage
+# 1 1 1, Road Transition (Light), 0.1, 30, -1, -6, m, -4, m, , , -100, -5, 5, , 0, Foliage
+# 1 1 1, Road Transition (Light), 0.1, 30, 1, 4, m, 6, m, 19, , -5, 45, 0.5, , 0, Foliage
+# 1 1 1, Road Transition (Light), 0.1, 30, -1, -6, m, -4, m, 19, , -5, 45, 0.5, , 0, Foliage
+# 1 1 1, Road Transition (Light), 0.1, 30, 1, 4, m, 6, m, , , 45, 250, 5, , 0, Foliage
+# 1 1 1, Road Transition (Light), 0.1, 30, -1, -6, m, -4, m, , , 45, 250, 5, , 0, Foliage
+# 1 1 1, Grass (Light), 0.1, 30, 6, 4, m, 100, m, , , -100, 250, 260, , -0.1, Foliage
+# 1 1 1, Snow, 0.5, 10, 0.01, -0.2, m, -0.1, m, , , -5, 45, 0.5, , 0.02, Random
+# 1 1 1, Snow, 0.5, 10, 0.01, 0.1, m, 0.2, m, , , -5, 45, 0.5, , 0.02, Random
+# 1 1 1, Snow, 0.5, 10, 0.8, -4, m, 4, m, , , -5.1, -5, 5, , 0.02, Random
+# 1 1 1, Snow, 0.5, 10, 0.8, -4, m, 4, m, , , 45, 45.1, 5, , 0.02, Random
+# 1 1 1, Snow, 0.5, 10, 0.8, -3.8, m, -3.9, m, , , -5, 45, 0.5, , 0.02, Random
+# 1 1 1, Snow, 0.5, 10, 0.8, 3.8, m, 3.9, m, , , -5, 45, 0.5, , 0.02, Random
+# 1 1 0, Snow, 0.5, 10, 0.8, -3.8, m, 3.8, m, 100, , 2.2, 40, 0.125, 36, 0.02, Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Grass (Light)
+SPECULAR(1) 0.1
+SCALE(1) 30
+LTILES(1) 6
+LIN(1) -100
+LINUNITS(1) m
+LOUT(1) -4
+LOUTUNITS(1) m
+SSTART(1) -100
+SSTOP(1) 250
+SINT(1) 260
+DZ(1) -0.1
+AUTODETAIL(1) Foliage
+COLOR(2) 1 1 1
+MATERIAL(2) Road (One Lane)
+SPECULAR(2) 0.2
+SCALE(2) 10
+LTILES(2) 1
+LIN(2) -4
+LINUNITS(2) m
+LOUT(2) 4
+LOUTUNITS(2) m
+SSTART(2) -100
+SSTOP(2) -5
+SINT(2) 5
+DZ(2) 0
+AUTODETAIL(2) Road
+COLOR(3) 1 1 1
+MATERIAL(3) Road (No Centerline)
+SPECULAR(3) 0.3
+SCALE(3) 10
+LTILES(3) 1
+LIN(3) -4
+LINUNITS(3) m
+LOUT(3) 4
+LOUTUNITS(3) m
+LDIV(3) 79
+SSTART(3) -5
+SSTOP(3) 45
+SINT(3) 0.5
+DZ(3) 0
+AUTODETAIL(3) Random
+COLOR(4) 1 1 1
+MATERIAL(4) Road (One Lane)
+SPECULAR(4) 0.2
+SCALE(4) 10
+LTILES(4) 1
+LIN(4) -4
+LINUNITS(4) m
+LOUT(4) 4
+LOUTUNITS(4) m
+SSTART(4) 45
+SSTOP(4) 250
+SINT(4) 5
+DZ(4) 0
+AUTODETAIL(4) Road
+COLOR(5) 1 1 1
+MATERIAL(5) Road Transition (Light)
+SPECULAR(5) 0.1
+SCALE(5) 30
+LTILES(5) 1
+LIN(5) 4
+LINUNITS(5) m
+LOUT(5) 6
+LOUTUNITS(5) m
+SSTART(5) -100
+SSTOP(5) -5
+SINT(5) 5
+DZ(5) 0
+AUTODETAIL(5) Foliage
+COLOR(6) 1 1 1
+MATERIAL(6) Road Transition (Light)
+SPECULAR(6) 0.1
+SCALE(6) 30
+LTILES(6) -1
+LIN(6) -6
+LINUNITS(6) m
+LOUT(6) -4
+LOUTUNITS(6) m
+SSTART(6) -100
+SSTOP(6) -5
+SINT(6) 5
+DZ(6) 0
+AUTODETAIL(6) Foliage
+COLOR(7) 1 1 1
+MATERIAL(7) Road Transition (Light)
+SPECULAR(7) 0.1
+SCALE(7) 30
+LTILES(7) 1
+LIN(7) 4
+LINUNITS(7) m
+LOUT(7) 6
+LOUTUNITS(7) m
+LDIV(7) 19
+SSTART(7) -5
+SSTOP(7) 45
+SINT(7) 0.5
+DZ(7) 0
+AUTODETAIL(7) Foliage
+COLOR(8) 1 1 1
+MATERIAL(8) Road Transition (Light)
+SPECULAR(8) 0.1
+SCALE(8) 30
+LTILES(8) -1
+LIN(8) -6
+LINUNITS(8) m
+LOUT(8) -4
+LOUTUNITS(8) m
+LDIV(8) 19
+SSTART(8) -5
+SSTOP(8) 45
+SINT(8) 0.5
+DZ(8) 0
+AUTODETAIL(8) Foliage
+COLOR(9) 1 1 1
+MATERIAL(9) Road Transition (Light)
+SPECULAR(9) 0.1
+SCALE(9) 30
+LTILES(9) 1
+LIN(9) 4
+LINUNITS(9) m
+LOUT(9) 6
+LOUTUNITS(9) m
+SSTART(9) 45
+SSTOP(9) 250
+SINT(9) 5
+DZ(9) 0
+AUTODETAIL(9) Foliage
+COLOR(10) 1 1 1
+MATERIAL(10) Road Transition (Light)
+SPECULAR(10) 0.1
+SCALE(10) 30
+LTILES(10) -1
+LIN(10) -6
+LINUNITS(10) m
+LOUT(10) -4
+LOUTUNITS(10) m
+SSTART(10) 45
+SSTOP(10) 250
+SINT(10) 5
+DZ(10) 0
+AUTODETAIL(10) Foliage
+COLOR(11) 1 1 1
+MATERIAL(11) Grass (Light)
+SPECULAR(11) 0.1
+SCALE(11) 30
+LTILES(11) 6
+LIN(11) 4
+LINUNITS(11) m
+LOUT(11) 100
+LOUTUNITS(11) m
+SSTART(11) -100
+SSTOP(11) 250
+SINT(11) 260
+DZ(11) -0.1
+AUTODETAIL(11) Foliage
+COLOR(12) 1 1 1
+MATERIAL(12) Snow
+SPECULAR(12) 0.5
+SCALE(12) 10
+LTILES(12) 0.01
+LIN(12) -0.2
+LINUNITS(12) m
+LOUT(12) -0.1
+LOUTUNITS(12) m
+SSTART(12) -5
+SSTOP(12) 45
+SINT(12) 0.5
+DZ(12) 0.02
+AUTODETAIL(12) Random
+COLOR(13) 1 1 1
+MATERIAL(13) Snow
+SPECULAR(13) 0.5
+SCALE(13) 10
+LTILES(13) 0.01
+LIN(13) 0.1
+LINUNITS(13) m
+LOUT(13) 0.2
+LOUTUNITS(13) m
+SSTART(13) -5
+SSTOP(13) 45
+SINT(13) 0.5
+DZ(13) 0.02
+AUTODETAIL(13) Random
+COLOR(14) 1 1 1
+MATERIAL(14) Snow
+SPECULAR(14) 0.5
+SCALE(14) 10
+LTILES(14) 0.8
+LIN(14) -4
+LINUNITS(14) m
+LOUT(14) 4
+LOUTUNITS(14) m
+SSTART(14) -5.1
+SSTOP(14) -5
+SINT(14) 5
+DZ(14) 0.02
+AUTODETAIL(14) Random
+COLOR(15) 1 1 1
+MATERIAL(15) Snow
+SPECULAR(15) 0.5
+SCALE(15) 10
+LTILES(15) 0.8
+LIN(15) -4
+LINUNITS(15) m
+LOUT(15) 4
+LOUTUNITS(15) m
+SSTART(15) 45
+SSTOP(15) 45.1
+SINT(15) 5
+DZ(15) 0.02
+AUTODETAIL(15) Random
+COLOR(16) 1 1 1
+MATERIAL(16) Snow
+SPECULAR(16) 0.5
+SCALE(16) 10
+LTILES(16) 0.8
+LIN(16) -3.8
+LINUNITS(16) m
+LOUT(16) -3.9
+LOUTUNITS(16) m
+SSTART(16) -5
+SSTOP(16) 45
+SINT(16) 0.5
+DZ(16) 0.02
+AUTODETAIL(16) Random
+COLOR(17) 1 1 1
+MATERIAL(17) Snow
+SPECULAR(17) 0.5
+SCALE(17) 10
+LTILES(17) 0.8
+LIN(17) 3.8
+LINUNITS(17) m
+LOUT(17) 3.9
+LOUTUNITS(17) m
+SSTART(17) -5
+SSTOP(17) 45
+SINT(17) 0.5
+DZ(17) 0.02
+AUTODETAIL(17) Random
+COLOR(18) 1 1 0
+MATERIAL(18) Snow
+SPECULAR(18) 0.5
+SCALE(18) 10
+LTILES(18) 0.8
+LIN(18) -3.8
+LINUNITS(18) m
+LOUT(18) 3.8
+LOUTUNITS(18) m
+LDIV(18) 100
+SSTART(18) 2.2
+SSTOP(18) 40
+SINT(18) 0.125
+IPRINT(18) 36
+DZ(18) 0.02
+AUTODETAIL(18) Random
+MTL_FILE Animator\Road_Materials\road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Ride Roads } Ride Chassis Twist Sine Wave
+#Library : Road: Animator Surface Shapes
+#DataSet : Ride Chassis Twist Sine Wave
+#Category: Ride Roads
+#FileID  : RdShape_a3a6c598-fb60-4a0a-8cbf-1333976f5ccf
+#Product : CarSim 2020.0
+#VehCode Road Shapes
+
+END

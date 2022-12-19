@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Blurred Tire`Tires
+#MiscYellow3
+add_obj Animator\3D_shape_files_CS\tires\blurred_tire\blurred_tire.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+*SPECULAR 0.3
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 0.3 0.3 0.3
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Video Camera`Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Tires } Blurred Tire
+#Library : Animator: Shape File Link
+#DataSet : Blurred Tire
+#Category: Tires
+#FileID  : Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

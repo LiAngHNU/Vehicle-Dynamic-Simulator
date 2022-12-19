@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Lateral Accel. of CG's vs. Time`Vehicle Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Ay, Time
+PLOTCHANNELS Ay_2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Lateral Accel. of CG's vs. Time
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Lateral Accel. of CG's vs. Time
+#Library : Plot: Setup
+#DataSet : Lateral Accel. of CG's vs. Time
+#Category: Vehicle Motion
+#FileID  : Plot_75a85771-5520-4b6b-a008-65bc09c24a90
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

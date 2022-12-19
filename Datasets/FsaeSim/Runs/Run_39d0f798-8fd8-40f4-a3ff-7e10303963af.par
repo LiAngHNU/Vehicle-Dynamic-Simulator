@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName CarSim Run Control`FSAE: Figure 8 Skidpad, Ref. Path X-Y Coordinates`* * FSAE Examples
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_39d0f798-8fd8-40f4-a3ff-7e10303963af
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 3
+PARSFILE Animator\Cameras\Camera_1f875c18-8107-470e-9681-951e03b624da.par
+#BlueLink0 Animator: Camera Setup`FL View, Veh. Ref., (Rr. Facing), 45m` Vehicle Reference` , Animator camera`Camera_1f875c18-8107-470e-9681-951e03b624da
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 1    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_5c83ba61-a2a5-436b-8691-d8258e485074.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`Mechanical Simulation FSAE` FSAE` , Math Model`VehLoad_5c83ba61-a2a5-436b-8691-d8258e485074
+
+PARSFILE Procedures\Proc_f72c57c1-88e9-4486-ac17-dfcc26c4ff94.par
+#BlueLink28 Procedures`Figure 8 Skidpad, Ref. Path X-Y Coordinates` Mech. Sim. FSAE: Procedures` , Procedure`Proc_f72c57c1-88e9-4486-ac17-dfcc26c4ff94
+
+PARSFILE Generic\Group\GenGrp_93c85863-f22e-4cd2-b8c7-402c8d5c9781.par
+#BlueLink9 Generic Data Group`VS Visualizer HUD Gauges (FSAE / Baja)` HUD Gauges` , Miscellaneous`GenGrp_93c85863-f22e-4cd2-b8c7-402c8d5c9781
+
+PARSFILE Generic\VS_commands\GenVS_0693f168-b4bd-44f0-ab4d-621bd5be4856.par
+#BlueLink10 Generic VS Commands`VsV HUD Text: Engine RPM, Trans. Gear Ratio` HUD Gauges` , Miscellaneous`GenVS_0693f168-b4bd-44f0-ab4d-621bd5be4856
+
+
+SPECIAL_PARSFILE Runs\Run_69e13eab-ec12-43c6-ab39-717ca0f18497.par
+#BlueLink23 CarSim Run Control`FSAE: Figure 8 Skidpad, Path Segment Builder` * * FSAE Examples` , Overlay run or ERD file`Run_69e13eab-ec12-43c6-ab39-717ca0f18497
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_4d135579-d50c-4bb7-8572-23ffbe185deb.png
+
+OPT_ALL_WRITE 1
+WRITE_SENSOR_DETECT
+Title FSAE: Figure 8 Skidpad, Ref. Path X-Y Coordinates <* * FSAE Examples>
+CATEGORY * * FSAE Examples 
+DATASET_TITLE FSAE: Figure 8 Skidpad, Ref. Path X-Y Coordinates
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A generic Formula SAE vehicle performing a skidpad test using a Figure 8-shaped path
+#
+#The Target Speed from Path Preview option is specified on the Procedure screen. This screen has options that allow the end-user to select from different Skill and Aggressiveness levels, as well as longitudinal and lateral acceleration targets.
+#
+#More details are available on the Procedure dataset:
+#Figure 8 Skidpad, Ref. Path X-Y Coordinates
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * * FSAE Examples } FSAE: Figure 8 Skidpad, Ref. Path X-Y Coordinates
+#Library : CarSim Run Control
+#DataSet : FSAE: Figure 8 Skidpad, Ref. Path X-Y Coordinates
+#Category: * * FSAE Examples
+#FileID  : Run_39d0f798-8fd8-40f4-a3ff-7e10303963af
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

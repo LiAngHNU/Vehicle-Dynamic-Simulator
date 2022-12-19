@@ -1,0 +1,103 @@
+PARSFILE
+#FullDataName Powertrain: Rear Differential`Viscous - Gear Ratio 2.65`Mech. Sim. FSAE & Baja: Rear Differentials
+#CheckBox0 0    
+LOCKED_RD_OPT 0
+
+#RingCtrl0 SPLINE
+OPT_LOCKED_DIFF 0
+#DiagramOne0
+M_DIFF_VISC_TABLE SPLINE
+-1200, 402.88
+-1080, 382.21
+-960, 360.35
+-840, 337.07
+-720, 312.07
+-600, 284.88
+-540, 270.26
+-480, 254.8
+-420, 238.35
+-360, 220.67
+-300, 201.44
+-240, 180.17
+-180, 156.03
+-120, 127.4
+-60, 90.09
+0, 0
+60, -90.09
+120, -127.4
+180, -156.03
+240, -180.17
+300, -201.44
+360, -220.67
+420, -238.35
+480, -254.8
+540, -270.26
+600, -284.88
+720, -312.07
+840, -337.07
+960, -360.35
+1080, -382.21
+1200, -402.88
+ENDTABLE
+#RadioCtrl0 0    
+
+M_DIFF_RD_TABLE SPLINE
+-1200, 402.88
+-1080, 382.21
+-960, 360.35
+-840, 337.07
+-720, 312.07
+-600, 284.88
+-540, 270.26
+-480, 254.8
+-420, 238.35
+-360, 220.67
+-300, 201.44
+-240, 180.17
+-180, 156.03
+-120, 127.4
+-60, 90.09
+0, 0
+60, -90.09
+120, -127.4
+180, -156.03
+240, -180.17
+300, -201.44
+360, -220.67
+420, -238.35
+480, -254.8
+540, -270.26
+600, -284.88
+720, -312.07
+840, -337.07
+960, -360.35
+1080, -382.21
+1200, -402.88
+ENDTABLE
+R_GEAR_RD 2.65
+R_EFF_F_RD 0.99
+R_EFF_R_RD 0.99
+LOCKED_RD_DAMP 0.8
+LOCKED_RD_K 80
+IDS_R 0.013
+IHS_LR 0.013
+IHS_RR 0.013
+
+R_GEAR_DIFF 2.65
+R_EFF_F_DIFF 0.99
+R_EFF_R_DIFF 0.99
+LOCKED_DIFF_DAMP 0.8
+LOCKED_DIFF_K 80
+IDS 0.013
+IHS_L 0.013
+IHS_R 0.013
+
+LOG_ENTRY Used Dataset: Powertrain: Rear Differential; { Mech. Sim. FSAE & Baja: Rear Differentials } Viscous - Gear Ratio 2.65
+#Library : Powertrain: Rear Differential
+#DataSet : Viscous - Gear Ratio 2.65
+#Category: Mech. Sim. FSAE & Baja: Rear Differentials
+#FileID  : DiffR_d489eb6c-7dc7-4b89-b2b9-2b38a00c3e51
+#Product : CarSim 2020.0
+#VehCode Rear Differential
+
+END

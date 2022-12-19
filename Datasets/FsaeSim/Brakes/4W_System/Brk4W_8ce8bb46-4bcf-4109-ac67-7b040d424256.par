@@ -1,0 +1,92 @@
+PARSFILE
+#FullDataName Brakes: Four-Wheel System`Baja SAE Brakes, No ABS`Mech. Sim. FSAE & Baja: Brakes
+#CheckBox1 0    
+#RingCtrl0 0
+#RingCtrl1 0
+#RingCtrl2 1
+#RingCtrl4 1
+#RingCtrl6 1
+#RingCtrl8 1
+#RingCtrl10 1
+#RingCtrl12 1
+#RingCtrl14 0
+OPT_BK_PEDAL 0
+TL_L1 0
+TL_L2 0
+
+iaxle 1
+iside 1
+symbol_push <<ax_bk>> <<axle>>
+symbol_push <<side>> L
+TLAG_BK 0
+*P_L1 1
+PBK_DL_COEFFICIENT 1
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_L1 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L1 150
+MY_BRAKE_COEFFICIENT 150
+*MY_FRIC_L1 0
+MY_FRICTION 0
+OPT_ABS_CTRL 0
+
+iside 2
+symbol_set <<side>> R
+TLAG_BK 0
+*P_L1 1
+PBK_DL_COEFFICIENT 1
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_L1 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L1 150
+MY_BRAKE_COEFFICIENT 150
+*MY_FRIC_L1 0
+MY_FRICTION 0
+
+iaxle 2
+iside 1
+symbol_add <<ax_bk>> 1
+symbol_set <<side>> L
+TLAG_BK 0
+*P_L2 0.4
+PBK_DL_COEFFICIENT 0.4
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_L2 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L2 70
+MY_BRAKE_COEFFICIENT 70
+*MY_FRIC_L2 0
+MY_FRICTION 0
+
+OPT_ABS_CTRL 0
+
+iside 2
+symbol_set <<side>> R
+TLAG_BK 0
+*P_L2 0.4
+PBK_DL_COEFFICIENT 0.4
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_L2 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L2 70
+MY_BRAKE_COEFFICIENT 70
+*MY_FRIC_L2 0
+MY_FRICTION 0
+
+LOG_ENTRY Used Dataset: Brakes: Four-Wheel System; { Mech. Sim. FSAE & Baja: Brakes } Baja SAE Brakes, No ABS
+#Library : Brakes: Four-Wheel System
+#DataSet : Baja SAE Brakes, No ABS
+#Category: Mech. Sim. FSAE & Baja: Brakes
+#FileID  : Brk4W_8ce8bb46-4bcf-4109-ac67-7b040d424256
+#Product : CarSim 2020.0
+#VehCode 4-Wheel System
+
+END

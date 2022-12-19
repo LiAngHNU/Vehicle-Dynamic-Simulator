@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Payload: Custom`FSAE Driver Mass & Inertia`FSAE
+DEFINE_PAYLOADS 1
+ILOAD = NLOAD
+OPT_PL_BODY_ID = IUNIT
+SET_DESCRIPTION PAYLOAD_NAME FSAE Driver Mass & Inertia
+H_CG_PL 240
+LX_CG_PL 950
+Y_CG_PL 0
+M_PL 80
+IXX_PL 6.75
+IYY_PL 17.5
+IZZ_PL 13
+IXZ_PL 4.6
+IXY_PL 0
+IYZ_PL 0
+*RX 0.290
+*RY 0.468
+*RZ 0.403
+
+
+LOG_ENTRY Used Dataset: Payload: Custom; { FSAE } FSAE Driver Mass & Inertia
+#Library : Payload: Custom
+#DataSet : FSAE Driver Mass & Inertia
+#Category: FSAE
+#FileID  : Custom_b9ac97d5-2238-4b5d-bb38-8089cd1b13d4
+#Product : CarSim 2020.0
+#VehCode Payload: Custom
+
+END

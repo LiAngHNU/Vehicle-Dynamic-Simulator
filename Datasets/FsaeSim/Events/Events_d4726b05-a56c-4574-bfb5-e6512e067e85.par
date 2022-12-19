@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Events`C. Switch to Closed-Loop Shifting`FSAE Acceleration to Top Speed
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl10 0
+#RingCtrl11 5
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_bc80c108-6a94-4294-bc41-3c677bf95e16.par
+#BlueLink18 Control: Throttle (Open Loop)`Ramp to Full Throttle in 10 seconds` Ramp` , Speed link`Throttle_bc80c108-6a94-4294-bc41-3c677bf95e16
+
+#MiscYellow0
+TSTART_THROTTLE = T
+opt_clutch_mode 1
+CLUTCH_TORQUE_GAIN = 1
+#ENDMYellow
+
+PARSFILE Control\Gear_at\GearCL_3d656f9b-b010-469b-b86b-d4e11ee52bef.par
+#BlueLink10 Control: Shifting (Closed Loop)`Closed-Loop Shift and Clutch (All Gears, Fast)` Automatic Clutch Control` , Miscellaneous`GearCL_3d656f9b-b010-469b-b86b-d4e11ee52bef
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { FSAE Acceleration to Top Speed } C. Switch to Closed-Loop Shifting
+#Library : Events
+#DataSet : C. Switch to Closed-Loop Shifting
+#Category: FSAE Acceleration to Top Speed
+#FileID  : Events_d4726b05-a56c-4574-bfb5-e6512e067e85
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

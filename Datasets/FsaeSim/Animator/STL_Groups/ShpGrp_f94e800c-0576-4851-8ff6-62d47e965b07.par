@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Animator: Shape Assembly`Mech. Sim. FSAE: Tire Shape`Mech. Sim. FSAE & Baja: Shape Assembly
+*ANGLE_Z 180
+*ANGLE_Y 0
+*X_REF_LENGTH 276
+*Y_REF_LENGTH 224
+*Z_REF_LENGTH 276
+*IMAGE_FIT_MODE 1
+#CheckBox0 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+
+#RingCtrl1 2
+#RingCtrl2 2
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL_Groups\ShpGrp_f94e800c-0576-4851-8ff6-62d47e965b07.png
+PARSFILE Animator\STL\Shape_17e76b1b-98e8-4ef8-a031-e0fe191c7e4f.par
+#BlueLink0 Animator: Shape File Link`FSAE: Tire Stripe` Mech. Sim. FSAE: Shape Files` , Shape File`Shape_17e76b1b-98e8-4ef8-a031-e0fe191c7e4f
+
+set_angle_y 0
+set_angle_z 180
+PARSFILE Animator\STL\Shape_a4ced851-2e75-464d-9606-79aeeb97e30f.par
+#BlueLink1 Animator: Shape File Link`FSAE: Tire Shape` Mech. Sim. FSAE: Shape Files` , Shape File`Shape_a4ced851-2e75-464d-9606-79aeeb97e30f
+
+set_angle_y 0
+set_angle_z 180
+PARSFILE Animator\STL\Shape_82d81023-ef22-42c8-9110-e3092acba723.par
+#BlueLink2 Animator: Shape File Link`FSAE: Wheel Shape` Mech. Sim. FSAE: Shape Files` , Shape File`Shape_82d81023-ef22-42c8-9110-e3092acba723
+
+set_angle_y 0
+set_angle_z 180
+PARSFILE Animator\STL\Shape_bb577297-c4af-4e92-a2ea-326b49659018.par
+#BlueLink3 Animator: Shape File Link`FSAE: Rotor` Mech. Sim. FSAE: Shape Files` , Shape File`Shape_bb577297-c4af-4e92-a2ea-326b49659018
+
+set_angle_y 0
+set_angle_z 180
+x_ref_length 276
+y_ref_length 224
+z_ref_length 276
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_f2e9fdc6-8eb7-4c80-a895-b3a3c8b4ed69.par
+#BlueLink17 Animator: Camera Setup`Shape Preview (Side) Static` Shape Preview` , Video Camera`Camera_f2e9fdc6-8eb7-4c80-a895-b3a3c8b4ed69
+
+
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { Mech. Sim. FSAE & Baja: Shape Assembly } Mech. Sim. FSAE: Tire Shape
+#Library : Animator: Shape Assembly
+#DataSet : Mech. Sim. FSAE: Tire Shape
+#Category: Mech. Sim. FSAE & Baja: Shape Assembly
+#FileID  : ShpGrp_f94e800c-0576-4851-8ff6-62d47e965b07
+#Product : CarSim 2020.0
+#VehCode Shape Assembly
+
+END

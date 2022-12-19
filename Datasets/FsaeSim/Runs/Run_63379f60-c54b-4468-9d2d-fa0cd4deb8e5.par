@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName CarSim Run Control`FSAE: Acceleration and Braking`* * FSAE Examples
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_63379f60-c54b-4468-9d2d-fa0cd4deb8e5
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 3
+PARSFILE Animator\Cameras\Camera_8d5e5054-3ff3-4116-9f8c-ae7201bc4aa6.par
+#BlueLink0 Animator: Camera Setup`15 deg. Azimuth, 7 deg. El., Veh. Ref.` Vehicle Reference` , Animator camera`Camera_8d5e5054-3ff3-4116-9f8c-ae7201bc4aa6
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 1    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+SET_RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_5c83ba61-a2a5-436b-8691-d8258e485074.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`Mechanical Simulation FSAE` FSAE` , Math Model`VehLoad_5c83ba61-a2a5-436b-8691-d8258e485074
+
+PARSFILE Procedures\Proc_61af139b-26de-4a0e-ba3f-7aac2ba630d1.par
+#BlueLink28 Procedures`Acceleration and Braking` Mech. Sim. FSAE: Procedures` , Procedure`Proc_61af139b-26de-4a0e-ba3f-7aac2ba630d1
+
+PARSFILE Generic\Group\GenGrp_93c85863-f22e-4cd2-b8c7-402c8d5c9781.par
+#BlueLink9 Generic Data Group`VS Visualizer HUD Gauges (FSAE / Baja)` HUD Gauges` , Miscellaneous`GenGrp_93c85863-f22e-4cd2-b8c7-402c8d5c9781
+
+PARSFILE Generic\VS_commands\GenVS_0693f168-b4bd-44f0-ab4d-621bd5be4856.par
+#BlueLink10 Generic VS Commands`VsV HUD Text: Engine RPM, Trans. Gear Ratio` HUD Gauges` , Miscellaneous`GenVS_0693f168-b4bd-44f0-ab4d-621bd5be4856
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_7eebfaf2-736d-4fc8-8710-ce4ecdfcfa7a.par
+#BlueLink11 Multiple Moving Objects`10 Driver Preview Points` Points of Interest` , Miscellaneous`TMotion_7eebfaf2-736d-4fc8-8710-ce4ecdfcfa7a
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_4d135579-d50c-4bb7-8572-23ffbe185deb.png
+
+OPT_ALL_WRITE 1
+WRITE_SENSOR_DETECT
+Title FSAE: Acceleration and Braking <* * FSAE Examples>
+CATEGORY * * FSAE Examples 
+DATASET_TITLE FSAE: Acceleration and Braking
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A generic Formula SAE vehicle performing an acceleration and braking test.
+#
+#Events, linked on the Procedure screen, are used to control the throttle, transmission shifting, and clutch actuation.
+#
+#Simulations such as these are very useful for studying and evaluating many aspects of the vehicle performance:
+#
+# * Aerodynamics
+# * Brakes
+# * Powertrain
+# * Steering
+# * Suspension
+# * Tire Forces
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * * FSAE Examples } FSAE: Acceleration and Braking
+#Library : CarSim Run Control
+#DataSet : FSAE: Acceleration and Braking
+#Category: * * FSAE Examples
+#FileID  : Run_63379f60-c54b-4468-9d2d-fa0cd4deb8e5
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

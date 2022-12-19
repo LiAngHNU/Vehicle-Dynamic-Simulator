@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Suspension: Jounce and Rebound Stops`+50.8 mm / -50.8 mm`FSAE & Baja: Jounce and Rebound Stops
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR
+#RingCtrl1 LINEAR
+#DiagramOne0
+F_JNC_STOP_TABLE LINEAR
+48, 0
+49, 0
+50.8, 10000
+ENDTABLE
+#DiagramOne1
+F_REB_STOP_TABLE LINEAR
+-50.8, -10000
+-49, 0
+-48, 0
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+
+LOG_ENTRY Used Dataset: Suspension: Jounce and Rebound Stops; { FSAE & Baja: Jounce and Rebound Stops } +50.8 mm / -50.8 mm
+#Library : Suspension: Jounce and Rebound Stops
+#DataSet : +50.8 mm / -50.8 mm
+#Category: FSAE & Baja: Jounce and Rebound Stops
+#FileID  : JncReb_5518d71a-89b6-46e3-bca9-ec5b6f7a86bc
+#Product : CarSim 2020.0
+#VehCode 
+
+END

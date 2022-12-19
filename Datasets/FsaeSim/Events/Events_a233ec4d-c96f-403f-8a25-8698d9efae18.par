@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Events`C. Shifting`FSAE Acceleration and Braking
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Vx
+*VALUE1 110
+#MiscYellow0
+opt_clutch_mode 1
+#ENDMYellow
+
+PARSFILE Control\Gear_at\GearCL_3d656f9b-b010-469b-b86b-d4e11ee52bef.par
+#BlueLink10 Control: Shifting (Closed Loop)`Closed-Loop Shift and Clutch (All Gears, Fast)` Automatic Clutch Control` , Miscellaneous`GearCL_3d656f9b-b010-469b-b86b-d4e11ee52bef
+
+MAKE_EVENT Vx > 110 ; Events\Events_45c7787a-5cd2-4ba0-b780-b03b46eff004.par
+#BlueLink0 Events`D. Brake to Stop` FSAE Acceleration and Braking` , Events`Events_45c7787a-5cd2-4ba0-b780-b03b46eff004
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { FSAE Acceleration and Braking } C. Shifting
+#Library : Events
+#DataSet : C. Shifting
+#Category: FSAE Acceleration and Braking
+#FileID  : Events_a233ec4d-c96f-403f-8a25-8698d9efae18
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

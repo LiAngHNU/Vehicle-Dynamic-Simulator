@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Vehicle with Loads, Sensors, Trailer, etc.`HUR 4WD & 4WS Electric Baja`* * * HUR Race Cars
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+
+symbol_push <<hitch_x>> 0
+symbol_push <<hitch_y>> 0
+symbol_push <<hitch_z>> 0
+iunit 1
+PARSFILE Vehicles\Assembly\Vehicle_2ec8ab10-7e73-4e6d-a2b8-b26ea23d3f2b.par
+#BlueLink0 Vehicle: Assembly`HUR 4WD & 4WS Electric Baja` * * * HUR` , Lead Unit`Vehicle_2ec8ab10-7e73-4e6d-a2b8-b26ea23d3f2b
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Custom\Custom_b9ac97d5-2238-4b5d-bb38-8089cd1b13d4.par
+#BlueLink1 Payload: Custom`FSAE Driver Mass & Inertia` FSAE` , Miscellaneous`Custom_b9ac97d5-2238-4b5d-bb38-8089cd1b13d4
+
+PARSFILE Sensors_Traffic\Radar\Radar_3e12adab-2c4f-49af-8dfc-6d12dd6e6a4d.par
+#BlueLink2 ADAS Sensors for Range and Tracking`Wide Sensor` * * * HUR Perceprtion Sensors` , Miscellaneous`Radar_3e12adab-2c4f-49af-8dfc-6d12dd6e6a4d
+
+PARSFILE Output\Points\RefPt_dd2f88d8-ecc6-4112-9ade-83d2a3ec10f0.par
+#BlueLink6 Custom Forces and Reference Points`K and C Table (X = -850mm, Z = 50mm)` K and C Test Machine` , Miscellaneous`RefPt_dd2f88d8-ecc6-4112-9ade-83d2a3ec10f0
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_2ec8ab10-7e73-4e6d-a2b8-b26ea23d3f2b.png
+
+LOG_ENTRY Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { * * * HUR Race Cars } HUR 4WD & 4WS Electric Baja
+#Library : Vehicle with Loads, Sensors, Trailer, etc.
+#DataSet : HUR 4WD & 4WS Electric Baja
+#Category: * * * HUR Race Cars
+#FileID  : VehLoad_58e4e727-199d-4e6d-848a-29c2c4d7c54a
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Vehicle Dynamic Simulator, import`* * * Vehicle Dynamic Simulator
+#RingCtrl0 1
+#RingCtrl1 1
+*README_FILE Results\Run_099bc55d-9d6b-4e83-96fb-5fcf2d5bf2c1\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_THROTTLE_ENGINE Add 0.0 ! 1
+IMP_PCON_BK Add 0.0 ! 1
+IMP_MY0_L1 Add 0.0 ! 1
+IMP_MY0_R1 Add 0.0 ! 1
+IMP_MY0_L2 Add 0.0 ! 1
+IMP_MY0_R2 Add 0.0 ! 1
+IMP_STEER_RACK_CON_L1 Add 0.0 ! 1
+IMP_STEER_RACK_CON_R1 Add 0.0 ! 1
+IMP_STEER_RACK_CON_L2 Add 0.0 ! 1
+IMP_STEER_RACK_CON_R2 Add 0.0 ! 1
+#ENDMYellow
+
+#BlueLink0 CarSim Run Control`HUR Simulator` * * * HUR Datasets` , example run`Run_099bc55d-9d6b-4e83-96fb-5fcf2d5bf2c1
+
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { * * * Vehicle Dynamic Simulator } Vehicle Dynamic Simulator, import
+#Library : I/O Channels: Import
+#DataSet : Vehicle Dynamic Simulator, import
+#Category: * * * Vehicle Dynamic Simulator
+#FileID  : Import_28722f73-93fd-4c78-92ce-be3793b8ffc6
+#Product : CarSim 2020.0
+#VehCode Import Channels
+
+END

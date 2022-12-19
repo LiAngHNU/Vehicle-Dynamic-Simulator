@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Vehicle Tracking Error (Rear)`* * * HUR Visualization
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS L_Drv_4, Station
+PLOTCHANNELS Rho_Road, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vehicle Tracking Error (Rear)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * HUR Visualization } Vehicle Tracking Error (Rear)
+#Library : Plot: Setup
+#DataSet : Vehicle Tracking Error (Rear)
+#Category: * * * HUR Visualization
+#FileID  : Plot_8140b2c4-42c7-4c25-8615-f8afaf2110a9
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

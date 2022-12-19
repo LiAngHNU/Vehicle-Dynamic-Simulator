@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Trans. Control: Gear From Closed-loop`Controls: Driver
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Gear_CL, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Trans. Control: Gear From Closed-loop
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#When the transmission is operated in closed loop control, the shift logic requests a gear based on the transmission upshift and down shift tables, along with the current speed and load.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Controls: Driver } Trans. Control: Gear From Closed-loop
+#Library : Plot: Setup
+#DataSet : Trans. Control: Gear From Closed-loop
+#Category: Controls: Driver
+#FileID  : Plot_bb603a0f-832f-4898-a9d8-b54b1ed8d883
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

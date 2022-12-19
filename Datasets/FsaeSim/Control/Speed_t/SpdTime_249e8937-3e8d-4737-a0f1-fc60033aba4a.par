@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Target Speed`6 km/h`Target Speed vs. Time
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID 6 km/h
+#CheckBox2 0    
+#CheckBox3 1    
+*SCALAR 6
+*SCALAR2 0
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SPEED_TARGET_COMBINE ADD
+#RingCtrl3 1
+#RadioCtrl0 1    
+#RadioCtrl1 0    
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 1
+SPEED_ID_SC SPEED_TARGET_ID
+#CheckBox0 1    
+OPT_BK_SC 1
+#CheckBox1 1    
+OPT_SC_ENGINE_BRAKING 1
+#CheckBox4 0    
+OPT_SC_2018 0
+SPEED_KI 0.15
+SPEED_KP 0.15
+VLOW_STOP -1
+BK_PERF_SC 0.980665
+FPD_PERF_SC 0.1
+PBK_CON_MAX_SC 10
+SPEED_KP3 0
+SPEED_TARGET_CONSTANT 6
+SPEED_TARGET_S_CONSTANT 0
+
+#EMBEDDED_NOTES
+#This dataset sets up the closed-loop speed controller with feedback gains suitable for the ISO steady-turning series of tests.
+#
+#The speed of 6 km/h is used to obtain an approximate experimental version of the Ackermann steering angle. At this low speed, some vehicles have steering system friction that affects the steering on moderate turns. However, when used on a limit 30-m radius path, a low speed is needed to keep lateral acceleration negligible.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Target Speed; { Target Speed vs. Time } 6 km/h
+#Library : Control: Speed (Closed Loop) Using Target Speed
+#DataSet : 6 km/h
+#Category: Target Speed vs. Time
+#FileID  : SpdTime_249e8937-3e8d-4737-a0f1-fc60033aba4a
+#Product : CarSim 2020.0
+#VehCode Target Speed
+
+END

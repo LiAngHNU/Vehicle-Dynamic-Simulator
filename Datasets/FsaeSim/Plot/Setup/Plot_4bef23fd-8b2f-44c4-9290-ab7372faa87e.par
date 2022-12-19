@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Tyre & Axle Vertical Forces`* * * HUR Visualization
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fz_L1, Station
+PLOTCHANNELS Fz_R1, Station
+PLOTCHANNELS Fz_L2, Station
+PLOTCHANNELS Fz_R2, Station
+PLOTCHANNELS Fz_A1, Station
+PLOTCHANNELS Fz_A2, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Tyre & Axle Vertical Forces
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * HUR Visualization } Tyre & Axle Vertical Forces
+#Library : Plot: Setup
+#DataSet : Tyre & Axle Vertical Forces
+#Category: * * * HUR Visualization
+#FileID  : Plot_4bef23fd-8b2f-44c4-9290-ab7372faa87e
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

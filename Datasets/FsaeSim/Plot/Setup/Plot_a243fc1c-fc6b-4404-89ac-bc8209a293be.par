@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time`Vehicle Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Vx, Time
+PLOTCHANNELS Vxz_Fwd, Time
+PLOTCHANNELS VxTarget, Time
+PLOTCHANNELS Vx_2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Longitudinal Speed (Vxz_Fwd) vs. Time
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#The output variable Vxz_Fwd is what the CarSim Closed-Loop Speed Controller uses.
+#
+#It is fixed in the vehicle Sprung Mass and takes into account the Sprung Mass pitch angle by taking the vector sum of the Sprung Mass Velocity in the Sprung Mass Coordinate System X direction and the Sprung Mass Coordinate System Z direction, and then taking the square root of the sum of the squares.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Longitudinal Speed (Vxz_Fwd) vs. Time
+#Library : Plot: Setup
+#DataSet : Longitudinal Speed (Vxz_Fwd) vs. Time
+#Category: Vehicle Motion
+#FileID  : Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

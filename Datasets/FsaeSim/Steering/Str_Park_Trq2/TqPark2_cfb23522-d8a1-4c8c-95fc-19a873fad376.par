@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Steering: Parking Torque for 2 Wheels`Zero`
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*A_MZ_BETA_R 0.1
+*A_MZ_BETA_L 0.1
+*SCALAR 0
+*SCALAR2 0
+
+
+iside 2
+A_MZ_BETA 0.1
+MZ_PARKING_STEER_CONSTANT 0
+
+iside 1
+A_MZ_BETA 0.1
+MZ_PARKING_STEER_CONSTANT 0
+
+LOG_ENTRY Used Dataset: Steering: Parking Torque for 2 Wheels; Zero
+#Library : Steering: Parking Torque for 2 Wheels
+#DataSet : Zero
+#Category: 
+#FileID  : TqPark2_cfb23522-d8a1-4c8c-95fc-19a873fad376
+#Product : CarSim 2020.0
+#VehCode Parking Torque
+
+END

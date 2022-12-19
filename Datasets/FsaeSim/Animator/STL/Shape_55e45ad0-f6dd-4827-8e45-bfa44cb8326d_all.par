@@ -1,0 +1,54 @@
+PARSFILE
+
+! EXPANDED_PARSFILE for Math models and animator
+
+! This is an expansion of the Parsfile: "Animator\STL\Shape_55e45ad0-f6dd-4827-8e45-bfa44cb8326d.par"
+! It contains the contents of that file plus the contents of any files linked
+! with the "PARSFILE" keyword.
+
+! File created: 14:38 on September 22, 2022 by CarSim 2020.0
+
+PRODUCT_NAME CarSim
+
+ENTER_PARSFILE Animator\STL\Shape_55e45ad0-f6dd-4827-8e45-bfa44cb8326d.par
+#FullDataName Animator: Shape File Link`Square`Geometric Shapes
+add_obj Animator\3D_Shape_Files\Geometric_Shapes\Squares\square.obj
+SET_COLOR 1 0 0
+SET_SCALE_X 1
+SET_SCALE_Y 0.1
+SET_SCALE_Z 1
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+set_lighting off
+set_fogging off
+USE_RUN_COLOR
+ENTER_PARSFILE Animator\Cameras\Camera_52079630-c01a-43a9-bc0c-30080f01066f.par
+#FullDataName Animator: Camera Setup`Shape Preview (Top)`Shape Preview
+SET_CAMERA_REFERENCE_FRAME Frame_f9d5c8a8-ef13-4086-8c73-c8fa6b7933b6
+ENTER_PARSFILE Animator\Frames\Frame_f9d5c8a8-ef13-4086-8c73-c8fa6b7933b6.par
+#FullDataName Animator: Reference Frame`Fixed`Shape Preview: Generic
+ADD_REFERENCE_FRAME Frame_f9d5c8a8-ef13-4086-8c73-c8fa6b7933b6
+SET_EULER_ANGLES yaw_pitch_roll
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Shape Preview: Generic } Fixed
+EXIT_PARSFILE Animator\Frames\Frame_f9d5c8a8-ef13-4086-8c73-c8fa6b7933b6.par
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_f9d5c8a8-ef13-4086-8c73-c8fa6b7933b6
+SET_LOOKPOINT_X -1.2
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 0
+SET_AZIMUTH 180
+SET_ELEVATION 90
+SET_DISTANCE 35
+SET_CAMERAMAN_NAME External camera
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 21.1
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Shape Preview } Shape Preview (Top)
+EXIT_PARSFILE Animator\Cameras\Camera_52079630-c01a-43a9-bc0c-30080f01066f.par
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+EXIT_PARSFILE Animator\STL\Shape_55e45ad0-f6dd-4827-8e45-bfa44cb8326d.par
+
+
+
+END

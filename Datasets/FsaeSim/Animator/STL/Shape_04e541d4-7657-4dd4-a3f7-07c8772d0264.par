@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Partly Cloudy Sky`Environment: Sky Boxes
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Environment\Sky_Boxes\Partly_Cloudy_Sky\Sky_Partly_Cloudy.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_SCALE_X 15
+SET_SCALE_Y 15
+SET_SCALE_Z 5
+SET_ANGLE_Z 180
+#CheckBox0 1    
+set_lighting off
+#CheckBox1 1    
+set_fogging off
+#CheckBox3 0    
+#CheckBox4 0    
+
+#MiscYellow0
+SUN_POSITION 250 -250 600
+cam_global_ambient .6 .6 .6 1
+cam_global_diffuse .9 .9 .9 1
+cam_global_specular .7 .7 .7 1
+ENV_MAP_XPOS Animator\3D_Shape_Files\Environment\Sky_Boxes\Partly_Cloudy_Sky\cubeXPos.tga
+ENV_MAP_XNEG Animator\3D_Shape_Files\Environment\Sky_Boxes\Partly_Cloudy_Sky\cubeXNeg.tga
+ENV_MAP_YPOS Animator\3D_Shape_Files\Environment\Sky_Boxes\Partly_Cloudy_Sky\cubeYPos.tga
+ENV_MAP_YNEG Animator\3D_Shape_Files\Environment\Sky_Boxes\Partly_Cloudy_Sky\cubeYNeg.tga
+ENV_MAP_ZPOS Animator\3D_Shape_Files\Environment\Sky_Boxes\Partly_Cloudy_Sky\cubeZPos.tga
+ENV_MAP_ZNEG Animator\3D_Shape_Files\Environment\Sky_Boxes\Partly_Cloudy_Sky\cubeZNeg.tga
+#ENDMYellow
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Video Camera`Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_04e541d4-7657-4dd4-a3f7-07c8772d0264.png
+
+#EMBEDDED_NOTES
+#In the Additional Data field, values are entered to set the lighting conditions for VS Visualizer.  These values override the default settings (which are available via the Preferences dialog box in VS Visualizer).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Environment: Sky Boxes } Partly Cloudy Sky
+#Library : Animator: Shape File Link
+#DataSet : Partly Cloudy Sky
+#Category: Environment: Sky Boxes
+#FileID  : Shape_04e541d4-7657-4dd4-a3f7-07c8772d0264
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

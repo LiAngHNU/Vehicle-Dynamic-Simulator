@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Suspension: Camber Angle`Baja SAE Camber Change (Front)`Mech. Sim. Baja SAE: Camber Change
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+CAMBER_COMBINE ADD
+#DiagramOne0
+CAMBER_TABLE SPLINE
+-70, 0.43
+-60, 0.44
+-50, 0.42
+-40, 0.38
+-30, 0.31
+-20, 0.23
+-10, 0.13
+0, 0
+10, -0.15
+20, -0.32
+30, -0.51
+40, -0.72
+50, -0.95
+60, -1.21
+70, -1.49
+ENDTABLE
+SUSP_CAMBER_JNC_OTHER_SIDE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR2 0
+
+
+LOG_ENTRY Used Dataset: Suspension: Camber Angle; { Mech. Sim. Baja SAE: Camber Change } Baja SAE Camber Change (Front)
+#Library : Suspension: Camber Angle
+#DataSet : Baja SAE Camber Change (Front)
+#Category: Mech. Sim. Baja SAE: Camber Change
+#FileID  : Camber_598673fd-4dad-41ab-93e7-ec5251f5b1d0
+#Product : CarSim 2020.0
+#VehCode Camber
+
+END

@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Aerodynamics: Fz (Lift) Coef. vs. Bounce and Pitch`Fz vs. Bounce & Pitch`Lift vs. Bounce and Pitch
+#CheckBox0 0    
+
+#RingCtrl0 CARPET
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical disp (mm)
+*3D_YLabel Pitch angle (deg)
+*3D_ZLabel Lift coefficient factor CFz (-)
+
+#DiagramTwo0
+*3D_DATA 3, 2 ! columns x rows
+FZ_AERO_SHAPING_2_CARPET 2D_LINEAR
+0, 0, 6.35, 12.7
+-2.68, -1.86048, -1.74516, -1.53844
+0, -1.86348, -1.74798, -1.54093
+ENDTABLE
+
+
+
+LOG_ENTRY Used Dataset: Aerodynamics: Fz (Lift) Coef. vs. Bounce and Pitch; { Lift vs. Bounce and Pitch } Fz vs. Bounce & Pitch
+#Library : Aerodynamics: Fz (Lift) Coef. vs. Bounce and Pitch
+#DataSet : Fz vs. Bounce & Pitch
+#Category: Lift vs. Bounce and Pitch
+#FileID  : AirCFz2_4706c1be-5b56-4f5f-8ef2-f2d1351e6341
+#Product : CarSim 2020.0
+#VehCode Lift vs. Bounce and Pitch
+
+END

@@ -1,0 +1,69 @@
+PARSFILE
+#FullDataName Generic VS Commands`VsV HUD Text: Engine RPM, Trans. Gear Ratio`HUD Gauges
+#VehCode VS Commands
+
+#MiscYellow0
+!
+!Add Gear Position Display
+ANI_GearStat
+WRT_GearStat
+ADD_OBJECT hud_text Text Output - GearStat
+  location 0.01 0.55 0.05 0.035
+  prefix Gear
+  min_width_prefix 5
+  value GearStat
+  precision 0
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+END_OBJECT hud_text Text Output - GearStat
+!
+!Add Gear Ratio Display
+ANI_Rgear_Tr
+WRT_Rgear_Tr
+ADD_OBJECT hud_text Text Output - Rgear_Tr
+  location 0.01 0.6 0.05 0.035
+  prefix Gear Ratio
+  min_width_prefix 5
+  value Rgear_Tr
+  precision 1
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+END_OBJECT hud_text Text Output - Rgear_Tr
+!
+!Add RPM Display
+ANI_AV_Eng
+WRT_AV_Eng
+ADD_OBJECT hud_text Text Output - Engine RPM
+  location 0.01 0.65 0.05 0.035
+  prefix Engine RPM
+  min_width_prefix 10
+  value AV_Eng
+  precision 0
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+END_OBJECT hud_text Text Output - Engine RPM
+!
+!Add Throttle Position Display
+ANI_Throttle
+WRT_Throttle
+ADD_ENTITY hud_text Text Output - Throttle
+  min_width_prefix 12
+  location 0.01 0.7 0.05 0.035
+  prefix Throttle
+  value Throttle
+  precision 2
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+END_ENTITY hud_text Text Output - Throttle
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { HUD Gauges } VsV HUD Text: Engine RPM, Trans. Gear Ratio
+#Library : Generic VS Commands
+#DataSet : VsV HUD Text: Engine RPM, Trans. Gear Ratio
+#Category: HUD Gauges
+#FileID  : GenVS_0693f168-b4bd-44f0-ab4d-621bd5be4856
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

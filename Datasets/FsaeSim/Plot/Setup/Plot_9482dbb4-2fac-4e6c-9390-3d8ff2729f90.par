@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Plot: Setup`Tyre-Road Friction Coefficients`* * * HUR Visualization
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS MuX_L1, Station
+PLOTCHANNELS Mux_R1, Station
+PLOTCHANNELS MuX_L2, Station
+PLOTCHANNELS MuX_R2, Station
+PLOTCHANNELS MuY_L1, Station
+PLOTCHANNELS MuY_R1, Station
+PLOTCHANNELS MuY_L2, Station
+PLOTCHANNELS MuY_R2, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Tyre-Road Friction Coefficients
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * HUR Visualization } Tyre-Road Friction Coefficients
+#Library : Plot: Setup
+#DataSet : Tyre-Road Friction Coefficients
+#Category: * * * HUR Visualization
+#FileID  : Plot_9482dbb4-2fac-4e6c-9390-3d8ff2729f90
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

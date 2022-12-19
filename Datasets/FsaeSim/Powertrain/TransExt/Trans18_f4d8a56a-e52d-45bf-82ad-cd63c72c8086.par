@@ -1,0 +1,77 @@
+PARSFILE
+#FullDataName Powertrain: Transmission (18 Gears or CVT)`Mech. Sim. FSAE 6-Speed Transmission`Mech. Sim. FSAE & Baja: Transmissions
+#RingCtrl0 6
+NGEARS 6
+#RingCtrl1 1
+OPT_SHIFT_INTERNAL 1
+#RingCtrl2 1
+OPT_TR_GEAR_INTERNAL 1
+#CheckBox0 0    
+R_GEAR_TR_REVERSE 0
+R_GEAR_TR(1) 5.5
+R_GEAR_TR(2) 3.9
+R_GEAR_TR(3) 3.0
+R_GEAR_TR(4) 2.4
+R_GEAR_TR(5) 2.0
+R_GEAR_TR(6) 1.8
+ITR_REVERSE 0.01
+ITR_NEUTRAL 0.015
+ITR(1) 0.015
+ITR(2) 0.015
+ITR(3) 0.015
+ITR(4) 0.015
+ITR(5) 0.015
+ITR(6) 0.015
+R_EFF_TR_F_REVERSE 1
+R_EFF_TR_F(1) 0.95
+R_EFF_TR_F(2) 0.95
+R_EFF_TR_F(3) 0.95
+R_EFF_TR_F(4) 0.95
+R_EFF_TR_F(5) 0.95
+R_EFF_TR_F(6) 0.95
+R_EFF_TR_R_REVERSE 1
+R_EFF_TR_R(1) 0.99
+R_EFF_TR_R(2) 0.99
+R_EFF_TR_R(3) 0.99
+R_EFF_TR_R(4) 0.99
+R_EFF_TR_R(5) 0.99
+R_EFF_TR_R(6) 0.99
+T_SHIFT 0.075
+
+
+igear 1
+PARSFILE Powertrain\Shift\Shift_f0a4fafe-50a8-40b1-8479-6ab87a697344.par
+#BlueLink0 Powertrain: Shift Schedule`Shift 1st to 2nd` Mech. Sim. FSAE Shift Schedules` , Shift schedule`Shift_f0a4fafe-50a8-40b1-8479-6ab87a697344
+
+
+igear 2
+PARSFILE Powertrain\Shift\Shift_a51e9200-7d9e-43d7-8fbb-ff9da8a08f3b.par
+#BlueLink1 Powertrain: Shift Schedule`Shift 2nd to 3rd` Mech. Sim. FSAE Shift Schedules` , Shift schedule`Shift_a51e9200-7d9e-43d7-8fbb-ff9da8a08f3b
+
+
+igear 3
+PARSFILE Powertrain\Shift\Shift_bdea51f2-4524-436f-b8ff-39b2b5d707aa.par
+#BlueLink2 Powertrain: Shift Schedule`Shift 3rd to 4th` Mech. Sim. FSAE Shift Schedules` , Shift schedule`Shift_bdea51f2-4524-436f-b8ff-39b2b5d707aa
+
+
+igear 4
+PARSFILE Powertrain\Shift\Shift_59e8a0fe-179b-4a74-b904-2880109de3a9.par
+#BlueLink3 Powertrain: Shift Schedule`Shift 4th to 5th` Mech. Sim. FSAE Shift Schedules` , Shift schedule`Shift_59e8a0fe-179b-4a74-b904-2880109de3a9
+
+
+igear 5
+PARSFILE Powertrain\Shift\Shift_a4844be9-18cb-4894-9746-373f85d9c308.par
+#BlueLink4 Powertrain: Shift Schedule`Shift 5th to 6th` Mech. Sim. FSAE Shift Schedules` , Shift schedule`Shift_a4844be9-18cb-4894-9746-373f85d9c308
+
+
+igear 6
+
+LOG_ENTRY Used Dataset: Powertrain: Transmission (18 Gears or CVT); { Mech. Sim. FSAE & Baja: Transmissions } Mech. Sim. FSAE 6-Speed Transmission
+#Library : Powertrain: Transmission (18 Gears or CVT)
+#DataSet : Mech. Sim. FSAE 6-Speed Transmission
+#Category: Mech. Sim. FSAE & Baja: Transmissions
+#FileID  : Trans18_f4d8a56a-e52d-45bf-82ad-cd63c72c8086
+#Product : CarSim 2020.0
+#VehCode Transmission
+
+END

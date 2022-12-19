@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip`Side Force Coefficient = 0.5 at 90 deg`
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RadioCtrl0 0    
+
+#DiagramOne0
+FY_AERO_SHAPING_TABLE SPLINE
+-180, 0
+-90, -0.5
+0, 0
+90, 0.5
+180, 0
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#The side force coefficient is typically larger then the drag coefficent, because the width of the vehiicle is less than the length, contirbuting to drag in the lateral direction. Also, the calculation of the coefficient is based on the projected frontal area of the car, while the side force is developed against the larger side area.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip; Side Force Coefficient = 0.5 at 90 deg
+#Library : Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip
+#DataSet : Side Force Coefficient = 0.5 at 90 deg
+#Category: 
+#FileID  : AirCFy_edc41c2e-26ec-4dd4-8a26-78811435f233
+#Product : CarSim 2020.0
+#VehCode Fy vs. Aero Slip
+
+END

@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Control: Clutch Shifting Timelines (Closed Loop)`Closed-loop Clutch and Thrt. Ctrl. (Fast)`
+
+opt_clutch_mode 1
+*CL_1 0.125
+*CL_2 0.13
+*CL_3 0
+*CL_4 0.3
+*TH_1 0.1
+*TH_2 0.25
+*TH_3 0.35
+*GC 0.125
+VLOW_CLUTCH 2
+
+T_GEAR_LAG 0.125
+T_TH_ZERO_TOTAL 0.25
+T_TH_ZERO_HOLD 0.15
+T_TH_RETURN 0.1
+T_CL_PRESS_TOTAL 0.13
+T_CL_PRESS_HOLD 0.005
+T_CL_HALF_TOTAL 0.17
+T_CL_HALF_HOLD 0
+
+LOG_ENTRY Used Dataset: Control: Clutch Shifting Timelines (Closed Loop); Closed-loop Clutch and Thrt. Ctrl. (Fast)
+#Library : Control: Clutch Shifting Timelines (Closed Loop)
+#DataSet : Closed-loop Clutch and Thrt. Ctrl. (Fast)
+#Category: 
+#FileID  : ClTime_8c23883a-cbef-438f-b53f-5a2261662ba9
+#Product : CarSim 2020.0
+#VehCode Shifting Times (Alt)
+
+END

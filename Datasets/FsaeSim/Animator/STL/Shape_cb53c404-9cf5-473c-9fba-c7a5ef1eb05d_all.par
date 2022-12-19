@@ -1,0 +1,54 @@
+PARSFILE
+
+! EXPANDED_PARSFILE for Math models and animator
+
+! This is an expansion of the Parsfile: "Animator\STL\Shape_cb53c404-9cf5-473c-9fba-c7a5ef1eb05d.par"
+! It contains the contents of that file plus the contents of any files linked
+! with the "PARSFILE" keyword.
+
+! File created: 14:01 on September 23, 2022 by CarSim 2020.0
+
+PRODUCT_NAME CarSim
+
+ENTER_PARSFILE Animator\STL\Shape_cb53c404-9cf5-473c-9fba-c7a5ef1eb05d.par
+#FullDataName Animator: Shape File Link`Sensor Fields: 90 deg FOV`Sensor Fields
+add_obj Animator\3D_Shape_Files\Common_Vehicle_Assets\Sensor_Beams\Sensor90.obj
+SET_COLOR 0.8 0 0
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+set_lighting off
+set_fogging on
+set_transparency 0.3
+ENTER_PARSFILE Animator\Cameras\Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60.par
+#FullDataName Animator: Camera Setup`Shape Preview (Side)`Shape Preview
+SET_CAMERA_REFERENCE_FRAME Frame_02b47476-96e6-474b-919e-07d03b43f1ec
+ENTER_PARSFILE Animator\Frames\Frame_02b47476-96e6-474b-919e-07d03b43f1ec.par
+#FullDataName Animator: Reference Frame`Yaw for Shape Preview #3`Shape Preview: Generic
+ADD_REFERENCE_FRAME Frame_02b47476-96e6-474b-919e-07d03b43f1ec
+SET_EULER_ANGLES yaw_pitch_roll
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Shape Preview: Generic } Yaw for Shape Preview #3
+EXIT_PARSFILE Animator\Frames\Frame_02b47476-96e6-474b-919e-07d03b43f1ec.par
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_02b47476-96e6-474b-919e-07d03b43f1ec
+SET_LOOKPOINT_X 0
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 0
+SET_AZIMUTH 0
+SET_ELEVATION 0
+SET_DISTANCE 35
+SET_CAMERAMAN_NAME External camera
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 21.1
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Shape Preview } Shape Preview (Side)
+EXIT_PARSFILE Animator\Cameras\Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60.par
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Sensor Fields } Sensor Fields: 90 deg FOV
+EXIT_PARSFILE Animator\STL\Shape_cb53c404-9cf5-473c-9fba-c7a5ef1eb05d.par
+
+
+
+END

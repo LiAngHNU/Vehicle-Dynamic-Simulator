@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Aerodynamics: Basic`Baja SAE Aero`Baja SAE
+#CheckBox0 0    
+
+#RingCtrl0 2
+#RingCtrl1 2
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 2
+#RingCtrl5 2
+PARSFILE Aerodynamics\Aero_Fx\AirCFx_1b10dee9-0a20-49ce-aeb4-a80287f5a08e.par
+#BlueLink0 Aerodynamics: Fx (Drag) Coef. vs. Aero Slip`Drag Coefficient = 0.30` ` , CFx`AirCFx_1b10dee9-0a20-49ce-aeb4-a80287f5a08e
+
+PARSFILE Aerodynamics\Aero_Fy\AirCFy_edc41c2e-26ec-4dd4-8a26-78811435f233.par
+#BlueLink1 Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip`Side Force Coefficient = 0.5 at 90 deg` ` , CFy`AirCFy_edc41c2e-26ec-4dd4-8a26-78811435f233
+
+PARSFILE Aerodynamics\Aero_Fz\AirCFz_2bd7b5e8-8499-40e6-bccc-0c23b363d70a.par
+#BlueLink2 Aerodynamics: Fz (Lift) Coef. vs. Aero Slip`Lift Coefficient = 0.18` ` , CFz`AirCFz_2bd7b5e8-8499-40e6-bccc-0c23b363d70a
+
+PARSFILE Aerodynamics\Aero_Mx\AirCMx_1b06e67c-1729-4e91-9ce9-aad23a79dac3.par
+#BlueLink3 Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip`Roll Moment Coefficient = 0.3 at 90 deg` ` , CMx`AirCMx_1b06e67c-1729-4e91-9ce9-aad23a79dac3
+
+PARSFILE Aerodynamics\Aero_My\AirCMy_95ace942-43cf-4051-b3f6-64da1a06e4e1.par
+#BlueLink4 Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip`Pitch Moment Coefficient = -0.15` ` , CMy`AirCMy_95ace942-43cf-4051-b3f6-64da1a06e4e1
+
+PARSFILE Aerodynamics\Aero_Mz\AirCMz_57ed564c-dd83-4157-a1e0-252d83f9f723.par
+#BlueLink5 Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip`Yaw Moment Coefficent = 0.05 at 90 deg` ` , CMz`AirCMz_57ed564c-dd83-4157-a1e0-252d83f9f723
+
+X_REF_AERO -1535/2
+Y_REF_AERO 0
+H_REF_AERO 0
+L_REF_AERO 1353
+AREA_AERO 1.6
+D_AIR 1.206
+
+LOG_ENTRY Used Dataset: Aerodynamics: Basic; { Baja SAE } Baja SAE Aero
+#Library : Aerodynamics: Basic
+#DataSet : Baja SAE Aero
+#Category: Baja SAE
+#FileID  : Aero_c6f4d51d-25d4-4e5d-befc-d12172e7f3a3
+#Product : CarSim 2020.0
+#VehCode Aerodynamics
+
+END

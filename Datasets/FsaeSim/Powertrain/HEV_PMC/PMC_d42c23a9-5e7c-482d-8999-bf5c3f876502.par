@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Powertrain: Hybrid/Electric Power Management Control`Hybrid Power Management: Full Load 160 kW`Mech. Sim. FSAE & Baja: HEV / EV
+! Hybrid Power Management Controller. 
+#CheckBox0 0    
+VLOW_ENG_MODE 45
+PWR_ENG_MODE 130
+K_BATTERY_CHARGE 150
+VLOW_BATTERY_CHARGE 15
+BATTERY_CHARGE_TARG 0.8
+BATTERY_CHARGE_LOW 0.25
+AV_GNRTR_LIMIT 5850
+GNR_CONTROL_KP 0.0157
+GNR_CONTROL_KI 0.0000873
+PWR_HEV_DRV_MAX 160
+TC_PWR_HYBRID_AV 0.8
+KPW_PBK_HEV 16
+PWR_EV_MODE 5
+REGEN_BRK_OFF 0.8
+
+PARSFILE Generic\tables\GenTab_609d14ea-2bb6-45ec-bab2-99ce5a2b8af0.par
+#BlueLink0 Generic Table`Driver Demand Power: Full Load 160 kW` Powertrain (HEV / EV)` , Driver Demand Power`GenTab_609d14ea-2bb6-45ec-bab2-99ce5a2b8af0
+
+PARSFILE Generic\tables\GenTab_f8c8e993-6748-4010-adee-8ca3e250b507.par
+#BlueLink1 Generic Table`Optimal engine speed (min. 4000 rpm)` Powertrain (HEV / EV)` , Engine Optimal Speed`GenTab_f8c8e993-6748-4010-adee-8ca3e250b507
+
+
+LOG_ENTRY Used Dataset: Powertrain: Hybrid/Electric Power Management Control; { Mech. Sim. FSAE & Baja: HEV / EV } Hybrid Power Management: Full Load 160 kW
+#Library : Powertrain: Hybrid/Electric Power Management Control
+#DataSet : Hybrid Power Management: Full Load 160 kW
+#Category: Mech. Sim. FSAE & Baja: HEV / EV
+#FileID  : PMC_d42c23a9-5e7c-482d-8999-bf5c3f876502
+#Product : CarSim 2020.0
+#VehCode Power Management Control (HEV)
+
+END

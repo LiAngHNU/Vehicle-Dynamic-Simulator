@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName Tire`Hoosier 265`* * * HUR Tires
+FZ_REF 6500
+Y_LENGTH 265
+#CheckBox2 1    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 0    
+
+#RingCtrl0 6
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 6
+
+PARSFILE Animator\STL_Groups\ShpGrp_f94e800c-0576-4851-8ff6-62d47e965b07.par
+#BlueLink4 Animator: Shape Assembly`Mech. Sim. FSAE: Tire Shape` Mech. Sim. FSAE & Baja: Shape Assembly` , Animator`ShpGrp_f94e800c-0576-4851-8ff6-62d47e965b07
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 265
+PARSFILE Tires\Fz\TireFz_568b60b5-eea8-4b4c-850e-db63c0ca09d4.par
+#BlueLink12 Tire: Vertical Force vs. Compression`Mech. Sim. FSAE: Tire Spring Rate` Mech. Sim. FSAE Tire Spring Rate` , Vertical force`TireFz_568b60b5-eea8-4b4c-850e-db63c0ca09d4
+
+M_TIRE 0
+IT 0.25
+IT_XXZZ 0
+PARSFILE Generic\tables\GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068
+
+PARSFILE Generic\tables\GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.004
+RR_V 0.000025
+L_CONTACT_X_CONSTANT 70
+L_CONTACT_Y_CONSTANT 175
+RR_FX 1
+OPT_TIRE_COMB 1
+R_TIRE_COMB 1.1
+PARSFILE Tires\Mz\TireMz_81ef0299-de31-4f6b-ad8b-8bfebe0a02ad.par
+#BlueLink0 Tire: Aligning Moment`Mech. Sim. FSAE: Mz vs. Slip Angle` Mech. Sim. Aligning Moment` , Aligning Moment`TireMz_81ef0299-de31-4f6b-ad8b-8bfebe0a02ad
+
+PARSFILE Tires\Fy\TireFy_d59a809a-6132-4bf7-9616-2b5a98eb58ad.par
+#BlueLink1 Tire: Lateral Force`Mech. Sim. FSAE: Fy vs. Slip Angle` Mech. Sim. FSAE Lateral Force` , Lateral Force`TireFy_d59a809a-6132-4bf7-9616-2b5a98eb58ad
+
+PARSFILE Tires\Fx\TireFx_adee6b26-e157-401c-b916-23b295cb8005.par
+#BlueLink2 Tire: Longitudinal Force`Mech. Sim. FSAE: Fx vs. Slip Angle` Mech. Sim. FSAE Longitudinal Force` , Longitudinal Force`TireFx_adee6b26-e157-401c-b916-23b295cb8005
+
+PARSFILE Tires\FyC\TireFyC_afae36ca-ad4c-471d-bd41-298e3fcbc5e2.par
+#BlueLink6 Tire: Lateral Force vs. Inclination`Mech. Sim. FSAE: Fy vs. Gamma` Mech. Sim. Lateral Force vs. Incl. Angle` , Lateral Force vs Gamma`TireFyC_afae36ca-ad4c-471d-bd41-298e3fcbc5e2
+
+PARSFILE Tires\MzC\TireMzC_9c3e2665-3817-4d2b-a35c-01b1daf7fe1d.par
+#BlueLink7 Tire: Aligning Moment vs. Inclination`Aligning Moment vs. Gamma: Zero` FSAE` , Aligning Moment vs Gamma`TireMzC_9c3e2665-3817-4d2b-a35c-01b1daf7fe1d
+
+PARSFILE Tires\Mx\TireMx_e81e58ac-a324-4874-8e63-1a55c15534c3.par
+#BlueLink8 Tire: Overturning Moment`Overturning Moment vs. Slip Angle: Zero` Mech Sim. FSAE Overturning Moment` , Overturning moment`TireMx_e81e58ac-a324-4874-8e63-1a55c15534c3
+
+PARSFILE Tires\MxC\TireMxC_9f78c513-5990-43c8-943e-77d3ff0a1c54.par
+#BlueLink9 Tire: Overturning Moment vs. Inclination`Overturning Moment vs. Gamma: Zero` FSAE` , Overturning Moment vs Gamma`TireMxC_9f78c513-5990-43c8-943e-77d3ff0a1c54
+
+
+
+#EMBEDDED_NOTES
+#Tire spin inetia of 0.25 kg-m^2 is based on an FSAE wheel / tire size of 13 x 6.5
+#
+#Assumptions:
+#Tire
+#OD = 21 inches
+#Mass = 11 lb
+#
+#Rim
+#Mass = 4 lb
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { * * * HUR Tires } Hoosier 265
+#Library : Tire
+#DataSet : Hoosier 265
+#Category: * * * HUR Tires
+#FileID  : Tire_eb4320d5-ebb1-47f0-8da9-c874b06fa6ec
+#Product : CarSim 2020.0
+#VehCode Tire
+
+END

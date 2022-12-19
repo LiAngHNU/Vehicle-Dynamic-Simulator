@@ -1,0 +1,93 @@
+PARSFILE
+#FullDataName Suspension: Lateral Movement Due to Jounce`FSAE Lateral Y Movement (Front)`Mech. Sim. FSAE: Lateral Movement
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_LAT_COMBINE ADD
+#DiagramOne0
+SUSP_LAT_TABLE LINEAR
+-50.8, -4.7498
+-48.26, -4.4196
+-45.72, -4.0894
+-43.18, -3.7592
+-40.64, -3.4544
+-38.1, -3.1496
+-35.56, -2.8702
+-33.02, -2.5908
+-30.48, -2.3368
+-27.94, -2.0828
+-25.4, -1.8288
+-22.86, -1.6002
+-20.32, -1.3716
+-17.78, -1.1684
+-15.24, -0.9652
+-12.7, -0.7874
+-10.16, -0.6096
+-7.62, -0.4318
+-5.08, -0.2794
+-2.54, -0.127
+0, 0
+2.54, 0.127
+5.08, 0.2286
+7.62, 0.3302
+10.16, 0.4318
+12.7, 0.508
+15.24, 0.5842
+17.78, 0.6604
+20.32, 0.7112
+22.86, 0.7366
+25.4, 0.762
+ENDTABLE
+SUSP_LAT_JNC_OTHER_SIDE_CONSTANT 0
+SUSP_Y_AXLE_ROLL_COMBINE ADD ! in case this is for a solid axle
+#DiagramOne0
+SUSP_LAT_AXLE_JOUNCE_TABLE LINEAR
+-50.8, -4.7498
+-48.26, -4.4196
+-45.72, -4.0894
+-43.18, -3.7592
+-40.64, -3.4544
+-38.1, -3.1496
+-35.56, -2.8702
+-33.02, -2.5908
+-30.48, -2.3368
+-27.94, -2.0828
+-25.4, -1.8288
+-22.86, -1.6002
+-20.32, -1.3716
+-17.78, -1.1684
+-15.24, -0.9652
+-12.7, -0.7874
+-10.16, -0.6096
+-7.62, -0.4318
+-5.08, -0.2794
+-2.54, -0.127
+0, 0
+2.54, 0.127
+5.08, 0.2286
+7.62, 0.3302
+10.16, 0.4318
+12.7, 0.508
+15.24, 0.5842
+17.78, 0.6604
+20.32, 0.7112
+22.86, 0.7366
+25.4, 0.762
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR2 0
+
+
+LOG_ENTRY Used Dataset: Suspension: Lateral Movement Due to Jounce; { Mech. Sim. FSAE: Lateral Movement } FSAE Lateral Y Movement (Front)
+#Library : Suspension: Lateral Movement Due to Jounce
+#DataSet : FSAE Lateral Y Movement (Front)
+#Category: Mech. Sim. FSAE: Lateral Movement
+#FileID  : LatJnc_8c8f5e65-0c51-43de-aa5d-c1ae77151bb3
+#Product : CarSim 2020.0
+#VehCode Lateral Movement
+
+END

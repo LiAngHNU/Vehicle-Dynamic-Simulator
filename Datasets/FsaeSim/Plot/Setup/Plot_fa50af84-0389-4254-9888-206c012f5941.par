@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Vehicle Tracking Error`* * * HUR Visualization
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS L_Drv_2, Station
+PLOTCHANNELS L_Drv_3, Station
+PLOTCHANNELS L_Drv_4, Station
+PLOTCHANNELS Rho_Road, Station
+PLOTCHANNELS Ax, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vehicle Tracking Error
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * HUR Visualization } Vehicle Tracking Error
+#Library : Plot: Setup
+#DataSet : Vehicle Tracking Error
+#Category: * * * HUR Visualization
+#FileID  : Plot_fa50af84-0389-4254-9888-206c012f5941
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

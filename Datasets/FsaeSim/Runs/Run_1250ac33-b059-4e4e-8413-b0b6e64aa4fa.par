@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName CarSim Run Control`FSAE Hybrid: Acceleration and Braking`* * FSAE Examples: Hybrid
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_1250ac33-b059-4e4e-8413-b0b6e64aa4fa
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 3
+PARSFILE Animator\Cameras\Camera_8d5e5054-3ff3-4116-9f8c-ae7201bc4aa6.par
+#BlueLink0 Animator: Camera Setup`15 deg. Azimuth, 7 deg. El., Veh. Ref.` Vehicle Reference` , Animator camera`Camera_8d5e5054-3ff3-4116-9f8c-ae7201bc4aa6
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 1    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_e2f28640-c7d3-419b-98d3-21b05822de90.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`Mechanical Simulation FSAE (Hybrid)` FSAE` , Math Model`VehLoad_e2f28640-c7d3-419b-98d3-21b05822de90
+
+PARSFILE Procedures\Proc_a242508a-120b-4178-9935-33c9f44a50ca.par
+#BlueLink28 Procedures`Acceleration and Braking (HEV)` Mech. Sim. FSAE: Procedures` , Procedure`Proc_a242508a-120b-4178-9935-33c9f44a50ca
+
+PARSFILE Generic\Group\GenGrp_6774a7ad-ae11-4a51-bbb6-c1c39ac887a0.par
+#BlueLink9 Generic Data Group`VS Visualizer HUD Gauges (FSAE HEV)` HUD Gauges` , Miscellaneous`GenGrp_6774a7ad-ae11-4a51-bbb6-c1c39ac887a0
+
+PARSFILE Generic\VS_commands\GenVS_27025ed9-027b-4b4e-91c0-6b516979cd99.par
+#BlueLink10 Generic VS Commands`VsV HUD Text (HEV / EV)` HUD Gauges` , Miscellaneous`GenVS_27025ed9-027b-4b4e-91c0-6b516979cd99
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_7eebfaf2-736d-4fc8-8710-ce4ecdfcfa7a.par
+#BlueLink11 Multiple Moving Objects`10 Driver Preview Points` Points of Interest` , Miscellaneous`TMotion_7eebfaf2-736d-4fc8-8710-ce4ecdfcfa7a
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_29eda444-d2a0-4f2f-aed3-f82c53028f92.png
+
+OPT_ALL_WRITE 1
+WRITE_SENSOR_DETECT
+Title FSAE Hybrid: Acceleration and Braking <* * FSAE Examples: Hybrid>
+CATEGORY * * FSAE Examples: Hybrid 
+DATASET_TITLE FSAE Hybrid: Acceleration and Braking
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A generic Formula SAE vehicle with hybrid powertrain (HEV) performing an acceleration and braking test.
+#
+#Events, linked on the Procedure screen, are used to direct the flow of the test.
+#
+#Simulations such as these are very useful for studying and evaluating many aspects of the vehicle performance:
+#
+# * Aerodynamics
+# * Brakes
+# * Powertrain
+# * Steering
+# * Suspension
+# * Tire Forces
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * * FSAE Examples: Hybrid } FSAE Hybrid: Acceleration and Braking
+#Library : CarSim Run Control
+#DataSet : FSAE Hybrid: Acceleration and Braking
+#Category: * * FSAE Examples: Hybrid
+#FileID  : Run_1250ac33-b059-4e4e-8413-b0b6e64aa4fa
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

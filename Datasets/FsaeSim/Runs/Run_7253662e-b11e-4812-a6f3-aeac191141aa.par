@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName CarSim Run Control`Baja SAE: Off-Road Hill-Climb`* * Baja SAE Examples
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_7253662e-b11e-4812-a6f3-aeac191141aa
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 3
+PARSFILE Animator\Cameras\Camera_b9fa7972-0bfa-43d1-9ff3-033711663214.par
+#BlueLink0 Animator: Camera Setup`165 deg. Azimuth, Veh. Ref. (No Yaw)` Vehicle Reference` , Animator camera`Camera_b9fa7972-0bfa-43d1-9ff3-033711663214
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 1    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+*RUN_COLOR 0.2 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_505a6006-6cdd-4c61-aeec-49bd09ce1452.par
+#BlueLink2 Vehicle: Assembly`Mech. Sim. Baja Vehicle Assembly` Mechanical Simulation FSAE & Baja` , Math Model`Vehicle_505a6006-6cdd-4c61-aeec-49bd09ce1452
+
+PARSFILE Procedures\Proc_a09b545f-7da7-49e8-bc32-b714319f9f0c.par
+#BlueLink28 Procedures`Off-Road Hill-Climb w/ Ramp to Full Throttle` Mech. Sim. Baja SAE: Procedures` , Procedure`Proc_a09b545f-7da7-49e8-bc32-b714319f9f0c
+
+PARSFILE Generic\Group\GenGrp_93c85863-f22e-4cd2-b8c7-402c8d5c9781.par
+#BlueLink9 Generic Data Group`VS Visualizer HUD Gauges (FSAE / Baja)` HUD Gauges` , Miscellaneous`GenGrp_93c85863-f22e-4cd2-b8c7-402c8d5c9781
+
+PARSFILE Plot\Setup\Plot_dafae624-d48a-4548-93eb-fa73d080e21a.par
+#BlueLink15 Plot: Setup`Brake Control: Master Cyl. Pressure` Braking` , Plot`Plot_dafae624-d48a-4548-93eb-fa73d080e21a
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_505a6006-6cdd-4c61-aeec-49bd09ce1452.png
+
+OPT_ALL_WRITE 1
+WRITE_SENSOR_DETECT
+Title Baja SAE: Off-Road Hill-Climb <* * Baja SAE Examples>
+CATEGORY * * Baja SAE Examples 
+DATASET_TITLE Baja SAE: Off-Road Hill-Climb
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A generic Baja SAE vehicle climbing an off-road hill.
+#
+#These roads are useful for evaluating the performance of the Powertrain, Suspension, and Tires.
+#
+#The time-based Open-Loop Throttle control is used in this test.
+#
+#More details are available on the Procedure dataset:
+#Off-Road Hill-Climb w/ Ramp to Full Throttle
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * * Baja SAE Examples } Baja SAE: Off-Road Hill-Climb
+#Library : CarSim Run Control
+#DataSet : Baja SAE: Off-Road Hill-Climb
+#Category: * * Baja SAE Examples
+#FileID  : Run_7253662e-b11e-4812-a6f3-aeac191141aa
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

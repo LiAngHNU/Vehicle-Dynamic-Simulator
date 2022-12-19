@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Vehicle Torques`* * * HUR Visualization
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS M_EngOut, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vehicle Torques
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * HUR Visualization } Vehicle Torques
+#Library : Plot: Setup
+#DataSet : Vehicle Torques
+#Category: * * * HUR Visualization
+#FileID  : Plot_dcc0b8f2-6367-482c-ab28-8989eaff4d92
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

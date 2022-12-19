@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`Event Elapsed Time`Event Control
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS t_event, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Event Elapsed Time
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#T_EVENT is a timer that begins when the run begins. It can be reset to zero to track the time spent under the control of any event (or series of events).
+#
+#It is reset to to zero when any event is triggered that has the "Reset all control clocks" checkbox checked.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Event Control } Event Elapsed Time
+#Library : Plot: Setup
+#DataSet : Event Elapsed Time
+#Category: Event Control
+#FileID  : Plot_865ec648-7e13-4974-803c-86946399ea5b
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

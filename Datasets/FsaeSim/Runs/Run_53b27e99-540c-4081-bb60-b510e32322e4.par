@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName CarSim Run Control`FSAE Hybrid: Autocross (2 Laps), Path Segment Builder`* * FSAE Examples: Hybrid
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_53b27e99-540c-4081-bb60-b510e32322e4
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 3
+PARSFILE Animator\Cameras\Camera_ba3fe239-88d8-4ffa-a4a9-7c163f3c38ed.par
+#BlueLink0 Animator: Camera Setup`180 deg. Azimuth, 10 deg. El., Veh. Ref. (No Yaw)` Vehicle Reference` , Animator camera`Camera_ba3fe239-88d8-4ffa-a4a9-7c163f3c38ed
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 1    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+SET_RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_e2f28640-c7d3-419b-98d3-21b05822de90.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`Mechanical Simulation FSAE (Hybrid)` FSAE` , Math Model`VehLoad_e2f28640-c7d3-419b-98d3-21b05822de90
+
+PARSFILE Procedures\Proc_266ddd47-e477-4821-a78a-88d8663852a7.par
+#BlueLink28 Procedures`Autocross (2 Laps), Path Segment Builder (HEV)` Mech. Sim. FSAE: Procedures` , Procedure`Proc_266ddd47-e477-4821-a78a-88d8663852a7
+
+PARSFILE Generic\Group\GenGrp_6774a7ad-ae11-4a51-bbb6-c1c39ac887a0.par
+#BlueLink9 Generic Data Group`VS Visualizer HUD Gauges (FSAE HEV)` HUD Gauges` , Miscellaneous`GenGrp_6774a7ad-ae11-4a51-bbb6-c1c39ac887a0
+
+PARSFILE Generic\VS_commands\GenVS_27025ed9-027b-4b4e-91c0-6b516979cd99.par
+#BlueLink10 Generic VS Commands`VsV HUD Text (HEV / EV)` HUD Gauges` , Miscellaneous`GenVS_27025ed9-027b-4b4e-91c0-6b516979cd99
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_7eebfaf2-736d-4fc8-8710-ce4ecdfcfa7a.par
+#BlueLink11 Multiple Moving Objects`10 Driver Preview Points` Points of Interest` , Miscellaneous`TMotion_7eebfaf2-736d-4fc8-8710-ce4ecdfcfa7a
+
+*TSTOP 180
+
+SPECIAL_PARSFILE Runs\Run_8699662e-9492-42f7-b2b7-aefb57a54ea8.par
+#BlueLink23 CarSim Run Control`FSAE: Autocross (2 Laps), Path Segment Builder` * * FSAE Examples` , Overlay run or ERD file`Run_8699662e-9492-42f7-b2b7-aefb57a54ea8
+
+
+SPECIAL_PARSFILE Runs\Run_c1fedf91-0d07-4ae8-8c8e-34983b102d44.par
+#BlueLink24 CarSim Run Control`FSAE Electric: Autocross (2 Laps), Path Segment Builder` * * FSAE Examples: Electric` , Overlay run or ERD file`Run_c1fedf91-0d07-4ae8-8c8e-34983b102d44
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_4d135579-d50c-4bb7-8572-23ffbe185deb.png
+
+OPT_ALL_WRITE 1
+WRITE_SENSOR_DETECT
+Title FSAE Hybrid: Autocross (2 Laps), Path Segment Builder <* * FSAE Examples: Hybrid>
+CATEGORY * * FSAE Examples: Hybrid 
+DATASET_TITLE FSAE Hybrid: Autocross (2 Laps), Path Segment Builder
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A generic Formula SAE vehicle with hybrid powertrain (HEV) driving on an autocross course. The path is looped and the vehicle performs two complete laps.
+#
+#Since CarSim supports multiple paths and one is always assigned to the road, separate paths can be used to represent various target paths for the Closed Loop Driver Model.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * * FSAE Examples: Hybrid } FSAE Hybrid: Autocross (2 Laps), Path Segment Builder
+#Library : CarSim Run Control
+#DataSet : FSAE Hybrid: Autocross (2 Laps), Path Segment Builder
+#Category: * * FSAE Examples: Hybrid
+#FileID  : Run_53b27e99-540c-4081-bb60-b510e32322e4
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

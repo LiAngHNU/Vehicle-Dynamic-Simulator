@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Animator: Camera Setup`FL View, Veh. Ref., (Rr. Facing), 45m`Vehicle Reference
+#RingCtrl1 0
+
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 1    
+
+GHOST_COUNT 0
+SET_CAMERA_REFERENCE_FRAME Frame_8d3b04cc-cfd1-4e65-b33b-c979be368264
+PARSFILE Animator\Frames\Frame_8d3b04cc-cfd1-4e65-b33b-c979be368264.par
+#BlueLink0 Animator: Reference Frame`Camera Tracking X-Y-Z` Cameras` , Reference frame for outside camera`Frame_8d3b04cc-cfd1-4e65-b33b-c979be368264
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_8d3b04cc-cfd1-4e65-b33b-c979be368264
+SET_LOOKPOINT_X 0
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 0
+SET_AZIMUTH 35
+SET_ELEVATION 8
+SET_DISTANCE 45
+SET_CAMERAMAN_NAME External camera
+*SET_LOOKPOINT_X 0
+*SET_LOOKPOINT_Y 0
+*SET_LOOKPOINT_Z 0
+*SET_AZIMUTH 35
+*SET_ELEVATION 8
+*SET_DISTANCE 45
+GHOST_COUNT 0
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 16
+SUN_POSITION 100 100 1000
+
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Vehicle Reference } FL View, Veh. Ref., (Rr. Facing), 45m
+#Library : Animator: Camera Setup
+#DataSet : FL View, Veh. Ref., (Rr. Facing), 45m
+#Category: Vehicle Reference
+#FileID  : Camera_1f875c18-8107-470e-9681-951e03b624da
+#Product : CarSim 2020.0
+#VehCode Camera
+
+END

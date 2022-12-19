@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Plot: Setup`User Defined Drive/Brake Moments / Whl. RPM`User-Defined Variables
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS MY_US_L1, AVy_L1
+PLOTCHANNELS MY_US_R1, AVy_R1
+PLOTCHANNELS MY_US_L2, AVy_L2
+PLOTCHANNELS MY_US_R2, AVy_R2
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE User Defined Drive/Brake Moments / Whl. RPM
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#The internal drive torques are applied to the driven wheels. They are reacted at the sprung mass with independent suspensions and at the unsprung mass for solid axles.
+#
+#The internal brake torques are applied to the wheels and always react against the unsprung mass. They always oppose the direction of wheel rotation.
+#
+#These ouput variables are associated with the user-defined import variables IMP_MYUSM_L1
+#(L2, R1, R2), The import variables are moments applied to the wheels and reacting against the unsprung mass. The magnitude and sign are whatever you define in your extensions (VS Commands, Simulink, C Code, etc.)
+#
+#These imports allow you to define things like electric motors mounted on the suspension, the torque multiplication of a planetary gear on the suspension, brake and bearing drag, and many other effects.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { User-Defined Variables } User Defined Drive/Brake Moments / Whl. RPM
+#Library : Plot: Setup
+#DataSet : User Defined Drive/Brake Moments / Whl. RPM
+#Category: User-Defined Variables
+#FileID  : Plot_38ae3726-e456-4b9f-a1a0-5ff08d5a2d08
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

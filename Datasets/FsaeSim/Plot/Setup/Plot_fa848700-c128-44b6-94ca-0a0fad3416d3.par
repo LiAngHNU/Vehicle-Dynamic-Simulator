@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`EV Motor Torque`Powertrain (Hybrid and EV)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS M_Motor, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE EV Motor Torque
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain (Hybrid and EV) } EV Motor Torque
+#Library : Plot: Setup
+#DataSet : EV Motor Torque
+#Category: Powertrain (Hybrid and EV)
+#FileID  : Plot_fa848700-c128-44b6-94ca-0a0fad3416d3
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

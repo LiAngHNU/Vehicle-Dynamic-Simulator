@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Tire: Lateral Force vs. Inclination`Mech. Sim. FSAE: Fy vs. Gamma`Mech. Sim. Lateral Force vs. Incl. Angle
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. inclination angle (deg)
+*3D_ZLabel Lateral force (N)
+
+#DiagramTwo0
+*3D_DATA 5, 12 ! columns x rows
+FYG_TIRE_CARPET 2D_FROM_ZERO
+0, 2362.81, 4725.61, 7088.42, 9451.23, 11814
+0.5, -13.94, -36.56, -53.48, -67.28, -80.54
+1, -27.84, -72.9, -106.77, -134.48, -161.1
+1.5, -41.67, -108.83, -159.67, -201.52, -241.68
+2, -55.39, -144.12, -212.01, -268.32, -322.31
+2.5, -68.97, -178.57, -263.58, -334.8, -402.99
+3, -82.37, -211.96, -314.2, -400.87, -483.74
+3.5, -95.55, -244.08, -363.67, -466.46, -564.57
+4, -108.47, -274.73, -411.81, -531.48, -645.5
+4.5, -121.11, -303.69, -458.42, -595.86, -726.55
+5, -133.42, -330.75, -503.32, -659.51, -807.71
+5.5, -145.37, -355.7, -546.31, -722.36, -889.02
+6, -156.92, -378.33, -587.2, -784.32, -970.47
+ENDTABLE
+
+CRO_FY 1
+
+
+LOG_ENTRY Used Dataset: Tire: Lateral Force vs. Inclination; { Mech. Sim. Lateral Force vs. Incl. Angle } Mech. Sim. FSAE: Fy vs. Gamma
+#Library : Tire: Lateral Force vs. Inclination
+#DataSet : Mech. Sim. FSAE: Fy vs. Gamma
+#Category: Mech. Sim. Lateral Force vs. Incl. Angle
+#FileID  : TireFyC_afae36ca-ad4c-471d-bd41-298e3fcbc5e2
+#Product : CarSim 2020.0
+#VehCode Tire: Fy
+
+END

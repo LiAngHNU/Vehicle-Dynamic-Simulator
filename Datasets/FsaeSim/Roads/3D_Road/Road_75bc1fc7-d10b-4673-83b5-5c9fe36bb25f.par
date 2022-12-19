@@ -1,0 +1,183 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Off-Road Hill, Slope 10.7 deg. (10 m - 15 m)`Mech. Sim. Baja Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_75bc1fc7-d10b-4673-83b5-5c9fe36bb25f.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Off-Road Hill, Slope 10.7 deg. (10 m - 15 m)
+PARSFILE Roads\BuilderSegment\RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c.par
+#BlueLink0 Path: Segment Builder`Straight Path East, ID = 1001` Straight` , Reference Path`RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight Path East, ID = 1001
+PARSFILE Roads\Center_Z\RdRefZ_d0396516-2546-45ed-b5c2-7a28777cf91c.par
+#BlueLink1 Road: Reference Line Elevation`Slope 10.7 deg. (10 -15 m), Flat After 105.8 m` Mech. Sim. Baja Path Elevation` , Path Elevation`RdRefZ_d0396516-2546-45ed-b5c2-7a28777cf91c
+
+PARSFILE Roads\dZ_Map\RdMapZ_74992977-ad4d-4089-b524-f049da9e9a4f.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Off-Road Terrain, 75 m long, 10 m wide` Off-Road Terrain` , Miscellaneous`RdMapZ_74992977-ad4d-4089-b524-f049da9e9a4f
+
+PARSFILE Roads\Friction\RdMu_3b0c5b27-b912-4170-9439-b5397fef112d.par
+#BlueLink3 Road: Friction Map, S-L Grid`0.5` Constant Mu` , Friction`RdMu_3b0c5b27-b912-4170-9439-b5397fef112d
+
+PARSFILE Roads\Shapes\RdShape_fb4cdb1b-2623-41b2-95be-c3f4c0eaaf8c.par
+#BlueLink4 Road: Animator Surface Shapes`Off-Road, Slope 10.7 deg, S Stop = 250 m` Ride Roads` , Road shape definitions`RdShape_fb4cdb1b-2623-41b2-95be-c3f4c0eaaf8c
+
+RR_SURF 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_0243ae01-7f22-400b-ac09-6ac909099257.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_0243ae01-7f22-400b-ac09-6ac909099257
+
+add_reference_frame road_stuff_7_Trees_for_Hill_Climb
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_00c3c0bd-799a-4157-9f93-d4b9f87334d8.par
+#BlueLink7 Road: Animator Repeated Object`Trees for Hill Climb` Trees` , 3D Shapes`AniRep_00c3c0bd-799a-4157-9f93-d4b9f87334d8
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`Rear View , Road Ref. (Frt. Facing)` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_75bc1fc7-d10b-4673-83b5-5c9fe36bb25f.ani
+
+add_reference_frame road_stuff_1_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_pitch 0.0731755774323
+set_offset_var_roll 0
+set_offset_var_x -99.5
+set_offset_var_y -13
+set_offset_var_z 0.127076967538
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_2_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_pitch 0.0731755774323
+set_offset_var_roll 0
+set_offset_var_x -52.2
+set_offset_var_y -8
+set_offset_var_z 0.0666675146279
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_3_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_pitch 0.0731755774323
+set_offset_var_roll 0
+set_offset_var_x -24.1
+set_offset_var_y -15
+set_offset_var_z 0.0307794464087
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_4_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_pitch -5.01298358973
+set_offset_var_roll 0
+set_offset_var_x 10
+set_offset_var_y -22.8
+set_offset_var_z 0.667
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_5_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_pitch -14.8497300812
+set_offset_var_roll 0
+set_offset_var_x 15
+set_offset_var_y -12
+set_offset_var_z 1.522
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_6_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_pitch -20.9355928741
+set_offset_var_roll 0
+set_offset_var_x 38.4
+set_offset_var_y -13
+set_offset_var_z 7.26751611817
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_7_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_pitch -12.2909754019
+set_offset_var_roll 0
+set_offset_var_x 67
+set_offset_var_y -11
+set_offset_var_z 14.566275624
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_8_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_pitch -5.22866868809
+set_offset_var_roll 0
+set_offset_var_x 95.5
+set_offset_var_y -19
+set_offset_var_z 19.4594415105
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_9_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_pitch 0.0249244175972
+set_offset_var_roll 0
+set_offset_var_x 128.7
+set_offset_var_y -15
+set_offset_var_z 19.9962153853
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_10_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_pitch 0.0249244175972
+set_offset_var_roll 0
+set_offset_var_x 156
+set_offset_var_y -14
+set_offset_var_z 19.9843395256
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_11_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_pitch 0.0249244175972
+set_offset_var_roll 0
+set_offset_var_x 188.5
+set_offset_var_y -5
+set_offset_var_z 19.9702015973
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_12_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_pitch 0.0249244175972
+set_offset_var_roll 0
+set_offset_var_x 217.1
+set_offset_var_y -9.75
+set_offset_var_z 19.9577602204
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+#EMBEDDED_NOTES
+#Off-Road Hill
+#
+#Slope 10.7 deg. (10 m - 15 m)
+#Flat after 105.847 m
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Mech. Sim. Baja Roads } Off-Road Hill, Slope 10.7 deg. (10 m - 15 m)
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Off-Road Hill, Slope 10.7 deg. (10 m - 15 m)
+#Category: Mech. Sim. Baja Roads
+#FileID  : Road_75bc1fc7-d10b-4673-83b5-5c9fe36bb25f
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

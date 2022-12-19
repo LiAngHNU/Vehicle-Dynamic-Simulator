@@ -1,0 +1,97 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`Mech. Sim. Baja Vehicle Assembly`Mechanical Simulation FSAE & Baja
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 2
+OPT_PT 2
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 2
+PARSFILE Steering\System2\StrSys2_a5dd0fbd-5851-460b-967e-bbe25e62c7c0.par
+#BlueLink7 Steering`Baja SAE Manual Rack & Pinion` Mech. Sim. FSAE & Baja: Steering Systems` , Steering System`StrSys2_a5dd0fbd-5851-460b-967e-bbe25e62c7c0
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_c9ed1ab2-6d7d-402a-83ac-d9d5fc664dd3.par
+#BlueLink19 Suspension: Independent System Kinematics`Baja SAE: Front Susp. Kinematics` Mech. Sim. FSAE & Baja: Ind. Susp. Kinem.` , Kinematics`KinInd_c9ed1ab2-6d7d-402a-83ac-d9d5fc664dd3
+
+PARSFILE Suspensions\Compliance\CmpInd_d24d15ea-71dc-4589-be46-28505ca766db.par
+#BlueLink16 Suspension: Independent Compliance, Springs, and Dampers`Baja SAE Compliance` Mech. Sim. FSAE & Baja: Ind. Susp. Compliance` , Compliance`CmpInd_d24d15ea-71dc-4589-be46-28505ca766db
+
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_6681fdc2-aa0d-4ab5-bd3a-9156a710f0a4.par
+#BlueLink9 Tire`Baja SAE Left Side Tire` Mech. Sim. FSAE & Baja: Tires` , Left-Front Tire`Tire_6681fdc2-aa0d-4ab5-bd3a-9156a710f0a4
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_9ca31159-fa45-4db0-b4cd-0a825754290f.par
+#BlueLink10 Tire`Baja SAE Right Side Tire` Mech. Sim. FSAE & Baja: Tires` , Tire`Tire_9ca31159-fa45-4db0-b4cd-0a825754290f
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_d357f6d4-b47f-4457-ba25-1ebbe3966e58.par
+#BlueLink20 Suspension: Independent System Kinematics`Baja SAE: Rear Susp. Kinematics` Mech. Sim. FSAE & Baja: Ind. Susp. Kinem.` , Kinematics`KinInd_d357f6d4-b47f-4457-ba25-1ebbe3966e58
+
+PARSFILE Suspensions\Compliance\CmpInd_d24d15ea-71dc-4589-be46-28505ca766db.par
+#BlueLink17 Suspension: Independent Compliance, Springs, and Dampers`Baja SAE Compliance` Mech. Sim. FSAE & Baja: Ind. Susp. Compliance` , Compliance`CmpInd_d24d15ea-71dc-4589-be46-28505ca766db
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_6681fdc2-aa0d-4ab5-bd3a-9156a710f0a4.par
+#BlueLink13 Tire`Baja SAE Left Side Tire` Mech. Sim. FSAE & Baja: Tires` , Left-Rear Tire`Tire_6681fdc2-aa0d-4ab5-bd3a-9156a710f0a4
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_9ca31159-fa45-4db0-b4cd-0a825754290f.par
+#BlueLink14 Tire`Baja SAE Right Side Tire` Mech. Sim. FSAE & Baja: Tires` , Rear Tire`Tire_9ca31159-fa45-4db0-b4cd-0a825754290f
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_39aa3051-db7a-47c3-8556-5616d113d89e.par
+#BlueLink0 Vehicle: Sprung Mass`Baja SAE Sprung Mass` Mech. Sim. FSAE & Baja` , Sprung Mass`SprMass_39aa3051-db7a-47c3-8556-5616d113d89e
+
+PARSFILE Aerodynamics\Aero_Main\Aero_c6f4d51d-25d4-4e5d-befc-d12172e7f3a3.par
+#BlueLink1 Aerodynamics: Basic`Baja SAE Aero` Baja SAE` , Aerodynamics`Aero_c6f4d51d-25d4-4e5d-befc-d12172e7f3a3
+
+PARSFILE Powertrain\Rwd\RWD_3fccf5ac-1b6c-4b13-a4f3-72ad2ec5778e.par
+#BlueLink4 Powertrain: Rear-Wheel Drive`Mech. Sim. Baja: 7.5 kW w/ CVT` Mech. Sim. FSAE & Baja: Powertrains` , Powertrain`RWD_3fccf5ac-1b6c-4b13-a4f3-72ad2ec5778e
+
+PARSFILE Brakes\4W_System\Brk4W_8ce8bb46-4bcf-4109-ac67-7b040d424256.par
+#BlueLink6 Brakes: Four-Wheel System`Baja SAE Brakes, No ABS` Mech. Sim. FSAE & Baja: Brakes` , Brake System`Brk4W_8ce8bb46-4bcf-4109-ac67-7b040d424256
+
+PARSFILE Animator\Vehicles\AniVeh_e2203068-c6b8-446c-bba4-888d09889b3b.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`Baja SAE Vehicle` Mech. Sim. FSAE & Baja: Vehicles & Targets` , Vehicle 3D Shape`AniVeh_e2203068-c6b8-446c-bba4-888d09889b3b
+
+*IMAGE_FIT_MODE 1
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Assembly\Vehicle_505a6006-6cdd-4c61-aeec-49bd09ce1452.png
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { Mechanical Simulation FSAE & Baja } Mech. Sim. Baja Vehicle Assembly
+#Library : Vehicle: Assembly
+#DataSet : Mech. Sim. Baja Vehicle Assembly
+#Category: Mechanical Simulation FSAE & Baja
+#FileID  : Vehicle_505a6006-6cdd-4c61-aeec-49bd09ce1452
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Events`A. Rev to Launch`FSAE Acceleration and Braking
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 av_eng
+*VALUE1 10250
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_a707549f-09ea-4f2d-86ee-5ccb52597176.par
+#BlueLink18 Control: Throttle (Open Loop)`Ramp to Full Throttle in 0.1 seconds` Ramp` , Speed link`Throttle_a707549f-09ea-4f2d-86ee-5ccb52597176
+
+#MiscYellow0
+vlow_clutch -1
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_99583725-3fab-4a15-a40c-665c2c8bd2f5.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Constant: 3 MPa` Constant` , Miscellaneous`PbkCon_99583725-3fab-4a15-a40c-665c2c8bd2f5
+
+PARSFILE Control\Clutch\ClCon_605aad24-35e9-45eb-82f9-7d1a35269e09.par
+#BlueLink11 Control: Clutch (Open Loop)`Clutch Disengaged` Single Engagement / Disengagement` , Miscellaneous`ClCon_605aad24-35e9-45eb-82f9-7d1a35269e09
+
+PARSFILE Control\Gear_mt\GearOL_9e92de50-8fdc-48bf-b5a6-3cdaade74732.par
+#BlueLink12 Control: Shifting (Open Loop)`Constant: 1st Gear` Constant` , Miscellaneous`GearOL_9e92de50-8fdc-48bf-b5a6-3cdaade74732
+
+PARSFILE Control\Driver\StrDM_5e1b87df-4a9a-4a60-ac80-544adfa4667d.par
+#BlueLink13 Control: Steering by the Closed-loop Driver Model`No Offset, 1 sec. Preview` Constant Position` , Miscellaneous`StrDM_5e1b87df-4a9a-4a60-ac80-544adfa4667d
+
+MAKE_EVENT av_eng > 10250 ; Events\Events_b0249a25-6e6f-4996-a494-442b5baa1da5.par
+#BlueLink0 Events`B. Launch` FSAE Acceleration and Braking` , Events`Events_b0249a25-6e6f-4996-a494-442b5baa1da5
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { FSAE Acceleration and Braking } A. Rev to Launch
+#Library : Events
+#DataSet : A. Rev to Launch
+#Category: FSAE Acceleration and Braking
+#FileID  : Events_766ad035-71ee-4d40-b1c1-11cb59339387
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

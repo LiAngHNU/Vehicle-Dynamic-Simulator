@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Elm: Summer, Small`Environment: Trees
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Environment\Trees\3D_Trees\Elm_Small_Summer_A.OSG
+#ENDMYellow
+
+SET_COLOR 1 1 1
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Video Camera`Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Small
+#Library : Animator: Shape File Link
+#DataSet : Elm: Summer, Small
+#Category: Environment: Trees
+#FileID  : Shape_a1860187-937f-4a26-bbf6-484e7ce439e3
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

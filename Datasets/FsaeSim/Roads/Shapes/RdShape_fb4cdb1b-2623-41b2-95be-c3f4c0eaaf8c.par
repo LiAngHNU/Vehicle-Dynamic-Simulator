@@ -1,0 +1,151 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Off-Road, Slope 10.7 deg, S Stop = 250 m`Ride Roads
+NLANES 9
+OPTTHRESHOLD 0.1
+#MiscYellow0
+# 1 1 1, Dirt, 0.05, 15, 1, -1.8, m, 1.8, m, 17, , -5, 250, 0.1, , , Random
+# 1 1 1, Grass (Light), 0.05, 10, 5, 2.8, m, 50, m, , , -5, 250, 0.1, , , Foliage
+# 1 1 1, Grass (Light), 0.05, 10, 5, -2.8, m, -50, m, , , -5, 250, 0.1, , , Foliage
+# 1 1 1, Dirt, 0.05, 10, 1, -1.8, m, 1.8, m, , , -50, -5, 5, , , Random
+# 1 1 1, Dirt, 0.05, 10, 1, -1.8, m, 1.8, m, , , 69.5, 250, 5, , , Random
+# 1 1 1, Dirt Transition, 0.05, 10, -1, -2.8, m, -1.8, m, , , -50, 250, 0.1, , , Foliage
+# 1 1 1, Dirt Transition, 0.05, 10, 1, 1.8, m, 2.8, m, , , -50, 250, 0.1, , , Foliage
+# 1 1 1, Grass (Light), 0.05, 10, 5, -50, m, 50, m, , , 69.5, 250, 5, , -0.01, Foliage
+# 1 1 1, Grass (Light), 0.05, 10, 5, -50, m, 50, m, , , -50, -5, 5, , -0.01, Foliage
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Dirt
+SPECULAR(1) 0.05
+SCALE(1) 15
+LTILES(1) 1
+LIN(1) -1.8
+LINUNITS(1) m
+LOUT(1) 1.8
+LOUTUNITS(1) m
+LDIV(1) 17
+SSTART(1) -5
+SSTOP(1) 250
+SINT(1) 0.1
+AUTODETAIL(1) Random
+COLOR(2) 1 1 1
+MATERIAL(2) Grass (Light)
+SPECULAR(2) 0.05
+SCALE(2) 10
+LTILES(2) 5
+LIN(2) 2.8
+LINUNITS(2) m
+LOUT(2) 50
+LOUTUNITS(2) m
+SSTART(2) -5
+SSTOP(2) 250
+SINT(2) 0.1
+AUTODETAIL(2) Foliage
+COLOR(3) 1 1 1
+MATERIAL(3) Grass (Light)
+SPECULAR(3) 0.05
+SCALE(3) 10
+LTILES(3) 5
+LIN(3) -2.8
+LINUNITS(3) m
+LOUT(3) -50
+LOUTUNITS(3) m
+SSTART(3) -5
+SSTOP(3) 250
+SINT(3) 0.1
+AUTODETAIL(3) Foliage
+COLOR(4) 1 1 1
+MATERIAL(4) Dirt
+SPECULAR(4) 0.05
+SCALE(4) 10
+LTILES(4) 1
+LIN(4) -1.8
+LINUNITS(4) m
+LOUT(4) 1.8
+LOUTUNITS(4) m
+SSTART(4) -50
+SSTOP(4) -5
+SINT(4) 5
+AUTODETAIL(4) Random
+COLOR(5) 1 1 1
+MATERIAL(5) Dirt
+SPECULAR(5) 0.05
+SCALE(5) 10
+LTILES(5) 1
+LIN(5) -1.8
+LINUNITS(5) m
+LOUT(5) 1.8
+LOUTUNITS(5) m
+SSTART(5) 69.5
+SSTOP(5) 250
+SINT(5) 5
+AUTODETAIL(5) Random
+COLOR(6) 1 1 1
+MATERIAL(6) Dirt Transition
+SPECULAR(6) 0.05
+SCALE(6) 10
+LTILES(6) -1
+LIN(6) -2.8
+LINUNITS(6) m
+LOUT(6) -1.8
+LOUTUNITS(6) m
+SSTART(6) -50
+SSTOP(6) 250
+SINT(6) 0.1
+AUTODETAIL(6) Foliage
+COLOR(7) 1 1 1
+MATERIAL(7) Dirt Transition
+SPECULAR(7) 0.05
+SCALE(7) 10
+LTILES(7) 1
+LIN(7) 1.8
+LINUNITS(7) m
+LOUT(7) 2.8
+LOUTUNITS(7) m
+SSTART(7) -50
+SSTOP(7) 250
+SINT(7) 0.1
+AUTODETAIL(7) Foliage
+COLOR(8) 1 1 1
+MATERIAL(8) Grass (Light)
+SPECULAR(8) 0.05
+SCALE(8) 10
+LTILES(8) 5
+LIN(8) -50
+LINUNITS(8) m
+LOUT(8) 50
+LOUTUNITS(8) m
+SSTART(8) 69.5
+SSTOP(8) 250
+SINT(8) 5
+DZ(8) -0.01
+AUTODETAIL(8) Foliage
+COLOR(9) 1 1 1
+MATERIAL(9) Grass (Light)
+SPECULAR(9) 0.05
+SCALE(9) 10
+LTILES(9) 5
+LIN(9) -50
+LINUNITS(9) m
+LOUT(9) 50
+LOUTUNITS(9) m
+SSTART(9) -50
+SSTOP(9) -5
+SINT(9) 5
+DZ(9) -0.01
+AUTODETAIL(9) Foliage
+MTL_FILE Animator\Road_Materials\road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Ride Roads } Off-Road, Slope 10.7 deg, S Stop = 250 m
+#Library : Road: Animator Surface Shapes
+#DataSet : Off-Road, Slope 10.7 deg, S Stop = 250 m
+#Category: Ride Roads
+#FileID  : RdShape_fb4cdb1b-2623-41b2-95be-c3f4c0eaaf8c
+#Product : CarSim 2020.0
+#VehCode Road Shapes
+
+END

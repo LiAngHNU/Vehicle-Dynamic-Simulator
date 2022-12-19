@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Engine RPM`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1
+
+#BlueLink1 ` , Discontinued` , Discontinued` , Discontinued`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS AV_Eng, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 0
+
+
+PTITLE Engine RPM
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } Engine RPM
+#Library : Plot: Setup
+#DataSet : Engine RPM
+#Category: Powertrain
+#FileID  : Plot_92c3bffb-a766-4f7d-9f5e-73059542ee31
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

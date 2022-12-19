@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Plot: Setup`Wheel Slip Ratios`* * * HUR Visualization
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Kappa_L1, Station
+PLOTCHANNELS Kappa_R1, Station
+PLOTCHANNELS Kappa_L2, Station
+PLOTCHANNELS Kappa_R2, Station
+PLOTCHANNELS KappL_L1, Station
+PLOTCHANNELS KappL_R1, Station
+PLOTCHANNELS KappL_L2, Station
+PLOTCHANNELS KappL_R2, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Wheel Slip Ratios
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * HUR Visualization } Wheel Slip Ratios
+#Library : Plot: Setup
+#DataSet : Wheel Slip Ratios
+#Category: * * * HUR Visualization
+#FileID  : Plot_63b2cdfe-0c25-4abb-8f10-c8d9699b1d0f
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Spin Rates in EV Powertrain`Powertrain (Hybrid and EV)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS AV_Trans, Time, Motor (ring gear)
+
+#ENDMYellow
+
+YAXISLABEL RPM
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Spin Rates in EV Powertrain
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain (Hybrid and EV) } Spin Rates in EV Powertrain
+#Library : Plot: Setup
+#DataSet : Spin Rates in EV Powertrain
+#Category: Powertrain (Hybrid and EV)
+#FileID  : Plot_ffb73284-58fd-4c81-b7e7-4c98318d15b4
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

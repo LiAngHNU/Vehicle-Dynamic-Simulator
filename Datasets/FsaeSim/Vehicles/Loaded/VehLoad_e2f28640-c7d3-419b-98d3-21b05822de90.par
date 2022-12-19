@@ -1,0 +1,53 @@
+PARSFILE
+#FullDataName Vehicle with Loads, Sensors, Trailer, etc.`Mechanical Simulation FSAE (Hybrid)`FSAE
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+
+symbol_push <<hitch_x>> 0
+symbol_push <<hitch_y>> 0
+symbol_push <<hitch_z>> 0
+iunit 1
+PARSFILE Vehicles\Assembly\Vehicle_29eda444-d2a0-4f2f-aed3-f82c53028f92.par
+#BlueLink0 Vehicle: Assembly`Mech. Sim. FSAE Vehicle Assembly (Hybrid)` Mechanical Simulation FSAE & Baja` , Lead Unit`Vehicle_29eda444-d2a0-4f2f-aed3-f82c53028f92
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Custom\Custom_b9ac97d5-2238-4b5d-bb38-8089cd1b13d4.par
+#BlueLink1 Payload: Custom`FSAE Driver Mass & Inertia` FSAE` , Miscellaneous`Custom_b9ac97d5-2238-4b5d-bb38-8089cd1b13d4
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Output\Points\RefPt_dd2f88d8-ecc6-4112-9ade-83d2a3ec10f0.par
+#BlueLink6 Custom Forces and Reference Points`K and C Table (X = -850mm, Z = 50mm)` K and C Test Machine` , Miscellaneous`RefPt_dd2f88d8-ecc6-4112-9ade-83d2a3ec10f0
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_29eda444-d2a0-4f2f-aed3-f82c53028f92.png
+
+LOG_ENTRY Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { FSAE } Mechanical Simulation FSAE (Hybrid)
+#Library : Vehicle with Loads, Sensors, Trailer, etc.
+#DataSet : Mechanical Simulation FSAE (Hybrid)
+#Category: FSAE
+#FileID  : VehLoad_e2f28640-c7d3-419b-98d3-21b05822de90
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

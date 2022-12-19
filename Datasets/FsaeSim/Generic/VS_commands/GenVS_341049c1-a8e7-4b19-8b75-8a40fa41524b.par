@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Generic VS Commands`Speedometer`HUD Gauges
+#VehCode VS Commands
+
+#MiscYellow0
+ADD_OBJECT hud_image Vx (Background)
+  location 10 10 200 200
+  align_x right
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  image_file Resources\Animator\2D_HUD_Icons\Dash_Gauges\Speedometer.dds
+END_OBJECT hud_image Vx (Back Ground)
+
+
+ANI_Vxz_fwd
+WRT_vxz_fwd
+
+ADD_OBJECT hud_image Vx (Needle)
+  location 10 10 200 200
+  align_x right
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  ! Calculation for tachometer needle
+  rotate -((vxz_fwd * 1.5)) + 150
+  image_file Resources\Animator\2D_HUD_Icons\Dash_Gauges\Needle.dds
+END_OBJECT hud_image Vx (Needle)
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { HUD Gauges } Speedometer
+#Library : Generic VS Commands
+#DataSet : Speedometer
+#Category: HUD Gauges
+#FileID  : GenVS_341049c1-a8e7-4b19-8b75-8a40fa41524b
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

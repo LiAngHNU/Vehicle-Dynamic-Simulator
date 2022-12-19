@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Animator: Sound Modifier`Power On Loudness: Load Effect`Gas Engine Sound Modifiers
+
+#MiscYellow0
+define_parameter max_torque 265
+define_output v_mod1 = if_gt_0_then(m_engout, pow(m_engout/max_torque, 0.5), 0);
+#ENDMYellow
+
+
+#RingCtrl0 VOLUME
+ADD_SOUND_MODIFIER VOLUME
+SOUNDMOD_OPERATION mult
+
+SOUNDMOD_INPUT_NAME v_mod1
+SOUNDMOD_INPUT_MIN 0.0
+SOUNDMOD_INPUT_LOW 1.0
+SOUNDMOD_INPUT_HIGH 1.0
+SOUNDMOD_INPUT_MAX 1.0
+SOUNDMOD_OUTPUT_MIN 0.0
+SOUNDMOD_OUTPUT_LOW 1.0
+SOUNDMOD_OUTPUT_HIGH 1.0
+SOUNDMOD_OUTPUT_MAX 1.0
+
+WRT_v_mod1
+ANI_v_mod1
+
+#EMBEDDED_NOTES
+#This modifer is to be applied to power-on conditions, i.e, when the engine torque is positive.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Sound Modifier; { Gas Engine Sound Modifiers } Power On Loudness: Load Effect
+#Library : Animator: Sound Modifier
+#DataSet : Power On Loudness: Load Effect
+#Category: Gas Engine Sound Modifiers
+#FileID  : SndMod_82007129-3b66-4c50-babb-2325954a277f
+#Product : CarSim 2020.0
+#VehCode Sound Modifier
+
+END

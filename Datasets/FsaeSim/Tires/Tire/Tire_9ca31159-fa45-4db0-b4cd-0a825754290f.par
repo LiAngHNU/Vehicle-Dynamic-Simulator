@@ -1,0 +1,72 @@
+PARSFILE
+#FullDataName Tire`Baja SAE Right Side Tire`Mech. Sim. FSAE & Baja: Tires
+FZ_REF 6500
+X_LENGTH 292
+Z_LENGTH 292
+Y_LENGTH 175
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\ShpGrp_2427cfb9-4d60-42b0-891f-ca85670829f6.par
+#BlueLink4 Animator: Shape Assembly`Baja SAE Right Side Tire` Mech. Sim. FSAE & Baja: Shape Assembly` , Animator`ShpGrp_2427cfb9-4d60-42b0-891f-ca85670829f6
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 175
+RRE 284
+R0 292
+FZ_TIRE_COEFFICIENT 230
+FZ_MAX 100000
+M_TIRE 0
+IT 0
+IT_XXZZ 0
+PARSFILE Generic\tables\GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068
+
+PARSFILE Generic\tables\GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.004
+RR_V 0.000025
+L_CONTACT_X_CONSTANT 70
+L_CONTACT_Y_CONSTANT 175
+RR_FX 1
+OPT_TIRE_COMB 1
+R_TIRE_COMB 1.1
+PARSFILE Tires\Mz\TireMz_d281e965-4641-4968-b3ce-25f36ba99538.par
+#BlueLink0 Tire: Aligning Moment`175/65 R14` Touring Tires` , Aligning Moment`TireMz_d281e965-4641-4968-b3ce-25f36ba99538
+
+PARSFILE Tires\Fy\TireFy_9a15db7f-122e-4e13-b021-5738f1703457.par
+#BlueLink1 Tire: Lateral Force`175/65 R14` Touring Tires` , Lateral Force`TireFy_9a15db7f-122e-4e13-b021-5738f1703457
+
+PARSFILE Tires\Fx\TireFx_85022984-db32-4ff1-98e3-9d6b8f3429f2.par
+#BlueLink2 Tire: Longitudinal Force`175/65 R14` Touring Tires` , Longitudinal Force`TireFx_85022984-db32-4ff1-98e3-9d6b8f3429f2
+
+PARSFILE Tires\Camber_Thrust\CamStiff_aefc96a5-44e9-4b04-b0f5-6c2a540c3595.par
+#BlueLink3 Tire: Camber Thrust Coefficient`175/65 R14` Touring Tires` , Camber Thrust`CamStiff_aefc96a5-44e9-4b04-b0f5-6c2a540c3595
+
+
+
+LOG_ENTRY Used Dataset: Tire; { Mech. Sim. FSAE & Baja: Tires } Baja SAE Right Side Tire
+#Library : Tire
+#DataSet : Baja SAE Right Side Tire
+#Category: Mech. Sim. FSAE & Baja: Tires
+#FileID  : Tire_9ca31159-fa45-4db0-b4cd-0a825754290f
+#Product : CarSim 2020.0
+#VehCode Tire
+
+END

@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Animator: Sound Modifier`Power On Loudness: Speed Effect`Gas Engine Sound Modifiers
+
+
+#RingCtrl0 VOLUME
+ADD_SOUND_MODIFIER VOLUME
+SOUNDMOD_OPERATION mult
+
+SOUNDMOD_INPUT_NAME av_eng
+SOUNDMOD_INPUT_MIN 0.0
+SOUNDMOD_INPUT_LOW 3500.0
+SOUNDMOD_INPUT_HIGH 7000.0
+SOUNDMOD_INPUT_MAX 70000.0
+SOUNDMOD_OUTPUT_MIN 0.0
+SOUNDMOD_OUTPUT_LOW 1.0
+SOUNDMOD_OUTPUT_HIGH 2.0
+SOUNDMOD_OUTPUT_MAX 20.0
+
+WRT_av_eng
+ANI_av_eng
+
+LOG_ENTRY Used Dataset: Animator: Sound Modifier; { Gas Engine Sound Modifiers } Power On Loudness: Speed Effect
+#Library : Animator: Sound Modifier
+#DataSet : Power On Loudness: Speed Effect
+#Category: Gas Engine Sound Modifiers
+#FileID  : SndMod_c37319df-b7d3-49ac-a826-559afe89c56b
+#Product : CarSim 2020.0
+#VehCode Sound Modifier
+
+END

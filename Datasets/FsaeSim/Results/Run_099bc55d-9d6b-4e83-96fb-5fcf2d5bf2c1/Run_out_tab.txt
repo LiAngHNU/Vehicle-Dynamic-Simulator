@@ -1,0 +1,1285 @@
+ Keyword	8-Char Alias	Units	Units Type	Component Type	Full Label	Specific Component	Extra Info
+AAx	 	rad/s2	Angular acceleration	Chassis motion	Roll acc. (body-fixed), vehicle	Vehicle roll (body-fixed)	This is the [sx] component of the angular acceleration vector of the sprung mass.
+AAy	 	rad/s2	Angular acceleration	Chassis motion	Pitch acc. (body-fixed), vehicle	Vehicle pitch (body-fixed)	This is the [sy] component of the angular acceleration vector of the sprung mass.
+AAy_L1	 	rad/s2	Angular acceleration	Wheels	Wheel L1 spin acceleration	Wheel L1 spin
+AAy_L2	 	rad/s2	Angular acceleration	Wheels	Wheel L2 spin acceleration	Wheel L2 spin
+AAy_R1	 	rad/s2	Angular acceleration	Wheels	Wheel R1 spin acceleration	Wheel R1 spin
+AAy_R2	 	rad/s2	Angular acceleration	Wheels	Wheel R2 spin acceleration	Wheel R2 spin
+AAz	 	rad/s2	Angular acceleration	Chassis motion	Yaw acc. (body-fixed), vehicle	Vehicle yaw (body-fixed)	This is the [sz] component of the angular acceleration vector of the sprung mass.
+AA_Eng	 	rad/s2	Angular acceleration	Powertrain	Engine crankshaft angular accel.	Engine crankshaft
+AA_P	 	rad/s2	Angular acceleration	Chassis motion	Pitch accel. (Euler), vehicle	Vehicle pitch (Euler)	This is the second time derivative of the Euler pitch angle of the sprung mass. Be aware that the second derivatives AA_P, AA_R, and AA_Y are not measurable in physical vehicles.
+AA_R	 	rad/s2	Angular acceleration	Chassis motion	Roll accel. (Euler), vehicle	Vehicle roll (Euler)	This is the second time derivative of the Euler roll angle of the sprung mass.
+AA_Y	 	rad/s2	Angular acceleration	Chassis motion	Yaw accel. (Euler), vehicle	Vehicle yaw (Euler)	This is the second time derivative of the Euler yaw angle of the sprung mass.
+ABS_L1	 	-	ABS apply command	Brakes	ABS apply command, L1	ABS apply command, L1
+ABS_L2	 	-	ABS apply command	Brakes	ABS apply command, L2	ABS apply command, L2
+ABS_R1	 	-	ABS apply command	Brakes	ABS apply command, R1	ABS apply command, R1
+ABS_R2	 	-	ABS apply command	Brakes	ABS apply command, R2	ABS apply command, R2
+Alpha_L1	 	deg	Angle	Tires	Lateral slip angle, tire L1	Tire L1 lateral slip	Instant lateral slip is the arc-tangent of the ratio of lateral to longitudinal velocity at the center of tire contact in the plane of the ground at the tire contact: ATAN2(Vy, Vx).
+Alpha_L2	 	deg	Angle	Tires	Lateral slip angle, tire L2	Tire L2 lateral slip
+Alpha_R1	 	deg	Angle	Tires	Lateral slip angle, tire R1	Tire R1 lateral slip
+Alpha_R2	 	deg	Angle	Tires	Lateral slip angle, tire R2	Tire R2 lateral slip
+AlphL_L1	 	deg	Angle	Tires	Lateral slip (lagged), tire L1	Tire L1 slip (lagged)	Lagged slip angle is the arc-tangent of the state variable SV_SLIP_LAT_L1 that follows the tangent of the instant slip angle ALPHA_L1, subject to a dynamic lag based on lateral relaxation length.
+AlphL_L2	 	deg	Angle	Tires	Lateral slip (lagged), tire L2	Tire L2 slip (lagged)
+AlphL_R1	 	deg	Angle	Tires	Lateral slip (lagged), tire R1	Tire R1 slip (lagged)
+AlphL_R2	 	deg	Angle	Tires	Lateral slip (lagged), tire R2	Tire R2 slip (lagged)
+AVx	 	deg/s	Angular rate	Chassis motion	Roll rate (body-fixed), vehicle	Vehicle roll (body-fixed)	This is the [sx] component of the angular velocity vector of the sprung mass.
+AVx_L1	 	deg/s	Angular rate	Wheels	Roll rate, wheel L1	Roll rate, wheel L1	This is the roll component of the angular velocity vector of the wheel knuckle, in the body-fixed [wx] direction.
+AVx_L2	 	deg/s	Angular rate	Wheels	Roll rate, wheel L2	Roll rate, wheel L2
+AVx_R1	 	deg/s	Angular rate	Wheels	Roll rate, wheel R1	Roll rate, wheel R1
+AVx_R2	 	deg/s	Angular rate	Wheels	Roll rate, wheel R2	Roll rate, wheel R2
+AVy	 	deg/s	Angular rate	Chassis motion	Pitch rate (body-fixed), vehicle	Vehicle pitch (body-fixed)	This is the [sy] component of the angular velocity vector of the sprung mass.
+AVy_L1	 	rpm	Driveline speed	Wheels	Wheel L1 spin	Wheel L1 spin
+AVy_L2	 	rpm	Driveline speed	Wheels	Wheel L2 spin	Wheel L2 spin
+AVy_R1	 	rpm	Driveline speed	Wheels	Wheel R1 spin	Wheel R1 spin
+AVy_R2	 	rpm	Driveline speed	Wheels	Wheel R2 spin	Wheel R2 spin
+AVy_W_L1	 	deg/s	Angular rate	Wheels	Pitch rate, wheel L1	Pitch rate, wheel L1	This is the pitch component of the angular velocity vector of the wheel knuckle, in the body-fixed [wy] direction.
+AVy_W_L2	 	deg/s	Angular rate	Wheels	Pitch rate, wheel L2	Pitch rate, wheel L2
+AVy_W_R1	 	deg/s	Angular rate	Wheels	Pitch rate, wheel R1	Pitch rate, wheel R1
+AVy_W_R2	 	deg/s	Angular rate	Wheels	Pitch rate, wheel R2	Pitch rate, wheel R2
+AVz	 	deg/s	Angular rate	Chassis motion	Yaw rate (body-fixed), vehicle	Vehicle yaw (body-fixed)	This is the [sz] component of the angular velocity vector of the sprung mass.
+AVzKp_L1	 	deg/s	Angular rate	Steering	Steer rate about kingpin L1	Kingpin L1 steer rate	Component of angular velocity vector of wheel knuckle about the 3D inclined kingpin axis.
+AVzKp_L2	 	deg/s	Angular rate	Steering	Steer rate about kingpin L2	Kingpin L2 steer rate
+AVzKp_R1	 	deg/s	Angular rate	Steering	Steer rate about kingpin R1	Kingpin R1 steer rate	Component of angular velocity vector of wheel knuckle about the 3D inclined kingpin axis.
+AVzKp_R2	 	deg/s	Angular rate	Steering	Steer rate about kingpin R2	Kingpin R2 steer rate
+AVz_L1	 	deg/s	Angular rate	Wheels	Yaw rate, wheel L1	Yaw rate, wheel L1	This is the yaw component of the angular velocity vector of the wheel knuckle, in the body-fixed [wz] direction..
+AVz_L2	 	deg/s	Angular rate	Wheels	Yaw rate, wheel L2	Yaw rate, wheel L2
+AVz_R1	 	deg/s	Angular rate	Wheels	Yaw rate, wheel R1	Yaw rate, wheel R1
+AVz_R2	 	deg/s	Angular rate	Wheels	Yaw rate, wheel R2	Yaw rate, wheel R2
+AV_D3f	 	rpm	Driveline speed	Powertrain	Trans case shaft to drv. A1 spin	Transfer case front output shaft
+AV_D3r	 	rpm	Driveline speed	Powertrain	Trans case shaft to drv. A2 spin	Transfer case rear output shaft
+AV_DS_L1	 	rpm	Driveline speed	Powertrain	Left-front driveshaft speed	LF driveshaft
+AV_DS_L2	 	rpm	Driveline speed	Powertrain	Left-rear driveshaft speed	LR driveshaft
+AV_DS_R1	 	rpm	Driveline speed	Powertrain	Right-front driveshaft speed	RF driveshaft
+AV_DS_R2	 	rpm	Driveline speed	Powertrain	Right-rear driveshaft speed	RR driveshaft
+AV_Eng	 	rpm	Driveline speed	Powertrain	Engine crankshaft spin	Engine crankshaft
+AV_Gear1	 	deg/s	Angular rate	Steering	Pitman arm rotation rate, axle 1	Axle 1 steering
+AV_Gear2	 	deg/s	Angular rate	Steering	Pitman arm rotation rate, axle 2	Axle 2 steering
+AV_Motor	 	rpm	Driveline speed	Powertrain	Electric motor ring gear spin	Electric motor (ring gear)
+AV_P	 	deg/s	Angular rate	Chassis motion	Pitch rate (Euler), vehicle	Vehicle pitch (Euler)	This is the time derivative of the Euler pitch angle of the sprung mass. Be aware that the derivatives AV_P, AV_R, and AV_Y are not measurable in physical vehicles.
+AV_R	 	deg/s	Angular rate	Chassis motion	Roll rate (Euler), vehicle	Vehicle roll (Euler)	This is the time derivative of the Euler roll angle of the sprung mass.
+AV_TC	 	rpm	Driveline speed	Powertrain	Trans input shaft spin	Transmission input shaft
+AV_Trans	 	rpm	Driveline speed	Powertrain	Trans. output shaft spin	Transmission output shaft
+AV_Y	 	deg/s	Angular rate	Chassis motion	Yaw rate (Euler), vehicle	Vehicle yaw (Euler)	This is the time derivative of the Euler yaw angle of the sprung mass.
+Ax	 	g	Longitudinal acceleration	Chassis motion	Long. accel., inst. CG, vehicle	Instant CG, vehicle	This is the acceleration of the instant CG of the vehicle unit in the ISO/SAE [x] direction. Be aware that the motion of the instant CG cannot be measured directly in physical vehicles.
+Ax_Rd	 	g	Longitudinal acceleration	Chassis motion	Road X accel., inst. CG, vehicle	Instant CG, vehicle	This is the acceleration of the instant CG of the vehicle unit, in the road [rx] direction.
+Ax_SCcmd	 	g	Longitudinal acceleration	Speed controller	Ax command for speed controller	Ax command for speed controller
+Ax_SCrq	 	g	Longitudinal acceleration	Speed controller	Ax request from speed controller	Ax request from speed controller
+Ax_SM	 	g	Longitudinal acceleration	Chassis motion	Long. accel., CG, sprung mass	CG, sprung mass	This is the [x] component of the acceleration vector of the sprung mass CG.
+Ay	 	g	Lateral acceleration	Chassis motion	Lat. accel., inst. CG, vehicle	Instant CG, vehicle	This is the acceleration of the instant CG of the vehicle unit in the ISO/SAE [y] direction. Be aware that the motion of the instant CG cannot be measured directly in physical vehicles.
+Ay_Rd	 	g	Lateral acceleration	Chassis motion	Road Y accel., inst. CG, vehicle	Instant CG, vehicle	This is the acceleration of the instant CG of the vehicle unit in the road [ry] direction.
+Ay_SM	 	g	Lateral acceleration	Chassis motion	Lat. accel., CG, sprung mass	CG, sprung mass	This is the [y] component of the acceleration vector of the sprung mass CG.
+Az	 	g	Vertical acceleration	Chassis motion	Vert. accel., inst. CG, vehicle	Instant CG, vehicle	This is the acceleration of the instant CG of the vehicle unit, in the [nz] direction. Be aware that the motion of the instant CG cannot be measured directly in physical vehicles.
+Az_Rd	 	g	Vertical acceleration	Chassis motion	Road Z accel., inst. CG, vehicle	Instant CG, vehicle	This is the acceleration of the instant CG of the vehicle unit in the road [rz] direction.
+Az_SM	 	g	Vertical acceleration	Chassis motion	Vert. accel., CG, sprung mass	CG, sprung mass	This is the [nz] component of the acceleration vector of the sprung mass CG.
+A_Bttry	 	W/V	Ampere	Powertrain	Battery output current	Electric battery output
+A_Drv_1	 	m2	Error area	Driver model	Driver pt 1 error area	Driver preview point 1	This is the area between the the reference path PATH_ID_DM and the driver preview points installed by the VS Command INSTALL_DRIVER_PREVIEW_SENSORS.
+A_Drv_2	 	m2	Error area	Driver model	Driver pt 2 error area	Driver preview point 2
+A_Drv_3	 	m2	Error area	Driver model	Driver pt 3 error area	Driver preview point 3
+A_Drv_4	 	m2	Error area	Driver model	Driver pt 4 error area	Driver preview point 4
+A_Drv_5	 	m2	Error area	Driver model	Driver pt 5 error area	Driver preview point 5
+A_Gear1	 	deg	Angle	Steering	Pitman arm rotation, axle 1	Axle 1 steering
+A_Gear2	 	deg	Angle	Steering	Pitman arm rotation, axle 2	Axle 2 steering
+A_StrIn1	 	deg	Angle	Steering	Steering input gear angle, axle 	Axle 1 steering
+A_StrIn2	 	deg	Angle	Steering	Steering input gear angle, axle 	Axle 2 steering
+A_Tbar	 	deg	Angle	Steering	Steering torsion bar angle	Steering
+Beta	 	deg	Angle	Chassis motion	Slip angle, vehicle	Vehicle slip (beta)	The side-slip angle of the vehicle unit is calculated with the ISO/SAE definition as ATAN2(Vy, Vx), where Vy and Vx are the ISO [y] and [x] components of the velocity of the instant center of gravity of the vehicle.
+BetaAir	 	deg	Angle	Aerodynamics	Aero slip angle, vehicle	Aero slip angle, vehicle	Angle of air velocity in the vehicle reference frame, relative to the instant CG for the vehicle unit. Head-on = 0. 90-deg is in the [y] direction.
+BetaR	 	deg/s	Angular rate	Chassis motion	Slip angle rate, vehicle	Vehicle slip rate
+BetaRd	 	deg	Angle	Chassis motion	Slip angle rel. to road, vehicle	Vehicle slip (beta) rel. to road	This is the side-slip angle of the vehicle unit relative to the Road Reference Frame: ATAN2(Vy_Rd, Vx_Rd).
+BetaRdR	 	deg/s	Angular rate	Chassis motion	Slip angle rate (road), vehicle	Vehicle slip rate (road)
+Bk_Boost	 	mm	Displacement	Brakes	Brake booster displacement	Brake Booster
+Bk_Obj_1	 	-	Braking status	Targets	Braking status for object 1	Object 1
+Bk_Obj_10	Bk_Obj10	-	Braking status	Targets	Braking status for object 10	Object 10
+Bk_Obj_2	 	-	Braking status	Targets	Braking status for object 2	Object 2
+Bk_Obj_3	 	-	Braking status	Targets	Braking status for object 3	Object 3
+Bk_Obj_4	 	-	Braking status	Targets	Braking status for object 4	Object 4
+Bk_Obj_5	 	-	Braking status	Targets	Braking status for object 5	Object 5
+Bk_Obj_6	 	-	Braking status	Targets	Braking status for object 6	Object 6
+Bk_Obj_7	 	-	Braking status	Targets	Braking status for object 7	Object 7
+Bk_Obj_8	 	-	Braking status	Targets	Braking status for object 8	Object 8
+Bk_Obj_9	 	-	Braking status	Targets	Braking status for object 9	Object 9
+Bk_Pedal	 	mm	Displacement	Brakes	Brake pedal displacement	Brake Pedal
+Bk_Stat	 	-	Boolean	Brakes	Brake apply status	Brake Control	This is 0 (brake control not applied; Pbk_Con < 100 Pa) or 1 (brake control applied; Pbk_Con > 100 Pa).
+BrCS1_1	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (C), detect 1	Sensor 1, detect 1
+BrCS1_10	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (C), detect 10	Sensor 1, detect 10
+BrCS1_2	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (C), detect 2	Sensor 1, detect 2
+BrCS1_3	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (C), detect 3	Sensor 1, detect 3
+BrCS1_4	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (C), detect 4	Sensor 1, detect 4
+BrCS1_5	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (C), detect 5	Sensor 1, detect 5
+BrCS1_6	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (C), detect 6	Sensor 1, detect 6
+BrCS1_7	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (C), detect 7	Sensor 1, detect 7
+BrCS1_8	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (C), detect 8	Sensor 1, detect 8
+BrCS1_9	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (C), detect 9	Sensor 1, detect 9
+BrLS1_1	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (L), detect 1	Sensor 1, detect 1
+BrLS1_10	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (L), detect 10	Sensor 1, detect 10
+BrLS1_2	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (L), detect 2	Sensor 1, detect 2
+BrLS1_3	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (L), detect 3	Sensor 1, detect 3
+BrLS1_4	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (L), detect 4	Sensor 1, detect 4
+BrLS1_5	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (L), detect 5	Sensor 1, detect 5
+BrLS1_6	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (L), detect 6	Sensor 1, detect 6
+BrLS1_7	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (L), detect 7	Sensor 1, detect 7
+BrLS1_8	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (L), detect 8	Sensor 1, detect 8
+BrLS1_9	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (L), detect 9	Sensor 1, detect 9
+BrRS1_1	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (R), detect 1	Sensor 1, detect 1
+BrRS1_10	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (R), detect 10	Sensor 1, detect 10
+BrRS1_2	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (R), detect 2	Sensor 1, detect 2
+BrRS1_3	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (R), detect 3	Sensor 1, detect 3
+BrRS1_4	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (R), detect 4	Sensor 1, detect 4
+BrRS1_5	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (R), detect 5	Sensor 1, detect 5
+BrRS1_6	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (R), detect 6	Sensor 1, detect 6
+BrRS1_7	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (R), detect 7	Sensor 1, detect 7
+BrRS1_8	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (R), detect 8	Sensor 1, detect 8
+BrRS1_9	 	deg	Bearing angle	Sensor Detections	Sensor 1 bearing (R), detect 9	Sensor 1, detect 9
+CamberL1	 	deg	Angle	Suspensions	Camber angle, wheel L1	Wheel camber L1
+CamberL2	 	deg	Angle	Suspensions	Camber angle, wheel L2	Wheel camber L2
+CamberR1	 	deg	Angle	Suspensions	Camber angle, wheel R1	Wheel camber R1
+CamberR2	 	deg	Angle	Suspensions	Camber angle, wheel R2	Wheel camber R2
+CamUSL1	 	deg	Angle	Suspensions	Camber (unsteered wheel) L1	Wheel camber (unsteered) L1	Roll angle of the unsteered wheel plane, using the camber sign convention.
+CamUSL2	 	deg	Angle	Suspensions	Camber (unsteered wheel) L2	Wheel camber (unsteered) L2	Roll angle of the unsteered wheel plane, using the camber sign convention.
+CamUSR1	 	deg	Angle	Suspensions	Camber (unsteered wheel) R1	Wheel camber (unsteered) R1
+CamUSR2	 	deg	Angle	Suspensions	Camber (unsteered wheel) R2	Wheel camber (unsteered) R2
+CapBtrDs	 	A-h	Capacity	Powertrain	Battery discharged capacity	Battery discharged
+Clt_D1_2	 	-	Clutch control	Powertrain	Front diff. 2nd clutch control	Front diff. second clutch
+Clt_D2_2	 	-	Clutch control	Powertrain	Rear diff. 2nd clutch control	Rear diff. second clutch
+Clt_D3_2	 	-	Clutch control	Powertrain	Trans. case, 2nd clutch control	Transfer case second clutch
+ClutchD1	 	-	Clutch control	Powertrain	Drive A1 diff. clutch control	Front differential clutch
+ClutchD2	 	-	Clutch control	Powertrain	Drive A2 diff. clutch control	Rear differential clutch
+ClutchD3	 	-	Clutch control	Powertrain	Trns case drive A1-2 clutch ctrl	Transfer case clutch
+ClutchL1	 	-	Clutch control	Powertrain	Front left whl. clutch control	Front left wheel clutch
+ClutchL2	 	-	Clutch control	Powertrain	Rear left whl. clutch control	Rear left wheel clutch
+ClutchR1	 	-	Clutch control	Powertrain	Front right whl. clutch control	Front right wheel clutch
+ClutchR2	 	-	Clutch control	Powertrain	Rear right whl. clutch control	Rear right wheel clutch
+ClutchTr	 	-	Clutch control	Powertrain	Transmission clutch control	Transmission clutch
+Cl_Stat	 	-	Boolean	Powertrain	Clutch locked state	Clutch	Clutch lock status: 0 -> slipping, 1 -> locked.
+CmpAD_L1	 	g	Compression acceleration	Suspensions	Compression accel, damper L1	Damper L1
+CmpAD_L2	 	g	Compression acceleration	Suspensions	Compression accel, damper L2	Damper L2
+CmpAD_R1	 	g	Compression acceleration	Suspensions	Compression accel, damper R1	Damper R1
+CmpAD_R2	 	g	Compression acceleration	Suspensions	Compression accel, damper R2	Damper R2
+CmpD_L1	 	mm	Compression	Suspensions	Compression of damper L1	Damper L1
+CmpD_L2	 	mm	Compression	Suspensions	Compression of damper L2	Damper L2
+CmpD_R1	 	mm	Compression	Suspensions	Compression of damper R1	Damper R1
+CmpD_R2	 	mm	Compression	Suspensions	Compression of damper R2	Damper R2
+CmpJStL1	 	mm	Compression	Suspensions	Compression of jounce stop L1	L1 jounce stop
+CmpJStL2	 	mm	Compression	Suspensions	Compression of jounce stop L2	L2 jounce stop
+CmpJStR1	 	mm	Compression	Suspensions	Compression of jounce stop R1	R1 jounce stop
+CmpJStR2	 	mm	Compression	Suspensions	Compression of jounce stop R2	R2 jounce stop
+CmpRD_L1	 	mm/s	Compression rate	Suspensions	Compression rate for damper L1	Damper L1
+CmpRD_L2	 	mm/s	Compression rate	Suspensions	Compression rate for damper L2	Damper L2
+CmpRD_R1	 	mm/s	Compression rate	Suspensions	Compression rate for damper R1	Damper R1
+CmpRD_R2	 	mm/s	Compression rate	Suspensions	Compression rate for damper R2	Damper R2
+CmpRStL1	 	mm	Compression	Suspensions	Compression of rebound stop L1	L1 rebound stop
+CmpRStL2	 	mm	Compression	Suspensions	Compression of rebound stop L2	L2 rebound stop
+CmpRStR1	 	mm	Compression	Suspensions	Compression of rebound stop R1	R1 rebound stop
+CmpRStR2	 	mm	Compression	Suspensions	Compression of rebound stop R2	R2 rebound stop
+CmpS_L1	 	mm	Compression	Suspensions	Compression of ride spring L1	Ride spring L1
+CmpS_L2	 	mm	Compression	Suspensions	Compression of ride spring L2	Ride spring L2
+CmpS_R1	 	mm	Compression	Suspensions	Compression of ride spring R1	Ride spring R1
+CmpS_R2	 	mm	Compression	Suspensions	Compression of ride spring R2	Ride spring R2
+CmpT_L1	 	mm	Compression	Tires	Compression, tire L1	Tire L1 compression
+CmpT_L2	 	mm	Compression	Tires	Compression, tire L2	Tire L2 compression
+CmpT_R1	 	mm	Compression	Tires	Compression, tire R1	Tire R1 compression
+CmpT_R2	 	mm	Compression	Tires	Compression, tire R2	Tire R2 compression
+DisS1_1	 	m	Distance	Sensor Detections	Sensor 1 distance, detect 1	Sensor 1, detect 1
+DisS1_10	 	m	Distance	Sensor Detections	Sensor 1 distance, detect 10	Sensor 1, detect 10
+DisS1_2	 	m	Distance	Sensor Detections	Sensor 1 distance, detect 2	Sensor 1, detect 2
+DisS1_3	 	m	Distance	Sensor Detections	Sensor 1 distance, detect 3	Sensor 1, detect 3
+DisS1_4	 	m	Distance	Sensor Detections	Sensor 1 distance, detect 4	Sensor 1, detect 4
+DisS1_5	 	m	Distance	Sensor Detections	Sensor 1 distance, detect 5	Sensor 1, detect 5
+DisS1_6	 	m	Distance	Sensor Detections	Sensor 1 distance, detect 6	Sensor 1, detect 6
+DisS1_7	 	m	Distance	Sensor Detections	Sensor 1 distance, detect 7	Sensor 1, detect 7
+DisS1_8	 	m	Distance	Sensor Detections	Sensor 1 distance, detect 8	Sensor 1, detect 8
+DisS1_9	 	m	Distance	Sensor Detections	Sensor 1 distance, detect 9	Sensor 1, detect 9
+Dive_L1	 	deg	Angle	Suspensions	Wheel L1 dive	Wheel L1 dive
+Dive_L2	 	deg	Angle	Suspensions	Wheel L2 dive	Wheel L2 dive
+Dive_R1	 	deg	Angle	Suspensions	Wheel R1 dive	Wheel R1 dive
+Dive_R2	 	deg	Angle	Suspensions	Wheel R2 dive	Wheel R2 dive
+DsLS1_1	 	m	Distance	Sensor Detections	Sensor 1 dist. (L), detect 1	Sensor 1, detect 1
+DsLS1_10	 	m	Distance	Sensor Detections	Sensor 1 dist. (L), detect 10	Sensor 1, detect 10
+DsLS1_2	 	m	Distance	Sensor Detections	Sensor 1 dist. (L), detect 2	Sensor 1, detect 2
+DsLS1_3	 	m	Distance	Sensor Detections	Sensor 1 dist. (L), detect 3	Sensor 1, detect 3
+DsLS1_4	 	m	Distance	Sensor Detections	Sensor 1 dist. (L), detect 4	Sensor 1, detect 4
+DsLS1_5	 	m	Distance	Sensor Detections	Sensor 1 dist. (L), detect 5	Sensor 1, detect 5
+DsLS1_6	 	m	Distance	Sensor Detections	Sensor 1 dist. (L), detect 6	Sensor 1, detect 6
+DsLS1_7	 	m	Distance	Sensor Detections	Sensor 1 dist. (L), detect 7	Sensor 1, detect 7
+DsLS1_8	 	m	Distance	Sensor Detections	Sensor 1 dist. (L), detect 8	Sensor 1, detect 8
+DsLS1_9	 	m	Distance	Sensor Detections	Sensor 1 dist. (L), detect 9	Sensor 1, detect 9
+DsRS1_1	 	m	Distance	Sensor Detections	Sensor 1 dist. (R), detect 1	Sensor 1, detect 1
+DsRS1_10	 	m	Distance	Sensor Detections	Sensor 1 dist. (R), detect 10	Sensor 1, detect 10
+DsRS1_2	 	m	Distance	Sensor Detections	Sensor 1 dist. (R), detect 2	Sensor 1, detect 2
+DsRS1_3	 	m	Distance	Sensor Detections	Sensor 1 dist. (R), detect 3	Sensor 1, detect 3
+DsRS1_4	 	m	Distance	Sensor Detections	Sensor 1 dist. (R), detect 4	Sensor 1, detect 4
+DsRS1_5	 	m	Distance	Sensor Detections	Sensor 1 dist. (R), detect 5	Sensor 1, detect 5
+DsRS1_6	 	m	Distance	Sensor Detections	Sensor 1 dist. (R), detect 6	Sensor 1, detect 6
+DsRS1_7	 	m	Distance	Sensor Detections	Sensor 1 dist. (R), detect 7	Sensor 1, detect 7
+DsRS1_8	 	m	Distance	Sensor Detections	Sensor 1 dist. (R), detect 8	Sensor 1, detect 8
+DsRS1_9	 	m	Distance	Sensor Detections	Sensor 1 dist. (R), detect 9	Sensor 1, detect 9
+dZdXair	 	-	Ground slope	Aerodynamics	X slope at road aero reference 1	X slope: road refence frame 1	dZ/dX slope of the ground at the point where the Road Reference Frame is defined.
+dZdX_L1	 	-	Ground slope	Ground and road	Ground X slope under tire L1	X slope L1	Slope of the road or ground in the global [nx] direction at the center of tire contact.
+dZdX_L2	 	-	Ground slope	Ground and road	Ground X slope under tire L2	X slope L2
+dZdX_R1	 	-	Ground slope	Ground and road	Ground X slope under tire R1	X slope R1
+dZdX_R2	 	-	Ground slope	Ground and road	Ground X slope under tire R2	X slope R2
+dZdYair	 	-	Ground slope	Aerodynamics	Y slope at road aero reference 1	Y slope: road refence frame 1	dZ/dY slope of the ground at the point where the Road Reference Frame is defined.
+dZdY_L1	 	-	Ground slope	Ground and road	Ground Y slope under tire L1	Y slope L1	Slope of the road or ground in the global [ny] direction at the center of tire contact.
+dZdY_L2	 	-	Ground slope	Ground and road	Ground Y slope under tire L2	Y slope L2
+dZdY_R1	 	-	Ground slope	Ground and road	Ground Y slope under tire R1	Y slope R1
+dZdY_R2	 	-	Ground slope	Ground and road	Ground Y slope under tire R2	Y slope R2
+EffBttry	 	-	Dimensionless ratio	Powertrain	Electric battery efficiency	Battery efficiency
+El_S1_1	 	deg	Angle	Sensor Detections	Sensor 1 elevation, detect 1	Sensor 1, detect 1
+El_S1_10	 	deg	Angle	Sensor Detections	Sensor 1 elevation, detect 10	Sensor 1, detect 10
+El_S1_2	 	deg	Angle	Sensor Detections	Sensor 1 elevation, detect 2	Sensor 1, detect 2
+El_S1_3	 	deg	Angle	Sensor Detections	Sensor 1 elevation, detect 3	Sensor 1, detect 3
+El_S1_4	 	deg	Angle	Sensor Detections	Sensor 1 elevation, detect 4	Sensor 1, detect 4
+El_S1_5	 	deg	Angle	Sensor Detections	Sensor 1 elevation, detect 5	Sensor 1, detect 5
+El_S1_6	 	deg	Angle	Sensor Detections	Sensor 1 elevation, detect 6	Sensor 1, detect 6
+El_S1_7	 	deg	Angle	Sensor Detections	Sensor 1 elevation, detect 7	Sensor 1, detect 7
+El_S1_8	 	deg	Angle	Sensor Detections	Sensor 1 elevation, detect 8	Sensor 1, detect 8
+El_S1_9	 	deg	Angle	Sensor Detections	Sensor 1 elevation, detect 9	Sensor 1, detect 9
+ESC_Stat	 	-	State	Powertrain	ESC engine torque control state	ESC engine torque control
+Event	 	-	Count	Time	Running count of events	Event	This output is initially set to 0, and is incremented every time a VS Event is triggered.
+FbkB_In	 	N	Force	Brakes	Brake input force before boost	Brake input force
+FbkB_Out	 	N	Force	Brakes	Brake booster output force	Brake Booster
+Fd_L1	 	N	Force	Suspensions	Force (compressive), damper L1	Damper L1
+Fd_L2	 	N	Force	Suspensions	Force (compressive), damper L2	Damper L2
+Fd_R1	 	N	Force	Suspensions	Force (compressive), damper R1	Damper R1
+Fd_R2	 	N	Force	Suspensions	Force (compressive), damper R2	Damper R2
+FJSt_L1	 	N	Force	Suspensions	Jounce-stop force L1	Jounce stop L1
+FJSt_L2	 	N	Force	Suspensions	Jounce-stop force L2	Jounce stop L2
+FJSt_R1	 	N	Force	Suspensions	Jounce-stop force R1	Jounce stop R1
+FJSt_R2	 	N	Force	Suspensions	Jounce-stop force R2	Jounce stop R2
+FRSt_L1	 	N	Force	Suspensions	Rebound-stop force L1	Rebound stop L1
+FRSt_L2	 	N	Force	Suspensions	Rebound-stop force L2	Rebound stop L2
+FRSt_R1	 	N	Force	Suspensions	Rebound-stop force R1	Rebound stop R1
+FRSt_R2	 	N	Force	Suspensions	Rebound-stop force R2	Rebound stop R2
+FsExt_L1	 	N	Force	Suspensions	Ext. spring force L1 (comp.)	Ext. spring L1 (comp.)	Spring force from external model (e.g., Simulink). The force applied in the multibody model is divided by the instant mechanical advantage.
+FsExt_L2	 	N	Force	Suspensions	Ext. spring force L2 (comp.)	Ext. spring L2 (comp.)	Spring force from external model (e.g., Simulink). The force applied in the multibody model is divided by the instant mechanical advantage.
+FsExt_R1	 	N	Force	Suspensions	Ext. spring force R1 (comp.)	Ext. spring R1 (comp.)
+FsExt_R2	 	N	Force	Suspensions	Ext. spring force R2 (comp.)	Ext. spring R2 (comp.)
+Fs_L1	 	N	Force	Suspensions	Spring force L1 (comp.)	Spring L1 (comp.)	Spring force from built-in model, including hysteresis. The force applied in the multibody model is divided by the instant mechanical advantage.
+Fs_L2	 	N	Force	Suspensions	Spring force L2 (comp.)	Spring L2 (comp.)	Spring force from built-in model, including hysteresis. The force applied in the multibody model is divided by the instant mechanical advantage.
+Fs_R1	 	N	Force	Suspensions	Spring force R1 (comp.)	Spring R1 (comp.)
+Fs_R2	 	N	Force	Suspensions	Spring force R2 (comp.)	Spring R2 (comp.)
+FullStep	 	-	Boolean	Time	Integrator full-step status	Integrator full-step status	Boolean that indicates whether the integrator is at a full step (1) or not (0). Be aware that changes to state variables from external equations that are not made at the full step are discarded. Also, events are processed only at the full step.
+FxExL1	 	N	Force	External actions	External Fx, L1	Wheel L1	Optional user-defined force applied to the wheel knuckle from the sprung mass in the [sx] direction
+FxExL2	 	N	Force	External actions	External Fx, L2	Wheel L2	Optional user-defined force applied to the wheel knuckle from the sprung mass in the [sx] direction
+FxExR1	 	N	Force	External actions	External Fx, R1	Wheel R1
+FxExR2	 	N	Force	External actions	External Fx, R2	Wheel R2
+FxGExL1	 	N	Force	External actions	External FxG, L1	Wheel L1	Optional user-defined force applied to the wheel knuckle from the inertial reference N in the [nx] direction
+FxGExL2	 	N	Force	External actions	External FxG, L2	Wheel L2	Optional user-defined force applied to the wheel knuckle from the inertial reference N in the [nx] direction
+FxGExR1	 	N	Force	External actions	External FxG, R1	Wheel R1
+FxGExR2	 	N	Force	External actions	External FxG, R2	Wheel R2
+Fx_A1	 	N	Force	Axles	Longitudinal tire force, axle 1	Axle 1 longitudinal tire force
+Fx_A2	 	N	Force	Axles	Longitudinal tire force, axle 2	Axle 2 longitudinal tire force
+Fx_Air	 	N	Force	Aerodynamics	Aero Fx, vehicle	Aero Fx, vehicle	Force applied to the sprung mass at the aerodynamic reference point in the [sx] direction.
+Fx_L1	 	N	Force	Tires	Longitudinal force, tire L1	Tire L1 longitudinal
+Fx_L2	 	N	Force	Tires	Longitudinal force, tire L2	Tire L2 longitudinal
+Fx_R1	 	N	Force	Tires	Longitudinal force, tire R1	Tire R1 longitudinal
+Fx_R2	 	N	Force	Tires	Longitudinal force, tire R2	Tire R2 longitudinal
+Fx_RP1	 	N	Force	Custom Forces and Reference Points	Fx, reference point 1	Ref. point 1 Fx	User-defined force in X direction applied to reference point from the inertial reference N. The direction is either fixed in the body or [nx], depending on the parameter OPT_RP_FORCE_N for the reference point.
+Fx_RP10	 	N	Force	Custom Forces and Reference Points	Fx, reference point 10	Ref. point 10 Fx
+Fx_RP2	 	N	Force	Custom Forces and Reference Points	Fx, reference point 2	Ref. point 2 Fx
+Fx_RP3	 	N	Force	Custom Forces and Reference Points	Fx, reference point 3	Ref. point 3 Fx
+Fx_RP4	 	N	Force	Custom Forces and Reference Points	Fx, reference point 4	Ref. point 4 Fx
+Fx_RP5	 	N	Force	Custom Forces and Reference Points	Fx, reference point 5	Ref. point 5 Fx
+Fx_RP6	 	N	Force	Custom Forces and Reference Points	Fx, reference point 6	Ref. point 6 Fx
+Fx_RP7	 	N	Force	Custom Forces and Reference Points	Fx, reference point 7	Ref. point 7 Fx
+Fx_RP8	 	N	Force	Custom Forces and Reference Points	Fx, reference point 8	Ref. point 8 Fx
+Fx_RP9	 	N	Force	Custom Forces and Reference Points	Fx, reference point 9	Ref. point 9 Fx
+Fx_WC_L1	 	N	Force	Wheels	Tire Fx at wheel center L1	Tire Fx at wheel center L1	This is the component of the total tire force vector applied to the wheel center in the [wx] direction.
+Fx_WC_L2	 	N	Force	Wheels	Tire Fx at wheel center L2	Tire Fx at wheel center L2
+Fx_WC_R1	 	N	Force	Wheels	Tire Fx at wheel center R1	Tire Fx at wheel center R1
+Fx_WC_R2	 	N	Force	Wheels	Tire Fx at wheel center R2	Tire Fx at wheel center R2
+FyExL1	 	N	Force	External actions	External Fy, L1	Wheel L1	Optional user-defined force applied to the wheel knuckle from the sprung mass in the [sy] direction
+FyExL2	 	N	Force	External actions	External Fy, L2	Wheel L2	Optional user-defined force applied to the wheel knuckle from the sprung mass in the [sy] direction
+FyExR1	 	N	Force	External actions	External Fy, R1	Wheel R1
+FyExR2	 	N	Force	External actions	External Fy, R2	Wheel R2
+FyGExL1	 	N	Force	External actions	External FyG, L1	Wheel L1	Optional user-defined force applied to the wheel knuckle from the inertial reference N in the [ny] direction
+FyGExL2	 	N	Force	External actions	External FyG, L2	Wheel L2	Optional user-defined force applied to the wheel knuckle from the inertial reference N in the [ny] direction
+FyGExR1	 	N	Force	External actions	External FyG, R1	Wheel R1
+FyGExR2	 	N	Force	External actions	External FyG, R2	Wheel R2
+Fy_A1	 	N	Force	Axles	Lateral tire force, axle 1	Axle 1 lateral tire force
+Fy_A2	 	N	Force	Axles	Lateral tire force, axle 2	Axle 2 lateral tire force
+Fy_Air	 	N	Force	Aerodynamics	Aero Fy, vehicle	Aero Fy, vehicle	Force applied to the sprung mass at the aerodynamic reference point in the [sy] direction.
+Fy_L1	 	N	Force	Tires	Lateral force, tire L1	Tire L1 lateral
+Fy_L2	 	N	Force	Tires	Lateral force, tire L2	Tire L2 lateral
+Fy_R1	 	N	Force	Tires	Lateral force, tire R1	Tire R1 lateral
+Fy_R2	 	N	Force	Tires	Lateral force, tire R2	Tire R2 lateral
+Fy_RP1	 	N	Force	Custom Forces and Reference Points	Fy, reference point 1	Ref. point 1 Fy	User-defined force in Y direction applied to reference point from the inertial reference N. The direction is either fixed in the body or [ny], depending on the parameter OPT_RP_FORCE_N for the reference point.
+Fy_RP10	 	N	Force	Custom Forces and Reference Points	Fy, reference point 10	Ref. point 10 Fy
+Fy_RP2	 	N	Force	Custom Forces and Reference Points	Fy, reference point 2	Ref. point 2 Fy
+Fy_RP3	 	N	Force	Custom Forces and Reference Points	Fy, reference point 3	Ref. point 3 Fy
+Fy_RP4	 	N	Force	Custom Forces and Reference Points	Fy, reference point 4	Ref. point 4 Fy
+Fy_RP5	 	N	Force	Custom Forces and Reference Points	Fy, reference point 5	Ref. point 5 Fy
+Fy_RP6	 	N	Force	Custom Forces and Reference Points	Fy, reference point 6	Ref. point 6 Fy
+Fy_RP7	 	N	Force	Custom Forces and Reference Points	Fy, reference point 7	Ref. point 7 Fy
+Fy_RP8	 	N	Force	Custom Forces and Reference Points	Fy, reference point 8	Ref. point 8 Fy
+Fy_RP9	 	N	Force	Custom Forces and Reference Points	Fy, reference point 9	Ref. point 9 Fy
+Fy_WC_L1	 	N	Force	Wheels	Tire Fy at wheel center L1	Tire Fy at wheel center L1	This is the component of the total tire force vector applied to the wheel center in the [wy] direction.
+Fy_WC_L2	 	N	Force	Wheels	Tire Fy at wheel center L2	Tire Fy at wheel center L2
+Fy_WC_R1	 	N	Force	Wheels	Tire Fy at wheel center R1	Tire Fy at wheel center R1
+Fy_WC_R2	 	N	Force	Wheels	Tire Fy at wheel center R2	Tire Fy at wheel center R2
+FzExL1	 	N	Force	External actions	External Fz, L1	Wheel L1	Optional user-defined force applied to the wheel knuckle from the sprung mass in the [sz] direction
+FzExL2	 	N	Force	External actions	External Fz, L2	Wheel L2	Optional user-defined force applied to the wheel knuckle from the sprung mass in the [sz] direction
+FzExR1	 	N	Force	External actions	External Fz, R1	Wheel R1
+FzExR2	 	N	Force	External actions	External Fz, R2	Wheel R2
+FzGExL1	 	N	Force	External actions	External FzG, L1	Wheel L1	Optional user-defined force applied to the wheel knuckle from the inertial reference N in the [nz] direction
+FzGExL2	 	N	Force	External actions	External FzG, L2	Wheel L2	Optional user-defined force applied to the wheel knuckle from the inertial reference N in the [nz] direction
+FzGExR1	 	N	Force	External actions	External FzG, R1	Wheel R1
+FzGExR2	 	N	Force	External actions	External FzG, R2	Wheel R2
+Fz_A1	 	N	Force	Axles	Vertical tire force, axle 1	Axle 1 vertical tire force
+Fz_A2	 	N	Force	Axles	Vertical tire force, axle 2	Axle 2 vertical tire force
+Fz_Air	 	N	Force	Aerodynamics	Aero Fz, vehicle	Aero Fz, vehicle	Force applied to the sprung mass at the aerodynamic reference point in the [sz] direction.
+Fz_L1	 	N	Force	Tires	Vertical force, tire L1	Tire L1 vertical
+Fz_L2	 	N	Force	Tires	Vertical force, tire L2	Tire L2 vertical
+Fz_R1	 	N	Force	Tires	Vertical force, tire R1	Tire R1 vertical
+Fz_R2	 	N	Force	Tires	Vertical force, tire R2	Tire R2 vertical
+Fz_RP1	 	N	Force	Custom Forces and Reference Points	Fz, reference point 1	Ref. point 1 Fz	User-defined force in Z direction applied to reference point from the inertial reference N. The direction is either fixed in the body or [nz], depending on the parameter OPT_RP_FORCE_N for the reference point.
+Fz_RP10	 	N	Force	Custom Forces and Reference Points	Fz, reference point 10	Ref. point 10 Fz
+Fz_RP2	 	N	Force	Custom Forces and Reference Points	Fz, reference point 2	Ref. point 2 Fz
+Fz_RP3	 	N	Force	Custom Forces and Reference Points	Fz, reference point 3	Ref. point 3 Fz
+Fz_RP4	 	N	Force	Custom Forces and Reference Points	Fz, reference point 4	Ref. point 4 Fz
+Fz_RP5	 	N	Force	Custom Forces and Reference Points	Fz, reference point 5	Ref. point 5 Fz
+Fz_RP6	 	N	Force	Custom Forces and Reference Points	Fz, reference point 6	Ref. point 6 Fz
+Fz_RP7	 	N	Force	Custom Forces and Reference Points	Fz, reference point 7	Ref. point 7 Fz
+Fz_RP8	 	N	Force	Custom Forces and Reference Points	Fz, reference point 8	Ref. point 8 Fz
+Fz_RP9	 	N	Force	Custom Forces and Reference Points	Fz, reference point 9	Ref. point 9 Fz
+Fz_WC_L1	 	N	Force	Wheels	Tire Fz at wheel center L1	Tire Fz at wheel center L1	This is the component of the total tire force vector applied to the wheel center in the [wz] direction.
+Fz_WC_L2	 	N	Force	Wheels	Tire Fz at wheel center L2	Tire Fz at wheel center L2
+Fz_WC_R1	 	N	Force	Wheels	Tire Fz at wheel center R1	Tire Fz at wheel center R1
+Fz_WC_R2	 	N	Force	Wheels	Tire Fz at wheel center R2	Tire Fz at wheel center R2
+F_boost	 	N	Force	Steering	Steering boost force	Power steering
+F_Pedal	 	N	Force	Brakes	Brake pedal force	Brake Pedal
+F_TRdL1	 	N	Force	Steering	Rack load from tierod L1	Tierod L1 rack load
+F_TRdL2	 	N	Force	Steering	Rack load from tierod L2	Tierod L2 rack load
+F_TRdR1	 	N	Force	Steering	Rack load from tierod R1	Tierod R1 rack load
+F_TRdR2	 	N	Force	Steering	Rack load from tierod R2	Tierod R2 rack load
+Gamma_L1	 	deg	Angle	Tires	Inclination angle, tire L1	Tire L1 inclination	Tire inclination is relative to the ground surface.
+Gamma_L2	 	deg	Angle	Tires	Inclination angle, tire L2	Tire L2 inclination
+Gamma_R1	 	deg	Angle	Tires	Inclination angle, tire R1	Tire R1 inclination
+Gamma_R2	 	deg	Angle	Tires	Inclination angle, tire R2	Tire R2 inclination
+GPSlongA	 	deg	GPS longitude	Chassis motion	GPS absolute longitude	Vehicle
+GPS_Altitude	GPSAlitd	m	GPS altitude	Chassis motion	GPS altitude (Zo + GPS_REF_ALT)	Vehicle
+GPS_Lat	 	deg	GPS latitude	Chassis motion	GPS relative latitude	Vehicle
+GPS_LatA	 	deg	GPS latitude	Chassis motion	GPS absolute latitude	Vehicle
+GPS_LatO_1	GPS_Lat1	deg	GPS latitude	Targets	GPS latitude, object 1	Object 1	GPS latitude of control point of object.
+GPS_LatO_10	GPS_Lt10	deg	GPS latitude	Targets	GPS latitude, object 10	Object 10
+GPS_LatO_2	GPS_Lat2	deg	GPS latitude	Targets	GPS latitude, object 2	Object 2
+GPS_LatO_3	GPS_Lat3	deg	GPS latitude	Targets	GPS latitude, object 3	Object 3
+GPS_LatO_4	GPS_Lat4	deg	GPS latitude	Targets	GPS latitude, object 4	Object 4
+GPS_LatO_5	GPS_Lat5	deg	GPS latitude	Targets	GPS latitude, object 5	Object 5
+GPS_LatO_6	GPS_Lat6	deg	GPS latitude	Targets	GPS latitude, object 6	Object 6
+GPS_LatO_7	GPS_Lat7	deg	GPS latitude	Targets	GPS latitude, object 7	Object 7
+GPS_LatO_8	GPS_Lat8	deg	GPS latitude	Targets	GPS latitude, object 8	Object 8
+GPS_LatO_9	GPS_Lat9	deg	GPS latitude	Targets	GPS latitude, object 9	Object 9
+GPS_Long	 	deg	GPS longitude	Chassis motion	GPS relative longitude	Vehicle
+GPS_LongO_1	GPS_Lng1	deg	GPS longitude	Targets	GPS longitude, object 1	Object 1	GPS longitude of control point of object.
+GPS_LongO_10	GPS_Lg10	deg	GPS longitude	Targets	GPS longitude, object 10	Object 10
+GPS_LongO_2	GPS_Lng2	deg	GPS longitude	Targets	GPS longitude, object 2	Object 2
+GPS_LongO_3	GPS_Lng3	deg	GPS longitude	Targets	GPS longitude, object 3	Object 3
+GPS_LongO_4	GPS_Lng4	deg	GPS longitude	Targets	GPS longitude, object 4	Object 4
+GPS_LongO_5	GPS_Lng5	deg	GPS longitude	Targets	GPS longitude, object 5	Object 5
+GPS_LongO_6	GPS_Lng6	deg	GPS longitude	Targets	GPS longitude, object 6	Object 6
+GPS_LongO_7	GPS_Lng7	deg	GPS longitude	Targets	GPS longitude, object 7	Object 7
+GPS_LongO_8	GPS_Lng8	deg	GPS longitude	Targets	GPS longitude, object 8	Object 8
+GPS_LongO_9	GPS_Lng9	deg	GPS longitude	Targets	GPS longitude, object 9	Object 9
+Hcg_TM	 	mm	Height (local Z coordinate)	Chassis motion	Height, inst. CG, vehicle	Instant CG, vehicle	This is the height (local Z coordinate) of the instant CG of the vehicle unit in the sprung mass coordinate system. Be aware that the motion of the instant CG cannot be measured directly in physical vehicles.
+HeadO_1	 	deg	Heading angle	Targets	Heading angle, object 1	Object 1
+HeadO_10	 	deg	Heading angle	Targets	Heading angle, object 10	Object 10
+HeadO_2	 	deg	Heading angle	Targets	Heading angle, object 2	Object 2
+HeadO_3	 	deg	Heading angle	Targets	Heading angle, object 3	Object 3
+HeadO_4	 	deg	Heading angle	Targets	Heading angle, object 4	Object 4
+HeadO_5	 	deg	Heading angle	Targets	Heading angle, object 5	Object 5
+HeadO_6	 	deg	Heading angle	Targets	Heading angle, object 6	Object 6
+HeadO_7	 	deg	Heading angle	Targets	Heading angle, object 7	Object 7
+HeadO_8	 	deg	Heading angle	Targets	Heading angle, object 8	Object 8
+HeadO_9	 	deg	Heading angle	Targets	Heading angle, object 9	Object 9
+HybMode0	 	-	HybMode0	VS Commands	HybMode0	HybMode0
+HybMode1	 	-	HybMode1	VS Commands	HybMode1	HybMode1
+HybMode2	 	-	HybMode2	VS Commands	HybMode2	HybMode2
+HybMode3	 	-	HybMode3	VS Commands	HybMode3	HybMode3
+ID_Event	 	-	ID number	Database	ID number of event	ID of event	This output gives the value of the system parameter ID_EVENT. The parameter will keep its default value of 0 unless it is changed by a VS Event or other VS Command.
+ID_Run	 	-	ID number	Database	ID number of run	ID of run	This output gives the value of the system parameter ID_RUN. The parameter will keep its default value of 0 unless it is changed by a VS Event or other VS Command.
+ID_S1_1	 	-	ID number	Sensor Detections	Sensor 1 ID number, detect 1	Sensor 1, detect 1
+ID_S1_10	 	-	ID number	Sensor Detections	Sensor 1 ID number, detect 10	Sensor 1, detect 10
+ID_S1_2	 	-	ID number	Sensor Detections	Sensor 1 ID number, detect 2	Sensor 1, detect 2
+ID_S1_3	 	-	ID number	Sensor Detections	Sensor 1 ID number, detect 3	Sensor 1, detect 3
+ID_S1_4	 	-	ID number	Sensor Detections	Sensor 1 ID number, detect 4	Sensor 1, detect 4
+ID_S1_5	 	-	ID number	Sensor Detections	Sensor 1 ID number, detect 5	Sensor 1, detect 5
+ID_S1_6	 	-	ID number	Sensor Detections	Sensor 1 ID number, detect 6	Sensor 1, detect 6
+ID_S1_7	 	-	ID number	Sensor Detections	Sensor 1 ID number, detect 7	Sensor 1, detect 7
+ID_S1_8	 	-	ID number	Sensor Detections	Sensor 1 ID number, detect 8	Sensor 1, detect 8
+ID_S1_9	 	-	ID number	Sensor Detections	Sensor 1 ID number, detect 9	Sensor 1, detect 9
+Iw_Dr_L1	 	kg-m2	Inertia	Powertrain	Driveline inertia for wheel L1	Drive wheel L1	Additional driveline inertia applied to the drive wheel.
+Iw_Dr_L2	 	kg-m2	Inertia	Powertrain	Driveline inertia for wheel L2	Drive wheel L2	Additional driveline inertia applied to the drive wheel.
+Iw_Dr_R1	 	kg-m2	Inertia	Powertrain	Driveline inertia for wheel R1	Drive wheel R1	Additional driveline inertia applied to the drive wheel.
+Iw_Dr_R2	 	kg-m2	Inertia	Powertrain	Driveline inertia for wheel R2	Drive wheel R2	Additional driveline inertia applied to the drive wheel.
+JncR_L1	 	mm/s	Compression rate	Suspensions	Wheel L1 jounce rate	Wheel L1 jounce
+JncR_L2	 	mm/s	Compression rate	Suspensions	Wheel L2 jounce rate	Wheel L2 jounce
+JncR_R1	 	mm/s	Compression rate	Suspensions	Wheel R1 jounce rate	Wheel R1 jounce
+JncR_R2	 	mm/s	Compression rate	Suspensions	Wheel R2 jounce rate	Wheel R2 jounce
+Jnc_L1	 	mm	Compression	Suspensions	Wheel L1 jounce (compression)	Wheel L1 jounce
+Jnc_L2	 	mm	Compression	Suspensions	Wheel L2 jounce (compression)	Wheel L2 jounce
+Jnc_R1	 	mm	Compression	Suspensions	Wheel R1 jounce (compression)	Wheel R1 jounce
+Jnc_R2	 	mm	Compression	Suspensions	Wheel R2 jounce (compression)	Wheel R2 jounce
+Kappa_L1	 	-	Dimensionless ratio	Tires	Longitudinal slip, tire L1	Tire L1 long. slip	Instant longitudinal slip: [AV of wheel]*RRE/Vx - 1.
+Kappa_L2	 	-	Dimensionless ratio	Tires	Longitudinal slip, tire L2	Tire L2 long. slip
+Kappa_R1	 	-	Dimensionless ratio	Tires	Longitudinal slip, tire R1	Tire R1 long. slip
+Kappa_R2	 	-	Dimensionless ratio	Tires	Longitudinal slip, tire R2	Tire R2 long. slip
+KappL_L1	 	-	Dimensionless ratio	Tires	Long. slip (lagged), tire L1	Tire L1 long. slip (lagged)	Lagged slip ratio is a state variable that follows the instant slip ratio KAPPA_L1, subject to a dynamic lag.
+KappL_L2	 	-	Dimensionless ratio	Tires	Long. slip (lagged), tire L2	Tire L2 long. slip (lagged)
+KappL_R1	 	-	Dimensionless ratio	Tires	Long. slip (lagged), tire R1	Tire R1 long. slip (lagged)
+KappL_R2	 	-	Dimensionless ratio	Tires	Long. slip (lagged), tire R2	Tire R2 long. slip (lagged)
+K_TC	 	Kinv	Inverse capacity	Powertrain	TC inverse capacity	Torque converter
+Lap	 	-	Lap	VS Commands	Lap	Lap
+LatO_1	 	m	Lateral offset	Targets	Lateral offset, object 1	Object 1	Lateral position is associated with the path identified by the parameter PATH_ID_OBJ. If PATH_ID_OBJ is zero, then LatO is not used and is always zero.
+LatO_10	 	m	Lateral offset	Targets	Lateral offset, object 10	Object 10
+LatO_2	 	m	Lateral offset	Targets	Lateral offset, object 2	Object 2
+LatO_3	 	m	Lateral offset	Targets	Lateral offset, object 3	Object 3
+LatO_4	 	m	Lateral offset	Targets	Lateral offset, object 4	Object 4
+LatO_5	 	m	Lateral offset	Targets	Lateral offset, object 5	Object 5
+LatO_6	 	m	Lateral offset	Targets	Lateral offset, object 6	Object 6
+LatO_7	 	m	Lateral offset	Targets	Lateral offset, object 7	Object 7
+LatO_8	 	m	Lateral offset	Targets	Lateral offset, object 8	Object 8
+LatO_9	 	m	Lateral offset	Targets	Lateral offset, object 9	Object 9
+Lat_Targ	 	m	Lateral distance to path	Driver model	Target lateral offset from path	Target
+Lat_Veh	 	m	Lateral distance to path	Driver model	Vehicle lateral distance to path	Vehicle
+LtrgIdDm	 	-	ID of LTARG dataset used by DM	Driver model	ID of LTARG dataset used by DM	Target
+LxcgTM	 	mm	Lx distance (local -X coord.)	Chassis motion	Lx distance to inst. CG, vehicle	Instant CG, vehicle	This is the local X coordinate of the instant CG of the vehicle unit in the sprung mass coordinate system, with the sign flipped as needed to represent the distance behind the sprung-mass origin. Be aware that the motion of the instant CG cannot be measured directly in physical vehicles.
+Lx_Sen_1	 	m	Longitudinal distance	Driver model	Lead distance to driver point 1	Driver preview point 1	Distance in the ISO/SAE [x] direction for the driver preview point installed by the VS Command INSTALL_DRIVER_PREVIEW_SENSORS. This distance is relative to the sprung mass origin.
+Lx_Sen_2	 	m	Longitudinal distance	Driver model	Lead distance to driver point 2	Driver preview point 2
+Lx_Sen_3	 	m	Longitudinal distance	Driver model	Lead distance to driver point 3	Driver preview point 3
+Lx_Sen_4	 	m	Longitudinal distance	Driver model	Lead distance to driver point 4	Driver preview point 4
+Lx_Sen_5	 	m	Longitudinal distance	Driver model	Lead distance to driver point 5	Driver preview point 5
+L_Drv_1	 	m	Lateral distance to target	Driver model	Lat dist to target point 1	Driver preview point 1	This lateral offset is the distance between the driver preview point (installed by the VS Command INSTALL_DRIVER_PREVIEW_SENSORS) and the reference path PATH_ID_DM.
+L_Drv_2	 	m	Lateral distance to target	Driver model	Lat dist to target point 2	Driver preview point 2
+L_Drv_3	 	m	Lateral distance to target	Driver model	Lat dist to target point 3	Driver preview point 3
+L_Drv_4	 	m	Lateral distance to target	Driver model	Lat dist to target point 4	Driver preview point 4
+L_Drv_5	 	m	Lateral distance to target	Driver model	Lat dist to target point 5	Driver preview point 5
+MagS1_1	 	-	Magnitude	Sensor Detections	Sensor 1 magnitude, detect 1	Sensor 1, detect 1
+MagS1_10	 	-	Magnitude	Sensor Detections	Sensor 1 magnitude, detect 10	Sensor 1, detect 10
+MagS1_2	 	-	Magnitude	Sensor Detections	Sensor 1 magnitude, detect 2	Sensor 1, detect 2
+MagS1_3	 	-	Magnitude	Sensor Detections	Sensor 1 magnitude, detect 3	Sensor 1, detect 3
+MagS1_4	 	-	Magnitude	Sensor Detections	Sensor 1 magnitude, detect 4	Sensor 1, detect 4
+MagS1_5	 	-	Magnitude	Sensor Detections	Sensor 1 magnitude, detect 5	Sensor 1, detect 5
+MagS1_6	 	-	Magnitude	Sensor Detections	Sensor 1 magnitude, detect 6	Sensor 1, detect 6
+MagS1_7	 	-	Magnitude	Sensor Detections	Sensor 1 magnitude, detect 7	Sensor 1, detect 7
+MagS1_8	 	-	Magnitude	Sensor Detections	Sensor 1 magnitude, detect 8	Sensor 1, detect 8
+MagS1_9	 	-	Magnitude	Sensor Detections	Sensor 1 magnitude, detect 9	Sensor 1, detect 9
+Mfuel	 	kg	Fuel consumed	Powertrain	Mass of fuel consumed	Fuel
+ModeHybr	 	-	Hybrid/electric control mode	Powertrain	Hybrid powertrain control mode	Hybrid/electric control mode
+ModeTran	 	-	Transmission control mode	Powertrain	Transmission control mode	Transmission control mode	Control option for transmission, from configurable function MODE_TRANS or imported variable. -1 is reverse, 0 is neutral, 1 specifies open-loop mode, 2 and higher specify a closed-loop limit (maximum gear available to the controller). The current gear in closed-loop mode is Gear_CL. The current gear in open-loop mode is Gear_OL.
+MsgObj_1	 	-	Message (code)	Targets	Message from object 1	Object 1	Each object has an output message (code) that can be set with VS Commands or imported from an external software tool. This can be used to provide content from objects representing signs and traffic signals.
+MsgObj_10	MsgObj10	-	Message (code)	Targets	Message from object 10	Object 10
+MsgObj_2	 	-	Message (code)	Targets	Message from object 2	Object 2
+MsgObj_3	 	-	Message (code)	Targets	Message from object 3	Object 3
+MsgObj_4	 	-	Message (code)	Targets	Message from object 4	Object 4
+MsgObj_5	 	-	Message (code)	Targets	Message from object 5	Object 5
+MsgObj_6	 	-	Message (code)	Targets	Message from object 6	Object 6
+MsgObj_7	 	-	Message (code)	Targets	Message from object 7	Object 7
+MsgObj_8	 	-	Message (code)	Targets	Message from object 8	Object 8
+MsgObj_9	 	-	Message (code)	Targets	Message from object 9	Object 9
+MsgS1_1	 	-	Message	Sensor Detections	Sensor 1 Message, detect 1	Sensor 1, detect 1
+MsgS1_10	 	-	Message	Sensor Detections	Sensor 1 Message, detect 10	Sensor 1, detect 10
+MsgS1_2	 	-	Message	Sensor Detections	Sensor 1 Message, detect 2	Sensor 1, detect 2
+MsgS1_3	 	-	Message	Sensor Detections	Sensor 1 Message, detect 3	Sensor 1, detect 3
+MsgS1_4	 	-	Message	Sensor Detections	Sensor 1 Message, detect 4	Sensor 1, detect 4
+MsgS1_5	 	-	Message	Sensor Detections	Sensor 1 Message, detect 5	Sensor 1, detect 5
+MsgS1_6	 	-	Message	Sensor Detections	Sensor 1 Message, detect 6	Sensor 1, detect 6
+MsgS1_7	 	-	Message	Sensor Detections	Sensor 1 Message, detect 7	Sensor 1, detect 7
+MsgS1_8	 	-	Message	Sensor Detections	Sensor 1 Message, detect 8	Sensor 1, detect 8
+MsgS1_9	 	-	Message	Sensor Detections	Sensor 1 Message, detect 9	Sensor 1, detect 9
+MuX_L1	 	-	Friction coefficient	Ground and road	Ground X friction, tire L1	Tire/Ground MuX L1	Friction from the built-in Configurable Functions is the same for the X and Y directions. However, different values can be imported for the X and Y directions for simulating unusual conditions such as sand or snow.
+MuX_L2	 	-	Friction coefficient	Ground and road	Ground X friction, tire L2	Tire/Ground MuX L2
+MuX_R1	 	-	Friction coefficient	Ground and road	Ground X friction, tire R1	Tire/Ground MuX R1
+MuX_R2	 	-	Friction coefficient	Ground and road	Ground X friction, tire R2	Tire/Ground MuX R2
+MuY_L1	 	-	Friction coefficient	Ground and road	Ground Y friction, tire L1	Tire/Ground MuY L1	Friction from the built-in Configurable Functions is the same for the X and Y directions. However, different values can be imported for the X and Y directions for simulating unusual conditions such as sand or snow.
+MuY_L2	 	-	Friction coefficient	Ground and road	Ground Y friction, tire L2	Tire/Ground MuY L2
+MuY_R1	 	-	Friction coefficient	Ground and road	Ground Y friction, tire R1	Tire/Ground MuY R1
+MuY_R2	 	-	Friction coefficient	Ground and road	Ground Y friction, tire R2	Tire/Ground MuY R2
+MxExL1	 	N-m	Moment	External actions	External Mx, L1	Wheel L1	Optional user-defined moment applied to the wheel knuckle from the sprung mass in the [sx] direction
+MxExL2	 	N-m	Moment	External actions	External Mx, L2	Wheel L2	Optional user-defined moment applied to the wheel knuckle from the sprung mass in the [sx] direction
+MxExR1	 	N-m	Moment	External actions	External Mx, R1	Wheel R1
+MxExR2	 	N-m	Moment	External actions	External Mx, R2	Wheel R2
+MxGExL1	 	N-m	Moment	External actions	External MxG, L1	Wheel L1	Optional user-defined moment applied to the wheel knuckle from the inertial reference N in the [nx] direction
+MxGExL2	 	N-m	Moment	External actions	External MxG, L2	Wheel L2	Optional user-defined moment applied to the wheel knuckle from the inertial reference N in the [nx] direction
+MxGExR1	 	N-m	Moment	External actions	External MxG, R1	Wheel R1
+MxGExR2	 	N-m	Moment	External actions	External MxG, R2	Wheel R2
+MxGExt	 	N-m	Moment	External actions	External MxG on sprung mass	Sprung mass	Optional user-defined moment applied from the inertial reference N in the [sx] direction.
+Mx_A1	 	N-m	Moment	Suspensions	Auxiliary roll moment, axle 1	Axle 1
+Mx_A2	 	N-m	Moment	Suspensions	Auxiliary roll moment, axle 2	Axle 2
+Mx_Air	 	N-m	Moment	Aerodynamics	Aero Mx, vehicle	Aero Mx, vehicle	Moment applied to the sprung mass in the [sx] direction.
+Mx_Ext	 	N-m	Moment	External actions	External Mx on sprung mass	Sprung mass	Optional user-defined moment applied from the inertial reference N in the [nx] direction.
+Mx_L1	 	N-m	Moment	Tires	Overturning moment, tire L1	Tire L1 overturning
+Mx_L2	 	N-m	Moment	Tires	Overturning moment, tire L2	Tire L2 overturning
+Mx_R1	 	N-m	Moment	Tires	Overturning moment, tire R1	Tire R1 overturning
+Mx_R2	 	N-m	Moment	Tires	Overturning moment, tire R2	Tire R2 overturning
+Mx_WC_L1	 	N-m	Moment	Wheels	Tire Mx at wheel center L1	Tire Mx at wheel center L1	This is the [wx] component of the total moment vector due to tire moments and the tire force vector applied to the wheel center.
+Mx_WC_L2	 	N-m	Moment	Wheels	Tire Mx at wheel center L2	Tire Mx at wheel center L2
+Mx_WC_R1	 	N-m	Moment	Wheels	Tire Mx at wheel center R1	Tire Mx at wheel center R1
+Mx_WC_R2	 	N-m	Moment	Wheels	Tire Mx at wheel center R2	Tire Mx at wheel center R2
+MyExL1	 	N-m	Moment	External actions	External My, L1	Wheel L1	Optional user-defined moment applied to the wheel knuckle from the sprung mass in the [sy] direction
+MyExL2	 	N-m	Moment	External actions	External My, L2	Wheel L2	Optional user-defined moment applied to the wheel knuckle from the sprung mass in the [sy] direction
+MyExR1	 	N-m	Moment	External actions	External My, R1	Wheel R1
+MyExR2	 	N-m	Moment	External actions	External My, R2	Wheel R2
+MyGExL1	 	N-m	Moment	External actions	External MyG, L1	Wheel L1	Optional user-defined moment applied to the wheel knuckle from the inertial reference N in the [ny] direction
+MyGExL2	 	N-m	Moment	External actions	External MyG, L2	Wheel L2	Optional user-defined moment applied to the wheel knuckle from the inertial reference N in the [ny] direction
+MyGExR1	 	N-m	Moment	External actions	External MyG, R1	Wheel R1
+MyGExR2	 	N-m	Moment	External actions	External MyG, R2	Wheel R2
+MyGExt	 	N-m	Moment	External actions	External MyG on sprung mass	Sprung mass	Optional user-defined moment applied from the inertial reference N in the [sy] direction.
+MyRR_L1	 	N-m	Moment	Tires	Rolling resist moment, tire L1	Tire L1 rolling resistance
+MyRR_L2	 	N-m	Moment	Tires	Rolling resist moment, tire L2	Tire L2 rolling resistance
+MyRR_R1	 	N-m	Moment	Tires	Rolling resist moment, tire R1	Tire R1 rolling resistance
+MyRR_R2	 	N-m	Moment	Tires	Rolling resist moment, tire R2	Tire R2 rolling resistance
+My_Air	 	N-m	Moment	Aerodynamics	Aero My, vehicle	Aero My, vehicle	Moment applied to the sprung mass in the [sy] direction.
+My_Bk_L1	 	N-m	Moment	Brakes	Brake moment L1	Brake My L1
+My_Bk_L2	 	N-m	Moment	Brakes	Brake moment L2	Brake My L2
+My_Bk_R1	 	N-m	Moment	Brakes	Brake moment R1	Brake My R1
+My_Bk_R2	 	N-m	Moment	Brakes	Brake moment R2	Brake My R2
+My_Dr_L1	 	N-m	Moment	Powertrain	Total drive moment for wheel L1	Drive wheel L1
+My_Dr_L2	 	N-m	Moment	Powertrain	Total drive moment for wheel L2	Drive wheel L2
+My_Dr_R1	 	N-m	Moment	Powertrain	Total drive moment for wheel R1	Drive wheel R1
+My_Dr_R2	 	N-m	Moment	Powertrain	Total drive moment for wheel R2	Drive wheel R2
+My_Ext	 	N-m	Moment	External actions	External My on sprung mass	Sprung mass	Optional user-defined moment applied from the inertial reference N in the [ny] direction.
+My_US_L1	 	N-m	Moment	Wheels	Ext moment on whl from usm L1	Wheel L1	This is an optional user-defined moment applied to the wheel from the unsprung mass.
+My_US_L2	 	N-m	Moment	Wheels	Ext moment on whl from usm L2	Wheel L2
+My_US_R1	 	N-m	Moment	Wheels	Ext moment on whl from usm R1	Wheel R1
+My_US_R2	 	N-m	Moment	Wheels	Ext moment on whl from usm R2	Wheel R2
+My_WC_L1	 	N-m	Moment	Wheels	Tire My at wheel center L1	Tire My at wheel center L1	This is the [wy] component of the total moment vector due to tire moments and the tire force vector applied to the wheel center.
+My_WC_L2	 	N-m	Moment	Wheels	Tire My at wheel center L2	Tire My at wheel center L2
+My_WC_R1	 	N-m	Moment	Wheels	Tire My at wheel center R1	Tire My at wheel center R1
+My_WC_R2	 	N-m	Moment	Wheels	Tire My at wheel center R2	Tire My at wheel center R2
+MzExL1	 	N-m	Moment	External actions	External Mz, L1	Wheel L1	Optional user-defined moment applied to the wheel knuckle from the sprung mass in the [sz] direction
+MzExL2	 	N-m	Moment	External actions	External Mz, L2	Wheel L2	Optional user-defined moment applied to the wheel knuckle from the sprung mass in the [sz] direction
+MzExR1	 	N-m	Moment	External actions	External Mz, R1	Wheel R1
+MzExR2	 	N-m	Moment	External actions	External Mz, R2	Wheel R2
+MzGExL1	 	N-m	Moment	External actions	External MzG, L1	Wheel L1	Optional user-defined moment applied to the wheel knuckle from the inertial reference N in the [nz] direction
+MzGExL2	 	N-m	Moment	External actions	External MzG, L2	Wheel L2	Optional user-defined moment applied to the wheel knuckle from the inertial reference N in the [nz] direction
+MzGExR1	 	N-m	Moment	External actions	External MzG, R1	Wheel R1
+MzGExR2	 	N-m	Moment	External actions	External MzG, R2	Wheel R2
+MzGExt	 	N-m	Moment	External actions	External MzG on sprung mass	Sprung mass	Optional user-defined moment applied from the inertial reference N in the [sz] direction.
+Mz_Air	 	N-m	Moment	Aerodynamics	Aero Mz, vehicle	Aero Mz, vehicle	Moment applied to the sprung mass in the [sz] direction.
+Mz_Ext	 	N-m	Moment	External actions	External Mz on sprung mass	Sprung mass	Optional user-defined moment applied from the inertial reference N in the [nz] direction.
+Mz_KP_L1	 	N-m	Moment	Steering	Steer moment about kingpin L1	Kingpin L1 steer moment
+Mz_KP_L2	 	N-m	Moment	Steering	Steer moment about kingpin L2	Kingpin L2 steer moment
+Mz_KP_R1	 	N-m	Moment	Steering	Steer moment about kingpin R1	Kingpin R1 steer moment
+Mz_KP_R2	 	N-m	Moment	Steering	Steer moment about kingpin R2	Kingpin R2 steer moment
+Mz_L1	 	N-m	Moment	Tires	Aligning moment, tire L1	Tire L1 aligning
+Mz_L2	 	N-m	Moment	Tires	Aligning moment, tire L2	Tire L2 aligning
+Mz_R1	 	N-m	Moment	Tires	Aligning moment, tire R1	Tire R1 aligning
+Mz_R2	 	N-m	Moment	Tires	Aligning moment, tire R2	Tire R2 aligning
+Mz_WC_L1	 	N-m	Moment	Wheels	Tire Mz at wheel center L1	Tire Mz at wheel center L1	This is the [wz] component of the total moment vector due to tire moments and the tire force vector applied to the wheel center.
+Mz_WC_L2	 	N-m	Moment	Wheels	Tire Mz at wheel center L2	Tire Mz at wheel center L2
+Mz_WC_R1	 	N-m	Moment	Wheels	Tire Mz at wheel center R1	Tire Mz at wheel center R1
+Mz_WC_R2	 	N-m	Moment	Wheels	Tire Mz at wheel center R2	Tire Mz at wheel center R2
+M_boost	 	N-m	Torque	Steering	Steering boost torque	Power steering
+M_ColHys	 	N-m	Torque	Steering	Steering col. hysteresis torque	Steering
+M_ColVis	 	N-m	Torque	Steering	Steering column damping torque	Steering
+M_D1visc	 	N-m	Torque	Powertrain	Drive A1 diff. viscous torque	Front diff. viscous coupling
+M_D1_Cl	 	N-m	Torque	Powertrain	Drive A1 diff. clutch torque	Front differential clutch
+M_D1_Cl2	 	N-m	Torque	Powertrain	Front diff. 2nd clutch torque	Front diff. second clutch
+M_D2visc	 	N-m	Torque	Powertrain	Drive A2 diff. viscous torque	Rear diff. viscous coupling
+M_D2_Cl	 	N-m	Torque	Powertrain	Drive A2 diff. clutch torque	Rear differential clutch
+M_D2_Cl2	 	N-m	Torque	Powertrain	Rear diff. 2nd clutch torque	Rear diff. second clutch
+M_D3f	 	N-m	Torque	Powertrain	Trns case shaft to drv A1 torque	Transfer case front output shaft
+M_D3r	 	N-m	Torque	Powertrain	Trns case shaft to drv A2 torque	Transfer case rear output shaft
+M_D3visc	 	N-m	Torque	Powertrain	Trans case drv A1-2 visc torque	Transfer case viscous coupling
+M_D3_Cl	 	N-m	Torque	Powertrain	Trns case drv A1-2 clutch torque	Transfer case clutch
+M_D3_Cl2	 	N-m	Torque	Powertrain	Transfer case 2nd clutch torque	Transfer case second clutch
+M_EngEsc	 	N-m	Torque	Powertrain	ESC requesting engine torque	ESC requesting for engine
+M_EngOut	 	N-m	Torque	Powertrain	Engine crankshaft output torque	Engine crankshaft output	Input engine torque minus the inertial effect of the crankshaft rotational acceleration.
+M_Eng_In	 	N-m	Torque	Powertrain	Engine crankshaft input torque	Engine crankshaft input	Torque applied to the crankshaft by the pistons (or other source of torque).
+M_Eng_Rq	 	N-m	Torque	Powertrain	Driver requesting engine torque	Driver requesting for engine
+M_L1_Cl	 	N-m	Torque	Powertrain	Front left whl. clutch torque	Front left wheel clutch
+M_L2_Cl	 	N-m	Torque	Powertrain	Rear left whl. clutch torque	Rear left wheel clutch
+M_MotCmd	 	N-m	Torque	Powertrain	Electric motor torque command	Electric motor command
+M_Motor	 	N-m	Torque	Powertrain	Electric motor output torque	Electric motor
+M_R1_Cl	 	N-m	Torque	Powertrain	Front right whl. clutch torque	Front right wheel clutch
+M_R2_Cl	 	N-m	Torque	Powertrain	Rear right whl. clutch torque	Rear right wheel clutch
+M_SW	 	N-m	Torque	Steering	Steering wheel torque	Steering wheel
+M_Tbar	 	N-m	Torque	Steering	Steering torsion bar torque	Steering
+M_TC	 	N-m	Torque	Powertrain	Trans input shaft torque	Transmission input shaft	Torque output from the torque converter or clutch. Torque input to the torque converter or clutch is the engine output torque.
+M_Trans	 	N-m	Torque	Powertrain	Trans. output shaft torque	Transmission output shaft
+M_TRdL1	 	N-m	Moment	Steering	Steer gear moment from tierod L1	Pitman arm L1 torque
+M_TRdL2	 	N-m	Moment	Steering	Steer gear moment from tierod L2	Pitman arm L2 torque
+M_TRdR1	 	N-m	Moment	Steering	Steer gear moment from tierod R1	Pitman arm R1 torque
+M_TRdR2	 	N-m	Moment	Steering	Steer gear moment from tierod R2	Pitman arm R2 torque
+PathIdDm	 	-	ID of path dataset used by DM	Driver model	ID of path dataset used by DM	Target
+PbkCh_L1	 	MPa	Pressure	Brakes	Brake actuator pressure L1	Brake actuator pressure L1	This is the input pressure for the brake actuator, used to determine mechanical brake torque. It includes lags from fluid dynamics relative to the control pressure.
+PbkCh_L2	 	MPa	Pressure	Brakes	Brake actuator pressure L2	Brake actuator pressure L2
+PbkCh_R1	 	MPa	Pressure	Brakes	Brake actuator pressure R1	Brake actuator pressure R1
+PbkCh_R2	 	MPa	Pressure	Brakes	Brake actuator pressure R2	Brake actuator pressure R2
+PbkD_L1	 	MPa	Pressure	Brakes	Delivery pressure, brake L1	Delivery pressure L1	This is the pressure after proportioning. It is the input pressure for the optional built-in ABS controller.
+PbkD_L2	 	MPa	Pressure	Brakes	Delivery pressure, brake L2	Delivery pressure L2
+PbkD_R1	 	MPa	Pressure	Brakes	Delivery pressure, brake R1	Delivery pressure R1
+PbkD_R2	 	MPa	Pressure	Brakes	Delivery pressure, brake R2	Delivery pressure R2
+PbkL_L1	 	MPa	Pressure	Brakes	Line pressure, brake L1	Line pressure L1	This is the pressure before proportioning. It includes lag from the transport delay relative to the master cylinder pressure.
+PbkL_L2	 	MPa	Pressure	Brakes	Line pressure, brake L2	Line pressure L2
+PbkL_R1	 	MPa	Pressure	Brakes	Line pressure, brake R1	Line pressure R1
+PbkL_R2	 	MPa	Pressure	Brakes	Line pressure, brake R2	Line pressure R2
+Pbk_Con	 	MPa	Pressure	Brakes	Brake control input (M/C)	Brake master cylinder	Control input for braking. This is typically the pressure from the master cylinder.
+PchS1_1	 	deg	Angle	Sensor Detections	Sensor 1 pitch, detect 1	Sensor 1, detect 1
+PchS1_10	 	deg	Angle	Sensor Detections	Sensor 1 pitch, detect 10	Sensor 1, detect 10
+PchS1_2	 	deg	Angle	Sensor Detections	Sensor 1 pitch, detect 2	Sensor 1, detect 2
+PchS1_3	 	deg	Angle	Sensor Detections	Sensor 1 pitch, detect 3	Sensor 1, detect 3
+PchS1_4	 	deg	Angle	Sensor Detections	Sensor 1 pitch, detect 4	Sensor 1, detect 4
+PchS1_5	 	deg	Angle	Sensor Detections	Sensor 1 pitch, detect 5	Sensor 1, detect 5
+PchS1_6	 	deg	Angle	Sensor Detections	Sensor 1 pitch, detect 6	Sensor 1, detect 6
+PchS1_7	 	deg	Angle	Sensor Detections	Sensor 1 pitch, detect 7	Sensor 1, detect 7
+PchS1_8	 	deg	Angle	Sensor Detections	Sensor 1 pitch, detect 8	Sensor 1, detect 8
+PchS1_9	 	deg	Angle	Sensor Detections	Sensor 1 pitch, detect 9	Sensor 1, detect 9
+Pctl_L1	 	MPa	Pressure	Brakes	Pressure from controller L1	Control pressure L1	This is the pressure requested after all controls, but without lags due to fluid dynamics.
+Pctl_L2	 	MPa	Pressure	Brakes	Pressure from controller L2	Control pressure L2
+Pctl_R1	 	MPa	Pressure	Brakes	Pressure from controller R1	Control pressure R1
+Pctl_R2	 	MPa	Pressure	Brakes	Pressure from controller R2	Control pressure R2
+Pitch	 	deg	Angle	Chassis motion	Pitch, vehicle	Vehicle pitch	Euler pitch angle of the sprung mass. This is the pitch angle commonly used in vehicle dynamics.
+PitchGL1	 	deg	Angle	Ground and road	Pitch of ground, wheel L1	Pitch of ground, wheel L1	This is the pitch of the ground at the center of tire contact, based on the instant longitudinal direction of the wheel plane.
+PitchGL2	 	deg	Angle	Ground and road	Pitch of ground, wheel L2	Pitch of ground, wheel L2
+PitchGR1	 	deg	Angle	Ground and road	Pitch of ground, wheel R1	Pitch of ground, wheel R1
+PitchGR2	 	deg	Angle	Ground and road	Pitch of ground, wheel R2	Pitch of ground, wheel R2
+PitchO1	 	deg	Pitch angle	Targets	Pitch angle of object 1	Object 1
+PitchO10	 	deg	Pitch angle	Targets	Pitch angle of object 10	Object 10
+PitchO2	 	deg	Pitch angle	Targets	Pitch angle of object 2	Object 2
+PitchO3	 	deg	Pitch angle	Targets	Pitch angle of object 3	Object 3
+PitchO4	 	deg	Pitch angle	Targets	Pitch angle of object 4	Object 4
+PitchO5	 	deg	Pitch angle	Targets	Pitch angle of object 5	Object 5
+PitchO6	 	deg	Pitch angle	Targets	Pitch angle of object 6	Object 6
+PitchO7	 	deg	Pitch angle	Targets	Pitch angle of object 7	Object 7
+PitchO8	 	deg	Pitch angle	Targets	Pitch angle of object 8	Object 8
+PitchO9	 	deg	Pitch angle	Targets	Pitch angle of object 9	Object 9
+PitchRd	 	deg	Angle	Chassis motion	Pitch rel. to road, vehicle	Vehicle pitch (road)	Pitch angle of the sprung mass relative to the Road Reference Frame.
+PitchS1	 	deg	Pitch angle	Sensors	Pitch angle of sensor 1	Sensor 1
+Pitch_L1	 	deg	Angle	Wheels	Pitch, wheel L1	Pitch, wheel L1
+Pitch_L2	 	deg	Angle	Wheels	Pitch, wheel L2	Pitch, wheel L2
+Pitch_R1	 	deg	Angle	Wheels	Pitch, wheel R1	Pitch, wheel R1
+Pitch_R2	 	deg	Angle	Wheels	Pitch, wheel R2	Pitch, wheel R2
+PtchAero	 	deg	Pitch	Aerodynamics	Aero pitch of sprung mass	Aerodynamic pitch	Pitch angle of sprung mass relative to the ground at the aero reference point.
+PtchGnd	 	deg	Angle	Ground and road	Pitch angle of ground	Road reference frame 1
+PtchGndA	 	deg	Pitch	Aerodynamics	Pitch of ground for aero	Ground pitch for aero
+PtchPath	 	deg	Angle	Driver model	Pitch at ground on driver path	Ground at driver path	Global pitch of the ground is calculated by the closed-loop speed controller when using path preview. If OPT_SC is not set to 4, then this is not calculated.
+PwrBtrCh	 	kW	Power	Powertrain	Battery charged power limit	Electric battery charge limit
+PwrBtrDs	 	kW	Power	Powertrain	Battery discharged power limit	Electric battery discharge limit
+PwrBttry	 	kW	Power	Powertrain	Electric battery required power	Electric battery required
+PwrDrHEV	 	kW	Power	Powertrain	Driver required power in HEV	Driver required in HEV/EV
+PwrEngAv	 	kW	Power	Powertrain	Engine available power	Engine available	Power available to the speed controller, assuming full throttle at the current crankshaft speed.
+PwrEngIn	 	kW	Power	Powertrain	Engine crankshaft input power	Engine crankshaft input	Power going into the engine before accounting for inertial effects of crankshaft angular acceleration.
+PwrEngO	 	kW	Power	Powertrain	Engine crankshaft output power	Engine crankshaft output	Power coming out of the engine after accounting for inertial effects of crankshaft angular acceleration.
+PwrMotDm	 	kW	Power	Powertrain	Electric motor power demand	Electric motor demand
+PwrMotor	 	kW	Power	Powertrain	Electric motor output power	Electric motor
+PwrTrans	 	kW	Power	Powertrain	Transmission output shaft power	Transmission output shaft
+PwrWheel	 	kW	Power	Powertrain	Power to wheels from powertrain	Drive wheels
+Pwr_SC	 	kW	Power	Speed controller	Power from speed control (no PT)	Speed controller (no powertrain)
+Pwr_SCrq	 	kW	Power	Speed controller	Power requested from speed ctrl	Speed controller requested power
+Pwr_TC	 	kW	Power	Powertrain	Trans input shaft power	Transmission input shaft
+Qfuel	 	kg/s	Fuel rate	Powertrain	Fuel rate	Fuel
+RdID_L1	 	-	Road ID Number	Tires	Road ID for tire L1	Tire L1
+RdID_L2	 	-	Road ID Number	Tires	Road ID for tire L2	Tire L2
+RdID_R1	 	-	Road ID Number	Tires	Road ID for tire R1	Tire R1
+RdID_R2	 	-	Road ID Number	Tires	Road ID for tire R2	Tire R2
+ResBttry	 	V2/W	Resistance	Powertrain	Electric battery resistance	Electric battery
+RhoPathY	 	1/m	Curvature	Driver model	Curvature of path (road lateral)	Driver path (road lateral)	Lateral (parallel to ground) component of curvature of driver preview reference path. This is calculated by the closed-loop speed controller when using path preview. If OPT_SC is not set to 4, then this curvature is not calculated.
+RhoPathZ	 	1/m	Curvature	Driver model	Curvature of path (road normal)	Driver path (road normal)	Normal (perpendicular to ground) component of curvature of driver preview reference path. This is calculated by the closed-loop speed controller when using path preview. If OPT_SC is not set to 4, then this curvature is not calculated.
+Rho_Road	 	1/m	Curvature	Driver model	Curvature of road X-Y ref. path	Driver reference path	Lateral (perpendicular to gravity) component of curvature of driver reference path.
+RolA_A1r	 	deg/s2	Angular acceleration	Axles	Axle 1 relative roll acc.	Axle 1 relative roll
+RolA_A2r	 	deg/s2	Angular acceleration	Axles	Axle 2 relative roll acc.	Axle 2 relative roll
+Roll	 	deg	Angle	Chassis motion	Roll, vehicle	Vehicle roll	This is the angle between [sy] and the horizontal plane normal to [nz]. It is calculated as arcsin(dot([sy], [nz])), and is more easily measurable than Euler roll. However, VS Visualizer requires the Euler angle, Roll_E.
+RollGL1	 	deg	Angle	Ground and road	Roll of ground, wheel L1	Roll of ground, wheel L1	This is the roll of the ground at the center of tire contact, based on the instant longitudinal direction of the wheel plane.
+RollGL2	 	deg	Angle	Ground and road	Roll of ground, wheel L2	Roll of ground, wheel L2
+RollGnd	 	deg	Angle	Ground and road	Roll angle of ground	Road reference frame 
+RollGR1	 	deg	Angle	Ground and road	Roll of ground, wheel R1	Roll of ground, wheel R1
+RollGR2	 	deg	Angle	Ground and road	Roll of ground, wheel R2	Roll of ground, wheel R2
+RollO_1	 	deg	Roll angle	Targets	Roll angle of object 1	Object 1
+RollO_10	 	deg	Roll angle	Targets	Roll angle of object 10	Object 10
+RollO_2	 	deg	Roll angle	Targets	Roll angle of object 2	Object 2
+RollO_3	 	deg	Roll angle	Targets	Roll angle of object 3	Object 3
+RollO_4	 	deg	Roll angle	Targets	Roll angle of object 4	Object 4
+RollO_5	 	deg	Roll angle	Targets	Roll angle of object 5	Object 5
+RollO_6	 	deg	Roll angle	Targets	Roll angle of object 6	Object 6
+RollO_7	 	deg	Roll angle	Targets	Roll angle of object 7	Object 7
+RollO_8	 	deg	Roll angle	Targets	Roll angle of object 8	Object 8
+RollO_9	 	deg	Roll angle	Targets	Roll angle of object 9	Object 9
+RollPath	 	deg	Angle	Driver model	Roll at ground on driver path	Ground at driver path	Global roll of the ground is calculated by the closed-loop speed controller when using path preview. If OPT_SC is not set to 4, then this is not calculated.
+RollS_1	 	deg	Roll angle	Sensors	Roll angle of sensor 1	Sensor 1
+RollWK_L1	RollWKL1	deg	Angle	Wheels	Roll, wheel knuckle L1	Roll, wheel knuckle L1	This is an Euler roll angle (3-2-1) for the wheel knuckle, used for VS STI tire models.
+RollWK_L2	RollWKL2	deg	Angle	Wheels	Roll, wheel knuckle L2	Roll, wheel knuckle L2
+RollWK_R1	RollWKR1	deg	Angle	Wheels	Roll, wheel knuckle R1	Roll, wheel knuckle R1
+RollWK_R2	RollWKR2	deg	Angle	Wheels	Roll, wheel knuckle R2	Roll, wheel knuckle R2
+Roll_A1r	 	deg	Angle	Axles	Axle 1 relative roll	Axle 1 relative roll	The axle's relative roll is measured between the axle and the sprung mass's [sz]-normal plane. For independent suspensions, a line is drawn between the origins of the unsteered unsprung mass bodies.
+Roll_A2r	 	deg	Angle	Axles	Axle 2 relative roll	Axle 2 relative roll
+Roll_E	 	deg	Angle	Chassis motion	Roll (Euler), vehicle	Vehicle roll (Euler)	This is the Euler roll angle of the sprung mass of the vehicle. This is needed by VS Visualizer, but is not the angle between [sy] and a horizontal reference unless the pitch angle is zero
+Roll_L1	 	deg	Angle	Wheels	Roll, wheel L1	Roll, wheel L1	This is the roll angle of the wheel spin axis, used to view with VS Visualizer.
+Roll_L2	 	deg	Angle	Wheels	Roll, wheel L2	Roll, wheel L2
+Roll_R1	 	deg	Angle	Wheels	Roll, wheel R1	Roll, wheel R1
+Roll_R2	 	deg	Angle	Wheels	Roll, wheel R2	Roll, wheel R2
+Roll_Rd	 	deg	Angle	Chassis motion	Roll rel. to road, vehicle	Vehicle roll (road)	Roll angle of the sprung mass relative to the Road Reference Frame.
+RolR_A1r	 	deg/s	Angular rate	Axles	Axle 1 relative roll rate	Axle 1 relative roll
+RolR_A2r	 	deg/s	Angular rate	Axles	Axle 2 relative roll rate	Axle 2 relative roll
+RotTrans	 	rev	Rotation	Powertrain	Trans. output shaft rotation	Transmission output shaft
+Rot_D3f	 	rev	Rotation	Powertrain	Trans case shaft to drv. A1 rot	Transfer case front output shaft
+Rot_D3r	 	rev	Rotation	Powertrain	Trans case shaft to drv. A2 rot	Transfer case rear output shaft
+Rot_L1	 	rev	Rotation	Wheels	Wheel L1 rotation (Euler)	Wheel L1 rotation
+Rot_L2	 	rev	Rotation	Wheels	Wheel L2 rotation (Euler)	Wheel L2 rotation
+Rot_R1	 	rev	Rotation	Wheels	Wheel R1 rotation (Euler)	Wheel R1 rotation
+Rot_R2	 	rev	Rotation	Wheels	Wheel R2 rotation (Euler)	Wheel R2 rotation
+Rot_TC	 	rev	Rotation	Powertrain	Trans input shaft rotation	Transmission input shaft
+RRE_L1	 	mm	Effective radius	Tires	Effective rolling rad., tire L1	Tire L1, eff. radius
+RRE_L2	 	mm	Effective radius	Tires	Effective rolling rad., tire L2	Tire L2, eff. radius
+RRE_R1	 	mm	Effective radius	Tires	Effective rolling rad., tire R1	Tire R1, eff. radius
+RRE_R2	 	mm	Effective radius	Tires	Effective rolling rad., tire R2	Tire R2, eff. radius
+R_AV_TC	 	-	Dimensionless ratio	Powertrain	TC output/input speed ratio	TC output/input speed
+R_M_TC	 	-	Dimensionless ratio	Powertrain	TC out./input shaft torque ratio	TC output/input shaft torque
+SocBttry	 	-	Dimensionless ratio	Powertrain	Battery state of charge	Battery state of charge
+SpdS1_1	 	km/h	Speed	Sensor Detections	Sensor 1 speed, detect 1	Sensor 1, detect 1
+SpdS1_10	 	km/h	Speed	Sensor Detections	Sensor 1 speed, detect 10	Sensor 1, detect 10
+SpdS1_2	 	km/h	Speed	Sensor Detections	Sensor 1 speed, detect 2	Sensor 1, detect 2
+SpdS1_3	 	km/h	Speed	Sensor Detections	Sensor 1 speed, detect 3	Sensor 1, detect 3
+SpdS1_4	 	km/h	Speed	Sensor Detections	Sensor 1 speed, detect 4	Sensor 1, detect 4
+SpdS1_5	 	km/h	Speed	Sensor Detections	Sensor 1 speed, detect 5	Sensor 1, detect 5
+SpdS1_6	 	km/h	Speed	Sensor Detections	Sensor 1 speed, detect 6	Sensor 1, detect 6
+SpdS1_7	 	km/h	Speed	Sensor Detections	Sensor 1 speed, detect 7	Sensor 1, detect 7
+SpdS1_8	 	km/h	Speed	Sensor Detections	Sensor 1 speed, detect 8	Sensor 1, detect 8
+SpdS1_9	 	km/h	Speed	Sensor Detections	Sensor 1 speed, detect 9	Sensor 1, detect 9
+Station	 	m	Longitudinal distance	Driver model	Station (path) at vehicle origin	Path station at vehicle origin
+Sta_Prof	 	m	Longitudinal distance	Ground and road	Station for road profiles	Road profile station	This is the travelled distance, calculated by integrating forward speed Vxz_Fwd. It is used to calculate incremental ground Z for "wandering profiles" that follow the tire contact points.
+Sta_Road	 	m	Longitudinal distance	Ground and road	Station (road) at vehicle origin	Road station at vehicle origin
+Steer_DM	 	deg	Angle	Driver model	Steer angle from DM controller	Steering wheel
+Steer_L1	 	deg	Angle	Steering	Wheel steer L1	Wheel steer L1	Total road wheel steer due to kinematics and compliance, about the [sz] axis.
+Steer_L2	 	deg	Angle	Steering	Wheel steer L2	Wheel steer L2
+Steer_R1	 	deg	Angle	Steering	Wheel steer R1	Wheel steer R1
+Steer_R2	 	deg	Angle	Steering	Wheel steer R2	Wheel steer R2
+Steer_SW	 	deg	Angle	Steering	Steering wheel angle	Steering wheel
+StrAV_SW	 	deg/s	Angular rate	Steering	Steering wheel angular rate	Steering wheel
+StrC_L1	 	deg	Angle	Steering	Compliance steer, wheel L1	Wheel L1 compliance steer
+StrC_L2	 	deg	Angle	Steering	Compliance steer, wheel L2	Wheel L2 compliance steer
+StrC_R1	 	deg	Angle	Steering	Compliance steer, wheel R1	Wheel R1 compliance steer
+StrC_R2	 	deg	Angle	Steering	Compliance steer, wheel R2	Wheel R2 compliance steer
+StrKp_L1	 	deg	Angle	Steering	Steer angle about kingpin L1	Kingpin L1 steer angle	This steer is about the 3D inclined kingpin axis, which is a rotation axis in the multibody model.
+StrKp_L2	 	deg	Angle	Steering	Steer angle about kingpin L2	Kingpin L2 steer angle
+StrKp_R1	 	deg	Angle	Steering	Steer angle about kingpin R1	Kingpin R1 steer angle	This steer is about the 3D inclined kingpin axis, which is a rotation axis in the multibody model.
+StrKp_R2	 	deg	Angle	Steering	Steer angle about kingpin R2	Kingpin R2 steer angle
+StrK_L1	 	deg	Angle	Steering	Kinematic steer, wheel L1	Wheel L1 kinematic steer	Steering angle of wheel due to kinematical effects: control divided by gear ratio, subject to nonlinear kinematical shaping, added to toe.
+StrK_L2	 	deg	Angle	Steering	Kinematic steer, wheel L2	Wheel L2 kinematic steer
+StrK_R1	 	deg	Angle	Steering	Kinematic steer, wheel R1	Wheel R1 kinematic steer
+StrK_R2	 	deg	Angle	Steering	Kinematic steer, wheel R2	Wheel R2 kinematic steer
+StrSWr_1	 	deg	Angle	Steering	SW angle reduced for axle 1	SW angle reduced for axle 1	Steering wheel angle divided by the constant steering gear ratio for this axle.
+StrSWr_2	 	deg	Angle	Steering	SW angle reduced for axle 2	SW angle reduced for axle 2
+SusX_L1	 	mm	Displacement	Suspensions	Wheel L1 X displacement	Wheel L1 X displacement
+SusX_L2	 	mm	Displacement	Suspensions	Wheel L2 X displacement	Wheel L2 X displacement
+SusX_R1	 	mm	Displacement	Suspensions	Wheel R1 X displacement	Wheel R1 X displacement
+SusX_R2	 	mm	Displacement	Suspensions	Wheel R2 X displacement	Wheel R2 X displacement
+SusY_L1	 	mm	Displacement	Suspensions	Wheel L1 lateral displacement	Wheel L1 lateral displacement
+SusY_L2	 	mm	Displacement	Suspensions	Wheel L2 lateral displacement	Wheel L2 lateral displacement
+SusY_R1	 	mm	Displacement	Suspensions	Wheel R1 lateral displacement	Wheel R1 lateral displacement
+SusY_R2	 	mm	Displacement	Suspensions	Wheel R2 lateral displacement	Wheel R2 lateral displacement
+S_Obj_1	 	m	Station	Targets	Station of object 1	Object 1	Station is associated with the path identified by the parameter PATH_ID_OBJ. If the parameter OPT_SPEED_OBJ is 1 or 2, then station is also installed as an ODE state variable whose derivative is V_Obj. If PATH_ID_OBJ is zero, then station is not used and is always zero.
+S_Obj_10	 	m	Station	Targets	Station of object 10	Object 10
+S_Obj_2	 	m	Station	Targets	Station of object 2	Object 2
+S_Obj_3	 	m	Station	Targets	Station of object 3	Object 3
+S_Obj_4	 	m	Station	Targets	Station of object 4	Object 4
+S_Obj_5	 	m	Station	Targets	Station of object 5	Object 5
+S_Obj_6	 	m	Station	Targets	Station of object 6	Object 6
+S_Obj_7	 	m	Station	Targets	Station of object 7	Object 7
+S_Obj_8	 	m	Station	Targets	Station of object 8	Object 8
+S_Obj_9	 	m	Station	Targets	Station of object 9	Object 9
+S_RdO_1	 	m	Station	Targets	Station on road path, object 1	Object 1	S_Rd_O applies to the reference path for the road surface identified by the parameter ROAD_ID_OBJ. If ROAD_ID_OBJ is zero, then this station is not used and is always zero.
+S_RdO_10	 	m	Station	Targets	Station on road path, object 10	Object 10
+S_RdO_2	 	m	Station	Targets	Station on road path, object 2	Object 2
+S_RdO_3	 	m	Station	Targets	Station on road path, object 3	Object 3
+S_RdO_4	 	m	Station	Targets	Station on road path, object 4	Object 4
+S_RdO_5	 	m	Station	Targets	Station on road path, object 5	Object 5
+S_RdO_6	 	m	Station	Targets	Station on road path, object 6	Object 6
+S_RdO_7	 	m	Station	Targets	Station on road path, object 7	Object 7
+S_RdO_8	 	m	Station	Targets	Station on road path, object 8	Object 8
+S_RdO_9	 	m	Station	Targets	Station on road path, object 9	Object 9
+S_Rd_L1	 	m	Road Station	Tires	Road station for tire L1	Tire L1
+S_Rd_L2	 	m	Road Station	Tires	Road station for tire L2	Tire L2
+S_Rd_R1	 	m	Road Station	Tires	Road station for tire R1	Tire R1
+S_Rd_R2	 	m	Road Station	Tires	Road station for tire R2	Tire R2
+TC_Lock	 	-	Boolean	Powertrain	Torque converter lockup signal	Torque converter lockup clutch	Torque converter lockup clutch control signal: 0 -> free, 1 -> lockup.
+TempBttry	TmpBttry	C	Temperature	Powertrain	Battery Temperature	Battery Temperature
+Throttle	 	-	Dimensionless ratio	Powertrain	Normalized throttle at Pedal	Pedal	Sum of the specified open-loop throttle control (internal + imported) plus throttle due to closed-loop speed control.
+Thrtl_SC	 	-	Dimensionless ratio	Powertrain	Throttle (speed controller)	Pedal (speed controller)
+Thr_Eng	 	-	Dimensionless ratio	Powertrain	Normalized throttle at Engine	Engine	Normalized throttle applied to the engine. This includes a 1st-order time lag.
+Thr_HEV	 	-	Dimensionless ratio	Powertrain	Engine throttle command from HEV	Engine (HEV)
+Thr_Intl	 	-	Dimensionless ratio	Powertrain	Normalized throttle (internal)	Pedal (internal)	Sum of the specified open-loop throttle control plus throttle due to closed-loop speed control. This excludes the optional imported value.
+TypeO_1	 	-	Type (code)	Targets	Type of object 1	Object 1	Each object has an output type (code) that can be set with VS Commands or imported from an external software tool. This can be used to provide content from objects representing signs and traffic signals.
+TypeO_10	 	-	Type (code)	Targets	Type of object 10	Object 10
+TypeO_2	 	-	Type (code)	Targets	Type of object 2	Object 2
+TypeO_3	 	-	Type (code)	Targets	Type of object 3	Object 3
+TypeO_4	 	-	Type (code)	Targets	Type of object 4	Object 4
+TypeO_5	 	-	Type (code)	Targets	Type of object 5	Object 5
+TypeO_6	 	-	Type (code)	Targets	Type of object 6	Object 6
+TypeO_7	 	-	Type (code)	Targets	Type of object 7	Object 7
+TypeO_8	 	-	Type (code)	Targets	Type of object 8	Object 8
+TypeO_9	 	-	Type (code)	Targets	Type of object 9	Object 9
+TypS1_1	 	-	Type	Sensor Detections	Sensor 1 Type, detect 1	Sensor 1, detect 1
+TypS1_10	 	-	Type	Sensor Detections	Sensor 1 Type, detect 10	Sensor 1, detect 10
+TypS1_2	 	-	Type	Sensor Detections	Sensor 1 Type, detect 2	Sensor 1, detect 2
+TypS1_3	 	-	Type	Sensor Detections	Sensor 1 Type, detect 3	Sensor 1, detect 3
+TypS1_4	 	-	Type	Sensor Detections	Sensor 1 Type, detect 4	Sensor 1, detect 4
+TypS1_5	 	-	Type	Sensor Detections	Sensor 1 Type, detect 5	Sensor 1, detect 5
+TypS1_6	 	-	Type	Sensor Detections	Sensor 1 Type, detect 6	Sensor 1, detect 6
+TypS1_7	 	-	Type	Sensor Detections	Sensor 1 Type, detect 7	Sensor 1, detect 7
+TypS1_8	 	-	Type	Sensor Detections	Sensor 1 Type, detect 8	Sensor 1, detect 8
+TypS1_9	 	-	Type	Sensor Detections	Sensor 1 Type, detect 9	Sensor 1, detect 9
+T_Event	 	s	Time	Time	Time since event clock reset	Event	This output is calculated each time step with the formula T_EVENT = T - TSTART_T_EVENT, where TSTART_T_EVENT is a system parameter that may be set to T when a VS Event is triggered.
+T_Record	 	s	Time	Time	Recording time in output file	Recording time in file	This variable is incremented when outputs are written to file or saved to a buffer. This matches the time that is obtained in post-processing by multiplying the sample number by the sample interval.
+T_Rtr_L1	 	C	Temperature	Brakes	Brake rotor L1 temperature	Brake rotor L1
+T_Rtr_L2	 	C	Temperature	Brakes	Brake rotor L2 temperature	Brake rotor L2
+T_Rtr_R1	 	C	Temperature	Brakes	Brake rotor R1 temperature	Brake rotor R1
+T_Rtr_R2	 	C	Temperature	Brakes	Brake rotor R2 temperature	Brake rotor R2
+T_Stamp	 	s	Time	Time	Simulation time stamp	Simulation time stamp	This is the simulation time. If writing to file is interupted by setting the system parameter OPT_WRITE to 0, then this variable will not match the recording time T_record.
+Vair	 	km/h	Speed	Aerodynamics	Air speed relative to vehicle	Air speed relative to vehicle
+Vbk_Tot	 	mm3	Volume	Brakes	Total brake corner volume	Brake system
+VisO_1	 	-	Visibility	Targets	Visibility of object 1	Object 1
+VisO_10	 	-	Visibility	Targets	Visibility of object 10	Object 10
+VisO_2	 	-	Visibility	Targets	Visibility of object 2	Object 2
+VisO_3	 	-	Visibility	Targets	Visibility of object 3	Object 3
+VisO_4	 	-	Visibility	Targets	Visibility of object 4	Object 4
+VisO_5	 	-	Visibility	Targets	Visibility of object 5	Object 5
+VisO_6	 	-	Visibility	Targets	Visibility of object 6	Object 6
+VisO_7	 	-	Visibility	Targets	Visibility of object 7	Object 7
+VisO_8	 	-	Visibility	Targets	Visibility of object 8	Object 8
+VisO_9	 	-	Visibility	Targets	Visibility of object 9	Object 9
+VJStL1	 	mm/s	Compression rate	Suspensions	Comp. rate, jounce stop L1	Jounce stop L1
+VJStL2	 	mm/s	Compression rate	Suspensions	Comp. rate, jounce stop L2	Jounce stop L2
+VJStR1	 	mm/s	Compression rate	Suspensions	Comp. rate, jounce stop R1	Jounce stop R1
+VJStR2	 	mm/s	Compression rate	Suspensions	Comp. rate, jounce stop R2	Jounce stop R2
+VocBttry	 	V	Voltage	Powertrain	Battery open-circuit voltage	Electric battery open-circuit
+VRStL1	 	mm/s	Compression rate	Suspensions	Comp. rate, rebound stop L1	Rebound stop L1
+VRStL2	 	mm/s	Compression rate	Suspensions	Comp. rate, rebound stop L2	Rebound stop L2
+VRStR1	 	mm/s	Compression rate	Suspensions	Comp. rate, rebound stop R1	Rebound stop R1
+VRStR2	 	mm/s	Compression rate	Suspensions	Comp. rate, rebound stop R2	Rebound stop R2
+Vwind	 	km/h	Speed	Aerodynamics	Wind speed	Wind
+Vx	 	km/h	Longitudinal speed	Chassis motion	Long. speed, inst. CG, vehicle	Instant CG, vehicle	This is the speed of the instant CG of the vehicle unit in the ISO/SAE [x] direction. Be aware  that the motion of the instant CG cannot be measured directly in physical vehicles.
+VxCenL1	 	km/h	Longitudinal speed	Tires	Vx, center of tire contact L1	Center of tire contact L1
+VxCenL2	 	km/h	Longitudinal speed	Tires	Vx, center of tire contact L2	Center of tire contact L2
+VxCenR1	 	km/h	Longitudinal speed	Tires	Vx, center of tire contact R1	Center of tire contact R1
+VxCenR2	 	km/h	Longitudinal speed	Tires	Vx, center of tire contact R2	Center of tire contact R2
+VxNf_SM	 	km/h	Speed	Chassis motion	Global X vel., CG, sprung mass	CG, sprung mass	This is the [nx] component of the velocity vector of the sprung mass CG.
+VxTarget	 	km/h	Longitudinal speed	Speed controller	Target speed	Target speed
+Vxz_Fwd	 	km/h	Longitudinal speed	Chassis motion	Longitudinal speed in XZ plane	Vehicle forward in XZ plane	This is the forward speed of the sprung mass CG, calculated as SQRT(Vx_SM^2 + Vz_SM^2), with the sign set to match Vx_SM.
+Vx_Err	 	km/h	Longitudinal speed	Speed controller	Speed controller error	Controller error
+Vx_IErr	 	m	Speed error integral	Speed controller	Integrated speed control error	Integrated speed error
+Vx_L1	 	km/h	Longitudinal speed	Wheels	Vx (equivalent), wheel L1	Wheel L1 (equivalent)	Equivalent wheel speed is defined as the spin (rad/sec) multiplied by the effective rolling radius. It is the translational speed that corresponds to the angular rate during free rolling.
+Vx_L2	 	km/h	Longitudinal speed	Wheels	Vx (equivalent), wheel L2	Wheel L2 (equivalent)
+Vx_R1	 	km/h	Longitudinal speed	Wheels	Vx (equivalent), wheel R1	Wheel R1 (equivalent)
+Vx_R2	 	km/h	Longitudinal speed	Wheels	Vx (equivalent), wheel R2	Wheel R2 (equivalent)
+Vx_Rd	 	km/h	Longitudinal speed	Chassis motion	Road X vel., inst. CG, vehicle	Instant CG, vehicle	This is the speed of the instant CG of the vehicle unit in the road [rx] direction.
+Vx_S1_1	 	km/h	Speed	Sensor Detections	Sensor 1 X speed, detect 1	Sensor 1, detect 1
+Vx_S1_10	 	km/h	Speed	Sensor Detections	Sensor 1 X speed, detect 10	Sensor 1, detect 10
+Vx_S1_2	 	km/h	Speed	Sensor Detections	Sensor 1 X speed, detect 2	Sensor 1, detect 2
+Vx_S1_3	 	km/h	Speed	Sensor Detections	Sensor 1 X speed, detect 3	Sensor 1, detect 3
+Vx_S1_4	 	km/h	Speed	Sensor Detections	Sensor 1 X speed, detect 4	Sensor 1, detect 4
+Vx_S1_5	 	km/h	Speed	Sensor Detections	Sensor 1 X speed, detect 5	Sensor 1, detect 5
+Vx_S1_6	 	km/h	Speed	Sensor Detections	Sensor 1 X speed, detect 6	Sensor 1, detect 6
+Vx_S1_7	 	km/h	Speed	Sensor Detections	Sensor 1 X speed, detect 7	Sensor 1, detect 7
+Vx_S1_8	 	km/h	Speed	Sensor Detections	Sensor 1 X speed, detect 8	Sensor 1, detect 8
+Vx_S1_9	 	km/h	Speed	Sensor Detections	Sensor 1 X speed, detect 9	Sensor 1, detect 9
+Vx_SM	 	km/h	Longitudinal speed	Chassis motion	Long. speed, CG, sprung mass	CG, sprung mass	This is the [x] component of the velocity vector of the sprung mass CG.
+Vx_WC_L1	 	km/h	Longitudinal speed	Wheels	Vx at wheel center L1	Vx at wheel center L1
+Vx_WC_L2	 	km/h	Longitudinal speed	Wheels	Vx at wheel center L2	Vx at wheel center L2
+Vx_WC_R1	 	km/h	Longitudinal speed	Wheels	Vx at wheel center R1	Vx at wheel center R1
+Vx_WC_R2	 	km/h	Longitudinal speed	Wheels	Vx at wheel center R2	Vx at wheel center R2
+Vy	 	km/h	Lateral speed	Chassis motion	Lat. speed, inst. CG, vehicle	Instant CG, vehicle	This is the speed of the instant CG of the vehicle unit in the ISO/SAE [y] direction. Be aware  that the motion of the instant CG cannot be measured directly in physical vehicles.
+VyNf_SM	 	km/h	Speed	Chassis motion	Global Y vel., CG, sprung mass	CG, sprung mass	This is the [ny] component of the velocity vector of the sprung mass CG.
+VyTC_L1	 	km/h	Lateral speed	Tires	Vy, L1 center of tire contact	Center of tire contact L1
+VyTC_L2	 	km/h	Lateral speed	Tires	Vy, L2 center of tire contact	Center of tire contact L2
+VyTC_R1	 	km/h	Lateral speed	Tires	Vy, R1 center of tire contact	Center of tire contact R1
+VyTC_R2	 	km/h	Lateral speed	Tires	Vy, R2 center of tire contact	Center of tire contact R2
+Vy_Rack1	 	mm/s	Speed	Steering	Steering rack disp. rate, axle 1	Axle 1 steering
+Vy_Rack2	 	mm/s	Speed	Steering	Steering rack disp. rate, axle 2	Axle 2 steering
+Vy_Rd	 	km/h	Lateral speed	Chassis motion	Road Y vel., inst. CG, vehicle	Instant CG, vehicle	This is the speed of the instant CG of the vehicle unit in the road [ry] direction.
+Vy_S1_1	 	km/h	Speed	Sensor Detections	Sensor 1 Y speed, detect 1	Sensor 1, detect 1
+Vy_S1_10	 	km/h	Speed	Sensor Detections	Sensor 1 Y speed, detect 10	Sensor 1, detect 10
+Vy_S1_2	 	km/h	Speed	Sensor Detections	Sensor 1 Y speed, detect 2	Sensor 1, detect 2
+Vy_S1_3	 	km/h	Speed	Sensor Detections	Sensor 1 Y speed, detect 3	Sensor 1, detect 3
+Vy_S1_4	 	km/h	Speed	Sensor Detections	Sensor 1 Y speed, detect 4	Sensor 1, detect 4
+Vy_S1_5	 	km/h	Speed	Sensor Detections	Sensor 1 Y speed, detect 5	Sensor 1, detect 5
+Vy_S1_6	 	km/h	Speed	Sensor Detections	Sensor 1 Y speed, detect 6	Sensor 1, detect 6
+Vy_S1_7	 	km/h	Speed	Sensor Detections	Sensor 1 Y speed, detect 7	Sensor 1, detect 7
+Vy_S1_8	 	km/h	Speed	Sensor Detections	Sensor 1 Y speed, detect 8	Sensor 1, detect 8
+Vy_S1_9	 	km/h	Speed	Sensor Detections	Sensor 1 Y speed, detect 9	Sensor 1, detect 9
+Vy_SM	 	km/h	Lateral speed	Chassis motion	Lateral speed, CG, sprung mass	CG, sprung mass	This is the [y] component of the velocity vector of the sprung mass CG.
+Vy_WC_L1	 	km/h	Lateral speed	Wheels	Vy at wheel center L1	Vy at wheel center L1
+Vy_WC_L2	 	km/h	Lateral speed	Wheels	Vy at wheel center L2	Vy at wheel center L2
+Vy_WC_R1	 	km/h	Lateral speed	Wheels	Vy at wheel center R1	Vy at wheel center R1
+Vy_WC_R2	 	km/h	Lateral speed	Wheels	Vy at wheel center R2	Vy at wheel center R2
+Vz	 	km/h	Vertical speed	Chassis motion	Vert. speed, inst. CG, vehicle	Instant CG, vehicle	This is the speed of the instant CG of the vehicle unit in the [nz] direction. Be aware  that the motion of the instant CG cannot be measured directly in physical vehicles.
+Vz_Rd	 	km/h	Vertical speed	Chassis motion	Road Z vel., inst. CG, vehicle	Instant CG, vehicle	This is the speed of the instant CG of the vehicle unit in the road [rz] direction.
+Vz_SM	 	km/h	Vertical speed	Chassis motion	Vert. speed, CG, sprung mass	CG, sprung mass	This is the [nz] component of the velocity vector of the sprung mass CG.
+Vz_WC_L1	 	km/h	Vertical speed	Wheels	Vz at wheel center L1	Vz at wheel center L1
+Vz_WC_L2	 	km/h	Vertical speed	Wheels	Vz at wheel center L2	Vz at wheel center L2
+Vz_WC_R1	 	km/h	Vertical speed	Wheels	Vz at wheel center R1	Vz at wheel center R1
+Vz_WC_R2	 	km/h	Vertical speed	Wheels	Vz at wheel center R2	Vz at wheel center R2
+V_Bttry	 	V	Voltage	Powertrain	Battery output voltage	Electric battery output
+V_Obj_1	 	km/h	Forward speed	Targets	Speed of object 1	Object 1	If the parameter PATH_ID_OBJ is nonzero it identifies a path for the object. If the parameter OPT_SPEED_OBJ is 1 or 2, then station is also installed as an ODE state variable whose derivative is V_Obj. In this case, V_Obj for each object can be imported or set with VS Commands such as EQ_OUT. Otherwise, V_Obj is calculated from changes in global X and Y coordinates.
+V_Obj_10	 	km/h	Forward speed	Targets	Speed of object 10	Object 10
+V_Obj_2	 	km/h	Forward speed	Targets	Speed of object 2	Object 2
+V_Obj_3	 	km/h	Forward speed	Targets	Speed of object 3	Object 3
+V_Obj_4	 	km/h	Forward speed	Targets	Speed of object 4	Object 4
+V_Obj_5	 	km/h	Forward speed	Targets	Speed of object 5	Object 5
+V_Obj_6	 	km/h	Forward speed	Targets	Speed of object 6	Object 6
+V_Obj_7	 	km/h	Forward speed	Targets	Speed of object 7	Object 7
+V_Obj_8	 	km/h	Forward speed	Targets	Speed of object 8	Object 8
+V_Obj_9	 	km/h	Forward speed	Targets	Speed of object 9	Object 9
+WidS1_1	 	m	Width	Sensor Detections	Sensor 1 width, detect 1	Sensor 1, detect 1
+WidS1_10	 	m	Width	Sensor Detections	Sensor 1 width, detect 10	Sensor 1, detect 10
+WidS1_2	 	m	Width	Sensor Detections	Sensor 1 width, detect 2	Sensor 1, detect 2
+WidS1_3	 	m	Width	Sensor Detections	Sensor 1 width, detect 3	Sensor 1, detect 3
+WidS1_4	 	m	Width	Sensor Detections	Sensor 1 width, detect 4	Sensor 1, detect 4
+WidS1_5	 	m	Width	Sensor Detections	Sensor 1 width, detect 5	Sensor 1, detect 5
+WidS1_6	 	m	Width	Sensor Detections	Sensor 1 width, detect 6	Sensor 1, detect 6
+WidS1_7	 	m	Width	Sensor Detections	Sensor 1 width, detect 7	Sensor 1, detect 7
+WidS1_8	 	m	Width	Sensor Detections	Sensor 1 width, detect 8	Sensor 1, detect 8
+WidS1_9	 	m	Width	Sensor Detections	Sensor 1 width, detect 9	Sensor 1, detect 9
+Xcg_SM	 	m	Global X coordinate	Chassis motion	X coordinate, CG, sprung mass	CG, sprung mass
+Xcg_TM	 	m	Global X coordinate	Chassis motion	X coordinate, inst. CG, vehicle	Instant CG, vehicle
+Xctc_L1	 	m	Global X coordinate	Tires	X coordinate, tire CTC L1	Center of tire contact L1
+Xctc_L2	 	m	Global X coordinate	Tires	X coordinate, tire CTC L2	Center of tire contact L2
+Xctc_R1	 	m	Global X coordinate	Tires	X coordinate, tire CTC R1	Center of tire contact R1
+Xctc_R2	 	m	Global X coordinate	Tires	X coordinate, tire CTC R2	Center of tire contact R2
+XL_S1_1	 	m	X coordinate	Sensor Detections	Sensor 1 X coord. (L), detect 1	Sensor 1, detect 1
+XL_S1_10	 	m	X coordinate	Sensor Detections	Sensor 1 X coord. (L), detect 10	Sensor 1, detect 10
+XL_S1_2	 	m	X coordinate	Sensor Detections	Sensor 1 X coord. (L), detect 2	Sensor 1, detect 2
+XL_S1_3	 	m	X coordinate	Sensor Detections	Sensor 1 X coord. (L), detect 3	Sensor 1, detect 3
+XL_S1_4	 	m	X coordinate	Sensor Detections	Sensor 1 X coord. (L), detect 4	Sensor 1, detect 4
+XL_S1_5	 	m	X coordinate	Sensor Detections	Sensor 1 X coord. (L), detect 5	Sensor 1, detect 5
+XL_S1_6	 	m	X coordinate	Sensor Detections	Sensor 1 X coord. (L), detect 6	Sensor 1, detect 6
+XL_S1_7	 	m	X coordinate	Sensor Detections	Sensor 1 X coord. (L), detect 7	Sensor 1, detect 7
+XL_S1_8	 	m	X coordinate	Sensor Detections	Sensor 1 X coord. (L), detect 8	Sensor 1, detect 8
+XL_S1_9	 	m	X coordinate	Sensor Detections	Sensor 1 X coord. (L), detect 9	Sensor 1, detect 9
+Xo	 	m	Global X coordinate	Chassis motion	X coordinate, vehicle origin	Vehicle
+Xrd_Air	 	m	Global X coordinate	Aerodynamics	X coord. of road aero ref. 1	Road reference frame 1
+Xrel_L1	 	mm	Local X coordinate	Wheels	X relative coordinate, WC L1	Wheel center L1
+Xrel_L2	 	mm	Local X coordinate	Wheels	X relative coordinate, WC L2	Wheel center L2
+Xrel_R1	 	mm	Local X coordinate	Wheels	X relative coordinate, WC R1	Wheel center R1
+Xrel_R2	 	mm	Local X coordinate	Wheels	X relative coordinate, WC R2	Wheel center R2
+XR_S1_1	 	m	X coordinate	Sensor Detections	Sensor 1 X coord. (R), detect 1	Sensor 1, detect 1
+XR_S1_10	 	m	X coordinate	Sensor Detections	Sensor 1 X coord. (R), detect 10	Sensor 1, detect 10
+XR_S1_2	 	m	X coordinate	Sensor Detections	Sensor 1 X coord. (R), detect 2	Sensor 1, detect 2
+XR_S1_3	 	m	X coordinate	Sensor Detections	Sensor 1 X coord. (R), detect 3	Sensor 1, detect 3
+XR_S1_4	 	m	X coordinate	Sensor Detections	Sensor 1 X coord. (R), detect 4	Sensor 1, detect 4
+XR_S1_5	 	m	X coordinate	Sensor Detections	Sensor 1 X coord. (R), detect 5	Sensor 1, detect 5
+XR_S1_6	 	m	X coordinate	Sensor Detections	Sensor 1 X coord. (R), detect 6	Sensor 1, detect 6
+XR_S1_7	 	m	X coordinate	Sensor Detections	Sensor 1 X coord. (R), detect 7	Sensor 1, detect 7
+XR_S1_8	 	m	X coordinate	Sensor Detections	Sensor 1 X coord. (R), detect 8	Sensor 1, detect 8
+XR_S1_9	 	m	X coordinate	Sensor Detections	Sensor 1 X coord. (R), detect 9	Sensor 1, detect 9
+Xv1_O_1	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, object 1	Object 1	Each object has 4 vertices whose global X and Y coordinates are available as outputs Xv and Yv. For rectangular objects, v1 is left-front, v2 is right-front, v3 is left-rear, and v4 is right-rear. For cylinders, v1 is front, v2 is right, v3 is back, and v4 is left.
+Xv1_O_10	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, object 10	Object 10
+Xv1_O_2	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, object 2	Object 2
+Xv1_O_3	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, object 3	Object 3
+Xv1_O_4	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, object 4	Object 4
+Xv1_O_5	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, object 5	Object 5
+Xv1_O_6	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, object 6	Object 6
+Xv1_O_7	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, object 7	Object 7
+Xv1_O_8	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, object 8	Object 8
+Xv1_O_9	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, object 9	Object 9
+Xv2_O_1	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, object 1	Object 1
+Xv2_O_10	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, object 10	Object 10
+Xv2_O_2	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, object 2	Object 2
+Xv2_O_3	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, object 3	Object 3
+Xv2_O_4	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, object 4	Object 4
+Xv2_O_5	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, object 5	Object 5
+Xv2_O_6	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, object 6	Object 6
+Xv2_O_7	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, object 7	Object 7
+Xv2_O_8	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, object 8	Object 8
+Xv2_O_9	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, object 9	Object 9
+Xv3_O_1	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, object 1	Object 1
+Xv3_O_10	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, object 10	Object 10
+Xv3_O_2	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, object 2	Object 2
+Xv3_O_3	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, object 3	Object 3
+Xv3_O_4	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, object 4	Object 4
+Xv3_O_5	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, object 5	Object 5
+Xv3_O_6	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, object 6	Object 6
+Xv3_O_7	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, object 7	Object 7
+Xv3_O_8	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, object 8	Object 8
+Xv3_O_9	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, object 9	Object 9
+Xv4_O_1	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, object 1	Object 1
+Xv4_O_10	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, object 10	Object 10
+Xv4_O_2	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, object 2	Object 2
+Xv4_O_3	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, object 3	Object 3
+Xv4_O_4	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, object 4	Object 4
+Xv4_O_5	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, object 5	Object 5
+Xv4_O_6	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, object 6	Object 6
+Xv4_O_7	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, object 7	Object 7
+Xv4_O_8	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, object 8	Object 8
+Xv4_O_9	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, object 9	Object 9
+X_Design	 	m	Global X coordinate	Driver model	X coordinate of reference path	Driver reference path
+X_DM_1	 	m	Global X coordinate	Driver model	X coordinate of preview point 1	Driver model preview point 1
+X_DM_10	 	m	Global X coordinate	Driver model	X coordinate of preview point 10	Driver model preview point 10
+X_DM_2	 	m	Global X coordinate	Driver model	X coordinate of preview point 2	Driver model preview point 2
+X_DM_3	 	m	Global X coordinate	Driver model	X coordinate of preview point 3	Driver model preview point 3
+X_DM_4	 	m	Global X coordinate	Driver model	X coordinate of preview point 4	Driver model preview point 4
+X_DM_5	 	m	Global X coordinate	Driver model	X coordinate of preview point 5	Driver model preview point 5
+X_DM_6	 	m	Global X coordinate	Driver model	X coordinate of preview point 6	Driver model preview point 6
+X_DM_7	 	m	Global X coordinate	Driver model	X coordinate of preview point 7	Driver model preview point 7
+X_DM_8	 	m	Global X coordinate	Driver model	X coordinate of preview point 8	Driver model preview point 8
+X_DM_9	 	m	Global X coordinate	Driver model	X coordinate of preview point 9	Driver model preview point 9
+X_Drv_1	 	m	Global X coordinate	Driver model	X coordinate, driver point 1	Driver preview point 1	This preview point was installed by the VS Command INSTALL_DRIVER_PREVIEW_SENSORS.
+X_Drv_2	 	m	Global X coordinate	Driver model	X coordinate, driver point 2	Driver preview point 2
+X_Drv_3	 	m	Global X coordinate	Driver model	X coordinate, driver point 3	Driver preview point 3
+X_Drv_4	 	m	Global X coordinate	Driver model	X coordinate, driver point 4	Driver preview point 4
+X_Drv_5	 	m	Global X coordinate	Driver model	X coordinate, driver point 5	Driver preview point 5
+X_L1	 	m	Global X coordinate	Wheels	X coordinate, wheel center L1	Wheel center L1
+X_L2	 	m	Global X coordinate	Wheels	X coordinate, wheel center L2	Wheel center L2
+X_Obj_1	 	m	X coordinate	Targets	X coordinate of object 1	Object 1	Station and lateral offset (S and L) are used to calculate global X and Y coordinates if the parameter PATH_ID_OBJ is nonzero. If PATH_ID_OBJ is zero, then X and Y can be imported or calculated with VS Commands such as EQ_IN.
+X_Obj_10	 	m	X coordinate	Targets	X coordinate of object 10	Object 10
+X_Obj_2	 	m	X coordinate	Targets	X coordinate of object 2	Object 2
+X_Obj_3	 	m	X coordinate	Targets	X coordinate of object 3	Object 3
+X_Obj_4	 	m	X coordinate	Targets	X coordinate of object 4	Object 4
+X_Obj_5	 	m	X coordinate	Targets	X coordinate of object 5	Object 5
+X_Obj_6	 	m	X coordinate	Targets	X coordinate of object 6	Object 6
+X_Obj_7	 	m	X coordinate	Targets	X coordinate of object 7	Object 7
+X_Obj_8	 	m	X coordinate	Targets	X coordinate of object 8	Object 8
+X_Obj_9	 	m	X coordinate	Targets	X coordinate of object 9	Object 9
+X_R1	 	m	Global X coordinate	Wheels	X coordinate, wheel center R1	Wheel center R1
+X_R2	 	m	Global X coordinate	Wheels	X coordinate, wheel center R2	Wheel center R2
+X_RP1	 	m	Global X coordinate	Custom Forces and Reference Points	Global X, reference point 1	Reference point 1 X
+X_RP10	 	m	Global X coordinate	Custom Forces and Reference Points	Global X, reference point 10	Reference point 10 X
+X_RP2	 	m	Global X coordinate	Custom Forces and Reference Points	Global X, reference point 2	Reference point 2 X
+X_RP3	 	m	Global X coordinate	Custom Forces and Reference Points	Global X, reference point 3	Reference point 3 X
+X_RP4	 	m	Global X coordinate	Custom Forces and Reference Points	Global X, reference point 4	Reference point 4 X
+X_RP5	 	m	Global X coordinate	Custom Forces and Reference Points	Global X, reference point 5	Reference point 5 X
+X_RP6	 	m	Global X coordinate	Custom Forces and Reference Points	Global X, reference point 6	Reference point 6 X
+X_RP7	 	m	Global X coordinate	Custom Forces and Reference Points	Global X, reference point 7	Reference point 7 X
+X_RP8	 	m	Global X coordinate	Custom Forces and Reference Points	Global X, reference point 8	Reference point 8 X
+X_RP9	 	m	Global X coordinate	Custom Forces and Reference Points	Global X, reference point 9	Reference point 9 X
+X_S1_1	 	m	X coordinate	Sensor Detections	Sensor 1 X coord., detect 1	Sensor 1, detect 1
+X_S1_10	 	m	X coordinate	Sensor Detections	Sensor 1 X coord., detect 10	Sensor 1, detect 10
+X_S1_2	 	m	X coordinate	Sensor Detections	Sensor 1 X coord., detect 2	Sensor 1, detect 2
+X_S1_3	 	m	X coordinate	Sensor Detections	Sensor 1 X coord., detect 3	Sensor 1, detect 3
+X_S1_4	 	m	X coordinate	Sensor Detections	Sensor 1 X coord., detect 4	Sensor 1, detect 4
+X_S1_5	 	m	X coordinate	Sensor Detections	Sensor 1 X coord., detect 5	Sensor 1, detect 5
+X_S1_6	 	m	X coordinate	Sensor Detections	Sensor 1 X coord., detect 6	Sensor 1, detect 6
+X_S1_7	 	m	X coordinate	Sensor Detections	Sensor 1 X coord., detect 7	Sensor 1, detect 7
+X_S1_8	 	m	X coordinate	Sensor Detections	Sensor 1 X coord., detect 8	Sensor 1, detect 8
+X_S1_9	 	m	X coordinate	Sensor Detections	Sensor 1 X coord., detect 9	Sensor 1, detect 9
+X_Sns_1	 	m	X coordinate	Sensors	X coordinate of sensor 1	Sensor 1
+X_Targ1	 	m	Global X coordinate	Driver model	X coord, target point 1	Driver path target point 1	This point is on the reference path PATH_ID_DM, and is installed by the VS Command INSTALL_DRIVER_PREVIEW_SENSORS.
+X_Targ2	 	m	Global X coordinate	Driver model	X coord, target point 2	Driver path target point 2
+X_Targ3	 	m	Global X coordinate	Driver model	X coord, target point 3	Driver path target point 3
+X_Targ4	 	m	Global X coordinate	Driver model	X coord, target point 4	Driver path target point 4
+X_Targ5	 	m	Global X coordinate	Driver model	X coord, target point 5	Driver path target point 5
+X_Target	 	m	Global X coordinate	Driver model	X coordinate of target path	Target
+Yaw	 	deg	Angle	Chassis motion	Yaw, vehicle	Vehicle yaw
+YawO_1	 	deg	Yaw angle	Targets	Yaw angle of object 1	Object 1
+YawO_10	 	deg	Yaw angle	Targets	Yaw angle of object 10	Object 10
+YawO_2	 	deg	Yaw angle	Targets	Yaw angle of object 2	Object 2
+YawO_3	 	deg	Yaw angle	Targets	Yaw angle of object 3	Object 3
+YawO_4	 	deg	Yaw angle	Targets	Yaw angle of object 4	Object 4
+YawO_5	 	deg	Yaw angle	Targets	Yaw angle of object 5	Object 5
+YawO_6	 	deg	Yaw angle	Targets	Yaw angle of object 6	Object 6
+YawO_7	 	deg	Yaw angle	Targets	Yaw angle of object 7	Object 7
+YawO_8	 	deg	Yaw angle	Targets	Yaw angle of object 8	Object 8
+YawO_9	 	deg	Yaw angle	Targets	Yaw angle of object 9	Object 9
+YawS1_1	 	deg	Angle	Sensor Detections	Sensor 1 yaw, detect 1	Sensor 1, detect 1
+YawS1_10	 	deg	Angle	Sensor Detections	Sensor 1 yaw, detect 10	Sensor 1, detect 10
+YawS1_2	 	deg	Angle	Sensor Detections	Sensor 1 yaw, detect 2	Sensor 1, detect 2
+YawS1_3	 	deg	Angle	Sensor Detections	Sensor 1 yaw, detect 3	Sensor 1, detect 3
+YawS1_4	 	deg	Angle	Sensor Detections	Sensor 1 yaw, detect 4	Sensor 1, detect 4
+YawS1_5	 	deg	Angle	Sensor Detections	Sensor 1 yaw, detect 5	Sensor 1, detect 5
+YawS1_6	 	deg	Angle	Sensor Detections	Sensor 1 yaw, detect 6	Sensor 1, detect 6
+YawS1_7	 	deg	Angle	Sensor Detections	Sensor 1 yaw, detect 7	Sensor 1, detect 7
+YawS1_8	 	deg	Angle	Sensor Detections	Sensor 1 yaw, detect 8	Sensor 1, detect 8
+YawS1_9	 	deg	Angle	Sensor Detections	Sensor 1 yaw, detect 9	Sensor 1, detect 9
+YawS_1	 	deg	Yaw angle	Sensors	Yaw angle of sensor 1	Sensor 1
+YawWK_L1	 	deg	Angle	Wheels	Yaw, wheel knuckle L1	Yaw, wheel knuckle L1	This is an Euler yaw angle for the wheel knuckle, used for VS STI tire models.
+YawWK_L2	 	deg	Angle	Wheels	Yaw, wheel knuckle L2	Yaw, wheel knuckle L2
+YawWK_R1	 	deg	Angle	Wheels	Yaw, wheel knuckle R1	Yaw, wheel knuckle R1
+YawWK_R2	 	deg	Angle	Wheels	Yaw, wheel knuckle R2	Yaw, wheel knuckle R2
+Yaw_L1	 	deg	Angle	Wheels	Yaw, wheel L1	Yaw, wheel L1	This is the yaw angle of the wheel spin axis, used to view with VS Visualizer.
+Yaw_L2	 	deg	Angle	Wheels	Yaw, wheel L2	Yaw, wheel L2
+Yaw_R1	 	deg	Angle	Wheels	Yaw, wheel R1	Yaw, wheel R1
+Yaw_R2	 	deg	Angle	Wheels	Yaw, wheel R2	Yaw, wheel R2
+Yaw_Wind	 	deg	Angle	Aerodynamics	Global wind heading (yaw)	Wind heading
+Ycg_SM	 	m	Global Y coordinate	Chassis motion	Y coordinate, CG, sprung mass	CG, sprung mass
+Ycg_TM	 	m	Global Y coordinate	Chassis motion	Y coordinate, inst. CG, vehicle	Instant CG, vehicle
+Yctc_L1	 	m	Global Y coordinate	Tires	Y coordinate, tire CTC L1	Center of tire contact L1
+Yctc_L2	 	m	Global Y coordinate	Tires	Y coordinate, tire CTC L2	Center of tire contact L2
+Yctc_R1	 	m	Global Y coordinate	Tires	Y coordinate, tire CTC R1	Center of tire contact R1
+Yctc_R2	 	m	Global Y coordinate	Tires	Y coordinate, tire CTC R2	Center of tire contact R2
+YlcgTM	 	mm	Local Y coordinate	Chassis motion	Local Y, inst. CG, vehicle	Instant CG, vehicle	This is the local Y coordinate of the instant CG of the vehicle unit in the sprung mass coordinate system. Be aware that the motion of the instant CG cannot be measured directly in physical vehicles.
+YL_S1_1	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord. (L), detect 1	Sensor 1, detect 1
+YL_S1_10	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord. (L), detect 10	Sensor 1, detect 10
+YL_S1_2	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord. (L), detect 2	Sensor 1, detect 2
+YL_S1_3	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord. (L), detect 3	Sensor 1, detect 3
+YL_S1_4	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord. (L), detect 4	Sensor 1, detect 4
+YL_S1_5	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord. (L), detect 5	Sensor 1, detect 5
+YL_S1_6	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord. (L), detect 6	Sensor 1, detect 6
+YL_S1_7	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord. (L), detect 7	Sensor 1, detect 7
+YL_S1_8	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord. (L), detect 8	Sensor 1, detect 8
+YL_S1_9	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord. (L), detect 9	Sensor 1, detect 9
+Yo	 	m	Global Y coordinate	Chassis motion	Y coordinate, vehicle origin	Vehicle
+Yrd_Air	 	m	Global Y coordinate	Aerodynamics	Y coord. of road aero ref. 1	Road reference frame 1
+Yrel_L1	 	mm	Local Y coordinate	Wheels	Y relative coordinate, WC L1	Wheel center L1
+Yrel_L2	 	mm	Local Y coordinate	Wheels	Y relative coordinate, WC L2	Wheel center L2
+Yrel_R1	 	mm	Local Y coordinate	Wheels	Y relative coordinate, WC R1	Wheel center R1
+Yrel_R2	 	mm	Local Y coordinate	Wheels	Y relative coordinate, WC R2	Wheel center R2
+YR_S1_1	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord. (R), detect 1	Sensor 1, detect 1
+YR_S1_10	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord. (R), detect 10	Sensor 1, detect 10
+YR_S1_2	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord. (R), detect 2	Sensor 1, detect 2
+YR_S1_3	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord. (R), detect 3	Sensor 1, detect 3
+YR_S1_4	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord. (R), detect 4	Sensor 1, detect 4
+YR_S1_5	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord. (R), detect 5	Sensor 1, detect 5
+YR_S1_6	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord. (R), detect 6	Sensor 1, detect 6
+YR_S1_7	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord. (R), detect 7	Sensor 1, detect 7
+YR_S1_8	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord. (R), detect 8	Sensor 1, detect 8
+YR_S1_9	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord. (R), detect 9	Sensor 1, detect 9
+Yv1_O_1	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, object 1	Object 1	Each object has 4 vertices whose global X and Y coordinates are available as outputs Xv and Yv. For rectangular objects, v1 is left-front, v2 is right-front, v3 is left-rear, and v4 is right-rear. For cylinders, v1 is front, v2 is right, v3 is back, and v4 is left.
+Yv1_O_10	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, object 10	Object 10
+Yv1_O_2	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, object 2	Object 2
+Yv1_O_3	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, object 3	Object 3
+Yv1_O_4	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, object 4	Object 4
+Yv1_O_5	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, object 5	Object 5
+Yv1_O_6	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, object 6	Object 6
+Yv1_O_7	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, object 7	Object 7
+Yv1_O_8	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, object 8	Object 8
+Yv1_O_9	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, object 9	Object 9
+Yv2_O_1	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, object 1	Object 1
+Yv2_O_10	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, object 10	Object 10
+Yv2_O_2	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, object 2	Object 2
+Yv2_O_3	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, object 3	Object 3
+Yv2_O_4	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, object 4	Object 4
+Yv2_O_5	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, object 5	Object 5
+Yv2_O_6	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, object 6	Object 6
+Yv2_O_7	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, object 7	Object 7
+Yv2_O_8	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, object 8	Object 8
+Yv2_O_9	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, object 9	Object 9
+Yv3_O_1	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, object 1	Object 1
+Yv3_O_10	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, object 10	Object 10
+Yv3_O_2	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, object 2	Object 2
+Yv3_O_3	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, object 3	Object 3
+Yv3_O_4	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, object 4	Object 4
+Yv3_O_5	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, object 5	Object 5
+Yv3_O_6	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, object 6	Object 6
+Yv3_O_7	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, object 7	Object 7
+Yv3_O_8	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, object 8	Object 8
+Yv3_O_9	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, object 9	Object 9
+Yv4_O_1	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, object 1	Object 1
+Yv4_O_10	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, object 10	Object 10
+Yv4_O_2	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, object 2	Object 2
+Yv4_O_3	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, object 3	Object 3
+Yv4_O_4	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, object 4	Object 4
+Yv4_O_5	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, object 5	Object 5
+Yv4_O_6	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, object 6	Object 6
+Yv4_O_7	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, object 7	Object 7
+Yv4_O_8	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, object 8	Object 8
+Yv4_O_9	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, object 9	Object 9
+Y_Design	 	m	Global Y coordinate	Driver model	Y coordinate of reference path	Driver reference path
+Y_DM_1	 	m	Global Y coordinate	Driver model	Y coordinate of preview point 1	Driver model preview point 1
+Y_DM_10	 	m	Global Y coordinate	Driver model	Y coordinate of preview point 10	Driver model preview point 10
+Y_DM_2	 	m	Global Y coordinate	Driver model	Y coordinate of preview point 2	Driver model preview point 2
+Y_DM_3	 	m	Global Y coordinate	Driver model	Y coordinate of preview point 3	Driver model preview point 3
+Y_DM_4	 	m	Global Y coordinate	Driver model	Y coordinate of preview point 4	Driver model preview point 4
+Y_DM_5	 	m	Global Y coordinate	Driver model	Y coordinate of preview point 5	Driver model preview point 5
+Y_DM_6	 	m	Global Y coordinate	Driver model	Y coordinate of preview point 6	Driver model preview point 6
+Y_DM_7	 	m	Global Y coordinate	Driver model	Y coordinate of preview point 7	Driver model preview point 7
+Y_DM_8	 	m	Global Y coordinate	Driver model	Y coordinate of preview point 8	Driver model preview point 8
+Y_DM_9	 	m	Global Y coordinate	Driver model	Y coordinate of preview point 9	Driver model preview point 9
+Y_Drv_1	 	m	Global Y coordinate	Driver model	Y coordinate, driver point 1	Driver preview point 1	This preview point was installed by the VS Command INSTALL_DRIVER_PREVIEW_SENSORS.
+Y_Drv_2	 	m	Global Y coordinate	Driver model	Y coordinate, driver point 2	Driver preview point 2
+Y_Drv_3	 	m	Global Y coordinate	Driver model	Y coordinate, driver point 3	Driver preview point 3
+Y_Drv_4	 	m	Global Y coordinate	Driver model	Y coordinate, driver point 4	Driver preview point 4
+Y_Drv_5	 	m	Global Y coordinate	Driver model	Y coordinate, driver point 5	Driver preview point 5
+Y_L1	 	m	Global Y coordinate	Wheels	Y coordinate, wheel center L1	Wheel center L1
+Y_L2	 	m	Global Y coordinate	Wheels	Y coordinate, wheel center L2	Wheel center L2
+Y_Obj_1	 	m	Y coordinate	Targets	Y coordinate of object 1	Object 1	Station and lateral offset (S and L) are used to calculate global X and Y coordinates if the parameter PATH_ID_OBJ is nonzero. If PATH_ID_OBJ is zero, then X and Y can be imported or calculated with VS Commands such as EQ_IN.
+Y_Obj_10	 	m	Y coordinate	Targets	Y coordinate of object 10	Object 10
+Y_Obj_2	 	m	Y coordinate	Targets	Y coordinate of object 2	Object 2
+Y_Obj_3	 	m	Y coordinate	Targets	Y coordinate of object 3	Object 3
+Y_Obj_4	 	m	Y coordinate	Targets	Y coordinate of object 4	Object 4
+Y_Obj_5	 	m	Y coordinate	Targets	Y coordinate of object 5	Object 5
+Y_Obj_6	 	m	Y coordinate	Targets	Y coordinate of object 6	Object 6
+Y_Obj_7	 	m	Y coordinate	Targets	Y coordinate of object 7	Object 7
+Y_Obj_8	 	m	Y coordinate	Targets	Y coordinate of object 8	Object 8
+Y_Obj_9	 	m	Y coordinate	Targets	Y coordinate of object 9	Object 9
+Y_R1	 	m	Global Y coordinate	Wheels	Y coordinate, wheel center R1	Wheel center R1
+Y_R2	 	m	Global Y coordinate	Wheels	Y coordinate, wheel center R2	Wheel center R2
+Y_Rack1	 	mm	Displacement	Steering	Steering rack disp., axle 1	Axle 1 steering
+Y_Rack2	 	mm	Displacement	Steering	Steering rack disp., axle 2	Axle 2 steering
+Y_RP1	 	m	Global Y coordinate	Custom Forces and Reference Points	Global Y, reference point 1	Reference point 1 Y
+Y_RP10	 	m	Global Y coordinate	Custom Forces and Reference Points	Global Y, reference point 10	Reference point 10 Y
+Y_RP2	 	m	Global Y coordinate	Custom Forces and Reference Points	Global Y, reference point 2	Reference point 2 Y
+Y_RP3	 	m	Global Y coordinate	Custom Forces and Reference Points	Global Y, reference point 3	Reference point 3 Y
+Y_RP4	 	m	Global Y coordinate	Custom Forces and Reference Points	Global Y, reference point 4	Reference point 4 Y
+Y_RP5	 	m	Global Y coordinate	Custom Forces and Reference Points	Global Y, reference point 5	Reference point 5 Y
+Y_RP6	 	m	Global Y coordinate	Custom Forces and Reference Points	Global Y, reference point 6	Reference point 6 Y
+Y_RP7	 	m	Global Y coordinate	Custom Forces and Reference Points	Global Y, reference point 7	Reference point 7 Y
+Y_RP8	 	m	Global Y coordinate	Custom Forces and Reference Points	Global Y, reference point 8	Reference point 8 Y
+Y_RP9	 	m	Global Y coordinate	Custom Forces and Reference Points	Global Y, reference point 9	Reference point 9 Y
+Y_S1_1	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord., detect 1	Sensor 1, detect 1
+Y_S1_10	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord., detect 10	Sensor 1, detect 10
+Y_S1_2	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord., detect 2	Sensor 1, detect 2
+Y_S1_3	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord., detect 3	Sensor 1, detect 3
+Y_S1_4	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord., detect 4	Sensor 1, detect 4
+Y_S1_5	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord., detect 5	Sensor 1, detect 5
+Y_S1_6	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord., detect 6	Sensor 1, detect 6
+Y_S1_7	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord., detect 7	Sensor 1, detect 7
+Y_S1_8	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord., detect 8	Sensor 1, detect 8
+Y_S1_9	 	m	Y coordinate	Sensor Detections	Sensor 1 Y coord., detect 9	Sensor 1, detect 9
+Y_Sns_1	 	m	Y coordinate	Sensors	Y coordinate of sensor 1	Sensor 1
+Y_Targ1	 	m	Global Y coordinate	Driver model	Y coordinate, target point 1	Driver path target point 1	This point is on the reference path PATH_ID_DM, and is installed by the VS Command INSTALL_DRIVER_PREVIEW_SENSORS.
+Y_Targ2	 	m	Global Y coordinate	Driver model	Y coordinate, target point 2	Driver path target point 2
+Y_Targ3	 	m	Global Y coordinate	Driver model	Y coordinate, target point 3	Driver path target point 3
+Y_Targ4	 	m	Global Y coordinate	Driver model	Y coordinate, target point 4	Driver path target point 4
+Y_Targ5	 	m	Global Y coordinate	Driver model	Y coordinate, target point 5	Driver path target point 5
+Y_Target	 	m	Global Y coordinate	Driver model	Y coordinate of target path	Target
+Zcg_SM	 	m	Global Z coordinate	Chassis motion	Z coordinate, CG, sprung mass	CG, sprung mass
+Zcg_TM	 	m	Global Z coordinate	Chassis motion	Z coordinate, inst. CG, vehicle	Instant CG, vehicle
+ZgndAve1	 	m	Ground elevation	Aerodynamics	Average ground height, axle 1	Ground at axle 1
+ZgndAve2	 	m	Ground elevation	Aerodynamics	Average ground height, axle 2	Ground at axle 2
+Zgnd_L1	 	m	Global Z coordinate	Ground and road	Ground Z coord under tire L1	Ground under tire L1
+Zgnd_L2	 	m	Global Z coordinate	Ground and road	Ground Z coord under tire L2	Ground under tire L2
+Zgnd_R1	 	m	Global Z coordinate	Ground and road	Ground Z coord under tire R1	Ground under tire R1
+Zgnd_R2	 	m	Global Z coordinate	Ground and road	Ground Z coord under tire R2	Ground under tire R2
+Zo	 	m	Global Z coordinate	Chassis motion	Z coordinate, vehicle origin	Vehicle
+Zrd_Air	 	m	Global Z coordinate	Aerodynamics	Z coord. of road aero ref. 1	Road reference frame 1
+Zrel_L1	 	mm	Local Z coordinate	Wheels	Z relative coordinate, WC L1	Wheel center L1
+Zrel_L2	 	mm	Local Z coordinate	Wheels	Z relative coordinate, WC L2	Wheel center L2
+Zrel_R1	 	mm	Local Z coordinate	Wheels	Z relative coordinate, WC R1	Wheel center R1
+Zrel_R2	 	mm	Local Z coordinate	Wheels	Z relative coordinate, WC R2	Wheel center R2
+Z_Aero	 	m	Height above road	Aerodynamics	Height of aero ref pt above road	Aero reference point
+Z_DM_1	 	m	Global Z coordinate	Driver model	Z coordinate of preview point 1	Driver model preview point 1
+Z_DM_10	 	m	Global Z coordinate	Driver model	Z coordinate of preview point 10	Driver model preview point 10
+Z_DM_2	 	m	Global Z coordinate	Driver model	Z coordinate of preview point 2	Driver model preview point 2
+Z_DM_3	 	m	Global Z coordinate	Driver model	Z coordinate of preview point 3	Driver model preview point 3
+Z_DM_4	 	m	Global Z coordinate	Driver model	Z coordinate of preview point 4	Driver model preview point 4
+Z_DM_5	 	m	Global Z coordinate	Driver model	Z coordinate of preview point 5	Driver model preview point 5
+Z_DM_6	 	m	Global Z coordinate	Driver model	Z coordinate of preview point 6	Driver model preview point 6
+Z_DM_7	 	m	Global Z coordinate	Driver model	Z coordinate of preview point 7	Driver model preview point 7
+Z_DM_8	 	m	Global Z coordinate	Driver model	Z coordinate of preview point 8	Driver model preview point 8
+Z_DM_9	 	m	Global Z coordinate	Driver model	Z coordinate of preview point 9	Driver model preview point 9
+Z_L1	 	m	Global Z coordinate	Wheels	Z coordinate, wheel center L1	Wheel center L1
+Z_L2	 	m	Global Z coordinate	Wheels	Z coordinate, wheel center L2	Wheel center L2
+Z_Obj_1	 	m	Z coordinate	Targets	Z coordinate of object 1	Object 1	The global Z coordinate of the object control point is calculated from the road surface specified with the parameter ROAD_ID_OBJ. If ROAD_ID_OBJ is set to zero, then Z_Obj can be imported or calculated with VS Commands such as EQ_IN.
+Z_Obj_10	 	m	Z coordinate	Targets	Z coordinate of object 10	Object 10
+Z_Obj_2	 	m	Z coordinate	Targets	Z coordinate of object 2	Object 2
+Z_Obj_3	 	m	Z coordinate	Targets	Z coordinate of object 3	Object 3
+Z_Obj_4	 	m	Z coordinate	Targets	Z coordinate of object 4	Object 4
+Z_Obj_5	 	m	Z coordinate	Targets	Z coordinate of object 5	Object 5
+Z_Obj_6	 	m	Z coordinate	Targets	Z coordinate of object 6	Object 6
+Z_Obj_7	 	m	Z coordinate	Targets	Z coordinate of object 7	Object 7
+Z_Obj_8	 	m	Z coordinate	Targets	Z coordinate of object 8	Object 8
+Z_Obj_9	 	m	Z coordinate	Targets	Z coordinate of object 9	Object 9
+Z_R1	 	m	Global Z coordinate	Wheels	Z coordinate, wheel center R1	Wheel center R1
+Z_R2	 	m	Global Z coordinate	Wheels	Z coordinate, wheel center R2	Wheel center R2
+Z_RP1	 	m	Global Z coordinate	Custom Forces and Reference Points	Global Z, reference point 1	Reference point 1 Z
+Z_RP10	 	m	Global Z coordinate	Custom Forces and Reference Points	Global Z, reference point 10	Reference point 10 Z
+Z_RP2	 	m	Global Z coordinate	Custom Forces and Reference Points	Global Z, reference point 2	Reference point 2 Z
+Z_RP3	 	m	Global Z coordinate	Custom Forces and Reference Points	Global Z, reference point 3	Reference point 3 Z
+Z_RP4	 	m	Global Z coordinate	Custom Forces and Reference Points	Global Z, reference point 4	Reference point 4 Z
+Z_RP5	 	m	Global Z coordinate	Custom Forces and Reference Points	Global Z, reference point 5	Reference point 5 Z
+Z_RP6	 	m	Global Z coordinate	Custom Forces and Reference Points	Global Z, reference point 6	Reference point 6 Z
+Z_RP7	 	m	Global Z coordinate	Custom Forces and Reference Points	Global Z, reference point 7	Reference point 7 Z
+Z_RP8	 	m	Global Z coordinate	Custom Forces and Reference Points	Global Z, reference point 8	Reference point 8 Z
+Z_RP9	 	m	Global Z coordinate	Custom Forces and Reference Points	Global Z, reference point 9	Reference point 9 Z
+Z_S1_1	 	m	Z coordinate	Sensor Detections	Sensor 1 Z coord., detect 1	Sensor 1, detect 1
+Z_S1_10	 	m	Z coordinate	Sensor Detections	Sensor 1 Z coord., detect 10	Sensor 1, detect 10
+Z_S1_2	 	m	Z coordinate	Sensor Detections	Sensor 1 Z coord., detect 2	Sensor 1, detect 2
+Z_S1_3	 	m	Z coordinate	Sensor Detections	Sensor 1 Z coord., detect 3	Sensor 1, detect 3
+Z_S1_4	 	m	Z coordinate	Sensor Detections	Sensor 1 Z coord., detect 4	Sensor 1, detect 4
+Z_S1_5	 	m	Z coordinate	Sensor Detections	Sensor 1 Z coord., detect 5	Sensor 1, detect 5
+Z_S1_6	 	m	Z coordinate	Sensor Detections	Sensor 1 Z coord., detect 6	Sensor 1, detect 6
+Z_S1_7	 	m	Z coordinate	Sensor Detections	Sensor 1 Z coord., detect 7	Sensor 1, detect 7
+Z_S1_8	 	m	Z coordinate	Sensor Detections	Sensor 1 Z coord., detect 8	Sensor 1, detect 8
+Z_S1_9	 	m	Z coordinate	Sensor Detections	Sensor 1 Z coord., detect 9	Sensor 1, detect 9
+Z_Sns_1	 	m	Z coordinate	Sensors	Z coordinate of sensor 1	Sensor 1

@@ -1,0 +1,560 @@
+MatrixTransform {
+  DataVariance STATIC
+  name "Scene Root"
+  nodeMask 0xffffffff
+  cullingActive TRUE
+  StateSet {
+    rendering_hint DEFAULT_BIN
+    renderBinMode INHERIT
+    GL_LIGHTING ON
+    GL_NORMALIZE ON
+  }
+  referenceFrame RELATIVE
+  Matrix {
+    1 0 0 0
+    0 1 0 0
+    0 0 1 0
+    0 0 0 1
+  }
+  num_children 2
+  MatrixTransform {
+    DataVariance STATIC
+    name "parking_lot"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    referenceFrame RELATIVE
+    Matrix {
+      1 0 0 0
+      0 1 0 0
+      0 0 0.0413719 0
+      -2.93462 -0.677745 0 1
+    }
+    num_children 1
+    Geode {
+      UniqueID Geode_0
+      DataVariance STATIC
+      name "parking_lot-GEODE"
+      nodeMask 0xffffffff
+      cullingActive TRUE
+      num_drawables 1
+      Geometry {
+        name "Material #35"
+        StateSet {
+          UniqueID StateSet_1
+          name "Material #35"
+          rendering_hint DEFAULT_BIN
+          renderBinMode INHERIT
+          GL_CULL_FACE ON
+          GL_LIGHTING ON
+          GL_NORMALIZE ON
+          Material {
+            ColorMode OFF
+            ambientColor 0.901961 0.901961 0.901961 1
+            diffuseColor 1 1 1 1
+            specularColor 0.234 0.234 0.234 1
+            emissionColor 0 0 0 1
+            shininess 12.8
+          }
+          textureUnit 0 {
+            GL_TEXTURE_2D ON
+            Texture2D {
+              UniqueID Texture2D_2
+              file "images\\grass2_di.dds"
+              wrap_s REPEAT
+              wrap_t REPEAT
+              wrap_r CLAMP_TO_EDGE
+              min_filter LINEAR_MIPMAP_LINEAR
+              mag_filter LINEAR
+              maxAnisotropy 1
+              borderColor 0 0 0 0
+              borderWidth 0
+              useHardwareMipMapGeneration TRUE
+              unRefImageDataAfterApply FALSE
+              internalFormatMode USE_IMAGE_DATA_FORMAT
+              resizeNonPowerOfTwo FALSE
+              shadowComparison FALSE
+              shadowCompareFunc GL_LEQUAL
+              shadowTextureMode GL_LUMINANCE
+            }
+          }
+          textureUnit 1 {
+            GL_TEXTURE_2D ON
+            Texture2D {
+              UniqueID Texture2D_3
+              file "images\\Noise_di1m.dds"
+              wrap_s REPEAT
+              wrap_t REPEAT
+              wrap_r CLAMP_TO_EDGE
+              min_filter LINEAR_MIPMAP_LINEAR
+              mag_filter LINEAR
+              maxAnisotropy 1
+              borderColor 0 0 0 0
+              borderWidth 0
+              useHardwareMipMapGeneration TRUE
+              unRefImageDataAfterApply FALSE
+              internalFormatMode USE_IMAGE_DATA_FORMAT
+              resizeNonPowerOfTwo FALSE
+              shadowComparison FALSE
+              shadowCompareFunc GL_LEQUAL
+              shadowTextureMode GL_LUMINANCE
+            }
+            TexEnvCombine {
+              combine_RGB INTERPOLATE
+              combine_Alpha INTERPOLATE
+              source0_RGB TEXTURE1
+              source1_RGB TEXTURE0
+              source2_RGB TEXTURE2
+              source0_Alpha TEXTURE1
+              source1_Alpha TEXTURE0
+              source2_Alpha TEXTURE2
+              operand0_RGB SRC_COLOR
+              operand1_RGB SRC_COLOR
+              operand2_RGB SRC_COLOR
+              operand0_Alpha SRC_ALPHA
+              operand1_Alpha SRC_ALPHA
+              operand2_Alpha SRC_ALPHA
+              scale_RGB 1
+              scale_Alpha 1
+              constantColor 0 0 0 0
+            }
+          }
+          textureUnit 2 {
+            GL_TEXTURE_2D ON
+            Texture2D {
+              UniqueID Texture2D_4
+              file "images\\grass2_nm.dds"
+              wrap_s REPEAT
+              wrap_t REPEAT
+              wrap_r CLAMP_TO_EDGE
+              min_filter LINEAR_MIPMAP_LINEAR
+              mag_filter LINEAR
+              maxAnisotropy 1
+              borderColor 0 0 0 0
+              borderWidth 0
+              useHardwareMipMapGeneration TRUE
+              unRefImageDataAfterApply FALSE
+              internalFormatMode USE_IMAGE_DATA_FORMAT
+              resizeNonPowerOfTwo FALSE
+              shadowComparison FALSE
+              shadowCompareFunc GL_LEQUAL
+              shadowTextureMode GL_LUMINANCE
+            }
+            TexEnvCombine {
+              combine_RGB MODULATE
+              combine_Alpha MODULATE
+              source0_RGB PREVIOUS
+              source1_RGB PRIMARY_COLOR
+              source2_RGB CONSTANT
+              source0_Alpha PREVIOUS
+              source1_Alpha PRIMARY_COLOR
+              source2_Alpha CONSTANT
+              operand0_RGB SRC_COLOR
+              operand1_RGB SRC_COLOR
+              operand2_RGB SRC_ALPHA
+              operand0_Alpha SRC_ALPHA
+              operand1_Alpha SRC_ALPHA
+              operand2_Alpha SRC_ALPHA
+              scale_RGB 1
+              scale_Alpha 1
+              constantColor 1 1 1 1
+            }
+          }
+        }
+        useDisplayList TRUE
+        useVertexBufferObjects FALSE
+        PrimitiveSets 10
+        {
+          DrawElementsUShort TRIANGLE_STRIP 9
+          {
+            7 8 6 9 1 12 13 14 15 
+          }
+          DrawElementsUShort TRIANGLE_STRIP 5
+          {
+            13 15 21 18 22 
+          }
+          DrawElementsUShort TRIANGLE_STRIP 6
+          {
+            21 22 2 24 26 25 
+          }
+          DrawElementsUShort TRIANGLE_STRIP 5
+          {
+            26 31 2 3 0 
+          }
+          DrawElementsUShort TRIANGLE_STRIP 5
+          {
+            2 0 1 4 5 
+          }
+          DrawElementsUShort TRIANGLE_STRIP 4
+          {
+            1 5 6 27 
+          }
+          DrawElementsUShort TRIANGLE_STRIP 5
+          {
+            29 12 11 9 10 
+          }
+          DrawElementsUShort TRIANGLE_STRIP 4
+          {
+            16 17 15 18 
+          }
+          DrawElementsUShort TRIANGLE_STRIP 4
+          {
+            18 17 20 19 
+          }
+          DrawElementsUShort TRIANGLES 9
+          {
+            22 23 24 8 28 9 20 30 18 
+          }
+        }
+        VertexArray Vec3Array 32
+        {
+          42.6978 4167.65 0
+          -606.707 682.188 0
+          752.033 682.188 0
+          1093.64 4056.78 0
+          -1008.25 4056.78 0
+          -1973.37 3741.03 0
+          -3535.56 2596.02 0
+          -4077.32 1817.32 0
+          -4422.65 934.869 0
+          -4422.65 -986.969 0
+          -4077.32 -1869.42 0
+          -3535.56 -2648.12 0
+          -1973.37 -3793.13 0
+          -606.707 -636.651 0
+          -1008.25 -4108.88 0
+          42.6988 -4219.75 0
+          1093.64 -4108.88 0
+          2058.77 -3793.13 0
+          4508.04 -986.968 0
+          2910.42 -3297.78 0
+          3620.96 -2648.12 0
+          752.033 -636.651 0
+          4629.3 -26.0495 0
+          4508.05 934.87 0
+          4162.71 1817.32 0
+          3620.96 2596.02 0
+          2910.42 3245.68 0
+          -2825.03 3245.68 0
+          -4543.91 -26.0498 0
+          -2825.03 -3297.78 0
+          4162.71 -1869.42 0
+          2058.77 3741.03 0
+        }
+        NormalBinding PER_VERTEX
+        NormalArray Vec3Array 32
+        {
+          0 0 1
+          0 0 1
+          0 0 1
+          0 0 1
+          0 0 1
+          0 0 1
+          0 0 1
+          -0 0 1
+          0 0 1
+          0 0 1
+          -0 -0 1
+          0 0 1
+          0 0 1
+          0 0 1
+          0 0 1
+          0 0 1
+          0 -0 1
+          0 0 1
+          0 0 1
+          0 -0 1
+          0 0 1
+          0 0 1
+          0 0 1
+          0 0 1
+          0 0 1
+          0 0 1
+          0 0 1
+          -0 0 1
+          -0 0 1
+          -0 -0 1
+          0 -0 1
+          0 0 1
+        }
+        TexCoordArray 0 Vec2Array 32
+        {
+          0.500005 18.5853
+          -2.01263 3.55428
+          3.24451 3.55428
+          4.56625 18.1072
+          -3.56624 18.1072
+          -7.30044 16.7455
+          -13.3447 11.8077
+          -15.4409 8.44953
+          -16.777 4.64397
+          -16.777 -3.64395
+          -15.4409 -7.44952
+          -13.0085 -10.6816
+          -7.30044 -15.7455
+          -2.01263 -2.13321
+          -3.56625 -17.1072
+          0.5 -17.5853
+          4.56625 -17.1072
+          8.30044 -15.7455
+          17.777 -3.64396
+          11.5956 -13.6093
+          14.3447 -10.8077
+          3.24451 -2.13321
+          18.2462 0.499998
+          17.777 4.64396
+          16.4409 8.44952
+          14.3447 11.8077
+          11.5956 14.6093
+          -10.5956 14.6093
+          -17.2462 0.500005
+          -10.5956 -13.6093
+          16.4409 -7.44952
+          8.30045 16.7455
+        }
+        TexCoordArray 1 Vec2Array 32
+        {
+          0.500001 2.76067
+          0.185921 0.881785
+          0.843064 0.881784
+          1.00828 2.7009
+          -0.00828016 2.7009
+          -0.475055 2.53069
+          -1.23059 1.91346
+          -1.49261 1.49369
+          -1.65963 1.018
+          -1.65963 -0.0179943
+          -1.49261 -0.49369
+          -1.23059 -0.913457
+          -0.475055 -1.53069
+          0.185921 0.170848
+          -0.00828081 -1.7009
+          0.5 -1.76067
+          1.00828 -1.7009
+          1.47506 -1.53069
+          2.65963 -0.0179951
+          1.88695 -1.26367
+          2.23059 -0.913458
+          0.843064 0.170848
+          2.71827 0.5
+          2.65963 1.01799
+          2.49261 1.49369
+          2.23059 1.91346
+          1.88695 2.26367
+          -0.88695 2.26367
+          -1.71827 0.500001
+          -0.88695 -1.26367
+          2.49261 -0.493691
+          1.47506 2.53069
+        }
+        TexCoordArray 2 Vec2Array 32
+        {
+          0.500005 18.5853
+          -2.01263 3.55428
+          3.24451 3.55428
+          4.56625 18.1072
+          -3.56624 18.1072
+          -7.30044 16.7455
+          -13.3447 11.8077
+          -15.4409 8.44953
+          -16.777 4.64397
+          -16.777 -3.64395
+          -15.4409 -7.44952
+          -13.3447 -10.8077
+          -7.30044 -15.7455
+          -2.01263 -2.13321
+          -3.56625 -17.1072
+          0.5 -17.5853
+          4.56625 -17.1072
+          8.30044 -15.7455
+          17.777 -3.64396
+          11.5956 -13.6093
+          14.3447 -10.8077
+          3.24451 -2.13321
+          18.2462 0.499998
+          17.777 4.64396
+          16.4409 8.44952
+          14.3447 11.8077
+          11.5956 14.6093
+          -10.5956 14.6093
+          -17.2462 0.500005
+          -10.5956 -13.6093
+          16.4409 -7.44952
+          8.30045 16.7455
+        }
+      }
+    }
+  }
+  MatrixTransform {
+    DataVariance STATIC
+    name "Object001"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    referenceFrame RELATIVE
+    Matrix {
+      1 0 0 0
+      0 1 0 0
+      0 0 0.0413719 0
+      -2.93462 -0.677745 0 1
+    }
+    num_children 1
+    Geode {
+      UniqueID Geode_5
+      DataVariance STATIC
+      name "Object001-GEODE"
+      nodeMask 0xffffffff
+      cullingActive TRUE
+      num_drawables 1
+      Geometry {
+        name "Material #36"
+        StateSet {
+          UniqueID StateSet_6
+          name "Material #36"
+          rendering_hint DEFAULT_BIN
+          renderBinMode INHERIT
+          GL_CULL_FACE ON
+          GL_LIGHTING ON
+          GL_NORMALIZE ON
+          Material {
+            ColorMode OFF
+            ambientColor 0.901961 0.901961 0.901961 1
+            diffuseColor 1 1 1 1
+            specularColor 0.234 0.234 0.234 1
+            emissionColor 0 0 0 1
+            shininess 12.8
+          }
+          textureUnit 0 {
+            GL_TEXTURE_2D ON
+            Texture2D {
+              UniqueID Texture2D_7
+              file "images\\pavement_di.dds"
+              wrap_s REPEAT
+              wrap_t REPEAT
+              wrap_r CLAMP_TO_EDGE
+              min_filter LINEAR_MIPMAP_LINEAR
+              mag_filter LINEAR
+              maxAnisotropy 1
+              borderColor 0 0 0 0
+              borderWidth 0
+              useHardwareMipMapGeneration TRUE
+              unRefImageDataAfterApply FALSE
+              internalFormatMode USE_IMAGE_DATA_FORMAT
+              resizeNonPowerOfTwo FALSE
+              shadowComparison FALSE
+              shadowCompareFunc GL_LEQUAL
+              shadowTextureMode GL_LUMINANCE
+            }
+          }
+          textureUnit 1 {
+            GL_TEXTURE_2D ON
+            Use Texture2D_3
+            TexEnvCombine {
+              combine_RGB INTERPOLATE
+              combine_Alpha INTERPOLATE
+              source0_RGB TEXTURE1
+              source1_RGB TEXTURE0
+              source2_RGB TEXTURE2
+              source0_Alpha TEXTURE1
+              source1_Alpha TEXTURE0
+              source2_Alpha TEXTURE2
+              operand0_RGB SRC_COLOR
+              operand1_RGB SRC_COLOR
+              operand2_RGB SRC_COLOR
+              operand0_Alpha SRC_ALPHA
+              operand1_Alpha SRC_ALPHA
+              operand2_Alpha SRC_ALPHA
+              scale_RGB 1
+              scale_Alpha 1
+              constantColor 0 0 0 0
+            }
+          }
+          textureUnit 2 {
+            GL_TEXTURE_2D ON
+            Texture2D {
+              UniqueID Texture2D_8
+              file "images\\pavement_nm.dds"
+              wrap_s REPEAT
+              wrap_t REPEAT
+              wrap_r CLAMP_TO_EDGE
+              min_filter LINEAR_MIPMAP_LINEAR
+              mag_filter LINEAR
+              maxAnisotropy 1
+              borderColor 0 0 0 0
+              borderWidth 0
+              useHardwareMipMapGeneration TRUE
+              unRefImageDataAfterApply FALSE
+              internalFormatMode USE_IMAGE_DATA_FORMAT
+              resizeNonPowerOfTwo FALSE
+              shadowComparison FALSE
+              shadowCompareFunc GL_LEQUAL
+              shadowTextureMode GL_LUMINANCE
+            }
+            TexEnvCombine {
+              combine_RGB MODULATE
+              combine_Alpha MODULATE
+              source0_RGB PREVIOUS
+              source1_RGB PRIMARY_COLOR
+              source2_RGB CONSTANT
+              source0_Alpha PREVIOUS
+              source1_Alpha PRIMARY_COLOR
+              source2_Alpha CONSTANT
+              operand0_RGB SRC_COLOR
+              operand1_RGB SRC_COLOR
+              operand2_RGB SRC_ALPHA
+              operand0_Alpha SRC_ALPHA
+              operand1_Alpha SRC_ALPHA
+              operand2_Alpha SRC_ALPHA
+              scale_RGB 1
+              scale_Alpha 1
+              constantColor 1 1 1 1
+            }
+          }
+        }
+        useDisplayList TRUE
+        useVertexBufferObjects FALSE
+        PrimitiveSets 1
+        {
+          DrawElementsUShort TRIANGLE_STRIP 4
+          {
+            1 2 0 3 
+          }
+        }
+        VertexArray Vec3Array 4
+        {
+          -606.707 682.188 0
+          -606.707 -636.651 0
+          752.033 -636.651 0
+          752.033 682.188 0
+        }
+        NormalBinding PER_VERTEX
+        NormalArray Vec3Array 4
+        {
+          0 0 1
+          0 0 1
+          0 0 1
+          0 0 1
+        }
+        TexCoordArray 0 Vec2Array 4
+        {
+          -135.374 132.384
+          -135.374 -131.384
+          136.374 -131.384
+          136.374 132.384
+        }
+        TexCoordArray 1 Vec2Array 4
+        {
+          -7.99213 8.74275
+          -7.99213 -7.74274
+          8.99212 -7.74275
+          8.99213 8.74274
+        }
+        TexCoordArray 2 Vec2Array 4
+        {
+          -135.374 132.384
+          -135.374 -131.384
+          136.374 -131.384
+          136.374 132.384
+        }
+      }
+    }
+  }
+}

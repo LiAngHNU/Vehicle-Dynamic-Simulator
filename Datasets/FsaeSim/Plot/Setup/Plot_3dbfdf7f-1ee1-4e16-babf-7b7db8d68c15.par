@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Jounce Stop Compression`Suspension Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS CmpJStL1, Time
+PLOTCHANNELS CmpJStR1, Time
+PLOTCHANNELS CmpJStL2, Time
+PLOTCHANNELS CmpJStR2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Jounce Stop Compression
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Motion } Jounce Stop Compression
+#Library : Plot: Setup
+#DataSet : Jounce Stop Compression
+#Category: Suspension Motion
+#FileID  : Plot_3dbfdf7f-1ee1-4e16-babf-7b7db8d68c15
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

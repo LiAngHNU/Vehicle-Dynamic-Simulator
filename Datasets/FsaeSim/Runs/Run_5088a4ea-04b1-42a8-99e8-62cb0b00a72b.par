@@ -1,0 +1,96 @@
+PARSFILE
+#FullDataName CarSim Run Control`3b. Slow Down for a Tight Curve (Full Plot Detail)`* * FSAE Examples: Restoring to a Previous State
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_5088a4ea-04b1-42a8-99e8-62cb0b00a72b
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 3
+PARSFILE Animator\Cameras\Camera_8d5e5054-3ff3-4116-9f8c-ae7201bc4aa6.par
+#BlueLink0 Animator: Camera Setup`15 deg. Azimuth, 7 deg. El., Veh. Ref.` Vehicle Reference` , Animator camera`Camera_8d5e5054-3ff3-4116-9f8c-ae7201bc4aa6
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 1    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_5c83ba61-a2a5-436b-8691-d8258e485074.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`Mechanical Simulation FSAE` FSAE` , Math Model`VehLoad_5c83ba61-a2a5-436b-8691-d8258e485074
+
+PARSFILE Procedures\Proc_c8ebe459-7d2a-4914-897f-544dbd0d6a97.par
+#BlueLink28 Procedures`Find Out Where to Slow Down` Mech. Sim. FSAE: Restoring to a Previous State` , Procedure`Proc_c8ebe459-7d2a-4914-897f-544dbd0d6a97
+
+PARSFILE Generic\Group\GenGrp_93c85863-f22e-4cd2-b8c7-402c8d5c9781.par
+#BlueLink9 Generic Data Group`VS Visualizer HUD Gauges (FSAE / Baja)` HUD Gauges` , Miscellaneous`GenGrp_93c85863-f22e-4cd2-b8c7-402c8d5c9781
+
+PARSFILE Generic\VS_commands\GenVS_0693f168-b4bd-44f0-ab4d-621bd5be4856.par
+#BlueLink10 Generic VS Commands`VsV HUD Text: Engine RPM, Trans. Gear Ratio` HUD Gauges` , Miscellaneous`GenVS_0693f168-b4bd-44f0-ab4d-621bd5be4856
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_7eebfaf2-736d-4fc8-8710-ce4ecdfcfa7a.par
+#BlueLink11 Multiple Moving Objects`10 Driver Preview Points` Points of Interest` , Miscellaneous`TMotion_7eebfaf2-736d-4fc8-8710-ce4ecdfcfa7a
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_4d135579-d50c-4bb7-8572-23ffbe185deb.png
+
+OPT_ALL_WRITE 1
+WRITE_SENSOR_DETECT
+Title 3b. Slow Down for a Tight Curve (Full Plot Detail) <* * FSAE Examples: Restoring to a Previous State>
+CATEGORY * * FSAE Examples: Restoring to a Previous State 
+DATASET_TITLE 3b. Slow Down for a Tight Curve (Full Plot Detail)
+#MiscYellow0
+opt_buffer_write 0; ! Use zero for full plot detail
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Restoring to a Previous State
+#
+#In this example, the car approaches an S-shaped turn.
+#
+#The first part of the S-shaped turn has a radius of 200 m, and the second part has a radius of 100 m.
+#
+#At the speed the vehicle is traveling, it can negotiate the first radius without trouble, but is almost a full vehicle width away from the target path in the second radius.
+#
+#When the car leaves the target path, the run is suspended and restored at successively earlier points in order to find a location where reducing the target speed gives the car sufficient time to slow down for the second part.
+#
+#Setting opt_buffer_write to 1 (in the Misc. yellow field) shows clean plots and animation.
+#
+#Setting opt_buffer_write to 0 (in the Misc. yellow field) shows the intermediate, restored states in the plots and animation.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * * FSAE Examples: Restoring to a Previous State } 3b. Slow Down for a Tight Curve (Full Plot Detail)
+#Library : CarSim Run Control
+#DataSet : 3b. Slow Down for a Tight Curve (Full Plot Detail)
+#Category: * * FSAE Examples: Restoring to a Previous State
+#FileID  : Run_5088a4ea-04b1-42a8-99e8-62cb0b00a72b
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

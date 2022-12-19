@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Generic Table`Electric Generator: Max. Load 66 N-m`Powertrain (HEV / EV)
+#RingCtrl0 LINEAR
+#CheckBox0 0    
+
+#DiagramOne0
+mgnrtr_max_TABLE LINEAR
+-200000, 0.012
+-10000, 17.16
+-8000, 21.6
+-6500, 26.4
+-5500, 31.2
+-4000, 43.2
+-3500, 49.2
+-3000, 57.6
+-2500, 66
+-2000, 66
+-1500, 66
+-1000, 66
+-500, 66
+0, 66
+500, 66
+1000, 66
+1500, 66
+2000, 66
+2500, 66
+3000, 57.6
+3500, 49.2
+4000, 43.2
+5500, 31.2
+6500, 26.4
+8000, 21.6
+10000, 17.16
+200000, 0.012
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD mgnrtr_max
+*X_LABEL generator speed (RPM)
+*Y_LABEL Maximum load (N-m)
+
+
+LOG_ENTRY Used Dataset: Generic Table; { Powertrain (HEV / EV) } Electric Generator: Max. Load 66 N-m
+#Library : Generic Table
+#DataSet : Electric Generator: Max. Load 66 N-m
+#Category: Powertrain (HEV / EV)
+#FileID  : GenTab_a0db5041-d4b4-45a8-b02b-253fd56e256c
+#Product : CarSim 2020.0
+#VehCode table
+
+END

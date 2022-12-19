@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Camera Rear Point w/ Yaw`Road Tracking
+ADD_REFERENCE_FRAME Frame_0d19114f-a5d3-40a0-b63b-e67f85442aa7
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_camR
+SET_Y_NAME Y_camR
+SET_Z_NAME Z_camR
+SET_YAW_NAME Yaw_CamR
+
+WRT_X_camR
+ANI_X_camR
+WRT_Y_camR
+ANI_Y_camR
+WRT_Z_camR
+ANI_Z_camR
+WRT_Yaw_CamR
+ANI_Yaw_CamR
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Road Tracking } Camera Rear Point w/ Yaw
+#Library : Animator: Reference Frame
+#DataSet : Camera Rear Point w/ Yaw
+#Category: Road Tracking
+#FileID  : Frame_0d19114f-a5d3-40a0-b63b-e67f85442aa7
+#Product : CarSim 2020.0
+#VehCode Reference Frame
+
+END

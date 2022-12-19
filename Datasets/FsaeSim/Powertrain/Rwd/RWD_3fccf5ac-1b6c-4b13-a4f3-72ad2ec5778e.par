@@ -1,0 +1,53 @@
+PARSFILE
+#FullDataName Powertrain: Rear-Wheel Drive`Mech. Sim. Baja: 7.5 kW w/ CVT`Mech. Sim. FSAE & Baja: Powertrains
+
+OPT_PT 2
+R_REAR_DRIVE_SC 1
+
+OPT_ENGINE_PITCH_REACTION(2) 0
+
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 0
+OPT_HEV 0
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+#CheckBox0 0    
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+OPT_DIFF_INTERNAL(2) 1
+
+PARSFILE Powertrain\Engine\Engine_9de6cb74-7576-448d-bb3d-22bcd1ff3db7.par
+#BlueLink0 Powertrain: Engine`7.5 kW  Engine` Mech. Sim. FSAE & Baja: Engines` , Engine`Engine_9de6cb74-7576-448d-bb3d-22bcd1ff3db7
+
+PARSFILE Powertrain\TConv\TC_0c00ad14-3c9e-48ed-97d2-43a17fd7aa18.par
+#BlueLink1 Powertrain: Torque Converter`Torque Converter for 7.5 kW Engine` Mech. Sim. Baja: Torque Converters` , Torque Conv.`TC_0c00ad14-3c9e-48ed-97d2-43a17fd7aa18
+
+PARSFILE Powertrain\TransExt\Trans18_d073fdc5-dbdb-4644-9f63-8452521673ac.par
+#BlueLink9 Powertrain: Transmission (18 Gears or CVT)`CVT: R = 0.69 - 5.6` Mech. Sim. FSAE & Baja: Transmissions` , Transmission (Extended)`Trans18_d073fdc5-dbdb-4644-9f63-8452521673ac
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_d489eb6c-7dc7-4b89-b2b9-2b38a00c3e51.par
+#BlueLink5 Powertrain: Rear Differential`Viscous - Gear Ratio 2.65` Mech. Sim. FSAE & Baja: Rear Differentials` , Differential`DiffR_d489eb6c-7dc7-4b89-b2b9-2b38a00c3e51
+
+
+LOG_ENTRY Used Dataset: Powertrain: Rear-Wheel Drive; { Mech. Sim. FSAE & Baja: Powertrains } Mech. Sim. Baja: 7.5 kW w/ CVT
+#Library : Powertrain: Rear-Wheel Drive
+#DataSet : Mech. Sim. Baja: 7.5 kW w/ CVT
+#Category: Mech. Sim. FSAE & Baja: Powertrains
+#FileID  : RWD_3fccf5ac-1b6c-4b13-a4f3-72ad2ec5778e
+#Product : CarSim 2020.0
+#VehCode RWD
+
+END

@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Powertrain: Clutch Torque`Mech. Sim. FSAE Clutch`Mech. Sim. FSAE: Clutch
+
+OPT_CLUTCH 1
+#CheckBox0 1    
+OPT_CLUTCH_DELAY 1
+#CheckBox1 0    
+
+#RingCtrl0 LINEAR_FLAT
+#DiagramOne0
+CLUTCH_TORQUE_TABLE LINEAR_FLAT
+0, 250
+1, 0
+ENDTABLE
+#RadioCtrl0 0    
+
+TC_CLUTCH_ENGAGE 0.06
+TC_CLUTCH_DISENGAGE 0.002
+ITC_INPUT_SHAFT 0.015
+ITC_OUTPUT_SHAFT 0.015
+
+LOG_ENTRY Used Dataset: Powertrain: Clutch Torque; { Mech. Sim. FSAE: Clutch } Mech. Sim. FSAE Clutch
+#Library : Powertrain: Clutch Torque
+#DataSet : Mech. Sim. FSAE Clutch
+#Category: Mech. Sim. FSAE: Clutch
+#FileID  : TrqCl_271e5f34-5847-4f68-acb9-6768684418ab
+#Product : CarSim 2020.0
+#VehCode Clutch
+
+END

@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Control: Clutch (Open Loop)`Clutch - Fast Engagement (1 second)`Ramp
+opt_clutch_mode 0
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+CLUTCH_CONTROL_TABLE LINEAR_FLAT
+0, 1
+1, 0
+3, 0
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Control: Clutch (Open Loop); { Ramp } Clutch - Fast Engagement (1 second)
+#Library : Control: Clutch (Open Loop)
+#DataSet : Clutch - Fast Engagement (1 second)
+#Category: Ramp
+#FileID  : ClCon_f004c67e-d8d4-4e91-8ef1-2f23553895b8
+#Product : CarSim 2020.0
+#VehCode Open-Loop Clutch
+
+END

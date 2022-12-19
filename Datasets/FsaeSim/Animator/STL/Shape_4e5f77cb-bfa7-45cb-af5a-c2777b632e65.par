@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Autocross Parking Lot`Mech. Sim. FSAE: Shape Files
+#MiscYellow3
+add_obj Animator\3D_Shape_Files_User\SAE\Formula SAE\Auto_x\parking_lot.OSG
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_Z 0
+SET_ANGLE_Y 0
+SET_ANGLE_X 0
+SET_OFFSET_X -50
+SET_OFFSET_Y 0
+SET_OFFSET_Z -0.05
+*SPECULAR .2
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 0    
+
+SET_SPECULAR .2 .2 .2
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_f2e9fdc6-8eb7-4c80-a895-b3a3c8b4ed69.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side) Static` Shape Preview` , Video Camera`Camera_f2e9fdc6-8eb7-4c80-a895-b3a3c8b4ed69
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_4e5f77cb-bfa7-45cb-af5a-c2777b632e65.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Autocross Parking Lot
+#Library : Animator: Shape File Link
+#DataSet : Autocross Parking Lot
+#Category: Mech. Sim. FSAE: Shape Files
+#FileID  : Shape_4e5f77cb-bfa7-45cb-af5a-c2777b632e65
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

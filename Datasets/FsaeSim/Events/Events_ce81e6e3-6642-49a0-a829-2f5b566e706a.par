@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Events`B. Slow Launch, Throttle and Clutch Engagement`FSAE Acceleration to Top Speed
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 t_event
+*VALUE1 6
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_57af8244-9525-4ded-9de7-de7de712c497.par
+#BlueLink18 Control: Throttle (Open Loop)`Ramp to 0.1 in 1 sec.` Ramp` , Speed link`Throttle_57af8244-9525-4ded-9de7-de7de712c497
+
+#MiscYellow0
+TSTART_T_EVENT = T
+TSTART_BRAKES = T
+TSTART_CLUTCH = T
+TSTART_GEAR = T 
+TSTART_THROTTLE = T
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Miscellaneous`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_mt\GearOL_c704d050-7535-4cbb-8a29-56865a1b0f8f.par
+#BlueLink11 Control: Shifting (Open Loop)`Shift into 1st Gear, Engage Clutch` Open-Loop Gearshift Control` , Miscellaneous`GearOL_c704d050-7535-4cbb-8a29-56865a1b0f8f
+
+#MiscYellow1
+CLUTCH_TORQUE_GAIN = 0.05; ! Allow for clutch slip
+#ENDMYellow
+
+MAKE_EVENT t_event > 6 ; Events\Events_d4726b05-a56c-4574-bfb5-e6512e067e85.par
+#BlueLink0 Events`C. Switch to Closed-Loop Shifting` FSAE Acceleration to Top Speed` , Events`Events_d4726b05-a56c-4574-bfb5-e6512e067e85
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { FSAE Acceleration to Top Speed } B. Slow Launch, Throttle and Clutch Engagement
+#Library : Events
+#DataSet : B. Slow Launch, Throttle and Clutch Engagement
+#Category: FSAE Acceleration to Top Speed
+#FileID  : Events_ce81e6e3-6642-49a0-a829-2f5b566e706a
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

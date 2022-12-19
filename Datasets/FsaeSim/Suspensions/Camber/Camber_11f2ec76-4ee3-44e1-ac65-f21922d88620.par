@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName Suspension: Camber Angle`FSAE: Camber Change (Front)`Mech. Sim. FSAE: Camber Change
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+CAMBER_COMBINE ADD
+#DiagramOne0
+CAMBER_TABLE LINEAR
+-200, 0.895
+-100, 0.895
+-75, 0.895
+-65, 0.895
+-60, 0.895
+-57.5, 0.895
+-55, 0.895
+-52.5, 0.89
+-50.8, 0.88
+-48.26, 0.843
+-45.72, 0.806
+-43.18, 0.768
+-40.64, 0.729
+-38.1, 0.69
+-35.56, 0.649
+-33.02, 0.608
+-30.48, 0.566
+-27.94, 0.524
+-25.4, 0.48
+-22.86, 0.436
+-20.32, 0.391
+-17.78, 0.345
+-15.24, 0.298
+-12.7, 0.25
+-10.16, 0.202
+-7.62, 0.153
+-5.08, 0.103
+-2.54, 0.052
+0, 0
+2.54, -0.053
+5.08, -0.106
+7.62, -0.16
+10.16, -0.215
+12.7, -0.271
+15.24, -0.328
+17.78, -0.386
+20.32, -0.444
+22.86, -0.504
+25.4, -0.564
+30, -0.57
+32.5, -0.571
+35, -0.572
+40, -0.573
+50, -0.575
+100, -0.575
+200, -0.575
+ENDTABLE
+SUSP_CAMBER_JNC_OTHER_SIDE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR2 0
+
+
+LOG_ENTRY Used Dataset: Suspension: Camber Angle; { Mech. Sim. FSAE: Camber Change } FSAE: Camber Change (Front)
+#Library : Suspension: Camber Angle
+#DataSet : FSAE: Camber Change (Front)
+#Category: Mech. Sim. FSAE: Camber Change
+#FileID  : Camber_11f2ec76-4ee3-44e1-ac65-f21922d88620
+#Product : CarSim 2020.0
+#VehCode Camber
+
+END

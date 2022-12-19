@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName Procedures`Four Small Bumps, Target Speed = 15 km/h`Mech. Sim. Baja SAE: Procedures
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART -10
+TSTART_WRITE = TSTART;
+TSTOP 30
+SSTOP 120
+OPT_DIRECTION 0
+*TSTOP 30
+*TSTART 0
+*SSTART -10
+*SSTOP 120
+
+OPT_SC 2
+PARSFILE Control\Driver\StrDM_5e1b87df-4a9a-4a60-ac80-544adfa4667d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`No Offset, 1 sec. Preview` Constant Position` , Steering`StrDM_5e1b87df-4a9a-4a60-ac80-544adfa4667d
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting Modes` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_t\SpdTime_1c8f611f-a363-44c3-aeb3-053e3578c6da.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`15 km/h` Target Speed vs. Station` , Speed vs. time`SpdTime_1c8f611f-a363-44c3-aeb3-053e3578c6da
+
+PARSFILE Roads\3D_Road\Road_418c7770-0e4c-4ebb-ae3e-8e3706b02f21.par
+#BlueLink0 Road: 3D Surface (All Properties)`Four Small Bumps, 0.3 m incr. elev.` Mech. Sim. Baja Roads` , Miscellaneous`Road_418c7770-0e4c-4ebb-ae3e-8e3706b02f21
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink1 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Generic\VS_commands\GenVS_770bb6c1-3d46-4935-b13a-8681564d6de9.par
+#BlueLink5 Generic VS Commands`Plots: Suspension` Mech. Sim. FSAE & Baja: Plot Groups` , Miscellaneous`GenVS_770bb6c1-3d46-4935-b13a-8681564d6de9
+
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+PARSFILE Plot\Setup\Plot_811b0750-5160-4ae1-aa82-2aabb3ab9af2.par
+#BlueLink9 Plot: Setup`Throttle: Closed Loop Speed Control` Controls: Driver` , Plot`Plot_811b0750-5160-4ae1-aa82-2aabb3ab9af2
+
+PARSFILE Plot\Setup\Plot_076736e1-2cdd-49d5-8a36-d55940b011f0.par
+#BlueLink11 Plot: Setup`Steering: Handwheel Angle` Steering` , Plot`Plot_076736e1-2cdd-49d5-8a36-d55940b011f0
+
+PARSFILE Plot\Setup\Plot_50bf9c06-33dd-4b73-8c46-754ecc52260a.par
+#BlueLink14 Plot: Setup`Tire Compression (Axle 1)` Tire Kinematics` , Plot`Plot_50bf9c06-33dd-4b73-8c46-754ecc52260a
+
+PARSFILE Plot\Setup\Plot_33b3c4b1-f23b-4e87-a101-c1b4b9a25273.par
+#BlueLink15 Plot: Setup`Tire Compression (Axle 2)` Tire Kinematics` , Plot`Plot_33b3c4b1-f23b-4e87-a101-c1b4b9a25273
+
+PARSFILE Plot\Setup\Plot_de12eea2-c7e6-47ac-a8f6-4f491244b283.par
+#BlueLink16 Plot: Setup`Vertical Forces (Axle 1)` Tire Forces and Moments` , Plot`Plot_de12eea2-c7e6-47ac-a8f6-4f491244b283
+
+PARSFILE Plot\Setup\Plot_4fae6e50-2618-44f6-8ed7-08b8ed3fe10e.par
+#BlueLink17 Plot: Setup`Vertical Forces (Axle 2)` Tire Forces and Moments` , Plot`Plot_4fae6e50-2618-44f6-8ed7-08b8ed3fe10e
+
+
+#EMBEDDED_NOTES
+#Procedure for four small bumps
+#
+#Roads such as these are useful for evaluating suspension articulation combined with effects due steering, as well as tire and powertrain performance.
+#
+#Driver controls:
+# * Target Speed vs. Station = 25 km/h
+# * No brake pressure
+# * Automatic gear selection using all available gears.
+#
+#For details on how the bumps were built, click on the 3D Road dataset:
+#Four Small Bumps, 0.3 m incr. elev.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Mech. Sim. Baja SAE: Procedures } Four Small Bumps, Target Speed = 15 km/h
+#Library : Procedures
+#DataSet : Four Small Bumps, Target Speed = 15 km/h
+#Category: Mech. Sim. Baja SAE: Procedures
+#FileID  : Proc_e591a96a-3052-4dba-a3dc-5993f981b637
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

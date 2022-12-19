@@ -1,0 +1,101 @@
+PARSFILE
+#FullDataName CarSim Run Control`Baja SAE: Transient Response Times`* * Baja SAE Examples
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_5703043c-dc8f-42b8-8078-14bcdca426e6
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 3
+PARSFILE Animator\Cameras\Camera_b9fa7972-0bfa-43d1-9ff3-033711663214.par
+#BlueLink0 Animator: Camera Setup`165 deg. Azimuth, Veh. Ref. (No Yaw)` Vehicle Reference` , Animator camera`Camera_b9fa7972-0bfa-43d1-9ff3-033711663214
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 1    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_505a6006-6cdd-4c61-aeec-49bd09ce1452.par
+#BlueLink2 Vehicle: Assembly`Mech. Sim. Baja Vehicle Assembly` Mechanical Simulation FSAE & Baja` , Math Model`Vehicle_505a6006-6cdd-4c61-aeec-49bd09ce1452
+
+PARSFILE Procedures\Proc_f3d07b1d-2f7f-459e-ab10-d79904dd43aa.par
+#BlueLink28 Procedures`Transient Response Test` Handling Testing` , Procedure`Proc_f3d07b1d-2f7f-459e-ab10-d79904dd43aa
+
+PARSFILE Generic\Group\GenGrp_93c85863-f22e-4cd2-b8c7-402c8d5c9781.par
+#BlueLink9 Generic Data Group`VS Visualizer HUD Gauges (FSAE / Baja)` HUD Gauges` , Miscellaneous`GenGrp_93c85863-f22e-4cd2-b8c7-402c8d5c9781
+
+PARSFILE Generic\VS_commands\GenVS_0693f168-b4bd-44f0-ab4d-621bd5be4856.par
+#BlueLink10 Generic VS Commands`VsV HUD Text: Engine RPM, Trans. Gear Ratio` HUD Gauges` , Miscellaneous`GenVS_0693f168-b4bd-44f0-ab4d-621bd5be4856
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_505a6006-6cdd-4c61-aeec-49bd09ce1452.png
+
+OPT_ALL_WRITE 1
+WRITE_SENSOR_DETECT
+Title Baja SAE: Transient Response Times <* * Baja SAE Examples>
+CATEGORY * * Baja SAE Examples 
+DATASET_TITLE Baja SAE: Transient Response Times
+#MiscYellow0
+speed_in_mph = 18
+ay_test = 0.4;
+level_i = 0.5
+level_f = 0.9;
+time_out = 20;
+time_settle = 3;
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This transient handling test illustrates the use of VS Commands to "capture" the values of calculated outputs at specific times, and then use those values to direct the progress of a test procedure.
+#
+#Two tests -- a slowly increasing steer input and a step steer input -- are performed according to user-specified parameters in the Miscellaneous yellow field on this Run Control screen under the Advanced Settings checkbox. The variables used are defined with VS Commands linked on the Procedure dataset.
+#
+#The parameters that specify the test are:
+#
+#Speed_in_mph. The speed is set in miles per hour to illustrate the use of units defined by the user.
+#
+#Ay_test. The lateral acceleration at which the steer angle for the step steer test is obtained during the slowly increasing steer test.
+#
+#Level_i and level_f. Level_i is a fraction of the steady state steer angle. Level_f is a fraction of the steady state value of the parameter for which response time is calculated.
+#
+#Response time is defined as the time elapsed between the steer angle reaching level_i and a parameter reaching level_f.
+#
+#Time_out. A time threshold to end the run if a condition is not reached.
+#
+#Time_settle. Time allowed after a transient input to allow steady state to be reached.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * * Baja SAE Examples } Baja SAE: Transient Response Times
+#Library : CarSim Run Control
+#DataSet : Baja SAE: Transient Response Times
+#Category: * * Baja SAE Examples
+#FileID  : Run_5703043c-dc8f-42b8-8078-14bcdca426e6
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

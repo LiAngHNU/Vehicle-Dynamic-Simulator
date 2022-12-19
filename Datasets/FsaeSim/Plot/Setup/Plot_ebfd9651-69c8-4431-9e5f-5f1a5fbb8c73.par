@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Slip Ratios: Lagged (Axle 2)`Tire Kinematics
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS KappL_L2, Time
+PLOTCHANNELS KappL_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Slip Ratios: Lagged (Axle 2)
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#Slip ratios after applying relaxation length
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Kinematics } Slip Ratios: Lagged (Axle 2)
+#Library : Plot: Setup
+#DataSet : Slip Ratios: Lagged (Axle 2)
+#Category: Tire Kinematics
+#FileID  : Plot_ebfd9651-69c8-4431-9e5f-5f1a5fbb8c73
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

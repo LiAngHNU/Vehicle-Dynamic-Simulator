@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Control: Shifting (Open Loop)`Shift into 1st Gear, Engage Clutch`Open-Loop Gearshift Control
+
+MODE_TRANS_CONSTANT 1
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+GEAR_TRANS_CONSTANT 1
+#RadioCtrl0 0    
+
+PARSFILE Control\Clutch\ClCon_58ed19f8-6bc2-4012-b186-c9f06ba67887.par
+#BlueLink0 Control: Clutch (Open Loop)`Clutch Engagement: 3 seconds` Ramp` , Clutch Control`ClCon_58ed19f8-6bc2-4012-b186-c9f06ba67887
+
+*SCALAR 1
+
+
+LOG_ENTRY Used Dataset: Control: Shifting (Open Loop); { Open-Loop Gearshift Control } Shift into 1st Gear, Engage Clutch
+#Library : Control: Shifting (Open Loop)
+#DataSet : Shift into 1st Gear, Engage Clutch
+#Category: Open-Loop Gearshift Control
+#FileID  : GearOL_c704d050-7535-4cbb-8a29-56865a1b0f8f
+#Product : CarSim 2020.0
+#VehCode Open-Loop Shift Control
+
+END

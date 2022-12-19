@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Tire: Overturning Moment`Overturning Moment vs. Slip Angle: Zero`Mech Sim. FSAE Overturning Moment
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. slip angle [alpha] (deg)
+*3D_ZLabel Overturning moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 2, 2 ! columns x rows
+MX_TIRE_CARPET 2D_FROM_ZERO
+0, 1, 10
+1, 0, 0
+2, 0, 0
+ENDTABLE
+
+
+
+LOG_ENTRY Used Dataset: Tire: Overturning Moment; { Mech Sim. FSAE Overturning Moment } Overturning Moment vs. Slip Angle: Zero
+#Library : Tire: Overturning Moment
+#DataSet : Overturning Moment vs. Slip Angle: Zero
+#Category: Mech Sim. FSAE Overturning Moment
+#FileID  : TireMx_e81e58ac-a324-4874-8e63-1a55c15534c3
+#Product : CarSim 2020.0
+#VehCode Tire: Mx
+
+END

@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Jounce (Axle 2)`Suspension Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Jnc_L2, Time
+PLOTCHANNELS Jnc_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Jounce (Axle 2)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Motion } Jounce (Axle 2)
+#Library : Plot: Setup
+#DataSet : Jounce (Axle 2)
+#Category: Suspension Motion
+#FileID  : Plot_6e89fcc6-8e6b-4e4b-8f58-fef0a7f6d22d
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

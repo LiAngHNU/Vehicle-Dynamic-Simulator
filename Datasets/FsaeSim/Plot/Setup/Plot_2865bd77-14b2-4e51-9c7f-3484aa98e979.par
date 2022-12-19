@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Roll Angle of Sprung Mass vs. Time`Vehicle Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Roll, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Roll Angle of Sprung Mass vs. Time
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Roll Angle of Sprung Mass vs. Time
+#Library : Plot: Setup
+#DataSet : Roll Angle of Sprung Mass vs. Time
+#Category: Vehicle Motion
+#FileID  : Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

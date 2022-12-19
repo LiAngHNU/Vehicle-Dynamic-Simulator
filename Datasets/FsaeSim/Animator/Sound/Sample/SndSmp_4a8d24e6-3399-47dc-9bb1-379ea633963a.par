@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Animator: Sound Sample`4 Cyl. - Power On`Gas Engine Sounds
+
+ADD_3D_SOUND Animator\Audio\Engine\Generic-Engine-02_L4_2.4L_1.0-Load_03-Mid-RPM.WAV
+#CheckBox0 1    
+LOOP_SOUND on
+
+#RingCtrl0 Default
+SOUND_AUTO_START Default
+
+SOUND_VOL_MULT 1.0
+SOUND_VOL_MIN 0.9
+SOUND_VOL_MAX 10.0
+SOUND_FREQ_MULT 1.0
+SOUND_FREQ_MIN 0.0
+SOUND_FREQ_MAX 20.0
+
+PARSFILE Animator\Sound\Modifier\SndMod_82007129-3b66-4c50-babb-2325954a277f.par
+#BlueLink0 Animator: Sound Modifier`Power On Loudness: Load Effect` Gas Engine Sound Modifiers` , Playback Modification 1`SndMod_82007129-3b66-4c50-babb-2325954a277f
+
+PARSFILE Animator\Sound\Modifier\SndMod_c37319df-b7d3-49ac-a826-559afe89c56b.par
+#BlueLink1 Animator: Sound Modifier`Power On Loudness: Speed Effect` Gas Engine Sound Modifiers` , Playback Modification 2`SndMod_c37319df-b7d3-49ac-a826-559afe89c56b
+
+PARSFILE Animator\Sound\Modifier\SndMod_83ec05bc-29ab-428d-a5ae-1e1a7ffa16f2.par
+#BlueLink2 Animator: Sound Modifier`Frequency with RPM` Gas Engine Sound Modifiers` , Playback Modification 3`SndMod_83ec05bc-29ab-428d-a5ae-1e1a7ffa16f2
+
+
+#EMBEDDED_NOTES
+#This sound set uses a sample recorded at wide open throttle and 3500 RPM, for a 4 cylinder engine.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Sound Sample; { Gas Engine Sounds } 4 Cyl. - Power On
+#Library : Animator: Sound Sample
+#DataSet : 4 Cyl. - Power On
+#Category: Gas Engine Sounds
+#FileID  : SndSmp_4a8d24e6-3399-47dc-9bb1-379ea633963a
+#Product : CarSim 2020.0
+#VehCode Sound Sample
+
+END

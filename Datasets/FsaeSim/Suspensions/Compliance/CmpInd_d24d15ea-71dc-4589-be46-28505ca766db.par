@@ -1,0 +1,111 @@
+PARSFILE
+#FullDataName Suspension: Independent Compliance, Springs, and Dampers`Baja SAE Compliance`Mech. Sim. FSAE & Baja: Ind. Susp. Compliance
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 0
+*OPT_SPR 0
+#RingCtrl1 1
+#RingCtrl3 1
+#RingCtrl5 2
+#RingCtrl7 1
+#RingCtrl9 1
+#RingCtrl11 1
+#RingCtrl13 1
+*KSPRING_L 5
+*FRICTION_L 0
+*BETA_C_L 2
+*BETA_E_L 2
+*L_SPG_ADJ_L 0
+*L_SPG_ADJ_R 0
+*FS_OFFSET_L 0
+*FS_OFFSET_R 0
+*R_SPRING_L 1
+*R_DAMPER_L 1
+*R_JOUNCE_L 1
+*R_REBOUND_L 1
+*CT_FX_L 0
+*CS_FY_L 0
+*CS_MZ_L 0
+*CC_FX_L 0
+*CI_FY_L 0
+*CI_MZ_L 0
+*C_LONG_L 0
+*C_LAT_L 0
+DAUX 0
+*CD_MY_L 0
+
+iside 1
+OPT_EXT_SP 0
+FS_COMP_COEFFICIENT 5
+FS_EXT_COEFFICIENT 5
+FS_COMP_OFFSET 0
+FS_EXT_OFFSET 0
+SPRING_COMP_BETA 2
+SPRING_EXT_BETA 2
+CMP_SPR_SEAT_COEFFICIENT 1
+L_SPG_ADJ 0
+FS_OFFSET 0
+CMP_OFFSET 0
+PARSFILE Suspensions\Shocks\Shock_e28340c6-c284-41e0-a9b5-bc760ee50a27.par
+#BlueLink1 Suspension: Shock Absorber`Baja SAE Damper` Mech. Sim. FSAE & Baja: Dampers` , Left damper`Shock_e28340c6-c284-41e0-a9b5-bc760ee50a27
+
+CMP_DAMP_COEFFICIENT 1
+PARSFILE Suspensions\Jounce_Rebound\JncReb_e50537af-b1f1-4910-a08f-636127461493.par
+#BlueLink5 Suspension: Jounce and Rebound Stops`+120 mm / -60 mm` FSAE & Baja: Jounce and Rebound Stops` , Jounce / rebound stop force`JncReb_e50537af-b1f1-4910-a08f-636127461493
+
+CMP_JSTOP_COEFFICIENT 1
+CMP_RSTOP_COEFFICIENT 1
+CT_FX_COEFFICIENT 0
+CS_FY_COEFFICIENT 0
+CS_MZ_COEFFICIENT 0
+CC_FX_COEFFICIENT 0
+CI_FY_COEFFICIENT 0
+CI_MZ_COEFFICIENT 0
+C_LONG_COEFFICIENT 0
+C_LAT_COEFFICIENT 0
+CD_MY_COEFFICIENT 0
+
+iside 2
+OPT_EXT_SP 0
+FS_COMP_COEFFICIENT 5
+FS_EXT_COEFFICIENT 5
+FS_COMP_OFFSET 0
+FS_EXT_OFFSET 0
+SPRING_COMP_BETA 2
+SPRING_EXT_BETA 2
+CMP_SPR_SEAT_COEFFICIENT 1
+L_SPG_ADJ 0
+FS_OFFSET 0
+CMP_OFFSET 0
+PARSFILE Suspensions\Shocks\Shock_e28340c6-c284-41e0-a9b5-bc760ee50a27.par
+#BlueLink1 Suspension: Shock Absorber`Baja SAE Damper` Mech. Sim. FSAE & Baja: Dampers` , Left damper`Shock_e28340c6-c284-41e0-a9b5-bc760ee50a27
+
+CMP_DAMP_COEFFICIENT 1
+PARSFILE Suspensions\Jounce_Rebound\JncReb_e50537af-b1f1-4910-a08f-636127461493.par
+#BlueLink5 Suspension: Jounce and Rebound Stops`+120 mm / -60 mm` FSAE & Baja: Jounce and Rebound Stops` , Jounce / rebound stop force`JncReb_e50537af-b1f1-4910-a08f-636127461493
+
+CMP_JSTOP_COEFFICIENT 1
+CMP_RSTOP_COEFFICIENT 1
+CT_FX_COEFFICIENT 0
+CS_FY_COEFFICIENT 0
+CS_MZ_COEFFICIENT 0
+CC_FX_COEFFICIENT 0
+CI_FY_COEFFICIENT 0
+CI_MZ_COEFFICIENT 0
+C_LONG_COEFFICIENT 0
+C_LAT_COEFFICIENT 0
+CD_MY_COEFFICIENT 0
+PARSFILE Suspensions\Aux_Roll\AuxMx_b216b487-cb2b-4044-9a88-5c83edf6bb6b.par
+#BlueLink2 Suspension: Auxiliary Roll Moment`Baja SAE Linear 75  N-m/deg` Mech. Sim. FSAE & Baja: Auxiliary Roll Moment` , Roll Moment`AuxMx_b216b487-cb2b-4044-9a88-5c83edf6bb6b
+
+
+LOG_ENTRY Used Dataset: Suspension: Independent Compliance, Springs, and Dampers; { Mech. Sim. FSAE & Baja: Ind. Susp. Compliance } Baja SAE Compliance
+#Library : Suspension: Independent Compliance, Springs, and Dampers
+#DataSet : Baja SAE Compliance
+#Category: Mech. Sim. FSAE & Baja: Ind. Susp. Compliance
+#FileID  : CmpInd_d24d15ea-71dc-4589-be46-28505ca766db
+#Product : CarSim 2020.0
+#VehCode Springs and Dampers
+
+END

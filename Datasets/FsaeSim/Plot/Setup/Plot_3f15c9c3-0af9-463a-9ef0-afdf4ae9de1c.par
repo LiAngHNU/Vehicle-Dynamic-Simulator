@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`Aerodynamic Forces`Aerodynamics and Wind
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fx_Air, Time
+PLOTCHANNELS Fx_Air_2, Time
+PLOTCHANNELS Fy_Air, Time
+PLOTCHANNELS Fy_Air_2, Time
+PLOTCHANNELS Fz_Air, Time
+PLOTCHANNELS Fz_Air_2, Time
+
+#ENDMYellow
+
+YAXISLABEL Aerodynamic Force -- N
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Aerodynamic Forces
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Aerodynamics and Wind } Aerodynamic Forces
+#Library : Plot: Setup
+#DataSet : Aerodynamic Forces
+#Category: Aerodynamics and Wind
+#FileID  : Plot_3f15c9c3-0af9-463a-9ef0-afdf4ae9de1c
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

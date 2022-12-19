@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Steering System: Steer Gain vs. Speed`Variable Phase`
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR
+#RadioCtrl0 0    
+
+#DiagramOne0
+R_STEER_SPEED_TABLE LINEAR
+0, -0.7
+10, -0.6
+20, -0.5
+30, -0.4
+40, -0.3
+50, -0.2
+60, -0.1
+70, 0
+80, 0.1
+90, 0.2
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Steering System: Steer Gain vs. Speed; Variable Phase
+#Library : Steering System: Steer Gain vs. Speed
+#DataSet : Variable Phase
+#Category: 
+#FileID  : RearStr_4d7a5d79-e418-4074-8130-9046a0261d61
+#Product : CarSim 2020.0
+#VehCode Steer Gain vs. Speed
+
+END

@@ -1,0 +1,67 @@
+PARSFILE
+#FullDataName Events`C. Slowly Increasing Steer`Transient Response Times
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 1    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl1 >
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 ay
+*NAME2 t_event
+*VALUE1 ay_test
+*VALUE2 time_out
+*SPEED v_hold
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 0
+OPT_INIT_SPEED 0
+PARSFILE Control\Steer\StrSW_92462877-5d20-491d-b6bc-a48af1de9e1b.par
+#BlueLink12 Control: Steering (Open Loop)`Slowly Increasing Steer (13.5 deg./sec.)` Transient Response Times` , Miscellaneous`StrSW_92462877-5d20-491d-b6bc-a48af1de9e1b
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+MAKE_EVENT ay > ay_test ; Events\Events_177a9d6c-a324-4c15-aa7c-a9cc26f905b2.par
+#BlueLink0 Events`D. Straighten Out Steer` Transient Response Times` , Events`Events_177a9d6c-a324-4c15-aa7c-a9cc26f905b2
+
+MAKE_EVENT t_event > time_out ; Events\Events_b5af09b5-d8ad-4e81-ae24-eebce691780e.par
+#BlueLink1 Events`End Events` Stop Conditions` , Events`Events_b5af09b5-d8ad-4e81-ae24-eebce691780e
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#After steady state conditions are reached, a slowly increasing steer test  is performed.
+#
+#When the user-specified lateral acceleration is reached, the steer angle will be recorded and steer returned to straight ahead.
+#
+#If the specified lateral aceleration is not reached in the allowed time, the run ends.
+#
+#The checkbox to reset the control clocks is checked so t_event can be used to monitor the time elapsed since this event began.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Transient Response Times } C. Slowly Increasing Steer
+#Library : Events
+#DataSet : C. Slowly Increasing Steer
+#Category: Transient Response Times
+#FileID  : Events_4c485117-53e8-4b01-b982-a673f7fc25b8
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

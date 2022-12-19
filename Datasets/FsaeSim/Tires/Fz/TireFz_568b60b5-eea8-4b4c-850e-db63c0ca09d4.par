@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Tire: Vertical Force vs. Compression`Mech. Sim. FSAE: Tire Spring Rate`Mech. Sim. FSAE Tire Spring Rate
+X_LENGTH 260
+Z_LENGTH 260
+#RingCtrl0 SPLINE
+#CheckBox0 0    
+
+RRE 260
+FZ_MAX 100000
+R0 265
+#DiagramOne0
+FZ_TIRE_TABLE SPLINE
+0, 0
+2.2, 214.748
+3.47, 347.649
+4.74, 487.237
+6.01, 633.511
+7.28, 786.471
+8.55, 946.119
+9.82, 1112.452
+11.09, 1285.472
+12.36, 1465.178
+13.63, 1651.571
+14.9, 1844.651
+16.17, 2044.416
+ENDTABLE
+#RadioCtrl0 0    
+
+
+LOG_ENTRY Used Dataset: Tire: Vertical Force vs. Compression; { Mech. Sim. FSAE Tire Spring Rate } Mech. Sim. FSAE: Tire Spring Rate
+#Library : Tire: Vertical Force vs. Compression
+#DataSet : Mech. Sim. FSAE: Tire Spring Rate
+#Category: Mech. Sim. FSAE Tire Spring Rate
+#FileID  : TireFz_568b60b5-eea8-4b4c-850e-db63c0ca09d4
+#Product : CarSim 2020.0
+#VehCode Tire: Fz vs Compression
+
+END

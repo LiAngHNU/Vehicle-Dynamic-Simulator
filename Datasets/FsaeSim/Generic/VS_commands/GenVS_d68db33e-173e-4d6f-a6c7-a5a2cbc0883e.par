@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName Generic VS Commands`Define Transient Response Variables`Miscellaneous Custom Output Variables
+#VehCode VS Commands
+
+#MiscYellow0
+! Test speed in mph. Define mph units and a parameter to set the test speed.
+define_units mph 2.236932; ! convert mph to m/sec
+define_parameter speed_in_mph 0; mph; Test speed in mph
+
+! Parameter to end run if conditions arent met in a reasonable time
+define_parameter time_out 1000; sec;
+
+! Time to allow vehicle to come to steady state
+define_parameter time_settle 5; sec; Time to allow vehicle to come to steady state
+
+! Lateral acceleration used to obtain steer angle
+define_parameter ay_test 0; g's; Lateral acceleration used to obtain steer angle
+
+! Steer angle for the step steer test
+define_output str_test 0; deg; Steer angle for the step steer test
+
+! Variables to hold the steady state values
+define_output ss_ay 0; g's; steady state ay
+define_output ss_roll 0; deg; steady state roll
+define_output ss_avz 0; deg/s; steady state yaw
+
+! Counter for passes through the step steer test
+define_output pass 0; -; the dash indicates that no units are applicable (ratios, counters, etc.)
+
+! Fractions of steady state steer defined as initiation time
+define_parameter level_i 0.5; units -; the dash indicates that no units are applicable (ratios, counters, etc.)
+
+! Fraction of steady state value of a parameter used to define completion, for the purpose of
+! calculating response time.
+define_parameter level_f 0.9; -; the dash indicates that no units are applicable (ratios, counters, etc.)
+
+! Response time is the elapsed time between initiation of steer and completion.
+! Variable to hold the steer initiation time
+define_variable t_init 0; sec; Variable to hold the steer initiation time
+
+! Capture the steer equivalent initiation time. The equation is a set of nested if_then conditions.
+! First we check to see if the initialization time has already been set.
+! If it hasn't, we check to see that we are on the second of two step steer events.
+! If that is true, we check for the moment that the initialization threshold is reached, and record the time.
+! Note: Each VS command must be on a single line
+eq_out t_init = if_not_0_then(t_init, t_init, if_gt_0_then(pass - 1, if_gt_0_then(steer_sw - level_i * str_test, t_event, 0), 0));
+
+! Variables to hold the response times
+define_output rt_ay 0; sec; ay response times
+define_output rt_roll 0; sec; roll response times
+define_output rt_avz 0; sec; yaw response times
+
+! Capture the response times. Each equation is a set of nested if_then conditions.
+! First we check to see if the response time for each parameter has already been captured.
+! If it hasn't, we check to see that we are on the second of two step steer events.
+! If that is true, we check for the moment that the parameter reaches its threshold value, and record the time.
+! Note: Each VS command must be on a single line
+eq_out rt_ay = if_not_0_then(rt_ay, rt_ay, if_gt_0_then(pass - 1, if_gt_0_then(ay - level_f * ss_ay, t_event - t_init, 0), 0));
+eq_out rt_roll = if_not_0_then(rt_roll, rt_roll, if_gt_0_then(pass - 1, if_gt_0_then(roll - level_f * ss_roll, t_event - t_init, 0), 0));
+eq_out rt_avz = if_not_0_then(rt_avz, rt_avz, if_gt_0_then(pass - 1, if_gt_0_then(avz - level_f *ss_avz, t_event - t_init, 0), 0));
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#Click the Parsfile button to open this dataset in the text editor for more convenient reading.
+#
+#It is also more convenient to edit the VS Commands in the text editor than in this edit window.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Miscellaneous Custom Output Variables } Define Transient Response Variables
+#Library : Generic VS Commands
+#DataSet : Define Transient Response Variables
+#Category: Miscellaneous Custom Output Variables
+#FileID  : GenVS_d68db33e-173e-4d6f-a6c7-a5a2cbc0883e
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`FSAE Autocross Road Shapes, Looped`Mech. Sim. FSAE: Autocross Road Shapes
+NLANES 2
+#MiscYellow0
+# 0.753 0.753 0.753, Road (No Centerline), .5, 15, 1, -2.5, m, 2.5, m, , , 0, 1352.826, 0.25, , , Road
+# 0.502 0.502 0.502, Pavement, .25, 2, , -3, m, 3, m, , , 0, 1352.826, 0.25, , -.02, Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 0.753 0.753 0.753
+MATERIAL(1) Road (No Centerline)
+SPECULAR(1) .5
+SCALE(1) 15
+LTILES(1) 1
+LIN(1) -2.5
+LINUNITS(1) m
+LOUT(1) 2.5
+LOUTUNITS(1) m
+SSTART(1) 0
+SSTOP(1) 1352.826
+SINT(1) 0.25
+AUTODETAIL(1) Road
+COLOR(2) 0.502 0.502 0.502
+MATERIAL(2) Pavement
+SPECULAR(2) .25
+SCALE(2) 2
+LIN(2) -3
+LINUNITS(2) m
+LOUT(2) 3
+LOUTUNITS(2) m
+SSTART(2) 0
+SSTOP(2) 1352.826
+SINT(2) 0.25
+DZ(2) -.02
+AUTODETAIL(2) Random
+MTL_FILE Animator\Road_Materials\road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Mech. Sim. FSAE: Autocross Road Shapes } FSAE Autocross Road Shapes, Looped
+#Library : Road: Animator Surface Shapes
+#DataSet : FSAE Autocross Road Shapes, Looped
+#Category: Mech. Sim. FSAE: Autocross Road Shapes
+#FileID  : RdShape_188b12a0-1b81-42fa-b752-501fdb99edeb
+#Product : CarSim 2020.0
+#VehCode Road Shapes
+
+END

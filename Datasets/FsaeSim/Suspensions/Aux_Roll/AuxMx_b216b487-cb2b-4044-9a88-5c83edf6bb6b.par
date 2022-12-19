@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Suspension: Auxiliary Roll Moment`Baja SAE Linear 75  N-m/deg`Mech. Sim. FSAE & Baja: Auxiliary Roll Moment
+#CheckBox0 0    
+
+#RingCtrl0 CARPET
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Axle load (N)
+*3D_YLabel Roll relative to axle (deg)
+*3D_ZLabel Auxiliary roll moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 2, 2 ! columns x rows
+MX_AUX_CARPET 2D_LINEAR
+0, 0, 1000
+0, 0, 0
+1, 75, 75
+ENDTABLE
+
+
+
+LOG_ENTRY Used Dataset: Suspension: Auxiliary Roll Moment; { Mech. Sim. FSAE & Baja: Auxiliary Roll Moment } Baja SAE Linear 75  N-m/deg
+#Library : Suspension: Auxiliary Roll Moment
+#DataSet : Baja SAE Linear 75  N-m/deg
+#Category: Mech. Sim. FSAE & Baja: Auxiliary Roll Moment
+#FileID  : AuxMx_b216b487-cb2b-4044-9a88-5c83edf6bb6b
+#Product : CarSim 2020.0
+#VehCode Aux. Roll Moment
+
+END

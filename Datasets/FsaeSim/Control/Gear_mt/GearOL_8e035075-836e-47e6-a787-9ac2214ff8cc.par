@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Control: Shifting (Open Loop)`Neutral w/ Clutch Disengaged`Constant
+
+MODE_TRANS_CONSTANT 1
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+GEAR_TRANS_CONSTANT 0
+#RadioCtrl0 0    
+
+PARSFILE Control\Clutch\ClCon_605aad24-35e9-45eb-82f9-7d1a35269e09.par
+#BlueLink0 Control: Clutch (Open Loop)`Clutch Disengaged` Single Engagement / Disengagement` , Clutch Control`ClCon_605aad24-35e9-45eb-82f9-7d1a35269e09
+
+*SCALAR 0
+
+
+LOG_ENTRY Used Dataset: Control: Shifting (Open Loop); { Constant } Neutral w/ Clutch Disengaged
+#Library : Control: Shifting (Open Loop)
+#DataSet : Neutral w/ Clutch Disengaged
+#Category: Constant
+#FileID  : GearOL_8e035075-836e-47e6-a787-9ac2214ff8cc
+#Product : CarSim 2020.0
+#VehCode Open-Loop Shift Control
+
+END

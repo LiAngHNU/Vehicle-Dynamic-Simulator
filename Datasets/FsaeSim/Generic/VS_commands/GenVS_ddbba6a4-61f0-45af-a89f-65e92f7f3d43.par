@@ -1,0 +1,67 @@
+PARSFILE
+#FullDataName Generic VS Commands`FSAE K & C Bounce Test VS Commands`Mech. Sim. FSAE: K & C Tests
+#VehCode VS Commands
+
+#MiscYellow0
+define_units N/mm 0.001
+define_units N-s/mm 0.001
+define_variable AMP_KC 150; mm    ! Amplitude of K&C movement (parameter)
+define_variable T_KC_CYCLE 10; s          ! Time length for 1 cycle test (parameter)
+define_variable K_KC_TR  100; N/mm          ! Stiffness (Trans.) between K&C and vehicle body (parameter)
+define_variable C_KC_TR  10; N-s/mm          ! Damping (Trans.) between K&C and vehicle body (parameter)
+define_variable K_KC_RT  1000; N-m/deg          ! Stiffness (Rot.) between K&C and vehicle body (parameter)
+define_variable C_KC_RT  100; N-m-s/deg          ! Damping (Rot.) between K&C and vehicle body (parameter)
+define_output x_kc = -0.850; m  ! Longitudinal displacement of K&C
+define_output y_kc = 0; m  ! Lateral displacement of K&C
+define_output z_kc = 0.05; m  ! Vertical displacement of K&C
+define_output yaw_kc = 0; deg  ! Yaw angle of K&C
+define_output pitch_kc = 0; deg  ! Pitch angle of K&C
+define_output roll_kc = 0; deg  ! Roll angle of K&C
+eq_in x_kc= -0.850;
+eq_in y_kc = 0;
+eq_in z_kc = 0.05 + AMP_KC*sin(2*pi*T/T_KC_CYCLE);
+eq_in yaw_kc = 0.0;
+eq_in pitch_kc = 0.0;
+eq_in roll_kc = 0.0;
+eq_in IMP_FX_EXT_9 = (x_kc - X_RP9) * K_KC_TR -  VX_SM * C_KC_TR;
+eq_in IMP_FY_EXT_9 = (y_kc - Y_RP9) * K_KC_TR - VY_SM * C_KC_TR;
+eq_in IMP_FZ_EXT_9 = (z_kc - Z_RP9) * K_KC_TR - VZ_SM * C_KC_TR;
+eq_in IMP_MX_EXT = (roll_kc - ROLL) * K_KC_RT - AVx * C_KC_RT;
+eq_in IMP_MY_EXT = (pitch_kc - PITCH) * K_KC_RT - AVy * C_KC_RT;
+eq_in IMP_MZ_EXT = (yaw_kc - YAW) * K_KC_RT - AVz * C_KC_RT;
+IMP_FX_EXT_9 replace 0
+IMP_FY_EXT_9 replace 0
+IMP_FZ_EXT_9 replace 0
+IMP_MX_EXT replace 0
+IMP_MY_EXT replace 0
+IMP_MZ_EXT replace 0
+SET_OUTPUT_LONG_NAME X_KC X coordinate of K and C Table
+SET_OUTPUT_LONG_NAME Y_KC Y coordinate of K and C Table
+SET_OUTPUT_LONG_NAME Z_KC Z coordinate of K and C Table
+SET_OUTPUT_LONG_NAME YAW_KC Yaw angle of K and C Table
+SET_OUTPUT_LONG_NAME PITCH_KC Pitch angle of K and C Table
+SET_OUTPUT_LONG_NAME ROLL_KC Roll angle of K and C Table
+SET_OUTPUT_GENERIC X_KC X coordinate
+SET_OUTPUT_GENERIC Y_KC Y coordinate
+SET_OUTPUT_GENERIC Z_KC Z coordinate
+SET_OUTPUT_GENERIC YAW_KC angle
+SET_OUTPUT_GENERIC PITCH_KC angle
+SET_OUTPUT_GENERIC ROLL_KC angle
+SET_OUTPUT_COMPONENT X_KC K and C Table
+SET_OUTPUT_COMPONENT Y_KC K and C Table
+SET_OUTPUT_COMPONENT Z_KC K and C Table
+SET_OUTPUT_COMPONENT YAW_KC K and C Table
+SET_OUTPUT_COMPONENT PITCH_KC K and C Table
+SET_OUTPUT_COMPONENT ROLL_KC K and C Table
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Mech. Sim. FSAE: K & C Tests } FSAE K & C Bounce Test VS Commands
+#Library : Generic VS Commands
+#DataSet : FSAE K & C Bounce Test VS Commands
+#Category: Mech. Sim. FSAE: K & C Tests
+#FileID  : GenVS_ddbba6a4-61f0-45af-a89f-65e92f7f3d43
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

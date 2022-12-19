@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Plot: Setup`Ground Elevation (Axle 1)`Ground
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Zgnd_L1, Time
+PLOTCHANNELS Zgnd_R1, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Ground Elevation (Axle 1)
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#This is the global vertical coordinate of the ground (road) at the center of tire contact for each tire.
+#
+#If the tire is off the ground, it is the Z coordinate of the point on the road nearest to the tire.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Ground } Ground Elevation (Axle 1)
+#Library : Plot: Setup
+#DataSet : Ground Elevation (Axle 1)
+#Category: Ground
+#FileID  : Plot_963fa020-badb-416b-85eb-979360e30af1
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

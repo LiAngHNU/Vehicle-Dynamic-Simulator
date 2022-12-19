@@ -1,0 +1,153 @@
+PARSFILE
+#FullDataName Animator: Wheel Arrows and Other Indicators`2A - Fz Tire Force Arrows`Tire Force Arrows (2 Axles)
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox4 0    
+
+#RingCtrl0 2
+#RingCtrl1 T
+#RingCtrl2 B
+#RingCtrl3 0
+*DYN_Z Fz_<<o>>
+*REF_Z 2000
+*OFFSET_Z 0
+*ID_AXLE 1
+
+#BlueLink0 Animator: Shape Assembly`Fz 3D, Offset (Tail Origin)` Arrows` , Animator Shape(s)`ShpGrp_1965fc8a-4449-4636-8bc7-e83e860e392f
+
+ADD_REFERENCE_FRAME wheel L1 indicator: 2A - Fz Tire Force Arrows
+PARSFILE Animator\STL_Groups\ShpGrp_1965fc8a-4449-4636-8bc7-e83e860e392f.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_L1
+WRT_Xctc_L1
+ANI_Xctc_L1
+SET_Y_NAME Yctc_L1
+WRT_Yctc_L1
+ANI_Yctc_L1
+SET_Z_NAME Zgnd_L1
+WRT_Zgnd_L1
+ANI_Zgnd_L1
+SET_PITCH_NAME PitchGL1
+WRT_PitchGL1
+ANI_PitchGL1
+SET_ROLL_NAME RollGL1
+WRT_RollGL1
+ANI_RollGL1
+SET_YAW_NAME Yaw_L1
+WRT_Yaw_L1
+ANI_Yaw_L1
+SET_FRAME_SCALE_Z_NAME Fz_L1
+WRT_Fz_L1
+ANI_Fz_L1
+Z_REF_LENGTH 2000
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0
+
+ADD_REFERENCE_FRAME wheel L2 indicator: 2A - Fz Tire Force Arrows
+PARSFILE Animator\STL_Groups\ShpGrp_1965fc8a-4449-4636-8bc7-e83e860e392f.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_L2
+WRT_Xctc_L2
+ANI_Xctc_L2
+SET_Y_NAME Yctc_L2
+WRT_Yctc_L2
+ANI_Yctc_L2
+SET_Z_NAME Zgnd_L2
+WRT_Zgnd_L2
+ANI_Zgnd_L2
+SET_PITCH_NAME PitchGL2
+WRT_PitchGL2
+ANI_PitchGL2
+SET_ROLL_NAME RollGL2
+WRT_RollGL2
+ANI_RollGL2
+SET_YAW_NAME Yaw_L2
+WRT_Yaw_L2
+ANI_Yaw_L2
+SET_FRAME_SCALE_Z_NAME Fz_L2
+WRT_Fz_L2
+ANI_Fz_L2
+Z_REF_LENGTH 2000
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0
+
+ADD_REFERENCE_FRAME wheel R1 indicator: 2A - Fz Tire Force Arrows
+PARSFILE Animator\STL_Groups\ShpGrp_1965fc8a-4449-4636-8bc7-e83e860e392f.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_R1
+WRT_Xctc_R1
+ANI_Xctc_R1
+SET_Y_NAME Yctc_R1
+WRT_Yctc_R1
+ANI_Yctc_R1
+SET_Z_NAME Zgnd_R1
+WRT_Zgnd_R1
+ANI_Zgnd_R1
+SET_PITCH_NAME PitchGR1
+WRT_PitchGR1
+ANI_PitchGR1
+SET_ROLL_NAME RollGR1
+WRT_RollGR1
+ANI_RollGR1
+SET_YAW_NAME Yaw_R1
+WRT_Yaw_R1
+ANI_Yaw_R1
+SET_OFFSET_VAR_YAW 180
+SET_SCALE_VAR_ROLL -1
+SET_SCALE_VAR_PITCH -1
+SET_FRAME_SCALE_Z_NAME Fz_R1
+WRT_Fz_R1
+ANI_Fz_R1
+Z_REF_LENGTH 2000
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0
+
+ADD_REFERENCE_FRAME wheel R2 indicator: 2A - Fz Tire Force Arrows
+PARSFILE Animator\STL_Groups\ShpGrp_1965fc8a-4449-4636-8bc7-e83e860e392f.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_R2
+WRT_Xctc_R2
+ANI_Xctc_R2
+SET_Y_NAME Yctc_R2
+WRT_Yctc_R2
+ANI_Yctc_R2
+SET_Z_NAME Zgnd_R2
+WRT_Zgnd_R2
+ANI_Zgnd_R2
+SET_PITCH_NAME PitchGR2
+WRT_PitchGR2
+ANI_PitchGR2
+SET_ROLL_NAME RollGR2
+WRT_RollGR2
+ANI_RollGR2
+SET_YAW_NAME Yaw_R2
+WRT_Yaw_R2
+ANI_Yaw_R2
+SET_OFFSET_VAR_YAW 180
+SET_SCALE_VAR_ROLL -1
+SET_SCALE_VAR_PITCH -1
+SET_FRAME_SCALE_Z_NAME Fz_R2
+WRT_Fz_R2
+ANI_Fz_R2
+Z_REF_LENGTH 2000
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0
+
+
+LOG_ENTRY Used Dataset: Animator: Wheel Arrows and Other Indicators; { Tire Force Arrows (2 Axles) } 2A - Fz Tire Force Arrows
+#Library : Animator: Wheel Arrows and Other Indicators
+#DataSet : 2A - Fz Tire Force Arrows
+#Category: Tire Force Arrows (2 Axles)
+#FileID  : Arrows_f2c29d4b-df79-4c67-b153-729d3f552770
+#Product : CarSim 2020.0
+#VehCode Wheel Indicators
+
+END

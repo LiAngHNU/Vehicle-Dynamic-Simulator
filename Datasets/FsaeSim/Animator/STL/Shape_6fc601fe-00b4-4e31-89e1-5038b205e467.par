@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Sphere: 0.1m Radius`Geometric Shapes
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Geometric_Shapes\Spheres\sphere_1m_radius.obj
+#ENDMYellow
+
+SET_COLOR 0 0.8 0
+SET_SCALE_X 0.1
+SET_SCALE_Y 0.1
+SET_SCALE_Z 0.1
+*SPECULAR 1
+*IMAGE_FIT_MODE 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 1    
+USE_RUN_COLOR
+#CheckBox4 0    
+
+SET_SPECULAR 1 1 1
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_52079630-c01a-43a9-bc0c-30080f01066f.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Top)` Shape Preview` , Video Camera`Camera_52079630-c01a-43a9-bc0c-30080f01066f
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_6fc601fe-00b4-4e31-89e1-5038b205e467.png
+
+#EMBEDDED_NOTES
+#Used for points of interest. Color will be set to match moving object color if that option is used in a moving object dataset.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Geometric Shapes } Sphere: 0.1m Radius
+#Library : Animator: Shape File Link
+#DataSet : Sphere: 0.1m Radius
+#Category: Geometric Shapes
+#FileID  : Shape_6fc601fe-00b4-4e31-89e1-5038b205e467
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

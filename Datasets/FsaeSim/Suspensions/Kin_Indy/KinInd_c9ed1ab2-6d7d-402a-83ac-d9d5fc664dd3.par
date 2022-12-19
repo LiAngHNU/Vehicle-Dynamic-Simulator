@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName Suspension: Independent System Kinematics`Baja SAE: Front Susp. Kinematics`Mech. Sim. FSAE & Baja: Ind. Susp. Kinem.
+iside 1
+#RingCtrl0 1
+OPT_JNC_DESIGN 1
+#RingCtrl1 2
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 2
+#RingCtrl5 2
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+
+R_US_STR 0.8
+L_TRACK 1164
+Y_CL_SUSP 0
+M_US 70
+*IW_L 0.6
+*JNC_DESIGN_L 0
+*TOE_L 0
+*CAMBER_L 0
+*IWXXZZ_L 0
+*M_US_IND_L 7
+*M_US_STR_L 28
+PARSFILE Suspensions\Dive\Dive_efc92b95-4284-4251-9def-0b6624f10654.par
+#BlueLink0 Suspension: Dive Angle (Caster Change)`Baja SAE Dive Change (Front)` Mech. Sim. Baja SAE: Dive Change Kinem.` , Left wheel dive (caster change)`Dive_efc92b95-4284-4251-9def-0b6624f10654
+
+PARSFILE Suspensions\Longitudinal\SusX_31939419-0f70-45a3-8891-bd83d8dd7d2a.par
+#BlueLink1 Suspension: Longitudinal Movement`Baja SAE Forward X Movement (Front)` Mech. Sim. Baja SAE: Forward X Movement` , Left wheel X`SusX_31939419-0f70-45a3-8891-bd83d8dd7d2a
+
+PARSFILE Suspensions\Camber\Camber_598673fd-4dad-41ab-93e7-ec5251f5b1d0.par
+#BlueLink2 Suspension: Camber Angle`Baja SAE Camber Change (Front)` Mech. Sim. Baja SAE: Camber Change` , Left wheel camber`Camber_598673fd-4dad-41ab-93e7-ec5251f5b1d0
+
+PARSFILE Suspensions\Lateral\LatJnc_a44a7b74-c8bb-4b1a-9790-3fb7ad80931e.par
+#BlueLink3 Suspension: Lateral Movement Due to Jounce`Baja SAE Lateral Y Movement (Front)` Mech. Sim. Baja SAE: Lateral Movement` , Left wheel lateral (-Y)`LatJnc_a44a7b74-c8bb-4b1a-9790-3fb7ad80931e
+
+PARSFILE Suspensions\Toe\Toe_4e56ea39-f6b4-4355-b0f9-6c132f1e376a.par
+#BlueLink4 Suspension: Toe Angle`Baja SAE Toe Change (Front)` Mech. Sim. Baja SAE: Toe Change` , Left wheel toe`Toe_4e56ea39-f6b4-4355-b0f9-6c132f1e376a
+
+M_US_IND 7
+M_US_STR 28
+IW 0.6
+IW_XXZZ 0
+JNC_DESIGN 0
+A_TOE 0
+A_CAMBER 0
+
+iside 2
+PARSFILE Suspensions\Dive\Dive_efc92b95-4284-4251-9def-0b6624f10654.par
+#BlueLink0 Suspension: Dive Angle (Caster Change)`Baja SAE Dive Change (Front)` Mech. Sim. Baja SAE: Dive Change Kinem.` , Left wheel dive (caster change)`Dive_efc92b95-4284-4251-9def-0b6624f10654
+
+PARSFILE Suspensions\Longitudinal\SusX_31939419-0f70-45a3-8891-bd83d8dd7d2a.par
+#BlueLink1 Suspension: Longitudinal Movement`Baja SAE Forward X Movement (Front)` Mech. Sim. Baja SAE: Forward X Movement` , Left wheel X`SusX_31939419-0f70-45a3-8891-bd83d8dd7d2a
+
+PARSFILE Suspensions\Camber\Camber_598673fd-4dad-41ab-93e7-ec5251f5b1d0.par
+#BlueLink2 Suspension: Camber Angle`Baja SAE Camber Change (Front)` Mech. Sim. Baja SAE: Camber Change` , Left wheel camber`Camber_598673fd-4dad-41ab-93e7-ec5251f5b1d0
+
+PARSFILE Suspensions\Lateral\LatJnc_a44a7b74-c8bb-4b1a-9790-3fb7ad80931e.par
+#BlueLink3 Suspension: Lateral Movement Due to Jounce`Baja SAE Lateral Y Movement (Front)` Mech. Sim. Baja SAE: Lateral Movement` , Left wheel lateral (-Y)`LatJnc_a44a7b74-c8bb-4b1a-9790-3fb7ad80931e
+
+PARSFILE Suspensions\Toe\Toe_4e56ea39-f6b4-4355-b0f9-6c132f1e376a.par
+#BlueLink4 Suspension: Toe Angle`Baja SAE Toe Change (Front)` Mech. Sim. Baja SAE: Toe Change` , Left wheel toe`Toe_4e56ea39-f6b4-4355-b0f9-6c132f1e376a
+
+M_US_IND 7
+M_US_STR 28
+IW 0.6
+IW_XXZZ 0
+JNC_DESIGN 0
+A_TOE 0
+A_CAMBER 0
+
+LOG_ENTRY Used Dataset: Suspension: Independent System Kinematics; { Mech. Sim. FSAE & Baja: Ind. Susp. Kinem. } Baja SAE: Front Susp. Kinematics
+#Library : Suspension: Independent System Kinematics
+#DataSet : Baja SAE: Front Susp. Kinematics
+#Category: Mech. Sim. FSAE & Baja: Ind. Susp. Kinem.
+#FileID  : KinInd_c9ed1ab2-6d7d-402a-83ac-d9d5fc664dd3
+#Product : CarSim 2020.0
+#VehCode Independent
+
+END

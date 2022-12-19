@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Models: Simulink`HUR Simulator`* * * HUR Simulator
+#RunMdlFile D:\Project Files\Vehicle-Dynamic-Simulator-Local\Vehicle_Dynamic_Simulator.mdl
+SIMULINK_MODEL_FILE D:\Project Files\Vehicle-Dynamic-Simulator-Local\Vehicle_Dynamic_Simulator.mdl
+#RingCtrl0 -1
+#CheckBox0 1    
+*USE_ALT_DIR 1
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 2
+OPT_INT_METHOD 2
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 0    
+OPT_IO_SYNC_FM 0
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+#AltPath D:\Project Files\Vehicle-Dynamic-Simulator-Local
+*ALTERNATE_PATH D:\Project Files\Vehicle-Dynamic-Simulator-Local
+#MiscYellow0
+LIVE_SERVER localhost
+ANI_T_STAMP
+TIME_CHANNEL_T_STAMP
+#ENDMYellow
+
+PARSFILE IO_Channels\I_Channels\Import_28722f73-93fd-4c78-92ce-be3793b8ffc6.par
+#BlueLink0 I/O Channels: Import`Vehicle Dynamic Simulator, import` * * * Vehicle Dynamic Simulator` , Import`Import_28722f73-93fd-4c78-92ce-be3793b8ffc6
+
+PARSFILE IO_Channels\O_Channels\Export_f6172c5c-1d99-423c-b492-27c8611c545d.par
+#BlueLink1 I/O Channels: Export`Vehicle Dynamic Simualtor, Export` * * * Vehicle Dynamic Simulator` , Import/Export`Export_f6172c5c-1d99-423c-b492-27c8611c545d
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+LOG_ENTRY Used Dataset: Models: Simulink; { * * * HUR Simulator } HUR Simulator
+#Library : Models: Simulink
+#DataSet : HUR Simulator
+#Category: * * * HUR Simulator
+#FileID  : Simlink_98f2db9b-c024-407a-b18d-986b8a266026
+#Product : CarSim 2020.0
+#VehCode 
+
+END

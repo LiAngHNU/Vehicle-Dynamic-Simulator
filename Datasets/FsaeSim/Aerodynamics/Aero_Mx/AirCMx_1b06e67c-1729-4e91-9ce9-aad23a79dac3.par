@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip`Roll Moment Coefficient = 0.3 at 90 deg`
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RadioCtrl0 0    
+
+#DiagramOne0
+MX_AERO_SHAPING_TABLE SPLINE
+-180, 0
+-90, -0.3
+0, 0
+90, 0.3
+180, 0
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#The aerodynamic moments relate the location of the aerodynamic center of pressure to the location of the aerodynamic reference point.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip; Roll Moment Coefficient = 0.3 at 90 deg
+#Library : Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip
+#DataSet : Roll Moment Coefficient = 0.3 at 90 deg
+#Category: 
+#FileID  : AirCMx_1b06e67c-1729-4e91-9ce9-aad23a79dac3
+#Product : CarSim 2020.0
+#VehCode Mx vs. Aero Slip
+
+END

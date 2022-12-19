@@ -1,0 +1,531 @@
+PARSFILE
+! VS Road Calculator
+! Utility to calculate road and path coordinates for visualization
+! Revision 125462, December 17, 2019
+
+TITLE Autocross Course #1 <* * * HUR Tracks>
+
+! Echo: Roads\3D_Road\Road_7f930470-e2a4-41b0-a90c-1f86e067a56c_echo.par
+! This run was made 15:20 on September 23, 2022.
+
+!------------------------------------------------------------------------------------
+! SYSTEM PARAMETERS (SIMULATION OPTIONS)
+!------------------------------------------------------------------------------------
+! [D] (default) indicates that a parameter was not set by reading from a Parsfile.
+! [I] indicates that changing the parameter via an Event triggers an initialization.
+! [L] indicates that the parameter is locked once the simulation starts.
+
+ID_EVENT            0 ; - ! ID number that can be assigned to the current event
+ID_RUN              0 ; - ! ID number that can be assigned to a simulation run
+IPRINT              1 ! Print interval: output time step TSTEP_WRITE = TSTEP*IPRINT;
+                      ! set IPRINT = 0 for debug (TSTEP_WRITE = T_DT) [L]
+NDIGITS_ECHO       10 ! [D] Max. no. of digits for printing floating-point numbers
+! NIMPORT           0 ! Number of variables activated for import (read only)
+! NOUT_ANI_LIVE     3 ! Number of variables sent live to animators (read only)
+! NOUT_EXPORT       0 ! Number of output variables activated for export (read only)
+! NOUT_WRITE        3 ! Number of output variables written to file (read only)
+OPT_ALL_WRITE       0 ! Write all outputs to file? 1 -> all, 0 -> only activated
+                      ! outputs
+OPT_BUFFER_WRITE    0 ! [D] Retain output data in memory buffer until end of run? 0
+                      ! -> no, write immediately to file, 1 -> yes, buffer during
+                      ! run and write to file after run finishes [L]
+OPT_CHECK_MATH      2 ! [D] Check for math exceptions? 2 -> as errors, 1 -> as
+                      ! warnings, 0 -> no checks
+OPT_ECHO_ALL_PARS   0 ! [D] Echo all parameters in this VS Solver? 0 -> no, 1 -> yes
+OPT_ECHO_ALL_UNITS  0 ! [D] Echo list of units and scale factors? 0 -> no, 1 -> yes
+OPT_ECHO_ANI_LIVE   0 ! [D] Echo variables sent live to video? 0 -> no, 1 -> yes
+OPT_ECHO_ICS        0 ! [D] Echo initial conditions? 0 -> no, 1 -> yes
+OPT_ECHO_KEYWORDS_LC 0 ! [D] Echo all keywords in lowercase? -> 0 -> no, 1 -> yes
+OPT_ECHO_WRITE      0 ! [D] Echo written outputs? 0 -> no, 1 -> yes
+OPT_ERROR_DIALOG    0 ! Show pop-up dialog box if fatal error occurs: 1 -> yes
+                      ! (normal use), 0 -> no (for batch runs)
+OPT_ERROR_DUP_DEF   0 ! [D] Handle case where DEFINE_IMPORT, DEFINE_OUTPUT,
+                      ! DEFINE_PARAMETER, or DEFINE_VARIABLE attempts to define a
+                      ! variable with a name that is already in use. 0 -> write
+                      ! warning in log file, 1 -> generate error [L]
+OPT_ERROR_SHOW_ALL  0 ! [D] Show pop-up boxes for all errors: 0 -> only show the
+                      ! first, 1 -> also show subsequent errors
+OPT_LINEARIZATION   0 ! [D] Numerical linearization applied for: 0 -> all ODEs of
+                      ! the model, 1 -> only selected derivatives [I]
+OPT_LOG_DEBUG       0 ! [D] Log file writing: 0 -> normal, 1 -> crash expected
+OPT_LOG_VERBOSE     2 ! [D] Log file verbosity: 2 -> errors + most events + parsfile
+                      ! names, 0 -> errors only, 1 -> errors + events, 3 ->
+                      ! advanced diagnostics
+OPT_LOG_WARNINGS    1 ! [D] Write warnings into log file? 1 -> yes, 0 -> no
+OPT_PAUSE           0 ! [D] Pause at end of run with window open? 0 -> no, 1 -> yes
+OPT_SKIP_INIT_DYN   0 ! [D] Skip initial dynamic calculations (for some RT systems)?
+                      ! 0 -> no, 1 -> yes
+OPT_SORT_WRITE      1 ! [D] Sort written outputs? 1 -> alphabetical, 0 -> as entered
+OPT_STOP            0 ! [D] Option for stopping the run: 0 -> stop when T reaches
+                      ! TSTOP; 1 -> stop when T reaches TSTOP or station reaches
+                      ! SSTOP; -1 -> run until stopped using VS Commands or
+                      ! external control
+OPT_VS_FILETYPE     1 ! [D] Type of output file: 1-> 64-bit VS, 2-> 32-bit VS,3 ->
+                      ! 32-bit ERD, 4 -> text CSV (no binary), 0 -> no output file
+OPT_WRITE           0 ; - ! Write outputs when T > TSTART_WRITE? 1 -> write, 0 ->
+                      ! don't write; change this using VS Commands or Events
+TSTART          14.72 ; s ! Starting time for the simulation clock
+TSTART_T_EVENT      0 ; s ! [D] Event clock reset time: T_EVENT = T - TSTART_T_EVENT
+TSTART_WRITE        0 ; s ! [D] Start writing outputs when this time is reached
+TSTEP            0.04 ; s ! Time step for numerical integration [L]
+! TSTEP_WRITE    0.04 ; s ! CALC -- Time interval in output time-series file
+TSTOP         14.7196 ; s ! Stop when this time is reached
+! T_DT           0.04 ; s ! CALC -- Time increment between calculations
+
+!------------------------------------------------------------------------------------
+! SYSTEM CONSTANTS
+!------------------------------------------------------------------------------------
+! DR      57.29577951 ; - ! Deg/rad symbol to use in formulas (read-only)
+! G           9.80665 ; - ! Symbol for gravity constant m/s/s (read-only)
+! PI      3.141592654 ; - ! Symbol for PI to use in formulas (read-only)
+! ZERO              0 ; - ! Symbol for zero to use in VS Events (read-only)
+
+!------------------------------------------------------------------------------------
+! REFERENCE PATHS
+!------------------------------------------------------------------------------------
+! Up to 500 reference paths may be installed to provide station-based coordinate
+! systems used to define 3D road surfaces, targets for the driver model, and
+! positions of moving objects. In addition to the parameters shown in this section,
+! the paths may include spline X-Y tables (keyword = SEGMENT_XY_TABLE).
+
+! NPATH             1 ! Number of installed paths available for roads, driver model,
+                      ! and moving objects (read only)
+DEFINE_PATHS        1 ! VS Command to install reference paths
+
+PATH_ID(1)          1 ! [D] ID number for this Reference Path
+OPT_PATH_START(1)   1 ! Set initial heading and X-Y coordinates of the path? 0 -> no
+                      ! (legacy, using table data), 1 -> yes
+OPT_PATH_LOOP(1)    0 ! Is this path looped? 0 -> no, 1 -> yes
+SPATH_START(1)      0 ; m ! Station at the start of this path
+HEADING_START(1)    0 ; deg ! Heading at the start of this path
+X_PATH_START(1)     0 ; m ! Global X coordinate at the start of this path
+Y_PATH_START(1)     0 ; m ! Global Y coordinate at the start of this path
+
+NSEGMENTS(1)       41 ! Number of segments in this path
+SEGMENT_TYPE(1,1)   0 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_LENGTH(1,1) 10 ; m ! Segment length
+! S_SEGMENT_END(1,1) 10 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,1) 10 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,1) 0 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,1)  0 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,2)   3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,2) 10 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,2)  120 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,2) 30.94395102 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,2) 18.66025404 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,2) 15 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,2) 120 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,3)   3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,3) 100 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,3)   10 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,3) 48.39724354 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,3) 8.662157971 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,3) 29.27876097 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,3) 130 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,4)   0 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_LENGTH(1,4) 20 ; m ! Segment length
+! S_SEGMENT_END(1,4) 68.39724354 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,4) -4.193594222 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,4) 44.59964983 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,4) 130 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,5)   3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,5) -20 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,5)  180 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,5) 131.2290966 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,5) 26.4481835 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,5) 70.31115422 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,5) -50 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,6)   0 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_LENGTH(1,6) 40 ; m ! Segment length
+! S_SEGMENT_END(1,6) 171.2290966 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,6) 52.15968789 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,6) 39.66937649 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,6) -50 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,7)   3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,7) 5 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,7)  150 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,7) 184.319066 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,7) 60.91394887 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,7) 43.75155543 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,7) 100 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,8)   0 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_LENGTH(1,8) 60 ; m ! Segment length
+! S_SEGMENT_END(1,8) 244.319066 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,8) 50.49505821 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,8) 102.8400206 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,8) 100 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,9)   3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,9) -5 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,9)   90 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,9) 252.1730476 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,9) 54.55085609 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,9) 108.6323003 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,9) 10 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,10)  0 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_LENGTH(1,10) 15 ; m ! Segment length
+! S_SEGMENT_END(1,10) 267.1730476 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,10) 69.32297238 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,10) 111.2370229 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,10) 10 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,11)  3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,11) -100 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,11)  20 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,11) 302.0796327 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,11) 104.0526079 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,11) 111.2370229 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,11) -10 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,12)  0 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_LENGTH(1,12) 30 ; m ! Segment length
+! S_SEGMENT_END(1,12) 332.0796327 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,12) 133.5968405 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,12) 106.0275776 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,12) -10 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,13)  3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,13) 5 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,13)  90 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,13) 339.9336143 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,13) 139.3891202 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,13) 110.0833755 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,13) 80 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,14)  3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,14) 10 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,14)   5 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,14) 340.8062789 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,14) 139.5029896 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,14) 110.9482998 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,14) 85 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,15)  3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,15) 10 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,15)  80 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,15) 354.768913 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,15) 132.1292331 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,15) 121.4791155 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,15) 165 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,16)  0 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_LENGTH(1,16) 5 ; m ! Segment length
+! S_SEGMENT_END(1,16) 359.768913 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,16) 127.2996039 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,16) 122.7732107 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,16) 165 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,17)  3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,17) -5 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,17) 100 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,17) 368.4955592 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,17) 124.0621602 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,17) 129.7159312 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,17) 65 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,18)  0 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_LENGTH(1,18) 30 ; m ! Segment length
+! S_SEGMENT_END(1,18) 398.4955592 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,18) 136.7407081 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,18) 156.9051648 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,18) 65 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,19)  3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,19) -100 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,19)  15 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,19) 424.675498 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,19) 150.7670425 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,19) 178.9220996 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,19) 50 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,20)  0 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_LENGTH(1,20) 50 ; m ! Segment length
+! S_SEGMENT_END(1,20) 474.675498 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,20) 182.906423 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,20) 217.2243217 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,20) 50 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,21)  3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,21) -20 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,21) 160 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,21) 530.5260341 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,21) 217.0211642 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,21) 197.5281667 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,21) -110 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,22)  3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,22) 20 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,22)  90 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,22) 561.9419606 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,22) 228.9746138 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,22) 171.8939114 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,22) -20 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,23)  0 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_LENGTH(1,23) 50 ; m ! Segment length
+! S_SEGMENT_END(1,23) 611.9419606 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,23) 275.9592448 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,23) 154.7929042 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,23) -20 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,24)  3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,24) 25 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,24)  15 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,24) 618.4869453 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,24) 282.3308548 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,24) 153.3803523 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,24) -5 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,25)  3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,25) -50 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,25) 180 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,25) 775.566578 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,25) 273.6152806 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,25) 53.76088249 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,25) 175 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,26)  3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,26) 25 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,26)  20 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,26) 784.2932242 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,26) 264.9659109 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,26) 53.0041607 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,26) -165 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,27)  0 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_LENGTH(1,27) 20 ; m ! Segment length
+! S_SEGMENT_END(1,27) 804.2932242 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,27) 245.6473944 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,27) 47.8277798 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,27) -165 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,28)  3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,28) 25 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,28)  45 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,28) 823.9281783 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,28) 230.4672354 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,28) 36.17963414 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,28) -120 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,29)  3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,29) 10 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,29)  50 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,29) 832.6548246 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,29) 229.7305632 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,29) 27.75943271 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,29) -70 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,30)  3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,30) -10 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,30) 100 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,30) 850.1081171 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,30) 222.0701188 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,30) 14.49115374 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,30) -170 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,31)  0 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_LENGTH(1,31) 30 ; m ! Segment length
+! S_SEGMENT_END(1,31) 880.1081171 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,31) 192.5258862 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,31) 9.281708412 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,31) -170 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,32)  3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,32) 50 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,32)  65 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,32) 936.8313178 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,32) 152.9120038 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,32) -27.01772698 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,32) -105 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,33)  3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,33) -70 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,33) 110 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,33) 1071.22167 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,33) 45.14684538 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,33) -66.24103693 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,33) 145 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,34)  3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,34) 10 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,34)  60 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,34) 1081.693646 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,34) 35.1848984 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,34) -65.3694795 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,34) -155 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,35)  3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,35) -10 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,35) 120 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,35) 1102.637597 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,35) 20.9967688 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,35) -55.4348442 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,35) 85 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,36)  3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,36) 10 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,36) 120 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,36) 1123.581548 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,36) 6.8086392 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,36) -45.5002089 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,36) -155 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,37)  3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,37) -10 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,37) 120 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,37) 1144.525499 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,37) -7.379490399 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,37) -35.56557361 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,37) 85 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,38)  3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,38) 10 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,38) 120 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,38) 1165.46945 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,38) -21.56762 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,38) -25.63093831 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,38) -155 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,39)  3 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RADIUS(1,39) -10 ; m ! Radius of arc; + -> left turn
+SEGMENT_ARC(1,39)  60 ; deg ! Central angle of arc
+! S_SEGMENT_END(1,39) 1175.941425 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,39) -31.52956698 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,39) -24.75938088 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,39) 145 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,40)  4 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_RHO_DS_ENTERING(1,40) -0.1 ; 1/m ! Entering rate of curvature (1/R)
+SEGMENT_RHO_DS_DEPARTING(1,40) 0 ; 1/m ! Departing rate of curvature (1/R)
+SEGMENT_LENGTH(1,40) 53 ; m ! Segment length
+! S_SEGMENT_END(1,40) 1228.941425 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,40) -2.288768864 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,40) -0.07877430301 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,40) -6.832383324 ; deg ! CALC -- Heading at end of segment
+
+SEGMENT_TYPE(1,41)  0 ! 0 -> straight, 1 -> table, 2 -> rho, 3 -> radius, 4 -> cloth
+SEGMENT_LENGTH(1,41) 2.5 ; m ! Segment length
+! S_SEGMENT_END(1,41) 1231.441425 ; m ! CALC -- Station at end of this segment
+! X_SEGMENT_END(1,41) 0.1934772061 ; m ! CALC -- X coordinate at end of segment
+! Y_SEGMENT_END(1,41) -0.3761872258 ; m ! CALC -- Y coordinate at end of segment
+! HEADING_END(1,41) -6.832383324 ; deg ! CALC -- Heading at end of segment
+
+!------------------------------------------------------------------------------------
+! ROAD SURFACES
+!------------------------------------------------------------------------------------
+! Road surfaces define elevation Z and friction MU as functions of global X and Y
+! coordinates, using a station-based coordinate system defined with a Reference
+! Path. Up to 200 surfaces may be installed to represent sections, intersections,
+! multiple lanes, etc. The Z and MU values for a road surface are provided with
+! Configurable Functions MU_ROAD, ROAD_DZ, and ROAD_ZS. Boundaries that control
+! automatic switching from one road surface to another make use of the Configurable
+! Functions ROAD_L_BOUNDARY, ROAD_NEW_ID, and ROAD_NEW_S.
+
+! NROAD             1 ! Number of installed road surfaces (read only)
+NROAD_DZ            1 ! Number of ROAD_DZ datasets
+DEFINE_ROADS        1 ! VS Command to define road surfaces
+CURRENT_ROAD_ID     1 ! ROAD_ID for the vehicle during initialization [I]
+
+ROAD_ID(1)          1 ! [D] ID number for this road
+ROAD_PATH_ID(1)     1 ! PATH_ID of reference path used for this road [I]
+ROAD_SMAX_NEW_ID(1) 0 ! [D] 0 -> No SMAX boundary, -1 -> stop if S > ROAD_SMAX, > 0
+                      ! -> switch to road with this ID if S > ROAD_SMAX
+ROAD_SMIN_NEW_ID(1) 0 ! [D] 0 -> No SMIN boundary, -1 -> stop if S < ROAD_SMIN, > 0
+                      ! -> switch to road with this ID if S < ROAD_SMIN
+RR_SURF(1)          1 ; - ! Tire rolling resistance surface-effect coefficient
+ROAD_N_DZ(1)        1 ! Number of ROAD_DZ layers added to the surface
+RD_DZ_ID(1,1)       1 ! ROAD_DZ_ID for a ROAD_DZ layer added to this surface
+
+!------------------------------------------------------------------------------------
+! START AND STOP INFORMATION FOR PATH
+!------------------------------------------------------------------------------------
+N_LTARG             0 ! [D] Number of LTARG datasets that are used in this run
+PATH_ID_DM          1 ! PATH_ID of reference path for the driver and vehicle [I]
+LTARG_ID_DM         0 ! [D] LTARG_ID of reference LTARG for the driver model (0 ->
+                      ! no reference LTARG)
+OPT_INIT_PATH       1 ! [D] Set Xo, Yo, and Yaw to match path PATH_ID_DM and target
+                      ! LTARG_ID_DM at station SSTART? 1 -> yes, 0 -> no [I]
+OPT_DIRECTION       1 ! Travel direction along path PATH_ID_DM: 0 -> set to 1 or -1
+                      ! using SSTART and SSTOP values (legacy); 1 -> increasing
+                      ! station, -1 -> decreasing station [I]
+SSTART              0 ; m ! [D] Start the vehicle at this station on path PATH_ID_DM
+                      ! and possibly with target LTARG_ID_DM. The current station
+                      ! on this path is the output variable "Station", which is
+                      ! also a state variable. [I]
+
+!------------------------------------------------------------------------------------
+! CONFIGURABLE FUNCTIONS
+!------------------------------------------------------------------------------------
+
+! MU_ROAD: Tire/road friction coefficient (MU) for a road surface. Use MU = -1 for
+! original tire data (no scaling). MU can be a nonlinear CARPET function of lateral
+! position and station or a function of station (CONSTANT, COEFFICIENT, or TABLE)
+! combined with a function MU_ROAD_L of lateral position (CONSTANT, COEFFICIENT, or
+! TABLE). Alternatively, a custom equation can be defined at runtime. MU from the
+! calculation can be adjusted with MU_ROAD_GAIN and MU_ROAD_OFFSET. Station used in
+! the calculation can be adjusted with SSCALE_MU_ROAD and SSTART_MU_ROAD. Lateral
+! position used in the calculation can be adjusted with L_SCALE_MU_ROAD and
+! L_START_MU_ROAD. This configurable function supports 200 datasets; if indices shown
+! below are not used, e.g., (2), the current value of the index IROAD is used to
+! identify the dataset when reading data.
+
+MU_ROAD_CONSTANT(1) 1 ; - ! Constant MU component due to station
+MU_ROAD_GAIN(1)     1 ! Gain multiplied with calculated value to get MU
+MU_ROAD_OFFSET(1)   0 ; - ! Offset added (after gain) to get MU
+MU_ROAD_COMBINE(1) MULTIPLY ! How to combine the two components
+MU_ROAD_L_CONSTANT(1) 1 ; - ! [D] Constant MU component due to lateral position
+
+! ROAD_DZ: Incremental elevation added to a road surface. DZ can be a nonlinear
+! CARPET function of lateral position and station or a function of station (CONSTANT,
+! COEFFICIENT, or TABLE) combined with a function ROAD_DZ_L of lateral position
+! (CONSTANT, COEFFICIENT, or TABLE). DZ from the calculation can be adjusted with
+! ROAD_DZ_GAIN and ROAD_DZ_OFFSET. Station used in the calculation can be adjusted
+! with SSCALE_ROAD_DZ and SSTART_ROAD_DZ. Lateral position used in the calculation
+! can be adjusted with L_SCALE_ROAD_DZ and L_START_ROAD_DZ. The derivative of this
+! function is used internally. This configurable function supports 200 datasets; if
+! indices shown below are not used, e.g., (2), the current value of the index
+! IROAD_DZ is used to identify the dataset when reading data.
+
+ROAD_DZ_ID(1)       1  ! User-defined ID number for this dataset
+ROAD_DZ_CONSTANT(1) 0 ; m ! Constant dZ component due to station
+ROAD_DZ_GAIN(1)     1 ! Gain multiplied with calculated value to get dZ
+ROAD_DZ_OFFSET(1)   0 ; m ! Offset added (after gain) to get dZ
+ROAD_DZ_COMBINE(1) MULTIPLY ! How to combine the two components
+ROAD_DZ_L_CONSTANT(1) 1 ; - ! Constant dZ component due to lateral position
+
+! ROAD_NEW_ID: Left/right boundary: 0 -> no boundary, -1 stop when L reaches
+! boundary, > 0 ID of adjacent road. ID is a function of S (CONSTANT, COEFFICIENT, or
+! TABLE). Alternatively, a custom equation can be defined at runtime. ID from the
+! calculation can be adjusted with ROAD_NEW_ID_GAIN and ROAD_NEW_ID_OFFSET. S used in
+! the calculation can be adjusted with SSCALE_ROAD_NEW_ID and SSTART_ROAD_NEW_ID.
+! This configurable function supports 400 datasets; if indices shown below are not
+! used, e.g., (1,2), the current values of the indices IROAD and ISIDE are used to
+! identify the dataset when reading data.
+
+ROAD_NEW_ID_CONSTANT(1,1) 0 ; - ! [D] Constant ID, Road 1, left side boundary
+ROAD_NEW_ID_OFFSET(1,1) 0 ; - ! Offset added (after gain) to get ID
+
+ROAD_NEW_ID_CONSTANT(1,2) 0 ; - ! [D] Constant ID, Road 1, right side boundary
+ROAD_NEW_ID_OFFSET(1,2) 0 ; - ! Offset added (after gain) to get ID
+
+! ROAD_ZS: Road elevation component related only to road station S. Elevation is a
+! function of station (CONSTANT, COEFFICIENT, or TABLE). Elevation from the
+! calculation can be adjusted with ROAD_ZS_GAIN and ROAD_ZS_OFFSET. Station used in
+! the calculation can be adjusted with SSCALE_ROAD_ZS and SSTART_ROAD_ZS. The
+! derivative of this function is used internally. This configurable function supports
+! 200 datasets; if indices shown below are not used, e.g., (2), the current value of
+! the index IROAD is used to identify the dataset when reading data.
+
+ROAD_ZS_CONSTANT(1) 0 ; m ! Constant elevation
+ROAD_ZS_OFFSET(1)   0 ; m ! Offset added (after gain) to get elevation
+
+
+END

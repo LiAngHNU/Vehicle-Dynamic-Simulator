@@ -1,0 +1,53 @@
+PARSFILE
+#FullDataName Generic VS Commands`Throttle (vertical bar)`HUD Gauges
+#VehCode VS Commands
+
+#MiscYellow0
+ADD_OBJECT hud_text Throttle Header
+  prefix Throttle
+  location 15 205 100 18
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  color 1 1 1 1
+  outline_color .3 .3 .3 0.5
+  font VeraMono.ttf
+END_OBJECT hud_text Throttle Header
+
+ADD_OBJECT hud_image Throttle Fill BG
+  location 10 10 100 200
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\0_100.dds
+END_OBJECT hud_image Throttle Fill BG
+
+ANI_Throttle
+WRT_Throttle
+ADD_OBJECT hud_image Throttle Fill Bar
+  location 32 35 33 149
+  red 0
+  green Throttle
+  blue 0
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  scale_y Throttle
+  center_location 0.0 -0.5
+  image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\Bar_Fade.dds
+END_OBJECT hud_image Throttle Fill Bar
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { HUD Gauges } Throttle (vertical bar)
+#Library : Generic VS Commands
+#DataSet : Throttle (vertical bar)
+#Category: HUD Gauges
+#FileID  : GenVS_2de1abb6-2f67-4fa6-993b-7dab333e8d9a
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

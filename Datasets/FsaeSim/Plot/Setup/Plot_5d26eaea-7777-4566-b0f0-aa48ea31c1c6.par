@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Rebound Stop Compression`Suspension Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS CmpRStL1, Time
+PLOTCHANNELS CmpRStR1, Time
+PLOTCHANNELS CmpRStL2, Time
+PLOTCHANNELS CmpRStR2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Rebound Stop Compression
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Motion } Rebound Stop Compression
+#Library : Plot: Setup
+#DataSet : Rebound Stop Compression
+#Category: Suspension Motion
+#FileID  : Plot_5d26eaea-7777-4566-b0f0-aa48ea31c1c6
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

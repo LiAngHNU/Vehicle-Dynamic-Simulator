@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Sensor Range and Bearing Sensitivity`50-m Range`* * * HUR Sensors
+#CheckBox0 1    
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#MiscYellow0
+RANGE_LIMIT_SENSOR = 50
+#ENDMYellow
+
+SENSOR_ANTENNA_RANGE_CONSTANT 1
+SENSOR_ANTENNA_BEARING_CONSTANT 1
+*SCALAR 1
+*SCALAR2 1
+
+
+LOG_ENTRY Used Dataset: Sensor Range and Bearing Sensitivity; { * * * HUR Sensors } 50-m Range
+#Library : Sensor Range and Bearing Sensitivity
+#DataSet : 50-m Range
+#Category: * * * HUR Sensors
+#FileID  : Range_eb512841-73d8-4366-98ac-e95b51c8aa1a
+#Product : CarSim 2020.0
+#VehCode Range & Bearing Sensitivity
+
+END

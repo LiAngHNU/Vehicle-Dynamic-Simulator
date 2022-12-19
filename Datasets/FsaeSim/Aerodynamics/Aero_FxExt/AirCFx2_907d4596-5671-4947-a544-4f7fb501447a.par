@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Aerodynamics: Fx (Drag) Coef. vs. Bounce and Pitch`Fx vs. Bounce & Pitch`Drag vs. Bounce and Pitch
+#CheckBox0 0    
+
+#RingCtrl0 CARPET
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical disp (mm)
+*3D_YLabel Pitch angle (deg)
+*3D_ZLabel Drag coefficient factor CFx (-)
+
+#DiagramTwo0
+*3D_DATA 3, 2 ! columns x rows
+FX_AERO_SHAPING_2_CARPET 2D_LINEAR
+0, 0, 6.35, 12.7
+-2.68, 0.80622, 0.809769, 0.81924
+0, 0.79805, 0.801566, 0.810941
+ENDTABLE
+
+
+
+LOG_ENTRY Used Dataset: Aerodynamics: Fx (Drag) Coef. vs. Bounce and Pitch; { Drag vs. Bounce and Pitch } Fx vs. Bounce & Pitch
+#Library : Aerodynamics: Fx (Drag) Coef. vs. Bounce and Pitch
+#DataSet : Fx vs. Bounce & Pitch
+#Category: Drag vs. Bounce and Pitch
+#FileID  : AirCFx2_907d4596-5671-4947-a544-4f7fb501447a
+#Product : CarSim 2020.0
+#VehCode Drag vs. Bounce and Pitch
+
+END

@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Powertrain: Rear Differential`Mech. Sim. FSAE: Diff., 4.0, TBR = 1.75 / 1.85`Mech. Sim. FSAE & Baja: Rear Differentials
+#CheckBox0 0    
+LOCKED_RD_OPT 0
+
+#RingCtrl0 LINEAR
+OPT_LOCKED_DIFF 0
+#DiagramOne0
+M_DIFF_VISC_TABLE LINEAR
+0, 0
+1, 0
+ENDTABLE
+#RadioCtrl0 0    
+
+M_DIFF_RD_TABLE LINEAR
+0, 0
+1, 0
+ENDTABLE
+R_GEAR_RD 4.0
+R_EFF_F_RD 1
+R_EFF_R_RD 0.99
+LOCKED_RD_DAMP 0.8
+LOCKED_RD_K 80
+IDS_R 0.015
+IHS_LR 0.002
+IHS_RR 0.002
+
+PARSFILE Powertrain\LSD\LSD_3eeda33e-e8b2-4657-be1a-f13253874a4b.par
+#BlueLink0 Powertrain: Limited Slip Differential (Front or Rear)`Mech. Sim. FSAE: TBR = 1.75 / 1.85` Mech. Sim. FSAE Torque Bias Ratio` , Drive torque`LSD_3eeda33e-e8b2-4657-be1a-f13253874a4b
+
+R_GEAR_DIFF 4.0
+R_EFF_F_DIFF 1
+R_EFF_R_DIFF 0.99
+LOCKED_DIFF_DAMP 0.8
+LOCKED_DIFF_K 80
+IDS 0.015
+IHS_L 0.002
+IHS_R 0.002
+
+LOG_ENTRY Used Dataset: Powertrain: Rear Differential; { Mech. Sim. FSAE & Baja: Rear Differentials } Mech. Sim. FSAE: Diff., 4.0, TBR = 1.75 / 1.85
+#Library : Powertrain: Rear Differential
+#DataSet : Mech. Sim. FSAE: Diff., 4.0, TBR = 1.75 / 1.85
+#Category: Mech. Sim. FSAE & Baja: Rear Differentials
+#FileID  : DiffR_5df3a20f-354f-449f-a272-9e3003414ef0
+#Product : CarSim 2020.0
+#VehCode Rear Differential
+
+END

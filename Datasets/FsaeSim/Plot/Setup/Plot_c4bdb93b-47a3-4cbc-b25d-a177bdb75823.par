@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Spin Rates in Powertrain`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS AV_Eng, Time
+PLOTCHANNELS AV_TC, Time
+PLOTCHANNELS AV_Trans, Time
+PLOTCHANNELS AV_D3f, Time
+PLOTCHANNELS AV_D3r, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Spin Rates in Powertrain
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } Spin Rates in Powertrain
+#Library : Plot: Setup
+#DataSet : Spin Rates in Powertrain
+#Category: Powertrain
+#FileID  : Plot_c4bdb93b-47a3-4cbc-b25d-a177bdb75823
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

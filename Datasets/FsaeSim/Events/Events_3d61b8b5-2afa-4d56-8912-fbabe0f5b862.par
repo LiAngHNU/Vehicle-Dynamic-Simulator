@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Events`C. Brake to Stop`FSAE Acceleration and Braking (Electric)
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 Vxz_Fwd
+*VALUE1 3
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_11844bf5-74b7-4834-8417-56ee08394ba5.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_11844bf5-74b7-4834-8417-56ee08394ba5
+
+#MiscYellow0
+TSTART_BRAKES = T
+TSTART_THROTTLE = T
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_a72a3aea-e7a8-4e06-b618-a93121c0a122.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Ramp: 2 MPa in 1 second` Ramp` , Miscellaneous`PbkCon_a72a3aea-e7a8-4e06-b618-a93121c0a122
+
+#MiscYellow1
+! When the average of the rear wheel spin rates is greater than 10 rpm, this
+! expression returns a value of 1; otherwise, it returns 0.
+eq_in MMOTOR_MAX_GAIN = GT(((AVy_L2+AVy_R2)/2), 10)
+
+! When the powertrain experiences a rapid deceleration at or near zero
+! speed, the torque supplied by the motor and brakes can become
+! unbalanced. This VS Command adjusts the gain of the motor torque table
+! to eliminate that unbalance.
+#ENDMYellow
+
+MAKE_EVENT Vxz_Fwd < 3 ; Events\Events_9f560fa2-bd35-490d-afb2-2f56268fd23a.par
+#BlueLink0 Events`D. Hold at Stop` FSAE Acceleration and Braking (Electric)` , Events`Events_9f560fa2-bd35-490d-afb2-2f56268fd23a
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { FSAE Acceleration and Braking (Electric) } C. Brake to Stop
+#Library : Events
+#DataSet : C. Brake to Stop
+#Category: FSAE Acceleration and Braking (Electric)
+#FileID  : Events_3d61b8b5-2afa-4d56-8912-fbabe0f5b862
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

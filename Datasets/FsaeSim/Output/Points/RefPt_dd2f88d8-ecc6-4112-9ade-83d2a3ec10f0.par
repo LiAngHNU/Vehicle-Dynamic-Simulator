@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Custom Forces and Reference Points`K and C Table (X = -850mm, Z = 50mm)`K and C Test Machine
+#RingCtrl0 0
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 0
+#RingCtrl6 1
+#RingCtrl7 0
+*N_PREVIOUS 9
+*BODY_ID_1 1
+*X_RP1 -850
+*Y_RP1 0
+*Z_RP1 50
+*BODY_ID_2 1
+*X_RP2 900
+*Y_RP2 -100
+*Z_RP2 90
+
+IREF_PT 9
+DEFINE_REFERENCE_POINTS 2 + IREF_PT -1 -NREF_PT
+
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 0
+OPT_RP_BODY_ID 1
+X_RP -850
+Y_RP 0
+Z_RP 50
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 1: K and C Table (X = -850mm, Z = 50mm)
+
+IREF_PT = IREF_PT + 1
+OPT_RP_BODY_TYPE 1
+OPT_RP_FORCE_N 0
+OPT_RP_BODY_ID 1
+X_RP 900
+Y_RP -100
+Z_RP 90
+SET_DESCRIPTION REFERENCE_POINT_NAME Point 2: K and C Table (X = -850mm, Z = 50mm)
+
+
+LOG_ENTRY Used Dataset: Custom Forces and Reference Points; { K and C Test Machine } K and C Table (X = -850mm, Z = 50mm)
+#Library : Custom Forces and Reference Points
+#DataSet : K and C Table (X = -850mm, Z = 50mm)
+#Category: K and C Test Machine
+#FileID  : RefPt_dd2f88d8-ecc6-4112-9ade-83d2a3ec10f0
+#Product : CarSim 2020.0
+#VehCode Custom Forces
+
+END

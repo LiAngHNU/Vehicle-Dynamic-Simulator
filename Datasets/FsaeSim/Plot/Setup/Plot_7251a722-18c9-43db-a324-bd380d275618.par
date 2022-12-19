@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Plot: Setup`Throttle: Control Input`Controls: Driver
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Throttle, Time
+PLOTCHANNELS Thr_Eng, Time
+
+#ENDMYellow
+
+YAXISLABEL Throttle -
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Throttle: Control Input
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#The variable "Throttle" is the sum of any throttle control calculated by the CarSim closed loop speed controller and any specified open-loop throttle.
+#
+#The source of open-loop throttle command may be from internal tables, VS commmands, or external sources like Simulink or the API.
+#
+#By using the sum of these 2 command sources you can implement things like driver aids for active safety that augment actions taken by the driver.
+#
+#When switching between open loop and closed loop control, take care that no unintended open loop control is "left over" by supplying a data set that sets the open loop component to zero.
+#
+#The variable "Thr_Eng" is the value of "Throttle", optionally modified by the application of a time constant to simulate the transient delay in changes in engine torque.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Controls: Driver } Throttle: Control Input
+#Library : Plot: Setup
+#DataSet : Throttle: Control Input
+#Category: Controls: Driver
+#FileID  : Plot_7251a722-18c9-43db-a324-bd380d275618
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

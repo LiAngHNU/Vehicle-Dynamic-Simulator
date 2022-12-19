@@ -1,0 +1,52 @@
+PARSFILE
+search_path_append .
+search_path_append D:\Program Files\Mechanical Simulation\CarSim_2020.0\CarSim_2020.0_Data_FSAE\
+search_path_append D:\Program Files\Mechanical Simulation\CarSim_2020.0\CarSim_2020.0_Prog\Resources\
+search_path_append D:\Program Files\Mechanical Simulation\CarSim_2020.0\CarSim_2020.0_Prog\
+search_path_append D:\Program Files\Mechanical Simulation\CarSim_2020.0\CarSim_2020.0_Prog\Resources\Animator\Deprecated_Assets\
+DATASET Roads\Shapes\ShapePreviewview.erd
+SET_CAMERA_Reference_Frame Camera
+ADD_REFERENCE_FRAME Camera
+SET_X_NAME X_camR
+SET_Y_NAME Y_camR
+SET_Z_NAME Z_camR
+SET_YAW_NAME Yaw_CamR
+SET_LOOKPOINT_Reference_Frame Camera
+SET_LOOKPOINT_X 5
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 1
+SET_AZIMUTH 180
+SET_ELEVATION 3
+SET_DISTANCE 124
+FOG_SCALE 0.2
+SET_FIELD_OF_VIEW 9.9
+add_reference_frame The Road
+reference_frame_ghosts off
+
+add_obj Roads\Shapes\ShapePreview_1.obj
+set_color 0.753 0.753 0.753
+show_front on
+show_back off
+compute_normals on
+set_specular 0.5 0.5 0.5
+set_auto_detail_type Road
+
+add_obj Roads\Shapes\ShapePreview_2.obj
+set_color 0.502 0.502 0.502
+show_front on
+show_back off
+compute_normals on
+set_specular 0.25 0.25 0.25
+set_auto_detail_type Random
+
+add_obj Roads\Shapes\ShapePreview_3.obj
+set_color 1 1 1
+show_front on
+show_back off
+compute_normals on
+set_specular 0.15 0.15 0.15
+set_auto_detail_type Random
+
+
+
+END

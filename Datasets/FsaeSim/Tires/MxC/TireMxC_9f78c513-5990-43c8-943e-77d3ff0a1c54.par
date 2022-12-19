@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Tire: Overturning Moment vs. Inclination`Overturning Moment vs. Gamma: Zero`FSAE
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. inclination angle (deg)
+*3D_ZLabel Overturning moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 2, 2 ! columns x rows
+MXG_TIRE_CARPET 2D_FROM_ZERO
+0, 1, 10
+1, 0, 0
+2, 0, 0
+ENDTABLE
+
+CRO_MX 0
+
+
+LOG_ENTRY Used Dataset: Tire: Overturning Moment vs. Inclination; { FSAE } Overturning Moment vs. Gamma: Zero
+#Library : Tire: Overturning Moment vs. Inclination
+#DataSet : Overturning Moment vs. Gamma: Zero
+#Category: FSAE
+#FileID  : TireMxC_9f78c513-5990-43c8-943e-77d3ff0a1c54
+#Product : CarSim 2020.0
+#VehCode Tire: Mx
+
+END

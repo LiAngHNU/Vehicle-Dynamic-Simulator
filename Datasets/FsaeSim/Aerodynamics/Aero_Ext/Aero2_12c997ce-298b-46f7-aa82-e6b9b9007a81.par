@@ -1,0 +1,68 @@
+PARSFILE
+#FullDataName Aerodynamics: Pitch, Bounce, Yaw`Mech. Sim. FSAE: Example Aerodynamics`Mech. Sim. FSAE Aerodynamics
+#CheckBox0 0    
+
+#RingCtrl0 2
+#RingCtrl1 2
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 2
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 3
+#RingCtrl8 2
+#RingCtrl9 3
+#RingCtrl10 2
+#RingCtrl11 3
+PARSFILE Aerodynamics\Aero_Fx\AirCFx_f9ecde30-ab37-4416-b6dc-9474e0b120bd.par
+#BlueLink0 Aerodynamics: Fx (Drag) Coef. vs. Aero Slip`CFx = 1 (No Yaw effect)` Constant Drag coefficient factor` , CFx`AirCFx_f9ecde30-ab37-4416-b6dc-9474e0b120bd
+
+PARSFILE Aerodynamics\Aero_Fy\AirCFy_3e2a31af-f4b1-4073-a803-21214dfddf96.par
+#BlueLink1 Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip`CFy = 0` Constant Side Force coefficient factor` , CFy`AirCFy_3e2a31af-f4b1-4073-a803-21214dfddf96
+
+PARSFILE Aerodynamics\Aero_Fz\AirCFz_5b2ceb70-fcc6-4d1a-aafb-8312994ac00b.par
+#BlueLink2 Aerodynamics: Fz (Lift) Coef. vs. Aero Slip`CFz = 1 (No Yaw effect)` Constant Lift coefficient factor` , CFz`AirCFz_5b2ceb70-fcc6-4d1a-aafb-8312994ac00b
+
+PARSFILE Aerodynamics\Aero_Mx\AirCMx_fac279a5-715f-4d81-b99b-43ba9b827187.par
+#BlueLink3 Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip`CMx = 0` Constant Roll Moment coefficient factor` , CMx`AirCMx_fac279a5-715f-4d81-b99b-43ba9b827187
+
+PARSFILE Aerodynamics\Aero_My\AirCMy_fd004798-24bc-4a20-b0c4-11ed28dd92e4.par
+#BlueLink4 Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip`CMy = 1 (No Yaw effect)` Constant Pitch Moment coefficient factor` , CMy`AirCMy_fd004798-24bc-4a20-b0c4-11ed28dd92e4
+
+PARSFILE Aerodynamics\Aero_Mz\AirCMz_8cc87e64-26f0-4023-9732-cc3b6a025fcf.par
+#BlueLink5 Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip`CMz = 0` Constant Yaw Moment coefficient factor` , CMz`AirCMz_8cc87e64-26f0-4023-9732-cc3b6a025fcf
+
+PARSFILE Aerodynamics\Aero_FxExt\AirCFx2_907d4596-5671-4947-a544-4f7fb501447a.par
+#BlueLink6 Aerodynamics: Fx (Drag) Coef. vs. Bounce and Pitch`Fx vs. Bounce & Pitch` Drag vs. Bounce and Pitch` , CFx2`AirCFx2_907d4596-5671-4947-a544-4f7fb501447a
+
+FY_AERO_SHAPING_2_CONSTANT 1
+FY_AERO_SHAPING_2_COMBINE MULTIPLY
+FY_AERO_SHAPING_Z_CONSTANT 1
+PARSFILE Aerodynamics\Aero_FzExt\AirCFz2_4706c1be-5b56-4f5f-8ef2-f2d1351e6341.par
+#BlueLink8 Aerodynamics: Fz (Lift) Coef. vs. Bounce and Pitch`Fz vs. Bounce & Pitch` Lift vs. Bounce and Pitch` , CFz2`AirCFz2_4706c1be-5b56-4f5f-8ef2-f2d1351e6341
+
+MX_AERO_SHAPING_2_CONSTANT 1
+MX_AERO_SHAPING_2_COMBINE MULTIPLY
+MX_AERO_SHAPING_Z_CONSTANT 1
+PARSFILE Aerodynamics\Aero_MyExt\AirCMy2_cbb1c13a-bd8e-4e4f-b8f8-3bc3f473d6e8.par
+#BlueLink10 Aerodynamics: My (Pitch Moment) Coef. vs. Bounce and Pitch`My vs. Bounce & Pitch` Pitch Moment vs. Bounce and Pitch` , CMy2`AirCMy2_cbb1c13a-bd8e-4e4f-b8f8-3bc3f473d6e8
+
+MZ_AERO_SHAPING_2_CONSTANT 1
+MZ_AERO_SHAPING_2_COMBINE MULTIPLY
+MZ_AERO_SHAPING_Z_CONSTANT 1
+X_REF_AERO -1700/2
+Y_REF_AERO 0
+H_REF_AERO 0
+L_REF_AERO 1700
+AREA_AERO 0.5
+D_AIR 1.206
+
+LOG_ENTRY Used Dataset: Aerodynamics: Pitch, Bounce, Yaw; { Mech. Sim. FSAE Aerodynamics } Mech. Sim. FSAE: Example Aerodynamics
+#Library : Aerodynamics: Pitch, Bounce, Yaw
+#DataSet : Mech. Sim. FSAE: Example Aerodynamics
+#Category: Mech. Sim. FSAE Aerodynamics
+#FileID  : Aero2_12c997ce-298b-46f7-aa82-e6b9b9007a81
+#Product : CarSim 2020.0
+#VehCode Aero Pitch, Bounce, Yaw
+
+END

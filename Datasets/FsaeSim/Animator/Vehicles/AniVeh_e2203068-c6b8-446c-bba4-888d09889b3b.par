@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`Baja SAE Vehicle`Mech. Sim. FSAE & Baja: Vehicles & Targets
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox6 1    
+#CheckBox8 0    
+
+OBJ_X_LENGTH 1535
+OBJ_Y_LENGTH 655
+OBJ_Z_LENGTH 1765
+*DZ_V 0
+*LAT_WC 1164
+*LAT_WC_2 1090
+*HWC 265
+*WHEEL_RATIO 1
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_e2203068-c6b8-446c-bba4-888d09889b3b.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_2587c54a-8e52-4945-bbe3-a9a00219831a.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 0.582
+SET_OFFSET_Z 0.25175
+TIRE_ANI_PARSFILE Animator\STL\Shape_2587c54a-8e52-4945-bbe3-a9a00219831a.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -0.582
+SET_OFFSET_Z 0.25175
+TIRE_ANI_PARSFILE Animator\STL\Shape_2587c54a-8e52-4945-bbe3-a9a00219831a.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X -1.535
+SET_OFFSET_Y 0.545
+SET_OFFSET_Z 0.25175
+TIRE_ANI_PARSFILE Animator\STL\Shape_2587c54a-8e52-4945-bbe3-a9a00219831a.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X -1.535
+SET_OFFSET_Y -0.545
+SET_OFFSET_Z 0.25175
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_97e142ab-8bd5-4be1-89d7-dd389b5eb596.par
+#BlueLink1 Animator: Shape Assembly`Baja SAE` Mech. Sim. FSAE & Baja: Shape Assembly` , Vehicle Body`ShpGrp_97e142ab-8bd5-4be1-89d7-dd389b5eb596
+
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577.par
+#BlueLink5 Animator: Camera Setup`Vehicle Pictures` Shape Preview` , Video Camera`Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577
+
+EXPORT_PARSFILE Animator\STL\Shape_2587c54a-8e52-4945-bbe3-a9a00219831a.par
+#BlueLink2 Animator: Shape File Link`Baja SAE: Left Side Tire` Mech. Sim. Baja: Shape Files` , Tire for traffic vehicle`Shape_2587c54a-8e52-4945-bbe3-a9a00219831a
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { Mech. Sim. FSAE & Baja: Vehicles & Targets } Baja SAE Vehicle
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : Baja SAE Vehicle
+#Category: Mech. Sim. FSAE & Baja: Vehicles & Targets
+#FileID  : AniVeh_e2203068-c6b8-446c-bba4-888d09889b3b
+#Product : CarSim 2020.0
+#VehCode Vehicle Shape
+
+END

@@ -1,0 +1,24 @@
+Run made by VS Road Calculator at 19:37 on May 05, 2022.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_75bc1fc7-d10b-4673-83b5-5c9fe36bb25f.par"
+Include PARSFILE "Roads\BuilderSegment\RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c.par"
+ Straight Path East, ID = 1001 <Straight>
+Used Dataset: Path: Segment Builder; { Straight } Straight Path East, ID = 1001
+Include PARSFILE "Roads\Center_Z\RdRefZ_d0396516-2546-45ed-b5c2-7a28777cf91c.par"
+Used Dataset: Road: Reference Line Elevation; { Mech. Sim. Baja Path Elevation } Slope 10.7 deg. (10 -15 m), Flat After 105.8 m
+Include PARSFILE "Roads\dZ_Map\RdMapZ_74992977-ad4d-4089-b524-f049da9e9a4f.par"
+Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Off-Road Terrain } Off-Road Terrain, 75 m long, 10 m wide
+Include PARSFILE "Roads\Friction\RdMu_3b0c5b27-b912-4170-9439-b5397fef112d.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } 0.5
+Include PARSFILE "Roads\Shapes\RdShape_fb4cdb1b-2623-41b2-95be-c3f4c0eaaf8c.par"
+Used Dataset: Road: Animator Surface Shapes; { Ride Roads } Off-Road, Slope 10.7 deg, S Stop = 250 m
+ Off-Road Hill, Slope 10.7 deg. (10 m - 15 m) <Mech. Sim. Baja Roads>
+Used Dataset: Road: 3D Surface (All Properties); { Mech. Sim. Baja Roads } Off-Road Hill, Slope 10.7 deg. (10 m - 15 m)
+
+Time to read input = 0.001
+
+Run started: VS output file = Roads\3D_Road\Road_75bc1fc7-d10b-4673-83b5-5c9fe36bb25f.vsb
+Function ROAD_ZS_TABLE(1) extrapolated (out of range LOW) for X = -99.5 m at T = 6.96
+Function ROAD_DZ_CARPET(1) extrapolated (out of range LOW) for X = -99.5 m at T = 6.96

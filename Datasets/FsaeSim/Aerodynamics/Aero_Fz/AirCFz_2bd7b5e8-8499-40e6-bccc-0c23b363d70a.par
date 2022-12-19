@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Aerodynamics: Fz (Lift) Coef. vs. Aero Slip`Lift Coefficient = 0.18`
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+FZ_AERO_SHAPING_TABLE SPLINE_FLAT
+-180, 0.4
+-135, 0.45
+-90, 0.35
+-20, 0.185
+0, 0.18
+20, 0.185
+90, 0.35
+135, 0.45
+180, 0.4
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#Nearly all passenger cars develop a small positive lift force at highway speeeds.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Aerodynamics: Fz (Lift) Coef. vs. Aero Slip; Lift Coefficient = 0.18
+#Library : Aerodynamics: Fz (Lift) Coef. vs. Aero Slip
+#DataSet : Lift Coefficient = 0.18
+#Category: 
+#FileID  : AirCFz_2bd7b5e8-8499-40e6-bccc-0c23b363d70a
+#Product : CarSim 2020.0
+#VehCode Lift vs. Aero Slip
+
+END

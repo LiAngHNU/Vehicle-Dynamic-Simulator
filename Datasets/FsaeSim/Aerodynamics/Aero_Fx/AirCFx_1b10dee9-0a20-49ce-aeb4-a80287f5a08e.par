@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Aerodynamics: Fx (Drag) Coef. vs. Aero Slip`Drag Coefficient = 0.30`
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+FX_AERO_SHAPING_TABLE SPLINE_FLAT
+-180, -0.45
+-160, -0.45
+-90, 0
+-20, 0.325
+0, 0.3
+20, 0.325
+90, 0
+160, -0.45
+180, -0.45
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#A nominal drag coefficent of 0.3 is typical of contemporary mid-size sedans, such as Honda Accord, Toyota Camry, and Ford Fusion.
+#
+#The drag coefficient typically increases a few percent as the vehicle develops an aerodynamic sidelsip angle, peaking around 20 degrees. Drag reduces as sidelip increases because the component of the airspeed in the vehicle X direction reduces.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Aerodynamics: Fx (Drag) Coef. vs. Aero Slip; Drag Coefficient = 0.30
+#Library : Aerodynamics: Fx (Drag) Coef. vs. Aero Slip
+#DataSet : Drag Coefficient = 0.30
+#Category: 
+#FileID  : AirCFx_1b10dee9-0a20-49ce-aeb4-a80287f5a08e
+#Product : CarSim 2020.0
+#VehCode Drag vs. Aero Slip
+
+END

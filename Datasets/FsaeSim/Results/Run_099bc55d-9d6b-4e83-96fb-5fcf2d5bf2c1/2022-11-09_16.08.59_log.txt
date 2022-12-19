@@ -1,0 +1,329 @@
+Run made by CarSim 2020.0 at 16:08 on November 09, 2022.
+Vehicle Configuration: I_I
+Started with simfile: simfile.sim
+
+Include PARSFILE "D:\Program Files\Mechanical Simulation\CarSim_2020.0\CarSim_2020.0_Data_FSAE\Results\Run_099bc55d-9d6b-4e83-96fb-5fcf2d5bf2c1\Run_all.par"
+Used Dataset: I/O Channels: Import; { * * * Vehicle Dynamic Simulator } Vehicle Dynamic Simulator, import
+Used Dataset: I/O Channels: Export; { * * * Vehicle Dynamic Simulator } Vehicle Dynamic Simualtor, Export
+Used Dataset: Models: Simulink; { * * * HUR Simulator } HUR Simulator
+Used Dataset: Animator: Reference Frame; { Car Tracking } Car X-Y-Z-Yaw
+Used Dataset: Animator: Camera Setup; { Vehicle Reference } 15 deg. Azimuth, 7 deg. El., Veh. Ref.
+Used Dataset: Steering System: Kinematics for 2 Wheels (Rack & Pinion); { Mech. Sim. FSAE & Baja: Steering Kinematics } FSAE Steering Kinematics
+Used Dataset: Steering: Parking Torque for 2 Wheels; Zero
+Used Dataset: Steering System: Compliance; { Constant } Constant: 0.001 deg/N-m
+Used Dataset: Steering System: Kinematics for 2 Wheels (Rack & Pinion); { Mech. Sim. FSAE & Baja: Steering Kinematics } FSAE Steering Kinematics
+Used Dataset: Steering System: Compliance; { Constant } Constant: 0.001 deg/N-m
+Used Dataset: Steering: Parking Torque for 2 Wheels; Zero
+Used Dataset: Steering; { * * * HUR Steering System } 4 Wheel Steeing
+Used Dataset: Suspension: Camber Angle; { Mech. Sim. FSAE: Camber Change } FSAE: Camber Change (Front)
+Used Dataset: Suspension: Lateral Movement Due to Jounce; { Mech. Sim. FSAE: Lateral Movement } FSAE Lateral Y Movement (Front)
+Used Dataset: Suspension: Camber Angle; { Mech. Sim. FSAE: Camber Change } FSAE: Camber Change (Front)
+Used Dataset: Suspension: Lateral Movement Due to Jounce; { Mech. Sim. FSAE: Lateral Movement } FSAE Lateral Y Movement (Front)
+Used Dataset: Suspension: Independent System Kinematics; { * * * HUR Suspension Kinematics } Front Kinematic: Standard
+Used Dataset: Suspension: Jounce and Rebound Stops; { FSAE & Baja: Jounce and Rebound Stops } +25.4 mm / -25.4 mm
+Used Dataset: Suspension: Jounce and Rebound Stops; { FSAE & Baja: Jounce and Rebound Stops } +25.4 mm / -25.4 mm
+Used Dataset: Suspension: Auxiliary Roll Moment; { Mech. Sim. FSAE & Baja: Auxiliary Roll Moment } FSAE Auxiliary Roll Moment
+Used Dataset: Suspension: Independent Compliance, Springs, and Dampers; { * * * HUR Suspenstion Compliances } Front Compliance: Standard
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } FSAE: Tire Stripe
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } FSAE: Tire Shape
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } FSAE: Wheel Shape
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } FSAE: Rotor
+Used Dataset: Animator: Shape Assembly; { Mech. Sim. FSAE & Baja: Shape Assembly } Mech. Sim. FSAE: Tire Shape
+Used Dataset: Tire: Vertical Force vs. Compression; { Mech. Sim. FSAE Tire Spring Rate } Mech. Sim. FSAE: Tire Spring Rate
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Mech. Sim. Aligning Moment } Mech. Sim. FSAE: Mz vs. Slip Angle
+Used Dataset: Tire: Lateral Force; { Mech. Sim. FSAE Lateral Force } Mech. Sim. FSAE: Fy vs. Slip Angle
+Used Dataset: Tire: Longitudinal Force; { Mech. Sim. FSAE Longitudinal Force } Mech. Sim. FSAE: Fx vs. Slip Angle
+Used Dataset: Tire: Lateral Force vs. Inclination; { Mech. Sim. Lateral Force vs. Incl. Angle } Mech. Sim. FSAE: Fy vs. Gamma
+Used Dataset: Tire: Aligning Moment vs. Inclination; { FSAE } Aligning Moment vs. Gamma: Zero
+Used Dataset: Tire: Overturning Moment; { Mech Sim. FSAE Overturning Moment } Overturning Moment vs. Slip Angle: Zero
+Used Dataset: Tire: Overturning Moment vs. Inclination; { FSAE } Overturning Moment vs. Gamma: Zero
+Used Dataset: Tire; { * * * HUR Tires } Hoosier 265
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } FSAE: Tire Stripe
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } FSAE: Tire Shape
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } FSAE: Wheel Shape
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } FSAE: Rotor
+Used Dataset: Animator: Shape Assembly; { Mech. Sim. FSAE & Baja: Shape Assembly } Mech. Sim. FSAE: Tire Shape
+Used Dataset: Tire: Vertical Force vs. Compression; { Mech. Sim. FSAE Tire Spring Rate } Mech. Sim. FSAE: Tire Spring Rate
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Mech. Sim. Aligning Moment } Mech. Sim. FSAE: Mz vs. Slip Angle
+Used Dataset: Tire: Lateral Force; { Mech. Sim. FSAE Lateral Force } Mech. Sim. FSAE: Fy vs. Slip Angle
+Used Dataset: Tire: Longitudinal Force; { Mech. Sim. FSAE Longitudinal Force } Mech. Sim. FSAE: Fx vs. Slip Angle
+Used Dataset: Tire: Lateral Force vs. Inclination; { Mech. Sim. Lateral Force vs. Incl. Angle } Mech. Sim. FSAE: Fy vs. Gamma
+Used Dataset: Tire: Aligning Moment vs. Inclination; { FSAE } Aligning Moment vs. Gamma: Zero
+Used Dataset: Tire: Overturning Moment; { Mech Sim. FSAE Overturning Moment } Overturning Moment vs. Slip Angle: Zero
+Used Dataset: Tire: Overturning Moment vs. Inclination; { FSAE } Overturning Moment vs. Gamma: Zero
+Used Dataset: Tire; { * * * HUR Tires } Hoosier 265
+Used Dataset: Suspension: Camber Angle; { Mech. Sim. FSAE: Camber Change } FSAE: Camber Change (Rear)
+Used Dataset: Suspension: Camber Angle; { Mech. Sim. FSAE: Camber Change } FSAE: Camber Change (Rear)
+Used Dataset: Suspension: Independent System Kinematics; { * * * HUR Suspension Kinematics } Rear Kinematic: Standard
+Used Dataset: Suspension: Jounce and Rebound Stops; { FSAE & Baja: Jounce and Rebound Stops } +25.4 mm / -25.4 mm
+Used Dataset: Suspension: Jounce and Rebound Stops; { FSAE & Baja: Jounce and Rebound Stops } +25.4 mm / -25.4 mm
+Used Dataset: Suspension: Auxiliary Roll Moment; { Mech. Sim. FSAE & Baja: Auxiliary Roll Moment } FSAE Auxiliary Roll Moment
+Used Dataset: Suspension: Independent Compliance, Springs, and Dampers; { * * * HUR Suspenstion Compliances } Rear Compliance: Standard
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } FSAE: Tire Stripe
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } FSAE: Tire Shape
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } FSAE: Wheel Shape
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } FSAE: Rotor
+Used Dataset: Animator: Shape Assembly; { Mech. Sim. FSAE & Baja: Shape Assembly } Mech. Sim. FSAE: Tire Shape
+Used Dataset: Tire: Vertical Force vs. Compression; { Mech. Sim. FSAE Tire Spring Rate } Mech. Sim. FSAE: Tire Spring Rate
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Mech. Sim. Aligning Moment } Mech. Sim. FSAE: Mz vs. Slip Angle
+Used Dataset: Tire: Lateral Force; { Mech. Sim. FSAE Lateral Force } Mech. Sim. FSAE: Fy vs. Slip Angle
+Used Dataset: Tire: Longitudinal Force; { Mech. Sim. FSAE Longitudinal Force } Mech. Sim. FSAE: Fx vs. Slip Angle
+Used Dataset: Tire: Lateral Force vs. Inclination; { Mech. Sim. Lateral Force vs. Incl. Angle } Mech. Sim. FSAE: Fy vs. Gamma
+Used Dataset: Tire: Aligning Moment vs. Inclination; { FSAE } Aligning Moment vs. Gamma: Zero
+Used Dataset: Tire: Overturning Moment; { Mech Sim. FSAE Overturning Moment } Overturning Moment vs. Slip Angle: Zero
+Used Dataset: Tire: Overturning Moment vs. Inclination; { FSAE } Overturning Moment vs. Gamma: Zero
+Used Dataset: Tire; { * * * HUR Tires } Hoosier 285
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } FSAE: Tire Stripe
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } FSAE: Tire Shape
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } FSAE: Wheel Shape
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } FSAE: Rotor
+Used Dataset: Animator: Shape Assembly; { Mech. Sim. FSAE & Baja: Shape Assembly } Mech. Sim. FSAE: Tire Shape
+Used Dataset: Tire: Vertical Force vs. Compression; { Mech. Sim. FSAE Tire Spring Rate } Mech. Sim. FSAE: Tire Spring Rate
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Mech. Sim. Aligning Moment } Mech. Sim. FSAE: Mz vs. Slip Angle
+Used Dataset: Tire: Lateral Force; { Mech. Sim. FSAE Lateral Force } Mech. Sim. FSAE: Fy vs. Slip Angle
+Used Dataset: Tire: Longitudinal Force; { Mech. Sim. FSAE Longitudinal Force } Mech. Sim. FSAE: Fx vs. Slip Angle
+Used Dataset: Tire: Lateral Force vs. Inclination; { Mech. Sim. Lateral Force vs. Incl. Angle } Mech. Sim. FSAE: Fy vs. Gamma
+Used Dataset: Tire: Aligning Moment vs. Inclination; { FSAE } Aligning Moment vs. Gamma: Zero
+Used Dataset: Tire: Overturning Moment; { Mech Sim. FSAE Overturning Moment } Overturning Moment vs. Slip Angle: Zero
+Used Dataset: Tire: Overturning Moment vs. Inclination; { FSAE } Overturning Moment vs. Gamma: Zero
+Used Dataset: Tire; { * * * HUR Tires } Hoosier 285
+Used Dataset: Vehicle: Sprung Mass; { Mech. Sim. FSAE & Baja } Mech. Sim. FSAE Sprung Mass
+Used Dataset: Aerodynamics: Fx (Drag) Coef. vs. Aero Slip; { Constant Drag coefficient factor } CFx = 1 (No Yaw effect)
+Used Dataset: Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip; { Constant Side Force coefficient factor } CFy = 0
+Used Dataset: Aerodynamics: Fz (Lift) Coef. vs. Aero Slip; { Constant Lift coefficient factor } CFz = 1 (No Yaw effect)
+Used Dataset: Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip; { Constant Roll Moment coefficient factor } CMx = 0
+Used Dataset: Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip; { Constant Pitch Moment coefficient factor } CMy = 1 (No Yaw effect)
+Used Dataset: Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip; { Constant Yaw Moment coefficient factor } CMz = 0
+Used Dataset: Aerodynamics: Fx (Drag) Coef. vs. Bounce and Pitch; { Drag vs. Bounce and Pitch } Fx vs. Bounce & Pitch
+Used Dataset: Aerodynamics: Fz (Lift) Coef. vs. Bounce and Pitch; { Lift vs. Bounce and Pitch } Fz vs. Bounce & Pitch
+Used Dataset: Aerodynamics: My (Pitch Moment) Coef. vs. Bounce and Pitch; { Pitch Moment vs. Bounce and Pitch } My vs. Bounce & Pitch
+Used Dataset: Aerodynamics: Pitch, Bounce, Yaw; { Mech. Sim. FSAE Aerodynamics } Mech. Sim. FSAE: Example Aerodynamics
+Used Dataset: Generic Table; { Powertrain (HEV / EV) } Electric Motor: Max. Output 305 N-m
+Used Dataset: Generic Table; { Powertrain (HEV / EV) } Motor efficiency
+Used Dataset: Generic Group of Links; { Powertrain (HEV / EV) } HEV / EV Motor: Max. Output 305 N-m
+Used Dataset: Generic Table; { Powertrain (HEV / EV) } Battery charged resistance
+Used Dataset: Generic Table; { Powertrain (HEV / EV) } Battery discharged resistance
+Used Dataset: Generic Table; { Powertrain (HEV / EV) } Battery Open-Circuit Voltage
+Used Dataset: Generic Table; { Powertrain (HEV / EV) } Battery Max. Capacity
+Used Dataset: Powertrain: Hybrid/Electric System; { Mech. Sim. FSAE & Baja: Electric } Electric Powertrain Assembly
+Used Dataset: Generic Table; { Powertrain (HEV / EV) } Driver Demand Power: Full Load 78 kW
+Used Dataset: Powertrain: Hybrid/Electric Power Management Control; { Mech. Sim. FSAE & Baja: HEV / EV } Electric Power Management: Full Load 78kW
+Used Dataset: Powertrain: Limited Slip Differential (Front or Rear); { Mech. Sim. FSAE Torque Bias Ratio } Mech. Sim. FSAE: TBR = 1.75 / 1.85
+Used Dataset: Powertrain: Rear Differential; { Mech. Sim. FSAE & Baja: Rear Differentials } Mech. Sim. FSAE: Diff., 4.0, TBR = 1.75 / 1.85
+Used Dataset: Powertrain: Rear-Wheel Drive; { Mech. Sim. FSAE & Baja: Powertrains } Mech. Sim. FSAE: RWD Powertrain (Electric)
+Used Dataset: Brakes: Four-Wheel System; { Mech. Sim. FSAE & Baja: Brakes } Mech. Sim. FSAE: Brakes w/o ABS
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } FSAE: Body
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } FSAE: Details
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } FSAE: Driver
+Used Dataset: Animator: Shape Assembly; { Mech. Sim. FSAE & Baja: Shape Assembly } FSAE Vehicle Shapes
+Used Dataset: Animator: Vehicles and Sensor Targets; { Mech. Sim. FSAE & Baja: Vehicles & Targets } FSAE Racecar
+Used Dataset: Vehicle: Assembly; { * * * HUR } HUR 4WD & 4WS Electric
+WARNING: The keyword H_CG_PL(1) has been deprecated
+Used Dataset: Payload: Custom; { FSAE } FSAE Driver Mass & Inertia
+Used Dataset: Sensor Range and Bearing Sensitivity; { * * * HUR Sensors } 50-m Range
+Used Dataset: Animator: Shape File Link; { Sensor Fields } Sensor Fields: 90 deg FOV
+Used Dataset: ADAS Sensors for Range and Tracking; { * * * HUR Perceprtion Sensors } Wide Sensor
+Used Dataset: Custom Forces and Reference Points; { K and C Test Machine } K and C Table (X = -850mm, Z = 50mm)
+Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { * * * HUR Race Cars } HUR 4WD & 4WS Electric
+Used Dataset: Control: Steering by the Closed-loop Driver Model; { Constant Position } No Offset, 1 sec. Preview
+Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting Modes } AT (All Available Gears)
+ Autocross Course #1 <* * * HUR Tracks>
+Used Dataset: Path: Segment Builder; { * * * HUR Tracks } Autocross Course #1
+Used Dataset: Road: Reference Line Elevation; Flat
+Used Dataset: Road: Off-Center Elevation Map, S-L Grid; Flat
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } 1.0
+Used Dataset: Road: Animator Surface Shapes; { * * * HUR Road Shapes } Autocross Course #1
+Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Skybox (Vehicle X-Y-Z)
+Used Dataset: Animator: Shape File Link; { Environment: Sky Boxes } Partly Cloudy Sky
+Used Dataset: Animator: Shape File Link; { Environment: Land Bowls } Light Grass
+Used Dataset: Animator: Group; { Environment Spheres } Partly Cloudy Sky with Light Grass
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Autocross Parking Lot
+Used Dataset: Road: 3D Surface (All Properties); { * * * HUR Tracks } Autocross Course #1
+Used Dataset: Surface: Roughness Profiles; { * * * HUR Road Roughness File } Flat Roughness File
+Used Dataset: Generic VS Commands; { HUD Gauges } Speedometer
+Used Dataset: Generic VS Commands; { HUD Gauges } Throttle (vertical bar)
+Used Dataset: Generic VS Commands; { HUD Gauges } Brake Indicator Light
+Used Dataset: Generic Data Group; { * * * HUR Head-Up Displays } HUR Head-Up Displays
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Multiple Moving Objects; { * * * HUR Obstacles } Traffic Cones: Left
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Multiple Moving Objects; { * * * HUR Obstacles } Traffic Cones: Right
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { * * * HUR Visualization } Vheicle Trajectory
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { * * * HUR Visualization } Vehicle Tracking Error (CoG)
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { * * * HUR Visualization } Vehicle Position
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { * * * HUR Visualization } Vehicle Altitude
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { * * * HUR Visualization } Vehicle Velocity
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { * * * HUR Visualization } Vehicle Angular Velocity
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { * * * HUR Visualization } Vehicle Acceleration
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { * * * HUR Visualization } Vehicle Angular Acceleration
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { * * * HUR Visualization } Vehicle Torques
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { * * * HUR Visualization } Steering Wheel Motions
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { * * * HUR Visualization } Wheel Slip Ratios
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { * * * HUR Visualization } Wheel Sideslip Angles
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { * * * HUR Visualization } Wheel Steer Angles
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { * * * HUR Visualization } Tyre & Axle Vertical Forces
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { * * * HUR Visualization } Tyre & Axle Longitudinal Forces
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { * * * HUR Visualization } Tyre & Axle Lateral Forces
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { * * * HUR Visualization } Tyre & Axle Torques
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { * * * HUR Visualization } Tyre-Road Friction Coefficients
+Used Dataset: Procedures; { * * * HUR Procedures } Procedure: Autocross
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (X-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fx 3D Arrow (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (X-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fx 3D Arrow (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (X-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fx 3D Arrow (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (X-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fx 3D Arrow (Tail Origin)
+Used Dataset: Animator: Wheel Arrows and Other Indicators; { Tire Force Arrows (2 Axles) } 2A - Fx Tire Force Arrows
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (Y-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fy 3D Arrow (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (Y-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fy 3D Arrow (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (Y-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fy 3D Arrow (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (Y-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fy 3D Arrow (Tail Origin)
+Used Dataset: Animator: Wheel Arrows and Other Indicators; { Tire Force Arrows (2 Axles) } 2A - Fy Tire Force Arrows
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (Z-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz 3D, Offset (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (Z-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz 3D, Offset (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (Z-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz 3D, Offset (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (Z-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz 3D, Offset (Tail Origin)
+Used Dataset: Animator: Wheel Arrows and Other Indicators; { Tire Force Arrows (2 Axles) } 2A - Fz Tire Force Arrows
+Used Dataset: Generic Data Group; { Tire Force Arrows } 2 Axle - Fx, Fy, Fz
+WARNING: The keyword OPT_SENSOR has been deprecated
+Used Dataset: Preview Points for External Driver Control; 5 Driver Preview Points
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Sphere: 0.1m Radius
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Sphere: 0.1m Radius
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Sphere: 0.1m Radius
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Sphere: 0.1m Radius
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Sphere: 0.1m Radius
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Sphere: 0.1m Radius
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Sphere: 0.1m Radius
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Sphere: 0.1m Radius
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Sphere: 0.1m Radius
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Sphere: 0.1m Radius
+Used Dataset: Multiple Moving Objects; { Points of Interest } 10 Driver Preview Points
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+Used Dataset: Animator: Shape File Link; { Geometric Shapes } Square
+ HUR Simulator <* * * HUR Datasets>
+Used Dataset: CarSim Run Control; { * * * HUR Datasets } HUR Simulator
+
+Time to read input = 0.101
+Function MENGINE_CARPET extrapolated (out of range LOW) for X = 0 rpm at T = 0
+Function MXG_TIRE_CARPET(1,1) extrapolated (out of range HIGH) for XCOL = 681.007 N at T = 0
+Function MX_TIRE_CARPET(1,1) extrapolated (out of range HIGH) for XCOL = 681.007 N at T = 0
+Function MZG_TIRE_CARPET(1,1) extrapolated (out of range HIGH) for XCOL = 681.007 N at T = 0
+Function MXG_TIRE_CARPET(1,2) extrapolated (out of range HIGH) for XCOL = 680.981 N at T = 0
+Function MX_TIRE_CARPET(1,2) extrapolated (out of range HIGH) for XCOL = 680.981 N at T = 0
+Function MZG_TIRE_CARPET(1,2) extrapolated (out of range HIGH) for XCOL = 680.981 N at T = 0
+Function MXG_TIRE_CARPET(2,1) extrapolated (out of range HIGH) for XCOL = 772.11 N at T = 0
+Function MX_TIRE_CARPET(2,1) extrapolated (out of range HIGH) for XCOL = 772.11 N at T = 0
+Function MZG_TIRE_CARPET(2,1) extrapolated (out of range HIGH) for XCOL = 772.11 N at T = 0
+Function MXG_TIRE_CARPET(2,2) extrapolated (out of range HIGH) for XCOL = 772.085 N at T = 0
+Function MX_TIRE_CARPET(2,2) extrapolated (out of range HIGH) for XCOL = 772.085 N at T = 0
+Function MZG_TIRE_CARPET(2,2) extrapolated (out of range HIGH) for XCOL = 772.085 N at T = 0
+Function VOC_BATTERY_CARPET extrapolated (out of range HIGH) for XCOL = 40 C at T = 0
+Function R_DIS_BATTERY_CARPET extrapolated (out of range HIGH) for XCOL = 40 C at T = 0
+Function MX_AUX_CARPET(1) extrapolated (out of range HIGH) for XCOL = 1387.06 N at T = 0
+Function F_REB_STOP_TABLE(1,1) extrapolated (out of range HIGH) for X = 9.45675 mm at T = 0
+Function F_JNC_STOP_TABLE(1,1) extrapolated (out of range LOW) for X = 9.45675 mm at T = 0
+Function F_REB_STOP_TABLE(1,2) extrapolated (out of range HIGH) for X = 9.45675 mm at T = 0
+Function F_JNC_STOP_TABLE(1,2) extrapolated (out of range LOW) for X = 9.45675 mm at T = 0
+Function MX_AUX_CARPET(2) extrapolated (out of range HIGH) for XCOL = 1550.03 N at T = 0
+Function F_REB_STOP_TABLE(2,1) extrapolated (out of range HIGH) for X = 11.6911 mm at T = 0
+Function F_JNC_STOP_TABLE(2,1) extrapolated (out of range LOW) for X = 11.6911 mm at T = 0
+Function F_REB_STOP_TABLE(2,2) extrapolated (out of range HIGH) for X = 11.6911 mm at T = 0
+Function F_JNC_STOP_TABLE(2,2) extrapolated (out of range LOW) for X = 11.6911 mm at T = 0
+Function FX_AERO_SHAPING_2_CARPET extrapolated (out of range LOW) for XCOL = -18.9508 mm at T = 0
+Function FZ_AERO_SHAPING_2_CARPET extrapolated (out of range LOW) for XCOL = -18.9508 mm at T = 0
+Function MY_AERO_SHAPING_2_CARPET extrapolated (out of range LOW) for XCOL = -18.9508 mm at T = 0
+
+Run started: ERD output file = D:\Program Files\Mechanical Simulation\CarSim_2020.0\CarSim_2020.0_Data_FSAE\Results\Run_099bc55d-9d6b-4e83-96fb-5fcf2d5bf2c1\2022-11-09_16.08.59.bin
+Function SUSP_LAT_TABLE(1,1) extrapolated (out of range HIGH) for X = 25.4036 mm at T = 37.435
+Function FY_TIRE_CARPET(1,1) extrapolated (out of range HIGH) for XCOL = 1112.14 N at T = 38.1395
+
+Run stopped at t = 46.1008. External control (manual or external model)
+
+Computational time ratio: RTIME = 0.993194 (real time)/(simulation time)
+

@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Powertrain: CVT Efficiencies`CVT Efficiencies`
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RingCtrl1 LINEAR_FLAT
+#DiagramOne0
+R_EFF_CVT_F_TABLE LINEAR_FLAT
+0.685, 0.99
+0.824, 0.99
+1, 0.99
+1.231, 0.98
+1.464, 0.95
+1.864, 0.95
+2.724, 0.92
+4.596, 0.92
+ENDTABLE
+#DiagramOne1
+R_EFF_CVT_R_TABLE LINEAR_FLAT
+0.685, 0.99
+0.824, 0.99
+1, 0.99
+1.231, 0.98
+1.464, 0.95
+1.864, 0.95
+2.724, 0.92
+4.596, 0.92
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+
+#EMBEDDED_NOTES
+#This is an example of CVT efficiency.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: CVT Efficiencies; CVT Efficiencies
+#Library : Powertrain: CVT Efficiencies
+#DataSet : CVT Efficiencies
+#Category: 
+#FileID  : CvtEff_3bb5f059-3f87-4223-822a-a250c4fdd859
+#Product : CarSim 2020.0
+#VehCode CVT Efficiencies
+
+END

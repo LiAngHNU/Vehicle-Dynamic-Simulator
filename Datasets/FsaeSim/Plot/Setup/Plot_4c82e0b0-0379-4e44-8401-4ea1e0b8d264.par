@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Electric Motor Output Power`Powertrain (Hybrid and EV)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS PwrMotor, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Electric Motor Output Power
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain (Hybrid and EV) } Electric Motor Output Power
+#Library : Plot: Setup
+#DataSet : Electric Motor Output Power
+#Category: Powertrain (Hybrid and EV)
+#FileID  : Plot_4c82e0b0-0379-4e44-8401-4ea1e0b8d264
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

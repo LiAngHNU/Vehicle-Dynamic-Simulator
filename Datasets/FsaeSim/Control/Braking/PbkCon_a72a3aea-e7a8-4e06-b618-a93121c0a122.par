@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Control: Braking MC Pressure (Open Loop)`Ramp: 2 MPa in 1 second`Ramp
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+PBK_CON_TABLE LINEAR_FLAT
+0, 0
+1, 0
+2, 2
+3, 2
+ENDTABLE
+VLOW_STOP -100
+
+
+LOG_ENTRY Used Dataset: Control: Braking MC Pressure (Open Loop); { Ramp } Ramp: 2 MPa in 1 second
+#Library : Control: Braking MC Pressure (Open Loop)
+#DataSet : Ramp: 2 MPa in 1 second
+#Category: Ramp
+#FileID  : PbkCon_a72a3aea-e7a8-4e06-b618-a93121c0a122
+#Product : CarSim 2020.0
+#VehCode Brake Control
+
+END

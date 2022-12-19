@@ -1,0 +1,69 @@
+PARSFILE
+#FullDataName Suspension: Independent System Kinematics`FSAE: Rear Susp. Kinematics`Mech. Sim. FSAE & Baja: Ind. Susp. Kinem.
+iside 1
+#RingCtrl0 1
+OPT_JNC_DESIGN 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 1
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+
+R_US_STR 0.9
+*DIVE_L 0
+*X_L 0
+*LAT_L 0
+*KIN_TOE_L 0
+L_TRACK 1210
+Y_CL_SUSP 0
+M_US 26
+*IW_L 0.35
+*JNC_DESIGN_L 0
+*TOE_L 0.05
+*CAMBER_L -1.5
+*IWXXZZ_L 0
+*M_US_IND_L 1.3
+*M_US_STR_L 11.7
+SUSP_DIVE_COEFFICIENT 0
+SUSP_X_COEFFICIENT 0
+PARSFILE Suspensions\Camber\Camber_fb9bb0eb-6368-4909-925c-4475498ed0c0.par
+#BlueLink2 Suspension: Camber Angle`FSAE: Camber Change (Rear)` Mech. Sim. FSAE: Camber Change` , Left wheel camber`Camber_fb9bb0eb-6368-4909-925c-4475498ed0c0
+
+SUSP_LAT_COEFFICIENT 0
+TOE_COEFFICIENT 0
+M_US_IND 1.3
+M_US_STR 11.7
+IW 0.35
+IW_XXZZ 0
+JNC_DESIGN 0
+A_TOE 0.05
+A_CAMBER -1.5
+
+iside 2
+SUSP_DIVE_COEFFICIENT 0
+SUSP_X_COEFFICIENT 0
+PARSFILE Suspensions\Camber\Camber_fb9bb0eb-6368-4909-925c-4475498ed0c0.par
+#BlueLink2 Suspension: Camber Angle`FSAE: Camber Change (Rear)` Mech. Sim. FSAE: Camber Change` , Left wheel camber`Camber_fb9bb0eb-6368-4909-925c-4475498ed0c0
+
+SUSP_LAT_COEFFICIENT 0
+TOE_COEFFICIENT 0
+M_US_IND 1.3
+M_US_STR 11.7
+IW 0.35
+IW_XXZZ 0
+JNC_DESIGN 0
+A_TOE 0.05
+A_CAMBER -1.5
+
+LOG_ENTRY Used Dataset: Suspension: Independent System Kinematics; { Mech. Sim. FSAE & Baja: Ind. Susp. Kinem. } FSAE: Rear Susp. Kinematics
+#Library : Suspension: Independent System Kinematics
+#DataSet : FSAE: Rear Susp. Kinematics
+#Category: Mech. Sim. FSAE & Baja: Ind. Susp. Kinem.
+#FileID  : KinInd_6f55e7e6-47a3-4582-969a-832df6a414b7
+#Product : CarSim 2020.0
+#VehCode Independent
+
+END

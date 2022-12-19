@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Autocross Course #1`* * * HUR Tracks
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_80b20051-5638-458e-8975-47c9237dbfc5.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Autocross Course #1
+PARSFILE Roads\BuilderSegment\RoadSeg_b97b34dd-f2db-407a-ab69-dd960c85d2af.par
+#BlueLink0 Path: Segment Builder`Autocross Course #1` * * * HUR Tracks` , Reference Path`RoadSeg_b97b34dd-f2db-407a-ab69-dd960c85d2af
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Autocross Course #1
+PARSFILE Roads\Center_Z\RdRefZ_598f8ea7-d2f1-4e0b-a828-7b8c7dfb136e.par
+#BlueLink1 Road: Reference Line Elevation`Flat` ` , Path Elevation`RdRefZ_598f8ea7-d2f1-4e0b-a828-7b8c7dfb136e
+
+PARSFILE Roads\dZ_Map\RdMapZ_daeb5d83-fffb-4248-89b6-089cb34929b0.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Flat` ` , Miscellaneous`RdMapZ_daeb5d83-fffb-4248-89b6-089cb34929b0
+
+PARSFILE Roads\Friction\RdMu_c8235679-ac14-458f-8e77-28bdd121c095.par
+#BlueLink3 Road: Friction Map, S-L Grid`1.0` Constant Mu` , Friction`RdMu_c8235679-ac14-458f-8e77-28bdd121c095
+
+PARSFILE Roads\Shapes\RdShape_59165a8f-9ba9-45fd-a225-f6ad4506228e.par
+#BlueLink4 Road: Animator Surface Shapes`Autocross Course #1` * * * HUR Road Shapes` , Road shape definitions`RdShape_59165a8f-9ba9-45fd-a225-f6ad4506228e
+
+RR_SURF 1.0
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_7_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_0243ae01-7f22-400b-ac09-6ac909099257.par
+#BlueLink7 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_0243ae01-7f22-400b-ac09-6ac909099257
+
+add_reference_frame road_stuff_9_Autocross_Parking_Lot
+reference_frame_ghosts off
+PARSFILE Animator\STL\Shape_4e5f77cb-bfa7-45cb-af5a-c2777b632e65.par
+#BlueLink9 Animator: Shape File Link`Autocross Parking Lot` Mech. Sim. FSAE: Shape Files` , 3D Shapes`Shape_4e5f77cb-bfa7-45cb-af5a-c2777b632e65
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`Rear View , Road Ref. (Frt. Facing)` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_80b20051-5638-458e-8975-47c9237dbfc5.ani
+
+#EMBEDDED_NOTES
+#Autocross Course using the Path Segment Builder
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { * * * HUR Tracks } Autocross Course #1
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Autocross Course #1
+#Category: * * * HUR Tracks
+#FileID  : Road_80b20051-5638-458e-8975-47c9237dbfc5
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

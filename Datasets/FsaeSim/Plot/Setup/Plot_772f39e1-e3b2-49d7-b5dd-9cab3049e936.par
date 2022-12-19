@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Gear Ratio`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Rgear_Tr, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Gear Ratio
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } Gear Ratio
+#Library : Plot: Setup
+#DataSet : Gear Ratio
+#Category: Powertrain
+#FileID  : Plot_772f39e1-e3b2-49d7-b5dd-9cab3049e936
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

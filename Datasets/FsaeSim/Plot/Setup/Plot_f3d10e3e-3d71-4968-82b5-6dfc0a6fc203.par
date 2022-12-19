@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Spring Compression (Axle 2)`Suspension Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS CmpS_L2, Time
+PLOTCHANNELS CmpS_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Spring Compression (Axle 2)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Motion } Spring Compression (Axle 2)
+#Library : Plot: Setup
+#DataSet : Spring Compression (Axle 2)
+#Category: Suspension Motion
+#FileID  : Plot_f3d10e3e-3d71-4968-82b5-6dfc0a6fc203
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

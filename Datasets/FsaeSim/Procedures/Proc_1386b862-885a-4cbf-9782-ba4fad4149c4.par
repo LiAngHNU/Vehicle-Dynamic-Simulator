@@ -1,0 +1,123 @@
+PARSFILE
+#FullDataName Procedures`Autocross (2 Laps), Path Seg. Builder (EV)`Mech. Sim. FSAE: Procedures
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 -1
+#RingCtrl2 0
+OPT_STOP -1
+TSTART 0
+SSTART -45
+TSTART_WRITE = TSTART;
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+TSTOP -1
+*SPEED 0
+*TSTOP 50
+*TSTART 0
+*SSTART -45
+*SSTOP 50
+
+PARSFILE Control\Driver\StrDM_5e1b87df-4a9a-4a60-ac80-544adfa4667d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`No Offset, 1 sec. Preview` Constant Position` , Steering`StrDM_5e1b87df-4a9a-4a60-ac80-544adfa4667d
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting Modes` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_path\SpdPath_22ef013b-ad42-46d5-bd11-ce1ab8fec8e0.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`FSAE Target Speed, Autocross` Mech. Sim. FSAE & Baja: Target Speed from Path Preview` , Speed vs. station`SpdPath_22ef013b-ad42-46d5-bd11-ce1ab8fec8e0
+
+PARSFILE Roads\3D_Road\Road_7f930470-e2a4-41b0-a90c-1f86e067a56c.par
+#BlueLink0 Road: 3D Surface (All Properties)`FSAE Autocross, Path Segment Builder` Mech. Sim. FSAE Roads` , Miscellaneous`Road_7f930470-e2a4-41b0-a90c-1f86e067a56c
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink1 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Generic\VS_commands\GenVS_29a222ed-bb56-4beb-9f82-45c8f9277c5d.par
+#BlueLink5 Generic VS Commands`Plots: Powertrain (EV)` Mech. Sim. FSAE & Baja: Plot Groups` , Miscellaneous`GenVS_29a222ed-bb56-4beb-9f82-45c8f9277c5d
+
+PARSFILE Events\Events_c6d09ad3-76b3-4bd5-8371-ef1678cc6a80.par
+#BlueLink7 Events`Stop Condition: Record 2 Laps` Stop Conditions` , Miscellaneous`Events_c6d09ad3-76b3-4bd5-8371-ef1678cc6a80
+
+PARSFILE Plot\Setup\Plot_dafae624-d48a-4548-93eb-fa73d080e21a.par
+#BlueLink8 Plot: Setup`Brake Control: Master Cyl. Pressure` Braking` , Plot`Plot_dafae624-d48a-4548-93eb-fa73d080e21a
+
+PARSFILE Plot\Setup\Plot_7f357647-835a-4216-8146-cfa805e9171e.par
+#BlueLink9 Plot: Setup`Wheel Cylinder Pressures (Axle 1)` Braking` , Plot`Plot_7f357647-835a-4216-8146-cfa805e9171e
+
+PARSFILE Plot\Setup\Plot_35af45d3-cdd7-4f32-845f-ccdd3884b9ff.par
+#BlueLink10 Plot: Setup`Wheel Cylinder Pressures (Axle 2)` Braking` , Plot`Plot_35af45d3-cdd7-4f32-845f-ccdd3884b9ff
+
+PARSFILE Plot\Setup\Plot_866339ed-b5e7-4d69-af61-dcfa598d9430.par
+#BlueLink11 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_866339ed-b5e7-4d69-af61-dcfa598d9430
+
+PARSFILE Plot\Setup\Plot_75a85771-5520-4b6b-a008-65bc09c24a90.par
+#BlueLink12 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_75a85771-5520-4b6b-a008-65bc09c24a90
+
+PARSFILE Plot\Setup\Plot_62d40774-ed58-4044-8614-8feb9ce47098.par
+#BlueLink14 Plot: Setup`Yaw Angle of Sprung Mass vs. Time` Vehicle Motion` , Plot`Plot_62d40774-ed58-4044-8614-8feb9ce47098
+
+PARSFILE Plot\Setup\Plot_310b0189-b08d-49fc-a484-ee359eb89744.par
+#BlueLink15 Plot: Setup`Yaw Rate of Sprung Mass vs. Time` Vehicle Motion` , Plot`Plot_310b0189-b08d-49fc-a484-ee359eb89744
+
+PARSFILE Plot\Setup\Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c.par
+#BlueLink16 Plot: Setup`Pitch Angle of Sprung Mass vs. Time` Vehicle Motion` , Plot`Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c
+
+PARSFILE Plot\Setup\Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979.par
+#BlueLink17 Plot: Setup`Roll Angle of Sprung Mass vs. Time` Vehicle Motion` , Plot`Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979
+
+PARSFILE Plot\Setup\Plot_4d5ed76a-bc9d-49a0-a969-e229b457f5e8.par
+#BlueLink18 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_4d5ed76a-bc9d-49a0-a969-e229b457f5e8
+
+PARSFILE Plot\Setup\Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f.par
+#BlueLink19 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f
+
+PARSFILE Plot\Setup\Plot_9ea832a7-356d-48ab-845f-4d224871aa86.par
+#BlueLink20 Plot: Setup`Lap Counter` Lap Counter` , Plot`Plot_9ea832a7-356d-48ab-845f-4d224871aa86
+
+PARSFILE Plot\Setup\Plot_b462b74e-eb99-42e0-a648-ae9a9c6e27b4.par
+#BlueLink21 Plot: Setup`Longitudinal Forces (Axle 1)` Tire Forces and Moments` , Plot`Plot_b462b74e-eb99-42e0-a648-ae9a9c6e27b4
+
+PARSFILE Plot\Setup\Plot_82c39b1b-fc03-4605-920c-8795e3853640.par
+#BlueLink22 Plot: Setup`Longitudinal Forces (Axle 2)` Tire Forces and Moments` , Plot`Plot_82c39b1b-fc03-4605-920c-8795e3853640
+
+PARSFILE Plot\Setup\Plot_0ae17b35-10e1-48bb-b226-c3ed72aa451b.par
+#BlueLink23 Plot: Setup`Lateral Forces (Axle 1)` Tire Forces and Moments` , Plot`Plot_0ae17b35-10e1-48bb-b226-c3ed72aa451b
+
+PARSFILE Plot\Setup\Plot_e1053788-c2c6-4b38-8282-7030bcf7df08.par
+#BlueLink24 Plot: Setup`Lateral Forces (Axle 2)` Tire Forces and Moments` , Plot`Plot_e1053788-c2c6-4b38-8282-7030bcf7df08
+
+PARSFILE Plot\Setup\Plot_de12eea2-c7e6-47ac-a8f6-4f491244b283.par
+#BlueLink25 Plot: Setup`Vertical Forces (Axle 1)` Tire Forces and Moments` , Plot`Plot_de12eea2-c7e6-47ac-a8f6-4f491244b283
+
+PARSFILE Plot\Setup\Plot_4fae6e50-2618-44f6-8ed7-08b8ed3fe10e.par
+#BlueLink26 Plot: Setup`Vertical Forces (Axle 2)` Tire Forces and Moments` , Plot`Plot_4fae6e50-2618-44f6-8ed7-08b8ed3fe10e
+
+
+#EMBEDDED_NOTES
+#Procedure for an Autocross course and an EV powertrain.
+#
+#Speed and braking control are set up in a single dataset:
+#FSAE Target Speed, Autocross
+#
+#The Target Speed from Path Preview screen has options that allow the end-user to select from different Skill and Aggressiveness levels, as well as longitudinal and lateral acceleration targets.
+#
+#Simulations such as these are very useful for studying and evaluating many aspects of the vehicle performance:
+#
+# * Aerodynamics
+# * Brakes
+# * Powertrain
+# * Steering
+# * Suspension
+# * Tire Forces
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Mech. Sim. FSAE: Procedures } Autocross (2 Laps), Path Seg. Builder (EV)
+#Library : Procedures
+#DataSet : Autocross (2 Laps), Path Seg. Builder (EV)
+#Category: Mech. Sim. FSAE: Procedures
+#FileID  : Proc_1386b862-885a-4cbf-9782-ba4fad4149c4
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

@@ -1,0 +1,107 @@
+PARSFILE
+#FullDataName Procedures`Acceleration and Braking`Mech. Sim. FSAE: Procedures
+#CheckBox3 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = TSTART;
+TSTOP 50
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*TSTOP 50
+*TSTART 0
+*SSTART 0
+*SSTOP 210
+
+PARSFILE Events\Events_766ad035-71ee-4d40-b1c1-11cb59339387.par
+#BlueLink0 Events`A. Rev to Launch` FSAE Acceleration and Braking` , Miscellaneous`Events_766ad035-71ee-4d40-b1c1-11cb59339387
+
+PARSFILE Roads\3D_Road\Road_78a21450-d2c6-4230-857b-b48b01d83942.par
+#BlueLink1 Road: 3D Surface (All Properties)`1200 m, One Lane, Mu = 0.85, Right-side Trees` Straight` , Miscellaneous`Road_78a21450-d2c6-4230-857b-b48b01d83942
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink2 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Generic\VS_commands\GenVS_690346c3-a0ad-49f8-a1ab-9beacd6f8df5.par
+#BlueLink4 Generic VS Commands`Plots: Aerodynamics` Mech. Sim. FSAE & Baja: Plot Groups` , Miscellaneous`GenVS_690346c3-a0ad-49f8-a1ab-9beacd6f8df5
+
+PARSFILE Generic\VS_commands\GenVS_c0012c12-e5f6-4c49-a171-dabea7799cd5.par
+#BlueLink5 Generic VS Commands`Plots: Powertrain` Mech. Sim. FSAE & Baja: Plot Groups` , Miscellaneous`GenVS_c0012c12-e5f6-4c49-a171-dabea7799cd5
+
+PARSFILE Plot\Setup\Plot_dafae624-d48a-4548-93eb-fa73d080e21a.par
+#BlueLink8 Plot: Setup`Brake Control: Master Cyl. Pressure` Braking` , Plot`Plot_dafae624-d48a-4548-93eb-fa73d080e21a
+
+PARSFILE Plot\Setup\Plot_7f357647-835a-4216-8146-cfa805e9171e.par
+#BlueLink9 Plot: Setup`Wheel Cylinder Pressures (Axle 1)` Braking` , Plot`Plot_7f357647-835a-4216-8146-cfa805e9171e
+
+PARSFILE Plot\Setup\Plot_35af45d3-cdd7-4f32-845f-ccdd3884b9ff.par
+#BlueLink10 Plot: Setup`Wheel Cylinder Pressures (Axle 2)` Braking` , Plot`Plot_35af45d3-cdd7-4f32-845f-ccdd3884b9ff
+
+PARSFILE Plot\Setup\Plot_6f0c0125-1c0c-4b0a-a06b-529aada16a53.par
+#BlueLink11 Plot: Setup`Brake Torque` Braking` , Plot`Plot_6f0c0125-1c0c-4b0a-a06b-529aada16a53
+
+PARSFILE Plot\Setup\Plot_60c40b33-9b7a-4d9f-868c-fdfcd6c5ea90.par
+#BlueLink13 Plot: Setup`Clutch: Control Input` Controls: Driver` , Plot`Plot_60c40b33-9b7a-4d9f-868c-fdfcd6c5ea90
+
+PARSFILE Plot\Setup\Plot_62d40774-ed58-4044-8614-8feb9ce47098.par
+#BlueLink14 Plot: Setup`Yaw Angle of Sprung Mass vs. Time` Vehicle Motion` , Plot`Plot_62d40774-ed58-4044-8614-8feb9ce47098
+
+PARSFILE Plot\Setup\Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c.par
+#BlueLink15 Plot: Setup`Pitch Angle of Sprung Mass vs. Time` Vehicle Motion` , Plot`Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c
+
+PARSFILE Plot\Setup\Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979.par
+#BlueLink16 Plot: Setup`Roll Angle of Sprung Mass vs. Time` Vehicle Motion` , Plot`Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979
+
+PARSFILE Plot\Setup\Plot_866339ed-b5e7-4d69-af61-dcfa598d9430.par
+#BlueLink18 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_866339ed-b5e7-4d69-af61-dcfa598d9430
+
+PARSFILE Plot\Setup\Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f.par
+#BlueLink20 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f
+
+PARSFILE Plot\Setup\Plot_b462b74e-eb99-42e0-a648-ae9a9c6e27b4.par
+#BlueLink21 Plot: Setup`Longitudinal Forces (Axle 1)` Tire Forces and Moments` , Plot`Plot_b462b74e-eb99-42e0-a648-ae9a9c6e27b4
+
+PARSFILE Plot\Setup\Plot_82c39b1b-fc03-4605-920c-8795e3853640.par
+#BlueLink22 Plot: Setup`Longitudinal Forces (Axle 2)` Tire Forces and Moments` , Plot`Plot_82c39b1b-fc03-4605-920c-8795e3853640
+
+PARSFILE Plot\Setup\Plot_0ae17b35-10e1-48bb-b226-c3ed72aa451b.par
+#BlueLink23 Plot: Setup`Lateral Forces (Axle 1)` Tire Forces and Moments` , Plot`Plot_0ae17b35-10e1-48bb-b226-c3ed72aa451b
+
+PARSFILE Plot\Setup\Plot_e1053788-c2c6-4b38-8282-7030bcf7df08.par
+#BlueLink24 Plot: Setup`Lateral Forces (Axle 2)` Tire Forces and Moments` , Plot`Plot_e1053788-c2c6-4b38-8282-7030bcf7df08
+
+PARSFILE Plot\Setup\Plot_de12eea2-c7e6-47ac-a8f6-4f491244b283.par
+#BlueLink25 Plot: Setup`Vertical Forces (Axle 1)` Tire Forces and Moments` , Plot`Plot_de12eea2-c7e6-47ac-a8f6-4f491244b283
+
+PARSFILE Plot\Setup\Plot_4fae6e50-2618-44f6-8ed7-08b8ed3fe10e.par
+#BlueLink26 Plot: Setup`Vertical Forces (Axle 2)` Tire Forces and Moments` , Plot`Plot_4fae6e50-2618-44f6-8ed7-08b8ed3fe10e
+
+
+#EMBEDDED_NOTES
+#Event-based Procedure for an Acceleration and Braking test
+#
+#The Events are used to control the throttle, transmission shifting, and clutch actuation.
+#
+#Simulations such as these are very useful for studying and evaluating many aspects of the vehicle performance:
+#
+# * Aerodynamics
+# * Brakes
+# * Powertrain
+# * Steering
+# * Suspension
+# * Tire Forces
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Mech. Sim. FSAE: Procedures } Acceleration and Braking
+#Library : Procedures
+#DataSet : Acceleration and Braking
+#Category: Mech. Sim. FSAE: Procedures
+#FileID  : Proc_61af139b-26de-4a0e-ba3f-7aac2ba630d1
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

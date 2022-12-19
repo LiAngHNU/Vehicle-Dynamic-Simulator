@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Animator: Shape Assembly`Figure 8 Scenery`Mech. Sim. FSAE & Baja: Shape Assembly
+*COLOR 0.4 0 1
+*OFFSET_Z .02
+*X_REF_LENGTH 2000
+#CheckBox0 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+
+#RingCtrl1 0
+#RingCtrl2 2
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL_Groups\ShpGrp_0b8382bb-dc61-4e94-bdcc-019c3574f4d7.png
+PARSFILE Animator\STL\Shape_5646946e-5000-4145-ad8b-85df644e2e04.par
+#BlueLink0 Animator: Shape File Link`Figure 8: Course Lines` Mech. Sim. FSAE: Shape Files` , Shape File`Shape_5646946e-5000-4145-ad8b-85df644e2e04
+
+set_lighting on
+PARSFILE Animator\STL\Shape_4accc766-2106-498d-a4ae-2d6b34ccee5d.par
+#BlueLink1 Animator: Shape File Link`Figure 8: Parking Lot` Mech. Sim. FSAE: Shape Files` , Shape File`Shape_4accc766-2106-498d-a4ae-2d6b34ccee5d
+
+set_lighting on
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_f2e9fdc6-8eb7-4c80-a895-b3a3c8b4ed69.par
+#BlueLink17 Animator: Camera Setup`Shape Preview (Side) Static` Shape Preview` , Video Camera`Camera_f2e9fdc6-8eb7-4c80-a895-b3a3c8b4ed69
+
+
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { Mech. Sim. FSAE & Baja: Shape Assembly } Figure 8 Scenery
+#Library : Animator: Shape Assembly
+#DataSet : Figure 8 Scenery
+#Category: Mech. Sim. FSAE & Baja: Shape Assembly
+#FileID  : ShpGrp_0b8382bb-dc61-4e94-bdcc-019c3574f4d7
+#Product : CarSim 2020.0
+#VehCode Shape Assembly
+
+END

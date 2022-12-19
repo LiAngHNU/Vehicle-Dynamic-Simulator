@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName CarSim Run Control`FSAE: On-Center Steer Test`* * Core Vehicle Evaluation and Diagnostics
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_99385c2a-3c97-4394-96cb-44b67fc076ad
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 3
+PARSFILE Animator\Cameras\Camera_ba3fe239-88d8-4ffa-a4a9-7c163f3c38ed.par
+#BlueLink0 Animator: Camera Setup`180 deg. Azimuth, 10 deg. El., Veh. Ref. (No Yaw)` Vehicle Reference` , Animator camera`Camera_ba3fe239-88d8-4ffa-a4a9-7c163f3c38ed
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 1    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_5c83ba61-a2a5-436b-8691-d8258e485074.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`Mechanical Simulation FSAE` FSAE` , Math Model`VehLoad_5c83ba61-a2a5-436b-8691-d8258e485074
+
+PARSFILE Procedures\Proc_65ad9f3a-13fd-429a-be0a-4510c96c000e.par
+#BlueLink28 Procedures`On-Center Test` Mech. Sim. FSAE & Baja SAE (Shared)` , Procedure`Proc_65ad9f3a-13fd-429a-be0a-4510c96c000e
+
+PARSFILE Generic\Group\GenGrp_93c85863-f22e-4cd2-b8c7-402c8d5c9781.par
+#BlueLink9 Generic Data Group`VS Visualizer HUD Gauges (FSAE / Baja)` HUD Gauges` , Miscellaneous`GenGrp_93c85863-f22e-4cd2-b8c7-402c8d5c9781
+
+PARSFILE Generic\VS_commands\GenVS_0693f168-b4bd-44f0-ab4d-621bd5be4856.par
+#BlueLink10 Generic VS Commands`VsV HUD Text: Engine RPM, Trans. Gear Ratio` HUD Gauges` , Miscellaneous`GenVS_0693f168-b4bd-44f0-ab4d-621bd5be4856
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_7eebfaf2-736d-4fc8-8710-ce4ecdfcfa7a.par
+#BlueLink11 Multiple Moving Objects`10 Driver Preview Points` Points of Interest` , Miscellaneous`TMotion_7eebfaf2-736d-4fc8-8710-ce4ecdfcfa7a
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_4d135579-d50c-4bb7-8572-23ffbe185deb.png
+
+OPT_ALL_WRITE 1
+WRITE_SENSOR_DETECT
+Title FSAE: On-Center Steer Test <* * Core Vehicle Evaluation and Diagnostics>
+CATEGORY * * Core Vehicle Evaluation and Diagnostics 
+DATASET_TITLE FSAE: On-Center Steer Test
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A generic Formula SAE vehicle performs a sinusoidal on-center test at 100 km/h.
+#
+#This on-center steer test consists of 5 cycles of a sinusoidal path, with smooth (cosine) lead-in and lead-out. The length was chosen to achieve 5 seconds per cycle (0.2 Hz) at 100 kph.
+#
+#The CarSim Closed-Loop Path Following Driver Model is used to follow the path.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * * Core Vehicle Evaluation and Diagnostics } FSAE: On-Center Steer Test
+#Library : CarSim Run Control
+#DataSet : FSAE: On-Center Steer Test
+#Category: * * Core Vehicle Evaluation and Diagnostics
+#FileID  : Run_99385c2a-3c97-4394-96cb-44b67fc076ad
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,559 @@
+PARSFILE
+#FullDataName Multiple Moving Objects`Traffic Cones: Left`* * * HUR Obstacles
+#RingCtrl0 11
+DEFINE_MOVING_OBJECTS 11
+#RingCtrl1 3
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl4 1
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 0    
+#CheckBox9 1    
+#CheckBox10 0    
+#CheckBox11 1    
+#CheckBox12 0    
+#CheckBox13 1    
+#CheckBox14 0    
+#CheckBox15 1    
+#CheckBox16 0    
+#CheckBox17 1    
+#CheckBox18 0    
+#CheckBox19 1    
+#CheckBox20 0    
+#CheckBox21 1    
+#CheckBox22 0    
+#CheckBox25 0    
+#CheckBox26 1    
+#CheckBox27 1    
+#CheckBox28 1    
+#CheckBox29 1    
+#CheckBox30 1    
+#CheckBox31 1    
+#CheckBox32 1    
+#CheckBox33 1    
+#CheckBox34 1    
+#CheckBox35 1    
+#CheckBox36 1    
+#CheckBox38 1    
+#CheckBox39 0    
+
+DZ_OBJECT 0
+*L +2.0
+*LEAD 60
+*TRAIL 15
+*HIDE 5
+*PATH_ID PATH_ID_DM
+*ROAD_ID CURRENT_ROAD_ID
+*V 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Traffic Cones: Left, Object #1
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 60
+S_TRAIL_OBJ 15
+S_HIDE_OBJ 5
+*SINIT_1 -15
+EQ_INIT S_OBJ_<<o>> = -15
+EQ_INIT V_OBJ_<<o>> = 0
+EQ_OUT V_OBJ_<<o>> = 0
+EQ_IN LATO_<<o>> = +2.0
+*COLOR_1 1 0 0
+SET_RUN_COLOR 1 0 0
+*H_TARGET_1 0.25
+H_OBJ 0.25
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+#BlueLink0 Animator: Shape File Link`Traffic Cone` Mech. Sim. FSAE: Shape Files` , 3D Shape for Video`Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 0
+DZ_OBJECT 0
+*SIZE_1 0.5
+DIAMETER_OBJ 0.5
+MATERIAL_TYPE_OBJ 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 0.5
+Y_LENGTH 0.5
+Z_LENGTH 0.5
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cylinders\cylinder_Zaxis_1m_diameter_1m_long.obj
+set_transparency 0.5
+SET_OFFSET_Z 0.5
+SET_COLOR 1 0 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Traffic Cones: Left, Object #2
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 60
+S_TRAIL_OBJ 15
+S_HIDE_OBJ 5
+*SINIT_2 -7.5
+EQ_INIT S_OBJ_<<o>> = -7.5
+EQ_INIT V_OBJ_<<o>> = 0
+EQ_OUT V_OBJ_<<o>> = 0
+EQ_IN LATO_<<o>> = +2.0
+*COLOR_2 1 0 0
+SET_RUN_COLOR 1 0 0
+*H_TARGET_2 0.25
+H_OBJ 0.25
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+#BlueLink1 Animator: Shape File Link`Traffic Cone` Mech. Sim. FSAE: Shape Files` , Traffic Vehicle Ani File`Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 0
+DZ_OBJECT 0
+*SIZE_2 0.5
+DIAMETER_OBJ 0.5
+MATERIAL_TYPE_OBJ 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 0.5
+Y_LENGTH 0.5
+Z_LENGTH 0.5
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cylinders\cylinder_Zaxis_1m_diameter_1m_long.obj
+set_transparency 0.5
+SET_OFFSET_Z 0.5
+SET_COLOR 1 0 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Traffic Cones: Left, Object #3
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 60
+S_TRAIL_OBJ 15
+S_HIDE_OBJ 5
+*SINIT_3 0
+EQ_INIT S_OBJ_<<o>> = 0
+EQ_INIT V_OBJ_<<o>> = 0
+EQ_OUT V_OBJ_<<o>> = 0
+EQ_IN LATO_<<o>> = +2.0
+*COLOR_3 1 0 0
+SET_RUN_COLOR 1 0 0
+*H_TARGET_3 0.25
+H_OBJ 0.25
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+#BlueLink2 Animator: Shape File Link`Traffic Cone` Mech. Sim. FSAE: Shape Files` , Traffic Vehicle Ani File`Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 0
+DZ_OBJECT 0
+*SIZE_3 0.5
+DIAMETER_OBJ 0.5
+MATERIAL_TYPE_OBJ 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 0.5
+Y_LENGTH 0.5
+Z_LENGTH 0.5
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cylinders\cylinder_Zaxis_1m_diameter_1m_long.obj
+set_transparency 0.5
+SET_OFFSET_Z 0.5
+SET_COLOR 1 0 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Traffic Cones: Left, Object #4
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 60
+S_TRAIL_OBJ 15
+S_HIDE_OBJ 5
+*SINIT_4 +7.5
+EQ_INIT S_OBJ_<<o>> = +7.5
+EQ_INIT V_OBJ_<<o>> = 0
+EQ_OUT V_OBJ_<<o>> = 0
+EQ_IN LATO_<<o>> = +2.0
+*COLOR_4 1 0 0
+SET_RUN_COLOR 1 0 0
+*H_TARGET_4 0.25
+H_OBJ 0.25
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+#BlueLink3 Animator: Shape File Link`Traffic Cone` Mech. Sim. FSAE: Shape Files` , Traffic Vehicle Ani File`Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 0
+DZ_OBJECT 0
+*SIZE_4 0.5
+DIAMETER_OBJ 0.5
+MATERIAL_TYPE_OBJ 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 0.5
+Y_LENGTH 0.5
+Z_LENGTH 0.5
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cylinders\cylinder_Zaxis_1m_diameter_1m_long.obj
+set_transparency 0.5
+SET_OFFSET_Z 0.5
+SET_COLOR 1 0 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Traffic Cones: Left, Object #5
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 60
+S_TRAIL_OBJ 15
+S_HIDE_OBJ 5
+*SINIT_5 +15
+EQ_INIT S_OBJ_<<o>> = +15
+EQ_INIT V_OBJ_<<o>> = 0
+EQ_OUT V_OBJ_<<o>> = 0
+EQ_IN LATO_<<o>> = +2.0
+*COLOR_5 1 0 0
+SET_RUN_COLOR 1 0 0
+*H_TARGET_5 0.25
+H_OBJ 0.25
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+#BlueLink4 Animator: Shape File Link`Traffic Cone` Mech. Sim. FSAE: Shape Files` , Traffic Vehicle Ani File`Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 0
+DZ_OBJECT 0
+*SIZE_5 0.5
+DIAMETER_OBJ 0.5
+MATERIAL_TYPE_OBJ 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 0.5
+Y_LENGTH 0.5
+Z_LENGTH 0.5
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cylinders\cylinder_Zaxis_1m_diameter_1m_long.obj
+set_transparency 0.5
+SET_OFFSET_Z 0.5
+SET_COLOR 1 0 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Traffic Cones: Left, Object #6
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 60
+S_TRAIL_OBJ 15
+S_HIDE_OBJ 5
+*SINIT_6 +22.5
+EQ_INIT S_OBJ_<<o>> = +22.5
+EQ_INIT V_OBJ_<<o>> = 0
+EQ_OUT V_OBJ_<<o>> = 0
+EQ_IN LATO_<<o>> = +2.0
+*COLOR_6 1 0 0
+SET_RUN_COLOR 1 0 0
+*H_TARGET_6 0.25
+H_OBJ 0.25
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+#BlueLink5 Animator: Shape File Link`Traffic Cone` Mech. Sim. FSAE: Shape Files` , Traffic Vehicle Ani File`Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 0
+DZ_OBJECT 0
+*SIZE_6 0.5
+DIAMETER_OBJ 0.5
+MATERIAL_TYPE_OBJ 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 0.5
+Y_LENGTH 0.5
+Z_LENGTH 0.5
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cylinders\cylinder_Zaxis_1m_diameter_1m_long.obj
+set_transparency 0.5
+SET_OFFSET_Z 0.5
+SET_COLOR 1 0 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Traffic Cones: Left, Object #7
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 60
+S_TRAIL_OBJ 15
+S_HIDE_OBJ 5
+*SINIT_7 +30
+EQ_INIT S_OBJ_<<o>> = +30
+EQ_INIT V_OBJ_<<o>> = 0
+EQ_OUT V_OBJ_<<o>> = 0
+EQ_IN LATO_<<o>> = +2.0
+*COLOR_7 1 0 0
+SET_RUN_COLOR 1 0 0
+*H_TARGET_7 0.25
+H_OBJ 0.25
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+#BlueLink6 Animator: Shape File Link`Traffic Cone` Mech. Sim. FSAE: Shape Files` , Traffic Vehicle Ani File`Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 0
+DZ_OBJECT 0
+*SIZE_7 0.5
+DIAMETER_OBJ 0.5
+MATERIAL_TYPE_OBJ 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 0.5
+Y_LENGTH 0.5
+Z_LENGTH 0.5
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cylinders\cylinder_Zaxis_1m_diameter_1m_long.obj
+set_transparency 0.5
+SET_OFFSET_Z 0.5
+SET_COLOR 1 0 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Traffic Cones: Left, Object #8
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 60
+S_TRAIL_OBJ 15
+S_HIDE_OBJ 5
+*SINIT_8 +37.5
+EQ_INIT S_OBJ_<<o>> = +37.5
+EQ_INIT V_OBJ_<<o>> = 0
+EQ_OUT V_OBJ_<<o>> = 0
+EQ_IN LATO_<<o>> = +2.0
+*COLOR_8 1 0 0
+SET_RUN_COLOR 1 0 0
+*H_TARGET_8 0.25
+H_OBJ 0.25
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+#BlueLink7 Animator: Shape File Link`Traffic Cone` Mech. Sim. FSAE: Shape Files` , Traffic Vehicle Ani File`Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 0
+DZ_OBJECT 0
+*SIZE_8 0.5
+DIAMETER_OBJ 0.5
+MATERIAL_TYPE_OBJ 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 0.5
+Y_LENGTH 0.5
+Z_LENGTH 0.5
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cylinders\cylinder_Zaxis_1m_diameter_1m_long.obj
+set_transparency 0.5
+SET_OFFSET_Z 0.5
+SET_COLOR 1 0 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Traffic Cones: Left, Object #9
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 60
+S_TRAIL_OBJ 15
+S_HIDE_OBJ 5
+*SINIT_9 +45
+EQ_INIT S_OBJ_<<o>> = +45
+EQ_INIT V_OBJ_<<o>> = 0
+EQ_OUT V_OBJ_<<o>> = 0
+EQ_IN LATO_<<o>> = +2.0
+*COLOR_9 1 0 0
+SET_RUN_COLOR 1 0 0
+*H_TARGET_9 0.25
+H_OBJ 0.25
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+#BlueLink8 Animator: Shape File Link`Traffic Cone` Mech. Sim. FSAE: Shape Files` , Traffic Vehicle Ani File`Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 0
+DZ_OBJECT 0
+*SIZE_9 0.5
+DIAMETER_OBJ 0.5
+MATERIAL_TYPE_OBJ 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 0.5
+Y_LENGTH 0.5
+Z_LENGTH 0.5
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cylinders\cylinder_Zaxis_1m_diameter_1m_long.obj
+set_transparency 0.5
+SET_OFFSET_Z 0.5
+SET_COLOR 1 0 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Traffic Cones: Left, Object #10
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 60
+S_TRAIL_OBJ 15
+S_HIDE_OBJ 5
+*SINIT_10 +52.5
+EQ_INIT S_OBJ_<<o>> = +52.5
+EQ_INIT V_OBJ_<<o>> = 0
+EQ_OUT V_OBJ_<<o>> = 0
+EQ_IN LATO_<<o>> = +2.0
+*COLOR_10 1 0 0
+SET_RUN_COLOR 1 0 0
+*H_TARGET_10 0.25
+H_OBJ 0.25
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+#BlueLink9 Animator: Shape File Link`Traffic Cone` Mech. Sim. FSAE: Shape Files` , Traffic Vehicle Ani File`Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 0
+DZ_OBJECT 0
+*SIZE_10 0.5
+DIAMETER_OBJ 0.5
+MATERIAL_TYPE_OBJ 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 0.5
+Y_LENGTH 0.5
+Z_LENGTH 0.5
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cylinders\cylinder_Zaxis_1m_diameter_1m_long.obj
+set_transparency 0.5
+SET_OFFSET_Z 0.5
+SET_COLOR 1 0 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Traffic Cones: Left, Object #11
+OPT_SPEED_OBJ 1
+OPT_DIR_OBJ 1
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 60
+S_TRAIL_OBJ 15
+S_HIDE_OBJ 5
+*SINIT_11 +60
+EQ_INIT S_OBJ_<<o>> = +60
+EQ_INIT V_OBJ_<<o>> = 0
+EQ_OUT V_OBJ_<<o>> = 0
+EQ_IN LATO_<<o>> = +2.0
+*COLOR_11 1 0 0
+SET_RUN_COLOR 1 0 0
+*H_TARGET_11 0.25
+H_OBJ 0.25
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+#BlueLink10 Animator: Shape File Link`Traffic Cone` Mech. Sim. FSAE: Shape Files` , Traffic Vehicle Ani File`Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 0
+DZ_OBJECT 0
+*SIZE_11 0.5
+DIAMETER_OBJ 0.5
+MATERIAL_TYPE_OBJ 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 0.5
+Y_LENGTH 0.5
+Z_LENGTH 0.5
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cylinders\cylinder_Zaxis_1m_diameter_1m_long.obj
+set_transparency 0.5
+SET_OFFSET_Z 0.5
+SET_COLOR 1 0 0
+
+LOG_ENTRY Used Dataset: Multiple Moving Objects; { * * * HUR Obstacles } Traffic Cones: Left
+#Library : Multiple Moving Objects
+#DataSet : Traffic Cones: Left
+#Category: * * * HUR Obstacles
+#FileID  : TMotion_99337835-9900-4c81-b0b2-bdf7f622527b
+#Product : CarSim 2020.0
+#VehCode Multiple Objects
+
+END

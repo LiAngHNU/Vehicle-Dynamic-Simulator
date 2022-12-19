@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Hybrid Mode Flags`Powertrain (Hybrid and EV)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS HybMode0, Time
+PLOTCHANNELS HybMode1, Time
+PLOTCHANNELS HybMode2, Time
+PLOTCHANNELS HybMode3, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Hybrid Mode Flags
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain (Hybrid and EV) } Hybrid Mode Flags
+#Library : Plot: Setup
+#DataSet : Hybrid Mode Flags
+#Category: Powertrain (Hybrid and EV)
+#FileID  : Plot_e505cb5f-cdac-4b5a-8950-6bcf165365c3
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

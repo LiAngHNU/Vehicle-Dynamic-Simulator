@@ -1,0 +1,156 @@
+PARSFILE
+#FullDataName Generic VS Commands`HEV Mode Indicators`HUD Gauges
+#VehCode VS Commands
+
+#MiscYellow0
+ADD_ENTITY hud_image Text_BG_Outer_HEV
+  size_mode absolute
+  place_mode absolute
+  location 5 145 370 90
+  red 0
+  green 0
+  blue 0
+  opacity .5
+!  image_file Animator\Hud\Text_Box.tga
+END_ENTITY hud_image Text_BG_Outer_HEV
+!
+!
+MiscYellow0
+ADD_ENTITY hud_image Text_BG_Inner_HEV
+  size_mode absolute
+  place_mode absolute
+  location 10 150 360 80
+  red 0
+  green 0
+  blue 0
+  opacity .25
+!  image_file Animator\Hud\Text_Box.tga
+END_ENTITY hud_image 
+!
+!
+define_variable Mode0 = 0;
+eq_in Mode0 = EQ(ModeHybr, 0);
+define_output HybMode0 = Mode0;
+ANI_HybMode0
+WRT_HybMode0
+!
+!
+define_variable Mode1 = 0;
+eq_in Mode1 = EQ(ModeHybr, 1);
+define_output HybMode1 = Mode1;
+ANI_HybMode1
+WRT_HybMode1
+!
+!
+define_variable Mode2 = 0;
+eq_in Mode2 = EQ(ModeHybr, 2);
+define_output HybMode2 = Mode2;
+ANI_HybMode2
+WRT_HybMode2
+!
+!
+define_variable Mode3 = 0;
+eq_in Mode3 = EQ(ModeHybr, 3);
+define_output HybMode3 = Mode3;
+ANI_HybMode3
+WRT_HybMode3
+!
+!
+!
+!---
+! Hybrid Mode header
+ADD_OBJECT hud_text Hybrid Mode Header
+  prefix Hybrid Mode
+  min_width_prefix 20
+  size_mode absolute
+  place_mode absolute
+  location 20 160 300 20
+  color 1 1 1 1
+  outline_color 0 0 0 1
+  font VeraMono.ttf
+END_OBJECT hud_text Hybrid Mode Header
+
+
+!----
+! Mode 0: Brake / Regen
+ANI_ModeHybr
+WRT_ModeHybr
+ADD_OBJECT hud_text Hybrid Mode Header
+  prefix Brake / Regen
+  value ModeHybr
+  opacity HybMode0
+  precision 0
+  min_width_prefix 5
+  size_mode absolute
+  place_mode absolute
+  location 20 190 300 20
+  color 1 1 1 1
+  outline_color 0 0 0 1
+  font VeraMono.ttf
+END_OBJECT hud_text Hybrid Mode Header
+
+
+!----
+! Mode 1: EV
+ADD_OBJECT hud_text Hybrid Mode Header
+  prefix EV
+  value ModeHybr
+  opacity HybMode1
+  precision 0
+  min_width_prefix 5
+  size_mode absolute
+  place_mode absolute
+  location 20 190 300 20
+  color 1 1 1 1
+  outline_color 0 0 0 1
+  font VeraMono.ttf
+END_OBJECT hud_text Hybrid Mode Header
+
+
+!----
+! Mode 2: Engine
+ADD_OBJECT hud_text Hybrid Mode Header
+  prefix Engine
+  value ModeHybr
+  opacity HybMode2
+  precision 0
+  min_width_prefix 5
+  size_mode absolute
+  place_mode absolute
+  location 20 190 300 20
+  color 1 1 1 1
+  outline_color 0 0 0 1
+  font VeraMono.ttf
+END_OBJECT hud_text Hybrid Mode Header
+
+
+!----
+! Mode 3: Assist
+ADD_OBJECT hud_text Hybrid Mode Header
+  prefix Assist
+  value ModeHybr
+  opacity HybMode3
+  precision 0
+  min_width_prefix 5
+  size_mode absolute
+  place_mode absolute
+  location 20 190 300 20
+  color 1 1 1 1
+  outline_color 0 0 0 1
+  font VeraMono.ttf
+END_OBJECT hud_text Hybrid Mode Header
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_e505cb5f-cdac-4b5a-8950-6bcf165365c3.par
+#BlueLink3 Plot: Setup`Hybrid Mode Flags` Powertrain (Hybrid and EV)` , Plot`Plot_e505cb5f-cdac-4b5a-8950-6bcf165365c3
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { HUD Gauges } HEV Mode Indicators
+#Library : Generic VS Commands
+#DataSet : HEV Mode Indicators
+#Category: HUD Gauges
+#FileID  : GenVS_a8fc4544-2f75-463c-bada-4010ae3a9b29
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

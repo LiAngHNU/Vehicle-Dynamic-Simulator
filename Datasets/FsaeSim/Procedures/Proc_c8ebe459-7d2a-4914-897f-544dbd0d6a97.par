@@ -1,0 +1,112 @@
+PARSFILE
+#FullDataName Procedures`Find Out Where to Slow Down`Mech. Sim. FSAE: Restoring to a Previous State
+#CheckBox3 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 75
+TSTART_WRITE = TSTART;
+TSTOP 40
+SSTOP 800
+OPT_DIRECTION 0
+*TSTOP 40
+*TSTART 0
+*SSTART 75
+*SSTOP 800
+
+#MiscYellow0
+define_parameter restores 0
+define_parameter restore_interval 0.1
+define_parameter restore_point 0
+define_parameter restore_limit 150
+define_parameter lat_err = 0.6
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_30c0b1a8-4893-4726-b371-058ce2830c6e.par
+#BlueLink0 Road: 3D Surface (All Properties)`90 deg turns: 200 m Right, 100 m Left` Mech. Sim. FSAE Roads` , Miscellaneous`Road_30c0b1a8-4893-4726-b371-058ce2830c6e
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink1 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+#MiscYellow1
+! The Events are linked here because they
+! need the new parameters and road information 
+! linked previously.
+#ENDMYellow
+
+PARSFILE Events\Events_e88cf2d1-830f-4026-89fa-8ec3fbfc63b1.par
+#BlueLink7 Events`1: Approach Turn` FSAE: Restoring to a Previous State` , Miscellaneous`Events_e88cf2d1-830f-4026-89fa-8ec3fbfc63b1
+
+PARSFILE Plot\Setup\Plot_f6add0c2-32e8-46c1-a387-39f9eeb322a9.par
+#BlueLink8 Plot: Setup`Longitudinal Speed vs. t_stamp` Vehicle Motion` , Plot`Plot_f6add0c2-32e8-46c1-a387-39f9eeb322a9
+
+PARSFILE Plot\Setup\Plot_bc05b93e-6d03-4604-b0d8-6aca156e0b63.par
+#BlueLink9 Plot: Setup`Throttle: Control Input vs. t_stamp` Controls: Driver` , Plot`Plot_bc05b93e-6d03-4604-b0d8-6aca156e0b63
+
+PARSFILE Plot\Setup\Plot_0bef770b-b9dd-48a8-a742-eb6653330c3f.par
+#BlueLink10 Plot: Setup`Master Cyl. Pressure vs. t_stamp` Braking` , Plot`Plot_0bef770b-b9dd-48a8-a742-eb6653330c3f
+
+PARSFILE Plot\Setup\Plot_acf4db96-8240-4ec1-830f-8fa43a24ecb6.par
+#BlueLink11 Plot: Setup`Steering Wheel Angle vs. t_stamp` Steering` , Plot`Plot_acf4db96-8240-4ec1-830f-8fa43a24ecb6
+
+PARSFILE Plot\Setup\Plot_359131bd-5c22-408e-8bca-c1e327403f96.par
+#BlueLink12 Plot: Setup`Road Wheel Steer Angle (Axle 1) vs. t_stamp` Steering` , Plot`Plot_359131bd-5c22-408e-8bca-c1e327403f96
+
+PARSFILE Plot\Setup\Plot_2b97bc82-7a2e-4298-8481-ba95b7ec0a15.par
+#BlueLink13 Plot: Setup`Lateral Accel. of CG's vs. t_stamp` Vehicle Motion` , Plot`Plot_2b97bc82-7a2e-4298-8481-ba95b7ec0a15
+
+PARSFILE Plot\Setup\Plot_762ede4b-d3f8-4659-838a-3601dad5286f.par
+#BlueLink14 Plot: Setup`Yaw Angle of Sprung Masses vs. t_stamp` Vehicle Motion` , Plot`Plot_762ede4b-d3f8-4659-838a-3601dad5286f
+
+PARSFILE Plot\Setup\Plot_71233543-068c-4732-b700-343f7a69676e.par
+#BlueLink15 Plot: Setup`Yaw Rate of Sprung Masses vs. t_stamp` Vehicle Motion` , Plot`Plot_71233543-068c-4732-b700-343f7a69676e
+
+PARSFILE Plot\Setup\Plot_22185e19-88f4-48da-88d1-eaaff26ea72f.par
+#BlueLink16 Plot: Setup`Pitch Angle of Sprung Masses vs. t_stamp` Vehicle Motion` , Plot`Plot_22185e19-88f4-48da-88d1-eaaff26ea72f
+
+PARSFILE Plot\Setup\Plot_f4ff56d1-4aac-415d-aad1-b4adf41e50d8.par
+#BlueLink17 Plot: Setup`Roll Angle of Sprung Masses vs. t_stamp` Vehicle Motion` , Plot`Plot_f4ff56d1-4aac-415d-aad1-b4adf41e50d8
+
+PARSFILE Plot\Setup\Plot_d8433799-af56-4074-a812-cec9b72c2f10.par
+#BlueLink18 Plot: Setup`Vertical Forces (Axle 1) vs. t_stamp` Tire Forces and Moments` , Plot`Plot_d8433799-af56-4074-a812-cec9b72c2f10
+
+PARSFILE Plot\Setup\Plot_00b07bb5-49f5-4621-a307-bda402c7ecc9.par
+#BlueLink19 Plot: Setup`Vertical Forces (Axle 2) vs. t_stamp` Tire Forces and Moments` , Plot`Plot_00b07bb5-49f5-4621-a307-bda402c7ecc9
+
+PARSFILE Plot\Setup\Plot_18119482-6f76-4052-94b7-23e00986ffc5.par
+#BlueLink24 Plot: Setup`Lateral Tracking vs. t_stamp` Tracking` , Plot`Plot_18119482-6f76-4052-94b7-23e00986ffc5
+
+PARSFILE Plot\Setup\Plot_627d56c4-11f2-44fa-90a1-3bfd2472d389.par
+#BlueLink25 Plot: Setup`Station vs. t_stamp` Tracking` , Plot`Plot_627d56c4-11f2-44fa-90a1-3bfd2472d389
+
+PARSFILE Plot\Setup\Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f.par
+#BlueLink26 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot`Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f
+
+
+#EMBEDDED_NOTES
+#Several parameters are created here to provide control options.
+#
+#The parameter "restores" counts the number of times the simulation has been stepped back in time.
+#
+#The parameter "restore_interval" is the length of time in seconds between successive saves of the data. When the run is restored it returns to one of these points. (This isn't a user setting, it's just defined here and given an initial value.)
+#
+#The parameter "restore_point" is the clock time calculated to restore. The run is restored to the last saved point before the time given.
+#
+#The parameter "restore_limit" is used to end the run if success is not achieved after a specified number of attempts.
+#
+#The parameter "lat_err" is the lateral distance the vehicle is allowed to deviate from the target path.
+#
+#The Events controlling the run refer to these parameters, so the Events must be linked after the parameter definitions, otherwise an error will occur.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Mech. Sim. FSAE: Restoring to a Previous State } Find Out Where to Slow Down
+#Library : Procedures
+#DataSet : Find Out Where to Slow Down
+#Category: Mech. Sim. FSAE: Restoring to a Previous State
+#FileID  : Proc_c8ebe459-7d2a-4914-897f-544dbd0d6a97
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

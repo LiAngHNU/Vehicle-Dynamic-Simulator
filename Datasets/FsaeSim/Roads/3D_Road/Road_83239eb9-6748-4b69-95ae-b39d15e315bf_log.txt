@@ -1,0 +1,651 @@
+Run made by VS Road Calculator at 09:40 on November 09, 2022.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_83239eb9-6748-4b69-95ae-b39d15e315bf.par"
+Include PARSFILE "Roads\Center_XY\PathXY_27d1115e-f43e-4e8f-a007-18289cb06f75.par"
+Used Dataset: Path: X-Y Coordinates; { * * * HUR Tracks } Autocross Course #2
+Include PARSFILE "Roads\Center_Z\RdRefZ_598f8ea7-d2f1-4e0b-a828-7b8c7dfb136e.par"
+Used Dataset: Road: Reference Line Elevation; Flat
+Include PARSFILE "Roads\dZ_Map\RdMapZ_daeb5d83-fffb-4248-89b6-089cb34929b0.par"
+Used Dataset: Road: Off-Center Elevation Map, S-L Grid; Flat
+Include PARSFILE "Roads\Friction\RdMu_c8235679-ac14-458f-8e77-28bdd121c095.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } 1.0
+Include PARSFILE "Roads\Shapes\RdShape_938e6127-6290-4dcf-814a-3dddbda45a56.par"
+Used Dataset: Road: Animator Surface Shapes; { * * * HUR Road Shapes } AutoCross Course #2
+Include PARSFILE "Roads\AniGroup\AniRep_cd942b90-8421-48c5-a8b5-73b632d56061.par"
+Used Dataset: Road: Animator Repeated Object; { * * * HUR Cones } Autocross Course Cones #2
+Include PARSFILE "Animator\Groups\Group_0243ae01-7f22-400b-ac09-6ac909099257.par"
+Include PARSFILE "Animator\Frames\Frame_8761c9b6-c784-4d2d-b8bc-72683578e773.par"
+Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Skybox (Vehicle X-Y-Z)
+Include PARSFILE "Animator\STL\Shape_04e541d4-7657-4dd4-a3f7-07c8772d0264.par"
+Used Dataset: Animator: Shape File Link; { Environment: Sky Boxes } Partly Cloudy Sky
+Include PARSFILE "Animator\STL\Shape_781167da-dd42-4784-9fe3-531dd2fba2fd.par"
+Used Dataset: Animator: Shape File Link; { Environment: Land Bowls } Light Grass
+Used Dataset: Animator: Group; { Environment Spheres } Partly Cloudy Sky with Light Grass
+Include PARSFILE "Animator\STL\Shape_4e5f77cb-bfa7-45cb-af5a-c2777b632e65.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Autocross Parking Lot
+Include PARSFILE "Roads\3D_Road\Road_83239eb9-6748-4b69-95ae-b39d15e315bf.ani"
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Include PARSFILE "Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par"
+Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Traffic Cone
+Used Dataset: Road: 3D Surface (All Properties); { * * * HUR Tracks } Autocross Course #2
+
+Time to read input = 0.016
+
+Run stopped at t = 11.08. Stop time reached.
+
+Run started: VS output file = Roads\3D_Road\Road_83239eb9-6748-4b69-95ae-b39d15e315bf.vsb

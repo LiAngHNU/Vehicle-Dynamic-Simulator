@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Brake Torque`Braking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS My_Bk_L1, Time
+PLOTCHANNELS My_Bk_R1, Time
+PLOTCHANNELS My_Bk_L2, Time
+PLOTCHANNELS My_Bk_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Brake Torque
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Braking } Brake Torque
+#Library : Plot: Setup
+#DataSet : Brake Torque
+#Category: Braking
+#FileID  : Plot_6f0c0125-1c0c-4b0a-a06b-529aada16a53
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

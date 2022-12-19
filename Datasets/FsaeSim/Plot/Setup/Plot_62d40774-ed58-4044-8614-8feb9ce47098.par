@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Yaw Angle of Sprung Mass vs. Time`Vehicle Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Yaw, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Yaw Angle of Sprung Mass vs. Time
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Yaw Angle of Sprung Mass vs. Time
+#Library : Plot: Setup
+#DataSet : Yaw Angle of Sprung Mass vs. Time
+#Category: Vehicle Motion
+#FileID  : Plot_62d40774-ed58-4044-8614-8feb9ce47098
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

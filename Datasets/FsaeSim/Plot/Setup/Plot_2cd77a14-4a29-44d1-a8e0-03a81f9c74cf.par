@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Torques in Powertrain`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS M_EngOut, Time
+PLOTCHANNELS M_Eng_In, Time
+PLOTCHANNELS M_TC, Time
+PLOTCHANNELS M_Trans, Time
+PLOTCHANNELS M_D3f, Time
+PLOTCHANNELS M_D3r, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Torques in Powertrain
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } Torques in Powertrain
+#Library : Plot: Setup
+#DataSet : Torques in Powertrain
+#Category: Powertrain
+#FileID  : Plot_2cd77a14-4a29-44d1-a8e0-03a81f9c74cf
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

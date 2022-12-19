@@ -1,0 +1,25 @@
+Run made by VS Road Calculator at 19:37 on May 05, 2022.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_418c7770-0e4c-4ebb-ae3e-8e3706b02f21.par"
+Include PARSFILE "Roads\BuilderSegment\RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c.par"
+ Straight Path East, ID = 1001 <Straight>
+Used Dataset: Path: Segment Builder; { Straight } Straight Path East, ID = 1001
+Include PARSFILE "Roads\Center_Z\RdRefZ_598f8ea7-d2f1-4e0b-a828-7b8c7dfb136e.par"
+Used Dataset: Road: Reference Line Elevation; Flat
+Include PARSFILE "Roads\dZ_Map\RdMapZ_c5b8b0c3-2ff5-43d0-a012-87bb7979cc54.par"
+Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Bumps } Small Bumps Smoothed, 0.3 m incr. elev.
+Include PARSFILE "Roads\Friction\RdMu_25e73395-9471-44b9-9c60-27bd9cc24921.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } 0.85
+Include PARSFILE "Roads\Shapes\RdShape_c2b1a427-2966-4e40-835f-471480fc0f7c.par"
+Used Dataset: Road: Animator Surface Shapes; { Ride Roads } 200 m Wide 400 m Long w/ Bumps
+Include PARSFILE "Roads\dZ_Map\RdMapZ_daeb5d83-fffb-4248-89b6-089cb34929b0.par"
+Used Dataset: Road: Off-Center Elevation Map, S-L Grid; Flat
+ Four Small Bumps, 0.3 m incr. elev. <Mech. Sim. Baja Roads>
+Used Dataset: Road: 3D Surface (All Properties); { Mech. Sim. Baja Roads } Four Small Bumps, 0.3 m incr. elev.
+
+Time to read input = 0.001
+
+Run started: VS output file = Roads\3D_Road\Road_418c7770-0e4c-4ebb-ae3e-8e3706b02f21.vsb
+Function ROAD_DZ_CARPET(1) extrapolated (out of range LOW) for X = -100 m at T = 8.96

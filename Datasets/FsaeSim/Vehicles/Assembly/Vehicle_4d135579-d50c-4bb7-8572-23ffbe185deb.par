@@ -1,0 +1,99 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`Mech. Sim. FSAE Vehicle Assembly`Mechanical Simulation FSAE & Baja
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 2
+OPT_PT 2
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 0
+PARSFILE Steering\System2\StrSys2_56180df4-4685-4b01-858b-6a714f7ddc0d.par
+#BlueLink7 Steering`FSAE Manual Rack & Pinion` Mech. Sim. FSAE & Baja: Steering Systems` , Steering System`StrSys2_56180df4-4685-4b01-858b-6a714f7ddc0d
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_2bc0cbc7-277d-45f2-83af-2c8eafe83997.par
+#BlueLink19 Suspension: Independent System Kinematics`FSAE: Front Susp. Kinematics` Mech. Sim. FSAE & Baja: Ind. Susp. Kinem.` , Kinematics`KinInd_2bc0cbc7-277d-45f2-83af-2c8eafe83997
+
+PARSFILE Suspensions\Compliance\CmpInd_878d3f6a-cedb-410c-ae32-0f36f1d0fa07.par
+#BlueLink16 Suspension: Independent Compliance, Springs, and Dampers`FSAE: Front Susp. Compliance` Mech. Sim. FSAE & Baja: Ind. Susp. Compliance` , Compliance`CmpInd_878d3f6a-cedb-410c-ae32-0f36f1d0fa07
+
+
+OPT_ALL_FOUR_TIRES_ALIKE 1
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_6ca24334-4b89-426c-ab36-7bfe349cccc7.par
+#BlueLink999 Tire`Mech. Sim. FSAE: Internal Tire w/ Camber Details` Mech. Sim. FSAE & Baja: Tires` , Tire`Tire_6ca24334-4b89-426c-ab36-7bfe349cccc7
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_6ca24334-4b89-426c-ab36-7bfe349cccc7.par
+#BlueLink10 Tire`Mech. Sim. FSAE: Internal Tire w/ Camber Details` Mech. Sim. FSAE & Baja: Tires` , Tire`Tire_6ca24334-4b89-426c-ab36-7bfe349cccc7
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_6f55e7e6-47a3-4582-969a-832df6a414b7.par
+#BlueLink20 Suspension: Independent System Kinematics`FSAE: Rear Susp. Kinematics` Mech. Sim. FSAE & Baja: Ind. Susp. Kinem.` , Kinematics`KinInd_6f55e7e6-47a3-4582-969a-832df6a414b7
+
+PARSFILE Suspensions\Compliance\CmpInd_a0e0d499-47a8-459a-9652-ba7acde1f80e.par
+#BlueLink17 Suspension: Independent Compliance, Springs, and Dampers`FSAE: Rear Compliance` Mech. Sim. FSAE & Baja: Ind. Susp. Compliance` , Compliance`CmpInd_a0e0d499-47a8-459a-9652-ba7acde1f80e
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_6ca24334-4b89-426c-ab36-7bfe349cccc7.par
+#BlueLink999 Tire`Mech. Sim. FSAE: Internal Tire w/ Camber Details` Mech. Sim. FSAE & Baja: Tires` , Tire`Tire_6ca24334-4b89-426c-ab36-7bfe349cccc7
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_6ca24334-4b89-426c-ab36-7bfe349cccc7.par
+#BlueLink999 Tire`Mech. Sim. FSAE: Internal Tire w/ Camber Details` Mech. Sim. FSAE & Baja: Tires` , Tire`Tire_6ca24334-4b89-426c-ab36-7bfe349cccc7
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_585d55c6-8895-4667-9a8f-30967e00f36d.par
+#BlueLink0 Vehicle: Sprung Mass`Mech. Sim. FSAE Sprung Mass` Mech. Sim. FSAE & Baja` , Sprung Mass`SprMass_585d55c6-8895-4667-9a8f-30967e00f36d
+
+PARSFILE Aerodynamics\Aero_Ext\Aero2_12c997ce-298b-46f7-aa82-e6b9b9007a81.par
+#BlueLink1 Aerodynamics: Pitch, Bounce, Yaw`Mech. Sim. FSAE: Example Aerodynamics` Mech. Sim. FSAE Aerodynamics` , Aerodynamics`Aero2_12c997ce-298b-46f7-aa82-e6b9b9007a81
+
+PARSFILE Powertrain\Rwd\RWD_19d724e2-c11b-4534-b933-44fba48e06cd.par
+#BlueLink4 Powertrain: Rear-Wheel Drive`Mech. Sim. FSAE: RWD Powertrain` Mech. Sim. FSAE & Baja: Powertrains` , Powertrain`RWD_19d724e2-c11b-4534-b933-44fba48e06cd
+
+PARSFILE Brakes\4W_System\Brk4W_d3f2fd96-8f71-4e89-972e-6ed976eb5976.par
+#BlueLink6 Brakes: Four-Wheel System`Mech. Sim. FSAE: Brakes w/ ABS` Mech. Sim. FSAE & Baja: Brakes` , Brake System`Brk4W_d3f2fd96-8f71-4e89-972e-6ed976eb5976
+
+PARSFILE Animator\Vehicles\AniVeh_bb42a17c-8976-438f-ab94-9290dab6f67b.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`FSAE Racecar` Mech. Sim. FSAE & Baja: Vehicles & Targets` , Vehicle 3D Shape`AniVeh_bb42a17c-8976-438f-ab94-9290dab6f67b
+
+*IMAGE_FIT_MODE 1
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Assembly\Vehicle_4d135579-d50c-4bb7-8572-23ffbe185deb.png
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { Mechanical Simulation FSAE & Baja } Mech. Sim. FSAE Vehicle Assembly
+#Library : Vehicle: Assembly
+#DataSet : Mech. Sim. FSAE Vehicle Assembly
+#Category: Mechanical Simulation FSAE & Baja
+#FileID  : Vehicle_4d135579-d50c-4bb7-8572-23ffbe185deb
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

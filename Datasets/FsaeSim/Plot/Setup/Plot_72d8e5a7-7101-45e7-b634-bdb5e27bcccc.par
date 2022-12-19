@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Plot: Setup`Vheicle Trajectory`* * * HUR Visualization
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 1    
+
+
+#MiscYellow0
+PLOTCHANNELS Yo, Xo
+PLOTCHANNELS Y_Design, X_Design
+
+#ENDMYellow
+
+ASPECTRATIO 1
+
+#RingCtrl8 1
+
+
+PTITLE Vheicle Trajectory
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * HUR Visualization } Vheicle Trajectory
+#Library : Plot: Setup
+#DataSet : Vheicle Trajectory
+#Category: * * * HUR Visualization
+#FileID  : Plot_72d8e5a7-7101-45e7-b634-bdb5e27bcccc
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Wheel Fore/Aft vs. Jounce (Axle 2)`Suspension Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Jnc_L2, X_L2
+PLOTCHANNELS Jnc_R2, X_R2
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Wheel Fore/Aft vs. Jounce (Axle 2)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Motion } Wheel Fore/Aft vs. Jounce (Axle 2)
+#Library : Plot: Setup
+#DataSet : Wheel Fore/Aft vs. Jounce (Axle 2)
+#Category: Suspension Motion
+#FileID  : Plot_9dc6e17e-5560-4f58-a765-74943f7e82c7
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Y vs. X -- Trajectory`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Yo, Xo
+PLOTCHANNELS Y_Design, X_Design
+PLOTCHANNELS Y_Target, X_Target
+PLOTCHANNELS Yo_2, Xo_2
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Y vs. X -- Trajectory
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Y vs. X -- Trajectory
+#Library : Plot: Setup
+#DataSet : Y vs. X -- Trajectory
+#Category: Tracking
+#FileID  : Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

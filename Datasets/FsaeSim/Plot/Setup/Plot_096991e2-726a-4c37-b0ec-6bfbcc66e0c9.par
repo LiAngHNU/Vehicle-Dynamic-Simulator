@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Torques in Hybrid Powertrain`Powertrain (Hybrid and EV)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS M_Eng_In, Time
+PLOTCHANNELS M_Trans, Time
+PLOTCHANNELS M_Gnrtr, Time, Electric generator
+PLOTCHANNELS M_Motor, Time, Electric motor
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Torques in Hybrid Powertrain
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain (Hybrid and EV) } Torques in Hybrid Powertrain
+#Library : Plot: Setup
+#DataSet : Torques in Hybrid Powertrain
+#Category: Powertrain (Hybrid and EV)
+#FileID  : Plot_096991e2-726a-4c37-b0ec-6bfbcc66e0c9
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

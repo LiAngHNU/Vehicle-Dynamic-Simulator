@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Wheel Steer Angles`* * * HUR Visualization
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Steer_L1, Station
+PLOTCHANNELS Steer_R1, Station
+PLOTCHANNELS Steer_L2, Station
+PLOTCHANNELS Steer_R2, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Wheel Steer Angles
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * HUR Visualization } Wheel Steer Angles
+#Library : Plot: Setup
+#DataSet : Wheel Steer Angles
+#Category: * * * HUR Visualization
+#FileID  : Plot_697f3606-93d0-49ef-bf4d-9350a3bb8a93
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

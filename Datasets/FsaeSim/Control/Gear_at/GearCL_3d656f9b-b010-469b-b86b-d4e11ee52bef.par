@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Control: Shifting (Closed Loop)`Closed-Loop Shift and Clutch (All Gears, Fast)`Automatic Clutch Control
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+MODE_TRANS_CONSTANT NGEARS
+#RadioCtrl0 0    
+
+PARSFILE Control\Int_Shift\ClTime_8c23883a-cbef-438f-b53f-5a2261662ba9.par
+#BlueLink0 Control: Clutch Shifting Timelines (Closed Loop)`Closed-loop Clutch and Thrt. Ctrl. (Fast)` ` , Shifting`ClTime_8c23883a-cbef-438f-b53f-5a2261662ba9
+
+*SCALAR NGEARS
+
+
+#EMBEDDED_NOTES
+#NGEARS is the internal symbol for the number of gears in a transmission. By setting the Mode to NGEARS, CarSim is told to use all of the transmission gears.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Shifting (Closed Loop); { Automatic Clutch Control } Closed-Loop Shift and Clutch (All Gears, Fast)
+#Library : Control: Shifting (Closed Loop)
+#DataSet : Closed-Loop Shift and Clutch (All Gears, Fast)
+#Category: Automatic Clutch Control
+#FileID  : GearCL_3d656f9b-b010-469b-b86b-d4e11ee52bef
+#Product : CarSim 2020.0
+#VehCode Closed-Loop Shift Control
+
+END

@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Plot: Setup`Longitudinal Speed vs. t_stamp`Vehicle Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Vx, t_stamp
+PLOTCHANNELS Vxz_Fwd, t_stamp
+PLOTCHANNELS VxTarget, t_stamp
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Longitudinal Speed vs. t_stamp
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#The output variable Vxz_Fwd is what the CarSim Closed-Loop Speed Controller uses.
+#
+#It is fixed in the vehicle Sprung Mass and takes into account the Sprung Mass pitch angle by taking the vector sum of the Sprung Mass Velocity in the Sprung Mass Coordinate System X direction and the Sprung Mass Coordinate System Z direction, and then taking the square root of the sum of the squares.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Longitudinal Speed vs. t_stamp
+#Library : Plot: Setup
+#DataSet : Longitudinal Speed vs. t_stamp
+#Category: Vehicle Motion
+#FileID  : Plot_f6add0c2-32e8-46c1-a387-39f9eeb322a9
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

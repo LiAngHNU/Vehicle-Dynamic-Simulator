@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName Suspension: Lateral Movement Due to Jounce`Baja SAE Lateral Y Movement (Rear)`Mech. Sim. Baja SAE: Lateral Movement
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_LAT_COMBINE ADD
+#DiagramOne0
+SUSP_LAT_TABLE LINEAR
+-220, 48.83
+-198, 38.82
+-176, 30.08
+-154, 22.55
+-132, 16.15
+-110, 10.86
+-88, 6.63
+-66, 3.44
+-44, 1.28
+-22, 0.13
+0, 0
+22, 0.88
+44, 2.8
+66, 5.77
+88, 9.82
+110, 15
+132, 21.36
+154, 28.97
+176, 37.94
+198, 48.39
+220, 60.49
+ENDTABLE
+SUSP_LAT_JNC_OTHER_SIDE_CONSTANT 0
+SUSP_Y_AXLE_ROLL_COMBINE ADD ! in case this is for a solid axle
+#DiagramOne0
+SUSP_LAT_AXLE_JOUNCE_TABLE LINEAR
+-220, 48.83
+-198, 38.82
+-176, 30.08
+-154, 22.55
+-132, 16.15
+-110, 10.86
+-88, 6.63
+-66, 3.44
+-44, 1.28
+-22, 0.13
+0, 0
+22, 0.88
+44, 2.8
+66, 5.77
+88, 9.82
+110, 15
+132, 21.36
+154, 28.97
+176, 37.94
+198, 48.39
+220, 60.49
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR2 0
+
+
+LOG_ENTRY Used Dataset: Suspension: Lateral Movement Due to Jounce; { Mech. Sim. Baja SAE: Lateral Movement } Baja SAE Lateral Y Movement (Rear)
+#Library : Suspension: Lateral Movement Due to Jounce
+#DataSet : Baja SAE Lateral Y Movement (Rear)
+#Category: Mech. Sim. Baja SAE: Lateral Movement
+#FileID  : LatJnc_f3bd98d3-50b5-4e85-9563-cee10919df77
+#Product : CarSim 2020.0
+#VehCode Lateral Movement
+
+END

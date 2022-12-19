@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Battery remaining level`Powertrain (Hybrid and EV)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS BatLevel, Time, Battery level (ext. model)
+PLOTCHANNELS SocBttry, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Battery remaining level
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain (Hybrid and EV) } Battery remaining level
+#Library : Plot: Setup
+#DataSet : Battery remaining level
+#Category: Powertrain (Hybrid and EV)
+#FileID  : Plot_fe0acea9-718d-438b-87b0-1fa60d84006b
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

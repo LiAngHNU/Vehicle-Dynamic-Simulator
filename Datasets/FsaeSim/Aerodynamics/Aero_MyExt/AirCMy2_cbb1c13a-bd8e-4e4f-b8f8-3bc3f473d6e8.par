@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Aerodynamics: My (Pitch Moment) Coef. vs. Bounce and Pitch`My vs. Bounce & Pitch`Pitch Moment vs. Bounce and Pitch
+#CheckBox0 0    
+
+#RingCtrl0 CARPET
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical disp (mm)
+*3D_YLabel Pitch angle (deg)
+*3D_ZLabel Pitch moment coefficient factor CMy (-)
+
+#DiagramTwo0
+*3D_DATA 3, 2 ! columns x rows
+MY_AERO_SHAPING_2_CARPET 2D_LINEAR
+0, 0, 6.35, 12.7
+-2.68, 0.139822, 0.132555, 0.13075
+0, 0.145737, 0.138159, 0.136281
+ENDTABLE
+
+
+
+LOG_ENTRY Used Dataset: Aerodynamics: My (Pitch Moment) Coef. vs. Bounce and Pitch; { Pitch Moment vs. Bounce and Pitch } My vs. Bounce & Pitch
+#Library : Aerodynamics: My (Pitch Moment) Coef. vs. Bounce and Pitch
+#DataSet : My vs. Bounce & Pitch
+#Category: Pitch Moment vs. Bounce and Pitch
+#FileID  : AirCMy2_cbb1c13a-bd8e-4e4f-b8f8-3bc3f473d6e8
+#Product : CarSim 2020.0
+#VehCode My vs. Bounce and Pitch
+
+END

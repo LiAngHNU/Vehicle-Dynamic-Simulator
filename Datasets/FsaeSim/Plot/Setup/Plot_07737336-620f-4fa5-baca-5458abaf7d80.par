@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Plot: Setup`Powers in Hybrid Powertrain`Powertrain (Hybrid and EV)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS PwrEngIn, Time
+PLOTCHANNELS PwrGnrtr, Time
+PLOTCHANNELS PwrMotor, Time
+PLOTCHANNELS PwrBttry, Time
+PLOTCHANNELS Pwr_Gnrt, Time, Electric generator (ext. model)
+PLOTCHANNELS Pwr_Motr, Time, Electric motor (ext. model)
+PLOTCHANNELS Pwr_Batt, Time, Battery power (ext. model)
+
+#ENDMYellow
+
+YAXISLABEL kW
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 0
+
+
+PTITLE Powers in Hybrid Powertrain
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain (Hybrid and EV) } Powers in Hybrid Powertrain
+#Library : Plot: Setup
+#DataSet : Powers in Hybrid Powertrain
+#Category: Powertrain (Hybrid and EV)
+#FileID  : Plot_07737336-620f-4fa5-baca-5458abaf7d80
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

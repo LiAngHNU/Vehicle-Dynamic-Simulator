@@ -1,0 +1,53 @@
+PARSFILE
+#FullDataName Powertrain: Rear-Wheel Drive`Mech. Sim. FSAE: RWD Powertrain`Mech. Sim. FSAE & Baja: Powertrains
+
+OPT_PT 2
+R_REAR_DRIVE_SC 1
+
+OPT_ENGINE_PITCH_REACTION(2) 0
+
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 1
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 0
+OPT_HEV 0
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+#CheckBox0 0    
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+OPT_DIFF_INTERNAL(2) 1
+
+PARSFILE Powertrain\Engine\Engine_6b71f06e-b1c3-45ba-ab1a-18c3827d7af7.par
+#BlueLink0 Powertrain: Engine`Mech. Sim. FSAE Engine` Mech. Sim. FSAE & Baja: Engines` , Engine`Engine_6b71f06e-b1c3-45ba-ab1a-18c3827d7af7
+
+PARSFILE Powertrain\Clutch\TrqCl_271e5f34-5847-4f68-acb9-6768684418ab.par
+#BlueLink6 Powertrain: Clutch Torque`Mech. Sim. FSAE Clutch` Mech. Sim. FSAE: Clutch` , Clutch`TrqCl_271e5f34-5847-4f68-acb9-6768684418ab
+
+PARSFILE Powertrain\TransExt\Trans18_f4d8a56a-e52d-45bf-82ad-cd63c72c8086.par
+#BlueLink9 Powertrain: Transmission (18 Gears or CVT)`Mech. Sim. FSAE 6-Speed Transmission` Mech. Sim. FSAE & Baja: Transmissions` , Transmission (Extended)`Trans18_f4d8a56a-e52d-45bf-82ad-cd63c72c8086
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_5df3a20f-354f-449f-a272-9e3003414ef0.par
+#BlueLink5 Powertrain: Rear Differential`Mech. Sim. FSAE: Diff., 4.0, TBR = 1.75 / 1.85` Mech. Sim. FSAE & Baja: Rear Differentials` , Differential`DiffR_5df3a20f-354f-449f-a272-9e3003414ef0
+
+
+LOG_ENTRY Used Dataset: Powertrain: Rear-Wheel Drive; { Mech. Sim. FSAE & Baja: Powertrains } Mech. Sim. FSAE: RWD Powertrain
+#Library : Powertrain: Rear-Wheel Drive
+#DataSet : Mech. Sim. FSAE: RWD Powertrain
+#Category: Mech. Sim. FSAE & Baja: Powertrains
+#FileID  : RWD_19d724e2-c11b-4534-b933-44fba48e06cd
+#Product : CarSim 2020.0
+#VehCode RWD
+
+END

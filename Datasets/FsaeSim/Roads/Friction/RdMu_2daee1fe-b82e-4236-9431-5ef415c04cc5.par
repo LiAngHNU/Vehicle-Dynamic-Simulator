@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Road: Friction Map, S-L Grid`0.0`Constant Mu
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 MULTIPLY
+MU_ROAD_COMBINE MULTIPLY
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+MU_ROAD_CONSTANT 0.00001
+MU_ROAD_L_CONSTANT 1
+*SCALAR 0.00001
+*SCALAR2 1
+
+
+#EMBEDDED_NOTES
+#This dataset is not set to completly zero.  If it were set to zero, the CarSim Math Models would use the Tire's Reference Coefficient of Friction as default.
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } 0.0
+#Library : Road: Friction Map, S-L Grid
+#DataSet : 0.0
+#Category: Constant Mu
+#FileID  : RdMu_2daee1fe-b82e-4236-9431-5ef415c04cc5
+#Product : CarSim 2020.0
+#VehCode Mu via S-L Grid
+
+END

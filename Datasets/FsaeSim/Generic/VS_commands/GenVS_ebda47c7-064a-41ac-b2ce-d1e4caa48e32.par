@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Generic VS Commands`Front In-Wheel Motors (1 kW)`Powertrain
+#VehCode VS Commands
+
+#MiscYellow0
+
+! Defines maximum power for each wheel motor
+DEFINE_PARAMETER max_pwr 1; kW; max motor power
+
+! Torque applied to each front wheel.  
+! AVy_(wheel) is an offset to prevent a divide by zero error.
+! The VS Command "sign" is used to check for the transmission mode. If modetran is negative, the 
+! transmission is in Reverse, and the torque applied to the wheels is given a negative sign. This allows
+! the vehicle to travel in reverse. 
+
+eq_in IMP_MYUSM_L1 = IF_GT_0_THEN(Throttle, sign((max_pwr  / (AVy_L1 + 0.5)), modetran), 0);
+eq_in IMP_MYUSM_R1 = IF_GT_0_THEN(Throttle, sign((max_pwr / (AVy_R1 + 0.5)), modetran), 0);
+
+IMP_MYUSM_L1 vs_add 0
+IMP_MYUSM_R1 vs_add 0
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_6a5e8523-9ee4-49b9-ad46-c244f0ce9dba.par
+#BlueLink3 Plot: Setup`User Defined Drive/Brake Moments` User-Defined Variables` , Plot`Plot_6a5e8523-9ee4-49b9-ad46-c244f0ce9dba
+
+PARSFILE Plot\Setup\Plot_38ae3726-e456-4b9f-a1a0-5ff08d5a2d08.par
+#BlueLink4 Plot: Setup`User Defined Drive/Brake Moments / Whl. RPM` User-Defined Variables` , Plot`Plot_38ae3726-e456-4b9f-a1a0-5ff08d5a2d08
+
+
+#EMBEDDED_NOTES
+#VS Commands allow you to extend the CarSim models without having to use other software.
+#
+#In this example, moments are being applied to the front wheels (unsprung mass) to simulate in-wheel motors.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Powertrain } Front In-Wheel Motors (1 kW)
+#Library : Generic VS Commands
+#DataSet : Front In-Wheel Motors (1 kW)
+#Category: Powertrain
+#FileID  : GenVS_ebda47c7-064a-41ac-b2ce-d1e4caa48e32
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

@@ -1,0 +1,77 @@
+PARSFILE
+#FullDataName Path: Segment Builder`200-m Radius Right, 100-m Radius Left`Mech. Sim. FSAE & Baja: Path Segment Builder
+#RingCtrl0 1
+SET_IPATH_FOR_ID 0
+#CheckBox0 1    
+OPT_PATH_START 1
+#CheckBox1 0    
+OPT_PATH_LOOP 0
+
+SPATH_START 150
+X_PATH_START 150
+Y_PATH_START 0
+HEADING_START 0
+PATH_ID_DM = PATH_ID
+set_description path_id 200-m Radius Right, 100-m Radius Left
+
+NSEGMENTS 4
+*TABLEROWS 4
+
+! Table Columns:
+!   NOTE: Label columns are not written to parsfile.
+!
+! 0: (Ring) Specify the type of segment. Circular arcs can be specified using radius or curvature (inverse radius). The table option provides a link to a dataset from the X-Y Coordinates for Segment library. The clothoid option will automatically generate an X-Y table with a specified length that maintains continuity with adjacent segments (the preceding and following rows in the table).
+! 1: (BlueLink) Link to a dataset from the X-Y Coordinates for Segment library.
+! 2: (Text) Length of straight segment in meters.
+! 3: (Label) Specify the length of a straight segment with meters.
+! 4: (Text) Segment radius: use a positive radius for a left turn, negative for a right turn.
+! 5: (Label) Specify radius with meters. Use a positive number for a left turn, negative number for a right turn.
+! 6: (Text) Length of segment arc, specified with arc length (m) or central angle (deg).
+! 7: (Ring) Specify arc size with central angle (deg) or arc length (m).
+! 8: (Text) Segment curvature (inverse of radius, 1/m): use a positive curvature for a left turn, negative for a right turn
+! 9: (Label) Specify segment curvature with 1/meter (inverse of radius). Use a positive number for a left turn, negative for a right turn.
+! 10: (Text) Length of segment arc, specified with arc length (m) or central angle (deg).
+! 11: (Ring) Specify arc size with central angle (deg) or arc length (m).
+! 12: (Text) Length of clothoid segment in meters. This will automatically generate an X-Y table that has this overall length and maintains continuity with the adjacent segments (the preceding and following rows in the table).
+! 13: (Label) Specify the length of a clothoid segment with meters.
+#MIXTABLE0
+#NUMROWS 4
+#straight, , 50, 100, 90, deg, 0.01, 90, deg, 400
+#radius, , 50, -200, 90, deg, 0.01, 90, deg, 400
+#radius, , 50, 100, 90, deg, 0.01, 90, deg, 400
+#straight, , 50, 100, 90, deg, 0.01, 90, deg, 400
+#ENDTABLE
+
+! Segment 1, straight
+IPATHSEG 1
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 50
+
+! Segment 2, radius
+IPATHSEG 2
+SEGMENT_TYPE 3
+SEGMENT_RADIUS -200.000000
+SEGMENT_ARC 90.000000
+
+! Segment 3, radius
+IPATHSEG 3
+SEGMENT_TYPE 3
+SEGMENT_RADIUS 100.000000
+SEGMENT_ARC 90.000000
+
+! Segment 4, straight
+IPATHSEG 4
+SEGMENT_TYPE 0
+SEGMENT_LENGTH 50
+
+Title 200-m Radius Right, 100-m Radius Left <Mech. Sim. FSAE & Baja: Path Segment Builder>
+
+LOG_ENTRY Used Dataset: Path: Segment Builder; { Mech. Sim. FSAE & Baja: Path Segment Builder } 200-m Radius Right, 100-m Radius Left
+#Library : Path: Segment Builder
+#DataSet : 200-m Radius Right, 100-m Radius Left
+#Category: Mech. Sim. FSAE & Baja: Path Segment Builder
+#FileID  : RoadSeg_f3aec731-3bc9-4a51-b5d6-6c1b078fe04f
+#Product : CarSim 2020.0
+#VehCode Path Segment Builder
+
+END

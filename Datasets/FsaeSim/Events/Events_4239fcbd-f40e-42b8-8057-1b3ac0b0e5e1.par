@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Events`A. Wait 2.5 seconds`FSAE Acceleration to Top Speed
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T
+*VALUE1 2.5
+MAKE_EVENT T > 2.5 ; Events\Events_ce81e6e3-6642-49a0-a829-2f5b566e706a.par
+#BlueLink0 Events`B. Slow Launch, Throttle and Clutch Engagement` FSAE Acceleration to Top Speed` , Events`Events_ce81e6e3-6642-49a0-a829-2f5b566e706a
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { FSAE Acceleration to Top Speed } A. Wait 2.5 seconds
+#Library : Events
+#DataSet : A. Wait 2.5 seconds
+#Category: FSAE Acceleration to Top Speed
+#FileID  : Events_4239fcbd-f40e-42b8-8057-1b3ac0b0e5e1
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

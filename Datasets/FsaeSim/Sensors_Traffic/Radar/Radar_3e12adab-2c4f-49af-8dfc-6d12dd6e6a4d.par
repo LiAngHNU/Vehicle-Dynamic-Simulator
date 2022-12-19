@@ -1,0 +1,62 @@
+PARSFILE
+#FullDataName ADAS Sensors for Range and Tracking`Wide Sensor`* * * HUR Perceprtion Sensors
+DEFINE_SENSORS 1
+ISENSOR = NSENSOR
+NSENSORS_INCREMENT
+symbol_add <<s>> 1
+SET_DESCRIPTION SENSOR_NAME Wide Sensor
+#CheckBox0 1    
+#CheckBox1 1    
+OPT_BLOCK_SENSOR 1
+#CheckBox2 1    
+OPT_SORT_OUTPUTS_SENSOR 1
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 0    
+OPT_EXPORT_SENSOR 0
+#CheckBox6 0    
+
+#RingCtrl0 0
+#RingCtrl1 1
+SENSOR_DETECT_TRANSLUCENCY 1
+#RingCtrl2 1
+IUNIT_SENSOR 1
+#RingCtrl3 1
+TYPE_SENSOR 1
+PARSFILE Sensors_Traffic\Radar_Range\Range_eb512841-73d8-4366-98ac-e95b51c8aa1a.par
+#BlueLink0 Sensor Range and Bearing Sensitivity`50-m Range` * * * HUR Sensors` , Range & Bearing Sensitivity`Range_eb512841-73d8-4366-98ac-e95b51c8aa1a
+
+WRITE_SENSOR_FIELD
+PARSFILE Animator\STL\Shape_cb53c404-9cf5-473c-9fba-c7a5ef1eb05d.par
+#BlueLink2 Animator: Shape File Link`Sensor Fields: 90 deg FOV` Sensor Fields` , Shape for Detection Field`Shape_cb53c404-9cf5-473c-9fba-c7a5ef1eb05d
+
+SET_COLOR 0 0.6 1
+SET_TRANSPARENCY 0.15
+X_LENGTH 50
+Y_LENGTH 70.7
+Z_LENGTH 2
+X_SENSOR 250
+Z_SENSOR H_CG_SU
+YAW_AIM_SENSOR 0
+PITCH_AIM_SENSOR 0
+ROLL_AIM_SENSOR 0
+SENSOR_DETECT_COLOR 0 0.6 1
+*SET_TRANSPARENCY 0.15
+*SET_COLOR_FIELD 0 0.6 1
+BEARING_MIN_SENSOR -45
+BEARING_MAX_SENSOR +45
+
+SPECIAL_PARSFILE Animator\STL\Shape_55e45ad0-f6dd-4827-8e45-bfa44cb8326d.par
+#BlueLink3 Animator: Shape File Link`Square` Geometric Shapes` , Shape for vector`Shape_55e45ad0-f6dd-4827-8e45-bfa44cb8326d
+
+SENSOR_DETECT_OBJ Animator\STL\Shape_55e45ad0-f6dd-4827-8e45-bfa44cb8326d.par
+
+LOG_ENTRY Used Dataset: ADAS Sensors for Range and Tracking; { * * * HUR Perceprtion Sensors } Wide Sensor
+#Library : ADAS Sensors for Range and Tracking
+#DataSet : Wide Sensor
+#Category: * * * HUR Perceprtion Sensors
+#FileID  : Radar_3e12adab-2c4f-49af-8dfc-6d12dd6e6a4d
+#Product : CarSim 2020.0
+#VehCode ADAS Sensor
+
+END

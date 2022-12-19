@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Tire: Aligning Moment vs. Inclination`Aligning Moment vs. Gamma: Zero`FSAE
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. inclination angle (deg)
+*3D_ZLabel Aligning moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 2, 2 ! columns x rows
+MZG_TIRE_CARPET 2D_FROM_ZERO
+0, 1, 10
+1, 0, 0
+2, 0, 0
+ENDTABLE
+
+CRO_MZ 100
+
+
+LOG_ENTRY Used Dataset: Tire: Aligning Moment vs. Inclination; { FSAE } Aligning Moment vs. Gamma: Zero
+#Library : Tire: Aligning Moment vs. Inclination
+#DataSet : Aligning Moment vs. Gamma: Zero
+#Category: FSAE
+#FileID  : TireMzC_9c3e2665-3817-4d2b-a35c-01b1daf7fe1d
+#Product : CarSim 2020.0
+#VehCode Tire: Mz
+
+END

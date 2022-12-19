@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Roll Angle of Sprung Masses vs. t_stamp`Vehicle Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_b3679a5a-f408-4603-94aa-d0014dd5acb1
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Roll, t_stamp
+PLOTCHANNELS Roll_2, t_stamp
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Roll Angle of Sprung Masses vs. t_stamp
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Roll Angle of Sprung Masses vs. t_stamp
+#Library : Plot: Setup
+#DataSet : Roll Angle of Sprung Masses vs. t_stamp
+#Category: Vehicle Motion
+#FileID  : Plot_f4ff56d1-4aac-415d-aad1-b4adf41e50d8
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

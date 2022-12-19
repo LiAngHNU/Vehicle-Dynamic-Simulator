@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`FSAE K & C Test Rig`Mech. Sim. FSAE Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_6eba5ecf-5175-4b52-baec-16c974ae0ac3.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id FSAE K & C Test Rig
+PARSFILE Roads\BuilderSegment\RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c.par
+#BlueLink0 Path: Segment Builder`Straight Path East, ID = 1001` Straight` , Reference Path`RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight Path East, ID = 1001
+PARSFILE Roads\Center_Z\RdRefZ_598f8ea7-d2f1-4e0b-a828-7b8c7dfb136e.par
+#BlueLink1 Road: Reference Line Elevation`Flat` ` , Path Elevation`RdRefZ_598f8ea7-d2f1-4e0b-a828-7b8c7dfb136e
+
+PARSFILE Roads\dZ_Map\RdMapZ_daeb5d83-fffb-4248-89b6-089cb34929b0.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Flat` ` , Miscellaneous`RdMapZ_daeb5d83-fffb-4248-89b6-089cb34929b0
+
+PARSFILE Roads\Friction\RdMu_2daee1fe-b82e-4236-9431-5ef415c04cc5.par
+#BlueLink3 Road: Friction Map, S-L Grid`0.0` Constant Mu` , Friction`RdMu_2daee1fe-b82e-4236-9431-5ef415c04cc5
+
+PARSFILE Roads\Shapes\RdShape_5a0d0496-c52b-465a-9469-50c21390f2b1.par
+#BlueLink4 Road: Animator Surface Shapes`No Machine-Generated Shapes` ` , Road shape definitions`RdShape_5a0d0496-c52b-465a-9469-50c21390f2b1
+
+PARSFILE Roads\dZ_Map\RdMapZ_daeb5d83-fffb-4248-89b6-089cb34929b0.par
+#BlueLink10 Road: Off-Center Elevation Map, S-L Grid`Flat` ` , Miscellaneous`RdMapZ_daeb5d83-fffb-4248-89b6-089cb34929b0
+
+RR_SURF 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_K_&_C_Base
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_75993352-d9e3-4883-8dae-0821746ea962.par
+#BlueLink6 Animator: Group`K & C Base` K & C Machine` , 3D Shapes`Group_75993352-d9e3-4883-8dae-0821746ea962
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`Rear View , Road Ref. (Frt. Facing)` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_6eba5ecf-5175-4b52-baec-16c974ae0ac3.ani
+
+#EMBEDDED_NOTES
+#Kinematics and Compliance
+#
+#The CarSim auto-generated road shapes are not used for this example. Instead, the animation shapes were generated outside of CarSim in a 3D rendering tool such as 3D StudioMax and linked via Animator Groups from this screen.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Mech. Sim. FSAE Roads } FSAE K & C Test Rig
+#Library : Road: 3D Surface (All Properties)
+#DataSet : FSAE K & C Test Rig
+#Category: Mech. Sim. FSAE Roads
+#FileID  : Road_6eba5ecf-5175-4b52-baec-16c974ae0ac3
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

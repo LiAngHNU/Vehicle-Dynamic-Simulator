@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Vertical Forces (Axle 2)`Tire Forces and Moments
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fz_L2, Time
+PLOTCHANNELS Fz_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vertical Forces (Axle 2)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Forces and Moments } Vertical Forces (Axle 2)
+#Library : Plot: Setup
+#DataSet : Vertical Forces (Axle 2)
+#Category: Tire Forces and Moments
+#FileID  : Plot_4fae6e50-2618-44f6-8ed7-08b8ed3fe10e
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

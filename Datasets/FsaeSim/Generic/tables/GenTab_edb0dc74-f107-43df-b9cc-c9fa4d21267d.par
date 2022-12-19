@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName Generic Table`Ly Variable, Scaled to Tire`Tire Relaxation Length
+#RingCtrl0 SPLINE_FLAT
+#RingCtrl1 MULTIPLY
+#RingCtrl2 SPLINE
+#CheckBox0 1    
+
+L_RELAX_Y_COMBINE MULTIPLY
+#MiscYellow0
+SET_UNITS L_RELAX_Y_TABLE m
+L_RELAX_Y_GAIN = RRE*2
+FZ_SCALE_L_RELAX_Y = FZ_REF
+#ENDMYellow
+
+#DiagramOne0
+L_RELAX_Y_TABLE SPLINE_FLAT
+-10, 0.039175
+-9.5, 0.042142
+-9, 0.047886
+-8.5, 0.054018
+-8, 0.061335
+-7.5, 0.069451
+-7, 0.078749
+-6.5, 0.089829
+-6, 0.10289
+-5.5, 0.11812
+-5, 0.13693
+-4.5, 0.15988
+-4, 0.18877
+-3.5, 0.22557
+-3, 0.27305
+-2.5, 0.33775
+-2, 0.42501
+-1.5, 0.5475
+-1, 0.71033
+-0.5, 0.89674
+0, 1
+0.5, 0.89674
+1, 0.71033
+1.5, 0.5475
+2, 0.42501
+2.5, 0.33775
+3, 0.27305
+3.5, 0.22557
+4, 0.18877
+4.5, 0.15988
+5, 0.13693
+5.5, 0.11812
+6, 0.10289
+6.5, 0.089829
+7, 0.078749
+7.5, 0.069451
+8, 0.061335
+8.5, 0.054018
+9, 0.047886
+9.5, 0.042142
+10, 0.039175
+ENDTABLE
+#DiagramOne1
+L_RELAX_Y_FZ_TABLE SPLINE
+0, 0.1
+1, 1
+2, 1.5805
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD L_RELAX_Y
+*X_LABEL Lagged Slip Angle (deg)
+*Y_LABEL Relaxation Length
+*X_LABEL_2 Vertical Load (Fz)
+*KEYWORD_2 L_RELAX_Y_FZ
+
+
+#EMBEDDED_NOTES
+#Normalized dataset. The function gain is scaled to the tire radius and the reference Fz.
+#
+#This dataset requires that the tire reference Fz (FZ_REF) have a reasonable value; otherwise the relaxation length will be huge.
+#
+#The units for relaxation length were changed to meters, to simplify the automatic scaling.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+#Library : Generic Table
+#DataSet : Ly Variable, Scaled to Tire
+#Category: Tire Relaxation Length
+#FileID  : GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d
+#Product : CarSim 2020.0
+#VehCode table
+
+END

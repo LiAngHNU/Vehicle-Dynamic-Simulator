@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`FSAE: Wheel Shape`Mech. Sim. FSAE: Shape Files
+#MiscYellow3
+add_obj Animator\3D_Shape_Files_User\SAE\Formula SAE\FSAE Wheels and Tires\f_wheel.obj
+#ENDMYellow
+
+SET_COLOR 0.878 0.878 0.878
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 0    
+
+SET_SPECULAR 1 1 1
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_f2e9fdc6-8eb7-4c80-a895-b3a3c8b4ed69.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side) Static` Shape Preview` , Video Camera`Camera_f2e9fdc6-8eb7-4c80-a895-b3a3c8b4ed69
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_82d81023-ef22-42c8-9110-e3092acba723.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } FSAE: Wheel Shape
+#Library : Animator: Shape File Link
+#DataSet : FSAE: Wheel Shape
+#Category: Mech. Sim. FSAE: Shape Files
+#FileID  : Shape_82d81023-ef22-42c8-9110-e3092acba723
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

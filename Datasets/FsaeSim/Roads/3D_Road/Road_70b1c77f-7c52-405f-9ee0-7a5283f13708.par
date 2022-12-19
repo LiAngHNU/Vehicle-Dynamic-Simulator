@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`FSAE Figure 8, Ref. Path X-Y Coordinates`Mech. Sim. FSAE Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_70b1c77f-7c52-405f-9ee0-7a5283f13708.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id FSAE Figure 8, Ref. Path X-Y Coordinates
+PARSFILE Roads\Center_XY\PathXY_a7f3ac84-babd-4433-912c-3a96d56f6ef9.par
+#BlueLink0 Path: X-Y Coordinates`Figure 8, 9.125 m Radius` FSAE` , Reference Path`PathXY_a7f3ac84-babd-4433-912c-3a96d56f6ef9
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Figure 8, 9.125 m Radius
+PARSFILE Roads\Center_Z\RdRefZ_598f8ea7-d2f1-4e0b-a828-7b8c7dfb136e.par
+#BlueLink1 Road: Reference Line Elevation`Flat` ` , Path Elevation`RdRefZ_598f8ea7-d2f1-4e0b-a828-7b8c7dfb136e
+
+PARSFILE Roads\dZ_Map\RdMapZ_daeb5d83-fffb-4248-89b6-089cb34929b0.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Flat` ` , Miscellaneous`RdMapZ_daeb5d83-fffb-4248-89b6-089cb34929b0
+
+PARSFILE Roads\Friction\RdMu_c8235679-ac14-458f-8e77-28bdd121c095.par
+#BlueLink3 Road: Friction Map, S-L Grid`1.0` Constant Mu` , Friction`RdMu_c8235679-ac14-458f-8e77-28bdd121c095
+
+PARSFILE Roads\Shapes\RdShape_5a0d0496-c52b-465a-9469-50c21390f2b1.par
+#BlueLink4 Road: Animator Surface Shapes`No Machine-Generated Shapes` ` , Road shape definitions`RdShape_5a0d0496-c52b-465a-9469-50c21390f2b1
+
+RR_SURF 1.0
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Timing_Cones_for_Figure_8_Skidpad
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_5ce1e44d-dcd5-407e-8b08-85902273cf71.par
+#BlueLink6 Road: Animator Repeated Object`Timing Cones for Figure 8 Skidpad` FSAE` , 3D Shapes`AniRep_5ce1e44d-dcd5-407e-8b08-85902273cf71
+
+add_reference_frame road_stuff_8_Figure_8_Scenery
+reference_frame_ghosts off
+PARSFILE Animator\STL_Groups\ShpGrp_0b8382bb-dc61-4e94-bdcc-019c3574f4d7.par
+#BlueLink8 Animator: Shape Assembly`Figure 8 Scenery` Mech. Sim. FSAE & Baja: Shape Assembly` , 3D Shapes`ShpGrp_0b8382bb-dc61-4e94-bdcc-019c3574f4d7
+
+add_reference_frame road_stuff_9_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_0243ae01-7f22-400b-ac09-6ac909099257.par
+#BlueLink9 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_0243ae01-7f22-400b-ac09-6ac909099257
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`Rear View , Road Ref. (Frt. Facing)` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_70b1c77f-7c52-405f-9ee0-7a5283f13708.ani
+
+add_reference_frame road_stuff_1_1_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw -0.0078957093876
+set_offset_var_pitch 0
+set_offset_var_roll 0
+set_offset_var_x -0.000234270412769
+set_offset_var_y -1.69999998386
+set_offset_var_z 0
+parsfile Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+
+add_reference_frame road_stuff_2_1_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 179.992104291
+set_offset_var_pitch 0
+set_offset_var_roll 0
+set_offset_var_x 0.000234270412769
+set_offset_var_y 1.69999998386
+set_offset_var_z 0
+parsfile Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+
+#EMBEDDED_NOTES
+#Figure-8 Skidpad road using the X-Y Coordinates of Path screen.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Mech. Sim. FSAE Roads } FSAE Figure 8, Ref. Path X-Y Coordinates
+#Library : Road: 3D Surface (All Properties)
+#DataSet : FSAE Figure 8, Ref. Path X-Y Coordinates
+#Category: Mech. Sim. FSAE Roads
+#FileID  : Road_70b1c77f-7c52-405f-9ee0-7a5283f13708
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

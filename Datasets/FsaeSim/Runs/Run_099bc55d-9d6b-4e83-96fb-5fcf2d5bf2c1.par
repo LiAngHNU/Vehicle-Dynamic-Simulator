@@ -1,0 +1,87 @@
+PARSFILE
+#FullDataName CarSim Run Control`HUR Simulator`* * * HUR Datasets
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_099bc55d-9d6b-4e83-96fb-5fcf2d5bf2c1
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 3
+PARSFILE Models\Simulink\Simlink_98f2db9b-c024-407a-b18d-986b8a266026.par
+#BlueLink12 Models: Simulink`HUR Simulator` * * * HUR Simulator` , Models`Simlink_98f2db9b-c024-407a-b18d-986b8a266026
+
+PARSFILE Animator\Cameras\Camera_8d5e5054-3ff3-4116-9f8c-ae7201bc4aa6.par
+#BlueLink0 Animator: Camera Setup`15 deg. Azimuth, 7 deg. El., Veh. Ref.` Vehicle Reference` , Animator camera`Camera_8d5e5054-3ff3-4116-9f8c-ae7201bc4aa6
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 1    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_00fd8a49-561e-4a08-8659-e182d7923350.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`HUR 4WD & 4WS Electric` * * * HUR Race Cars` , Math Model`VehLoad_00fd8a49-561e-4a08-8659-e182d7923350
+
+PARSFILE Procedures\Proc_481d013c-89bf-4e83-af4d-383a44d3e0f6.par
+#BlueLink28 Procedures`Procedure: Autocross` * * * HUR Procedures` , Procedure`Proc_481d013c-89bf-4e83-af4d-383a44d3e0f6
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Output\DrvSensor\DrvSen_2b8cb142-6e6b-4286-bb4f-6e2ffdd80e2b.par
+#BlueLink10 Preview Points for External Driver Control`5 Driver Preview Points` ` , Miscellaneous`DrvSen_2b8cb142-6e6b-4286-bb4f-6e2ffdd80e2b
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_7eebfaf2-736d-4fc8-8710-ce4ecdfcfa7a.par
+#BlueLink11 Multiple Moving Objects`10 Driver Preview Points` Points of Interest` , Miscellaneous`TMotion_7eebfaf2-736d-4fc8-8710-ce4ecdfcfa7a
+
+#BlueLink23 CarSim Run Control`File: 2022-11-02_14.04.03.erd` ` , Overlay run or ERD file`
+
+*ERD_FILE_1 Results\Run_099bc55d-9d6b-4e83-96fb-5fcf2d5bf2c1\2022-11-02_14.04.03.erd
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_a8b77f01-da0b-42a4-8b10-ea532095e9c2.png
+
+OPT_ALL_WRITE 1
+WRITE_SENSOR_DETECT
+Title HUR Simulator <* * * HUR Datasets>
+CATEGORY * * * HUR Datasets 
+DATASET_TITLE HUR Simulator
+#RingCtrl8 5
+NUM_CACHED_RUNS 5
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A generic Formula SAE vehicle with an electric powertrain (EV) driving an autocross course. The path is looped and the vehicle performs two complete laps.
+#
+#Since CarSim supports multiple paths and one is always assigned to the road, separate paths can be used to represent various target paths for the Closed Loop Driver Model.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * * * HUR Datasets } HUR Simulator
+#Library : CarSim Run Control
+#DataSet : HUR Simulator
+#Category: * * * HUR Datasets
+#FileID  : Run_099bc55d-9d6b-4e83-96fb-5fcf2d5bf2c1
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

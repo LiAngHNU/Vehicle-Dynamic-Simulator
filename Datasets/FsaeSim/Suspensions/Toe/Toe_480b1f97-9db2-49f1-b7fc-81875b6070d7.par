@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Suspension: Toe Angle`Baja SAE Toe Change (Rear)`Mech. Sim. Baja SAE: Toe Change
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+TOE_COMBINE ADD
+#DiagramOne0
+TOE_TABLE LINEAR
+-60, -0.2
+-50, -0.13
+-40, -0.06
+-30, 0.01
+-20, 0.07
+-10, 0.14
+0, 0.2
+10, 0.26
+20, 0.32
+30, 0.38
+40, 0.43
+50, 0.49
+60, 0.54
+70, 0.59
+ENDTABLE
+SUSP_TOE_JNC_OTHER_SIDE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR2 0
+
+
+LOG_ENTRY Used Dataset: Suspension: Toe Angle; { Mech. Sim. Baja SAE: Toe Change } Baja SAE Toe Change (Rear)
+#Library : Suspension: Toe Angle
+#DataSet : Baja SAE Toe Change (Rear)
+#Category: Mech. Sim. Baja SAE: Toe Change
+#FileID  : Toe_480b1f97-9db2-49f1-b7fc-81875b6070d7
+#Product : CarSim 2020.0
+#VehCode Toe
+
+END

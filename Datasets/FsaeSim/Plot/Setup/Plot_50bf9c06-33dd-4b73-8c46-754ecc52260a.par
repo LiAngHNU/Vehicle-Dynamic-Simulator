@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Tire Compression (Axle 1)`Tire Kinematics
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS CmpT_L1, Time
+PLOTCHANNELS CmpT_R1, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Tire Compression (Axle 1)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Kinematics } Tire Compression (Axle 1)
+#Library : Plot: Setup
+#DataSet : Tire Compression (Axle 1)
+#Category: Tire Kinematics
+#FileID  : Plot_50bf9c06-33dd-4b73-8c46-754ecc52260a
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

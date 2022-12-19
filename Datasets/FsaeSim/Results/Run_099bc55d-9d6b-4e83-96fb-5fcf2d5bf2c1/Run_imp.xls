@@ -1,0 +1,796 @@
+ keyword	Units	Component	Description	Internal
+IMP_AV_D3_F	rpm	Powertrain	Output shaft speed of transfer case to front differential	0
+IMP_AV_D3_R	rpm	Powertrain	Output shaft speed of transfer case to rear differential	0
+IMP_AV_ENG	rpm	Powertrain	Engine speed (external engine only)	0
+IMP_AV_TC	rpm	Powertrain	Torque converter speed (external transmission only)	0
+IMP_AX_FIELD	m/s2	Environment	Field acceleration in global X direction	0
+IMP_AX_SC	g	Speed controller	Imported acceleration command for speed controller	VARIABLE
+IMP_AY_FIELD	m/s2	Environment	Field acceleration in global Y direction	0
+IMP_AZ_FIELD	m/s2	Environment	Field acceleration in global Z direction	0
+IMP_BK_STAT	-	Brakes	Brake apply status: 0 or 1 (based on control pressure)	VARIABLE
+IMP_CLT_D1_2	-	Powertrain	Clutch control for front differential (second clutch)	0
+IMP_CLT_D2_2	-	Powertrain	Clutch control for rear differential (second clutch)	0
+IMP_CLUTCH	-	Powertrain	Clutch control for transmission	VARIABLE
+IMP_CLUTCH_D1	-	Powertrain	Clutch control for front differential	0
+IMP_CLUTCH_D2	-	Powertrain	Clutch control for rear differential	0
+IMP_CLUTCH_L1	-	Powertrain	Twin clutch control in left side of front differential	0
+IMP_CLUTCH_L2	-	Powertrain	Twin clutch control in left side of rear differential	0
+IMP_CLUTCH_R1	-	Powertrain	Twin clutch control in right side of front differential	0
+IMP_CLUTCH_R2	-	Powertrain	Twin clutch control in right side of rear differential	0
+IMP_CMP_EXT_L1	mm	Suspensions	Compression for spring L1	VARIABLE
+IMP_CMP_EXT_L2	mm	Suspensions	Compression for spring L2	VARIABLE
+IMP_CMP_EXT_R1	mm	Suspensions	Compression for spring R1	VARIABLE
+IMP_CMP_EXT_R2	mm	Suspensions	Compression for spring R2	VARIABLE
+IMP_DSTEER_CON_L1	deg/s	Steering	Steering gear angular rate for wheel L1 from external model	VARIABLE
+IMP_DSTEER_CON_L2	deg/s	Steering	Steering gear angular rate for wheel L2 from external model	VARIABLE
+IMP_DSTEER_CON_R1	deg/s	Steering	Steering gear angular rate for wheel R1 from external model	VARIABLE
+IMP_DSTEER_CON_R2	deg/s	Steering	Steering gear angular rate for wheel R2 from external model	VARIABLE
+IMP_DSTEER_L1	deg/s	Steering	Road wheel L1 steer angular rate due to the steering system (NOT ride/roll steer), from external model	VARIABLE
+IMP_DSTEER_L2	deg/s	Steering	Road wheel L2 steer angular rate due to the steering system (NOT ride/roll steer), from external model	VARIABLE
+IMP_DSTEER_R1	deg/s	Steering	Road wheel R1 steer angular rate due to the steering system (NOT ride/roll steer), from external model	VARIABLE
+IMP_DSTEER_R2	deg/s	Steering	Road wheel R2 steer angular rate due to the steering system (NOT ride/roll steer), from external model	VARIABLE
+IMP_DSTEER_RACK_CON_L1	mm/s	Steering	Steering rack speed for wheel L1 from external model	VARIABLE
+IMP_DSTEER_RACK_CON_L2	mm/s	Steering	Steering rack speed for wheel L2 from external model	VARIABLE
+IMP_DSTEER_RACK_CON_R1	mm/s	Steering	Steering rack speed for wheel R1 from external model	VARIABLE
+IMP_DSTEER_RACK_CON_R2	mm/s	Steering	Steering rack speed for wheel R2 from external model	VARIABLE
+IMP_DSTEER_SW	deg/s	Steering	Steering wheel angular rate	VARIABLE
+IMP_DVBK_L1	mm3/s	Brakes	L1 caliper flow rate	VARIABLE
+IMP_DVBK_L2	mm3/s	Brakes	L2 caliper flow rate	VARIABLE
+IMP_DVBK_R1	mm3/s	Brakes	R1 caliper flow rate	VARIABLE
+IMP_DVBK_R2	mm3/s	Brakes	R2 caliper flow rate	VARIABLE
+IMP_DXDMP_EXT_L1	mm/s	Suspensions	Compression rate for damper L1	VARIABLE
+IMP_DXDMP_EXT_L2	mm/s	Suspensions	Compression rate for damper L2	VARIABLE
+IMP_DXDMP_EXT_R1	mm/s	Suspensions	Compression rate for damper R1	VARIABLE
+IMP_DXDMP_EXT_R2	mm/s	Suspensions	Compression rate for damper R2	VARIABLE
+IMP_DXJST_EXT_L1	mm/s	Suspensions	Compression rate for jounce stop L1	VARIABLE
+IMP_DXJST_EXT_L2	mm/s	Suspensions	Compression rate for jounce stop L2	VARIABLE
+IMP_DXJST_EXT_R1	mm/s	Suspensions	Compression rate for jounce stop R1	VARIABLE
+IMP_DXJST_EXT_R2	mm/s	Suspensions	Compression rate for jounce stop R2	VARIABLE
+IMP_DXRST_EXT_L1	mm/s	Suspensions	Compression rate for rebound stop L1	VARIABLE
+IMP_DXRST_EXT_L2	mm/s	Suspensions	Compression rate for rebound stop L2	VARIABLE
+IMP_DXRST_EXT_R1	mm/s	Suspensions	Compression rate for rebound stop R1	VARIABLE
+IMP_DXRST_EXT_R2	mm/s	Suspensions	Compression rate for rebound stop R2	VARIABLE
+IMP_DZDX_L1	-	Tires	Slope of ground in X direction at the tire CTC	VARIABLE
+IMP_DZDX_L2	-	Tires	Slope of ground in X direction at the tire CTC	VARIABLE
+IMP_DZDX_R1	-	Tires	Slope of ground in X direction at the tire CTC	VARIABLE
+IMP_DZDX_R2	-	Tires	Slope of ground in X direction at the tire CTC	VARIABLE
+IMP_DZDY_L1	-	Tires	Slope of ground in Y direction at the tire CTC	VARIABLE
+IMP_DZDY_L2	-	Tires	Slope of ground in Y direction at the tire CTC	VARIABLE
+IMP_DZDY_R1	-	Tires	Slope of ground in Y direction at the tire CTC	VARIABLE
+IMP_DZDY_R2	-	Tires	Slope of ground in Y direction at the tire CTC	VARIABLE
+IMP_ENGINE_CMD_HEV	-	Powertrain	Engine command from HEV controller (0-1)	VARIABLE
+IMP_ESC_ENGINE_CON_STATE	-	Powertrain	ESC engine torque control state: 0 -> no control, 1 -> reduce torque to ESC request, 2 -> increase torque to ESC request	0
+IMP_FBK_BSTIN	N	Brakes	Brake booster input force	VARIABLE
+IMP_FBK_PDL	N	Brakes	Brake pedal force	VARIABLE
+IMP_FD_L1	N	Suspensions	Compressive force from damper L1	VARIABLE
+IMP_FD_L2	N	Suspensions	Compressive force from damper L2	VARIABLE
+IMP_FD_R1	N	Suspensions	Compressive force from damper R1	VARIABLE
+IMP_FD_R2	N	Suspensions	Compressive force from damper R2	VARIABLE
+IMP_FS_L1	N	Suspensions	Compressive force added to built-in ride spring L1	0
+IMP_FS_L2	N	Suspensions	Compressive force added to built-in ride spring L2	0
+IMP_FS_R1	N	Suspensions	Compressive force added to built-in ride spring R1	0
+IMP_FS_R2	N	Suspensions	Compressive force added to built-in ride spring R2	0
+IMP_FUEL_RT	kg/s	Powertrain	Fuel rate	VARIABLE
+IMP_FX0_L1	N	Tires	Longitudinal force at wheel center from tire	VARIABLE
+IMP_FX0_L2	N	Tires	Longitudinal force at wheel center from tire	VARIABLE
+IMP_FX0_R1	N	Tires	Longitudinal force at wheel center from tire	VARIABLE
+IMP_FX0_R2	N	Tires	Longitudinal force at wheel center from tire	VARIABLE
+IMP_FXEXL1	N	Suspensions	User-defined [sx] force at L1 from the sprung mass	0
+IMP_FXEXL2	N	Suspensions	User-defined [sx] force at L2 from the sprung mass	0
+IMP_FXEXR1	N	Suspensions	User-defined [sx] force at R1 from the sprung mass	0
+IMP_FXEXR2	N	Suspensions	User-defined [sx] force at R2 from the sprung mass	0
+IMP_FXGEXL1	N	Suspensions	User-defined [nx] force at L1 from the inertial reference N	0
+IMP_FXGEXL2	N	Suspensions	User-defined [nx] force at L2 from the inertial reference N	0
+IMP_FXGEXR1	N	Suspensions	User-defined [nx] force at R1 from the inertial reference N	0
+IMP_FXGEXR2	N	Suspensions	User-defined [nx] force at R2 from the inertial reference N	0
+IMP_FX_AERO	N	Aerodynamics	X component of aerodynamic force at the aero reference point	VARIABLE
+IMP_FX_L1	N	Tires	Long. force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FX_L2	N	Tires	Long. force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FX_R1	N	Tires	Long. force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FX_R2	N	Tires	Long. force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FX_RP_1	N	Reference points	Longitudinal force at reference point	VARIABLE
+IMP_FX_RP_10	N	Reference points	Longitudinal force at reference point	VARIABLE
+IMP_FX_RP_2	N	Reference points	Longitudinal force at reference point	VARIABLE
+IMP_FX_RP_3	N	Reference points	Longitudinal force at reference point	VARIABLE
+IMP_FX_RP_4	N	Reference points	Longitudinal force at reference point	VARIABLE
+IMP_FX_RP_5	N	Reference points	Longitudinal force at reference point	VARIABLE
+IMP_FX_RP_6	N	Reference points	Longitudinal force at reference point	VARIABLE
+IMP_FX_RP_7	N	Reference points	Longitudinal force at reference point	VARIABLE
+IMP_FX_RP_8	N	Reference points	Longitudinal force at reference point	VARIABLE
+IMP_FX_RP_9	N	Reference points	Longitudinal force at reference point	VARIABLE
+IMP_FY0_L1	N	Tires	Lateral force at wheel center from tire	VARIABLE
+IMP_FY0_L2	N	Tires	Lateral force at wheel center from tire	VARIABLE
+IMP_FY0_R1	N	Tires	Lateral force at wheel center from tire	VARIABLE
+IMP_FY0_R2	N	Tires	Lateral force at wheel center from tire	VARIABLE
+IMP_FYEXL1	N	Suspensions	User-defined [sy] force at L1 from the sprung mass	0
+IMP_FYEXL2	N	Suspensions	User-defined [sy] force at L2 from the sprung mass	0
+IMP_FYEXR1	N	Suspensions	User-defined [sy] force at R1 from the sprung mass	0
+IMP_FYEXR2	N	Suspensions	User-defined [sy] force at R2 from the sprung mass	0
+IMP_FYGEXL1	N	Suspensions	User-defined [ny] force at L1 from the inertial reference N	0
+IMP_FYGEXL2	N	Suspensions	User-defined [ny] force at L2 from the inertial reference N	0
+IMP_FYGEXR1	N	Suspensions	User-defined [ny] force at R1 from the inertial reference N	0
+IMP_FYGEXR2	N	Suspensions	User-defined [ny] force at R2 from the inertial reference N	0
+IMP_FY_AERO	N	Aerodynamics	Y component of aerodynamic force at the aero reference point	VARIABLE
+IMP_FY_L1	N	Tires	Lateral force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FY_L2	N	Tires	Lateral force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FY_R1	N	Tires	Lateral force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FY_R2	N	Tires	Lateral force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FY_RP_1	N	Reference points	Lateral force at reference point	VARIABLE
+IMP_FY_RP_10	N	Reference points	Lateral force at reference point	VARIABLE
+IMP_FY_RP_2	N	Reference points	Lateral force at reference point	VARIABLE
+IMP_FY_RP_3	N	Reference points	Lateral force at reference point	VARIABLE
+IMP_FY_RP_4	N	Reference points	Lateral force at reference point	VARIABLE
+IMP_FY_RP_5	N	Reference points	Lateral force at reference point	VARIABLE
+IMP_FY_RP_6	N	Reference points	Lateral force at reference point	VARIABLE
+IMP_FY_RP_7	N	Reference points	Lateral force at reference point	VARIABLE
+IMP_FY_RP_8	N	Reference points	Lateral force at reference point	VARIABLE
+IMP_FY_RP_9	N	Reference points	Lateral force at reference point	VARIABLE
+IMP_FZ0_L1	N	Tires	Vertical force at wheel center from tire	VARIABLE
+IMP_FZ0_L2	N	Tires	Vertical force at wheel center from tire	VARIABLE
+IMP_FZ0_R1	N	Tires	Vertical force at wheel center from tire	VARIABLE
+IMP_FZ0_R2	N	Tires	Vertical force at wheel center from tire	VARIABLE
+IMP_FZEXL1	N	Suspensions	User-defined [sz] force at L1 from the sprung mass	0
+IMP_FZEXL2	N	Suspensions	User-defined [sz] force at L2 from the sprung mass	0
+IMP_FZEXR1	N	Suspensions	User-defined [sz] force at R1 from the sprung mass	0
+IMP_FZEXR2	N	Suspensions	User-defined [sz] force at R2 from the sprung mass	0
+IMP_FZGEXL1	N	Suspensions	User-defined [nz] force at L1 from the inertial reference N	0
+IMP_FZGEXL2	N	Suspensions	User-defined [nz] force at L2 from the inertial reference N	0
+IMP_FZGEXR1	N	Suspensions	User-defined [nz] force at R1 from the inertial reference N	0
+IMP_FZGEXR2	N	Suspensions	User-defined [nz] force at R2 from the inertial reference N	0
+IMP_FZ_AERO	N	Aerodynamics	Z component of aerodynamic force at the aero reference point	VARIABLE
+IMP_FZ_L1	N	Tires	Vertical force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FZ_L2	N	Tires	Vertical force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FZ_R1	N	Tires	Vertical force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FZ_R2	N	Tires	Vertical force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FZ_RP_1	N	Reference points	Vertical force at reference point	VARIABLE
+IMP_FZ_RP_10	N	Reference points	Vertical force at reference point	VARIABLE
+IMP_FZ_RP_2	N	Reference points	Vertical force at reference point	VARIABLE
+IMP_FZ_RP_3	N	Reference points	Vertical force at reference point	VARIABLE
+IMP_FZ_RP_4	N	Reference points	Vertical force at reference point	VARIABLE
+IMP_FZ_RP_5	N	Reference points	Vertical force at reference point	VARIABLE
+IMP_FZ_RP_6	N	Reference points	Vertical force at reference point	VARIABLE
+IMP_FZ_RP_7	N	Reference points	Vertical force at reference point	VARIABLE
+IMP_FZ_RP_8	N	Reference points	Vertical force at reference point	VARIABLE
+IMP_FZ_RP_9	N	Reference points	Vertical force at reference point	VARIABLE
+IMP_F_AUX_EXT_L1	N	Suspensions	Ext. aux spring force at wheel center L1	0
+IMP_F_AUX_EXT_L2	N	Suspensions	Ext. aux spring force at wheel center L2	0
+IMP_F_AUX_EXT_R1	N	Suspensions	Ext. aux spring force at wheel center R1	0
+IMP_F_AUX_EXT_R2	N	Suspensions	Ext. aux spring force at wheel center R2	0
+IMP_F_BOOST_EXT	N	Steering	Steering rack boost force (applies to internal steer model only)	VARIABLE
+IMP_F_JNC_STOP_L1	N	Suspensions	Jounce-stop force L1	VARIABLE
+IMP_F_JNC_STOP_L2	N	Suspensions	Jounce-stop force L2	VARIABLE
+IMP_F_JNC_STOP_R1	N	Suspensions	Jounce-stop force R1	VARIABLE
+IMP_F_JNC_STOP_R2	N	Suspensions	Jounce-stop force R2	VARIABLE
+IMP_F_REB_STOP_L1	N	Suspensions	Rebound-stop force L1	VARIABLE
+IMP_F_REB_STOP_L2	N	Suspensions	Rebound-stop force L2	VARIABLE
+IMP_F_REB_STOP_R1	N	Suspensions	Rebound-stop force R1	VARIABLE
+IMP_F_REB_STOP_R2	N	Suspensions	Rebound-stop force R2	VARIABLE
+IMP_F_TIEROD_L1	N	Steering	Force on rack at tie rod L1, from external model	VARIABLE
+IMP_F_TIEROD_L2	N	Steering	Force on rack at tie rod L2, from external model	VARIABLE
+IMP_F_TIEROD_R1	N	Steering	Force on rack at tie rod R1, from external model	VARIABLE
+IMP_F_TIEROD_R2	N	Steering	Force on rack at tie rod R2, from external model	VARIABLE
+IMP_HEAD_OBJ_1	deg	Targets	Heading angle, object 1	0
+IMP_HEAD_OBJ_10	deg	Targets	Heading angle, object 10	0
+IMP_HEAD_OBJ_11	deg	Targets	Heading angle, object 11	0
+IMP_HEAD_OBJ_12	deg	Targets	Heading angle, object 12	0
+IMP_HEAD_OBJ_13	deg	Targets	Heading angle, object 13	0
+IMP_HEAD_OBJ_14	deg	Targets	Heading angle, object 14	0
+IMP_HEAD_OBJ_15	deg	Targets	Heading angle, object 15	0
+IMP_HEAD_OBJ_16	deg	Targets	Heading angle, object 16	0
+IMP_HEAD_OBJ_17	deg	Targets	Heading angle, object 17	0
+IMP_HEAD_OBJ_18	deg	Targets	Heading angle, object 18	0
+IMP_HEAD_OBJ_19	deg	Targets	Heading angle, object 19	0
+IMP_HEAD_OBJ_2	deg	Targets	Heading angle, object 2	0
+IMP_HEAD_OBJ_20	deg	Targets	Heading angle, object 20	0
+IMP_HEAD_OBJ_21	deg	Targets	Heading angle, object 21	0
+IMP_HEAD_OBJ_22	deg	Targets	Heading angle, object 22	0
+IMP_HEAD_OBJ_23	deg	Targets	Heading angle, object 23	0
+IMP_HEAD_OBJ_24	deg	Targets	Heading angle, object 24	0
+IMP_HEAD_OBJ_25	deg	Targets	Heading angle, object 25	0
+IMP_HEAD_OBJ_26	deg	Targets	Heading angle, object 26	0
+IMP_HEAD_OBJ_27	deg	Targets	Heading angle, object 27	0
+IMP_HEAD_OBJ_28	deg	Targets	Heading angle, object 28	0
+IMP_HEAD_OBJ_29	deg	Targets	Heading angle, object 29	0
+IMP_HEAD_OBJ_3	deg	Targets	Heading angle, object 3	0
+IMP_HEAD_OBJ_30	deg	Targets	Heading angle, object 30	0
+IMP_HEAD_OBJ_31	deg	Targets	Heading angle, object 31	0
+IMP_HEAD_OBJ_32	deg	Targets	Heading angle, object 32	0
+IMP_HEAD_OBJ_33	deg	Targets	Heading angle, object 33	0
+IMP_HEAD_OBJ_34	deg	Targets	Heading angle, object 34	0
+IMP_HEAD_OBJ_4	deg	Targets	Heading angle, object 4	0
+IMP_HEAD_OBJ_5	deg	Targets	Heading angle, object 5	0
+IMP_HEAD_OBJ_6	deg	Targets	Heading angle, object 6	0
+IMP_HEAD_OBJ_7	deg	Targets	Heading angle, object 7	0
+IMP_HEAD_OBJ_8	deg	Targets	Heading angle, object 8	0
+IMP_HEAD_OBJ_9	deg	Targets	Heading angle, object 9	0
+IMP_HYBRID_MODE	-	Powertrain	HEV/EV control mode: 0->brake, 1->motor, 2->engine, 3-> engine + motor	VARIABLE
+IMP_IENG	kg-m2	Powertrain	Combined spin inertia of engine crankshaft and torque converter input shaft	0
+IMP_LAT_OBJ_1	m	Targets	Lateral offset, object 1	VARIABLE
+IMP_LAT_OBJ_10	m	Targets	Lateral offset, object 10	VARIABLE
+IMP_LAT_OBJ_11	m	Targets	Lateral offset, object 11	VARIABLE
+IMP_LAT_OBJ_12	m	Targets	Lateral offset, object 12	VARIABLE
+IMP_LAT_OBJ_13	m	Targets	Lateral offset, object 13	VARIABLE
+IMP_LAT_OBJ_14	m	Targets	Lateral offset, object 14	VARIABLE
+IMP_LAT_OBJ_15	m	Targets	Lateral offset, object 15	VARIABLE
+IMP_LAT_OBJ_16	m	Targets	Lateral offset, object 16	VARIABLE
+IMP_LAT_OBJ_17	m	Targets	Lateral offset, object 17	VARIABLE
+IMP_LAT_OBJ_18	m	Targets	Lateral offset, object 18	VARIABLE
+IMP_LAT_OBJ_19	m	Targets	Lateral offset, object 19	VARIABLE
+IMP_LAT_OBJ_2	m	Targets	Lateral offset, object 2	VARIABLE
+IMP_LAT_OBJ_20	m	Targets	Lateral offset, object 20	VARIABLE
+IMP_LAT_OBJ_21	m	Targets	Lateral offset, object 21	VARIABLE
+IMP_LAT_OBJ_22	m	Targets	Lateral offset, object 22	VARIABLE
+IMP_LAT_OBJ_23	m	Targets	Lateral offset, object 23	VARIABLE
+IMP_LAT_OBJ_24	m	Targets	Lateral offset, object 24	VARIABLE
+IMP_LAT_OBJ_25	m	Targets	Lateral offset, object 25	VARIABLE
+IMP_LAT_OBJ_26	m	Targets	Lateral offset, object 26	VARIABLE
+IMP_LAT_OBJ_27	m	Targets	Lateral offset, object 27	VARIABLE
+IMP_LAT_OBJ_28	m	Targets	Lateral offset, object 28	VARIABLE
+IMP_LAT_OBJ_29	m	Targets	Lateral offset, object 29	VARIABLE
+IMP_LAT_OBJ_3	m	Targets	Lateral offset, object 3	VARIABLE
+IMP_LAT_OBJ_30	m	Targets	Lateral offset, object 30	VARIABLE
+IMP_LAT_OBJ_31	m	Targets	Lateral offset, object 31	VARIABLE
+IMP_LAT_OBJ_32	m	Targets	Lateral offset, object 32	VARIABLE
+IMP_LAT_OBJ_33	m	Targets	Lateral offset, object 33	VARIABLE
+IMP_LAT_OBJ_34	m	Targets	Lateral offset, object 34	VARIABLE
+IMP_LAT_OBJ_4	m	Targets	Lateral offset, object 4	VARIABLE
+IMP_LAT_OBJ_5	m	Targets	Lateral offset, object 5	VARIABLE
+IMP_LAT_OBJ_6	m	Targets	Lateral offset, object 6	VARIABLE
+IMP_LAT_OBJ_7	m	Targets	Lateral offset, object 7	VARIABLE
+IMP_LAT_OBJ_8	m	Targets	Lateral offset, object 8	VARIABLE
+IMP_LAT_OBJ_9	m	Targets	Lateral offset, object 9	VARIABLE
+IMP_LX_SEN_1	m	Driver model	Lead distance to driver preview point #1	VARIABLE
+IMP_LX_SEN_2	m	Driver model	Lead distance to driver preview point #2	VARIABLE
+IMP_LX_SEN_3	m	Driver model	Lead distance to driver preview point #3	VARIABLE
+IMP_LX_SEN_4	m	Driver model	Lead distance to driver preview point #4	VARIABLE
+IMP_LX_SEN_5	m	Driver model	Lead distance to driver preview point #5	VARIABLE
+IMP_MENGINE	N-m	Powertrain	Engine torque applied to crankshaft from pistons	VARIABLE
+IMP_MENGINE_ESC_REQUEST	N-m	Powertrain	Engine torque requested by ESC/TCS	0
+IMP_MODE_TRANS	-	Powertrain	Transmission controller mode : -1->reverse, 0->neutral, 1->open - loop     gear selection, 2 - 18->closed - loop limit(maximum gear available)	0
+IMP_MSG_OBJ_1	-	Targets	Msg code of object 1	0
+IMP_MSG_OBJ_10	-	Targets	Msg code of object 10	0
+IMP_MSG_OBJ_11	-	Targets	Msg code of object 11	0
+IMP_MSG_OBJ_12	-	Targets	Msg code of object 12	0
+IMP_MSG_OBJ_13	-	Targets	Msg code of object 13	0
+IMP_MSG_OBJ_14	-	Targets	Msg code of object 14	0
+IMP_MSG_OBJ_15	-	Targets	Msg code of object 15	0
+IMP_MSG_OBJ_16	-	Targets	Msg code of object 16	0
+IMP_MSG_OBJ_17	-	Targets	Msg code of object 17	0
+IMP_MSG_OBJ_18	-	Targets	Msg code of object 18	0
+IMP_MSG_OBJ_19	-	Targets	Msg code of object 19	0
+IMP_MSG_OBJ_2	-	Targets	Msg code of object 2	0
+IMP_MSG_OBJ_20	-	Targets	Msg code of object 20	0
+IMP_MSG_OBJ_21	-	Targets	Msg code of object 21	0
+IMP_MSG_OBJ_22	-	Targets	Msg code of object 22	0
+IMP_MSG_OBJ_23	-	Targets	Msg code of object 23	0
+IMP_MSG_OBJ_24	-	Targets	Msg code of object 24	0
+IMP_MSG_OBJ_25	-	Targets	Msg code of object 25	0
+IMP_MSG_OBJ_26	-	Targets	Msg code of object 26	0
+IMP_MSG_OBJ_27	-	Targets	Msg code of object 27	0
+IMP_MSG_OBJ_28	-	Targets	Msg code of object 28	0
+IMP_MSG_OBJ_29	-	Targets	Msg code of object 29	0
+IMP_MSG_OBJ_3	-	Targets	Msg code of object 3	0
+IMP_MSG_OBJ_30	-	Targets	Msg code of object 30	0
+IMP_MSG_OBJ_31	-	Targets	Msg code of object 31	0
+IMP_MSG_OBJ_32	-	Targets	Msg code of object 32	0
+IMP_MSG_OBJ_33	-	Targets	Msg code of object 33	0
+IMP_MSG_OBJ_34	-	Targets	Msg code of object 34	0
+IMP_MSG_OBJ_4	-	Targets	Msg code of object 4	0
+IMP_MSG_OBJ_5	-	Targets	Msg code of object 5	0
+IMP_MSG_OBJ_6	-	Targets	Msg code of object 6	0
+IMP_MSG_OBJ_7	-	Targets	Msg code of object 7	0
+IMP_MSG_OBJ_8	-	Targets	Msg code of object 8	0
+IMP_MSG_OBJ_9	-	Targets	Msg code of object 9	0
+IMP_MUX_L1	-	Tires	Ground longitudinal friction at the tire CTC	VARIABLE
+IMP_MUX_L2	-	Tires	Ground longitudinal friction at the tire CTC	VARIABLE
+IMP_MUX_R1	-	Tires	Ground longitudinal friction at the tire CTC	VARIABLE
+IMP_MUX_R2	-	Tires	Ground longitudinal friction at the tire CTC	VARIABLE
+IMP_MUY_L1	-	Tires	Ground lateral friction at the tire CTC	VARIABLE
+IMP_MUY_L2	-	Tires	Ground lateral friction at the tire CTC	VARIABLE
+IMP_MUY_R1	-	Tires	Ground lateral friction at the tire CTC	VARIABLE
+IMP_MUY_R2	-	Tires	Ground lateral friction at the tire CTC	VARIABLE
+IMP_MX0_L1	N-m	Tires	Roll moment at wheel center from tire	VARIABLE
+IMP_MX0_L2	N-m	Tires	Roll moment at wheel center from tire	VARIABLE
+IMP_MX0_R1	N-m	Tires	Roll moment at wheel center from tire	VARIABLE
+IMP_MX0_R2	N-m	Tires	Roll moment at wheel center from tire	VARIABLE
+IMP_MXEXL1	N-m	Suspensions	User-defined [sx] moment at L1 from the sprung mass	0
+IMP_MXEXL2	N-m	Suspensions	User-defined [sx] moment at L2 from the sprung mass	0
+IMP_MXEXR1	N-m	Suspensions	User-defined [sx] moment at R1 from the sprung mass	0
+IMP_MXEXR2	N-m	Suspensions	User-defined [sx] moment at R2 from the sprung mass	0
+IMP_MXGEXL1	N-m	Suspensions	User-defined [nx] moment at L1 from the inertial reference N	0
+IMP_MXGEXL2	N-m	Suspensions	User-defined [nx] moment at L2 from the inertial reference N	0
+IMP_MXGEXR1	N-m	Suspensions	User-defined [nx] moment at R1 from the inertial reference N	0
+IMP_MXGEXR2	N-m	Suspensions	User-defined [nx] moment at R2 from the inertial reference N	0
+IMP_MXGEXT	N-m	Sprung mass	User-defined [nx] moment on sprung mass from inertial reference frame	0
+IMP_MX_A1	N-m	Suspensions	Auxiliary roll moment for axle 1	VARIABLE
+IMP_MX_A2	N-m	Suspensions	Auxiliary roll moment for axle 2	VARIABLE
+IMP_MX_AERO	N-m	Aerodynamics	X component of aerodynamic moment	VARIABLE
+IMP_MX_EXT	N-m	Sprung mass	User-defined [sx] moment on sprung mass from inertial reference frame	0
+IMP_MX_L1	N-m	Tires	Overturning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MX_L2	N-m	Tires	Overturning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MX_R1	N-m	Tires	Overturning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MX_R2	N-m	Tires	Overturning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MY0_L1	N-m	Tires	Spin moment at wheel center from tire	VARIABLE
+IMP_MY0_L2	N-m	Tires	Spin moment at wheel center from tire	VARIABLE
+IMP_MY0_R1	N-m	Tires	Spin moment at wheel center from tire	VARIABLE
+IMP_MY0_R2	N-m	Tires	Spin moment at wheel center from tire	VARIABLE
+IMP_MYBK_L1	N-m	Brakes	Brake moment L1	VARIABLE
+IMP_MYBK_L2	N-m	Brakes	Brake moment L2	VARIABLE
+IMP_MYBK_R1	N-m	Brakes	Brake moment R1	VARIABLE
+IMP_MYBK_R2	N-m	Brakes	Brake moment R2	VARIABLE
+IMP_MYEXL1	N-m	Suspensions	User-defined [sy] moment at L1 from the sprung mass	0
+IMP_MYEXL2	N-m	Suspensions	User-defined [sy] moment at L2 from the sprung mass	0
+IMP_MYEXR1	N-m	Suspensions	User-defined [sy] moment at R1 from the sprung mass	0
+IMP_MYEXR2	N-m	Suspensions	User-defined [sy] moment at R2 from the sprung mass	0
+IMP_MYGEXL1	N-m	Suspensions	User-defined [ny] moment at L1 from the inertial reference N	0
+IMP_MYGEXL2	N-m	Suspensions	User-defined [ny] moment at L2 from the inertial reference N	0
+IMP_MYGEXR1	N-m	Suspensions	User-defined [ny] moment at R1 from the inertial reference N	0
+IMP_MYGEXR2	N-m	Suspensions	User-defined [ny] moment at R2 from the inertial reference N	0
+IMP_MYGEXT	N-m	Sprung mass	User-defined [ny] moment on sprung mass from inertial reference frame	0
+IMP_MYSM_L1	N-m	Brakes	Ext. moment applied from sprung mass to wheel L1	0
+IMP_MYSM_L2	N-m	Brakes	Ext. moment applied from sprung mass to wheel L2	0
+IMP_MYSM_R1	N-m	Brakes	Ext. moment applied from sprung mass to wheel R1	0
+IMP_MYSM_R2	N-m	Brakes	Ext. moment applied from sprung mass to wheel R2	0
+IMP_MYUSM_L1	N-m	Brakes	Ext. moment applied from unsprung mass to wheel L1	0
+IMP_MYUSM_L2	N-m	Brakes	Ext. moment applied from unsprung mass to wheel L2	0
+IMP_MYUSM_R1	N-m	Brakes	Ext. moment applied from unsprung mass to wheel R1	0
+IMP_MYUSM_R2	N-m	Brakes	Ext. moment applied from unsprung mass to wheel R2	0
+IMP_MY_AERO	N-m	Aerodynamics	Y component of aerodynamic moment	VARIABLE
+IMP_MY_EXT	N-m	Sprung mass	User-defined [sy] moment on sprung mass from inertial reference frame	0
+IMP_MY_L1	N-m	Tires	Rolling-resistance at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MY_L2	N-m	Tires	Rolling-resistance at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MY_OUT_D1_L	N-m	Powertrain	Left output shaft torque of front differential	0
+IMP_MY_OUT_D1_R	N-m	Powertrain	Right output shaft torque of front differential	0
+IMP_MY_OUT_D2_L	N-m	Powertrain	Left output shaft torque of rear differential	0
+IMP_MY_OUT_D2_R	N-m	Powertrain	Right output shaft torque of rear differential	0
+IMP_MY_R1	N-m	Tires	Rolling-resistance at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MY_R2	N-m	Tires	Rolling-resistance at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MZ0_L1	N-m	Tires	Yaw moment at wheel center from tire	VARIABLE
+IMP_MZ0_L2	N-m	Tires	Yaw moment at wheel center from tire	VARIABLE
+IMP_MZ0_R1	N-m	Tires	Yaw moment at wheel center from tire	VARIABLE
+IMP_MZ0_R2	N-m	Tires	Yaw moment at wheel center from tire	VARIABLE
+IMP_MZEXL1	N-m	Suspensions	User-defined [sz] moment at L1 from the sprung mass	0
+IMP_MZEXL2	N-m	Suspensions	User-defined [sz] moment at L2 from the sprung mass	0
+IMP_MZEXR1	N-m	Suspensions	User-defined [sz] moment at R1 from the sprung mass	0
+IMP_MZEXR2	N-m	Suspensions	User-defined [sz] moment at R2 from the sprung mass	0
+IMP_MZGEXL1	N-m	Suspensions	User-defined [nz] moment at L1 from the inertial reference N	0
+IMP_MZGEXL2	N-m	Suspensions	User-defined [nz] moment at L2 from the inertial reference N	0
+IMP_MZGEXR1	N-m	Suspensions	User-defined [nz] moment at R1 from the inertial reference N	0
+IMP_MZGEXR2	N-m	Suspensions	User-defined [nz] moment at R2 from the inertial reference N	0
+IMP_MZGEXT	N-m	Sprung mass	User-defined [nz] moment on sprung mass from inertial reference frame	0
+IMP_MZ_AERO	N-m	Aerodynamics	Z component of aerodynamic moment	VARIABLE
+IMP_MZ_EXT	N-m	Sprung mass	User-defined [sz] moment on sprung mass from inertial reference frame	0
+IMP_MZ_L1	N-m	Tires	Aligning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MZ_L2	N-m	Tires	Aligning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MZ_R1	N-m	Tires	Aligning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MZ_R2	N-m	Tires	Aligning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_M_BOOST_EXT	N-m	Steering	Steering gear boost torque (applies to internal steer model only)	VARIABLE
+IMP_M_DIFF_D1	N-m	Powertrain	Torque difference of front differential	0
+IMP_M_DIFF_D2	N-m	Powertrain	Torque difference of rear differential	0
+IMP_M_KP_L1	N-m	Steering	Additional kingpin torque reacted at sprung mass	0
+IMP_M_KP_L2	N-m	Steering	Additional kingpin torque reacted at sprung mass	0
+IMP_M_KP_R1	N-m	Steering	Additional kingpin torque reacted at sprung mass	0
+IMP_M_KP_R2	N-m	Steering	Additional kingpin torque reacted at sprung mass	0
+IMP_M_MOTOR	N-m	Powertrain	Electric motor output torque to planetary ring gear	VARIABLE
+IMP_M_MOTOR_CMD	N-m	Powertrain	Electric motor torque command	VARIABLE
+IMP_M_OUT_D3_F	N-m	Powertrain	Output shaft torque of transfer case to front differential	0
+IMP_M_OUT_D3_R	N-m	Powertrain	Output shaft torque of transfer case to rear differential	0
+IMP_M_TBAR_EXT	N-m	Steering	Steering column reaction torque from external model	0
+IMP_M_TIEROD_L1	N-m	Steering	Moment at Pitman arm due to load in tie rod L1,from external model	VARIABLE
+IMP_M_TIEROD_L2	N-m	Steering	Moment at Pitman arm due to load in tie rod L2,from external model	VARIABLE
+IMP_M_TIEROD_R1	N-m	Steering	Moment at Pitman arm due to load in tie rod R1,from external model	VARIABLE
+IMP_M_TIEROD_R2	N-m	Steering	Moment at Pitman arm due to load in tie rod R2,from external model	VARIABLE
+IMP_PBK_L1	MPa	Brakes	Brake actuator pressure L1	VARIABLE
+IMP_PBK_L2	MPa	Brakes	Brake actuator pressure L2	VARIABLE
+IMP_PBK_R1	MPa	Brakes	Brake actuator pressure R1	VARIABLE
+IMP_PBK_R2	MPa	Brakes	Brake actuator pressure R2	VARIABLE
+IMP_PCON_BK	MPa	Brakes	Brake master cylinder pressure	VARIABLE
+IMP_PCTL_L1	MPa	Brakes	Control pressure (without dynamics) for brake actuator L1	VARIABLE
+IMP_PCTL_L2	MPa	Brakes	Control pressure (without dynamics) for brake actuator L2	VARIABLE
+IMP_PCTL_R1	MPa	Brakes	Control pressure (without dynamics) for brake actuator R1	VARIABLE
+IMP_PCTL_R2	MPa	Brakes	Control pressure (without dynamics) for brake actuator R2	VARIABLE
+IMP_PDEL_L1	MPa	Brakes	Delivery pressure (after proportioning) for brake L1	VARIABLE
+IMP_PDEL_L2	MPa	Brakes	Delivery pressure (after proportioning) for brake L2	VARIABLE
+IMP_PDEL_R1	MPa	Brakes	Delivery pressure (after proportioning) for brake R1	VARIABLE
+IMP_PDEL_R2	MPa	Brakes	Delivery pressure (after proportioning) for brake R2	VARIABLE
+IMP_PITCH_AIM_SENSOR_1	deg	Sensors	Relative pitch (aim) of sensor	VARIABLE
+IMP_PITCH_OBJ_1	deg	Targets	Pitch angle of object 1	0
+IMP_PITCH_OBJ_10	deg	Targets	Pitch angle of object 10	0
+IMP_PITCH_OBJ_11	deg	Targets	Pitch angle of object 11	0
+IMP_PITCH_OBJ_12	deg	Targets	Pitch angle of object 12	0
+IMP_PITCH_OBJ_13	deg	Targets	Pitch angle of object 13	0
+IMP_PITCH_OBJ_14	deg	Targets	Pitch angle of object 14	0
+IMP_PITCH_OBJ_15	deg	Targets	Pitch angle of object 15	0
+IMP_PITCH_OBJ_16	deg	Targets	Pitch angle of object 16	0
+IMP_PITCH_OBJ_17	deg	Targets	Pitch angle of object 17	0
+IMP_PITCH_OBJ_18	deg	Targets	Pitch angle of object 18	0
+IMP_PITCH_OBJ_19	deg	Targets	Pitch angle of object 19	0
+IMP_PITCH_OBJ_2	deg	Targets	Pitch angle of object 2	0
+IMP_PITCH_OBJ_20	deg	Targets	Pitch angle of object 20	0
+IMP_PITCH_OBJ_21	deg	Targets	Pitch angle of object 21	0
+IMP_PITCH_OBJ_22	deg	Targets	Pitch angle of object 22	0
+IMP_PITCH_OBJ_23	deg	Targets	Pitch angle of object 23	0
+IMP_PITCH_OBJ_24	deg	Targets	Pitch angle of object 24	0
+IMP_PITCH_OBJ_25	deg	Targets	Pitch angle of object 25	0
+IMP_PITCH_OBJ_26	deg	Targets	Pitch angle of object 26	0
+IMP_PITCH_OBJ_27	deg	Targets	Pitch angle of object 27	0
+IMP_PITCH_OBJ_28	deg	Targets	Pitch angle of object 28	0
+IMP_PITCH_OBJ_29	deg	Targets	Pitch angle of object 29	0
+IMP_PITCH_OBJ_3	deg	Targets	Pitch angle of object 3	0
+IMP_PITCH_OBJ_30	deg	Targets	Pitch angle of object 30	0
+IMP_PITCH_OBJ_31	deg	Targets	Pitch angle of object 31	0
+IMP_PITCH_OBJ_32	deg	Targets	Pitch angle of object 32	0
+IMP_PITCH_OBJ_33	deg	Targets	Pitch angle of object 33	0
+IMP_PITCH_OBJ_34	deg	Targets	Pitch angle of object 34	0
+IMP_PITCH_OBJ_4	deg	Targets	Pitch angle of object 4	0
+IMP_PITCH_OBJ_5	deg	Targets	Pitch angle of object 5	0
+IMP_PITCH_OBJ_6	deg	Targets	Pitch angle of object 6	0
+IMP_PITCH_OBJ_7	deg	Targets	Pitch angle of object 7	0
+IMP_PITCH_OBJ_8	deg	Targets	Pitch angle of object 8	0
+IMP_PITCH_OBJ_9	deg	Targets	Pitch angle of object 9	0
+IMP_PLIN_L1	MPa	Brakes	Brake line pressure L1 before proportioning	VARIABLE
+IMP_PLIN_L2	MPa	Brakes	Brake line pressure L2 before proportioning	VARIABLE
+IMP_PLIN_R1	MPa	Brakes	Brake line pressure R1 before proportioning	VARIABLE
+IMP_PLIN_R2	MPa	Brakes	Brake line pressure R2 before proportioning	VARIABLE
+IMP_PWR_ENGINE_AV	kW	Powertrain	Available power of external engine, needed for closed-loop speed control.	VARIABLE
+IMP_ROLL_AIM_SENSOR_1	deg	Sensors	Relative roll (aim) of sensor	VARIABLE
+IMP_ROLL_OBJ_1	deg	Targets	Roll angle of object 1	0
+IMP_ROLL_OBJ_10	deg	Targets	Roll angle of object 10	0
+IMP_ROLL_OBJ_11	deg	Targets	Roll angle of object 11	0
+IMP_ROLL_OBJ_12	deg	Targets	Roll angle of object 12	0
+IMP_ROLL_OBJ_13	deg	Targets	Roll angle of object 13	0
+IMP_ROLL_OBJ_14	deg	Targets	Roll angle of object 14	0
+IMP_ROLL_OBJ_15	deg	Targets	Roll angle of object 15	0
+IMP_ROLL_OBJ_16	deg	Targets	Roll angle of object 16	0
+IMP_ROLL_OBJ_17	deg	Targets	Roll angle of object 17	0
+IMP_ROLL_OBJ_18	deg	Targets	Roll angle of object 18	0
+IMP_ROLL_OBJ_19	deg	Targets	Roll angle of object 19	0
+IMP_ROLL_OBJ_2	deg	Targets	Roll angle of object 2	0
+IMP_ROLL_OBJ_20	deg	Targets	Roll angle of object 20	0
+IMP_ROLL_OBJ_21	deg	Targets	Roll angle of object 21	0
+IMP_ROLL_OBJ_22	deg	Targets	Roll angle of object 22	0
+IMP_ROLL_OBJ_23	deg	Targets	Roll angle of object 23	0
+IMP_ROLL_OBJ_24	deg	Targets	Roll angle of object 24	0
+IMP_ROLL_OBJ_25	deg	Targets	Roll angle of object 25	0
+IMP_ROLL_OBJ_26	deg	Targets	Roll angle of object 26	0
+IMP_ROLL_OBJ_27	deg	Targets	Roll angle of object 27	0
+IMP_ROLL_OBJ_28	deg	Targets	Roll angle of object 28	0
+IMP_ROLL_OBJ_29	deg	Targets	Roll angle of object 29	0
+IMP_ROLL_OBJ_3	deg	Targets	Roll angle of object 3	0
+IMP_ROLL_OBJ_30	deg	Targets	Roll angle of object 30	0
+IMP_ROLL_OBJ_31	deg	Targets	Roll angle of object 31	0
+IMP_ROLL_OBJ_32	deg	Targets	Roll angle of object 32	0
+IMP_ROLL_OBJ_33	deg	Targets	Roll angle of object 33	0
+IMP_ROLL_OBJ_34	deg	Targets	Roll angle of object 34	0
+IMP_ROLL_OBJ_4	deg	Targets	Roll angle of object 4	0
+IMP_ROLL_OBJ_5	deg	Targets	Roll angle of object 5	0
+IMP_ROLL_OBJ_6	deg	Targets	Roll angle of object 6	0
+IMP_ROLL_OBJ_7	deg	Targets	Roll angle of object 7	0
+IMP_ROLL_OBJ_8	deg	Targets	Roll angle of object 8	0
+IMP_ROLL_OBJ_9	deg	Targets	Roll angle of object 9	0
+IMP_ROT_D3_F	rev	Powertrain	Output shaft rotation of transfer case to front differential	0
+IMP_ROT_D3_R	rev	Powertrain	Output shaft rotation of transfer case to rear differential	0
+IMP_RRE_L1	mm	Tires	Effective rolling radius at the tire CTC	VARIABLE
+IMP_RRE_L2	mm	Tires	Effective rolling radius at the tire CTC	VARIABLE
+IMP_RRE_R1	mm	Tires	Effective rolling radius at the tire CTC	VARIABLE
+IMP_RRE_R2	mm	Tires	Effective rolling radius at the tire CTC	VARIABLE
+IMP_RR_SURF_L1	-	Tires	Rolling-resistance coefficient for road surface at the tire CTC	VARIABLE
+IMP_RR_SURF_L2	-	Tires	Rolling-resistance coefficient for road surface at the tire CTC	VARIABLE
+IMP_RR_SURF_R1	-	Tires	Rolling-resistance coefficient for road surface at the tire CTC	VARIABLE
+IMP_RR_SURF_R2	-	Tires	Rolling-resistance coefficient for road surface at the tire CTC	VARIABLE
+IMP_R_EFF_D1	-	Powertrain	Efficiency of front differential	0
+IMP_R_EFF_D2	-	Powertrain	Efficiency of rear differential	0
+IMP_R_GEAR_D1	-	Powertrain	Gear ratio of front differential	0
+IMP_R_GEAR_D2	-	Powertrain	Gear ratio of rear differential	0
+IMP_R_STR_EXT_L1	-	Steering	Overall steer ratio for wheel L1 with external steer model, used by the closed loop steering controller (driver model)	VARIABLE
+IMP_R_STR_EXT_L2	-	Steering	Overall steer ratio for wheel L2 with external steer model, used by the closed loop steering controller (driver model)	VARIABLE
+IMP_R_STR_EXT_R1	-	Steering	Overall steer ratio for wheel R1 with external steer model, used by the closed loop steering controller (driver model)	VARIABLE
+IMP_R_STR_EXT_R2	-	Steering	Overall steer ratio for wheel R2 with external steer model, used by the closed loop steering controller (driver model)	VARIABLE
+IMP_SPEED	km/h	Speed controller	Imported target speed for speed controller	VARIABLE
+IMP_STEER_CON_L1	deg	Steering	Steering gear output angle for wheel L1 (input to nonlinear steering kinematics table) from external model	VARIABLE
+IMP_STEER_CON_L2	deg	Steering	Steering gear output angle for wheel L2 (input to nonlinear steering kinematics table) from external model	VARIABLE
+IMP_STEER_CON_R1	deg	Steering	Steering gear output angle for wheel R1 (input to nonlinear steering kinematics table) from external model	VARIABLE
+IMP_STEER_CON_R2	deg	Steering	Steering gear output angle for wheel R2 (input to nonlinear steering kinematics table) from external model	VARIABLE
+IMP_STEER_L1	deg	Steering	Road wheel L1 steer angle due to the steering system, (NOT ride/roll steer) from external model	VARIABLE
+IMP_STEER_L2	deg	Steering	Road wheel L2 steer angle due to the steering system, (NOT ride/roll steer) from external model	VARIABLE
+IMP_STEER_R1	deg	Steering	Road wheel R1 steer angle due to the steering system, (NOT ride/roll steer) from external model	VARIABLE
+IMP_STEER_R2	deg	Steering	Road wheel R2 steer angle due to the steering system, (NOT ride/roll steer) from external model	VARIABLE
+IMP_STEER_RACK_CON_L1	mm	Steering	Steering rack position for wheel L1 (input to nonlinear steering kinematics table) from external model	VARIABLE
+IMP_STEER_RACK_CON_L2	mm	Steering	Steering rack position for wheel L2 (input to nonlinear steering kinematics table) from external model	VARIABLE
+IMP_STEER_RACK_CON_R1	mm	Steering	Steering rack position for wheel R1 (input to nonlinear steering kinematics table) from external model	VARIABLE
+IMP_STEER_RACK_CON_R2	mm	Steering	Steering rack position for wheel R2 (input to nonlinear steering kinematics table) from external model	VARIABLE
+IMP_STEER_SW	deg	Steering	Steering wheel angle	VARIABLE
+IMP_STEER_T_IN	N-m	Steering	Steering input torque (driver model torque option or open loop)	VARIABLE
+IMP_S_OBJ_1	m	Targets	Station of object 1	0
+IMP_S_OBJ_10	m	Targets	Station of object 10	0
+IMP_S_OBJ_11	m	Targets	Station of object 11	0
+IMP_S_OBJ_12	m	Targets	Station of object 12	0
+IMP_S_OBJ_13	m	Targets	Station of object 13	0
+IMP_S_OBJ_14	m	Targets	Station of object 14	0
+IMP_S_OBJ_15	m	Targets	Station of object 15	0
+IMP_S_OBJ_16	m	Targets	Station of object 16	0
+IMP_S_OBJ_17	m	Targets	Station of object 17	0
+IMP_S_OBJ_18	m	Targets	Station of object 18	0
+IMP_S_OBJ_19	m	Targets	Station of object 19	0
+IMP_S_OBJ_2	m	Targets	Station of object 2	0
+IMP_S_OBJ_20	m	Targets	Station of object 20	0
+IMP_S_OBJ_21	m	Targets	Station of object 21	0
+IMP_S_OBJ_22	m	Targets	Station of object 22	0
+IMP_S_OBJ_23	m	Targets	Station of object 23	0
+IMP_S_OBJ_24	m	Targets	Station of object 24	0
+IMP_S_OBJ_25	m	Targets	Station of object 25	0
+IMP_S_OBJ_26	m	Targets	Station of object 26	0
+IMP_S_OBJ_27	m	Targets	Station of object 27	0
+IMP_S_OBJ_28	m	Targets	Station of object 28	0
+IMP_S_OBJ_29	m	Targets	Station of object 29	0
+IMP_S_OBJ_3	m	Targets	Station of object 3	0
+IMP_S_OBJ_30	m	Targets	Station of object 30	0
+IMP_S_OBJ_31	m	Targets	Station of object 31	0
+IMP_S_OBJ_32	m	Targets	Station of object 32	0
+IMP_S_OBJ_33	m	Targets	Station of object 33	0
+IMP_S_OBJ_34	m	Targets	Station of object 34	0
+IMP_S_OBJ_4	m	Targets	Station of object 4	0
+IMP_S_OBJ_5	m	Targets	Station of object 5	0
+IMP_S_OBJ_6	m	Targets	Station of object 6	0
+IMP_S_OBJ_7	m	Targets	Station of object 7	0
+IMP_S_OBJ_8	m	Targets	Station of object 8	0
+IMP_S_OBJ_9	m	Targets	Station of object 9	0
+IMP_TEMP_BTTRY	C	Powertrain	Battery Temperature	VARIABLE
+IMP_THROTTLE_ENGINE	-	Powertrain	Open loop throttle control	VARIABLE
+IMP_TYPE_OBJ_1	-	Targets	Type code of object 1	0
+IMP_TYPE_OBJ_10	-	Targets	Type code of object 10	0
+IMP_TYPE_OBJ_11	-	Targets	Type code of object 11	0
+IMP_TYPE_OBJ_12	-	Targets	Type code of object 12	0
+IMP_TYPE_OBJ_13	-	Targets	Type code of object 13	0
+IMP_TYPE_OBJ_14	-	Targets	Type code of object 14	0
+IMP_TYPE_OBJ_15	-	Targets	Type code of object 15	0
+IMP_TYPE_OBJ_16	-	Targets	Type code of object 16	0
+IMP_TYPE_OBJ_17	-	Targets	Type code of object 17	0
+IMP_TYPE_OBJ_18	-	Targets	Type code of object 18	0
+IMP_TYPE_OBJ_19	-	Targets	Type code of object 19	0
+IMP_TYPE_OBJ_2	-	Targets	Type code of object 2	0
+IMP_TYPE_OBJ_20	-	Targets	Type code of object 20	0
+IMP_TYPE_OBJ_21	-	Targets	Type code of object 21	0
+IMP_TYPE_OBJ_22	-	Targets	Type code of object 22	0
+IMP_TYPE_OBJ_23	-	Targets	Type code of object 23	0
+IMP_TYPE_OBJ_24	-	Targets	Type code of object 24	0
+IMP_TYPE_OBJ_25	-	Targets	Type code of object 25	0
+IMP_TYPE_OBJ_26	-	Targets	Type code of object 26	0
+IMP_TYPE_OBJ_27	-	Targets	Type code of object 27	0
+IMP_TYPE_OBJ_28	-	Targets	Type code of object 28	0
+IMP_TYPE_OBJ_29	-	Targets	Type code of object 29	0
+IMP_TYPE_OBJ_3	-	Targets	Type code of object 3	0
+IMP_TYPE_OBJ_30	-	Targets	Type code of object 30	0
+IMP_TYPE_OBJ_31	-	Targets	Type code of object 31	0
+IMP_TYPE_OBJ_32	-	Targets	Type code of object 32	0
+IMP_TYPE_OBJ_33	-	Targets	Type code of object 33	0
+IMP_TYPE_OBJ_34	-	Targets	Type code of object 34	0
+IMP_TYPE_OBJ_4	-	Targets	Type code of object 4	0
+IMP_TYPE_OBJ_5	-	Targets	Type code of object 5	0
+IMP_TYPE_OBJ_6	-	Targets	Type code of object 6	0
+IMP_TYPE_OBJ_7	-	Targets	Type code of object 7	0
+IMP_TYPE_OBJ_8	-	Targets	Type code of object 8	0
+IMP_TYPE_OBJ_9	-	Targets	Type code of object 9	0
+IMP_VIS_OBJ_1	-	Targets	Visibility of object 1	0
+IMP_VIS_OBJ_10	-	Targets	Visibility of object 10	0
+IMP_VIS_OBJ_11	-	Targets	Visibility of object 11	0
+IMP_VIS_OBJ_12	-	Targets	Visibility of object 12	0
+IMP_VIS_OBJ_13	-	Targets	Visibility of object 13	0
+IMP_VIS_OBJ_14	-	Targets	Visibility of object 14	0
+IMP_VIS_OBJ_15	-	Targets	Visibility of object 15	0
+IMP_VIS_OBJ_16	-	Targets	Visibility of object 16	0
+IMP_VIS_OBJ_17	-	Targets	Visibility of object 17	0
+IMP_VIS_OBJ_18	-	Targets	Visibility of object 18	0
+IMP_VIS_OBJ_19	-	Targets	Visibility of object 19	0
+IMP_VIS_OBJ_2	-	Targets	Visibility of object 2	0
+IMP_VIS_OBJ_20	-	Targets	Visibility of object 20	0
+IMP_VIS_OBJ_21	-	Targets	Visibility of object 21	0
+IMP_VIS_OBJ_22	-	Targets	Visibility of object 22	0
+IMP_VIS_OBJ_23	-	Targets	Visibility of object 23	0
+IMP_VIS_OBJ_24	-	Targets	Visibility of object 24	0
+IMP_VIS_OBJ_25	-	Targets	Visibility of object 25	0
+IMP_VIS_OBJ_26	-	Targets	Visibility of object 26	0
+IMP_VIS_OBJ_27	-	Targets	Visibility of object 27	0
+IMP_VIS_OBJ_28	-	Targets	Visibility of object 28	0
+IMP_VIS_OBJ_29	-	Targets	Visibility of object 29	0
+IMP_VIS_OBJ_3	-	Targets	Visibility of object 3	0
+IMP_VIS_OBJ_30	-	Targets	Visibility of object 30	0
+IMP_VIS_OBJ_31	-	Targets	Visibility of object 31	0
+IMP_VIS_OBJ_32	-	Targets	Visibility of object 32	0
+IMP_VIS_OBJ_33	-	Targets	Visibility of object 33	0
+IMP_VIS_OBJ_34	-	Targets	Visibility of object 34	0
+IMP_VIS_OBJ_4	-	Targets	Visibility of object 4	0
+IMP_VIS_OBJ_5	-	Targets	Visibility of object 5	0
+IMP_VIS_OBJ_6	-	Targets	Visibility of object 6	0
+IMP_VIS_OBJ_7	-	Targets	Visibility of object 7	0
+IMP_VIS_OBJ_8	-	Targets	Visibility of object 8	0
+IMP_VIS_OBJ_9	-	Targets	Visibility of object 9	0
+IMP_V_OBJ_1	km/h	Targets	V speed of object 1	0
+IMP_V_OBJ_10	km/h	Targets	V speed of object 10	0
+IMP_V_OBJ_11	km/h	Targets	V speed of object 11	0
+IMP_V_OBJ_12	km/h	Targets	V speed of object 12	0
+IMP_V_OBJ_13	km/h	Targets	V speed of object 13	0
+IMP_V_OBJ_14	km/h	Targets	V speed of object 14	0
+IMP_V_OBJ_15	km/h	Targets	V speed of object 15	0
+IMP_V_OBJ_16	km/h	Targets	V speed of object 16	0
+IMP_V_OBJ_17	km/h	Targets	V speed of object 17	0
+IMP_V_OBJ_18	km/h	Targets	V speed of object 18	0
+IMP_V_OBJ_19	km/h	Targets	V speed of object 19	0
+IMP_V_OBJ_2	km/h	Targets	V speed of object 2	0
+IMP_V_OBJ_20	km/h	Targets	V speed of object 20	0
+IMP_V_OBJ_21	km/h	Targets	V speed of object 21	0
+IMP_V_OBJ_22	km/h	Targets	V speed of object 22	0
+IMP_V_OBJ_23	km/h	Targets	V speed of object 23	0
+IMP_V_OBJ_24	km/h	Targets	V speed of object 24	0
+IMP_V_OBJ_25	km/h	Targets	V speed of object 25	0
+IMP_V_OBJ_26	km/h	Targets	V speed of object 26	0
+IMP_V_OBJ_27	km/h	Targets	V speed of object 27	0
+IMP_V_OBJ_28	km/h	Targets	V speed of object 28	0
+IMP_V_OBJ_29	km/h	Targets	V speed of object 29	0
+IMP_V_OBJ_3	km/h	Targets	V speed of object 3	0
+IMP_V_OBJ_30	km/h	Targets	V speed of object 30	0
+IMP_V_OBJ_31	km/h	Targets	V speed of object 31	0
+IMP_V_OBJ_32	km/h	Targets	V speed of object 32	0
+IMP_V_OBJ_33	km/h	Targets	V speed of object 33	0
+IMP_V_OBJ_34	km/h	Targets	V speed of object 34	0
+IMP_V_OBJ_4	km/h	Targets	V speed of object 4	0
+IMP_V_OBJ_5	km/h	Targets	V speed of object 5	0
+IMP_V_OBJ_6	km/h	Targets	V speed of object 6	0
+IMP_V_OBJ_7	km/h	Targets	V speed of object 7	0
+IMP_V_OBJ_8	km/h	Targets	V speed of object 8	0
+IMP_V_OBJ_9	km/h	Targets	V speed of object 9	0
+IMP_WIND_HEADING	deg	Aerodynamics	Heading (yaw) angle of wind relative to global X: when vehicle yaw is zero, then 0 deg -> tailwind, 90 deg -> from right, 180 deg -> headwind	VARIABLE
+IMP_WIND_SPEED	km/h	Aerodynamics	Absolute wind speed	VARIABLE
+IMP_XDMP_EXT_L1	mm	Suspensions	Compression of damper L1	VARIABLE
+IMP_XDMP_EXT_L2	mm	Suspensions	Compression of damper L2	VARIABLE
+IMP_XDMP_EXT_R1	mm	Suspensions	Compression of damper R1	VARIABLE
+IMP_XDMP_EXT_R2	mm	Suspensions	Compression of damper R2	VARIABLE
+IMP_XJST_EXT_L1	mm	Suspensions	Compression for jounce stop L1	VARIABLE
+IMP_XJST_EXT_L2	mm	Suspensions	Compression for jounce stop L2	VARIABLE
+IMP_XJST_EXT_R1	mm	Suspensions	Compression for jounce stop R1	VARIABLE
+IMP_XJST_EXT_R2	mm	Suspensions	Compression for jounce stop R2	VARIABLE
+IMP_XRST_EXT_L1	mm	Suspensions	Compression for rebound stop L1	VARIABLE
+IMP_XRST_EXT_L2	mm	Suspensions	Compression for rebound stop L2	VARIABLE
+IMP_XRST_EXT_R1	mm	Suspensions	Compression for rebound stop R1	VARIABLE
+IMP_XRST_EXT_R2	mm	Suspensions	Compression for rebound stop R2	VARIABLE
+IMP_X_OBJ_1	m	Targets	X coordinate of object 1	0
+IMP_X_OBJ_10	m	Targets	X coordinate of object 10	0
+IMP_X_OBJ_11	m	Targets	X coordinate of object 11	0
+IMP_X_OBJ_12	m	Targets	X coordinate of object 12	0
+IMP_X_OBJ_13	m	Targets	X coordinate of object 13	0
+IMP_X_OBJ_14	m	Targets	X coordinate of object 14	0
+IMP_X_OBJ_15	m	Targets	X coordinate of object 15	0
+IMP_X_OBJ_16	m	Targets	X coordinate of object 16	0
+IMP_X_OBJ_17	m	Targets	X coordinate of object 17	0
+IMP_X_OBJ_18	m	Targets	X coordinate of object 18	0
+IMP_X_OBJ_19	m	Targets	X coordinate of object 19	0
+IMP_X_OBJ_2	m	Targets	X coordinate of object 2	0
+IMP_X_OBJ_20	m	Targets	X coordinate of object 20	0
+IMP_X_OBJ_21	m	Targets	X coordinate of object 21	0
+IMP_X_OBJ_22	m	Targets	X coordinate of object 22	0
+IMP_X_OBJ_23	m	Targets	X coordinate of object 23	0
+IMP_X_OBJ_24	m	Targets	X coordinate of object 24	0
+IMP_X_OBJ_25	m	Targets	X coordinate of object 25	0
+IMP_X_OBJ_26	m	Targets	X coordinate of object 26	0
+IMP_X_OBJ_27	m	Targets	X coordinate of object 27	0
+IMP_X_OBJ_28	m	Targets	X coordinate of object 28	0
+IMP_X_OBJ_29	m	Targets	X coordinate of object 29	0
+IMP_X_OBJ_3	m	Targets	X coordinate of object 3	0
+IMP_X_OBJ_30	m	Targets	X coordinate of object 30	0
+IMP_X_OBJ_31	m	Targets	X coordinate of object 31	0
+IMP_X_OBJ_32	m	Targets	X coordinate of object 32	0
+IMP_X_OBJ_33	m	Targets	X coordinate of object 33	0
+IMP_X_OBJ_34	m	Targets	X coordinate of object 34	0
+IMP_X_OBJ_4	m	Targets	X coordinate of object 4	0
+IMP_X_OBJ_5	m	Targets	X coordinate of object 5	0
+IMP_X_OBJ_6	m	Targets	X coordinate of object 6	0
+IMP_X_OBJ_7	m	Targets	X coordinate of object 7	0
+IMP_X_OBJ_8	m	Targets	X coordinate of object 8	0
+IMP_X_OBJ_9	m	Targets	X coordinate of object 9	0
+IMP_YAW_AIM_SENSOR_1	deg	Sensors	Relative yaw (aim) of sensor	VARIABLE
+IMP_YAW_OBJ_1	deg	Targets	Yaw angle of object 1	0
+IMP_YAW_OBJ_10	deg	Targets	Yaw angle of object 10	0
+IMP_YAW_OBJ_11	deg	Targets	Yaw angle of object 11	0
+IMP_YAW_OBJ_12	deg	Targets	Yaw angle of object 12	0
+IMP_YAW_OBJ_13	deg	Targets	Yaw angle of object 13	0
+IMP_YAW_OBJ_14	deg	Targets	Yaw angle of object 14	0
+IMP_YAW_OBJ_15	deg	Targets	Yaw angle of object 15	0
+IMP_YAW_OBJ_16	deg	Targets	Yaw angle of object 16	0
+IMP_YAW_OBJ_17	deg	Targets	Yaw angle of object 17	0
+IMP_YAW_OBJ_18	deg	Targets	Yaw angle of object 18	0
+IMP_YAW_OBJ_19	deg	Targets	Yaw angle of object 19	0
+IMP_YAW_OBJ_2	deg	Targets	Yaw angle of object 2	0
+IMP_YAW_OBJ_20	deg	Targets	Yaw angle of object 20	0
+IMP_YAW_OBJ_21	deg	Targets	Yaw angle of object 21	0
+IMP_YAW_OBJ_22	deg	Targets	Yaw angle of object 22	0
+IMP_YAW_OBJ_23	deg	Targets	Yaw angle of object 23	0
+IMP_YAW_OBJ_24	deg	Targets	Yaw angle of object 24	0
+IMP_YAW_OBJ_25	deg	Targets	Yaw angle of object 25	0
+IMP_YAW_OBJ_26	deg	Targets	Yaw angle of object 26	0
+IMP_YAW_OBJ_27	deg	Targets	Yaw angle of object 27	0
+IMP_YAW_OBJ_28	deg	Targets	Yaw angle of object 28	0
+IMP_YAW_OBJ_29	deg	Targets	Yaw angle of object 29	0
+IMP_YAW_OBJ_3	deg	Targets	Yaw angle of object 3	0
+IMP_YAW_OBJ_30	deg	Targets	Yaw angle of object 30	0
+IMP_YAW_OBJ_31	deg	Targets	Yaw angle of object 31	0
+IMP_YAW_OBJ_32	deg	Targets	Yaw angle of object 32	0
+IMP_YAW_OBJ_33	deg	Targets	Yaw angle of object 33	0
+IMP_YAW_OBJ_34	deg	Targets	Yaw angle of object 34	0
+IMP_YAW_OBJ_4	deg	Targets	Yaw angle of object 4	0
+IMP_YAW_OBJ_5	deg	Targets	Yaw angle of object 5	0
+IMP_YAW_OBJ_6	deg	Targets	Yaw angle of object 6	0
+IMP_YAW_OBJ_7	deg	Targets	Yaw angle of object 7	0
+IMP_YAW_OBJ_8	deg	Targets	Yaw angle of object 8	0
+IMP_YAW_OBJ_9	deg	Targets	Yaw angle of object 9	0
+IMP_Y_OBJ_1	m	Targets	Y coordinate of object 1	0
+IMP_Y_OBJ_10	m	Targets	Y coordinate of object 10	0
+IMP_Y_OBJ_11	m	Targets	Y coordinate of object 11	0
+IMP_Y_OBJ_12	m	Targets	Y coordinate of object 12	0
+IMP_Y_OBJ_13	m	Targets	Y coordinate of object 13	0
+IMP_Y_OBJ_14	m	Targets	Y coordinate of object 14	0
+IMP_Y_OBJ_15	m	Targets	Y coordinate of object 15	0
+IMP_Y_OBJ_16	m	Targets	Y coordinate of object 16	0
+IMP_Y_OBJ_17	m	Targets	Y coordinate of object 17	0
+IMP_Y_OBJ_18	m	Targets	Y coordinate of object 18	0
+IMP_Y_OBJ_19	m	Targets	Y coordinate of object 19	0
+IMP_Y_OBJ_2	m	Targets	Y coordinate of object 2	0
+IMP_Y_OBJ_20	m	Targets	Y coordinate of object 20	0
+IMP_Y_OBJ_21	m	Targets	Y coordinate of object 21	0
+IMP_Y_OBJ_22	m	Targets	Y coordinate of object 22	0
+IMP_Y_OBJ_23	m	Targets	Y coordinate of object 23	0
+IMP_Y_OBJ_24	m	Targets	Y coordinate of object 24	0
+IMP_Y_OBJ_25	m	Targets	Y coordinate of object 25	0
+IMP_Y_OBJ_26	m	Targets	Y coordinate of object 26	0
+IMP_Y_OBJ_27	m	Targets	Y coordinate of object 27	0
+IMP_Y_OBJ_28	m	Targets	Y coordinate of object 28	0
+IMP_Y_OBJ_29	m	Targets	Y coordinate of object 29	0
+IMP_Y_OBJ_3	m	Targets	Y coordinate of object 3	0
+IMP_Y_OBJ_30	m	Targets	Y coordinate of object 30	0
+IMP_Y_OBJ_31	m	Targets	Y coordinate of object 31	0
+IMP_Y_OBJ_32	m	Targets	Y coordinate of object 32	0
+IMP_Y_OBJ_33	m	Targets	Y coordinate of object 33	0
+IMP_Y_OBJ_34	m	Targets	Y coordinate of object 34	0
+IMP_Y_OBJ_4	m	Targets	Y coordinate of object 4	0
+IMP_Y_OBJ_5	m	Targets	Y coordinate of object 5	0
+IMP_Y_OBJ_6	m	Targets	Y coordinate of object 6	0
+IMP_Y_OBJ_7	m	Targets	Y coordinate of object 7	0
+IMP_Y_OBJ_8	m	Targets	Y coordinate of object 8	0
+IMP_Y_OBJ_9	m	Targets	Y coordinate of object 9	0
+IMP_ZGND_L1	m	Tires	Z coordinate of ground at the tire CTC	VARIABLE
+IMP_ZGND_L2	m	Tires	Z coordinate of ground at the tire CTC	VARIABLE
+IMP_ZGND_R1	m	Tires	Z coordinate of ground at the tire CTC	VARIABLE
+IMP_ZGND_R2	m	Tires	Z coordinate of ground at the tire CTC	VARIABLE
+IMP_Z_OBJ_1	m	Targets	Z coordinate of object 1	0
+IMP_Z_OBJ_10	m	Targets	Z coordinate of object 10	0
+IMP_Z_OBJ_11	m	Targets	Z coordinate of object 11	0
+IMP_Z_OBJ_12	m	Targets	Z coordinate of object 12	0
+IMP_Z_OBJ_13	m	Targets	Z coordinate of object 13	0
+IMP_Z_OBJ_14	m	Targets	Z coordinate of object 14	0
+IMP_Z_OBJ_15	m	Targets	Z coordinate of object 15	0
+IMP_Z_OBJ_16	m	Targets	Z coordinate of object 16	0
+IMP_Z_OBJ_17	m	Targets	Z coordinate of object 17	0
+IMP_Z_OBJ_18	m	Targets	Z coordinate of object 18	0
+IMP_Z_OBJ_19	m	Targets	Z coordinate of object 19	0
+IMP_Z_OBJ_2	m	Targets	Z coordinate of object 2	0
+IMP_Z_OBJ_20	m	Targets	Z coordinate of object 20	0
+IMP_Z_OBJ_21	m	Targets	Z coordinate of object 21	0
+IMP_Z_OBJ_22	m	Targets	Z coordinate of object 22	0
+IMP_Z_OBJ_23	m	Targets	Z coordinate of object 23	0
+IMP_Z_OBJ_24	m	Targets	Z coordinate of object 24	0
+IMP_Z_OBJ_25	m	Targets	Z coordinate of object 25	0
+IMP_Z_OBJ_26	m	Targets	Z coordinate of object 26	0
+IMP_Z_OBJ_27	m	Targets	Z coordinate of object 27	0
+IMP_Z_OBJ_28	m	Targets	Z coordinate of object 28	0
+IMP_Z_OBJ_29	m	Targets	Z coordinate of object 29	0
+IMP_Z_OBJ_3	m	Targets	Z coordinate of object 3	0
+IMP_Z_OBJ_30	m	Targets	Z coordinate of object 30	0
+IMP_Z_OBJ_31	m	Targets	Z coordinate of object 31	0
+IMP_Z_OBJ_32	m	Targets	Z coordinate of object 32	0
+IMP_Z_OBJ_33	m	Targets	Z coordinate of object 33	0
+IMP_Z_OBJ_34	m	Targets	Z coordinate of object 34	0
+IMP_Z_OBJ_4	m	Targets	Z coordinate of object 4	0
+IMP_Z_OBJ_5	m	Targets	Z coordinate of object 5	0
+IMP_Z_OBJ_6	m	Targets	Z coordinate of object 6	0
+IMP_Z_OBJ_7	m	Targets	Z coordinate of object 7	0
+IMP_Z_OBJ_8	m	Targets	Z coordinate of object 8	0
+IMP_Z_OBJ_9	m	Targets	Z coordinate of object 9	0

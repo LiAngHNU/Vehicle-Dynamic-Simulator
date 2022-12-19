@@ -1,0 +1,26 @@
+Run made by VS Road Calculator at 19:37 on May 05, 2022.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_e21073ee-1264-4a05-9e66-86945748e2d2.par"
+Include PARSFILE "Roads\BuilderSegment\RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c.par"
+ Straight Path East, ID = 1001 <Straight>
+Used Dataset: Path: Segment Builder; { Straight } Straight Path East, ID = 1001
+Include PARSFILE "Roads\Center_Z\RdRefZ_598f8ea7-d2f1-4e0b-a828-7b8c7dfb136e.par"
+Used Dataset: Road: Reference Line Elevation; Flat
+Include PARSFILE "Roads\dZ_Map\RdMapZ_daeb5d83-fffb-4248-89b6-089cb34929b0.par"
+Used Dataset: Road: Off-Center Elevation Map, S-L Grid; Flat
+Include PARSFILE "Roads\Friction\RdMu_25e73395-9471-44b9-9c60-27bd9cc24921.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } 0.85
+Include PARSFILE "Roads\Shapes\RdShape_8e6b6769-1ac6-4496-945d-5408acbbfa7e.par"
+Used Dataset: Road: Animator Surface Shapes; { Straight Roads } 1200 m Road + 200 m Light Grass (One Lane)
+Include PARSFILE "Roads\dZ_Map\RdMapZ_daeb5d83-fffb-4248-89b6-089cb34929b0.par"
+Used Dataset: Road: Off-Center Elevation Map, S-L Grid; Flat
+ 1200 m, One Lane, Mu = 0.85, No Trees <Straight>
+Used Dataset: Road: 3D Surface (All Properties); { Straight } 1200 m, One Lane, Mu = 0.85, No Trees
+
+Time to read input = 0.001
+
+Run stopped at t = 14.44. Stop time reached.
+
+Run started: VS output file = Roads\3D_Road\Road_e21073ee-1264-4a05-9e66-86945748e2d2.vsb

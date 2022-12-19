@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Lap Counter`Lap Counter
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_01028e0f-04b1-4222-bdf3-7848a11f4ae5
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+define_output Lap = SV_N_START_CROSS;
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS Lap, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Lap Counter
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Lap Counter } Lap Counter
+#Library : Plot: Setup
+#DataSet : Lap Counter
+#Category: Lap Counter
+#FileID  : Plot_9ea832a7-356d-48ab-845f-4d224871aa86
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END
