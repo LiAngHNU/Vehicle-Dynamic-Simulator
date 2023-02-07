@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Reference Line Parameterizer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Version: v2.0 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Date: 2022/11/09 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Version: v3.0 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Date: 2023/02/07 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Author: Li.Ang %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Email: li.ang@cidi.ai %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -12,12 +12,10 @@ close all; clc;
 % Set Steps
 nI = 5;
 % Set Dimensions
-nD = length(out.T.Data);
-% Set Fit Methods               [diff, spline, pchip, makima]
-Method = 'diff';                     
+nD = length(out.T.Data);                     
 % Set Track Width
-Wl = 2.0;
-Wr = 2.0;
+Wl = 2.0*ones(nD,1);
+Wr = 2.0*ones(nD,1);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Initialize Matrices %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -37,7 +35,9 @@ Slp = zeros(nD,1);
 Tht = zeros(nD,1);
 Kpa = zeros(nD,1);
 dX = zeros(nD,1);
+ddX = zeros(nD,1);
 dY = zeros(nD,1);
+ddY = zeros(nD,1);
 dBnk = zeros(nD,1);
 dSlp = zeros(nD,1);
 dTht = zeros(nD,1);
@@ -62,23 +62,39 @@ Kpa = out.Kpa.Data;
 for i = 1:1:nD
 Id(i,1) = i;
 end
-% 
-switch Method
-% Method: diff
-case 'diff'
-dX = [0;diff(X)];
-dY = [0;diff(Y)];
-for i = 1:1:nD
-Tht(i,1) = atan(dY(i)/dX(i));
-Tht(1,1) = Tht(2,1);
+% Calculate X and Y Derivatives
+coefs_X = spline(S,X);
+coefs_Y = spline(S,Y);
+for i = 1:1:nD-1
+    dX(i,1) = coefs_X.coefs(i,3);
+    ddX(i,1) = 2*coefs_X.coefs(i,2);
+    dY(i,1) = coefs_Y.coefs(i,3);
+    ddY(i,1) = 2*coefs_Y.coefs(i,2);
 end
+dX(nD,1) = 3*coefs_X.coefs(nD-1,1)*(S(nD)-S(nD-1))^2 + ...
+           2*coefs_X.coefs(nD-1,2)*(S(nD)-S(nD-1)) + ...
+           1*coefs_X.coefs(nD-1,3);
+ddX(nD,1) = 6*coefs_X.coefs(nD-1,1)*(S(nD)-S(nD-1)) + ...
+            2*coefs_X.coefs(nD-1,2);
+dY(nD,1) = 3*coefs_Y.coefs(nD-1,1)*(S(nD)-S(nD-1))^2 + ...
+           2*coefs_Y.coefs(nD-1,2)*(S(nD)-S(nD-1)) + ...
+           1*coefs_Y.coefs(nD-1,3);
+ddY(nD,1) = 6*coefs_Y.coefs(nD-1,1)*(S(nD)-S(nD-1)) + ...
+            2*coefs_Y.coefs(nD-1,2);
+% Calculate Theta
+for i = 1:1:nD
+    Tht(i,1) = atan(dY(i,1)/dX(i,1));
+end
+% Calculate Kappa
+for i = 1:1:nD
+    Kpa(i,1) = (dX(i,1)*ddY(i,1) - ddX(i,1)*dY(i,1))/(dX(i,1)^2 + dY(i,1)^2);
+end
+% Kpa = out.Kpa.Data; 
+Kpa = smooth(Kpa,50);
+
 dBnk = [0;diff(Bnk)];
 dSlp = [0;diff(Slp)];
 dKpa = [0;diff(Kpa)];
-% Method: spline
-% Method: pchip
-% Method: makima
-end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Data Legality Check %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -97,10 +113,12 @@ dTht = [0;diff(Tht)];
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Calculate Boundaries %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Xl = X - Wl*sin(Tht);
-Yl = Y + Wl*cos(Tht);
-Xr = X + Wr*sin(Tht);
-Yr = Y - Wr*cos(Tht);
+for i = 1:1:nD
+    Xl(i) = X(i) - Wl(i)*sin(Tht(i));
+    Yl(i) = Y(i) + Wl(i)*cos(Tht(i));
+    Xr(i) = X(i) + Wr(i)*sin(Tht(i));
+    Yr(i) = Y(i) - Wr(i)*cos(Tht(i));
+end
 for i = 2:1:nD
     Sl(i) = sqrt((Xl(i)-Xl(i-1))^2+(Yl(i)-Yl(i-1))^2) + Sl(i-1);
     Sr(i) = sqrt((Xr(i)-Xr(i-1))^2+(Yr(i)-Yr(i-1))^2) + Sr(i-1);
@@ -108,8 +126,9 @@ end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Save RefLine %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-RefLineInfo = table(Id, T, S, X, Y, Bnk, Slp, Tht, Kpa, dX, dY,...
-                    dBnk, dSlp, dTht, dKpa, Sl, Xl, Yl, Sr, Xr, Yr);
+RefLineInfo = table(Id, T, S, X, Y, Bnk, Slp, Tht, Kpa, ...
+                    dX, ddX, dY, ddY, dBnk, dSlp, dTht, dKpa, ...
+                    Sl, Xl, Yl, Sr, Xr, Yr);
 RefLineInfo.Id = Id;
 RefLineInfo.T = T;
 RefLineInfo.S = S;
