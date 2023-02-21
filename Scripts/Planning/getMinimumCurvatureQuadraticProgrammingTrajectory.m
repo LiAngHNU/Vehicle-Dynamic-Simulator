@@ -10,30 +10,26 @@ close all; clear; clc;
 %% Planner Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Set Steps
-Tp =   200;
-Ts =     5;
+Tp =   100;
+Tc =   100;
+Ts =  2.00;
 % Set Weights
-Qc = 1.00;
-Qd = 1-Qc;
-Rd = 1.00;
+Qc =  1.00;
+Qd =  1-Qc;
+Rd =  1.00;
 % Set RefLine
-load("Scenarios\RaceTracks\RaceTrack_Budapest.mat");
+load('Scenarios\RaceTracks\RaceTrack_BrandsHatch.mat');
 % Set Constraints
-SafetyMargin = 0.00;
+SafetyMargin = 0.50;
 dLmax = +0.50;
 dLmin = -0.50;
-% Set Initial Posture
-Vx =  0.00; Ax = 0.00;
-Vy =  0.00; Ay = 0.00;
-StartID =   501;
-StartEy = -0.00;
-StartX  = RefLineInfo.X(StartID) - StartEy*sin(RefLineInfo.Tht(StartID));
-StartY  = RefLineInfo.Y(StartID) + StartEy*cos(RefLineInfo.Tht(StartID));
-StartTht= RefLineInfo.Tht(StartID);
-StartVx = Vx*cos(StartTht) - Vy*sin(StartTht);
-StartVy = Vx*sin(StartTht) + Vy*cos(StartTht);
-StartAx = Ax*cos(StartTht) - Ay*sin(StartTht);
-StartAy = Ax*sin(StartTht) + Ay*cos(StartTht);
+% Set Initial & Final States
+Vxo = +15.00; Vxf = +15.00;
+Vyo = + 5.00; Vyf = + 0.00;
+Axo = + 0.00; Axf = + 0.00;
+Ayo = + 0.00; Ayf = + 0.00;
+StartID =  251;
+StartEy = +0.00;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Initialize Matrices & Vectors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -42,6 +38,7 @@ Vector_S_ref = zeros(Tp,1);
 Vector_X_ref = zeros(Tp,1);
 Vector_Y_ref = zeros(Tp,1);
 Vector_Tht_ref = zeros(Tp,1);
+Vector_Kpa_ref = zeros(Tp,1);
 Vector_dX_ref = zeros(Tp,1);
 Vector_dY_ref = zeros(Tp,1);
 Vector_Wl_ref = zeros(Tp,1);
@@ -71,6 +68,14 @@ Matrix_fcxx = zeros(Tp,1);
 Matrix_fcxy = zeros(Tp,1);
 Matrix_fcyy = zeros(Tp,1);
 Matrix_fd   = zeros(Tp,1);
+Matrix_Asat = zeros(2*Tp,Tp);
+Matrix_Ainc = zeros(2*Tp,Tp);
+Matrix_A    = zeros(4*Tp,Tp);
+Matrix_bsat = zeros(2*Tp,1);
+Matrix_binc = zeros(2*Tp,1);
+Matrix_b    = zeros(4*Tp,1);
+Matrix_Aeq  = zeros(Tp,Tp);
+Matrix_beq  = zeros(Tp,1);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Calculate Reference Line Information %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -80,23 +85,35 @@ for i = 1:1:Tp
     Vector_X_ref(i,1) = interp1(RefLineInfo.S,RefLineInfo.X,Vector_S_ref(i,1));
     Vector_Y_ref(i,1) = interp1(RefLineInfo.S,RefLineInfo.Y,Vector_S_ref(i,1));
     Vector_Tht_ref(i,1) = interp1(RefLineInfo.S,RefLineInfo.Tht,Vector_S_ref(i,1));
+    Vector_Kpa_ref(i,1) = interp1(RefLineInfo.S,RefLineInfo.Kpa,Vector_S_ref(i,1));
     Vector_dX_ref(i,1) = interp1(RefLineInfo.S,RefLineInfo.dX,Vector_S_ref(i,1));
     Vector_dY_ref(i,1) = interp1(RefLineInfo.S,RefLineInfo.dY,Vector_S_ref(i,1));
     Vector_Wl_ref(i,1) = interp1(RefLineInfo.S,RefLineInfo.Wl,Vector_S_ref(i,1));
     Vector_Wr_ref(i,1) = interp1(RefLineInfo.S,RefLineInfo.Wr,Vector_S_ref(i,1));
 end
+StartX  = RefLineInfo.X(StartID) - StartEy*sin(RefLineInfo.Tht(StartID));
+StartY  = RefLineInfo.Y(StartID) + StartEy*cos(RefLineInfo.Tht(StartID));
+StartTht= RefLineInfo.Tht(StartID);
+StartVs = (1-RefLineInfo.Kpa(StartID)*StartEy)/(Vxo*cos(StartTht) - Vyo*sin(StartTht));
+StartVx = Vxo*cos(StartTht) - Vyo*sin(StartTht);
+StartVy = Vxo*sin(StartTht) + Vyo*cos(StartTht);
+
+FinalTht = Vector_Tht_ref(Tp,1);
+FinalVs = (1-Vector_Kpa_ref(Tp,1)*StartEy)/(Vxf*cos(StartTht) - Vyf*sin(StartTht));
+FinalVx = Vxf*cos(StartTht) - Vyf*sin(StartTht);
+FinalVy = Vxf*sin(StartTht) + Vyf*cos(StartTht);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Calculate Matrices & Vectors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Calculate Xref & Yref
 Matrix_X_refsp(1,1) = StartX;
 Matrix_X_refsp(2,1) = Vector_X_ref(1,1);
-Matrix_X_refsp(end-1,1) = StartAx;
-Matrix_X_refsp(end,  1) = interp1(RefLineInfo.S,RefLineInfo.dX,Vector_S_ref(Tp,1));
+Matrix_X_refsp(end-1,1) = 0;
+Matrix_X_refsp(end,  1) = 0; % interp1(RefLineInfo.S,RefLineInfo.dX,Vector_S_ref(Tp,1));
 Matrix_Y_refsp(1,1) = StartY;
 Matrix_Y_refsp(2,1) = Vector_Y_ref(1,1);
-Matrix_Y_refsp(end-1,1) = StartAy;
-Matrix_Y_refsp(end,  1) = interp1(RefLineInfo.S,RefLineInfo.dY,Vector_S_ref(Tp,1));
+Matrix_Y_refsp(end-1,1) = 0;
+Matrix_Y_refsp(end,  1) = 0; % interp1(RefLineInfo.S,RefLineInfo.dY,Vector_S_ref(Tp,1));
 for i = 2:1:Tp
     Matrix_X_refsp(4*i-3,1) = Vector_X_ref(i-1,1);
     Matrix_X_refsp(4*i-2,1) = Vector_X_ref(i,1);
@@ -188,8 +205,18 @@ Matrix_binc(1,1) = +dLmax + StartEy;
 Matrix_binc(Tp+1,1) = -dLmin - StartEy;
 Matrix_b = [Matrix_bsat;...
             Matrix_binc;];
+% Calculate Matrix Aeq
+Matrix_Aeq = [        eye(Tc),   zeros(Tc,Tp-Tc);...
+              zeros(Tp-Tc,Tc),zeros(Tp-Tc,Tp-Tc);];
+% Calculate Matrix beq
+Matrix_beq = [    ones(Tc,1);...
+                  zeros(Tp-Tc,1);];
+% Calculate Matrix lb
+Matrix_lb = -Vector_Wr_ref + SafetyMargin;
+% Calculate Matrix lb
+Matrix_ub = +Vector_Wl_ref - SafetyMargin;
 % Solve QP
-Vector_L_traj = quadprog(Matrix_H, Matrix_f, Matrix_A, Matrix_b);
+Vector_L_traj = quadprog(Matrix_H,Matrix_f,Matrix_A,Matrix_b,Matrix_Aeq,Matrix_beq);
 Vector_L_traj(1,1) = 0.5*(StartEy + Vector_L_traj(2,1));
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Post Process %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -201,6 +228,9 @@ Vector_Xl_ref = interp1(RefLineInfo.S,RefLineInfo.Xl,Vector_S_ref);
 Vector_Yl_ref = interp1(RefLineInfo.S,RefLineInfo.Yl,Vector_S_ref);
 Vector_Xr_ref = interp1(RefLineInfo.S,RefLineInfo.Xr,Vector_S_ref);
 Vector_Yr_ref = interp1(RefLineInfo.S,RefLineInfo.Yr,Vector_S_ref);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Visualize Results %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 hold on; axis equal;
 plot(RefLineInfo.X,RefLineInfo.Y,'r--');
 plot(RefLineInfo.Xl,RefLineInfo.Yl,'k');
@@ -208,6 +238,6 @@ plot(RefLineInfo.Xr,RefLineInfo.Yr,'k');
 plot([RefLineInfo.Xl(1,1),RefLineInfo.Xr(1,1)],...
      [RefLineInfo.Yl(1,1),RefLineInfo.Yr(1,1)],'k','LineWidth',10);
 plot(Vector_X_traj,Vector_Y_traj,'g','LineWidth',2);
-% for i = 1:1:Tp
-%     plot([Vector_Xl_ref(i,1),Vector_Xr_ref(i,1)],[Vector_Yl_ref(i,1),Vector_Yr_ref(i,1)],'k');
-% end
+for i = 1:1:Tp
+    plot([Vector_Xl_ref(i,1),Vector_Xr_ref(i,1)],[Vector_Yl_ref(i,1),Vector_Yr_ref(i,1)],'k');
+end
