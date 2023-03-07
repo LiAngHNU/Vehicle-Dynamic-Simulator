@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Aerodynamics: Basic`No Aerodynamics`Generic Aerodynamic Properties
+#CheckBox0 0    
+
+#RingCtrl0 2
+#RingCtrl1 2
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 2
+#RingCtrl5 2
+PARSFILE Aerodynamics\Aero_Fx\AirCFx_9bb7ce85-4c15-4510-9289-f3e6344e8ec9.par
+#BlueLink0 Aerodynamics: Fx (Drag) Coef. vs. Aero Slip`CFx = 0` ` , CFx`AirCFx_9bb7ce85-4c15-4510-9289-f3e6344e8ec9
+
+PARSFILE Aerodynamics\Aero_Fy\AirCFy_32839a5b-606d-49ef-b579-5b3cdb52ff83.par
+#BlueLink1 Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip`CFy = 0` ` , CFy`AirCFy_32839a5b-606d-49ef-b579-5b3cdb52ff83
+
+PARSFILE Aerodynamics\Aero_Fz\AirCFz_3625ad4f-4faa-42fc-a93b-f90396b378ea.par
+#BlueLink2 Aerodynamics: Fz (Lift) Coef. vs. Aero Slip`CFz = 0` ` , CFz`AirCFz_3625ad4f-4faa-42fc-a93b-f90396b378ea
+
+PARSFILE Aerodynamics\Aero_Mx\AirCMx_c749aa2e-04b2-44ba-b514-014a0d130bea.par
+#BlueLink3 Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip`CMx = 0` ` , CMx`AirCMx_c749aa2e-04b2-44ba-b514-014a0d130bea
+
+PARSFILE Aerodynamics\Aero_My\AirCMy_b0ed58af-007c-41f4-80ec-a90d3789d806.par
+#BlueLink4 Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip`CMy = 0` ` , CMy`AirCMy_b0ed58af-007c-41f4-80ec-a90d3789d806
+
+PARSFILE Aerodynamics\Aero_Mz\AirCMz_fa06daaf-f8b1-473a-85d9-63748fc25049.par
+#BlueLink5 Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip`CMz = 0` ` , CMz`AirCMz_fa06daaf-f8b1-473a-85d9-63748fc25049
+
+X_REF_AERO 0
+Y_REF_AERO 0
+H_REF_AERO 0
+L_REF_AERO 0
+AREA_AERO 0
+D_AIR 1.206
+
+#EMBEDDED_NOTES
+#The frontal area and reference length are zero to remove aerodynamic effects from this dataset. Aerodynamic effects can also be disabled by setting the air mass density to zero, or by linking to force and moment data sets that always return zero.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Aerodynamics: Basic; { Generic Aerodynamic Properties } No Aerodynamics
+#Library : Aerodynamics: Basic
+#DataSet : No Aerodynamics
+#Category: Generic Aerodynamic Properties
+#FileID  : Aero_3479bdf1-b57e-4404-97d9-41c21f83ddb4
+#Product : CarSim 2020.0
+#VehCode Aerodynamics
+
+END

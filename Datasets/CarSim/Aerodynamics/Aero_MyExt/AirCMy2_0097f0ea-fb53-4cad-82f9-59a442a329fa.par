@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Aerodynamics: My (Pitch Moment) Coef. vs. Bounce and Pitch`Exotic Racecar`
+#CheckBox0 0    
+
+#RingCtrl0 CARPET
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical disp (mm)
+*3D_YLabel Pitch angle (deg)
+*3D_ZLabel Pitch moment coefficient factor CMy (-)
+
+#DiagramTwo0
+*3D_DATA 3, 2 ! columns x rows
+MY_AERO_SHAPING_2_CARPET 2D_LINEAR
+0, 0, 6.35, 12.7
+-2.68, 0.139822, 0.132555, 0.13075
+0, 0.145737, 0.138159, 0.136281
+ENDTABLE
+
+
+
+LOG_ENTRY Used Dataset: Aerodynamics: My (Pitch Moment) Coef. vs. Bounce and Pitch; Exotic Racecar
+#Library : Aerodynamics: My (Pitch Moment) Coef. vs. Bounce and Pitch
+#DataSet : Exotic Racecar
+#Category: 
+#FileID  : AirCMy2_0097f0ea-fb53-4cad-82f9-59a442a329fa
+#Product : CarSim 2020.0
+#VehCode My vs. Bounce and Pitch
+
+END

@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Aerodynamics: Basic`Full-Size Pickup (3725 mm wheelbase)`Pickup Trucks
+#CheckBox0 0    
+
+#RingCtrl0 2
+#RingCtrl1 2
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 2
+#RingCtrl5 2
+PARSFILE Aerodynamics\Aero_Fx\AirCFx_67b7c1a5-2eb8-4548-b585-873fbb86b674.par
+#BlueLink0 Aerodynamics: Fx (Drag) Coef. vs. Aero Slip`Spline: 0.30 at 0 deg.` Spline Interpolation` , CFx`AirCFx_67b7c1a5-2eb8-4548-b585-873fbb86b674
+
+PARSFILE Aerodynamics\Aero_Fy\AirCFy_fdb1d5b6-475a-4d35-bfcc-b2b05bed2d67.par
+#BlueLink1 Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip`Spline: 2 at 90 deg.` Spline Interpolation` , CFy`AirCFy_fdb1d5b6-475a-4d35-bfcc-b2b05bed2d67
+
+PARSFILE Aerodynamics\Aero_Fz\AirCFz_181dc205-db9c-4a33-a480-7f8380b96502.par
+#BlueLink2 Aerodynamics: Fz (Lift) Coef. vs. Aero Slip`Spline: 0.18 at 0 deg.` Spline Interpolation` , CFz`AirCFz_181dc205-db9c-4a33-a480-7f8380b96502
+
+PARSFILE Aerodynamics\Aero_Mx\AirCMx_3f02edea-099a-450e-bb38-0cab04c7d554.par
+#BlueLink3 Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip`Spline: 0.3 at 90 deg.` Spline Interpolation` , CMx`AirCMx_3f02edea-099a-450e-bb38-0cab04c7d554
+
+PARSFILE Aerodynamics\Aero_My\AirCMy_d0c39dc5-f1b1-477a-8422-5ef53720bcf1.par
+#BlueLink4 Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip`Spline: 0.15 at 0 deg.` Spline Interpolation` , CMy`AirCMy_d0c39dc5-f1b1-477a-8422-5ef53720bcf1
+
+PARSFILE Aerodynamics\Aero_Mz\AirCMz_8c859ffc-2eb2-44f3-8fa4-850e39efba8a.par
+#BlueLink5 Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip`Spline: 0.2 at 35 deg.` Spline Interpolation` , CMz`AirCMz_8c859ffc-2eb2-44f3-8fa4-850e39efba8a
+
+X_REF_AERO -1862.5
+Y_REF_AERO 0
+H_REF_AERO 0
+L_REF_AERO 3725
+AREA_AERO 3.2
+D_AIR 1.206
+
+#EMBEDDED_NOTES
+#According to SAE convention, the reference point is located at the midpoint of the wheelbase, the midpoint of the track, at ground level, and the reference length is equal to the wheelbase.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Aerodynamics: Basic; { Pickup Trucks } Full-Size Pickup (3725 mm wheelbase)
+#Library : Aerodynamics: Basic
+#DataSet : Full-Size Pickup (3725 mm wheelbase)
+#Category: Pickup Trucks
+#FileID  : Aero_6a2332a0-8e9f-4489-a7dc-082aa97c3fa3
+#Product : CarSim 2020.0
+#VehCode Aerodynamics
+
+END

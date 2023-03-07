@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Aerodynamics: Fz (Lift) Coef. vs. Bounce and Pitch`Exotic Racecar`
+#CheckBox0 0    
+
+#RingCtrl0 CARPET
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical disp (mm)
+*3D_YLabel Pitch angle (deg)
+*3D_ZLabel Lift coefficient factor CFz (-)
+
+#DiagramTwo0
+*3D_DATA 3, 2 ! columns x rows
+FZ_AERO_SHAPING_2_CARPET 2D_LINEAR
+0, 0, 6.35, 12.7
+-2.68, -1.86048, -1.74516, -1.53844
+0, -1.86348, -1.74798, -1.54093
+ENDTABLE
+
+
+
+LOG_ENTRY Used Dataset: Aerodynamics: Fz (Lift) Coef. vs. Bounce and Pitch; Exotic Racecar
+#Library : Aerodynamics: Fz (Lift) Coef. vs. Bounce and Pitch
+#DataSet : Exotic Racecar
+#Category: 
+#FileID  : AirCFz2_b75ba627-8dbb-4463-9b27-2b957f662960
+#Product : CarSim 2020.0
+#VehCode Lift vs. Bounce and Pitch
+
+END

@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Aerodynamics: Pitch, Bounce, Yaw`Exotic Racecar`
+#CheckBox0 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 2
+#RingCtrl7 2
+#RingCtrl8 2
+#RingCtrl9 2
+#RingCtrl10 2
+#RingCtrl11 2
+FX_AERO_SHAPING_CONSTANT 1
+FY_AERO_SHAPING_CONSTANT 0
+FZ_AERO_SHAPING_CONSTANT 1
+MX_AERO_SHAPING_CONSTANT 0
+MY_AERO_SHAPING_CONSTANT 1
+MZ_AERO_SHAPING_CONSTANT 0
+PARSFILE Aerodynamics\Aero_FxExt\AirCFx2_200424bb-befa-4980-92f5-af1e811f0c48.par
+#BlueLink6 Aerodynamics: Fx (Drag) Coef. vs. Bounce and Pitch`Exotic Racecar` ` , CFx2`AirCFx2_200424bb-befa-4980-92f5-af1e811f0c48
+
+PARSFILE Aerodynamics\Aero_FyExt\AirCFy2_031132e3-bbb6-4770-a3cc-c4a74f404b4f.par
+#BlueLink7 Aerodynamics: Fy (Side Force) Coef. vs. Bounce and Pitch`No Effect` ` , CFy2`AirCFy2_031132e3-bbb6-4770-a3cc-c4a74f404b4f
+
+PARSFILE Aerodynamics\Aero_FzExt\AirCFz2_b75ba627-8dbb-4463-9b27-2b957f662960.par
+#BlueLink8 Aerodynamics: Fz (Lift) Coef. vs. Bounce and Pitch`Exotic Racecar` ` , CFz2`AirCFz2_b75ba627-8dbb-4463-9b27-2b957f662960
+
+PARSFILE Aerodynamics\Aero_MxExt\AirCMx2_67b50cad-b8d3-40a1-82f3-e7b780f1a53b.par
+#BlueLink9 Aerodynamics: Mx (Roll Moment) Coef. vs. Bounce and Pitch`No Effect` ` , CMx2`AirCMx2_67b50cad-b8d3-40a1-82f3-e7b780f1a53b
+
+PARSFILE Aerodynamics\Aero_MyExt\AirCMy2_0097f0ea-fb53-4cad-82f9-59a442a329fa.par
+#BlueLink10 Aerodynamics: My (Pitch Moment) Coef. vs. Bounce and Pitch`Exotic Racecar` ` , CMy2`AirCMy2_0097f0ea-fb53-4cad-82f9-59a442a329fa
+
+PARSFILE Aerodynamics\Aero_MzExt\AirCMz2_cb0d683b-aec1-40aa-84be-90c196ad166a.par
+#BlueLink11 Aerodynamics: Mz (Yaw Moment) Coef. vs. Bounce and Pitch`No Effect` ` , CMz2`AirCMz2_cb0d683b-aec1-40aa-84be-90c196ad166a
+
+X_REF_AERO -1175
+Y_REF_AERO 0
+H_REF_AERO 0
+L_REF_AERO 2350
+AREA_AERO 1
+D_AIR 1.206
+
+LOG_ENTRY Used Dataset: Aerodynamics: Pitch, Bounce, Yaw; Exotic Racecar
+#Library : Aerodynamics: Pitch, Bounce, Yaw
+#DataSet : Exotic Racecar
+#Category: 
+#FileID  : Aero2_49245b29-5b72-469f-aa10-f5799a254e38
+#Product : CarSim 2020.0
+#VehCode Aero Pitch, Bounce, Yaw
+
+END

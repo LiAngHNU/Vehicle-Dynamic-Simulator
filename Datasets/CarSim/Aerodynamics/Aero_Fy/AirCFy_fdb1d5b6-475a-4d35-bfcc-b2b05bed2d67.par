@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip`Spline: 2 at 90 deg.`Spline Interpolation
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+FY_AERO_SHAPING_TABLE SPLINE_FLAT
+-180, 0
+-90, -2
+0, 0
+90, 2
+180, 0
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 2 at 90 deg.
+#Library : Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip
+#DataSet : Spline: 2 at 90 deg.
+#Category: Spline Interpolation
+#FileID  : AirCFy_fdb1d5b6-475a-4d35-bfcc-b2b05bed2d67
+#Product : CarSim 2020.0
+#VehCode Fy vs. Aero Slip
+
+END
